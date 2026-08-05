@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 
 import requests

@@ -56,7 +56,7 @@ def _parse_date(text: str) -> float | None:
 
 def _parse_anchor(anchor) -> tuple[str, float | None]:
     """앵커 안의 텍스트를 줄 단위로 쪼개 제목과 날짜를 뽑는다."""
-    lines = [l.strip() for l in anchor.get_text("\n").split("\n") if l.strip()]
+    lines = [ln.strip() for ln in anchor.get_text("\n").split("\n") if ln.strip()]
     published = None
     candidates = []
     for line in lines:
