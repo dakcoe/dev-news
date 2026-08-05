@@ -48,7 +48,7 @@
 
   /* ---------------- main ---------------- */
   .wrap{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
-  .scroll{flex:1;overflow-y:auto;padding:34px 34px 70px}
+  .scroll{flex:1;overflow-y:auto;scrollbar-gutter:stable;padding:34px 34px 70px}
   .inner{max-width:1180px;margin:0 auto}
 
   h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin-bottom:6px}
@@ -94,6 +94,11 @@
   .cp.on .n{color:rgba(255,255,255,.55)}
   .cp .sq{width:8px;height:8px;border-radius:2.5px}
   .cp .n{font-size:12.5px;color:var(--tx3);font-weight:600}
+  .cp .ckm{width:16px;height:16px;border:1.8px solid #c9c9d4;border-radius:5px;background:#fff;
+           display:inline-flex;align-items:center;justify-content:center;transition:.12s}
+  .cp .ckm svg{width:11px;height:11px;color:#fff;stroke-width:3.2;display:none}
+  .cp.on .ckm{background:var(--pri);border-color:var(--pri)}
+  .cp.on .ckm svg{display:block}
 
   /* ---------------- rows ---------------- */
   .row{
@@ -357,7 +362,7 @@ function barHTML(){
    +   '<button class="sg'+(days===7?' on':'')+'" data-d="7">7일</button>'
    +   '<button class="sg'+(days===0?' on':'')+'" data-d="0">전체</button>'
    + '</div>'
-   + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread">'+I.eye+' 안 읽음</button>'
+   + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span> 안 읽음</button>'
    + '</div>';
 }
 

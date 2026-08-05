@@ -47,3 +47,12 @@ def test_detail_panel_kept(html):
 def test_rail_buttons_bigger(html):
     assert "width:74px" in html          # .rail
     assert "width:50px;height:50px" in html  # .rb
+
+
+def test_unread_toggle_has_checkbox(html):
+    assert 'id="unread"><span class="ckm">' in html
+    assert ".cp .ckm{" in html
+
+
+def test_no_scrollbar_layout_shift(html):
+    assert "scrollbar-gutter:stable" in html
