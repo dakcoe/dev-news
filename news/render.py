@@ -1,0 +1,107 @@
+"""수집·요약된 기사 목록을 정적 HTML 한 장으로 렌더링한다."""
+from __future__ import annotations
+
+import json
+import os
+from datetime import datetime, timedelta, timezone
+
+KST = timezone(timedelta(hours=9))
+TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")
+
+# 화면에 쓰이는 출처 메타데이터. config.yaml의 sources와 키를 맞춘다.
+SOURCE_META = {
+    "hackernews": {"name": "Hacker News", "color": "#ff6600",
+                   "desc": "HN Firebase API에서 Top Stories 수집 · 상위 100개에서 AI/개발 뉴스 필터링"},
+    "github": {"name": "GitHub Trending", "color": "#1f2328",
+               "desc": "일간 트렌딩 저장소에서 개발·AI 관련 프로젝트 수집"},
+    "lobsters": {"name": "Lobste.rs", "color": "#ac130d",
+                 "desc": "hottest.json에서 상위 스토리 수집"},
+    "devto": {"name": "dev.to", "color": "#3b49df",
+              "desc": "javascript · python · ai · rust · devops 등 태그별 rising 글"},
+    "reddit": {"name": "Reddit", "color": "#ff4500",
+               "desc": "r/LocalLLaMA · r/ClaudeAI · r/MachineLearning 등 hot 포스트"},
+    "geeknews": {"name": "긱뉴스", "color": "#2f7de0",
+                 "desc": "news.hada.io RSS — 한국 개발자 커뮤니티 소식"},
+    "rss": {"name": "블로그 · RSS", "color": "#6b5bd2",
+            "desc": "config.yaml의 feeds 목록 — 공식 블로그와 기술 매체"},
+    "anthropic": {"name": "Anthropic", "color": "#c96442",
+                  "desc": "anthropic.com/news · /engineering 직접 파싱 (RSS 미제공)"},
+}
+
+
+def _pub_iso(article: dict) -> str:
+    ts = article.get("published_at")
+    if ts is None:
+        return datetime.now(timezone.utc).isoformat()
+    try:
+        if isinstance(ts, (int, float)):
+            return datetime.fromtimestamp(float(ts), timezone.utc).isoformat()
+        return datetime.fromisoformat(str(ts).replace("Z", "+00:00")).isoformat()
+    except Exception:
+        return datetime.now(timezone.utc).isoformat()
+
+
+def _first_sentences(text: str, limit: int = 140) -> str:
+    text = (text or "").strip().replace("\n", " ")
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    dot = max(cut.rfind("다."), cut.rfind(". "))
+    return (cut[: dot + 1] if dot > 60 else cut.rstrip() + "…")
+
+
+def to_view_model(articles: list[dict]) -> list[dict]:
+    out = []
+    for a in articles:
+        summary = a.get("summary") or a.get("description") or ""
+        body_paras = [p.strip() for p in summary.split("\n") if p.strip()] or ["(요약 생성 실패 — 원문을 확인하세요)"]
+        out.append({
+            "batch": a.get("batch", ""),
+            "batchLabel": a.get("batch_label", ""),
+            "src": a.get("source", "media"),
+            "title": a.get("ko_title") or a.get("title", ""),
+            # RSS는 피드 이름을, 서브레딧은 r/이름을 출처로 표시한다
+            "from": (a.get("from") or a.get("feed")
+                     or (f"r/{a['subreddit']}" if a.get("subreddit") else None)
+                     or SOURCE_META.get(a.get("source", ""), {}).get("name", a.get("source", ""))),
+            "url": a.get("url", ""),
+            "img": a.get("image") or "",
+            "score": int(a.get("upvotes") or 0),
+            "cm": int(a.get("comments") or 0),
+            "pub": _pub_iso(a),
+            "snip": _first_sentences(summary),
+            "body": "".join(f"<p>{p}</p>" for p in body_paras),
+            "why": a.get("why") or "",
+        })
+    return out
+
+
+def render(articles: list[dict], out_path: str, collected: datetime | None = None,
+           enabled: dict[str, bool] | None = None) -> str:
+    """enabled: config.yaml의 sources. 토글은 '설정에서 켜졌는지'를 나타낸다.
+
+    오늘 결과에 그 출처 글이 없을 수도 있으므로(점수에서 밀렸거나 새 글이 없거나)
+    '켜짐 여부'와 '오늘 몇 건'은 별개로 표시한다.
+    """
+    collected = collected or datetime.now(KST)
+    enabled = enabled or {}
+
+    sources = {k: {"name": v["name"], "color": v["color"], "desc": v["desc"],
+                   "on": bool(enabled.get(k, True))}
+               for k, v in SOURCE_META.items()}
+
+    with open(TEMPLATE, encoding="utf-8") as f:
+        html = f.read()
+
+    html = (html
+            .replace("__DATA_JSON__", json.dumps(to_view_model(articles), ensure_ascii=False))
+            .replace("__SRC_JSON__", json.dumps(sources, ensure_ascii=False))
+            .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
+            .replace("__COLLECTED__", collected.isoformat())
+            .replace("__DATE__", collected.strftime("%Y-%m-%d")))
+
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"[render] {out_path} · 기사 {len(articles)}건")
+    return out_path

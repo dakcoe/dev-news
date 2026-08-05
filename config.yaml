@@ -1,0 +1,137 @@
+# 수집 설정 — 여기만 고치면 됩니다.
+
+sources:
+  hackernews: true
+  github: true
+  lobsters: true
+  devto: true
+  geeknews: true
+  rss: true
+  anthropic: true    # RSS가 없어 news/engineering 페이지를 직접 파싱
+  reddit: false      # 비인증 접근이 403으로 막힘. 켜려면 .env에 REDDIT_CLIENT_ID/SECRET 필요
+
+# RSS/Atom 피드 — 주소만 추가하면 소스가 늘어난다.
+feeds:
+  # Anthropic은 공개 RSS가 없어서 뺐습니다 (news/rss.xml, rss.xml 모두 404)
+  - name: OpenAI
+    url: https://openai.com/news/rss.xml
+  - name: Google AI Blog
+    url: https://blog.google/technology/ai/rss/
+  - name: Hugging Face
+    url: https://huggingface.co/blog/feed.xml
+  - name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+  - name: The Decoder
+    url: https://the-decoder.com/feed/
+  - name: 카카오 기술블로그
+    url: https://tech.kakao.com/feed/
+  - name: 토스 기술블로그
+    url: https://toss.tech/rss.xml
+
+# 글이 드문 공식 블로그는 48시간으로 자르면 놓친다. 이 출처들만 창을 늘린다.
+# (한 번 실린 글은 seen.json이 막으므로 같은 글이 반복되지는 않는다)
+long_window:
+  anthropic: 240     # 10일
+  rss: 120           # 5일
+
+# 출처마다 점수 단위가 달라서 그대로 비교할 수 없다.
+#   base   = 업보트 개념이 없는 출처에 주는 바닥 점수
+#   weight = 과대·과소평가되는 출처를 누르거나 올리는 배수
+source_base:
+  anthropic: 900
+  rss: 420
+  geeknews: 320
+  devto: 60
+
+source_weight:
+  github: 0.35       # '오늘 받은 스타'는 수천 단위라 그대로 두면 상위를 독식한다
+  hackernews: 1.0
+  lobsters: 1.4      # 점수 단위가 작아서 조금 올려준다
+
+# 점수와 무관하게 자리를 먼저 확보하는 출처. 나머지 자리는 점수순으로 채운다.
+# 후보가 부족하면 확보한 만큼만 들어가고 로그에 남는다.
+source_quota:
+  github: 5
+
+scraper:
+  top_n: 20          # 한 회차에 새로 추가할 기사 수
+  keep_days: 30      # 페이지에 남겨둘 기간 (누적)
+  max_items: 300     # 누적 최대 건수. 넘으면 오래된 것부터 잘라낸다
+  per_source: 5      # 한 출처가 차지할 수 있는 최대 개수
+  window_hours: 48   # 최근 몇 시간 내 발행분만
+  hn_limit: 60       # HN 상위 몇 개를 훑을지
+  per_feed: 8        # RSS 피드 하나당 몇 개까지
+  per_source_fetch: 30
+
+  devto_tags:
+    - javascript
+    - python
+    - ai
+    - webdev
+    - typescript
+    - rust
+    - go
+    - devops
+    - security
+
+  subreddits:
+    - LocalLLaMA
+    - ClaudeAI
+    - MachineLearning
+    - programming
+    - singularity
+    - devops
+
+# 아래 키워드가 제목·설명에 하나도 없으면 제외한다.
+# github / devto / geeknews는 이미 개발 전용이라 필터를 적용하지 않는다.
+keywords:
+  - python
+  - javascript
+  - typescript
+  - rust
+  - go
+  - golang
+  - java
+  - kotlin
+  - swift
+  - ai
+  - llm
+  - gpt
+  - claude
+  - gemini
+  - agent
+  - machine learning
+  - deep learning
+  - transformer
+  - inference
+  - cloud
+  - docker
+  - kubernetes
+  - linux
+  - devops
+  - container
+  - database
+  - sql
+  - postgres
+  - redis
+  - api
+  - sdk
+  - cli
+  - git
+  - open source
+  - compiler
+  - runtime
+  - framework
+  - library
+  - backend
+  - frontend
+  - security
+  - vulnerability
+  - cve
+  - encryption
+  - benchmark
+  - performance
+  - async
+  - developer
+  - programming
+  - release
