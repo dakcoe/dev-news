@@ -31,17 +31,17 @@
 
   /* ---------------- rail ---------------- */
   .rail{
-    width:62px;flex:none;background:var(--rail);border-right:1px solid var(--line);
-    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:6px;
+    width:74px;flex:none;background:var(--rail);border-right:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:8px;
   }
   .rb{
-    width:40px;height:40px;border-radius:11px;border:none;background:transparent;
+    width:50px;height:50px;border-radius:13px;border:none;background:transparent;
     display:flex;align-items:center;justify-content:center;cursor:pointer;
     color:#9a9aa8;transition:.14s;position:relative;
   }
   .rb:hover{background:#eeeef3;color:var(--tx2)}
   .rb.on{background:var(--pri-bg);color:var(--pri-dk)}
-  .rb svg{width:21px;height:21px;stroke-width:1.9}
+  .rb svg{width:25px;height:25px;stroke-width:1.9}
   .rb .dot{position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;
            background:var(--pri);display:none}
   .rb.has .dot{display:block}
@@ -60,11 +60,6 @@
     background:var(--panel);border:1px solid var(--line);border-radius:14px;
     padding:16px 20px;margin-bottom:26px;
   }
-  .stbtn{
-    display:flex;align-items:center;gap:9px;background:var(--pri-bg);color:var(--pri-dk);
-    border-radius:11px;padding:12px 22px;font-size:15.5px;font-weight:700;
-  }
-  .stbtn svg{width:17px;height:17px;stroke-width:2.2}
   .stmeta{font-size:14.5px;color:var(--tx2);line-height:1.65}
   .stmeta b{color:var(--tx);font-weight:700}
   .stmeta .l2{color:var(--tx3);font-size:13.5px}
@@ -152,9 +147,6 @@
   .none{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
 
   /* ---------------- detail ---------------- */
-  .ov{position:fixed;inset:0;background:rgba(22,22,32,.34);backdrop-filter:blur(2px);
-      display:none;z-index:70}
-  .ov.open{display:block}
   .dt{
     position:fixed;top:0;right:0;bottom:0;width:min(620px,94vw);background:var(--panel);
     z-index:80;transform:translateX(100%);transition:transform .26s cubic-bezier(.32,.72,0,1);
@@ -229,7 +221,6 @@
   <div class="scroll"><div class="inner" id="view"></div></div>
 </div>
 
-<div class="ov" id="ov" onclick="closeDetail()"></div>
 <aside class="dt" id="dt">
   <div class="dh">
     <button class="x" onclick="closeDetail()">✕</button>
@@ -272,7 +263,6 @@ const I={
   doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16M4 10h16M4 15h10"/></svg>',
   chk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l5 5L20 6"/></svg>',
   sch:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
-  rf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 11a8 8 0 10-2.3 5.7M20 5v6h-6"/></svg>',
   eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></svg>'
 };
 
@@ -401,7 +391,6 @@ function render(){
 
   if(!isSaved){
     h+='<div class="status">'
-      +'<div class="stbtn">'+I.rf+'뉴스 수집</div>'
       +'<div class="stmeta"><b>누적 '+DATA.length+'건</b> · 최근 수집 '+latestCount()+'건 ('+COLLECTED_LABEL+')<br>'
       +'<span class="l2">회차 '+batches().length+'개 · 소스 '+new Set(DATA.map(d=>d.src)).size
       +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+saved.size+'건</span></div></div>';
@@ -459,13 +448,11 @@ function openDetail(i){
     + '<a class="go" href="'+d.url+'" target="_blank" rel="noopener">원문 열기 ↗</a></div>';
   document.getElementById('db').scrollTop=0;
   document.getElementById('dt').classList.add('open');
-  document.getElementById('ov').classList.add('open');
   render();
 }
 function closeDetail(){
   cur=null;
   document.getElementById('dt').classList.remove('open');
-  document.getElementById('ov').classList.remove('open');
   render();
 }
 function copyMd(){
