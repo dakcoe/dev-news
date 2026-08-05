@@ -1,0 +1,74 @@
+[
+ {
+  "source": "hackernews",
+  "title": "SQLite critical CVEs or LLM slops?",
+  "ko_title": "SQLite \"치명적 CVE\" 55건 중 54건이 LLM이 지어낸 가짜였다",
+  "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+  "upvotes": 723,
+  "comments": 372,
+  "published_at": 1785766800,
+  "image": "",
+  "summary": "JFrog 시큐리티 리서치가 SQLite·libraw·Arduino 오디오 디코더를 대상으로 제출된 보안 권고 55건을 검증했는데, 그중 54건이 LLM이 생성한 허구였다고 밝혔습니다. 지목된 함수가 해당 버전에 아예 존재하지 않거나 PoC 코드를 실행해도 크래시가 나지 않았습니다. 그럼에도 이 항목들은 NVD까지 통과했고 Red Hat은 CVSS 10.0을 잠시 부여했다가 7.6으로 내렸습니다.",
+  "why": "CVE 점수를 그대로 믿고 자동 패치를 돌리고 있다면 필터를 하나 더 둬야 한다는 신호입니다."
+ },
+ {
+  "source": "github",
+  "title": "usestrix/strix",
+  "ko_title": "usestrix / strix — 자율 모의침투 에이전트, 오늘 트렌딩 1위",
+  "url": "https://github.com/usestrix/strix",
+  "upvotes": 2804,
+  "comments": 0,
+  "published_at": 1785888000,
+  "image": "https://opengraph.githubassets.com/1/usestrix/strix",
+  "summary": "애플리케이션 취약점을 자동으로 찾고 고치는 멀티 에이전트 보안 테스트 플랫폼입니다. 정적 스캐너와 달리 동적 분석과 실제 익스플로잇 시도로 동작하는 PoC를 만듭니다. 정찰·익스플로잇·검증 에이전트를 분리해 병렬 테스트하고 GitHub Actions로 CI에 붙일 수 있습니다.",
+  "why": "멀티 에이전트를 역할별로 쪼개는 구조 자체가 봇 리팩터링에 참고할 만합니다."
+ },
+ {
+  "source": "reddit",
+  "title": "I built a coding agent with a 4B model",
+  "ko_title": "4B 파라미터 모델로 코딩 에이전트를 만든 방법",
+  "url": "https://www.reddit.com/r/LocalLLaMA/",
+  "upvotes": 112,
+  "comments": 48,
+  "published_at": 1785899400,
+  "image": "",
+  "summary": "로컬 4B 모델로도 툴 호출이 안정적으로 돌아가게 만든 과정을 정리한 글입니다. 대부분의 코딩 에이전트가 프론티어 모델을 가정하고 만들어져 작은 모델에서 툴 호출이 깨진다는 문제 제기에서 출발합니다. 프롬프트를 단순화하고 툴 스키마를 줄이는 것이 핵심이었다고 합니다.",
+  "why": "로컬 모델로 봇 기능을 옮길 때 어디서 깨지는지 미리 알 수 있습니다."
+ },
+ {
+  "source": "geeknews",
+  "title": "긱뉴스 샘플 항목",
+  "ko_title": "FFmpeg 9.0 릴리스 — 애니메이션 WebP 디코더 추가",
+  "url": "https://news.hada.io/",
+  "upvotes": 0,
+  "comments": 12,
+  "published_at": 1785880800,
+  "image": "",
+  "summary": "FFmpeg이 8.1 이후 4개월 만에 메이저 버전 9.0을 냈습니다. 애니메이션 WebP 디코더와 Vulkan·CUDA 필터가 추가됐고 독립형 CELT 디코더가 제거됐습니다.",
+  "why": "음악봇이 FFmpeg에 직접 의존하니 올릴 때 제거 항목만 확인하면 됩니다."
+ },
+ {
+  "source": "lobsters",
+  "title": "Bonsai: OCaml UI framework",
+  "ko_title": "janestreet / bonsai — OCaml로 프론트엔드까지",
+  "url": "https://github.com/janestreet/bonsai",
+  "upvotes": 62,
+  "comments": 15,
+  "published_at": 1785844800,
+  "image": "https://opengraph.githubassets.com/1/janestreet/bonsai",
+  "summary": "Jane Street가 사내에서 쓰는 UI 프레임워크입니다. OCaml로 작성돼 JSOO로 자바스크립트를 컴파일하며, 백엔드와 프론트엔드가 같은 타입 시스템을 공유합니다. 터미널 UI도 지원합니다.",
+  "why": "함수형 언어로 프론트엔드를 굴린 실전 코드를 통째로 볼 수 있습니다."
+ },
+ {
+  "source": "devto",
+  "title": "Fixing a race condition in shared auth",
+  "ko_title": "공유 인증 라이브러리의 레이스 컨디션을 해결한 방법",
+  "url": "https://dev.to/",
+  "upvotes": 44,
+  "comments": 26,
+  "published_at": 1785891600,
+  "image": "",
+  "summary": "여러 브라우저 탭에서 인증 토큰이 동시에 갱신될 때 발생하는 레이스 컨디션을 BroadcastChannel과 락으로 해결한 과정입니다. 갱신 요청을 한 탭으로 몰고 나머지는 결과를 구독하는 구조로 바꿨습니다.",
+  "why": "토큰 갱신이 있는 서비스라면 그대로 옮겨쓸 수 있는 패턴입니다."
+ }
+]
