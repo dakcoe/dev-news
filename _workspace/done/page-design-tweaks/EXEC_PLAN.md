@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 - **생성일**: 2026-08-05T18:14:27.375Z
 
 ## 목표
@@ -34,3 +34,4 @@ design 워크스페이스의 refinement-directives 원칙(요청받은 축만 �
 - 레일 버튼이 50px로 커졌다
 - 기사 상세를 열어도 왼쪽 목록이 흐려지지 않고 클릭 가능하다
 - pytest 테스트 통과, verify-task.js 통과
+- **완료일**: 2026-08-05T18:19:05.978Z
