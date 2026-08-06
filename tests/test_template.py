@@ -59,22 +59,17 @@ def test_no_scrollbar_layout_shift(html):
     assert "scrollbar-gutter:stable" in html
 
 
-# ---- SPEC Phase 3: 고밀도 피드 ----
+# ---- 카드 레이아웃 (사용자 피드백으로 고밀도 리스트에서 복원) ----
 
-def test_score_display_removed(html):
-    assert 'data-s="score"' not in html      # 점수순 정렬 제거
-    assert "'점'" not in html                # "226점" 표시 제거
-
-
-def test_thumbnail_and_badges_removed(html):
-    assert ".thumb" not in html
-    assert "bdg" not in html                 # NEW/HOT 뱃지 → 6px 점(dot2)
-    assert ".dot2" in html
+def test_card_layout_with_thumbnail(html):
+    assert ".thumb{" in html                 # 오른쪽 썸네일 카드 복원
+    assert '"bdg new"' in html               # NEW 뱃지 복원
+    assert '"status"' in html                # 상태 카드 복원
+    assert "bdg hot" not in html             # HOT 뱃지는 SPEC대로 제거 유지
 
 
-def test_status_card_demoted(html):
-    assert '"status"' not in html
-    assert "hstats" in html                  # 헤더 구석 한 줄로 강등
+def test_github_delta_shown(html):
+    assert "d.delta" in html                 # 점수 대신 스타 Δ 표시 (SPEC 1.5)
 
 
 # ---- SPEC 2.4~2.5: 아카이브 검색·북마크 스냅샷 ----
