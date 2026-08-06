@@ -56,6 +56,22 @@ def test_budget_cap(monkeypatch):
     assert [a["llm_done"] for a in out] == [True, True, False]
 
 
+def test_hanja_triggers_regeneration(monkeypatch):
+    responses = ["번역제목: 제프 딘 离任\n요약: 리더십이 교체됐다.\n왜중요: 크다.",
+                 "번역제목: 제프 딘 사임\n요약: 리더십이 교체됐다.\n왜중요: 크다."]
+    calls = []
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
+    monkeypatch.setattr(summarizer.requests, "post",
+                        lambda *a, **k: calls.append(1) or FakeResp(200, responses[len(calls) - 1]))
+
+    out = summarizer.summarize_all(list(ARTICLES[:1]), provider="groq", max_calls=10)
+
+    assert len(calls) == 2                       # 한자 감지 → 1회 재생성
+    assert out[0]["ko_title"] == "제프 딘 사임"
+    assert not summarizer.HANJA_RE.search(out[0]["summary"])
+
+
 def test_no_new_info_becomes_empty_summary(monkeypatch):
     monkeypatch.setenv("GROQ_API_KEY", "test-key")
     monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
