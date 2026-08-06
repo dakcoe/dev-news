@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 - **생성일**: 2026-08-06T00:20:25.505Z
 
 ## 목표
@@ -38,3 +38,4 @@
 - daily.yml에 pull --rebase -X theirs가 push 앞에 존재
 - pytest·린트 통과
 - 다음 워크플로우 실행이 push까지 성공 (봇 커밋 생성 확인)
+- **완료일**: 2026-08-06T00:22:41.277Z
