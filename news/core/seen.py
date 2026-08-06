@@ -7,12 +7,10 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 DEFAULT_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__)))), "data", "seen.json")
-
-KEEP_DAYS = 30
 
 
 def _load(path: str) -> dict[str, str]:
@@ -41,21 +39,14 @@ def filter_unseen(articles: list[dict], path: str = DEFAULT_PATH) -> list[dict]:
 
 
 def mark_seen(articles: list[dict], path: str = DEFAULT_PATH) -> None:
+    # 영구 유지 (SPEC 2.3) — 만료를 두면 30일 뒤 다시 트렌딩에 오른 기사가 중복 등장한다.
+    # URL 집합이라 무한 누적해도 용량 문제가 없다.
     data = _load(path)
     now = datetime.now(timezone.utc)
     for a in articles:
         data[a["url"]] = now.isoformat()
 
-    cutoff = now - timedelta(days=KEEP_DAYS)
-    pruned = {}
-    for url, ts in data.items():
-        try:
-            if datetime.fromisoformat(ts) >= cutoff:
-                pruned[url] = ts
-        except Exception:
-            pruned[url] = ts
-
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(pruned, f, ensure_ascii=False, indent=1, sort_keys=True)
-    print(f"[seen] {len(articles)}건 기록 · 보관 {len(pruned)}건")
+        json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=True)
+    print(f"[seen] {len(articles)}건 기록 · 보관 {len(data)}건 (영구)")

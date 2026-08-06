@@ -35,6 +35,7 @@ jobs:
         env:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER || 'groq' }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}   # candidates의 GitHub API 한도 확보 (SPEC 1.4)
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}

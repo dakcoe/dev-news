@@ -28,9 +28,10 @@ def test_collect_button_removed(html):
     assert "stbtn" not in html
 
 
-def test_status_meta_kept(html):
-    assert "stmeta" in html
-    assert "누적" in html
+def test_status_stats_kept(html):
+    # 상태 카드는 헤더 한 줄(hstats)로 강등됐지만 통계 자체는 유지 (SPEC 3.2)
+    assert "최근 30일" in html
+    assert "안 읽음" in html
 
 
 def test_overlay_removed(html):
@@ -56,3 +57,33 @@ def test_unread_toggle_has_checkbox(html):
 
 def test_no_scrollbar_layout_shift(html):
     assert "scrollbar-gutter:stable" in html
+
+
+# ---- SPEC Phase 3: 고밀도 피드 ----
+
+def test_score_display_removed(html):
+    assert 'data-s="score"' not in html      # 점수순 정렬 제거
+    assert "'점'" not in html                # "226점" 표시 제거
+
+
+def test_thumbnail_and_badges_removed(html):
+    assert ".thumb" not in html
+    assert "bdg" not in html                 # NEW/HOT 뱃지 → 6px 점(dot2)
+    assert ".dot2" in html
+
+
+def test_status_card_demoted(html):
+    assert '"status"' not in html
+    assert "hstats" in html                  # 헤더 구석 한 줄로 강등
+
+
+# ---- SPEC 2.4~2.5: 아카이브 검색·북마크 스냅샷 ----
+
+def test_archive_search_wired(html):
+    assert "data/search-index.json" in html
+    assert "openArchived" in html
+
+
+def test_saved_snapshot_migration(html):
+    assert "savedMap" in html
+    assert "typeof item === 'string'" in html   # URL 배열 → 객체 승격
