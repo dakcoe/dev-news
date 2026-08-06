@@ -62,10 +62,11 @@ def test_no_scrollbar_layout_shift(html):
 # ---- 카드 레이아웃 (사용자 피드백으로 고밀도 리스트에서 복원) ----
 
 def test_card_layout_with_thumbnail(html):
-    assert ".thumb{" in html                 # 오른쪽 썸네일 카드 복원
-    assert '"bdg new"' in html               # NEW 뱃지 복원
-    assert '"status"' in html                # 상태 카드 복원
-    assert "bdg hot" not in html             # HOT 뱃지는 SPEC대로 제거 유지
+    assert ".thumb{" in html                 # 오른쪽 썸네일 카드
+    assert '"status"' in html                # 상태 카드
+    assert "bdg" not in html                 # NEW/HOT 뱃지 제거
+    assert 'data-s="score"' not in html      # 점수순 정렬 제거
+    assert ".row:hover .ck" in html          # 체크박스는 호버 시에만 노출
 
 
 def test_github_delta_shown(html):
