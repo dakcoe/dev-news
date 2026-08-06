@@ -38,7 +38,12 @@ KEY_ENV = {
     "gemini": "GEMINI_API_KEY",
 }
 
-SYSTEM = "너는 한국인 개발자를 위한 기술 뉴스 브리핑 편집자다. 지시한 형식만 출력하고 다른 말은 절대 붙이지 않는다."
+SYSTEM = ("너는 한국인 개발자를 위한 기술 뉴스 브리핑 편집자다. 지시한 형식만 출력하고 다른 말은 절대 붙이지 않는다. "
+          "출력에는 한글·영문·숫자·문장부호만 쓴다. 중국어 한자를 절대 쓰지 마라 — 한자어는 반드시 한글로 적는다 (예: 离任(X)→물러남(O), 超越(X)→뛰어넘기(O)).")
+
+# Llama 계열은 한국어 생성 중 한자어를 중국어 문자로 출력하는 버릇이 있다.
+# 프롬프트 금지만으로는 가끔 새므로, 응답에서 감지되면 1회 재생성한다.
+HANJA_RE = re.compile(r"[㐀-䶿一-鿿豈-﫿]")
 
 # 요약 원칙 (SPEC 1.3): 제목 복창 금지. 제목에 없는 새 정보만.
 # 독자는 한 명으로 고정 — 백엔드·AI를 다루는 개발자가 자기 일에 쓸지 판단할 수 있게.
@@ -186,6 +191,12 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 calls += 1
                 candidate = _parse(_call(prompt, provider, model, api_key))
                 if candidate["ko_title"] or candidate["summary"]:
+                    joined = " ".join(filter(None, [candidate["ko_title"] or "",
+                                                    candidate["summary"], candidate["why"]]))
+                    if HANJA_RE.search(joined) and attempt < 2:
+                        print("  · 한자 섞임 — 재생성")
+                        attempt += 1
+                        continue
                     parsed = candidate
                     break
                 print(f"  · 파싱 실패, 재시도 {attempt + 1}")
