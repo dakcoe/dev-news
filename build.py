@@ -2,19 +2,25 @@
 """개발·AI 뉴스 페이지 빌더.
 
   python build.py            # 수집 → 요약 → docs/index.html 생성
-  python build.py --demo     # 네트워크·Gemini 없이 sample.json으로 렌더만 (레이아웃 확인용)
-  python build.py --no-ai    # 수집은 하되 Gemini 요약은 건너뜀 (원문 설명 그대로 사용)
+  python build.py --demo     # 네트워크·LLM 없이 sample.json으로 렌더만 (레이아웃 확인용)
+  python build.py --no-ai    # 수집은 하되 LLM 요약은 건너뜀 (원문 설명 그대로 사용)
 
 환경변수
-  LLM_PROVIDER   groq(기본) / openrouter / gemini
-  GROQ_API_KEY   공급자에 맞는 키 하나 (OPENROUTER_API_KEY, GEMINI_API_KEY)
+  LLM_PROVIDER   groq(기본) — Groq 전용, 새 공급자 추가 금지 (SPEC 불변 제약)
+  GROQ_API_KEY   Groq API 키
   LLM_MODEL      모델을 직접 지정하고 싶을 때만
+  GITHUB_TOKEN   있으면 GitHub API 한도가 시간당 60→1,000회+ (Actions는 자동 제공)
+
+깔때기 (SPEC 1.2): 넓은 수집 → 중복 제거 + candidates 로그 → 보조 점수 top_n 선별
+→ 최종 선별분만 본문·썸네일·요약. 파이프라인 수준의 차단 필터는 두지 않는다 —
+무엇을 보고 숨길지는 열람 단계(클라이언트 검색·필터)가 담당한다 (SPEC 1.1).
 """
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import shutil
 import sys
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,7 +28,7 @@ from datetime import datetime, timedelta, timezone
 
 import yaml
 
-from news.core import archive
+from news.core import archive, candidates
 from news.core import seen as seen_db
 from news.core.enrich import enrich
 from news.core.scorer import score_and_categorize
@@ -144,12 +150,22 @@ def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] |
     return kept
 
 
-def adjust_scores(articles: list[dict], cfg: dict) -> list[dict]:
-    """출처별 기본점수·가중치를 적용해 서로 다른 저울을 맞춘다.
+def dedupe(articles: list[dict]) -> list[dict]:
+    """배치 내 URL 중복 제거 (여러 소스가 같은 글을 물어오는 경우)."""
+    seen_urls: set[str] = set()
+    out = []
+    for a in articles:
+        if a.get("url") in seen_urls:
+            continue
+        seen_urls.add(a.get("url"))
+        out.append(a)
+    return out
 
-    GitHub의 '오늘 받은 스타 2,800'과 HN의 '700점'과 블로그의 '0점'은
-    그대로 두면 비교가 안 된다. base는 점수 개념이 없는 출처의 바닥값,
-    weight는 과대·과소평가되는 출처를 눌러주거나 올려주는 배수다.
+
+def adjust_scores(articles: list[dict], cfg: dict) -> list[dict]:
+    """출처별 기본점수·가중치 보정 (deprecated — 동점 처리용으로만 남김, SPEC 1.5).
+
+    UI에서 점수 표시는 제거됐다. 이 보정은 top_n 선별의 정렬 기준으로만 쓰인다.
     """
     base = cfg.get("source_base", {})
     weight = cfg.get("source_weight", {})
@@ -201,10 +217,50 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     return picked
 
 
+def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
+    """GitHub 아이템의 지표를 절대 스타에서 전일 대비 증가량(Δ)으로 교체 (SPEC 1.5).
+
+    candidates 샤드의 어제 스냅샷과 API의 현재 스타 수로 Δ를 계산한다.
+    첫 등장(어제 데이터 없음)은 trending의 "stars today"(upvotes)를 그대로 쓴다.
+    반환: url → GitHub API 메타 (candidates 로그에 재사용).
+    """
+    gh_items = [a for a in articles if a.get("source") == "github"]
+    meta_map: dict[str, dict] = {}
+    for a in gh_items:
+        meta = candidates.github_meta(a["url"])
+        meta_map[a["url"]] = meta
+        prev = candidates.previous_stars(a["url"], before_date=today)
+        if meta.get("stars") is not None and prev is not None:
+            delta = max(meta["stars"] - prev, 0)
+        else:
+            delta = a.get("upvotes", 0)        # 첫 등장 — trending의 stars today
+        a["upvotes"] = delta
+        a["delta_stars"] = delta
+    if gh_items:
+        print(f"[Δ] GitHub {len(gh_items)}건 스타 증가량 적용")
+    return meta_map
+
+
+def sync_docs_data() -> None:
+    """아카이브 검색용 데이터를 docs/로 복사 (SPEC 2.4).
+
+    GitHub Pages는 /docs 폴더만 서빙하므로 data/를 직접 fetch할 수 없다.
+    지난 달 샤드는 불변이라 복사해도 내용이 같으면 git 변경이 생기지 않는다.
+    """
+    dst_dir = os.path.join(ROOT, "docs", "data", "articles")
+    os.makedirs(dst_dir, exist_ok=True)
+    for m in archive.months():
+        shutil.copyfile(os.path.join(archive.DIR, f"{m}.json"),
+                        os.path.join(dst_dir, f"{m}.json"))
+    if os.path.exists(archive.INDEX_PATH):
+        shutil.copyfile(archive.INDEX_PATH,
+                        os.path.join(ROOT, "docs", "data", "search-index.json"))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true", help="sample.json으로 렌더만 수행")
-    ap.add_argument("--no-ai", action="store_true", help="Gemini 요약 건너뛰기")
+    ap.add_argument("--no-ai", action="store_true", help="LLM 요약 건너뛰기")
     ap.add_argument("--out", default=os.path.join(ROOT, "docs", "index.html"))
     args = ap.parse_args()
 
@@ -217,40 +273,59 @@ def main() -> int:
 
     cfg = load_config()
     sc = cfg.get("scraper", {})
+    now = datetime.now(KST)
+    today = now.strftime("%Y-%m-%d")
 
-    articles = run_scrapers(cfg)
-    print(f"전체 수집 {len(articles)}건")
-    articles = keyword_filter(articles, cfg.get("keywords", []))
+    archive.migrate_legacy()               # 단일 articles.json → 월별 샤드 (멱등)
+
+    raw = run_scrapers(cfg)
+    articles = keyword_filter(raw, cfg.get("keywords", []))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
-    # 자르지 않고 전부 점수화한 뒤 출처 보정을 적용한다 (보정 전에 잘리면 의미가 없다)
+    articles = dedupe(articles)
+    print(f"[깔때기] 후보 {len(raw)}건 → 필터·중복 제거 후 {len(articles)}건")
+
+    gh_meta_map = apply_star_delta(articles, today)
+
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
-    articles = seen_db.filter_unseen(articles)
-    articles = pick(articles, sc.get("top_n", 20), sc.get("per_source", 5),
-                    quota=cfg.get("source_quota", {}))
+    fresh = seen_db.filter_unseen(articles)
+    picked = pick(fresh, sc.get("top_n", 20), sc.get("per_source", 5),
+                  quota=cfg.get("source_quota", {}))
+    print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건")
 
-    if not articles:
+    # 판정 로그: 선별 탈락분 포함 전 후보를 기록 (SPEC 1.4)
+    candidates.log(articles, {a["url"] for a in picked}, now, gh_meta_map)
+
+    if not picked:
         print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
         return 0
-    print(f"이번 회차 {len(articles)}건 선별")
 
-    articles = enrich(articles)
+    picked = enrich(picked)
 
     if args.no_ai:
-        for a in articles:
+        for a in picked:
             a.setdefault("summary", a.get("description", ""))
+            a["llm_done"] = True
     else:
         from news.summarizer import summarize_all
-        articles = summarize_all(articles)
+        llm_cfg = cfg.get("llm", {})
+        picked = summarize_all(picked, max_calls=llm_cfg.get("max_calls_per_run", 50))
 
-    now = datetime.now(KST)
-    all_articles = archive.append(
-        articles, now,
-        keep_days=sc.get("keep_days", 30),
-        max_items=sc.get("max_items", 300),
-    )
-    render(all_articles, args.out, collected=now, enabled=cfg.get("sources", {}))
-    seen_db.mark_seen(articles)
+    # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
+    # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
+    published = [a for a in picked if a.get("llm_done")]
+
+    if published:
+        all_articles = archive.append(published, now)
+    else:
+        print("[한도] 이번 회차 게시 0건 — 기존 페이지 유지")
+        all_articles = archive.load_all()
+
+    archive.write_search_index(all_articles)
+    display = archive.recent(all_articles, sc.get("keep_days", 30))
+    render(display, args.out, collected=now, enabled=cfg.get("sources", {}))
+    sync_docs_data()
+    seen_db.mark_seen(published)
     return 0
 
 

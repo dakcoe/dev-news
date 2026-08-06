@@ -58,6 +58,8 @@ def to_view_model(articles: list[dict]) -> list[dict]:
         out.append({
             "batch": a.get("batch", ""),
             "batchLabel": a.get("batch_label", ""),
+            "month": (a.get("batch", "") or "")[:7],
+            "delta": a.get("delta_stars"),        # GitHub 전일 대비 스타 증가량 (SPEC 1.5)
             "src": a.get("source", "media"),
             "title": a.get("ko_title") or a.get("title", ""),
             # RSS는 피드 이름을, 서브레딧은 r/이름을 출처로 표시한다

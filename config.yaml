@@ -27,6 +27,14 @@ feeds:
     url: https://tech.kakao.com/feed/
   - name: 토스 기술블로그
     url: https://toss.tech/rss.xml
+  # SPEC 1.2 수집 확대 — 1B 태그 어휘 도출용 코퍼스 축적이 목적.
+  # 페이지 구성은 per_source/quota가 현행대로 통제하므로 페이지가 넘치지 않는다.
+  - name: arXiv cs.AI
+    url: https://rss.arxiv.org/rss/cs.AI
+  - name: arXiv cs.CL
+    url: https://rss.arxiv.org/rss/cs.CL
+  - name: r/LocalLLaMA
+    url: https://www.reddit.com/r/LocalLLaMA/.rss
 
 # 글이 드문 공식 블로그는 48시간으로 자르면 놓친다. 이 출처들만 창을 늘린다.
 # (한 번 실린 글은 seen.json이 막으므로 같은 글이 반복되지는 않는다)
@@ -34,9 +42,10 @@ long_window:
   anthropic: 240     # 10일
   rss: 120           # 5일
 
-# 출처마다 점수 단위가 달라서 그대로 비교할 수 없다.
+# [deprecated — SPEC 1.5] 점수는 UI에서 제거됐고 top_n 선별의 정렬 기준으로만 쓰인다.
 #   base   = 업보트 개념이 없는 출처에 주는 바닥 점수
 #   weight = 과대·과소평가되는 출처를 누르거나 올리는 배수
+# GitHub 아이템은 절대 스타 대신 전일 대비 증가량(Δ)이 지표다.
 source_base:
   anthropic: 900
   rss: 420
@@ -53,10 +62,15 @@ source_weight:
 source_quota:
   github: 5
 
+# LLM 호출 예산 (SPEC 1.6) — Groq 무료 일일 한도(1,000회)를 하루 1회 실행이
+# 다 소진하지 않도록 실행당 상한을 건다. 로컬 테스트와 Actions가 겹쳐도 안전.
+llm:
+  max_calls_per_run: 50
+
 scraper:
   top_n: 20          # 한 회차에 새로 추가할 기사 수
-  keep_days: 30      # 페이지에 남겨둘 기간 (누적)
-  max_items: 300     # 누적 최대 건수. 넘으면 오래된 것부터 잘라낸다
+  keep_days: 30      # [표시 계층] index.html에 굽는 기간. 저장은 월별 샤드에 무제한 누적 (SPEC 2.1)
+  # max_items: 300   # [deprecated — SPEC 2.1] 저장 상한 제거. 샤딩이 용량을 통제한다
   per_source: 5      # 한 출처가 차지할 수 있는 최대 개수
   window_hours: 48   # 최근 몇 시간 내 발행분만
   hn_limit: 60       # HN 상위 몇 개를 훑을지
