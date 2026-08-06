@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # pull --rebase가 공통 조상을 찾을 수 있게 전체 이력
 
       - uses: actions/setup-python@v5
         with:
@@ -47,5 +49,8 @@ jobs:
             echo "변경 없음 — 커밋 생략"
           else
             git commit -m "뉴스 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
-            git push
+            # Re-run(옛 스냅샷 체크아웃)이나 동시 push로 원격이 앞서 있어도 실패하지 않게
+            # rebase로 흡수한다. 충돌 시 -X theirs = 방금 생성한 데이터·페이지를 남긴다.
+            git pull --rebase -X theirs origin main
+            git push origin main
           fi
