@@ -2,8 +2,8 @@ name: 매일 뉴스 수집
 
 on:
   schedule:
-    # UTC 00:00 = KST 09:00
-    - cron: "0 0 * * *"
+    # KST 00:00 / 08:00 / 16:00 (UTC 15:00 / 23:00 / 07:00)
+    - cron: "0 7,15,23 * * *"
   workflow_dispatch:        # 액션 탭에서 수동 실행 가능
 
 permissions:
