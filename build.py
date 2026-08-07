@@ -162,6 +162,19 @@ def dedupe(articles: list[dict]) -> list[dict]:
     return out
 
 
+def page_eligible(articles: list[dict]) -> list[dict]:
+    """페이지 게재 자격이 있는 것만 남긴다 (SPEC 1.1 — 기록과 게재는 별개).
+
+    코퍼스 전용 피드(config feeds의 page: false)는 candidates 로그에는 남되
+    페이지 선별 대상에서는 빠진다. 플래그가 없는 아이템은 기존대로 게재 대상.
+    """
+    kept = [a for a in articles if a.get("page", True)]
+    excluded = len(articles) - len(kept)
+    if excluded:
+        print(f"[선별] 코퍼스 전용 {excluded}건 페이지 제외")
+    return kept
+
+
 def adjust_scores(articles: list[dict], cfg: dict) -> list[dict]:
     """출처별 기본점수·가중치 보정 (deprecated — 동점 처리용으로만 남김, SPEC 1.5).
 
@@ -288,7 +301,7 @@ def main() -> int:
 
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
-    fresh = seen_db.filter_unseen(articles)
+    fresh = seen_db.filter_unseen(page_eligible(articles))
     picked = pick(fresh, sc.get("top_n", 20), sc.get("per_source", 5),
                   quota=cfg.get("source_quota", {}))
     print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건")
