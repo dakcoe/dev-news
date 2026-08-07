@@ -82,6 +82,8 @@ def _one(feed: dict, limit: int) -> list[dict]:
             "description": _text(desc_tag.get_text() if desc_tag else ""),
             "source": "rss",
             "feed": name,
+            "page": bool(feed.get("page", True)),   # False = 코퍼스 전용, 페이지 미게재
+
             "upvotes": 0,
             "comments": 0,
             "published_at": _ts(pub_tag.get_text(strip=True) if pub_tag else None),

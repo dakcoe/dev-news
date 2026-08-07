@@ -28,13 +28,17 @@ feeds:
   - name: 토스 기술블로그
     url: https://toss.tech/rss.xml
   # SPEC 1.2 수집 확대 — 1B 태그 어휘 도출용 코퍼스 축적이 목적.
-  # 페이지 구성은 per_source/quota가 현행대로 통제하므로 페이지가 넘치지 않는다.
+  # page: false = candidates 로그에만 기록하고 페이지에는 싣지 않는다.
+  # (rss 기본점수 420을 업고 레딧 밈이 페이지에 실린 사고 이후 도입 — corpus-feeds-page-exclusion)
   - name: arXiv cs.AI
     url: https://rss.arxiv.org/rss/cs.AI
+    page: false
   - name: arXiv cs.CL
     url: https://rss.arxiv.org/rss/cs.CL
+    page: false
   - name: r/LocalLLaMA
     url: https://www.reddit.com/r/LocalLLaMA/.rss
+    page: false
 
 # 글이 드문 공식 블로그는 48시간으로 자르면 놓친다. 이 출처들만 창을 늘린다.
 # (한 번 실린 글은 seen.json이 막으므로 같은 글이 반복되지는 않는다)
