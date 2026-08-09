@@ -106,6 +106,12 @@ def test_tag_drawer_mobile(html):
     assert "facet open" in html or "facet.open" in html or ".facet.open" in html
 
 
+def test_facet_collapsible(html):
+    assert 'id="tagfold"' in html               # 사이드바 접기 버튼
+    assert "dev-news-facetfold" in html         # 접힘 상태 localStorage 유지
+    assert "layout fc" in html or "'fc'" in html or '"fc"' in html or "fc'" in html
+
+
 def test_tag_json_has_label_and_group(html):
     import re
     m = re.search(r"const TAGS = (\{.*?\});", html)
