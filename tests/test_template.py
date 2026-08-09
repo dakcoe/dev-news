@@ -112,26 +112,27 @@ def test_facet_collapsible(html):
     assert "layout fc" in html or "'fc'" in html or '"fc"' in html or "fc'" in html
 
 
-def test_filter_button_row(html):
-    assert "tagcp" in html                      # 보라 강조 스타일
-    assert ".tagcp{" in html
-    assert "tagrow" in html                     # 검색 바 아래 전용 줄
-    bar_fn = html.split("function barHTML()")[1].split("function ")[0]
-    assert "tagbtn" not in bar_fn
-    assert "barHTML()+tagRowHTML()" in html.replace(" ", "")
-
-
-def test_unified_filter_panel(html):
-    """unified-filter-panel: 정렬·기간·출처·안읽음·태그가 전부 패널 안에 있다."""
-    facet_fn = html.split("function facetHTML()")[1].split("\nfunction ")[0]
-    assert 'data-fs=' in facet_fn               # 정렬 라디오
-    assert 'data-fd=' in facet_fn               # 기간 라디오
-    assert 'data-f="' in facet_fn               # 출처 목록
-    assert 'id="unread"' in facet_fn            # 안 읽음 토글
-    # 소스 칩 줄과 바의 세그 컨트롤은 제거됐다
-    assert "function chipsHTML()" not in html
+def test_bar_has_dropdowns_and_filter_button(html):
+    """bar-dropdown-cleanup: 바 = 검색 + 필터(좌측·강조색) + 커스텀 드롭다운 + 안 읽음."""
     bar_fn = html.split("function barHTML()")[1].split("\nfunction ")[0]
-    assert 'data-s=' not in bar_fn and 'data-d=' not in bar_fn and 'id="unread"' not in bar_fn
+    assert "ddHTML('sortsel'" in bar_fn         # 정렬 커스텀 드롭다운
+    assert "ddHTML('daysel'" in bar_fn          # 기간 커스텀 드롭다운
+    assert 'id="unread"' in bar_fn              # 안 읽음은 패널 밖
+    assert 'id="tagbtn"' in bar_fn              # 필터 버튼은 바 안(검색 옆)
+    assert "tagcp" in bar_fn and ".cp.tagcp{" in html   # .cp보다 특이도 높은 강조색
+    assert ".ddpop{" in html and ".dditem{" in html   # 커스텀 드롭다운 스타일
+    assert "<select" not in html                # 네이티브 select 미사용
+    assert "tagRowHTML" not in html             # 전용 줄 제거
+
+
+def test_panel_has_source_and_tags_only(html):
+    facet_fn = html.split("function facetHTML()")[1].split("\nfunction ")[0]
+    assert 'data-f="' in facet_fn               # 출처 목록
+    assert 'data-ft=' in facet_fn               # 태그 목록
+    assert 'data-fs=' not in facet_fn           # 정렬은 바로 이동
+    assert 'data-fd=' not in facet_fn           # 기간은 바로 이동
+    assert 'id="unread"' not in facet_fn        # 안 읽음은 바로 이동
+    assert "function chipsHTML()" not in html
 
 
 def test_tag_json_has_label_and_group(html):

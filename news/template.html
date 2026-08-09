@@ -127,15 +127,40 @@
   .ffoot button{border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;
     cursor:pointer;color:var(--tx3)}
   .ffoot button:hover{color:var(--tx)}
-  .tagrow{display:none;margin:-8px 0 18px}   /* 소스 칩 아래 전용 줄 — 숨김 시 공간 0 */
-  .tagrow.show{display:flex}                 /* 사이드바 접힘 시 데스크톱에서도 노출 */
-  .tagcp{
-    background:#f1effc;border-color:#d9d3f6;color:#6a5cd8;font-weight:700;gap:6px;
+  /* 커스텀 드롭다운 */
+  .ddwrap{position:relative}
+  .dd{
+    display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
+    background:var(--panel);border-radius:10px;padding:9px 13px;font-size:14px;
+    font-weight:600;color:var(--tx);font-family:inherit;cursor:pointer;transition:.13s;
   }
-  .tagcp svg{width:14px;height:14px;stroke-width:2}
-  .tagcp:hover{background:#e9e5fb;border-color:var(--pri);color:#5a4bd4}
-  .tagcp.has{background:var(--pri);border-color:var(--pri);color:#fff}
-  .tagcp.has:hover{background:#6a5cd8;color:#fff}
+  .dd:hover{border-color:#cfcfd8}
+  .dd.open{border-color:var(--pri);box-shadow:0 0 0 3px rgba(124,110,230,.12)}
+  .dd svg{width:12px;height:12px;stroke-width:2.4;color:var(--tx3)}
+  .ddpop{
+    position:absolute;top:calc(100% + 6px);left:0;z-index:40;min-width:132px;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 10px 28px rgba(20,20,45,.13);padding:5px;
+    display:flex;flex-direction:column;
+  }
+  .dditem{
+    display:flex;align-items:center;gap:8px;border:none;background:none;
+    font-family:inherit;font-size:13.5px;color:var(--tx);padding:8px 10px;
+    border-radius:8px;cursor:pointer;text-align:left;white-space:nowrap;
+  }
+  .dditem:hover{background:#f4f3fb}
+  .dditem.on{color:var(--pri);font-weight:700}
+  .dditem .rdo{width:13px;height:13px;border-radius:50%;border:1.6px solid #c9c9d4;background:#fff;flex:none}
+  .dditem.on .rdo{border:4px solid var(--pri)}
+
+  /* 필터 버튼 — 검색 바로 옆(좌측), 처음부터 보라색, 호버 시 더 어둡게.
+     .cp 기본 규칙이 이 아래에 정의되므로 .cp.tagcp로 특이도를 올려 이긴다. */
+  .cp.tagcp{
+    background:var(--pri);border-color:var(--pri);color:#fff;font-weight:700;gap:6px;
+    padding:9px 13px;font-size:14px;      /* 드롭다운(.dd)과 같은 크기 */
+  }
+  .cp.tagcp svg{width:14px;height:14px;stroke-width:2}
+  .cp.tagcp:hover{background:#6152cc;border-color:#6152cc;color:#fff}
   .tagcp .bn{background:rgba(255,255,255,.25);color:#fff;font-size:11px;font-weight:700;
     border-radius:10px;padding:0 6px;min-width:18px;text-align:center}
   .scrim{position:fixed;inset:0;background:rgba(20,20,35,.32);z-index:59}
@@ -150,7 +175,6 @@
       box-shadow:8px 0 28px rgba(20,20,45,.14);
     }
     .facet.open{transform:none}
-    .tagrow{display:flex}
   }
   @media (prefers-reduced-motion:reduce){ .facet{transition:none} }
   .cp{
@@ -327,6 +351,9 @@ try{
   }
 }catch(e){}
 function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
+let openDrop=null;                     // 열려 있는 커스텀 드롭다운 id (렌더 간 비유지)
+document.addEventListener('click', ()=>{ if(openDrop){ openDrop=null; render(); } });
+
 /* 사이드바 접힘 상태 (데스크톱) — 재방문 시 유지 */
 const FOLD_KEY='dev-news-facetfold';
 let facetFold=false;
@@ -451,9 +478,9 @@ function archRowHTML(e){
     + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
 }
 
-/* 활성 필터 수 — 정렬은 보기 방식이라 세지 않는다 */
+/* 활성 필터 수 = 패널 항목(태그·출처)만 — 기간·안읽음·정렬은 바에서 직접 보인다 */
 function activeFilterCount(){
-  return tagSel.size + (filter!=='all'?1:0) + (days!==0?1:0) + (unreadOnly?1:0);
+  return tagSel.size + (filter!=='all'?1:0);
 }
 
 /* 통합 필터 패널 (unified-filter-panel): 정렬 · 기간 · 읽음 · 출처 · 태그를 한곳에.
@@ -471,23 +498,6 @@ function facetHTML(){
   let h='<aside class="facet'+(facetOpen?' open':'')+'" id="facet">'
     +'<div class="fhead"><span class="ft">필터</span>'
     +'<button id="tagfold" title="사이드바 접기">◂ 접기</button></div>';
-
-  h+='<div class="fgh">정렬</div>';
-  [['batch','수집순'],['new','최신순'],['src','출처별']].forEach(([v,l])=>{
-    h+='<button class="fitem'+(sort===v?' on':'')+'" data-fs="'+v+'">'
-      +'<span class="rdo"></span><span class="fl">'+l+'</span></button>';
-  });
-
-  h+='<div class="fgh">기간</div>';
-  [[1,'오늘'],[3,'3일'],[7,'7일'],[0,'전체']].forEach(([v,l])=>{
-    h+='<button class="fitem'+(days===v?' on':'')+'" data-fd="'+v+'">'
-      +'<span class="rdo"></span><span class="fl">'+l+'</span></button>';
-  });
-
-  h+='<div class="fgh">읽음</div>'
-    +'<button class="fitem'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span>'
-    +'<span class="fl">안 읽음만</span>'
-    +'<span class="fn">'+DATA.filter(d=>!read.has(d.url)).length+'</span></button>';
 
   h+='<div class="fgh">출처</div>'
     +'<button class="fitem'+(filter==='all'?' on':'')+'" data-f="all">'
@@ -514,19 +524,30 @@ function facetHTML(){
   return h;
 }
 
-/* 필터 진입점 — 검색 바 아래 전용 줄 (패널 접힘/모바일에서만 노출) */
-function tagRowHTML(){
-  const n = activeFilterCount();
-  return '<div class="chips tagrow'+(facetFold?' show':'')+'">'
-    +'<button class="cp tagcp'+(n?' has':'')+'" id="tagbtn">'
-    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5h18M6 12h12M10 19h4"/></svg>'
-    +'필터'+(n?' <span class="bn">'+n+'</span>':'')+'</button></div>';
+/* 커스텀 드롭다운 — 네이티브 select 대신 디자인 통일 (bar-dropdown-cleanup 피드백) */
+function ddHTML(id, cur, opts){
+  const curLabel = (opts.find(o=>String(o[0])===String(cur))||opts[0])[1];
+  let h='<div class="ddwrap"><button class="dd'+(openDrop===id?' open':'')+'" id="'+id+'">'+curLabel
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>';
+  if(openDrop===id){
+    h+='<div class="ddpop">'+opts.map(([v,l])=>
+      '<button class="dditem'+(String(cur)===String(v)?' on':'')+'" data-dd="'+id+'" data-v="'+v+'">'
+      +'<span class="rdo"></span>'+l+'</button>').join('')+'</div>';
+  }
+  return h+'</div>';
 }
 
 function barHTML(){
-  // 선택 컨트롤은 전부 필터 패널(facetHTML)로 이동 — 바에는 검색만 남긴다
+  // 바 = 검색 + 필터(좌측·강조색) + 정렬/기간 커스텀 드롭다운 + 안 읽음
+  const n = activeFilterCount();
   return '<div class="bar">'
    + '<div class="search">'+I.sch+'<input id="q" placeholder="검색 (아카이브 포함)…" value="'+q.replace(/"/g,'&quot;')+'"></div>'
+   + '<button class="cp tagcp'+(n?' has':'')+'" id="tagbtn">'
+   +   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5h18M6 12h12M10 19h4"/></svg>'
+   +   '필터'+(n?' <span class="bn">'+n+'</span>':'')+'</button>'
+   + ddHTML('sortsel', sort, [['batch','수집순'],['new','최신순'],['src','출처별']])
+   + ddHTML('daysel', days, [[1,'오늘'],[3,'3일'],[7,'7일'],[0,'전체 기간']])
+   + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span> 안 읽음</button>'
    + '</div>';
 }
 
@@ -619,7 +640,7 @@ function render(){
     +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+savedMap.size+'건</span></div></div>';
 
   const items=visible();
-  h+=barHTML()+tagRowHTML();
+  h+=barHTML();
 
   // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
   h+='<div class="layout'+(facetFold?' fc':'')+'">'+facetHTML()
@@ -660,8 +681,14 @@ function bind(){
   const qi=document.getElementById('q');
   if(qi) qi.oninput=e=>{q=e.target.value; render(); const n=document.getElementById('q'); n.focus();
                         n.setSelectionRange(n.value.length,n.value.length);};
-  viewEl.querySelectorAll('.fitem[data-fs]').forEach(b=>b.onclick=()=>{sort=b.dataset.fs; render();});
-  viewEl.querySelectorAll('.fitem[data-fd]').forEach(b=>b.onclick=()=>{days=+b.dataset.fd; render();});
+  viewEl.querySelectorAll('.dd').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); openDrop = openDrop===b.id ? null : b.id; render();
+  });
+  viewEl.querySelectorAll('.dditem').forEach(b=>b.onclick=e=>{
+    e.stopPropagation();
+    if(b.dataset.dd==='sortsel') sort=b.dataset.v; else days=+b.dataset.v;
+    openDrop=null; render();
+  });
   const ub=document.getElementById('unread');
   if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; render();};
   viewEl.querySelectorAll('.fitem[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
@@ -670,14 +697,14 @@ function bind(){
     e.stopPropagation(); toggleTag(b.dataset.tg);   // 행의 태그 클릭 = 선택에 추가/해제
   });
   const tc=document.getElementById('tagclear');
-  if(tc) tc.onclick=()=>{   // 초기화 = 필터 전체 리셋 (정렬은 보기 방식이라 유지)
-    tagSel.clear(); persistTags(); filter='all'; days=0; unreadOnly=false; render();
+  if(tc) tc.onclick=()=>{   // 초기화 = 패널 항목(태그·출처)만 리셋
+    tagSel.clear(); persistTags(); filter='all'; render();
   };
   const tb=document.getElementById('tagbtn');
   if(tb) tb.onclick=()=>{
-    // 좁은 화면 = 드로어 열기 / 데스크톱(접힘 상태) = 사이드바 펼치기
+    // 좁은 화면 = 드로어 열기 / 데스크톱 = 패널 접기/펼치기 토글
     if(window.matchMedia('(max-width:900px)').matches){ facetOpen=true; render(); }
-    else setFold(false);
+    else setFold(!facetFold);
   };
   const tf=document.getElementById('tagfold');
   if(tf) tf.onclick=()=>setFold(true);
