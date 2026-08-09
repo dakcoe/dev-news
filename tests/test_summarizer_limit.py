@@ -72,8 +72,31 @@ def test_hanja_triggers_regeneration(monkeypatch):
     assert not summarizer.HANJA_RE.search(out[0]["summary"])
 
 
+def test_hanja_repair_translates_and_replaces(monkeypatch):
+    """hanja-translate-fallback: 재생성으로도 한자가 남으면 번역 치환으로 복구.
+
+    같은 한자(超越)가 여러 번 나와도 매핑 하나로 일괄 치환되는지 확인한다.
+    흐름: 최초(한자) → 재생성(한자) → 치환 번역 호출 → 게시.
+    """
+    hanja_body = "번역제목: GPT를 超越하기\n요약: 오픈 모델이 검색 성능을 超越했다.\n왜중요: 크다."
+    responses = [hanja_body, hanja_body, "超越=초월"]
+    calls = []
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
+    monkeypatch.setattr(summarizer.requests, "post",
+                        lambda *a, **k: calls.append(1) or FakeResp(200, responses[len(calls) - 1]))
+
+    out = summarizer.summarize_all(list(ARTICLES[:1]), provider="groq", max_calls=10)
+
+    assert len(calls) == 3
+    assert out[0]["llm_done"] is True
+    assert out[0]["ko_title"] == "GPT를 초월하기"
+    assert out[0]["summary"] == "오픈 모델이 검색 성능을 초월했다."
+    assert not summarizer.HANJA_RE.search(out[0]["ko_title"] + out[0]["summary"])
+
+
 def test_persistent_hanja_not_published(monkeypatch):
-    """fix-hanja-residual: 재생성을 다 써도 한자가 남으면 수용하지 않고 미게시.
+    """치환 번역까지 실패하면(매핑 없음/한자 재출력) 수용하지 않고 미게시.
 
     seen에 안 들어가므로 다음 실행에서 재시도된다 (SPEC 1.6 부분 실패와 동일 경로).
     """

@@ -42,8 +42,20 @@ SYSTEM = ("너는 한국인 개발자를 위한 기술 뉴스 브리핑 편집�
           "출력에는 한글·영문·숫자·문장부호만 쓴다. 중국어 한자를 절대 쓰지 마라 — 한자어는 반드시 한글로 적는다 (예: 离任(X)→물러남(O), 超越(X)→뛰어넘기(O)).")
 
 # Llama 계열은 한국어 생성 중 한자어를 중국어 문자로 출력하는 버릇이 있다.
-# 프롬프트 금지만으로는 가끔 새므로, 응답에서 감지되면 1회 재생성한다.
+# 프롬프트 금지만으로는 가끔 새므로: 감지 시 재생성 1회 → 그래도 남으면
+# 한자만 추출해 번역·일괄 치환 (hanja-translate-fallback) → 그래도 남으면 미게시.
 HANJA_RE = re.compile(r"[㐀-䶿一-鿿豈-﫿]")
+HANJA_RUN_RE = re.compile(HANJA_RE.pattern + "+")   # 연속 한자 런 (단어 단위 추출용)
+
+HANJA_FIX_PROMPT = """아래 한국어 문장에 중국어 한자가 잘못 섞여 있다. 나열된 한자 단어를 문맥에 맞는 자연스러운 한국어로 번역해라.
+각 줄에 "한자=한국어" 형식으로만 출력하고 다른 말은 절대 붙이지 마라.
+
+[문맥]
+{context}
+
+[번역할 단어]
+{words}
+"""
 
 # 요약 원칙 (SPEC 1.3): 제목 복창 금지. 제목에 없는 새 정보만.
 # 독자는 한 명으로 고정 — 백엔드·AI를 다루는 개발자가 자기 일에 쓸지 판단할 수 있게.
@@ -142,6 +154,39 @@ def _call(prompt: str, provider: str, model: str, api_key: str) -> str:
     return _call_openai_compatible(prompt, model, api_key, ENDPOINTS[provider])
 
 
+def _translate_hanja(parsed: dict, provider: str, model: str, api_key: str) -> dict | None:
+    """잔존 한자를 추출·번역해 일괄 치환한다. 실패하면 None (호출자는 미게시 처리).
+
+    같은 한자가 여러 번 나와도 매핑 하나로 모두 치환된다. 매핑이 불완전하거나
+    번역값에 또 한자가 있으면 포기하고, 치환 후에도 전체를 재검증한다.
+    """
+    joined = " ".join(filter(None, [parsed.get("ko_title"), parsed.get("summary"),
+                                    parsed.get("why")]))
+    words = list(dict.fromkeys(HANJA_RUN_RE.findall(joined)))   # 중복 제거, 순서 유지
+    reply = _call(HANJA_FIX_PROMPT.format(context=joined[:600], words="\n".join(words)),
+                  provider, model, api_key)
+
+    mapping = {}
+    for line in reply.splitlines():
+        src, _, dst = line.partition("=")
+        src, dst = _clean(src).strip(), dst.strip()
+        if src in words and dst and not HANJA_RE.search(dst):
+            mapping[src] = dst
+    if len(mapping) < len(words):
+        return None
+
+    out = dict(parsed)
+    for key in ("ko_title", "summary", "why"):
+        value = out.get(key)
+        if value:
+            for src, dst in mapping.items():
+                value = value.replace(src, dst)
+            out[key] = value
+
+    fixed = " ".join(filter(None, [out.get("ko_title"), out.get("summary"), out.get("why")]))
+    return None if HANJA_RE.search(fixed) else out
+
+
 # ---------------------------------------------------------------- public
 MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 서킷 브레이커 (SPEC 1.6)
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
@@ -193,13 +238,22 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if candidate["ko_title"] or candidate["summary"]:
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
                                                     candidate["summary"], candidate["why"]]))
-                    # 한자는 절대 수용하지 않는다 (fix-hanja-residual) — 재생성을 다
-                    # 쓰면 미게시(llm_done=False)로 두어 다음 실행에서 재시도된다.
+                    # 한자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회
+                    # → 그래도 남으면 미게시(llm_done=False, 다음 실행에서 재시도).
                     if HANJA_RE.search(joined):
-                        print("  · 한자 섞임 — 재생성" if attempt < 2
-                              else "  · 한자 잔존 — 이번 회차 미게시 (다음 실행에서 재시도)")
-                        attempt += 1
-                        continue
+                        if attempt < 1:
+                            print("  · 한자 섞임 — 재생성")
+                            attempt += 1
+                            continue
+                        if calls < max_calls:
+                            calls += 1
+                            fixed = _translate_hanja(candidate, provider, model, api_key)
+                            if fixed is not None:
+                                print("  · 한자 번역 치환 성공")
+                                parsed = fixed
+                                break
+                        print("  · 한자 잔존 — 이번 회차 미게시 (다음 실행에서 재시도)")
+                        break
                     parsed = candidate
                     break
                 print(f"  · 파싱 실패, 재시도 {attempt + 1}")
