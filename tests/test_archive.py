@@ -75,4 +75,5 @@ def test_search_index_light(tmp_path):
         [{"url": "https://a", "title": "t", "ko_title": "번역", "source": "rss",
           "batch": "2026-08-06T09:00:00+09:00", "summary": "긴 요약" * 100}], path=path)
     idx = json.load(open(path, encoding="utf-8"))
-    assert idx == [{"t": "번역", "u": "https://a", "m": "2026-08", "s": "rss", "d": "2026-08-06"}]
+    assert idx == [{"t": "번역", "u": "https://a", "m": "2026-08", "s": "rss",
+                    "g": [], "d": "2026-08-06"}]

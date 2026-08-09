@@ -83,6 +83,12 @@
   .sg:hover{color:var(--tx)}
   .sg.on{background:var(--panel);color:var(--tx);box-shadow:0 1px 2px rgba(0,0,0,.07);font-weight:700}
   .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+  .tagchips{margin-bottom:10px}
+  .tagchips .cp{padding:5px 11px;font-size:13px;border-radius:8px}
+  .tg{border:none;background:#f0f0f5;color:var(--tx3);font-size:11.5px;font-weight:600;
+      padding:2px 8px;border-radius:6px;cursor:pointer;transition:.12s;font-family:inherit}
+  .tg:hover{background:#e4e4ec;color:var(--tx2)}
+  .row.rd .tg{opacity:.55}
   .cp{
     display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
     background:var(--panel);color:var(--tx2);padding:7px 14px;border-radius:9px;
@@ -237,11 +243,17 @@ const COLLECTED = "__COLLECTED__";
 const COLLECTED_LABEL = "__COLLECTED_LABEL__";
 
 const SRC = __SRC_JSON__;
+const TAGS = __TAG_JSON__;   // 닫힌 태그 어휘 id → 한글 라벨 (SPEC 1B)
 
 const DATA = __DATA_JSON__;
 
 /* ---------------- state ---------------- */
 let view='news', sort='batch', filter='all', q='', days=0, unreadOnly=false;   // days=0 이면 전체
+/* 태그 필터 (SPEC 3.3 — 태그가 1차 필터, 선택은 localStorage에 저장해 재방문 시 복원) */
+const TAGF_KEY='dev-news-tagfilter';
+let tagFilter='all';
+try{ const t=localStorage.getItem(TAGF_KEY); if(t && (t==='all'||TAGS[t])) tagFilter=t; }catch(e){}
+function setTagFilter(t){ tagFilter=t; try{ localStorage.setItem(TAGF_KEY,t); }catch(e){} render(); }
 const read = new Set();
 const SAVE_KEY='dev-news-saved';
 const READ_KEY='dev-news-read';
@@ -318,8 +330,9 @@ function visible(){
   if(view!=='saved') a=a.filter(d=>inDays(d, days));
   if(unreadOnly) a=a.filter(d=>!read.has(d.url));
   if(filter!=='all') a=a.filter(d=>d.src===filter);
+  if(tagFilter!=='all') a=a.filter(d=>(d.tags||[]).includes(tagFilter));
   if(q){ const s=q.toLowerCase();
-    a=a.filter(d=>(d.title+d.snip+d.from).toLowerCase().includes(s)); }
+    a=a.filter(d=>(d.title+d.snip+d.from+(d.tags||[]).map(t=>TAGS[t]||t).join(' ')).toLowerCase().includes(s)); }
   return sorted(a);
 }
 
@@ -329,6 +342,9 @@ function rowHTML(d){
   if(d.src==='github' && d.delta) meta+='<span class="sep">·</span><span class="num">+'+d.delta.toLocaleString()+'</span>';
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
+  (d.tags||[]).slice(0,4).forEach(t=>{
+    meta+='<button class="tg" data-tg="'+t+'">'+(TAGS[t]||t)+'</button>';
+  });
   const isRead = read.has(d.url);
   return '<div class="row'+(cur===d.i?' act':'')+(isRead?' rd':'')+'" data-i="'+d.i+'">'
     + '<button class="ck'+(savedMap.has(d.url)?' on':'')+'" data-ck="'+d.i+'" title="보관">'+I.chk+'</button>'
@@ -353,6 +369,18 @@ function archRowHTML(e){
     + '<div class="mid"><span class="rt">'+e.t+'</span>'
     + '<div class="rm"><span class="s">'+((SRC[e.s]||{}).name||e.s)+'</span>'
     + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
+}
+
+/* 태그 칩 — 1차 필터 (SPEC 3.3). 현재 기간 범위 내 건수를 함께 표시 */
+function tagChipsHTML(){
+  const scope = DATA.filter(d=>inDays(d, days));
+  const c={}; scope.forEach(d=>(d.tags||[]).forEach(t=>c[t]=(c[t]||0)+1));
+  let h='<button class="cp'+(tagFilter==='all'?' on':'')+'" data-tf="all">전체 태그</button>';
+  Object.keys(TAGS).filter(t=>c[t]).forEach(t=>{
+    h+='<button class="cp'+(tagFilter===t?' on':'')+'" data-tf="'+t+'">'
+      +TAGS[t]+' <span class="n">'+c[t]+'</span></button>';
+  });
+  return '<div class="chips tagchips">'+h+'</div>';
 }
 
 function chipsHTML(){
@@ -474,7 +502,7 @@ function render(){
     +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+savedMap.size+'건</span></div></div>';
 
   const items=visible();
-  h+=barHTML()+chipsHTML();
+  h+=barHTML()+tagChipsHTML()+chipsHTML();
   if(!items.length){
     h+='<div class="none">'+(days?'이 기간에는 기사가 없습니다. 오른쪽 위 「전체」를 눌러보세요.'
                                   :'조건에 맞는 기사가 없습니다.')+'</div>';
@@ -514,6 +542,10 @@ function bind(){
   const ub=document.getElementById('unread');
   if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; render();};
   viewEl.querySelectorAll('.cp[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
+  viewEl.querySelectorAll('.cp[data-tf]').forEach(b=>b.onclick=()=>setTagFilter(b.dataset.tf));
+  viewEl.querySelectorAll('.tg[data-tg]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); setTagFilter(b.dataset.tg);   // 행의 태그 클릭 = 그 태그로 필터
+  });
   viewEl.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); toggleSave(DATA[+b.dataset.ck]);});
   viewEl.querySelectorAll('[data-un]').forEach(b=>b.onclick=e=>{
