@@ -72,6 +72,25 @@ def test_hanja_triggers_regeneration(monkeypatch):
     assert not summarizer.HANJA_RE.search(out[0]["summary"])
 
 
+def test_persistent_hanja_not_published(monkeypatch):
+    """fix-hanja-residual: 재생성을 다 써도 한자가 남으면 수용하지 않고 미게시.
+
+    seen에 안 들어가므로 다음 실행에서 재시도된다 (SPEC 1.6 부분 실패와 동일 경로).
+    """
+    calls = []
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
+    monkeypatch.setattr(summarizer.requests, "post",
+                        lambda *a, **k: calls.append(1)
+                        or FakeResp(200, "번역제목: 제프 딘 离任\n요약: 리더십 교체.\n왜중요: 크다."))
+
+    out = summarizer.summarize_all(list(ARTICLES[:1]), provider="groq", max_calls=10)
+
+    assert len(calls) == 3                       # 최초 1회 + 재생성 2회, 그리고 포기
+    assert out[0]["llm_done"] is False
+    assert "ko_title" not in out[0] or not summarizer.HANJA_RE.search(out[0].get("ko_title") or "")
+
+
 def test_no_new_info_becomes_empty_summary(monkeypatch):
     monkeypatch.setenv("GROQ_API_KEY", "test-key")
     monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
