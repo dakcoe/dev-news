@@ -83,3 +83,35 @@ def test_archive_search_wired(html):
 def test_saved_snapshot_migration(html):
     assert "savedMap" in html
     assert "typeof item === 'string'" in html   # URL 배열 → 객체 승격
+
+
+# ---- apply-tag-facet-ui: 태그 패싯 사이드바(F) + 모바일 드로어(I) ----
+
+def test_tag_facet_sidebar(html):
+    assert 'id="facet"' in html                 # 그룹 패싯 사이드바
+    assert "facetHTML" in html
+    assert ".fill" in html                      # 분포 막대
+    assert "tagchips" not in html               # 구 태그 칩 한 줄 제거
+
+
+def test_tag_multi_select_persisted(html):
+    assert "tagSel" in html                     # 다중 선택 Set
+    assert "dev-news-tagsel" in html            # localStorage 저장 (SPEC 3.3)
+    assert "dev-news-tagfilter" in html         # 구 단일 키 마이그레이션
+
+
+def test_tag_drawer_mobile(html):
+    assert 'id="tagbtn"' in html                # 좁은 화면용 "태그" 버튼
+    assert "scrim" in html                      # 드로어 스크림
+    assert "facet open" in html or "facet.open" in html or ".facet.open" in html
+
+
+def test_tag_json_has_label_and_group(html):
+    import re
+    m = re.search(r"const TAGS = (\{.*?\});", html)
+    assert m, "TAGS 상수가 없음"
+    tags = json.loads(m.group(1))
+    assert tags["ai"]["label"]
+    assert tags["ai"]["group"]
+    groups = {v["group"] for v in tags.values()}
+    assert len(groups) == 3                     # AI / 개발 / 그 외

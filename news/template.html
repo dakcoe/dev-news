@@ -83,12 +83,57 @@
   .sg:hover{color:var(--tx)}
   .sg.on{background:var(--panel);color:var(--tx);box-shadow:0 1px 2px rgba(0,0,0,.07);font-weight:700}
   .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
-  .tagchips{margin-bottom:10px}
-  .tagchips .cp{padding:5px 11px;font-size:13px;border-radius:8px}
   .tg{border:none;background:#f0f0f5;color:var(--tx3);font-size:11.5px;font-weight:600;
       padding:2px 8px;border-radius:6px;cursor:pointer;transition:.12s;font-family:inherit}
   .tg:hover{background:#e4e4ec;color:var(--tx2)}
+  .tg.hit{background:#e9e5fb;color:#6a5cd8}
   .row.rd .tg{opacity:.55}
+
+  /* ---------------- 태그 패싯 사이드바 (시안 F) + 모바일 드로어 (시안 I) ---------------- */
+  .layout{display:flex;gap:16px;align-items:flex-start}
+  .feed{flex:1;min-width:0}
+  .facet{
+    flex:0 0 200px;position:sticky;top:12px;background:var(--panel);
+    border:1px solid var(--line);border-radius:14px;padding:12px 8px;
+    max-height:calc(100vh - 24px);overflow-y:auto;
+  }
+  .fgh{font-size:10.5px;font-weight:800;color:var(--tx3);letter-spacing:.09em;margin:8px 8px 3px}
+  .fgh:first-child{margin-top:0}
+  .fitem{
+    display:flex;align-items:center;gap:8px;width:100%;padding:5px 8px;border-radius:8px;
+    border:none;background:none;font-family:inherit;font-size:12.5px;color:var(--tx);
+    cursor:pointer;text-align:left;position:relative;overflow:hidden;
+  }
+  .fitem:hover{background:#f4f3fb}
+  .fitem .fill{position:absolute;left:0;top:0;bottom:0;background:#f1effc;border-radius:8px;z-index:0}
+  .fitem.on .fill{background:#e4dffa}
+  .fitem>*{position:relative;z-index:1}
+  .fitem .ckm{width:14px;height:14px;border:1.6px solid #c9c9d4;border-radius:4px;background:#fff;
+    display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .fitem .ckm svg{width:9px;height:9px;color:#fff;stroke-width:3.4;display:none}
+  .fitem.on .ckm{background:var(--pri);border-color:var(--pri)}
+  .fitem.on .ckm svg{display:block}
+  .fitem .fn{margin-left:auto;color:var(--tx3);font-size:11px;font-variant-numeric:tabular-nums}
+  .ffoot{border-top:1px solid var(--line2);margin-top:8px;padding:7px 8px 2px;
+    display:flex;justify-content:space-between;font-size:12px}
+  .ffoot .fsel{color:var(--pri);font-weight:700}
+  .ffoot button{border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;
+    cursor:pointer;color:var(--tx3)}
+  .ffoot button:hover{color:var(--tx)}
+  #tagbtn{display:none}
+  #tagbtn .bn{background:var(--pri);color:#fff;font-size:11px;font-weight:700;
+    border-radius:10px;padding:0 6px;min-width:18px;text-align:center}
+  .scrim{position:fixed;inset:0;background:rgba(20,20,35,.32);z-index:59}
+  @media (max-width:900px){
+    .facet{
+      position:fixed;left:0;top:0;bottom:0;width:240px;max-height:none;z-index:60;
+      border-radius:0 14px 14px 0;transform:translateX(-105%);transition:.22s;
+      box-shadow:8px 0 28px rgba(20,20,45,.14);
+    }
+    .facet.open{transform:none}
+    #tagbtn{display:inline-flex}
+  }
+  @media (prefers-reduced-motion:reduce){ .facet{transition:none} }
   .cp{
     display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
     background:var(--panel);color:var(--tx2);padding:7px 14px;border-radius:9px;
@@ -249,11 +294,22 @@ const DATA = __DATA_JSON__;
 
 /* ---------------- state ---------------- */
 let view='news', sort='batch', filter='all', q='', days=0, unreadOnly=false;   // days=0 이면 전체
-/* 태그 필터 (SPEC 3.3 — 태그가 1차 필터, 선택은 localStorage에 저장해 재방문 시 복원) */
-const TAGF_KEY='dev-news-tagfilter';
-let tagFilter='all';
-try{ const t=localStorage.getItem(TAGF_KEY); if(t && (t==='all'||TAGS[t])) tagFilter=t; }catch(e){}
-function setTagFilter(t){ tagFilter=t; try{ localStorage.setItem(TAGF_KEY,t); }catch(e){} render(); }
+/* 태그 필터 (SPEC 3.3 — 태그가 1차 필터, 다중 선택(OR), localStorage에 저장해 재방문 시 복원) */
+const TAGSEL_KEY='dev-news-tagsel';
+const tagSel = new Set();
+let facetOpen = false;                 // 좁은 화면 드로어 열림 상태
+try{
+  const raw = localStorage.getItem(TAGSEL_KEY);
+  if(raw) JSON.parse(raw).forEach(t=>{ if(TAGS[t]) tagSel.add(t); });
+  else{
+    // 구 단일 선택 키(dev-news-tagfilter) 마이그레이션
+    const old = localStorage.getItem('dev-news-tagfilter');
+    if(old && TAGS[old]) tagSel.add(old);
+  }
+}catch(e){}
+function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
+function toggleTag(t){ tagSel.has(t) ? tagSel.delete(t) : tagSel.add(t); persistTags(); render(); }
+function tagLabel(t){ return (TAGS[t]||{}).label || t; }
 const read = new Set();
 const SAVE_KEY='dev-news-saved';
 const READ_KEY='dev-news-read';
@@ -330,9 +386,9 @@ function visible(){
   if(view!=='saved') a=a.filter(d=>inDays(d, days));
   if(unreadOnly) a=a.filter(d=>!read.has(d.url));
   if(filter!=='all') a=a.filter(d=>d.src===filter);
-  if(tagFilter!=='all') a=a.filter(d=>(d.tags||[]).includes(tagFilter));
+  if(tagSel.size) a=a.filter(d=>(d.tags||[]).some(t=>tagSel.has(t)));   // 다중 선택 = OR
   if(q){ const s=q.toLowerCase();
-    a=a.filter(d=>(d.title+d.snip+d.from+(d.tags||[]).map(t=>TAGS[t]||t).join(' ')).toLowerCase().includes(s)); }
+    a=a.filter(d=>(d.title+d.snip+d.from+(d.tags||[]).map(tagLabel).join(' ')).toLowerCase().includes(s)); }
   return sorted(a);
 }
 
@@ -343,7 +399,7 @@ function rowHTML(d){
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
   (d.tags||[]).slice(0,4).forEach(t=>{
-    meta+='<button class="tg" data-tg="'+t+'">'+(TAGS[t]||t)+'</button>';
+    meta+='<button class="tg'+(tagSel.has(t)?' hit':'')+'" data-tg="'+t+'">'+tagLabel(t)+'</button>';
   });
   const isRead = read.has(d.url);
   return '<div class="row'+(cur===d.i?' act':'')+(isRead?' rd':'')+'" data-i="'+d.i+'">'
@@ -371,16 +427,31 @@ function archRowHTML(e){
     + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
 }
 
-/* 태그 칩 — 1차 필터 (SPEC 3.3). 현재 기간 범위 내 건수를 함께 표시 */
-function tagChipsHTML(){
+/* 태그 패싯 (시안 F — 1차 필터, SPEC 3.3): 그룹 헤더 + 체크박스 + 분포 막대.
+   좁은 화면에서는 같은 마크업이 드로어(시안 I)로 전환된다 (CSS만 다름). */
+function facetHTML(){
   const scope = DATA.filter(d=>inDays(d, days));
   const c={}; scope.forEach(d=>(d.tags||[]).forEach(t=>c[t]=(c[t]||0)+1));
-  let h='<button class="cp'+(tagFilter==='all'?' on':'')+'" data-tf="all">전체 태그</button>';
-  Object.keys(TAGS).filter(t=>c[t]).forEach(t=>{
-    h+='<button class="cp'+(tagFilter===t?' on':'')+'" data-tf="'+t+'">'
-      +TAGS[t]+' <span class="n">'+c[t]+'</span></button>';
+  const max = Math.max(1, ...Object.values(c));
+  const groups = {};
+  Object.entries(TAGS).forEach(([id,meta])=>{ (groups[meta.group]=groups[meta.group]||[]).push(id); });
+  const order = ['AI','개발','그 외'].filter(g=>groups[g])
+    .concat(Object.keys(groups).filter(g=>!['AI','개발','그 외'].includes(g)));
+  let h='<aside class="facet'+(facetOpen?' open':'')+'" id="facet">';
+  order.forEach(g=>{
+    h+='<div class="fgh">'+g+'</div>';
+    groups[g].forEach(t=>{
+      const n=c[t]||0;
+      // 라벨은 반드시 span으로 감싼다 — 맨몸 텍스트 노드는 .fill 막대에 가려진다
+      h+='<button class="fitem'+(tagSel.has(t)?' on':'')+'" data-ft="'+t+'">'
+        +'<span class="fill" style="width:'+Math.round(n/max*100)+'%"></span>'
+        +'<span class="ckm">'+I.chk+'</span><span class="fl">'+TAGS[t].label+'</span>'
+        +'<span class="fn">'+n+'</span></button>';
+    });
   });
-  return '<div class="chips tagchips">'+h+'</div>';
+  h+='<div class="ffoot"><span class="fsel">'+(tagSel.size?tagSel.size+'개 선택':'')+'</span>'
+    +'<button id="tagclear">초기화</button></div></aside>';
+  return h;
 }
 
 function chipsHTML(){
@@ -410,6 +481,7 @@ function barHTML(){
    +   '<button class="sg'+(days===0?' on':'')+'" data-d="0">전체</button>'
    + '</div>'
    + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span> 안 읽음</button>'
+   + '<button class="cp" id="tagbtn">태그'+(tagSel.size?' <span class="bn">'+tagSel.size+'</span>':'')+'</button>'
    + '</div>';
 }
 
@@ -502,7 +574,11 @@ function render(){
     +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+savedMap.size+'건</span></div></div>';
 
   const items=visible();
-  h+=barHTML()+tagChipsHTML()+chipsHTML();
+  h+=barHTML()+chipsHTML();
+
+  // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
+  h+='<div class="layout">'+facetHTML()+(facetOpen?'<div class="scrim" id="scrim"></div>':'')
+    +'<div class="feed">';
   if(!items.length){
     h+='<div class="none">'+(days?'이 기간에는 기사가 없습니다. 오른쪽 위 「전체」를 눌러보세요.'
                                   :'조건에 맞는 기사가 없습니다.')+'</div>';
@@ -529,6 +605,7 @@ function render(){
     else if(INDEX==='loading'){ h+='<div class="archead">아카이브 검색 중…</div>'; }
     else if(m && m.length){ h+='<div class="archead">지난 기사 (아카이브) '+m.length+'건</div>'+m.map(archRowHTML).join(''); }
   }
+  h+='</div></div>';
 
   viewEl.innerHTML=h; bind();
 }
@@ -542,10 +619,16 @@ function bind(){
   const ub=document.getElementById('unread');
   if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; render();};
   viewEl.querySelectorAll('.cp[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
-  viewEl.querySelectorAll('.cp[data-tf]').forEach(b=>b.onclick=()=>setTagFilter(b.dataset.tf));
+  viewEl.querySelectorAll('.fitem[data-ft]').forEach(b=>b.onclick=()=>toggleTag(b.dataset.ft));
   viewEl.querySelectorAll('.tg[data-tg]').forEach(b=>b.onclick=e=>{
-    e.stopPropagation(); setTagFilter(b.dataset.tg);   // 행의 태그 클릭 = 그 태그로 필터
+    e.stopPropagation(); toggleTag(b.dataset.tg);   // 행의 태그 클릭 = 선택에 추가/해제
   });
+  const tc=document.getElementById('tagclear');
+  if(tc) tc.onclick=()=>{ tagSel.clear(); persistTags(); render(); };
+  const tb=document.getElementById('tagbtn');
+  if(tb) tb.onclick=()=>{ facetOpen=true; render(); };
+  const sc=document.getElementById('scrim');
+  if(sc) sc.onclick=()=>{ facetOpen=false; render(); };
   viewEl.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); toggleSave(DATA[+b.dataset.ck]);});
   viewEl.querySelectorAll('[data-un]').forEach(b=>b.onclick=e=>{

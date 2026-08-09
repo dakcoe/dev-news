@@ -102,7 +102,8 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
             .replace("__DATA_JSON__", json.dumps(to_view_model(articles), ensure_ascii=False))
             .replace("__SRC_JSON__", json.dumps(sources, ensure_ascii=False))
             .replace("__TAG_JSON__", json.dumps(
-                {tid: spec["label"] for tid, spec in tag_vocab.VOCAB.items()},
+                {tid: {"label": spec["label"], "group": spec["group"]}
+                 for tid, spec in tag_vocab.VOCAB.items()},
                 ensure_ascii=False))
             .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
             .replace("__COLLECTED__", collected.isoformat())
