@@ -112,6 +112,9 @@
   .fitem .fill{position:absolute;left:0;top:0;bottom:0;background:#f1effc;border-radius:8px;z-index:0}
   .fitem.on .fill{background:#e4dffa}
   .fitem>*{position:relative;z-index:1}
+  .fitem .rdo{width:14px;height:14px;border-radius:50%;border:1.6px solid #c9c9d4;background:#fff;flex:none}
+  .fitem.on .rdo{border:4.5px solid var(--pri)}
+  .fitem .sq{width:8px;height:8px;border-radius:2.5px;flex:none}
   .fitem .ckm{width:14px;height:14px;border:1.6px solid #c9c9d4;border-radius:4px;background:#fff;
     display:inline-flex;align-items:center;justify-content:center;flex:none}
   .fitem .ckm svg{width:9px;height:9px;color:#fff;stroke-width:3.4;display:none}
@@ -448,21 +451,55 @@ function archRowHTML(e){
     + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
 }
 
-/* 태그 패싯 (시안 F — 1차 필터, SPEC 3.3): 그룹 헤더 + 체크박스 + 분포 막대.
-   좁은 화면에서는 같은 마크업이 드로어(시안 I)로 전환된다 (CSS만 다름). */
+/* 활성 필터 수 — 정렬은 보기 방식이라 세지 않는다 */
+function activeFilterCount(){
+  return tagSel.size + (filter!=='all'?1:0) + (days!==0?1:0) + (unreadOnly?1:0);
+}
+
+/* 통합 필터 패널 (unified-filter-panel): 정렬 · 기간 · 읽음 · 출처 · 태그를 한곳에.
+   좁은 화면에서는 같은 마크업이 드로어로 전환된다 (CSS만 다름). */
 function facetHTML(){
   const scope = DATA.filter(d=>inDays(d, days));
   const c={}; scope.forEach(d=>(d.tags||[]).forEach(t=>c[t]=(c[t]||0)+1));
+  const sc={}; scope.forEach(d=>sc[d.src]=(sc[d.src]||0)+1);
   const max = Math.max(1, ...Object.values(c));
   const groups = {};
   Object.entries(TAGS).forEach(([id,meta])=>{ (groups[meta.group]=groups[meta.group]||[]).push(id); });
   const order = ['AI','개발','그 외'].filter(g=>groups[g])
     .concat(Object.keys(groups).filter(g=>!['AI','개발','그 외'].includes(g)));
+
   let h='<aside class="facet'+(facetOpen?' open':'')+'" id="facet">'
-    +'<div class="fhead"><span class="ft">태그</span>'
+    +'<div class="fhead"><span class="ft">필터</span>'
     +'<button id="tagfold" title="사이드바 접기">◂ 접기</button></div>';
+
+  h+='<div class="fgh">정렬</div>';
+  [['batch','수집순'],['new','최신순'],['src','출처별']].forEach(([v,l])=>{
+    h+='<button class="fitem'+(sort===v?' on':'')+'" data-fs="'+v+'">'
+      +'<span class="rdo"></span><span class="fl">'+l+'</span></button>';
+  });
+
+  h+='<div class="fgh">기간</div>';
+  [[1,'오늘'],[3,'3일'],[7,'7일'],[0,'전체']].forEach(([v,l])=>{
+    h+='<button class="fitem'+(days===v?' on':'')+'" data-fd="'+v+'">'
+      +'<span class="rdo"></span><span class="fl">'+l+'</span></button>';
+  });
+
+  h+='<div class="fgh">읽음</div>'
+    +'<button class="fitem'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span>'
+    +'<span class="fl">안 읽음만</span>'
+    +'<span class="fn">'+DATA.filter(d=>!read.has(d.url)).length+'</span></button>';
+
+  h+='<div class="fgh">출처</div>'
+    +'<button class="fitem'+(filter==='all'?' on':'')+'" data-f="all">'
+    +'<span class="rdo"></span><span class="fl">전체</span><span class="fn">'+scope.length+'</span></button>';
+  Object.keys(SRC).filter(k=>sc[k]).forEach(k=>{
+    h+='<button class="fitem'+(filter===k?' on':'')+'" data-f="'+k+'">'
+      +'<span class="rdo"></span><span class="sq" style="background:'+SRC[k].color+'"></span>'
+      +'<span class="fl">'+SRC[k].name+'</span><span class="fn">'+sc[k]+'</span></button>';
+  });
+
   order.forEach(g=>{
-    h+='<div class="fgh">'+g+'</div>';
+    h+='<div class="fgh">태그 · '+g+'</div>';
     groups[g].forEach(t=>{
       const n=c[t]||0;
       // 라벨은 반드시 span으로 감싼다 — 맨몸 텍스트 노드는 .fill 막대에 가려진다
@@ -472,46 +509,24 @@ function facetHTML(){
         +'<span class="fn">'+n+'</span></button>';
     });
   });
-  h+='<div class="ffoot"><span class="fsel">'+(tagSel.size?tagSel.size+'개 선택':'')+'</span>'
+  h+='<div class="ffoot"><span class="fsel">'+(activeFilterCount()?activeFilterCount()+'개 적용':'')+'</span>'
     +'<button id="tagclear">초기화</button></div></aside>';
   return h;
 }
 
-function chipsHTML(){
-  const scope = DATA.filter(d=>inDays(d, days));
-  const c={}; scope.forEach(d=>c[d.src]=(c[d.src]||0)+1);
-  let h='<button class="cp'+(filter==='all'?' on':'')+'" data-f="all">전체 <span class="n">'+scope.length+'</span></button>';
-  Object.keys(SRC).filter(k=>c[k]).forEach(k=>{
-    h+='<button class="cp'+(filter===k?' on':'')+'" data-f="'+k+'">'
-      +'<span class="sq" style="background:'+SRC[k].color+'"></span>'+SRC[k].name
-      +' <span class="n">'+c[k]+'</span></button>';
-  });
-  return '<div class="chips">'+h+'</div>';
-}
-
-/* 태그 진입점 — 소스 칩 줄 아래 전용 줄 (사이드바 접힘/모바일에서만 노출) */
+/* 필터 진입점 — 검색 바 아래 전용 줄 (패널 접힘/모바일에서만 노출) */
 function tagRowHTML(){
+  const n = activeFilterCount();
   return '<div class="chips tagrow'+(facetFold?' show':'')+'">'
-    +'<button class="cp tagcp'+(tagSel.size?' has':'')+'" id="tagbtn">'
-    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11V4a1 1 0 011-1h7l10 10-8 8L3 11z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg>'
-    +'태그'+(tagSel.size?' <span class="bn">'+tagSel.size+'</span>':'')+'</button></div>';
+    +'<button class="cp tagcp'+(n?' has':'')+'" id="tagbtn">'
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5h18M6 12h12M10 19h4"/></svg>'
+    +'필터'+(n?' <span class="bn">'+n+'</span>':'')+'</button></div>';
 }
 
 function barHTML(){
+  // 선택 컨트롤은 전부 필터 패널(facetHTML)로 이동 — 바에는 검색만 남긴다
   return '<div class="bar">'
    + '<div class="search">'+I.sch+'<input id="q" placeholder="검색 (아카이브 포함)…" value="'+q.replace(/"/g,'&quot;')+'"></div>'
-   + '<div class="segs">'
-   +   '<button class="sg'+(sort==='batch'?' on':'')+'" data-s="batch">수집순</button>'
-   +   '<button class="sg'+(sort==='new'?' on':'')+'" data-s="new">최신순</button>'
-   +   '<button class="sg'+(sort==='src'?' on':'')+'" data-s="src">출처별</button>'
-   + '</div>'
-   + '<div class="segs">'
-   +   '<button class="sg'+(days===1?' on':'')+'" data-d="1">오늘</button>'
-   +   '<button class="sg'+(days===3?' on':'')+'" data-d="3">3일</button>'
-   +   '<button class="sg'+(days===7?' on':'')+'" data-d="7">7일</button>'
-   +   '<button class="sg'+(days===0?' on':'')+'" data-d="0">전체</button>'
-   + '</div>'
-   + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span> 안 읽음</button>'
    + '</div>';
 }
 
@@ -604,7 +619,7 @@ function render(){
     +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+savedMap.size+'건</span></div></div>';
 
   const items=visible();
-  h+=barHTML()+chipsHTML()+tagRowHTML();
+  h+=barHTML()+tagRowHTML();
 
   // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
   h+='<div class="layout'+(facetFold?' fc':'')+'">'+facetHTML()
@@ -645,17 +660,19 @@ function bind(){
   const qi=document.getElementById('q');
   if(qi) qi.oninput=e=>{q=e.target.value; render(); const n=document.getElementById('q'); n.focus();
                         n.setSelectionRange(n.value.length,n.value.length);};
-  viewEl.querySelectorAll('.sg[data-s]').forEach(b=>b.onclick=()=>{sort=b.dataset.s; render();});
-  viewEl.querySelectorAll('.sg[data-d]').forEach(b=>b.onclick=()=>{days=+b.dataset.d; render();});
+  viewEl.querySelectorAll('.fitem[data-fs]').forEach(b=>b.onclick=()=>{sort=b.dataset.fs; render();});
+  viewEl.querySelectorAll('.fitem[data-fd]').forEach(b=>b.onclick=()=>{days=+b.dataset.fd; render();});
   const ub=document.getElementById('unread');
   if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; render();};
-  viewEl.querySelectorAll('.cp[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
+  viewEl.querySelectorAll('.fitem[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
   viewEl.querySelectorAll('.fitem[data-ft]').forEach(b=>b.onclick=()=>toggleTag(b.dataset.ft));
   viewEl.querySelectorAll('.tg[data-tg]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); toggleTag(b.dataset.tg);   // 행의 태그 클릭 = 선택에 추가/해제
   });
   const tc=document.getElementById('tagclear');
-  if(tc) tc.onclick=()=>{ tagSel.clear(); persistTags(); render(); };
+  if(tc) tc.onclick=()=>{   // 초기화 = 필터 전체 리셋 (정렬은 보기 방식이라 유지)
+    tagSel.clear(); persistTags(); filter='all'; days=0; unreadOnly=false; render();
+  };
   const tb=document.getElementById('tagbtn');
   if(tb) tb.onclick=()=>{
     // 좁은 화면 = 드로어 열기 / 데스크톱(접힘 상태) = 사이드바 펼치기
