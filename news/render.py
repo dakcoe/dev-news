@@ -5,6 +5,8 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
+from news.core import tags as tag_vocab
+
 KST = timezone(timedelta(hours=9))
 TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")
 
@@ -71,6 +73,7 @@ def to_view_model(articles: list[dict]) -> list[dict]:
             "score": int(a.get("upvotes") or 0),
             "cm": int(a.get("comments") or 0),
             "pub": _pub_iso(a),
+            "tags": a.get("tags") or [],
             "snip": _first_sentences(summary),
             "body": "".join(f"<p>{p}</p>" for p in body_paras),
             "why": a.get("why") or "",
@@ -98,6 +101,9 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
     html = (html
             .replace("__DATA_JSON__", json.dumps(to_view_model(articles), ensure_ascii=False))
             .replace("__SRC_JSON__", json.dumps(sources, ensure_ascii=False))
+            .replace("__TAG_JSON__", json.dumps(
+                {tid: spec["label"] for tid, spec in tag_vocab.VOCAB.items()},
+                ensure_ascii=False))
             .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
             .replace("__COLLECTED__", collected.isoformat())
             .replace("__DATE__", collected.strftime("%Y-%m-%d")))

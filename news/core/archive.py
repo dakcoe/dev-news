@@ -115,6 +115,7 @@ def write_search_index(articles: list[dict], path: str = INDEX_PATH) -> None:
             "u": a.get("url", ""),
             "m": _month(a.get("batch", "")),
             "s": a.get("source", ""),
+            "g": a.get("tags", []),
             "d": (a.get("batch", "") or "")[:10]}
            for a in articles]
     _save_json(path, idx)

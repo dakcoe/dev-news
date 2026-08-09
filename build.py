@@ -32,6 +32,7 @@ from news.core import archive, candidates
 from news.core import seen as seen_db
 from news.core.enrich import enrich
 from news.core.scorer import score_and_categorize
+from news.core.tags import tag_all
 from news.render import render
 from news.scrapers import anthropic, devto, geeknews, github, hackernews, lobsters, reddit, rss
 
@@ -326,7 +327,8 @@ def main() -> int:
 
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
-    published = [a for a in picked if a.get("llm_done")]
+    # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
+    published = tag_all([a for a in picked if a.get("llm_done")])
 
     if published:
         all_articles = archive.append(published, now)
