@@ -112,6 +112,16 @@ def test_facet_collapsible(html):
     assert "layout fc" in html or "'fc'" in html or '"fc"' in html or "fc'" in html
 
 
+def test_tagbtn_in_chips_row_with_color(html):
+    assert "tagcp" in html                      # 보라 강조 스타일
+    assert ".tagcp{" in html
+    # 태그 버튼은 컨트롤 바(barHTML)가 아니라 소스 칩 줄(chipsHTML) 맨 앞에 있다
+    bar_fn = html.split("function barHTML()")[1].split("function ")[0]
+    chips_fn = html.split("function chipsHTML()")[1].split("function ")[0]
+    assert "tagbtn" not in bar_fn
+    assert "tagbtn" in chips_fn
+
+
 def test_tag_json_has_label_and_group(html):
     import re
     m = re.search(r"const TAGS = (\{.*?\});", html)
