@@ -97,8 +97,12 @@
     border:1px solid var(--line);border-radius:14px;padding:12px 8px;
     max-height:calc(100vh - 24px);overflow-y:auto;
   }
+  .fhead{display:flex;align-items:center;justify-content:space-between;padding:2px 8px 7px}
+  .fhead .ft{font-size:12.5px;font-weight:800}
+  #tagfold{border:none;background:none;font-family:inherit;font-size:11.5px;font-weight:700;
+    color:var(--tx3);cursor:pointer;padding:2px 4px;border-radius:6px}
+  #tagfold:hover{color:var(--tx);background:#f4f3fb}
   .fgh{font-size:10.5px;font-weight:800;color:var(--tx3);letter-spacing:.09em;margin:8px 8px 3px}
-  .fgh:first-child{margin-top:0}
   .fitem{
     display:flex;align-items:center;gap:8px;width:100%;padding:5px 8px;border-radius:8px;
     border:none;background:none;font-family:inherit;font-size:12.5px;color:var(--tx);
@@ -121,10 +125,15 @@
     cursor:pointer;color:var(--tx3)}
   .ffoot button:hover{color:var(--tx)}
   #tagbtn{display:none}
+  #tagbtn.show{display:inline-flex}          /* 사이드바 접힘 시 데스크톱에서도 노출 */
   #tagbtn .bn{background:var(--pri);color:#fff;font-size:11px;font-weight:700;
     border-radius:10px;padding:0 6px;min-width:18px;text-align:center}
   .scrim{position:fixed;inset:0;background:rgba(20,20,35,.32);z-index:59}
+  @media (min-width:901px){
+    .layout.fc .facet{display:none}          /* 접힘: 피드가 전체 폭 사용 */
+  }
   @media (max-width:900px){
+    #tagfold{display:none}                   /* 드로어는 스크림 클릭으로 닫는다 */
     .facet{
       position:fixed;left:0;top:0;bottom:0;width:240px;max-height:none;z-index:60;
       border-radius:0 14px 14px 0;transform:translateX(-105%);transition:.22s;
@@ -308,6 +317,11 @@ try{
   }
 }catch(e){}
 function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
+/* 사이드바 접힘 상태 (데스크톱) — 재방문 시 유지 */
+const FOLD_KEY='dev-news-facetfold';
+let facetFold=false;
+try{ facetFold = localStorage.getItem(FOLD_KEY)==='1'; }catch(e){}
+function setFold(v){ facetFold=v; try{ localStorage.setItem(FOLD_KEY, v?'1':'0'); }catch(e){} render(); }
 function toggleTag(t){ tagSel.has(t) ? tagSel.delete(t) : tagSel.add(t); persistTags(); render(); }
 function tagLabel(t){ return (TAGS[t]||{}).label || t; }
 const read = new Set();
@@ -437,7 +451,9 @@ function facetHTML(){
   Object.entries(TAGS).forEach(([id,meta])=>{ (groups[meta.group]=groups[meta.group]||[]).push(id); });
   const order = ['AI','개발','그 외'].filter(g=>groups[g])
     .concat(Object.keys(groups).filter(g=>!['AI','개발','그 외'].includes(g)));
-  let h='<aside class="facet'+(facetOpen?' open':'')+'" id="facet">';
+  let h='<aside class="facet'+(facetOpen?' open':'')+'" id="facet">'
+    +'<div class="fhead"><span class="ft">태그</span>'
+    +'<button id="tagfold" title="사이드바 접기">◂ 접기</button></div>';
   order.forEach(g=>{
     h+='<div class="fgh">'+g+'</div>';
     groups[g].forEach(t=>{
@@ -481,7 +497,7 @@ function barHTML(){
    +   '<button class="sg'+(days===0?' on':'')+'" data-d="0">전체</button>'
    + '</div>'
    + '<button class="cp'+(unreadOnly?' on':'')+'" id="unread"><span class="ckm">'+I.chk+'</span> 안 읽음</button>'
-   + '<button class="cp" id="tagbtn">태그'+(tagSel.size?' <span class="bn">'+tagSel.size+'</span>':'')+'</button>'
+   + '<button class="cp'+(facetFold?' show':'')+'" id="tagbtn">태그'+(tagSel.size?' <span class="bn">'+tagSel.size+'</span>':'')+'</button>'
    + '</div>';
 }
 
@@ -577,7 +593,8 @@ function render(){
   h+=barHTML()+chipsHTML();
 
   // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
-  h+='<div class="layout">'+facetHTML()+(facetOpen?'<div class="scrim" id="scrim"></div>':'')
+  h+='<div class="layout'+(facetFold?' fc':'')+'">'+facetHTML()
+    +(facetOpen?'<div class="scrim" id="scrim"></div>':'')
     +'<div class="feed">';
   if(!items.length){
     h+='<div class="none">'+(days?'이 기간에는 기사가 없습니다. 오른쪽 위 「전체」를 눌러보세요.'
@@ -626,7 +643,13 @@ function bind(){
   const tc=document.getElementById('tagclear');
   if(tc) tc.onclick=()=>{ tagSel.clear(); persistTags(); render(); };
   const tb=document.getElementById('tagbtn');
-  if(tb) tb.onclick=()=>{ facetOpen=true; render(); };
+  if(tb) tb.onclick=()=>{
+    // 좁은 화면 = 드로어 열기 / 데스크톱(접힘 상태) = 사이드바 펼치기
+    if(window.matchMedia('(max-width:900px)').matches){ facetOpen=true; render(); }
+    else setFold(false);
+  };
+  const tf=document.getElementById('tagfold');
+  if(tf) tf.onclick=()=>setFold(true);
   const sc=document.getElementById('scrim');
   if(sc) sc.onclick=()=>{ facetOpen=false; render(); };
   viewEl.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{
