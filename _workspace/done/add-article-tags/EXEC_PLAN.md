@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 - **생성일**: 2026-08-09T03:07:23.643Z
 
 ## 목표
@@ -36,3 +36,4 @@ SPEC 1B(태그 도입)의 1차 구현. 누적 179건 코퍼스 분석으로 **�
 - [ ] data/articles/2026-08.json 전 기사에 `tags` 필드 존재
 - [ ] search-index.json에 태그 포함, docs/index.html에 태그 칩 렌더·필터 동작
 - [ ] `python build.py --demo` 정상 동작 (기존 기능 회귀 없음)
+- **완료일**: 2026-08-09T03:14:54.915Z
