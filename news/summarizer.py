@@ -193,8 +193,11 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if candidate["ko_title"] or candidate["summary"]:
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
                                                     candidate["summary"], candidate["why"]]))
-                    if HANJA_RE.search(joined) and attempt < 2:
-                        print("  · 한자 섞임 — 재생성")
+                    # 한자는 절대 수용하지 않는다 (fix-hanja-residual) — 재생성을 다
+                    # 쓰면 미게시(llm_done=False)로 두어 다음 실행에서 재시도된다.
+                    if HANJA_RE.search(joined):
+                        print("  · 한자 섞임 — 재생성" if attempt < 2
+                              else "  · 한자 잔존 — 이번 회차 미게시 (다음 실행에서 재시도)")
                         attempt += 1
                         continue
                     parsed = candidate
