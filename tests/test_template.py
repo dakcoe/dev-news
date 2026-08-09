@@ -112,17 +112,26 @@ def test_facet_collapsible(html):
     assert "layout fc" in html or "'fc'" in html or '"fc"' in html or "fc'" in html
 
 
-def test_tagbtn_below_sources_with_color(html):
+def test_filter_button_row(html):
     assert "tagcp" in html                      # 보라 강조 스타일
     assert ".tagcp{" in html
-    assert "tagrow" in html                     # 소스 칩 줄 아래 전용 줄
-    # 태그 버튼은 컨트롤 바(barHTML)·소스 칩 줄(chipsHTML) 안에는 없다
+    assert "tagrow" in html                     # 검색 바 아래 전용 줄
     bar_fn = html.split("function barHTML()")[1].split("function ")[0]
-    chips_fn = html.split("function chipsHTML()")[1].split("function ")[0]
     assert "tagbtn" not in bar_fn
-    assert "tagbtn" not in chips_fn
-    # 렌더 순서: 소스 칩 다음에 tagrow
-    assert "chipsHTML()+tagRowHTML()" in html.replace(" ", "")
+    assert "barHTML()+tagRowHTML()" in html.replace(" ", "")
+
+
+def test_unified_filter_panel(html):
+    """unified-filter-panel: 정렬·기간·출처·안읽음·태그가 전부 패널 안에 있다."""
+    facet_fn = html.split("function facetHTML()")[1].split("\nfunction ")[0]
+    assert 'data-fs=' in facet_fn               # 정렬 라디오
+    assert 'data-fd=' in facet_fn               # 기간 라디오
+    assert 'data-f="' in facet_fn               # 출처 목록
+    assert 'id="unread"' in facet_fn            # 안 읽음 토글
+    # 소스 칩 줄과 바의 세그 컨트롤은 제거됐다
+    assert "function chipsHTML()" not in html
+    bar_fn = html.split("function barHTML()")[1].split("\nfunction ")[0]
+    assert 'data-s=' not in bar_fn and 'data-d=' not in bar_fn and 'id="unread"' not in bar_fn
 
 
 def test_tag_json_has_label_and_group(html):
