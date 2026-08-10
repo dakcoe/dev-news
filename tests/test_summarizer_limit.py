@@ -69,7 +69,7 @@ def test_hanja_triggers_regeneration(monkeypatch):
 
     assert len(calls) == 2                       # 한자 감지 → 1회 재생성
     assert out[0]["ko_title"] == "제프 딘 사임"
-    assert not summarizer.HANJA_RE.search(out[0]["summary"])
+    assert not summarizer.FOREIGN_RE.search(out[0]["summary"])
 
 
 def test_hanja_repair_translates_and_replaces(monkeypatch):
@@ -92,7 +92,7 @@ def test_hanja_repair_translates_and_replaces(monkeypatch):
     assert out[0]["llm_done"] is True
     assert out[0]["ko_title"] == "GPT를 초월하기"
     assert out[0]["summary"] == "오픈 모델이 검색 성능을 초월했다."
-    assert not summarizer.HANJA_RE.search(out[0]["ko_title"] + out[0]["summary"])
+    assert not summarizer.FOREIGN_RE.search(out[0]["ko_title"] + out[0]["summary"])
 
 
 def test_persistent_hanja_not_published(monkeypatch):
@@ -111,7 +111,7 @@ def test_persistent_hanja_not_published(monkeypatch):
 
     assert len(calls) == 3                       # 최초 1회 + 재생성 2회, 그리고 포기
     assert out[0]["llm_done"] is False
-    assert "ko_title" not in out[0] or not summarizer.HANJA_RE.search(out[0].get("ko_title") or "")
+    assert "ko_title" not in out[0] or not summarizer.FOREIGN_RE.search(out[0].get("ko_title") or "")
 
 
 def test_no_new_info_becomes_empty_summary(monkeypatch):
