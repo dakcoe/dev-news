@@ -144,3 +144,16 @@ def test_tag_json_has_label_and_group(html):
     assert tags["ai"]["group"]
     groups = {v["group"] for v in tags.values()}
     assert len(groups) == 3                     # AI / 개발 / 그 외
+
+
+def test_card_tags_display_only(html):
+    """카드 행 태그는 표시 전용 (remove-card-tag-filter-click).
+
+    태그 클릭 = 필터 토글 동작을 제거 — 핸들러와 버튼 마크업이 없어야 하고,
+    사이드바 태그 패널의 필터(data-ft)는 유지돼야 한다.
+    """
+    assert "querySelectorAll('.tg[data-tg]')" not in html   # 클릭 핸들러 제거
+    assert "data-tg" not in html                            # 카드 태그에 클릭 대상 속성 없음
+    assert '<span class="tg' in html                        # 버튼 → 표시 전용 span
+    assert '<button class="tg' not in html
+    assert "data-ft" in html                                # 사이드바 필터는 유지
