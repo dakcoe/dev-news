@@ -679,8 +679,15 @@ function render(){
 
 function bind(){
   const qi=document.getElementById('q');
-  if(qi) qi.oninput=e=>{q=e.target.value; render(); const n=document.getElementById('q'); n.focus();
-                        n.setSelectionRange(n.value.length,n.value.length);};
+  if(qi){
+    // render()가 input을 갈아끼우므로 한글 IME 조합 중에는 재렌더를 건너뛴다
+    // (조합 중 교체되면 자모가 낱개로 입력됨). Chrome은 조합 중 input에
+    // isComposing=true, Safari는 compositionend 후 최종 input이 온다 — 둘 다 커버.
+    const rerender=el=>{ const pos=el.selectionStart; render();
+      const n=document.getElementById('q'); n.focus(); n.setSelectionRange(pos,pos); };
+    qi.oninput=e=>{ q=e.target.value; if(!e.isComposing) rerender(e.target); };
+    qi.oncompositionend=e=>{ q=e.target.value; rerender(e.target); };
+  }
   viewEl.querySelectorAll('.dd').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); openDrop = openDrop===b.id ? null : b.id; render();
   });
