@@ -157,3 +157,14 @@ def test_card_tags_display_only(html):
     assert '<span class="tg' in html                        # 버튼 → 표시 전용 span
     assert '<button class="tg' not in html
     assert "data-ft" in html                                # 사이드바 필터는 유지
+
+
+def test_search_input_ime_composition_guard(html):
+    """한글 IME 조합 보호 (fix-ime-composition-search).
+
+    입력마다 render()가 input을 갈아끼우면 macOS 한글 IME 조합이 끊겨
+    자모가 낱개(ㄱㅏㄴㅏ)로 입력된다. 조합 중에는 재렌더를 건너뛰고
+    compositionend에서만 렌더하는 가드가 있어야 한다.
+    """
+    assert "isComposing" in html
+    assert "compositionend" in html
