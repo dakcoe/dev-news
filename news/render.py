@@ -56,7 +56,9 @@ def to_view_model(articles: list[dict]) -> list[dict]:
     out = []
     for a in articles:
         summary = a.get("summary") or a.get("description") or ""
-        body_paras = [p.strip() for p in summary.split("\n") if p.strip()] or ["(요약 생성 실패 — 원문을 확인하세요)"]
+        # 페이월·영상·JS 전용 페이지는 본문 추출이 안 돼 요약이 비는 게 정상 —
+        # "생성 실패"가 아니라 본문 미공개 안내를 보여준다 (fix-empty-summary-label).
+        body_paras = [p.strip() for p in summary.split("\n") if p.strip()] or ["(본문이 공개되지 않은 기사 — 원문을 확인하세요)"]
         out.append({
             "batch": a.get("batch", ""),
             "batchLabel": a.get("batch_label", ""),
