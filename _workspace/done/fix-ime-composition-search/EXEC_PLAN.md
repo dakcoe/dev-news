@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -25,3 +25,4 @@ Chrome(조합 중 input.isComposing=true → compositionend)과 Safari(compositi
 ## 완료 기준
 
 - 조합 가드(compositionend + isComposing) 존재를 테스트로 고정, 전체 테스트 통과
+- **완료일**: 2026-08-10T19:25:36.564Z
