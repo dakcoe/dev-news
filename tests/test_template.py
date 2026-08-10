@@ -159,12 +159,15 @@ def test_card_tags_display_only(html):
     assert "data-ft" in html                                # 사이드바 필터는 유지
 
 
-def test_search_input_ime_composition_guard(html):
-    """한글 IME 조합 보호 (fix-ime-composition-search).
+def test_search_partial_render_keeps_input(html):
+    """한글 IME 조합 보호 v2 (fix-search-partial-render).
 
-    입력마다 render()가 input을 갈아끼우면 macOS 한글 IME 조합이 끊겨
-    자모가 낱개(ㄱㅏㄴㅏ)로 입력된다. 조합 중에는 재렌더를 건너뛰고
-    compositionend에서만 렌더하는 가드가 있어야 한다.
+    v1(조합 끝날 때만 렌더)은 맥 IME가 단어 커밋까지 조합을 유지해 검색이
+    지연되는 부작용이 있었다. 검색 입력은 목록(.layout)만 부분 갱신해
+    input이 교체되지 않아야 한다 — 조합 유지 + 조합 중 실시간 검색.
     """
-    assert "isComposing" in html
-    assert "compositionend" in html
+    assert "function layoutHTML" in html
+    assert "function renderList" in html
+    assert "renderList()" in html
+    # oninput이 전체 render()로 input을 갈아끼우던 이전 방식이 아니어야 한다
+    assert "q=e.target.value; render()" not in html
