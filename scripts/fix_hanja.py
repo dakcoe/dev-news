@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""아카이브 한자 잔존 기사 소급 정화 (fix-hanja-residual).
+"""아카이브 외국 문자 잔존 기사 소급 정화 (fix-hanja-residual · fix-foreign-script-leak).
 
-fix-hanja-leak 이전에 게시돼 한자가 박제된 기사를 찾아 LLM으로 재생성한다.
-아카이브에 content가 보존돼 있어 요약 재료가 있다. 한자 없이 성공한 것만
-교체하며(summarizer가 한자 응답을 수용하지 않으므로 성공 = 한자 없음 보장),
+필터 강화 이전에 게시돼 외국 문자(한자·가나·키릴·태국 문자 등)가 박제된 기사를
+찾아 LLM으로 재생성한다. 아카이브에 content가 보존돼 있어 요약 재료가 있다.
+외국 문자 없이 성공한 것만 교체하며(summarizer가 외국 문자 응답을 수용하지
+않으므로 성공 = 외국 문자 없음 보장),
 실패한 기사는 원문 유지 후 로그로 보고한다.
 
   python scripts/fix_hanja.py
@@ -18,12 +19,12 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from build import load_dotenv                          # noqa: E402
 from news.core import archive                          # noqa: E402
-from news.summarizer import HANJA_RE, summarize_all    # noqa: E402
+from news.summarizer import FOREIGN_RE, summarize_all    # noqa: E402
 
 
 def _dirty(a: dict) -> bool:
     joined = " ".join(filter(None, [a.get("ko_title"), a.get("summary"), a.get("why")]))
-    return bool(HANJA_RE.search(joined))
+    return bool(FOREIGN_RE.search(joined))
 
 
 def main() -> int:
@@ -37,7 +38,7 @@ def main() -> int:
         if not targets:
             continue
         total_dirty += len(targets)
-        print(f"[fix-hanja] {m}: 한자 잔존 {len(targets)}건 재생성 시도")
+        print(f"[fix-hanja] {m}: 외국 문자 잔존 {len(targets)}건 재생성 시도")
 
         # 기사당 최대 3회 호출이므로 예산은 3배로. pause는 TPM 여유용 기본값 유지.
         results = summarize_all([a for _, a in targets], max_calls=len(targets) * 3)

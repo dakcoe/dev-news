@@ -39,17 +39,27 @@ KEY_ENV = {
 }
 
 SYSTEM = ("너는 한국인 개발자를 위한 기술 뉴스 브리핑 편집자다. 지시한 형식만 출력하고 다른 말은 절대 붙이지 않는다. "
-          "출력에는 한글·영문·숫자·문장부호만 쓴다. 중국어 한자를 절대 쓰지 마라 — 한자어는 반드시 한글로 적는다 (예: 离任(X)→물러남(O), 超越(X)→뛰어넘기(O)).")
+          "출력에는 한글·영문·숫자·문장부호만 쓴다. 그 외 문자(중국어 한자·일본어 가나·키릴·태국 문자 등)를 절대 쓰지 마라 — 한자어는 반드시 한글로 적는다 (예: 离任(X)→물러남(O), 超越(X)→뛰어넘기(O)).")
 
-# Llama 계열은 한국어 생성 중 한자어를 중국어 문자로 출력하는 버릇이 있다.
+# Llama 계열은 한국어 생성 중 한자뿐 아니라 가나·키릴·태국 문자 등 다국어 토큰을
+# 섞어 출력하는 버릇이 있다 (실측: 테็กซ스, 프로토タイプ, нос고). 스크립트를 나열해
+# 막는 블랙리스트는 새는 스크립트가 생길 때마다 뚫리므로, SYSTEM이 선언한 허용
+# 집합(한글·영문·숫자·문장부호)의 화이트리스트로 검사한다.
 # 프롬프트 금지만으로는 가끔 새므로: 감지 시 재생성 1회 → 그래도 남으면
-# 한자만 추출해 번역·일괄 치환 (hanja-translate-fallback) → 그래도 남으면 미게시.
-HANJA_RE = re.compile(r"[㐀-䶿一-鿿豈-﫿]")
-HANJA_RUN_RE = re.compile(HANJA_RE.pattern + "+")   # 연속 한자 런 (단어 단위 추출용)
+# 해당 단어만 추출해 번역·일괄 치환 → 그래도 남으면 미게시.
+FOREIGN_RE = re.compile(
+    r"[^ -~"                # ASCII (영문·숫자·문장부호·공백)
+    r"가-힣ㄱ-ㅣ"  # 한글 음절 · 호환 자모
+    r"£¥°±·×"      # £ ¥ ° ± · ×
+    r"‐-―‘’“”…"  # 하이픈·대시류, 따옴표, 말줄임
+    r"₩€]"               # ₩ €
+)
+FOREIGN_RUN_RE = re.compile(FOREIGN_RE.pattern + "+")   # 연속 런 (단어 단위 추출용)
 
-HANJA_FIX_PROMPT = """아래 한국어 문장에 중국어 한자가 잘못 섞여 있다. 나열된 한자 단어를 한국어로 옮겨라.
-가능하면 한국 한자음 독음으로 옮겨라 (예: 超越=초월, 离任=이임, 金融=금융) — 문장의 조사·어미와 자연스럽게 이어지도록. 독음이 한국어에서 안 쓰이는 단어일 때만 뜻으로 번역해라.
-각 줄에 "한자=한국어" 형식으로만 출력하고 다른 말은 절대 붙이지 마라.
+FOREIGN_FIX_PROMPT = """아래 한국어 문장에 외국 문자(한자·가나·키릴 등)가 잘못 섞여 있다. 나열된 단어를 한국어로 옮겨라.
+한자는 가능하면 한국 한자음 독음으로 옮겨라 (예: 超越=초월, 离任=이임, 金融=금융) — 문장의 조사·어미와 자연스럽게 이어지도록. 독음이 한국어에서 안 쓰이는 단어일 때만 뜻으로 번역해라.
+그 외 문자는 문맥에 맞는 한국어 표기로 옮겨라 (예: タイプ=타입, прогресс=진전).
+각 줄에 "원문=한국어" 형식으로만 출력하고 다른 말은 절대 붙이지 마라.
 
 [문맥]
 {context}
@@ -80,6 +90,21 @@ def _clean(line: str) -> str:
     return line.replace("**", "").replace("*", "")
 
 
+# PROMPT가 "덧붙일 정보가 없으면 '없음'"이라 지시하는데, 모델이 정상 요약 뒤에
+# "… 계획이다. 없음"이나 "기술 스택 정보는 없음."처럼 답을 덧붙이는 누출이 있다.
+# 정상 한국어 문어체 문장은 "없음"으로 끝나지 않으므로(없다/없었다로 끝남),
+# "없음"으로 끝나는 마지막 문장은 템플릿 반응으로 보고 제거한다.
+_NO_INFO_TAIL_RE = re.compile(r"(?:(?<=[.!?])|^)\s*[^.!?]*없음[.!?]?\s*$")
+
+
+def _strip_no_info_tail(text: str) -> str:
+    while True:
+        stripped = _NO_INFO_TAIL_RE.sub("", text).rstrip()
+        if stripped == text:
+            return text
+        text = stripped
+
+
 def _parse(text: str) -> dict:
     buf: dict[str, list[str]] = {"ko_title": [], "summary": [], "why": []}
     section = None
@@ -99,8 +124,10 @@ def _parse(text: str) -> dict:
     out = {k: " ".join(v).strip() for k, v in buf.items()}
     # "없음" = 덧붙일 정보가 없다는 답 → 빈 문자열 (UI가 요약 줄을 생략한다)
     for k in ("summary", "why"):
-        if re.fullmatch(r"[\s\"'()\[\]]*없음[\s.\"'()\[\]]*", out[k] or ""):
-            out[k] = ""
+        text = _strip_no_info_tail(out[k] or "")
+        if re.fullmatch(r"[\s\"'()\[\]]*없음[\s.\"'()\[\]]*", text):
+            text = ""
+        out[k] = text
     return {k: (v or None) if k == "ko_title" else v for k, v in out.items()}
 
 
@@ -155,23 +182,23 @@ def _call(prompt: str, provider: str, model: str, api_key: str) -> str:
     return _call_openai_compatible(prompt, model, api_key, ENDPOINTS[provider])
 
 
-def _translate_hanja(parsed: dict, provider: str, model: str, api_key: str) -> dict | None:
-    """잔존 한자를 추출·번역해 일괄 치환한다. 실패하면 None (호출자는 미게시 처리).
+def _translate_foreign(parsed: dict, provider: str, model: str, api_key: str) -> dict | None:
+    """잔존 외국 문자를 추출·번역해 일괄 치환한다. 실패하면 None (호출자는 미게시 처리).
 
-    같은 한자가 여러 번 나와도 매핑 하나로 모두 치환된다. 매핑이 불완전하거나
-    번역값에 또 한자가 있으면 포기하고, 치환 후에도 전체를 재검증한다.
+    같은 단어가 여러 번 나와도 매핑 하나로 모두 치환된다. 매핑이 불완전하거나
+    번역값에 또 외국 문자가 있으면 포기하고, 치환 후에도 전체를 재검증한다.
     """
     joined = " ".join(filter(None, [parsed.get("ko_title"), parsed.get("summary"),
                                     parsed.get("why")]))
-    words = list(dict.fromkeys(HANJA_RUN_RE.findall(joined)))   # 중복 제거, 순서 유지
-    reply = _call(HANJA_FIX_PROMPT.format(context=joined[:600], words="\n".join(words)),
+    words = list(dict.fromkeys(FOREIGN_RUN_RE.findall(joined)))   # 중복 제거, 순서 유지
+    reply = _call(FOREIGN_FIX_PROMPT.format(context=joined[:600], words="\n".join(words)),
                   provider, model, api_key)
 
     mapping = {}
     for line in reply.splitlines():
         src, _, dst = line.partition("=")
         src, dst = _clean(src).strip(), dst.strip()
-        if src in words and dst and not HANJA_RE.search(dst):
+        if src in words and dst and not FOREIGN_RE.search(dst):
             mapping[src] = dst
     if len(mapping) < len(words):
         return None
@@ -185,7 +212,7 @@ def _translate_hanja(parsed: dict, provider: str, model: str, api_key: str) -> d
             out[key] = value
 
     fixed = " ".join(filter(None, [out.get("ko_title"), out.get("summary"), out.get("why")]))
-    return None if HANJA_RE.search(fixed) else out
+    return None if FOREIGN_RE.search(fixed) else out
 
 
 # ---------------------------------------------------------------- public
@@ -239,21 +266,21 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if candidate["ko_title"] or candidate["summary"]:
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
                                                     candidate["summary"], candidate["why"]]))
-                    # 한자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회
+                    # 외국 문자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회
                     # → 그래도 남으면 미게시(llm_done=False, 다음 실행에서 재시도).
-                    if HANJA_RE.search(joined):
+                    if FOREIGN_RE.search(joined):
                         if attempt < 1:
-                            print("  · 한자 섞임 — 재생성")
+                            print("  · 외국 문자 섞임 — 재생성")
                             attempt += 1
                             continue
                         if calls < max_calls:
                             calls += 1
-                            fixed = _translate_hanja(candidate, provider, model, api_key)
+                            fixed = _translate_foreign(candidate, provider, model, api_key)
                             if fixed is not None:
-                                print("  · 한자 번역 치환 성공")
+                                print("  · 외국 문자 번역 치환 성공")
                                 parsed = fixed
                                 break
-                        print("  · 한자 잔존 — 이번 회차 미게시 (다음 실행에서 재시도)")
+                        print("  · 외국 문자 잔존 — 이번 회차 미게시 (다음 실행에서 재시도)")
                         break
                     parsed = candidate
                     break
