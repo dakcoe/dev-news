@@ -595,7 +595,7 @@ function render(){
   document.querySelector('.rb[data-v="saved"]').classList.toggle('has', savedMap.size>0);
 
   if(view==='src'){
-    let h='<h1>수집 소스</h1><div class="sub">매일 오전 9시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
+    let h='<h1>수집 소스</h1><div class="sub">매일 00시·08시·16시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
     const c={}; DATA.forEach(d=>c[d.src]=(c[d.src]||0)+1);
     Object.keys(SRC).forEach(k=>{
       const s=SRC[k];
@@ -613,7 +613,7 @@ function render(){
   let h='<h1>'+(isSaved?'보관함':'오늘의 뉴스')+'</h1>'
       + '<div class="sub">'+(isSaved
           ? '체크한 기사만 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
-          : '매일 오전 9시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차)')+'</div>';
+          : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차)')+'</div>';
 
   if(isSaved){
     if(savedMap.size) h+='<button class="expbtn" onclick="copyMd()">선택 '+savedMap.size+'건 마크다운으로 복사</button>';
