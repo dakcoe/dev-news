@@ -66,8 +66,8 @@ source_weight:
 source_quota:
   github: 5
 
-# LLM 호출 예산 (SPEC 1.6) — Groq 무료 일일 한도(1,000회)를 하루 1회 실행이
-# 다 소진하지 않도록 실행당 상한을 건다. 로컬 테스트와 Actions가 겹쳐도 안전.
+# LLM 호출 예산 (SPEC 1.6) — Groq 무료 일일 한도(1,000회)를 한 회차 실행이
+# 다 소진하지 않도록 실행당 상한을 건다(하루 3회 실행). 로컬 테스트와 Actions가 겹쳐도 안전.
 llm:
   max_calls_per_run: 50
 

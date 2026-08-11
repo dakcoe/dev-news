@@ -159,6 +159,26 @@ def test_card_tags_display_only(html):
     assert "data-ft" in html                                # 사이드바 필터는 유지
 
 
+def test_update_schedule_text_matches_cron(html):
+    """안내 문구가 실제 Actions 스케줄과 일치해야 한다 (fix-update-schedule-text).
+
+    워크플로는 cron "0 7,15,23 * * *"(UTC) = KST 00·08·16시 하루 3회인데
+    페이지에는 "매일 오전 9시"로 적혀 있었다.
+    """
+    import re
+    assert "9시" not in html
+    assert html.count("매일 00시·08시·16시") == 2   # 소스 뷰 + 뉴스 뷰 서브텍스트
+
+    wf = os.path.join(ROOT, ".github", "workflows")
+    crons = []
+    for name in os.listdir(wf):
+        with open(os.path.join(wf, name), encoding="utf-8") as f:
+            crons += re.findall(r'cron:\s*"([^"]+)"', f.read())
+    assert crons, "워크플로에 cron이 없음"
+    utc_hours = sorted(int(h) for c in crons for h in c.split()[1].split(","))
+    assert sorted((h + 9) % 24 for h in utc_hours) == [0, 8, 16]
+
+
 def test_search_partial_render_keeps_input(html):
     """한글 IME 조합 보호 v2 (fix-search-partial-render).
 
