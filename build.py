@@ -31,6 +31,7 @@ import yaml
 from news.core import archive, candidates
 from news.core import seen as seen_db
 from news.core.enrich import enrich
+from news.core.redact import redact_articles
 from news.core.scorer import score_and_categorize
 from news.core.tags import tag_all
 from news.render import render
@@ -296,6 +297,9 @@ def main() -> int:
     articles = keyword_filter(raw, cfg.get("keywords", []))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
     articles = dedupe(articles)
+    # 남의 글에 박힌 토큰이 candidates 로그·아카이브에 실려 push되면 GitHub Push
+    # Protection이 push를 거부해 회차 전체가 죽는다 (run 31510062957)
+    articles = redact_articles(articles, "수집")
     print(f"[깔때기] 후보 {len(raw)}건 → 필터·중복 제거 후 {len(articles)}건")
 
     gh_meta_map = apply_star_delta(articles, today)
@@ -314,7 +318,9 @@ def main() -> int:
         print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
         return 0
 
-    picked = enrich(picked)
+    # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM 공급자에게
+    # 전송되는 것까지 막힌다.
+    picked = redact_articles(enrich(picked), "본문")
 
     if args.no_ai:
         for a in picked:
@@ -324,6 +330,8 @@ def main() -> int:
         from news.summarizer import summarize_all
         llm_cfg = cfg.get("llm", {})
         picked = summarize_all(picked, max_calls=llm_cfg.get("max_calls_per_run", 50))
+
+    picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
 
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
