@@ -70,6 +70,12 @@ source_quota:
 # 다 소진하지 않도록 실행당 상한을 건다(하루 3회 실행). 로컬 테스트와 Actions가 겹쳐도 안전.
 llm:
   max_calls_per_run: 50
+  # 빈 값이면 summarizer의 기본 모델(openai/gpt-oss-120b). 환경변수 LLM_MODEL이
+  # 있으면 그쪽이 우선한다 — Actions에서 vars.LLM_MODEL로 코드 수정 없이 되돌릴 수 있다.
+  model:
+  # 호출 간격(초). gpt-oss는 무료 한도(429)에 llama보다 빨리 걸린다 —
+  # 2초에서 10건 중 5건이 429였고 8초에서 10/10 성공했다.
+  pause_seconds: 6.0
 
 scraper:
   top_n: 20          # 한 회차에 새로 추가할 기사 수
