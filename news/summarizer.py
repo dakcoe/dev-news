@@ -22,7 +22,11 @@ import requests
 PROVIDER = os.environ.get("LLM_PROVIDER", "groq").lower()
 
 DEFAULT_MODELS = {
-    "groq": "llama-3.3-70b-versatile",
+    # A/B 실측(동일 기사 10건)으로 llama-3.3-70b에서 교체 — switch-summarizer-model.
+    # 결정적 차이는 번역 정확도였다. "…Medical Research Is 100% AI"(폭로 기사)를
+    # llama는 "의학 연구를 위한 논문 초안 제공"으로 옮겨 핵심을 통째로 날렸다.
+    # methodologist를 "메소도론가"로 오역하고 "있음을모르다하다" 같은 비문도 냈다.
+    "groq": "openai/gpt-oss-120b",
     "openrouter": "meta-llama/llama-3.3-70b-instruct:free",
     "gemini": "gemini-3.1-flash-lite",
 }
@@ -52,8 +56,23 @@ FOREIGN_RE = re.compile(
     r"가-힣ㄱ-ㅣ"  # 한글 음절 · 호환 자모
     r"£¥°±·×"      # £ ¥ ° ± · ×
     r"‐-―‘’“”…"  # 하이픈·대시류, 따옴표, 말줄임
+    r"←→↔"          # 화살표 — "SVG→PDF"처럼 쓸모가 있다
     r"₩€]"               # ₩ €
 )
+
+# 모델이 섞어 쓰는 무해한 공백·기호를 ASCII로 정규화한다. 외국 문자 검사보다
+# 먼저 돌려야 오탐으로 재생성·미게시되는 낭비가 없다 — gpt-oss 실측에서 걸린 건
+# 한자·가나가 아니라 U+202F(좁은 비분리 공백) 12건과 → 1건뿐이었다.
+# 저장물도 같이 깨끗해진다 (JSON에 보이지 않는 공백이 남지 않는다).
+SYMBOL_MAP = {
+    0x00A0: " ", 0x2007: " ", 0x2009: " ", 0x202F: " ",   # 각종 비분리·얇은 공백
+    0x2060: "", 0xFEFF: "",                                 # 폭 없는 결합자·BOM
+    0x2011: "-",                                            # 비분리 하이픈
+}
+
+
+def _normalize_symbols(text: str) -> str:
+    return text.translate(SYMBOL_MAP)
 FOREIGN_RUN_RE = re.compile(FOREIGN_RE.pattern + "+")   # 연속 런 (단어 단위 추출용)
 
 FOREIGN_FIX_PROMPT = """아래 한국어 문장에 외국 문자(한자·가나·키릴 등)가 잘못 섞여 있다. 나열된 단어를 한국어로 옮겨라.
@@ -86,7 +105,7 @@ LABELS = {"번역제목": "ko_title", "요약": "summary", "왜중요": "why"}
 
 
 def _clean(line: str) -> str:
-    line = re.sub(r"^#+\s*", "", line.strip())
+    line = re.sub(r"^#+\s*", "", _normalize_symbols(line).strip())
     return line.replace("**", "").replace("*", "")
 
 
@@ -161,12 +180,19 @@ def _call_openai_compatible(prompt: str, model: str, api_key: str, url: str) -> 
         "temperature": 0.3,
         "max_tokens": 800,
     }
+    # gpt-oss는 추론형이라 추론 토큰도 max_tokens를 먹는다. 기본값(medium)이면
+    # 추론이 예산을 다 써서 content가 빈 문자열로 온다 — 실측 10건 중 2건.
+    # low로 낮추면 10/10 정상. 요약은 긴 추론이 필요한 작업이 아니다.
+    if "gpt-oss" in model:
+        payload["reasoning_effort"] = "low"
     resp = requests.post(url, headers=headers, json=payload, timeout=90)
     if resp.status_code == 429:
         raise RateLimited(_retry_after(resp))
     if resp.status_code >= 400:
         raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:300]}")
-    return resp.json()["choices"][0]["message"]["content"]
+    # 추론형 모델은 content가 없고 reasoning만 오는 경우가 있다 — None이 아니라
+    # 빈 문자열로 넘겨서 호출자의 파싱 실패 재시도 경로를 타게 한다.
+    return resp.json()["choices"][0]["message"].get("content") or ""
 
 
 def _call_gemini(prompt: str, model: str, api_key: str) -> str:
