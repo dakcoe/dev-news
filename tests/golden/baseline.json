@@ -1,20 +1,15 @@
 {
  "count": 12,
- "clean_rate": 0.833,
+ "clean_rate": 1.0,
  "pass_rate": {
   "incomplete": 1.0,
   "foreign": 1.0,
-  "untranslated": 0.833,
+  "untranslated": 1.0,
   "noinfo-leak": 1.0,
   "length": 1.0,
   "residue": 1.0
  },
- "failures": {
-  "untranslated": [
-   "datasette-upload-dbs 0.5a0",
-   "React useEventSource Hook: Server-Sent Events with Auto-Reco"
-  ]
- },
- "echo_mean": 0.264,
+ "failures": {},
+ "echo_mean": 0.241,
  "model": "(summarizer 기본값)"
 }
