@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write      # 실패·열화 알림을 이슈로 남긴다 (add-failure-alert)
 
 concurrency:
   group: daily-news
@@ -32,6 +33,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 수집 · 요약 · 페이지 생성
+        id: build
         env:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER || 'groq' }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -55,3 +57,39 @@ jobs:
             git pull --rebase -X theirs origin main
             git push origin main
           fi
+
+      # exit 1로 죽은 경우. 어느 스텝에서든 실패하면 뛴다.
+      - name: 실패 알림
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+            "$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') 회차가 실패했습니다.
+
+          실행 로그: $RUN
+
+          실패한 스텝을 로그에서 확인하세요. 자주 나오는 원인:
+          - \`변경분 커밋\` 실패 → 수집물에 섞인 시크릿으로 push 거부(GH013).
+            \`news/core/redact.py\`에 패턴을 추가해 마스킹으로 풉니다.
+            unblock URL로 허용 처리하지 마세요 (SPEC '하지 말 것')."
+
+      # exit 0이지만 게시 건수가 임계 미만인 경우 — 실패 알림이 못 잡는 사각지대.
+      - name: 열화 알림
+        if: success() && steps.build.outputs.degraded == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          bash scripts/notify.sh "🟡 게시 건수 급감" \
+            "$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') 회차는 성공했지만 **${{ steps.build.outputs.published }}건**만 게시됐습니다.
+
+          실행 로그: $RUN
+
+          확인할 것:
+          - \`[summarizer]\` 성공 건수 — 요약 한도(429)에 걸리면 일부만 게시됩니다 (SPEC 1.6)
+          - \`[깔때기]\` 후보 수 — 키워드 필터가 과하게 자르고 있을 수 있습니다
+          - \`[seen]\` 제외 건수 — 이미 소개한 기사가 많으면 후보가 마릅니다
+
+          임계값은 config.yaml의 \`alert.min_published\`입니다."
