@@ -101,52 +101,154 @@ scraper:
     - devops
 
 # 아래 키워드가 제목·설명에 하나도 없으면 제외한다.
-# github / devto / geeknews는 이미 개발 전용이라 필터를 적용하지 않는다.
+# github / devto / geeknews / rss / anthropic은 이미 개발 전용이라 필터를 적용하지 않는다.
+#
+# 매칭은 단어경계 기준이다 (build.py `_keyword_re`). 부분문자열이 아니므로
+# "said"가 ai에, "ago"가 go에 걸리지 않는다. 복수·시제 어미는 자동으로 받아주니
+# containers·released처럼 활용형을 따로 적을 필요가 없다.
+#
+# 짧고 흔한 영어 단어(rest·data·set 등)는 넣지 말 것 — 단어경계로도 못 막는다.
 keywords:
+  # 언어·런타임
   - python
   - javascript
   - typescript
+  - nodejs
   - rust
   - go
   - golang
   - java
   - kotlin
   - swift
+  - language
+  - compiler
+  - interpreter
+  - bytecode
+  - runtime
+  - wasm
+  - webassembly
+  - regex
+  - parser
+  - type system
+  - garbage collection
+  # AI
   - ai
+  - agent
+  - agentic
   - llm
   - gpt
   - claude
   - gemini
-  - agent
+  - openai
+  - anthropic
+  - chatgpt
+  - copilot
+  - llama
+  - mistral
+  - qwen
+  - huggingface
+  - pytorch
+  - tensorflow
   - machine learning
   - deep learning
   - transformer
   - inference
+  - reasoning
+  - neural
+  - diffusion
+  - model
+  - dataset
+  - embedding
+  - prompt
+  - token
+  - fine-tuning
+  - rag
+  - chatbot
+  # 인프라·데이터
   - cloud
   - docker
   - kubernetes
   - linux
   - devops
   - container
+  - serverless
+  - microservice
+  - terraform
   - database
   - sql
   - postgres
   - redis
+  - sqlite
+  - mongodb
+  - clickhouse
+  - kafka
+  - distributed
+  - scaling
+  - concurrency
+  - parallel
+  - latency
+  - throughput
+  # 개발 도구·플랫폼
   - api
   - sdk
   - cli
   - git
+  - github
+  - gitlab
+  - npm
+  - package
   - open source
-  - compiler
-  - runtime
+  - source code
+  - software
+  - platform
   - framework
   - library
+  - rails
   - backend
   - frontend
+  - browser
+  - chrome
+  - firefox
+  - graphql
+  - grpc
+  - webhook
+  - protocol
+  - oauth
+  - http
+  - dns
+  - json
+  - yaml
+  - architecture
+  - refactor
+  - debugging
+  - optimization
+  # 보안
   - security
   - vulnerability
   - cve
   - encryption
+  - authentication
+  - privacy
+  - breach
+  - exploit
+  - malware
+  - ransomware
+  - phishing
+  - zero-day
+  - sandbox
+  - firewall
+  - patch
+  # 하드웨어·기타
+  - hardware
+  - firmware
+  - kernel
+  - gpu
+  - cuda
+  - nvidia
+  - chip
+  - silicon
+  - arm64
+  - risc-v
   - benchmark
   - performance
   - async
