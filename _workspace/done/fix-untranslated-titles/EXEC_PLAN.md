@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -60,3 +60,4 @@ llama 시절 산출물에는 `datasette-upload-dbs 0.5a0 — Datasette 인스턴
 - [ ] 한국어 원제는 여전히 그대로 유지된다
 - [ ] 기준선 파일이 갱신된다
 - [ ] 기존 테스트 전부 통과 + ruff 통과
+- **완료일**: 2026-08-12T14:27:15.317Z
