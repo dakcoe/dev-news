@@ -77,6 +77,12 @@ llm:
   # 2초에서 10건 중 5건이 429였고 8초에서 10/10 성공했다.
   pause_seconds: 6.0
 
+# 조용한 열화 감지 (add-failure-alert). 회차가 exit 0으로 끝나도 게시 건수가
+# 이보다 적으면 Actions가 이슈로 알린다 — 요약 한도(429)나 후보 고갈로 몇 건만
+# 올라오는 상태는 "실패"로 잡히지 않기 때문이다. top_n(20)의 절반을 기준으로 둔다.
+alert:
+  min_published: 10
+
 scraper:
   top_n: 20          # 한 회차에 새로 추가할 기사 수
   keep_days: 30      # [표시 계층] index.html에 굽는 기간. 저장은 월별 샤드에 무제한 누적 (SPEC 2.1)

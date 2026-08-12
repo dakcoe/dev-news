@@ -281,6 +281,29 @@ def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
     return meta_map
 
 
+def emit_actions_output(published: int, min_published: int) -> bool:
+    """게시 결과를 Actions 출력으로 내보낸다. 반환값은 '열화'로 판정했는지 여부.
+
+    실패 알림(`if: failure()`)은 exit 1일 때만 뛴다. 그런데 이 파이프라인엔 성공으로
+    끝나는 열화 경로가 있다 — 새 기사 없음, 요약 한도로 일부만 게시(SPEC 1.6),
+    변경 없어 커밋 생략. "매일 도는데 조용히 3건씩만 올라오는" 상태를 잡으려면
+    건수 자체를 신호로 내보내야 한다.
+
+    임계 비교를 셸에서 하면 config.yaml을 bash로 파싱해야 하고 테스트도 못 한다.
+    그래서 판정은 여기서 하고 워크플로는 플래그만 본다.
+    로컬 실행(GITHUB_OUTPUT 없음)에서는 아무것도 하지 않는다.
+    """
+    degraded = published < min_published
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(f"published={published}\n")
+            f.write(f"degraded={'true' if degraded else 'false'}\n")
+    if degraded:
+        print(f"[알림] 게시 {published}건 — 임계 {min_published}건 미만이라 열화로 보고합니다")
+    return degraded
+
+
 def sync_docs_data() -> None:
     """아카이브 검색용 데이터를 docs/로 복사 (SPEC 2.4).
 
@@ -339,8 +362,11 @@ def main() -> int:
     # 판정 로그: 선별 탈락분 포함 전 후보를 기록 (SPEC 1.4)
     candidates.log(articles, {a["url"] for a in picked}, now, gh_meta_map)
 
+    min_published = cfg.get("alert", {}).get("min_published", 0)
+
     if not picked:
         print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
+        emit_actions_output(0, min_published)
         return 0
 
     # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM 공급자에게
@@ -376,6 +402,7 @@ def main() -> int:
     render(display, args.out, collected=now, enabled=cfg.get("sources", {}))
     sync_docs_data()
     seen_db.mark_seen(published)
+    emit_actions_output(len(published), min_published)
     return 0
 
 
