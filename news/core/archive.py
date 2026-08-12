@@ -77,10 +77,18 @@ def migrate_legacy(legacy_path: str = LEGACY_PATH, base_dir: str = DIR) -> None:
     print(f"[archive] 마이그레이션: {len(legacy)}건 → 월별 샤드 {len(by_month)}개, articles.json 제거")
 
 
+# 요약 생성에만 쓰이고 화면에는 나오지 않는 필드 — 저장하지 않는다.
+# content(수집 원문 3000자)는 샤드 용량의 66%를 차지했고, 남의 API 토큰이
+# 섞여 들어와 push가 거부되는 사고의 통로이기도 했다 (fix-secret-push-block).
+# 요약 파이프라인은 enrich→summarizer 구간에서 이미 다 쓰고 넘어온다.
+DROP_FIELDS = ("content",)
+
+
 def append(new_items: list[dict], batch: datetime, base_dir: str = DIR) -> list[dict]:
     """새 기사에 수집 회차를 찍어 이번 달 샤드 앞에 붙인다. 삭제·상한 없음."""
     known = {a.get("url") for a in load_all(base_dir)}
-    stamped = [{**a, "batch": batch.isoformat(),
+    stamped = [{**{k: v for k, v in a.items() if k not in DROP_FIELDS},
+                "batch": batch.isoformat(),
                 "batch_label": f"{batch.month}월 {batch.day}일 {batch:%H:%M}"}
                for a in new_items if a.get("url") not in known]
 
