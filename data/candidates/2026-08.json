@@ -126,7 +126,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -139,7 +139,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -152,7 +152,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -741,6 +741,201 @@
   "date": "2026-08-12"
  },
  {
+  "url": "https://arxiv.org/abs/2608.09934",
+  "title": "LLM Agents Factory: Retrieval of Domain-Specific LLM Agents",
+  "description": "arXiv:2608.09934v1 Announce Type: new Abstract: Large language model (LLM) agents improve task performance by decomposing problems into role-specialized behaviors. However, their practical deployment is often limited by the computational cost and instability associated with the on-the-fly agent design for each user request. To address this, we present LLM Agents Factory, a retrieval-based framewor",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.09936",
+  "title": "Conflict or Strategy? Asymmetric Role Framing of La France insoumise and Rassemblement National in French News Headlines, 2022-2025",
+  "description": "arXiv:2608.09936v1 Announce Type: new Abstract: Do French news headlines frame left- and right-populist challengers as symmetric ``extremes,'' or as fundamentally different political adversaries? We examine 28,592 headlines about La France insoumise (LFI) and Rassemblement National (RN) published by 25 French-language outlets between 2022 and 2025, annotated through a three-model LLM pipeline vali",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.09937",
+  "title": "Carefully Considering Culture: Analyzing LLM Alignment in Single- and Multi-Cultural Settings using Cultural Consensus Theory",
+  "description": "arXiv:2608.09937v1 Announce Type: new Abstract: Recent work in NLP has probed large language models for their understanding of cultural norms across countries. However, this work typically considers distributional patterns, ignoring group consensus or possible multicultural environments within a country. In this work, we leverage cultural consensus theory (CCT) from cultural anthropology to model ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.09941",
+  "title": "The Multilingual Quantization Tax: Structural Collapse and Typological Fragility in Edge SLMs",
+  "description": "arXiv:2608.09941v1 Announce Type: new Abstract: While 4-bit weight quantization is critical for deploying Small Language Models (SLMs) on edge devices, evaluations of the resulting performance degradation-the quantization tax-remain overwhelmingly English-centric. We present a zero-shot multilingual evaluation of 4-bit quantization across the Gemma 4 and Qwen 3.5 architectures. Evaluating on eight",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.09942",
+  "title": "When Chain-of-Thought Helps and When It Hurts: An Empirical Investigation of the Serial-Depth Bottleneck in LLM Reasoning",
+  "description": "arXiv:2608.09942v1 Announce Type: new Abstract: It is widely assumed that chain-of-thought (CoT) prompting universally improves LLM reasoning. We investigate this through the conceptual framework of the H_dp bandwidth bound (Chen et al., 2024): although the formal bound binds only asymptotically (at astronomically large prompt lengths), it identifies a real architectural bottleneck -- serial compu",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.10021",
+  "title": "Position Encoding in Transformers: From Absolute and Relative Methods to Rotary Position Embeddings and Long-Context Scaling",
+  "description": "arXiv:2608.10021v1 Announce Type: new Abstract: Self-attention models content-dependent interactions between tokens but does not by itself encode token order. Position encoding addresses this limitation by introducing absolute coordinates, relative distances, or position-dependent rotations into Transformer representations and attention scores. This technical survey develops a unified account of s",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.10109",
+  "title": "PERCEPT: A Corpus for POS Tagging and Analysis of Persian-English Code-Mixing",
+  "description": "arXiv:2608.10109v1 Announce Type: new Abstract: Social media has become a major venue for multilingual communication, where users frequently mix multiple languages within a single utterance. Although code-mixed corpora have been developed for several language pairs, Persian-English code-mixing remains relatively underexplored. Existing Persian resources lack Universal Dependencies (UD) part-of-spe",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.10137",
+  "title": "The Parser Already Knows: Lightweight Bias Correction in Constrained Decoding",
+  "description": "arXiv:2608.10137v1 Announce Type: new Abstract: Grammar Constrained Decoding (GCD) forces Language Models (LMs) to produce syntactically valid outputs by masking out non-conforming tokens at each step. However, rigid masking distorts the model's underlying probability distribution, often biasing generation toward valid but suboptimal outputs. While online sampling restores this distribution, it re",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm7iqx/its_the_final_countdown_baby_qwen_is_out_in_just/",
+  "title": "It's the final countdown, baby! Qwen is out in just over 7 hours!",
+  "description": "Historic event! We're ready! Google Translate, on the other hand, is not ready! submitted by /u/LegacyRemaster [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm5e14/rtx_6000_pro_price_raised_to_16000_usd_on_the/",
+  "title": "RTX 6000 PRO price raised to $16,000 USD on the Nvidia website",
+  "description": "submitted by /u/Norwood_Reaper_ [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlyzi6/anthropic_openai_google_meta_microsoft_and/",
+  "title": "Anthropic, OpenAI, Google, Meta, Microsoft, and Mistral all signed the EU Code of Practice on Transparency of AI-Generated Content",
+  "description": "Even open source local models from these companies will be watermarking code and text since it's required by law. submitted by /u/Bestlife73 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm2116/new_museglimmer30b_sota_quants_hopefully_a_new/",
+  "title": "New Muse-Glimmer-30B SoTA Quants - hopefully a new lineup :)",
+  "description": "Hey Folks, I've been making quants for a while - recently I took a short break to get into hardcore research (submitted my first EMNLP paper during it!). Along the way, I built up a little arsenal of quant-optim techniques: everything from novel, paper-pending tricks to some genuinely sick tensor-mapping algos. I threw some of the secret sauce into the newly released Muse Glimmer 30B (META IS BACK",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm6had/fyi_muse_glimmer_chat_template_got_updated/",
+  "title": "FYI: Muse Glimmer Chat Template Got Updated Recently",
+  "description": "Source: https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/chat_template.jinja Seems to be a deduplication. Not sure how it alters model performance but it did get updated FWIW. Side note: good orchestrator model, Meta! submitted by /u/TacticalRock [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything",
+  "title": "There are no lossless transformations of natural-language text",
+  "description": "There are no lossless transformations of natural-language text Sophie Alpert shares her \"internal policy on acceptable use of AI writing by engineers\". It's a short read (supporting its own recommendations) and really good. If you chose to have LLMs help massage your writing the following rule seems crucial to me: You must stand behind every idea and every sentence in your docs . It is your respon",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/#atom-everything",
+  "title": "datasette-upload-dbs 0.5a0",
+  "description": "Release: datasette-upload-dbs 0.5a0 This plugin has been around for a while - it lets users upload a brand new SQLite database to a hosted Datasette instance, at which point that database will start being served by that instance. It can also be used to atomically swap a database with a more recent version. The uploaded database is saved to a file, verified, then swapped in so /name starts serving ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
   "url": "https://punkx.org/jackdoe/home.html",
   "title": "My Anti AI computer",
   "description": "I made this computer to have a place where I can calm my mind, and to re-learn patience; the irony is that I used AI to write the OS and the drivers and everything, and now I do enjoy it, but surely not as much as if I would've written the code myself.",
@@ -1036,6 +1231,66 @@
   "native": {
    "upvotes": 39,
    "comments": 42
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.404media.co/company-offering-100-human-written-never-ai-peer-review-is-entirely-ai/",
+  "title": "Company Offering '100% Human-Written, Never AI' Medical Research Is 100% AI",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 174,
+   "comments": 39
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://arstechnica.com/security/2026/08/chrome-adopts-what-may-be-the-best-protection-yet-against-account-takeovers/",
+  "title": "Chrome adopts what may be the best protection yet against account takeovers",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 5,
+   "comments": 3
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://discoveredmaterials.com/research/",
+  "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
+  "description": "Hey HN, we're Advaith and Akash from Discovered Materials (  https://discoveredmaterials.com/  ).  We build AI agents that discover new materials for the semiconductor industry. GPUs today have a heat problem. Nvidia & AMD are almost doubling the TDP (Thermal Design Power) in every chip they release - the H100 (released 2022) has a TDP of 700W, Blackwell (2024) gives out 1.2 kW and Rubin (2026) gives out at 2.3 kW of heat. This trend is expected to continue, and getting rid of this heat is one o",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 6,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://github.com/JamelHammoud/crew",
+  "title": "Crew, a multiplayer workspace for humans and AI agents to work together",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://www.cbsnews.com/news/video-gamer-air-traffic-controllers-faa-recruitment-sean-duffy/",
+  "title": "US hires over 2k video gamers as air traffic controllers",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 110,
+   "comments": 95
   },
   "selected": false,
   "date": "2026-08-12"
@@ -1426,7 +1681,7 @@
     "software"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -1449,7 +1704,7 @@
     "python"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -1487,7 +1742,7 @@
     "vlm"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -1519,7 +1774,25 @@
     "zsh"
    ]
   },
-  "selected": false,
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://github.com/cathrynlavery/diagram-design",
+  "title": "cathrynlavery / diagram-design",
+  "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+  "source": "github",
+  "native": {
+   "upvotes": 1616,
+   "comments": 0,
+   "stars_today": 1616,
+   "stars": 7629,
+   "forks": 507,
+   "language": "HTML",
+   "license": "MIT",
+   "topics": []
+  },
+  "selected": true,
   "date": "2026-08-12"
  },
  {
@@ -1574,6 +1847,66 @@
   "url": "https://news.hada.io/topic?id=32411",
   "title": "Chicken Scheme 6.0",
   "description": "핵심 시스템에 R7RS small 전체 모듈 을 포함하고 문자열 내부 표현을 UTF-8로 전환해 완전한 Unicode 문자열을 지원함 기존 (chicken blob) 을 R7RS 호환 (chicken bytevector) 로 교체했으며, blob 읽기 문법과 여러 u8vector 전용 입출...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32430",
+  "title": "London Underground의 승객 얼굴 스캔 개시",
+  "description": "London Underground의 승객 얼굴 스캔 개시",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://news.hada.io/article/antirez-controls-the-ideas",
+  "title": "AI가 코드를 쓰는 시대, antirez는 왜 다시 C로 만드는가",
+  "description": "Redis를 만든 antirez 가 이번에는 H3-metal - Mac용 MiniMax-H3 추론 엔진 을 공개함 텍스트로 영상과 오디오를 함께 생성하는 모델을 Apple Silicon에서 실행하기 위해 C, Objective-C, Metal로 만든 엔진 범용 AI 프레임워크를 가",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32428",
+  "title": "HOP - HWP/HWPX 문서를 보고 편집할 수 있는 오픈소스 데스크톱 앱",
+  "description": "HWP/HWPX 문서를 macOS, Windows, Linux에서 열고 편집할 수 있는 오픈소스 데스크톱 앱 Rust 기반 HWP/HWPX 파서·에디터인 rhwp 를 문서 엔진으로 사용하고, 그 위에 데스크톱 환경에 필요한 기능을 추가한 구조 현재 지원 기능 HWP/HWPX 문서 열...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32427",
+  "title": "Go 언어가 AI 기반 소프트웨어 엔지니어링에 이상적인 이유",
+  "description": "AI가 코드를 대량 생성하면서 개발의 병목이 코드 작성에서 리뷰/검증/유지보수로 이동 하고 있으며, 이 변화가 프로그래밍 언어를 평가하는 기준도 바꾸고 있음 Go는 처음부터 개인의 코드 작성 편의보다 여러 사람이 장기간 함께 시스템을 만드는 소프트웨어 엔지니어링",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32426",
+  "title": "압축은 예측이다",
+  "description": "우리가 데이터를 작게 압축할 수 있는 이유는 다음에 무엇이 나올지 어느 정도 예상할 수 있기 때문 임. 반복되거나 자주 등장하는 패턴일수록 적은 정보만 저장해도 됨 예를 들어 영어에서 Q 다음에는 거의 항상 U 가 오므로, U 를 매번 길게 ...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -2486,6 +2819,618 @@
   "url": "https://dev.to/changhai/replacing-a-nextjs-microsite-with-an-embedded-go-vite-binary-without-losing-seo-41g7",
   "title": "Replacing a Next.js Microsite with an Embedded Go + Vite Binary Without Losing SEO",
   "description": "I recently moved a small interactive content site from a Next.js runtime to a single Go service. The...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/childrentime/react-useeventsource-hook-server-sent-events-with-auto-reconnect-2026-fbm",
+  "title": "React useEventSource Hook: Server-Sent Events with Auto-Reconnect (2026)",
+  "description": "Live notifications, deployment logs, stock tickers, AI responses streaming in token by token — none...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/isundram/-i-ported-decimaljs-to-go-in-72-hours-and-found-4-bugs-in-the-original-3k3b",
+  "title": "I Ported decimal.js to Go in 72 Hours — and Found 2 Real Bugs in the Original",
+  "description": "The pitch sounded simple: take a well-known open-source library, port it to a new language, prove it...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/rabbxdev/building-rabbxsirv-an-ultra-fast-edge-native-static-file-middleware-for-every-runtime-31em",
+  "title": "Building @rabbx/sirv: An Ultra-Fast, Edge-Native Static File Middleware for Every Runtime",
+  "description": "When building modern web applications, serving static assets efficiently across multiple JavaScript...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/todd_linnertz_871a076f68e/i-wrote-thirteen-posts-looking-for-the-line-between-devops-and-ai-governance-there-isnt-one-5h01",
+  "title": "I Wrote Thirteen Posts Looking for the Line Between DevOps and AI Governance. There Isn't One.",
+  "description": "Thirteen posts ago I went looking for a seam.  Somewhere between the pipeline work I did for twenty...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/peacemelodi/the-simple-idea-behind-how-nestjs-handles-things-going-wrong-517",
+  "title": "The Simple Idea Behind How NestJS Handles Things Going Wrong",
+  "description": "Every building, no matter how well built, has systems in place for when something goes wrong. A smoke...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/peacemelodi/the-quiet-confidence-nestjs-gave-me-as-a-developer-1o89",
+  "title": "The Quiet Confidence NestJS Gave Me as a Developer",
+  "description": "There is a specific kind of fear that comes early in a developer's career, the fear that everything...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/shanni/the-translation-model-that-cost-15x-more-was-also-the-most-confidently-wrong-10m7",
+  "title": "The translation model that cost 15 more was also the most confidently wrong",
+  "description": "My app serves the same content in Chinese and English: personalized readings for Chinese birth...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/begoodtool/i-set-out-to-build-the-app-that-would-save-the-world-embedding-youtube-turned-out-to-be-the-easy-56h5",
+  "title": "I set out to build the app that would save the world. Embedding YouTube turned out to be the easy 10%.",
+  "description": "I set out to build the app that would save the world. Reader, it does not save the world. What it...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/youre-blocking-touchmove-events-to-contain-scroll-overscroll-behavior-does-it-natively-223o",
+  "title": "You're blocking touchmove events to contain scroll. `overscroll-behavior` does it natively.",
+  "description": "When a scrollable container hits its edge, the page behind it starts scrolling too. Developers block this with JavaScript event handlers or body overflow tricks. overscroll-behavior is the CSS property that turns off scroll chaining in one line.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/yuvaraj_radhakrishnan_224/i-built-59-free-browser-based-dev-tools-in-vanilla-js-heres-what-i-learned-1el",
+  "title": "I built 59 free browser-based dev tools in vanilla JS — here's what I learned",
+  "description": "I've been quietly building Antigravity Tools — a collection of 59 free, browser-based developer...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/w_bushg_ee2cdfa6c771a866/a-self-hosted-market-dashboard-that-needs-zero-api-keys-a-shares-hk-us-gold-commodities-4bfo",
+  "title": "A self-hosted market dashboard that needs zero API keys (A-shares, HK, US, gold, commodities, treasury yields)",
+  "description": "The one-screen market cockpit with no API bills   Live demo: https://mrd.hermes.cc.cd — no...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/farhan_bangash_d8021d8280/dastanthe-taste-of-homeevery-culture-has-a-taste-of-home-33ho",
+  "title": "DASTAN The Taste of Home Every culture has a taste of home.",
+  "description": "DASTAN — The Taste of Home 🍲   This is my submission for the Frontend Challenge – Comfort...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/begoodtool/the-4-rule-doesnt-control-your-withdrawals-it-just-sizes-the-target-i-didnt-realize-this-5029",
+  "title": "The 4% rule doesn't control your withdrawals — it just sizes the target (I didn't realize this until I built a FIRE calculator)",
+  "description": "I'd read about the 4% rule the same way most people who lurk in FIRE forums have: withdraw 4% of your...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/mukesh_13/the-day-my-automation-reported-zero-failures-while-quietly-wasting-a-third-of-its-work-603",
+  "title": "The Day My Automation Reported Zero Failures While Quietly Wasting a Third of Its Work",
+  "description": "The symptom   The log looked clean. Thirty-one tasks executed in one run, zero failures,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/lzocate-li/thread-safety-em-net-10-e-python-gil-e-race-conditions-22a5",
+  "title": "Thread-safety em .NET 10 e Python: GIL e race conditions",
+  "description": "Entenda thread-safety em .NET 10 e Python: o que muda com System.Threading.Lock, GIL, free-threaded e como testar race conditions em serviços concorrentes.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/predictandprofit/i-audited-my-trading-bot-using-a-brier-score-it-had-no-skill-be4",
+  "title": "I Audited My Trading Bot Using a Brier Score. It Had No Skill.",
+  "description": "I Audited My Trading Bot Using a Brier Score. It Had No Skill.   I ran a weather trading bot...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/christopher_studva_7a1f8e/i-built-jarvis-a-local-first-ai-assistant-you-actually-own-macos-linux-mit-2171",
+  "title": "I built JARVIS — a local-first AI assistant you actually own (macOS + Linux, MIT)",
+  "description": "Siri, Alexa, and Google Assistant are thin clients. The intelligence lives on someone else's servers,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/yashwanth_kasi/evaluating-agent-effectiveness-2pmf",
+  "title": "Evaluating Agent Effectiveness",
+  "description": "Optimize LangGraph agent conversation goals using MCP's Resource primitive",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/enjoy_kumawat/a-space-before-the-in-my-env-file-made-a-credential-silently-disappear-3im8",
+  "title": "A Space Before the `=` in My .env File Made a Credential Silently Disappear",
+  "description": "I have four different load_env() functions in my MCP server project (my-git-manager) — one in...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/wxfwxf911/kai-yuan-xiang-mu-cong-0-dao-1wo-yong-2-zhou-ye-yu-shi-jian-da-jian-liao-duo-ping-tai-fa-bu-xi-tong-2p4f",
+  "title": "开源项目从 0 到 1：我用 2 周业余时间搭建了多平台发布系统",
+  "description": "开源项目从 0 到 1：我是怎么用 2 周业余时间搭建多平台发布系统的            起因：一个周三晚上的崩溃   故事开始于一个普通的周三晚上。  22:00，写完了一篇...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/zanesterling7589/supplier-invoice-extraction-prompt-routing-small-model-first-fallback-and-batch-runs-2mep",
+  "title": "Supplier Invoice Extraction: Prompt Routing, Small-Model-First Fallback, and Batch Runs",
+  "description": "A supplier invoice that lands in a healthtech billing app is not a chat transcript; it becomes a row...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/libme/reserve-kv-cache-for-the-output-you-promised-not-just-the-prompt-you-received-oko",
+  "title": "Reserve KV Cache for the Output You Promised, Not Just the Prompt You Received",
+  "description": "Admission control that only measures the prompt lets short requests with big generation caps OOM your LLM server. Reserve for output tokens.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/jacob_gong/parsing-and-rebuilding-epub-files-in-python-lessons-learned-from-lectulibre-3mgp",
+  "title": "Parsing and Rebuilding EPUB Files in Python: Lessons Learned from LectuLibre",
+  "description": "How we tackled EPUB parsing and rebuilding for AI book translation, with code examples and hard-won...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/romanticdeveloper/i-didnt-realize-i-was-growing-with-every-generation-of-mobile-development-2iko",
+  "title": "I Didn't Realize I Was Growing with Every Generation of Mobile Development",
+  "description": "Chapter 1 - Foundation   Looking back, between 2011 and 2012, I spent countless hours...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/jaweii/an-ai-invented-an-endpoint-for-our-api-we-shipped-it-4mo",
+  "title": "An AI invented an endpoint for our API. We shipped it.",
+  "description": "A model wrote a working-looking demo against a URL, a field name, and a response shape that did not exist. You cannot patch a model, so we made the guess true.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/johnonlee/agent-memory-part-1-it-started-at-the-tv-3c1o",
+  "title": "Agent Memory, Part 1: It Started at the TV",
+  "description": "For the last nine months I've worked on agent memory and almost nothing else. Up front: what I set...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/c_k_fb750e731394/the-idor-fix-cursor-writes-stops-at-the-get-route-cwe-639-37a3",
+  "title": "The IDOR Fix Cursor Writes Stops at the GET Route (CWE-639)",
+  "description": "TL;DR    Ask an AI editor to fix an IDOR and it will scope the one route you showed it,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/onurcinar/self-evolving-apps-not-vibe-live-coding-in-ruby-with-llms-and-metaprogramming-56h1",
+  "title": "Self-Evolving Apps: Not Vibe, Live-Coding in Ruby with LLMs and Metaprogramming",
+  "description": "Using AI to generate code for a new application is a familiar workflow today. But what if an...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/q00/dangsinyi-eijeonteu-rupeuneun-modelege-keoningeul-gareucigo-issda-2ep2",
+  "title": "당신의 에이전트 루프는 모델에게 커닝을 가르치고 있다",
+  "description": "AI 코딩 에이전트에 루프를 씌우는 것은 단발 프롬프트가 한계에 부딪히면 누구나 떠올리는 다음 수다. 돌리고, 채점하고, 점수가 낮으면 다시 돌린다.  그런데 바로 두 개의 벽에...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/koraykoylu/a-payment-qr-code-is-just-twelve-lines-of-text-1bg4",
+  "title": "A payment QR code is just twelve lines of text",
+  "description": "If you have paid an invoice in Europe recently, you have probably pointed your banking app at a small...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/tuan_fan_b37a2d370946f5db/designing-sms-login-flows-for-roaming-users-1okp",
+  "title": "Designing SMS Login Flows for Roaming Users",
+  "description": "An SMS login flow looks simple: generate a code, send it, and verify the response. Roaming turns that...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/binaryjournal/markdown-tricks-for-cleaner-docs-19oa",
+  "title": "Markdown Tricks for Cleaner Docs",
+  "description": "Markdown Tricks for Cleaner Docs   Markdown is everywhere: READMEs, docs, comments, even...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/sulimanmukhtar/ingesting-the-solana-firehose-high-throughput-decoding-with-rust-4a5c",
+  "title": "Ingesting the Solana Firehose: High-Throughput Decoding with Rust",
+  "description": "In Part 1: Economics &amp; System Design, we established the blueprint. We proved that by optimizing...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/serbyte/thermite-simd-update-faces-testing-challenges-due-to-hardware-limitations-for-advanced-simd-backends-4p7c",
+  "title": "Thermite SIMD Update Faces Testing Challenges Due to Hardware Limitations for Advanced SIMD Backends",
+  "description": "Introduction   After six years of dedicated development, Thermite SIMD has emerged as a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/guinas/como-o-zabbix-pode-ajudar-no-dia-a-dia-de-um-time-de-noc-1cn9",
+  "title": "Como o Zabbix pode ajudar no dia a dia de um time de NOC",
+  "description": "Quem trabalha em um NOC sabe que acompanhar a infraestrutura pode ser uma tarefa bastante...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/savage_solutions/how-we-killed-alert-fatigue-without-going-blind-38j2",
+  "title": "How We Killed Alert Fatigue Without Going Blind",
+  "description": "The Problem Was Noise, Not Negligence   We had dozens of cron jobs. Each one was configured...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/weston_carnes_d580b505e0c/llm-tool-use-safety-giving-agents-tools-without-giving-away-the-keys-e8c",
+  "title": "LLM tool use safety: giving agents tools without giving away the keys",
+  "description": "Tool use is what turns an LLM into an agent — and into a real attack surface. Making function calling safe: capability scoping, argument validation, authorization outside the model, and containment.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/samson_tanimawo/building-a-career-in-sre-from-junior-to-staff-4naa",
+  "title": "Building a Career in SRE: From Junior to Staff",
+  "description": "I've been in SRE for about 10 years. Started as a junior, made my way through mid, senior, and now...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/moisi_trungu_31647b7ac300/how-to-change-campaign-dial-speed-in-vicidial-p4n",
+  "title": "How to Change Campaign Dial Speed in ViciDial",
+  "description": "How to Change Campaign Dial Speed in ViciDial   Master dial speed adjustments for ViciDial...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/sahil_khurana_486f374ecf2/7-reasons-why-java-frameworks-are-used-for-api-development-ee6",
+  "title": "7 Reasons Why Java Frameworks are Used for API Development",
+  "description": "There's no shortage of options for building an API in 2026 — Node, Go, FastAPI, Kotlin, Rust, all...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/nikolas_mi_5f4aa63cc4080/supabase-row-level-security-the-policies-that-actually-ship-saas-1ell",
+  "title": "Supabase Row Level Security: The Policies That Actually Ship SaaS",
+  "description": "The 4 RLS policy patterns that cover 95% of multi-tenant SaaS, how to test them locally, and the service_role footgun that bites every team.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/jamilxt/building-a-production-ai-agent-in-spring-boot-the-sandbox-rule-part-11-57el",
+  "title": "Building a Production AI Agent in Spring Boot: The Sandbox Rule (Part 11)",
+  "description": "Docker shipped a product this week with a feature it calls YOLO mode, and the marketing line is...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/gokulnh/anyone-with-your-tunnel-url-can-hit-your-dev-machine-the-attack-surface-nobody-mentions-ned",
+  "title": "Anyone with your tunnel URL can hit your dev machine — the attack surface nobody mentions",
+  "description": "You start your dev server, open a tunnel to show a teammate your    progress, and get a public URL....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/anoymask/kimwolf-v7-androidiot-botnet-with-http2-browser-spoofing-ddos-and-enstor-three-layer-c2-44m1",
+  "title": "Kimwolf v7: Android/IoT Botnet with HTTP/2 Browser Spoofing DDoS and ENS/Tor Three-Layer C2",
+  "description": "Kimwolf v7: Android/IoT Botnet with HTTP/2 Browser Spoofing DDoS and ENS/Tor Three-Layer...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/anoymask/gunra-ransomware-raas-exploiting-fortigate-for-vdi-sessions-otp-theft-saas-exfiltration-and-3d3f",
+  "title": "Gunra Ransomware: RaaS Exploiting FortiGate for VDI Sessions, OTP Theft, SaaS Exfiltration, and Encryption",
+  "description": "Gunra Ransomware: RaaS Exploiting FortiGate for VDI Sessions, OTP Theft, SaaS Exfiltration,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/christopher_studva_7a1f8e/running-popular-osint-recon-tools-natively-on-macos-no-vm-no-kali-1520",
+  "title": "Running Popular OSINT & Recon Tools Natively on macOS (No VM, No Kali)",
+  "description": "If you do security research or OSINT on a Mac, you've hit this wall: half the best tools are written...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/weston_carnes_d580b505e0c/designing-a-cross-border-payment-system-2bi2",
+  "title": "Designing a cross-border payment system",
+  "description": "A payment system's one job is to never lose track of money. The money-safety core — double-entry ledger, idempotency, reconciliation, multi-channel delivery — from a platform moving $2M/day.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/toffy/apple-quietly-shipped-everything-you-need-to-build-a-real-time-translator-so-i-built-one-9ce",
+  "title": "Apple quietly shipped everything you need to build a real-time translator — so I built one",
+  "description": "I built Wakaru, a macOS app that turns any audio playing on your Mac into live translated subtitles — 100% on-device with macOS 26's new speech, translation, and LLM APIs. Here's what I learned.",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/bashiru98/ventstream-open-source-cdc-engine-that-syncs-your-database-to-search-cache-and-ai-agents-in-23jl",
+  "title": "VentStream — open source CDC engine that syncs your database to search, cache, and AI agents in realtime",
+  "description": "Keeping downstream systems in sync with a database is one of those problems every team ends up...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/aiwithaj/use-ai-see-how-much-youve-used-in-a-second-2j6i",
+  "title": "Use AI? See how much you've used in a second.",
+  "description": "Hi! I have made a tool called \"Overcap\", we've all seen the problem. We use Claude Code, Codex, Grok,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-12"
+ },
+ {
+  "url": "https://dev.to/ahmet_gedik778845/building-a-video-url-canonicalization-pipeline-for-multi-region-feeds-592n",
+  "title": "Building a Video URL Canonicalization Pipeline for Multi-Region Feeds",
+  "description": "Replacing raw-URL identity with a two-stage canonicalization pipeline: RFC 3986 structural normaliza",
   "source": "devto",
   "native": {
    "upvotes": 0,
