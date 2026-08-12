@@ -20,9 +20,11 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 from collections import defaultdict
+from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 
@@ -107,17 +109,40 @@ def run_scrapers(cfg: dict) -> list[dict]:
     return articles
 
 
+@lru_cache(maxsize=8)
+def _keyword_re(keywords: tuple[str, ...]) -> re.Pattern[str]:
+    """키워드 목록을 단어경계 정규식 하나로 컴파일한다.
+
+    부분문자열 매칭(`"ai" in "said"`)이면 필터가 통째로 무력해진다 — 실측으로
+    미신뢰 출처 167건 중 166건이 통과했다. 그래서 앞뒤를 영숫자로 막는다.
+
+    형태소는 허용하되 길이로 차등한다. 4글자 이상은 복수·시제 어미까지 받고
+    (`containers`·`released`), 3글자 이하는 복수형만 받는다 — 짧은 키워드에 시제
+    어미를 허용하면 `going`(go+ing)·`aid`(ai+d)가 다시 새기 때문이다.
+
+    한글은 영숫자가 아니므로 한국어 제목은 이 경계 조건에 영향받지 않는다.
+    """
+    short = sorted((k for k in keywords if len(k) <= 3), key=len, reverse=True)
+    long_ = sorted((k for k in keywords if len(k) > 3), key=len, reverse=True)
+    parts = []
+    if long_:
+        parts.append("(?:" + "|".join(re.escape(k) for k in long_) + ")(?:s|es|ed|ing|d)?")
+    if short:
+        parts.append("(?:" + "|".join(re.escape(k) for k in short) + ")s?")
+    return re.compile(r"(?<![a-z0-9])(?:" + "|".join(parts) + r")(?![a-z0-9])")
+
+
 def keyword_filter(articles: list[dict], keywords: list[str]) -> list[dict]:
     if not keywords:
         return articles
-    lowered = [k.lower() for k in keywords]
+    pattern = _keyword_re(tuple(k.lower() for k in keywords))
     kept, dropped = [], 0
     for a in articles:
         if a["source"] in TRUSTED:
             kept.append(a)
             continue
         text = (a.get("title", "") + " " + a.get("description", "")).lower()
-        if any(k in text for k in lowered):
+        if pattern.search(text):
             kept.append(a)
         else:
             dropped += 1
