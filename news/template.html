@@ -570,17 +570,19 @@ function archMatches(){
   const here=new Set(DATA.map(d=>d.url));
   return INDEX.filter(e=>!here.has(e.u) && (e.t||'').toLowerCase().includes(s)).slice(0,50);
 }
-function openArchived(url, month){
+/* extra = 목록이 이미 아는 메타(출처·발행시각·댓글수·썸네일). 지연 로딩분의
+   상세가 아카이브 검색 결과처럼 빈약해지지 않도록 덮어쓴다. */
+function openArchived(url, month, extra){
   const show = list => {
     const a=list.find(x=>x.url===url);
     if(!a){ alert('기사를 찾지 못했습니다.'); return; }
     const body=(a.summary||a.description||'').split('\n').filter(p=>p.trim());
-    showDetail({
+    showDetail(Object.assign({
       title:a.ko_title||a.title, from:(SRC[a.source]||{}).name||a.source,
       color:(SRC[a.source]||{}).color||'#999', pub:null, dateLabel:(a.batch||'').slice(0,10),
       img:a.image, body:body.map(p=>'<p>'+p+'</p>').join('')||'<p>(요약 없음)</p>',
       why:a.why||'', url:a.url
-    });
+    }, extra||{}));
     markRead(url);
   };
   if(SHARDS[month]){ show(SHARDS[month]); return; }
@@ -750,6 +752,13 @@ function showDetail(d){
 function openDetail(i){
   cur=i; const d=DATA[i], s=SRC[d.src]||{name:d.src,color:'#999'};
   markRead(d.url);
+  /* 최근 N일 밖 기사는 body·why가 인라인되지 않는다 (split-initial-payload).
+     월별 샤드에서 가져온다 — 같은 달은 SHARDS에 캐시되므로 한 번만 탄다. */
+  if(d.body===undefined){
+    openArchived(d.url, d.month, {from:d.from, color:s.color, pub:d.pub, cm:d.cm,
+      delta:(d.src==='github'?d.delta:0), img:d.img, title:d.title});
+    render(); return;
+  }
   showDetail({
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,

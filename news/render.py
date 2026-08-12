@@ -52,13 +52,26 @@ def _first_sentences(text: str, limit: int = 140) -> str:
     return (cut[: dot + 1] if dot > 60 else cut.rstrip() + "…")
 
 
-def to_view_model(articles: list[dict]) -> list[dict]:
+# 상세 패널 전용 필드(body·why)를 인라인할 기간. 이보다 오래된 기사는 상세를 열 때
+# 월별 샤드에서 가져온다 (template.html의 openArchived 경로 재사용).
+# 목록·검색·필터는 snip만 쓰므로 화면 동작은 달라지지 않는다.
+INLINE_DAYS = 3
+
+
+def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[dict]:
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=inline_days)).timestamp() if inline_days else None
     out = []
     for a in articles:
         summary = a.get("summary") or a.get("description") or ""
         # 페이월·영상·JS 전용 페이지는 본문 추출이 안 돼 요약이 비는 게 정상 —
         # "생성 실패"가 아니라 본문 미공개 안내를 보여준다 (fix-empty-summary-label).
         body_paras = [p.strip() for p in summary.split("\n") if p.strip()] or ["(본문이 공개되지 않은 기사 — 원문을 확인하세요)"]
+        inline = True
+        if cutoff is not None:
+            try:
+                inline = datetime.fromisoformat(a["batch"]).timestamp() >= cutoff
+            except Exception:
+                inline = True          # 회차를 모르면 안전하게 인라인
         out.append({
             "batch": a.get("batch", ""),
             "batchLabel": a.get("batch_label", ""),
@@ -77,9 +90,10 @@ def to_view_model(articles: list[dict]) -> list[dict]:
             "pub": _pub_iso(a),
             "tags": a.get("tags") or [],
             "snip": _first_sentences(summary),
-            "body": "".join(f"<p>{p}</p>" for p in body_paras),
-            "why": a.get("why") or "",
         })
+        if inline:
+            out[-1]["body"] = "".join(f"<p>{p}</p>" for p in body_paras)
+            out[-1]["why"] = a.get("why") or ""
     return out
 
 
