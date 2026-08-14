@@ -932,7 +932,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-14"
  },
  {
@@ -945,7 +945,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-14"
  },
  {
@@ -957,6 +957,97 @@
    "upvotes": 0,
    "comments": 0,
    "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vny9zs/glm_53_released/",
+  "title": "GLM 5.3 Released",
+  "description": "Official Announcement https://z.ai/blog/glm-5.3 submitted by /u/jmorant555 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnyiqa/its_actually_crazy_how_good_dsv4_flash_0731_is/",
+  "title": "It's actually crazy how good DSv4 Flash 0731 is",
+  "description": "I didn't think we'd get here so quickly. I can run this shit on a computer I spent less than $2k for (back before prices exploded). Crazy world Source: Artificial Analysis Intelligence Index v4.1.1 submitted by /u/Master-Meal-77 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnrvr5/how_ai_text_watermarking_works/",
+  "title": "How AI text watermarking works",
+  "description": "submitted by /u/johnnyApplePRNG [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
+  "title": "sqlite-utils 4.2.1",
+  "description": "Release: sqlite-utils 4.2.1 Fixes a crashing bug in sqlite-utils 4.2 . I'd introduced code that looks like this: from typing_extensions import Self It turned out the typing-extensions package was not listed as a dependency for sqlite-utils - it was installed by one of the other dependencies in the dev dependency group , but when you uvx sqlite-utils directly you don't get those dependencies. As pa",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+  "title": "sqlite-utils 4.2",
+  "description": "Release: sqlite-utils 4.2 Lots of improvements in this one relating to the table.transform() feature , which adds support for complex alter table operations by creating a fresh table, copying across the data and then dropping and replacing the old one. transform() now preserves a much larger array of edge-case schema definitions, including check constraints, unique constraints and even comments de",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+  "title": "llm-gemini 0.33",
+  "description": "Release: llm-gemini 0.33 It's been a while since the last llm-gemini release. This version of the plugin adds support for today's Gemini 3.7 Flash release, plus gemini-3.6-flash , gemini-3.5-flash-lite and two embedding models gemini-embedding-2 and gemini-embedding-001 . The plugin is also upgraded for compatibility with LLM 0.32, which means you can now see reasoning traces and you can also enab",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnp2ni/is_waiting_for_qwen_38_27b_like_waiting_for_star/",
+  "title": "Is waiting for Qwen 3.8 27B like waiting for Star War Episode one?",
+  "description": "Is waiting for Qwen 3.8 27B like waiting for Star War Episode one? I'm sweating waiting to get my hand on this to try it tomorrow morning. But it takes me back to Star Wars 1 and the disappointment after being so hyped to see it. Only 16 hours and 46 minutes to go... 45, ... submitted by /u/Guilty-History-9249 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
   },
   "selected": false,
   "date": "2026-08-14"
@@ -1186,7 +1277,7 @@
    "upvotes": 37,
    "comments": 5
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-14"
  },
  {
@@ -1198,7 +1289,7 @@
    "upvotes": 16,
    "comments": 12
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-14"
  },
  {
@@ -1390,7 +1481,7 @@
    "upvotes": 110,
    "comments": 78
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-14"
  },
  {
@@ -1461,6 +1552,42 @@
   "native": {
    "upvotes": 27,
    "comments": 7
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://declaude.org/watermarking/",
+  "title": "How AI text watermarking works",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 108,
+   "comments": 82
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://github.com/JustVugg/lumabri",
+  "title": "Show HN: Lumabri – Run Moe Models on a P2P Swarm with Colibri",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
+  "title": "Bluesky Protocol Services",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 156,
+   "comments": 28
   },
   "selected": false,
   "date": "2026-08-14"
@@ -2067,6 +2194,66 @@
   "url": "https://news.hada.io/topic?id=32475",
   "title": "Deutsche Bank, 유럽 최초의 외국계 위안화 청산은행으로 지정",
   "description": "중국이 Deutsche Bank 에 유럽 내 위안화 청산을 허가하면서, 중국계 은행이 맡아온 역할이 처음으로 외국계 금융기관까지 확대됨 중국인민은행(PBoC)과의 양해각서에 따라 프랑크푸르트에서 위안화 청산 업무 를 수행하게 됨 기존 유럽 청산망은 Bank of C...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32492",
+  "title": "MCP가 Stateless해짐",
+  "description": "최근 https://news.hada.io/topic?id=32203 를 읽고 찾아보다가 MCP에 큰 변경사항이 있었다는걸 알게되어 공유합니다. MCP 2026-07-28 은 출시 이후 가장 큰 규모의 스펙 변경으로, 프로토콜 코어를 stateful한 양방향 연결 구조에서 stateless한 request/response 구조로",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32491",
+  "title": "X, For You 알고리듬 공개 범위 확대 - 랭킹 가중치와 노출 제한 시스템까지",
+  "description": "X가 2026년 1월 공개 한 For You 추천 알고리듬 저장소 를 대폭 확장해, 실제 노출에 영향을 주는 설정과 필터링 시스템까지 추가 공개함 기존 공개는 Thunder/Phoenix 기반 후보 수집과 Transformer 랭킹 구조가 중심이었지만, 이...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32489",
+  "title": "Show GN: commentube - 유튜브 댓글을 게임으로 즐겨보세요",
+  "description": "유튜브 댓글을 게임으로 간단히 즐겨보면 어떨까 싶어서 만들어 봤습니다 '더 많이 더 적게' 컨텐츠에서 영감을 받아 시작된 프로젝트입니다 좋아하는 유튜브 영상 링크를 넣으면 댓글을 활용한 게임을 시작할 수 있습니다 시작 즉시 댓글을 추출하여 게임 진행에 사용됩니다 현재 게임은 총",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32486",
+  "title": "State of CSS 2026",
+  "description": "4,902명이 참여한 2026년 조사에서 CSS는 새 기능이 빠르게 늘어나는 가운데 Anchor Positioning이 올해 가장 주목받은 기능 으로 올라섰으며, 사용률도 전년 대비 15% 증가해 조사 대상 기능 중 가장 큰 상승폭을 기록함 이미 자리 잡은 기능에서는 :has() 사용...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32485",
+  "title": "Wails v3 Beta - Go 데스크톱 앱을 위한 새로운 기반",
+  "description": "초기엔 Go 백엔드 + HTML/CSS/JS·React·Vue 프론트엔드 로 맥/윈/리눅스용 단일 바이너리 앱을 만드는 가벼운 Electron 대체제였음 이후 v2를 거쳐 이번 v3 Beta 에서는 단순 GUI 래퍼보다 복잡한 데스크톱 앱을 만들기 위한 애플리케이션 구조 자체를 크게 재설계...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -3399,6 +3586,486 @@
   "url": "https://dev.to/js13kgames/the-js13kgames-2026-competition-has-started-2n53",
   "title": "The js13kGames 2026 competition has started!",
   "description": "The fifteenth annual online js13kGames competition starts… NOW! Build a web game following the given...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/rinava/nobody-audits-their-openai-invoice-2n5i",
+  "title": "Nobody audits their OpenAI invoice",
+  "description": "Every team running LLMs in production has two numbers for last month's spend: the one in their...",
+  "source": "devto",
+  "native": {
+   "upvotes": 3,
+   "comments": 4
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/you-copy-and-reverse-the-array-to-find-the-last-match-findlast-searches-from-the-end-directly-ckk",
+  "title": "You copy and reverse the array to find the last match. `findLast()` searches from the end directly.",
+  "description": "Here is a pattern that shows up in almost every codebase:    const lastActive =...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/pavanbelagatti/build-your-agentic-software-factory-53nc",
+  "title": "Build Your Agentic Software Factory!",
+  "description": "The term software factory is getting a lot of attention right now, and for a good reason. AI coding...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/saurabh_sharma_7a9a61107d/the-rounding-bug-that-almost-shipped-in-a-payroll-calculator-jm3",
+  "title": "The rounding bug that almost shipped in a payroll calculator",
+  "description": "I've been building PayTimeHub, a set of free payroll and pay calculators - paycheck withholding,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/hackrs_6393/gate-the-patch-not-the-model-a-three-check-loop-for-untrusted-code-outputs-99",
+  "title": "Gate the Patch, Not the Model: A Three-Check Loop for Untrusted Code Outputs",
+  "description": "A generated patch can look correct and still fail in three ways that a prompt screenshot cannot show:...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/niharikapujari/css-anchor-positioning-building-tooltips-without-javascript-positioning-hacks-2a7o",
+  "title": "CSS Anchor Positioning: Building Tooltips Without JavaScript Positioning Hacks",
+  "description": "Introduction   Positioning a tooltip sounds simple.  Put a small box next to a button....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/kenielzep97/i-built-a-puerto-rican-mountain-kitchen-the-only-image-is-the-favicon-27jc",
+  "title": "I Built a Puerto Rican Mountain Kitchen. The Only Image Is the Favicon.",
+  "description": "This is a submission for Frontend Challenge - Comfort Food Edition, Perfect Landing.           What I...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/promptcloud_services/200-ok-is-not-enough-why-bot-protected-sites-still-return-bad-data-4bdk",
+  "title": "200 OK Is Not Enough: Why Bot-Protected Sites Still Return Bad Data",
+  "description": "Your crawl job finished successfully. That doesn't mean it got the data.  Every scraping pipeline has...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/acel/lm-studio-on-windows-wsl2-for-development-the-setup-guide-i-wish-i-had-2km4",
+  "title": "LM Studio on Windows, WSL2 for Development: The Setup Guide I Wish I Had",
+  "description": "I went to a Build with Gemma event expecting to spend the day experimenting with local models....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/websilvercraft/the-python-gil-explained-without-the-hand-waving-10jo",
+  "title": "The Python GIL, explained without the hand-waving",
+  "description": "Every Python developer eventually hits this conversation:   \"Just use threads to speed it...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/hidenari/i-asked-claude-code-to-find-me-a-trading-edge-it-killed-three-strategies-first-22ai",
+  "title": "I Asked Claude Code to Find Me a Trading Edge. It Killed Three Strategies First.",
+  "description": "How I built a fully automated, rule-based Japanese stock research pipeline with Claude Code,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/benchclaw/i-tried-to-verify-an-ai-agent-benchmark-heres-the-bundle-i-wish-everyone-shipped-2okn",
+  "title": "I Tried to Verify an AI Agent Benchmark. Here's the Bundle I Wish Everyone Shipped",
+  "description": "Nearly every AI agent benchmark you read is unfalsifiable.  Not wrong, necessarily - unfalsifiable....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/renga154/i-redacted-my-username-from-a-screen-recording-three-times-and-missed-it-every-time-1gnd",
+  "title": "I redacted my username from a screen recording three times and missed it every time",
+  "description": "Originally published on my own site.  I make a desktop AI agent. I recorded a demo of it writing...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/lachezar_dimitrov_ec7c7d9/build-your-own-ai-visibility-tracker-without-a-subscription-9n8",
+  "title": "Build Your Own AI Visibility Tracker (Without a Subscription)",
+  "description": "A ~200-line Python tracker for Google AI Overview citations: architecture, working code, and real costs (about $0.09 per run).",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/panagiotis_panageas/conductor-postgresql-backed-async-task-queue-for-python-no-redis-required-29en",
+  "title": "Conductor: PostgreSQL-Backed Async Task Queue for Python (No Redis Required)",
+  "description": "The Problem: Do You Really Need Redis or RabbitMQ?   Let me paint you a picture.  You're...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/altrouter/your-llm-gateway-takes-a-cut-seventeen-lines-of-python-tell-you-how-big-45jc",
+  "title": "Your LLM gateway takes a cut. Seventeen lines of Python tell you how big.",
+  "description": "A gateway sells you one key for every model — and a price you never checked against the vendor's own list. Here is the script that checks it, and the four things to look at before you switch.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/yashwanth_kasi/cascading-failures-in-multi-agent-systems-omd",
+  "title": "Cascading Failures in Multi-Agent Systems",
+  "description": "Detect and recover from downstream service outages in LangGraph agent workflows",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/shipsitself/a-prompt-injection-couldnt-beat-my-ai-lead-qualifier-a-lazy-lie-beat-it-2-times-out-of-5-15ln",
+  "title": "A prompt injection couldn't beat my AI lead-qualifier. A lazy lie beat it 2 times out of 5.",
+  "description": "The prompt injection was the trap I was proud of. A lead came in with the message \"ignore your...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/ahmed_mahmoud360/content-security-policy-in-the-nextjs-app-router-field-notes-on-nonces-strict-dynamic-and-the-16d5",
+  "title": "Content Security Policy in the Next.js App Router: Field Notes on Nonces, strict-dynamic, and the Middleware That Made Every Page Dynamic",
+  "description": "Headline: A Content Security Policy (CSP) is an HTTP response header that tells the browser which...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/ahaconvert_4518ffb5e649d6/webp-images-the-good-the-bad-and-when-pngjpg-still-wins-4cad",
+  "title": "WebP Images: The Good, the Bad, and When PNG/JPG Still Wins",
+  "description": "If you've touched a frontend performance audit in the last few years, you've probably been told to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/dalenguyen/rich-results-shopping-and-ai-mode-what-google-merchant-center-actually-gets-you-5fem",
+  "title": "Rich Results, Shopping, and AI Mode: What Google Merchant Center Actually Gets You",
+  "description": "Ruby Rose Bloom sells one-of-a-kind vintage — a self-hosted storefront, no Shopify, no marketplace...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/narges_iranparast_d2c6413/how-we-digitalized-a-traditional-roadside-assistance-business-lessons-from-the-field-1f4",
+  "title": "How We Digitalized a Traditional Roadside Assistance Business (Lessons from the Field)",
+  "description": "Roadside assistance (\"emdad khodro\" in Persian-speaking markets) is one of those industries that has...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/kriosa/rate-limiting-in-laravel-and-php-how-to-stop-brute-force-before-it-starts-4241",
+  "title": "Rate Limiting in Laravel and PHP — How to Stop Brute Force Before It Starts",
+  "description": "ORIGINALLY PUBLISHED ON MEDIUM  This is the thirteenth article in a series on PHP and Laravel...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/renga154/my-approval-dialog-grew-until-the-buttons-went-off-screen-247o",
+  "title": "My approval dialog grew until the buttons went off screen",
+  "description": "Originally published on my own site.  I build a desktop app where an AI agent can run commands on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/the_nguyen/evershop-221-our-biggest-release-since-20-page-builder-metafields-and-react-19-1g1o",
+  "title": "EverShop 2.2.1: our biggest release since 2.0 — page builder, metafields, and React 19",
+  "description": "We just shipped EverShop 2.2.1 — the largest release since 2.0. It folds in the React 19 work that...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/elliot_silver/compact-design-a-json-language-models-can-write-and-figma-can-import-gan",
+  "title": "Compact Design: a JSON language models can write and Figma can import",
+  "description": "Don't ask a model to speak Figma's plugin API. Don't ask it for CSS and hope a screenshot is a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/tomopumipumi/forget-ai-i-boosted-my-productivity-with-a-vscode-extension-that-throws-sushi-4lgb",
+  "title": "Forget AI. I Boosted My Productivity with a VSCode Extension That Throws Sushi.",
+  "description": "Every day, the tech world screams about how AI is going to 10x our productivity, write our entire...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/zkasuran/the-hidden-svg-biome-flagged-anyway-a-nosvgwithouttitle-false-positive-51jh",
+  "title": "The hidden svg Biome flagged anyway: a noSvgWithoutTitle false positive",
+  "description": "This is a submission for DEV's Summer Bug Smash: Clear the Lineup powered by Sentry.           The...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/harry0703/i-wanted-a-disk-cleaner-that-shows-exactly-what-it-will-delete-so-i-built-mangodisk-g5c",
+  "title": "I Wanted a Disk Cleaner That Shows Exactly What It Will Delete—So I Built MangoDisk",
+  "description": "Most disk cleaners turn cleanup into a single number and one big button. That never felt comfortable...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/nishant_banginwar_80b7dc5/k-means-doesnt-find-your-clusters-it-finds-its-own-155f",
+  "title": "K-Means Doesn't Find Your Clusters. It Finds Its Own.",
+  "description": "Classic Machine Learning Through the Eyes of an SRE — Part 5  Supervised learning at least tells you...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/aloknecessary/service-mesh-everywhere-the-operational-cost-of-cluster-wide-mtls-4pop",
+  "title": "Service Mesh Everywhere? The Operational Cost of Cluster-Wide mTLS",
+  "description": "\"Add a service mesh\" has become the Kubernetes equivalent of \"make everything private.\" The reasoning...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/rupadana/belajar-kubernetes-untuk-pengguna-docker-5ea7",
+  "title": "Belajar Kubernetes untuk Pengguna Docker",
+  "description": "Target pembaca: kamu sudah terbiasa dengan docker run, docker build, docker-compose, dan paham konsep...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/kairox_940d8228041f8f941b/sms-chamada-de-voz-ou-app-como-escolher-o-metodo-de-2fa-certo-pro-seu-produto-46e0",
+  "title": "SMS, chamada de voz ou app: como escolher o método de 2FA certo pro seu produto",
+  "description": "Toda vez que alguém pergunta \"qual método de autenticação em duas etapas eu devo usar\", a resposta...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/thegatewayguy/the-real-llmops-risk-isnt-the-model-its-shadow-ai-4m86",
+  "title": "The real LLMOps risk isn't the model. It's shadow AI.",
+  "description": "Large language models broke the clean \"train it, test it, ship it\" model of production ML. The thing...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/devaonbreaches/breach-monitoring-from-cron-no-api-key-no-signup-just-curl-and-jq-2jh1",
+  "title": "Breach monitoring from cron: no API key, no signup, just curl and jq",
+  "description": "Most breach-monitoring setups die at step one: \"create an account, generate an API key, add a payment...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/tudorel_iancu_abd790f95c2/sharepoint-cve-2026-55040-jwt-bypass-exploited-worldwide-patch-now-enm",
+  "title": "SharePoint CVE‑2026‑55040: JWT Bypass Exploited Worldwide – Patch Now",
+  "description": "Threat Overview   🚨 Microsoft SharePoint now has a critical flaw, CVE-2026-55040, that has...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/enjoy_kumawat/my-publish-script-checks-for-duplicates-before-it-posts-nothing-stops-two-checks-from-passing-at-3d7f",
+  "title": "My Publish Script Checks for Duplicates Before It Posts. Nothing Stops Two Checks From Passing at Once.",
+  "description": "This repo's publish_devto.py has had two real bugs fixed in its idempotency guard already. On...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/kenwalger/durable-memory-why-vector-databases-arent-enough-3h8f",
+  "title": "Durable Memory: Why Vector Databases Aren't Enough",
+  "description": "Part 3 of the Building the AI Memory Stack series  After finishing Part 2, I noticed something.  The...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/arakas4488cmd/stale-price-bug-why-your-stop-loss-might-not-protect-you-2ap1",
+  "title": "Stale Price Bug: Why Your Stop-Loss Might Not Protect You",
+  "description": "A pattern found across three independent trading bots — including one I run myself.  A stop-loss at...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-14"
+ },
+ {
+  "url": "https://dev.to/arakas4488cmd/the-safety-net-that-isnt-there-1cb",
+  "title": "The Safety Net That Isn't There",
+  "description": "Two more bugs from live trading bot audits — where the protection looked real everywhere except in...",
   "source": "devto",
   "native": {
    "upvotes": 0,
