@@ -30,6 +30,7 @@ from datetime import datetime, timedelta, timezone
 
 import yaml
 
+from news import apis_catalog
 from news.core import archive, candidates
 from news.core import seen as seen_db
 from news.core.enrich import enrich
@@ -401,6 +402,8 @@ def main() -> int:
     display = archive.recent(all_articles, sc.get("keep_days", 30))
     render(display, args.out, collected=now, enabled=cfg.get("sources", {}))
     sync_docs_data()
+    # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
+    apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"))
     seen_db.mark_seen(published)
     emit_actions_output(len(published), min_published)
     return 0
