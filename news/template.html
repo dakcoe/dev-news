@@ -185,7 +185,8 @@
   .ccard:hover{border-color:#d6d6e0;box-shadow:0 2px 6px rgba(20,20,40,.05)}
   .chd{display:flex;align-items:center;justify-content:space-between;gap:8px}
   .cic{width:30px;height:30px;border-radius:9px;background:var(--pri-bg);color:var(--pri-dk);
-       font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+       display:flex;align-items:center;justify-content:center;flex:none}
+  .cic svg{width:17px;height:17px;stroke-width:1.9}
   .cmeta{font-size:11px;color:var(--tx3);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
   .cfree{font-size:10.5px;padding:0 6px;border-radius:99px;background:#e7f6ec;color:#1f7a3d;font-weight:600;white-space:nowrap}
   .cname{font-size:14.5px;font-weight:700;letter-spacing:-.02em}
@@ -663,6 +664,53 @@ function ensureApis(){
     .then(j=>{ APIS=j; if(view==='api') render(); })
     .catch(()=>{ APIS='fail'; if(view==='api') render(); });
 }
+/* 카테고리 아이콘 — 이름 키워드로 매핑, 위에서부터 첫 매칭 (api-category-hub 피드백:
+   첫 글자 타일은 정보가 없다). 새 카테고리가 생겨도 폴백(플러그)이 받는다. */
+const A_ICONS=[
+  [/이메일|email/i,'M3 6h18v13H3zM3 8l9 6 9-6'],
+  [/정부|공공기관|government/i,'M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6'],
+  [/지도|위치|geocod/i,'M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11zM12 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z'],
+  [/지역/,'M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14'],
+  [/금융|결제|finance|currency|crypto|암호화폐|블록체인|재정|예산|경제/i,'M15 9.5c-.4-1.2-1.6-2-3-2-1.7 0-3 .9-3 2.1 0 2.9 6 1.4 6 4.3 0 1.2-1.3 2.1-3 2.1-1.4 0-2.6-.8-3-2M12 5.5v13'],
+  [/통신/,'M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 20V4'],
+  [/교통|transport|vehicle/i,'M4 16V7a2 2 0 012-2h12a2 2 0 012 2v9M2 16h20v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zM7.5 16h.01M16.5 16h.01'],
+  [/날씨|환경|weather|environment|클라우드|cloud/i,'M17 17a4 4 0 000-8 5.5 5.5 0 00-10.7 1.5A3.5 3.5 0 007 17h10z'],
+  [/의료|보건|건강|health|medical/i,'M12 21C7 17 3 13.5 3 9.5A4.5 4.5 0 0112 6a4.5 4.5 0 019 3.5c0 4-4 7.5-9 11.5z'],
+  [/교육|도서|법률|사전|education|books|dictionar|legal|law/i,'M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2V5zM4 19a2 2 0 012-2h13'],
+  [/부동산|housing|스마트홈|iot/i,'M3 11l9-8 9 8M5 9.5V21h14V9.5M9 21v-6h6v6'],
+  [/문화|관광|여행|travel|tourism/i,'M12 21a9 9 0 100-18 9 9 0 000 18zM15.5 8.5l-2 5-5 2 2-5 5-2z'],
+  [/AI|머신러닝|인공지능|machine learning/i,'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z'],
+  [/쇼핑|커머스|shopping|commerce/i,'M3 4h2l2.5 12.5a1.5 1.5 0 001.5 1.2h8.6a1.5 1.5 0 001.5-1.2L21 8H6M10 20.5h.01M17 20.5h.01'],
+  [/배송|물류|tracking/i,'M1 6h13v10H1zM14 10h4l3 3v3h-7M6 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z'],
+  [/음식|음료|food|drink/i,'M4 8h13v6a5 5 0 01-5 5H9a5 5 0 01-5-5V8zM17 9h2a2.5 2.5 0 010 5h-2M7.5 3v2M11.5 3v2'],
+  [/게임|엔터테인|games|comics|entertainment|anime/i,'M2 10a3 3 0 013-3h14a3 3 0 013 3v6a3 3 0 01-3 3H5a3 3 0 01-3-3v-6zM7 11v4M5 13h4M15 12.5h.01M18 14h.01'],
+  [/음악|music/i,'M9 18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM9 18V5l10-2v12M19 15a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z'],
+  [/미디어|콘텐츠|영상|video|news|podcast/i,'M3 5h18v14H3zM10 9.5l5 2.5-5 2.5v-5z'],
+  [/소셜|커뮤니|social|messaging/i,'M4 4h16v12H8l-4 4V4z'],
+  [/에너지|전력|energy/i,'M13 2L4 14h6l-1 8 9-12h-6l1-8z'],
+  [/과학|연구|science|math/i,'M9 3h6M10 3v6l-5 9a2 2 0 001.8 3h10.4a2 2 0 001.8-3l-5-9V3'],
+  [/통계|지표|analytics/i,'M4 20V10M10 20V4M16 20v-8M22 20H2'],
+  [/개발|development|programming|open.?source|continuous/i,'M8 4l-5 8 5 8M16 4l5 8-5 8'],
+  [/데이터|data/i,'M12 9c3.9 0 7-1.3 7-3s-3.1-3-7-3-7 1.3-7 3 3.1 3 7 3zM5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3'],
+  [/동물|animal|pet/i,'M12 12.5c-2.8 0-5 1.9-5 4.2 0 1.3 1 2.3 2.3 2.3h5.4c1.3 0 2.3-1 2.3-2.3 0-2.3-2.2-4.2-5-4.2zM6.5 10a1.5 1.9 0 10.01 0M12 7.5a1.5 1.9 0 10.01 0M17.5 10a1.5 1.9 0 10.01 0'],
+  [/스포츠|sports|fitness/i,'M8 4h8v5a4 4 0 01-8 0V4zM8 5H5a3 3 0 003 4M16 5h3a3 3 0 01-3 4M12 13v4M8 20h8'],
+  [/보안|안전|인증|security|authentication|anti.?malware/i,'M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z'],
+  [/사진|이미지|photo|image/i,'M3 7h4l1.5-3h7L17 7h4v13H3V7zM12 16.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z'],
+  [/채용|비즈니스|기업|네이버|카카오|jobs|business/i,'M3 8h18v12H3zM9 8V6a2 2 0 012-2h2a2 2 0 012 2v2'],
+  [/캘린더|일정|calendar|events/i,'M3 5h18v16H3zM3 10h18M8 3v4M16 3v4'],
+  [/url|shorten/i,'M9 15l6-6M8.5 12.5l-2 2a3.5 3.5 0 105 5l2-2M15.5 11.5l2-2a3.5 3.5 0 10-5-5l-2 2'],
+  [/항공|aviation|flight/i,'M21 3L3 10.5l6.5 2L11.5 19 21 3zM9.5 12.5L21 3'],
+  [/농수산|농업|agriculture/i,'M6 18C6 10 11 5 20 4c-1 9-6 14-14 14zM6 18c2-5 5.5-8.5 9.5-10.5'],
+  [/디자인|art|design/i,'M17 3l4 4L8 20l-5 1 1-5L17 3zM14 6l4 4'],
+  [/문서|텍스트|text|document|productivity|patent/i,'M6 2h9l5 5v15H6zM15 2v5h5M9 13h6M9 17h4'],
+  [/personality|인물/i,'M12 12a4 4 0 100-8 4 4 0 000 8zM4 21c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5'],
+  [/전화|phone/i,'M5 3h4l2 5-2.5 1.5a12 12 0 005 5L15 12l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z'],
+];
+const A_ICON_FALLBACK='M9 7V3M15 7V3M7 7h10v4a5 5 0 01-10 0V7zM12 16v5';
+function apiCatIcon(cat){
+  const hit=A_ICONS.find(([re])=>re.test(cat));
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="'+(hit?hit[1]:A_ICON_FALLBACK)+'"/></svg>';
+}
 function apiItems(){ return APIS.apis.filter(x=>apiSrc==='all'||x.src===apiSrc); }
 function apiCats(){
   const m=new Map();
@@ -708,7 +756,7 @@ function apiHubHTML(){
   const bySrc={kr:[],global:[]};
   apiCats().forEach(c=>(bySrc[c.src]=bySrc[c.src]||[]).push(c));
   const card=c=>'<button class="ccard" data-acat="'+escA(c.key)+'">'
-    +'<span class="chd"><span class="cic">'+escA(c.cat.charAt(0))+'</span>'
+    +'<span class="chd"><span class="cic">'+apiCatIcon(c.cat)+'</span>'
     +'<span class="cmeta">'+c.n+'개'+(c.free?' <span class="cfree">무인증 '+c.free+'</span>':'')+'</span></span>'
     +'<span class="cname">'+escA(c.cat)+'</span>'
     +'<span class="cprev">'+escA(c.names.join(' · '))+(c.n>c.names.length?'…':'')+'</span>'
