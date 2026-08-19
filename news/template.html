@@ -177,6 +177,17 @@
     .facet.open{transform:none}
   }
   @media (prefers-reduced-motion:reduce){ .facet{transition:none} }
+
+  /* ---------------- API 카탈로그 (add-public-apis-feeds) ---------------- */
+  .arow{padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:8px}
+  .ah{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .ah a{font-weight:700;font-size:14px;color:inherit;text-decoration:none}
+  .ah a:hover{text-decoration:underline}
+  .abadge{font-size:11px;padding:1px 7px;border-radius:99px;background:#f0f0f4;color:#6b6b78}
+  .abadge.free{background:#e7f6ec;color:#1f7a3d}
+  .akr{font-size:10px;font-weight:800;padding:1px 6px;border-radius:5px;background:#2f7de0;color:#fff}
+  .adesc{font-size:12.5px;color:#6b6b78;margin-top:3px;line-height:1.5}
+  .ddpop{max-height:340px;overflow:auto}   /* 카테고리 드롭다운은 항목이 50개+ */
   .cp{
     display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
     background:var(--panel);color:var(--tx2);padding:7px 14px;border-radius:9px;
@@ -321,6 +332,9 @@
   <button class="rb" data-v="saved" title="보관함">
     <span class="dot"></span>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg>
+  </button>
+  <button class="rb" data-v="api" title="무료 API 목록">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 01-10 0V7zM12 16v5"/></svg>
   </button>
   <button class="rb" data-v="src" title="수집 소스">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
@@ -605,9 +619,77 @@ function openArchived(url, month, extra){
     .catch(()=>alert('아카이브를 불러오지 못했습니다. (로컬 파일로 열면 검색만 가능합니다)'));
 }
 
+/* ---------------- API 카탈로그 (add-public-apis-feeds) ----------------
+   public-apis · 한국판 README 전체를 파싱한 data/apis.json 스냅샷을 첫 진입 때
+   fetch한다 (아카이브 샤드와 같은 지연 로딩 패턴). 기사 파이프라인과 무관. */
+let APIS=null;                         // null=미시도, 'loading', 'fail', 객체
+let apiQ='', apiSrc='all', apiCat='all';
+const escA=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function ensureApis(){
+  if(APIS!==null) return;
+  APIS='loading';
+  fetch('data/apis.json')
+    .then(r=>{ if(!r.ok) throw 0; return r.json(); })
+    .then(j=>{ APIS=j; if(view==='api') render(); })
+    .catch(()=>{ APIS='fail'; if(view==='api') render(); });
+}
+function apiFiltered(){
+  let a=APIS.apis;
+  if(apiSrc!=='all') a=a.filter(x=>x.src===apiSrc);
+  if(apiCat!=='all') a=a.filter(x=>x.cat===apiCat);
+  if(apiQ){ const s=apiQ.toLowerCase();
+    a=a.filter(x=>(x.name+' '+x.desc+' '+x.cat).toLowerCase().includes(s)); }
+  return a;
+}
+function apiListHTML(){
+  const items=apiFiltered();
+  if(!items.length) return '<div class="none">조건에 맞는 API가 없습니다.</div>';
+  let h='', last=null;
+  items.forEach(x=>{
+    if(x.cat!==last){ h+='<div class="group">'+escA(x.cat)+'</div>'; last=x.cat; }
+    h+='<div class="arow"><div class="ah">'
+      +'<a href="'+escA(x.url)+'" target="_blank" rel="noopener">'+escA(x.name)+'</a>'
+      +(x.src==='kr'?'<span class="akr">KR</span>':'')
+      +(x.auth?'<span class="abadge">'+escA(x.auth)+'</span>':'<span class="abadge free">인증 불필요</span>')
+      +'</div>'+(x.desc?'<div class="adesc">'+escA(x.desc)+'</div>':'')+'</div>';
+  });
+  return h;
+}
+function apiHTML(){
+  let h='<h1>무료 API 목록</h1>';
+  if(APIS===null||APIS==='loading') return h+'<div class="none">목록을 불러오는 중…</div>';
+  if(APIS==='fail') return h+'<div class="none">API 목록을 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다. (로컬 file:// 에서는 사용할 수 없습니다)</div>';
+  const srcLabel={}; (APIS.sources||[]).forEach(s=>srcLabel[s.id]=s.label);
+  const cats=[...new Set(APIS.apis.filter(x=>apiSrc==='all'||x.src===apiSrc).map(x=>x.cat))];
+  h+='<div class="sub">public-apis · public-apis 한국판 리포의 전체 목록 '+APIS.apis.length
+    +'개입니다. 매 수집 회차마다 갱신됩니다'
+    +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>';
+  h+='<div class="bar">'
+    +'<div class="search">'+I.sch+'<input id="apiq" placeholder="API 검색…" value="'+apiQ.replace(/"/g,'&quot;')+'"></div>'
+    +ddHTML('apisrc', apiSrc, [['all','전체 출처']].concat((APIS.sources||[]).map(s=>[s.id,s.label+' '+s.count])))
+    +ddHTML('apicat', apiCat, [['all','전체 카테고리']].concat(cats.map(c=>[c,c])))
+    +'</div>';
+  return h+'<div id="apilist">'+apiListHTML()+'</div>';
+}
+function bindApi(){
+  const qi=document.getElementById('apiq');
+  // 목록만 부분 갱신 — 뉴스 검색과 같은 이유로 한글 IME 조합을 끊지 않는다
+  if(qi) qi.oninput=e=>{ apiQ=e.target.value;
+    const box=document.getElementById('apilist'); if(box) box.innerHTML=apiListHTML(); };
+  viewEl.querySelectorAll('.dd').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); openDrop=openDrop===b.id?null:b.id; render(); });
+  viewEl.querySelectorAll('.dditem').forEach(b=>b.onclick=e=>{
+    e.stopPropagation();
+    if(b.dataset.dd==='apisrc'){ apiSrc=b.dataset.v; apiCat='all'; }  // 출처 바꾸면 카테고리 초기화
+    else apiCat=b.dataset.v;
+    openDrop=null; render(); });
+}
+
 function render(){
   document.querySelectorAll('.rb').forEach(b=>b.classList.toggle('on', b.dataset.v===view));
   document.querySelector('.rb[data-v="saved"]').classList.toggle('has', savedMap.size>0);
+
+  if(view==='api'){ ensureApis(); viewEl.innerHTML=apiHTML(); bindApi(); return; }
 
   if(view==='src'){
     let h='<h1>수집 소스</h1><div class="sub">매일 00시·08시·16시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
