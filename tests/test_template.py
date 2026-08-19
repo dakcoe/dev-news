@@ -179,6 +179,29 @@ def test_update_schedule_text_matches_cron(html):
     assert sorted((h + 9) % 24 for h in utc_hours) == [0, 8, 16]
 
 
+def test_mobile_layout_not_squeezed(html):
+    """모바일 카드 본문 붕괴 재현 테스트 (fix-mobile-layout).
+
+    ≤820px에서 .acts가 그리드 옆 칸에 남아 있으면 본문(.mid)이 98px까지 줄어
+    제목이 한 단어씩 세로로 떨어진다. .acts는 카드 하단 전체 폭 행으로 내려가고
+    좌측 레일은 하단 내비로 전환돼야 한다.
+    """
+    mobile = html.split("@media (max-width:820px)")[1].split("}\n")[0:20]
+    mobile = "@media (max-width:820px)" + "}\n".join(mobile)
+    # 본문 옆에 acts 칸이 없다 — 2칸 그리드(체크박스 + 본문)
+    assert ".row{grid-template-columns:auto minmax(0,1fr);" in mobile
+    assert "auto minmax(0,1fr) auto" not in mobile
+    # acts는 하단 전체 폭 행
+    assert "grid-column:1/-1" in mobile
+    # 레일은 하단 고정 내비 — 스크롤 영역이 그만큼 하단 여백을 확보
+    assert "bottom:0;top:auto" in mobile
+    assert "flex-direction:row" in mobile
+    assert "88px" in mobile, "하단 내비 높이만큼 스크롤 여백이 없음"
+    # 전체 스케일 축소 — fixed 요소 좌표가 틀어지지 않게 .inner에만 건다
+    assert ".inner{zoom:.8}" in mobile
+    assert "body{zoom" not in mobile
+
+
 def test_search_partial_render_keeps_input(html):
     """한글 IME 조합 보호 v2 (fix-search-partial-render).
 
