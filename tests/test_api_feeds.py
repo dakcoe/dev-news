@@ -132,5 +132,6 @@ def test_template_api_view(tmp_path):
     # 2단 구조 (api-category-hub): 카테고리 허브 → 항목 아코디언
     assert "apiHubHTML" in html                   # 허브(카테고리 카드 그리드)
     assert "apiCatIcon" in html                   # 카테고리 의미 아이콘 (첫 글자 타일 대체)
+    assert "apiGroupOf" in html                   # 대분류 색상 섹션 (api-hub-groups)
     assert "aitem" in html                        # 항목 아코디언 행
     assert 'id="apibody"' in html                 # IME 보존용 본문 부분 갱신 컨테이너
