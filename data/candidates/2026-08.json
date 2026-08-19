@@ -689,6 +689,136 @@
   "date": "2026-08-20"
  },
  {
+  "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+  "title": "5 new ways to level up your learning with Search",
+  "description": "an illustrated image with icons and phrasing like \"Add Notebook\" and \"Ask Google\"",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Google AI Blog"
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/19/jeremy-morrell/",
+  "title": "Quoting Jeremy Morrell",
+  "description": "My hypothesis is that there is a new opportunity for Extensible Software on the web . LLMs radically lower the cost of authoring extensions, and modern sandbox primitives lower the deployment cost and provide good security boundaries. We can build our app as a solid, accountable core, and allow users to safely extend it in many directions by having LLMs fill in the missing pieces. We can give our ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+  "title": "Conceptual integrity and counting lines of code",
+  "description": "Last week I recorded an episode of the Talking Postgres podcast with Claire Giordano on the subject of \"How AI is changing software development\". We had a really great conversation. Here are a couple of my highlights from a lightly edited transcript (prompt to Claude: \"very minor edits to remove disfluencies\"). This is the latest version of an argument I've been trying to build about why sometimes",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://the-decoder.com/stripe-declares-were-living-in-the-singularity-and-uses-it-as-a-reason-not-to-ipo/",
+  "title": "Stripe declares we're living in the singularity and uses it as a reason not to IPO",
+  "description": "In a letter to investors, Stripe declares January 1 the \"beginning of the singularity\" and uses that as a reason to stay private. Not that it needs one: revenue grew 41 percent in the first half of the year, and the company confirmed its $8 billion-plus acquisition of OpenRouter. Declaring the singularity is in vogue right now. Hassabis, Altman, and Musk all say it's already here. The article Stri",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://the-decoder.com/attackers-are-using-ai-to-build-exploits-for-industrial-control-systems-u-s-agencies-warn/",
+  "title": "Attackers are using AI to build exploits for industrial control systems, U.S. agencies warn",
+  "description": "The NSA, CISA, and FBI say attackers are using AI to build exploit scripts targeting Siemens S7 controllers, drastically cutting the time and skill needed to attack industrial control systems. Critical U.S. sectors like energy, water, and manufacturing are affected. The article Attackers are using AI to build exploits for industrial control systems, U.S. agencies warn appeared first on The Decoder",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://the-decoder.com/openai-fixes-codex-bug-that-deleted-real-user-files-without-permission/",
+  "title": "OpenAI fixes Codex bug that deleted real user files without permission",
+  "description": "OpenAI patched Codex after GPT-5.6 Sol started deleting real user files on its own. A cleanup command meant for temporary folders was wiping home directories instead. Codex now verifies deletion targets first, and full-access mode can no longer be triggered by accident. The article OpenAI fixes Codex bug that deleted real user files without permission appeared first on The Decoder .",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+  "title": "Offering Zero Data Retention for frontier models",
+  "description": "OpenAI reaffirms Zero Data Retention for eligible API customers and previews Private Safety Processing for advanced AI safety without compromising data privacy.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsr67c/introducing_qwen3827b_dynamic_v3_unsloth_ggufs/",
+  "title": "Introducing Qwen3.8-27B Dynamic v3 Unsloth GGUFs",
+  "description": "Hey everyone! We’re releasing new Qwen3.8-27B GGUFs with 10% higher accuracy for the same size. This uses a new version of Dynamic v3.0 Unsloth Dynamic V3 outperforms others by >10% on Div-300, KLD & more benchmarks. We also release 1-bit quants that retain 77% accuracy. Run on 8GB RAM. Some of you already saw we updated our quants a few hours ago. No, nothing was broken, nothing needed fixes (I d",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsuaoj/dflash2_speeds_qwen_38_27b_up_to_4_times/",
+  "title": "DFlash2 speeds Qwen 3.8 27B up to 4 times",
+  "description": "llama.cpp pr #27342 adds dflash2, so i rented an rtx 6000 and ran the same four prompts through four decoding setups on qwen3.8 27B median results over the four tasks: baseline 47.4 tok/s mtp 114.7 tok/s dflash 99.3 tok/s dflash2 140.6. tok/s so on average 3x for dflash2 though i have to point out that it's far from a 3x gain some of the time, on one of the test it struggled to achieve a 1.5x gain",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsy4l2/i_pushed_qwen3827b_limits_again_dflash2_134_tps/",
+  "title": "I pushed Qwen3.8-27B limits again... Dflash2 - 134 tps on a RTX 3090",
+  "description": "Edit: Title says 134 tps, it's actually 138 -- keep in mind my 3090 is power limited to 250w. Three days ago I released a hyper-optimized Qwen3.8-27B inference engine for an RTX 3090 (82 tps single request, 672 peak), and yesterday's update took it to ~114 tps single-user / ~1,000 tps at 64 concurrent. Today it's ~138 tps at default sampling on real chat prompts (up from ~124), 942 tps at 64 concu",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
   "url": "https://tipiirai.com/writing/bun-rust-rewrite-worries",
   "title": "Bun 1.4 Rust rewrite is not looking good",
   "description": "",
@@ -697,7 +827,7 @@
    "upvotes": 59,
    "comments": 50
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-20"
  },
  {
@@ -710,6 +840,18 @@
    "comments": 15
   },
   "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://go.dev/blog/go1.27",
+  "title": "Go 1.27 is released",
+  "description": "",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 36,
+   "comments": 2
+  },
+  "selected": true,
   "date": "2026-08-20"
  },
  {
@@ -948,6 +1090,210 @@
   "native": {
    "upvotes": 186,
    "comments": 40
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+  "title": "OpenRouter is joining Stripe",
+  "description": "Previously: Stripe will reportedly acquire OpenRouter for $7B+  https://news.ycombinator.com/item?id=49323381",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 536,
+   "comments": 293
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
+  "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 226,
+   "comments": 73
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
+  "title": "Extensible Software in the age of LLMs",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 96,
+   "comments": 43
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://ngrok.com/blog/probes",
+  "title": "How Kubernetes Probes Work",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 109,
+   "comments": 21
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://liamrosen.com/2025/07/24/33-rules-of-good-social-skills/",
+  "title": "Rules of good social skills (2025)",
+  "description": "https://web.archive.org/web/20260515105039/https://liamrosen...",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 72,
+   "comments": 34
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://github.com/anthropics/claude-code/issues/6235",
+  "title": "Feature Request: Support AGENTS.md",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 69,
+   "comments": 31
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://arxiv.org/abs/2503.08679",
+  "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful (2025)",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 59,
+   "comments": 36
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://github.com/onecli/onecli",
+  "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
+  "description": "Hi HN, Jonathan & Guy here from OneCLI, an agent harness built for teams, giving every employee a secured, sandboxed personal agent. Here’s what you can do with it: 1. get a sandboxed agent, with all the OneCLI capabilities in place like connect your GitHub account, Gmail, Notion, or Dropbox simply from the chat. 2. deterministic human in the loop approval in the chat itself for things that you need 100% control like sending an email or deleting the Linear ticket. 3. manage team policy in one pl",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 47,
+   "comments": 14
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://inco.ai/blog/dflash2/",
+  "title": "DFlash 2: Keep Drafting Parallel",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 53,
+   "comments": 6
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://demo.frugaltokens.com/",
+  "title": "Show HN: Frugal Tokens – explore costs and usage across coding agents",
+  "description": "I wanted to share a project I’ve been working on called Frugal Tokens. I originally built it because I was curious to see how much all of my sessions cost and how much cache misses affected that spend. I’d noticed people had widely different spend profiles and wanted to better understand what might contribute to that. As I’ve worked on this, the tool has grown to show more usage patterns across all of your sessions. It shows overall usage, estimated working time and overlapping sessions, and whe",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 26,
+   "comments": 6
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://os8088.com/spotlight/",
+  "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 22,
+   "comments": 8
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/",
+  "title": "A revisit of remote Spectre attacks on Cloudflare Workers",
+  "description": "Paper:  https://arxiv.org/abs/2608.17043v1  (\"Remote-Timer-as-a-Service: Efficient Microarchitectural Leakage in the Cloud with Remote Timers\")",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 23,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://github.com/BrightbeamAI/chap",
+  "title": "Collaborative Human Agent Protocol (CHAP)",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 12,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://www.japantimes.co.jp/news/2026/08/19/japan/ai-training-data-disclosure/",
+  "title": "Japan to require AI firms to disclose training data",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 10,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.16753",
+  "title": "Mathematics in the age of AI",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 104,
+   "comments": 92
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+  "title": "Pacing model development in an era of cyber-critical capabilities",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 116,
+   "comments": 135
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://fx.sh",
+  "title": "fx :Tiny, open, native coding agent.",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 152,
+   "comments": 77
   },
   "selected": false,
   "date": "2026-08-20"
@@ -1382,6 +1728,66 @@
   "url": "https://news.hada.io/topic?id=32661",
   "title": "소프트웨어 팀의 AI 사용 패턴",
   "description": "Linear 유료 고객의 제품 개발 흐름을 분석한 결과, 2026년 상반기 AI 기능 사용률 이 모든 직군에서 2배 이상 증가했으며 기업 규모와 관계없이 확산됨 AI는 기존 업무를 줄이기보다 그 위에 더해짐. 이슈 작성·분류·댓글 시간은 대체로 늘고 기획 시간은 유지된 가운데 AI ...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32675",
+  "title": "7,704명 연구에서 원격 근무자의 웰빙이 가장 높게 나타남",
+  "description": "대형 의료기관 직원 7,704명 을 분석한 결과, 완전 원격 근무자의 웰빙이 가장 높고 전면 출근 근무자가 가장 낮았으며 하이브리드 근무자는 그사이에 위치함 원격 근무자가 동료나 조직 문화와 덜 연결된다는 근거는 거의 없었고, 오히려 팀워크·포용·지원 관련 단...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32674",
+  "title": "OpenRouter가 Stripe에 합류함",
+  "description": "AI 모델 마켓플레이스·게이트웨이 OpenRouter가 Stripe에 합류 하지만, 사명·이름·제품·로드맵과 기존 연동 방식은 그대로 유지함 400개 이상의 AI 모델에서 하루 10조 개 이상의 토큰 을 처리하며, 1,000만 명 이상의 개발자·기업을 기반으로 추론량이 매년 최소 1...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32673",
+  "title": "시민 위생 — 경찰국가에 악용될 기술을 만들지 말 것 (2013)",
+  "description": "공익을 위해 만든 데이터베이스도 정권이 바뀌면 시민을 탄압하는 감시 도구 로 전용될 수 있어, 현재가 아닌 다음 정부까지 고려한 설계가 필요함 성적 지향 정보 는 보건 서비스·출생률·학교 수요 계획에 유용할 수 있지만, 동성애 혐오 세력이 집권하면 특정 시민...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32672",
+  "title": "Moderna, 흑색종 mRNA 신생항원 치료제 최초의 긍정적 3상 결과 발표",
+  "description": "Moderna와 Merck가 완전 절제된 IIB~IV기 흑색종 환자 를 대상으로 intismeran autogene과 KEYTRUDA 병용 보조요법의 긍정적인 3상 결과를 발표함 임상시험은 1차 평가변수인 무재발 생존기간 과 주요 2차 평가변수인 원격전이 없는 생존기간 을 모두...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32671",
+  "title": "농담으로 산 도메인이 지정학적 전쟁에 휘말린 과정",
+  "description": "2018년 Habhub 리디렉션 으로 시작한 SondeHub는 독립적인 라디오존데 추적·예측 인프라로 성장해 정부·군·항공기관·우크라이나 작전팀까지 사용하는 서비스가 됨 지상까지 이어지는 비행 추적과 역방향 예측 으로 발사 지점을 추정하면서 문서화되지 않은 관측소뿐...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -2198,6 +2604,510 @@
   "url": "https://dev.to/fikrimohammad/why-gos-encodingcsv-burns-540mb-on-5m-rows-and-how-i-fixed-it-4m63",
   "title": "Why Go's encoding/csv Burns 540MB on 5M Rows (and How I Fixed It)",
   "description": "TL;DR: Go's built-in encoding/csv.Read() allocates string slices and strings for every single row,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://blog.mlh.com/hacktoberfest-2026-ai-belongs-to-everyone-3jl8",
+  "title": "Hacktoberfest 2026: AI belongs to everyone",
+  "description": "We have some news we're excited to share today: Major League Hacking (MLH) and DEV are partnering...",
+  "source": "devto",
+  "native": {
+   "upvotes": 103,
+   "comments": 12
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/le_beltagy/i-deliberately-destroyed-my-kubernetes-cluster-at-2-am-heres-what-died-first-40no",
+  "title": "I Deliberately Destroyed My Kubernetes Cluster at 2 AM. Here's What Died First.",
+  "description": "I Deliberately Destroyed My Kubernetes Cluster at 2 AM. Here's What Died First.   Chaos...",
+  "source": "devto",
+  "native": {
+   "upvotes": 14,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/mayu2008/qwen38-27b-a-deep-dive-into-qwens-newest-vision-language-powerhouse-2e7",
+  "title": "Qwen3.8-27B: A Deep Dive Into Qwen's Newest Vision-Language Powerhouse",
+  "description": "Alibaba's Qwen team just dropped Qwen3.8-27B, and it's easily one of the most interesting open-weight...",
+  "source": "devto",
+  "native": {
+   "upvotes": 8,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/kenwalger/you-dont-need-a-ministry-of-truth-to-build-a-memory-hole-3kaf",
+  "title": "You Don't Need a Ministry of Truth to Build a Memory Hole",
+  "description": "What happens when a thousand independent sources turn out to have one parent?  A while back I went...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/playfulprogramming/my-ai-content-journey-1b8p",
+  "title": "My AI Content Journey",
+  "description": "I apologize ahead of time, what follows has no tooling applied to it. No grammar checks, no AI, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/adioof/the-bun-rewrite-proves-never-rewrite-from-scratch-was-always-a-cope-4iog",
+  "title": "The Bun rewrite proves 'never rewrite from scratch' was always a cope",
+  "description": "In just 11 days, 64 AI agents successfully ported roughly 535,000 lines of Zig code to Rust. It...",
+  "source": "devto",
+  "native": {
+   "upvotes": 3,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/mellowthunder735/your-browser-tests-dont-need-to-be-perfect-they-need-to-explain-themselves-19b8",
+  "title": "Your Browser Tests Don’t Need to Be Perfect. They Need to Explain Themselves.",
+  "description": "There’s a strange goal that creeps into test automation projects.  We start by wanting confidence...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/sleepyfalcon247/good-test-automation-is-really-a-feedback-system-4mk5",
+  "title": "Good Test Automation Is Really a Feedback System",
+  "description": "A lot of teams talk about test automation as if the goal is to automate more tests.  I think that's...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/ssukhpinder/mcp-x-mcp-header-validation-keep-bad-tool-schemas-out-of-toolslist-3j3d",
+  "title": "MCP x-mcp-header Validation: Keep Bad Tool Schemas Out of tools/list",
+  "description": "MCP x-mcp-header validation is easy to miss because the annotation looks like ordinary JSON Schema...",
+  "source": "devto",
+  "native": {
+   "upvotes": 4,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/amansoomro062/add-google-authenticator-2fa-to-your-node-app-in-two-steps-3n3n",
+  "title": "Add Google Authenticator 2FA to your Node app in two steps",
+  "description": "Adding 2FA to an app sounds like a weekend of reading RFCs, so most side projects never get it. I...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/lucian_lkb_1f009d/watch-a-game-ai-think-minimax-and-alpha-beta-in-a-browser-tab-3onj",
+  "title": "Watch a Game AI Think: Minimax and Alpha-Beta, in a Browser Tab",
+  "description": "Every \"AI\" opponent in a board game — Tic-Tac-Toe, Connect 4, Checkers, Othello, Chess — tends to run...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/tuvidev/how-i-built-a-dsl-for-infrastructure-in-10-days-with-ai-120n",
+  "title": "How I built a DSL for infrastructure in 10 days with AI",
+  "description": "Lessons from building infra-lang — an IaC DSL with 5 compilation targets, an LSP, and live K8s E2E...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/owaspblt/building-an-ai-powered-security-tui-with-rust-and-mcp-oj9",
+  "title": "Building an AI-Powered Security TUI with Rust and MCP",
+  "description": "Picking up where I left off   In my midterm update, I introduced the two main parts I was...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/jsmanifest/typescript-exclude-and-extract-in-depth-filtering-union-types-for-real-api-contracts-24k3",
+  "title": "TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts",
+  "description": "TypeScript Exclude and Extract in Depth: Filtering Union Types for Real API...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/bellsal_b44bf6d/your-canvas-a4-export-is-not-a4-dpi-print-size-and-the-number-nobody-checks-5akh",
+  "title": "Your canvas \"A4 export\" is not A4: DPI, print size, and the number nobody checks",
+  "description": "When I added an \"A4\" preset to a browser-based collage tool, I thought the hard part was the layout...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/thecoollearner/computer-fundamentals-no-bs-10em",
+  "title": "Computer Fundamentals: No BS",
+  "description": "I've been working with software for a few years now, and I've noticed something uncomfortable.  I can...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/jaya_chapparam/replaying-real-time-telemetry-through-a-live-rendering-pipeline-without-touching-the-components-4g33",
+  "title": "Replaying real-time telemetry through a live rendering pipeline, without touching the components",
+  "description": "A recorded session and a live socket should drive the same instruments the same way. Making that true comes down to one affine transform and a surprisingly sharp question about which clock the components are watching.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/thecoollearner/part-1-what-actually-happens-when-code-runs-558o",
+  "title": "Part 1 — What Actually Happens When Code Runs",
+  "description": "When we write:    const result = add(10, 20);        Enter fullscreen mode            Exit fullscreen...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/hammad4june1999/i-made-twenty-tools-take-twenty-files-every-bug-was-state-that-outlived-one-file-4898",
+  "title": "I made twenty tools take twenty files. Every bug was state that outlived one file.",
+  "description": "My browser-based tools each took exactly one file. Converting twenty tracks meant twenty page loads,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/maliuppal/stop-hand-renaming-variables-a-developers-guide-to-case-conventions-with-free-tools-405b",
+  "title": "Stop Hand-Renaming Variables: A Developer's Guide to Case Conventions (With Free Tools)",
+  "description": "Stop Hand-Renaming Variables: A Developer's Guide to Case Conventions   If you've ever...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/codepy_1473/the-free-server-wiped-my-sqlite-queue-overnight-and-the-health-check-never-noticed-5ce6",
+  "title": "The Free Server Wiped My SQLite Queue Overnight and the Health Check Never Noticed",
+  "description": "The background job worker looked perfect when I deployed it. A free model available through...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/josejux/grading-security-headers-isnt-the-full-picture-1gpm",
+  "title": "Grading Security Headers Isn't the Full Picture",
+  "description": "A few days ago someone left a comment on my last post about grading security headers...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/priyasundaram/did-you-mean-autocomplete-and-spelling-correction-in-pure-python-no-external-services-17i5",
+  "title": "\"Did you mean...?\" — autocomplete and spelling correction in pure Python (no external services)",
+  "description": "Search boxes that only match exactly what you typed feel broken. Type pythn and get nothing; forget...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/iszy/learning-python-loops-as-a-beginner-what-i-finally-understood-3n3a",
+  "title": "Learning Python Loops as a Beginner: What I Finally Understood",
+  "description": "When I started learning Python, I understood variables, data types, conditionals, and functions. But...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/cub4nh1/ho-costruito-un-bot-telegram-che-gradisce-la-sicurezza-del-tuo-sito-in-5-secondi-51ei",
+  "title": "Ho costruito un bot Telegram che gradisce la sicurezza del tuo sito in 5 secondi",
+  "description": "Ho costruito un bot Telegram che gradisce la sicurezza del tuo sito in 5 secondi           ...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/kafidog/i-built-an-open-source-offline-first-ai-content-factory-one-topic-in-a-complete-content-package-1mi5",
+  "title": "I built an open-source, offline-first AI Content Factory — one topic in, a complete content package out",
+  "description": "Most AI content tools solve one step.  Write an article. Generate an image. Make a video. Create a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/henry_dan_81513dd35a2f540/the-audit-became-a-build-step-45je",
+  "title": "The Audit Became a Build Step",
+  "description": "I audited my travel site's legal-status dataset twice and the drift came back anyway — because an audit is a snapshot, and nothing held the agreement after the auditor left. So the third audit became a script that runs first in every build and fails on any reader-reachable contradiction between the database and the static copies.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/eugen_taranowski/one-line-of-javascript-disabled-server-rendering-on-190-pages-5akb",
+  "title": "One line of JavaScript disabled server rendering on 190 pages",
+  "description": "Google reported soft 404s across almost every page on my site — months after I'd added proper metadata to all of them. The cause was a single property read, and the reason nobody caught it is that this failure is invisible from a browser.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/kahwee/your-linter-needs-to-be-as-fast-as-your-ai-5dme",
+  "title": "Your Linter Needs to Be as Fast as Your AI",
+  "description": "AI writes code faster than you can review it. ESLint validates slower than it needs to. Biome fixes the mismatch.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/kokibuilds/studio-feature-released-supporting-9-output-formats-c22",
+  "title": "Studio Feature Released, Supporting 9 Output Formats",
+  "description": "August 11 was centered on the Studio feature release.           Studio Feature Shipped   We released...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/karma0/testing-the-claim-a-degraded-link-matrix-as-a-required-ci-gate-4edm",
+  "title": "Testing the claim: a degraded-link matrix as a required CI gate",
+  "description": "This is a writeup of building a required CI gate for degraded-network behavior. The system under test...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/flipslidersand/sandboxed-code-evaluation-for-ai-generated-outputs-how-i-built-safecode-arena-1468",
+  "title": "Sandboxed Code Evaluation for AI-Generated Outputs — How I Built SafeCode Arena",
+  "description": "AI code verification with \"AI\"",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/tashirka1/k2-a-lightweight-server-monitor-that-ships-as-one-static-binary-3fhd",
+  "title": "K2: a lightweight server monitor that ships as one static binary",
+  "description": "I have been tinkering with a server monitoring tool called K2 and wanted to share it here. It tracks...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/ferztyle/leetcode-151-reverse-words-in-a-string-in-go-258d",
+  "title": "LeetCode 151: Reverse Words in a String in Go",
+  "description": "The problem that looks simple until the whitespace shows up   You open LeetCode 151 —...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/unmannedops/your-agents-negatives-are-claims-about-its-instruments-not-about-the-world-4646",
+  "title": "Your agent's negatives are claims about its instruments, not about the world",
+  "description": "We run a small organization whose operators are scheduled agent runs. Six slots a day, each a fresh...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/akashdas/five-agent-engineering-problems-with-the-numbers-behind-them-3ol7",
+  "title": "Five agent engineering problems, with the numbers behind them",
+  "description": "Sticky tool_choice loops, the August 26 Assistants API shutdown, AutoGen's maintenance mode, caching versus memory, and why end-to-end evals miss regressions.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/uehara/i-looked-at-the-github-actions-bill-and-built-a-ci-security-base-at-home-3h2b",
+  "title": "I looked at the GitHub Actions bill and built a CI + security base at home",
+  "description": "In late June 2026, my org's GitHub Actions stopped at the billing cap. Every PR (pull request) CI...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/petr_michal_178dc4f87ad91/how-bimi-inspection-actually-works-dns-records-selectors-svg-logos-and-dmarc-5e3l",
+  "title": "How BIMI Inspection Actually Works: DNS Records, Selectors, SVG Logos and DMARC",
+  "description": "A practical walkthrough of BIMI DNS records, selectors, logo locations, SVG requirements, and the DMARC prerequisite behind BIMI inspection.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/nyaomaru/is-learning-dsa-boring-lets-use-dsa-view-view-two-sum-binary-search-and-bubble-sort-374o",
+  "title": "Is Learning DSA Boring? Let's Use DSA View View 👀👀 (Two Sum, Binary Search, and Bubble Sort)",
+  "description": "Hoi hoi!  I’m @nyaomaru, a frontend engineer who dislikes crowded places, so I'm planning to take a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 20,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/izgorodin/your-agent-doesnt-need-more-memory-it-needs-to-know-what-its-allowed-to-believe-22j7",
+  "title": "Agent Memory: Everything It Remembers Has the Same Authority, and That Is the Bug",
+  "description": "Every team that wires long-term memory into a coding agent hits the same wall about three weeks in....",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 6
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/yureki_lab/how-i-let-an-ai-agent-migrate-800-js-files-to-typescript-in-3-weeks-1eif",
+  "title": "How I Let an AI Agent Migrate 800 JS Files to TypeScript in 3 Weeks",
+  "description": "TL;DR   I had an 800-file JavaScript codebase and no appetite for a six-month TypeScript...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-20"
+ },
+ {
+  "url": "https://dev.to/royalpinto007/making-a-knowledge-base-queryable-by-any-agent-over-mcp-3lkl",
+  "title": "Making a knowledge base queryable by any agent over MCP",
+  "description": "A stateless remote MCP server on Cloudflare Workers that lets Claude, Cursor, or any MCP client ask \"has this failure happened before?\" mid-investigation.",
   "source": "devto",
   "native": {
    "upvotes": 0,
