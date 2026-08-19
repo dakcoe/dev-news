@@ -178,16 +178,42 @@
   }
   @media (prefers-reduced-motion:reduce){ .facet{transition:none} }
 
-  /* ---------------- API 카탈로그 (add-public-apis-feeds) ---------------- */
-  .arow{padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:8px}
-  .ah{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .ah a{font-weight:700;font-size:14px;color:inherit;text-decoration:none}
-  .ah a:hover{text-decoration:underline}
-  .abadge{font-size:11px;padding:1px 7px;border-radius:99px;background:#f0f0f4;color:#6b6b78}
+  /* ---------------- API 카탈로그 (api-category-hub): 허브 → 항목 아코디언 ---------------- */
+  .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:10px;margin-bottom:18px}
+  .ccard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+         display:flex;flex-direction:column;gap:5px;cursor:pointer;text-align:left;font-family:inherit;transition:.13s}
+  .ccard:hover{border-color:#d6d6e0;box-shadow:0 2px 6px rgba(20,20,40,.05)}
+  .chd{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .cic{width:30px;height:30px;border-radius:9px;background:var(--pri-bg);color:var(--pri-dk);
+       font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+  .cmeta{font-size:11px;color:var(--tx3);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
+  .cfree{font-size:10.5px;padding:0 6px;border-radius:99px;background:#e7f6ec;color:#1f7a3d;font-weight:600;white-space:nowrap}
+  .cname{font-size:14.5px;font-weight:700;letter-spacing:-.02em}
+  .cprev{font-size:11.5px;color:var(--tx3);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;
+         -webkit-box-orient:vertical;overflow:hidden}
+  .aback{border:none;background:none;font-family:inherit;font-size:13px;font-weight:700;color:var(--tx3);
+         cursor:pointer;padding:2px 4px;border-radius:6px;margin-bottom:10px}
+  .aback:hover{color:var(--tx);background:#f4f3fb}
+  .cathead{font-size:18px;font-weight:800;letter-spacing:-.03em;margin-bottom:2px}
+  .catsub{font-size:12.5px;color:var(--tx3);margin-bottom:12px}
+  .aitem{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:6px;overflow:hidden}
+  .aitem.open{border-color:var(--pri);box-shadow:0 0 0 3px rgba(124,110,230,.1)}
+  .aihead{display:flex;align-items:center;gap:8px;padding:10px 14px;cursor:pointer}
+  .aihead:hover{background:#fafafc}
+  .aihead .cv{width:14px;height:14px;color:var(--tx3);flex:none;transition:.14s}
+  .aitem.open .aihead .cv{transform:rotate(90deg);color:var(--pri-dk)}
+  .aihead .an{font-size:13.5px;font-weight:700;letter-spacing:-.015em;white-space:nowrap}
+  .aihead .ap{font-size:12px;color:var(--tx3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+  .aibody{padding:2px 14px 12px 36px;border-top:1px solid var(--line2)}
+  .aibody .ad{font-size:13px;color:var(--tx2);line-height:1.65;padding-top:8px}
+  .agoto{display:inline-flex;align-items:center;gap:6px;margin-top:9px;border:1px solid var(--line);
+         background:var(--panel);border-radius:8px;padding:5px 12px;font-size:12.5px;font-weight:700;
+         color:var(--tx2);text-decoration:none}
+  .agoto:hover{border-color:var(--pri);color:var(--pri-dk)}
+  .agoto svg{width:12px;height:12px;stroke-width:2}
+  .abadge{font-size:11px;padding:1px 7px;border-radius:99px;background:#f0f0f4;color:#6b6b78;white-space:nowrap;flex:none}
   .abadge.free{background:#e7f6ec;color:#1f7a3d}
-  .akr{font-size:10px;font-weight:800;padding:1px 6px;border-radius:5px;background:#2f7de0;color:#fff}
-  .adesc{font-size:12.5px;color:#6b6b78;margin-top:3px;line-height:1.5}
-  .ddpop{max-height:340px;overflow:auto}   /* 카테고리 드롭다운은 항목이 50개+ */
+  .akr{font-size:10px;font-weight:800;padding:1px 6px;border-radius:5px;background:#2f7de0;color:#fff;flex:none}
   .cp{
     display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
     background:var(--panel);color:var(--tx2);padding:7px 14px;border-radius:9px;
@@ -619,11 +645,15 @@ function openArchived(url, month, extra){
     .catch(()=>alert('아카이브를 불러오지 못했습니다. (로컬 파일로 열면 검색만 가능합니다)'));
 }
 
-/* ---------------- API 카탈로그 (add-public-apis-feeds) ----------------
+/* ---------------- API 카탈로그 (api-category-hub) ----------------
    public-apis · 한국판 README 전체를 파싱한 data/apis.json 스냅샷을 첫 진입 때
-   fetch한다 (아카이브 샤드와 같은 지연 로딩 패턴). 기사 파이프라인과 무관. */
+   fetch한다 (아카이브 샤드와 같은 지연 로딩 패턴). 기사 파이프라인과 무관.
+   구조: 카테고리 허브(카드 그리드) → 카테고리 진입(항목 아코디언) / 전역 검색.
+   상단 바(h1·검색·세그)는 하위 뷰와 무관하게 동일 마크업 — #apibody만 부분
+   갱신해서 허브→검색 전환 중에도 input이 교체되지 않아 한글 IME가 유지된다. */
 let APIS=null;                         // null=미시도, 'loading', 'fail', 객체
-let apiQ='', apiSrc='all', apiCat='all';
+let apiQ='', apiSrc='all', apiCat=null, apiOpen=-1;   // apiCat='src|cat' 키, apiOpen=현재 목록 내 인덱스
+const A_LBL={kr:'한국판', global:'Public APIs'};
 const escA=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function ensureApis(){
   if(APIS!==null) return;
@@ -633,56 +663,112 @@ function ensureApis(){
     .then(j=>{ APIS=j; if(view==='api') render(); })
     .catch(()=>{ APIS='fail'; if(view==='api') render(); });
 }
-function apiFiltered(){
-  let a=APIS.apis;
-  if(apiSrc!=='all') a=a.filter(x=>x.src===apiSrc);
-  if(apiCat!=='all') a=a.filter(x=>x.cat===apiCat);
-  if(apiQ){ const s=apiQ.toLowerCase();
-    a=a.filter(x=>(x.name+' '+x.desc+' '+x.cat).toLowerCase().includes(s)); }
-  return a;
+function apiItems(){ return APIS.apis.filter(x=>apiSrc==='all'||x.src===apiSrc); }
+function apiCats(){
+  const m=new Map();
+  apiItems().forEach(x=>{
+    const k=x.src+'|'+x.cat;
+    if(!m.has(k)) m.set(k,{key:k,cat:x.cat,src:x.src,n:0,free:0,names:[]});
+    const c=m.get(k); c.n++; if(!x.auth) c.free++; if(c.names.length<3) c.names.push(x.name);
+  });
+  return [...m.values()];
 }
-function apiListHTML(){
-  const items=apiFiltered();
+function apiRowHTML(x,i){
+  const open=i===apiOpen;
+  let h='<div class="aitem'+(open?' open':'')+'">'
+    +'<div class="aihead" data-ai="'+i+'">'
+    +'<svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg>'
+    +'<span class="an">'+escA(x.name)+'</span>'
+    +(x.src==='kr'?'<span class="akr">KR</span>':'')
+    +(x.auth?'<span class="abadge">'+escA(x.auth)+'</span>':'<span class="abadge free">인증 불필요</span>')
+    +(open?'':'<span class="ap">'+escA(x.desc)+'</span>')
+    +'</div>';
+  if(open){
+    h+='<div class="aibody">'
+      +'<div class="ad">'+(x.desc?escA(x.desc):'(설명 없음 — 문서를 확인하세요)')+'</div>'
+      +'<a class="agoto" href="'+escA(x.url)+'" target="_blank" rel="noopener">문서 바로가기'
+      +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>'
+      +'</div>';
+  }
+  return h+'</div>';
+}
+function apiAccordionHTML(items, groups){
   if(!items.length) return '<div class="none">조건에 맞는 API가 없습니다.</div>';
   let h='', last=null;
-  items.forEach(x=>{
-    if(x.cat!==last){ h+='<div class="group">'+escA(x.cat)+'</div>'; last=x.cat; }
-    h+='<div class="arow"><div class="ah">'
-      +'<a href="'+escA(x.url)+'" target="_blank" rel="noopener">'+escA(x.name)+'</a>'
-      +(x.src==='kr'?'<span class="akr">KR</span>':'')
-      +(x.auth?'<span class="abadge">'+escA(x.auth)+'</span>':'<span class="abadge free">인증 불필요</span>')
-      +'</div>'+(x.desc?'<div class="adesc">'+escA(x.desc)+'</div>':'')+'</div>';
+  items.forEach((x,i)=>{
+    if(groups){
+      const g=A_LBL[x.src]+' · '+x.cat;
+      if(g!==last){ h+='<div class="group">'+escA(g)+'</div>'; last=g; }
+    }
+    h+=apiRowHTML(x,i);
   });
   return h;
+}
+function apiHubHTML(){
+  const bySrc={kr:[],global:[]};
+  apiCats().forEach(c=>(bySrc[c.src]=bySrc[c.src]||[]).push(c));
+  const card=c=>'<button class="ccard" data-acat="'+escA(c.key)+'">'
+    +'<span class="chd"><span class="cic">'+escA(c.cat.charAt(0))+'</span>'
+    +'<span class="cmeta">'+c.n+'개'+(c.free?' <span class="cfree">무인증 '+c.free+'</span>':'')+'</span></span>'
+    +'<span class="cname">'+escA(c.cat)+'</span>'
+    +'<span class="cprev">'+escA(c.names.join(' · '))+(c.n>c.names.length?'…':'')+'</span>'
+    +'</button>';
+  let h='';
+  [['kr',bySrc.kr],['global',bySrc.global]].forEach(([s,list])=>{
+    if(!list||!list.length) return;
+    h+='<div class="group">'+A_LBL[s]+' · '+list.length+'개 카테고리</div>'
+      +'<div class="cgrid">'+list.map(card).join('')+'</div>';
+  });
+  return h;
+}
+function apiBodyHTML(){
+  if(apiQ){
+    const s=apiQ.toLowerCase();
+    return apiAccordionHTML(apiItems().filter(x=>(x.name+' '+x.desc+' '+x.cat).toLowerCase().includes(s)), true);
+  }
+  if(apiCat){
+    const p=apiCat.indexOf('|'), src=apiCat.slice(0,p), cat=apiCat.slice(p+1);
+    const items=APIS.apis.filter(x=>x.src===src&&x.cat===cat);
+    if(!items.length){ apiCat=null; return apiHubHTML(); }   // 스냅샷 갱신으로 사라진 카테고리
+    const free=items.filter(x=>!x.auth).length;
+    return '<button class="aback" data-aback="1">← 전체 카테고리</button>'
+      +'<div class="cathead">'+escA(cat)+'</div>'
+      +'<div class="catsub">'+A_LBL[src]+' · '+items.length+'개'+(free?' · 인증 불필요 '+free+'개':'')+'</div>'
+      +apiAccordionHTML(items, false);
+  }
+  return apiHubHTML();
 }
 function apiHTML(){
   let h='<h1>무료 API 목록</h1>';
   if(APIS===null||APIS==='loading') return h+'<div class="none">목록을 불러오는 중…</div>';
   if(APIS==='fail') return h+'<div class="none">API 목록을 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다. (로컬 file:// 에서는 사용할 수 없습니다)</div>';
-  const srcLabel={}; (APIS.sources||[]).forEach(s=>srcLabel[s.id]=s.label);
-  const cats=[...new Set(APIS.apis.filter(x=>apiSrc==='all'||x.src===apiSrc).map(x=>x.cat))];
-  h+='<div class="sub">public-apis · public-apis 한국판 리포의 전체 목록 '+APIS.apis.length
-    +'개입니다. 매 수집 회차마다 갱신됩니다'
+  h+='<div class="sub">public-apis · public-apis 한국판 전체 '+APIS.apis.length
+    +'개 · 매 수집 회차마다 갱신됩니다'
     +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>';
   h+='<div class="bar">'
-    +'<div class="search">'+I.sch+'<input id="apiq" placeholder="API 검색…" value="'+apiQ.replace(/"/g,'&quot;')+'"></div>'
-    +ddHTML('apisrc', apiSrc, [['all','전체 출처']].concat((APIS.sources||[]).map(s=>[s.id,s.label+' '+s.count])))
-    +ddHTML('apicat', apiCat, [['all','전체 카테고리']].concat(cats.map(c=>[c,c])))
+    +'<div class="search">'+I.sch+'<input id="apiq" placeholder="이름 · 설명 · 카테고리 검색…" value="'+apiQ.replace(/"/g,'&quot;')+'"></div>'
+    +'<div class="segs">'+[['all','전체'],['kr','한국판'],['global','Public APIs']].map(([v,l])=>
+      '<button class="sg'+(apiSrc===v?' on':'')+'" data-asrc="'+v+'">'+l+'</button>').join('')+'</div>'
     +'</div>';
-  return h+'<div id="apilist">'+apiListHTML()+'</div>';
+  return h+'<div id="apibody">'+apiBodyHTML()+'</div>';
+}
+function refreshApiBody(){
+  const box=document.getElementById('apibody');
+  if(box){ box.innerHTML=apiBodyHTML(); bindApiBody(); }
+}
+function bindApiBody(){
+  viewEl.querySelectorAll('[data-acat]').forEach(b=>b.onclick=()=>{ apiCat=b.dataset.acat; apiOpen=-1; refreshApiBody(); });
+  viewEl.querySelectorAll('[data-aback]').forEach(b=>b.onclick=()=>{ apiCat=null; apiOpen=-1; refreshApiBody(); });
+  viewEl.querySelectorAll('[data-ai]').forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.ai; apiOpen = apiOpen===i ? -1 : i; refreshApiBody(); });
 }
 function bindApi(){
   const qi=document.getElementById('apiq');
-  // 목록만 부분 갱신 — 뉴스 검색과 같은 이유로 한글 IME 조합을 끊지 않는다
-  if(qi) qi.oninput=e=>{ apiQ=e.target.value;
-    const box=document.getElementById('apilist'); if(box) box.innerHTML=apiListHTML(); };
-  viewEl.querySelectorAll('.dd').forEach(b=>b.onclick=e=>{
-    e.stopPropagation(); openDrop=openDrop===b.id?null:b.id; render(); });
-  viewEl.querySelectorAll('.dditem').forEach(b=>b.onclick=e=>{
-    e.stopPropagation();
-    if(b.dataset.dd==='apisrc'){ apiSrc=b.dataset.v; apiCat='all'; }  // 출처 바꾸면 카테고리 초기화
-    else apiCat=b.dataset.v;
-    openDrop=null; render(); });
+  // 본문(#apibody)만 부분 갱신 — 뉴스 검색과 같은 이유로 한글 IME 조합을 끊지 않는다
+  if(qi) qi.oninput=e=>{ apiQ=e.target.value; apiOpen=-1; refreshApiBody(); };
+  viewEl.querySelectorAll('[data-asrc]').forEach(b=>b.onclick=()=>{
+    apiSrc=b.dataset.asrc; apiCat=null; apiOpen=-1; render(); });
+  bindApiBody();
 }
 
 function render(){

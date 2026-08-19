@@ -129,3 +129,7 @@ def test_template_api_view(tmp_path):
     assert 'data-v="api"' in html                 # 레일 버튼
     assert "data/apis.json" in html               # 카탈로그 지연 fetch
     assert "무료 API 목록" in html                 # 전용 뷰 제목
+    # 2단 구조 (api-category-hub): 카테고리 허브 → 항목 아코디언
+    assert "apiHubHTML" in html                   # 허브(카테고리 카드 그리드)
+    assert "aitem" in html                        # 항목 아코디언 행
+    assert 'id="apibody"' in html                 # IME 보존용 본문 부분 갱신 컨테이너
