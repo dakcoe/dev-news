@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 - **생성일**: 2026-08-20T05:58:27.044Z
 
 ## 목표
@@ -38,3 +38,4 @@ Groq·Gemini·Hugging Face 같은 LLM/생성형 AI API가 "Machine Learning" 카
 - 카드·그룹 헤더에 `AI · LLM · 머신러닝` 로 표시된다 (원본 데이터는 불변)
 - 검색창에 `LLM` 입력 시 해당 카테고리 항목이 나온다
 - pytest 전체 통과
+- **완료일**: 2026-08-20T05:59:52.023Z
