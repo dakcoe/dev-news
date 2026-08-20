@@ -135,3 +135,35 @@ def test_template_api_view(tmp_path):
     assert "apiGroupOf" in html                   # 대분류 색상 섹션 (api-hub-groups)
     assert "aitem" in html                        # 항목 아코디언 행
     assert 'id="apibody"' in html                 # IME 보존용 본문 부분 갱신 컨테이너
+
+
+def _api_html(tmp_path):
+    from news.render import render
+
+    with open(os.path.join(ROOT, "sample.json"), encoding="utf-8") as f:
+        articles = json.load(f)
+    out = tmp_path / "index.html"
+    render(articles, str(out))
+    return out.read_text(encoding="utf-8")
+
+
+def test_ai_llm_is_its_own_top_group(tmp_path):
+    """api-ai-llm-group: AI/LLM이 '개발·데이터'에 묻히지 않고 독립 대분류로 뜬다."""
+    html = _api_html(tmp_path)
+    assert "'AI · LLM'" in html
+    # 첫 매칭 우선이므로 dev(개발·데이터)보다 앞에 정의돼야 한다
+    assert html.index("'AI · LLM'") < html.index("'개발 · 데이터'")
+
+
+def test_misleading_cat_name_gets_display_alias(tmp_path):
+    """'Machine Learning'은 ML 보조 도구로 오해되므로 표시명에 AI·LLM을 붙인다."""
+    html = _api_html(tmp_path)
+    assert "A_CAT_ALIAS" in html
+    assert "apiCatLabel" in html
+    assert "AI · LLM · 머신러닝" in html
+
+
+def test_api_search_matches_alias(tmp_path):
+    """검색은 원본 카테고리명뿐 아니라 별칭에도 걸린다 (LLM으로 검색 가능)."""
+    html = _api_html(tmp_path)
+    assert "apiCatLabel(x.cat)" in html
