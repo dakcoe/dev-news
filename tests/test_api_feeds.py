@@ -232,3 +232,83 @@ def test_template_has_llm_segment(tmp_path):
     html = _api_html(tmp_path)
     assert "llm:'무료 LLM'" in html      # A_LBL
     assert "['llm','무료 LLM']" in html   # 세그먼트 필터
+
+
+# ---------------- api-llm-dedupe: 무료 LLM 소스와 README 중복 제거 ----------------
+DUP_MD = """# Public APIs
+
+## Index
+
+### Machine Learning
+| API | Description | Auth | HTTPS | CORS |
+|:---|:---|:---|:---|:---|
+| [Groq](https://groq.com/) | Fast LLM inference | `apiKey` | Yes | Yes |
+| [Hugging Face](https://hf.co/) | Models and datasets | `apiKey` | Yes | Yes |
+| [Clarifai](https://clarifai.com/) | Computer vision | `apiKey` | Yes | Yes |
+
+### Cryptocurrency
+| API | Description | Auth | HTTPS | CORS |
+|:---|:---|:---|:---|:---|
+| [Gemini](https://gemini.com/) | Crypto exchange rates | No | Yes | Yes |
+"""
+
+
+def _dedupe(readme_md=DUP_MD):
+    readme = apis_catalog.parse(readme_md, "global")
+    llm = apis_catalog.parse_llm_json(
+        {"providers": [
+            {"name": "Groq", "url": "https://console.groq.com/keys", "models": []},
+            {"name": "Google Gemini", "url": "https://aistudio.google.com/", "models": []},
+            {"name": "Hugging Face", "url": "https://hf.co/settings/tokens", "models": []},
+        ]}, "llm")
+    return apis_catalog.dedupe_llm_overlap(readme, llm)
+
+
+def test_dedupe_removes_readme_duplicates_in_ai_cats():
+    kept = [a["name"] for a in _dedupe()]
+    assert "Groq" not in kept
+    assert "Hugging Face" not in kept
+    assert "Clarifai" in kept          # 겹치지 않는 항목은 유지
+
+
+def test_dedupe_keeps_same_name_in_unrelated_category():
+    """암호화폐 거래소 Gemini는 Google Gemini와 다른 API — 지우면 안 된다."""
+    kept = [(a["cat"], a["name"]) for a in _dedupe()]
+    assert ("Cryptocurrency", "Gemini") in kept
+
+
+def test_dedupe_name_match_is_normalized():
+    readme = apis_catalog.parse(DUP_MD, "global")
+    llm = apis_catalog.parse_llm_json(
+        {"providers": [{"name": "hugging-face", "url": "https://hf.co/", "models": []}]}, "llm")
+    kept = [a["name"] for a in apis_catalog.dedupe_llm_overlap(readme, llm)]
+    assert "Hugging Face" not in kept
+
+
+def test_sync_source_counts_reflect_dedupe(tmp_path, monkeypatch):
+    """상단 요약문에 쓰이는 sources[].count 가 제거 후 값이어야 한다."""
+    monkeypatch.setattr(apis_catalog, "MIN_COUNT", {})
+    out = tmp_path / "apis.json"
+    with patch.object(apis_catalog.requests, "get",
+                      side_effect=_fake_get(_md_map(global_md=DUP_MD))):
+        assert apis_catalog.sync(str(out)) is True
+    cat = json.loads(out.read_text(encoding="utf-8"))
+    counts = {s["id"]: s["count"] for s in cat["sources"]}
+    # DUP_MD 4건 중 Groq·Hugging Face 가 LLM 소스(Groq/Cohere)와… Groq만 겹친다
+    assert counts["global"] == 3
+    assert sum(counts.values()) == len(cat["apis"])
+
+
+def test_ai_cat_regex_has_real_word_boundaries():
+    """\b 가 백스페이스 문자(0x08)로 깨진 적이 있다 — 그러면 AI/LLM 대안이 죽는다."""
+    assert apis_catalog._AI_CAT_RE.search("AI · LLM")      # 무료 LLM 소스 카테고리
+    assert apis_catalog._AI_CAT_RE.search("Machine Learning")
+    assert not apis_catalog._AI_CAT_RE.search("Email")     # \b 없으면 'ai' 로 오탐
+
+
+def test_no_control_chars_in_shipped_sources():
+    """정규식을 파일에 써 넣을 때 이스케이프가 한 겹 벗겨지는 사고 방지."""
+    for rel in ("news/apis_catalog.py", "news/template.html"):
+        with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
+            body = f.read()
+        assert "\x08" not in body, f"{rel} 에 백스페이스 문자"

@@ -17,6 +17,9 @@ docs/data/apis.json 을 통째로 교체한다 (append 아님).
   data.json** 으로 내주므로 README 파싱 대신 스키마를 그대로 받는다.
 - 화면에는 제공자 1줄로 접어 넣는다 — 모델별 행으로 펼치면 항목 수가
   10배로 늘어 기존 아코디언이 무너진다. 모델 정보는 대표 한도로 요약한다.
+- README 의 AI/ML 카테고리와 겹치는 제공자(Groq·Gemini·Hugging Face 등)는
+  README 쪽을 지운다. 다만 이름만 보고 전역으로 지우면 안 된다 —
+  `Cryptocurrency | Gemini` 는 암호화폐 거래소라 Google Gemini 와 무관하다.
 """
 from __future__ import annotations
 
@@ -52,6 +55,12 @@ MIN_COUNT = {"global": 300, "kr": 50, "llm": 10}
 _TOC_RE = re.compile(r"^##\s*(Index|목차)\b", re.I)
 _CAT_RE = re.compile(r"^###\s+(.+)")
 _ROW_RE = re.compile(r"^\|\s*\[([^\]]+)\]\((https?://[^)\s]+)[^)]*\)\s*\|(.*)")
+
+# 중복 제거를 적용할 카테고리 판정 (api-llm-dedupe).
+# template.html 의 'AI · LLM' 대분류 정규식과 같은 규칙을 파이썬으로 옮긴 것 —
+# 한쪽만 고치면 화면 분류와 중복 제거 범위가 어긋나므로 함께 유지한다.
+_AI_CAT_RE = re.compile(r"머신러닝|인공지능|\bAI\b|machine.?learning|\bnlp\b|\bllm\b", re.I)
+_NORM_RE = re.compile(r"[^0-9a-z가-힣]+")
 
 
 def parse(md: str, source_id: str) -> list[dict]:
@@ -108,10 +117,26 @@ def parse_llm_json(data: dict, source_id: str) -> list[dict]:
     return apis
 
 
+def _norm_name(name: str) -> str:
+    """이름 비교용 정규화 — 'Hugging Face' / 'hugging-face' 를 같게 본다."""
+    return _NORM_RE.sub("", name.lower())
+
+
+def dedupe_llm_overlap(readme_apis: list[dict], llm_apis: list[dict]) -> list[dict]:
+    """README 쪽 AI/ML 항목 중 무료 LLM 소스와 겹치는 것을 지운다.
+
+    LLM 소스가 이긴다 — 대표 한도·모델 수까지 있어 정보량이 많고 일 단위로
+    갱신된다. 제거는 AI/ML 카테고리 안에서만 한다: 이름이 같아도 다른 API 인
+    경우(Cryptocurrency 의 Gemini)를 지우면 안 되기 때문이다.
+    """
+    known = {_norm_name(a["name"]) for a in llm_apis}
+    return [a for a in readme_apis
+            if not (_AI_CAT_RE.search(a["cat"]) and _norm_name(a["name"]) in known)]
+
+
 def build_catalog() -> dict:
     """세 소스를 받아 카탈로그 dict를 만든다. 실패는 예외로 올린다."""
-    all_apis: list[dict] = []
-    sources = []
+    by_source: dict[str, list[dict]] = {}
     for s in SOURCES:
         resp = requests.get(s["url"], headers=HEADERS, timeout=20)
         resp.raise_for_status()
@@ -120,6 +145,18 @@ def build_catalog() -> dict:
         floor = MIN_COUNT.get(s["id"], 0)
         if len(apis) < floor:
             raise ValueError(f"{s['label']} 파싱 {len(apis)}건 < 최소 {floor}건 — 소스 형식 변경 의심")
+        by_source[s["id"]] = apis
+
+    # 중복 제거는 방어선(MIN_COUNT) 통과 뒤에 한다 — 제거분 때문에 회차가 죽으면 안 된다
+    llm_apis = [a for s in SOURCES if s["kind"] == "llm_json" for a in by_source[s["id"]]]
+    for s in SOURCES:
+        if s["kind"] != "llm_json":
+            by_source[s["id"]] = dedupe_llm_overlap(by_source[s["id"]], llm_apis)
+
+    all_apis: list[dict] = []
+    sources = []
+    for s in SOURCES:
+        apis = by_source[s["id"]]
         sources.append({"id": s["id"], "label": s["label"],
                         "home": s["home"], "count": len(apis)})
         all_apis.extend(apis)
