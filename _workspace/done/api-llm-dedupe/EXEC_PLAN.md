@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -35,3 +35,4 @@ template.html 의 `AI · LLM` 대분류 규칙을 파이썬으로 옮겨 맞춘�
 - `Cryptocurrency | Gemini` 는 그대로 남는다
 - 상단 요약문의 소스별 건수가 제거 후 값과 일치
 - pytest 전체 통과
+- **완료일**: 2026-08-20T06:28:08.675Z
