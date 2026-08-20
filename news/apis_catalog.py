@@ -10,12 +10,20 @@ docs/data/apis.json 을 통째로 교체한다 (append 아님).
 - 표 행은 첫 셀이 `[이름](링크)` 인 행만 인정 — 헤더·구분선은 자연히 빠진다.
 - 본가는 5열(Auth·HTTPS·CORS), 한국판은 3열(인증)이지만 둘 다
   "링크 | 설명 | 인증"까지만 쓰므로 파서 하나로 처리한다.
+
+무료 LLM 소스(api-free-llm-source)
+- public-apis 는 커뮤니티 갱신이 느려 Groq·OpenRouter 같은 최신 LLM API 가
+  거의 없다. mnfst/awesome-free-llm-apis 는 같은 정보를 **유지보수되는
+  data.json** 으로 내주므로 README 파싱 대신 스키마를 그대로 받는다.
+- 화면에는 제공자 1줄로 접어 넣는다 — 모델별 행으로 펼치면 항목 수가
+  10배로 늘어 기존 아코디언이 무너진다. 모델 정보는 대표 한도로 요약한다.
 """
 from __future__ import annotations
 
 import json
 import os
 import re
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -24,17 +32,22 @@ KST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 
 SOURCES = [
-    {"id": "kr", "label": "한국판",
-     "readme": "https://raw.githubusercontent.com/yybmion/public-apis-4Kr/main/README.md",
+    {"id": "kr", "label": "한국판", "kind": "readme",
+     "url": "https://raw.githubusercontent.com/yybmion/public-apis-4Kr/main/README.md",
      "home": "https://github.com/yybmion/public-apis-4Kr"},
-    {"id": "global", "label": "Public APIs",
-     "readme": "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md",
+    {"id": "global", "label": "Public APIs", "kind": "readme",
+     "url": "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md",
      "home": "https://github.com/public-apis/public-apis"},
+    {"id": "llm", "label": "무료 LLM", "kind": "llm_json",
+     "url": "https://raw.githubusercontent.com/mnfst/awesome-free-llm-apis/main/data.json",
+     "home": "https://github.com/mnfst/awesome-free-llm-apis"},
 ]
 
+LLM_CAT = "AI · LLM"
+
 # README 형식이 바뀌어 파싱이 거의 안 되는 회차에 기존 파일을 덮어쓰지 않기 위한
-# 소스별 최소 건수. 실측(2026-08): global 1,400+ · kr 300+.
-MIN_COUNT = {"global": 300, "kr": 50}
+# 소스별 최소 건수. 실측(2026-08): global 1,400+ · kr 300+ · llm 17.
+MIN_COUNT = {"global": 300, "kr": 50, "llm": 10}
 
 _TOC_RE = re.compile(r"^##\s*(Index|목차)\b", re.I)
 _CAT_RE = re.compile(r"^###\s+(.+)")
@@ -69,17 +82,44 @@ def parse(md: str, source_id: str) -> list[dict]:
     return apis
 
 
+def parse_llm_json(data: dict, source_id: str) -> list[dict]:
+    """data.json 의 providers 를 제공자 1건씩으로 접는다.
+
+    대표 한도는 모델 rateLimit 의 최빈값 — 실측상 17개 제공자 중 13곳은 모든
+    모델이 같은 한도이고, 나머지도 최빈값이 그 제공자의 기본 한도다.
+    """
+    apis: list[dict] = []
+    for p in data.get("providers", []):
+        name, url = (p.get("name") or "").strip(), (p.get("url") or "").strip()
+        if not name or not url:
+            continue                    # 이름·링크 없는 행은 화면에서 쓸모가 없다
+        models = p.get("models") or []
+        limits = [m.get("rateLimit") for m in models if m.get("rateLimit")]
+        parts = [(p.get("description") or "").strip()]
+        if limits:
+            parts.append(f"대표 한도 {Counter(limits).most_common(1)[0][0]}")
+        if models:
+            names = ", ".join(str(m.get("name") or m.get("id") or "") for m in models[:3])
+            parts.append(f"모델 {len(models)}개 ({names}{'…' if len(models) > 3 else ''})")
+        apis.append({"name": name, "url": url,
+                     "desc": " · ".join(x for x in parts if x),
+                     "auth": "apiKey",   # 무료 티어라도 키는 필요 — 빈 값이면 '인증 불필요' 배지가 붙는다
+                     "cat": LLM_CAT, "src": source_id})
+    return apis
+
+
 def build_catalog() -> dict:
-    """두 README를 받아 카탈로그 dict를 만든다. 실패는 예외로 올린다."""
+    """세 소스를 받아 카탈로그 dict를 만든다. 실패는 예외로 올린다."""
     all_apis: list[dict] = []
     sources = []
     for s in SOURCES:
-        resp = requests.get(s["readme"], headers=HEADERS, timeout=20)
+        resp = requests.get(s["url"], headers=HEADERS, timeout=20)
         resp.raise_for_status()
-        apis = parse(resp.text, s["id"])
+        apis = (parse_llm_json(resp.json(), s["id"]) if s["kind"] == "llm_json"
+                else parse(resp.text, s["id"]))
         floor = MIN_COUNT.get(s["id"], 0)
         if len(apis) < floor:
-            raise ValueError(f"{s['label']} 파싱 {len(apis)}건 < 최소 {floor}건 — README 형식 변경 의심")
+            raise ValueError(f"{s['label']} 파싱 {len(apis)}건 < 최소 {floor}건 — 소스 형식 변경 의심")
         sources.append({"id": s["id"], "label": s["label"],
                         "home": s["home"], "count": len(apis)})
         all_apis.extend(apis)

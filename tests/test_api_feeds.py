@@ -77,14 +77,18 @@ def test_parse_kr_three_column_format():
 def _fake_get(md_by_url):
     def get(url, **kw):
         resp = MagicMock()
-        resp.text = md_by_url[url]
+        body = md_by_url[url]
+        resp.text = body if isinstance(body, str) else ""
+        resp.json = MagicMock(return_value=body)
         resp.raise_for_status = MagicMock()
         return resp
     return get
 
 
 def _md_map(global_md=GLOBAL_MD, kr_md=KR_MD):
-    return {s["readme"]: (global_md if s["id"] == "global" else kr_md)
+    """소스 3종(README 2 + LLM data.json)을 모두 채운다 — 하나라도 빠지면 sync 실패."""
+    body = {"readme": {"global": global_md, "kr": kr_md}}
+    return {s["url"]: (LLM_JSON if s["kind"] == "llm_json" else body["readme"][s["id"]])
             for s in apis_catalog.SOURCES}
 
 
@@ -95,8 +99,8 @@ def test_sync_writes_catalog(tmp_path, monkeypatch):
     with patch.object(apis_catalog.requests, "get", side_effect=_fake_get(_md_map())):
         assert apis_catalog.sync(str(out)) is True
     cat = json.loads(out.read_text(encoding="utf-8"))
-    assert len(cat["apis"]) == 4
-    assert {s["id"] for s in cat["sources"]} == {"global", "kr"}
+    assert len(cat["apis"]) == 6                  # README 4건 + LLM 제공자 2건
+    assert {s["id"] for s in cat["sources"]} == {"global", "kr", "llm"}
     assert cat["updated"]
 
 
@@ -167,3 +171,64 @@ def test_api_search_matches_alias(tmp_path):
     """검색은 원본 카테고리명뿐 아니라 별칭에도 걸린다 (LLM으로 검색 가능)."""
     html = _api_html(tmp_path)
     assert "apiCatLabel(x.cat)" in html
+
+
+# ---------------- api-free-llm-source: 무료 LLM 전용 소스 ----------------
+# mnfst/awesome-free-llm-apis 의 data.json 스키마 축약본.
+# README 파싱이 아니라 유지보수되는 JSON을 그대로 받는다.
+LLM_JSON = {
+    "lastUpdated": "2026-08-19",
+    "providers": [
+        {
+            "name": "Groq",
+            "url": "https://console.groq.com/keys",
+            "description": "Free tier, no credit card. Ultra-fast LPU inference.",
+            "models": [
+                {"name": "llama-3.3-70b-versatile", "rateLimit": "30 RPM, 1,000 RPD"},
+                {"name": "llama-3.1-8b-instant", "rateLimit": "30 RPM, 14,400 RPD"},
+                {"name": "openai/gpt-oss-120b", "rateLimit": "30 RPM, 1,000 RPD"},
+                {"name": "openai/gpt-oss-20b", "rateLimit": "30 RPM, 1,000 RPD"},
+            ],
+        },
+        {
+            "name": "Cohere",
+            "url": "https://dashboard.cohere.com/api-keys",
+            "description": "Trial key, no credit card.",
+            "models": [{"name": "command-r-plus", "rateLimit": "20 RPM"}],
+        },
+    ],
+}
+
+
+def test_parse_llm_json_one_row_per_provider():
+    """제공자 1줄 — 모델별로 펼치지 않는다 (기존 아코디언 UI 유지)."""
+    apis = apis_catalog.parse_llm_json(LLM_JSON, "llm")
+    assert [a["name"] for a in apis] == ["Groq", "Cohere"]
+    assert apis[0]["url"] == "https://console.groq.com/keys"
+    assert all(a["cat"] == "AI · LLM" for a in apis)
+    assert all(a["src"] == "llm" for a in apis)
+
+
+def test_parse_llm_json_uses_modal_rate_limit():
+    """대표 한도 = 모델 rateLimit 최빈값 (Groq는 1,000 RPD 가 3/4)."""
+    groq = apis_catalog.parse_llm_json(LLM_JSON, "llm")[0]
+    assert "30 RPM, 1,000 RPD" in groq["desc"]
+    assert "30 RPM, 14,400 RPD" not in groq["desc"]   # 최빈값만
+    assert "모델 4개" in groq["desc"]
+
+
+def test_parse_llm_json_requires_api_key():
+    """무료 티어라도 키는 필요 — '인증 불필요' 배지가 붙으면 안 된다."""
+    assert all(a["auth"] == "apiKey" for a in apis_catalog.parse_llm_json(LLM_JSON, "llm"))
+
+
+def test_llm_source_registered_with_floor():
+    src = {s["id"]: s for s in apis_catalog.SOURCES}
+    assert src["llm"]["kind"] == "llm_json"
+    assert apis_catalog.MIN_COUNT["llm"] >= 10   # 스키마 변경 시 기존 파일 보존
+
+
+def test_template_has_llm_segment(tmp_path):
+    html = _api_html(tmp_path)
+    assert "llm:'무료 LLM'" in html      # A_LBL
+    assert "['llm','무료 LLM']" in html   # 세그먼트 필터

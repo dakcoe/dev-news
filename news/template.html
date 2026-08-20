@@ -658,7 +658,7 @@ function openArchived(url, month, extra){
    갱신해서 허브→검색 전환 중에도 input이 교체되지 않아 한글 IME가 유지된다. */
 let APIS=null;                         // null=미시도, 'loading', 'fail', 객체
 let apiQ='', apiSrc='all', apiCat=null, apiOpen=-1;   // apiCat='src|cat' 키, apiOpen=현재 목록 내 인덱스
-const A_LBL={kr:'한국판', global:'Public APIs'};
+const A_LBL={kr:'한국판', global:'Public APIs', llm:'무료 LLM'};
 const escA=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function ensureApis(){
   if(APIS!==null) return;
@@ -833,12 +833,12 @@ function apiHTML(){
   let h='<h1>무료 API 목록</h1>';
   if(APIS===null||APIS==='loading') return h+'<div class="none">목록을 불러오는 중…</div>';
   if(APIS==='fail') return h+'<div class="none">API 목록을 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다. (로컬 file:// 에서는 사용할 수 없습니다)</div>';
-  h+='<div class="sub">public-apis · public-apis 한국판 전체 '+APIS.apis.length
-    +'개 · 매 수집 회차마다 갱신됩니다'
+  h+='<div class="sub">'+(APIS.sources||[]).map(s=>escA(s.label)+' '+s.count+'개').join(' · ')
+    +' · 전체 '+APIS.apis.length+'개 · 매 수집 회차마다 갱신됩니다'
     +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>';
   h+='<div class="bar">'
     +'<div class="search">'+I.sch+'<input id="apiq" placeholder="이름 · 설명 · 카테고리 검색…" value="'+apiQ.replace(/"/g,'&quot;')+'"></div>'
-    +'<div class="segs">'+[['all','전체'],['kr','한국판'],['global','Public APIs']].map(([v,l])=>
+    +'<div class="segs">'+[['all','전체'],['llm','무료 LLM'],['kr','한국판'],['global','Public APIs']].map(([v,l])=>
       '<button class="sg'+(apiSrc===v?' on':'')+'" data-asrc="'+v+'">'+l+'</button>').join('')+'</div>'
     +'</div>';
   return h+'<div id="apibody">'+apiBodyHTML()+'</div>';
