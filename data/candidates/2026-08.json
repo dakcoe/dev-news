@@ -204,7 +204,7 @@
    "comments": 0,
    "feed": "Hugging Face"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-22"
  },
  {
@@ -815,7 +815,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-22"
  },
  {
@@ -848,6 +848,71 @@
   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vusds8/qwen3827b_different_thinking_levels/",
   "title": "Qwen3.8-27B different thinking levels",
   "description": "Even the low preset is better than Qwen 3.7 plus or Qwen3.6-27B reasoning submitted by /u/Tall_Abrocoma_3533 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv1qfs/this_is_why_i_run_locally/",
+  "title": "This is why I run locally.",
+  "description": "It was only a matter of time... submitted by /u/Retumbo77 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv4mei/llamacpp_version_020_is_out/",
+  "title": "Llama.cpp version 0.2.0 is out!",
+  "description": "You can find the changelog and source code here: https://github.com/ggml-org/llama.cpp/releases/tag/v0.2.0 Associated pre-build is here: https://github.com/ggml-org/llama.cpp/releases/tag/b10566 submitted by /u/PhilippeEiffel [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuzz3j/16_gb_vram_purgatory_discussion_thread/",
+  "title": "16 GB VRAM purgatory discussion thread",
+  "description": "What models and configs are we using? Please share here On windows, I am using this copium pared down model https://huggingface.co/Bucoid/Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF with MTP disabled, q4 k/q4 v mmproj banished to CPU/RAM and a small ub to save whatever context I can (90k-100k) so everything stays in the vram If you are on linux or have an iGPU, you don't have to deal with win",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://the-decoder.com/psychological-methods-reveal-major-weaknesses-in-ai-security-testing/",
+  "title": "Psychological methods reveal major weaknesses in AI security testing",
+  "description": "Researchers at the UK AI Security Institute used psychometric methods to show that popular safety benchmarks for language models don't measure one consistent trait. Blanket blocking of requests can artificially inflate a safety score even as the model gets less useful day to day. The study also offers a method for catching models that act more cautious during tests than they do in normal use. The ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuvx0t/i_tried_to_do_agenic_coding_with_qwen_38_27b_3bit/",
+  "title": "I tried to do agenic coding with Qwen 3.8 27B 3bit quant on a macbook air m2 24gb. It took 63 hours, but amazingly, the flight simulator worked.",
+  "description": "I used LM Studio Bionic with Qwen 3.8 27B Q3_K_S with 57k context. It took a staggering 63 hours to finish coding. After the first prompt \"Create a beautiful, relaxing flight simulator in a single HTML page\" taking 47.8 hours, it created an html file that showed the title screen that said \"press any key\" but pressing any keys won't advance the game. So I wrote on the second prompt \"It saids press ",
   "source": "rss",
   "native": {
    "upvotes": 0,
@@ -1333,6 +1398,114 @@
   "native": {
    "upvotes": 38,
    "comments": 9
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://danluu.com/perf-opt/",
+  "title": "There's no reason for software to be slow anymore",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 330,
+   "comments": 236
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+  "title": "GPT 5.6 Sol 20% price reduction",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 62,
+   "comments": 44
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.nytimes.com/2026/08/18/technology/silicon-valley-tech-fans-children.html",
+  "title": "Silicon Valley Executives Are Tech Fans. Just Not for Their Kids",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 12,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://deepsql.ai/blog/giving-an-llm-your-database-is-easy-taking-access-away-is-hard",
+  "title": "Giving an LLM your prod database is easy. Taking access away is the hard part",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 3,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://rust-glancer.github.io/blog/hello-world/",
+  "title": "Rust Glancer: Rust LSP using 100x less RAM",
+  "description": "https://matklad.github.io/2026/08/21/rust-glancer.html",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 128,
+   "comments": 33
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://ozbrain.com",
+  "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+  "description": "I think agent-first chat interfaces will be a primary software modality and busy dashboard/UI will go away. I’m not sure who exactly wins it, but I want my knowledge to grow/go with me. A lot of the “knowledge” ie research, analysis, reasoning will be done by agents as the primary user. Our current notes tools & tasks management systems were built for humans… I don’t care what the 17th thing on my bug backlog is. I want to conduct agents that can execute for me and do great work. What I built Oz",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 65,
+   "comments": 36
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://github.com/FlashML-org/FreeToken",
+  "title": "Run 290B+ frontier MoE models locally on your gaming PC",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 20,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://www.lambda-symbolics.com/autolith",
+  "title": "Autolith: A programming agent with a live runtime",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 58,
+   "comments": 16
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/",
+  "title": "GitHub, autoscaling, and the component substitution fallacy",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 47,
+   "comments": 0
   },
   "selected": false,
   "date": "2026-08-22"
@@ -1971,7 +2144,7 @@
     "web-application"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-22"
  },
  {
@@ -1999,7 +2172,7 @@
     "tensorflow"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-22"
  },
  {
@@ -2026,7 +2199,7 @@
     "serialization"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-22"
  },
  {
@@ -2141,6 +2314,66 @@
   "url": "https://news.hada.io/topic?id=32743",
   "title": "전 세계 운영체제를 꿈꾼 일본의 TRON과 미국의 개입",
   "description": "1984년 시작된 TRON 은 가전의 마이크로컨트롤러부터 PC·메인프레임·통신망까지 일본의 디지털 기반 전체를 하나의 개방형 아키텍처 로 구축하려던 프로젝트였음 데스크톱용 BTRON 은 파일과 애플리케이션 대신 타입이 있는 문서 조각, 이름을 바꿔도...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32756",
+  "title": "SSL에 대해 배운 모든 것이 더는 유효하지 않음 [유튜브]",
+  "description": "장기 인증서와 수동 갱신에 의존하던 운영 방식은 TLS 1.3 , 단기 인증서와 ACME 자동화를 중심으로 바뀌었으며 기존 SSL 관행 대부분은 더는 안전하거나 지속 가능하지 않음 CA의 부실한 감사와 인증서 오발급, SHA-1 충돌 , Heartbleed, 불완전한 폐기 체계가 잇달...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32755",
+  "title": "YC CEO Garry Tan이 말하는 창업자의 새로운 규칙 [유튜브]",
+  "description": "Web 1.0 붕괴 직후 유행을 좇아 웹 개발과 Palantir 기회를 놓친 경험은, 창업자가 시장의 평가보다 직접 경험 과 자신만의 지식을 따라야 한다는 교훈으로 이어짐 바이브 코딩과 코딩 에이전트는 개인의 역량을 과거 수백 명 규모로 증폭하므로, 기존 SaaS 성공 공식을 복제하기보다...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32754",
+  "title": "Computer Use와 Skills/Files API로 프로덕션 에이전트 구축하기",
+  "description": "Claude Platform의 Computer Use·Skills API·Files API 를 결합하면 소프트웨어 조작부터 조직 지식 적용, 완성된 파일 반환까지 하나의 에이전트 흐름으로 구성할 수 있음 새로운 Browser Use Tool 은 페이지 구조를 읽어 특정 필드와 버튼을 조작하며, Computer Us...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32753",
+  "title": "Huggingface Speech To Speech - 오픈소스 모델로 로컬 음성 에이전트를 만드는 파이프라인",
+  "description": "사용자가 말하면 이를 감지하고(VAD) → 음성을 텍스트로 바꾸고(STT) → LLM이 질문을 이해하고 답변 생성 → 생성된 답변을 다시 음성으로 읽어주는(TTS) 완전한 음성 대화 파이프라인 을 로컬에서 구성할 수 있음 각 단계는 각각 별도 스레드에서 동작하고 큐로 연결돼, 한 단계가...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32752",
+  "title": "Rust nightly, 차세대 트레이트 솔버 기본 활성화",
+  "description": "약 4년간 개발한 차세대 트레이트 솔버 가 안정화를 앞두고 nightly에서 기본 활성화되며, where 절 증명과 연관 타입 정규화 등 Rust 컴파일러의 핵심 처리 방식을 전면 교체함 기존 구현을 제거하면 Type Alias Impl Trait·Return Type Notation 안정화, Mo...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -3765,6 +3998,534 @@
   "native": {
    "upvotes": 0,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/dj29/the-optimization-that-was-too-good-why-our-push-notifications-only-worked-when-you-werent-looking-2f4d",
+  "title": "The Optimization That Was Too Good: Why Our Push Notifications Only Worked When You Weren't Looking",
+  "description": "This is a submission for DEV's Summer Bug Smash: Smash Stories powered by Sentry.  When I was...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/carlosjcastrog/overflow-clip-saved-my-navbar-2a99",
+  "title": "overflow: clip saved my navbar",
+  "description": "This is a submission for DEV's Summer Bug Smash: Smash Stories powered by Sentry.  There was no error...",
+  "source": "devto",
+  "native": {
+   "upvotes": 3,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/o-o1112/pythonjsc-block-language-220-run-polyglot-workflows-in-one-document-1e80",
+  "title": "[Python/JS/C#] Block Language 2.2.0: Run Polyglot Workflows in One Document",
+  "description": "I got tired of writing small glue programs around otherwise simple workflows.  Python was the right...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/wolffy-good/ai-model-routing-the-missing-infrastructure-layer-for-multi-model-ai-applications-32cf",
+  "title": "AI Model Routing: The Missing Infrastructure Layer for Multi-Model AI Applications",
+  "description": "The Next AI Infrastructure Layer Is Not the Model — It’s the Router   How model routing is...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/your-fetch-in-beforeunload-is-silently-killed-navigatorsendbeacon-guarantees-delivery-17pn",
+  "title": "Your fetch in beforeunload is silently killed. navigator.sendBeacon guarantees delivery.",
+  "description": "When the page unloads, the browser may cancel any in-flight fetch or XHR before it completes. navigator.sendBeacon sends a POST the browser commits to delivering, even after the document is gone.",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/agenticstack/architectural-breakdown-ola-devto-sou-o-gabriel-e-automatizo-o-escritorio-juridico-onde-trabalho-13fm",
+  "title": "Architectural Breakdown: Olá, dev.to! Sou o Gabriel e automatizo o escritório jurídico onde trabalho",
+  "description": "# Olá, dev.to. I Automate My Law Firm, Here’s the Hardened Python Stack That Replaced...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/kenwalger/designing-a-reasoning-ledger-record-22eo",
+  "title": "Designing a Reasoning Ledger Record",
+  "description": "A companion to Part 4 of the Building the AI Memory Stack series. Part 4.5 of the series.  Part 4...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/anthony_builds/you-can-now-clip-video-from-inside-your-ai-agent-the-state-of-mcp-for-video-in-2026-2jek",
+  "title": "You can now clip video from inside your AI agent: the state of MCP for video in 2026",
+  "description": "Six months ago, \"AI video editing\" meant opening a web app, pasting a link, and clicking around....",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/filenest12/i-built-browser-local-file-tools-so-files-dont-need-to-be-uploaded-416a",
+  "title": "I Built Browser-Local File Tools So Files Don't Need to Be Uploaded",
+  "description": "A lot of small file jobs still follow the same awkward pattern:   choose a file, upload it to someone...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/aleksuix/metas-conversions-api-wants-seconds-datenow-sends-milliseconds-4p80",
+  "title": "Meta's Conversions API Wants Seconds. Date.now() Sends Milliseconds.",
+  "description": "JavaScript's Date.now() is 13 digits. Meta's event_time is 10. The event lands far in the future, outside the 7-day window, and never attributes. Three other CAPI mistakes sit in the same payload.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/aleksuix/a-segment-track-call-needs-an-event-name-the-http-200-does-not-check-3m71",
+  "title": "A Segment Track Call Needs an Event Name. The HTTP 200 Does Not Check.",
+  "description": "The HTTP Tracking API documents event as required on track, and userId or anonymousId on every call. A Unix epoch timestamp is the wrong type. None of that shows up in the status code.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/aleksuix/posthog-capture-treats-an-epoch-timestamp-as-ingestion-time-2bng",
+  "title": "PostHog Capture Treats an Epoch Timestamp as Ingestion Time",
+  "description": "PostHog's capture API documents timestamp as ISO 8601. A Unix epoch number is accepted, then ignored, so a backfill looks like it happened just now. distinct_id is required on every event, including each row in a batch.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/renga154/the-jitter-wasnt-in-the-interpolation-it-was-in-the-schedule-557p",
+  "title": "The jitter wasn't in the interpolation. It was in the schedule.",
+  "description": "One symptom, three unrelated causes, and the order to check them in. Including a threshold-free test for telling a real kink from a smooth curve.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/shipyourpythonapp/shipping-a-python-desktop-app-to-real-users-everything-that-breaks-after-pyinstaller-succeeds-118f",
+  "title": "Shipping a Python desktop app to real users: everything that breaks after PyInstaller succeeds",
+  "description": "I built a desktop app in Python (PySide6 + MediaPipe + ONNX, ~33k lines) and shipped it to real beta...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/_a9de0f38ed294cfb7e5e/can-we-automate-the-work-of-a-software-engineer-the-story-behind-healer-2mge",
+  "title": "Can We Automate the Work of a Software Engineer? The Story Behind HEALER",
+  "description": "In my previous article, I wrote about X-Ray — an observability system that grew out of my work on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/golflover2023/meshctx-open-source-ai-agent-with17-brain-regions-3gme",
+  "title": "MeshCtx: Open Source AI Agent with17 Brain Regions",
+  "description": "Why I Built an AI Agent with17 Brain Regions (And What I Learned)   Most AI agents are...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/anas_4890/i-built-a-zero-code-execution-visual-architecture-route-tracer-for-python-and-typescript-5g3n",
+  "title": "I built a zero-code-execution visual architecture & route tracer for Python and TypeScript",
+  "description": "Every time I clone an unfamiliar open-source repository or onboard onto a new project, I find myself...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/golflover2023/ai-powered-price-tracking-for-latin-america-building-preciosml-23pe",
+  "title": "AI-Powered Price Tracking for Latin America: Building PreciosML",
+  "description": "How We Monitor500K+ Product Prices Across Latin America Every Hour   Price monitoring in...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/gabrielvictorcruz/ola-devto-sou-o-gabriel-e-automatizo-o-escritorio-juridico-onde-trabalho-2fl5",
+  "title": "Olá, dev.to! Sou o Gabriel e automatizo o escritório jurídico onde trabalho",
+  "description": "👋 Olá! Eu sou o Gabriel Victor   Sou estudante de Engenharia de Software em Brasília e este...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/masaoshimadaopen/my-investment-bots-sell-rule-was-broken-how-i-added-sec-edgar-filings-to-catch-pre-bankruptcy-5dbi",
+  "title": "My Investment Bot's Sell Rule Was Broken: How I Added SEC EDGAR Filings to Catch 'Pre-Bankruptcy' Signals Sooner",
+  "description": "Hey dev.to! Grandpa here. I'm a 38-year-old tinkering with AI agents and automated trading bots on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/thomaslanghorst/the-best-engineering-teams-use-ai-and-junior-developers-differently-1eo3",
+  "title": "The Best Engineering Teams Use AI and Junior Developers Differently",
+  "description": "Over the past year, I've watched a lot of engineering teams go through the same adoption pattern with...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/mahakfaheem/agent-state-memory-checkpointing-where-the-boundaries-blur-3je8",
+  "title": "Agent State, Memory & Checkpointing: Where the Boundaries Blur",
+  "description": "Hi again.  In Part 1, I tried to separate state, memory and checkpointing in the simplest way I...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/jomynn/building-an-offline-ai-security-scanner-that-doesnt-hallucinate-findings-3oab",
+  "title": "Building an Offline AI Security Scanner That Doesn't Hallucinate Findings",
+  "description": "How AiSec Studio pipes every scan through parser → rule engine → knowledge graph before a local LLM...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/gde/when-to-use-bloc-vs-cubit-vs-signal-an-architectural-decision-guide-2911",
+  "title": "When to Use Bloc vs. Cubit vs. Signal: An Architectural Decision Guide",
+  "description": "Stop guessing how to structure your Flutter state. Here is a definitive, 4-tier decision rubric comparing raw Signals, CubitSignal, BlocSignal, and persistence mixins.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devshefali/19-chrome-devtools-tricks-every-developer-should-know-3o6f",
+  "title": "19 Chrome DevTools Tricks Every Developer Should Know",
+  "description": "Most developers use Chrome DevTools every day.  But most of us only use a small part of what it can...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/aialleyway/your-tts-shortlist-is-three-shortlists-and-they-barely-intersect-jhf",
+  "title": "Your TTS shortlist is three shortlists, and they barely intersect",
+  "description": "Every \"best text-to-speech API\" list I have read is ranked. Number one, number two, number three,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/voltwake/your-ai-doesnt-understand-design-so-i-gave-it-a-library-it-can-read-5cg0",
+  "title": "Your AI doesn't understand design. So I gave it a library it can read.",
+  "description": "Ask any LLM to \"make this landing page look like a high-end Swiss design studio\" and you'll get...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devops_oasis/devops-questions-after-we-broke-the-release-handshake-46j2",
+  "title": "DevOps Questions After We Broke The Release Handshake",
+  "description": "Our team answers awkward DevOps questions after a failed release handoff, covering ownership, production access, pager duty, metrics, and rollouts.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devops_oasis/jenkins-versus-github-actions-after-our-43-minute-queue-3p48",
+  "title": "Jenkins Versus GitHub Actions After Our 43-Minute Queue",
+  "description": "Jenkins, GitHub Actions, and GitLab CI compared after a 43-minute build queue, with concrete picks for small, growing, and platform teams.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devops_oasis/leadership-mistakes-we-put-into-production-before-lunch-133",
+  "title": "Leadership Mistakes We Put Into Production Before Lunch",
+  "description": "Six leadership anti-patterns from our platform team: approval bottlenecks, hero culture, bad paging routes, misleading metrics, and unpaid on-call.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/oleksandr_kuryzhev_42873f/fix-lambda-s3-trigger-error-handling-before-it-loses-events-58b4",
+  "title": "Fix Lambda S3 Trigger Error Handling Before It Loses Events",
+  "description": "Originally published on kuryzhev.cloud     We had a client whose ingestion pipeline \"worked fine\" for...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/harishteens/4-non-obvious-learnings-from-working-with-alerts-ba5",
+  "title": "4 Non-obvious learnings from working with alerts",
+  "description": "Alerting is a details game. Nobody gets paged by their intent — they get paged by the exact query...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/ndcodes/day-30-hard-reset-forgets-on-purpose-and-nat-needs-a-guardrail-switched-off-22ko",
+  "title": "Day 30: Hard Reset Forgets on Purpose, and NAT Needs a Guardrail Switched Off",
+  "description": "Thirty days in, and today both tasks required deliberately switching off something that exists to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devops_oasis/sre-starts-with-the-alert-that-woke-us-1hnk",
+  "title": "SRE Starts With The Alert That Woke Us",
+  "description": "A practical beginner primer on SRE, using our payment API alerts, SLOs, error budgets, and on-call decisions from one difficult day.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/devops_oasis/kanban-after-12-months-of-interrupt-driven-work-5611",
+  "title": "Kanban After 12 Months Of Interrupt-Driven Work",
+  "description": "One year after replacing sprints with kanban, our nine-person platform team grades the move B: clear limits helped, but board upkeep became real work.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/piyush140104/from-sandbox-to-review-queue-my-gsoc-2026-project-with-owasp-owtf-50dd",
+  "title": "From Sandbox to Review Queue: My GSoC 2026 Project with OWASP OWTF",
+  "description": "I spent this summer building a community plugin marketplace for OWASP OWTF. Here is what I shipped, what broke, and what my mentor talked me out of.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/onizuka/i-ran-300k-company-api-lookups-40k-hit-military-bases-3p1b",
+  "title": "I Ran 300K Company API Lookups. 40K Hit Military Bases.",
+  "description": "security, #api, #cybersecurity, #discuss   On July 30, 2026, my batch job finished 300,000...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/darshit2308/week-6-7-8-58ln",
+  "title": "Week-6, 7, 8",
+  "description": "Catching Up: Architecture, Security, and Concurrency in the Heka Auth Service   Hey...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/minhhk68/deep-dive-write-up-by-huynh-kien-minh-cve-2026-13736-newpath-wildapricotpress-member-directory-174d",
+  "title": "Deep-Dive Write-up by Huynh Kien Minh: CVE-2026-13736 — NewPath WildApricotPress Member Directory PII Disclosure",
+  "description": "🔐 Vulnerability ID: CVE-2026-13736 | 🎯 CVSS Score: 5.3 Medium | 🏆 Lead Researcher: Huynh Kien Minh...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/anoymask/trueconf-server-exploitation-phantomcore-delivered-via-cve-2026-72529-72530-3dc3",
+  "title": "TrueConf Server Exploitation: PhantomCore Delivered via CVE-2026-72529 / 72530",
+  "description": "1. Basic Information     Article Title: Head Mare APT Group exploits vulnerabilities in...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/anoymask/e4del-pinhole-using-ftp-banners-for-command-retrieval-12h5",
+  "title": "E4del / PINHOLE Using FTP Banners for Command Retrieval",
+  "description": "1. Basic Information     Article Title: FTP Banners: The New Dead Drop Resolver Delivering...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/anoymask/synkloader-deploying-multi-stage-modules-via-teams-phishing-1cal",
+  "title": "SynkLoader Deploying Multi-Stage Modules via Teams Phishing",
+  "description": "1. Basic Information     Article Title: SynkLoader: when you throw in everything but the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/_a2a5aeb0db084c76b8ea/ufw-says-the-port-is-closed-docker-published-it-to-your-whole-network-anyway-3ome",
+  "title": "UFW says the port is closed. Docker published it to your whole network anyway.",
+  "description": "TL;DR: ufw enable on a Pi does what it says — until Docker is installed. Docker inserts its own...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-22"
+ },
+ {
+  "url": "https://dev.to/dev_michael/ai-didnt-make-me-a-worse-coder-it-made-me-a-worse-reviewer-48d0",
+  "title": "AI didn't make me a worse coder. It made me a worse reviewer.",
+  "description": "I built a lot of apps with AI last year and approved most of the code without really reading it. The research says the skill that decays isn't typing — it's the cognitive work underneath. Here's why every fix I've read (including my own first idea) is built to fail, and the one shape that isn't.",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 2
   },
   "selected": false,
   "date": "2026-08-22"
