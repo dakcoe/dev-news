@@ -386,7 +386,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-23"
  },
  {
@@ -399,7 +399,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-23"
  },
  {
@@ -412,7 +412,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-23"
  },
  {
@@ -425,7 +425,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-23"
  },
  {
@@ -624,6 +624,58 @@
   "date": "2026-08-23"
  },
  {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvv7iv/the_all_spark_cluster_upgrading_from_16_36_dgx/",
+  "title": "“The All Spark” Cluster: Upgrading from 16 - 36 DGX Sparks",
+  "description": "Earlier this year I posted about building what at the time I believe was the first 16x DGX Spark Cluster. I’m now adding 20 more Sparks to the cluster in my homelab server rack, giving me 4.6TB of unified memory. • 36x Sparks • 1x 200Gbps FS 24 x 200Gb QSFP56 + 8x 400Gb Switch • 24x QSFP56 DAC cables • 6x 400gb to 2x 200gb breakout cables Over the last 4+ months i’ve been running nearly every nota",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvyacg/qwen_38_27b_is_a_game_changer/",
+  "title": "Qwen 3.8 27B is a game changer.",
+  "description": "Our devs got their hands on it a few days ago. One wired it into Codex to compare with GPT Luna, our usual workhorse right now for its cost effectiveness. Another tried it out on one of our OCR pipelines. It's comparable to Luna for coding and ***OCR quality appears to be better than Gemini 3.5 Flash Lite***. That's huge. We pay a ton of money for OCR. This is the first local model that feels like",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvtu9z/i_fine_tuned_gemma_4_12b_for_a_27x_improvement_on/",
+  "title": "I fine tuned Gemma 4 12B for a 2.7x improvement on tool calling because I can't fit anything else comfortably into my 16 GBs of Vram",
+  "description": "Gemma 12B is obviously a very well trained model, I always thought the fine tuning they did on it wasn't really cut out for agentic coding. From my own experiences it struggles to use the tools it's given from Github Copilot and is also very inept at the cli too. So I thought I'd kill two birds with one stone and fine tune it for tool call use and the command line. Not only did I see an improvemen",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvu15m/qwen3827b_one_week_later_the_rlocalllama/",
+  "title": "# Qwen3.8-27B — One Week Later: The r/LocalLLaMA + r/LocalLLM Verdict",
+  "description": "Companion to the Qwen 3.8 Release Megathread . Compiled from ~2,000 posts scanned across both subs, with deep reads of the 45 highest-signal threads (560 posts and comments), Aug 15–22, 2026, plus independent X benchmarks. Every number is attributed to the poster's stated hardware/runtime/quant. This community contradicts itself on nearly every axis — so this thread keeps the disagreements side-by",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
   "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c",
   "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
   "description": "",
@@ -643,6 +695,18 @@
   "native": {
    "upvotes": 15,
    "comments": 15
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://blog.wybxc.cc/blog/rust-gui-survey-2026/",
+  "title": "A 2026 Survey of Rust GUI Libraries",
+  "description": "",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 17,
+   "comments": 18
   },
   "selected": false,
   "date": "2026-08-23"
@@ -1015,6 +1079,78 @@
   "native": {
    "upvotes": 19,
    "comments": 6
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://twitter.com/moxie/status/2091218652133732491",
+  "title": "Scrap (2006)",
+  "description": "https://xcancel.com/moxie/status/2091218652133732491",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 364,
+   "comments": 194
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://martypc.net/",
+  "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 83,
+   "comments": 21
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/",
+  "title": "Software Engineering in the Agentic Era",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 20,
+   "comments": 8
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://lwn.net/Articles/1087635/",
+  "title": "A look at CrossPoint e-reader firmware",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 11,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://sfstandard.com/opinion/2026/08/22/sunset-magazine-menlo-park-campus-torn-down/",
+  "title": "This Silicon Valley campus was a paradise. Bulldoze it",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 5,
+   "comments": 4
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://support.mozilla.org/en-US/kb/firefox-enterprise-154-release-notes",
+  "title": "Firefox 155 and beyond will be released in a two-week cadence",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 6,
+   "comments": 2
   },
   "selected": false,
   "date": "2026-08-23"
@@ -1573,6 +1709,66 @@
   "url": "https://news.hada.io/topic?id=32776",
   "title": "ElevenLabs, TwelveLabs, ThirteenLabs…",
   "description": "ElevenLabs를 출발점으로 0~99의 숫자와 Labs를 결합한 이름 을 조사한 결과, 상당수 번호에서 실제 회사나 프로젝트의 온라인 흔적이 발견됨 숫자는 영문·숫자 표기 모두 허용하고 Labs 또는 Lab 을 앞뒤에 붙이는 방식으로 한정했으며, 후보가 여럿이면 ...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32793",
+  "title": "기억해 둘 만한 작은 네이티브 웹 기법",
+  "description": "HTMLcat은 별도 라이브러리 없이 적용할 수 있는 HTML·CSS·JavaScript 활용법 을 짧은 노트로 정리함 입력 기능 감지부터 중앙 정렬, 스크롤, 줄바꿈, 색상까지 자주 필요한 CSS 패턴 을 찾아볼 수 있음 dialog , Popover API, inert",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32791",
+  "title": "로컬 LLM이 실제 성능보다 더 멍청하게 느껴지는 이유",
+  "description": "같은 모델 가중치라도 GPU 명령어·추론 소프트웨어·정밀도 설정 이 다르면 다음 토큰 확률이 달라지고, 긴 문맥에서는 도구 호출 실패로 이어질 수 있음 Qwen3.6-27B와 약 10만 토큰의 실제 에이전트 작업 문맥을 실험한 결과, vLLM의 어텐션 백엔드 차이는 후반부부...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32789",
+  "title": "Show GN: CachyOS 와 Omarchy 의 혼종을 만들고 있습니다.",
+  "description": "게이밍 피씨, 짭팀머신으로 쓰려고 구입한 미니 피씨에 게이밍 os를 표방하는 CachyOS 를 설치해서 가끔 스팀 열어서 사 놓은 게임이 잘 돌아가는지 확인하는 용도로 쓰던 차에 타일링 윈도우 매니저인 Hyprland가 쓰고 싶어서 기본 설정으로 쓰다 한껏 튜닝 된 Omarchy 까지 욕심이 생겼습니다.",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32788",
+  "title": "Munder Difflin - 나를 복제한 직원들로 사무실을 운영하는 에이전트 하네스",
+  "description": "Munder Difflin 은 기존 에이전트 CLI와 구독을 활용해 사용자의 업무 방식·도구·지식을 공유하는 여러 복제 에이전트를 로컬 컴퓨터에서 실행하는 무료 오픈소스 하네스임 Claude Code, Codex, Copilot 등 12개 에이전트 CLI 를 감싸며, 에이전트들이 기억과 맥락을...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32787",
+  "title": "Show GN: 일섬 — 일봉 거가중100 밀착·돌파 코인 스크리너",
+  "description": "일봉 거래량가중이동평균(거가중100)에 붙다가 위로 닫는 코인을 매일 훑는 웹 스크리너입니다. 업비트와 바이낸스 공개 일봉만 씁니다. 밀착 / 돌파 / 시도 / 접근 분류 손절은 선 아래, 1·2차 익절은 매물·박스·R 배수 지표·손익비를 합친 ‘오늘 매수 후보’와 추천 진입 구",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -2897,6 +3093,378 @@
   "native": {
    "upvotes": 0,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/tatsuyawwp/my-scheduled-task-reported-success-every-5-minutes-for-3-weeks-the-process-inside-it-had-been-28m5",
+  "title": "My scheduled task reported \"success\" every 5 minutes for 3 weeks. The process inside it had been crashing the whole time.",
+  "description": "I run a one-person AI company: Claude Code writes and maintains the code, and most of what it builds...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 5
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/arqamwd/i-wrote-the-privacy-rule-enforced-it-commented-it-and-shipped-the-leak-anyway-500g",
+  "title": "I wrote the privacy rule, enforced it, commented it, and shipped the leak anyway",
+  "description": "This is a submission for DEV's Summer Bug Smash: Smash Stories.   TL;DR. I wrote a scrubbing policy...",
+  "source": "devto",
+  "native": {
+   "upvotes": 7,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/koda2026/i-checked-my-database-logs-and-found-a-senior-engineer-stress-testing-my-ai-24p",
+  "title": "I checked my database logs and found a Senior Engineer stress-testing my AI 🕵️‍♂️",
+  "description": "Hey everyone, Harun here again. I’m the 12-year-old solo dev from Anthiyur, India, building an AI...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/iammofidul/what-166k-clicks-taught-me-about-using-ai-for-seo-1pe6",
+  "title": "What 166K Clicks Taught Me About Using AI for SEO",
+  "description": "Over three months, my static website generated 166K Google clicks from 1.39M impressions, with an...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 4
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/yuudaikido/two-pieces-of-code-same-answer-which-one-should-you-write-2p43",
+  "title": "Two Pieces of Code, Same Answer — Which One Should You Write?",
+  "description": "Introduction   This is my first post. It has been one year since I became an engineer with...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/james_anderson_h/why-llms-are-bad-at-math-explained-simply-3omj",
+  "title": "Why LLMs Are Bad at Math, Explained Simply",
+  "description": "You've probably had this exact moment. You ask an AI a math question. It lays out the steps...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/behan05/building-a-live-user-controlled-canvas-background-system-that-doesnt-kill-low-end-phones-bg7",
+  "title": "Building a Live, User-Controlled Canvas Background System That Doesn't Kill Low-End Phones",
+  "description": "The idea   Most apps give you a static background. I wanted Pairly to feel alive instead, so...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/mech_app_ai/mastra-multi-agent-pipeline-coordinating-four-typescript-agents-without-losing-state-2dn5",
+  "title": "Mastra Multi-Agent Pipeline: Coordinating Four TypeScript Agents Without Losing State",
+  "description": "How Mastra orchestrates four specialized agents in TypeScript, handles partial failures, and keeps intermediate state consistent across retries.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/xpdev99/i-built-a-chrome-devtools-extension-to-mock-apis-without-leaving-the-browser-1klf",
+  "title": "I Built a Chrome DevTools Extension to Mock APIs Without Leaving the Browser",
+  "description": "Capture live API requests in Chrome DevTools and turn them into mock responses — no proxy, no server, no code changes.",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/prabhu_kalyansamal_f743d/-mcp-security-threat-model-hardening-guide-2026--3enn",
+  "title": "MCP Security: Threat Model & Hardening Guide (2026)",
+  "description": "Educational &amp; Ethical Use Only — This article is provided for educational and ethical...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/beny_2005/deploying-my-first-web-server-with-nginx-3phf",
+  "title": "Deploying My First Web Server with Nginx",
+  "description": "Today I worked on a simple but important DevOps task: deploying a web server using Nginx on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/one-version-bump-40-files-to-edit-import-maps-fix-that-188b",
+  "title": "One version bump, 40 files to edit. Import maps fix that.",
+  "description": "Bare specifiers like import _ from 'lodash' don't work in a browser without a bundler — unless you tell the browser how to resolve them yourself, in one JSON block instead of forty hardcoded URLs.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/piro0919/someone-forked-my-react-component-instead-of-opening-an-issue-3d37",
+  "title": "Someone forked my React component instead of opening an issue",
+  "description": "I maintain a small comic and manga viewer component for React called react-comic-viewer.  The other...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/yuvaraj_radhakrishnan_224/i-built-59-free-browser-based-dev-tools-in-vanilla-js-heres-what-i-learned-2pcp",
+  "title": "I built 59 free browser-based dev tools in vanilla JS — here's what I learned",
+  "description": "I've been quietly building Antigravity Tools — a collection of 59 free, browser-based developer...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/tamizuddin/building-a-private-agentic-os-with-local-llms-lessons-from-eliza-hister-and-the-planning-problem-mel",
+  "title": "Building a Private Agentic OS with Local LLMs: Lessons from Eliza, Hister, and the Planning Problem",
+  "description": "A technical deep-dive into architecting local-first AI agent operating systems, analyzing the Eliza framework, Hister, and solving the planning problem.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/wizcodes/what-actually-shapes-a-custom-software-build-2bac",
+  "title": "What Actually Shapes a Custom Software Build",
+  "description": "Two teams describe what sounds like the same product and end up with wildly different builds. Not...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/theaishop/building-a-reliable-multi-agent-pipeline-with-the-claude-api-orchestration-patterns-that-hold-up-29pl",
+  "title": "Building a Reliable Multi-Agent Pipeline with the Claude API: Orchestration Patterns That Hold Up in Production",
+  "description": "Most \"multi-agent\" demos fall apart the moment you put them in front of real data. One agent's...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/oussama_laribi_dad54a6441/from-css-selector-to-source-line-instrumenting-angular-templates-3oni",
+  "title": "From CSS selector to source line: instrumenting Angular templates",
+  "description": "Every accessibility tool I have used reports violations like this:    Images must have alternative...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/labstek9glitch/http-402-was-the-easy-part-x402scan-still-refused-the-tunnel-344h",
+  "title": "HTTP 402 was the easy part — x402scan still refused the tunnel",
+  "description": "This is a submission for DEV's Summer Bug Smash: Smash Stories powered by Sentry.  The protocol...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/a353551071/i-built-a-free-dividend-calculator-suite-no-signup-open-source-math-2a9p",
+  "title": "I built a free dividend calculator suite (no signup, open-source math)",
+  "description": "A free suite of dividend calculators — yield, payout ratio, growth, DRIP, monthly income, SCHD, QQQI. No sign-up, open-source math, runs in your browser.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/alejandrorodrom/hmac-over-json-in-typescript-why-verify-fails-in-production-457k",
+  "title": "HMAC over JSON in TypeScript — why verify fails in production",
+  "description": "In the previous post we treated bytes as Uint8Array and skimmed HMAC for a JSON body. The one-liner...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/morinaga/four-github-api-license-values-that-an-oss-directory-cannot-display-verbatim-1e1p",
+  "title": "Four GitHub API license values that an OSS directory cannot display verbatim",
+  "description": "MIT and Apache-2.0 are fine to show as-is. NOASSERTION, BUSL-1.1, SSPL-1.0, and null each need separate handling before they mean something useful to a developer.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/saurav_tb_pandey/no-more-midnight-deploys-the-magic-of-blue-green-deployments-4b29",
+  "title": "No More Midnight Deploys: The Magic of Blue-Green Deployments",
+  "description": "No More Midnight Deploys: The Magic of Blue-Green Deployments   Imagine trying to upgrade...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/tejas_kp/kubernetes-architecture-32c9",
+  "title": "Kubernetes Architecture",
+  "description": "Control Plane (Master) &amp; Worker Nodes  Control Plane components:   API Server Scheduler Control...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/sifat_ahmed_3cc666203e7b8/why-fusebox-doesnt-support-claude-yet-196f",
+  "title": "Why Fusebox doesn't support Claude yet",
+  "description": "Fusebox emails you before your OpenAI bill blows past a number you set. Before writing any of that...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/manoharij/azure-integration-services-interview-prep-part-3-managed-identity-key-vault-vnet-private-5646",
+  "title": "Azure Integration Services Interview Prep Part 3: Managed Identity, Key Vault, VNet , Private Endpoints, NSGs, RBAC and Token Validation",
+  "description": "Part 1 covered the messaging services - Service Bus, Storage Queues, Event Hub, Event Grid. Part 2...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/__52904/introducing-t-phantom-os-53-a-saudi-developed-bilingual-linux-platform-for-dfir-and-cybersecurity-5d",
+  "title": "Introducing T-PHANTOM OS 5.3: A Saudi-Developed Bilingual Linux Platform for DFIR and Cybersecurity",
+  "description": "By Eng. Talal Fawaz Al-Sohimiy Designer &amp; Developer of T-PHANTOM OS Saudi Arabia  I built...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/magopredator/mcp-drift-monitor-deteccion-continua-de-cambios-no-autorizados-en-servidores-mcp-f8",
+  "title": "mcp-drift-monitor: detección continua de cambios no autorizados en servidores MCP",
+  "description": "mcp-drift-monitor detecta cambios no autorizados en servidores MCP (Model Context Protocol)....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/edison_flores_6d2cd381b13/re-topstarai-yes-lets-talk-collaboration-and-answers-to-your-questions-14dm",
+  "title": "Re: @topstar_ai — yes, let's talk collaboration (and answers to your questions)",
+  "description": "Response to @topstar_ai. Answers about Sentinel score, performance, and collaboration offer.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/gde/bridging-the-ai-cutoff-teaching-coding-agents-every-dart-feature-from-10-to-314-3752",
+  "title": "Bridging the AI Cutoff: Teaching Coding Agents Every Dart Feature from 1.0 to 3.14",
+  "description": "How to eliminate LLM training cutoff gaps in Dart and Flutter, modernize legacy codebases, and install open agent skills with a single command.",
+  "source": "devto",
+  "native": {
+   "upvotes": 7,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-23"
+ },
+ {
+  "url": "https://dev.to/bonour/the-people-building-ai-are-the-worst-at-predicting-it-4b5k",
+  "title": "The People Building AI Are the Worst at Predicting It",
+  "description": "I graded 18 dated AI predictions from the last two years against what actually happened. The...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 1
   },
   "selected": false,
   "date": "2026-08-23"
