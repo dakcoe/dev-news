@@ -546,6 +546,279 @@
   "date": "2026-08-24"
  },
  {
+  "url": "https://arxiv.org/abs/2608.20341",
+  "title": "SDAD: Spec-Driven Agentic Development for the AI-Native SDLC",
+  "description": "arXiv:2608.20341v1 Announce Type: new Abstract: Frontier coding agents backed by large language models with context windows from hundreds of thousands to millions of tokens are restructuring the Software Development Life Cycle (SDLC). Rich context handling and multi-step reasoning now allow substantial Functional Requirement Documents (FRDs) and repository context to be ingested in a single workfl",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20342",
+  "title": "PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure",
+  "description": "arXiv:2608.20342v1 Announce Type: new Abstract: Large language model (LLM) coding agents start each session with an empty context window, discarding accumulated knowledge from prior work. We present PrimeAgentOrchestrator (PAO), a system that spawns new instances of Claude Code -- Anthropic's terminal-based coding agent -- pre-loaded with relevant memories compiled from the user's existing persona",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20378",
+  "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+  "description": "arXiv:2608.20378v1 Announce Type: new Abstract: Safety alignment in Large Language Models (LLMs) is often superficial, relying on refusal mechanisms that trigger only at the final stages of generation without erasing the foundational knowledge of harmful concepts acquired during pretraining. This study demonstrates that this architectural disconnect leaves models vulnerable to Semantic Camouflage ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20379",
+  "title": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+  "description": "arXiv:2608.20379v1 Announce Type: new Abstract: Advances in large language models (LLMs) have fueled a wave of research into agency: the ability to reason, plan, and act. This effort has produced agentic frameworks that orchestrate perception, memory, and decision-making around powerful LLM backbones. With the advent of large multimodal models (LMMs), these systems can process and integrate divers",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20384",
+  "title": "Interpretable Multimodal Classification with Linear Discriminant Tree Ensembles",
+  "description": "arXiv:2608.20384v1 Announce Type: new Abstract: Multimodal affect and behaviour classifiers that fuse heterogeneous text, audio, and visual streams must simultaneously achieve competitive accuracy and produce human-understandable explanations of the cues driving their decisions -- a dual objective that current high-capacity models, notably Transformers, only partially address. While Transformers a",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20389",
+  "title": "Representation Affects Retrieval: A Case Study of Skill Discovery and Routing in a Multimodal Agent Harness",
+  "description": "arXiv:2608.20389v1 Announce Type: new Abstract: A production agent harness must discover and rank, from a growing library of skills, the one most appropriate for a user's task. At small scale this selection happens in context: the LLM planner chooses among skill representations exposed in its system prompt, without an explicit embedding-based retrieval step. We treat this in-context selection as t",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20397",
+  "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+  "description": "arXiv:2608.20397v1 Announce Type: new Abstract: Agentic large language models (LLMs) on the Model Context Protocol (MCP) re-encode verbose tool schemas every turn, so prefill - quadratic in sequence length - dominates time-to-first-token (TTFT) as the tool registry grows. Nexus's primary lever is to decouple routing from the schema-prefill cost: an INT8 semantic lookaside buffer (SLB) with a calib",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20398",
+  "title": "Environmental Slow AI: Design Principles for Generative Systems",
+  "description": "arXiv:2608.20398v1 Announce Type: new Abstract: Generative AI (genAI) systems produce cultural artefacts at scale, but they also reflect embedded cultural values through their design. Once identified, these values become open to deliberate reshaping. This position paper examines the maximalist values of current generative AI through an environmental humanities tradition and proposes design princip",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20344",
+  "title": "Beyond Raw Transcripts: Structured Persona Extraction for LLM-Based Digital Twins",
+  "description": "arXiv:2608.20344v1 Announce Type: new Abstract: LLM-based \"digital twins\" aim to simulate how an individual would behavein new environments or respond to novel questions, given some representation of that individual's prior responses. A common approach constructs this representation from survey transcripts or summaries responses. Prior work shows that compressing long transcripts into shorter LLM-",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20345",
+  "title": "When Vocabulary Comprehension Fails Clinical Reasoning: Evaluating Therapy Bots' Safety Risks for Generation Alpha",
+  "description": "arXiv:2608.20345v1 Announce Type: new Abstract: Conversational AI systems have become informal mental health support resources for Generation Alpha (Gen Alpha, born 2010-2024), with 13.1% of U.S. adolescents (5.4 million) using generative AI for mental health advice. While these systems, from therapy apps to general chatbots, rely on large language models trained on extensive psychological literat",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20346",
+  "title": "Building and Evaluating a Synthetic Bengali Speech Resource for Telecom Customer Care",
+  "description": "arXiv:2608.20346v1 Announce Type: new Abstract: Speech systems used in customer-facing applications often require domain-specific language coverage. We present a synthetic Bengali speech dataset for telecom customer-care scenarios. The dataset contains 10,000 audio-text pairs, approximately 26.82 hours of 24 kHz speech, and predefined train, validation, and test splits of 9,000, 500, and 500 examp",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20347",
+  "title": "Who Do Language Models Think Is Competent? A Mechanistic Analysis of Occupational Bias",
+  "description": "arXiv:2608.20347v1 Announce Type: new Abstract: Language models (LMs) often pass behavioral bias evaluations, but it remains unclear whether they no longer represent the underlying associations that give rise to biases, or have merely learned not to express them. In this study, we show that representational biases are often detectable, even when behavioral biases are not visible. We introduce a ca",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20348",
+  "title": "Inhibitory Attention for Clinical Long-Context Reasoning: Characterizing and Mitigating Lost-in-the-Middle Effects in EHR Processing",
+  "description": "arXiv:2608.20348v1 Announce Type: new Abstract: Electronic health records now routinely exceed 100,000 tokens per patient. Yet large language models exhibit the lost-in-the-middle (LitM) effect: information near the center of a long context is retrieved less reliably than information near the edges. In clinical use this is not benign: the single most consequential fact in a note can sit at its cen",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20349",
+  "title": "Beyond Prompt Engineering: A Systematic Analysis of Prompt Lexical Sensitivity and Its Impacts on Quality",
+  "description": "arXiv:2608.20349v1 Announce Type: new Abstract: Large Language Models (LLMs) exhibit extreme sensitivity to surface-level prompt variations, in which minor lexical changes can trigger disproportionate performance fluctuations. Moving beyond black-box optimization and coarse-grained templates, we present the first large-scale, n-gram token-level mechanistic analysis of prompt stability, leveraging ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20350",
+  "title": "How to Train a Real-World Silicon Concierge? Internalizing Complex Business Workflow to Only OneModel",
+  "description": "arXiv:2608.20350v1 Announce Type: new Abstract: Traditional industrial agents rely on modular pipelines, including Router, Retriever, Planner, Executor, Responder, Reviewer, and other components. These systems often fracture into a labyrinth of ad-hoc patches, leading to cascading errors and high latency. We propose OneModel, an applicable paradigm shift from external workflows to internalized kno",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://arxiv.org/abs/2608.20351",
+  "title": "Exploratory As-Analyzed No-Detection of Culturally-Marked Predicate-Triggered PII Amplification in a Synthetic-English RAG Probe: A Predicate-Resource-Confounded Audit",
+  "description": "arXiv:2608.20351v1 Announce Type: new Abstract: We ask whether stereotype-loaded queries about culturally marked people leak more personal information from a retrieval-augmented generation (RAG) system than otherwise-equivalent neutral queries. We pre-register a four-culture audit (en-Anglo, es-LATAM, Arabic, Hindi) on a synthetic English PII corpus, comparing five query arms we call the Stereotyp",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwvghi/xiaomi_ai_cube_announced_with_12tbs_memory/",
+  "title": "Xiaomi AI Cube announced with 1.2TB/s memory bandwidth",
+  "description": "Xiaomi announced a prototype for their Xiaomi AI Cube. 3 chip system: - Xiaomi Xuanjie O3 - Xiaomi Xuanjie O100 - Xiaomi Xuanjie D100 The specs are impressive, but a bit confusing. The D100 chip (originally for their EVs) supports up to 160GB of RAM, but O100 has the 1.22TB/s memory bandwidth. Perhaps the 1.22TB/s figure is for SRAM? Hard to say definitively. Source: https://www.ithome.com/0/993/5",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwt6m7/i_developed_my_own_quantized_llm_from_scratch/",
+  "title": "I developed my own quantized LLM from scratch, trained on 30B tokens, deploys in 60 MB",
+  "description": "Reposting here after sharing this on [ r/MachineLearning ]( r/MachineLearning ) a few days ago, where it got a much better response than I expected (300+ upvotes, great questions, zero roasting) GitHub is at 35 stars now. So here it is. I trained a 250M parameter model from scratch on 30B tokens of fineweb. It’s quantized to under 2 bits so the whole deployment is 60 MB and it needs about 80 MB of",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwowbu/qwen_38_27b_just_wanted_to_say_thanks_to_you_guys/",
+  "title": "Qwen 3.8 27B, just wanted to say thanks to you guys",
+  "description": "I commented on another Qwen 3.8 27B post that I was frustrated getting anything to work. You all gave some great comments. I nuked openwebui and straightened out my llama.cpp docker config. 1 hour of work and I have a model I can chat with, connected to my HomeAssistant server, which I have already updated dashboards with a short prompt and a screenshot (wtf vision built in?) Guess all I needed wa",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwsjut/deepseekv4flash0731_surprisingly_usable/",
+  "title": "deepseek-v4-flash-0731 - surprisingly usable",
+  "description": "I just finished building my (relatively) low rent local inference machine: * Epyc 7663 * 256GB ECC DDR4-3200 * 1x RTX 5090 32GB Yeah I realize it's weird to throw a 5090 and 256GB of anything together and call it low end, but relative to ~151GB of weights it is. I'm running UD-Q8_K_XL and getting 23.8-24.6 tokens/sec, with pp ranging from 60 on the first prompt to 385 near the last (no doubt lots ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwrc6i/i_trained_a_157bparameter_dreamer_4_world_model/",
+  "title": "I trained a 1.57B-parameter Dreamer 4 World Model from scratch for under $150",
+  "description": "My first attempt didn't work. I built on Genie's architecture and the videos looked great, but the controls barely did anything. The effect of a keypress was basically zero. Genie learns its actions unsupervised into 8 codes, and that was too loose a grip for us. So I scrapped it and started again with Dreamer 4. The second attempt: Tokenizer at 40.41 PSNR (Genie's paper reports 35.7) FVD 32.19 en",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
   "url": "https://lobste.rs/s/kxualw/are_there_any_decent_programs_for_pdf",
   "title": "Are there any decent programs for pdf viewing and editing for Linux that replace Adobe Acrobat?",
   "description": "Alternate title:How is there still no decent Linux replacement for Adobe Acrobat (pdf viewing and editing)?\r\n\r\nThere are plenty of viewing programs, some page editing programs, but simply nothing that also allows actual image editing, outline creation, etc. PDF4QT does some of these but is not ideal.",
@@ -877,6 +1150,150 @@
   "native": {
    "upvotes": 5,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://schlarp.com/posts/everything-i-own-owned/",
+  "title": "Everything I own, owned",
+  "description": "https://web.archive.org/web/20260823225933/https://schlarp.c...",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 753,
+   "comments": 218
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://morgin.ai/articles/your-open-source-model-could-have-a-hidden-time-release-backdoor.html",
+  "title": "Your Open Source Model Could Have a Hidden Time-Release Backdoor",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 26,
+   "comments": 17
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://status.claude.com/uptime",
+  "title": "Anthropic Claude and API service outages",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 26,
+   "comments": 16
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://status.claude.com/incidents/vgz5psbjmt1h",
+  "title": "Elevated Errors for Multiple Models",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 22,
+   "comments": 7
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://github.com/thiagotigaz/ocr-it",
+  "title": "OCR It – pull text out of un-copyable documents for your LLM",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 12,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
+  "title": "Executable Is a SQLite Database",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 7,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://github.com/Jang-woo-AnnaSoft/execution-state-preflight/blob/main/who-fills-in-the-form.md",
+  "title": "LLM Tool Failures: Only 3 Root Causes – Value, Condition, Intent",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 5,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://cmart.blog/claude-writing/",
+  "title": "Why is Anthropic's public writing style so unlike Claude's?",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://twitter.com/paulg/status/2091544343589060625",
+  "title": "I were 17, I'd learn how to build LLMs from scratch",
+  "description": "https://xcancel.com/paulg/status/2091544343589060625",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 47,
+   "comments": 87
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://pantel.is/projects/ai-gaming-companion/",
+  "title": "I built a low-latency AI companion that plays Skyrim with me",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 119,
+   "comments": 19
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://matklad.github.io/2024/07/25/git-worktrees.html",
+  "title": "How I Use Git Worktrees (2024)",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 9,
+   "comments": 3
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://www.jepeake.com/ai-chip-architectures",
+  "title": "AI Chip Architectures",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 68,
+   "comments": 26
   },
   "selected": false,
   "date": "2026-08-24"
@@ -1236,7 +1653,7 @@
     "skills"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-24"
  },
  {
@@ -1287,7 +1704,7 @@
    "license": "Apache-2.0",
    "topics": []
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-24"
  },
  {
@@ -1312,7 +1729,7 @@
     "vaultwarden"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-24"
  },
  {
@@ -1330,7 +1747,7 @@
    "license": "GPL-3.0",
    "topics": []
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-24"
  },
  {
@@ -1445,6 +1862,66 @@
   "url": "https://news.hada.io/topic?id=32811",
   "title": "GLM-5.3 오픈 웨이트, Anthropic·OpenAI 모델을 5분의 1 비용으로 제침",
   "description": "GLM-5.3 은 28개 실무 과제를 모두 통과하고 품질 점수 9.3을 받았으며, 전체 비용도 약 $0.28 로 gpt-5.5의 약 5분의 1에 그침 평가는 17개 모델에 동일한 프롬프트·API 호출·OpenRouter 스트리밍 경로와 결정론적 자동 채점 을 적용한 단일 시험이...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32837",
+  "title": "Google Workspace가 내 도메인을 이메일 제공업체로 오인함(2025)",
+  "description": "정상적인 회사 도메인이 이메일 제공업체로 오인 돼 Google Workspace 등록이 차단됐으며, 2026년 8월에도 문제가 남아 있음 가입 페이지의 로컬 검증 함수가 도메인을 정규식 목록과 비교하며, web\\\\..* 규칙이 모든 web.[TLD] 형태를 차단함",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32834",
+  "title": "Show GN: 내 GPU로 어떤 LLM을 돌릴 수 있는지 계산해주는 오픈소스 도구 만들었습니다",
+  "description": "AI 인프라 견적/자문 일을 하면서 \"이 GPU로 이 모델 돌아가요?\"라는 질문에 매번 VRAM을 손으로 계산해서 답하는 게 반복돼서, 이걸 자동화하는 계산기를 만들어 오픈소스로 공개했습니다. 무엇을 하는지: GPU를 고르면 실행 가능한 모델(양자화, 예상 속도)을 계산 — GPU 147종, 모",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32833",
+  "title": "agent.md로 LLM 생성 코드의 품질 높이기",
+  "description": "2025년에는 컴파일조차 못 하던 LLM이 2026년에는 복잡한 구현과 버그 분석까지 해냈지만, 스파게티 코드 와 부족한 주석·구조 탓에 프로덕션에 바로 쓰기 어려웠음 세션마다 반복하던 코드 리뷰 지침을 agent.md 에 모아 프롬프트에 자동 주입하자, 생성 코드가 직접...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32832",
+  "title": "Show GN: 매일 하나의 질문에 투표하고, 주제에 대해 토론하는 앱",
+  "description": "매일 하나 주제에 대해 2가지 선택지 중 하나를 선택하고 토론하는 서비스 입니다. [어떻게 쓰나요] 매일 아침 9시에 새로운 주제에 대한 질문이 하나씩 올라오고 선택지에서 본인의 의견에 가까운 선택을 합니다. 투표 후에 실시간 투표결과가 출력되고, 토론하기에서 사용자들과 의견을 나눌 수",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32831",
+  "title": "Show GN: 카카오톡 테마 제작 툴을 만들었습니다",
+  "description": "원래는 카카오톡에서 제공하는 가이드를 보고 테마를 만들고 있었는데 어떤 이미지 소스가 필요한지 헷갈려서 claude한테 가이드 보여주고 테마가 제작 툴을 만들라고 시켜봤습니다. ios는 웹에서 바로 다운받아서 카카오톡에 적용할 수 있는데 안드로이드는 폴더를 내려받은 뒤 셀프로 빌드",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -2873,6 +3350,750 @@
   "url": "https://dev.to/ionablokchain/nova-pallasvesta-in-the-kernel-how-iona-os-does-recursive-proofs-without-trusted-setup-3aed",
   "title": "Nova Pallas/Vesta in the kernel: how IONA OS does recursive proofs without trusted setup",
   "description": "Most blockchains verify transactions one by one. IONA Protocol verifies thousands at once — inside...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/kenielzep97/the-tests-passed-the-contract-was-wrong-mp0",
+  "title": "The Tests Passed. The Contract Was Wrong.",
+  "description": "In June a reviewer on DEV who goes by ANP2 told me to stop storing a conclusion.  I had a gate that...",
+  "source": "devto",
+  "native": {
+   "upvotes": 14,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/bobbyhalljr/build-a-mini-engineering-graph-with-typescript-and-github-4haj",
+  "title": "Build a Mini Engineering Graph With TypeScript and GitHub",
+  "description": "Build a working engineering graph that analyzes GitHub pull requests, identifies code experts, and discovers files that frequently change together.",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/gabbs279/how-i-actually-code-with-claude-code-my-real-workflow-on-a-real-project-4ao0",
+  "title": "How I Actually Code with Claude Code: My Real Workflow on a Real Project",
+  "description": "There are two kinds of articles about coding with AI. The ones that generate a sorting function and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/akhourianmolkumar/i-built-a-full-image-editor-that-never-uploads-your-photo-heres-how-the-on-device-ai-parts-1i03",
+  "title": "I built a full image editor that never uploads your photo — here's how the on-device AI parts actually work",
+  "description": "Most background-removal and object-removal tools online work the same way: you upload an image, a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/wyattdave/ai-fairys-and-agile-44cc",
+  "title": "AI, Fairy's, and Agile",
+  "description": "Now hose 3 words don't generally go together, but trust me its not just clickbait (well just a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/debashish_ghosal/i-ran-157-agent-goals-for-030-the-field-test-found-10-issues-that-unit-tests-never-would-hgk",
+  "title": "I Ran 170 Agent Goals for $0.49. The Field Test Found 10 Issues That Unit Tests Never Would.",
+  "description": "This is article 4 in a series about building PlannerCritic, an open-source engine where one LLM...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/coryntas/what-mcp-doesnt-solve-1ahe",
+  "title": "What MCP Doesn't Solve",
+  "description": "Consider an illustrative employee-offboarding workflow. The HR system records that access should end...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/dineshgowtham/elasticache-for-rag-how-to-store-and-query-embeddings-in-redis-with-nodejs-and-typescript-4j3d",
+  "title": "ElastiCache for RAG: How to Store and Query Embeddings in Redis with Node.js and TypeScript",
+  "description": "You can serve LLM‑powered answers in milliseconds by caching vector embeddings in Redis—no separate...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/ahmed_mahmoud360/webhooks-in-the-nextjs-app-router-field-notes-on-raw-bodies-signature-verification-and-1bc6",
+  "title": "Webhooks in the Next.js App Router: Field Notes on Raw Bodies, Signature Verification, and Returning 200 Before the Work",
+  "description": "Headline: A webhook signature is an HMAC computed over the raw request bytes, so a handler that...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/priyasundaram/a-25k-star-project-swapped-whoosh-for-a-rust-search-engine-and-kept-whooshs-query-language-15n1",
+  "title": "A 25k-star project swapped Whoosh for a Rust search engine — and kept Whoosh's query language",
+  "description": "Tagged #python #search #abotwrotethis. I'm Priya Sundaram, the current maintainer of whoosh3 — the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/moputa/nodejs-interview-deep-dive-what-they-are-really-testing-1m6o",
+  "title": "Node.js interview deep dive: what they are really testing",
+  "description": "Almost every senior Node question is the same question wearing a different hat: do you understand...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/shyam0118/javascript-slice-vs-splice-dont-mix-them-up-3447",
+  "title": "JavaScript slice() vs splice() — Don't Mix Them Up 🚀",
+  "description": "One of the most common JavaScript interview questions is:  What's the difference between slice() and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/justirva09/why-i-built-yet-another-api-client-and-made-it-open-source-1k4d",
+  "title": "Why I Built Yet Another API Client (and Made It Open Source)",
+  "description": "I spend most of my day job writing backend services in Go, wiring up gRPC/Protobuf between...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/xiazai77/rendering-mp4-travel-videos-entirely-in-the-browser-with-webcodecs-4cpl",
+  "title": "Rendering MP4 travel videos entirely in the browser with WebCodecs",
+  "description": "Last month I shipped a web app that turns Google Maps location history into an MP4 travel video —...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/textmachine/adaptive-png-filtering-made-my-animations-24x-bigger-42km",
+  "title": "Adaptive PNG filtering made my animations 2.4x bigger",
+  "description": "I added adaptive per-scanline filtering to an APNG encoder, because that is what you are supposed to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/jnv-33/i-built-a-dependency-free-sidebar-with-drag-and-drop-and-magnetic-snapping-in-vanilla-js-17fb",
+  "title": "I built a dependency-free sidebar with drag-and-drop and magnetic snapping , in vanilla JS",
+  "description": "Most sidebar components pull in a framework, a build step, or at least a CSS library. ac_sidebar...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/ggwork/building-a-morse-code-translator-when-retro-communication-meets-modern-web-apis-3o5a",
+  "title": "Building a Morse Code Translator: When Retro Communication Meets Modern Web APIs",
+  "description": "While working on a collection of browser-based tools recently, I found myself needing a Morse code...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/pm_cheng_3f36acecfb9c59f5/your-canvastoblob-might-be-silently-handing-you-a-png-27bo",
+  "title": "Your canvas.toBlob might be silently handing you a PNG",
+  "description": "A user told me the .webp files my tool produced wouldn't open on their desktop. I opened one in a hex...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/karthikreddy/the-evolution-of-web-forms-part-2-1gla",
+  "title": "The Evolution of Web Forms — Part 2",
+  "description": "The Evolution of Web Forms — Part 2: From React State to Form Libraries   In Part 1, we...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/karthikreddy/the-evolution-of-forms-part-3-laf",
+  "title": "The Evolution of Web Forms — Part 3",
+  "description": "The Evolution of Web Forms — Part 3: React Hook Form, Validation Libraries, and Zod   In...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/tangchen/rendering-1-million-markers-in-leaflet-with-webgl-2l24",
+  "title": "Rendering 1 Million Markers in Leaflet with WebGL",
+  "description": "Leaflet's default markers are DOM elements. That is a great design for a few dozen markers — but it...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/ugliai/your-agent-framework-cant-un-send-that-email-54h0",
+  "title": "Your Agent Framework Can't Un-Send That Email",
+  "description": "AutoGen, CrewAI, LangGraph, and Flowise control four different surfaces: messages, roles, state, and canvas. None of them makes an external side effect transactional. Choose by what you will need during recovery, not by the feature table.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/satwik001/i-mapped-indias-public-financial-data-endpoints-so-you-dont-have-to-1jdi",
+  "title": "I mapped India's public financial data endpoints so you don't have to",
+  "description": "Indian financial market data can cost companies lakhs of rupees every year.  But a lot of the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/unknown1803/beyond-the-basics-what-i-learned-from-a-deep-dive-eda-on-the-ames-housing-dataset-20c4",
+  "title": "Beyond the Basics: What I learned from a Deep-Dive EDA on the Ames Housing Dataset",
+  "description": "Hey everyone! As I’m working through my ML fundamentals, I wanted to share a deep-dive Exploratory...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/pikotutorial/10-vs-code-snippets-essential-for-every-python-developer-4lj3",
+  "title": "10 VS Code snippets essential for every Python developer",
+  "description": "Why use snippets in the era of AI agents?   Modern AI tools can generate Python code at an...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/omuniyal/i-built-a-terminal-sql-workspace-for-csv-files-and-made-it-catch-bad-data-automatically-mpl",
+  "title": "I built a terminal SQL workspace for CSV files — and made it catch bad data automatically",
+  "description": "Every time I get a new data file, I do the same three things.  Open it in Excel to get a feel for it....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/itsraxzey/how-late-is-form-4-real-time-data-measuring-filing-delay-on-11241-insider-filings-2e9j",
+  "title": "How late is Form 4 'real-time' data? Measuring filing delay on 11,241 insider filings",
+  "description": "If you backtest anything involving insider trades, there's a quiet bug waiting for you: Form 4 data...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/masaoshimadaopen/predicting-shareholder-meeting-failure-how-ai-quantified-risk-from-a-single-sentence-in-past-4265",
+  "title": "Predicting Shareholder Meeting Failure: How AI Quantified Risk from a Single Sentence in Past Minutes and a 5x Increase in Share",
+  "description": "Hey, it's your friendly neighborhood dev-grandpa here, still chugging along building AI agents on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/agenticstack/architectural-breakdown-we-fixed-the-eval-platform-were-competing-on-a-typeerror-that-crashed-thr-42eg",
+  "title": "Architectural Breakdown: We fixed the eval platform we're competing on: a TypeError that crashed thr",
+  "description": "We Fixed the Eval Platform: The TypeError That Took Down Three Benchmark Pipelines   At 3...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/5uper0/llmstxt-implementation-the-part-nobody-measures-2144",
+  "title": "llms.txt Implementation: The Part Nobody Measures",
+  "description": "My robots.txt has a line that says AI search and citation crawlers are \"explicitly welcomed.\" I wrote...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/mneang/false-green-my-incident-agent-said-healthy-without-live-evidence-2di3",
+  "title": "False Green: My Incident Agent Said “Healthy” Without Live Evidence",
+  "description": "This is a submission for DEV's Summer Bug Smash: Clear the Lineup powered by Sentry.  The pipeline...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/max_polaczuk/we-tried-to-build-duolingo-for-singing-with-a-tiny-team-heres-what-actually-worked-4k61",
+  "title": "We Tried to Build \"Duolingo for Singing\" With a Tiny Team. Here's What Actually Worked.",
+  "description": "Everyone who's ever pitched a learning app has said the same sentence: \"It's like Duolingo, but for...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/hwangbyeongseon/i-measured-what-12-ats-apis-actually-return-across-15m-job-postings-33l9",
+  "title": "I measured what 12 ATS APIs actually return, across 1.5M job postings",
+  "description": "Twelve applicant tracking systems publish open job endpoints. They do not publish the same fields, and the gaps are not documented. So I measured every live board.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/julesrobineau/sse-in-go-your-timeouts-do-not-apply-where-you-think-3gp8",
+  "title": "SSE in Go: Your Timeouts Do Not Apply Where You Think",
+  "description": "An SSE stream is an HTTP request that never ends. Every default you did not touch is working against...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/utlkit/6-pitfalls-of-building-a-multilingual-site-with-nextjs-15-from-query-strings-to-url-paths-51fh",
+  "title": "6 Pitfalls of Building a Multilingual Site with Next.js 15: From Query Strings to URL Paths",
+  "description": "I built a 150+ tool website with Next.js 15 on Cloudflare Pages (utlkit.com). Half the traffic was...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/vishaltripathi1/i-built-16-browser-based-developer-tools-that-never-upload-your-data-40od",
+  "title": "I Built 16 Browser-Based Developer Tools That Never Upload Your Data.",
+  "description": "I Built 16 Browser-Based Developer Tools That Never Upload Your Data As a developer, I often find...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/fetchply/chunking-the-most-underrated-decision-in-your-rag-pipeline-1eg7",
+  "title": "Chunking: the most underrated decision in your RAG pipeline",
+  "description": "Ask a team how their RAG pipeline works and they will tell you about the embedding model, the vector...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/susiewang/the-translate-button-is-declarative-the-community-workflow-is-not-5cc8",
+  "title": "The Translate Button Is Declarative; the Community Workflow Is Not",
+  "description": "Build a failure-aware translation boundary around Tencent RTC TUIChat using a functional TypeScript core, an imperative effect shell, immutable source messages, moderation gates, and a visible path to human review.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/mokshrajssr7/i-built-a-bank-reconciliation-engine-that-never-uploads-your-files-2eep",
+  "title": "I built a bank reconciliation engine that never uploads your files",
+  "description": "First post here, so bear with me.  I've spent the last few weeks building a site full of browser-side...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/hiroshi_takamura_c851fe71/what-ai-friendly-vfx-tooling-actually-looks-like-47ma",
+  "title": "What AI-Friendly VFX Tooling Actually Looks Like",
+  "description": "Coding agents are much better at working with some project structures than others.  Give an agent a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/hiroshi_takamura_c851fe71/a-git-friendly-particle-vfx-workflow-for-threejs-and-pixijs-59kh",
+  "title": "A Git-Friendly Particle VFX Workflow for Three.js and PixiJS",
+  "description": "Git is great at tracking code.  It is less pleasant when important parts of your game are hidden...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/samyama-ai/we-nearly-published-a-2x-regression-that-didnt-exist-3bii",
+  "title": "We nearly published a 2x regression that didn't exist",
+  "description": "We were about to ship a performance write-up claiming three queries had gotten 2-4x slower. All three...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/ruslan_manov/how-smartkey-keeps-two-alphabets-alive-until-context-decides-461k",
+  "title": "How SmartKey Keeps Two Alphabets Alive Until Context Decides",
+  "description": "The input event does not arrive with a language tag.  Press the same two physical keys on a Bulgarian...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/robust_true_try/run-legacy-dos-apps-in-ci-with-martypc-1hdm",
+  "title": "Run Legacy DOS Apps in CI with MartyPC",
+  "description": "Learn how to embed MartyPC in a Rust pipeline to automate testing of old PC software.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/melastmohican/your-e-paper-panel-isnt-broken-how-retained-state-makes-drivers-look-buggy-4ifi",
+  "title": "Your E-Paper Panel Isn't Broken: How Retained State Makes Drivers Look Buggy",
+  "description": "An interrupted refresh leaves the controller latched busy, and a hardware reset won't clear it. Four symptoms, three fixes for a bug that didn't exist, and the protocol that avoids all of it.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/gouranga-das-khulna/the-day-i-merged-6-go-packages-into-termux-before-dinner-47ne",
+  "title": "The Day I Merged 6 Go Packages Into Termux Before Dinner 🐹",
+  "description": "I didn't wake up planning to get six pull requests merged. I just wanted to add one missing Go tool...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/muskan_bandta/chatgpt-and-gemini-both-crossed-a-billion-users-the-infrastructure-story-is-the-one-nobodys-25k7",
+  "title": "ChatGPT and Gemini Both Crossed a Billion Users. The Infrastructure Story Is the One Nobody's Telling",
+  "description": "The headline this week is the round number: ChatGPT reportedly crossed a billion weekly users, Gemini...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/brettryan/the-software-craftsmans-day-one-why-my-first-week-of-startup-life-had-no-business-logic-d2g",
+  "title": "The Software Craftsman’s Day One: Why My First Week of Startup Life Had No Business Logic",
+  "description": "Being made redundant from a position where I defined patterns and practices for a high-performance...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/achiya-automation/i-audited-50669-n8n-runs-85-of-failures-alerted-nobody-47pm",
+  "title": "I Audited 50,669 n8n Runs. 85% of Failures Alerted Nobody.",
+  "description": "Three days of a broken WhatsApp bot, an error handler that was itself failing silently, and the SQL query that found both. What a real n8n error-handling audit looks like.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/mecanik-dev/linux-server-hardening-guide-for-2026-2be9",
+  "title": "Linux Server Hardening Guide for 2026",
+  "description": "A default Linux install is convenient, not secure. Hardening is the process of reducing a server's...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/ryosuke_aoki_2266a6aa25dc/your-license-scanner-is-answering-the-wrong-question-j0c",
+  "title": "Your license scanner is answering the wrong question",
+  "description": "Run a license scanner over a typical Node or Python project and you get a table: package, license,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/muskan_bandta/kubernetes-at-the-edge-hit-a-wall-fleet-management-is-the-way-through-28nh",
+  "title": "Kubernetes at the Edge Hit a Wall. Fleet Management Is the Way Through.",
+  "description": "Kubernetes at the edge has been \"the next big thing\" for a few years now, and this month the honest...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/muskan_bandta/finops-cant-stop-at-the-cloud-bill-anymore-tracking-ai-token-spend-3chf",
+  "title": "FinOps Can't Stop at the Cloud Bill Anymore: Tracking AI Token Spend",
+  "description": "FinOps grew up managing one kind of cost: cloud infrastructure. Instances, storage, data transfer,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/muskan_bandta/openai-just-paused-its-own-model-for-being-too-good-at-finding-zero-days-read-that-again-3ejp",
+  "title": "OpenAI Just Paused Its Own Model for Being Too Good at Finding Zero-Days. Read That Again.",
+  "description": "The AI story this week that should stop you mid-scroll is not another benchmark or price cut. It is...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/darkedges/trusted-ai-agent-transactions-part-5-end-to-end-proof-44b5",
+  "title": "Trusted AI Agent Transactions, Part 5: End-to-End Proof",
+  "description": "Building and proving the complete request path   The previous articles covered the identity...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/silvern47/streamux-full-rfc-9113-in-go-with-c-abi-3hie",
+  "title": "Streamux: Full RFC 9113 in Go with C abi",
+  "description": "Spent the last few weeks building an HTTP/2 server from scratch in Go.  Full RFC 9113 - framing,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/amartyadev/i-built-format-on-save-for-everything-that-isnt-an-editor-3dpm",
+  "title": "I Built Format-on-Save for Everything That Isn't an Editor",
+  "description": "Editors have had format-on-save for years. The rest of the development environment has not.  When a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/shamylbm/freehire-an-open-source-job-search-engine-that-crawls-directly-from-company-career-pages-4eah",
+  "title": "freehire: An Open-Source Job Search Engine That Crawls Directly From Company Career Pages",
+  "description": "Disclosure: I was offered credits on the freehire platform in exchange for writing this article. The...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/zhangwj891129/why-ai-generated-code-for-your-go-project-compiles-but-still-needs-a-rewrite-hea",
+  "title": "Why AI-Generated Code for Your Go Project Compiles But Still Needs a Rewrite",
+  "description": "Why AI-generated code for your Go project compiles but still needs a rewrite            A...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/viklogix/developer-experience-improves-with-gos-faster-compile-times-and-ease-of-use-compared-to-swift-49em",
+  "title": "Developer Experience Improves with Go's Faster Compile Times and Ease of Use Compared to Swift",
+  "description": "Introduction: The Shift from Swift to Go – A Developer’s Awakening   For years, developers...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/fletchervance3712/go-user-avatar-upload-backend-storage-database-metadata-and-auditable-receipt-keys-2i2c",
+  "title": "Go User Avatar Upload Backend Storage: Database Metadata and Auditable Receipt Keys",
+  "description": "Large-file throughput changes the answer: a customer-support system that processes receipts and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-24"
+ },
+ {
+  "url": "https://dev.to/devxdh/building-an-http-server-from-scratch-using-tcp-5ehb",
+  "title": "Building an HTTP Server From Scratch using TCP.",
+  "description": "HTTP is something I interact with every single day, whether I am fetching data on the frontend or...",
   "source": "devto",
   "native": {
    "upvotes": 0,
