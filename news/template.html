@@ -835,7 +835,12 @@ function apiHTML(){
   if(APIS==='fail') return h+'<div class="none">API 목록을 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다. (로컬 file:// 에서는 사용할 수 없습니다)</div>';
   h+='<div class="sub">'+(APIS.sources||[]).map(s=>escA(s.label)+' '+s.count+'개').join(' · ')
     +' · 전체 '+APIS.apis.length+'개 · 매 수집 회차마다 갱신됩니다'
-    +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>';
+    +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>'
+    // 링크 생존 확인 (api-link-health) — 죽은 링크는 목록에서 이미 빠진 상태다.
+    // 확인이 꺼져 있거나 실패한 회차에는 health가 없어 이 줄도 나오지 않는다.
+    +(APIS.health?'<div class="sub">링크 생존 확인: 누적 '+APIS.health.known
+      +'개 중 이번 회차 '+APIS.health.checked+'개 확인 · 접속되지 않아 제외 '
+      +APIS.health.dropped+'개.</div>':'');
   h+='<div class="bar">'
     +'<div class="search">'+I.sch+'<input id="apiq" placeholder="이름 · 설명 · 카테고리 검색…" value="'+apiQ.replace(/"/g,'&quot;')+'"></div>'
     +'<div class="segs">'+[['all','전체'],['llm','무료 LLM'],['kr','한국판'],['global','Public APIs']].map(([v,l])=>
