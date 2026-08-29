@@ -83,6 +83,19 @@ llm:
 alert:
   min_published: 10
 
+# 페이지 광고 (add-ad-slot).
+#   provider: placeholder = 계정 없이 자리만 확인 (외부 스크립트를 부르지 않는다)
+#             adsense     = 실제 광고. 승인 후 client·slot을 채우고 바꾼다
+#   client 는 ca-pub-숫자, slot 은 숫자여야 한다 — 형식이 어긋나면 광고를 끈다.
+# 광고는 기사 사이가 아니라 피드 오른쪽 레일에 붙는다. 1200px 미만 화면에서는
+# 아예 그리지 않는다 — 피드를 좁히면서까지 넣을 자리가 아니다.
+ads:
+  enabled: false
+  provider: placeholder
+  client: ""            # 예: ca-pub-1234567890123456
+  slot: ""              # 애드센스에서 만든 광고 단위 ID
+  count: 1              # 오른쪽 레일에 세로로 쌓을 개수 (최대 3)
+
 # 무료 API 목록의 링크 생존 확인 (api-link-health).
 # public-apis README에는 도메인이 사라진 항목이 그대로 남아 있다 — 실측 8%.
 # 2,000여 건을 매 회차 전부 두드리지 않고 per_run 만큼 회전 확인하며,
