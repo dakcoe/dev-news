@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>개발·AI 뉴스 · __DATE__</title>
+__ADS_HEAD__
 <link rel="stylesheet" as="style" crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <style>
@@ -282,6 +283,21 @@
   .row.rd .thumb{opacity:.45}
   .ib.done{color:var(--pri)}
 
+  /* 광고 (add-ad-slot). 기사 사이가 아니라 피드 오른쪽 레일에 세로로 둔다 —
+     읽는 흐름을 끊지 않고, 애드센스 정책이 요구하는 '콘텐츠와의 구분'도 확실하다.
+     좁은 화면에서는 아예 그리지 않는다(피드를 좁히면서까지 넣을 자리가 아니다). */
+  .adrail{display:none;flex:0 0 300px;position:sticky;top:12px}
+  .adbox{border:1px solid var(--line);border-radius:14px;background:var(--panel);
+         padding:10px 12px;overflow:hidden;margin-bottom:12px}
+  .adlab{font-size:11px;color:var(--tx3);letter-spacing:.02em;margin-bottom:6px}
+  .adph{display:flex;align-items:center;justify-content:center;text-align:center;
+        height:250px;border:1px dashed var(--line);border-radius:8px;
+        color:var(--tx3);font-size:12.5px;line-height:1.5;padding:0 10px}
+  /* 레일이 들어가는 만큼 컨테이너를 넓혀 피드 폭을 지킨다 (1180 → 1500). */
+  @media (min-width:1200px){
+    body.ads .inner{max-width:1500px}
+    body.ads .layout .adrail{display:block}
+  }
   .none{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
   .archead{font-size:13px;font-weight:700;color:var(--tx3);margin:22px 2px 10px}
 
@@ -392,6 +408,12 @@ const SRC = __SRC_JSON__;
 const TAGS = __TAG_JSON__;   // 닫힌 태그 어휘 id → 한글 라벨 (SPEC 1B)
 
 const DATA = __DATA_JSON__;
+/* 광고 설정 (add-ad-slot). null이면 광고를 전혀 그리지 않는다 —
+   config.yaml의 ads 블록이 검증을 통과해야만 값이 들어온다. */
+const ADS = __ADS_JSON__;
+/* 광고가 켜진 회차에만 body에 표시를 남긴다 — CSS가 이 클래스로 레일을 켜고
+   컨테이너 폭을 넓힌다. 꺼져 있으면 지금 레이아웃 그대로다. */
+if(ADS) document.body.classList.add('ads');
 
 /* ---------------- state ---------------- */
 let view='news', sort='batch', filter='all', q='', days=0, unreadOnly=false;   // days=0 이면 전체
@@ -924,6 +946,37 @@ function render(){
   viewEl.innerHTML=h; bind();
 }
 
+/* ---------------- 광고 (add-ad-slot) ----------------
+   피드 중간에 ADS.every개마다 하나씩, 최대 ADS.max개. 목록이 짧은 날
+   광고가 기사보다 눈에 띄지 않도록 개수를 묶어 둔다. */
+function adHTML(){
+  if(!ADS) return '';
+  const inner = ADS.provider==='adsense'
+    ? '<ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client
+      +'" data-ad-slot="'+ADS.slot+'" data-ad-format="auto" data-full-width-responsive="true"></ins>'
+    : '<div class="adph">광고 자리<br>(placeholder — 실제 광고는 나가지 않습니다)</div>';
+  return '<div class="adbox"><div class="adlab">광고</div>'+inner+'</div>';
+}
+
+/* 피드 오른쪽 레일. 광고가 꺼져 있으면 빈 문자열이라 레이아웃도 그대로다. */
+function adRailHTML(){
+  if(!ADS) return '';
+  let h='';
+  for(let i=0;i<ADS.count;i++) h+=adHTML();
+  return '<div class="adrail">'+h+'</div>';
+}
+
+/* 아직 채워지지 않은 광고만 초기화한다. renderList()가 검색 한 글자마다
+   목록을 다시 그리는데, 이미 채워진 <ins>를 또 push하면 애드센스가
+   'already have ads' 오류를 낸다. */
+function initAds(){
+  if(!ADS || ADS.provider!=='adsense') return;
+  try{
+    viewEl.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])')
+      .forEach(()=>{ (window.adsbygoogle=window.adsbygoogle||[]).push({}); });
+  }catch(e){}
+}
+
 /* 레이아웃(패싯 사이드바 + 피드 + 아카이브 결과)만 따로 생성.
    검색 입력 중 부분 갱신에 쓰인다 (fix-search-partial-render). */
 function layoutHTML(){
@@ -958,7 +1011,7 @@ function layoutHTML(){
     else if(INDEX==='loading'){ h+='<div class="archead">아카이브 검색 중…</div>'; }
     else if(m && m.length){ h+='<div class="archead">지난 기사 (아카이브) '+m.length+'건</div>'+m.map(archRowHTML).join(''); }
   }
-  return h+'</div></div>';
+  return h+'</div>'+adRailHTML()+'</div>';
 }
 
 /* 목록만 갱신 — 바(검색 input)를 건드리지 않아 한글 IME 조합이 유지되고,
@@ -970,6 +1023,7 @@ function renderList(){
 }
 
 function bind(){
+  initAds();                       // 새로 그려진 광고 자리만 채운다
   const qi=document.getElementById('q');
   // 목록만 부분 갱신(renderList)하므로 input이 교체되지 않는다 —
   // 한글 IME 조합이 유지되고 조합 중에도 즉시 필터링된다.

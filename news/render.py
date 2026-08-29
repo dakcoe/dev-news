@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
 
 from news.core import tags as tag_vocab
@@ -29,6 +30,55 @@ SOURCE_META = {
     "anthropic": {"name": "Anthropic", "color": "#c96442",
                   "desc": "anthropic.com/news · /engineering 직접 파싱 (RSS 미제공)"},
 }
+
+
+# 광고 설정 검증 (add-ad-slot).
+# 형식이 조금이라도 어긋나면 광고를 끈다 — 검증 없이 head에 심으면 config 한 줄로
+# 남의 스크립트를 페이지에 주입하는 통로가 된다.
+_CLIENT_RE = re.compile(r"^ca-pub-\d{10,20}$")
+_SLOT_RE = re.compile(r"^\d{6,20}$")
+_ADS_MAX = 3                        # 사이드 레일에 쌓을 수 있는 광고 개수 상한
+
+ADSENSE_SRC = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+
+
+def _ads_config(ads: object) -> dict | None:
+    """config.yaml의 ads 블록을 검증해 템플릿에 넘길 형태로 줄인다.
+
+    쓸 수 없는 설정이면 None — 광고 없이 페이지가 정상적으로 나가는 쪽이
+    깨진 광고 코드가 실리는 것보다 낫다.
+    """
+    if not isinstance(ads, dict) or not ads.get("enabled"):
+        return None
+    try:
+        count = min(_ADS_MAX, int(ads.get("count", 1)))
+    except (TypeError, ValueError):
+        print("[ads] count가 숫자가 아닙니다 — 광고를 끕니다")
+        return None
+    if count < 1:
+        return None
+
+    provider = str(ads.get("provider") or "placeholder").strip()
+    if provider == "placeholder":
+        return {"provider": "placeholder", "count": count}
+    if provider != "adsense":
+        print(f"[ads] 모르는 provider '{provider}' — 광고를 끕니다")
+        return None
+
+    client = str(ads.get("client") or "").strip()
+    slot = str(ads.get("slot") or "").strip()
+    if not _CLIENT_RE.match(client) or not _SLOT_RE.match(slot):
+        print("[ads] client는 ca-pub-숫자, slot은 숫자여야 합니다 — 광고를 끕니다")
+        return None
+    return {"provider": "adsense", "client": client, "slot": slot, "count": count}
+
+
+def _ads_head(cfg: dict | None) -> str:
+    """애드센스 로더는 head에 한 번만 넣는다. client는 정규식을 통과한 값뿐이다."""
+    if not cfg or cfg["provider"] != "adsense":
+        return ""
+    return (f'<script async src="{ADSENSE_SRC}?client={cfg["client"]}" '
+            f'crossorigin="anonymous"></script>')
 
 
 def _pub_iso(article: dict) -> str:
@@ -98,7 +148,7 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
 
 
 def render(articles: list[dict], out_path: str, collected: datetime | None = None,
-           enabled: dict[str, bool] | None = None) -> str:
+           enabled: dict[str, bool] | None = None, ads: dict | None = None) -> str:
     """enabled: config.yaml의 sources. 토글은 '설정에서 켜졌는지'를 나타낸다.
 
     오늘 결과에 그 출처 글이 없을 수도 있으므로(점수에서 밀렸거나 새 글이 없거나)
@@ -106,6 +156,7 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
     """
     collected = collected or datetime.now(KST)
     enabled = enabled or {}
+    ads_cfg = _ads_config(ads)
 
     sources = {k: {"name": v["name"], "color": v["color"], "desc": v["desc"],
                    "on": bool(enabled.get(k, True))}
@@ -123,7 +174,9 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
                 ensure_ascii=False))
             .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
             .replace("__COLLECTED__", collected.isoformat())
-            .replace("__DATE__", collected.strftime("%Y-%m-%d")))
+            .replace("__DATE__", collected.strftime("%Y-%m-%d"))
+            .replace("__ADS_HEAD__", _ads_head(ads_cfg))
+            .replace("__ADS_JSON__", json.dumps(ads_cfg, ensure_ascii=False)))
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
