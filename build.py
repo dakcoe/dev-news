@@ -403,7 +403,9 @@ def main() -> int:
     render(display, args.out, collected=now, enabled=cfg.get("sources", {}))
     sync_docs_data()
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
-    apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"))
+    apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
+                      health=cfg.get("apis", {}).get("health"),
+                      cache_path=os.path.join(ROOT, "data", "api_health.json"))
     seen_db.mark_seen(published)
     emit_actions_output(len(published), min_published)
     return 0
