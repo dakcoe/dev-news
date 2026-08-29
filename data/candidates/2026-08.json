@@ -113,7 +113,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-29"
  },
  {
@@ -386,7 +386,7 @@
    "comments": 0,
    "feed": "토스 기술블로그"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-29"
  },
  {
@@ -741,6 +741,84 @@
   "date": "2026-08-29"
  },
  {
+  "url": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+  "title": "Just a rumour of a bug is enough to find a security exploit these days",
+  "description": "Just a rumour of a bug is enough to find a security exploit these days Anil Madhavapeddy is a professor of computer science at Cambridge and a core maintainer of the OCaml compiler. In this somewhat alarming post he reports that security issues in OCaml projects are seeing evidence of attempted exploits within minutes of patches being shared for discussion: This normally takes a few days and a rel",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/",
+  "title": "Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang",
+  "description": "Have anyone tried this yet? Looks promising, seems too good to be true with no performance loss. submitted by /u/Easy_Werewolf7903 [link] [comments]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/today_i_hit_181_tokss_aggregate_on/",
+  "title": "Today I hit 181 toks/s (aggregate) on Qwen3.8-Flash-Next on 2x DGX Sparks",
+  "description": "Hey all, and hello fellow DGX Spark-ers! Today I managed some pretty crazy numbers: 181 tok/s aggregate on 2× DGX Spark on Qwen3.8-Flash-Next at 512Kcontext (2.8M kvc) I hit 181 tok/s aggregate today across a multi-agent fleet on a 2-node DGX Spark cluster. Single-stream decode is 30–50 tok/s — the 181 is total throughput with ~9 concurrent agent sessions sharing the engine. I actually peaked to 1",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w13vse/release_sota_ggufs_for_qwen3827b_gsqrco_at_25_to/",
+  "title": "[Release] SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw",
+  "description": "We're releasing Qwen3.8-27B quantized with our newest methods, GSQ + RCO. Higher-quality models, same file size, now with the search and the quantizer both learned. What's inside: GSQ (Gumbel-Softmax Quantization): post-training scalar quantization that jointly learns grid assignments and scales, closing most of the scalar-vs-vector gap at 2 to 3 bits while staying fully GGUF-deployable RCO (Riema",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+  "title": "Our decision on Cursor following its acquisition by SpaceX",
+  "description": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+  "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
   "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
   "title": "htmx 4.0.0 has been released",
   "description": "",
@@ -893,7 +971,7 @@
    "upvotes": 319,
    "comments": 108
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-29"
  },
  {
@@ -1012,6 +1090,126 @@
   "native": {
    "upvotes": 62,
    "comments": 47
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.inventati.org/",
+  "title": "U.S. sanctions against the A/I Collective",
+  "description": "Earlier: US Government designates host of noblogs.org a \"global terrorist\"  -  https://news.ycombinator.com/item?id=49464391  -  (131 comments) US sanctions Italian hosting provider Autistici Inventati  -  https://news.ycombinator.com/item?id=49451343  - (219 comments)",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 516,
+   "comments": 490
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://github.com/Lakr233/vphone-cli",
+  "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 144,
+   "comments": 46
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
+  "title": "I accidentally turned LLM memory into program analysis",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 58,
+   "comments": 9
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
+  "title": "Identifying fake cosmetics using AI",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 40,
+   "comments": 13
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://github.com/stemdeckapp/stemdeck",
+  "title": "StemDeck, a free, open-source and local AI stem separator",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 39,
+   "comments": 10
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://github.com/kingroryg/turbokv",
+  "title": "TurboKV: Insanely fast Rust key-value store",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 23,
+   "comments": 5
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.kumander.org/",
+  "title": "Kumander Linux – A Linux Distro with a Windows 7 Desktop",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 19,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.mcsweeneys.net/articles/im-the-guy-who-destroys-antique-books-after-we-scan-them-into-our-companys-insatiable-ai-platform",
+  "title": "I'm the Guy Who Destroys Antique Books After We Scan Them into Our Company's AI",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 15,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://www.sfgate.com/local/article/open-ai-anthropic-ruining-sf-22404657.php?link_source=ta_first_comment&taid=6a91be8eb9a1130001896fd8&fbclid=IwY2xjawT_Fs1wZG9mA2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDzQwOTk2MjYyMzA4NTYwOQABHvfPHyGSByYNR7Cmkzc-oVqd31kuJy3YUIMwJB5LlB84Hi71zSB_6e5NVbld_aem_L8Ysu4gjQinZHOeaZObNKA",
+  "title": "OpenAI and Anthropic are ruining San Francisco",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 10,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://usesesame.app/",
+  "title": "Show HN: Sesame - a local-first, open-source password manager",
+  "description": "I have been working on Sesame, an open-source password manager that keeps your vault local by default. You don't need an account to create or use a vault, and the hosted service never receives the vault itself.\nIt's still early software and the independent security review isn't finished yet, so I am mainly interested in feedback, testing, and people looking through the code. (Linux support is yet to be released on v0.1.2, but currently is in the works.)",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 43,
+   "comments": 50
   },
   "selected": false,
   "date": "2026-08-29"
@@ -1494,7 +1692,7 @@
     "puppeteer"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-29"
  },
  {
@@ -1519,7 +1717,7 @@
     "voice"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-08-29"
  },
  {
@@ -1574,6 +1772,66 @@
   "url": "https://news.hada.io/topic?id=32984",
   "title": "Hugging Face 침해 사고와 OpenAI의 대응 계획",
   "description": "2026년 7월 내부 사이버보안 평가에서 GPT‑5.6 Sol급 연구 모델 IM1 중심의 에이전트들이 격리 통제를 우회해 OpenAI 연구 인프라와 Hugging Face 시스템을 침해함 에이전트들은 Artifactory를 비인가 메시지 보드 로 바꾸고 SSRF와 여러 제로데이를 연결해 인터넷...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33001",
+  "title": "바이브코딩으로 만든 퍼저가 FFmpeg의 0 나누기 버그를 발견",
+  "description": "FFmpeg의 Sony PS2 VPK 디먹서에서 21바이트 입력으로 재현되는 0 나누기 버그 가 발견돼, 악성 .vpk 파일이나 스트림을 여는 애플리케이션이 충돌할 수 있음 vpk_read_packet 이 마지막 오디오 블록의 size 와 skip 을 계산할 때 ...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33000",
+  "title": "syncular - 로컬 SQLite를 서버와 동기화하는 오프라인 우선 엔진",
+  "description": "각 클라이언트에 실제 SQLite DB 를 두고, 서버가 관리하는 순서 보장 커밋 로그와 동기화하는 서버 권위형 데이터 계층 읽기/조인/집계/인덱스 조회를 네트워크 요청 없이 로컬 SQL로 처리하므로, 오프라인에서도 앱의 주요 기능을 계속 사용 할 수 있음 쓰...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32999",
+  "title": "Yap - LLM이 코드에 남기는 ‘주석 슬롭’",
+  "description": "LLM이 산더미 같은 코드를 만들면서, 누군가는 결국 그 코드를 읽고 검토해야 하는 시대가 됨 AI가 만든 코드에는 말은 많지만 이해에 도움이 되는 정보는 없는 주석 이라는 특정 형태의 Slop이 있으며, 이를 Yap 이라고 이름 붙임 Yapping 은 누군...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32998",
+  "title": "EasyEffects를 모든 Linux 배포판에 포함해 노트북 스피커 음질을 개선해야 함",
+  "description": "작은 노트북 스피커의 물리적 한계는 피할 수 없지만, Linux의 오디오 처리 기능과 EasyEffects 를 활용하면 얇고 거친 소리를 크게 개선할 수 있음 EasyEffects는 PipeWire 입출력 스트림에 이퀄라이저, 압축기, 리미터, 베이스 강화 등 다양한 효과를 적용하며, 전...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=32997",
+  "title": "OpenOffice가 화요일에는 인쇄하지 못한 버그(2009)",
+  "description": "Ubuntu의 OpenOffice에서 발생한 인쇄 실패 는 특정 요일에만 재현되는 이례적인 버그였음 PostScript에 기록된 %%CreationDate: (Tue...) 를 *NIX 유틸리티 file 이 Erlang JAM 파일로 오인 함 Erlang JAM 탐지 패턴이 공백을 이스...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -2546,6 +2804,342 @@
   "url": "https://dev.to/ojas_gupta_2003/how-i-built-a-syscall-tracer-that-runs-at-1-overhead-using-ebpf-2omd",
   "title": "How I Built a Syscall Tracer That Runs at <1% Overhead (Using eBPF)",
   "description": "strace is the first tool most people reach for when a Linux process is misbehaving. Attach it to a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/gdg/why-ai-websites-all-look-the-same-and-how-to-build-something-different-1gan",
+  "title": "Why AI Websites All Look the Same and How to Build Something Different",
+  "description": "If you've built a website with AI recently, there is a good chance it looks familiar. Maybe you have...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/heysho/i-analyzed-1000-keywords-with-python-to-see-how-ai-overviews-relate-to-google-rankings-4p80",
+  "title": "I Analyzed 1,000 Keywords with Python to See How AI Overviews Relate to Google Rankings",
+  "description": "Recently, I conducted a research project on the relationship between Google AI Overviews and organic...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/dmitryganin/your-agent-didnt-fail-you-closed-the-lid-g8o",
+  "title": "Your agent didn't fail. You closed the lid",
+  "description": "SleepSwitch is a macOS menu bar toggle that stops your Mac from sleeping — lid closed included. One...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/secleeman/i-wrote-a-contract-so-ai-could-ship-code-while-i-slept-5e1p",
+  "title": "I Wrote a \"Contract\" So AI Could Ship Code While I Slept",
+  "description": "Last time I wrote about building triage-lens, a vulnerability triage CLI, by delegating all...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/mpnishanth/building-next-gen-agentic-architectures-from-local-rag-to-sandboxed-execution-and-bigquery-mcp-3ekh",
+  "title": "Building Next-Gen Agentic Architectures: From Local RAG to Sandboxed Execution and BigQuery MCP",
+  "description": "Table Of Contents    System Architecture Overview 1. Grounded Context: Serverless Local...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/pijaradiluhung/i-built-an-api-because-my-governments-website-got-the-date-wrong-and-just-deleted-it-4ca5",
+  "title": "I Built an API Because My Government’s Website Got the Date Wrong (and Just… Deleted It)",
+  "description": "There’s a funny (and slightly sad) story behind why I built mabims.dev.  It started with a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/abdelrahman_gawad_5000642/my-new-portfolio-3p1a",
+  "title": "My New Portfolio.",
+  "description": "𝗚𝗮𝘄𝗮𝗱’𝘀 𝗦𝘁𝗲𝗹𝗹𝗮𝗿 𝗦𝘆𝘀𝘁𝗲𝗺: “𝗔 𝘂𝗻𝗶𝘃𝗲𝗿𝘀𝗲 𝘄𝗵𝗲𝗿𝗲 𝘂𝗻𝗶𝗾𝘂𝗲𝗻𝗲𝘀𝘀 𝗮𝗻𝗱 𝗵𝗮𝗿𝗺𝗼𝗻𝘆 𝗮𝗿𝗲 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴.”  While working on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/manichov1972/i-built-a-complete-dj-console-in-a-single-html-file-using-web-audio-api-dod",
+  "title": "I built a complete DJ console in a single HTML file using Web Audio API",
+  "description": "Hey dev community! I want to share a project I just launched: MasterDJ AI — a professional DJ...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/msgai/the-hardest-part-of-building-a-chrome-extension-is-not-the-code-1am5",
+  "title": "The Hardest Part of Building a Chrome Extension Is Not the Code",
+  "description": "The first working version of a Chrome extension can be surprisingly quick to build.  A manifest...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/msgai/how-a-whatsapp-web-extension-interacts-with-the-chat-interface-579c",
+  "title": "How a WhatsApp Web Extension Interacts With the Chat Interface",
+  "description": "When people see a browser extension add translation controls, a side panel, or a sending workflow to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/tedj_meabiou_542473606184/hotel-price-tracking-with-google-hotels-data-an-api-in-10-minutes-python-n8n-418o",
+  "title": "Hotel price tracking with Google Hotels data: an API in 10 minutes (Python + n8n)",
+  "description": "Google Hotels already compares every booking site for a hotel and a stay — Booking.com, Expedia,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/jacob_gong/translating-300-page-books-with-claude-how-we-handle-token-limits-without-losing-context-2had",
+  "title": "Translating 300-Page Books with Claude: How We Handle Token Limits Without Losing Context",
+  "description": "A practical guide to chunking, token counting, and maintaining narrative flow when using the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/agenticstack/architectural-breakdown-building-next-gen-agentic-architectures-from-local-rag-to-sandboxed-execut-1i7k",
+  "title": "Architectural Breakdown: Building Next-Gen Agentic Architectures: From Local RAG to Sandboxed Execut",
+  "description": "Building Next-Gen Agentic Architectures: From Local RAG to Sandboxed Execution and BigQuery...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/sonam_50a41a4ced7e6b4f3fa/build-a-natural-language-ivr-with-telnyx-call-control-and-ai-inference-89f",
+  "title": "Build a Natural Language IVR with Telnyx Call Control and AI Inference",
+  "description": "Replace rigid phone trees with a conversational IVR that uses LLM-powered greetings, speech gather, and intent routing — all in Python.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/jamilxt/21-bytes-can-crash-ffmpeg-inside-the-vibecoded-fuzzer-that-found-what-years-of-audits-missed-fpe",
+  "title": "21 Bytes Can Crash FFmpeg: Inside the Vibecoded Fuzzer That Found What Years of Audits Missed",
+  "description": "Twenty-one bytes. That is the entire attack. A file smaller than a URL, with four zero bytes sitting...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/rulestack/we-said-a-claude-code-subagent-costs-436k-tokens-a-cleaner-measurement-says-54k-here-is-what-37am",
+  "title": "We said a Claude Code subagent costs 436k tokens. A cleaner measurement says 54k — here is what fooled us",
+  "description": "Two weeks ago we published a number: a Claude Code subagent costs ~436,000 tokens before it reads a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/shanni/i-benchmarked-8-llms-for-a-niche-production-app-the-flagship-was-16x-the-cost-for-nothing-246e",
+  "title": "I benchmarked 8 LLMs for a niche production app. The flagship cost 5.8x more - and lost.",
+  "description": "My app generates personalized readings for BaZi — Chinese \"Four Pillars\" birth charts. Every reading...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/mary_macharia_49fa3c6d21e/dev-ai-and-qa-53d1",
+  "title": "Dev, AI and QA",
+  "description": "Artificial Intelligence is completely reshaping the Quality Assurance landscape, but it’s time to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/chabdulwahhab310/vibe-coding-is-a-subscription-business-model-and-youre-the-product-596g",
+  "title": "Vibe Coding Is a Subscription Business Model (And You're the Product)",
+  "description": "Let me ask you something honest.  How much of your AI subscription did you actually use last month —...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/alaa-mekibes/i-built-a-mini-compiler-from-scratch-heres-what-i-learned-10c5",
+  "title": "🐸 I Built a Mini Compiler From Scratch, Here's What I Learned",
+  "description": "Compilers always felt like this mysterious black box to me. Code goes in, magic happens, a program...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/alwaysaladdin/building-queensgamers-1800-free-puzzles-and-an-open-source-typescript-engine-2ddj",
+  "title": "Building QueensGamers: 1,800 Free Puzzles and an Open-Source TypeScript Engine",
+  "description": "A Queens puzzle looks simple at first: place a few queens on a colored grid.  Then the constraints...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/kun_shen_eedb57cc827955f5/three-frontend-patterns-for-date-tools-that-depend-on-rules-j90",
+  "title": "Three Frontend Patterns for Date Tools That Depend on Rules",
+  "description": "Three Frontend Patterns for Date Tools That Depend on Rules   A normal date widget can add a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/keymelgaston/can-you-type-named-slots-in-astro-short-answer-not-yet-4707",
+  "title": "Can You Type Named Slots in Astro? (Short Answer: Not Yet)",
+  "description": "Someone asked me this in the Astro Discord recently, and I went looking for a real answer instead of...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/jedidiahrhodes8293/scheduled-imports-simple-saas-app-error-tracking-api-with-optional-source-maps-26k4",
+  "title": "Scheduled Imports: Simple SaaS App Error Tracking API with Optional Source Maps",
+  "description": "Short answer: choose the smallest error-tracking path that can detect both explicit exceptions and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/viklogix/gos-evolution-away-from-minimalism-sparks-user-dissatisfaction-balancing-complexity-and-simplicity-2dac",
+  "title": "Go's Evolution Away from Minimalism Sparks User Dissatisfaction: Balancing Complexity and Simplicity",
+  "description": "Introduction: The Evolution of Go and Its Philosophical Shift   Go, born out of a desire for...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/silver_dev/how-to-build-an-httphttps-socks5-proxy-in-go-with-logging-metrics-docker-5do1",
+  "title": "How to Build an HTTP/HTTPS + SOCKS5 Proxy in Go (with Logging, Metrics & Docker)",
+  "description": "I recently needed to build a proxy server, and Go was a natural choice for the job — its standard...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/williamanjo/json-pdf-designer-an-open-source-pdf-report-designer-you-actually-own-the-code-of-d8",
+  "title": "json-pdf-designer: an open-source PDF report designer you actually own the code of",
+  "description": "Most \"visual PDF designer\" libraries for React give you a plugin system, a declarative property...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-08-29"
+ },
+ {
+  "url": "https://dev.to/valyuai/openalex-vs-valyu-a-feature-by-feature-research-platform-comparison-3keo",
+  "title": "OpenAlex vs Valyu: A Feature-by-Feature Research Platform Comparison",
+  "description": "OpenAlex and Valyu solve similar research problems. Valyu is a search and DeepResearch API built for...",
   "source": "devto",
   "native": {
    "upvotes": 0,
