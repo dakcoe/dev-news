@@ -31,6 +31,8 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
+from news import api_health
+
 KST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 
@@ -164,17 +166,40 @@ def build_catalog() -> dict:
             "sources": sources, "apis": all_apis}
 
 
-def sync(out_path: str) -> bool:
+def sync(out_path: str, health: dict | None = None,
+         cache_path: str | None = None) -> bool:
     """카탈로그를 갱신한다. 실패 시 기존 파일을 그대로 두고 False.
 
     회차를 죽이지 않는다 — 뉴스 게시와 무관한 부가 산출물이므로 실패해도
     로그만 남기고 지나간다. 다음 회차가 다시 시도한다.
+
+    링크 생존 확인(api-link-health)은 그보다 한 단계 더 무르게 다룬다:
+    확인이 통째로 터져도 확인 전 목록을 그대로 내보낸다. 죽은 링크가 며칠 더
+    남는 것보다 목록이 통째로 사라지는 쪽이 나쁘다.
     """
     try:
         catalog = build_catalog()
     except Exception as e:
         print(f"[apis] 카탈로그 갱신 실패 — 기존 파일 유지: {e}")
         return False
+
+    if (health or {}).get("enabled"):
+        try:
+            kept, summary = api_health.run(
+                catalog["apis"],
+                cache_path or os.path.join("data", "api_health.json"),
+                health)
+            catalog["apis"] = kept
+            catalog["health"] = summary
+            counts = Counter(a["src"] for a in kept)
+            for s in catalog["sources"]:
+                s["count"] = counts.get(s["id"], 0)
+            print(f"[apis] 링크 확인 {summary['checked']}건 "
+                  f"(살아있음 {summary['ok']} · 죽음 {summary['dead']} · "
+                  f"보류 {summary['unknown']}) → 목록에서 제외 {summary['dropped']}건")
+        except Exception as e:
+            print(f"[apis] 링크 확인 실패 — 확인 없이 목록을 내보낸다: {e}")
+
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(catalog, f, ensure_ascii=False)
