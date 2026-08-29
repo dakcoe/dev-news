@@ -332,7 +332,9 @@ def main() -> int:
 
     if args.demo:
         with open(os.path.join(ROOT, "sample.json"), encoding="utf-8") as f:
-            render(json.load(f), args.out, enabled=load_config().get("sources", {}))
+            cfg = load_config()
+            render(json.load(f), args.out, enabled=cfg.get("sources", {}),
+                   ads=cfg.get("ads"))
         return 0
 
     cfg = load_config()
@@ -400,7 +402,8 @@ def main() -> int:
 
     archive.write_search_index(all_articles)
     display = archive.recent(all_articles, sc.get("keep_days", 30))
-    render(display, args.out, collected=now, enabled=cfg.get("sources", {}))
+    render(display, args.out, collected=now, enabled=cfg.get("sources", {}),
+           ads=cfg.get("ads"))
     sync_docs_data()
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
