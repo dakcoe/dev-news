@@ -8,7 +8,11 @@ sources:
   geeknews: true
   rss: true
   anthropic: true    # RSS가 없어 news/engineering 페이지를 직접 파싱
-  reddit: false      # 비인증 접근이 403으로 막힘. 켜려면 .env에 REDDIT_CLIENT_ID/SECRET 필요
+  # 비인증 접근은 403으로 막히고, OAuth 키 발급도 막혀 있다 (2026-08-31 실측):
+  # prefs/apps 폼은 열리지만 create app 을 누르면 Responsible Builder Policy
+  # 안내로 돌아오고 앱이 만들어지지 않는다. 승인을 받으면 .env에
+  # REDDIT_CLIENT_ID/SECRET 만 넣으면 켜진다 — 코드는 준비돼 있다.
+  reddit: false
 
 # RSS/Atom 피드 — 주소만 추가하면 소스가 늘어난다.
 feeds:
