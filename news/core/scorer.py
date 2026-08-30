@@ -37,7 +37,9 @@ def score_and_categorize(articles: list[dict], top_n: int = 12) -> list[dict]:
     scored = []
     for a in articles:
         key = _normalize_title(a["title"])[:60]
-        cross_source_count = len(title_sources[key])
+        # dedup.merge_duplicates가 이미 세어 놓았으면 그 값을 쓴다. 여기 제목
+        # 완전일치는 한국어 제목과 영어 제목을 절대 못 묶는다 — 병합 결과가 더 정확하다.
+        cross_source_count = a.get("cross_source_count") or len(title_sources[key])
         upvotes = a.get("upvotes", 0) or 0
         comments = a.get("comments", 0) or 0
         decay = _time_decay(a.get("published_at"))
