@@ -18,7 +18,7 @@ from datetime import datetime
 
 import requests
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
 DIR = os.path.join(ROOT, "data", "candidates")
 
 GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")

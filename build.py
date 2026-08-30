@@ -26,7 +26,7 @@ import sys
 from collections import defaultdict
 from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 import yaml
 
@@ -43,7 +43,7 @@ from news.render import render
 from news.scrapers import anthropic, devto, geeknews, github, hackernews, lobsters, reddit, rss
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-KST = timezone(timedelta(hours=9))
+from news.core.common import KST  # noqa: E402  (상수 재노출)
 TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic"}   # 키워드 필터를 적용하지 않는 출처
 
 

@@ -1,5 +1,6 @@
 import requests
-from datetime import datetime, timezone
+
+from news.core.common import to_timestamp
 
 URL = "https://lobste.rs/hottest.json"
 HEADERS = {"User-Agent": "news-scraper/1.0 (personal feed aggregator)"}
@@ -15,13 +16,7 @@ def fetch(limit: int = 25) -> list[dict]:
 
     articles = []
     for item in resp.json()[:limit]:
-        try:
-            published_at = int(
-                datetime.fromisoformat(item["created_at"].replace("Z", "+00:00"))
-                .astimezone(timezone.utc).timestamp()
-            )
-        except Exception:
-            published_at = None
+        published_at = to_timestamp(item.get("created_at"))
         articles.append({
             "title": item.get("title", ""),
             "url": item.get("url") or item.get("comments_url", ""),

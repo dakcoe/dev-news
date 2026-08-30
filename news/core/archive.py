@@ -13,7 +13,7 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
 DIR = os.path.join(ROOT, "data", "articles")
 LEGACY_PATH = os.path.join(ROOT, "data", "articles.json")
 INDEX_PATH = os.path.join(ROOT, "data", "search-index.json")
