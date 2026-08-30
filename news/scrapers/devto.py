@@ -1,6 +1,5 @@
-import requests
+from news.core import http
 
-HEADERS = {"User-Agent": "discord-news-bot/1.0"}
 API_URL = "https://dev.to/api/articles"
 DEFAULT_TAGS = ["javascript", "python", "ai", "webdev", "typescript", "rust", "go", "devops", "security", "programming"]
 
@@ -14,9 +13,8 @@ def fetch(tags: list[str] | None = None, per_tag: int = 10) -> list[dict]:
 
     for tag in tags:
         try:
-            resp = requests.get(
+            resp = http.get(
                 API_URL,
-                headers=HEADERS,
                 params={"tag": tag, "per_page": per_tag, "state": "rising"},
                 timeout=10,
             )

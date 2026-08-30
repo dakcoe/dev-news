@@ -16,7 +16,7 @@ import os
 import re
 from datetime import datetime
 
-import requests
+from news.core import http
 
 from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
 DIR = os.path.join(ROOT, "data", "candidates")
@@ -49,7 +49,7 @@ def github_meta(url: str, token: str | None = None) -> dict:
     if token:
         headers["Authorization"] = f"Bearer {token}"
     try:
-        resp = requests.get(f"https://api.github.com/repos/{m.group(1)}/{m.group(2)}",
+        resp = http.get(f"https://api.github.com/repos/{m.group(1)}/{m.group(2)}",
                             headers=headers, timeout=10)
         if resp.status_code != 200:
             print(f"[candidates] GitHub API {resp.status_code}: {m.group(1)}/{m.group(2)}")
@@ -62,7 +62,7 @@ def github_meta(url: str, token: str | None = None) -> dict:
             "license": (j.get("license") or {}).get("spdx_id"),
             "topics": j.get("topics", []),
         }
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[candidates] GitHub API 실패: {e}")
         return {}
 

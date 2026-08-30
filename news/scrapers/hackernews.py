@@ -1,5 +1,6 @@
-import requests
 from bs4 import BeautifulSoup
+
+from news.core import http
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HN_BASE = "https://hacker-news.firebaseio.com/v0"
@@ -7,19 +8,19 @@ HN_BASE = "https://hacker-news.firebaseio.com/v0"
 
 def _fetch_item(item_id: int) -> dict | None:
     try:
-        resp = requests.get(f"{HN_BASE}/item/{item_id}.json", timeout=5)
+        resp = http.get(f"{HN_BASE}/item/{item_id}.json", timeout=10)
         resp.raise_for_status()
         return resp.json()
-    except requests.RequestException:
+    except Exception:
         return None
 
 
 def fetch(limit: int = 30) -> list[dict]:
     try:
-        resp = requests.get(f"{HN_BASE}/topstories.json", timeout=10)
+        resp = http.get(f"{HN_BASE}/topstories.json", timeout=10)
         resp.raise_for_status()
         top_ids = resp.json()[:limit]
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[hackernews] topstories 요청 실패: {e}")
         return []
 

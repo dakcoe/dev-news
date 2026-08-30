@@ -8,22 +8,15 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urljoin
 
-import requests
 import trafilatura
 from bs4 import BeautifulSoup
 
 from news.api_health import _error_kind, classify
+from news.core import http
 from news.core.fetch_health import reason_of, record
 
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    )
-}
 
 GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
 
@@ -53,10 +46,10 @@ def _github_readme(owner: str, repo: str) -> str | None:
     for filename in ("README.md", "readme.md", "README.rst", "README"):
         url = f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{filename}"
         try:
-            resp = requests.get(url, timeout=10, headers=HEADERS)
+            resp = http.get(url, timeout=10)
             if resp.status_code == 200 and len(resp.text.strip()) >= MIN_CONTENT_CHARS:
                 return resp.text.strip()[:MAX_CONTENT_CHARS]
-        except requests.RequestException:
+        except Exception:
             pass
     return None
 
@@ -96,14 +89,23 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None
         return readme, f"https://opengraph.githubassets.com/1/{owner}/{repo}", None, None
 
     try:
-        resp = requests.get(url, timeout=15, headers=HEADERS)
-    except requests.RequestException as e:
+        resp = http.get(url, timeout=15)
+    except Exception as e:
         return None, None, classify(None, _error_kind(e)), None
 
     status = classify(resp.status_code, None)
     if status != "ok":
         return None, None, status, resp.status_code
-    html = resp.text
+
+    # HTML이 아니면 본문 추출 대상이 아니다. 전에는 PDF·이미지도 그대로
+    # trafilatura에 들어갔다.
+    ctype = (resp.headers.get("content-type") or "").split(";")[0].strip().lower()
+    if ctype and "html" not in ctype and "xml" not in ctype:
+        return None, None, status, resp.status_code
+
+    # bytes를 넘긴다. resp.text는 헤더에 charset이 없으면 ISO-8859-1로 추정해
+    # HTML meta에만 UTF-8을 선언한 한국어 블로그의 본문이 깨진다.
+    html = resp.content
 
     content = None
     try:

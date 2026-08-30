@@ -34,14 +34,14 @@ def _fake_response():
 
 
 def test_rss_page_false_propagates():
-    with patch.object(rss.requests, "get", return_value=_fake_response()):
+    with patch.object(rss.http, "get", return_value=_fake_response()):
         items = rss._one({"name": "r/Test", "url": "https://example.test/.rss",
                           "page": False}, limit=8)
     assert items and all(a["page"] is False for a in items)
 
 
 def test_rss_page_defaults_true():
-    with patch.object(rss.requests, "get", return_value=_fake_response()):
+    with patch.object(rss.http, "get", return_value=_fake_response()):
         items = rss._one({"name": "Blog", "url": "https://example.test/feed"}, limit=8)
     assert items and all(a["page"] is True for a in items)
 
