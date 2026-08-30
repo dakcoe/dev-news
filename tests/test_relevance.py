@@ -17,7 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from news.summarizer import PROMPT, _parse  # noqa: E402
-from build import drop_irrelevant  # noqa: E402
+from news.core.filters import drop_irrelevant  # noqa: E402
 
 
 def _reply(relevance=None, title="제목", summary="요약문", why="이유"):

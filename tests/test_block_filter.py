@@ -14,7 +14,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from build import keyword_filter  # noqa: E402
+from news.core.filters import keyword_filter  # noqa: E402
 
 KW = ["ai", "llm", "python", "linux", "api", "release", "security", "kernel"]
 BLOCK = {

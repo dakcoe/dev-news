@@ -10,7 +10,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from build import pick  # noqa: E402
+from news.core.select import pick  # noqa: E402
 
 
 def _feed_arts(feed, n, score=900):
