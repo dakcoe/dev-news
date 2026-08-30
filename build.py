@@ -178,30 +178,19 @@ def sync_docs_data() -> None:
         shutil.copyfile(archive.INDEX_PATH,
                         os.path.join(ROOT, "docs", "data", "search-index.json"))
 
-
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--demo", action="store_true", help="sample.json으로 렌더만 수행")
-    ap.add_argument("--no-ai", action="store_true", help="LLM 요약 건너뛰기")
-    ap.add_argument("--out", default=os.path.join(ROOT, "docs", "index.html"))
-    args = ap.parse_args()
-
-    load_dotenv()
-
-    if args.demo:
-        with open(os.path.join(ROOT, "sample.json"), encoding="utf-8") as f:
-            cfg = load_config()
-            render(json.load(f), args.out, enabled=cfg.get("sources", {}),
-                   ads=cfg.get("ads"))
-        return 0
-
-    cfg = load_config()
+def _gate_settings(cfg: dict) -> tuple[int, bool, int, int | None]:
+    """설정에서 파생되는 선별 값들. 여러 단계가 같은 값을 봐야 해서 한곳에 둔다."""
     sc = cfg.get("scraper", {})
-    now = datetime.now(KST)
-    today = now.strftime("%Y-%m-%d")
+    top_n = sc.get("top_n", 20)
+    gate_on = bool(sc.get("relevance_gate", False))
+    # 게이트가 꺼져 있으면 여유분도 0 — 동작이 도입 전과 완전히 같아진다
+    overpick = sc.get("overpick", 5) if gate_on else 0
+    return top_n, gate_on, overpick, sc.get("per_feed_page")
 
-    archive.migrate_legacy()               # 단일 articles.json → 월별 샤드 (멱등)
 
+def collect_candidates(cfg: dict) -> list[dict]:
+    """수집 → 필터 → 중복 제거. 깔때기의 넓은 쪽 (SPEC 1.2)."""
+    sc = cfg.get("scraper", {})
     raw = run_scrapers(cfg)
     articles = keyword_filter(raw, cfg.get("keywords", []), cfg.get("block_keywords"))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
@@ -210,41 +199,41 @@ def main() -> int:
     # Protection이 push를 거부해 회차 전체가 죽는다 (run 31510062957)
     articles = redact_articles(articles, "수집")
     print(f"[깔때기] 후보 {len(raw)}건 → 필터·중복 제거 후 {len(articles)}건")
+    return articles
+
+
+def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[dict]:
+    """점수 → 미소개분 → 예약석·상한 적용. 판정 로그도 여기서 남긴다 (SPEC 1.4)."""
+    sc = cfg.get("scraper", {})
+    top_n, _, overpick, per_feed_page = _gate_settings(cfg)
 
     gh_meta_map = apply_star_delta(articles, today)
-
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
+
     fresh = seen_db.filter_unseen(page_eligible(articles))
-    # 분류 게이트(llm-relevance-gate)가 `무관`을 빼므로 여유 있게 뽑는다.
-    # 요약은 top_n이 차는 즉시 멈추니 무관이 없는 회차의 호출 수는 그대로다.
-    top_n = sc.get("top_n", 20)
-    # 게이트가 꺼져 있으면 여유분도 0 — 동작이 도입 전과 완전히 같아진다.
-    gate_on = bool(sc.get("relevance_gate", False))
-    overpick = sc.get("overpick", 5) if gate_on else 0
-    per_feed_page = sc.get("per_feed_page")
     picked = pick(fresh, top_n + overpick, sc.get("per_source", 5),
                   quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page)
     print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건 "
           f"(목표 {top_n} + 여유 {overpick})")
 
-    # 판정 로그: 선별 탈락분 포함 전 후보를 기록 (SPEC 1.4)
     candidates.log(articles, {a["url"] for a in picked}, now, gh_meta_map)
+    return picked
 
-    min_published = cfg.get("alert", {}).get("min_published", 0)
 
-    if not picked:
-        print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
-        emit_actions_output(0, min_published)
-        return 0
+def prepare_published(picked: list[dict], cfg: dict,
+                      no_ai: bool) -> tuple[list[dict], list[dict], list[dict]]:
+    """본문·요약·태깅. (게재분, 무관 제외분, 죽은 링크 제외분)을 돌려준다."""
+    sc = cfg.get("scraper", {})
+    top_n, gate_on, _, per_feed_page = _gate_settings(cfg)
 
-    # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM 공급자에게
-    # 전송되는 것까지 막힌다.
+    # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM
+    # 공급자에게 전송되는 것까지 막힌다.
     picked = redact_articles(enrich(picked), "본문")
-    # 죽은 링크는 요약 전에 뺀다 — LLM 호출을 쓰지 않게 된다.
+    # 죽은 링크는 요약 전에 뺀다 — LLM 호출을 쓰지 않게 된다
     picked, dead_links = drop_dead_links(picked)
 
-    if args.no_ai:
+    if no_ai:
         for a in picked:
             a.setdefault("summary", a.get("description", ""))
             a["llm_done"] = True
@@ -257,18 +246,23 @@ def main() -> int:
                                stop_after=top_n if gate_on else None)
 
     picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
+    picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
 
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
-    # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
-    picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
-    # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 단순히 앞에서 자르면
-    # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
     ready = [a for a in picked if a.get("llm_done")]
-    published = tag_all(pick(ready, top_n, sc.get("per_source", 5),
-                             quota=cfg.get("source_quota", {}),
-                             per_feed_page=per_feed_page) if gate_on else ready)
+    # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 앞에서 그냥 자르면
+    # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
+    if gate_on:
+        ready = pick(ready, top_n, sc.get("per_source", 5),
+                     quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page)
+    # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
+    return tag_all(ready), irrelevant, dead_links
 
+
+def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
+    """아카이브 → 검색 인덱스 → 페이지 → docs 사본 → API 카탈로그."""
+    sc = cfg.get("scraper", {})
     if published:
         all_articles = archive.append(published, now)
     else:
@@ -277,15 +271,48 @@ def main() -> int:
 
     archive.write_search_index(all_articles)
     display = archive.recent(all_articles, sc.get("keep_days", 30))
-    render(display, args.out, collected=now, enabled=cfg.get("sources", {}),
+    render(display, out, collected=now, enabled=cfg.get("sources", {}),
            ads=cfg.get("ads"))
     sync_docs_data()
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
                       health=cfg.get("apis", {}).get("health"),
                       cache_path=os.path.join(ROOT, "data", "api_health.json"))
-    # 무관 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로 올라와
-    # 같은 기사에 LLM 호출을 반복한다.
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--demo", action="store_true", help="sample.json으로 렌더만 수행")
+    ap.add_argument("--no-ai", action="store_true", help="LLM 요약 건너뛰기")
+    ap.add_argument("--out", default=os.path.join(ROOT, "docs", "index.html"))
+    args = ap.parse_args()
+
+    load_dotenv()
+    cfg = load_config()
+
+    if args.demo:
+        with open(os.path.join(ROOT, "sample.json"), encoding="utf-8") as f:
+            render(json.load(f), args.out, enabled=cfg.get("sources", {}),
+                   ads=cfg.get("ads"))
+        return 0
+
+    now = datetime.now(KST)
+    min_published = cfg.get("alert", {}).get("min_published", 0)
+    archive.migrate_legacy()               # 단일 articles.json → 월별 샤드 (멱등)
+
+    articles = collect_candidates(cfg)
+    picked = select_articles(articles, cfg, now, now.strftime("%Y-%m-%d"))
+
+    if not picked:
+        print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
+        emit_actions_output(0, min_published)
+        return 0
+
+    published, irrelevant, dead_links = prepare_published(picked, cfg, args.no_ai)
+    write_outputs(published, cfg, now, args.out)
+
+    # 무관·죽은 링크 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로
+    # 올라와 같은 기사에 LLM 호출을 반복한다.
     seen_db.mark_seen(published + irrelevant + dead_links)
     emit_actions_output(len(published), min_published)
     return 0
