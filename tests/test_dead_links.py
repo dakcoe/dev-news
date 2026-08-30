@@ -13,7 +13,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from build import drop_dead_links  # noqa: E402
+from news.core.filters import drop_dead_links  # noqa: E402
 
 
 def _art(status, url="https://e.com/x"):
