@@ -75,7 +75,7 @@ VOCAB: dict[str, dict] = {
         "group": "개발",
         "patterns": [r"secur", r"보안", r"vulnerab", r"취약점", r"\bcve\b",
                      r"phish", r"피싱", r"backdoor", r"백도어", r"exploit",
-                     r"malware", r"encrypt", r"암호화", r"osint", r"hack(ed|ing|er)?",
+                     r"malware", r"encrypt", r"암호화", r"osint", r"hack(ed|ing|er)",
                      r"해킹", r"passkey", r"password", r"비밀번호", r"\bauth\w*",
                      r"social engineering", r"사회공학", r"cyber", r"사이버", r"privacy",
                      r"프라이버시", r"침해"],
@@ -201,28 +201,74 @@ SOURCE_IMPLIES: dict[str, str] = {
     "github": "open-source",
 }
 
-MAX_TAGS = 6
+# 제목에서만 인정하는 "약한" 패턴.
+#
+# 태거는 제목+ko_title+설명+요약 전부를 훑는데, 요약은 LLM이 쓴 부연이라 본문
+# 주제와 먼 단어가 흔하다. 범용 한국어 명사가 스치듯 등장해 태그가 됐다 —
+# 단독으로 태그를 만든 패턴을 1,272건에서 세어 보니 상위가 전부 이런 말이었다
+# (공개 114 · 도구 136 · 연구 68 · 서버 53 · 기업 33 · 커뮤니티 33).
+#
+#   "은하 상태를 보관하고"(게임 세계관) → science
+#   "HTML 형식의 문서를 지원"           → web
+#
+# 고유명사·전문용어(openai, claude, css, kubernetes)는 어디서 나와도 그 기사의
+# 소재이므로 약하게 두지 않는다. 요약을 통째로 빼는 안은 폐기했다 — 실측에서
+# 123건이 태그 0개가 되고 정당한 llm 태그 140건이 사라졌다.
+WEAK_PATTERNS = {
+    r"공개", r"발표", r"업데이트", r"출시", r"인수",
+    r"도구", r"연구", r"평가", r"서버", r"웹", r"배포", r"안전", r"보안",
+    r"기업", r"고객", r"경쟁", r"시장", r"커뮤니티", r"문화", r"교육",
+    r"성능", r"최적화", r"테스트", r"오류", r"버그",
+    r"programmer", r"프로그래머", r"interview", r"인터뷰", r"opinion",
+    r"\btool(s|ing)?\b", r"\bstudy\b", r"market", r"community", r"culture",
+    r"은하", r"galax", r"물리", r"수학", r"위성", r"항공", r"날씨",
+    r"해킹", r"html",
+}
 
-_COMPILED = {tid: [re.compile(p) for p in spec["patterns"]]
+MAX_TAGS = 4
+
+_COMPILED = {tid: [re.compile(p) for p in spec["patterns"]
+                   if p not in WEAK_PATTERNS]
              for tid, spec in VOCAB.items()}
+
+# 약한 패턴은 제목에만 적용한다
+_COMPILED_WEAK = {tid: [re.compile(p) for p in spec["patterns"]
+                        if p in WEAK_PATTERNS]
+                  for tid, spec in VOCAB.items()}
 
 
 _HANGUL_BOUNDARY = re.compile(r"(?<=[a-zA-Z0-9])(?=[가-힣])|(?<=[가-힣])(?=[a-zA-Z0-9])")
 
 
-def _text_of(article: dict) -> str:
-    parts = [article.get("title") or "", article.get("ko_title") or "",
-             article.get("description") or "", article.get("summary") or ""]
-    text = " ".join(parts).lower()
+def _normalize(*parts) -> str:
+    text = " ".join(p or "" for p in parts).lower()
     # "DNS에서"처럼 영단어에 조사가 붙으면 \b 경계가 안 잡힌다(한글도 \w) — 사이를 띄운다
     return _HANGUL_BOUNDARY.sub(" ", text)
+
+
+def _text_of(article: dict) -> str:
+    return _normalize(article.get("title"), article.get("ko_title"),
+                      article.get("description"), article.get("summary"))
+
+
+def _title_of(article: dict) -> str:
+    """약한 패턴을 검사할 범위 — 출처가 준 원제목만.
+
+    ko_title과 summary는 LLM이 만든 글이라 원문에 없는 말이 섞인다. 실제로
+    "Aspect-Ratio Hack"이 "비율 해킹"으로 오역돼 CSS 기사에 security 태그가
+    붙었고, 요약의 "HTML 형식의 문서"가 web 태그를 만들었다. 원제목에 있으면
+    그 기사의 주제이므로 인정한다.
+    """
+    return _normalize(article.get("title"))
 
 
 def tag_article(article: dict) -> list[str]:
     """닫힌 어휘에서 매칭되는 태그를 우선순위(VOCAB 순서)대로 반환. 최대 MAX_TAGS개."""
     text = _text_of(article)
-    got: list[str] = [tid for tid, pats in _COMPILED.items()
-                      if any(p.search(text) for p in pats)]
+    title = _title_of(article)
+    got: list[str] = [tid for tid in VOCAB
+                      if any(p.search(text) for p in _COMPILED[tid])
+                      or any(p.search(title) for p in _COMPILED_WEAK[tid])]
 
     src_tag = SOURCE_IMPLIES.get(article.get("source", ""))
     if src_tag and src_tag not in got:
