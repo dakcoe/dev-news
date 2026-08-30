@@ -284,8 +284,15 @@ def pick(articles: list[dict], top_n: int, per_source: int,
          quota: dict[str, int] | None = None) -> list[dict]:
     """점수순 목록에서 최종 선별.
 
-    1단계 — source_quota에 적힌 출처는 그 개수를 먼저 확보한다(점수와 무관하게 자리 보장).
-    2단계 — 남은 자리를 전체 점수순으로 채우되 출처당 상한을 지킨다.
+    source_quota는 우선권이 아니라 **예약석**이다.
+
+    1단계 — quota에 적힌 출처가 그 개수를 가져간다. 점수와 무관하게 자리를
+            보장받고, 동시에 그 개수를 넘지도 않는다(상한이기도 하다).
+    2단계 — 나머지 출처가 `top_n - 예약분 합계`만큼을 점수순으로 채운다.
+
+    2단계 목표가 top_n이 아니라는 것이 핵심이다. top_n까지 채우면 예약 출처가
+    부족할 때 그 자리를 일반 기사가 가져간다 — github가 4건이면 일반이 16건
+    들어와 20건이 됐다. 예약석은 비워 두고 19건으로 끝내는 것이 맞다.
     """
     quota = quota or {}
     counts: dict[str, int] = defaultdict(int)
@@ -304,17 +311,25 @@ def pick(articles: list[dict], top_n: int, per_source: int,
         if counts[src] < n:
             print(f"[선별] {src} 보장 {n}건 중 {counts[src]}건만 확보 (후보 부족)")
 
+    reserved = min(sum(quota.values()), top_n)
+    general_limit = max(top_n - reserved, 0)
+    general_taken = 0
+
     for i, a in enumerate(articles):
-        if len(picked) >= top_n:
+        if general_taken >= general_limit:
             break
-        if i in taken:
+        if i in taken or a["source"] in quota:   # 예약 출처는 1단계에서만 뽑는다
             continue
-        cap = max(per_source, quota.get(a["source"], 0))
+        cap = per_source
         if counts[a["source"]] >= cap:
             continue
         taken.add(i)
         counts[a["source"]] += 1
+        general_taken += 1
         picked.append(a)
+
+    if general_taken < general_limit:
+        print(f"[선별] 일반 {general_limit}칸 중 {general_taken}건만 확보 (후보 부족)")
 
     picked.sort(key=lambda x: x.get("score", 0), reverse=True)
     print("[선별] " + " · ".join(f"{k} {v}" for k, v in sorted(counts.items()) if v))
@@ -464,7 +479,11 @@ def main() -> int:
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
     # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
     picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
-    published = tag_all([a for a in picked if a.get("llm_done")][:top_n])
+    # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 단순히 앞에서 자르면
+    # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
+    ready = [a for a in picked if a.get("llm_done")]
+    published = tag_all(pick(ready, top_n, sc.get("per_source", 5),
+                             quota=cfg.get("source_quota", {})) if gate_on else ready)
 
     if published:
         all_articles = archive.append(published, now)
