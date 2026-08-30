@@ -134,22 +134,62 @@ def _keyword_re(keywords: tuple[str, ...]) -> re.Pattern[str]:
     return re.compile(r"(?<![a-z0-9])(?:" + "|".join(parts) + r")(?![a-z0-9])")
 
 
-def keyword_filter(articles: list[dict], keywords: list[str]) -> list[dict]:
-    if not keywords:
-        return articles
-    pattern = _keyword_re(tuple(k.lower() for k in keywords))
-    kept, dropped = [], 0
+@lru_cache(maxsize=8)
+def _block_re(ko: tuple[str, ...], en: tuple[str, ...]) -> re.Pattern[str] | None:
+    """비개발 주제 차단 정규식.
+
+    영어는 단어경계로 막는다 — 경계가 없으면 `war`가 `software`·`hardware`
+    안에서 걸린다(실측 오탐). 한국어는 영숫자 경계가 통하지 않아 부분문자열로
+    매칭되므로, `배우`(→배우다)처럼 다른 말에 파묻히는 모호어는 목록에 넣지
+    않는 것으로 대응한다.
+    """
+    parts = []
+    if ko:
+        parts.append("(?:" + "|".join(re.escape(k) for k in ko) + ")")
+    if en:
+        parts.append(r"(?<![a-z0-9])(?:" + "|".join(re.escape(k) for k in en)
+                     + r")(?![a-z0-9])")
+    return re.compile("|".join(parts)) if parts else None
+
+
+def keyword_filter(articles: list[dict], keywords: list[str],
+                   block_keywords: dict | None = None) -> list[dict]:
+    """개발 키워드로 거르고(화이트리스트), 비개발 주제를 뺀다(블랙리스트).
+
+    화이트리스트는 TRUSTED 출처를 면제한다 — 키워드 140개에 한국어가 없어서
+    긱뉴스 한국어 제목이 통과할 수 없기 때문이다. 그런데 그 면제 때문에
+    비개발 기사가 그대로 실렸다(2026-08-30 배치 20건 중 4건).
+
+    그래서 차단은 TRUSTED에도 적용한다. 면제는 "통과시킬 이유"에만 해당하지
+    "빼지 않을 이유"는 아니다. 다만 차단어가 있어도 개발 키워드가 하나라도
+    같이 있으면 남긴다 — `캘리포니아주 의회, 연령 확인법에서 Linux 면제`처럼
+    정치 어휘를 쓰는 개발 기사를 잃지 않기 위해서다.
+    """
+    block_keywords = block_keywords or {}
+    block = _block_re(
+        tuple(k for k in (block_keywords.get("ko") or [])),
+        tuple(k.lower() for k in (block_keywords.get("en") or [])),
+    )
+    pattern = _keyword_re(tuple(k.lower() for k in keywords)) if keywords else None
+
+    kept, dropped, blocked = [], 0, 0
     for a in articles:
-        if a["source"] in TRUSTED:
-            kept.append(a)
-            continue
         text = (a.get("title", "") + " " + a.get("description", "")).lower()
-        if pattern.search(text):
+        has_dev = bool(pattern.search(text)) if pattern else False
+
+        if block is not None and block.search(text) and not has_dev:
+            blocked += 1
+            continue
+
+        if pattern is None or a["source"] in TRUSTED or has_dev:
             kept.append(a)
         else:
             dropped += 1
+
     if dropped:
         print(f"[필터] 키워드 불일치 {dropped}건 제외")
+    if blocked:
+        print(f"[필터] 비개발 주제 {blocked}건 제외")
     return kept
 
 
@@ -344,7 +384,7 @@ def main() -> int:
     archive.migrate_legacy()               # 단일 articles.json → 월별 샤드 (멱등)
 
     raw = run_scrapers(cfg)
-    articles = keyword_filter(raw, cfg.get("keywords", []))
+    articles = keyword_filter(raw, cfg.get("keywords", []), cfg.get("block_keywords"))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
     articles = dedupe(articles)
     # 남의 글에 박힌 토큰이 candidates 로그·아카이브에 실려 push되면 GitHub Push
