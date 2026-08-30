@@ -34,6 +34,7 @@ from news import apis_catalog
 from news.core import archive, candidates
 from news.core import seen as seen_db
 from news.core.dedup import merge_duplicates
+from news.summarizer import IRRELEVANT
 from news.core.enrich import enrich
 from news.core.redact import redact_articles
 from news.core.scorer import score_and_categorize
@@ -229,6 +230,29 @@ def dedupe(articles: list[dict]) -> list[dict]:
     return merge_duplicates(articles)
 
 
+def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
+    """LLM이 `무관`으로 분류한 기사를 게재 대상에서 뺀다.
+
+    키워드로는 원리적으로 못 잡는 것들을 거른다 — 저작권 소송·노동 판결·학교
+    성적 실험은 AI가 소재라 개발 키워드에 걸리고 차단어도 없다.
+
+    `주변`(업계·제품 동향)은 남긴다. 경계를 좁게 잡아야 오탐으로 진짜 기사를
+    잃지 않는다. 요약을 못 받은 기사(llm_done=False)는 분류도 없으므로 건드리지
+    않는다 — 여기서 빼면 다음 회차 재시도 경로가 끊긴다.
+    """
+    kept, dropped = [], []
+    for a in articles:
+        if a.get("llm_done") and a.get("relevance") == IRRELEVANT:
+            dropped.append(a)
+        else:
+            kept.append(a)
+    if dropped:
+        print(f"[분류] 무관 {len(dropped)}건 게재 제외")
+        for a in dropped:
+            print(f"   · {a.get('title', '')[:60]}")
+    return kept, dropped
+
+
 def page_eligible(articles: list[dict]) -> list[dict]:
     """페이지 게재 자격이 있는 것만 남긴다 (SPEC 1.1 — 기록과 게재는 별개).
 
@@ -397,9 +421,16 @@ def main() -> int:
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
     fresh = seen_db.filter_unseen(page_eligible(articles))
-    picked = pick(fresh, sc.get("top_n", 20), sc.get("per_source", 5),
+    # 분류 게이트(llm-relevance-gate)가 `무관`을 빼므로 여유 있게 뽑는다.
+    # 요약은 top_n이 차는 즉시 멈추니 무관이 없는 회차의 호출 수는 그대로다.
+    top_n = sc.get("top_n", 20)
+    # 게이트가 꺼져 있으면 여유분도 0 — 동작이 도입 전과 완전히 같아진다.
+    gate_on = bool(sc.get("relevance_gate", False))
+    overpick = sc.get("overpick", 5) if gate_on else 0
+    picked = pick(fresh, top_n + overpick, sc.get("per_source", 5),
                   quota=cfg.get("source_quota", {}))
-    print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건")
+    print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건 "
+          f"(목표 {top_n} + 여유 {overpick})")
 
     # 판정 로그: 선별 탈락분 포함 전 후보를 기록 (SPEC 1.4)
     candidates.log(articles, {a["url"] for a in picked}, now, gh_meta_map)
@@ -424,14 +455,16 @@ def main() -> int:
         llm_cfg = cfg.get("llm", {})
         picked = summarize_all(picked, model=llm_cfg.get("model") or None,
                                pause=float(llm_cfg.get("pause_seconds", 4.0)),
-                               max_calls=llm_cfg.get("max_calls_per_run", 50))
+                               max_calls=llm_cfg.get("max_calls_per_run", 50),
+                               stop_after=top_n if gate_on else None)
 
     picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
 
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
     # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
-    published = tag_all([a for a in picked if a.get("llm_done")])
+    picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
+    published = tag_all([a for a in picked if a.get("llm_done")][:top_n])
 
     if published:
         all_articles = archive.append(published, now)
@@ -448,7 +481,9 @@ def main() -> int:
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
                       health=cfg.get("apis", {}).get("health"),
                       cache_path=os.path.join(ROOT, "data", "api_health.json"))
-    seen_db.mark_seen(published)
+    # 무관 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로 올라와
+    # 같은 기사에 LLM 호출을 반복한다.
+    seen_db.mark_seen(published + irrelevant)
     emit_actions_output(len(published), min_published)
     return 0
 

@@ -94,6 +94,7 @@ PROMPT = """아래 기사를 다음 형식으로만 출력해라.
 번역제목: (반드시 한국어가 포함돼야 한다. 이미 한국어면 그대로 두어라. 외국어 문장이면 자연스러운 한국어로 옮기되, 원제에 없는 내용을 덧붙이지 마라 — 옮기기만 해라. "원래이름 — 한 줄 한국어 설명" 형태는 저장소명·패키지명·제품명·버전처럼 옮길 수 없는 고유명사가 제목의 전부일 때만 쓴다. 예: "datasette-upload-dbs 0.5a0 — Datasette에 SQLite DB를 올리는 플러그인", "owner / repo — 한 줄 설명". 문장형 제목에 이 형태를 쓰는 것은 금지다 — 옮긴 제목 뒤에 " — 설명"을 붙이지 마라. 원제를 영어 그대로 복사하는 것도 금지다)
 요약: (2~4문장. 제목에 이미 있는 정보를 반복하지 마라. 제목에 없는 새 정보만 써라 — 구체적으로 무엇이 새로운지, 왜 지금 주목받는지, GitHub 저장소라면 기술 스택과 쓰임새. 독자는 백엔드·AI를 다루는 개발자 한 명이고, 자기 일에 쓸지 판단하는 데 필요한 것만. 원문에 없는 내용은 절대 지어내지 마라. 제목 외에 덧붙일 정보가 본문에 없으면 "없음"이라고만 써라)
 왜중요: (한 문장. 그 개발자의 일에 어떤 의미인지. 덧붙일 것이 없으면 "없음")
+분류: (게재 / 제외 중 하나만 써라. 이 글이 무엇에 관한 사건인지로 판단해라. 게재 = 코드·도구·라이브러리·모델·제품·릴리스·연구 결과 등 기술 자체에 일어난 일. 제외 = 소송·판결·법률·규제·수사·노동·일자리·채용·교육·학교·정치·행정·사회·범죄·감시·연예처럼 기술 밖 영역에서 일어난 일. AI 회사나 IT 기업이 등장해도 사건 자체가 기술 밖이면 제외다 — 저작권 소송은 제외, 그 회사가 낸 새 모델은 게재.)
 
 [기사]
 제목: {title}
@@ -127,7 +128,14 @@ def looks_like_identifier_title(title: str) -> bool:
     return all(_IDENT_TOKEN_RE.match(tok) for tok in tokens)
 
 
-LABELS = {"번역제목": "ko_title", "요약": "summary", "왜중요": "why"}
+LABELS = {"번역제목": "ko_title", "요약": "summary", "왜중요": "why",
+          "분류": "relevance"}
+
+# 게재에서 빼는 분류. 값이 없거나 목록 밖이면 게재 쪽으로 기운다(fail-open) —
+# 이 필드가 깨졌을 때 페이지가 비는 것이 훨씬 나쁘다.
+RELEVANCE_VALUES = ("게재", "제외")
+DEFAULT_RELEVANCE = "게재"
+IRRELEVANT = "제외"
 
 
 def _clean(line: str) -> str:
@@ -151,7 +159,8 @@ def _strip_no_info_tail(text: str) -> str:
 
 
 def _parse(text: str) -> dict:
-    buf: dict[str, list[str]] = {"ko_title": [], "summary": [], "why": []}
+    buf: dict[str, list[str]] = {"ko_title": [], "summary": [], "why": [],
+                                 "relevance": []}
     section = None
     for raw in text.splitlines():
         line = _clean(raw)
@@ -167,6 +176,14 @@ def _parse(text: str) -> dict:
         if not hit and section and line:
             buf[section].append(line)
     out = {k: " ".join(v).strip() for k, v in buf.items()}
+
+    # 모델이 "무관 (개발과 관련 없음)"처럼 꾸며 쓴다 — 값만 뽑는다.
+    # 목록 순서가 아니라 문자열에서 먼저 나오는 값을 취해야 한다. 순서로 고르면
+    # "무관 (개발과 관련 없음)"이 괄호 안의 `개발`에 걸린다.
+    raw = out.get("relevance") or ""
+    found = [(raw.index(v), v) for v in RELEVANCE_VALUES if v in raw]
+    out["relevance"] = min(found)[1] if found else DEFAULT_RELEVANCE
+
     # "없음" = 덧붙일 정보가 없다는 답 → 빈 문자열 (UI가 요약 줄을 생략한다)
     for k in ("summary", "why"):
         text = _strip_no_info_tail(out[k] or "")
@@ -274,8 +291,13 @@ MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 �
 
 def summarize_all(articles: list[dict], provider: str | None = None,
                   model: str | None = None, pause: float = 4.0,
-                  max_calls: int = 50) -> list[dict]:
-    """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지."""
+                  max_calls: int = 50, stop_after: int | None = None) -> list[dict]:
+    """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
+
+    stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
+    무관 판정 때문에 후보를 여유 있게 받았을 때, 무관이 없는 회차의 호출 수가
+    늘어나지 않게 하기 위한 것이다 — 20건이 차면 나머지는 부르지 않는다.
+    """
     provider = (provider or PROVIDER).lower()
     if provider not in DEFAULT_MODELS:
         raise ValueError(f"알 수 없는 공급자: {provider} (groq / openrouter / gemini)")
@@ -363,6 +385,17 @@ def summarize_all(articles: list[dict], provider: str | None = None,
 
         print(f"[{i}/{len(articles)}] OK · {article['title'][:45]}")
         out.append({**article, **parsed, "llm_done": True})
+
+        if stop_after is not None:
+            publishable = sum(1 for a in out
+                              if a.get("llm_done") and a.get("relevance") != IRRELEVANT)
+            if publishable >= stop_after:
+                remain = len(articles) - i
+                if remain:
+                    print(f"[분류] 게재 가능 {publishable}건 확보 — 남은 {remain}건은 호출하지 않음")
+                    out.extend({**a, "llm_done": False} for a in articles[i:])
+                break
+
         time.sleep(pause)          # 분당 토큰 제한(TPM) 여유를 둔다
 
     ok = sum(1 for a in out if a.get("llm_done"))
