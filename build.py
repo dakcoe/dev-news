@@ -299,7 +299,8 @@ def adjust_scores(articles: list[dict], cfg: dict) -> list[dict]:
 
 
 def pick(articles: list[dict], top_n: int, per_source: int,
-         quota: dict[str, int] | None = None) -> list[dict]:
+         quota: dict[str, int] | None = None,
+         per_feed_page: int | None = None) -> list[dict]:
     """점수순 목록에서 최종 선별.
 
     source_quota는 우선권이 아니라 **예약석**이다.
@@ -307,6 +308,11 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     1단계 — quota에 적힌 출처가 그 개수를 가져간다. 점수와 무관하게 자리를
             보장받고, 동시에 그 개수를 넘지도 않는다(상한이기도 하다).
     2단계 — 나머지 출처가 `top_n - 예약분 합계`만큼을 점수순으로 채운다.
+
+    per_feed_page는 2단계에 피드 단위 상한을 더한다. per_source는 source(rss)
+    단위라 rss 5칸을 어느 피드가 가져가는지 통제하지 못했다 — 글을 많이 쓰는
+    매체가 후보 수로 이겨 최근 10배치 rss 43건 중 The Decoder가 30건이었다.
+    `feed` 키가 있는 아이템에만 걸린다(rss·anthropic만 이 키를 채운다).
 
     2단계 목표가 top_n이 아니라는 것이 핵심이다. top_n까지 채우면 예약 출처가
     부족할 때 그 자리를 일반 기사가 가져간다 — github가 4건이면 일반이 16건
@@ -332,6 +338,7 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     reserved = min(sum(quota.values()), top_n)
     general_limit = max(top_n - reserved, 0)
     general_taken = 0
+    feed_counts: dict[str, int] = defaultdict(int)
 
     for i, a in enumerate(articles):
         if general_taken >= general_limit:
@@ -341,8 +348,13 @@ def pick(articles: list[dict], top_n: int, per_source: int,
         cap = per_source
         if counts[a["source"]] >= cap:
             continue
+        feed = a.get("feed")
+        if per_feed_page and feed and feed_counts[feed] >= per_feed_page:
+            continue
         taken.add(i)
         counts[a["source"]] += 1
+        if a.get("feed"):
+            feed_counts[a["feed"]] += 1
         general_taken += 1
         picked.append(a)
 
@@ -460,8 +472,9 @@ def main() -> int:
     # 게이트가 꺼져 있으면 여유분도 0 — 동작이 도입 전과 완전히 같아진다.
     gate_on = bool(sc.get("relevance_gate", False))
     overpick = sc.get("overpick", 5) if gate_on else 0
+    per_feed_page = sc.get("per_feed_page")
     picked = pick(fresh, top_n + overpick, sc.get("per_source", 5),
-                  quota=cfg.get("source_quota", {}))
+                  quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page)
     print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건 "
           f"(목표 {top_n} + 여유 {overpick})")
 
@@ -503,7 +516,8 @@ def main() -> int:
     # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
     ready = [a for a in picked if a.get("llm_done")]
     published = tag_all(pick(ready, top_n, sc.get("per_source", 5),
-                             quota=cfg.get("source_quota", {})) if gate_on else ready)
+                             quota=cfg.get("source_quota", {}),
+                             per_feed_page=per_feed_page) if gate_on else ready)
 
     if published:
         all_articles = archive.append(published, now)

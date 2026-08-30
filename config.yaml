@@ -129,7 +129,12 @@ scraper:
   overpick: 5
   keep_days: 30      # [표시 계층] index.html에 굽는 기간. 저장은 월별 샤드에 무제한 누적 (SPEC 2.1)
   # max_items: 300   # [deprecated — SPEC 2.1] 저장 상한 제거. 샤딩이 용량을 통제한다
-  per_source: 5      # 한 출처가 차지할 수 있는 최대 개수
+  per_source: 5      # 한 출처가 차지할 수 있는 최대 개수 (source 단위: rss 전체)
+  # 한 피드가 배치당 차지할 수 있는 최대 개수 (feed 단위: The Decoder 하나).
+  # per_source는 source 단위라 rss 5칸을 어느 매체가 가져가는지 통제하지 못했다 —
+  # 글을 많이 쓰는 곳이 후보 수로 이겨 최근 10배치 rss 43건 중 The Decoder가
+  # 30건(70%)이었다. feed 키가 있는 rss·anthropic에만 걸린다.
+  per_feed_page: 2
   window_hours: 48   # 최근 몇 시간 내 발행분만
   hn_limit: 60       # HN 상위 몇 개를 훑을지
   per_feed: 8        # RSS 피드 하나당 몇 개까지
