@@ -17,12 +17,10 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 
-import requests
 from bs4 import BeautifulSoup
 
+from news.core import http
 from news.core.common import to_timestamp
-
-HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 
 
 def _text(html: str, limit: int = 400) -> str:
@@ -34,9 +32,9 @@ def _one(feed: dict, limit: int) -> list[dict]:
     url = feed["url"]
     name = feed.get("name") or urlparse(url).netloc.replace("www.", "")
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp = http.get(url, timeout=15)
         resp.raise_for_status()
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[rss] {name} 실패: {e}")
         return []
 

@@ -12,20 +12,15 @@ import re
 from datetime import datetime, timezone
 from urllib.parse import urljoin
 
-import requests
 from bs4 import BeautifulSoup
+
+from news.core import http
 
 BASE = "https://www.anthropic.com"
 PAGES = [
     ("/news", "/news/"),
     ("/engineering", "/engineering/"),
 ]
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    )
-}
 
 # "Aug 4, 2026" / "August 4, 2026" / "2026-08-04"
 DATE_PATTERNS = [
@@ -74,9 +69,9 @@ def _parse_anchor(anchor) -> tuple[str, float | None]:
 def _fetch_page(path: str, prefix: str, limit: int) -> list[dict]:
     url = BASE + path
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp = http.get(url, timeout=15)
         resp.raise_for_status()
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[anthropic] {path} 실패: {e}")
         return []
 
