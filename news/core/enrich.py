@@ -13,6 +13,7 @@ import trafilatura
 from bs4 import BeautifulSoup
 
 from news.api_health import _error_kind, classify
+from news.core.fetch_health import reason_of, record
 
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
@@ -79,8 +80,8 @@ def _og_image(soup: BeautifulSoup, base_url: str) -> str | None:
     return None
 
 
-def _fetch_one(url: str) -> tuple[str | None, str | None, str | None]:
-    """(본문, 썸네일 URL, 링크 판정)
+def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None]:
+    """(본문, 썸네일 URL, 링크 판정, 응답 코드)
 
     판정은 api_health.classify()를 그대로 쓴다 — 같은 문제를 이미 실측으로
     다듬어 놨다. 404·410은 dead, 5xx·타임아웃은 unknown, 403·429는 ok다.
@@ -92,16 +93,16 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None]:
         # 멀쩡하므로 판정 대상이 아니다.
         owner, repo = m.group(1), m.group(2)
         readme = _github_readme(owner, repo)
-        return readme, f"https://opengraph.githubassets.com/1/{owner}/{repo}", None
+        return readme, f"https://opengraph.githubassets.com/1/{owner}/{repo}", None, None
 
     try:
         resp = requests.get(url, timeout=15, headers=HEADERS)
     except requests.RequestException as e:
-        return None, None, classify(None, _error_kind(e))
+        return None, None, classify(None, _error_kind(e)), None
 
     status = classify(resp.status_code, None)
     if status != "ok":
-        return None, None, status
+        return None, None, status, resp.status_code
     html = resp.text
 
     content = None
@@ -116,11 +117,11 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None]:
     except Exception:
         pass
 
-    return content, image, status
+    return content, image, status, resp.status_code
 
 
 def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
-    results: dict[str, tuple[str | None, str | None, str | None]] = {}
+    results: dict[str, tuple] = {}
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = {pool.submit(_fetch_one, a["url"]): a["url"] for a in articles}
         for future in as_completed(futures):
@@ -128,21 +129,25 @@ def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
             try:
                 results[url] = future.result()
             except Exception:
-                results[url] = (None, None, None)
+                results[url] = (None, None, None, None)
 
     # 채택 기준(usable_content)을 통과한 것만 센다 — 원시 추출본 수와 다르다
     got_text = 0
-    got_img = sum(1 for _, i, _ in results.values() if i)
-    dead = sum(1 for _, _, s in results.values() if s == "dead")
+    got_img = sum(1 for _, i, _, _ in results.values() if i)
+    dead = sum(1 for _, _, s, _ in results.values() if s == "dead")
 
     out = []
+    rows: list[dict] = []
     for a in articles:
-        content, image, status = results.get(a["url"], (None, None, None))
-        content = usable_content(content, a.get("description"))
+        raw, image, status, code = results.get(a["url"], (None, None, None, None))
+        content = usable_content(raw, a.get("description"))
         if content:
             got_text += 1
+        rows.append({"url": a["url"], "source": a.get("source", ""),
+                     "reason": reason_of(status, code, raw, accepted=bool(content))})
         out.append({**a, "content": content, "image": image, "link_status": status})
 
     print(f"[enrich] 본문 {got_text}/{len(articles)} · 썸네일 {got_img}/{len(articles)}"
           + (f" · 죽은 링크 {dead}" if dead else ""))
+    record(rows)
     return out
