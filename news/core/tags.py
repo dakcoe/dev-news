@@ -223,6 +223,9 @@ WEAK_PATTERNS = {
     r"\btool(s|ing)?\b", r"\bstudy\b", r"market", r"community", r"culture",
     r"은하", r"galax", r"물리", r"수학", r"위성", r"항공", r"날씨",
     r"해킹", r"html",
+    # 중의적 — 타입 추론·통계적 추론·LLM 추론이 같은 말을 쓴다.
+    # "static type inference"(zod)가 llm 태그를 만들었고 IMPLIES로 ai까지 끌고 왔다.
+    r"\binference\b", r"추론",
 }
 
 MAX_TAGS = 4
