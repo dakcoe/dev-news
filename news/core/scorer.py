@@ -45,14 +45,9 @@ def score_and_categorize(articles: list[dict], top_n: int = 12) -> list[dict]:
         decay = _time_decay(a.get("published_at"))
         score = ((upvotes * 1.0) + (comments * 1.5) + (cross_source_count * 300)) * decay
 
-        if cross_source_count >= 2:
-            category = "multi_source"
-        elif comments > 0 and upvotes > 0 and (comments / max(upvotes, 1)) > 0.4:
-            category = "hot_debate"
-        else:
-            category = "trending"
-
-        scored.append({**a, "score": score, "category": category, "cross_source_count": cross_source_count})
+        # category(trending/hot_debate/multi_source)는 아무도 읽지 않아 뺐다
+        # (drop-dead-category). cross_source_count는 위 가산에 쓰이므로 남긴다.
+        scored.append({**a, "score": score, "cross_source_count": cross_source_count})
 
     seen_urls: set[str] = set()
     unique = []
