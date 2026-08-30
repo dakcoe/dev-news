@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 from news.api_health import _error_kind, classify
 
 MAX_CONTENT_CHARS = 3000
-MIN_CONTENT_CHARS = 200
+MIN_CONTENT_CHARS = 80
 
 HEADERS = {
     "User-Agent": (
@@ -25,6 +25,27 @@ HEADERS = {
 }
 
 GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
+
+
+def usable_content(text, description=None):
+    """추출한 본문을 쓸지 결정한다.
+
+    바닥값(MIN_CONTENT_CHARS)은 쿠키 배너·내비게이션 같은 껍데기를 막는 역할만
+    한다. 예전 값 200은 멀쩡한 짧은 글까지 버렸다 — mastodon 툿 136자,
+    data4sci 119자가 그렇게 사라져 요약이 통째로 비었다. 짧은 글은 원래 짧은
+    것이지 추출 실패가 아니다.
+
+    description보다 짧으면 쓰지 않는다. summarizer가 `content or description`
+    순으로 고르기 때문에, 그냥 두면 85자 본문이 400자 description을 밀어낸다.
+    """
+    if not text:
+        return None
+    text = text.strip()
+    if len(text) < MIN_CONTENT_CHARS:
+        return None
+    if description and len(text) <= len(description.strip()):
+        return None
+    return text[:MAX_CONTENT_CHARS]
 
 
 def _github_readme(owner: str, repo: str) -> str | None:
@@ -85,9 +106,7 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None]:
 
     content = None
     try:
-        text = trafilatura.extract(html, include_comments=False, include_tables=False)
-        if text and len(text) >= MIN_CONTENT_CHARS:
-            content = text[:MAX_CONTENT_CHARS]
+        content = trafilatura.extract(html, include_comments=False, include_tables=False)
     except Exception:
         pass
 
@@ -111,14 +130,19 @@ def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
             except Exception:
                 results[url] = (None, None, None)
 
-    got_text = sum(1 for c, _, _ in results.values() if c)
+    # 채택 기준(usable_content)을 통과한 것만 센다 — 원시 추출본 수와 다르다
+    got_text = 0
     got_img = sum(1 for _, i, _ in results.values() if i)
     dead = sum(1 for _, _, s in results.values() if s == "dead")
-    print(f"[enrich] 본문 {got_text}/{len(articles)} · 썸네일 {got_img}/{len(articles)}"
-          + (f" · 죽은 링크 {dead}" if dead else ""))
 
     out = []
     for a in articles:
         content, image, status = results.get(a["url"], (None, None, None))
+        content = usable_content(content, a.get("description"))
+        if content:
+            got_text += 1
         out.append({**a, "content": content, "image": image, "link_status": status})
+
+    print(f"[enrich] 본문 {got_text}/{len(articles)} · 썸네일 {got_img}/{len(articles)}"
+          + (f" · 죽은 링크 {dead}" if dead else ""))
     return out
