@@ -31,8 +31,11 @@ def _text(html: str, limit: int = 400) -> str:
 def _one(feed: dict, limit: int) -> list[dict]:
     url = feed["url"]
     name = feed.get("name") or urlparse(url).netloc.replace("www.", "")
+    # 피드가 UA를 지정하면 그 값을 쓴다. 레딧은 처음 보는 UA에 즉시 429를 주고
+    # 오래 써 온 문자열만 통과시킨다 — 실측: 옛 UA 200, 새 UA·무작위 UA 429.
+    headers = {"User-Agent": feed["user_agent"]} if feed.get("user_agent") else None
     try:
-        resp = http.get(url, timeout=15)
+        resp = http.get(url, timeout=15, headers=headers)
         resp.raise_for_status()
     except Exception as e:
         print(f"[rss] {name} 실패: {e}")

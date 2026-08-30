@@ -39,6 +39,11 @@ feeds:
   - name: r/LocalLLaMA
     url: https://www.reddit.com/r/LocalLLaMA/.rss
     page: false
+    # 레딧은 처음 보는 UA에 즉시 429를 준다 — 실측으로 무작위 UA도 429였다.
+    # 오래 써 온 이 문자열만 통과하므로 공용 UA(consolidate-http)를 덮어쓴다.
+    # sources.reddit(OAuth 스크래퍼)과는 다른 경로다. 그쪽은 API 승인이 필요해
+    # 꺼져 있고, 이건 인증 없이 받는 공개 RSS다.
+    user_agent: "dev-news/1.0 (personal feed aggregator)"
 
 # 글이 드문 공식 블로그는 48시간으로 자르면 놓친다. 이 출처들만 창을 늘린다.
 # (한 번 실린 글은 seen.json이 막으므로 같은 글이 반복되지는 않는다)
