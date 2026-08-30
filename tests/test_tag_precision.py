@@ -86,3 +86,23 @@ def test_max_tags_tightened():
 
 def test_empty_article():
     assert _t() == []
+
+
+# ------------------------------------------------- 중의적 어휘 (fix-inference-tag)
+def test_type_inference_is_not_llm():
+    """로컬 전체 실행에서 발견 — TypeScript의 타입 추론이 LLM 태그를 만들었다.
+
+    colinhacks / zod → ai, llm, web, open-source
+    "TypeScript-first schema validation with static type inference"
+    """
+    tags = _t(title="colinhacks / zod",
+              description="TypeScript-first schema validation with static type inference",
+              summary="TypeScript-first schema validation with static type inference")
+    assert "llm" not in tags
+    assert "ai" not in tags, "llm이 IMPLIES로 ai까지 끌고 왔다"
+
+
+def test_inference_in_title_is_still_llm():
+    """추론 최적화는 이 피드의 핵심 주제다 — 제목에 있으면 잡아야 한다."""
+    assert "llm" in _t(title="A fast inference engine for local models")
+    assert "llm" in _t(title="추론 속도를 3배 높인 방법")
