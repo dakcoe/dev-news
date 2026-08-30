@@ -14,8 +14,7 @@ from __future__ import annotations
 
 import os
 import re
-from datetime import datetime
-from email.utils import parsedate_to_datetime
+from news.core.common import to_timestamp
 
 import requests
 from bs4 import BeautifulSoup
@@ -89,16 +88,7 @@ def _fetch_rss(subreddit: str, limit: int) -> list[dict]:
         content = entry.find("content")
         text = BeautifulSoup(content.get_text() if content else "", "html.parser").get_text(" ")
         pub = entry.find("published") or entry.find("updated")
-        ts = None
-        if pub:
-            raw = pub.get_text(strip=True)
-            try:
-                ts = datetime.fromisoformat(raw.replace("Z", "+00:00")).timestamp()
-            except ValueError:
-                try:
-                    ts = parsedate_to_datetime(raw).timestamp()
-                except Exception:
-                    ts = None
+        ts = to_timestamp(pub.get_text(strip=True)) if pub else None
         out.append({
             "title": title, "url": url,
             "description": re.sub(r"\s+", " ", text).strip()[:300],

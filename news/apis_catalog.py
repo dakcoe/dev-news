@@ -27,13 +27,13 @@ import json
 import os
 import re
 from collections import Counter
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 
 import requests
 
 from news import api_health
 
-KST = timezone(timedelta(hours=9))
+from news.core.common import KST  # noqa: E402  (상수 재노출)
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 
 SOURCES = [

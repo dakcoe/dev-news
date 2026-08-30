@@ -6,34 +6,17 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
 
 import requests
 from bs4 import BeautifulSoup
+
+from news.core.common import to_timestamp
 
 FEED_CANDIDATES = [
     "https://news.hada.io/rss/news",
     "https://feeds.feedburner.com/geeknews-feed",
 ]
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
-
-
-def _to_ts(value: str | None) -> int | None:
-    if not value:
-        return None
-    try:
-        return int(parsedate_to_datetime(value).astimezone(timezone.utc).timestamp())
-    except Exception:
-        pass
-    try:
-        return int(
-            datetime.fromisoformat(value.replace("Z", "+00:00"))
-            .astimezone(timezone.utc)
-            .timestamp()
-        )
-    except Exception:
-        return None
 
 
 def _clean(html: str) -> str:
@@ -78,7 +61,7 @@ def fetch(limit: int = 25) -> list[dict]:
                 "source": "geeknews",
                 "upvotes": 0,
                 "comments": 0,
-                "published_at": _to_ts(published.get_text(strip=True) if published else None),
+                "published_at": to_timestamp(published.get_text(strip=True) if published else None),
             }
         )
     return articles

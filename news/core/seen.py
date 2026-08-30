@@ -9,8 +9,9 @@ import json
 import os
 from datetime import datetime, timezone
 
-DEFAULT_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__)))), "data", "seen.json")
+from news.core.common import ROOT
+
+DEFAULT_PATH = os.path.join(ROOT, "data", "seen.json")
 
 
 def _load(path: str) -> dict[str, str]:
