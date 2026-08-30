@@ -230,6 +230,24 @@ def dedupe(articles: list[dict]) -> list[dict]:
     return merge_duplicates(articles)
 
 
+def drop_dead_links(articles: list[dict]) -> tuple[list[dict], list[dict]]:
+    """이미 사라진 링크를 게재에서 뺀다.
+
+    판정은 enrich가 api_health.classify()로 붙여 둔 link_status를 그대로 쓴다.
+    `dead`(404·410·DNS 실패·연결 거부)만 뺀다 — `unknown`(5xx·타임아웃)은
+    일시 장애일 수 있고, 403·429는 봇 차단일 뿐 살아 있는 페이지다. 실측 403
+    4건(economist·stanford·oup·axios)이 전부 멀쩡했다.
+    """
+    kept, dropped = [], []
+    for a in articles:
+        (dropped if a.get("link_status") == "dead" else kept).append(a)
+    if dropped:
+        print(f"[링크] 죽은 링크 {len(dropped)}건 게재 제외")
+        for a in dropped:
+            print(f"   · {a.get('url', '')[:80]}")
+    return kept, dropped
+
+
 def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     """LLM이 `무관`으로 분류한 기사를 게재 대상에서 뺀다.
 
@@ -460,6 +478,8 @@ def main() -> int:
     # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM 공급자에게
     # 전송되는 것까지 막힌다.
     picked = redact_articles(enrich(picked), "본문")
+    # 죽은 링크는 요약 전에 뺀다 — LLM 호출을 쓰지 않게 된다.
+    picked, dead_links = drop_dead_links(picked)
 
     if args.no_ai:
         for a in picked:
@@ -502,7 +522,7 @@ def main() -> int:
                       cache_path=os.path.join(ROOT, "data", "api_health.json"))
     # 무관 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로 올라와
     # 같은 기사에 LLM 호출을 반복한다.
-    seen_db.mark_seen(published + irrelevant)
+    seen_db.mark_seen(published + irrelevant + dead_links)
     emit_actions_output(len(published), min_published)
     return 0
 
