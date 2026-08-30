@@ -116,3 +116,4 @@
 - `software`·`hardware`가 `war`로 차단되지 않는다
 - `block_keywords`가 비어 있으면 현행과 동일하게 동작한다
 - pytest 전체 통과
+- **완료일**: 2026-08-30T18:04:40.894Z
