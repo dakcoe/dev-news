@@ -33,6 +33,7 @@ import yaml
 from news import apis_catalog
 from news.core import archive, candidates
 from news.core import seen as seen_db
+from news.core.dedup import merge_duplicates
 from news.core.enrich import enrich
 from news.core.redact import redact_articles
 from news.core.scorer import score_and_categorize
@@ -179,15 +180,13 @@ def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] |
 
 
 def dedupe(articles: list[dict]) -> list[dict]:
-    """배치 내 URL 중복 제거 (여러 소스가 같은 글을 물어오는 경우)."""
-    seen_urls: set[str] = set()
-    out = []
-    for a in articles:
-        if a.get("url") in seen_urls:
-            continue
-        seen_urls.add(a.get("url"))
-        out.append(a)
-    return out
+    """배치 내 중복 제거 (여러 소스가 같은 글을 물어오는 경우).
+
+    URL 완전일치만 보던 것을 news.core.dedup으로 옮겼다 — 정규화 URL 1단,
+    제목 유사도 2단. 합쳐진 항목은 cross_source_count를 들고 나가 scorer의
+    가산에 쓰인다.
+    """
+    return merge_duplicates(articles)
 
 
 def page_eligible(articles: list[dict]) -> list[dict]:
