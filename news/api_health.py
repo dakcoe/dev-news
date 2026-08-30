@@ -21,14 +21,14 @@ from __future__ import annotations
 import concurrent.futures as cf
 import json
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 
 import requests
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-KST = timezone(timedelta(hours=9))
+from news.core.common import KST  # noqa: E402  (상수 재노출)
 
 # 브라우저를 흉내 내지 않으면 봇 차단(403)이 늘어 오탐 판정 부담만 커진다.
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; dev-news link checker; "

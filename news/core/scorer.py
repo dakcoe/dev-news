@@ -1,6 +1,8 @@
 from collections import defaultdict
 from datetime import datetime, timezone
 
+from news.core.common import to_timestamp
+
 
 def _normalize_title(title: str) -> str:
     return " ".join(title.lower().split())
@@ -10,11 +12,9 @@ def _time_decay(published_at) -> float:
     if not published_at:
         return 1.0
     try:
-        if isinstance(published_at, str):
-            from datetime import datetime as _dt
-            ts = _dt.fromisoformat(published_at.replace("Z", "+00:00")).timestamp()
-        else:
-            ts = float(published_at)
+        ts = to_timestamp(published_at)
+        if ts is None:
+            return 1.0
         age_hours = (datetime.now(timezone.utc).timestamp() - ts) / 3600
     except Exception:
         return 1.0

@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 from news.core import tags as tag_vocab
 
-KST = timezone(timedelta(hours=9))
+from news.core.common import KST  # noqa: E402  (상수 재노출)
 TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")
 
 # 화면에 쓰이는 출처 메타데이터. config.yaml의 sources와 키를 맞춘다.

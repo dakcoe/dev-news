@@ -15,31 +15,14 @@ from __future__ import annotations
 
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
 
+from news.core.common import to_timestamp
+
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
-
-
-def _ts(value: str | None) -> float | None:
-    if not value:
-        return None
-    for parser in (
-        lambda v: parsedate_to_datetime(v),
-        lambda v: datetime.fromisoformat(v.replace("Z", "+00:00")),
-    ):
-        try:
-            dt = parser(value)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.timestamp()
-        except Exception:
-            continue
-    return None
 
 
 def _text(html: str, limit: int = 400) -> str:
@@ -86,7 +69,7 @@ def _one(feed: dict, limit: int) -> list[dict]:
 
             "upvotes": 0,
             "comments": 0,
-            "published_at": _ts(pub_tag.get_text(strip=True) if pub_tag else None),
+            "published_at": to_timestamp(pub_tag.get_text(strip=True) if pub_tag else None),
         })
     print(f"[rss] {name} {len(out)}개")
     return out
