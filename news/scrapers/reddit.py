@@ -6,9 +6,17 @@
   2) RSS    — 키가 없으면 공개 .rss 시도 (막힐 때도 있다)
   3) 포기   — 둘 다 실패하면 빈 리스트. 파이프라인은 계속 진행된다.
 
-OAuth 키 만들기 (무료, 2분)
-  https://www.reddit.com/prefs/apps → create app → 타입 "script"
-  redirect uri는 http://localhost:8080 아무거나
+OAuth 키 발급이 막혀 있다 (2026-08-31 실측)
+  https://www.reddit.com/prefs/apps 에서 폼은 열리지만 create app 을 누르면
+  앱이 만들어지지 않고 Responsible Builder Policy 안내로 돌아온다.
+
+    "In order to create an application or use our API you can read our
+     full policies here: https://support.reddithelp.com/hc/en-us/articles/
+     42728983564564-Responsible-Builder-Policy"
+
+  자율 등록이 닫히고 승인제로 바뀐 것으로 보인다. 승인을 받으면 아래 흐름이
+  그대로 동작한다 — 코드는 손댈 필요가 없다.
+    타입 "script", redirect uri는 http://localhost:8080 아무거나
 """
 from __future__ import annotations
 
