@@ -1,16 +1,13 @@
-import requests
-
+from news.core import http
 from news.core.common import to_timestamp
 
 URL = "https://lobste.rs/hottest.json"
-HEADERS = {"User-Agent": "news-scraper/1.0 (personal feed aggregator)"}
-
 
 def fetch(limit: int = 25) -> list[dict]:
     try:
-        resp = requests.get(URL, headers=HEADERS, timeout=10)
+        resp = http.get(URL, timeout=10)
         resp.raise_for_status()
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[lobsters] 요청 실패: {e}")
         return []
 

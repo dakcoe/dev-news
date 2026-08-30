@@ -7,17 +7,15 @@ from __future__ import annotations
 
 import re
 
-import requests
 from bs4 import BeautifulSoup
 
+from news.core import http
 from news.core.common import to_timestamp
 
 FEED_CANDIDATES = [
     "https://news.hada.io/rss/news",
     "https://feeds.feedburner.com/geeknews-feed",
 ]
-HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
-
 
 def _clean(html: str) -> str:
     text = BeautifulSoup(html or "", "html.parser").get_text(" ").strip()
@@ -28,12 +26,12 @@ def fetch(limit: int = 25) -> list[dict]:
     body = None
     for url in FEED_CANDIDATES:
         try:
-            resp = requests.get(url, headers=HEADERS, timeout=10)
+            resp = http.get(url, timeout=10)
             resp.raise_for_status()
             if "<item" in resp.text or "<entry" in resp.text:
                 body = resp.text
                 break
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"[geeknews] {url} 실패: {e}")
     if body is None:
         print("[geeknews] 사용 가능한 피드를 찾지 못했습니다")
