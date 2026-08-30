@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -63,3 +63,4 @@ raw README로 우회하는데, README가 없어 404가 나도 저장소는 멀�
 - GitHub 저장소 링크가 README 부재로 빠지지 않는다
 - 제외분이 seen에 남아 다음 회차에 재확인되지 않는다
 - verify-task 통과 (테스트 + 린트)
+- **완료일**: 2026-08-30T18:06:55.168Z
