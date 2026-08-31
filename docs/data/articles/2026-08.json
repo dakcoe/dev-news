@@ -1,5 +1,426 @@
 [
  {
+  "title": "Understanding ChatGPT Work",
+  "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+  "description": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of ChatGPT Work is the one that runs in the cloud. This can be accessed via chatgpt.com or through the ChatGPT mobile apps. Let's ",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788134387.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.simonwillison.net/static/2026/chatgpt-work-card.jpg",
+  "link_status": "ok",
+  "ko_title": "ChatGPT Work 이해",
+  "summary": "OpenAI는 7월 9일에 ChatGPT Work를 발표했으며 현재 유료 구독자에게만 제공한다. Work는 클라우드 버전(Work Cloud)과 로컬 데스크톱 버전(Work Local) 두 가지 형태로 제공되며, 클라우드 버전은 파일 접근 및 프로그램 실행 기능을 포함한다. 주요 차별점으로는 Luna·Terra 사용 옵션, 인터넷 연결 코드 실행 환경, 헤드리스 Chrome 브라우저, 공유 영구 파일 시스템 등이 있다.",
+  "why": "작업 중심의 명확한 결과물을 자동화하려는 백엔드·AI 개발자에게 새로운 생산성 도구가 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "devops-infra"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "NVIDIA-labs OO Agents (NOOA) - Python 클래스로 에이전트를 정의하는 프레임워크",
+  "url": "https://news.hada.io/topic?id=33059",
+  "description": "에이전트의 상태/기능/프롬프트/입출력 규칙을 하나의 Python 클래스 안에 함께 정의 하는 모델 독립적 프레임워크 클래스의 필드는 상태, 메서드는 기능, 독스트링은 프롬프트, 타입 어노테이션은 입출력 계약 역할을 함 일반 Python 코드가 들어 있는 메서드는 그대로 실행...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788138004.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33059?v=00df6be49f951f8b253418e66feefd11",
+  "link_status": "ok",
+  "ko_title": "NVIDIA-labs OO Agents (NOOA) - Python 클래스로 에이전트를 정의하는 프레임워크",
+  "summary": "NOOA는 에이전트의 상태, 기능, 프롬프트, 입출력 규칙을 하나의 Python 클래스에 통합해 모델 독립적인 프레임워크를 제공한다. 메서드가 비어 있으면 LLM이 코드를 생성하고, 타입 어노테이션을 통해 입출력 계약을 자동 검증한다. Jupyter 스타일 REPL에서 직접 코드를 작성·실행하며, Anthropic·OpenAI·Ollama·vLLM 등 다양한 모델을 선택해 사용할 수 있다. 설치는 pip 또는 uv로 간단히 가능하고, Apache-2.0 라이선스로 배포된다.",
+  "why": "LLM 기반 에이전트를 기존 Python 개발 흐름에 자연스럽게 통합해 테스트·버전 관리가 가능하기 때문이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "The Agentic Awakening - 코딩이 10배 빨라져도 조직 생산성이 따라오지 않는 이유",
+  "url": "https://news.hada.io/topic?id=33058",
+  "description": "AI로 개인의 코딩 속도는 10배 이상 빨라질 수 있지만 , 기존의 기획, 검토, 승인, 배포 절차가 속도를 흡수해 조직 전체 생산성 향상은 25~30% 수준 에 머물 수 있음 Part I은 여러 에이전트가 장시간 병렬로 일할 수 있는 개발 환경, 전담 AI Ops 조직",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788137702.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33058?v=800dd5e1719358cae8f667d169b54212",
+  "link_status": "ok",
+  "ko_title": "에이전틱 각성 - 코딩이 10배 빨라져도 조직 생산성이 따라오지 않는 이유",
+  "summary": "20개 이상 기업의 CTO·엔지니어링 리더를 인터뷰한 결과, AI가 개인 코딩 속도를 10배 이상 높여도 전체 조직 생산성은 평균 25~30% 수준에 머물렀다. 이를 극복하려면 에이전트가 병렬로 작업할 수 있는 코딩 인프라, 전담 AI Ops 팀, 결과 중심의 측정 체계, 보안·규정 준수 구조 등 조직 전반의 인프라와 운영 방식을 동시에 바꿔야 한다. 또한, 요구사항 작성·리뷰·승인·배포 등 비코딩 단계가 새로운 병목이 되므로 1~5명 규모의 자율 팀과 짧은 계획 주기로 조직을 재설계해야 한다.",
+  "why": "AI 코딩 도구만 도입해도 생산성 향상이 제한적이므로, 실제 가치를 얻으려면 조직·프로세스 전반을 재구성해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Inter 대신 UI 글꼴을 고르는 두 가지 기준",
+  "url": "https://news.hada.io/topic?id=33057",
+  "description": "Inter 대신 UI 글꼴을 고르는 두 가지 기준 https://yeptype.com/article/inter-alternatives Inter 폰트가 UI에서 쓰기 편한 이유는 단순히 깔끔해서가 아니라, 대문자 높이가 글자 상자 중앙에 놓이는 vertical metrics 를 갖췄기 때문 글자 상자의 위아래 여백이 균형",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788137102.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33057?v=33515c7387ededf634d4298d1f1e09a8",
+  "link_status": "ok",
+  "ko_title": "Inter 대신 UI 글꼴을 고르는 두 가지 기준",
+  "summary": "UI에서 글꼴을 선택할 때는 대문자가 글자 상자 중앙에 위치하는 cap-centered vertical metrics와 소문자 높이가 대문자의 70~75% 수준인 높은 x-height를 만족해야 한다. 이러한 두 조건을 동시에 만족하는 글꼴이 버튼·아이콘 정렬을 별도 보정 없이 가능하게 하며, 현재 Inter 외에 Innovator Grotesk, Universal Sans, Plain, SwissNow 등 10개의 대안이 소개된다. CSS의 text-box-trim으로 vertical metrics는 보정 가능하지만 x-height는 조정할 수 없고, Firefox 미지원으로 아직 모든 환경에 적용하기는 어렵다.",
+  "why": "적절한 UI 글꼴 선택은 디자인 토큰을 단순화하고 컴포넌트 유지보수를 크게 줄인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "유럽의 극심한 여름 가뭄, 사막화 위협까지 키우고 있음",
+  "url": "https://news.hada.io/topic?id=33056",
+  "description": "유럽 각지의 가뭄과 폭염 이 강·호수·양식장을 말리고 수온 상승과 산소 부족을 일으켜 생태계와 수산업을 동시에 타격함 헝가리 국토의 약 99% 가 심각하거나 극심한 가뭄 상태이며, 고온과 강수량 부족으로 식생이 줄어드는 사막화가 헝가리 대평원 상당 부분을 위...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788136661.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33056?v=ed6d52c027b8c5815f3a1b48b2ac3852",
+  "link_status": "ok",
+  "ko_title": "유럽의 극심한 여름 가뭄, 사막화 위협까지 키우고 있음",
+  "summary": "유럽 전역에서 가뭄과 폭염이 강·호수·양식장을 말려 수온 상승과 산소 부족을 초래해 어류 대량 폐사와 수산업 매출 손실을 발생시키고 있다. 헝가리에서는 양어장 1,588헥타르가 말라 280톤의 물고기가 죽었으며, 손실액은 약 13억 포린트(420만 달러)로 추정된다. 루마니아·체코·보스니아·슬로베니아·세르비아 등은 사료 축소·산소 공급·물 주입 등 긴급 조치를 취해 피해를 완화하고 있다. 장기적으로는 물 보존과 기후 변화 대응이 필요하다.",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "IKEA 가구 개조해 작업대 만들기",
+  "url": "https://news.hada.io/topic?id=33055",
+  "description": "작업대의 실용성과 거실 가구의 외관을 함께 얻기 위해 IKEA Kallax 2×2 와 남은 책상 상판을 조합해 사무실용 작업대 2개를 제작함 깊이 40cm 이하인 일반 수납장, 산업적인 작업대, 개당 약 1,000유로인 맞춤 가구, 디자인과 마감이 맞지 않는 주방 수납장 대신 직접 제작...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788136481.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33055?v=2eab073542fb5309aeaa2cd94111b0e7",
+  "link_status": "ok",
+  "ko_title": "IKEA 가구 개조해 작업대 만들기",
+  "summary": "IKEA Kallax 2×2와 남은 책상 상판을 결합해 80×60 cm 크기의 작업대 2개를 직접 제작했다. 기존 제품이 깊이·디자인·가격 면에서 요구를 충족하지 못해 비용 130 유로 수준으로 저렴하게 만들었으며, MDF와 고무판을 템플릿·사전 천공으로 조립해 진동 흡수 구조를 구현했다. 조립 과정에서 패널 손상 방지를 위한 나사 조임 정도 조절과 비대칭 구멍 보정이 필요했다.",
+  "why": "저가 부품으로 맞춤형 작업대를 만들면 예산을 절감하면서도 업무 환경에 최적화된 물리적 공간을 확보할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Why open source rocks – a new SM750 (Silicon Motion GPU) HDMI Driver",
+  "url": "https://github.com/KodeMunkie/sm750hdmifb",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 64,
+  "comments": 33,
+  "published_at": 1788115748,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 827.0,
+  "image": "https://opengraph.githubassets.com/1/KodeMunkie/sm750hdmifb",
+  "link_status": null,
+  "ko_title": "오픈소스가 멋진 이유 – 새로운 SM750 (Silicon Motion GPU) HDMI 드라이버",
+  "summary": "이 드라이버는 Linux 6.17 이상에서 SM750G10-AC 기반 SE-DP750A-HDMI PCIe 카드의 HDMI 출력을 2048 픽셀 너비 혹은 2560×1080 울트라와이드 해상도로 지원한다. Ubuntu 24.04·Linux Mint 22 환경에서 DKMS 패키지로 빌드·설치 가능하며, 기존 sm750fb 드라이버와 충돌을 방지한다. 현재는 특정 보드만 지원하며, 비표준 모드 사용 시 신호 손실 위험이 있다.",
+  "why": "동일한 저가 GPU 카드에 최신 Linux DRM 기능을 활용해 고해상도 출력과 성능 최적화를 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Continuous Diffusion Language Models (CDLM's)",
+  "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 49,
+  "comments": 14,
+  "published_at": 1788122813,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 740.0,
+  "image": "https://sander.ai/images/verin.jpg",
+  "link_status": "ok",
+  "ko_title": "연속 확산 언어 모델 (CDLM)",
+  "summary": "최근 연속 확산 기반 언어 모델 연구가 활발히 진행되고 있어, 이전에 이 분야가 정체되었던 상황에서 다시 주목받고 있다. 기존의 완전 이산 확산 방식이 주류를 이루었지만, 연속 확산 접근이 자동회귀 모델의 한계를 보완하며 새로운 생성 방법을 제시한다. 이 글은 최근 연구 동향을 정리하고, 연속 확산이 왜 지금 부상하는지에 대한 저자의 관점을 제공한다.",
+  "why": "자동회귀 한계 극복과 병렬 학습 효율성을 높일 수 있는 새로운 언어 생성 패러다임을 제시한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Tell Me About You",
+  "url": "https://dev.to/kenielzep97/tell-me-about-you-1hi4",
+  "description": "After sixty-seven published posts here, the comments have become one of the best parts of the work....",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 5,
+  "published_at": "2026-08-30T19:05:28Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 703.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdonrvpchb495b245th28.png",
+  "link_status": "ok",
+  "ko_title": "당신에 대해 말해 주세요",
+  "summary": "저자는 67개의 글을 올린 뒤 독자와의 댓글 교류를 강조하며, 이번 글에서는 자신을 소개한다. 그는 현재 매사추세츠 브랜다이스 대학에서 공식 농구 코치로 활동하고 있으며, PokeMMO PvP를 현대 체스처럼 전략적으로 즐긴다. 또한 자동화된 미래를 대비해 기계의 의사결정 과정을 이해하려는 목표를 밝힌다.",
+  "why": "개발자 커뮤니티에서 개인적인 배경과 사고방식을 공유함으로써 협업과 아이디어 교류에 도움이 된다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Native CORS support on GKE Gateway: Offloading cross-origin policy management to infrastructure",
+  "url": "https://dev.to/googlecloud/native-cors-support-on-gke-gateway-offloading-cross-origin-policy-management-to-infrastructure-3c0m",
+  "description": "Offload cross-origin preflight handling and header injection to Google Cloud Load Balancing with native CORS support on GKE Gateway.",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 15,
+  "comments": 1,
+  "published_at": "2026-08-30T19:09:03Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 693.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fyub1nq2p1e2apdkn4fgg.png",
+  "link_status": "ok",
+  "ko_title": "GKE 게이트웨이의 네이티브 CORS 지원: 인프라로 교차 출처 정책 관리 오프로드",
+  "summary": "GKE 게이트웨이와 인퍼런스 게이트웨이에 네이티브 CORS 필터가 프리뷰 형태로 추가되어, 기존 Ingress-Nginx에서 사용하던 어노테이션 없이도 교차 출처 요청을 처리할 수 있다. 이를 통해 백엔드 서비스마다 CORS 미들웨어를 구현할 필요가 없어 중복 로직과 프리플라이트 요청에 따른 리소스 소모를 줄인다. 또한 정책 관리가 로드밸런서 수준에서 일관되게 적용돼 설정 드리프트와 보안 위험을 최소화한다.",
+  "why": "인프라 차원에서 CORS를 처리하면 마이크로서비스 운영 비용과 보안 위험을 크게 낮출 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "I Added a Fourth Model Mid-Run. It Changed What My Field Test Could Prove.",
+  "url": "https://dev.to/debashish_ghosal/i-added-a-fourth-model-mid-run-it-changed-what-my-field-test-could-prove-418g",
+  "description": "Latest release: v0.2.2 — Aug 29, 2026   I did something I usually try hard not to do in a field...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-08-30T18:52:24Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 672.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0d8bspqi5db7hv230k49.png",
+  "link_status": "ok",
+  "ko_title": "중간에 네 번째 모델을 추가했다. 현장 테스트가 증명할 수 있는 것이 바뀌었다.",
+  "summary": "필드 테스트 도중 모델 구성을 변경해 네 번째 모델을 도입했으며, 이는 실험 범위를 확대해 다양성에 대한 보다 정확한 결론을 도출하게 했다. 기존 세 모델(GPT-4o-mini, Gemini 2.5 Flash, DeepSeek-V3)만으로는 대륙 간 최대 다양성 효과를 평가할 수 없었고, 추가 모델 덕분에 교차 대륙 페어링을 검증할 수 있었다. 이 과정에서 데이터 일관성이 일시적으로 깨졌지만, 최종 결과는 실험 설계가 질문에 답할 수 있는지를 판단하는 데 더 큰 가치를 제공한다.",
+  "why": "현장 테스트에서 모델 구성을 유연하게 조정하면 실험 목표에 맞는 충분한 다양성을 확보해 보다 신뢰성 있는 결론을 얻을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "What \"undo\" actually means when the target is a real repo, not a fixture",
+  "url": "https://dev.to/mahirhir/what-undo-actually-means-when-the-target-is-a-real-repo-not-a-fixture-4l1c",
+  "description": "Falsifier, stated before anything else   Here's the claim this post makes, and here's...",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-08-30T17:27:16Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 670.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcxjys4yn9imw17yv84ar.png",
+  "link_status": "ok",
+  "ko_title": "실제 저장소가 대상일 때 “undo”가 의미하는 바",
+  "summary": "이 글은 gx라는 도구가 공개 Git 저장소를 대상으로 네 단계(변경, 증명, 복구, 검증)를 수행하고 30초 이내에 완료한다는 주장을 검증한다. 저자는 left-pad 저장소를 복제해 git과 파일시스템 어댑터 각각에 대해 테스트했으며, 모든 단계가 성공하고 시간 제한을 초과하지 않았음을 확인했다. 또한 사용된 바이너리가 현재 공개 저장소와 일치하는지는 검증하지 않았다고 명시한다.",
+  "why": "실제 저장소에 대한 빠른 변경·복구 검증이 CI 파이프라인 등에 활용될 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Running Coding Agents in Parallel with Git Worktrees",
+  "url": "https://dev.to/servatj/running-coding-agents-in-parallel-with-git-worktrees-507i",
+  "description": "One repo, one PC, several agents working at once - and the merge step is just git.",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 1,
+  "comments": 2,
+  "published_at": "2026-08-30T21:29:33Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 668.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F62zqxude0q08lxwpf1uq.png",
+  "link_status": "ok",
+  "ko_title": "Git 워크트리를 활용한 코딩 에이전트 병렬 실행",
+  "summary": "동일 저장소 내에서 git worktree를 이용해 여러 작업 디렉터리를 만들면 각 코딩 에이전트를 별도 터미널에서 독립적으로 실행할 수 있다. 각 워크트리는 자체 브랜치를 갖지만 객체와 커밋은 공유하므로 푸시·풀 없이도 브랜치 병합이 가능하다. 이를 통해 로그인과 결제 같은 작업을 동시에 진행하면서 파일 충돌을 방지한다.",
+  "why": "로컬 환경에서 여러 자동화 작업을 동시에 수행하면서도 코드 충돌 없이 효율적으로 관리할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Supporting Thailand’s next generation of AI startups",
+  "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+  "description": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1787882400.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/2tIyHZ57iQlK3I0xifz9H9/7a9e9bee80e0e7d926a79d111e453342/supporting-thailand-next-generation-ai-startups--seo-v002.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "태국 차세대 AI 스타트업 지원",
+  "summary": "OpenAI와 태국 고등교육·과학연구혁신부가 8주짜리 AI 가속기를 공동 출범한다. 헬스케어·웰니스·교육 분야 10개 스타트업이 멘토링을 받아 프로토타입을 실용 제품으로 전환하도록 지원한다. 파트너로는 국가혁신청·마히돌대학·Techsauce 등이 참여한다.",
+  "why": "현지 AI 스타트업이 실제 서비스로 성장할 수 있는 실질적 지원을 받는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
+  "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+  "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+  "description": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1787821200.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6ZXqBy6YHRAp7pZUlmTbKY/c5520708839c4add08cde7eb2346041f/what-students-gain-chatgpt-critical-thinking--seo-clean-edges-v3.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "더 나은 답변, 넓은 사고: 학생들이 ChatGPT와 비판적 사고 훈련을 통해 얻는 것",
+  "summary": "보코니 대학 1천 명 이상의 1학년 학생을 대상으로 한 무작위 실험에서 ChatGPT 사용과 인과 추론 훈련이 각각 학생 과제의 품질·일관성과 아이디어의 독창성을 향상시킨 것으로 나타났다. 두 요소를 모두 적용받은 그룹은 두 효과를 모두 보였다. 연구진은 AI 활용이 답변을 다듬는 데 도움을 주지만, 과제 설계 시 독창성 같은 다른 평가 기준도 필요하다고 강조했다.",
+  "why": "AI 도구와 비판적 사고 교육을 동시에 활용하면 개발자가 설계하는 교육·학습 시스템의 효과를 극대화할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-08-31T10:05:25.629225+09:00",
+  "batch_label": "8월 31일 10:05"
+ },
+ {
   "title": "No AI Fridays",
   "url": "https://noaifridays.com/",
   "description": "",
