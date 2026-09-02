@@ -17,12 +17,13 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from news.core.tags import MAX_TAGS, tag_article  # noqa: E402
+from news.core.tags import tag_article  # noqa: E402
 
 
-def _t(title="", ko_title="", description="", summary=""):
+def _t(title="", ko_title="", description="", summary="", source=""):
     return tag_article({"title": title, "ko_title": ko_title,
-                        "description": description, "summary": summary})
+                        "description": description, "summary": summary,
+                        "source": source})
 
 
 # ------------------------------------------------------ 실측 오배정이 사라질 것
@@ -80,8 +81,20 @@ def test_generic_word_only_in_llm_title_does_not_tag():
                                 ko_title="비율 해킹 삭제")
 
 
-def test_max_tags_tightened():
-    assert MAX_TAGS <= 4
+def test_no_tag_cap_cross_topic_article():
+    """2026-08-31 zhaoxuya520 / reverse-skill — 8개 태그가 매칭됐는데 상한 4개에서
+    VOCAB 앞쪽 AI 그룹만 남고 security·open-source가 잘려 나갔다. 상한을 두지 않는다."""
+    got = _t(title="zhaoxuya520 / reverse-skill", ko_title="리버스-스킬",
+             description="Reverse Engineering / Authorized Penetration Testing / "
+                         "Security Research Skill Router Pack AI-powered routing "
+                         "Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients",
+             summary="reverse-skill은 사이버보안 스킬을 라우팅하는 패키지이며 현재 v1.0.1이 "
+                     "릴리스되었다. MIT 라이선스로 배포된다.",
+             source="github")
+    for tid in ("ai", "llm", "ai-agent", "ai-coding", "research", "security",
+                "open-source", "release"):
+        assert tid in got, (tid, got)
+    assert len(got) == 8
 
 
 def test_empty_article():

@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import re
 
-# 태그 어휘 — 순서가 우선순위다 (MAX_TAGS 초과 시 뒤쪽부터 버린다).
+# 태그 어휘 — 순서가 출력 순서다. 개수 상한은 두지 않는다 (remove-tag-cap).
 VOCAB: dict[str, dict] = {
     "ai": {
         "label": "AI",
@@ -228,8 +228,6 @@ WEAK_PATTERNS = {
     r"\binference\b", r"추론",
 }
 
-MAX_TAGS = 4
-
 _COMPILED = {tid: [re.compile(p) for p in spec["patterns"]
                    if p not in WEAK_PATTERNS]
              for tid, spec in VOCAB.items()}
@@ -266,7 +264,12 @@ def _title_of(article: dict) -> str:
 
 
 def tag_article(article: dict) -> list[str]:
-    """닫힌 어휘에서 매칭되는 태그를 우선순위(VOCAB 순서)대로 반환. 최대 MAX_TAGS개."""
+    """닫힌 어휘에서 매칭되는 태그를 전부 VOCAB 순서대로 반환.
+
+    개수 상한을 두지 않는다 — 예전 상한 4개는 VOCAB 앞쪽 AI 그룹이 자리를 다
+    차지해 "AI 도구 + 보안" 같은 교차 주제 기사에서 security·open-source가
+    통째로 잘려 나갔다 (2026-08-31 reverse-skill).
+    """
     text = _text_of(article)
     title = _title_of(article)
     got: list[str] = [tid for tid in VOCAB
@@ -281,10 +284,10 @@ def tag_article(article: dict) -> list[str]:
         if implied and implied not in got:
             got.append(implied)
 
-    # 어휘 순서로 정렬해 출력 순서를 안정화하고 상한을 적용
+    # 어휘 순서로 정렬해 출력 순서를 안정화
     order = {tid: i for i, tid in enumerate(VOCAB)}
     got.sort(key=lambda t: order[t])
-    return got[:MAX_TAGS]
+    return got
 
 
 def tag_all(articles: list[dict]) -> list[dict]:
