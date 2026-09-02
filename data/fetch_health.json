@@ -99,6 +99,22 @@
     "ok": 15
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-02T20:57:20+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "short": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=49522896",
+     "source": "hackernews",
+     "reason": "short"
+    }
+   ]
   }
  ]
 }
