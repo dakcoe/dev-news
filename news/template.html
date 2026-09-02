@@ -552,7 +552,7 @@ function rowHTML(d){
   if(d.src==='github' && d.delta) meta+='<span class="sep">·</span><span class="num">+'+d.delta.toLocaleString()+'</span>';
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
-  (d.tags||[]).slice(0,4).forEach(t=>{
+  (d.tags||[]).forEach(t=>{
     meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+tagLabel(t)+'</span>';
   });
   const isRead = read.has(d.url);
