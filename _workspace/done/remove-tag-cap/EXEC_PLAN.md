@@ -2,7 +2,7 @@
 
 - **타입**: fix
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 - **생성일**: 2026-09-02T12:18:20.094Z
 
 ## 목표
@@ -28,3 +28,4 @@
 - pytest 전체 통과
 - reverse-skill 기사 태그에 security 포함 (data/articles/2026-08.json 재태깅 결과)
 - docs/index.html 재렌더
+- **완료일**: 2026-09-02T12:19:31.422Z
