@@ -25,3 +25,6 @@ Work/design 레퍼런스(design-specimen-ledger.html)를 근거로 뉴스 페이
 - 제목/스니펫 위계가 이전보다 뚜렷, 스니펫 장행 제한
 - 기존 기능(선택 상태 .act, 읽음 .rd, 광고 레일) 회귀 없음
 - pytest + ruff 통과
+
+- **상태**: COMPLETED
+- **완료일**: 2026-09-02T04:03:14.151Z
