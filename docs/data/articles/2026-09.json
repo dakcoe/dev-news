@@ -1,5 +1,529 @@
 [
  {
+  "title": "Pre-Release of Polars 2.0",
+  "url": "https://pola.rs/posts/announcing-polars-2/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 212,
+  "comments": 60,
+  "published_at": 1788418748,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1204.0,
+  "image": "https://pola.rs/polars_2.0.0-rc1.png",
+  "link_status": "ok",
+  "ko_title": "Polars 2.0 사전 릴리스",
+  "summary": "Polars가 2.0 버전의 첫 릴리스 후보를 공개했으며, 주요 변경점은 LazyFrame 쿼리가 기본 스트리밍 엔진으로 실행돼 메모리 사용량과 성능이 크게 개선된다는 점이다. 스트리밍 엔진은 기존 설계 제약을 없애고 기본값을 보다 합리적으로 바꾸어 5배 가량 빠른 속도를 기대한다. 마이그레이션 가이드가 제공돼 기존 사용자들이 전환하기 쉽도록 돕는다.",
+  "why": "메모리 효율과 실행 속도가 크게 향상돼 데이터 처리 파이프라인 최적화에 직접적인 이점을 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Google avoids a breakup of its ad tech business",
+  "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
+  "description": "https://archive.ph/rlAbY https://www.reuters.com/legal/litigation/google-defeats-us-b...",
+  "source": "hackernews",
+  "upvotes": 411,
+  "comments": 289,
+  "published_at": 1788360376,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1144.5,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "구글, 광고 기술 사업 부문 분할을 피하다",
+  "summary": "구글은 미국 법무부와 여러 주가 제기한 반독점 소송에서 승소해 광고 기술 부문의 강제 분할을 면했다. 판결로 구글은 현재의 광고 플랫폼을 유지하며 기존 고객과 파트너 관계를 지속할 수 있게 되었다. 이번 결정은 구글의 광고 수익 구조와 시장 지배력을 그대로 유지한다는 점에서 주목받는다.",
+  "why": "광고 인프라를 직접 운영하는 개발자는 구글 광고 API와 데이터 접근 방식에 변동이 없음을 확인할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Meta closes in on the top with Muse Spark 1.3, and undercuts rivals on price",
+  "url": "https://the-decoder.com/meta-closes-in-on-the-top-with-muse-spark-1-3-and-undercuts-rivals-on-price/",
+  "description": "Meta has released Muse Spark 1.3, its fourth model in the series in five months. According to Artificial Analysis, the model gains the most on agentic benchmarks but still trails Claude Fable 5.1 and other top models. The strongest argument is price. At $0.55 per task, Muse Spark undercuts every comparably scored rival. The article Meta closes in on the top with Muse Spark 1.3, and undercuts rival",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788435941.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/07/meta_AI_logo.png",
+  "link_status": "ok",
+  "ko_title": "Meta, Muse Spark 1.3 출시로 선두에 근접하고 가격으로 경쟁사 제압",
+  "summary": "Meta가 Muse Spark 1.3을 공개했으며, xhigh 티어는 즉시 이용 가능하고 max 티어는 제한된 프리뷰 형태로 제공된다. 이 모델은 에이전시 작업에서 가장 큰 성능 향상을 보였지만, Claude Fable 5.1 등 최고 수준 모델보다 여전히 낮은 점수를 기록한다. 작업당 $0.55의 가격으로 동일 성능 등급 중 가장 저렴하며, 향후 오픈 웨이트 버전이 출시될 예정이다.",
+  "why": "비용 효율적인 고성능 모델을 찾는 백엔드·AI 개발자에게 매력적인 선택지가 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Anthropic ramps up Claude infrastructure with $35 billion Lambda deal",
+  "url": "https://the-decoder.com/anthropic-ramps-up-claude-infrastructure-with-35-billion-lambda-deal/",
+  "description": "Anthropic has signed a $35 billion cloud computing deal with Lambda, an Nvidia-backed cloud provider. The article Anthropic ramps up Claude infrastructure with $35 billion Lambda deal appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788423722.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/anthropic_claude.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic, $35 억 규모 Lambda 계약으로 Claude 인프라 확대",
+  "summary": "Anthropic은 Nvidia 지원 클라우드 제공업체 Lambda와 350억 달러 규모의 클라우드 컴퓨팅 계약을 체결하고 텍사스에 350 MW 데이터센터를 구축한다. 이 시설은 전 전직 암호채굴 기업인 Hut 8이 개발하며, Nvidia가 임대를 보유하고 있다. 이번 계약은 Anthropic이 IPO 준비와 AI 모델 Claude 및 Claude Code 수요 증가에 대응하기 위한 대규모 인프라 확장의 일환이다.",
+  "why": "AI 모델 서비스 확장으로 개발자들이 더 빠르고 안정적인 Claude 기반 도구를 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "노화한 뇌는 기억을 단순히 잊기보다 서로 뒤섞음",
+  "url": "https://news.hada.io/topic?id=33189",
+  "description": "18~74세 성인의 해마 활동을 분석한 결과, 노화한 뇌는 기억을 약하게 보존하는 데 그치지 않고 관련 없는 경험의 조각까지 폭넓게 재생해 잘못된 연결 을 만들 수 있음 젊은 성인은 학습과 회상 때의 뇌 활동 패턴 이 비슷할수록 정확도가 높았지만, 고령자에게서는...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788435159.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33189?v=1b63d3513edf3484c7704eb46e2c29bd",
+  "link_status": "ok",
+  "ko_title": "노화한 뇌는 기억을 단순히 잊기보다 서로 뒤섞음",
+  "summary": "연구팀은 18세에서 74세까지의 성인 61명을 대상으로 해마 활동을 MRI로 측정하고, 얼굴-사물·얼굴-장면 쌍을 학습·회상하도록 했다. 젊은 성인은 학습과 회상 단계의 뇌 패턴 유사성이 높을수록 정확도가 상승했지만, 고령자는 패턴이 유사할수록 사물과 장면을 뒤섞는 범주 간 오류가 증가했다. 해마 부피 감소와 주의력 차이만으로는 고령자의 이러한 혼동을 설명할 수 없으며, 기억 재생 과정에서 관련 없는 정보까지 폭넓게 검색되는 현상이 관찰되었다.",
+  "why": "기억 재생 시 불필요한 정보까지 연결되는 고령자의 뇌 특성을 이해하면, 연령별 기억 보강 전략을 설계하는 데 도움이 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "세계 최대 암흑물질 검출기, 이상한 입자 하나를 포착",
+  "url": "https://news.hada.io/topic?id=33188",
+  "description": "7톤의 액체 제논을 사용하는 LUX-ZEPLIN(LZ) 이 배경 현상으로 설명할 수 없는 단일 사건을 감지했지만, 암흑물질 발견으로 판단하기에는 통계적 근거가 크게 부족함 기존 5~55keV였던 검색 범위를 270keV 까지 넓힌 결과, 원자핵이 248keV의 높은 에너지로 반동한 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788431515.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33188?v=3a732297612adfb526127426e4dab64c",
+  "link_status": "ok",
+  "ko_title": "세계 최대 암흑물질 검출기, 이상한 입자 하나를 포착",
+  "summary": "LUX-ZEPLIN(LZ) 검출기가 검색 범위를 270 keV까지 확대한 뒤 248 keV 핵반동 사건 하나를 발견했지만, 일반적인 WIMP 모델로는 저에너지 사건이 다수 동반돼야 함에도 전혀 관측되지 않아 기존 가설과 다른 새로운 암흑물질 후보가 제시되고 있다. 통계적 우연일 확률은 약 200분의 1로, 검증을 위해 LZ 추가 데이터와 XENONnT·PandaX의 독립 실험이 필요하다.",
+  "why": "고에너지 단일 사건은 기존 WIMP 탐색 전략의 한계를 드러내며, 새로운 암흑물질 모델 연구에 직접적인 실험적 동기를 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Diffusion으로 OCR 디코딩 가속하기",
+  "url": "https://news.hada.io/topic?id=33187",
+  "description": "OCR 모델을 AR과 block diffusion 겸용으로 변환해, diffusion으로 초안을 쓰고 AR로 검증하는 self-speculative decoding — 품질 손실 없이 디코딩 3.85배 가속.",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788426078.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33187?v=3f20d4b83706d5174e5d9bc61f3e0a66",
+  "link_status": "ok",
+  "ko_title": "Diffusion으로 OCR 디코딩 가속하기",
+  "summary": "OCR 모델을 AR(autoregressive)과 block diffusion 방식으로 변환해 초안을 diffusion으로 생성하고, AR로 검증하는 self-speculative decoding 방식을 적용했다. 품질 손실 없이 디코딩 속도를 3.85배 가속했다. 해당 접근법은 기존 OCR 파이프라인의 효율성을 크게 높일 수 있다.",
+  "why": "OCR 처리 속도가 빨라지면 대량 문서 분석이나 실시간 텍스트 인식 작업에 필요한 인프라 비용을 절감할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "backend-data"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Show GN: GitHub Trend Radar - 빠르게 떠오르는 GitHub 저장소를 찾는 랭킹",
+  "url": "https://news.hada.io/topic?id=33186",
+  "description": "저는 얼리어답터라 새로 나온 도구를 빠르게 써보고, 괜찮은 건 주변에 공유하는 걸 좋아합니다. 그런데 GitHub Trending을 매일 봐도 상위권은 이미 Threads나 여러 커뮤니티에서 몇 번씩 본 저장소가 대부분이었습니다. 아직 잘 알려지지 않았지만 슬슬 반응이 오기 시작한 프로젝트를 찾으려면 GitHub를 직",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788420707.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33186?v=b3af432030ede29e9246203c4e5c5048",
+  "link_status": "ok",
+  "ko_title": "Show GN: GitHub Trend Radar - 빠르게 떠오르는 GitHub 저장소를 찾는 랭킹",
+  "summary": "Show GN은 2시간마다 GitHub 데이터를 새로 수집해 모멘텀, 급부상, 현재 열기 세 가지 기준으로 순위를 매기는 웹 서비스다. 언어·토픽 필터링, 과거 순위 조회, 공식 Trending과 비교 기능을 제공한다. 가입 없이 바로 사용 가능하며 한국어·영어와 라이트·다크 모드를 지원한다.",
+  "why": "새롭게 급부상하는 오픈소스 프로젝트를 빠르게 발견해 개발에 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "zg(zvec-grep) - 키워드를 넘어서는 로컬 검색 인프라",
+  "url": "https://news.hada.io/topic?id=33183",
+  "description": "Qwen 팀이 사람과 에이전트를 위한 로컬 우선 검색 도구 zg(zvec-grep) 를 오픈소스로 공개함. ripgrep의 정확한 텍스트 검색에 벡터 검색/BM25/하이브리드 검색을 결합해 코드와 문서를 자연어 의도로 탐색하고 정확한 위치까지 좁힐 수 있음 함수명이나 오류 문자열을 모르는 상태...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788410402.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33183?v=9bbbb20cb6a431738026244018ca3b19",
+  "link_status": "ok",
+  "ko_title": "zg(zvec-grep) - 키워드를 넘어서는 로컬 검색 인프라",
+  "summary": "Qwen 팀이 텍스트 검색 도구 ripgrep에 벡터 검색·BM25·하이브리드 검색을 결합한 로컬 우선 검색 인프라 zg를 오픈소스로 공개했다. 온디바이스에서 파일 스캔·임베딩·인덱싱·검색을 수행하며 16M 파라미터 임베딩 모델이 GPU 없이 동작한다. SWE-QA-Bench과 BrowseComp-Plus 평가에서 도구 호출·입력 토큰이 절반 가량 감소하고 정확도와 Judge 점수가 향상되었다. 현재 macOS·Linux·Windows CLI와 MCP를 지원하고, 향후 그래프·멀티모달 검색 등을 추가할 계획이다.",
+  "why": "로컬에서 고성능 의미 검색을 제공해 에이전트 기반 개발 워크플로우의 검색 비용과 지연을 크게 줄인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+  "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788393600.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://huggingface.co/blog/assets/grpo-with-trl-ifstruct/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "350M 모델을 100 GRPO 단계로 미세조정해 구조화된 출력 개선",
+  "summary": "이 가이드에서는 무료 GPU 환경(Colab·Kaggle)에서 350M 규모 모델을 100 GRPO 단계만에 미세조정하여 구조화된 출력 성능을 크게 향상시키는 방법을 제시한다. 미세조정된 모델은 IFStruct 벤치마크에서 21.1% 점수를 재현하며, 훨씬 큰 모델과 동등한 성능을 보인다. 평가 단계는 MacBook에서 llama.cpp를 이용해 OpenAI 호환 서버를 띄워 진행한다.",
+  "why": "작은 모델을 간단히 미세조정해 대형 모델 수준의 구조화 출력 품질을 얻을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Give Your Coding Agents a Memory You Own",
+  "url": "https://huggingface.co/blog/funes",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788393600.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://huggingface.co/blog/assets/funes/thumbnail.jpg",
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트에 직접 소유하는 메모리를 제공",
+  "summary": "funes는 로컬에서 동작하는 단일 바이너리로, 기존 코딩 에이전트(Claude Code, Codex, pi, Hermes)의 세션 로그를 인덱싱·검색·재정렬하여 지속적인 메모리 레이어를 제공한다. 설치 후 `funes add <agent>` 명령으로 첫 인덱스를 만들고, 이후 각 실행이 자동으로 새로운 턴을 추가해 점진적으로 업데이트된다. 에이전트는 과거 결정이나 이유를 필요할 때 자체적으로 기억을 호출해 대화 흐름에 바로 활용할 수 있다.",
+  "why": "에이전트가 과거 컨텍스트를 자동으로 재활용하면 디버깅·리팩터링 효율이 크게 향상된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Japanese–English Web Typography Is More Than Choosing a Japanese Font",
+  "url": "https://dev.to/jackdone/japanese-english-web-typography-is-more-than-choosing-a-japanese-font-ll",
+  "description": "This account is operated by someone affiliated with the Ichizenn project referenced in this article....",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 4,
+  "published_at": "2026-09-03T06:02:04Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 682.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4ya2rv3qnkpsc0voloc6.png",
+  "link_status": "ok",
+  "ko_title": "일본어-영어 웹 타이포그래피는 일본어 글꼴 선택 이상이다",
+  "summary": "일본어와 영어를 동시에 사용하는 웹 페이지에서 단순히 글꼴을 교체하고 크기를 조정하는 것만으로는 충분하지 않다. 두 언어의 줄 바꿈, 간격, 로딩 성능, 의미론적 마크업, 네비게이션 폭, 폼 디자인, 접근성 등 다양한 요소를 고려해야 한다. 이를 위해 HTML lang 속성을 적절히 선언하고, 언어별 스타일링을 적용해야 한다.",
+  "why": "언어별 타이포그래피를 올바르게 처리하면 사용자 경험과 접근성을 크게 향상시킬 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "My Dev.to CLI Got Its First Community PR. Image Uploads From Terminal.",
+  "url": "https://dev.to/sarvar_04/my-devto-cli-got-its-first-community-pr-image-uploads-from-terminal-4562",
+  "description": "devpub v0.3 adds image uploads via `devpub upload`. The catch: the Forem API has no image endpoint. Here's how we solved it, and the story of devpub's first external contributor.",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": "2026-09-03T11:36:02Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 677.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzfpzfxerc9qw0sbgul09.png",
+  "link_status": "ok",
+  "ko_title": "내 Dev.to CLI가 첫 커뮤니티 PR을 받았다. 터미널에서 이미지 업로드",
+  "summary": "커뮤니티 기여자 Harish가 devpub 저장소에 이미지 업로드 기능을 구현한 풀 리퀘스트를 제출했다. 이 기능은 기존 Forem API가 이미지 업로드 엔드포인트를 제공하지 않아 구현이 어려웠던 부분을 해결한다. 이제 `devpub upload <파일>` 명령 하나로 이미지가 S3에 업로드되고 URL을 바로 확인할 수 있다. 해당 기능은 devpub 0.3.0에 포함되어 배포된다.",
+  "why": "터미널에서 바로 이미지 업로드가 가능해져 글 작성 흐름을 크게 단축할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data",
+   "open-source",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "Memory Is Not Talent: Talent Is Pattern Recognition and Connection",
+  "url": "https://dev.to/sumit0rn/memory-is-not-talent-talent-is-pattern-recognition-and-connection-3bea",
+  "description": "We often confuse high memory capacity with intelligence or talent.  Someone can recall formulas,...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": "2026-09-03T10:20:22Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 674.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm8glj5ebq1hjace6dfiq.png",
+  "link_status": "ok",
+  "ko_title": "기억은 재능이 아니다: 재능은 패턴 인식과 연결",
+  "summary": "기억력과 재능을 혼동하는 경향이 있지만, 기억은 단순히 정보를 저장하는 역할에 불과하고 재능은 그 정보를 활용해 패턴을 인식하고 관계를 파악하며 새로운 해결책을 도출하는 능력이다. 저자는 기억에 의존하는 암기식 학습이 변형된 문제에 취약하다고 지적하고, 진정한 이해는 입력을 분석하고 원리를 적용해 새로운 상황에 대응하는 모델을 구축하는 과정이라고 주장한다.",
+  "why": "개발자는 방대한 문서를 기억하기보다 패턴을 찾아 적용하는 능력이 문제 해결에 핵심이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "AI-assisted genealogy",
+  "url": "https://dev.to/nfrankel/ai-assisted-genealogy-9cn",
+  "description": "My son recently came to me to brag about using AI to find our ancestors. While the results were...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-09-03T09:02:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 672.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjeg91ul98zpllf1gmdcg.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 기반 가계도 연구",
+  "summary": "개발자는 AI를 활용해 조상 탐색을 자동화하고, 한 달 만에 600명 이상의 인물을 수집해 일부 계통에서 12세대까지 확장했다. 프로젝트는 Git 저장소와 Cloudflare Pages를 이용해 관리했으며, 데이터는 GEDCOM 5.5.1 형식으로 저장했다. GEDCOM 형식과 최신 버전 차이에 대한 설명도 포함된다.",
+  "why": "AI를 이용해 대규모 가계도 데이터를 효율적으로 구축할 수 있음을 보여준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "f / prompts.chat",
+  "url": "https://github.com/f/prompts.chat",
+  "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+  "source": "github",
+  "upvotes": 198,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 198,
+  "score": 174.29999999999998,
+  "image": "https://opengraph.githubassets.com/1/f/prompts.chat",
+  "link_status": null,
+  "ko_title": "prompts.chat – 세계 최대 오픈소스 프롬프트 라이브러리",
+  "summary": "이 프로젝트는 ChatGPT, Claude, Gemini, Llama, Mistral 등 다양한 모델에서 사용할 수 있는 프롬프트 컬렉션을 제공한다. 기존 이름은 Awesome ChatGPT Prompts였으며, 웹사이트와 Hugging Face 데이터셋, GitHub 저장소를 통해 접근 가능하다. 자체 호스팅 옵션과 프롬프트 책도 제공한다.",
+  "why": "다양한 LLM에 적용 가능한 고품질 프롬프트를 한 곳에서 손쉽게 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "ByteByteGoHq / system-design-101",
+  "url": "https://github.com/ByteByteGoHq/system-design-101",
+  "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+  "source": "github",
+  "upvotes": 158,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 158,
+  "score": 160.29999999999998,
+  "image": "https://opengraph.githubassets.com/1/ByteByteGoHq/system-design-101",
+  "link_status": null,
+  "ko_title": "ByteByteGoHq / system-design-101",
+  "summary": "시스템 설계 인터뷰 준비와 전반적인 시스템 이해를 돕기 위해 시각 자료와 간단한 설명을 제공하는 오픈소스 레포지토리이다. API·웹 개발, gRPC, NAT, HTTP/2 등 다양한 주제를 다루는 가이드와 링크가 포함되어 있다. 각 가이드는 실무에서 바로 적용 가능한 사례와 개념 정리를 목표로 한다.",
+  "why": "시스템 설계 인터뷰 대비와 실제 서비스 아키텍처 설계에 바로 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
+  "title": "magnitudedev / magnitude",
+  "url": "https://github.com/magnitudedev/magnitude",
+  "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+  "source": "github",
+  "upvotes": 130,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 130,
+  "score": 150.5,
+  "image": "https://opengraph.githubassets.com/1/magnitudedev/magnitude",
+  "link_status": null,
+  "ko_title": "Magnitude — 로컬 모델에서 에이전트를 실행하는 오픈소스 추론 서버",
+  "summary": "Magnitude는 사용자의 하드웨어를 프로파일링해 적합한 로컬 모델을 자동으로 추천·다운로드·튜닝하고, 이를 에이전트와 연결해 실행한다. Pi, OpenCode, Hermes 등 다양한 에이전트와 호환되며, npm 패키지(@magnitudedev/cli)로 제공된다. 오프라인 환경에서도 무료로 사용할 수 있다.",
+  "why": "로컬에서 고성능 모델을 손쉽게 운영하면 데이터 프라이버시와 비용을 동시에 절감할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-03T20:55:41.749389+09:00",
+  "batch_label": "9월 3일 20:55"
+ },
+ {
   "title": "Muse Spark 1.3",
   "url": "https://developer.meta.com/ai/models/muse-spark/",
   "description": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
