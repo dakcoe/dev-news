@@ -1,5 +1,387 @@
 [
  {
+  "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+  "url": "https://news.ycombinator.com/item?id=49551096",
+  "description": "https://status.openai.com https://status.claude.com https://status.x.ai",
+  "source": "hackernews",
+  "upvotes": 190,
+  "comments": 152,
+  "published_at": 1788448021,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1436.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ask HN: OpenAI·Claude·Grok가 동시에 다운된 이유는?",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Nvidia to acquire Hugging Face",
+  "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
+  "description": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face...",
+  "source": "hackernews",
+  "upvotes": 255,
+  "comments": 78,
+  "published_at": 1788437433,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1344.0,
+  "image": "https://image.cnbcfm.com/api/v1/image/108358351-1788440424844-108358351-1788440038288-gettyimages-2151605984-BLOOMBERG_TECHNOLOGY_SUMMIT.jpg?v=1788452709&w=1920&h=1080",
+  "link_status": "ok",
+  "ko_title": "엔비디아, 허깅페이스 인수",
+  "summary": "엔비디아가 오픈소스 AI 플랫폼 허깅페이스를 129억 달러에 인수한다. 인수 후 허깅페이스는 오픈 플랫폼으로 유지되며 엔비디아는 인프라 확장과 전 세계 개발자·기관에 AI 접근성을 높일 계획이다. 이번 거래는 엔비디아의 두 번째 규모 큰 인수이며, 하드웨어를 넘어 AI 스택 상위 단계로 진입한다는 의미다.",
+  "why": "엔비디아의 AI 생태계 통합으로 오픈소스 모델 활용과 확장이 가속화된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware",
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+  "url": "https://huggingface.co/blog/Hcompany/neomme",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788441228.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6264f9655f6f2e14d6ac981c/GJ6FUbgFpq1x8RNOqzmz-.webp",
+  "link_status": "ok",
+  "ko_title": "NeoMME: 효율적인 멀티모달-네이티브·다국어 인코더",
+  "summary": "NeoMME는 260M과 800M 파라미터 규모의 멀티모달·다국어 인코더 패밀리로, 별도의 비전 타워나 인과 언어 모델 없이 텍스트 토큰과 이미지 패치를 하나의 양방향 Transformer가 처리한다. 마스크된 이산 확산 목표로 처음부터 학습했으며, ColPali 방식으로 시각 문서 검색에 파인튜닝해 한 번의 전방패스로 밀집 및 후기-상호작용 임베딩을 생성한다. 260M 모델은 NVIDIA L40S에서 2048×2048 이미지 입력 시 초당 51 페이지를 인코딩해 기존 모델 대비 두 배 이상의 처리량을 보이며, 계층 토큰 풀링과 비대칭 양자화로 페이지당 인덱스 저장량을 255배 압축한다. 모델은 Hugging Face Transformers에서 Apache 2.0 라이선스로 제공된다.",
+  "why": "검색·분류·토큰 라벨링 등 비생성 작업에 불필요한 인과 디코더를 제거해 효율성을 크게 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Pangram's biggest flaw is users turning its scores into public shaming",
+  "url": "https://the-decoder.com/pangrams-biggest-flaw-is-users-turning-its-scores-into-public-shaming/",
+  "description": "Pangram hired an \"attack dog\" to shame alleged AI users on social media. But the campaign blurs two things that aren't the same: Pangram only somewhat reliably measures whether AI was used, while the shaming implies the person didn't think or work on their own. A high AI score hits a text built on hours of original research just as easily as one cranked out from a ten-second prompt. The article Pa",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788458846.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/07/pangram_logo.png",
+  "link_status": "ok",
+  "ko_title": "팬그램의 가장 큰 결점은 사용자가 점수를 공개 비난으로 전환한다",
+  "summary": "팬그램은 AI 텍스트 감지 서비스를 제공하면서 기자를 고용해 소셜 미디어에서 AI 사용자를 공개적으로 비난하도록 했으며, 이후 해당 기자와의 계약을 종료했다. 그러나 CEO 맥스 스페로는 여전히 팬그램 점수를 이용해 의심되는 AI 사용자를 지적하고 있다. 팬그램의 도구는 AI 사용 여부만을 측정하지만, 비난은 사용자가 생각하거나 직접 작업하지 않았다는 의미를 내포한다.",
+  "why": "AI 사용 여부 판단 도구가 비난 수단으로 전락하면 신뢰성과 윤리적 활용에 문제가 생긴다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Nvidia buys the front door to open AI as closed labs increasingly design their own silicon",
+  "url": "https://the-decoder.com/nvidia-buys-the-front-door-to-open-ai-as-closed-labs-increasingly-design-their-own-silicon/",
+  "description": "Nvidia plans to acquire Hugging Face for about $12.9 billion, securing the central platform for open AI models. More than 18 million developers and 200,000 companies use the hub. CEO Jensen Huang promises to keep the platform open and hardware-neutral, but the deal also hands him a powerful distribution channel for compute. The article Nvidia buys the front door to open AI as closed labs increasin",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788445537.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2-1536x864-1.png",
+  "link_status": "ok",
+  "ko_title": "Nvidia, 폐쇄형 연구실이 자체 실리콘을 설계하는 가운데 오픈 AI 진입문을 인수",
+  "summary": "Nvidia가 약 129억 달러에 Hugging Face를 인수한다는 계획을 발표했다. 인수 후에도 플랫폼은 오픈 및 하드웨어 중립성을 유지하며, Nvidia는 자체 칩 외에도 다른 클라우드와 칩을 지원한다. Hugging Face는 1800만 명 이상의 개발자와 20만 개 이상의 기업이 이용하는 주요 오픈 AI 모델 허브이다. 거래는 2027년 상반기까지 완료되지 않으며 규제 승인이 필요하다.",
+  "why": "오픈 AI 모델 허브를 직접 소유함으로써 Nvidia는 AI 인프라 생태계 전반에 걸친 영향력을 확대한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "K2 Horizon: A connected fleet of six open models",
+  "url": "https://ifm.ai/blog/k2/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 144,
+  "comments": 41,
+  "published_at": 1788449803,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1011.0,
+  "image": "https://ifm.ai/blog/k2/assets/k2-horizon-social.webp",
+  "link_status": "ok",
+  "ko_title": "K2 Horizon: 여섯 개 오픈 모델의 연결된 군집",
+  "summary": "IFM이 0.9B부터 375B까지 여섯 가지 규모의 모델을 공개했으며, 각 모델은 해당 규모에서 최고 수준의 성능을 기록한다. 36B 모델은 새로운 MoVA 메커니즘으로 큰 모델에 버금가는 효율을 보인다. 모든 모델에 대해 사전학습부터 에이전트 후학습까지 전 과정을 공개하고, Apache 2.0 라이선스로 배포한다.",
+  "why": "완전 공개된 에이전트 모델군을 통해 모델 개발·튜닝 과정을 직접 검증·재현할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Audacity 4.0.0 Released",
+  "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 23,
+  "comments": 6,
+  "published_at": 1788443563.188,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "cross_source_count": 1,
+  "score": 929.5999999999999,
+  "image": "https://opengraph.githubassets.com/1/audacity/audacity",
+  "link_status": null,
+  "ko_title": "Audacity 4.0.0 출시",
+  "summary": "Audacity가 4.0.0 버전을 공개했으며, 완전 새로운 UI와 대규모 구조 개편이 진행 중이다. 현재 master 브랜치는 신규 기여자에게 친화적이지 않으며, 기존 3.x 버전은 `audacity3` 브랜치를 통해 패치를 제출할 수 있다. 3.x와 4.0 빌드 방법이 각각 별도 문서에 제공된다.",
+  "why": "새로운 UI와 리팩터링으로 향후 오디오 편집 워크플로우가 크게 개선될 가능성이 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": ".name 3단계 도메인 종료",
+  "url": "https://news.hada.io/topic?id=33197",
+  "description": "Verisign이 관리 단순화를 위해 .name 3단계 도메인 전체 폐지 를 제안하고 ICANN이 승인하면서, 약 25년간 운영된 neil.fraser.name도 사라질 예정임 -.name은 일반적인 하위 도메인 재판매와 달리 xxx.yyy.name을 등록기관에서 직접 등록하고 WHOIS 기록 을 제공하도록 설계...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788456706.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33197?v=c0ddfbf2658ab2326b5e1253d8e05e7a",
+  "link_status": "ok",
+  "ko_title": ".name 3단계 도메인 종료",
+  "summary": "Verisign이 관리 단순화를 이유로 .name 3단계 도메인 전체 폐지를 제안했고 ICANN이 승인했다. 이로 인해 25년간 운영된 neil.fraser.name이 2월에 사라지며, 해당 도메인에 연결된 웹사이트·이메일·API·IoT 기기가 중단된다. 도메인 소유자가 fraser.name을 다른 사람이 등록하면 기존 계정 탈취와 IoT 기기 제어권 획득 위험이 발생한다. 약 22,000명의 사용자가 도메인을 잃을 수 있다.",
+  "why": "도메인 폐지로 서비스 중단과 계정 탈취 위험이 발생해 기존 인프라를 유지하던 개발자에게 큰 영향을 미친다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Polars 2.0 프리릴리스",
+  "url": "https://news.hada.io/topic?id=33196",
+  "description": "첫 릴리스 후보 Polars 2.0rc1 은 대규모 기능 추가보다 기존 설계 제약을 없애고 기본 동작과 API를 개선하는 데 초점을 맞춤 모든 LazyFrame 쿼리가 기본적으로 스트리밍 엔진 을 사용하면서 메모리 효율과 실행 성능이 개선되며, 전체적으로 약 5배 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788453394.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33196?v=915d20f7ad568fed8f145c832d0b082a",
+  "link_status": "ok",
+  "ko_title": "Polars 2.0 프리릴리스",
+  "summary": "Polars 2.0rc1은 기본 LazyFrame 실행 엔진을 스트리밍으로 전환해 메모리 사용량을 줄이고 실행 속도를 약 5배 향상시킨다. 스트리밍 엔진은 join·group_by·unpivot 등에서 행 순서를 보장하지 않으며, 필요 시 maintain_order 옵션을 지정해야 한다. 타입 변환 검증이 강화돼 is_in 의 손실 변환이 금지되고, 높이가 다른 수평 결합 시 ShapeError가 발생한다. 향후 외부 메모리 처리, 새 IO 플러그인, 비용 기반 플래너 등 추가 기능이 예정돼 있다.",
+  "why": "데이터 파이프라인의 성능과 오류 조기 탐지가 개선돼 백엔드 처리 효율을 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "ChatGPT 페이지에서 404 오류 발생",
+  "url": "https://news.hada.io/topic?id=33195",
+  "description": "404 오류 가 발생한 ChatGPT 페이지는 AI 대화 입력창과 사진·파일·웹 검색 기능을 제공함 로그인하면 저장된 대화를 검색해 이전 작업을 이어가고 맞춤형 답변 을 받을 수 있음 Deep research 는 여러 단계로 조사하고 출처를 비교해 인용...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788453214.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33195?v=3f5f2139bfdb92c5f59b5dd427e45dc4",
+  "link_status": "ok",
+  "ko_title": "ChatGPT 페이지에서 404 오류 발생",
+  "summary": "404 오류가 발생한 페이지에서는 AI 대화 입력창과 사진·파일·웹 검색 등 다양한 기능을 제공한다. 로그인 시 저장된 대화 검색, Deep research 보고서 저장, 이미지 생성 등 고급 기능을 이용할 수 있다. 데이터 사용은 모델 개선에 활용될 수 있으며, 설정에서 제어 가능하다.",
+  "why": "로그인 후 활용 가능한 고급 기능이 개발자 작업 효율을 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media",
+   "research"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Fable 5.1 월드 모델링",
+  "url": "https://news.hada.io/topic?id=33194",
+  "description": "Claude Fable 5.1 에이전트 군집이 실제 장소를 조사하고 3D로 모델링한 뒤 검수까지 수행해, 브라우저에서 직접 탐색할 수 있는 세계 로 재구성함 단순히 3D 장면 하나를 생성한 것이 아니라 자료 조사, Blender 자산 생성, Three.js 조립, 실제 사진과의 비교, 전문 역할별 검토를 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788449501.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33194?v=ec560980e7d2eb6024b0cd20be920a95",
+  "link_status": "ok",
+  "ko_title": "Fable 5.1 월드 모델링",
+  "summary": "Claude Fable 5.1 에이전트 군집이 실제 장소를 조사·3D 모델링·검수까지 자동화해 브라우저에서 탐색 가능한 세계를 만든다. 샌프란시스코 Union Square와 교토 Higashiyama를 각각 3D·2D 혼합 렌더링으로 구현했으며, 전체 파이프라인은 Blender, Three.js, OSM 데이터 등을 활용한다. 실행당 800만 토큰·API 비용 33달러가 소요되었다.",
+  "why": "개발자는 최소 비용·코드만으로 실제 환경을 재현하는 자동 파이프라인을 활용해 인터랙티브 지도·시뮬레이션을 빠르게 구축할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Show GN: First Mind - 정보보안에 있어서 진입장벽을 없애보자",
+  "url": "https://news.hada.io/topic?id=33193",
+  "description": "배경 나는 고1이며 초4때 프로그래밍을 접해 지금까지 보안과 개발을 독학중임. 정보보안을 어릴 때 부터 공부해온 입장에서 가장 힘들었던 것은 난해한 설명과 추상성이었음. 지금은 나에게 너무나도 당연한 개념이나 혼자 dreamhack 강의만을 통해 공부하기는 무리를 느낀 용어들도 있음....",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788444742.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33193?v=79c2781517e5dcff7bf0cfd6dd0d97d6",
+  "link_status": "ok",
+  "ko_title": "Show GN: First Mind - 정보보안에 있어서 진입장벽을 없애보자",
+  "summary": "고등학생이 직접 개발·유지보수·강의 제작을 맡아 정보보안 교육 사이트를 구축하고 있다. 현재 네트워크·보안 자료를 Claude Opus 4로 정규화하고 Android·eBPF 강의를 추가로 준비 중이며, 결제 시스템을 도입했지만 유료화는 계획하지 않는다. 사이트는 다양한 커뮤니티에 공개돼 피드백을 받고 있다.",
+  "why": "정보보안 학습 진입장벽을 낮추려는 시도로, 실무 수준 자료를 무료로 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "open-source",
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
+  "title": "Sanders introduces bill to ban artificial superintelligence and pause AI",
+  "url": "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 38,
+  "comments": 22,
+  "published_at": 1788456029,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 742.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "샌더스, 인공 초지능 금지 및 AI 개발 일시 중단 법안 소개",
+  "summary": "상원의원 버니 샌더스와 하원의원 그렉 카사르가 인공 초지능 개발과 배포를 영구 금지하고, 연방 규제기관이 안전 규칙을 마련할 때까지 고도 AI 개발을 일시 중단하는 법안을 발표했다. 이 법안은 초지능 AI가 전 세계 어디서든 개발되지 않도록 국제 협약을 추진하도록 미국에 요구한다. 최근 주요 AI 기업들이 기술 통제 실패 사례를 인정한 배경에서 제안된 조치이다.",
+  "why": "초지능 AI의 위험을 사전에 차단함으로써 개발자와 기업이 안전 규제에 맞춰 기술을 설계하도록 압력을 가한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "hardware"
+  ],
+  "batch": "2026-09-04T03:20:59.076590+09:00",
+  "batch_label": "9월 4일 03:20"
+ },
+ {
   "title": "Pre-Release of Polars 2.0",
   "url": "https://pola.rs/posts/announcing-polars-2/",
   "description": "",
