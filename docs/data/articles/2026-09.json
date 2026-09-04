@@ -1,5 +1,452 @@
 [
  {
+  "title": "GPT-6 Astra",
+  "url": "https://openai.com/index/gpt-6-astra/",
+  "description": "System Card:  https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3  -  https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index  -  https://news.ycombinator.com/item?id=49556147",
+  "source": "hackernews",
+  "upvotes": 1253,
+  "comments": 981,
+  "published_at": 1788460865,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 6049.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6ibCaqsoO7F6XCNCIO8zaZ/9475cdebc1f0af100414f1c85860fc4c/Hero_16x9.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra",
+  "summary": "OpenAI가 GPT-6 Astra 모델을 발표했다. 이 모델은 컴퓨터 사용, 브라우징, 소프트웨어 엔지니어링, 사이버보안, 과학, 전문 업무 등에서 최첨단 성능을 보이며, FrontierMath Tier 4에서 98%, ARC-AGI-3에서 99.9%, ExploitBench에서 100% 점수를 기록했다. 현재 제한된 조직에 제공 중이며, 곧 ChatGPT Plus·Pro·Business·Enterprise 사용자와 OpenAI API·AWS를 통해 전면 공개될 예정이다.",
+  "why": "개발자는 Astra를 활용해 코드 자동화·테스트·배포 등 반복 작업을 신뢰성 있게 자동화할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "ai-safety",
+   "research",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+  "url": "https://inference-docs.cerebras.ai/models/overview",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 435,
+  "comments": 126,
+  "published_at": 1788460333,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1848.0,
+  "image": "https://cerebras-inference.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DDocumentation%26title%3DModel%2BCatalog%26description%3DBrowse%2Ball%2Bmodels%2Bavailable%2Bon%2BCerebras%2Bpublic%2Bendpoints.%26theme%3D0d969de00f05bf51f42e2bb2&w=1200&q=100",
+  "link_status": "ok",
+  "ko_title": "Cerebras에서 Qwen 3.8 27B 모델을 초당 1500 토큰 속도로 제공",
+  "summary": "Cerebras가 Qwen 3.8 27B 모델을 공개 API를 통해 제공하며, 초당 1500 토큰의 처리 속도를 달성했다. 제공되는 모델은 원본 그대로이며, 프루닝되지 않은 상태로 저장 시 선택적 weight-only 양자화(16-bit/8-bit/4-bit)만 적용한다. 프루닝 모델은 Hugging Face에 별도 공개돼 연구용으로만 이용 가능하다.",
+  "why": "고속 토큰 처리와 원본 품질 보존 덕분에 대규모 언어 모델을 실시간 서비스에 적용하기 용이하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "science"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Nvidia, Hugging Face를 약 19조원에 인수하기로 공식 합의",
+  "url": "https://news.hada.io/topic?id=33207",
+  "description": "GPU 중심의 Nvidia가 약 129억 달러($12.9b)에 Hugging Face를 인수하기로 공식 합의 하며 AI 플랫폼으로 사업 영역을 확장함 인수 후에도 Hugging Face를 전체 AI 생태계를 위한 개방형 플랫폼 으로 유지하고, Nvidia 컴퓨팅을 사용하지 않아도 모델과 서비스를 자유...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788481891.0,
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/33207?v=928c28766b6891eacd797700c6c1fe8b",
+  "link_status": "ok",
+  "ko_title": "Nvidia, Hugging Face를 약 19조원에 인수하기로 공식 합의",
+  "summary": "Nvidia가 약 129억 달러(대략19조원) 규모로 Hugging Face를 인수하기로 합의했으며, 인수 후에도 플랫폼을 개방형으로 유지하고 Nvidia 컴퓨팅에 의존하지 않도록 할 계획이다. 거래는 2027년 상반기 완료를 목표로 하며, 주주에게 119억 달러, 직원 장기 보상에 최대 10억 달러가 배정된다. 이번 인수는 Nvidia 역사상 두 번째로 큰 거래이며, AI 생태계 전반에 대한 영향력을 확대한다.",
+  "why": "Nvidia가 AI 모델·데이터 플랫폼을 직접 확보해 개발 흐름과 인프라 선택권을 넓히게 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+  "url": "https://arcprize.org/blog/astra",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 157,
+  "comments": 90,
+  "published_at": 1788464700,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1184.0,
+  "image": "https://arcprize.org/media/images/blog/astra-action-efficiency.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI의 GPT-6 Astra on ARC-AGI-3",
+  "summary": "GPT-6 Astra는 ARC-AGI-3 벤치마크에서 62.7% 정확도로 2만6천 달러, 99.9% 정확도로 1만9천 달러 비용의 하니스 옵션을 사용해 높은 성능을 기록했다. 인간 평균보다 96% 수준에서 적은 행동 수로 과제를 해결했으며, 익숙하지 않은 환경을 논리 규칙 기반의 상징적 세계 모델로 압축해 자체 도메인 언어를 만들어 상태를 추적하고 계획한다. ARC-AGI-3는 인간이 100% 해결 가능한 추상적 턴제 환경을 통해 에이전트의 탐색·모델링·계획 능력을 평가한다.",
+  "why": "에이전트가 자체 모델을 구축하고 효율적으로 행동을 계획하는 능력은 차세대 AI 어플리케이션 개발에 핵심적인 인사이트를 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "GPT‑6 Astra",
+  "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+  "description": "GPT‑6 Astra GPT-6 Astra is \"rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API and AWS\" - I've not tried it yet myself, so I don't have a great deal to say about it yet. It's going to be API priced at the same rate as Claude Fable 5 and 5.1: $10/million input ",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788466721.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra 출시",
+  "summary": "오늘부터 제한된 조직에 제공되며 곧 ChatGPT Plus·Pro·Business·Enterprise 사용자와 OpenAI API·AWS에서도 이용 가능해진다. 입력당 $10, 출력당 $50의 가격으로 Claude Fable 5·5.1과 동일하게 책정된다. ARC-AGI 3 벤치마크에서 99.9% 점수를 기록했으며, ExploitBench 등 보안 과제에서 100%에 가까운 성능을 보인다. 긴 컨텍스트 처리에서도 256K-512K 토큰 구간에서 100% 정확도를 달성했다.",
+  "why": "보안 및 장기 대화가 중요한 백엔드·AI 서비스에 최신 고성능 모델을 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "GPT-6 Astra is the first model making OpenAI willing to declare the \"AGI era\"",
+  "url": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
+  "description": "OpenAI has released GPT-6 Astra, its most capable model yet. President Greg Brockman says it marks the start of the \"AGI era.\" Astra tops benchmarks in math, coding, and cybersecurity and is the first model OpenAI rates as \"critical\" under its safety framework. During testing, it independently found two previously unknown zero-day vulnerabilities. The article GPT-6 Astra is the first model making ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788463540.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_logo_astra-2.png",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra, OpenAI가 “AGI 시대”를 선언하도록 만든 최초 모델",
+  "summary": "OpenAI가 가장 성능이 뛰어난 GPT-6 Astra 모델을 출시했으며, 유료 ChatGPT 이용자와 클라우드 플랫폼에 곧 제공될 예정이다. 벤치마크에서 Astra는 전 모델인 GPT-5.6 Sol과 Anthropic의 Fable 5 모델을 논리·수학·소프트웨어 엔지니어링 등 주요 분야에서 크게 앞선다. 토큰 가격은 2.5배 높지만 작업당 비용은 사용 사례에 따라 낮아질 수 있다.",
+  "why": "기존 모델 대비 큰 성능 향상으로 고부가가치 AI 작업에 활용 가능성이 높다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "research",
+   "security",
+   "devops-infra",
+   "release",
+   "science"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "K2 Horizon: 6개 오픈 모델로 연결된 제품군",
+  "url": "https://news.hada.io/topic?id=33208",
+  "description": "IFM이 추론·수학·코딩·에이전트 작업을 아우르는 K2 Horizon 모델 6종 을 공개했으며, 0.9B·3.7B·7B 모델은 각 크기 등급에서 최고 수준의 평가 결과를 기록함 모든 모델에서 사전학습부터 에이전트 후학습까지 중간 체크포인트·데이터·코드·설정·로그·평가·최종 가중치...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788482128.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33208?v=715dab9ff6f74ec15f0f8ac4b00c12ee",
+  "link_status": "ok",
+  "ko_title": "K2 Horizon: 6개 오픈 모델로 연결된 제품군",
+  "summary": "IFM이 추론·수학·코딩·에이전트 작업을 포괄하는 6종의 K2 Horizon 모델을 공개했으며, 0.9B·3.7B·7B 모델은 각 규모에서 최고 수준의 평가 결과를 기록했다. 모든 모델은 사전학습부터 에이전트 후학습까지 중간 체크포인트·데이터·코드·설정·로그·평가·최종 가중치를 Apache 2.0 라이선스로 제공해 학습 과정을 재현·확장할 수 있다. 36B-A4B와 375B-A23B는 MoE·MoVA 기법으로 토큰당 활성 파라미터를 제한하면서도 dense 모델에 근접한 성능을 보여준다.",
+  "why": "공개된 학습 과정과 코드로 자체 LLM 개발·튜닝 시 비용을 절감하고 투명성을 확보할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "CLIProxyAPI - AI 구독 계정을 호환 API로 노출하는 프록시",
+  "url": "https://news.hada.io/topic?id=33206",
+  "description": "ChatGPT Codex, Claude Code, Gemini, Grok Build, Antigravity 등의 OAuth 계정을 로컬 프록시에 연결해 , 여러 표준 형식의 API로 제공 별도의 API 키를 발급받지 않고도 기존 SDK, API 클라이언트와 코딩 에이전트에서 구독 계정의 모델을 호출할 수 있음 OpenAI Respons...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788481801.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33206?v=300bd13c04e116112e4d04cbb10586d8",
+  "link_status": "ok",
+  "ko_title": "CLIProxyAPI - AI 구독 계정을 호환 API로 노출하는 프록시",
+  "summary": "CLIProxyAPI는 ChatGPT, Claude, Gemini, Grok 등 다양한 AI 구독 계정을 로컬 프록시로 연결해 표준 API 형태로 제공한다. 별도 API 키 없이 기존 SDK와 클라이언트, 코딩 에이전트에서 모델을 호출할 수 있으며, 요청과 응답을 각 제공자 형식에 맞게 자동 변환한다. 스트리밍, WebSocket, 이미지 입력 등 다양한 인터페이스를 지원하고, 라운드 로빈 방식으로 여러 계정에 요청을 분산한다. Go SDK와 관리 API, 데스크톱용 EasyCLIProxyAPI 클라이언트도 제공한다.",
+  "why": "기존 AI SDK를 그대로 사용하면서도 여러 구독 모델을 하나의 프록시로 통합해 개발 효율을 높일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "브라우저의 메인 스레드는 비싸다",
+  "url": "https://news.hada.io/topic?id=33205",
+  "description": "브라우저 성능의 핵심은 ‘메인 스레드’를 어떻게 사용하는가에 달려 있다 프론트엔드 성능 문제는 단순히 코드가 느려서가 아니라, JavaScript·렌더링·이벤트 처리가 메인 스레드를 장시간 점유하기 때문에 발생하는 경우가 많음. 해결책은 크게 메인 스레드 안에...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788481277.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33205?v=052e8e4477a6590840f1f469181480cc",
+  "link_status": "ok",
+  "ko_title": "브라우저의 메인 스레드는 비싸다",
+  "summary": "메인 스레드가 JavaScript 실행, 이벤트 처리, 레이아웃·렌더링 등을 모두 담당해 긴 작업이 UI 지연을 초래한다. 이를 해결하기 위해 작업을 작은 단위로 나누고(Splitting), 묶어 처리하며(Batching), 우선순위를 지정하고(Prioritizing), 필요 없는 작업을 미루는(Deferring) 전략을 제시한다. 또한 Compositor·Web Worker 등 메인 스레드 외의 스레드로 작업을 옮겨 부하를 감소시킬 수 있다.",
+  "why": "메인 스레드 최적화는 프론트엔드 응답성을 높여 사용자 경험을 크게 개선한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Jujutsu 0.45.0",
+  "url": "https://news.hada.io/topic?id=33204",
+  "description": "Git 호환 버전 관리 시스템 Jujutsu 0.45.0에 분기된 커밋을 결합해 자동 해소하는 jj converge 명령이 추가됨 jj converge 는 휴리스틱 으로 대체 커밋을 만들며, 결과를 확정하기 어렵다면 사용자에게 묻거나 비대화형 모드에서 중단함...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788480130.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33204?v=5fe885b4e7549e70d14426289b0fd3d2",
+  "link_status": "ok",
+  "ko_title": "Jujutsu 0.45.0 출시",
+  "summary": "jj converge 명령이 추가돼 분기된 커밋을 자동으로 결합하고, 필요 시 사용자에게 확인을 요청하거나 비대화형 모드에서 중단한다. 설정 파일을 특정 파일로 지정할 수 있는 옵션(--file)이 도입됐으며, Git HEAD를 워크트리별로 추적하도록 내부 구조가 변경돼 다중 Git 워크트리 지원을 준비한다. 기존 저장소는 자동 마이그레이션되며, 여러 안정성 문제가 함께 수정되었다.",
+  "why": "자동 커밋 결합과 다중 워크트리 지원으로 복잡한 버전 관리 흐름을 간소화한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "How concerned should we be about Astra's recurrent architecture?",
+  "url": "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 83,
+  "comments": 44,
+  "published_at": 1788455406,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 898.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Astra의 순환 구조에 대해 얼마나 우려해야 할까",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+  "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 78,
+  "comments": 22,
+  "published_at": 1788470434,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 822.0,
+  "image": "https://armature.tech/assets/blog/coding-agents-tool-choice-3.png",
+  "link_status": "ok",
+  "ko_title": "Claude와 Codex, Cursor는 어떤 도구를 선택했을까? 1만7천 번 실행을 측정했다",
+  "summary": "연구팀은 수천 개의 공개 GitHub 저장소를 분석해 언어·프레임워크·서비스·배포 환경·팀 규모·코드 연령 등을 추출하고, 이를 기반으로 75개의 리포지터리를 10개 언어로 구성했다. 각 리포지터리에서 네 가지 개발자 페르소나가 제시한 실제 작업을 수행하도록 Claude, Codex, Cursor 등 코딩 에이전트를 실행해 1만7천 회 이상의 실험을 진행했다. 실험은 코드 일부와 서드파티 서비스 구현을 제거한 변형도 포함해 편향 없는 결과를 얻었다.",
+  "why": "실제 개발 환경과 다양한 요구 조건에서 AI 코딩 도구의 선택과 성능을 객관적으로 비교할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Claude Fable 5.1 decoded a centuries-old royalist message hidden in plain sight since 1653",
+  "url": "https://the-decoder.com/claude-fable-5-1-decoded-a-centuries-old-royalist-message-hidden-in-plain-sight-since-1653/",
+  "description": "Anthropic's Claude Fable 5.1 appears to have cracked a centuries-old number puzzle that researchers considered unsolved. The article Claude Fable 5.1 decoded a centuries-old royalist message hidden in plain sight since 1653 appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788444928.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/cyphral_distich.png",
+  "link_status": "ok",
+  "ko_title": "Claude Fable 5.1, 1653년부터 눈에 보이게 숨겨진 수세기 전 왕당파 메시지를 해독",
+  "summary": "Anthropic의 Claude Fable 5.1이 1653년 발표된 Sir Thomas Urquhart의 “Cyphral Distich”라는 64개의 숫자로 이루어진 암호를 44분 만에 인간 개입 없이 풀었다. 모델은 스스로 해결 가능한 퍼즐을 찾기 위해 다양한 문제를 탐색했으며, 각 숫자가 책의 특정 구절을 가리키는 방식을 이용해 “O God uphold King Charls the Second…”라는 문장을 복원했다. 이는 기존 모델들이 해결하지 못했던 수세기 미해결 퍼즐을 최초로 자동 해결한 사례이다.",
+  "why": "프론트라인 AI가 인간 없이도 오래된 암호 퍼즐을 해결할 수 있음을 보여줘, 복잡한 문제 탐색과 자동화된 추론에 대한 새로운 가능성을 제시한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+  "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+  "description": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788441300.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/lvizepLUAiputffdSjtue/f89a11ed639405a45b491f70c882f0de/SEO_Card___short_copy_example__1_.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "전방 방어자를 위한 Daybreak: 필수 서비스 보호를 위한 10억 달러",
+  "summary": "OpenAI가 전 세계 전방 방어자를 지원하기 위해 Daybreak 사이버 모델·제품·교육·기술 지원을 10억 달러 규모로 제공한다. 미국 내에서는 물·전기·지방 정부·은행 등 핵심 인프라를 보호하는 ‘Daybreak for America’ 프로그램과 MS-ISAC 파일럿을 진행한다. 또한 35개 이상의 기업 제품과 파트너 서비스를 Daybreak Defense Network에 통합해 기존 방어 워크플로에 AI 사이버 모델을 적용한다.",
+  "why": "사이버 방어에 AI를 도입해 핵심 인프라 보호를 강화할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
+  "title": "The await That Silently Breaks navigator.clipboard.writeText()",
+  "url": "https://dev.to/parsajiravand/the-await-that-silently-breaks-navigatorclipboardwritetext-10oe",
+  "description": "navigator.clipboard.writeText() only works while the document is focused and the user gesture is still fresh. Any await before the call can let both expire, so a copy button fails with an uncaught NotAllowedError and nobody ever sees why.",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": "2026-09-03T17:23:31Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 674.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fclipboard-writetext-focus-bug.png",
+  "link_status": "ok",
+  "ko_title": "클립보드에 텍스트를 쓰는 navigator.clipboard.writeText()를 조용히 깨뜨리는 await",
+  "summary": "클릭 후 짧은 시간 안에 다른 탭이나 창으로 전환하면 navigator.clipboard.writeText()가 silently 거부되어 클립보드에 내용이 복사되지 않는다. 이는 API가 클릭 순간에만 권한을 신뢰하기 때문에 발생한다. 기존 해결책(로딩 스피너, 오류 무시, 재시도)은 근본 원인을 해결하지 못한다.",
+  "why": "클릭 직후 포커스가 바뀌면 복사 기능이 실패해 사용자 경험이 크게 저하될 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-04T09:46:52.692972+09:00",
+  "batch_label": "9월 4일 09:46"
+ },
+ {
   "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
   "url": "https://news.ycombinator.com/item?id=49551096",
   "description": "https://status.openai.com https://status.claude.com https://status.x.ai",
