@@ -1,5 +1,558 @@
 [
  {
+  "title": "August newsletter is out",
+  "url": "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+  "description": "The August edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: We got more details on OpenAl's accidental cyberattacks One-shotting Raccoon Heist games with Fable 5 and Sol 5.6 Claude auto mode Understanding ChatGPT Work Model releases Miscellaneous bits and bobs My projects What I'm using at the momen",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788501280.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "8월 뉴스레터 발행",
+  "summary": "스폰서 전용 월간 뉴스레터가 8월 호로 공개되었으며, 스폰서이거나 새로 스폰서를 시작하면 해당 내용을 열람할 수 있다. 구독료는 월 $10이며, 구독자는 무료 사본보다 한 달 앞선 정보를 받는다. 이번 호에는 OpenAI의 우발적 사이버 공격 상세, Raccoon Heist 게임 관련 업데이트, Claude 자동 모드, ChatGPT 작업 이해 등 다양한 주제가 포함된다.",
+  "why": "스폰서 전용 최신 AI·툴 소식과 모델 업데이트를 빠르게 파악할 수 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Benchmarks disagree on GPT-6 Astra, but its human-beating efficiency on ARC-AGI-3 pulls Chollet’s AGI forecast forward",
+  "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+  "description": "OpenAI's GPT-6 Astra is drawing contradictory benchmark verdicts. Epoch AI puts it out in front with 169 points, while Artificial Analysis rates it no better than its predecessor and behind Claude Fable 5.1. The biggest surprise comes from ARC-AGI-3, where Astra works more efficiently than the average human for the first time. ARC Prize chief François Chollet doesn't call this proof of AGI, but he",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788520056.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_logo_astra-1.png",
+  "link_status": "ok",
+  "ko_title": "벤치마크가 GPT-6 Astra에 대해 의견이 엇갈리지만, ARC-AGI-3에서 인간을 능가하는 효율성으로 Chollet의 AGI 전망을 앞당긴다",
+  "summary": "Epoch AI와 Artificial Analysis가 각각 50여 개와 여러 테스트를 종합해 GPT-6 Astra에 대해 상반된 점수를 매겼다. Epoch AI는 169점으로 267 모델 중 1위를 기록했지만, Artificial Analysis는 전 모델과 동등한 61점에 머물렀다. ARC-AGI-3 테스트에서는 Astra가 평균 인간보다 두 배 빠른 효율을 보여, Fran시ois Chollet가 예상했던 AGI 도달 시점을 앞당겼다. 비용 면에서는 Astra가 텍스트 처리당 2.5배 비싸지만, 코딩 작업에서는 Anthropic 모델보다 절반 이하 비용으로 동일 점수를 얻는다.",
+  "why": "인간 수준 효율을 넘어선 모델 성능과 비용 구조 변화는 AI 서비스 비용 최적화와 AGI 연구 로드맵에 직접적인 영향을 미친다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Nvidia wants your home network to work like a mini data center for local AI",
+  "url": "https://the-decoder.com/nvidia-wants-your-home-network-to-work-like-a-mini-data-center-for-local-ai/",
+  "description": "Nvidia's PAIR (Personal AI Router) automatically spreads local AI requests across all available devices on a home network, cutting wait times for parallel agent tasks. The article Nvidia wants your home network to work like a mini data center for local AI appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788509175.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2025/12/nvidia_logo_wall_cb-1.jpeg",
+  "link_status": "ok",
+  "ko_title": "Nvidia, 로컬 AI를 위해 가정용 네트워크를 미니 데이터센터처럼 만들고자 함",
+  "summary": "Nvidia가 PAIR(Personal AI Router)라는 오픈소스 도구를 공개했다. PAIR는 가정 내 여러 장치에 로컬 AI 요청을 자동으로 분산시켜 GPU 과부하를 방지하고 응답 시간을 절반으로 단축한다. 지원 하드웨어는 RTX 20시리즈 이상, RTX Pro 워크스테이션, DGX Spark, Apple 실리콘(M4 이상)이며, Windows·macOS·Linux에서 베타 버전을 제공한다.",
+  "why": "로컬 AI 작업을 여러 기기로 분산해 비용과 대기 시간을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "AI가 만든 코드가 어드민이 되기까지",
+  "url": "https://toss.tech/article/52885",
+  "description": "실시간으로 생성되는 코드를 어드민 화면으로 보여 주기 위해, 개발 환경을 브라우저 안으로 옮긴 이야기를 소개해요.",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788511620.0,
+  "merged_sources": [
+   "rss"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.toss.im/disposables/contents/ai-to-admin-generative.png",
+  "link_status": "ok",
+  "ko_title": "AI가 만든 코드가 어드민이 되기까지",
+  "summary": "토스가 사내 어드민 제작 플랫폼 TOI를 출시해 AI가 API 스키마를 기반으로 React 코드를 자동 생성하도록 했다. 생성된 코드를 브라우저 내에서 실시간으로 실행·미리보기할 수 있도록 Dev Server와 사용자별 프리뷰 환경을 구현했으며, 2026년 2월 공개 이후 6개월간 439개 프로젝트와 2,418개 페이지가 만들어졌다.",
+  "why": "AI 기반 코드 생성과 브라우저 내 실시간 프리뷰가 어드민 개발 속도를 크게 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "바둑 세계 1위 신진서, 두 점 접바둑에서 AI KataGo에 승리",
+  "url": "https://news.hada.io/topic?id=33220",
+  "description": "첫판에서 크게 패한 신진서 9단이 세계 정상급 바둑 AI KataGo 를 상대로 두 판을 연이어 따내며 3번기 2-1 역전승 을 거둠 최종국에서는 흑으로 221수 만에 11.5집 차 로 이겼으며, 대국은 3시간 5분 동안 진행됨 전투보다 수비와 집 보존...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788517943.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33220?v=53da42e132a2cd2741ab5c215e2fde63",
+  "link_status": "ok",
+  "ko_title": "바둑 세계 1위 신진서, 두 점 접바둑에서 AI KataGo에 승리",
+  "summary": "신진서 9단이 2026년 7월 21일 서울에서 열린 최종국에서 KataGo와의 3번기 시리즈를 2-1로 역전승했다. 두 점 접바둑 조건 하에 초반 수비와 중반 절제된 공격으로 99% 승률을 유지했으며, 이는 현대 최고 수준 AI를 상대로 공식 시리즈에서 승리한 최초 인간 기사 기록이다. 대국료와 상금 2억5천만 원 및 Genesis G90 차량을 수상했다.",
+  "why": "인간 기사들이 AI와의 대국에서 전략을 자체적으로 재구성할 수 있음을 보여준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "MongoDB 컬렉션을 PostgreSQL로 복사하고 동기화하기",
+  "url": "https://news.hada.io/topic?id=33219",
+  "description": "MongoDB 컬렉션을 PostgreSQL로 복사한 뒤, 이후 발생하는 추가·수정·삭제까지 계속 동기화해 본 과정을 정리했습니다. 실제로 해 보니 동기화 자체보다 MongoDB 문서 구조를 PostgreSQL 테이블에 맞게 매핑하는 과정이 더 까다로웠습니다. 단순한 필드는 일반 컬럼으로 저장하고, 중첩된 객체와 배열은 JSONB",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788515642.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33219?v=506140975c45ff3e2b334e20f78a032f",
+  "link_status": "ok",
+  "ko_title": "MongoDB 컬렉션을 PostgreSQL로 복사하고 동기화하기",
+  "summary": "MongoDB 컬렉션을 PostgreSQL 테이블에 매핑하여 복사하고, 이후 발생하는 추가·수정·삭제를 실시간으로 동기화하는 과정을 정리했다. 매핑 시 단순 필드는 일반 컬럼으로, 중첩 객체와 배열은 JSONB 타입으로 저장했으며, 기본 키 부재와 필드명 차이로 인한 동기화 중단 문제를 해결했다. 테스트에는 VisuaLeaf 팀이 개발한 VisuaLeaf 도구를 사용했다.",
+  "why": "MongoDB와 PostgreSQL 간 데이터 마이그레이션 및 실시간 동기화 구현 방법을 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Show GN: GNUCMS - 웹호스팅에 올리면 바로 실행되는 PHP 게시판·CMS",
+  "url": "https://news.hada.io/topic?id=33218",
+  "description": "일반 웹호스팅(카페24 등)에 FTP로 올리고 브라우저에서 설치하면 끝나는 PHP 기반 커뮤니티·콘텐츠 관리 시스템 SQLite / MySQL·MariaDB / PostgreSQL 중 원하는 DB를 골라 쓸 수 있어, DB 서버 없이 SQLite 하나로도 운영 가능 Slim 기반에 순수 PHP 템플릿 엔진을 써서 서버 렌더링, 별도...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788506951.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33218?v=520e3c4e8129090985c589603ea99995",
+  "link_status": "ok",
+  "ko_title": "Show GN: GNUCMS - 웹호스팅에 올리면 바로 실행되는 PHP 게시판·CMS",
+  "summary": "GNUCMS는 PHP 8.2 이상에서 동작하는 오픈소스 CMS로, FTP만으로 일반 웹호스팅에 배포가 가능하고 별도 빌드 과정이 필요 없다. SQLite, MySQL·MariaDB, PostgreSQL 중 선택해 사용할 수 있어 DB 서버 없이도 운영이 가능하며, Slim 프레임워크와 자체 템플릿 엔진을 이용해 서버-사이드 렌더링을 제공한다. 배포 파일에 vendor 디렉터리가 포함돼 있어 서버에서 Composer를 실행할 필요가 없으며, 다양한 게시판 형태와 소셜 로그인, Cloudflare Turnstile 연동 등 풍부한 기능을 제공한다. 현재 버전은 0.2.0이며 MIT 라이선스로 배포된다.",
+  "why": "별도 서버 설정 없이 바로 배포 가능한 PHP 기반 CMS가 필요할 때 즉시 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "오랫동안 RHEL을 사용해 온 CERN, 산업용 컴퓨터를 Debian으로 전환",
+  "url": "https://news.hada.io/topic?id=33217",
+  "description": "CERN은 가속기 제어용 산업용 컴퓨터와 임베디드 시스템 을 CentOS에서 Debian으로 전환해, 2026년 말까지 2,200대 이상에 Debian 13을 배포할 계획임 자체 RHEL 계열 배포판인 Scientific Linux를 약 10년간 사용하고 2015년 CentOS로 옮긴 데 이어, 다시 약 10년 만에 일부 시스템의...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788505271.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33217?v=bf821f6249a542f20e799f2df755f943",
+  "link_status": "ok",
+  "ko_title": "오랫동안 RHEL을 사용해 온 CERN, 산업용 컴퓨터를 Debian으로 전환",
+  "summary": "CERN은 가속기 제어용 산업용 컴퓨터와 임베디드 시스템 2,200대 이상을 2026년 말까지 Debian 13으로 교체한다. 기존에 사용하던 Scientific Linux와 CentOS에서 전환했으며, CentOS Stream을 포기한 이유는 기본 컴파일러 플래그가 구형 하드웨어를 강제 노후화시킨다고 판단했기 때문이다. 전환 과정에서 패키지 자동 빌드·배포 도구 부족과 복수 버전 지원 부재가 과제로 남아 있다. 데이터센터와 실험용 컴퓨팅은 기존 RHEL/AlmaLinux를 유지한다.",
+  "why": "기존 RHEL 기반 인프라를 Debian으로 옮기는 사례는 유사한 레거시 환경을 가진 개발자에게 마이그레이션 전략과 도구 선택에 실질적인 인사이트를 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "The NX bit is not just about security",
+  "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 3,
+  "published_at": 1788503224.169,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "cross_source_count": 1,
+  "score": 883.4,
+  "image": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/og.png",
+  "link_status": "ok",
+  "ko_title": "NX 비트는 보안뿐 아니라",
+  "summary": "ARM64 기반 베어메탈 하이퍼바이저 개발 중 CTR_EL0 인터셉트를 활성화하면 기기가 무작위로 잠기고 재부팅되는 버그를 발견했다. 예외 처리 트램폴린과 스택 할당을 검증했으며, 레지스터 보존이나 쓰기 오류가 원인일 가능성을 조사했다. 현재 원인 분석 중이며, 해당 버그는 특수 기능 레지스터 접근 시 시스템 안정성에 영향을 줄 수 있다.",
+  "why": "특수 기능 레지스터 조작 시 시스템 크래시를 방지하는 방법을 이해하면 하이퍼바이저와 저수준 코드의 신뢰성을 높일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+  "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+  "description": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday.  It took an evening! Getting the feel right and shipping it took a few more weekends and evenings. I spent the last few weeks analyzing what Claude did, feeding it my 33 years of memory of how I built the game, my notes and the git repos. It wrote the first draft of the article, and I edited line by line over a week. The screenshots of my 1993 map editor is the first I have run it since then. The one thing I never verified myself is the 108-byte explanation. \"Before starting everything, the model assembled the code using vasm on my Mac, and kept going till the binary is byte-identical to the binaries I had in my original game. Even after that, the there was mismatch of about 108 bytes. I originally used AsmOne  which assembles into memory, and the game saved into the disk by saving that memory after running the game. So the original shipped files are a snapshot of the game that had already been running, not clean asm-one output.\" Please post any questions. I am also releasing the original game for free.",
+  "source": "hackernews",
+  "upvotes": 308,
+  "comments": 102,
+  "published_at": 1788445698,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 761.0,
+  "image": "https://www.babyloniantwins.com/img/og.jpg",
+  "link_status": "ok",
+  "ko_title": "LLM이 68000 어셈블리를 읽어 Godot로 1993년 아미가 게임 이식",
+  "summary": "1993년 이라크 바그다드에서 만든 아미가 전용 게임 “Babylonian Twins”을 LLM을 활용해 68000 어셈블리를 해석하고 Godot 엔진으로 재구현했다. 원본 디스크는 itch.io에서 무료로 제공되며, 재구현된 Definitive Edition도 공개됐다. 이 과정은 레거시 어셈블리 코드를 현대 엔진으로 옮기는 방법을 보여준다.",
+  "why": "레거시 하드웨어용 어셈블리 코드를 AI가 자동 변환해 최신 엔진에 적용할 수 있음을 입증한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "hardware",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "OpenAI agents hijacked German website in previously undisclosed AI breakout",
+  "url": "https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 34,
+  "comments": 26,
+  "published_at": 1788517857,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 746.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI 에이전트가 독일 웹사이트를 탈취, 이전에 공개되지 않은 AI 탈출 사건",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
+  "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 280,
+  "comments": 89,
+  "published_at": 1788452493,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 713.5,
+  "image": "https://d2rj6cu2ik1biv.cloudfront.net/193c804a-a673-47bd-b09b-11baf4822a17/9ac494a4-627d-4fea-a827-dcf588dd6f96/fd5ffa75-92b9-459b-9465-2f2d37321e0d/thumbnails/5fdb6aa7-15a3-4f1c-8980-ce664981a95c.jpeg?appId=f347d34d-c1a6-4a00-b570-b78c2dcb3211&w=1200",
+  "link_status": "ok",
+  "ko_title": "인공 비버 댐, 어린 연어 생존율 8%에서 60%로 상승",
+  "summary": "북캘리포니아 스콧 강 계곡에 인공 비버 댐을 설치해 습지를 복원한 결과, 위협받는 연어 종인 코호 연어의 어린 시절 생존율이 8%에서 60%로 크게 증가했다. 연구는 Frontiers in Ecology and Evolution에 발표됐으며, 인공 댐은 목재와 식물 재료로 간단히 구축했다. 비버가 남아 있던 지역에서는 비버가 직접 구조를 보수·확장하기도 했다.",
+  "why": "자연 서식지 복원을 통한 비용 효율적인 생물 보전 방법을 보여준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "AI Engineering Is Easy. Changing How We Work Is Hard",
+  "url": "https://dev.to/ujja/ai-engineering-is-easy-changing-how-we-work-is-hard-39j4",
+  "description": "AI engineering sounds fancy. New terms are everywhere: agentic development, AI-native engineering,...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 6,
+  "published_at": "2026-09-04T09:24:10Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 704.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fg3w3qarjxhlga0achtsj.png",
+  "link_status": "ok",
+  "ko_title": "AI 엔지니어링은 쉽다. 일하는 방식을 바꾸는 것은 어렵다",
+  "summary": "AI가 요구사항 정의, PRD 검토, UX 아이디어 탐색, 아키텍처 논의, 구현 계획 수립, 코드 작성 및 검증까지 개발 전 단계에 참여할 수 있게 되었다. 이러한 흐름은 기존 개발 프로세스를 다섯 단계(요구사항, 정제, 계획, 구축, 검증)로 나누어 AI가 각 단계에서 역할을 수행하도록 설계된다. AI는 요구사항을 명확히 하고 모호성을 찾아내는 보조 역할을 하며, 인간이 직접 수행하던 검토 작업을 부분적으로 자동화한다.",
+  "why": "AI를 활용해 요구사항 품질을 높이면 개발 효율과 코드 품질을 동시에 개선할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Building a Client-Side Number to Words Converter: A Lesson in Structural Parsing",
+  "url": "https://dev.to/hoangvibecode/building-a-client-side-number-to-words-converter-a-lesson-in-structural-parsing-2ppk",
+  "description": "Hey DEV community! 👋  In software engineering, text processing, and administrative workflows, we...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": "2026-09-04T08:15:07Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 675.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fru9svxeejjob3cf3x8y8.png",
+  "link_status": "ok",
+  "ko_title": "클라이언트 측 숫자를 영문 단어로 변환하는 도구 만들기: 구조적 파싱 학습",
+  "summary": "이 글은 브라우저에서 순수 JavaScript만 사용해 숫자를 영문 단어로 바꾸는 알고리즘을 소개한다. 3자리씩 나누어 스케일(천, 백만 등)을 적용하는 재귀적 분할 방식을 설명하고, 구현 코드를 제공한다. 클라이언트 측 변환으로 민감한 수치가 서버로 전송되지 않아 보안 이점도 강조한다.",
+  "why": "프론트엔드에서 숫자 포맷을 직접 처리하면 데이터 유출 위험을 줄일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "Stop Building AI Agents. Start Building AI Systems.",
+  "url": "https://dev.to/jaideepparashar/stop-building-ai-agents-start-building-ai-systems-5hda",
+  "description": "There's a phrase I keep seeing everywhere in AI development:  \"We need an AI agent.\"  Need to analyze...",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-09-04T05:27:08Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 672.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F60rakprbipzwp8hhkt3s.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트 구축을 멈추고 AI 시스템 구축을 시작하라",
+  "summary": "글에서는 AI 에이전트를 제품 자체로 보는 관행을 비판하고, 실제 사용자에게 필요한 것은 신뢰할 수 있는 전체 시스템이라고 주장한다. 에이전트는 전체 파이프라인의 한 구성 요소에 불과하며, 데이터 출처, 컨텍스트 검색, 오류 처리, 모니터링 등 시스템 전반의 설계와 운영이 중요하다고 강조한다. 저자는 에이전트 도입 여부를 결정하기 전에 워크플로우를 먼저 매핑할 것을 제안한다.",
+  "why": "AI 기능을 실제 서비스로 전환하려면 에이전트보다 시스템 전체의 안정성과 운영성을 확보해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "clshortfuse / renodx",
+  "url": "https://github.com/clshortfuse/renodx",
+  "description": "Renovation Engine for DirectX Games",
+  "source": "github",
+  "upvotes": 759,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 759,
+  "score": 370.65,
+  "image": "https://opengraph.githubassets.com/1/clshortfuse/renodx",
+  "link_status": null,
+  "ko_title": "renodx — DirectX 게임 모드 도구",
+  "summary": "RenoDX는 DirectX 기반 게임의 셰이더 교체, 버퍼 주입, 오버레이 추가, 스왑체인 및 텍스처 리소스 업그레이드, 사용자 설정 저장 등을 지원하는 모드 툴셋이다. Reshade의 애드온 시스템을 활용해 다양한 버전의 DirectX와 호환성을 확보한다. GitHub에서 CI·빌드 워크플로가 제공되며, FPS 제한기와 개발자 키트 등 부가 유틸리티도 포함한다.",
+  "why": "DirectX 게임에 손쉽게 기능을 추가·수정할 수 있어 그래픽·게임 개발자에게 실용적이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "anomalyco / opencode",
+  "url": "https://github.com/anomalyco/opencode",
+  "description": "The open source coding agent.",
+  "source": "github",
+  "upvotes": 314,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 314,
+  "score": 214.89999999999998,
+  "image": "https://opengraph.githubassets.com/1/anomalyco/opencode",
+  "link_status": null,
+  "ko_title": "anomalyco / opencode",
+  "summary": "오픈소스 AI 코딩 에이전트인 OpenCode가 공개되었습니다. npm 패키지(opencode-ai)로 설치 가능하며, Discord 커뮤니티와 CI 파이프라인을 제공하고 다국어 README가 준비돼 있습니다. 웹 기반 터미널 UI를 통해 브라우저에서 직접 사용할 수 있습니다.",
+  "why": "AI 기반 코딩 보조 도구를 프로젝트에 쉽게 도입할 수 있습니다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "bikini / exploitarium",
+  "url": "https://github.com/bikini/exploitarium",
+  "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+  "source": "github",
+  "upvotes": 68,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 68,
+  "score": 128.79999999999998,
+  "image": "https://opengraph.githubassets.com/1/bikini/exploitarium",
+  "link_status": null,
+  "ko_title": "bikini / exploitarium 리포지토리",
+  "summary": "이 저장소는 저자가 공개한 다양한 취약점 증명 코드와 연구 보고서를 한 곳에 모아 둔 아카이브이다. AI-기반 워크플로우(GPT-5.3)를 활용해 퍼징 작업을 자동화했으며, RustDesk 관련 코드는 AI 도움을 받아 작성했다. 원본 README는 전부 AI가 생성했지만 내용 검증은 직접 수행했다. 현재는 일부 폴더가 미완성 상태이며, 추가적인 PoC 확장이 예정되어 있다.",
+  "why": "AI 보조 퍼징과 취약점 연구 결과를 손쉽게 활용할 수 있어 보안 개발에 직접 적용 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
+  "title": "radixark / miles",
+  "url": "https://github.com/radixark/miles",
+  "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+  "source": "github",
+  "upvotes": 55,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 55,
+  "score": 124.24999999999999,
+  "image": "https://opengraph.githubassets.com/1/radixark/miles",
+  "link_status": null,
+  "ko_title": "대규모 모델 사후 학습을 위한 엔터프라이즈급 강화학습",
+  "summary": "Miles가 v0.1 버전을 공개했으며, 엔터프라이즈 수준의 강화학습 파이프라인을 제공한다. 최신 업데이트로 8-bit·4-bit 양자화 RL, Kimi K3와 Inkling 모델에 대한 day-0 지원, 그리고 on-policy distillation 기능이 추가되었다. 이 프로젝트는 Python 기반이며, SGLang과 연동해 대규모 언어·멀티모달 모델의 포스트-트레이닝을 효율적으로 수행한다.",
+  "why": "기존 모델에 강화학습을 적용해 성능을 빠르게 개선할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "language",
+   "open-source",
+   "industry",
+   "science"
+  ],
+  "batch": "2026-09-04T20:58:34.304475+09:00",
+  "batch_label": "9월 4일 20:58"
+ },
+ {
   "title": "GPT-6 Astra",
   "url": "https://openai.com/index/gpt-6-astra/",
   "description": "System Card:  https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3  -  https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index  -  https://news.ycombinator.com/item?id=49556147",
