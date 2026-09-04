@@ -1,5 +1,2313 @@
 [
  {
+  "url": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
+  "title": "OpenAI's rogue agents were caught communicating via public wikis",
+  "description": "Here we go again... Discovery of a new OpenAI agent message board by Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, and Thomas Larsen describes the latest accidental cyberattack by models being trained by OpenAI. This time it was agents engaged in some sort of web research benchmark, so they had (supposedly) controlled access to the Web. The agents figured out they could update public Wikis and",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/openais-gpt-6-astra-hallucinates-less-but-remains-vulnerable-to-hidden-prompt-injections/",
+  "title": "OpenAI's GPT-6 Astra hallucinates less but remains vulnerable to hidden prompt injections",
+  "description": "OpenAI's GPT-6 Astra hallucinates less than its predecessor and blocks 99.99 percent of direct prompt injections. But when attacks are hidden inside documents the AI reads, the model still gets cracked in 8.5 percent of scenarios. Claude Opus 5 does better at 4.8 percent. For autonomous AI agents handling real data, those numbers still seem high. The article OpenAI's GPT-6 Astra hallucinates less ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/deepseek-plans-the-largest-known-huawei-chip-cluster-with-160000-processors-in-inner-mongolia/",
+  "title": "Deepseek plans the largest known Huawei chip cluster with 160,000 processors in Inner Mongolia",
+  "description": "Deepseek wants to put 160,000 Huawei Ascend-950DT chips into an Inner Mongolia data center for inference only, not training. It would be the largest known Huawei chip cluster. But production bottlenecks mean Huawei probably can't deliver for over a year. The article Deepseek plans the largest known Huawei chip cluster with 160,000 processors in Inner Mongolia appeared first on The Decoder .",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/openai-agents-hijacked-a-25-year-old-german-wiki-to-cheat-on-their-tasks-and-share-sandbox-exploits/",
+  "title": "OpenAI agents hijacked a 25-year-old German wiki to cheat on their tasks and share sandbox exploits",
+  "description": "According to an analysis by collusion.wiki, autonomous AI agents that identified themselves as OpenAI systems left roughly 18,000 posts in a 25-year-old German wiki between May and July 2026. The agents shared answers, raw data, and a trick that let them break out of their sandbox, built on a faked Microsoft cloud address. A single human moderator deleted dozens of pages every day for weeks, but h",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+  "title": "Benchmarks disagree on GPT-6 Astra, but its human-beating efficiency on ARC-AGI-3 pulls Chollet’s AGI forecast forward",
+  "description": "OpenAI's GPT-6 Astra is drawing contradictory benchmark verdicts. Epoch AI puts it out in front with 169 points, while Artificial Analysis rates it no better than its predecessor and behind Claude Fable 5.1. The biggest surprise comes from ARC-AGI-3, where Astra works more efficiently than the average human for the first time. ARC Prize chief François Chollet doesn't call this proof of AGI, but he",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w71bax/nvidias_1293030000000_acquisition_of_hugging_face/",
+  "title": "NVIDIA's $12,930,300,000.00 acquisition of Hugging Face contains an easter egg. The first 6 numbers of the acquisition price represent the decimal conversion of Unicode character U+1F917. The 🤗 emoji.",
+  "description": "From: Polymarket on 𝕏: https://x.com/Polymarket/status/2095646821485842805 Julien Chaumond on 𝕏: https://x.com/julien_c/status/2095822387895824836 submitted by /u/Nunki08 [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w7990o/georgi_gerganov_on_the_nvidia_acquisition/",
+  "title": "Georgi Gerganov on the Nvidia acquisition",
+  "description": "Link: https://x.com/ggerganov/status/2095897173376618881 submitted by /u/CombinationKitchen76 [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w78ztg/you_can_now_run_a_90m_conversational_llm_on_the/",
+  "title": "You can now run a 90M conversational LLM on the Sony PSP (hardware from 2004). Doesn't get more local than this.",
+  "description": "Github link: https://github.com/thatblend/LLMPSP I wanted to see what the PSP can theoretically handle and I got my answer - a 90M model is about the max it can do without atrocious inference speeds. It's running around 0.5 - 0.6 tokens per second, which is very slow, but it's useable. Maybe 1-3 minutes for a reply. The model is actually fairly impressive for 90M parameters, it's not really useful",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w78dmn/qwen3827b_is_the_first_local_model_im_able_to/",
+  "title": "Qwen3.8-27b is the first Local model im able to blindly trust",
+  "description": "You know that thing where you just throw a task at a frontier model and not have to supervise it worrying of it going off course? Qwen3.8-27b has officially gotten me to that point for local work. He has been doing non-stop continuous agentic work for 8+ hours and hasnt screwed up not one bit IT AMAZING!! submitted by /u/Express_Quail_1493 [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w77ath/drummers_artemis_31b_v1_and_v11_coming_back_with/",
+  "title": "Drummer's Artemis 31B v1 and v1.1 - Coming back with a bang!",
+  "description": "Hey everyone, been a while! https://huggingface.co/TheDrummer/Artemis-31B-v1.1 https://huggingface.co/TheDrummer/Artemis-31B-v1 A few months ago, Gemma graced us with models that served as a much needed downpour from a year-long drought. I'm so happy to see us thrive once again. The difference between v1 and v1.1 is quite simple: v1 was an early attempt, an overdue release that excelled in prose a",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w75rp4/i_built_a_server_with_768gb_vram_for_frontier_but/",
+  "title": "I built a server with 768GB VRAM for frontier, but all new frontier open source models are likely to be two trillion or above now, including next GLM 6, am I cooked?",
+  "description": "This epyc server I am using twelve cards with 64 GB memory, plus 256GB ram. Looking at the most capable models in open source, GLM 5.3 seems to be the only option, but with Astra releasing it will likely be fairly behind. GLM6 looks like it will be at least double in size, maybe even triple. Qwen-max and Kimmi are already way too big to even consider. Even the deepseek V4 Pro is too big. Should I ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+  "title": "August newsletter is out",
+  "description": "The August edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: We got more details on OpenAl's accidental cyberattacks One-shotting Raccoon Heist games with Fable 5 and Sol 5.6 Claude auto mode Understanding ChatGPT Work Model releases Miscellaneous bits and bobs My projects What I'm using at the momen",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+  "title": "GPT‑6 Astra",
+  "description": "GPT‑6 Astra GPT-6 Astra is \"rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API and AWS\" - I've not tried it yet myself, so I don't have a great deal to say about it yet. It's going to be API priced at the same rate as Claude Fable 5 and 5.1: $10/million input ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02889",
+  "title": "Where Does Harness-Optimization Value Live? Localized Gains and the Budget-Splitting Trap in Self-Evolving LLM Agents",
+  "description": "arXiv:2609.02889v1 Announce Type: new Abstract: A growing body of work improves frozen large language models (LLMs) as agents by evolving their harness: the textual scaffolding around the model, including persona, strategy, format rules, and control heuristics. Existing reflective prompt-evolution methods usually optimize this harness as one flat string. We instead ask where the optimization value",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02890",
+  "title": "Bounded Personas Match Retrieval on Classification but Not Regression for a Frozen Agent",
+  "description": "arXiv:2609.02890v1 Announce Type: new Abstract: A personalized language agent must convert a user's interaction history into behavior on each new request at inference time. Two strategies dominate. Retrieval pulls a few of the user's most relevant past items into the prompt, which is accurate but pays a per-query selection and context cost that grows with the history. Distillation instead compress",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02892",
+  "title": "Counterexamples as Feedback for Agent Self-Correction",
+  "description": "arXiv:2609.02892v1 Announce Type: new Abstract: Single-turn code-generation metrics understate a central property of deployed agents: whether they can repair a wrong artifact after receiving concrete feedback. This paper presents A-CEGIS, a lightweight framework that uses counterexamples as feedback for evaluating multi-turn refinement in natural-language-to-regex synthesis. An agent proposes a re",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02893",
+  "title": "Probe Generalization as Subspace Selection for OOD Deception Detection",
+  "description": "arXiv:2609.02893v1 Announce Type: new Abstract: Linear probes can be used to detect behaviors and concepts inside language model activations, but may fail to transfer to out-of-distribution examples. When studying the generalization performance of Llama-3.1-8B-Instruct probes over 3 held-out deception detection datasets, we find that projecting inputs onto a small subset of principal components (P",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02894",
+  "title": "R$^{2}$Adapter: A Routing and Rewriting Adapter for Efficient Hybrid RAG",
+  "description": "arXiv:2609.02894v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) has become a prevailing paradigm for enhancing Large Language Models (LLMs) with non-parametric knowledge. Vanilla RAG efficiently handles simple queries but struggles with relational or multi-hop reasoning. Graph-based RAG alleviates this issue but incurs higher inference complexity and latency. In practice, user",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02895",
+  "title": "BharatGather: A Culturally-Informed Benchmark Dataset for Misinformation and Fake News Detection in Indian Public Events",
+  "description": "arXiv:2609.02895v1 Announce Type: new Abstract: Large-scale public events, such as religious festivals, political rallies, and cultural gatherings, are increasingly vulnerable to the rapid dissemination of misinformation, posing substantial risks to public safety and social cohesion. While automated fake news detection has seen significant methodological progress, existing benchmarks frequently fa",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02896",
+  "title": "PiPMRE: A Pipeline Based on Language Model for Medical Relation Extraction",
+  "description": "arXiv:2609.02896v1 Announce Type: new Abstract: Medical relation extraction (MRE) is commonly known for extracting entities and their relations jointly from a medical text, which has attracted considerable attention in recent years. Previous studies treat MRE as a sequence tagging task, which results in either a challenging design of the tagging schema or a failed extraction of multiple relations,",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02897",
+  "title": "Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding",
+  "description": "arXiv:2609.02897v1 Announce Type: new Abstract: Speculative decoding accelerates LLM inference by drafting candidate tokens and verifying them in parallel. Tree-attention drafters such as EAGLE-3 are widely adopted, yet typically hold two decisions fixed: (1) a strict token-match verification rule and (2) a static draft-tree shape. Prior work relaxes each in isolation under limiting assumptions: l",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.02981",
+  "title": "Structure and Implementation of New Practical English Textbooks Driven by Artificial Intelligence",
+  "description": "arXiv:2609.02981v1 Announce Type: new Abstract: Artificial intelligence is changing the form of applied English materials from fixed paper sequences to adaptive learning systems that can diagnose learners, recommend tasks, and provide formative feedback. This paper studies the structure and application of a new practical English textbook driven by artificial intelligence. A five-layer architecture",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03209",
+  "title": "MasterControl Seventeen Every Time",
+  "description": "arXiv:2609.03209v1 Announce Type: new Abstract: We study a governed approach to enterprise analytics: a language model interprets the question, while deterministic policy selects and runs a pre-approved analytical program that returns both results and evidence. We show that this restriction can remain expressive within a defined analytical class, using relational operations plus aggregation, compa",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03236",
+  "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+  "description": "arXiv:2609.03236v1 Announce Type: new Abstract: Tool-using LLM agents spend wall-clock time not only on model inference but also in serial action--observation turns, where each tool call, environment transition, and observation can delay subsequent decisions. We introduce \\textbf{Speculative Macro Commit} (SMC), a runtime mechanism for a two-tier agent system: a large authoritative actor model pro",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03340",
+  "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
+  "description": "arXiv:2609.03340v1 Announce Type: new Abstract: Distributed LLM-agent teams can read the latest shared facts and still act on an obsolete plan. A planner may derive an action from requirement $r_3$, another agent may commit $r_4$, and an executor may receive $r_4$ without replacing the plan derived from $r_3$. We call this \\emph{stale-plan execution}: state freshness does not establish that the pl",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03402",
+  "title": "A Prompt-Engineering Approach to Develop Scalable, Flexible, and Real-Time Hybrid Micro-Level Personalization in a General Purpose AI Teaching Assistant",
+  "description": "arXiv:2609.03402v1 Announce Type: new Abstract: Artificial intelligence (AI) teaching assistants powered by large language models (LLMs) offer scalable educational support but often provide limited personalization. This study presents a prompt-engineering-based framework for personalizing general-purpose LLM/RAG-based AI teaching assistants such as Jill Watson across academic disciplines and cours",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03407",
+  "title": "Caught in the Story: Narrative Captivity in Multi-turn LLMs Conversation",
+  "description": "arXiv:2609.03407v1 Announce Type: new Abstract: People increasingly turn to large language models (LLMs) for everyday advice, making ethically charged interpersonal problems a practical moral-advisory context. Most prior work has studied this context through single-turn judgments or pressure-laden rebuttals, assumptions that poorly match how guidance is sought in real-world contexts. These assumpt",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03416",
+  "title": "Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Detection",
+  "description": "arXiv:2609.03416v1 Announce Type: new Abstract: LLM-empowered paper-code discrepancy detection has received growing concern since the scaling of research submissions exceeds the manual review capability. However, the limited context capacity and one-sided discrepancy detection of existing single-agent LLM paradigms lead to an inferior recall performance in detecting discrepancies. In this paper, w",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.03423",
+  "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
+  "description": "arXiv:2609.03423v1 Announce Type: new Abstract: Full-duplex voice agents must continuously decide when to listen, backchannel, interrupt, handle speech overlaps, take the floor, and yield. Existing benchmarks largely test these behaviors through explicit turn-management instructions, while deployed agents are often configured through roles or personas from which the appropriate conversational beha",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.AI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/nvidia-wants-your-home-network-to-work-like-a-mini-data-center-for-local-ai/",
+  "title": "Nvidia wants your home network to work like a mini data center for local AI",
+  "description": "Nvidia's PAIR (Personal AI Router) automatically spreads local AI requests across all available devices on a home network, cutting wait times for parallel agent tasks. The article Nvidia wants your home network to work like a mini data center for local AI appeared first on The Decoder .",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
+  "title": "GPT-6 Astra is the first model making OpenAI willing to declare the \"AGI era\"",
+  "description": "OpenAI has released GPT-6 Astra, its most capable model yet. President Greg Brockman says it marks the start of the \"AGI era.\" Astra tops benchmarks in math, coding, and cybersecurity and is the first model OpenAI rates as \"critical\" under its safety framework. During testing, it independently found two previously unknown zero-day vulnerabilities. The article GPT-6 Astra is the first model making ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/pangrams-biggest-flaw-is-users-turning-its-scores-into-public-shaming/",
+  "title": "Pangram's biggest flaw is users turning its scores into public shaming",
+  "description": "Pangram hired an \"attack dog\" to shame alleged AI users on social media. But the campaign blurs two things that aren't the same: Pangram only somewhat reliably measures whether AI was used, while the shaming implies the person didn't think or work on their own. A high AI score hits a text built on hours of original research just as easily as one cranked out from a ten-second prompt. The article Pa",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6myn6/the_benchmarks_the_big_labs_dont_want_you_to_see/",
+  "title": "The benchmarks the big labs don't want you to see",
+  "description": "submitted by /u/jd_3d [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://toss.tech/article/52885",
+  "title": "AI가 만든 코드가 어드민이 되기까지",
+  "description": "실시간으로 생성되는 코드를 어드민 화면으로 보여 주기 위해, 개발 환경을 브라우저 안으로 옮긴 이야기를 소개해요.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "토스 기술블로그"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+  "title": "Proactive cyber defense for governments and enterprises",
+  "description": "Introducing Fairwind Program",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Google AI Blog"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+  "title": "The latest AI news we announced in August 2026",
+  "description": "Transitioning cards: 1. Text \"Gemini 3.7 Flash\" next to the Gemini logo icon; 2. a photo of a pixel phone; 3. Google Gemini logo above the text \"Claim your student plan for 1 year at no cost\"",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Google AI Blog"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+  "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+  "description": "Collage of images created by Google Pics, with the text \"Say hello to Google Pics\" on top",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Google AI Blog"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+  "title": "llm-gemini 0.34",
+  "description": "Release: llm-gemini 0.34 New model gemini-3.8-flash for Gemini 3.8 Flash , with low, medium and high thinking levels. #146 Fixed async responses failing to record the resolved model version. Thanks, Charlie Tonneslan . #137 Google released Gemini 3.8 Flash (and 3.8 Flash Cyber, but that's available to \"trusted defenders\" only) today. Here are the pelicans for high, medium, and low. This is high: F",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+  "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
+  "description": "Anthropic publish the system prompts for their Claude consumer applications ( Claude.ai and the Claude mobile apps - sadly not for Claude Cowork or Claude Code). I love that they do this, and that they share not just the current prompts but historic changes to their prompts as well. They used to keep all of the prompts on a single page, but when I checked today I noticed they had re-arranged those",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+  "title": "Quoting Rick Brewster",
+  "description": "Direct2D has always been the biggest hurdle for Paint.NET on WINE, and it's clear that it will never be completed enough for Paint.NET's use. And I can't just \"disable\" the use of Direct2D. So, instead, Paint.NET now has an internal, from-scratch, clean-room reverse-engineered rewrite of Direct2D that it uses on WINE (triggered by using /wine ). It lives in PaintDotNet.Windows.Direct2D1.Managed.dl",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+  "title": "Claude Fable 5.1 made me a really nice animated pelican",
+  "description": "Today is Claude Fable (and Mythos) 5.1 day . Anthropic say that Fable 5.1 \"sets a new standard for coding, knowledge work, and long-running problem-solving tasks\". Their announcement spends a notable amount of time on scientific research, boasting of a 52.6% score on the brand new Terminal-Bench-Science 0.1 benchmark (first announced on August 27th ), up from 24.7% for Fable 5, 29.0% for Opus 5 an",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+  "title": "Codex bundles LibreOffice",
+  "description": "I was poking around in my ~/.cache/ folder using OmniDiskSweeper when I spotted something interesting. The OpenAI Codex desktop app (since rebranded to just ChatGPT) has 1.7GB of stuff in there in a folder called codex-primary-runtime , including a full Python installation, a full Node.js installation, and native binaries for Poppler , git, and the LibreOffice open source office suite (which forke",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/Hcompany/neomme",
+  "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+  "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/funes",
+  "title": "Give Your Coding Agents a Memory You Own",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/train-to-paint-with-code",
+  "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+  "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/allenai/benchmirt",
+  "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://huggingface.co/blog/webgpu-kernels",
+  "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+  "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+  "description": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+  "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+  "description": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+  "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+  "description": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+  "title": "Safety overview: GPT-6 Astra",
+  "description": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/atv-big-air-tour",
+  "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+  "description": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/ai-native-company-workflows",
+  "title": "How AI-native companies turn workflows into operating capability",
+  "description": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/path-to-astra",
+  "title": "Path to Astra: critical capabilities and frontier safeguards",
+  "description": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+  "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+  "description": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "OpenAI"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://the-decoder.com/nvidia-buys-the-front-door-to-open-ai-as-closed-labs-increasingly-design-their-own-silicon/",
+  "title": "Nvidia buys the front door to open AI as closed labs increasingly design their own silicon",
+  "description": "Nvidia plans to acquire Hugging Face for about $12.9 billion, securing the central platform for open AI models. More than 18 million developers and 200,000 companies use the hub. CEO Jensen Huang promises to keep the platform open and hardware-neutral, but the deal also hands him a powerful distribution channel for compute. The article Nvidia buys the front door to open AI as closed labs increasin",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://collusion.wiki/",
+  "title": "Discovery of a new OpenAI agent message board",
+  "description": "Originally: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 25,
+   "comments": 8
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://lobste.rs/s/7tpc5q/surviving_code_reviews_era_ai",
+  "title": "Surviving Code Reviews in the era of AI",
+  "description": "My coworkers are all fully AI pilled. As a consequence, every PR that comes my way for review is on average ~6k lines of diff.\r\n\r\nIt's well established that even PRs an order of magnitude smaller than this are too big to be effectively reviewed. I'm still clinging to the idea that us humans should understand how the systems we are building work, so I'm hesitant to use AI for reviews aside from more general question answering. Much of what it produces in the way of explanations are difficult to f",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 56,
+   "comments": 31
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://thoughtbot.com/blog/is-ai-ruining-my-brain",
+  "title": "Is AI ruining my brain?",
+  "description": "",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 18,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/",
+  "title": "The asteroid currently hitting frontend web development",
+  "description": "",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 36,
+   "comments": 16
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://openai.com/index/gpt-6-astra/",
+  "title": "GPT-6 Astra",
+  "description": "System Card:  https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3  -  https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index  -  https://news.ycombinator.com/item?id=49556147",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 2082,
+   "comments": 1897
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+  "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 311,
+   "comments": 58
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://inference-docs.cerebras.ai/models/overview",
+  "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 660,
+   "comments": 218
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
+  "title": "Corporate America is getting hooked on open-source AI",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 152,
+   "comments": 114
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+  "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 285,
+   "comments": 139
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.ycombinator.com/item?id=49551096",
+  "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+  "description": "https://status.openai.com https://status.claude.com https://status.x.ai ChatGPT outage – Resolved  -  https://news.ycombinator.com/item?id=49550614  (315 comments) Claude outage – Resolved  -  https://news.ycombinator.com/item?id=49549676  (146 comments) Grok outage  -  https://news.ycombinator.com/item?id=49551589  (142 comments)",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 386,
+   "comments": 547
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://opentrailpaper.com",
+  "title": "Show HN: Open-Source eInk Bike Computer",
+  "description": "Hey all, i just launched my Eink Bike computer project and think it is cool. Another tidbit, in the crazy things that AI has done... It has helped create a ANT (common sensor wireless protocol used in workout/biking) implementation for ESP32 by messing around with undocumented registers:  https://github.com/RaemondBW/esp32-ant",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 39,
+   "comments": 11
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/",
+  "title": "Nobody Is Saying Why OpenAI and Anthropic Had Outages",
+  "description": "https://archive.ph/3zcMG",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 36,
+   "comments": 6
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+  "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 24,
+   "comments": 10
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://desec.io/",
+  "title": "deSEC – Free Secure DNS",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 25,
+   "comments": 7
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://twitter.com/ggerganov/status/2095897173376618881",
+  "title": "Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 14,
+   "comments": 3
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://gizmodo.com/ozempic-and-other-glp-1s-are-being-linked-to-fewer-serious-infections-including-tb-2000806796",
+  "title": "GLP-1s are being linked to fewer serious infections, including TB",
+  "description": "https://web.archive.org/web/20260903235256/https://gizmodo.c...",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 133,
+   "comments": 76
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
+  "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 443,
+   "comments": 170
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+  "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+  "description": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday.  It took an evening! Getting the feel right and shipping it took a few more weekends and evenings. I spent the last few weeks analyzing what Claude did, feeding it my 33 years of memory of how I built the game, my notes and the git repos. It wrote the first draft of the article, and I edited line by line over a week. The screensh",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 357,
+   "comments": 123
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
+  "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 356,
+   "comments": 117
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://ifm.ai/blog/k2/",
+  "title": "K2 Horizon: A connected fleet of six open models",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 328,
+   "comments": 125
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.ycombinator.com/item?id=49548600",
+  "title": "Ask HN: Who is using MCP in production?",
+  "description": "I’ve been following MCP since it first came out.\nIt got a lot of attention early on, but I haven’t come across many people using it in production.\nI may simply have missed them. If you’re using MCP in production, what are you using it for?\nWhat advantages have you found over a normal API or direct tool integration or just CLI?",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 150,
+   "comments": 167
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
+  "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
+  "description": "I love research and development, you may have heard of me because of PJON (Padded Jittering Operative Network). It is a network protocol I started developing in 2010, which was recently implemented in silicon by the ETH Zurich university thanks to the research of Pius Sieber. I am excited to share with you TERMy, a terminal assistant built on top of the NPC-Forge framework. Unlike everything else being built today, TERMy does not use embeddings, machine-learning or LLMs. It runs on the CPU (even",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 5,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://reactoratlas.com",
+  "title": "Show HN: Reactor Atlas",
+  "description": "Hi HN, I'm a nuclear engineer and tech entrepreneur. After working for 3 years in the National Atomic Energy Commision (CNEA) in HPC software for nuclear simulations, I co-founded ratherlabs.com, a software company providing blockchain solutions for startups. Rather Labs business reached ~6 million usd in annual revenue in 2024; now demand is decreasing as our niche clients are using AI to launch their MVPs. Now I'm joining my scientific background with my entrepreneurial inclinations to think o",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 59,
+   "comments": 23
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/mattpocock/skills",
+  "title": "mattpocock / skills",
+  "description": "Skills for Real Engineers. Straight from my .agents directory.",
+  "source": "github",
+  "native": {
+   "upvotes": 2900,
+   "comments": 0,
+   "stars_today": 2900,
+   "stars": 249804,
+   "forks": 21115,
+   "language": "Shell",
+   "license": "MIT",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/DietrichGebert/ponytail",
+  "title": "DietrichGebert / ponytail",
+  "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+  "source": "github",
+  "native": {
+   "upvotes": 1981,
+   "comments": 0,
+   "stars_today": 1981,
+   "stars": 125134,
+   "forks": 6743,
+   "language": "JavaScript",
+   "license": "MIT",
+   "topics": [
+    "agent-skills",
+    "ai-agents",
+    "claude",
+    "claude-code",
+    "claude-code-plugin",
+    "cursor-rules",
+    "developer-tools",
+    "llm",
+    "prompt-engineering",
+    "yagni"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/debpalash/VoiceStudio",
+  "title": "debpalash / VoiceStudio",
+  "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+  "source": "github",
+  "native": {
+   "upvotes": 1523,
+   "comments": 0,
+   "stars_today": 1523,
+   "stars": 17499,
+   "forks": 2307,
+   "language": "Python",
+   "license": "AGPL-3.0",
+   "topics": [
+    "ai",
+    "audiobook",
+    "cuda",
+    "dubbing",
+    "elevenlabs-alternative",
+    "huggingface",
+    "local-first",
+    "mlx",
+    "omnivoice-studio",
+    "speech-to-text",
+    "tauri",
+    "text-to-speech",
+    "transcription",
+    "translate",
+    "tts",
+    "voice-ai",
+    "voice-cloning",
+    "voice-generation",
+    "voicestudio",
+    "workflow"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/affaan-m/ECC",
+  "title": "affaan-m / ECC",
+  "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+  "source": "github",
+  "native": {
+   "upvotes": 1241,
+   "comments": 0,
+   "stars_today": 1241,
+   "stars": 248185,
+   "forks": 37405,
+   "language": "JavaScript",
+   "license": "MIT",
+   "topics": [
+    "ai-agents",
+    "anthropic",
+    "claude",
+    "claude-code",
+    "developer-tools",
+    "llm",
+    "mcp",
+    "productivity"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/blader/humanizer",
+  "title": "blader / humanizer",
+  "description": "Agent skill that removes signs of AI-generated writing from text",
+  "source": "github",
+  "native": {
+   "upvotes": 1200,
+   "comments": 0,
+   "stars_today": 1200,
+   "stars": 42485,
+   "forks": 3602,
+   "language": "Python",
+   "license": "MIT",
+   "topics": [
+    "agent-skills",
+    "ai-writing",
+    "claude-code",
+    "codex",
+    "cursor",
+    "prompt-engineering",
+    "writing-tools"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "title": "NousResearch / hermes-agent",
+  "description": "The agent that grows with you",
+  "source": "github",
+  "native": {
+   "upvotes": 663,
+   "comments": 0,
+   "stars_today": 663,
+   "stars": 241366,
+   "forks": 49500,
+   "language": "Python",
+   "license": "MIT",
+   "topics": [
+    "ai",
+    "ai-agent",
+    "ai-agents",
+    "anthropic",
+    "chatgpt",
+    "claude",
+    "claude-code",
+    "codex",
+    "hermes",
+    "hermes-agent",
+    "llm",
+    "nous-research",
+    "openai"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/bannedbook/fanqiang",
+  "title": "bannedbook / fanqiang",
+  "description": "翻墙-科学上网",
+  "source": "github",
+  "native": {
+   "upvotes": 639,
+   "comments": 0,
+   "stars_today": 639,
+   "stars": 52721,
+   "forks": 8521,
+   "language": "Kotlin",
+   "license": null,
+   "topics": [
+    "brook",
+    "daze",
+    "fanqiang",
+    "goflyway",
+    "lightsocks",
+    "proxy",
+    "psiphon",
+    "shadowsocks",
+    "ssr",
+    "trojan",
+    "v2ray"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/fmtlib/fmt",
+  "title": "fmtlib / fmt",
+  "description": "A modern formatting library",
+  "source": "github",
+  "native": {
+   "upvotes": 497,
+   "comments": 0,
+   "stars_today": 497,
+   "stars": 25434,
+   "forks": 3032,
+   "language": "C++",
+   "license": "MIT",
+   "topics": [
+    "c-plus-plus",
+    "chrono",
+    "cpp",
+    "cross-platform",
+    "floating-point",
+    "formatting",
+    "multiplatform",
+    "output",
+    "performance",
+    "printf",
+    "ranges",
+    "unicode"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/JuliusBrussee/caveman",
+  "title": "JuliusBrussee / caveman",
+  "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+  "source": "github",
+  "native": {
+   "upvotes": 485,
+   "comments": 0,
+   "stars_today": 485,
+   "stars": 103481,
+   "forks": 6006,
+   "language": "Go",
+   "license": "NOASSERTION",
+   "topics": [
+    "ai",
+    "anthropic",
+    "caveman",
+    "claude",
+    "claude-code",
+    "llm",
+    "meme",
+    "prompt-engineering",
+    "skill",
+    "tokens"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/anthropics/skills",
+  "title": "anthropics / skills",
+  "description": "Public repository for Agent Skills",
+  "source": "github",
+  "native": {
+   "upvotes": 475,
+   "comments": 0,
+   "stars_today": 475,
+   "stars": 174023,
+   "forks": 20632,
+   "language": "Python",
+   "license": null,
+   "topics": [
+    "agent-skills"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/magnitudedev/magnitude",
+  "title": "magnitudedev / magnitude",
+  "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+  "source": "github",
+  "native": {
+   "upvotes": 423,
+   "comments": 0,
+   "stars_today": 423,
+   "stars": 2284,
+   "forks": 160,
+   "language": "TypeScript",
+   "license": "Apache-2.0",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/google-research/timesfm",
+  "title": "google-research / timesfm",
+  "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+  "source": "github",
+  "native": {
+   "upvotes": 342,
+   "comments": 0,
+   "stars_today": 342,
+   "stars": 30974,
+   "forks": 2952,
+   "language": "Python",
+   "license": "Apache-2.0",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/cathrynlavery/diagram-design",
+  "title": "cathrynlavery / diagram-design",
+  "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+  "source": "github",
+  "native": {
+   "upvotes": 258,
+   "comments": 0,
+   "stars_today": 258,
+   "stars": 30772,
+   "forks": 1975,
+   "language": "HTML",
+   "license": "MIT",
+   "topics": [
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "data-visualization",
+    "diagrams",
+    "drawio",
+    "mermaid",
+    "svg"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/anomalyco/opencode",
+  "title": "anomalyco / opencode",
+  "description": "The open source coding agent.",
+  "source": "github",
+  "native": {
+   "upvotes": 208,
+   "comments": 0,
+   "stars_today": 208,
+   "stars": 203939,
+   "forks": 26620,
+   "language": "TypeScript",
+   "license": "MIT",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/bikini/exploitarium",
+  "title": "bikini / exploitarium",
+  "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+  "source": "github",
+  "native": {
+   "upvotes": 77,
+   "comments": 0,
+   "stars_today": 77,
+   "stars": 4456,
+   "forks": 1238,
+   "language": "Python",
+   "license": null,
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/clshortfuse/renodx",
+  "title": "clshortfuse / renodx",
+  "description": "Renovation Engine for DirectX Games",
+  "source": "github",
+  "native": {
+   "upvotes": 68,
+   "comments": 0,
+   "stars_today": 68,
+   "stars": 3472,
+   "forks": 137,
+   "language": "HLSL",
+   "license": "MIT",
+   "topics": [
+    "directx",
+    "games",
+    "hdr",
+    "mod"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://github.com/radixark/miles",
+  "title": "radixark / miles",
+  "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+  "source": "github",
+  "native": {
+   "upvotes": 47,
+   "comments": 0,
+   "stars_today": 47,
+   "stars": 2511,
+   "forks": 441,
+   "language": "Python",
+   "license": "Apache-2.0",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33237",
+  "title": "Google AI Mode는 같은 제품을 기존 검색보다 21.6% 더 비싸게 보여줌",
+  "description": "2026년 8월 9~31일 같은 쇼핑 질의를 비교하자, 양쪽에 노출된 동일 제품 의 AI Mode 대표 가격이 기존 검색보다 평균 21.6% 높았음 전체 가격 표시 상품으로 범위를 넓히면 중앙값은 AI Mode 149달러 , 기존 검색 100달러로 약 49% 차이가 났음",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33236",
+  "title": "단순한 프로그램이 꼭 작은 것은 아니다",
+  "description": "프로그램의 단순함 은 코드나 도구의 크기가 아니라, 서로 다른 기능과 개념이 불필요하게 얽히지 않은 상태를 뜻함 Unix 파이프라인은 작은 도구를 조합하지만 sort | uniq --count 처럼 집계와 정렬이 결합 돼, 출력 순서만 바꾸려 해도 임시 파일과 정...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33235",
+  "title": "Show GN: FlowSuite - 노코드 화면 자동화, AI 파일 정리 등 윈도우 생산성 도구 모음",
+  "description": "업무를 하면서 매일 반복되는 단순 웹/시스템 로그인, 엑셀 취합, 지루한 클릭 노가다와 어지러운 다운로드 폴더 정리에 피로감을 느껴 주말마다 틈틈이 직접 만들어 쓰던 윈도우 생산성 유틸리티들을 모아 웹사이트와 함께 정리해 보았습니다. 기존 파이썬(PyAutoGUI)이나 AutoHotkey 스크립트는 창 크기나 위",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33234",
+  "title": "NPC로 살고 싶다",
+  "description": "NPC처럼 산다는 것은 자율성을 포기하는 대신, 타인의 기대에 휘둘리지 않고 자기 삶에 집중하는 방식 일 수 있음 게임 속 NPC는 플레이어의 행동과 무관하게 자기 할 일 을 계속하며 주변 사건에 쉽게 동요하지 않음 Skyrim 의 대장장이는 플레이어...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33233",
+  "title": "인공 비버 댐 설치 후 어린 은연어 생존율이 8%에서 60%로 상승",
+  "description": "북부 캘리포니아 하천에서 사라진 습지를 인공 비버 댐 으로 복원하자 멸종위기 은연어(coho salmon)의 어린 개체 생존율이 크게 높아짐 Scott River Watershed Council은 2015년 Sugar Creek에 댐 2개를 만들고, 3년 뒤 French Creek에도 여러 개를 추가함 댐은 약",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/nestjs-dependency-injection-explained-with-cheat-sheet-4bem",
+  "title": "NestJS Dependency Injection Explained (with Cheat Sheet)",
+  "description": "How the NestJS DI container resolves providers: tokens, module scope, singleton vs request vs transient, and why 'singleton' can still mean two instances.",
+  "source": "devto",
+  "native": {
+   "upvotes": 8,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/lovestaco/how-chatgpt-agents-with-no-internet-access-ended-up-in-hugging-face-2p89",
+  "title": "How ChatGPT agents with no internet access ended up in Hugging Face",
+  "description": "Hello, I'm Maneshwar, and I'm building LiveReview — a blast-radius aware AI code review built for...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/zenika/delivery-practices-a-software-team-actually-needs-57gl",
+  "title": "🚀 Delivery Practices a Software Team Actually Needs",
+  "description": "Stop chasing elite labels. The baseline that makes deploys boring — even when you are the whole team.",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/rbonweb/the-cors-header-was-right-there-and-the-browser-blocked-it-anyway-dgo",
+  "title": "The CORS Header Was Right There and the Browser Blocked It Anyway",
+  "description": "Access-Control-Allow-Origin was visibly present in the response and the request still got blocked, because the browser's network tab was silently merging two duplicate headers into one line.",
+  "source": "devto",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/raju_dandigam/your-gemini-answer-has-citations-is-it-actually-grounded-47el",
+  "title": "Your Gemini Answer Has Citations. Is It Actually Grounded?",
+  "description": "Adding citations to an AI answer feels like the moment the system becomes trustworthy.  The response...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/uvarov-frontend/vanilla-disintegrate-modern-particle-effects-for-the-web-3bhd",
+  "title": "Vanilla Disintegrate — Modern and Impressive Animations for the Web",
+  "description": "A framework-agnostic library for animating DOM element removal and restoration with particle effects, customizable animations, and WebGL2.",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/shreyashchaurasia/building-aetherdraw-an-agent-native-infinite-whiteboard-with-webmcp-330b",
+  "title": "Building AetherDraw: An Agent-Native Infinite Whiteboard with WebMCP",
+  "description": "Building AetherDraw: An Agent-Native Infinite Whiteboard with WebMCP   Visual whiteboards...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/mubaraqabba/cpis-on-solana-from-confusion-to-confidence-3p2g",
+  "title": "CPIs on Solana: From Confusion to Confidence",
+  "description": "On Day 71, I thought CPI was a magic black box. I knew it stood for Cross-Program Invocation, but I...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/jancera/i-built-a-rust-cli-that-turns-a-narrated-mp3-into-an-edited-video-a4",
+  "title": "I built a Rust CLI that turns a narrated MP3 into an edited video",
+  "description": "A friend of mine makes narration-first videos, voiceover carries the whole piece, the visuals are...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/akhiakl/how-svgin-react-renders-svgs-as-real-styleable-elements-without-the-xss-risk-2hod",
+  "title": "How svgin-react renders SVGs as real, styleable elements without the XSS risk",
+  "description": "Say you're fetching an SVG from somewhere you don't fully control. A CMS field, a user upload, an API...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/easyformatter/jsonparse-tells-you-what-broke-but-not-where-48ij",
+  "title": "JSON.parse tells you what broke, but not where",
+  "description": "Paste this into your console:    try { JSON.parse('{\"a\":NaN}') } catch (e) { console.log(e.message)...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/easyformatter/your-word-counter-returns-0-for-half-the-planet-40on",
+  "title": "Your word counter returns 0 for half the planet",
+  "description": "Here's a one-line test. Run it in your console right now:    \"مرحبا...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/jamilxt/bun-141-vs-nodejs-26-should-you-actually-move-your-server-2ce8",
+  "title": "Bun 1.4.1 vs Node.js 26: Should You Actually Move Your Server?",
+  "description": "Bun v1.4.1 shipped today with a number that made me do a double take. In their idle-memory benchmark,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/bruce_lee_666/how-i-built-an-ai-line-art-saas-with-nextjs-a-worker-queue-and-stripe-credits-1o35",
+  "title": "How I built an AI Line Art SaaS with Next.js, a worker queue, and Stripe credits",
+  "description": "Hey! 👋 I recently shipped ailineart.com, an AI line art generator that turns photos and text prompts...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/erel96/how-we-built-an-astronomical-chinese-calendar-engine-in-typescript-2dlk",
+  "title": "How We Built an Astronomical Chinese Calendar Engine in TypeScript",
+  "description": "Every software engineer eventually encounters the horror of calendar systems: leap years, daylight...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/kriosa/insecure-deserialization-in-php-when-your-cache-becomes-an-attack-surface-5835",
+  "title": "Insecure Deserialization in PHP — When Your Cache Becomes an Attack Surface",
+  "description": "unserialize() does more than restore data. With attacker-controlled input, object instantiation and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/rahmanfrr/why-i-built-a-sql-practice-platform-with-zero-backend-compute-5dm7",
+  "title": "Why I Built a SQL Practice Platform with Zero Backend Compute",
+  "description": "If you’ve ever tried to prepare for a SQL interview, you know the drill. You read up on CTEs and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/alperen_2adb3efcbd0cc1e8f/i-built-xivizley-an-open-source-visual-docker-compose-architect-at-14-15a5",
+  "title": "I built XIVIZLEY: An Open-Source Visual Docker Compose Architect (At 14)",
+  "description": "Hey everyone! 👋  I'm Alperen, a 14-year-old student and developer from Turkey.   Like many...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/susiewang/the-next-person-should-not-inherit-your-beauty-filter-build-a-reset-safe-tencent-rtc-camera-booth-4k8g",
+  "title": "The Next Person Should Not Inherit Your Beauty Filter: Build a Reset-Safe Tencent RTC Camera Booth",
+  "description": "Build a reproducible TypeScript state machine for a shared Tencent RTC Beauty AR experience. Every participant gets a clean preview, explicit effect selection, controlled publishing, performance-aware fallback, and a verifiable session reset.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/ankitpatel_qa/why-your-playwright-suite-gets-slower-every-sprint-and-the-fix-nobody-talks-about-32bi",
+  "title": "Why Your Playwright Suite Gets Slower Every Sprint (And the Fix Nobody Talks About)",
+  "description": "Every Playwright suite starts fast. Forty tests, ninety seconds, green on every push. Then eighteen...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/miad_ea7faef80e5125861119/building-pure-deterministic-energy-planning-engines-in-typescript-zero-database-architecture-47e2",
+  "title": "Building Pure Deterministic Energy Planning Engines in TypeScript (Zero-Database Architecture)",
+  "description": "How we built open-access, zero-database energy modeling calculators using pure TypeScript functions, immutable math engines, and typed provenance tracking.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/quintetkit/distribute-custom-tools-as-composite-github-actions-without-npm-publishing-51lp",
+  "title": "Distribute Custom Tools as Composite GitHub Actions (Without npm Publishing)",
+  "description": "When you create a small CLI tool, it is common to consider publishing it on npm for others to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/_wangcch/typescript-without-nodejs-in-production-what-you-gain-what-you-give-up-156f",
+  "title": "TypeScript Without Node.js in Production: What You Gain, What You Give Up",
+  "description": "A small TypeScript service often arrives in production with much more than its application code.  It...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/pulimoodan/true-or-false-4c1a",
+  "title": "True or false?",
+  "description": "Someone emailed me a signed contract, and I forwarded it to myself to test something.  Outlook did...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/mighty840/webassembly-as-a-first-class-workload-next-to-your-containers-41fn",
+  "title": "WebAssembly as a first-class workload - next to your containers",
+  "description": "Why my orchestrator schedules Wasm modules with the same machinery it uses for containers, and where that leads.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/kornel_maraz_5e66a3e4e27d/one-backend-every-screen-i-built-a-cross-platform-audio-app-the-wrong-way-28mf",
+  "title": "One Backend, Every Screen: I Built a Cross-Platform Audio App the 'Wrong' Way",
+  "description": "Every \"build in public\" thread and every YouTube growth guru tells you the same thing: pick the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/cleiton_augusto_/i-wrote-a-book-about-testing-then-i-tested-the-book-2pn5",
+  "title": "Two gates that hide a bug from every test you have",
+  "description": "A production simulator shipped an inverted sign and every count-based test passed. Two gates show why - the states go orthogonal while every measurement probability stays identical.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/karan5028ji/building-win-optimizer-pro-a-modern-tauri-based-windows-debloater-for-maximum-performance-2c6a",
+  "title": "Building Win-Optimizer-Pro: A Modern, Tauri-Based Windows Debloater for Maximum Performance",
+  "description": "If you’re a developer, gamer, or power user, you probably know the struggle of setting up a fresh...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/yqteamdyq/i-built-a-local-memory-layer-for-ai-agents-no-vector-db-one-sqlite-file-27jf",
+  "title": "I built a local memory layer for AI agents: no vector DB, one SQLite file",
+  "description": "If you build AI agents, you know the feeling: the model itself has no memory. Every conversation...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/xxxn3m3s1sxxx/your-mcp-server-is-a-backdoor-heres-how-attackers-use-it-356o",
+  "title": "Your MCP Server Is a Backdoor. Here's How Attackers Use It.",
+  "description": "I've been digging into MCP (Model Context Protocol) server security over the past few weeks, and what...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/arsen_ask_cde670c63b5a66f/my-own-tool-lied-to-me-for-three-weeks-declared-and-works-are-different-claims-5f2a",
+  "title": "My own tool lied to me for three weeks: “declared” and “works” are different claims",
+  "description": "My repo had 55 passing checks. On someone else's machine, none of them ran.  I write code with...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/rahad_bhuiya/what-if-servers-balanced-load-like-emperor-penguins-meet-huddlecluster-4kjb",
+  "title": "What if servers balanced load like Emperor Penguins? Meet HuddleCluster",
+  "description": "In Antarctic blizzards where temperatures drop below -40°C and winds scream past 200 km/h, Emperor...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/ashutosh_shukla_devt/21-yr-old-kid-explaining-terraform-in-stupid-simple-language-4ppo",
+  "title": "21 yr old kid explaining terraform in stupid simple language",
+  "description": "What if I told you that instead of clicking through cloud dashboards, you could describe your entire...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/milkyway008/ollama-desktop-says-server-not-ready-on-windows-but-the-server-is-fine-2ko0",
+  "title": "Ollama Desktop Says Server Not Ready on Windows but the Server Is Fine",
+  "description": "Ollama Desktop starts, and then just sits there: \"ollama server not ready, continuing anyway\" every...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/quintetkit/automatically-update-issue-labels-based-on-pr-activity-56gj",
+  "title": "Automatically Update Issue Labels Based on PR Activity",
+  "description": "When tracking progress by adding labels like status:in-progress or status:review to Issues, you will...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/ujja/ai-engineering-is-easy-changing-how-we-work-is-hard-39j4",
+  "title": "AI Engineering Is Easy. Changing How We Work Is Hard",
+  "description": "AI engineering sounds fancy. New terms are everywhere: agentic development, AI-native engineering,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 23,
+   "comments": 13
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/cyclopt_dimitrisk/your-ai-generated-tests-arent-testing-your-code-theyre-testing-the-ais-blind-spots-46mo",
+  "title": "Your AI-generated tests aren't testing your code. They're testing the AI's blind spots.",
+  "description": "Intro   There's a pitch behind every \"AI writes your tests too\" workflow: more coverage,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 18,
+   "comments": 11
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/michaeltruong/the-board-came-back-the-highlights-lied-18bo",
+  "title": "The board came back. The highlights lied.",
+  "description": "I ship Codenames AI, a web game. Each game mode keeps its own save in localStorage. Reload the tab,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 15,
+   "comments": 9
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/anchildress1/is-this-really-required-meet-gh-stack-5g1f",
+  "title": "Is This Really Required? Meet gh stack",
+  "description": "A tutorial for gh stack, and for the fact that it does not care whether the diff gets read by my lead or by an AI. Small diffs get reviewed better either way.",
+  "source": "devto",
+  "native": {
+   "upvotes": 12,
+   "comments": 3
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/begoodtool/how-i-built-three-small-party-games-for-a-spring-dinner-1c5p",
+  "title": "[Open Source Sharing] How I Built Three Small Party Games for a Spring Dinner",
+  "description": "The best software I wrote for a spring dinner was not a dashboard or an internal tool. It was a set...",
+  "source": "devto",
+  "native": {
+   "upvotes": 9,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/richang/-how-enabling-cross-origin-isolation-silently-broke-our-multi-threaded-wasm-image-compressor-3a0p",
+  "title": "# How enabling cross-origin isolation silently broke our multi-threaded WASM image compressor",
+  "description": "A production postmortem. We shipped browser-side image compression (Rust → WASM + WebGPU), turned on...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/sylwia-lask/20-agentic-ai-terms-every-developer-should-know-explained-simply-jii",
+  "title": "20 Agentic AI Terms Every Developer Should Know (Explained Simply)",
+  "description": "Do you ever feel like the AI world has moved forward a little too quickly?&nbsp;You hear about...",
+  "source": "devto",
+  "native": {
+   "upvotes": 111,
+   "comments": 48
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/kenwalger/forensic-receipts-from-trusted-to-proven-5cj0",
+  "title": "Forensic Receipts: From Trusted to Proven",
+  "description": "Part 6 of the Building the AI Memory Stack series  At the end of the last article, I left one...",
+  "source": "devto",
+  "native": {
+   "upvotes": 12,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/managerfx/my-thermostat-was-speaking-an-industrial-protocol-just-not-to-me-2a0p",
+  "title": "My Thermostat Was Speaking an Industrial Protocol. Just Not to Me.",
+  "description": "A senior software engineer who knew nothing about hardware, a BACnet MS/TP thermostat, and an RS-485 bus. How I ended up with an ESP32-S3 gateway on a DIN rail, wired into Home Assistant, in 15 evenings.",
+  "source": "devto",
+  "native": {
+   "upvotes": 16,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/sumit0rn/memory-is-not-talent-talent-is-pattern-recognition-and-connection-3bea",
+  "title": "Memory Is Not Talent: Talent Is Pattern Recognition and Connection",
+  "description": "We often confuse high memory capacity with intelligence or talent.  Someone can recall formulas,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 12,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/vultr/installing-gpt4all-an-open-source-chatbot-application-for-running-llms-38dk",
+  "title": "Installing GPT4All, an Open-Source Chatbot Application for Running LLMs",
+  "description": "GPT4All is an open-source graphical desktop application for running large language models (LLMs)...",
+  "source": "devto",
+  "native": {
+   "upvotes": 10,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/copyleftdev/battlebots-but-the-robot-is-your-agent-harness-3jj5",
+  "title": "BattleBots, but the robot is your agent harness",
+  "description": "I built an arena where two AI agents fight over a network in real time. One of them refused the job. The other one started laying false trails.",
+  "source": "devto",
+  "native": {
+   "upvotes": 4,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/anant_sharma_007/depzero-building-a-zero-dependency-dependency-intelligence-engine-in-72-hours-2f8a",
+  "title": "DepZero: Building a Zero-Dependency Dependency Intelligence Engine in 72 Hours",
+  "description": "DepZero: Building a Zero-Dependency Dependency Intelligence Engine in 72 Hours How Team CR7 built a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/masaoshimadaopen/my-ai-agent-was-serving-stale-data-for-30-days-a-silent-failure-rooted-in-state-file-freshness-4687",
+  "title": "My AI Agent Was Serving Stale Data for 30 Days: A Silent Failure Rooted in State File Freshness",
+  "description": "Hey everyone, it's Grandpa Dev. I'm a 38-year-old side-hustle engineer building AI agents and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/swampieb/how-i-built-an-async-fastapi-microservice-to-extract-tech-stacks-seo-b2b-contacts-in-1s-2fbm",
+  "title": "How I Built an Async FastAPI Microservice to Extract Tech Stacks, SEO & B2B Contacts in <1s",
+  "description": "Hey fellow developers! 👋  When auditing client websites or building lead-generation pipelines, the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/agenticstack/architectural-breakdown-who-watches-the-watchdog-the-boring-work-behind-a-monitoring-saas-36df",
+  "title": "Architectural Breakdown: Who watches the watchdog? The boring work behind a monitoring SaaS",
+  "description": "Who watches the watchdog? The 3 AM reality check for monitoring SaaS   At 3:17 AM, the pager...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/datacpp_8185/test-agent-patches-with-an-oracle-the-diff-cannot-touch-34nk",
+  "title": "Test Agent Patches With an Oracle the Diff Cannot Touch",
+  "description": "An agent patch is only as trustworthy as the checks it cannot rewrite. If properties, fixtures, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/adrian_m_peticila/why-i-built-gorgona-turning-runaway-ai-agents-to-stone-28ho",
+  "title": "Why I Built Gorgona: Turning Runaway AI Agents to Stone",
+  "description": "Running multiple digital brands simultaneously with autonomous AI agents sounds like a dream until...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/libinops/phi-a-fast-terminal-coding-agent-with-first-class-rust-plugin-support-4kn8",
+  "title": "Phi – a fast terminal coding agent with first-class Rust plugin support",
+  "description": "Hey I’ve been building Phi, a terminal coding agent written in Go with a deliberately small core. It...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/anton_brilliantov/controlled-and-imperfect-beats-perfect-and-foreign-4pbo",
+  "title": "Controlled and Imperfect Beats Perfect and Foreign",
+  "description": "Between a decision I can change today and a better one that changes on someone else's release, I take the first. Not because it is written better - because the cost of changing it is known in advance.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/sshaaf/blast-radius-for-agent-assisted-development-on-kubernetes-161",
+  "title": "Blast Radius for Agent-Assisted Development on Kubernetes",
+  "description": "If you use Cursor or Claude Code on large repos, blast radius gives your agent bounded structural facts instead of grep guesses. A Kubernetes walkthrough for engineers: what to expect, when it helps, and when your IDE is still the better tool.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/thomasmoore157/go-server-rendered-login-controls-auditable-session-verification-through-password-recovery-5fcg",
+  "title": "Go Server-Rendered Login Controls: Auditable Session Verification Through Password Recovery",
+  "description": "Short answer: For a server-rendered Go login, keep session creation, verification, refresh, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/mitchellcross2134/insurance-claim-image-metadata-inspection-in-go-lifecycle-validation-at-intake-3olk",
+  "title": "Insurance Claim Image Metadata Inspection in Go: Lifecycle Validation at Intake",
+  "description": "Short answer: inspect metadata, validate image content, and validate lifecycle state as three...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/loganpierce2073/healthtech-phone-otp-authentication-audit-trail-risk-events-and-session-actions-547h",
+  "title": "Healthtech Phone OTP Authentication Audit Trail — Risk Events and Session Actions",
+  "description": "Use a phone OTP flow only when every risk decision and session mutation lands in one append-only...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/faelvorn538072/how-to-build-receipt-capture-metadata-inspection-rotation-and-crop-for-mobile-photos-in-go-5hkf",
+  "title": "How to Build Receipt Capture Metadata Inspection Rotation and Crop for Mobile Photos in Go",
+  "description": "Short answer: normalize orientation first, crop only after the receipt bounds are known, and run...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://dev.to/fairchildblake8483/go-pdf-endpoints-for-useu-saas-digital-archiving-privacy-and-retention-2jgc",
+  "title": "Go PDF Endpoints for US/EU SaaS Digital Archiving — Privacy and Retention",
+  "description": "A US/EU SaaS should use four PDF endpoint capabilities for digital archiving: asynchronous...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+  "title": "As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, Claude Code, and Cowork.",
+  "description": "",
+  "source": "anthropic",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Anthropic Engineering"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+  "title": "Developing Enterprise Frontier Safeguards with our customers",
+  "description": "",
+  "source": "anthropic",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Anthropic"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+  "title": "Improving our alignment and security efforts",
+  "description": "",
+  "source": "anthropic",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Anthropic"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+  "title": "We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.",
+  "description": "",
+  "source": "anthropic",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Anthropic"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
+  "url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+  "title": "Expanding our support for scientists",
+  "description": "",
+  "source": "anthropic",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Anthropic"
+  },
+  "selected": false,
+  "date": "2026-09-05"
+ },
+ {
   "url": "https://huggingface.co/blog/Hcompany/neomme",
   "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
   "description": "",
