@@ -177,7 +177,11 @@ docs/data/                    # 위 파일들의 Pages 서빙 사본 + apis.json
 ```yaml
 alert:
   min_published: 10   # 이보다 적게 게시되면 Actions가 🟡 이슈를 연다
+  silent_streak: 3    # 켜진 출처가 이 회차 수만큼 연속 0건이면 🟡 출처 침묵 이슈를 연다
 ```
+
+출처별 수집 건수는 회차마다 `data/source_health.json`에 남는다(최근 30회차). 한 회차 0건은 타임아웃일 수 있어 기본 3회차(하루)를 본다.
+GitHub 트렌딩·Trendshift·Anthropic은 HTML을 파싱하므로 상대 사이트가 화면을 바꾸면 에러 없이 0건이 된다. 그럴 때 이 알림이 잡는다.
 
 ## 광고
 

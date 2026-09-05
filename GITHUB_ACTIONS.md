@@ -126,8 +126,9 @@ git push origin main
 |---|---|---|
 | 🔴 뉴스 수집 실패 | 어느 스텝이든 exit 1 | 수집·요약·커밋 중 하나가 깨졌다 |
 | 🟡 게시 건수 급감 | 성공했지만 게시가 `alert.min_published`(기본 10건) 미만 | 요약 한도, 후보 고갈, 필터 과잉 등 조용한 열화 |
+| 🟡 출처 침묵 | 켜진 출처가 `alert.silent_streak`(기본 3회차) 연속 0건 | HTML 파싱 출처의 화면 변경, 차단, 피드 주소 변경 |
 
-임계값은 `config.yaml`의 `alert.min_published`로 바꾼다.
+임계값은 `config.yaml`의 `alert` 항목으로 바꾼다. 출처별 건수 이력은 `data/source_health.json`에 남는다.
 
 ## 6. 문제 해결
 
@@ -172,6 +173,8 @@ Workflow permissions가 Read only다. 1-4를 확인한다.
 3. `[seen]` 제외 건수 — 이미 소개한 기사가 많으면 후보가 마른다
 
 ### 특정 출처가 0건
+
+3회차 연속이면 🟡 출처 침묵 이슈가 열린다. 로그에서 `[<출처>] 실패`(요청 자체가 실패)인지 `[<출처>] 0개 수집`(응답은 왔는데 파싱 0건)인지 먼저 가른다. 후자면 상대 사이트 화면이 바뀐 것이라 `news/scrapers/`의 해당 파일 셀렉터를 손본다.
 
 - **긱뉴스** — RSS 주소가 바뀐 것이다. `news/scrapers/geeknews.py`의 `FEED_CANDIDATES`에 새 주소를 추가한다.
 - **Reddit** — 러너 IP가 403으로 막힌다. `config.yaml`에서 `reddit: false`로 둔다. 공개 RSS 경로(`feeds`의 `r/LocalLLaMA/.rss`)는 별개다.

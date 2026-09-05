@@ -89,6 +89,33 @@ def test_degraded_step_gated_on_build_output():
     assert "success()" in step["if"]      # 실패 회차에 두 번 알리지 않는다
 
 
+# ------------------------------------------------------- 출처 침묵 (add-source-silence-alert)
+def test_silent_output_written(tmp_path, monkeypatch):
+    out = tmp_path / "gh_out"
+    monkeypatch.setenv("GITHUB_OUTPUT", str(out))
+    emit_actions_output(20, 10, ["trendshift", "github"])
+    assert "silent=trendshift,github" in out.read_text(encoding="utf-8")
+
+
+def test_silent_output_empty_when_none(tmp_path, monkeypatch):
+    out = tmp_path / "gh_out"
+    monkeypatch.setenv("GITHUB_OUTPUT", str(out))
+    emit_actions_output(20, 10)
+    assert "silent=\n" in out.read_text(encoding="utf-8")
+
+
+def test_silent_step_gated_on_build_output():
+    step = next(s for s in _steps() if s.get("name") == "출처 침묵 알림")
+    assert "steps.build.outputs.silent != ''" in step["if"]
+    assert "success()" in step["if"]
+    assert "scripts/notify.sh" in step["run"]
+
+
+def test_config_has_silent_streak():
+    cfg = yaml.safe_load(open(os.path.join(ROOT, "config.yaml"), encoding="utf-8"))
+    assert cfg["alert"]["silent_streak"] >= 2
+
+
 def test_build_step_has_id():
     """id가 없으면 steps.build.outputs를 참조할 수 없다."""
     step = next(s for s in _steps() if s.get("name") == "수집 · 요약 · 페이지 생성")
