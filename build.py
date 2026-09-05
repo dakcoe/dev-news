@@ -44,7 +44,8 @@ from news.core.redact import redact_articles
 from news.core.scorer import score_and_categorize
 from news.core.tags import tag_all
 from news.render import render
-from news.scrapers import anthropic, devto, geeknews, github, hackernews, lobsters, reddit, rss
+from news.scrapers import (anthropic, devto, geeknews, github, hackernews, lobsters,
+                           reddit, rss, trendshift)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 from news.core.common import KST  # noqa: E402  (상수 재노출)
@@ -89,6 +90,8 @@ def run_scrapers(cfg: dict) -> list[dict]:
         tasks["hackernews"] = lambda: hackernews.fetch(limit=s.get("hn_limit", 60))
     if src.get("github", True):
         tasks["github"] = lambda: github.fetch()
+    if src.get("trendshift", True):
+        tasks["trendshift"] = lambda: trendshift.fetch()   # source=github, feed=Trendshift
     if src.get("lobsters", True):
         tasks["lobsters"] = lambda: lobsters.fetch(limit=s.get("per_source", 30))
     if src.get("devto", True):
