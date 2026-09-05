@@ -8,6 +8,7 @@
 |---|---|
 | Hacker News | Firebase API `topstories` 상위 `hn_limit`개 |
 | GitHub Trending | `github.com/trending` 일간. 지표는 스타 총수가 아니라 전일 대비 증가량 |
+| Trendshift | `trendshift.io` 홈페이지의 일간 순위 25건. GitHub 트렌딩과 같은 저장소는 중복 제거에서 한 건으로 합쳐지고 교차 출처 가산을 받는다. 화면 라벨은 Trendshift |
 | Lobste.rs | `hottest.json` |
 | dev.to | `devto_tags`별 rising 글 |
 | 긱뉴스 | `news.hada.io` RSS |

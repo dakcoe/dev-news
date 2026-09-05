@@ -178,7 +178,10 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
     for g in groups:
         items = g["items"]
         best = max(items, key=_score)
-        sources = sorted({i.get("source") for i in items if i.get("source")})
+        # 출처는 feed까지 구분해 센다 — Trendshift는 source=github이지만 별개 신호다
+        # (add-trendshift-source). rss 피드 두 곳이 같은 글을 물어와도 마찬가지.
+        sources = sorted({i.get("feed") or i.get("source") for i in items
+                          if i.get("source")})
         merged = {**best, "merged_sources": sources,
                   "cross_source_count": max(len(sources), 1)}
         out.append(merged)
