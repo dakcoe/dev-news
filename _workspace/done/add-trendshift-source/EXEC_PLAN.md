@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -36,3 +36,4 @@ OSS Insight는 제외 — `/v1/trends/repos` API가 2026-03-01부터 data_qualit
 
 - pytest 전체 통과
 - `python build.py --no-ai` 로그에 `[trendshift] N개 수집`이 찍히고, GitHub 트렌딩과 겹치는 저장소가 한 건으로 합쳐짐(merged_sources 확인)
+- **완료일**: 2026-09-05T05:35:16.997Z
