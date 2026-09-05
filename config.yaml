@@ -97,6 +97,9 @@ llm:
 # 올라오는 상태는 "실패"로 잡히지 않기 때문이다. top_n(20)의 절반을 기준으로 둔다.
 alert:
   min_published: 10
+  # 켜진 출처가 이 회차 수만큼 연속 0건이면 이슈로 알린다 (add-source-silence-alert).
+  # 한 회차 0건은 타임아웃일 수 있어 하루(3회차)를 본다. 이력: data/source_health.json
+  silent_streak: 3
 
 # 페이지 광고 (add-ad-slot).
 #   provider: placeholder = 계정 없이 자리만 확인 (외부 스크립트를 부르지 않는다)
