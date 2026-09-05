@@ -28,7 +28,7 @@ from datetime import datetime
 import yaml
 
 from news import apis_catalog
-from news.core import archive, candidates
+from news.core import archive, candidates, source_health
 from news.core import seen as seen_db
 from news.core.dedup import merge_duplicates
 from news.core.filters import (
@@ -82,7 +82,8 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def run_scrapers(cfg: dict) -> list[dict]:
+def run_scrapers(cfg: dict, counts: dict[str, int] | None = None) -> list[dict]:
+    """출처별 수집. counts를 주면 출처 이름 → 건수를 채운다 (예외는 0건)."""
     s = cfg.get("scraper", {})
     src = cfg.get("sources", {})
     tasks = {}
@@ -114,8 +115,12 @@ def run_scrapers(cfg: dict) -> list[dict]:
                 got = future.result()
                 print(f"[{name}] {len(got)}개 수집")
                 articles.extend(got)
+                if counts is not None:
+                    counts[name] = len(got)
             except Exception as e:
                 print(f"[{name}] 실패: {e}")
+                if counts is not None:
+                    counts[name] = 0
     return articles
 
 
@@ -143,7 +148,8 @@ def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
     return meta_map
 
 
-def emit_actions_output(published: int, min_published: int) -> bool:
+def emit_actions_output(published: int, min_published: int,
+                        silent: list[str] | None = None) -> bool:
     """게시 결과를 Actions 출력으로 내보낸다. 반환값은 '열화'로 판정했는지 여부.
 
     실패 알림(`if: failure()`)은 exit 1일 때만 뛴다. 그런데 이 파이프라인엔 성공으로
@@ -161,6 +167,7 @@ def emit_actions_output(published: int, min_published: int) -> bool:
         with open(path, "a", encoding="utf-8") as f:
             f.write(f"published={published}\n")
             f.write(f"degraded={'true' if degraded else 'false'}\n")
+            f.write(f"silent={','.join(silent or [])}\n")
     if degraded:
         print(f"[알림] 게시 {published}건 — 임계 {min_published}건 미만이라 열화로 보고합니다")
     return degraded
@@ -191,10 +198,25 @@ def _gate_settings(cfg: dict) -> tuple[int, bool, int, int | None]:
     return top_n, gate_on, overpick, sc.get("per_feed_page")
 
 
-def collect_candidates(cfg: dict) -> list[dict]:
-    """수집 → 필터 → 중복 제거. 깔때기의 넓은 쪽 (SPEC 1.2)."""
+def check_source_silence(counts: dict[str, int], cfg: dict, when: str) -> list[str]:
+    """출처별 건수를 기록하고 연속 0건인 출처를 돌려준다 (add-source-silence-alert)."""
+    streak = cfg.get("alert", {}).get("silent_streak", source_health.DEFAULT_STREAK)
+    history = source_health.record(counts, when)
+    quiet = source_health.silent(history, streak)
+    if quiet:
+        print(f"[알림] {streak}회차 연속 0건 출처: {', '.join(quiet)}")
+    return quiet
+
+
+def collect_candidates(cfg: dict, when: str = "") -> tuple[list[dict], list[str]]:
+    """수집 → 필터 → 중복 제거. 깔때기의 넓은 쪽 (SPEC 1.2).
+
+    출처별 건수는 여기서 기록하고, 침묵 출처 목록을 두 번째 값으로 돌려준다.
+    """
     sc = cfg.get("scraper", {})
-    raw = run_scrapers(cfg)
+    counts: dict[str, int] = {}
+    raw = run_scrapers(cfg, counts)
+    quiet = check_source_silence(counts, cfg, when)
     articles = keyword_filter(raw, cfg.get("keywords", []), cfg.get("block_keywords"))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
     articles = merge_duplicates(articles)
@@ -202,7 +224,7 @@ def collect_candidates(cfg: dict) -> list[dict]:
     # Protection이 push를 거부해 회차 전체가 죽는다 (run 31510062957)
     articles = redact_articles(articles, "수집")
     print(f"[깔때기] 후보 {len(raw)}건 → 필터·중복 제거 후 {len(articles)}건")
-    return articles
+    return articles, quiet
 
 
 def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[dict]:
@@ -303,12 +325,12 @@ def main() -> int:
     min_published = cfg.get("alert", {}).get("min_published", 0)
     archive.migrate_legacy()               # 단일 articles.json → 월별 샤드 (멱등)
 
-    articles = collect_candidates(cfg)
+    articles, silent = collect_candidates(cfg, now.isoformat(timespec="minutes"))
     picked = select_articles(articles, cfg, now, now.strftime("%Y-%m-%d"))
 
     if not picked:
         print("새 기사가 없습니다. 기존 페이지를 유지합니다.")
-        emit_actions_output(0, min_published)
+        emit_actions_output(0, min_published, silent)
         return 0
 
     published, irrelevant, dead_links = prepare_published(picked, cfg, args.no_ai)
@@ -317,7 +339,7 @@ def main() -> int:
     # 무관·죽은 링크 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로
     # 올라와 같은 기사에 LLM 호출을 반복한다.
     seen_db.mark_seen(published + irrelevant + dead_links)
-    emit_actions_output(len(published), min_published)
+    emit_actions_output(len(published), min_published, silent)
     return 0
 
 

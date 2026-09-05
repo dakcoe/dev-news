@@ -93,3 +93,21 @@ jobs:
           - \`[seen]\` 제외 건수 — 이미 소개한 기사가 많으면 후보가 마릅니다
 
           임계값은 config.yaml의 \`alert.min_published\`입니다."
+
+      # 켜진 출처가 연속 회차 0건 — 다른 출처가 top_n을 채우면 열화 알림이 못 잡는다.
+      # HTML 파싱 출처(github·trendshift·anthropic)는 화면이 바뀌면 조용히 0건이 된다.
+      - name: 출처 침묵 알림
+        if: success() && steps.build.outputs.silent != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          bash scripts/notify.sh "🟡 출처 침묵" \
+            "$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') 회차 기준 연속 0건인 출처: **${{ steps.build.outputs.silent }}**
+
+          실행 로그: $RUN
+
+          확인할 것:
+          - 로그의 \`[<출처>] 실패\`(요청 실패)인지 \`[<출처>] 0개 수집\`(파싱 0건)인지
+          - HTML 파싱 출처면 상대 사이트 화면이 바뀐 것 — news/scrapers/ 의 해당 파일 셀렉터를 손본다
+          - 이력은 data/source_health.json, 임계는 config.yaml의 \`alert.silent_streak\`"
