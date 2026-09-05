@@ -16,7 +16,7 @@ SOURCE_META = {
     "hackernews": {"name": "Hacker News", "color": "#ff6600",
                    "desc": "HN Firebase API에서 Top Stories 수집 · 상위 100개에서 AI/개발 뉴스 필터링"},
     "github": {"name": "GitHub Trending", "color": "#1f2328",
-               "desc": "일간 트렌딩 저장소에서 개발·AI 관련 프로젝트 수집"},
+               "desc": "github.com/trending 일간 + Trendshift 일간 순위 — 같은 저장소는 한 건으로 합쳐진다"},
     "lobsters": {"name": "Lobste.rs", "color": "#ac130d",
                  "desc": "hottest.json에서 상위 스토리 수집"},
     "devto": {"name": "dev.to", "color": "#3b49df",

@@ -185,3 +185,15 @@ def test_cross_language_pair_still_allowed():
     a = "Claude Code, Auto mode를 기본 권한 모드로 전환"
     b = "Auto mode is now the default in Claude Code"
     assert title_similarity(a, b) >= 0.6
+
+
+# ------------------------------------------------- add-trendshift-source
+def test_same_source_different_feed_counts_as_cross_source():
+    """Trendshift 항목은 source=github이지만 GitHub 트렌딩과 별개 신호다.
+    같은 저장소가 둘 다에 오르면 합쳐지되 교차 출처 2로 가산을 받아야 한다."""
+    a = {"url": "https://github.com/o/r", "title": "o / r", "source": "github", "upvotes": 500}
+    b = {**a, "feed": "Trendshift", "upvotes": 442}
+    got = merge_duplicates([a, b])
+    assert len(got) == 1
+    assert got[0]["cross_source_count"] == 2
+    assert got[0]["merged_sources"] == ["Trendshift", "github"]
