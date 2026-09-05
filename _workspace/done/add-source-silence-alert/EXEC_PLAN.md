@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -31,3 +31,4 @@ HTML 파싱 출처(github·trendshift·anthropic)는 상대 사이트가 화면�
 
 - pytest 전체 통과
 - 로컬 `--no-ai` 실행 후 data/source_health.json에 회차 1건이 기록됨
+- **완료일**: 2026-09-05T05:45:59.384Z
