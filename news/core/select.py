@@ -22,9 +22,22 @@ def adjust_scores(articles: list[dict], cfg: dict) -> list[dict]:
     return articles
 
 
+def _is_backfill(a: dict, feeds: list[str]) -> bool:
+    """예약석에서 뒤로 미룰 항목인가 — 후순위 피드에서만 왔고 본 출처에도 오르지 않은 것.
+
+    양쪽에 오른 저장소는 dedup이 merged_sources에 본 출처 이름을 남긴다. 대표가
+    Trendshift 항목이어도 그건 본진이다 (교차 출처 가산과 결이 같다).
+    """
+    feed = a.get("feed")
+    if not feed or feed not in feeds:
+        return False
+    return a.get("source") not in (a.get("merged_sources") or [])
+
+
 def pick(articles: list[dict], top_n: int, per_source: int,
          quota: dict[str, int] | None = None,
-         per_feed_page: int | None = None) -> list[dict]:
+         per_feed_page: int | None = None,
+         quota_backfill: dict[str, list[str]] | None = None) -> list[dict]:
     """점수순 목록에서 최종 선별.
 
     source_quota는 우선권이 아니라 **예약석**이다.
@@ -38,17 +51,28 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     매체가 후보 수로 이겨 최근 10배치 rss 43건 중 The Decoder가 30건이었다.
     `feed` 키가 있는 아이템에만 걸린다(rss·anthropic만 이 키를 채운다).
 
+    quota_backfill은 1단계 안의 순서다 — `{github: [Trendshift]}`면 github 칸을
+    트렌딩에 오른 항목으로 먼저 채우고, 남는 칸만 Trendshift 전용 항목으로 메운다
+    (quota-backfill-order). Trendshift는 유용성이 낮은 저장소도 섞여 있어 스타
+    수로 동등하게 경쟁시키지 않는다.
+
     2단계 목표가 top_n이 아니라는 것이 핵심이다. top_n까지 채우면 예약 출처가
     부족할 때 그 자리를 일반 기사가 가져간다 — github가 4건이면 일반이 16건
     들어와 20건이 됐다. 예약석은 비워 두고 19건으로 끝내는 것이 맞다.
     """
     quota = quota or {}
+    quota_backfill = quota_backfill or {}
     counts: dict[str, int] = defaultdict(int)
     picked: list[dict] = []
     taken: set[int] = set()
 
     for src, n in quota.items():
-        for i, a in enumerate(articles):
+        defer = quota_backfill.get(src) or []
+        order = list(enumerate(articles))
+        if defer:   # 본진 먼저, 후순위 피드는 뒤로 (각 무리 안에서는 점수순 유지)
+            order = ([(i, a) for i, a in order if not _is_backfill(a, defer)]
+                     + [(i, a) for i, a in order if _is_backfill(a, defer)])
+        for i, a in order:
             if counts[src] >= n or len(picked) >= top_n:
                 break
             if i in taken or a["source"] != src:

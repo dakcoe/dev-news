@@ -99,3 +99,68 @@ def test_quota_larger_than_top_n():
 
 def test_empty_input():
     assert pick([], top_n=20, per_source=5, quota=QUOTA) == []
+
+
+# ------------------------------------------------- quota-backfill-order
+BACKFILL = {"github": ["Trendshift"]}
+
+
+def _gh(n, score, feed=None, merged=None):
+    out = []
+    for i in range(n):
+        a = {"url": f"https://github.com/{feed or 'gh'}/{i}", "title": f"{feed or 'gh'} / {i}",
+             "source": "github", "score": score - i}
+        if feed:
+            a["feed"] = feed
+        if merged:
+            a["merged_sources"] = merged
+        out.append(a)
+    return out
+
+
+def _names(picked):
+    return [a["title"] for a in picked if a["source"] == "github"]
+
+
+def _sorted(arts):
+    """pick은 점수순 입력을 전제한다 (adjust_scores가 정렬해서 넘긴다)."""
+    return sorted(arts, key=lambda a: a["score"], reverse=True)
+
+
+def test_trending_fills_reserved_seats_before_trendshift():
+    """Trendshift 전용 항목은 스타가 더 많아도 트렌딩 뒤로 간다."""
+    arts = (_arts("hackernews", 30, 900) + _gh(10, 100)
+            + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA, quota_backfill=BACKFILL)
+    assert _counts(got)["github"] == 5
+    assert all(n.startswith("gh /") for n in _names(got))
+
+
+def test_trendshift_backfills_only_the_shortfall():
+    """트렌딩 3건 + Trendshift 10건 → 트렌딩 3 + Trendshift 2."""
+    arts = (_arts("hackernews", 30, 900) + _gh(3, 100)
+            + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA, quota_backfill=BACKFILL)
+    names = _names(got)
+    assert len(names) == 5
+    assert sorted(n for n in names if n.startswith("gh /")) == ["gh / 0", "gh / 1", "gh / 2"]
+    assert sum(n.startswith("Trendshift /") for n in names) == 2
+
+
+def test_repo_on_both_lists_counts_as_trending():
+    """양쪽에 오른 저장소는 대표가 Trendshift 항목이어도 본진이다 (merged_sources에 github)."""
+    both = _gh(1, 50, feed="Trendshift", merged=["Trendshift", "github"])
+    arts = (_arts("hackernews", 30, 900) + _gh(4, 100) + both
+            + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA, quota_backfill=BACKFILL)
+    names = _names(got)
+    assert len(names) == 5
+    assert "Trendshift / 0" in names                    # 양쪽에 오른 것
+    assert sum(n.startswith("Trendshift /") for n in names) == 1
+
+
+def test_no_backfill_config_keeps_score_order():
+    arts = (_arts("hackernews", 30, 900) + _gh(10, 100)
+            + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA)
+    assert all(n.startswith("Trendshift /") for n in _names(got))
