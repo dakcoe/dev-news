@@ -238,7 +238,8 @@ def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[di
 
     fresh = seen_db.filter_unseen(page_eligible(articles))
     picked = pick(fresh, top_n + overpick, sc.get("per_source", 5),
-                  quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page)
+                  quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page,
+                  quota_backfill=cfg.get("quota_backfill", {}))
     print(f"[깔때기] 미소개 {len(fresh)}건 → 최종 선별 {len(picked)}건 "
           f"(목표 {top_n} + 여유 {overpick})")
 
@@ -280,7 +281,8 @@ def prepare_published(picked: list[dict], cfg: dict,
     # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
     if gate_on:
         ready = pick(ready, top_n, sc.get("per_source", 5),
-                     quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page)
+                     quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page,
+                     quota_backfill=cfg.get("quota_backfill", {}))
     # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
     return tag_all(ready), irrelevant, dead_links
 
