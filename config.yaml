@@ -86,6 +86,11 @@ source_quota:
 # 유용성이 낮은 저장소도 섞여 있다. 양쪽에 오른 저장소는 트렌딩 쪽으로 친다.
 quota_backfill:
   github: [Trendshift]
+# 후순위로 메우는 개수 상한 (quota-backfill-max). 트렌딩은 며칠씩 같은 목록이라
+# 전부 이미 소개한 날이 흔하고, 그러면 5칸이 통째로 Trendshift가 됐다.
+# 트렌딩 0건이면 Trendshift 2건만 싣고 나머지 칸은 비운다 (회차 17건).
+quota_backfill_max:
+  github: 2
 
 # LLM 호출 예산 (SPEC 1.6) — Groq 무료 일일 한도(1,000회)를 한 회차 실행이
 # 다 소진하지 않도록 실행당 상한을 건다(하루 3회 실행). 로컬 테스트와 Actions가 겹쳐도 안전.
