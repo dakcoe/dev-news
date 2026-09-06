@@ -111,6 +111,14 @@ quota_backfill:
 예약석을 채우는 순서다. github 칸은 GitHub 트렌딩에 오른 저장소로 먼저 채우고, 남는 칸만 Trendshift에만 오른 저장소로 메운다. 양쪽에 오른 저장소는 트렌딩 쪽으로 친다.
 트렌딩 3건 + Trendshift 10건이면 트렌딩 3 + Trendshift 2가 된다. 비우면 스타 수로 동등하게 경쟁한다.
 
+```yaml
+quota_backfill_max:
+  github: 2
+```
+
+후순위로 메우는 개수의 상한이다. 트렌딩은 며칠씩 같은 목록이라 전부 이미 소개한 저장소인 날이 흔한데, 그러면 5칸이 통째로 Trendshift가 된다.
+`github: 2`면 트렌딩이 0건일 때 Trendshift 2건만 싣고 나머지 칸은 비워 회차가 17건으로 끝난다. 트렌딩 4건이면 Trendshift 1건이 메워 5건이다.
+
 **LLM 분류 게이트** (`relevance_gate`, 기본 꺼짐)
 
 요약 호출에 게재/제외 판정을 하나 더 받아 기술 밖 사건을 뺀다. 추가 호출은 없다.
