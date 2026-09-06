@@ -164,3 +164,32 @@ def test_no_backfill_config_keeps_score_order():
             + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
     got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA)
     assert all(n.startswith("Trendshift /") for n in _names(got))
+
+
+# ------------------------------------------------- quota-backfill-max
+MAX2 = {"github": 2}
+
+
+def test_backfill_capped_when_no_trending_is_fresh():
+    """트렌딩이 전부 seen이라 후보가 0이면 Trendshift 2건만 싣고 나머지 칸은 비운다."""
+    arts = _arts("hackernews", 30, 900) + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"])
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA,
+               quota_backfill=BACKFILL, quota_backfill_max=MAX2)
+    assert _counts(got) == {"hackernews": 15, "github": 2}
+
+
+def test_backfill_cap_is_on_backfill_count_not_total():
+    """트렌딩 4건이면 Trendshift 1건이 메워 5건 — 상한 2는 후순위 개수에만 걸린다."""
+    arts = (_arts("hackernews", 30, 900) + _gh(4, 100)
+            + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"]))
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA,
+               quota_backfill=BACKFILL, quota_backfill_max=MAX2)
+    names = _names(got)
+    assert len(names) == 5
+    assert sum(n.startswith("Trendshift /") for n in names) == 1
+
+
+def test_no_cap_config_fills_all_seats():
+    arts = _arts("hackernews", 30, 900) + _gh(10, 9000, feed="Trendshift", merged=["Trendshift"])
+    got = pick(_sorted(arts), top_n=20, per_source=15, quota=QUOTA, quota_backfill=BACKFILL)
+    assert _counts(got)["github"] == 5

@@ -37,7 +37,8 @@ def _is_backfill(a: dict, feeds: list[str]) -> bool:
 def pick(articles: list[dict], top_n: int, per_source: int,
          quota: dict[str, int] | None = None,
          per_feed_page: int | None = None,
-         quota_backfill: dict[str, list[str]] | None = None) -> list[dict]:
+         quota_backfill: dict[str, list[str]] | None = None,
+         quota_backfill_max: dict[str, int] | None = None) -> list[dict]:
     """점수순 목록에서 최종 선별.
 
     source_quota는 우선권이 아니라 **예약석**이다.
@@ -54,7 +55,10 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     quota_backfill은 1단계 안의 순서다 — `{github: [Trendshift]}`면 github 칸을
     트렌딩에 오른 항목으로 먼저 채우고, 남는 칸만 Trendshift 전용 항목으로 메운다
     (quota-backfill-order). Trendshift는 유용성이 낮은 저장소도 섞여 있어 스타
-    수로 동등하게 경쟁시키지 않는다.
+    수로 동등하게 경쟁시키지 않는다. quota_backfill_max는 그 후순위 항목의 개수
+    상한이다 (quota-backfill-max) — 트렌딩은 며칠씩 같은 목록이라 전부 seen인
+    날이 흔하고, 그러면 5칸이 통째로 Trendshift가 됐다. `{github: 2}`면 트렌딩
+    0건일 때 Trendshift 2건만 싣고 나머지 칸은 비운다.
 
     2단계 목표가 top_n이 아니라는 것이 핵심이다. top_n까지 채우면 예약 출처가
     부족할 때 그 자리를 일반 기사가 가져간다 — github가 4건이면 일반이 16건
@@ -62,6 +66,7 @@ def pick(articles: list[dict], top_n: int, per_source: int,
     """
     quota = quota or {}
     quota_backfill = quota_backfill or {}
+    quota_backfill_max = quota_backfill_max or {}
     counts: dict[str, int] = defaultdict(int)
     picked: list[dict] = []
     taken: set[int] = set()
@@ -72,11 +77,17 @@ def pick(articles: list[dict], top_n: int, per_source: int,
         if defer:   # 본진 먼저, 후순위 피드는 뒤로 (각 무리 안에서는 점수순 유지)
             order = ([(i, a) for i, a in order if not _is_backfill(a, defer)]
                      + [(i, a) for i, a in order if _is_backfill(a, defer)])
+        back_max = quota_backfill_max.get(src)
+        back_taken = 0
         for i, a in order:
             if counts[src] >= n or len(picked) >= top_n:
                 break
             if i in taken or a["source"] != src:
                 continue
+            if defer and _is_backfill(a, defer):
+                if back_max is not None and back_taken >= back_max:
+                    break                      # 후순위는 점수순 뒤쪽이라 더 볼 것이 없다
+                back_taken += 1
             taken.add(i)
             counts[src] += 1
             picked.append(a)
