@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -27,3 +27,4 @@ Trendshift는 유용성이 낮은 저장소도 섞여 있어 트렌딩과 동등
 ## 완료 기준
 
 - pytest 전체 통과. 트렌딩 후보 3건 + Trendshift 10건이면 트렌딩 3 + Trendshift 2.
+- **완료일**: 2026-09-06T06:46:41.659Z
