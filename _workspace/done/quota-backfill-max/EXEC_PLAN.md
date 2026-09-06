@@ -2,7 +2,7 @@
 
 - **타입**: feat
 - **프로젝트**: project/dev-news
-- **상태**: IN_PROGRESS
+- **상태**: COMPLETED
 
 ## 목표
 
@@ -25,3 +25,4 @@ GitHub 트렌딩은 며칠씩 같은 목록이라 전부 seen에 있는 날이 �
 ## 완료 기준
 
 - pytest 통과. 로컬 재수집 회차에서 github 항목이 Trendshift 최대 2건.
+- **완료일**: 2026-09-06T06:58:10.540Z
