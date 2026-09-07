@@ -93,7 +93,7 @@ PROMPT = """아래 기사를 다음 형식으로만 출력해라.
 
 번역제목: (반드시 한국어가 포함돼야 한다. 이미 한국어면 그대로 두어라. 외국어 문장이면 자연스러운 한국어로 옮기되, 원제에 없는 내용을 덧붙이지 마라 — 옮기기만 해라. "원래이름 — 한 줄 한국어 설명" 형태는 저장소명·패키지명·제품명·버전처럼 옮길 수 없는 고유명사가 제목의 전부일 때만 쓴다. 예: "datasette-upload-dbs 0.5a0 — Datasette에 SQLite DB를 올리는 플러그인", "owner / repo — 한 줄 설명". 문장형 제목에 이 형태를 쓰는 것은 금지다 — 옮긴 제목 뒤에 " — 설명"을 붙이지 마라. 원제를 영어 그대로 복사하는 것도 금지다)
 요약: (2~4문장. 제목에 이미 있는 정보를 반복하지 마라. 제목에 없는 새 정보만 써라 — 구체적으로 무엇이 새로운지, 왜 지금 주목받는지, GitHub 저장소라면 기술 스택과 쓰임새. 독자는 백엔드·AI를 다루는 개발자 한 명이고, 자기 일에 쓸지 판단하는 데 필요한 것만. 원문에 없는 내용은 절대 지어내지 마라. 제목 외에 덧붙일 정보가 본문에 없으면 "없음"이라고만 써라)
-왜중요: (한 문장. 그 개발자의 일에 어떤 의미인지. 덧붙일 것이 없으면 "없음")
+왜중요: (2~3문장. 요약을 다시 말하지 마라. 이 소식이 그 개발자의 일에서 무엇을 바꾸는지 판단해서 써라. 다음 중 기사에 근거가 있는 것만 골라 쓴다 — 지금 확인하거나 조치해야 할 것(버전·설정 변경·마감일), 지금까지 쓰던 방법과 무엇이 달라지는지, 어떤 경우에는 무시해도 되는지, 남아 있는 한계나 위험. 한 문장은 60자를 넘기지 말고 조건을 이어붙이지 마라. 독자와 무관하다는 판정은 쓰지 말고, 도구·목록 모음이면 거기서 무엇을 건질 수 있는지를 써라. 사실은 기사에 있는 것만 쓰고 수치·이름·날짜를 지어내지 마라. 기사에 없는 기능·설정·옵션이 있다고 가정하지 마라. 문장 수를 채우려고 "주목할 만하다", "앞으로가 기대된다" 같은 일반론을 쓰는 것은 금지다 — 근거가 한 가지뿐이면 한 문장으로 끝내고, 그것도 없으면 "없음")
 분류: (게재 / 제외 중 하나만 써라. 이 글이 무엇에 관한 사건인지로 판단해라. 게재 = 코드·도구·라이브러리·모델·제품·릴리스·연구 결과 등 기술 자체에 일어난 일. 제외 = 소송·판결·법률·규제·수사·노동·일자리·채용·교육·학교·정치·행정·사회·범죄·감시·연예처럼 기술 밖 영역에서 일어난 일. AI 회사나 IT 기업이 등장해도 사건 자체가 기술 밖이면 제외다 — 저작권 소송은 제외, 그 회사가 낸 새 모델은 게재.)
 
 [기사]
@@ -102,6 +102,43 @@ PROMPT = """아래 기사를 다음 형식으로만 출력해라.
 본문: {body}
 """
 
+
+# '왜 중요한가'를 따로 뽑을 때 쓰는 프롬프트 (llm.why_model 설정 시).
+# 요약·번역은 정확도가 중요해 gpt-oss로 고정돼 있지만(모델 교체 주석 참고),
+# 이 항목은 사실 전달이 아니라 판단이라 더 큰 모델이 낫다.
+# SYSTEM이 같이 전송되므로 한자·가나 금지 지시와 FOREIGN_RE 검사는 이 호출에도 그대로 적용된다.
+WHY_PROMPT = """아래는 한국인 개발자용 기술 뉴스 브리핑에 실릴 기사다. '왜 중요한가' 한 토막만 써라.
+
+독자는 백엔드·AI를 다루는 개발자 한 명이다.
+
+- 2~3문장. 요약이 무슨 일이 있었는지라면, 이 토막은 그 일이 독자의 일에서 무엇을 바꾸는지다.
+- 한 문장은 60자를 넘기지 마라. 조건을 "~이므로", "~하며"로 계속 이어붙이지 말고 끊어서 새 문장으로 써라.
+- 요약을 다시 말하지 마라. 요약에 있는 내용을 다른 말로 바꿔 적는 것도 반복이다.
+- 다음 중 기사에 근거가 있는 것만 골라 써라: 지금 확인하거나 조치해야 할 것(버전·설정 변경·마감일), 지금까지 쓰던 방법과 무엇이 달라지는지, 어떤 경우에는 무시해도 되는지, 남아 있는 한계나 위험.
+- 사실은 기사에 있는 것만 써라. 수치·이름·날짜를 지어내지 마라. 기사에 나오지 않는 기능·설정·옵션·절차가 존재한다고 가정하지 마라 — 독자가 "확인해야 한다"고 쓰려면 그 확인 대상이 기사에 나와 있어야 한다.
+- 이 기사가 독자와 무관하다거나 볼 필요가 없다는 판정은 쓰지 마라. 실리는 기사는 이미 선별을 통과한 것이고, 독자는 무관하다는 말을 읽으려고 오지 않는다. 도구·라이브러리·목록 모음이라면 거기서 무엇을 건질 수 있는지, 어떤 상황에서 꺼내 쓸 물건인지를 써라.
+- 문장 수를 채우려고 "주목할 만하다", "앞으로가 기대된다", "생태계에 큰 영향을 줄 것이다" 같은 일반론을 쓰는 것은 금지다. 근거가 한 가지뿐이면 한 문장으로 끝내라.
+- 덧붙일 것이 정말 없으면 "없음"이라고만 써라.
+
+출력은 그 문단 본문만. 라벨·머리말·따옴표·목록 기호를 붙이지 마라.
+
+[기사]
+제목: {title}
+한국어 제목: {ko_title}
+요약: {summary}
+본문: {body}
+"""
+
+
+def _parse_why(text: str) -> str:
+    """WHY_PROMPT 응답 정리. 모델이 붙이는 라벨과 '없음' 답을 걷어낸다."""
+    lines = [_clean(raw) for raw in text.splitlines()]
+    out = " ".join(line for line in lines if line).strip()
+    out = re.sub(r"^(왜\s*중요(한가)?|왜중요)\s*[:：]\s*", "", out)
+    out = _strip_no_info_tail(out)
+    if re.fullmatch(r"[\s\"\'()\[\]]*없음[\s.\"\'()\[\]]*", out):
+        return ""
+    return out
 
 # 제목이 "고유명사뿐"인지 — PROMPT의 `이름 — 설명` 형식이 허용되는 조건.
 # 모델이 이 형식을 문장형 제목에도 적용해 원문에 없는 설명을 지어냈다
@@ -284,6 +321,19 @@ def _translate_foreign(parsed: dict, provider: str, model: str, api_key: str) ->
     return None if FOREIGN_RE.search(fixed) else out
 
 
+def _call_why(candidate: dict, article: dict, body: str, provider: str,
+              why_model: str, api_key: str) -> str:
+    """'왜 중요한가'만 별도 모델로 다시 생성한다. 실패는 호출자가 처리한다."""
+    return _parse_why(_call(
+        WHY_PROMPT.format(
+            title=article["title"],
+            ko_title=candidate.get("ko_title") or "",
+            summary=candidate.get("summary") or "",
+            body=body[:2000] if body else "(본문 없음 — 제목과 요약만으로 쓰되 추측하지 마라)",
+        ),
+        provider, why_model, api_key))
+
+
 # ---------------------------------------------------------------- public
 MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 서킷 브레이커 (SPEC 1.6)
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
@@ -291,7 +341,8 @@ MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 �
 
 def summarize_all(articles: list[dict], provider: str | None = None,
                   model: str | None = None, pause: float = 4.0,
-                  max_calls: int = 50, stop_after: int | None = None) -> list[dict]:
+                  max_calls: int = 50, stop_after: int | None = None,
+                  why_model: str | None = None) -> list[dict]:
     """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
 
     stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
@@ -308,10 +359,13 @@ def summarize_all(articles: list[dict], provider: str | None = None,
             f"{KEY_ENV[provider]}가 없습니다. GitHub Secrets 또는 로컬 환경변수에 넣어주세요."
         )
     model = model or os.environ.get("LLM_MODEL") or DEFAULT_MODELS[provider]
-    print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회")
+    why_model = why_model or os.environ.get("LLM_WHY_MODEL") or None
+    print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"
+          + (f" · 왜중요 {why_model}" if why_model else ""))
 
     calls = 0
     exhausted = False        # 서킷 브레이커 — 열리면 이후 호출을 시도조차 하지 않는다
+    why_off = False          # 왜중요 모델이 한도에 걸리면 이번 회차는 더 부르지 않는다
     out = []
 
     for i, article in enumerate(articles, 1):
@@ -338,6 +392,18 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 calls += 1
                 candidate = _parse(_call(prompt, provider, model, api_key))
                 if candidate["ko_title"] or candidate["summary"]:
+                    if why_model and not why_off and calls < max_calls:
+                        calls += 1
+                        try:
+                            better = _call_why(candidate, article, body, provider,
+                                               why_model, api_key)
+                            if better:
+                                candidate["why"] = better
+                        except RateLimited:
+                            why_off = True
+                            print(f"  · 왜중요 모델 한도(429) — 남은 기사는 {model}의 왜중요를 쓴다")
+                        except Exception as e:
+                            print(f"  · 왜중요 생성 실패({e}) — {model} 결과 유지")
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
                                                     candidate["summary"], candidate["why"]]))
                     # 외국 문자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회

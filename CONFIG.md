@@ -138,9 +138,10 @@ quota_backfill_max:
 
 ```yaml
 llm:
-  max_calls_per_run: 50   # 실행당 호출 상한. 하루 3회 × 50 = 150회로 무료 한도 안
+  max_calls_per_run: 90   # 실행당 호출 상한. why_model을 쓰면 기사당 2회다
   model:                  # 비우면 공급자 기본 모델
   pause_seconds: 6.0      # 호출 간격. gpt-oss는 2초면 절반이 429였다
+  why_model: qwen/qwen3.8-27b   # '왜 중요한가'만 다른 모델로. 비우면 model이 다 쓴다
 ```
 
 - 429는 Retry-After만큼 기다려 최대 2회 재시도하고, 그래도 실패하면 그 회차의 요약을 통째로 멈춘다(서킷 브레이커). 남은 기사는 다음 회차로 넘어간다.
