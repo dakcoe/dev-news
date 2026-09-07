@@ -467,6 +467,11 @@ __ADS_HEAD__
           flex-direction:row;justify-content:space-around;align-items:center;padding:0;gap:0;
           border-right:none;border-top:1px solid var(--line);z-index:70}
     .rb{width:46px;height:46px}
+    /* 브랜드 마크도 버튼과 같은 상자에 넣는다. 세로 레일용 여백(위 5px·아래 16px)이
+       그대로 남아 있으면 가로 바에서 혼자 위로 뜬다. */
+    .brand{width:46px;height:46px;margin:0;
+           display:flex;align-items:center;justify-content:center}
+    .brand svg{width:28px;height:28px}
     a.rb.gh{margin-top:0}    /* 하단 내비에선 나란히 */
     .facet{bottom:58px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
   }
