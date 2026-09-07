@@ -14,7 +14,7 @@ import pytest
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from news.render import _ads_config, render  # noqa: E402
+from news.render import ADSENSE_SRC, _ads_config, render  # noqa: E402
 
 ADSENSE = {"enabled": True, "provider": "adsense",
            "client": "ca-pub-1234567890123456", "slot": "9876543210",
@@ -82,7 +82,7 @@ def test_이상한_client는_광고를_끈다(client):
     assert _ads_config({**ADSENSE, "client": client}) is None
 
 
-@pytest.mark.parametrize("slot", ["", "abc", "12", "98765<script>"])
+@pytest.mark.parametrize("slot", ["abc", "12", "98765<script>"])
 def test_이상한_slot은_광고를_끈다(slot):
     assert _ads_config({**ADSENSE, "slot": slot}) is None
 
@@ -143,3 +143,33 @@ def test_광고_라벨이_붙는다(tmp_path, articles):
     """표시광고법·애드센스 정책 모두 광고임을 알아볼 수 있어야 한다."""
     html = build(tmp_path, articles, ADSENSE)
     assert "광고" in html
+
+
+# ---------------- 심사 단계: client만 있고 slot이 없다 ----------------
+
+REVIEW = {"enabled": True, "provider": "adsense",
+          "client": "ca-pub-1234567890123456", "slot": "", "count": 1}
+
+
+def test_slot이_없어도_로더는_head에_들어간다(tmp_path, articles):
+    """애드센스 심사는 로더 스크립트를 보고 사이트를 확인한다. 광고 단위는
+    승인 뒤에 만들기 때문에 이 시점에는 slot이 없다."""
+    html = build(tmp_path, articles, REVIEW)
+    assert html.count("pagead2.googlesyndication.com/pagead/js/adsbygoogle.js") == 1
+    assert "client=ca-pub-1234567890123456" in html
+
+
+def test_slot이_없으면_설정에_빈_값으로_전달된다(tmp_path, articles):
+    """템플릿은 slot이 비면 광고 자리를 그리지 않는다. slot 없는 ins 태그는
+    애드센스가 오류로 잡기 때문이다."""
+    html = build(tmp_path, articles, REVIEW)
+    cfg = json.loads(re.search(r"const ADS = (\{.*?\});", html).group(1))
+    assert cfg["slot"] == ""
+    assert "if(ADS.provider==='adsense' && !ADS.slot) return '';" in html
+
+
+def test_slot이_틀린_형식이면_전부_끈다(tmp_path, articles):
+    """빈 값은 심사 단계지만, 값이 있는데 숫자가 아니면 오타다."""
+    assert _ads_config({**REVIEW, "slot": "abc"}) is None
+    html = build(tmp_path, articles, {**REVIEW, "slot": "abc"})
+    assert "googlesyndication.com" not in html

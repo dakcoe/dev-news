@@ -67,8 +67,15 @@ def _ads_config(ads: object) -> dict | None:
 
     client = str(ads.get("client") or "").strip()
     slot = str(ads.get("slot") or "").strip()
-    if not _CLIENT_RE.match(client) or not _SLOT_RE.match(slot):
-        print("[ads] client는 ca-pub-숫자, slot은 숫자여야 합니다 — 광고를 끕니다")
+    if not _CLIENT_RE.match(client):
+        print("[ads] client는 ca-pub-숫자여야 합니다 — 광고를 끕니다")
+        return None
+    # 심사 단계에서는 slot이 없다. 광고 단위는 승인 뒤에 만들기 때문이다.
+    # 그런데 구글은 로더 스크립트가 head에 있어야 사이트를 확인해 준다. 그래서
+    # slot이 비면 로더만 넣고 광고 자리는 그리지 않는다(빈 ins는 오류가 된다).
+    # 값이 있는데 형식이 틀린 경우는 오타이므로 예전처럼 전부 끈다.
+    if slot and not _SLOT_RE.match(slot):
+        print("[ads] slot은 숫자여야 합니다 — 광고를 끕니다")
         return None
     return {"provider": "adsense", "client": client, "slot": slot, "count": count}
 
