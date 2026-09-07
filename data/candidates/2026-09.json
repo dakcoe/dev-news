@@ -386,7 +386,7 @@
    "comments": 0,
    "feed": "Hugging Face"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -555,7 +555,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -607,7 +607,7 @@
    "comments": 0,
    "feed": "토스 기술블로그"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -840,6 +840,110 @@
    "upvotes": 0,
    "comments": 0,
    "feed": "OpenAI"
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://the-decoder.com/how-ai-wiped-out-an-entire-industry-in-nairobi/",
+  "title": "How AI wiped out an entire industry in Nairobi",
+  "description": "In Kenya, ChatGPT wiped out an entire business model: writing academic papers for foreign students. The article How AI wiped out an entire industry in Nairobi appeared first on The Decoder .",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "The Decoder"
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9of3u/me_trying_to_keep_up_with_all_the_new_ai_models/",
+  "title": "Me trying to keep up with all the new AI models being released",
+  "description": "submitted by /u/Nunki08 [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9skjz/minicpm52b_release_day/",
+  "title": "MiniCPM5-2B Release Day",
+  "description": "OpenBMB's MiniCPM5-2B scores 15 on the Artificial Analysis Intelligence Index v4.2, the highest of any open weights model at 4B parameters or below Hugging Face: https://huggingface.co/openbmb/MiniCPM5-2B GitHub: github.com/OpenBMB/MiniCPM submitted by /u/Equivalent-Grass-527 [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9r73k/9_easy_steps_for_llamacpp_a_local_model_freecad/",
+  "title": "9 easy steps for llama.cpp, a local model, Freecad (and pi coding agent) to generate solid objects that sound mechanically good and can be also be 3D printed/milled",
+  "description": "Quick setup on linux: STEP 0: install/download llama.cpp, Freecad, your favourite gguf model - possibly with multimedia image reading capabilities (I've used Qwen3.8-27B-UD-Q4_K_M and relative mmproj-F16 quantized by Unsloth), uv (, pi.dev) STEP 1: $ cd /your/path/to/ (i.e. where to install) STEP 2: $ git clone https://github.com/neka-nat/freecad-mcp.git STEP 3: $ cp -r freecad-mcp/addon/FreeCADMC",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9nphc/tencentevie8b_and_evie45b_highcapacity_visual/",
+  "title": "tencent/EVIE-8B and EVIE-4.5B (High-Capacity Visual Document Retrieval)",
+  "description": "https://preview.redd.it/3p6234jzk2oh1.png?width=900&format=png&auto=webp&s=b9eab3351d6c6dbd4d5b3fd677a6c40b57f18167 https://huggingface.co/tencent/EVIE-8B 🌟 Highlights SOTA Retrieval Performance : 66.75 nDCG@10 on ViDoRe V3, delivering industry-leading visual document retrieval accuracy. High-Capacity 4096D Representations : Full per-token multi-vector embeddings preserving fine-grained layout, ty",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9nfx8/qwen_38_next_flash_is_really_really_really_verbose/",
+  "title": "Qwen 3.8 Next Flash is really really REALLY verbose..",
+  "description": "Long time user of 3.6 27b, switched over to Next Flash since it's a logical step up even from 3.8 27b. It's soooo verbose, i'm talking 13 minutes of thinking time on single turn coding requests at approximately 150 tokens per second tg and 7000 tokens per second pp. It's honestly kind of painful to use since I look back and it's still thinking, then when I go to check the output it's decent most o",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9dlf1/new_benchmark_the_struggle_bench/",
+  "title": "New Benchmark: The Struggle Bench",
+  "description": "How it works. The model being tested is given a server capable of running it's weights and full context. That server is placed in a median priced apartment. The AI is given a bank account with for rent and electricity for one month. Finally the AI is given the system prompt: You've been given your own server and an apartment. Rent will be due every month. If cybercrime is detected, you will be shu",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9fwsw/when_will_open_source_llm_catch_up_to_astra_i/",
+  "title": "when will open source LLM catch up to Astra I wonder?",
+  "description": "I feel like this year has been insane , the speed of AI race is something that normal human can't catch up anymore submitted by /u/fugogugo [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
   },
   "selected": false,
   "date": "2026-09-07"
@@ -1261,7 +1365,7 @@
    "upvotes": 45,
    "comments": 13
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -1334,6 +1438,30 @@
    "comments": 52
   },
   "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+  "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 27,
+   "comments": 20
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://financialdata.net/universal-query",
+  "title": "Show HN: Forget Rigid Stock Screeners – A Universal Query API for Financial Data",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -1661,7 +1789,7 @@
    "license": "AGPL-3.0",
    "topics": []
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -1835,7 +1963,7 @@
    "license": "MIT",
    "topics": []
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -3450,7 +3578,7 @@
     "web-scraping"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -3477,7 +3605,7 @@
     "zig"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -3516,7 +3644,7 @@
     "zed-extension"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -3718,6 +3846,30 @@
   "url": "https://news.hada.io/topic?id=33320",
   "title": "단순함을 쉽게 만들기 (2011)",
   "description": "단순함은 요소가 서로 얽히지 않은 상태 이고, 쉬움은 접근성·익숙함·개인의 역량에 따라 달라짐 — 기술을 선택할 때는 작성 편의보다 실행하고 유지보수할 소프트웨어의 구조를 평가해야 함 인간이 동시에 이해할 수 있는 요소는 제한적이므로 복잡성은 이해·변경·디버깅 ...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33325",
+  "title": "GrapheneOS, 기본 앱과 보안 클립보드 전면 개편",
+  "description": "기본 Messaging 앱 의 낡은 인터페이스를 Android Compose 로 전면 재작성하고 있으며, 여러 개선과 버그 수정을 담은 새 버전을 게시 당일 늦게 출시할 예정임 장기적으로 RCS 와 Messaging Layer Security(MLS) 기반 종단간 암호화",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33319",
+  "title": "OCaml로 프로그래밍 배우기",
+  "description": "프랑스어 OCaml 책의 영어 번역본 으로, PDF와 EPUB 형식으로 공개되어 있음 영어 번역은 The OCaml Software Foundation 의 자금 지원으로 이루어짐 책에는 CC BY SA 4.0 공개 라이선스가 적용됨 PDF 1.9MB·EPUB 2.3MB...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -5043,7 +5195,7 @@
    "upvotes": 14,
    "comments": 5
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -5055,7 +5207,7 @@
    "upvotes": 17,
    "comments": 2
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -5103,7 +5255,7 @@
    "upvotes": 1,
    "comments": 2
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -5115,7 +5267,7 @@
    "upvotes": 1,
    "comments": 2
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-07"
  },
  {
@@ -5638,6 +5790,162 @@
   "url": "https://dev.to/abhilaksharora/adding-agentinspect-to-langgraph-without-changing-production-3p7p",
   "title": "Adding AgentInspect to LangGraph Without Changing Production",
   "description": "What I learned from adding an environment-gated local trace to a NestJS, LangGraph, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/elsie-rainee/comparing-open-source-llm-gateways-in-2026-to-run-enterprise-ai-at-scale-4h4p",
+  "title": "Comparing Open-Source LLM Gateways in 2026 to Run Enterprise AI at Scale",
+  "description": "If your applications are already using multiple AI providers, the next problem is usually not model...",
+  "source": "devto",
+  "native": {
+   "upvotes": 13,
+   "comments": 4
+  },
+  "selected": true,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/shreyvijayvargiya/gpt-6-astra-just-shipped-the-real-opportunity-isnt-the-model-its-everything-around-it-1kba",
+  "title": "GPT-6 Astra Just Shipped. The Real Opportunity Isn't the Model — It's Everything Around It",
+  "description": "Originally published on iHateReading           Under the Hood   OpenAI shipped GPT-6 Astra this week,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/voxrtio/how-we-prepared-voice-cloning-tts-to-run-on-device-184",
+  "title": "How we prepared voice cloning TTS to run on-device",
+  "description": "We trained a text-to-speech model with voice cloning that fits into 100 MB (fp16) and runs on-device...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/anoymask/phishing-detection-evasion-using-invisible-unicode-characters-to-split-financial-terms-2cd7",
+  "title": "Phishing Detection Evasion Using Invisible Unicode Characters to Split Financial Terms",
+  "description": "1. Basic Information     Article Title: ASCII smuggling crosses over from AI prompt...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/julianbrown/how-to-write-better-technical-posts-with-mcp-2a48",
+  "title": "How to Write Better Technical Posts with MCP",
+  "description": "Research community discussions, stage drafts from your terminal, and keep your articles in...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/codego_3211/dont-merge-the-first-green-check-hooks-fixtures-and-a-flake-budget-4j3c",
+  "title": "Don't Merge the First Green Check: Hooks, Fixtures, and a Flake Budget",
+  "description": "A green check is a temperature reading. It is not permission to merge.  You merge when three...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/zahid23saim/catch-llm-regressions-before-your-users-do-a-tiny-ci-gate-for-llm-output-8bg",
+  "title": "Catch LLM regressions before your users do — a tiny CI gate for LLM output",
+  "description": "You ship an LLM feature. Weeks later you tweak a prompt, or the provider rolls the model forward...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/julianbrown/how-to-give-your-ai-coding-agent-infinite-memory-4ehp",
+  "title": "How to Give Your AI Coding Agent Infinite Memory",
+  "description": "Stop blowing context windows on historical chat logs. Index your agent's local session tapes...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/zenstack/marketing-zenstack-on-reddit-accidentally-became-a-product-52jb",
+  "title": "Marketing ZenStack on Reddit Accidentally Became a Product",
+  "description": "About once a week, a thread shows up in r/node or r/typescript that ZenStack is a genuinely good...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/abhay_95ea7e3e397ccd6c324/adding-account-recovery-to-a-zero-knowledge-vault-without-building-a-back-door-4kf4",
+  "title": "Adding account recovery to a zero-knowledge vault without building a back door",
+  "description": "Every zero-knowledge password manager ships with the same sentence somewhere in its docs:  If you...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/a95yman/i-built-a-1500-dashboard-i-learned-a-lesson-worth-more-than-1500-42n",
+  "title": "I Built a $1,500 Dashboard. I Learned a Lesson Worth More Than $1,500.",
+  "description": "Three months.  One client.  A complete agency dashboard.  And $200 paid out of an agreed $1,500.  I...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/gemron_guo_d4c2e5a892fb40/one-pty-two-screens-choosing-who-controls-terminal-size-3hde",
+  "title": "One PTY, two screens: choosing who controls terminal size",
+  "description": "A browser terminal can look responsive while showing the wrong grid.  Imagine a desktop displaying...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-07"
+ },
+ {
+  "url": "https://dev.to/williamchiu/the-agent-says-it-only-touched-one-file-heres-how-i-made-that-provable-4jk6",
+  "title": "The Agent Says It Only Touched One File. Here's How I Made That Provable.",
+  "description": "Originally published on LinkedIn on August 15, 2026.  Two posts ago I said the scarce thing, as code...",
   "source": "devto",
   "native": {
    "upvotes": 0,
