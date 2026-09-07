@@ -95,13 +95,21 @@ quota_backfill_max:
 # LLM 호출 예산 (SPEC 1.6) — Groq 무료 일일 한도(1,000회)를 한 회차 실행이
 # 다 소진하지 않도록 실행당 상한을 건다(하루 3회 실행). 로컬 테스트와 Actions가 겹쳐도 안전.
 llm:
-  max_calls_per_run: 50
+  max_calls_per_run: 90    # why_model을 쓰면 기사당 2회다 — 50이면 25건에서 끊긴다
   # 빈 값이면 summarizer의 기본 모델(openai/gpt-oss-120b). 환경변수 LLM_MODEL이
   # 있으면 그쪽이 우선한다 — Actions에서 vars.LLM_MODEL로 코드 수정 없이 되돌릴 수 있다.
   model:
   # 호출 간격(초). gpt-oss는 무료 한도(429)에 llama보다 빨리 걸린다 —
   # 2초에서 10건 중 5건이 429였고 8초에서 10/10 성공했다.
   pause_seconds: 6.0
+
+  # '왜 중요한가'만 다른 모델로 뽑는다. 비워두면 위 model이 네 항목을 다 쓴다.
+  # 번역·요약은 원문을 옮기는 일이라 gpt-oss로 충분하지만, 이 항목은 기사에
+  # 없는 판단을 쓰는 일이라 큰 모델이 낫다. 값을 넣으면 기사당 호출이 2회가
+  # 되므로 max_calls_per_run 여유를 확인할 것 (20건 = 40회).
+  # 이 호출이 429면 그 회차는 위 model이 쓴 왜중요를 그대로 쓴다 (기사는 게시된다).
+  # 환경변수 LLM_WHY_MODEL이 있으면 그쪽이 우선한다.
+  why_model: qwen/qwen3.8-27b
 
 # 조용한 열화 감지 (add-failure-alert). 회차가 exit 0으로 끝나도 게시 건수가
 # 이보다 적으면 Actions가 이슈로 알린다 — 요약 한도(429)나 후보 고갈로 몇 건만
