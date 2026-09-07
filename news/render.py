@@ -184,26 +184,41 @@ def _esc(text: str) -> str:
 
 
 def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS) -> str:
-    """스크립트 실행 전에 보이는 목록. 최신 회차부터 limit건."""
+    """스크립트가 실행되기 전에 보이는 화면.
+
+    ⚠️ **JS가 그리는 화면과 같은 마크업을 써야 한다.** 처음에 다른 모양으로
+    그렸더니 스크립트가 뜨는 순간 사이드바가 생기고 카드로 바뀌면서 화면이
+    통째로 흔들렸다 — 스타일이 늦게 오는 것처럼 보인다. 그래서 h1·.sub·
+    .status·.layout·.row을 그대로 쓴다. 교체돼도 자리가 그대로다.
+    """
     items = sorted(view_model, key=lambda d: d.get("batch") or "", reverse=True)[:limit]
-    parts = [
-        '<div class="pre">',
-        f'<h1>개발·AI 뉴스 · {collected.strftime("%Y년 %m월 %d일")}</h1>',
-        '<p class="lead">해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스 등에서 매일 '
-        '00시·08시·16시에 모아 한국어로 옮긴 개발·AI 소식입니다.</p>',
-    ]
+    batches = len({d.get("batch") for d in view_model if d.get("batch")})
+    rows = []
     for d in items:
-        meta = " · ".join(filter(None, [_esc(d.get("from") or d.get("src") or ""),
-                                        _esc(d.get("batchLabel") or "")]))
-        parts.append(
-            '<article>'
-            f'<h2><a href="{_esc(d.get("url") or "")}" rel="noopener">'
-            f'{_esc(d.get("title") or "")}</a></h2>'
-            f'<p class="m">{meta}</p>'
-            + (f'<p class="s">{_esc(d.get("snip") or "")}</p>' if d.get("snip") else "")
-            + '</article>')
-    parts.append("</div>")
-    return "".join(parts)
+        meta = ['<span class="s">' + _esc(d.get("from") or d.get("src") or "") + "</span>"]
+        if d.get("batchLabel"):
+            meta.append('<span class="sep">·</span><span>' + _esc(d["batchLabel"]) + "</span>")
+        rows.append(
+            '<div class="row"><div></div><div class="mid">'
+            f'<span class="rt"><a href="{_esc(d.get("url") or "")}" rel="noopener">'
+            f'{_esc(d.get("title") or "")}</a></span>'
+            '<div class="rm">' + "".join(meta) + "</div>"
+            + (f'<div class="snip">{_esc(d["snip"])}</div>' if d.get("snip") else "")
+            + "</div><div></div><div></div></div>")
+    return (
+        "<h1>오늘의 뉴스</h1>"
+        '<div class="sub">매일 00시·08시·16시에 수집합니다. '
+        "30일 지난 기사는 검색으로 찾을 수 있습니다 "
+        f"(최근 {batches}회차)</div>"
+        '<div class="status"><div class="stmeta">'
+        f'<b>최근 30일 {len(view_model)}건</b> · 수집 {collected.strftime("%Y년 %m월 %d일")}<br>'
+        f'<span class="l2">회차 {batches}개 · 해커뉴스·GitHub 트렌딩·Lobsters·'
+        "dev.to·긱뉴스에서 모읍니다</span></div></div>"
+        # 검색·필터 바 자리. 높이를 잡아두지 않으면 스크립트가 뜰 때 목록이 밀린다.
+        '<div class="bar"><div class="search">'
+        '<input placeholder="검색 (아카이브 포함)…" disabled></div></div>'
+        '<div class="layout"><div class="facet" style="min-height:420px"></div>'
+        '<div class="feed">' + "".join(rows) + "</div></div>")
 
 
 def _meta_desc(view_model: list[dict]) -> str:
