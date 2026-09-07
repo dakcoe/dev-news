@@ -1,5 +1,269 @@
 [
  {
+  "title": "Why comparing insurance deductibles needs shared random medical-spend paths",
+  "url": "https://dev.to/begoodtool/why-comparing-insurance-deductibles-needs-shared-random-medical-spend-paths-4lc1",
+  "description": "The hard part of comparing a high-deductible, low-premium plan with a low-deductible plan is not...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": "2026-09-07T13:00:03Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 668.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbsggllnjajgsezx54f5k.png",
+  "link_status": "ok",
+  "ko_title": "보험 공제액 비교에 공유된 무작위 의료 지출 경로가 필요한 이유",
+  "summary": "이 글은 고공제·저보험료 플랜과 저공제 플랜을 비교할 때 동일한 무작위 의료 지출 경로를 사용해야 공정한 결과를 얻을 수 있다고 설명한다. 연간 지출을 로그 정규 형태로 생성하고, 동일한 지출 값을 두 플랜에 적용해 시뮬레이션한다. JavaScript 코드와 스프레드시트 사용법을 제공한다.",
+  "why": "보험료 비교 시 무작위 노이즈가 결과에 영향을 미치지 않도록 동일한 지출 경로를 적용하는 시뮬레이션 기법을 제공한다. 불확실성을 다루는 백엔드 로직이나 데이터 분석 작업에 이 공유 경로 방식을 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "Sayto",
+  "url": "https://dev.to/kennyfred/sayto-3hn9",
+  "description": "Why ?     I’ve always been interested in how we use language technologies, especially when...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": "2026-09-07T14:09:22Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 665.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fujnz8u633aypobztgjwn.png",
+  "link_status": "ok",
+  "ko_title": "Sayto",
+  "summary": "Sayto는 번역, 음성 입력, 번역 기록, 즐겨찾기, 통계, 개인화 제안을 제공하는 웹 애플리케이션이다. 프론트엔드는 HTML·CSS·JavaScript, 백엔드는 Node.js·Express로 구현했으며, Docker에서 실행되는 LibreTranslate 인스턴스를 번역 엔진으로 사용한다. 현재는 LibreTranslate에 의존하지만 향후 자체 번역 모델을 개발해 통합할 계획이다.",
+  "why": "Sayto는 Docker로 구동되는 LibreTranslate를 번역 엔진으로 사용해 외부 API 의존 없이 로컬에서 번역을 처리한다. 현재는 LibreTranslate에 의존하지만 향후 자체 번역 모델로 교체될 예정이다. 자체 모델 전환 시 번역 품질과 속도, 지원 언어 범위가 달라질 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "AI Generated pixel art needs a build system, not better prompts",
+  "url": "https://dev.to/nonatofabio_28/ai-generated-pixel-art-needs-a-build-system-not-better-prompts-280c",
+  "description": "I rebuilt my tiny homage to Warhammer 40k this week. The original, Hive City Rampage, was a...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": "2026-09-07T14:37:48Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 664.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6htkzuhgif8q0rgdg02m.png",
+  "link_status": "ok",
+  "ko_title": "AI 생성 픽셀 아트는 더 나은 프롬프트가 아니라 빌드 시스템이 필요하다",
+  "summary": "개발자는 AI 에이전트가 작성한 95천 라인 GDScript와 자동 생성 스프라이트를 사용해 Godot 4 기반 등각 시점 게임 ‘Ashgate Siege’를 만들었다. 3D와 달리 2D 스프라이트 게임은 각 프레임이 독립적인 픽셀 맵이라 일관성 유지가 자동으로 보장되지 않는다. 이를 해결하기 위해 프롬프트를 고정된 스키마(예: 4 × 3 셀, 1536×1024 캔버스, 마젠타 배경)로 정의해 빌드 시스템처럼 관리한다.",
+  "why": "2D 스프라이트는 3D와 달리 엔진이 일관성을 보장하지 않아 프레임 간 왜곡이 발생한다. 프롬프트를 캔버스 크기나 배경색 등 고정 스키마로 정의해 빌드 시스템처럼 관리해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "showcase"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "Building 3 AI Agents on a $0 Budget: What I Learned About Tool-Use, RAG, and Code Execution",
+  "url": "https://dev.to/ijlalxhaider/building-3-ai-agents-on-a-0-budget-what-i-learned-about-tool-use-rag-and-code-execution-2ejl",
+  "description": "Why I built this   I'm a CS graduate preparing for a Data Science/AI master's application,...",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": "2026-09-07T11:08:38Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 662.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvuonieor6id8x3if2o32.png",
+  "link_status": "ok",
+  "ko_title": "0원 예산으로 AI 에이전트 3개 구축: 도구 사용·RAG·코드 실행에서 배운 점",
+  "summary": "저자는 Google Gemini 무료 티어만 이용해 웹 검색, 자체 데이터 검색(RAG), 실시간 코드 실행을 수행하는 세 가지 에이전트를 만들었다. 각 에이전트는 Gemini 2.5 Flash 모델과 DuckDuckGo 검색, 로컬 ChromaDB 벡터 저장소를 활용한다. 에이전트 1은 필요할 때만 검색 도구를 호출해 비용과 오답을 최소화한다. 에이전트 2는 사용자가 제공한 텍스트 파일을 청크로 나누어 임베딩하고 로컬 데이터베이스에서 검색한다. 에이전트 3는 코드를 실행해 즉각적인 결과를 반환한다.",
+  "why": "\"항상 검색\" 방식은 불필요한 호출을 늘리고 오히려 답변 품질을 떨어뜨린다. 도구 호출 시점의 판단 로직을 설계하는 것이 통합 자체만큼 중요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "I Built a 41-Check Website Audit Engine. The Most Important Result Is `skip`.",
+  "url": "https://dev.to/lucas_zhuang/i-built-a-41-check-website-audit-engine-the-most-important-result-is-skip-21cl",
+  "description": "I started building a website audit tool with a simple plan: crawl a site, run a list of checks,...",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": "2026-09-07T08:25:21Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 662.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6zmkraqg1k2d5ozn7x4n.png",
+  "link_status": "ok",
+  "ko_title": "41개의 검사 웹사이트 감사 엔진을 만들었다. 가장 중요한 결과는 `skip`",
+  "summary": "이 엔진은 보안, 콘텐츠, 구조화 데이터, 성능, 모바일 UX, 정책 신호 등 41개의 검사를 수행한다. 기존의 단순 pass/warn/fail 모델에서 `skip`과 `info` 상태, 그리고 검증 상태를 추가해 결과의 의미를 구분한다. `skip`은 검사 실행이 불가능했음을, `info`는 문제는 없지만 참고할 정보를 제공함을 나타낸다.",
+  "why": "기존 pass/fail 이분법으로는 네트워크 타임아웃 같은 환경 오류를 사이트 결함으로 오분류한다. 감사 도구를 만들거나 해석할 때 실행 불가 상태를 분리해 신뢰도를 높여야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "Gotham Silicon: 1μ CMOS process that will ship custom chips for –$100 in <24hrs",
+  "url": "https://gothamsilicon.com/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 26,
+  "comments": 12,
+  "published_at": 1788735203,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 344.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Gotham Silicon: 1마이크로 CMOS 공정, 맞춤형 칩을 24시간 이내에 약 100달러에 제공",
+  "summary": "1마이크론 피처 사이즈 CMOS 전자 공정을 개발 중이며, 맞춤형 칩을 24시간 이내에 약 100달러에 제공한다는 내용이다.",
+  "why": "1마이크론 CMOS 공정으로 맞춤형 칩을 24시간 내 100달러에 제공한다. 기존의 수개월 걸리던 칩 제작 주기가 하루로 단축된다. 소량 생산이나 프로토타입 검증 시 비용과 시간을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "microsoft / tgrep",
+  "url": "https://github.com/microsoft/tgrep",
+  "description": "Trigram-indexed grep with a client/server architecture for fast regex search in large codebases locally",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 468,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 468,
+  "score": 268.79999999999995,
+  "image": "https://opengraph.githubassets.com/1/microsoft/tgrep",
+  "link_status": null,
+  "ko_title": "microsoft / tgrep — 트라이그램 인덱스 기반 빠른 정규식 검색 도구",
+  "summary": "tgrep는 트라이그램 인덱스를 사전 구축해 대규모 코드베이스에서 파일 전체를 스캔하지 않고 검색을 수행한다. 클라이언트·서버 구조로 한 번 서버를 시작하면 이후 검색은 즉시 응답한다. 벤치마크에서 ripgrep 대비 최대 52배 빠른 성능을 보였으며, GitHub Copilot CLI에 통합돼 사용된다.",
+  "why": "대규모 모노레포에서 ripgrep로 정규식 검색 시 파일 전체 스캔으로 인한 지연이 사라진다. tgrep 서버를 한 번 띄워두면 이후 검색은 인덱스 기반으로 즉시 응답한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "Ask HN: Would you read a statistics textbook?",
+  "url": "https://news.ycombinator.com/item?id=49583440",
+  "description": "I had a classic Bayesian statistical education throughout my undergraduate and grad years and I’ve come to conclude that the plethora of books offered are pretty bad. For me personally statistics is intuitive if illustrated properly. \nA great example is  https://seeing-theory.brown.edu/ I was wondering whether it would make sense to turn the intuitions behind statistics into a book. Would anyone read it? Do people still read stats books or would it be mostly a waste of effort?\nIf you wanted to teach/help people understand statistics, what resources would you consider?",
+  "source": "hackernews",
+  "upvotes": 93,
+  "comments": 53,
+  "published_at": 1788670338,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 236.25,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "통계 교과서를 읽겠습니까?",
+  "summary": "",
+  "why": "백엔드와 AI 개발 시 통계적 직관을 코드에 반영하는 데 도움이 된다. 기존 교과서 대신 시각화 자료를 참고해 개념을 이해하는 방식이 유효하다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
+  "title": "vastsa / PI-Desktop",
+  "url": "https://github.com/vastsa/PI-Desktop",
+  "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 86,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 86,
+  "score": 135.1,
+  "image": "https://opengraph.githubassets.com/1/vastsa/PI-Desktop",
+  "link_status": null,
+  "ko_title": "vastsa / PI-Desktop",
+  "summary": "PI-Desktop은 로컬에서 실행되는 데스크톱 워크스페이스로, AI 코딩 에이전트를 위한 프로젝트와 모델을 자유롭게 연결한다. 계정이나 중계 서버가 필요 없으며, macOS·Windows·Linux에서 사용할 수 있다. 현재 Early Preview 단계이지만 실제 코딩 흐름에 바로 적용 가능하다.",
+  "why": "중계 서버나 계정 없이 로컬에서 AI 코딩 에이전트를 직접 제어할 수 있다. 에이전트 API나 확장 인터페이스가 계속 바뀌므로 프로덕션 환경 도입은 신중해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T00:28:22.164151+09:00",
+  "batch_label": "9월 8일 00:28"
+ },
+ {
   "title": "Qwen-Drive 1.0 tells you why it brakes, just don't expect the explanation to match the maneuver",
   "url": "https://the-decoder.com/qwen-drive-1-0-tells-you-why-it-brakes-just-dont-expect-the-explanation-to-match-the-maneuver/",
   "description": "Alibaba's research arm has released Qwen-Drive 1.0, an AI model that handles environmental perception, traffic Q&A, and route planning in one system. The researchers show that text-image models don't automatically understand three-dimensional space. Spatial awareness has to be trained on purpose. The goal is a single model that runs both the cockpit and the driving system. The article Qwen-Drive 1",
