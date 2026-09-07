@@ -31,6 +31,8 @@ BASELINE = os.path.join(ROOT, "tests", "golden", "baseline.json")
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", help="비워두면 config.yaml / summarizer 기본값")
+    ap.add_argument("--why-model", help="'왜 중요한가'만 다른 모델로. 비우면 config.yaml")
+    ap.add_argument("--show", action="store_true", help="생성된 요약·왜중요를 그대로 출력")
     ap.add_argument("--save-baseline", action="store_true")
     ap.add_argument("--tolerance", type=float, default=0.10)
     args = ap.parse_args()
@@ -42,14 +44,29 @@ def main() -> int:
     articles = [{**a, "url": f"golden://{i}"} for i, a in enumerate(corpus)]
     llm = build.load_config().get("llm", {})
     model = args.model or llm.get("model") or None
+    why_model = args.why_model or llm.get("why_model") or None
 
     out = summarize_all(articles, model=model,
                         pause=float(llm.get("pause_seconds", 4.0)),
-                        max_calls=len(articles) * 3)
+                        max_calls=len(articles) * 4,
+                        why_model=why_model)
     result = quality.score(out)
     result["model"] = model or "(summarizer 기본값)"
+    result["why_model"] = why_model or result["model"]
 
-    print(f"\n=== 채점: {result['model']} · {result['count']}건 ===")
+    # 채점기는 왜중요의 '두께'를 못 잰다 — 프롬프트를 고칠 때는 눈으로 읽어야 한다.
+    if args.show:
+        for a in out:
+            if not a.get("llm_done"):
+                continue
+            print(f"\n· {a.get('ko_title') or a['title']}")
+            print(f"  요약   {a.get('summary') or '(없음)'}")
+            print(f"  왜중요 {a.get('why') or '(없음)'}")
+        lens = [len(a.get("why") or "") for a in out if a.get("llm_done")]
+        if lens:
+            print(f"\n왜중요 평균 {sum(lens) // len(lens)}자 · 최소 {min(lens)} · 최대 {max(lens)}")
+
+    print(f"\n=== 채점: {result['model']} · 왜중요 {result['why_model']} · {result['count']}건 ===")
     print(f"무결점 비율 {result['clean_rate']:.0%} · 제목 반복도(참고) {result['echo_mean']:.0%}")
     for code in quality.CHECKS:
         rate = result["pass_rate"][code]
