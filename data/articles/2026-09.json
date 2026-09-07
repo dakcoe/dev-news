@@ -1,5 +1,236 @@
 [
  {
+  "title": "ChatGPT claws back web traffic share to 55.5 percent as Gemini's brief comeback fades",
+  "url": "https://the-decoder.com/chatgpt-claws-back-web-traffic-share-to-55-5-percent-as-geminis-brief-comeback-fades/",
+  "description": "ChatGPT has pushed its share of AI chatbot website traffic back up to 55.5 percent, according to Similarweb. Year-over-year, though, its lead shrank sharply from 73.3 percent as Gemini doubled its share and Claude grew nearly fivefold. Mobile apps and desktop clients aren't included. The article ChatGPT claws back web traffic share to 55.5 percent as Gemini's brief comeback fades appeared first on",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788800052.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2025/05/chatgpt_website_stats.png",
+  "link_status": "ok",
+  "ko_title": "ChatGPT, 웹 트래픽 점유율 55.5% 회복…Gemini의 일시적 반등 사라져",
+  "summary": "Similarweb 데이터에 따르면 ChatGPT는 웹 트래픽 점유율을 52.7%에서 55.5%로 회복했다. 반면 Google Gemini는 27.8%에서 25.6%로 감소했으며, Anthropic Claude는 1.9%에서 9.3%로 급증했다. 이 통계는 웹사이트 방문량만을 반영하며, 모바일 앱을 통한 사용량은 포함되지 않는다.",
+  "why": "Claude의 웹 트래픽 점유율이 1.9%에서 9.3%로 급증했다. 웹 기반 AI 도구 선택 시 Claude를 주요 대안으로 검토해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "We checked every single-typo of the 30 most popular npm and PyPI packages. Here's what's actually registered.",
+  "url": "https://dev.to/rushabh5000/we-checked-every-single-typo-of-the-30-most-popular-npm-and-pypi-packages-heres-whats-actually-29j9",
+  "description": "Typosquatting is one of the best-documented supply-chain attack techniques — publish a package one...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T11:34:11Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3l08tef6wplql4c4y8mf.png",
+  "link_status": "ok",
+  "ko_title": "가장 인기 있는 npm·PyPI 패키지 30개의 모든 오타를 조사했습니다. 실제 등록 현황은 이렇습니다.",
+  "summary": "npm에서 30개 인기 패키지의 498개 오타 후보 중 297개(59.6%)가 실제 등록돼 있으며, 그 중 97개(32.7%)가 악성으로 확인됐다. PyPI에서는 582개 후보 중 47개(8.1%)만 등록됐고, 악성으로 확인된 사례는 없었다. 조사 방법은 고빈도 패키지명을 대상으로 삭제·중복·인접 문자 교환 세 가지 오타 패턴을 적용해 레지스트리 API와 OSV 악성 패키지 데이터베이스를 교차 검증한 것이다.",
+  "why": "npm에서 인기 패키지 오타 이름의 3분의 1이 악성으로 확인됐다. PyPI는 같은 조사에서 악성 사례가 없었다. npm 의존성 설치 시 오타로 인한 공급망 공격 위험을 직접 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "Why your JSON and Regex tools shouldn't send data to a backend (and how I built a zero-leak client suite)",
+  "url": "https://dev.to/elvingts/why-your-json-and-regex-tools-shouldnt-send-data-to-a-backend-and-how-i-built-a-zero-leak-client-c3a",
+  "description": "Every developer does it at least once a week: you get an unformatted 2MB payload from an internal...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T14:44:54Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzwcnl9rne58z62yzj6lh.png",
+  "link_status": "ok",
+  "ko_title": "JSON·Regex 도구가 백엔드에 데이터를 보내면 안 되는 이유와 제로 누수 클라이언트 스위트 구축 방법",
+  "summary": "개발자들이 종종 내부 데이터나 정규식 문자열을 온라인 포맷터에 붙여넣어 사용한다. 대부분의 온라인 도구는 광고 추적기와 텔레메트리를 포함해 입력 데이터를 외부 서버로 전송한다. 이를 방지하기 위해 OmniTools Pro라는 16가지 유틸리티가 브라우저 내에서만 동작하도록 제작되었으며, 오프라인에서도 사용 가능하고 네트워크 요청이 전혀 발생하지 않는다.",
+  "why": "내부 엔드포인트에서 받은 페이로드나 JWT를 온라인 포맷터에 붙여넣으면 광고 추적기나 텔레메트리를 통해 외부 서버로 전송될 수 있다. 인증 헤더나 고객 개인정보가 포함된 데이터는 제로 누수 클라이언트 도구로 처리해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "I built a 16-bit RPG inside Jira, and Forge took away my server",
+  "url": "https://dev.to/drinkits/i-built-a-16-bit-rpg-inside-jira-and-forge-took-away-my-server-4n6d",
+  "description": "I could not make myself log time in Jira.  Not because it is hard. Because nothing happens...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T09:41:14Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9gpjzrzzy92uf4449fwn.png",
+  "link_status": "ok",
+  "ko_title": "Jira 안에 16비트 RPG를 만들었는데 Forge가 내 서버를 빼앗았다",
+  "summary": "개발자는 Jira에서 작업 시간을 기록하는 동기부여가 부족해 팀에게 픽셀 아트 트롤을 제공하는 16비트 RPG 앱을 만들었다. 이 앱은 Atlassian Marketplace에 공개됐으며 Atlassian Forge 위에서 실행돼 Node 22 런타임과 Forge SQL을 사용한다. 앱은 6개의 읽기 전용 스코프만 선언하고, 데이터베이스 마이그레이션은 새로운 테이블만 추가할 수 있어 기존 테이블 수정이 불가능하다.",
+  "why": "Forge SQL은 배포된 테이블 수정이 불가하고 새 테이블만 추가할 수 있다. 기존 스키마 변경이 필요한 마이그레이션 전략을 재검토해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "How to Write Better Technical Posts with MCP",
+  "url": "https://dev.to/julianbrown/how-to-write-better-technical-posts-with-mcp-2a48",
+  "description": "Research community discussions, stage drafts from your terminal, and keep your articles in...",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T13:35:03Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy4nm78f8duhhixauz5se.jpg",
+  "link_status": "ok",
+  "ko_title": "MCP로 기술 게시물 작성 능력 향상",
+  "summary": "개발 환경에 AI 코딩 에이전트를 연결해 DEV.to에 직접 게시물을 작성·수정할 수 있는 FastMCP 서버가 소개된다. 에이전트는 커뮤니티 토론을 검색하고, 코드와 동기화된 초안을 단계별로 저장하며, 저장소가 변경될 때 자동으로 게시물을 업데이트한다. 이를 통해 코드 작성 시점에 바로 기술 글을 작성해 최신성을 유지할 수 있다.",
+  "why": "기존에 코드 완료 후 별도로 글을 쓰던 방식과 달라진다. 저장소 변경 시 게시물이 자동으로 동기화되어 최신성을 유지한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "The bug that marked 9,133 emails as read",
+  "url": "https://dev.to/c1-anderson/the-bug-that-marked-9133-emails-as-read-4n75",
+  "description": "A bot polled my personal inbox every 15 seconds and quietly marked almost all of it read. The cause is one word in an IMAP fetch — and the obvious fix introduces a second bug immediately.",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T13:00:06Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fh2ylx5icvsycu0pwctr8.png",
+  "link_status": "ok",
+  "ko_title": "9,133개의 이메일을 읽음으로 표시한 버그",
+  "summary": "Gmail 인박스에서 9,133개의 메일이 도착 직후 자동으로 읽음 처리된 원인은 IMAP fetch 명령이 RFC822 옵션을 사용해 \\Seen 플래그를 설정했기 때문이다. 이를 BODY.PEEK[] 옵션으로 교체하면 플래그가 변경되지 않아 문제를 해결한다. 필터링 로직은 정상 작동했으며, 읽음 플래그가 설정된 후에 필터가 적용돼 오해를 일으켰다.",
+  "why": "IMAP 클라이언트를 직접 다루는 경우, RFC822 옵션은 읽음 플래그를 변경하는 부수 효과가 있다. 메시지 내용을 가져올 때 플래그를 건드리지 않으려면 BODY.PEEK[] 옵션으로 교체해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "hydra-db / hydradb",
+  "url": "https://github.com/hydra-db/hydradb",
+  "description": "HydraDB - fast graph database on object storage",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 11,
+  "score": 108.85,
+  "image": "https://opengraph.githubassets.com/1/hydra-db/hydradb",
+  "link_status": null,
+  "ko_title": "HydraDB — 객체 저장소 기반 분산 그래프 데이터베이스",
+  "summary": "HydraDB는 Rust로 구현된 분산 그래프 데이터베이스로, SlateDB 위에 내구성을 갖춘 그래프 저장소를 두고 S3 호환 객체 저장소에 데이터를 영구 보관한다. 데이터 노드와 인덱서가 독립적으로 실행되어 컴퓨팅 리소스를 별도 확장·교체할 수 있으며, Neo4j 호환 Bolt 프로토콜과 HTTPS API를 제공한다. 현재 GitHub에서 AGPL-3.0 라이선스로 공개되어 있다.",
+  "why": "Neo4j Bolt 프로토콜을 지원하므로 기존 클라이언트 코드를 수정하지 않고 연결할 수 있다. 데이터 노드와 인덱서를 독립적으로 확장하는 구조라 그래프 트래버스 부하가 클 때 유용하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
+  "title": "kubernetes / kubernetes",
+  "url": "https://github.com/kubernetes/kubernetes",
+  "description": "Production-Grade Container Scheduling and Management",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 10,
+  "score": 108.5,
+  "image": "https://opengraph.githubassets.com/1/kubernetes/kubernetes",
+  "link_status": null,
+  "ko_title": "쿠버네티스",
+  "summary": "쿠버네티스는 컨테이너화된 애플리케이션을 다중 호스트에 걸쳐 배포·유지·확장하는 오픈소스 시스템이다. 구글의 Borg 경험과 커뮤니티의 베스트 프랙티스를 결합했으며 CNCF가 호스팅한다. 공식 문서와 무료 마이크로서비스 교육 과정을 제공하고, 코드 자체를 라이브러리로 사용하는 것은 지원되지 않는다.",
+  "why": "쿠버네티스 코드를 외부 앱의 라이브러리로 직접 가져다 쓰는 것은 지원되지 않는다. 기존에 k8s.io/kubernetes 모듈을 의존성으로 선언한 프로젝트는 이 제한을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-08T02:02:48.147369+09:00",
+  "batch_label": "9월 8일 02:02"
+ },
+ {
   "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
   "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
   "description": "https://www.youtube.com/watch?v=6IFVTcM28KA",
