@@ -991,6 +991,9 @@ function render(){
    광고가 기사보다 눈에 띄지 않도록 개수를 묶어 둔다. */
 function adHTML(){
   if(!ADS) return '';
+  /* 심사 단계: client만 있고 slot이 없다. 로더는 head에 들어가 있고 여기서는
+     아무것도 그리지 않는다. slot 없는 ins는 애드센스가 오류로 잡는다. */
+  if(ADS.provider==='adsense' && !ADS.slot) return '';
   const inner = ADS.provider==='adsense'
     ? '<ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client
       +'" data-ad-slot="'+ADS.slot+'" data-ad-format="auto" data-full-width-responsive="true"></ins>'
