@@ -1,5 +1,553 @@
 [
  {
+  "title": "Nitter and XCancel resume service after legal advice",
+  "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+  "description": "https://github.com/zedeus/nitter https://xcancel.com/cdclegal https://nitter.net/ https://xcancel.com/",
+  "source": "hackernews",
+  "upvotes": 425,
+  "comments": 231,
+  "published_at": 1788716987,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 2143.0,
+  "image": "https://opengraph.githubassets.com/1/zedeus/nitter",
+  "link_status": null,
+  "ko_title": "Nitter와 XCancel, 법률 자문 후 서비스 재개",
+  "summary": "X Corp.의 중단 요구에도 불구하고 Nitter 프로젝트는 법률 자문을 받아 서비스를 지속하기로 결정했다. Nitter는 JavaScript 없이 동작하고 광고가 없으며, 백엔드가 트위터와 직접 통신해 사용자의 IP와 지문을 보호한다. 현재 GitHub에서 활발히 유지·테스트되고 있으며, 향후 계정 시스템 및 트윗 보관 기능을 추가할 계획이다.",
+  "why": "프라이버시를 중시하는 트위터 대체 프론트엔드를 계속 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "It took a year to ship WebAssembly in Anubis",
+  "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 30,
+  "comments": 1,
+  "published_at": 1788727298.43,
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "cross_source_count": 2,
+  "score": 1768.1999999999998,
+  "image": "https://anubis.techaro.lol/chrystarium.webp",
+  "link_status": "ok",
+  "ko_title": "Anubis에 WebAssembly를 배포하는데 1년 걸렸다",
+  "summary": "Anubis는 해시캐시와 유사한 Proof-of-Work 방식을 도입해 대규모 스크래핑을 비용 상승시켜 서버를 보호한다. 현재는 임시 방편으로 사용되며, 향후에는 폰트 렌더링 등으로 헤드리스 브라우저를 식별해 정당 사용자에게는 챌린지를 표시하지 않을 계획이다.",
+  "why": "스크래핑 방어를 강화해 서비스 가용성을 유지할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Databasus - 실제 복원까지 검증하는 셀프 호스팅 데이터베이스 백업 도구",
+  "url": "https://news.hada.io/topic?id=33305",
+  "description": "백업 일정과 저장 위치, 보관 기간을 관리하고 백업한 데이터가 실제로 복원되는지까지 자동으로 확인 하는 도구 PostgreSQL/MySQL/MariaDB/MongoDB의 논리 백업 지원 PostgreSQL은 전체/증분 물리 백업과 특정 시점 복구(PITR) 도 가능 WAL 변경...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788741602.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33305",
+  "link_status": "ok",
+  "ko_title": "Databasus - 실제 복원까지 검증하는 셀프 호스팅 데이터베이스 백업 도구",
+  "summary": "Databasus는 PostgreSQL, MySQL, MariaDB, MongoDB의 논리 백업을 지원하고, PostgreSQL에 대해 전체·증분 물리 백업 및 PITR 기능을 제공한다. 백업 후 별도 컨테이너에 복원을 수행해 데이터 크기와 행 수를 보고서로 제공하며, 백업 및 검증 스케줄을 시간·일·주·월 단위와 cron으로 예약할 수 있다. 로컬 디스크와 S3, Cloudflare R2, Google Drive 등 다양한 저장소에 AES-256-GCM 암호화로 저장하고, Docker, Docker Compose, Helm 등으로 손쉽게 배포한다.",
+  "why": "실제 복원 검증까지 자동화해 백업 신뢰성을 높여 운영 안정성을 확보한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "브라운필드의 코끼리: AI로 개인은 빨라졌는데, 조직은 왜 그대로인가",
+  "url": "https://news.hada.io/topic?id=33304",
+  "description": "기존 시스템과 조직 구조가 자리 잡은 브라운필드 기업 의 AI 전환에는 기술뿐 아니라, 자신의 역할과 팀의 권한을 정체성으로 여기는 문제 가 걸려 있음 AI로 담당 업무를 빠르게 처리해도 다른 팀의 승인과 백로그를 기다려야 한다면 조직 경계를 넘는 순간...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788741302.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33304",
+  "link_status": "ok",
+  "ko_title": "브라운필드의 코끼리: AI로 개인은 빨라졌는데, 조직은 왜 그대로인가",
+  "summary": "기존 시스템과 조직 구조가 고착된 기업에서 AI 도입은 개인 업무 속도를 높이지만, 승인 절차와 역할·책임의 경계 때문에 조직 전체의 속도는 개선되지 않는다. AI 활용을 위해서는 기존 역할과 절차를 재설계하고, 구성원에게 권한과 자율성을 부여해야 한다. 현재 많은 기업이 공통 AI 스킬 배포와 개인 자동화에 집중하지만, 이는 조직 전환을 대신하지 못한다.",
+  "why": "조직 구조와 권한 재설계 없이 AI를 도입하면 개발 생산성이 제한돼 프로젝트 일정과 비용에 직접적인 영향을 미친다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "M3 Mac을 지원하는 Asahi Linux",
+  "url": "https://news.hada.io/topic?id=33303",
+  "description": "Asahi Linux의 M3 지원 코드 가 설치 프로그램에 병합되어, M3·M3 Pro·M3 Max 기반 MacBook과 iMac에서도 사용할 수 있음 M1·M2에서 지원하던 기능 대부분 이 작동하며, 웹캠·내장 마이크·WiFi·Bluetooth·최대 USB 3 10Gb/s와 AV1 하드웨어 가속 디코딩",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788741137.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33303?v=de9612d205e307515def8c38e0e1698e",
+  "link_status": "ok",
+  "ko_title": "M3 Mac을 지원하는 Asahi Linux",
+  "summary": "Asahi Linux가 M3, M3 Pro, M3 Max 기반 MacBook과 iMac에 설치할 수 있도록 설치 프로그램에 M3 지원 코드를 병합했다. 기존 M1·M2 기기에서 작동하던 웹캠·마이크·Wi-Fi·Bluetooth·USB 3 10 Gb/s·AV1 하드웨어 디코딩 기능이 대부분 유지된다. 현재 완전한 DCP와 GPU 지원이 미비해 3D 가속 성능은 제한적이며, 절전 모드와 HDMI 포트도 동작하지 않는다. 설치는 Expert 모드에서만 가능하고, 몇 주 뒤 Fedora 45 베타 출시와 함께 제한 해제가 예정되어 있다.",
+  "why": "M3 기반 Mac에서도 리눅스 환경을 시험해볼 수 있어 최신 Apple 하드웨어 활용 개발에 직접적인 선택지를 제공한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "LLGo - C와 Python 라이브러리를 활용하는 LLVM 기반 Go 컴파일러",
+  "url": "https://news.hada.io/topic?id=33302",
+  "description": "Go로 코드를 작성하면서 C와 Python 생태계의 라이브러리를 함께 사용 할 수 있도록 만든 컴파일러 Go 소스를 LLVM으로 컴파일하며, C 라이브러리와는 C ABI 공통 호출 규약 으로 연결 C 함수를 직접 호출해 일반 Go의 cgo 에서 발생하는 스택과...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788741003.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33302?v=3172321c4f5d706546294aa5aa8915d0",
+  "link_status": "ok",
+  "ko_title": "LLGo - C와 Python 라이브러리를 활용하는 LLVM 기반 Go 컴파일러",
+  "summary": "LLGo는 Go 소스를 LLVM으로 컴파일해 C ABI를 통해 C 라이브러리를 직접 호출함으로써 cgo의 스택·스케줄러 전환 오버헤드를 제거한다. 또한 llpyg 도구로 Python 패키지(Numpy, pandas, PyTorch 등)의 Go 바인딩을 생성해 Go 코드에서 Python 라이브러리를 사용할 수 있다. 현재 Linux·macOS amd64/arm64를 지원하고, WebAssembly 및 일부 임베디드 보드용 빌드도 제공한다.",
+  "why": "Go 프로젝트에서 고성능 C·Python 라이브러리를 비용 없이 통합할 수 있어 개발 생산성과 실행 효율을 동시에 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "GPT-6 Astra: 하네스가 곧 제품이다",
+  "url": "https://news.hada.io/topic?id=33301",
+  "description": "같은 GPT-6 Astra도 ARC-AGI-3의 동일한 High 추론 설정에서 하네스에 따라 54.8%와 99.9% 를 기록함. 즉, 장기 실행 에이전트는 모델뿐 아니라 메모리, 도구, 문맥 관리, 제어 루프를 합친 시스템으로 평가해야 함 요청 사이에 이전 추론 상태를 보존하고...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788740702.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33301?v=0def4a4043fd469b74f31d24a766e5da",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra — 하네스가 곧 제품이다",
+  "summary": "GPT-6 Astra는 하네스와 결합해 추론 비용을 절반 이하로 낮추면서 99.9%의 높은 점수를 기록했다. 하네스는 이전 상태 보존, 문맥 압축, 비동기 도구 호출 등을 제공해 장기 실행 에이전트의 효율을 높인다. 다만 과거 문맥 검색은 실험 단계이며, 작업 취소·재시도 등은 애플리케이션이 관리해야 한다. OpenAI는 이를 ‘pre-AGI’라 부르지만, 실제 업무에서의 인간 능가 여부는 아직 입증되지 않았다.",
+  "why": "에이전트 시스템 구축 시 하네스 활용으로 비용 절감과 성능 향상을 기대할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Python Iceberg",
+  "url": "https://aleyan.com/projects/python-iceberg/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 10,
+  "comments": 6,
+  "published_at": 1788720414.409,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "cross_source_count": 1,
+  "score": 893.1999999999999,
+  "image": "https://aleyan.com/python-iceberg/social.jpg",
+  "link_status": "ok",
+  "ko_title": "Python 아이스버그",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Windows 11's \"special\" developer edition looks like another marketing misfire",
+  "url": "https://www.neowin.net/opinions/windows-11s-special-developer-edition-sounds-like-yet-another-marketing-misfire/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 56,
+  "comments": 38,
+  "published_at": 1788729370,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 826.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Windows 11의 “특별” 개발자 에디션이 또 다른 마케팅 실수처럼 보인다",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Making a Python interpreter in 1024 bytes",
+  "url": "https://austinhenley.com/blog/python1024.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 47,
+  "comments": 17,
+  "published_at": 1788736448,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 745.0,
+  "image": "https://austinhenley.com/blog/images/python1024.png",
+  "link_status": "ok",
+  "ko_title": "1024바이트로 파이썬 인터프리터 만들기",
+  "summary": "개발자는 매크로나 라이브러리 없이 순수 C 코드만으로 1024바이트 이하 크기의 파이썬-같은 인터프리터를 구현하려고 한다. 전체 파이썬 언어를 지원하지 못하므로, 함수 정의와 들여쓰기 같은 파이썬 문법 요소를 최소한으로 구현하고 fizzbuzz 예제로 동작을 보여준다. 구현은 전역 변수와 고정 길이 배열을 사용해 토큰화·파싱·실행을 단순화한다.",
+  "why": "극한 코드 크기로 파이썬 구문을 구현하는 방법을 살펴볼 수 있어 임베디드·리소스 제한 환경에서 언어 인터프리터를 설계할 때 참고가 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "There's No Limit to How Bad Code Can Get",
+  "url": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
+  "description": "My comment on There's No Limit to How Bad Code Can Get — Lobste.rs. [In reply to a comment about burning it down to start from scratch when technical debt becomes overwhelming] In my experience it's so rare for that to work. You announce the old thing is irrecoverably drowning in tech debt. You spin up a team to rewrite it from scratch. Work begins. Meanwhile the old thing remains a moving target:",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788685686.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "코드가 얼마나 나빠질 수 있는지 한계가 없다",
+  "summary": "기존 시스템이 기술 부채에 빠져도 새 시스템을 처음부터 다시 만들려는 시도는 흔히 실패한다. 기존 시스템은 계속 운영돼 변경이 필요하고, 새 시스템을 담당하는 팀은 전체 동작을 충분히 이해하지 못한 채 진행한다. 결국 두 시스템이 동시에 운영돼 유지보수 비용이 증가하고, 새 시스템이 완전 대체되지 못한 채 방치될 위험이 있다.",
+  "why": "기존 레거시와 신시스템을 동시에 관리하는 상황은 개발 효율을 크게 저하시킨다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Meta's new real-time audio model is the foundation for AI assistants that never stop listening",
+  "url": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
+  "description": "Meta's Superintelligence Labs have released Muse Voice Transcribe, a real-time transcription model that processes speech in 80-millisecond chunks, tells speakers apart, and detects sentence boundaries. According to Artificial Analysis, it delivers the most accurate streaming transcription at the lowest price in the market. Meta sees the model as a building block for personal AI agents that listen ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788687918.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/meta_logo.png",
+  "link_status": "ok",
+  "ko_title": "Meta의 새로운 실시간 오디오 모델, 끊임없이 듣는 AI 비서의 기반",
+  "summary": "Meta가 Muse Voice Transcribe라는 실시간 음성 인식 모델을 공개했다. 이 모델은 80밀리초 단위로 오디오를 처리해 발화 속도와 정확도를 동적으로 조절하고, 20명 이상의 화자를 구분하며 문장 경계까지 자동으로 인식한다. 70개 이상의 언어를 지원하고 시간당 0.18달러의 비용으로 Meta AI와 Model API를 통해 즉시 사용할 수 있다.",
+  "why": "실시간 다화자 인식과 저비용 API 제공으로 음성 기반 서비스 개발 비용과 복잡성을 크게 낮춘다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Stripping safety guardrails from open-weight AI models is now a turnkey commercial service",
+  "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
+  "description": "Abliteration.ai sells access to modified open-weight models with their trained safety mechanisms stripped out, currently based on Z.AI's GLM-5.3. The startup markets the service for offensive cybersecurity and red teaming, but journalists were able to generate malware instructions without much effort. Whether the benefits outweigh the risks remains an open question. The article Stripping safety gu",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788684956.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/abliteration-ai-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "오픈 가중치 AI 모델에서 안전 가드레일을 제거하는 것이 이제 바로 사용할 수 있는 상업 서비스가 되다",
+  "summary": "미국 스타트업 Abliteration.ai가 GLM-5.3 등 오픈 가중치 모델의 거부 메커니즘을 제거하고, 수정된 모델을 API 형태로 제공한다. 이 서비스는 사이버 보안 테스트, 레드팀, 악성코드 분석 등에 활용될 수 있지만, 자체 GPU 인프라 없이도 접근이 가능해 악용 위험도 높아진다. Abliteration은 모델 내부 활성화 패턴을 찾아 가중치를 조정해 거부를 억제하는 “abliteration” 기법을 사용한다.",
+  "why": "모델 안전 장치를 우회한 서비스가 쉽게 제공되면 보안 테스트와 악용 사이의 경계가 흐려진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Mozaik in Plain English: A Gentle Introduction to Concurrent AI Agents",
+  "url": "https://dev.to/jamilxt/mozaik-in-plain-english-a-gentle-introduction-to-concurrent-ai-agents-5bed",
+  "description": "Most AI agent tutorials show you a pipeline. Agent A extracts data, hands it to Agent B, B hands it...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 4,
+  "published_at": "2026-09-06T19:41:19Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 686.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk7k2ut837gi7h9rhz5pj.png",
+  "link_status": "ok",
+  "ko_title": "Mozaik 쉽게 풀어보기: 동시성 AI 에이전트 입문",
+  "summary": "Mozaik은 파이프라인 방식이 아닌 방 안의 참가자들이 자유롭게 이벤트를 주고받으며 동시 작업하는 런타임이다. 인간, AI 에이전트, 텔레메트리 등 모든 참가자는 공유 버스에 게시된 이벤트를 보고 스스로 반응한다. 이를 활용해 저자는 JigJoy 해커톤에서 실시간 장애 대응 방(Room)인 OpsRoom을 구축했으며, 에이전트들이 서로 차단 없이 동시에 작업하고 서로의 존재와 대화를 인식한다는 특징을 보여준다.",
+  "why": "기존 파이프라인 한계 없이 에이전트를 병렬로 협업시켜 운영 자동화와 장애 대응을 효율화할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "Your prompt system has no tests, and that is why you cannot tell it is broken",
+  "url": "https://dev.to/latifox/your-prompt-system-has-no-tests-and-that-is-why-you-cannot-tell-it-is-broken-10bh",
+  "description": "Tags: ai, python, testing, showdev     Code fails loudly. A prompt system fails in silence, and it...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 4,
+  "comments": 5,
+  "published_at": "2026-09-06T21:24:56Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 683.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8hnq6as6wb2j11t8rp9x.png",
+  "link_status": "ok",
+  "ko_title": "프롬프트 시스템에 테스트가 없으니 언제 고장났는지 알 수 없다",
+  "summary": "멀티스킬 에이전트 시스템에서 15개의 스킬과 9개의 명령이 구조화된 JSON을 주고받으며 몇 주간 정상 동작했지만, 테스트가 없어 한 스킬이 필드를 누락해도 오류를 감지하지 못했다. 저자는 산술 점수, 스키마 검증, 그리고 숫자로 표현된 텍스트 규칙을 테스트로 구현해 대부분의 회귀를 포착할 수 있었다. 이러한 테스트는 모델 출력 자체가 아니라 결과값과 구조적 계약을 검증한다.",
+  "why": "테스트 없이 프롬프트 파이프라인을 운영하면 미묘한 회귀가 누적돼 실제 성능 저하를 놓치기 쉽다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "openai / skills",
+  "url": "https://github.com/openai/skills",
+  "description": "Skills Catalog for Codex",
+  "source": "github",
+  "upvotes": 46,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 46,
+  "score": 121.1,
+  "image": "https://opengraph.githubassets.com/1/openai/skills",
+  "link_status": null,
+  "ko_title": "openai / skills — OpenAI Codex용 에이전트 스킬 저장소",
+  "summary": "이 저장소는 더 이상 사용되지 않으며 현재 Codex 스킬 및 플러그인 예시는 OpenAI Plugins 저장소에서 확인할 수 있다. 기존 스킬은 `.system` 디렉터리에 자동 설치되고, `$skill-installer` 명령으로 커리티드·실험적 스킬을 추가할 수 있다. 커스텀 스킬을 만들려면 OpenAI 개발자 문서의 Build plugins 가이드를 참고한다.",
+  "why": "Codex 기반 에이전트 개발 시 스킬 관리와 배포 방식을 이해하고 최신 플러그인 저장소로 전환해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "dramaclaw / dramaclaw",
+  "url": "https://github.com/dramaclaw/dramaclaw",
+  "description": "A general-purpose AIGC video engine: script to finished film in one pipeline — dramas, ads, product videos, otome games, and more. | 通用 AIGC 视频引擎 —— 从剧本到成片一条流水线，漫剧、广告、电商、乙游皆可",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 31,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 31,
+  "score": 115.85,
+  "image": "https://opengraph.githubassets.com/1/dramaclaw/dramaclaw",
+  "link_status": null,
+  "ko_title": "dramaclaw / dramaclaw — 오픈소스 드라마 제작 파이프라인",
+  "summary": "DramaClaw는 스크립트 작성부터 완성된 영상까지 전 과정을 자동화하는 AI 기반 드라마 제작 파이프라인을 제공한다. Elastic License 2.0 하에 상업적 사용이 가능하며, 별도의 허가 없이도 수정·배포·수익 창출이 허용된다. 현재는 자체 호스팅 SaaS 형태로 제공되지 않는다.",
+  "why": "AI 기반 드라마 제작 파이프라인을 직접 구축해 비용을 절감하고 창작 자유를 확보할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "llvm / llvm-project",
+  "url": "https://github.com/llvm/llvm-project",
+  "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+  "source": "github",
+  "upvotes": 23,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 23,
+  "score": 113.05,
+  "image": "https://opengraph.githubassets.com/1/llvm/llvm-project",
+  "link_status": null,
+  "ko_title": "llvm / llvm-project — LLVM 프로젝트",
+  "summary": "이 GitHub 저장소는 고성능 컴파일러와 최적화기, 런타임 환경을 구축하기 위한 LLVM 툴킷의 소스 코드를 제공한다. 핵심 컴포넌트인 LLVM 외에 Clang 프론트엔드, libc++ 표준 라이브러리, LLD 링커 등을 포함한다. 빌드 및 기여 방법은 공식 문서와 가이드에서 확인할 수 있다.",
+  "why": "LLVM은 다양한 언어와 플랫폼을 지원하는 컴파일러 인프라로, 백엔드 개발에 핵심적인 도구이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
+  "title": "webadderallorg / Recordly",
+  "url": "https://github.com/webadderallorg/Recordly",
+  "description": "Create polished demo videos without editing skills. Mac/Windows/Linux",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 20,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 20,
+  "score": 112.0,
+  "image": "https://opengraph.githubassets.com/1/webadderallorg/Recordly",
+  "link_status": null,
+  "ko_title": "webadderallorg / Recordly — 화면 녹화·편집 데스크톱 앱",
+  "summary": "Recordly는 macOS, Windows, Linux에서 동작하는 오픈소스 데스크톱 화면 녹화·편집 앱이다. 각 플랫폼별로 네이티브 캡처 도구(ScreenCaptureKit, Windows Graphics Capture, Electron)를 활용해 영상과 오디오를 기록한다. 자동 줌, 커서 보정, 스타일 프레임 등 모션 기반 프레젠테이션 기능을 내장하고 있다. 현재 PR을 받고 있다.",
+  "why": "개발자가 별도 영상 편집 툴 없이 바로 시연 영상을 만들 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-09-07T09:41:35.278324+09:00",
+  "batch_label": "9월 7일 09:41"
+ },
+ {
   "title": "QBittorrent breaks out of sandbox to commit crimes",
   "url": "https://beige.party/@intransitivelie/117057396732763183",
   "description": "",
