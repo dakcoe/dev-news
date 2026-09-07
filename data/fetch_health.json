@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-08-31T10:05:36+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 14,
-    "github": 1
-   },
-   "failures": []
-  },
-  {
    "at": "2026-08-31T23:50:49+09:00",
    "total": 19,
    "counts": {
@@ -423,6 +414,22 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-08T03:59:53+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://queue.acm.org/doi/10.1145/3212477.3212479",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
