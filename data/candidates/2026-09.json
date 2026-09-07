@@ -702,6 +702,32 @@
   "date": "2026-09-08"
  },
  {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w9v6qp/are_you_running_qwen_38_27b_or_qwen_flash_next/",
+  "title": "Are you running Qwen 3.8 27b or Qwen Flash Next?",
+  "description": "Curious about what people are preferring, if you have the hardware. I have m3 Max 96gb and both run, and largely feel identical, but prefill on qwen 27b is faster. Is there anything / anyone working on anything to improve pp with mlx? Branching question: is anyone working on a harness that works with no reasoning? This interests me ever since Jetbrains shared that they're using 3.6 with reasoning ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/",
+  "title": "The purpose of DNS is to spread scams",
+  "description": "The purpose of DNS is to spread scams Terence Eden shares some daunting statistics in support of his take that \"the Domain Name System's purpose seems to be a vector for criminals to run scams on people at a terrifyingly high rate\". On this Interisle report ( via Andrew Campling ), Terence says: It says 85 million new registrations of gTLDs were made in 2025. Of those 8.5 million were added to blo",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
   "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
   "title": "It took a year to ship WebAssembly in Anubis",
   "description": "",
@@ -925,6 +951,18 @@
   "native": {
    "upvotes": 93,
    "comments": 53
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://www.vldb.org/pvldb/volumes/19/paper/The%20Dataflow%20Model%20Revisited",
+  "title": "The Dataflow Model Revisited",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 3,
+   "comments": 1
   },
   "selected": true,
   "date": "2026-09-08"
@@ -1652,7 +1690,7 @@
     "memory"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-08"
  },
  {
@@ -1852,6 +1890,46 @@
   "date": "2026-09-08"
  },
  {
+  "url": "https://github.com/redhat-et/ripwire",
+  "title": "redhat-et / ripwire",
+  "description": "The ripgrep of AI context: a zero-dependency C++23 CLI + MCP server giving coding agents a ranked, deterministic map of any repo, blast radius, tests-to-run and quality deltas. Signatures at 80% fewer bytes than bodies; ~5% of a grep-and-read pass's tokens.",
+  "source": "github",
+  "native": {
+   "upvotes": 548,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 548,
+   "stars": 1134,
+   "forks": 49,
+   "language": "C++",
+   "license": "Apache-2.0",
+   "topics": [
+    "ai-agents",
+    "call-graph",
+    "claude",
+    "claude-code",
+    "cli",
+    "code-navigation",
+    "codex",
+    "coding-agents",
+    "context-engineering",
+    "cpp",
+    "developer-tools",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "python",
+    "rust",
+    "static-analysis",
+    "swift",
+    "tree-sitter",
+    "typescript"
+   ]
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
   "url": "https://news.hada.io/topic?id=33325",
   "title": "GrapheneOS, 기본 앱과 보안 클립보드 전면 개편",
   "description": "기본 Messaging 앱 의 낡은 인터페이스를 Android Compose 로 전면 재작성하고 있으며, 여러 개선과 버그 수정을 담은 새 버전을 게시 당일 늦게 출시할 예정임 장기적으로 RCS 와 Messaging Layer Security(MLS) 기반 종단간 암호화",
@@ -1909,6 +1987,30 @@
    "comments": 0
   },
   "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33327",
+  "title": "브레인롯에서 벗어나기 위한 휴가",
+  "description": "소프트웨어 엔지니어로서 업무에 익숙해지고 AI로 생산성도 높아졌지만 사고는 느리고 얕아졌다고 느껴, 2주간의 휴가 를 독서와 새로운 학습에 사용함 숏폼·게임·만화·TV 프로그램으로 지루할 틈이 없어지고 취침 전 둠스크롤링 에 독서가 밀려나자, 지난 1년간 손...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33326",
+  "title": "Terence Tao: “AI만으로 수학 문제를 성급하게 푸는 것”의 위험",
+  "description": "순수수학의 난제 는 정답뿐 아니라 해결 과정에서 새로운 통찰과 이론을 만드는 데 가치가 있으며, 과정을 공개하지 않는 AI 단독 해결은 이 역할을 훼손할 수 있음 Navier-Stokes 전역 정칙성 문제 를 인간 수학자가 AI와 함께 시행착오를 분석하며 풀면 유체역학을...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
   "date": "2026-09-08"
  },
  {
@@ -2743,6 +2845,138 @@
   "url": "https://dev.to/mighty840/webassembly-as-a-first-class-workload-next-to-your-containers-bli",
   "title": "WebAssembly as a first-class workload - next to your containers",
   "description": "Why my orchestrator schedules Wasm modules with the same machinery it uses for containers, and where that leads.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/alisterbaroi/an-ai-agent-is-just-a-while-loop-i-built-one-in-70-lines-of-python-then-tricked-it-into-leaking-4ehf",
+  "title": "An AI agent is just a while loop. I built one in 70 lines of Python, then tricked it into leaking my .env",
+  "description": "Every framework, every job posting, and about half of LinkedIn wants to tell you what an \"AI agent\"...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/parsajiravand/one-css-property-replaces-your-checkbox-hack-4jhk",
+  "title": "One CSS Property Replaces Your Checkbox Hack",
+  "description": "Recoloring a checkbox to match the brand usually means appearance: none, a hand-drawn checkmark, and a rebuilt focus ring. accent-color does the same job in one line — and knowing where it stops matters as much as knowing that it works.",
+  "source": "devto",
+  "native": {
+   "upvotes": 8,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/abimanyu_p_9e75124634d2a4/closure-in-javascript-4bdl",
+  "title": "Closure in javascript",
+  "description": "Closures in JavaScript   Closures are one of the most important concepts in JavaScript. They...",
+  "source": "devto",
+  "native": {
+   "upvotes": 3,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/oscarhsieh/i-kept-losing-track-of-which-json-lines-i-had-already-changed-d4a",
+  "title": "I kept losing track of which JSON lines I had already changed",
+  "description": "Most of my JSON work is editing, not reading.  A config file comes in, and I have to change fifteen...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/suman_debnath_1/the-ai-agent-cost-guides-say-200-a-month-mine-has-cost-5-1in1",
+  "title": "The AI agent cost guides say $200 a month. Mine has cost $5.",
+  "description": "In short — MIGI is a fleet of AI agents built by Suman Debnath, running since 8 July 2026 at forty...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/marcelo_sqe/my-restored-cypress-session-was-lying-to-me-4648",
+  "title": "My restored Cypress session was lying to me",
+  "description": "Author's Note / Disclosure: 100% human-authored content based on real production engineering work....",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/i_m_vampire_/the-internet-lied-to-you-about-portfolio-websites-i18",
+  "title": "The Internet Lied to You About Portfolio Websites",
+  "description": "Here's what I found: most of the advice floating around is either outdated, wrong, or only applies if...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/edgeai/good-friction-5ci",
+  "title": "Good Friction",
+  "description": "Executive summary Something happened in July 2026 that has not yet been absorbed by the people who...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/jamilxt/jdk-27-lands-september-15-five-changes-that-affect-your-app-even-if-you-never-upgrade-10h",
+  "title": "JDK 27 Lands September 15. Five Changes That Affect Your App Even If You Never Upgrade",
+  "description": "Next Tuesday, September 15, JDK 27 hits general availability. If you run Spring Boot in production,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/malachinilsson7591/social-sign-in-recovery-jwt-caching-with-live-session-introspection-1olk",
+  "title": "Social Sign-In Recovery — JWT Caching with Live Session Introspection",
+  "description": "Short answer: Use a split JWT verification architecture: bounded JWKS caching for ordinary API calls,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-08"
+ },
+ {
+  "url": "https://dev.to/florianblake3536/high-risk-login-controls-with-device-fingerprints-event-reports-and-step-up-verification-klc",
+  "title": "High-Risk Login Controls with Device Fingerprints, Event Reports, and Step-Up Verification",
+  "description": "High-risk login controls for a healthtech account must use device fingerprints as signals, preserve...",
   "source": "devto",
   "native": {
    "upvotes": 0,
