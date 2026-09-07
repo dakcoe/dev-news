@@ -127,10 +127,12 @@ alert:
 # 광고는 기사 사이가 아니라 피드 오른쪽 레일에 붙는다. 1200px 미만 화면에서는
 # 아예 그리지 않는다 — 피드를 좁히면서까지 넣을 자리가 아니다.
 ads:
-  enabled: false
-  provider: placeholder
-  client: ""            # 예: ca-pub-1234567890123456
-  slot: ""              # 애드센스에서 만든 광고 단위 ID
+  enabled: true
+  provider: adsense
+  client: "ca-pub-9719970909376058"
+  # 심사 단계라 비워 둔다. 광고 단위는 승인 뒤에 만든다 — 비어 있으면
+  # head의 로더만 나가고 광고 자리는 그리지 않는다.
+  slot: ""
   count: 1              # 오른쪽 레일에 세로로 쌓을 개수 (최대 3)
 
 # 무료 API 목록의 링크 생존 확인 (api-link-health).
