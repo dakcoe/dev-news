@@ -374,16 +374,20 @@ __ADS_HEAD__
   /* 광고 (add-ad-slot). 기사 사이가 아니라 피드 오른쪽 레일에 세로로 둔다 —
      읽는 흐름을 끊지 않고, 애드센스 정책이 요구하는 '콘텐츠와의 구분'도 확실하다.
      좁은 화면에서는 아예 그리지 않는다(피드를 좁히면서까지 넣을 자리가 아니다). */
-  .adrail{display:none;flex:0 0 300px;position:sticky;top:12px}
+  .adrail{display:none;flex:0 0 250px;position:sticky;top:12px}
   .adbox{border:1px solid var(--line);border-radius:14px;background:var(--panel);
-         padding:10px 12px;overflow:hidden;margin-bottom:12px}
+         padding:9px 11px;overflow:hidden;margin-bottom:12px}
   .adlab{font-size:11px;color:var(--tx3);letter-spacing:.02em;margin-bottom:6px}
   .adph{display:flex;align-items:center;justify-content:center;text-align:center;
-        height:250px;border:1px dashed var(--line);border-radius:8px;
+        height:180px;border:1px dashed var(--line);border-radius:8px;
         color:var(--tx3);font-size:12.5px;line-height:1.5;padding:0 10px}
-  /* 레일이 들어가는 만큼 컨테이너를 넓혀 피드 폭을 지킨다 (1180 → 1500). */
+  /* 좁은 화면용 가로 광고. 회차 구분선 자리에만 들어가 기사 흐름을 안 끊는다.
+     레일과 동시에 쓰지 않는다 — 하나만 그린다(아래 WIDE 참조). */
+  .adbox.wide{margin:22px 0 14px}
+  .adbox.wide .adph{height:110px}
+  /* 레일이 들어가는 만큼 컨테이너를 넓혀 피드 폭을 지킨다 (1180 → 1450). */
   @media (min-width:1200px){
-    body.ads .inner{max-width:1500px}
+    body.ads .inner{max-width:1450px}
     body.ads .layout .adrail{display:block}
   }
   .more{text-align:center;padding:22px 10px;color:var(--tx3);font-size:13px}
@@ -527,9 +531,14 @@ const ADS = __ADS_JSON__;
    이때 로더는 head에 들어가야 하지만 그릴 광고는 없다. 이걸 구분하지 않으면
    빈 레일이 300px을 차지한다. */
 const ADS_ON = !!(ADS && (ADS.provider !== 'adsense' || ADS.slot));
+/* 넓은 화면은 오른쪽 레일, 좁은 화면은 회차 구분선마다 가로 광고.
+   ⚠️ 둘을 동시에 그리고 CSS로 감추면 안 된다 — 애드센스가 숨은 자리를
+   채우려다 실패하고 정책 위반으로 잡힌다. 한 번에 하나만 그린다. */
+const WIDE = matchMedia('(min-width:1200px)');
+const AD_ROWS_MAX = 3;              // 좁은 화면에서 끼울 가로 광고 최대 개수
 /* 광고가 켜진 회차에만 body에 표시를 남긴다 — CSS가 이 클래스로 레일을 켜고
    컨테이너 폭을 넓힌다. 꺼져 있으면 지금 레이아웃 그대로다. */
-if(ADS_ON) document.body.classList.add('ads');
+if(ADS_ON && WIDE.matches) document.body.classList.add('ads');
 
 /* ---------------- state ---------------- */
 let view='news', sort='batch', filter='all', q='', days=0, unreadOnly=false;   // days=0 이면 전체
@@ -1091,9 +1100,19 @@ function adHTML(){
   return '<div class="adbox"><div class="adlab">광고</div>'+inner+'</div>';
 }
 
+/* 좁은 화면용 가로 광고 한 칸. 회차 구분선 위에 놓는다. */
+function adWideHTML(){
+  if(!ADS_ON || WIDE.matches) return '';
+  const inner = ADS.provider==='adsense'
+    ? '<ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client
+      +'" data-ad-slot="'+ADS.slot+'" data-ad-format="horizontal" data-full-width-responsive="true"></ins>'
+    : '<div class="adph">광고 자리<br>(placeholder — 실제 광고는 나가지 않습니다)</div>';
+  return '<div class="adbox wide"><div class="adlab">광고</div>'+inner+'</div>';
+}
+
 /* 피드 오른쪽 레일. 광고가 꺼져 있으면 빈 문자열이라 레이아웃도 그대로다. */
 function adRailHTML(){
-  if(!ADS_ON) return '';
+  if(!ADS_ON || !WIDE.matches) return '';
   let h='';
   for(let i=0;i<ADS.count;i++) h+=adHTML();
   return '<div class="adrail">'+h+'</div>';
@@ -1128,10 +1147,13 @@ function layoutHTML(){
     h+='<div class="none">'+(days?'이 기간에는 기사가 없습니다. 오른쪽 위 「전체」를 눌러보세요.'
                                   :'조건에 맞는 기사가 없습니다.')+'</div>';
   } else if(sort==='batch'){
-    let last=null;
+    let last=null, adRows=0;
     items.slice(0, shown).forEach(d=>{
       const label=d.batchLabel||'';
       if(label && label!==last){
+        /* 회차가 갈리는 지점. 좁은 화면에서는 여기에 가로 광고를 하나 끼운다.
+           첫 구분선은 건너뛴다 — 페이지가 광고로 시작하지 않게. */
+        if(last!==null && adRows<AD_ROWS_MAX){ const a=adWideHTML(); if(a){ h+=a; adRows++; } }
         const n=items.filter(x=>x.batchLabel===label).length;
         h+='<div class="group">'+label+' 수집 · '+n+'건</div>';
         last=label;
@@ -1278,6 +1300,12 @@ function copyMd(){
 document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{view=b.dataset.v; q=''; render();});
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
 render();
+
+/* 폭이 1200px 경계를 넘나들면 광고 배치가 달라지므로 다시 그린다. */
+WIDE.addEventListener('change', function(){
+  document.body.classList.toggle('ads', ADS_ON && WIDE.matches);
+  render();
+});
 
 /* 인트로는 화면이 준비되면 걷는다. 고정 시간이 아니라 로딩에 걸린 만큼만 보인다.
    다만 타이핑이 끝나기 전에 걷으면 글자가 잘려 보여서 최소 560ms는 둔다. */
