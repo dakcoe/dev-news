@@ -167,7 +167,8 @@ def test_update_schedule_text_matches_cron(html):
     """
     import re
     assert "9시" not in html
-    assert html.count("매일 00시·08시·16시") == 2   # 소스 뷰 + 뉴스 뷰 서브텍스트
+    # 소스 뷰 + 뉴스 뷰 서브텍스트 + 스크립트 실행 전 목록(add-seo-prerender)
+    assert html.count("매일 00시·08시·16시") == 3
 
     wf = os.path.join(ROOT, ".github", "workflows")
     crons = []
