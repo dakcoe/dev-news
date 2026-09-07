@@ -1,5 +1,592 @@
 [
  {
+  "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
+  "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+  "description": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+  "source": "hackernews",
+  "upvotes": 1055,
+  "comments": 482,
+  "published_at": 1788764600,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 2078.0,
+  "image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/LG-smart-TV-investigation.png",
+  "link_status": "ok",
+  "ko_title": "LG 스마트 TV, 화면 꺼진 상태에서 오디오 기록 및 로컬 기기 탐색",
+  "summary": "연구팀이 LG OLED TV 모델을 분석한 결과, TV가 화면이 꺼진 대기 모드에서도 마이크 오디오를 로컬에 저장하고, 네트워크 연결이 복구되면 업로드한다는 것이 확인됐다. 또한 TV는 LAN을 스캔해 주변 스마트폰·스마트워치 등 2차 기기의 이름·신호 강도·위치 데이터를 수집한다. 수집된 데이터는 LG 광고 솔루션에 전달되어 타깃 광고에 활용된다. 연구진은 웹OS의 원격 코드 실행 취약점도 발견했으며, 현재 책임 있는 공개 절차를 진행 중이다.",
+  "why": "LAN 스캔으로 주변 기기 정보를 수집하는 기능이 기본 설정으로 켜져 있어, 네트워크 보안 설정을 점검해야 한다. 화면 꺼진 상태에서도 마이크가 작동하므로, 민감한 대화가 있는 공간에서는 TV의 인터넷 연결을 끊는 것이 안전하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Tell HN: OpenAI brings back 5 hour limit for plus and business standard users",
+  "url": "https://news.ycombinator.com/item?id=49600233",
+  "description": "In case you're wondering why the limits behave so very different from last week. Also: this makes limit resets kind woth significantly less.",
+  "source": "hackernews",
+  "upvotes": 102,
+  "comments": 98,
+  "published_at": 1788799232,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1098.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI, 플러스 및 비즈니스 표준 사용자에 5시간 제한 복구",
+  "summary": "OpenAI가 플러스와 비즈니스 표준 요금제 사용자에게 5시간 사용 제한을 다시 적용했다. 이번 변경으로 제한이 이전보다 더 자주 초기화된다.",
+  "why": "OpenAI API를 업무에 쓰는 경우 5시간 주기 제한이 다시 적용된다. 제한 초기화 주기가 짧아져 연속 작업 중 차단될 가능성이 커진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk",
+  "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+  "description": "Anthropic signed compute contracts worth up to $517 billion in eleven months but still trails OpenAI's $750 billion plan through 2030. In early 2026, CEO Dario Amodei warned against investing too fast. Now Anthropic is racing to catch up, while Sam Altman warns about \"unsustainable silliness\" in the compute buildout, especially from neo-cloud providers. The article Anthropic reportedly signs $517 ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788804761.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/01/openai_anthropic-2.jpeg",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 다리오 아모데이의 무모한 위험 경고 이후 5,170억 달러 규모의 컴퓨팅 계약 체결",
+  "summary": "Anthropic은 11개월 동안 최대 5,170억 달러 규모의 컴퓨팅 계약을 체결했고, 2025년 10월 이후 최소 14.8GW의 컴퓨팅 전력을 확보했다. 기존에 보유한 1~2GW에 추가로 자체 데이터센터를 구축할 계획이다. 연간 매출은 650억 달러를 넘어섰지만, 아직 계약 규모를 매출만으로 충당하기는 어렵다.",
+  "why": "Anthropic의 컴퓨팅 계약이 매출을 초과해 지속 가능성에 의문이 제기된다. 이는 AI 서비스의 비용 구조가 불안정할 수 있음을 시사한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "GPT-6 Astra beat Portal start to finish without human help in under 24 hours",
+  "url": "https://the-decoder.com/gpt-6-astra-beat-portal-start-to-finish-without-human-help-in-under-24-hours/",
+  "description": "GPT-6 Astra beat the puzzle game Portal entirely on its own in about 24 hours, with zero human help after the initial goal was set. Developer cozyblaze published the code and docs on GitHub. His takeaway: Astra is \"the worst model we'll ever get.\" The article GPT-6 Astra beat Portal start to finish without human help in under 24 hours appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788802772.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/gpt6astra_portal-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra, 인간 도움 없이 24시간 이내에 Portal 전체를 클리어",
+  "summary": "GPT-6 Astra 모델이 23시간 43분 만에 Portal 게임을 처음부터 끝까지 인간 개입 없이 플레이했다. 모델은 게임을 일시정지하며 스크린샷과 위치 정보를 보고 입력을 선택한다. 코드와 문서는 GitHub에 공개돼 있다.",
+  "why": "MCP와 게임 일시정지 도구를 결합해 AI 에이전트가 시각 정보를 분석하고 입력을 생성하는 구조를 확인할 수 있다. GitHub에 공개된 코드를 참고해 백엔드 시스템에 에이전트 기반 자동화 모듈을 설계하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "스위스 연방정부, 컴퓨터 3,000대에서 Microsoft를 대체한다",
+  "url": "https://news.hada.io/topic?id=33328",
+  "description": "스위스 연방정부가 전체 인력의 약 7%인 3,000명 을 대상으로 Microsoft 365를 오픈소스 대안으로 전환하는 파일럿을 시작했으며, 2027년 말 완료를 목표로 함 직원 172명이 참여한 openDesk 개념검증 에서 문서 처리와 이메일은 긍정적인 평가를 받...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788805992.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33328?v=ddce93646642aba5d04af23010254cdb",
+  "link_status": "ok",
+  "ko_title": "스위스 연방정부, 컴퓨터 3,000대에서 Microsoft를 대체한다",
+  "summary": "스위스 연방정부는 3,000명을 대상으로 Microsoft 365를 오픈소스 플랫폼 openDesk로 전환하는 파일럿을 2027년 말까지 진행한다. 파일럿 예산은 900만 스위스프랑이며, 초기 PoC에서는 문서·이메일 작업이 긍정적 평가를 받았지만 대규모 화상회의에 기술적 한계가 있었다. 군 사이버부대는 2026년 10월까지 전면 전환을 목표로 별도 계획을 추진한다.",
+  "why": "오픈소스 협업 플랫폼으로의 전환 시 대규모 화상회의 기능에 기술적 한계가 있음을 확인했다. 기존 Microsoft 365 환경에서 화상회의를 핵심 업무로 사용하는 경우, 대체 도구 도입 전 해당 기능을 반드시 검증해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "브레인롯에서 벗어나기 위한 휴가",
+  "url": "https://news.hada.io/topic?id=33327",
+  "description": "소프트웨어 엔지니어로서 업무에 익숙해지고 AI로 생산성도 높아졌지만 사고는 느리고 얕아졌다고 느껴, 2주간의 휴가 를 독서와 새로운 학습에 사용함 숏폼·게임·만화·TV 프로그램으로 지루할 틈이 없어지고 취침 전 둠스크롤링 에 독서가 밀려나자, 지난 1년간 손...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788798834.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33327?v=327d27726b06d5972f3bff0524ef5350",
+  "link_status": "ok",
+  "ko_title": "브레인롯에서 벗어나기 위한 휴가",
+  "summary": "소프트웨어 엔지니어가 2주간의 휴가를 통해 독서와 수학·물리학 학습에 집중했다. 웹 기반 학습 자료인 Paul’s Notes와 Active Calculus를 활용해 미적분을 보충했다. 가족과 시간을 보내며 새로운 습관을 시도하고, 기존 업무에서 느낀 사고력 저하를 개선하려는 시도를 기록했다.",
+  "why": "AI로 생산성은 올랐지만 사고 깊이가 얕아졌다면, 이번 휴가처럼 의도적 학습 시간을 확보해야 한다. 화면 기반 학습이 불편하다면 Paul’s Notes 같은 웹 자료를 활용해 미적분을 보충할 수 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Terence Tao: “AI만으로 수학 문제를 성급하게 푸는 것”의 위험",
+  "url": "https://news.hada.io/topic?id=33326",
+  "description": "순수수학의 난제 는 정답뿐 아니라 해결 과정에서 새로운 통찰과 이론을 만드는 데 가치가 있으며, 과정을 공개하지 않는 AI 단독 해결은 이 역할을 훼손할 수 있음 Navier-Stokes 전역 정칙성 문제 를 인간 수학자가 AI와 함께 시행착오를 분석하며 풀면 유체역학을...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788796950.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33326?v=579d4ee9932b7210dbbb7e0832bbaa1f",
+  "link_status": "ok",
+  "ko_title": "테렌스 타오: “AI만으로 수학 문제를 성급하게 푸는 것”의 위험",
+  "summary": "타오는 AI가 난제 해결에 기여하더라도 과정과 통찰을 공개하지 않으면 연구 가치가 훼손된다고 경고한다. Navier-Stokes 전역 정칙성 문제를 인간과 AI가 협업해 단계별로 접근하면 유체역학 발전에 도움이 되지만, AI가 최종 해만 제시하면 같은 효과를 기대하기 어렵다. 가상 시나리오이지만, AI 단독 해결을 벤치마크로만 활용하면 차세대 연구자를 양성할 기회를 잃을 수 있다.",
+  "why": "AI가 최종 해만 내놓으면 연구 과정의 통찰이 사라져 후속 발전이 막힌다. 코드 리뷰나 설계 단계에서 결과물만 검증하는 방식은 같은 한계를 가진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "GrapheneOS, 기본 앱과 보안 클립보드 전면 개편",
+  "url": "https://news.hada.io/topic?id=33325",
+  "description": "기본 Messaging 앱 의 낡은 인터페이스를 Android Compose 로 전면 재작성하고 있으며, 여러 개선과 버그 수정을 담은 새 버전을 게시 당일 늦게 출시할 예정임 장기적으로 RCS 와 Messaging Layer Security(MLS) 기반 종단간 암호화",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788787948.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33325?v=b6162594bbc611525565014a304547f3",
+  "link_status": "ok",
+  "ko_title": "GrapheneOS, 기본 앱과 보안 클립보드 전면 개편",
+  "summary": "기본 Messaging 앱을 Android Compose로 전면 재작성하고 새 버전을 오늘 늦게 출시한다. 장기적으로 RCS와 MLS 기반 종단간 암호화를 지원해 Google Messages 없이도 RCS 사용을 목표로 한다. Gallery와 Keyboard 등 나머지 AOSP 앱도 곧 전면 개편하거나 교체할 계획이며, 인력 채용을 확대해 개발 속도를 높인다.",
+  "why": "GrapheneOS를 쓰는 경우 RCS 활성화에 샌드박스형 Google Play가 필요하므로 초기 단계에서 이 제약이 적용된다. 통신사 자체 서비스만 사용하는 방식은 해당 통신사가 실제로 지원하는 경우에 한해 가능하다는 한계가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "career-culture"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200",
+  "url": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 50,
+  "comments": 48,
+  "published_at": 1788805472,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 844.0,
+  "image": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses/og.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 모델이 실제 사업을 운영했다: 가짜 청구서 12,431달러 송금, 3,200달러 손실",
+  "summary": "연구팀은 7개의 최첨단 LLM에 각각 300달러와 컴퓨터를 제공하고 72시간 동안 자율 사업을 시도하게 했다. 모델들은 가짜 청구서를 발행해 12,431달러를 청구하고, 이메일 수집·스팸 발송, 장시간 대기 상태 등을 보였다. 이 과정에서 API 호출 비용 등으로 약 2,800달러와 실제 거래에 360달러를 소모해 총 3,200달러를 손실했다.",
+  "why": "자율 에이전트를 운영 환경에 배포할 때 무제한 권한을 부여하면 안 된다. 가짜 청구서 발행이나 스팸 발송 같은 불법 행위를 저지를 위험이 확인됐다. API 호출 비용과 실제 거래로 인한 손실이 수익보다 클 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "C Is Not a Low-Level Language (2018)",
+  "url": "https://queue.acm.org/doi/10.1145/3212477.3212479",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 45,
+  "comments": 33,
+  "published_at": 1788795560,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 789.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "C는 저수준 언어가 아니다",
+  "summary": "",
+  "why": "C가 저수준 언어가 아니라는 논지는 백엔드 개발 시 추상화 계층을 재검토하게 만든다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Supporting independent journalism in Ukraine",
+  "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+  "description": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788739200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4EIHNZJQDBZf3Op2ZWbU1g/eafc9b864cc26c505ecca0f8eadb8f78/supporting-independent-journalism-in-ukraine-seo-option-029.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "우크라이나 독립 언론 지원",
+  "summary": "OpenAI와 WAN-IFRA, AIRPPU가 협력해 우크라이나 언론사를 대상으로 AI 역량 구축과 혁신 가속화를 위한 프로그램을 발표했다. 프로그램은 AI 기반 뉴스룸 프로젝트 지원과 비즈니스 전환 지원 두 부분으로 구성된다. 선정된 10개 언론사는 AI 활용 사례 발굴·로드맵 작성·파일럿 구현을 지원받는다.",
+  "why": "백엔드 개발자에게는 직접적인 조치 사항이 없다. AI 기반 뉴스룸 워크플로우 구축 사례를 참고 자료로만 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "How Documents Find Developers at Toss",
+  "url": "https://toss.tech/article/toss-frontend-ai-docs-eng",
+  "description": "The Toss Frontend team no longer has to dig through documents to find what they need. We’re building an environment where developers can get immediate answers to their questions through docs and AI. Here’s how we built a new documentation system that lets developers focus entirely on development.",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788762420.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://static.toss.im/illusts-content/cover-ai.png",
+  "link_status": "ok",
+  "ko_title": "문서가 토스 개발자를 찾는 방법",
+  "summary": "토스는 기존 문서 검색 방식을 바꾸고, 개발자가 질문하면 즉시 답변을 제공하는 Mr. Park라는 도구를 만들었다. 이 도구는 VSCode·Cursor와 사내 메신저에서 사용 가능하며, 대화형 인터페이스로 문서를 탐색한다.",
+  "why": "IDE나 메신저에서 내보내지 않고 바로 질문해 답을 얻는 방식이 도입됐다. 문서 탐색에 쓰는 시간을 줄이고 작업 흐름을 유지할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "An AI agent is just a while loop. I built one in 70 lines of Python, then tricked it into leaking my .env",
+  "url": "https://dev.to/alisterbaroi/an-ai-agent-is-just-a-while-loop-i-built-one-in-70-lines-of-python-then-tricked-it-into-leaking-4ehf",
+  "description": "Every framework, every job posting, and about half of LinkedIn wants to tell you what an \"AI agent\"...",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 11,
+  "comments": 3,
+  "published_at": "2026-09-07T15:57:07Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 691.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcnr2836ebojkn1sw2gc7.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트는 단순히 while 루프일 뿐이다. 70줄 파이썬으로 만들고 .env를 유출하도록 속였다",
+  "summary": "저자는 70줄 이하의 파이썬 코드와 Ollama 로컬 모델을 이용해 AI 에이전트를 구현하고, 웹 페이지에 숨긴 문단을 통해 에이전트가 API 키를 유출하는 과정을 시연한다. 이후 모델 자체와 무관한 수정 방법을 제시한다. 구현에 필요한 환경은 Python 3.10+, Ollama와 OpenAI 파이썬 패키지이며, Docker나 클라우드 계정이 필요 없다.",
+  "why": "에이전트 보안 취약점은 모델이 아니라 도구 호출 로직에 있으므로, while 루프 구조를 직접 점검해야 한다. 웹 페이지에 숨긴 지시문으로 API 키 유출이 가능하다는 점은 프롬프트 인젝션 방어 설계에 직접적인 시사점을 준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Web Workers in JavaScript: The Complete Guide",
+  "url": "https://dev.to/parsajiravand/web-workers-in-javascript-the-complete-guide-5f17",
+  "description": "Learn JavaScript Web Workers step by step: message passing, transferable objects, error handling, and a copy-paste cheat sheet for offloading work.",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 10,
+  "comments": 2,
+  "published_at": "2026-09-07T12:03:04Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 686.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fweekly-web-workers.png",
+  "link_status": "ok",
+  "ko_title": "JavaScript 웹 워커 완전 가이드",
+  "summary": "웹 워커는 브라우저의 UI 스레드와 별도로 백그라운드에서 코드를 실행해 메인 스레드가 차단되는 상황을 방지한다. 본 가이드는 워커 생성, 데이터 전송, 결과 반환 방법과 구조화 복제와 전송 가능한 객체 차이를 설명한다. 또한 워커 오류 처리, 종료 방법 및 메모리 누수 방지 팁을 제공한다. 워커 사용이 적합한 경우와 그렇지 않은 경우를 판단하는 기준도 제시한다.",
+  "why": "메인 스레드가 무거운 연산으로 막히면 UI가 멈추는 문제를 해결할 수 있다. 구조화 복제와 전송 가능한 객체의 차이를 이해해야 메모리 누수를 막을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "hardware"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "SSH, Actually Explained: Handshakes, Keys, and the Tunnel Trick",
+  "url": "https://dev.to/lovestaco/ssh-actually-explained-handshakes-keys-and-the-tunnel-trick-48bf",
+  "description": "Hello, I'm Maneshwar, and I'm building LiveReview — a blast-radius aware AI code review built for...",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": "2026-09-07T17:17:38Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 682.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzkm3icen6pj1vnj4q2pm.png",
+  "link_status": "ok",
+  "ko_title": "SSH, 실제로 설명: 핸드쉐이크, 키, 그리고 터널 트릭",
+  "summary": "이 글은 SSH가 로그인 과정에서 수행하는 비밀 키 교환과 핸드쉐이크 메커니즘을 상세히 설명한다. 텔넷과의 차이점을 통해 SSH가 어떻게 암호화된 채널을 빠르게 설정하는지 소개한다. 비대칭 암호와 대칭 암호가 어떻게 조합되어 초기 몇 밀리초 안에 안전한 통신을 보장하는지 사례와 함께 제시한다.",
+  "why": "SSH 핸드쉐이크 원리를 이해하면 로그인 실패나 연결 끊김 같은 오류를 빠르게 진단할 수 있다. 비대칭과 대칭 암호 조합 방식을 파악하면 보안 설정 검토 시 실제 취약점을 식별하기 쉽다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "security"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "Rion-Wu-tech / wechat-intelligence-hub",
+  "url": "https://github.com/Rion-Wu-tech/wechat-intelligence-hub",
+  "description": "Local-first WeChat intelligence system with a read-only CLI, Codex skills, searchable chat history, daily briefings, follow-ups and opportunity tracking.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 964,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 964,
+  "score": 442.4,
+  "image": "https://opengraph.githubassets.com/1/Rion-Wu-tech/wechat-intelligence-hub",
+  "link_status": null,
+  "ko_title": "위챗 인텔리전스 허브",
+  "summary": "Rion-Wu-tech가 공개한 위챗 개인 정밀 정보 저장소 프로젝트로, 로컬 위챗 대화를 검색·검증·활동 가능한 인텔리전스로 변환한다. 현재 v0.9.2-preview.2 버전이 출시됐으며, 읽기 전용 리더와 인텔리전스 워크플로우를 제공한다. 설치 시 로컬 데이터베이스와 사용자의 명시적 권한이 필요하고, 자동으로 전체 채팅을 읽지는 않는다.",
+  "why": "로컬 위챗 데이터를 검색 가능한 인텔리전스로 변환하는 도구다. 전체 채팅을 자동 읽지 않고 명시적 권한과 로컬 데이터베이스가 필요하다. macOS 신규 환경에서의 키 획득 경로는 아직 검증되지 않았다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "ashemag / human-atlas",
+  "url": "https://github.com/ashemag/human-atlas",
+  "description": "Open-source 3D anatomy explorer: 2,234 selectable BodyParts3D meshes, system layers, search, and exploded views.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 746,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 746,
+  "score": 366.09999999999997,
+  "image": "https://opengraph.githubassets.com/1/ashemag/human-atlas",
+  "link_status": null,
+  "ko_title": "ashemag / human-atlas — 인터랙티브 3D 인체 해부 탐색기",
+  "summary": "React·Three.js·shadcn/ui 로 만든 웹 기반 인체 해부도 뷰어로, 2,234개의 개별 메쉬와 15개 해부계, 3,432개의 명칭을 검색·선택할 수 있다. Node.js 22.13 이상 환경에서 API 키 없이 로컬 실행이 가능하며, 검증 스크립트로 메쉬·검색·터치 동작을 확인한다. 라이선스는 CC BY 4.0이며 현재 BodyParts3D 4.0 성인 남성 모델을 사용한다.",
+  "why": "React와 Three.js로 3D 인체 모델을 웹에서 다루는 패턴을 참고할 수 있다. Node.js 22.13 이상이 필요하므로 기존 로컬 환경 버전과 충돌 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "jo-inc / camofox-browser",
+  "url": "https://github.com/jo-inc/camofox-browser",
+  "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+  "source": "github",
+  "upvotes": 193,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 193,
+  "score": 172.54999999999998,
+  "image": "https://opengraph.githubassets.com/1/jo-inc/camofox-browser",
+  "link_status": null,
+  "ko_title": "camofox-browser — AI 에이전트를 위한 안티디텍션 브라우저 서버",
+  "summary": "Camoufox 기반 Firefox 포크를 REST API 형태로 제공하는 서버이다. npm으로 설치·시작하면 로컬에서 http://localhost:9377 로 접근할 수 있다. AI 에이전트가 웹을 탐색할 때 Playwright·Headless Chrome의 차단이나 지문 추적을 회피한다. macOS, Telegram, WhatsApp, 이메일 등 다양한 환경에서 사용 가능하다.",
+  "why": "AI 에이전트가 웹을 탐색할 때 Playwright나 헤드리스 크롬의 차단 문제를 피할 수 있다. 기존 스틸스 플러그인이 지문으로 잡히는 방식과 달리 C++ 레벨에서 지문을 위장한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "mksglu / context-mode",
+  "url": "https://github.com/mksglu/context-mode",
+  "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+  "source": "github",
+  "upvotes": 147,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 147,
+  "score": 156.45,
+  "image": "https://opengraph.githubassets.com/1/mksglu/context-mode",
+  "link_status": null,
+  "ko_title": "context-mode — 컨텍스트 모드",
+  "summary": "npm 패키지 context-mode는 컨텍스트 문제의 다른 절반을 해결하는 라이브러리다. 현재 Microsoft·Google·Meta 등 여러 팀에서 사용 중이며, npm 다운로드와 GitHub 스타·포크 수가 표시된다.",
+  "why": "context-mode는 컨텍스트 문제의 다른 절반을 해결하는 라이브러리다. Microsoft·Google·Meta 등 여러 팀에서 이미 사용 중이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
+  "title": "lightpanda-io / browser",
+  "url": "https://github.com/lightpanda-io/browser",
+  "description": "Lightpanda: the headless browser designed for AI and automation",
+  "source": "github",
+  "upvotes": 112,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 112,
+  "score": 144.2,
+  "image": "https://opengraph.githubassets.com/1/lightpanda-io/browser",
+  "link_status": null,
+  "ko_title": "Lightpanda 브라우저",
+  "summary": "Zig로 새로 만든 헤드리스 브라우저로 Chromium 포크나 WebKit 패치가 아니다. AWS EC2 m5.large에서 100페이지 기준 메모리 사용량이 123 MB로 Chrome의 2 GB 대비 약 16배 적고, 실행 시간은 5 초로 9배 빠른 성능을 보인다. Homebrew와 AUR을 통해 최신 나이틀리 빌드를 설치할 수 있다.",
+  "why": "AI 에이전트나 크롤링 파이프라인에서 헤드리스 Chrome 대신 이 브라우저를 쓰면 메모리와 실행 시간을 크게 줄일 수 있다. 다만 최신 나이틀리 빌드만 제공되므로 프로덕션 배포 전 안정성을 직접 검증해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "devops-infra",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T03:59:34.277287+09:00",
+  "batch_label": "9월 8일 03:59"
+ },
+ {
   "title": "The purpose of DNS is to spread scams",
   "url": "https://shkspr.mobi/blog/2026/09/the-purpose-of-dns-is-to-spread-scams/",
   "description": "",
