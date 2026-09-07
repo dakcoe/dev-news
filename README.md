@@ -7,7 +7,7 @@
 매일 00시·08시·16시(KST)에 개발·AI 뉴스를 수집해 정적 페이지 한 장으로 만들어 두는 도구.
 GitHub Actions에서 돌면 서버가 필요 없고, `python build.py` 한 줄로 로컬에서도 똑같이 돌아간다.
 
-**보기:** https://dakcoe.github.io/dev-news/
+**보기:** https://dev-news.net/
 
 ## 파이프라인
 
