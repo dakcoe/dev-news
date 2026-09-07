@@ -1,5 +1,295 @@
 [
  {
+  "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
+  "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+  "description": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+  "source": "hackernews",
+  "upvotes": 848,
+  "comments": 419,
+  "published_at": 1788764600,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1776.5,
+  "image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/LG-smart-TV-investigation.png",
+  "link_status": "ok",
+  "ko_title": "LG 스마트 TV, 화면 꺼진 상태에서 오디오 기록 및 로컬 기기 탐색",
+  "summary": "LG OLED TV가 대기 모드에서도 마이크 오디오를 기록하고, 네트워크를 스캔해 주변 기기와 Wi-Fi 정보를 수집한다. 수집된 데이터는 LG 광고 솔루션에 전달돼 타깃 광고에 활용된다. 연구팀은 또한 webOS의 원격 코드 실행 취약점을 발견했으며, 현재 책임 있는 공개 절차를 진행 중이다.",
+  "why": "LG TV의 네트워크 스캔과 오디오 기록 기능이 백엔드 서버의 로컬 네트워크 보안 가정에 영향을 줄 수 있다. TV가 대기 중에도 주변 기기를 탐지해 광고 데이터로 전송하므로, 같은 네트워크에 있는 개발 장비의 IP와 Wi-Fi 정보가 노출될 위험이 있다. webOS의 원격 코드 실행 취약점이 확인되었으므로, 해당 TV를 내부망에 연결할 경우 공격 벡터로 악용될 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "AI-designed drug appears to turn back the body's biological clock in early trial",
+  "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+  "description": "A study in Nature Biotechnology suggests that rentosertib, a drug designed with AI by Insilico Medicine, may reverse markers of biological aging. Six independent aging clocks predicted that treated patients were biologically up to six years younger than the placebo group. The trial covered just 42 patients and the drug hasn't been tested in healthy people yet. The article AI-designed drug appears ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788798860.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/ai_pill_medicine-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "AI 설계 약물, 초기 임상에서 신체의 생물학적 시계를 되돌리는 듯",
+  "summary": "Insilico Medicine이 생성 AI로 개발한 rentosertib이 IPF 환자 42명을 대상으로 한 초기 임상에서 혈액 단백질 기반의 6가지 AI 노화 시계 모두에서 위약군보다 최대 6년 낮은 생물학적 연령을 보였다. 연구는 Nature Biotechnology에 발표됐으며, 효과는 혈액 단백질 패턴 변화에 기반한다. 표본 규모가 작고 건강인 대상 시험이 없어 결과 해석에 제한이 있다.",
+  "why": "생물학적 노화 역전 신호가 혈액 단백질 패턴 변화에 기반하므로, 실제 신체 기능 개선으로 이어지는지는 아직 확인되지 않았다. 표본이 42명에 불과하고 건강인 대상 시험이 없어, 이 결과를 일반화하거나 임상 적용 기준으로 삼기에는 한계가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "Nobody Checks Whether the Guardrail Is Running",
+  "url": "https://dev.to/mickyarun/nobody-checks-whether-the-guardrail-is-running-3ng",
+  "description": "Every AI-and-engineering post right now is about adding a guardrail.  Lint rules the agent can't...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": "2026-09-07T14:07:25Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 677.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fr6koovcta9xkhf5y475g.png",
+  "link_status": "ok",
+  "ko_title": "가드레일이 실행되는지 아무도 확인하지 않는다",
+  "summary": "이 글은 CI 파이프라인에서 가드레일이 실제로 작동하지 않음에도 성공적으로 보이는 상황을 지적한다. GitHub Actions 워크플로우가 CI 성공 여부에 따라 배포를 차단하지만, CI가 한 번도 성공하지 않아 배포가 영구히 스킵되는 사례를 소개한다. 또한 평가 시스템에서도 거부 기준이 명확히 기록되지 않은 경우 문제를 강조한다.",
+  "why": "CI가 한 번도 성공하지 못해 배포가 영구히 스킵되는 상태는 UI에서 실패로 표시되지 않는다. 워크플로우가 실제로 실행되고 있는지 주기적으로 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "Inside vLLM: Following One Request from the API to GPU Execution",
+  "url": "https://dev.to/yuan_lei_e631e36865ed370b/inside-vllm-following-one-request-from-the-api-to-gpu-execution-1ja6",
+  "description": "Follow one vLLM V1 request through scheduling, paged KV-cache management, GPU execution, and output delivery.",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": "2026-09-07T12:52:14Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 665.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjmebhbe0kxmde1etb90s.png",
+  "link_status": "ok",
+  "ko_title": "vLLM 내부 살펴보기: API 요청이 GPU 실행까지 진행되는 과정",
+  "summary": "이 글은 vLLM 0.22.0 버전의 소스 코드를 따라가며, LLM.generate() 호출부터 CUDA 경계까지 한 요청이 어떻게 처리되는지 단계별로 설명한다. 요청 입장, 토큰 배치 평탄화, 페이지 KV-캐시 접근, 샘플링 및 자원 회수 과정을 상세히 다룬다. 내부 구현을 이해하려는 개발자를 위한 코드 중심 안내이며, 별도의 API 튜토리얼이 아니다.",
+  "why": "vLLM 0.22.0 기준의 요청 처리 경로를 소스 코드로 추적할 수 있다. 버전이 빠르게 바뀌므로 파일명이나 호출 경계는 달라질 수 있다. 연속 배치와 페이지드 KV 할당 같은 핵심 개념은 유지된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "Sniffnet: How Much Traffic Are My AI Agents Generating Behind My Back",
+  "url": "https://dev.to/jtorchia/sniffnet-how-much-traffic-are-my-ai-agents-generating-behind-my-back-5gn0",
+  "description": "I installed Sniffnet to check what network traffic Cline and background LLM API calls actually generate. Here's what the tool shows you, and what you can't conclude from a single observation session.",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": "2026-09-07T12:00:19Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 662.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fj2sefdky5ap9yhaos9ej.png",
+  "link_status": "ok",
+  "ko_title": "Sniffnet: 내 AI 에이전트가 몰래 생성하는 트래픽 양",
+  "summary": "Sniffnet은 Rust로 만든 오픈소스 네트워크 트래픽 모니터링 도구로, 실시간 그래픽 인터페이스를 제공한다. pcap을 활용해 패킷을 캡처하며, Linux·macOS·Windows를 지원하고 프로세스별 트래픽을 식별한다. 이를 통해 여러 AI 에이전트를 동시에 사용할 때 발생하는 배경 트래픽을 시각적으로 확인할 수 있다.",
+  "why": "AI 에이전트 사용 중 발생하는 배경 트래픽을 프로세스별로 시각화할 수 있다. 이상한 지연이나 에이전트 응답 지연 원인을 네트워크 계층에서 추적할 때 유용하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "Phishing Detection Evasion Using Invisible Unicode Characters to Split Financial Terms",
+  "url": "https://dev.to/anoymask/phishing-detection-evasion-using-invisible-unicode-characters-to-split-financial-terms-2cd7",
+  "description": "1. Basic Information     Article Title: ASCII smuggling crosses over from AI prompt...",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": "2026-09-07T13:28:26Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 662.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnegpryrumovs0gzhs6xh.png",
+  "link_status": "ok",
+  "ko_title": "보이지 않는 유니코드 문자로 금융 용어를 분할해 피싱 탐지 회피",
+  "summary": "금융 피싱 이메일이 보이지 않는 유니코드 태그 문자(U+E0020)를 단어 사이에 삽입해 키워드 기반 탐지를 회피한다. Microsoft Defender for Office 365는 99% 이상을 차단했지만, 하루에 237만 건이 탐지 대상이 되었다. 공격자는 ActiveCampaign 인프라를 이용해 메일을 발송하고, 클릭 트래킹 도메인을 통해 링크를 전달한다.",
+  "why": "키워드 매칭 기반의 피싱 탐지 로직은 보이지 않는 유니코드 문자 삽입에 취약하다. 이메일 본문 전처리 단계에서 유니코드 태그 문자를 제거하는 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "My restored Cypress session was lying to me",
+  "url": "https://dev.to/marcelo_sqe/my-restored-cypress-session-was-lying-to-me-4648",
+  "description": "Author's Note / Disclosure: 100% human-authored content based on real production engineering work....",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": "2026-09-07T15:36:23Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 660.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0eb0wx4lv98i48bdiaqx.png",
+  "link_status": "ok",
+  "ko_title": "복원된 Cypress 세션이 나를 속였다",
+  "summary": "Cypress의 cy.session()은 로그인 한 번으로 쿠키·스토리지를 스냅샷해 이후 테스트에서 재사용한다. 하지만 본문에서는 두 가지 버그가 겹쳐 validate() 검증이 항상 성공해 세션이 실제로 만료돼도 재로그인되지 않는 문제가 발견되었다. 첫 번째 버그는 cy.request가 baseUrl을 기준으로 요청해 IdP가 아닌 애플리케이션에 요청을 보내는 것이고, 두 번째는 SPA가 인식하지 못하는 경로에 대해 index.html을 반환해 401 응답이 절대 발생하지 않는 것이다. 이로 인해 개발자는 오랜 기간 동안 “플레이키” 테스트 실패 원인을 찾지 못하고 시간을 낭비했다.",
+  "why": "cy.request가 baseUrl 기준으로 요청을 보내면 IdP가 아닌 애플리케이션에 도달한다. SPA는 미등록 경로에 index.html을 반환하므로 401 응답이 절대 발생하지 않는다. validate()가 항상 성공해 세션 만료 시 재로그인이 안 되는 문제를 직접 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "Tell HN: OpenAI brings back 5 hour limit for plus and business standard users",
+  "url": "https://news.ycombinator.com/item?id=49600233",
+  "description": "In case you're wondering why the limits behave so very different from last week. Also: this makes limit resets kind woth significantly less.",
+  "source": "hackernews",
+  "upvotes": 4,
+  "comments": 2,
+  "published_at": 1788799232,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 614.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI, 플러스 및 비즈니스 스탠다드 사용자에게 5시간 제한 복구",
+  "summary": "OpenAI가 Plus와 Business Standard 플랜 사용자에게 5시간 사용 제한을 다시 적용했다. 이번 제한은 지난 주와 달리 제한이 초기화되는 빈도가 크게 줄어든다.",
+  "why": "OpenAI가 Plus와 Business Standard 플랜에 5시간 사용 제한을 다시 적용했다. 제한 초기화 빈도가 크게 줄어든 점이 핵심 변화다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "nodejs / node",
+  "url": "https://github.com/nodejs/node",
+  "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 13,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 13,
+  "score": 109.55,
+  "image": "https://opengraph.githubassets.com/1/nodejs/node",
+  "link_status": null,
+  "ko_title": "Node.js",
+  "summary": "Node.js는 오픈소스 크로스플랫폼 JavaScript 런타임이며, 현재 버전은 6개월 주기로 주요 버전이 업데이트된다. 4월에 출시된 버전은 10개월 후인 10월에 LTS로 전환되며, LTS 버전은 8개월간 지원된다. 프로젝트는 OpenJS Foundation이 지원하고, 오픈 거버넌스 모델을 채택한다.",
+  "why": "4월 출시 버전은 10월에 LTS로 전환된다. LTS 버전은 8개월간 지원된다. 프로덕션 배포 시 이 주기를 맞춰야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
+  "title": "microsoft / vscode",
+  "url": "https://github.com/microsoft/vscode",
+  "description": "Visual Studio Code",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 12,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 12,
+  "score": 109.19999999999999,
+  "image": "https://opengraph.githubassets.com/1/microsoft/vscode",
+  "link_status": null,
+  "ko_title": "마이크로소프트 / vscode",
+  "summary": "이 저장소는 오픈 소스 “Code - OSS” 프로젝트로, 마이크로소프트와 커뮤니티가 함께 Visual Studio Code를 개발한다. MIT 라이선스로 공개되어 누구나 코드를 확인하고 기여할 수 있다. 저장소에는 로드맵, 월간 계획, 엔드게임 계획 등 향후 개발 방향이 문서화돼 있다.",
+  "why": "로드맵과 월간 계획 문서를 통해 다음 릴리스에 들어갈 기능을 미리 파악할 수 있다. 자신에게 필요한 기능이 계획에 포함되어 있는지 확인해 개발 일정을 조정할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-08T01:53:27.713982+09:00",
+  "batch_label": "9월 8일 01:53"
+ },
+ {
   "title": "브레인롯에서 벗어나기 위한 휴가",
   "url": "https://news.hada.io/topic?id=33327",
   "description": "소프트웨어 엔지니어로서 업무에 익숙해지고 AI로 생산성도 높아졌지만 사고는 느리고 얕아졌다고 느껴, 2주간의 휴가 를 독서와 새로운 학습에 사용함 숏폼·게임·만화·TV 프로그램으로 지루할 틈이 없어지고 취침 전 둠스크롤링 에 독서가 밀려나자, 지난 1년간 손...",
