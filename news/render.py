@@ -200,8 +200,8 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
             meta.append('<span class="sep">·</span><span>' + _esc(d["batchLabel"]) + "</span>")
         rows.append(
             '<div class="row"><div></div><div class="mid">'
-            f'<span class="rt"><a href="{_esc(d.get("url") or "")}" rel="noopener">'
-            f'{_esc(d.get("title") or "")}</a></span>'
+            f'<h2 class="rt"><a href="{_esc(d.get("url") or "")}" rel="noopener">'
+            f'{_esc(d.get("title") or "")}</a></h2>'
             '<div class="rm">' + "".join(meta) + "</div>"
             + (f'<div class="snip">{_esc(d["snip"])}</div>' if d.get("snip") else "")
             + "</div><div></div><div></div></div>")
@@ -226,6 +226,41 @@ def _meta_desc(view_model: list[dict]) -> str:
     titles = [d.get("title", "") for d in view_model[:3] if d.get("title")]
     base = "매일 세 번 모으는 개발·AI 뉴스. 해커뉴스, GitHub 트렌딩, Lobsters 등을 한국어로."
     return _esc((base + " 오늘: " + " / ".join(titles))[:160]) if titles else _esc(base)
+
+
+def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS) -> str:
+    """구조화된 데이터. 이 페이지는 '남의 기사로 만든 목록'이므로 ItemList다.
+
+    ⚠️ NewsArticle로 표시하지 않는다. 기사를 우리가 쓴 게 아니라서 사실과 다르고,
+    구글 구조화 데이터 정책의 잘못된 표시에 걸린다.
+    """
+    items = sorted(view_model, key=lambda d: d.get("batch") or "", reverse=True)[:limit]
+    base = site_url()
+    elements = []
+    for i, d in enumerate(items, 1):
+        if not d.get("url"):
+            continue
+        elements.append({"@type": "ListItem", "position": i,
+                         "url": d["url"], "name": d.get("title") or ""})
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "WebSite", "@id": base + "/#site", "url": base + "/",
+             "name": "dev-news", "inLanguage": "ko",
+             "description": "매일 세 번 모으는 개발·AI 뉴스"},
+            {"@type": "CollectionPage", "@id": base + "/#page", "url": base + "/",
+             "isPartOf": {"@id": base + "/#site"},
+             "name": f'개발·AI 뉴스 · {collected.strftime("%Y-%m-%d")}',
+             "inLanguage": "ko",
+             "dateModified": collected.isoformat(timespec="seconds"),
+             "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements),
+                            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+                            "itemListElement": elements}},
+        ],
+    }
+    return ('<script type="application/ld+json">'
+            + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+            + "</script>")
 
 
 def write_seo_files(out_dir: str, collected: datetime) -> None:
@@ -273,6 +308,7 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
             .replace("__COLLECTED__", collected.isoformat())
             .replace("__DATE__", collected.strftime("%Y-%m-%d"))
             .replace("__SEO_HTML__", _seo_html(view_model, collected))
+            .replace("__JSONLD__", _jsonld(view_model, collected))
             .replace("__META_DESC__", _meta_desc(view_model))
             .replace("__SITE_URL__", site_url())
             .replace("__ADS_HEAD__", _ads_head(ads_cfg))
