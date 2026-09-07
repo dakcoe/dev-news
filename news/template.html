@@ -61,7 +61,10 @@ __ADS_HEAD__
                animation:introMark .3s cubic-bezier(.2,.8,.2,1) both}
   .intro__type{
     position:relative;
-    font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+    /* 윈도우에는 SF Mono·Menlo가 없어 generic monospace(대개 Courier New)로
+       떨어진다. Consolas·Cascadia를 사이에 넣어 윈도우도 같은 인상이 되게 한다. */
+    font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,
+                Consolas,"Cascadia Mono","Segoe UI Mono","Liberation Mono",monospace;
     font-size:34px;font-weight:700;color:var(--tx);
     letter-spacing:normal;white-space:nowrap;
   }
@@ -366,6 +369,7 @@ __ADS_HEAD__
     body.ads .inner{max-width:1500px}
     body.ads .layout .adrail{display:block}
   }
+  .more{text-align:center;padding:22px 10px;color:var(--tx3);font-size:13px}
   .none{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
   .archead{font-size:13px;font-weight:700;color:var(--tx3);margin:22px 2px 10px}
 
@@ -1096,6 +1100,12 @@ function initAds(){
 
 /* 레이아웃(패싯 사이드바 + 피드 + 아카이브 결과)만 따로 생성.
    검색 입력 중 부분 갱신에 쓰인다 (fix-search-partial-render). */
+/* 한 번에 그릴 행 수. 1,537행을 통째로 만들면 메인 스레드가 오래 막혀
+   인트로 애니메이션도 입력도 멈춘다(실측 600ms). 화면에 보이는 건 대여섯 행뿐이라
+   나머지는 스크롤이 다가올 때 이어 붙인다 — main-thread.md 2-4 미루기. */
+const PAGE = 60;
+let shown = PAGE;                        // 지금까지 그린 행 수 (필터·검색이 바뀌면 리셋)
+
 function layoutHTML(){
   const items=visible();
   // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
@@ -1107,7 +1117,7 @@ function layoutHTML(){
                                   :'조건에 맞는 기사가 없습니다.')+'</div>';
   } else if(sort==='batch'){
     let last=null;
-    items.forEach(d=>{
+    items.slice(0, shown).forEach(d=>{
       const label=d.batchLabel||'';
       if(label && label!==last){
         const n=items.filter(x=>x.batchLabel===label).length;
@@ -1117,8 +1127,10 @@ function layoutHTML(){
       h+=rowHTML(d);
     });
   } else {
-    h+=items.map(rowHTML).join('');
+    h+=items.slice(0, shown).map(rowHTML).join('');
   }
+  /* 더 남았으면 감시용 표식을 둔다. 화면에 400px 안으로 들어오면 다음 장을 잇는다. */
+  if(items.length>shown) h+='<div id="more" class="more">기사 '+(items.length-shown)+'건 더</div>';
 
   // 아카이브 검색 (SPEC 2.4): 30일 밖 기사는 인덱스에서 찾는다
   if(q){
@@ -1139,27 +1151,48 @@ function renderList(){
   box.outerHTML=layoutHTML(); bind();
 }
 
+let moreIO=null, qTimer=0;
+function watchMore(){
+  if(moreIO){ moreIO.disconnect(); moreIO=null; }
+  const el=document.getElementById('more');
+  if(!el) return;
+  /* rootMargin 400px — 닿기 전에 미리 채워 빈 화면이 안 보이게 (main-thread.md 2-4) */
+  moreIO=new IntersectionObserver(es=>{
+    if(es.some(e=>e.isIntersecting)){ shown+=PAGE; renderList(); }
+  },{rootMargin:'400px'});
+  moreIO.observe(el);
+}
+
 function bind(){
   initAds();                       // 새로 그려진 광고 자리만 채운다
+  watchMore();
   const qi=document.getElementById('q');
   // 목록만 부분 갱신(renderList)하므로 input이 교체되지 않는다 —
-  // 한글 IME 조합이 유지되고 조합 중에도 즉시 필터링된다.
-  if(qi) qi.oninput=e=>{ q=e.target.value; renderList(); };
+  // 한글 IME 조합이 유지된다.
+  // ⚠️ 예전엔 키 입력마다 즉시 다시 그렸다. 목록이 1,500행이라 한 글자에
+  // 전부 새로 만들면 입력이 밀린다. 200ms 디바운스로 묶는다
+  // (main-thread.md 2-2 모으기 — 검색은 잠잠해지면 한 번).
+  if(qi) qi.oninput=e=>{
+    q=e.target.value;
+    clearTimeout(qTimer);
+    qTimer=setTimeout(()=>{ shown=PAGE; renderList(); }, 200);
+  };
   viewEl.querySelectorAll('.dd').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); openDrop = openDrop===b.id ? null : b.id; render();
   });
   viewEl.querySelectorAll('.dditem').forEach(b=>b.onclick=e=>{
     e.stopPropagation();
     if(b.dataset.dd==='sortsel') sort=b.dataset.v; else days=+b.dataset.v;
+    shown=PAGE;
     openDrop=null; render();
   });
   const ub=document.getElementById('unread');
-  if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; render();};
-  viewEl.querySelectorAll('.fitem[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; render();});
-  viewEl.querySelectorAll('.fitem[data-ft]').forEach(b=>b.onclick=()=>toggleTag(b.dataset.ft));
+  if(ub) ub.onclick=()=>{unreadOnly=!unreadOnly; shown=PAGE; render();};
+  viewEl.querySelectorAll('.fitem[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f; shown=PAGE; render();});
+  viewEl.querySelectorAll('.fitem[data-ft]').forEach(b=>b.onclick=()=>{shown=PAGE; toggleTag(b.dataset.ft);});
   const tc=document.getElementById('tagclear');
   if(tc) tc.onclick=()=>{   // 초기화 = 패널 항목(태그·출처)만 리셋
-    tagSel.clear(); persistTags(); filter='all'; render();
+    tagSel.clear(); persistTags(); filter='all'; shown=PAGE; render();
   };
   const tb=document.getElementById('tagbtn');
   if(tb) tb.onclick=()=>{
@@ -1238,9 +1271,11 @@ render();
    다만 타이핑이 끝나기 전에 걷으면 글자가 잘려 보여서 최소 560ms는 둔다. */
 (function(){
   var el=document.querySelector('.intro'); if(!el) return;
-  /* 덮개가 다 밀려나는 시각 = 지연 0.1s + 0.45s. 그 전에 걷으면 글자가
-     덜 찍힌 채로 사라진다. 로딩이 더 걸리면 그만큼 더 오래 보인다. */
-  var left=Math.max(0, 550-performance.now());
+  /* 하네스 규칙: 로딩이 빨라도 애니메이션이 다 보일 시간은 보장한다
+     (design-harness의 Cinematic Intro Loader — 급하게 보이면 안 됨).
+     타이핑이 550ms에 끝나므로 한 박자 쉬고 1,100ms에 걷는다. 로딩이 더
+     걸리면 그만큼 더 오래 보인다. */
+  var left=Math.max(0, 1100-performance.now());
   setTimeout(function(){ el.classList.add('is-done'); }, left);
 })();
 </script>
