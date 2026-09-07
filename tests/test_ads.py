@@ -165,7 +165,20 @@ def test_slot이_없으면_설정에_빈_값으로_전달된다(tmp_path, articl
     html = build(tmp_path, articles, REVIEW)
     cfg = json.loads(re.search(r"const ADS = (\{.*?\});", html).group(1))
     assert cfg["slot"] == ""
-    assert "if(ADS.provider==='adsense' && !ADS.slot) return '';" in html
+
+
+def test_slot이_없으면_레일도_레이아웃도_건드리지_않는다(tmp_path, articles):
+    """빈 레일이 300px을 차지하고 컨테이너가 1500px로 넓어지는 것을 막는다.
+    ADS_ON이 body.ads와 레일 렌더를 함께 가른다."""
+    html = build(tmp_path, articles, REVIEW)
+    assert "const ADS_ON = !!(ADS && (ADS.provider !== 'adsense' || ADS.slot));" in html
+    assert "if(ADS_ON) document.body.classList.add('ads');" in html
+
+
+def test_slot이_있으면_레일을_그린다(tmp_path, articles):
+    html = build(tmp_path, articles, ADSENSE)
+    cfg = json.loads(re.search(r"const ADS = (\{.*?\});", html).group(1))
+    assert cfg["slot"] == "9876543210"
 
 
 def test_slot이_틀린_형식이면_전부_끈다(tmp_path, articles):

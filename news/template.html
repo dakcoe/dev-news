@@ -434,9 +434,13 @@ const DATA = __DATA_JSON__;
 /* 광고 설정 (add-ad-slot). null이면 광고를 전혀 그리지 않는다 —
    config.yaml의 ads 블록이 검증을 통과해야만 값이 들어온다. */
 const ADS = __ADS_JSON__;
+/* 실제로 광고를 그리는가. 애드센스 심사 단계에는 client만 있고 slot이 없다 —
+   이때 로더는 head에 들어가야 하지만 그릴 광고는 없다. 이걸 구분하지 않으면
+   빈 레일이 300px을 차지한다. */
+const ADS_ON = !!(ADS && (ADS.provider !== 'adsense' || ADS.slot));
 /* 광고가 켜진 회차에만 body에 표시를 남긴다 — CSS가 이 클래스로 레일을 켜고
    컨테이너 폭을 넓힌다. 꺼져 있으면 지금 레이아웃 그대로다. */
-if(ADS) document.body.classList.add('ads');
+if(ADS_ON) document.body.classList.add('ads');
 
 /* ---------------- state ---------------- */
 let view='news', sort='batch', filter='all', q='', days=0, unreadOnly=false;   // days=0 이면 전체
@@ -990,10 +994,7 @@ function render(){
    피드 중간에 ADS.every개마다 하나씩, 최대 ADS.max개. 목록이 짧은 날
    광고가 기사보다 눈에 띄지 않도록 개수를 묶어 둔다. */
 function adHTML(){
-  if(!ADS) return '';
-  /* 심사 단계: client만 있고 slot이 없다. 로더는 head에 들어가 있고 여기서는
-     아무것도 그리지 않는다. slot 없는 ins는 애드센스가 오류로 잡는다. */
-  if(ADS.provider==='adsense' && !ADS.slot) return '';
+  if(!ADS_ON) return '';
   const inner = ADS.provider==='adsense'
     ? '<ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client
       +'" data-ad-slot="'+ADS.slot+'" data-ad-format="auto" data-full-width-responsive="true"></ins>'
@@ -1003,7 +1004,7 @@ function adHTML(){
 
 /* 피드 오른쪽 레일. 광고가 꺼져 있으면 빈 문자열이라 레이아웃도 그대로다. */
 function adRailHTML(){
-  if(!ADS) return '';
+  if(!ADS_ON) return '';
   let h='';
   for(let i=0;i<ADS.count;i++) h+=adHTML();
   return '<div class="adrail">'+h+'</div>';
@@ -1013,7 +1014,7 @@ function adRailHTML(){
    목록을 다시 그리는데, 이미 채워진 <ins>를 또 push하면 애드센스가
    'already have ads' 오류를 낸다. */
 function initAds(){
-  if(!ADS || ADS.provider!=='adsense') return;
+  if(!ADS_ON || ADS.provider!=='adsense') return;
   try{
     viewEl.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])')
       .forEach(()=>{ (window.adsbygoogle=window.adsbygoogle||[]).push({}); });
