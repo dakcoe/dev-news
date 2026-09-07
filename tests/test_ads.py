@@ -172,7 +172,7 @@ def test_slot이_없으면_레일도_레이아웃도_건드리지_않는다(tmp_
     ADS_ON이 body.ads와 레일 렌더를 함께 가른다."""
     html = build(tmp_path, articles, REVIEW)
     assert "const ADS_ON = !!(ADS && (ADS.provider !== 'adsense' || ADS.slot));" in html
-    assert "if(ADS_ON) document.body.classList.add('ads');" in html
+    assert "if(ADS_ON && WIDE.matches) document.body.classList.add('ads');" in html
 
 
 def test_slot이_있으면_레일을_그린다(tmp_path, articles):
@@ -186,3 +186,19 @@ def test_slot이_틀린_형식이면_전부_끈다(tmp_path, articles):
     assert _ads_config({**REVIEW, "slot": "abc"}) is None
     html = build(tmp_path, articles, {**REVIEW, "slot": "abc"})
     assert "googlesyndication.com" not in html
+
+
+# ---------------- 넓은 화면 레일 / 좁은 화면 가로, 둘 중 하나만 ----------------
+
+def test_레일과_가로광고를_동시에_그리지_않는다(tmp_path, articles):
+    """숨긴 자리에 애드센스가 채우려 들면 정책 위반으로 잡힌다.
+    폭에 따라 한 쪽만 그리도록 두 함수가 서로 반대 조건을 본다."""
+    html = build(tmp_path, articles, ADSENSE)
+    assert "if(!ADS_ON || !WIDE.matches) return '';" in html      # 레일: 넓을 때만
+    assert "if(!ADS_ON || WIDE.matches) return '';" in html       # 가로: 좁을 때만
+
+
+def test_첫_회차_구분선에는_광고를_넣지_않는다(tmp_path, articles):
+    """페이지가 광고로 시작하면 안 된다."""
+    html = build(tmp_path, articles, ADSENSE)
+    assert "if(last!==null && adRows<AD_ROWS_MAX)" in html
