@@ -6,6 +6,10 @@
 <title>개발·AI 뉴스 · __DATE__</title>
 <meta name="description" content="__META_DESC__">
 <link rel="canonical" href="__SITE_URL__/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#7c6ee6">
 __ADS_HEAD__
 <link rel="stylesheet" as="style" crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
@@ -43,6 +47,14 @@ __ADS_HEAD__
     width:74px;flex:none;background:var(--rail);border-right:1px solid var(--line);
     display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:8px;
   }
+  .brand{
+    width:38px;height:38px;display:block;margin:2px 0 12px;
+    padding-bottom:12px;position:relative;
+  }
+  .brand svg{width:38px;height:38px;display:block}
+  /* 브랜드 마크와 기능 버튼을 가르는 선 */
+  .brand::after{content:"";position:absolute;left:-4px;right:-4px;bottom:0;
+                height:1px;background:var(--line)}
   .rb{
     width:50px;height:50px;border-radius:13px;border:none;background:transparent;
     display:flex;align-items:center;justify-content:center;cursor:pointer;
@@ -271,6 +283,8 @@ __ADS_HEAD__
   .ck.on svg{display:block}
 
   .mid{min-width:0;cursor:pointer}
+  /* 스크립트 실행 전 목록은 제목이 링크다 — 색·밑줄은 최종 화면과 맞춘다 */
+  .rt a{color:inherit;text-decoration:none}
   .rt{font-size:18px;font-weight:750;line-height:1.5;letter-spacing:-.026em;
       margin-bottom:7px;text-wrap:pretty;display:inline}
   .rm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;
@@ -311,16 +325,6 @@ __ADS_HEAD__
     body.ads .inner{max-width:1500px}
     body.ads .layout .adrail{display:block}
   }
-  /* 스크립트가 실행되기 전에 보이는 목록. 크롤러가 읽는 것도 이것이다 —
-     내용은 JS가 그리는 화면과 같고, 로드되면 그대로 대체된다. */
-  .pre{padding:18px 2px}
-  .pre h1{font-size:19px;font-weight:800;margin:0 0 4px}
-  .pre .lead{color:var(--tx2);font-size:13.5px;margin:0 0 18px}
-  .pre article{padding:12px 0;border-top:1px solid var(--line2)}
-  .pre h2{font-size:15px;font-weight:700;margin:0 0 4px;line-height:1.45}
-  .pre h2 a{color:var(--tx);text-decoration:none}
-  .pre .m{font-size:12px;color:var(--tx3);margin:0 0 4px}
-  .pre p.s{font-size:13.5px;color:var(--tx2);margin:0;line-height:1.6}
   .none{text-align:center;padding:70px 20px;color:var(--tx3);font-size:15px}
   .archead{font-size:13px;font-weight:700;color:var(--tx3);margin:22px 2px 10px}
 
@@ -405,6 +409,13 @@ __ADS_HEAD__
 <body>
 
 <nav class="rail">
+  <a class="brand" href="/" title="개발·AI 뉴스" aria-label="개발·AI 뉴스">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="7.5" fill="#7c6ee6"/>
+      <path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff"
+            stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
   <button class="rb on" data-v="news" title="오늘의 뉴스">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h11a1 1 0 011 1v12a2 2 0 002 2H5a1 1 0 01-1-1V5z"/><path d="M16 8h3a1 1 0 011 1v9a2 2 0 01-2 2"/><path d="M7 8h6M7 12h6M7 16h4"/></svg>
   </button>
