@@ -10,6 +10,7 @@
 <link rel="icon" href="/favicon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#7c6ee6">
+__JSONLD__
 <script>/* 인트로는 세션당 한 번. JS가 죽어도 CSS가 알아서 걷어낸다. */
 try{if(sessionStorage.getItem("i")){document.documentElement.className+=" no-intro"}
 else{sessionStorage.setItem("i","1")}}catch(e){}</script>
@@ -343,8 +344,10 @@ __ADS_HEAD__
   .mid{min-width:0;cursor:pointer}
   /* 스크립트 실행 전 목록은 제목이 링크다 — 색·밑줄은 최종 화면과 맞춘다 */
   .rt a{color:inherit;text-decoration:none}
+  /* 기사 제목은 h2다. 크기·굵기는 여기서 정하고 기본 여백은 지운다.
+     display:inline이라 옆의 메타 줄과 같은 흐름에 놓인다. */
   .rt{font-size:18px;font-weight:750;line-height:1.5;letter-spacing:-.026em;
-      margin-bottom:7px;text-wrap:pretty;display:inline}
+      margin:0 0 7px;text-wrap:pretty;display:inline}
   .rm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;
       color:var(--tx3);margin:8px 0}
   .rm .s{font-weight:700}
@@ -649,11 +652,11 @@ function rowHTML(d){
   return '<div class="row'+(cur===d.i?' act':'')+(isRead?' rd':'')+'" data-i="'+d.i+'">'
     + '<button class="ck'+(savedMap.has(d.url)?' on':'')+'" data-ck="'+d.i+'" title="보관">'+I.chk+'</button>'
     + '<div class="mid" data-open="'+d.i+'">'
-    +   '<span class="rt">'+d.title+'</span>'
+    +   '<h2 class="rt">'+d.title+'</h2>'
     +   '<div class="rm">'+meta+'</div>'
     +   (d.snip?'<div class="snip">'+d.snip+'</div>':'')
     + '</div>'
-    + (d.img?'<div class="thumb"><img src="'+d.img+'" loading="lazy" alt="" onerror="this.closest(\'.thumb\').remove()"></div>':'<div></div>')
+    + (d.img?'<div class="thumb"><img src="'+d.img+'" loading="lazy" alt="'+escA(d.title)+'" onerror="this.closest(\'.thumb\').remove()"></div>':'<div></div>')
     + '<div class="acts">'
     +   '<button class="ib" title="원문 열기" onclick="event.stopPropagation();markRead(\''+d.url+'\');render();window.open(\''+d.url+'\',\'_blank\')">'+I.ext+'</button>'
     +   '<button class="ib" title="번역 요약" data-open="'+d.i+'">'+I.doc+'</button>'
@@ -666,7 +669,7 @@ function rowHTML(d){
 function archRowHTML(e){
   return '<div class="row" data-au="'+e.u+'" data-am="'+e.m+'" style="cursor:pointer">'
     + '<div></div>'
-    + '<div class="mid"><span class="rt">'+e.t+'</span>'
+    + '<div class="mid"><h2 class="rt">'+e.t+'</h2>'
     + '<div class="rm"><span class="s">'+((SRC[e.s]||{}).name||e.s)+'</span>'
     + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
 }
@@ -1057,7 +1060,7 @@ function render(){
         if(d) h+=rowHTML({...d, i:DATA.indexOf(d)});
         else h+='<div class="row" data-au="'+sv.url+'" data-am="'+sv.month+'" style="cursor:pointer">'
               +'<button class="ck on" data-un="'+sv.url+'" title="보관 해제">'+I.chk+'</button>'
-              +'<div class="mid"><span class="rt">'+sv.title+'</span>'
+              +'<div class="mid"><h2 class="rt">'+sv.title+'</h2>'
               +'<div class="rm"><span>'+(sv.month||'아카이브')+'</span></div></div></div>';
       });
     }
