@@ -56,7 +56,10 @@ __ADS_HEAD__
        스크립트가 죽어도 2.4초 뒤에는 무조건 사라지게 두는 안전장치. */
     animation:introOut .6s cubic-bezier(.65,0,.35,1) 2.4s forwards;
   }
-  .intro.is-done{animation:introOut .6s cubic-bezier(.65,0,.35,1) forwards}
+  /* ⚠️ 이름이 introOut이면 안 된다. 같은 이름이면 브라우저가 위의 애니메이션을
+     이어서 계산해, 이미 지연 시간이 지난 뒤엔 끝난 것으로 보고 마지막 상태로
+     튄다(페이드가 안 보이고 그냥 사라진다). 다른 이름이라야 새로 시작한다. */
+  .intro.is-done{animation:introFade .6s cubic-bezier(.65,0,.35,1) forwards}
   .intro__mark{width:40px;height:40px;flex:none;will-change:transform,opacity;
                animation:introMark .3s cubic-bezier(.2,.8,.2,1) both}
   .intro__type{
@@ -89,6 +92,7 @@ __ADS_HEAD__
   @keyframes introCaret{50%{border-left-color:transparent}}
   @keyframes introMark{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
   @keyframes introOut{to{opacity:0;visibility:hidden}}
+  @keyframes introFade{to{opacity:0;visibility:hidden}}
   /* 모션을 줄이도록 설정한 사용자, 그리고 두 번째 방문부터는 건너뛴다 */
   @media (prefers-reduced-motion:reduce){ .intro{display:none} }
   .no-intro .intro{display:none}
