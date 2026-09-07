@@ -43,7 +43,7 @@ from news.core.enrich import enrich
 from news.core.redact import redact_articles
 from news.core.scorer import score_and_categorize
 from news.core.tags import tag_all
-from news.render import render
+from news.render import render, write_seo_files
 from news.scrapers import (anthropic, devto, geeknews, github, hackernews, lobsters,
                            reddit, rss, trendshift)
 
@@ -303,6 +303,7 @@ def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
     display = archive.recent(all_articles, sc.get("keep_days", 30))
     render(display, out, collected=now, enabled=cfg.get("sources", {}),
            ads=cfg.get("ads"))
+    write_seo_files(os.path.dirname(out), now)
     sync_docs_data()
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),

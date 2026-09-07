@@ -154,6 +154,79 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
     return out
 
 
+# ---------------------------------------------------------------- SEO
+# 이 페이지는 기사를 JS 배열로 싣고 브라우저가 그린다. 그래서 크롤러가 받는
+# HTML 본문에 글자가 없었다(실측 9자). 구글이 JS를 실행하긴 하지만 순서가
+# 밀리고 보장되지 않는다 — 2026-09-07 기준 색인 0건이었다.
+#
+# 그래서 최근 기사만 정적 마크업으로 같이 굽는다. 스크립트가 로드되면 같은
+# 내용을 대화형 화면으로 대체하므로 사람이 보는 것과 크롤러가 읽는 것이
+# 다르지 않다. 전부 넣으면 파일이 배로 커지므로 최근 것만 넣는다.
+SEO_ITEMS = 120
+CNAME_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                          "docs", "CNAME")
+FALLBACK_URL = "https://dakcoe.github.io/dev-news"
+
+
+def site_url() -> str:
+    """사이트 주소. docs/CNAME이 단일 출처다(없으면 옛 Pages 주소)."""
+    try:
+        with open(CNAME_PATH, encoding="utf-8") as f:
+            host = f.read().strip()
+        return f"https://{host}" if host else FALLBACK_URL
+    except OSError:
+        return FALLBACK_URL
+
+
+def _esc(text: str) -> str:
+    return (str(text).replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS) -> str:
+    """스크립트 실행 전에 보이는 목록. 최신 회차부터 limit건."""
+    items = sorted(view_model, key=lambda d: d.get("batch") or "", reverse=True)[:limit]
+    parts = [
+        '<div class="pre">',
+        f'<h1>개발·AI 뉴스 · {collected.strftime("%Y년 %m월 %d일")}</h1>',
+        '<p class="lead">해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스 등에서 매일 '
+        '00시·08시·16시에 모아 한국어로 옮긴 개발·AI 소식입니다.</p>',
+    ]
+    for d in items:
+        meta = " · ".join(filter(None, [_esc(d.get("from") or d.get("src") or ""),
+                                        _esc(d.get("batchLabel") or "")]))
+        parts.append(
+            '<article>'
+            f'<h2><a href="{_esc(d.get("url") or "")}" rel="noopener">'
+            f'{_esc(d.get("title") or "")}</a></h2>'
+            f'<p class="m">{meta}</p>'
+            + (f'<p class="s">{_esc(d.get("snip") or "")}</p>' if d.get("snip") else "")
+            + '</article>')
+    parts.append("</div>")
+    return "".join(parts)
+
+
+def _meta_desc(view_model: list[dict]) -> str:
+    """검색 결과에 뜨는 한 줄. 오늘 실린 제목 몇 개를 붙여 매일 달라지게 한다."""
+    titles = [d.get("title", "") for d in view_model[:3] if d.get("title")]
+    base = "매일 세 번 모으는 개발·AI 뉴스. 해커뉴스, GitHub 트렌딩, Lobsters 등을 한국어로."
+    return _esc((base + " 오늘: " + " / ".join(titles))[:160]) if titles else _esc(base)
+
+
+def write_seo_files(out_dir: str, collected: datetime) -> None:
+    """robots.txt와 sitemap.xml. 한 장짜리라 사이트맵도 한 줄이다."""
+    base = site_url()
+    with open(os.path.join(out_dir, "robots.txt"), "w", encoding="utf-8") as f:
+        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n")
+    with open(os.path.join(out_dir, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                f'  <url><loc>{base}/</loc>'
+                f'<lastmod>{collected.date().isoformat()}</lastmod>'
+                '<changefreq>daily</changefreq></url>\n'
+                '</urlset>\n')
+
+
 def render(articles: list[dict], out_path: str, collected: datetime | None = None,
            enabled: dict[str, bool] | None = None, ads: dict | None = None) -> str:
     """enabled: config.yaml의 sources. 토글은 '설정에서 켜졌는지'를 나타낸다.
@@ -169,11 +242,13 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
                    "on": bool(enabled.get(k, True))}
                for k, v in SOURCE_META.items()}
 
+    view_model = to_view_model(articles)
+
     with open(TEMPLATE, encoding="utf-8") as f:
         html = f.read()
 
     html = (html
-            .replace("__DATA_JSON__", json.dumps(to_view_model(articles), ensure_ascii=False))
+            .replace("__DATA_JSON__", json.dumps(view_model, ensure_ascii=False))
             .replace("__SRC_JSON__", json.dumps(sources, ensure_ascii=False))
             .replace("__TAG_JSON__", json.dumps(
                 {tid: {"label": spec["label"], "group": spec["group"]}
@@ -182,6 +257,9 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
             .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
             .replace("__COLLECTED__", collected.isoformat())
             .replace("__DATE__", collected.strftime("%Y-%m-%d"))
+            .replace("__SEO_HTML__", _seo_html(view_model, collected))
+            .replace("__META_DESC__", _meta_desc(view_model))
+            .replace("__SITE_URL__", site_url())
             .replace("__ADS_HEAD__", _ads_head(ads_cfg))
             .replace("__ADS_JSON__", json.dumps(ads_cfg, ensure_ascii=False)))
 
