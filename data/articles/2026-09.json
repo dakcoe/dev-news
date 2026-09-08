@@ -1,5 +1,603 @@
 [
  {
+  "title": "Mistral raises €3B",
+  "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 552,
+  "comments": 388,
+  "published_at": 1788843983,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 2868.0,
+  "image": "https://mistral.ai/cms-media/api/media/file/fundraise.jpg",
+  "link_status": "ok",
+  "ko_title": "Mistral, 30억 유로 유치",
+  "summary": "Mistral이 시리즈 D 라운드에서 30억 유로를 유치해 기업가치 210억 유로 이상을 기록했다. 삼성전자가 주도했으며, 이는 유럽 기술 기업 사상 최대 규모의 주식 투자이다. 이번 자금으로 Mistral은 오픈-웨이트 모델과 인프라를 포함한 풀스택 연구를 확대하고, 컴퓨팅 역량을 늘려 글로벌 기업 125곳 이상에 서비스를 확대한다.",
+  "why": "오픈-웨이트 모델과 인프라를 함께 제공하는 풀스택 구조가 강점이다. 데이터 주권을 중시하는 백엔드 시스템에 대안으로 검토할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "We have a year to fix security everywhere",
+  "url": "https://jyn.dev/a-year-to-fix-security/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 260,
+  "comments": 249,
+  "published_at": 1788842890,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1867.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "우리는 1년 안에 보안을 모두 고쳐야 한다",
+  "summary": "GLM 5.3-flash 모델이 공개돼 저비용·고속으로 실행 가능해졌으며, 누구나 다운로드·수정할 수 있다. 이 모델은 기존 안전 장치를 우회한 형태로 제공돼 악의적 활용 위험이 커졌다. 프로젝트 Glasswing·Daybreak은 이러한 위험을 완화하기 위해 LLM을 활용해 보안 취약점을 빠르게 탐지·수정하려는 시도를 진행 중이다.",
+  "why": "GLM 5.3-flash는 안전 장치가 제거된 형태로 배포되어 악의적 코드 생성에 악용될 수 있다. 백엔드 개발자는 LLM 기반 보안 취약점 탐지 도구를 활용해 기존 코드베이스의 위험을 선제적으로 점검해야 한다. 탐지된 취약점을 실제 운영 환경에 배포하는 과정은 여전히 수작업 의존도가 높다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Mistral AI raises 3 billion euros in Europe's largest-ever tech funding round despite lagging behind rivals",
+  "url": "https://the-decoder.com/mistral-ai-raises-3-billion-euros-in-europes-largest-ever-tech-funding-round-despite-lagging-behind-rivals/",
+  "description": "Three years after launch, Mistral AI has closed a 3 billion euro Series D round, pushing its valuation past 21 billion euros. The article Mistral AI raises 3 billion euros in Europe's largest-ever tech funding round despite lagging behind rivals appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788853541.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/mistral-logo-wall-nano-banana-pro-scaled.jpg",
+  "link_status": "ok",
+  "ko_title": "Mistral AI, 경쟁사에 뒤처지면서도 유럽 최대 규모 기술 투자 라운드에서 30억 유로 유치",
+  "summary": "Mistral AI가 30억 유로 규모의 시리즈 D 라운드를 마감해 기업가치를 210억 유로 이상으로 끌어올렸다. 삼성전자가 주도하고 a16z·Nvidia·ASML 등 기존 투자자와 신규 투자자가 함께 참여했다. 최근 8억 3천만 달러 규모의 대출로 자체 데이터 센터를 구축하고 있다.",
+  "why": "Mistral Medium 3.5는 Qwen이나 Kimi 같은 중국 오픈소스 모델보다 성능이 떨어진다. 미국 폐쇄형 모델과 경쟁도 하지 못한다. 유럽 기업들의 미국 의존도를 줄이려는 움직임이 Mistral 수요를 늘리는 중이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "The state of European cloud providers in 2026",
+  "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 21,
+  "comments": 16,
+  "published_at": 1788852016.336,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "cross_source_count": 1,
+  "score": 965.9999999999999,
+  "image": "https://crescentro.se/posts/euro-cloud-providers-2026/preview.png",
+  "link_status": "ok",
+  "ko_title": "2026년 유럽 클라우드 제공업체 현황",
+  "summary": "글쓴이는 개인용 서버를 찾으며 유럽 클라우드 제공업체들을 직접 테스트했다. 가격, CPU 종류, 네트워크 성능, 관리 콘솔 사용성을 평가하고 Geekbench 점수로 상대적인 성능을 비교했다. 또한 객체 저장소·관리형 데이터베이스 등 추가 서비스의 확장성을 간략히 살폈다.",
+  "why": "유럽 클라우드의 실제 CPU 배정 방식과 관리 콘솔 안정성을 직접 검증한 자료가 된다. 동일한 vCPU 수라도 실제 칩셋에 따라 성능 차이가 크므로 인프라 선정 시 참고할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Show GN: stage-gen – 아트 디렉션과 참고 이미지로 만드는 2D 게임 에셋",
+  "url": "https://news.hada.io/topic?id=33360",
+  "description": "게임의 아트 디렉션과 참고 이미지를 바탕으로 캐릭터·배경·지형을 생성하는 오픈소스 도구 stage-gen을 만들고 있습니다. 생성한 에셋을 러너와 플랫포머 데모에 넣어 확인하고 있으며, README에 게임 장면과 에셋 구성을 정리했습니다. 미리 준비한 입력 패키지(아트 디렉션·참고 이미지 등)를 바탕으로 GPT",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788863672.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33360?v=4f04b6a3d11d474231d1c16f7e6bd7f1",
+  "link_status": "ok",
+  "ko_title": "Show GN: stage-gen – 아트 디렉션과 참고 이미지로 만드는 2D 게임 에셋",
+  "summary": "오픈소스 도구 stage-gen은 아트 디렉션과 참고 이미지를 입력으로 GPT Image 2를 활용해 2D 게임 캐릭터·배경·지형 에셋을 자동 생성한다. Python CLI와 웹 그래프 UI를 제공하며, 생성 결과와 매니페스트를 기록한다. 실제 에셋 생성에는 사용자의 API 키와 제공사 사용료가 필요하고, 연속 동작 애니메이션은 아직 미완성이다.",
+  "why": "2D 게임 에셋 생성 파이프라인을 구축할 때 참고할 수 있는 오픈소스 도구다. 연속 동작 애니메이션은 아직 미완성이므로 해당 기능이 필수인 프로젝트에는 적합하지 않다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "language",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "1990년대 인증기관의 RSA 키를 인수분해했다",
+  "url": "https://news.hada.io/topic?id=33359",
+  "description": "초기 웹 브라우저가 신뢰했던 E-Certify의 512비트 RSA 루트 인증서 2개 를 데스크톱에서 인수분해해 개인 키를 복원함 CADO-NFS 로 개인 키 복원에 필요한 두 소수를 구했으며, Ryzen 9 5950X에서 SSL용 키는 32시간 , S/MIME용 키는 29시간이 걸림...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788859981.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33359?v=b3a02f63c149b83558564d14b4257375",
+  "link_status": "ok",
+  "ko_title": "1990년대 인증기관의 RSA 키를 인수분해했다",
+  "summary": "연구팀이 CADO-NFS를 이용해 1999년 Netscape에 포함된 512비트 RSA 루트 인증서 두 개를 데스크톱에서 인수분해해 개인 키를 복원했다. 복원에는 Ryzen 9 5950X에서 SSL용 32시간, S/MIME용 29시간이 소요되었다. 복원된 키로 구형 Netscape 4.51에서 인증서를 검증했으며, 현대 TLS와는 호환되지 않아 Go 기반 서버를 별도로 구현했다.",
+  "why": "512비트 RSA 키는 데스크톱에서 하루 만에 깨질 수 있음을 재확인했다. 현재 2048비트 이상을 쓰더라도 양자컴퓨터 위협으로 폐기가 예상된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Mistral, 30억 유로 투자 유치",
+  "url": "https://news.hada.io/topic?id=33358",
+  "description": "설립 3년 만에 시리즈 D로 30억 유로 를 조달한 Mistral의 투자 후 기업가치가 210억 유로를 넘었으며 , 유럽 기술기업 사상 최대 규모의 지분 투자 유치를 기록함 Samsung Electronics 가 투자를 주도하고, EQT가 운용하는 Scaleup Europe Fund와 기...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788856406.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33358?v=d8bd9e9d384604ebfbb045f776345470",
+  "link_status": "ok",
+  "ko_title": "Mistral, 30억 유로 투자 유치",
+  "summary": "Mistral은 설립 3년 만에 시리즈 D 라운드로 30억 유로를 조달해 기업가치 210억 유로를 돌파했다. 투자 주도는 Samsung Electronics이며, EQT와 기존 투자자들이 공동 참여했다. 조달된 자금은 최첨단 AI 연구, 학습 인프라 확충, 상업적 성장 및 해외 진출에 사용될 예정이다. 현재 20개국에서 125개 이상의 글로벌 기업에 AI 전환을 지원하고 있다.",
+  "why": "오픈 웨이트 모델과 인프라를 함께 제공해 특정 공급업체에 종속되지 않도록 한다. 데이터를 조직 내부에 유지하면서 모델을 제어하고 맞춤화할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Show GN: Hermeum - 팀에 필요한 Hermes agent를 딸깍으로 만들고 배포해주는 오픈소스 플랫폼",
+  "url": "https://news.hada.io/topic?id=33357",
+  "description": "회사에서 팀 마다 직접 에이전트를 만들고 슬랙에 연동하다 보니 사일로가 늘어나는 게 보였습니다. Hermeum은 이 문제를 해결하기 위해서 시작한 프로젝트입니다. Hermeum은 Hermes agent에 소울(soul), 스킬, mcp, 플러그인, 크론을 자동 설정해서 팀에 맞는 에이전트를 바로 만들어 줍니다. 가장 큰",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788853966.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33357?v=9bb934ad0b0587c46c97cd1f2d3bbb4c",
+  "link_status": "ok",
+  "ko_title": "Show GN: Hermeum - 팀에 필요한 Hermes agent를 딸깍으로 만들고 배포해주는 오픈소스 플랫폼",
+  "summary": "Hermeum은 Hermes agent의 소울·스킬·mcp·플러그인·크론을 자동 설정해 팀 맞춤 에이전트를 즉시 생성·배포한다. 설정은 LLM이 자동으로 수행하고 YAML 하나로 관리·템플릿·공유가 가능하다. 개발자가 아닌 사용자도 에이전트를 손쉽게 만들 수 있다.",
+  "why": "팀별 에이전트 설정을 YAML 하나로 관리해 템플릿 공유가 가능하다. 개발자가 아닌 팀원도 LLM 자동 설정을 통해 에이전트를 직접 만들 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "devops-infra",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Jellyfin 12.0",
+  "url": "https://news.hada.io/topic?id=33355",
+  "description": "10.11의 데이터베이스 전환을 바탕으로 라이브러리 탐색 성능 을 개선하고, 에피소드 다중 버전과 서버 내장 도서·만화 지원을 추가한 새 안정 버전임 재생목록·컬렉션 항목을 개별 행으로 저장 해 전체 목록을 읽거나 다시 쓰지 않고도 개수·페이지 조회와 개별 항목...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788852985.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33355?v=06391e31e4704d0049bcef5408b36bb0",
+  "link_status": "ok",
+  "ko_title": "Jellyfin 12.0",
+  "summary": "10.11 데이터베이스 전환을 기반으로 라이브러리 탐색 속도가 개선되고, 에피소드 다중 버전 및 서버 내장 도서·만화 지원이 추가되었습니다. 재생목록·컬렉션을 개별 행으로 저장해 전체 목록을 읽지 않고도 개수·페이지 조회와 편집이 가능해졌으며, UI가 Modern으로 바뀌고 FFmpeg 8.1 기반 미디어 처리 개선이 제공됩니다. 업그레이드 시 10.10.7 또는 10.11.x에서만 지원되며, 서버 중지 후 전체 수동 백업이 필수이고 첫 전체 스캔이 오래 걸립니다.",
+  "why": "서드파티 플러그인은 업그레이드 전 제거해야 하며, 10.11용 플러그인은 12.0에서 로드되지 않는다. 구형 클라이언트는 레거시 경로 제거로 작동하지 않을 수 있으니 새 버전 표기와 API 변경을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
+  "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 52,
+  "comments": 37,
+  "published_at": 1788840380,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 815.0,
+  "image": "https://newsroom.arm.com/wp-content/uploads/2026/09/Arm-Newsroom-AI-native-graphics-image-1600x900-1.jpg",
+  "link_status": "ok",
+  "ko_title": "Arm Mali G2-Ultra NX GPU: 데스크톱급 모바일 게임플레이와 AI 기반 그래픽",
+  "summary": "Arm은 AI 가속기를 셰이더 코어에 통합한 Mali G2-Ultra NX GPU를 발표했다. 이 GPU는 신경망 기반 초고해상도 복원(NSS) 등 세 가지 신경 기술을 지원해 모바일 환경에서도 데스크톱 수준의 시각 품질을 제공한다. 기존 GPU 대비 데이터 이동을 최소화하고 전력 효율을 높여 신경 그래픽을 빠르게 적용할 수 있다.",
+  "why": "기존 셰이더 코어에 신경 가속기가 통합되어 그래픽과 AI 워크로드가 동시에 실행된다. 데이터 이동을 줄여 모바일 전력 한계 내에서 데스크톱급 화질을 구현할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Bootstrapping in the Age of Claude Code: How AI Quietly Killed the Old Startup Playbook",
+  "url": "https://dev.to/thebitforge/bootstrapping-in-the-age-of-claude-code-how-ai-quietly-killed-the-old-startup-playbook-47do",
+  "description": "I want to tell you about two founders, because I think their story explains this whole shift better...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 38,
+  "comments": 0,
+  "published_at": "2026-09-08T06:53:28Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 736.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4qotl0geny4f69vsi1oy.png",
+  "link_status": "ok",
+  "ko_title": "Claude 코드 시대의 부트스트래핑: AI가 기존 스타트업 플레이북을 조용히 무너뜨린 방법",
+  "summary": "AI 도구를 활용해 창업자가 투자 유치 없이 짧은 시간에 제품을 출시하고 수익을 창출하는 사례가 늘고 있다. 기존의 투자 중심 개발 방식과 달리, 실제 사용자 피드백을 기반으로 빠르게 반복하고 전액 소유권을 유지한다. 이러한 흐름은 소프트웨어 개발과 사업 모델에 대한 전통적 접근을 재정의하고 있다.",
+  "why": "AI 코딩 도구가 개발 주기를 단축해 투자 유치 없이도 초기 수익 모델을 검증할 수 있게 됐다. 기존의 투자 중심 개발 방식과 달리 사용자 피드백 기반의 빠른 반복이 가능해졌다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "industry"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Angular DataGrid: A Free, Open-Source AG Grid Alternative Built for Scale",
+  "url": "https://dev.to/hadil/angular-datagrid-a-free-open-source-ag-grid-alternative-built-for-scale-5gkm",
+  "description": "Angular has changed in recent versions, especially around how developers handle reactive state....",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 22,
+  "comments": 6,
+  "published_at": "2026-09-08T09:07:24Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 722.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fls1ocrsr7a5cfvmksx3k.png",
+  "link_status": "ok",
+  "ko_title": "Angular DataGrid – 무료 오픈소스 AG Grid 대안",
+  "summary": "Angular DataGrid는 Angular와 TypeScript, Angular CDK 기반의 신호 기반 아키텍처를 갖춘 오픈소스 데이터 그리드이다. 무료 버전은 가상 스크롤링, 정렬·필터링·페이지네이션·검색 등 25개 이상의 기능을 제공하고 10만 행 이상을 지원한다. 엔터프라이즈 버전은 스프레드시트와 데이터 거버넌스 기능을 추가로 제공한다. 현재 MIT 라이선스로 배포되고 있다.",
+  "why": "Angular Signals 기반 아키텍처를 채택했으므로 기존 반응형 상태 관리 방식과 호환된다. MIT 라이선스라 상용 프로젝트에 무상으로 적용할 수 있다. 10만 행 이상 데이터를 가상 스크롤링으로 처리하므로 대용량 테이블 렌더링 성능을 확보할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "llm 0.35",
+  "url": "https://simonwillison.net/2026/Sep/7/llm/",
+  "description": "Release: llm 0.35 New OpenAI model: gpt-6-astra for GPT-6 Astra . Tags: openai , llm , gpt-6-astra",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788825294.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "llm 0.35",
+  "summary": "OpenAI가 GPT-6 Astra 모델인 gpt-6-astra를 발표했다.",
+  "why": "GPT-6 Astra 모델이 출시되어 기존 GPT 계열 모델 대비 성능 차이를 직접 확인해야 한다. 백엔드 서비스의 프롬프트나 응답 파싱 로직에 영향이 있는지 점검할 시점이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Video compressor",
+  "url": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+  "description": "Tool: Video compressor I recorded a short demo video of my Equal Earth animation on my phone and wanted to publish an optimized version of that video (using FFMPEG) on my blog, so I had Claude Fable 5.1 in Claude Code for web build me this tool using the WebAssembly build of FFMPEG. Tags: ffmpeg , video , webassembly , claude , claude-code , claude-mythos-fable",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788805747.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://static.simonwillison.net/static/2026/video-compressor-card.jpg",
+  "link_status": "ok",
+  "ko_title": "비디오 압축기",
+  "summary": "Claude Code for web의 Claude Fable 5.1이 WebAssembly 기반 FFMPEG를 이용해 동영상 최적화 도구를 만들었다. 이 도구는 모바일에서 촬영한 짧은 데모 영상을 블로그에 게시하기 위해 사용된다.",
+  "why": "WebAssembly 기반 FFMPEG를 활용해 브라우저 환경에서 동영상 압축을 수행할 수 있음을 보여준다. 서버 배포 없이 로컬에서 바로 실행 가능한 비디오 최적화 워크플로우를 구성할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "web",
+   "hardware",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "How AI wiped out an entire industry in Nairobi",
+  "url": "https://the-decoder.com/how-ai-wiped-out-an-entire-industry-in-nairobi/",
+  "description": "In Kenya, ChatGPT wiped out an entire business model: writing academic papers for foreign students. The article How AI wiped out an entire industry in Nairobi appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788787137.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/openai_logo_chatgpt-2-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "AI가 나이로비의 전체 산업을 사라지게 하다",
+  "summary": "케냐에서 ChatGPT 도입 이후, 외국 학생을 위한 논문·과제 작성 서비스가 급락해 나이로비만 4만 명이 넘는 종사자가 일자리를 잃었다. 가격이 하락하고 주문이 감소하면서 전사적 데이터 라벨링·전사·콘텐츠 검수 등 관련 업무도 사라졌다. 현재 남은 일은 AI가 만든 텍스트를 표절 검사에 통과하도록 수정하는 “humanizer” 역할이다.",
+  "why": "AI가 생성한 텍스트를 표절 검사에 통과시키기 위한 수정 작업이 새로운 업무로 등장했다. 백엔드 개발자도 AI 산출물의 품질 검증 단계에서 이 문제를 직면할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "career-culture"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "Tencent / teamai-cli",
+  "url": "https://github.com/Tencent/teamai-cli",
+  "description": "The team harness for AI agents",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 684,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 684,
+  "score": 344.4,
+  "image": "https://opengraph.githubassets.com/1/Tencent/teamai-cli",
+  "link_status": null,
+  "ko_title": "Tencent / teamai-cli",
+  "summary": "팀의 AI 스킬, 규칙, 에이전트 등을 중앙 저장소에서 관리하고 자동 동기화해 주는 CLI 도구다. npm으로 전역 설치 후 Git 저장소를 지정해 초기화하면 프로젝트 또는 사용자 범위에 리소스를 배포한다. 지원 AI 에이전트에는 Claude Code, Codex, CodeBuddy 등 다수 포함된다.",
+  "why": "팀원마다 수동으로 복사하던 AI 에이전트 설정 파일을 중앙 저장소 하나로 통일할 수 있다. Claude Code나 Codex 세션을 열면 최신 규칙이 자동으로 반영되어 버전 불일치 문제를 줄인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "vastsa / PI-Desktop",
+  "url": "https://github.com/vastsa/PI-Desktop",
+  "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 598,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 598,
+  "score": 314.29999999999995,
+  "image": "https://opengraph.githubassets.com/1/vastsa/PI-Desktop",
+  "link_status": null,
+  "ko_title": "PI-Desktop — 로컬 우선 AI 코딩 에이전트를 위한 데스크톱 작업공간",
+  "summary": "PI-Desktop은 로컬에서 AI 코딩 에이전트를 실행할 수 있는 독립형 데스크톱 워크스페이스를 제공한다. 사용자는 모델을 직접 가져와 로컬 프로젝트에 연결하고, 에이전트가 작업하는 동안 전체 제어권을 유지한다. 현재 Early Preview 단계이며, API와 확장 인터페이스가 향후 변경될 수 있다.",
+  "why": "로컬에서 코딩 에이전트를 돌릴 때 클라우드 중계나 계정 연동이 필요 없다. 다만 Early Preview 단계라 API와 확장 인터페이스가 바뀔 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "ayghri / i-have-adhd",
+  "url": "https://github.com/ayghri/i-have-adhd",
+  "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+  "source": "github",
+  "upvotes": 422,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 422,
+  "score": 252.7,
+  "image": "https://opengraph.githubassets.com/1/ayghri/i-have-adhd",
+  "link_status": null,
+  "ko_title": "i-have-adhd — ADHD 친화적인 출력 제공",
+  "summary": "이 저장소는 코딩 어시스턴트용 스킬/플러그인을 제공한다. 답변을 숨기지 않고 행동 우선, 단계 번호 매김 형태로 출력한다. 설치는 CLI에 복사·붙여넣기하거나 별도 설치 가이드를 참고한다. 기존 어시스턴트가 장황한 설명을 제공하던 방식을 간결한 단계형 출력으로 바꾼다.",
+  "why": "코딩 어시스턴트의 답변이 장황한 설명이 아닌 행동 우선 단계형으로 바뀐다. 설치는 CLI 프롬프트에 저장소 주소를 붙여넣거나 설치 가이드를 참고하면 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "viarotel-org / escrcpy",
+  "url": "https://github.com/viarotel-org/escrcpy",
+  "description": "📱 Display and control your Android device graphically with scrcpy.",
+  "source": "github",
+  "upvotes": 173,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 173,
+  "score": 165.54999999999998,
+  "image": "https://opengraph.githubassets.com/1/viarotel-org/escrcpy",
+  "link_status": null,
+  "ko_title": "viarotel-org / escrcpy",
+  "summary": "",
+  "why": "기사가 escrcpy의 로고와 저장소 링크만 제시하고 구체적인 기능이나 변경 사항을 설명하지 않는다. 따라서 백엔드나 AI 개발 환경에 직접적인 영향을 미치는 기술적 내용이 확인되지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
+  "title": "openai / plugins",
+  "url": "https://github.com/openai/plugins",
+  "description": "OpenAI Plugins",
+  "source": "github",
+  "upvotes": 45,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 45,
+  "score": 120.74999999999999,
+  "image": "https://opengraph.githubassets.com/1/openai/plugins",
+  "link_status": null,
+  "ko_title": "openai 플러그인",
+  "summary": "이 GitHub 저장소는 Codex 플러그인 예시들을 모아둔 컬렉션이다. 각 플러그인은 `plugins/<name>/` 아래에 매니페스트와 부속 파일들을 포함한다. 기본 마켓플레이스와 API 키 로그인용 별도 마켓플레이스가 제공된다. Figma, Notion, iOS·macOS·Web·Expo·Netlify 등 다양한 분야의 풍부한 예시가 포함되어 있다.",
+  "why": "Codex 플러그인 구조를 파악해 커스텀 플러그인을 만들 때 참고할 수 있다. Figma나 Notion 같은 외부 도구 연동 예시를 통해 기존 워크플로우를 확장할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-08T20:58:37.897860+09:00",
+  "batch_label": "9월 8일 20:58"
+ },
+ {
   "title": "Creepy crawlies",
   "url": "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
   "description": "Creepy crawlies Konstantin Ryabitsev discusses how bad the \"background radiation\" of abusive crawlers has become from the perspective of git.kernel.org , the official Git repository for the Linux kernel: TL;DR: we spend more CPU cycles rendering commits for scrapers than we spend on all other kinds of legitimate access, including git clones. At any one time, across 5 geo-distributed nodes, there a",
