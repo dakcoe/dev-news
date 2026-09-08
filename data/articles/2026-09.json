@@ -1,5 +1,491 @@
 [
  {
+  "title": "Creepy crawlies",
+  "url": "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
+  "description": "Creepy crawlies Konstantin Ryabitsev discusses how bad the \"background radiation\" of abusive crawlers has become from the perspective of git.kernel.org , the official Git repository for the Linux kernel: TL;DR: we spend more CPU cycles rendering commits for scrapers than we spend on all other kinds of legitimate access, including git clones. At any one time, across 5 geo-distributed nodes, there a",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788822538.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "오싹한 크롤러들",
+  "summary": "git.kernel.org에서 악성 크롤러가 생성한 HTML 커밋 페이지 렌더링에 14개의 CPU 코어가 전용으로 사용되고 있다. 이는 정상적인 git clone 등 모든 합법적 접근보다 많은 자원을 소모한다. 데이터셋을 대규모 웹 페이지로 제공하는 Datasette에서도 유사한 문제를 우려하고 있다.",
+  "why": "서버 자원이 악성 크롤러에 의해 소진되면 정당한 클론 요청이 지연된다. 백엔드 서비스 운영 시 크롤러 트래픽을 차단하는 조치가 필수적이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Quoting Jakub Pachocki",
+  "url": "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
+  "description": "The strongest argument I see for continuing to train much smarter models quickly is the need to build defensive systems against the dangers posed by other AI. [...] We will need powerful, aligned AI for defense; to secure infrastructure, to protect against rogue agents in real time, and to invent entirely new protective measures. This will be a primary focus of OpenAI’s deployment efforts. At the ",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788819985.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Jakub Pachocki 인용",
+  "summary": "OpenAI는 다른 AI가 초래할 위험에 대비해 방어 시스템을 구축하기 위해 빠르게 더 똑똑한 모델을 훈련해야 한다고 강조한다. 강력하고 정렬된 AI는 인프라 보호, 실시간 악의적 행위 방지, 새로운 방어 수단 개발에 필수적이다. 그러나 이러한 필요가 무모한 경쟁을 정당화하는 변명이 되어서는 안 된다고 경고한다.",
+  "why": "AI 기반 방어 시스템이 백엔드 인프라 보호의 핵심이 되므로, 실시간 에이전트 공격 대응을 고려한 보안 설계를 검토해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "career-culture"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "강남언니 약 22만 명 개인정보 유출…상담 사진과 실제 시술 내역까지 포함",
+  "url": "https://news.hada.io/topic?id=33337",
+  "description": "미용의료 플랫폼 강남언니 운영사 힐링페이퍼가 21만 9,665명의 개인정보 유출 을 공지했으며, 이중 한국 이용자는 약 16만 명 이름과 연락처뿐 아니라 상담 사진, 병원과 의사명, 신청한 시술과 실제 받은 시술 내역 , 결제 정보까지 유출 항목에 포함 9월...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788828302.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33337?v=7a3d3e535f05134f8630016c8b9c03be",
+  "link_status": "ok",
+  "ko_title": "강남언니 약 22만 명 개인정보 유출…상담 사진과 실제 시술 내역까지 포함",
+  "summary": "힐링페이퍼가 운영하는 미용의료 플랫폼 강남언니에서 21만 9,665명(한국 약 16만 명)의 이름·연락처·상담 사진·시술·결제 정보 등이 유출됐으며, 9월 4일 API 차단 후 다음 날 다른 경로로 재접근 시도가 있었다. 회사는 시스템 점검·인증 강화와 권한 검증 로직 재정비를 완료했지만, 구체적 취약점은 공개하지 않았다. 유출된 개인별 내역은 공지 후 30일간 조회 가능하다.",
+  "why": "상담 내역 조회 API 차단 후 다른 경로로 재접근 시도가 발생했다. 권한 검증 로직 재정비가 완료됐지만 구체적 취약점은 공개되지 않았다. 개인별 유출 내역은 공지 후 30일간만 조회할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Apache Maka - 에이전트가 한 일을 기록으로 남기는 로컬 우선 워크스페이스",
+  "url": "https://news.hada.io/topic?id=33336",
+  "description": "원하는 AI 모델을 연결해 데스크톱이나 터미널에서 작업을 맡기고, 에이전트가 무엇을 했는지 실행 과정까지 확인 할 수 있는 작업 공간 대화뿐 아니라 도구 호출과 결과, 권한 승인 여부, 종료 상태를 순서대로 기록하며, 이 기록을 화면 표시와 다음 요청 구성, 비정상 종료 후 복구...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788827402.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33336?v=092955599de79172904ca89278490871",
+  "link_status": "ok",
+  "ko_title": "Apache Maka - 에이전트가 한 일을 기록으로 남기는 로컬 우선 워크스페이스",
+  "summary": "Apache Maka는 로컬에 작업 기록을 저장하고, AI 모델과 연결해 데스크톱·터미널에서 작업을 수행한다. 실행 과정, 도구 호출, 권한 승인, 종료 상태 등을 순서대로 기록해 화면 표시와 다음 요청 구성에 활용한다. 기록은 모델에 전달하는 문맥을 줄여도 보존되며, 중단된 작업 이어가기 기능은 기본적으로 비활성화돼 있다. 현재 Incubator 단계로 공식 릴리스가 없으며, macOS·Windows·Linux용 빌드를 제공한다.",
+  "why": "Incubator 단계라 데이터 형식과 CLI가 바뀔 수 있어 프로덕션 환경 도입은 신중해야 한다. 중단된 작업 이어가기 기능이 기본적으로 꺼져 있어 활성화 시 추가 토큰 소모가 발생한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "가장 짧은 IPv6 주소를 찾아서",
+  "url": "https://news.hada.io/topic?id=33335",
+  "description": "1.1.1.1 처럼 짧고 기억하기 쉬운 IPv6 주소도 있을까 궁금해, 실제로 응답하는 주소를 찾아봄 IPv6는 연속된 0을 :: 로 줄여 쓸 수 있어, 첫 번째 그룹만 남는 X:: 형태 를 대상으로 짧은 fish 셸 스크립트를 작성해 ping을 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788826251.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33335?v=0a9edd4b3fbc9f701a02cec8b7b3fa2f",
+  "link_status": "ok",
+  "ko_title": "가장 짧은 IPv6 주소를 찾아서",
+  "summary": "짧은 형태의 IPv6 주소를 찾기 위해 전역 유니캐스트 블록을 대상으로 fish 셸 스크립트를 사용해 ping 테스트를 수행했다. 초기 탐색에서 2409::, 2600::, 2a09::, 2a11:: 네 주소가 응답했으며, 비주거용 IP 범위에서 추가로 2002::, 2a12::, 2c0f::가 응답했다. 응답한 주소 중 일부는 DNS 서버로 운영되고 있었고, 2002::는 6to4 주소로 응답 이유는 확인되지 않았다.",
+  "why": "전역 유니캐스트 블록에서 실제 응답하는 짧은 IPv6 주소가 존재함을 확인했다. 네트워크 설정이나 DNS 구성 시 2a09:: 같은 짧은 주소를 직접 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "타임스탬프를 시·분·초로 변환하는 더 빠른 방법",
+  "url": "https://news.hada.io/topic?id=33334",
+  "description": "여러 주요 날짜/시간 라이브러리는 시/분/초를 구할 때 앞선 계산 결과를 차례로 기다리는 구조 를 사용하며, 계산 순서만 바꿔도 이 대기 시간을 크게 줄일 수 있음 V1 은 전체 분과 시간을 독립적으로 구한 뒤 초와 분을 병렬로 계산해, 복잡한 비트 기법 없이 근사...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788826071.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33334?v=fa5411aa466e1d1b9926ded9f78636fd",
+  "link_status": "ok",
+  "ko_title": "타임스탬프를 시·분·초로 변환하는 더 빠른 방법",
+  "summary": "기존 라이브러리의 순차적 나눗셈 방식 대신 연산 순서를 바꾸어 의존성을 줄인 V1, 고정소수점 곱셈을 활용한 V2, 60진법을 64진법 나머지 연산으로 대체한 V3 등 세 가지 최적화 버전을 제시한다. 각 버전은 평균 지연 사이클을 16→8, 10→6, 5 사이클 수준으로 단축시킬 수 있다. 구현은 Rust datealgo-rs와 Cassio Neri의 calendar 저장소에 포함돼 있다. 실제 성능은 CPU·컴파일러 특성 및 지연시간·처리량 우선순위에 따라 달라진다.",
+  "why": "Rust의 datealgo-rs 라이브러리를 쓰는 경우, 지연시간과 처리량 우선순위에 맞춰 V1부터 V3까지 버전을 선택할 수 있다. 입력 범위와 윤초 처리 조건을 확인하고 대상 환경에서 벤치마크를 해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "빌 게이츠의 MovieMaker 설치 시도(2003)",
+  "url": "https://news.hada.io/topic?id=33333",
+  "description": "빌 게이츠 는 MovieMaker 다운로드와 Digital Plus 패키지 구매에 한 시간 넘게 매달렸지만 둘 다 이용하지 못했고, Windows 사용성과 프로그램 관리 조직의 대응을 강하게 비판함 Microsoft.com의 느린 검색과 혼란스러운 다운로드 목록에 이어 Windows Update의 검사·업데...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788820451.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33333?v=9e98bd5315eb7b4aa16655b9113d8d10",
+  "link_status": "ok",
+  "ko_title": "빌 게이츠의 MovieMaker 설치 시도(2003)",
+  "summary": "빌 게이츠가 2003년 Microsoft 웹사이트와 Windows Update를 통해 MovieMaker와 Digital Plus 패키지를 다운로드하려다 여러 단계의 검색 지연, 불명확한 다운로드 목록, 긴 설치·재부팅 과정으로 실패했다. 이 경험은 Microsoft.com과 Windows Update의 사용자 경험 설계와 프로그램 관리 조직의 책임 소재에 대한 내부 논의를 촉발했다.",
+  "why": "2003년 사례지만, 다운로드와 설치를 분리해 재부팅까지 강제하는 구조는 여전히 백엔드 배포에서 흔하다. 사용자가 의도치 않은 재부팅으로 작업 상태를 잃는 문제를 막으려면, 배포 파이프라인의 재시작 조건을 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "216M Spy TVs – The LG Smart TV Problem [video]",
+  "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+  "description": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-au...",
+  "source": "hackernews",
+  "upvotes": 475,
+  "comments": 706,
+  "published_at": 1788740524,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 917.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "216M 스파이 TV – LG 스마트 TV 문제",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Rust debugging survey 2026 results",
+  "url": "https://blog.rust-lang.org/2026/09/07/rust-debugging-survey-2026-results/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 21,
+  "comments": 0,
+  "published_at": 1788800442.881,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "cross_source_count": 1,
+  "score": 898.8,
+  "image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+  "link_status": "ok",
+  "ko_title": "Rust 디버깅 설문 2026 결과",
+  "summary": "2026년 Rust 디버깅 설문에서 2,300명 이상이 응답했으며, 46%가 현재 디버거를 사용하고 54%는 사용하지 않는다. 전문가 수준이 높은 개발자일수록 디버거 사용 비율이 높으며, 초보자는 절반 이상이 사용 경험이 없다. 디버깅 문제로 사용을 중단한 비율은 전체의 약 3%이며, 추가로 24%가 부분적으로 문제를 겪었다.",
+  "why": "Rust 디버깅 경험이 부족해 개발을 중단한 사례가 전체의 약 3%에 달한다. 디버거 사용이 54%에 그치는 상황에서, 디버깅 난이도가 프로젝트 지속 가능성을 위협할 수 있음을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "ChatGPT claws back web traffic share to 55.5 percent as Gemini's brief comeback fades",
+  "url": "https://the-decoder.com/chatgpt-claws-back-web-traffic-share-to-55-5-percent-as-geminis-brief-comeback-fades/",
+  "description": "ChatGPT has pushed its share of AI chatbot website traffic back up to 55.5 percent, according to Similarweb. Year-over-year, though, its lead shrank sharply from 73.3 percent as Gemini doubled its share and Claude grew nearly fivefold. Mobile apps and desktop clients aren't included. The article ChatGPT claws back web traffic share to 55.5 percent as Gemini's brief comeback fades appeared first on",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788800052.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2025/05/chatgpt_website_stats.png",
+  "link_status": "ok",
+  "ko_title": "ChatGPT, 웹 트래픽 점유율 55.5% 회복…Gemini 잠시 부활 사라져",
+  "summary": "Similarweb 데이터에 따르면 ChatGPT는 3개월 전 52.7%에서 55.5%로 웹 트래픽 점유율을 회복했다. Google Gemini는 27.8%에서 25.6%로 감소했으며, Anthropic Claude는 1.9%에서 9.3%로 급증했다. 통계는 웹 방문만 포함하고 모바일 앱 이용은 제외된다.",
+  "why": "Claude의 웹 트래픽 점유율이 1.9%에서 9.3%로 급증했다. 모바일 앱 이용은 통계에서 제외되어 실제 사용량은 더 클 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "AI-designed drug appears to turn back the body's biological clock in early trial",
+  "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+  "description": "A study in Nature Biotechnology suggests that rentosertib, a drug designed with AI by Insilico Medicine, may reverse markers of biological aging. Six independent aging clocks predicted that treated patients were biologically up to six years younger than the placebo group. The trial covered just 42 patients and the drug hasn't been tested in healthy people yet. The article AI-designed drug appears ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788798860.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/ai_pill_medicine-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "AI 설계 약물, 초기 임상에서 신체의 생물학적 시계를 되돌리는 듯",
+  "summary": "Insilico Medicine이 생성 AI로 만든 rentosertib이 폐섬유증 환자 42명을 대상으로 한 임상에서 혈액 단백질 패턴을 분석한 결과, 6개의 독립적인 AI 노화 시계 모두 치료군을 위약군보다 생물학적으로 최대 6년 더 젊게 평가했다. 연구는 Nature Biotechnology에 발표됐으며, 효과는 4주 차에 3~4년 감소, 일부 모델에서는 6년까지 나타났다. 샘플 규모가 작고 건강인 대상 시험이 없어 결과 해석에 제한이 있다.",
+  "why": "AI 노화 시계 모델이 혈액 단백질 패턴을 분석해 생물학적 나이를 추정하는 방식이다. 백엔드 개발자가 자체 노화 지표나 프로파일링 파이프라인을 구축할 때 참고할 수 있다. 샘플이 작고 건강인 대상 검증이 없어 결과 해석에 주의가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Show HN: HomeCat – Design your backyard office",
+  "url": "https://myhomecat.com",
+  "description": "Hey HN! Ilya and Nikita here. We’re building HomeCat, a tool that lets you design a backyard office space -  https://myhomecat.com We started out by helping people design sheds, and quickly realized that many people actually want to build a backyard office. There wasn't really an easy way to do this, so we thought we'd take on the challenge. Right now, you can design a backyard shed and our tool will make it code compliant. It's maybe 90% of the way there, since you also have zoning/HOA and other edge cases. But it does figure out most of the details for you. Right now, it's pretty simple: enter your address, what you want to build (i.e. 8x8 backyard office), and it'll create a few concepts for you. If you like one, you can customize it with the chat. Here's an example of a design that's compliant in SF:  https://myhomecat.com/scene/classic-cottage-137134ef We would love for you to try our tool if you are planning your backyard office. As a bonus to the HN community, we can professionally design one for you for free if you comment what you're looking for. Happy labor day!",
+  "source": "hackernews",
+  "upvotes": 26,
+  "comments": 15,
+  "published_at": 1788805415,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 697.0,
+  "image": "https://myhomecat.com/opengraph-image.png",
+  "link_status": "ok",
+  "ko_title": "Show HN: HomeCat – 뒷마당 사무실 디자인",
+  "summary": "HomeCat은 뒷마당에 사무실이나 창고를 설계하고 건축 규정에 맞는 도면을 자동으로 생성해 주는 웹 도구다. 사용자는 주소와 원하는 크기(예: 8x8)를 입력하면 여러 디자인 안을 받아볼 수 있다. 현재는 설계와 규정 검토를 90% 정도 자동화했으며, 채팅을 통해 세부 커스터마이징도 가능하다.",
+  "why": "백엔드 개발 업무와 직접적인 연관이 없는 주거 설계 도구다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science",
+   "showcase"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "The smallest edge AI device for local LLMs",
+  "url": "https://tiiny.ai/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 18,
+  "comments": 16,
+  "published_at": 1788815352,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 684.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "가장 작은 엣지 AI 디바이스 for 로컬 LLMs",
+  "summary": "",
+  "why": "본문에 기술적 내용이 없어 독자의 작업에 미칠 영향을 확인할 수 없다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Your AI Agent Has a Memory. But It's Not Chat History",
+  "url": "https://dev.to/rijultp/your-ai-agent-has-a-memory-but-its-not-chat-history-2pm",
+  "description": "Hello, I'm Rijul, and I'm building LiveReview — a blast-radius aware AI code review built for your...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 3,
+  "published_at": "2026-09-07T19:46:48Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 681.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frqwmr99em3x92yerkfd3.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트에 기억이 있다. 하지만 채팅 기록은 아니다",
+  "summary": "이 글은 LiveReview라는 AI 코드 리뷰 도구가 대화 기록이 아닌 별도 메모리를 사용해 이전 대화 내용을 기억한다는 점을 설명한다. 기존 LLM은 현재 대화의 컨텍스트만 보지만, 메모리를 통해 프로젝트 스택·데이터베이스·도메인 정보를 지속적으로 활용한다. 메모리와 채팅 기록의 차이를 이해하면 AI 기반 도구를 설계하거나 적용할 때 적절한 상태 관리 방식을 선택할 수 있다.",
+  "why": "AI 에이전트 설계 시 채팅 기록과 별도 메모리를 구분해야 한다. 프로젝트 스택이나 도메인 정보를 지속 활용하려면 상태 관리 방식을 달리 선택해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Your system prompt isn't instructions. It's data.",
+  "url": "https://dev.to/natuworkguy/your-system-prompt-isnt-instructions-its-data-43m8",
+  "description": "Four measured findings from tuning a 31B model's 680-line system prompt, including the six rebuilds I wasted on a bug that never existed.",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 4,
+  "comments": 4,
+  "published_at": "2026-09-07T18:26:04Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 680.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9wpod7w692robl9ir7nk.png",
+  "link_status": "ok",
+  "ko_title": "시스템 프롬프트는 지시가 아니라 데이터다",
+  "summary": "저자는 시스템 프롬프트에 예시 문구를 넣으면 모델이 그 문구를 실제 출력에 재사용한다는 문제를 발견했다. 이를 해결하기 위해 네 가지 프롬프트 작성 규칙을 제시했으며, 특히 금지하고 싶은 문구는 프롬프트 자체에서 삭제해야 함을 강조한다. 실험은 Flash Onyx 모델을 사용해 고정 시드로 반복 검증한 결과이다.",
+  "why": "프롬프트에 금지 문구를 명시해도 모델이 이를 출력에 재사용하므로 해당 문구를 삭제해야 한다. 구체적인 코드 지시가 추상적인 원칙보다 모델의 행동을 더 확실하게 통제한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "microsoft / tgrep",
+  "url": "https://github.com/microsoft/tgrep",
+  "description": "Trigram-indexed grep with a client/server architecture for fast regex search in large codebases locally",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 993,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 993,
+  "score": 452.54999999999995,
+  "image": "https://opengraph.githubassets.com/1/microsoft/tgrep",
+  "link_status": null,
+  "ko_title": "microsoft / tgrep",
+  "summary": "tgrep는 트라이그램 인덱스를 사전에 구축해 대규모 코드베이스에서 정규식 검색을 빠르게 수행하는 클라이언트/서버 기반 도구다. GitHub Copilot CLI에 통합돼 대형 레포지토리에서 즉시 검색이 가능하며, 벤치마크에서 ripgrep보다 최대 52배 빠른 성능을 보인다. 인덱스 생성 후 서버를 한 번 실행하면 파일 변경을 감시하면서 지속적으로 초단위 검색이 가능하다.",
+  "why": "10만 개 파일이 넘는 대형 레포지토리에서 정규식 검색 시 지연이 사라진다. 인덱스 생성 후 서버를 실행하면 파일 변경을 감시하며 초단위 검색이 유지된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
+  "title": "Sadpainy / Stuxnet",
+  "url": "https://github.com/Sadpainy/Stuxnet",
+  "description": "Stuxnet, Here reproduced by me, Only for researchs educations purposes. It set work on WindowsXP and Windows 7 only.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 10,
+  "score": 213.5,
+  "image": "https://opengraph.githubassets.com/1/Sadpainy/Stuxnet",
+  "link_status": null,
+  "ko_title": "Sadpainy / Stuxnet — 악명 높은 스턱스넷 웜 재구성",
+  "summary": "이 저장소는 2010년 발견된 Stuxnet 바이너리를 역공학해 재구성한 코드이며, 학술 연구와 악성코드 분석 교육용으로 제공된다. 원본 로직과 공격 경로를 유지하면서 가독성을 높였다.",
+  "why": "SCADA 환경의 PLC 로직 변조와 루트킷 은폐 기법을 코드 수준에서 직접 확인할 수 있다. 공격 벡터 분석 시 원본 바이너리 역공학 대신 이 재구성 코드를 참고 자료로 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-09-08T09:54:32.496988+09:00",
+  "batch_label": "9월 8일 09:54"
+ },
+ {
   "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
   "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
   "description": "https://www.youtube.com/watch?v=6IFVTcM28KA",
