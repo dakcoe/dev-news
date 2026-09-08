@@ -178,3 +178,23 @@ def test_네이버_소유확인_태그가_남아있다(html):
     지우면 등록이 풀리고 네이버 검색에서 사라진다."""
     assert ('<meta name="naver-site-verification" '
             'content="2f80c00d8aa3e1ce9eb9b7513b2fe24967f3e867">') in html
+
+
+def test_favicon_ico가_루트에_있다():
+    """크롤러 상당수는 <link rel="icon">을 안 읽고 /favicon.ico를 그냥 요청한다.
+    없으면 검색 결과 아이콘이 기본 지구본으로 뜬다.
+
+    ICO 컨테이너를 직접 읽는다 — 헤더 6바이트 뒤에 16바이트짜리 항목이 크기마다
+    하나씩 온다. Pillow에 기대지 않으려고 struct로 푼다."""
+    import struct
+    path = os.path.join(ROOT, "docs", "favicon.ico")
+    assert os.path.exists(path), "docs/favicon.ico 없음"
+    raw = open(path, "rb").read()
+    reserved, kind, count = struct.unpack("<HHH", raw[:6])
+    assert (reserved, kind) == (0, 1), "ICO 헤더가 아니다"
+    sizes = sorted(raw[6 + 16 * i] for i in range(count))
+    assert sizes == [16, 32, 48], f"담긴 크기: {sizes}"
+
+
+def test_head가_favicon_ico를_가리킨다(html):
+    assert '<link rel="icon" href="/favicon.ico"' in html
