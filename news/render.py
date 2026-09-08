@@ -221,11 +221,16 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         '<div class="feed">' + "".join(rows) + "</div></div>")
 
 
+# 검색 결과에 뜨는 한 줄. 네이버 서치어드바이저가 80자 이내를 요구한다.
+# 한때 오늘 실린 기사 제목을 붙여 매일 달라지게 했는데, 남의 기사 제목이
+# 사이트 설명 자리를 차지해 이 사이트가 무엇인지 알 수 없게 됐다. 설명은
+# 사이트를 설명해야 한다.
+META_DESC = ("해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스의 개발·AI 소식을 "
+             "매일 세 번 한국어로 요약합니다.")
+
+
 def _meta_desc(view_model: list[dict]) -> str:
-    """검색 결과에 뜨는 한 줄. 오늘 실린 제목 몇 개를 붙여 매일 달라지게 한다."""
-    titles = [d.get("title", "") for d in view_model[:3] if d.get("title")]
-    base = "매일 세 번 모으는 개발·AI 뉴스. 해커뉴스, GitHub 트렌딩, Lobsters 등을 한국어로."
-    return _esc((base + " 오늘: " + " / ".join(titles))[:160]) if titles else _esc(base)
+    return _esc(META_DESC)
 
 
 def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS) -> str:
