@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-08-31T23:50:49+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 14,
-    "short": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://tech.kakao.com/posts/831",
-     "source": "rss",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-01T05:39:41+09:00",
    "total": 15,
    "counts": {
@@ -428,6 +412,22 @@
      "url": "https://queue.acm.org/doi/10.1145/3212477.3212479",
      "source": "hackernews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-08T09:54:51+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 14,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://myhomecat.com",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
