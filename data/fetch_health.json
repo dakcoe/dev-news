@@ -1,21 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-01T05:39:41+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 14,
-    "short": 1
-   },
-   "failures": [
-    {
-     "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-01T10:39:31+09:00",
    "total": 15,
    "counts": {
@@ -430,6 +415,15 @@
      "reason": "short"
     }
    ]
+  },
+  {
+   "at": "2026-09-08T20:58:58+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
+   },
+   "failures": []
   }
  ]
 }
