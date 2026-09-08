@@ -169,3 +169,12 @@ def test_llms가_사이트를_설명한다(seo_dir):
     assert txt.startswith("# dev-news")
     assert "직접 쓰지는 않는다" in txt
     assert site_url() in txt
+
+
+# ---------------- 검색 도구 소유 확인 ----------------
+
+def test_네이버_소유확인_태그가_남아있다(html):
+    """네이버 서치어드바이저는 이 태그로 소유를 확인한다. 템플릿을 고치다
+    지우면 등록이 풀리고 네이버 검색에서 사라진다."""
+    assert ('<meta name="naver-site-verification" '
+            'content="2f80c00d8aa3e1ce9eb9b7513b2fe24967f3e867">') in html
