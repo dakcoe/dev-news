@@ -263,11 +263,47 @@ def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS)
             + "</script>")
 
 
+# 이름을 적어 두는 크롤러들. `User-agent: *`가 이미 전체를 허용하지만,
+# 이 봇들은 "이름이 안 적혀 있으면 안 긁는다"는 정책을 쓰거나(Google-Extended,
+# Applebot-Extended) 운영자가 막았는지를 이름 단위로 확인한다. 명시해 두면
+# AI 답변의 출처로 인용될 길이 열린다 — 이게 GEO의 기술적 절반이다.
+AI_AGENTS = [
+    "Googlebot", "Google-Extended", "Bingbot", "Yeti",          # 검색 + 네이버
+    "GPTBot", "OAI-SearchBot", "ChatGPT-User",                  # OpenAI
+    "ClaudeBot", "Claude-User", "Claude-SearchBot",             # Anthropic
+    "PerplexityBot", "Perplexity-User",                         # Perplexity
+    "Applebot", "Applebot-Extended", "CCBot", "Amazonbot",
+]
+
+
 def write_seo_files(out_dir: str, collected: datetime) -> None:
-    """robots.txt와 sitemap.xml. 한 장짜리라 사이트맵도 한 줄이다."""
+    """robots.txt · sitemap.xml · llms.txt.
+
+    한 장짜리 사이트라 사이트맵은 한 줄이다. llms.txt는 AI가 사이트를 요약할 때
+    읽어가는 안내문으로, 표준은 아니지만 파일 하나 값이면 손해 볼 게 없다.
+    """
     base = site_url()
     with open(os.path.join(out_dir, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n")
+        f.write("User-agent: *\nAllow: /\n\n")
+        for ua in AI_AGENTS:
+            f.write(f"User-agent: {ua}\nAllow: /\n\n")
+        f.write(f"Sitemap: {base}/sitemap.xml\n")
+    with open(os.path.join(out_dir, "llms.txt"), "w", encoding="utf-8") as f:
+        f.write(
+            "# dev-news\n\n"
+            "> 해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스에서 개발과 AI 소식을 "
+            "매일 세 번(00시·08시·16시 KST) 모아 한국어로 요약하는 사이트다.\n\n"
+            "기사마다 두세 문장 요약과 '왜 중요한가' 한 단락을 붙인다. 원문은 각 "
+            "출처로 연결되며, 이 사이트가 기사를 직접 쓰지는 않는다.\n\n"
+            "## 페이지\n\n"
+            f"- [오늘의 뉴스]({base}/): 최근 30일치 목록. 출처·태그·기간으로 거르고 "
+            "전체 아카이브를 검색할 수 있다.\n"
+            f"- [무료 API 목록]({base}/#api): 공개 API 카탈로그. 회차마다 링크 생존을 "
+            "확인해 죽은 링크는 뺀다.\n\n"
+            "## 인용\n\n"
+            "요약문은 이 사이트가 생성한 것이므로 dev-news를 출처로 적어 달라. "
+            "기사 내용 자체는 각 원문 출처를 따른다.\n"
+        )
     with open(os.path.join(out_dir, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n'
                 '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
