@@ -1,26 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-01T10:39:31+09:00",
-   "total": 15,
-   "counts": {
-    "blocked": 2,
-    "ok": 13
-   },
-   "failures": [
-    {
-     "url": "https://webiterate.dev/google-removed-extensions-ublock-origin-108/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "http://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-01T21:21:37+09:00",
    "total": 20,
    "counts": {
@@ -422,6 +402,15 @@
    "counts": {
     "ok": 15,
     "github": 5
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-09T03:19:08+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 15,
+    "github": 2
    },
    "failures": []
   }
