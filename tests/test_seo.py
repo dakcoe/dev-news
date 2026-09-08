@@ -45,9 +45,10 @@ def seo_dir(tmp_path_factory):
 
 def test_제목에_검색어가_들어간다(html):
     """'개발·AI 뉴스 · 날짜'만으로는 아무도 검색하지 않는다. 사람들이 실제로
-    치는 말(해커뉴스, GitHub 트렌딩, 한국어 요약)이 제목에 있어야 한다."""
+    치는 말이 제목에 있어야 한다. 출처 이름은 설명에만 두고 제목에서는 뺐다 —
+    제목이 길어지면 검색 결과에서 뒤가 잘린다."""
     title = re.search(r"<title>(.*?)</title>", html).group(1)
-    for word in ("개발", "AI 뉴스", "한국어 요약", "해커뉴스", "GitHub 트렌딩"):
+    for word in ("개발", "AI 뉴스", "한국어 요약"):
         assert word in title, f"제목에 '{word}'이(가) 없다: {title}"
 
 
