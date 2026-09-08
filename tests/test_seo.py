@@ -52,9 +52,27 @@ def test_제목에_검색어가_들어간다(html):
         assert word in title, f"제목에 '{word}'이(가) 없다: {title}"
 
 
-def test_설명은_비어있지_않고_길이가_적당하다(html):
+def test_설명은_80자_이내다(html):
+    """네이버 서치어드바이저가 80자 이내를 요구한다. 넘으면 뒤가 잘린다."""
     desc = re.search(r'<meta name="description" content="(.*?)">', html).group(1)
-    assert 50 <= len(desc) <= 200, f"설명 길이 {len(desc)}자: {desc}"
+    assert 30 <= len(desc) <= 80, f"설명 길이 {len(desc)}자: {desc}"
+
+
+def test_설명에_기사_제목이_들어가지_않는다(articles, html):
+    """설명은 사이트를 설명해야 한다. 남의 기사 제목이 들어가면 이 사이트가
+    무엇인지 알 수 없고, 매일 바뀌어 검색 엔진이 주제를 잡지 못한다."""
+    desc = re.search(r'<meta name="description" content="(.*?)">', html).group(1)
+    for a in articles:
+        t = (a.get("title") or "").strip()
+        if len(t) > 10:
+            assert t not in desc, f"설명에 기사 제목이 들어갔다: {t}"
+
+
+def test_오픈그래프_설명도_같은_문구다(html):
+    desc = re.search(r'<meta name="description" content="(.*?)">', html).group(1)
+    og = re.search(r'property="og:description" content="(.*?)"', html).group(1)
+    tw = re.search(r'name="twitter:description" content="(.*?)"', html).group(1)
+    assert og == desc == tw
 
 
 def test_canonical이_한_개다(html):
