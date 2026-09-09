@@ -1,5 +1,495 @@
 [
  {
+  "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
+  "url": "https://news.ycombinator.com/item?id=49624603",
+  "description": "DSeek plans to officially release the V4.1 Flash model around September 10, 2026 (Beijing Time). After extensive internal and external testing, V4.1 Flash has comprehensively surpassed V4 Pro across all key metrics, including performance, cost, speed, and task completion time. In keeping with our commitment to user responsibility, following the official launch of V4.1 Flash and prior to the release of V4.1 Pro, all requests to the Pro model will be routed to V4.1 Flash and billed at Flash's price. If you encounter any issues during your comparative testing between V4 Pro and V4.1 Flash, please do not hesitate to reach out to us with your feedback. Thank you for your support! We will adjust the pricing for the Flash series effective from 12:00 Beijing Time on September 10, 2026. During off-peak hours, the unit price will be $0.003 for input cache hits, $0.15 for input cache misses, and $0.6 for output. Peak-hour prices will be double the off-peak rates. Please plan your usage accordingly.",
+  "source": "hackernews",
+  "upvotes": 360,
+  "comments": 183,
+  "published_at": 1788952766,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1869.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "DeepSeek, v4.1 Flash 출시… v4 Pro보다 저렴하고 성능 뛰어남",
+  "summary": "DeepSeek가 2026년 9월 10일(베이징 시간) v4.1 Flash 모델을 공식 출시한다. 내부·외부 테스트 결과 v4.1 Flash가 성능, 비용, 속도, 작업 완료 시간 등 주요 지표에서 v4 Pro를 전반적으로 앞선다. 출시와 동시에 Pro 모델에 대한 모든 요청은 v4.1 Flash로 라우팅되며 Flash 가격이 적용된다. 오프피크 시간대 가격은 입력 캐시 히트 $0.003, 입력 캐시 미스 $0.15, 출력 $0.6이며 피크 시간대는 두 배이다.",
+  "why": "기존에 v4 Pro를 호출하던 코드는 별도 수정 없이 v4.1 Flash로 자동 라우팅된다. 피크 시간대에는 오프피크 대비 두 배의 요금이 부과되므로 배치 작업의 실행 시점을 조정해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "How I advertise malicious software on Google Ads",
+  "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 279,
+  "comments": 170,
+  "published_at": 1788954201,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1668.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Google Ads에 악성 소프트웨어를 광고하는 방법",
+  "summary": "",
+  "why": "악성 소프트웨어를 광고하는 수법을 파악해 유사한 공격 벡터를 차단할 수 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Claude, change the \"Add to Cart\" button to blue",
+  "url": "https://opusfived.dev/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 742,
+  "comments": 312,
+  "published_at": 1788946786,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1510.0,
+  "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/30670832-9635-4801-aee1-22bf39bccebf/id-preview-364e3d04--0e3289c2-58d2-415e-a7ad-27daeb3a63a1.lovable.app-1788612778060.png",
+  "link_status": "ok",
+  "ko_title": "Claude, ‘Add to Cart’ 버튼을 파란색으로 변경",
+  "summary": "Claude에게 ‘Add to Cart’ 버튼을 파란색으로만 변경하도록 지시했다. 다른 요소는 변경하지 않도록 제한했다.",
+  "why": "프롬프트에 특정 요소만 수정하라는 명시적 제약을 넣어야 한다. 이 방식은 불필요한 코드 변경을 막아 리뷰 부담을 줄인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Desert Ant Labs: local, fast models that run on device",
+  "url": "https://desertant.com/blog/introducing-desert-ant-labs/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 81,
+  "published_at": 1788953986,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1437.0,
+  "image": "https://desertant.com/og/blog/introducing-desert-ant-labs.jpg?v=8",
+  "link_status": "ok",
+  "ko_title": "Desert Ant Labs: 로컬·빠른 모델을 디바이스에서 실행",
+  "summary": "Desert Ant Labs는 오디오·비전·텍스트용 소형 전용 모델 18개를 공개했다. 각 모델은 Swift·Kotlin·JavaScript SDK 하나로 iPhone·안드로이드·웹에서 밀리초 수준 응답을 제공한다. 모델은 무료로 월 10만 기기까지 사용 가능하며, 데이터는 디바이스에 머물러 클라우드 의존이 없다.",
+  "why": "기존 클라우드 API 호출을 대체해 밀리초 단위 응답을 확보할 수 있다. 데이터가 디바이스에 머물러 개인정보 처리 시 서버 전송 위험을 제거한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+  "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 179,
+  "comments": 63,
+  "published_at": 1788964667,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1147.0,
+  "image": "https://substackcdn.com/image/fetch/$s_!bGKc!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d2ac2ec-ab80-43a8-aa93-a33a846dda43_1564x874.png",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Astra, 루프형 트랜스포머와 숨겨진 추론",
+  "summary": "OpenAI가 최근 GPT-6 Astra를 공개했으며, 기존 모델 대비 3D 렌더링·애니메이션에서 뛰어난 성능을 보인다. 수학·코딩·일반 논리 퍼즐(ARC-AGI-3)에서도 높은 점수를 기록했다. 기사에서는 루프형 트랜스포머 구조와 추론 과정 숨김 기술에 대한 최신 연구 결과도 소개한다.",
+  "why": "루프형 트랜스포머 구조가 추론 과정을 숨기는 기술과 어떻게 연결되는지 확인해야 한다. 기존 체인 오브 쓰ought 접근법과 다른 동작 방식을 이해해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Introducing ChatGPT Images 2.5",
+  "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+  "description": "Introducing ChatGPT Images 2.5 OpenAI's image generation models are apparently used \"more than 3 billion images across ChatGPT Images and the GPT‑Image models in the API\". This latest release improves their instruction-following ability across multiple turns, responds faster, and \"is better at preserving the subjects in your reference photos\". There are two new model IDs in the API: gpt-image-2.5-",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788907593.0,
+  "merged_sources": [
+   "OpenAI",
+   "Simon Willison"
+  ],
+  "cross_source_count": 2,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "ChatGPT Images 2.5 소개",
+  "summary": "OpenAI가 이미지 생성 모델 ChatGPT Images 2.5를 출시했다. 새 API 모델 ID는 gpt-image-2.5-sunburst와 gpt-image-2.5-flare이며, Sunburst는 편집 정밀도가 높은 작업에, Flare는 빠른 고품질 이미지 생성에 적합하다. 모델은 다중 턴 지시 수행 능력이 향상되고 응답 속도가 빨라졌으며, 참조 사진의 피사체 보존이 개선되었다.",
+  "why": "기존 이미지 생성 API 호출 시 모델 ID를 gpt-image-2.5-sunburst나 gpt-image-2.5-flare로 교체해야 한다. 편집 정밀도가 중요한 작업은 Sunburst를, 빠른 생성이 필요한 작업은 Flare를 선택해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Get ready for the game with new football features in Search",
+  "url": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+  "description": "An illustrated graphic set against a vibrant green background featuring American football elements, including a gold trophy, a blue helmet, a silver whistle, a football, a mini scoreboard, and play diagrams, with the icon for AI Mode in Google Search in t",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788969600.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Football_on_Search_blog_header.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "검색에 새 축구 기능으로 경기 준비하기",
+  "summary": "검색에 실시간 경기 피드가 추가돼 현재 진행 중인 경기의 플레이-바이-플레이 업데이트와 하이라이트를 모바일에서 확인할 수 있다. 경기 매치업 검색 시 리그 전체 점수를 한눈에 보여주는 캐러셀과 패싱 터치다운·러싱 야드 등 상세 선수·리그 통계가 제공된다. 미국 모바일에서 영어로 먼저 서비스되며, 이번 달 말 대학 팀 지원과 전 세계 모바일 확대가 예정되어 있다.",
+  "why": "검색 결과에 실시간 경기 피드와 상세 통계가 포함됐다. 경기 중 모바일로 플레이-바이-플레이를 확인하는 방식이 바뀐다. 미국 모바일 영어 환경에서만 먼저 제공된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Recreating a 70-year love story frame by frame",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+  "description": "An elderly couple sitting in a movie theater. Overlayed are \"Teulluride Film Festival\" and \"Love, Rendered\"",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788969600.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/LOVE_RENDERED_HERO_BLOG_SANS_LOGOS_2784x1566.width-1300.jpg",
+  "link_status": "ok",
+  "ko_title": "70년 사랑 이야기를 한 장면씩 재현",
+  "summary": "영화 “Love, Rendered”는 70년 결혼한 부부의 기억 상실을 다루며, 구식 사진을 AI 이미지 복원·영상 모델로 애니메이션화한다. 프로젝트는 Google DeepMind와 Primordial Soup이 협업해 기술을 적용했으며, 감독 Liz Garbus와 Darren Aronofsky가 참여했다. 이 기술은 사라지는 기억을 시각적으로 보존하는 새로운 방법을 제시한다.",
+  "why": "구식 사진 복원과 영상 애니메이션 모델을 결합해 기록이 없는 기억을 시각화하는 워크플로우를 확인했다. AI 영상 생성 파이프라인을 구축할 때 이미지 복원 단계와 애니메이션 단계의 연계를 참고할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+  "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788968184.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/69d3d41eef229c09afea5d83/KYse3pX6t3l8FnI-1pKsi.png",
+  "link_status": "ok",
+  "ko_title": "IBM, 상용 친화적 라이선스 적용한 최신 Granite 시계열 PatchTST-FM-r2 모델 공개",
+  "summary": "IBM이 Granite TSFM 패밀리의 최신 모델인 PatchTST-FM-r2를 공개했다. 385M 파라미터 규모에 업데이트된 아키텍처와 더 큰 사전학습 데이터, 확률적 예측 및 결측값 보간 기능을 제공한다. 이 모델은 Apache 2.0 및 OpenMDW 1.0 라이선스로 배포돼 상업적 활용이 가능하며, GIFT-Eval 벤치마크에서 복제 가능한 제로샷 모델 중 상위 성능을 기록한다. 모델 가중치와 코드가 모두 공개돼 바로 사용 및 재현이 가능하다.",
+  "why": "Apache 2.0 라이선스라 상업적 프로젝트에 바로 적용할 수 있다. 결측값 보간과 확률적 예측 기능이 있어 기존 파이프라인을 수정해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Suno launches v6 music models built with Warner, BMG, and Believe",
+  "url": "https://the-decoder.com/suno-launches-v6-music-models-built-with-warner-bmg-and-believe/",
+  "description": "Suno has unveiled a new AI music model generation, v6, in three versions, built together with Warner Music Group, BMG, and Believe. All older models are being shut down. Songs can now be partially changed through text commands or generated multimodally from text, audio, and images. The company won't say which catalogs went into training, while Universal and Sony keep suing. The article Suno launch",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788962817.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/Suno_v6_Main.jpg",
+  "link_status": "ok",
+  "ko_title": "Suno, Warner·BMG·Believe와 함께 만든 v6 음악 모델 출시",
+  "summary": "Suno가 Warner Music, BMG, Believe와 협업해 v6 모델을 3가지 버전으로 출시하고 기존 모델을 전부 종료한다. 멀티모달 모델은 텍스트·오디오·이미지·비디오 입력으로 곡을 생성하고, 텍스트 명령으로 개별 파트를 편집할 수 있다. v6-pro와 v6-premier는 유료 구독자용, v6-wild는 실험용, v6-mini는 무료로 제공된다.",
+  "why": "기존 모델이 모두 종료되므로 이전 버전으로 생성한 워크플로가 중단된다. Universal과 Sony의 소송이 계속 진행 중이라 학습 데이터의 저작권 리스크가 남아 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "release"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Anthropic, 활동가 감시를 위한 예측형 감시 시스템 구축 중",
+  "url": "https://news.hada.io/topic?id=33448",
+  "description": "채용 공고와 보안 책임자 인터뷰에 따르면, Anthropic은 AI의 급속한 개발에 반대하는 활동가 와 임원·시설 주변 시위를 감시하며 사건 발생 전 위협을 예측하는 체계를 확대하고 있음 위험 탐지 업체 Samdesk 의 시위 정보와 관심 인물 추적 절차 를...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788975210.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33448?v=12f59bf91bda1b036213c9927378accc",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 활동가 감시를 위한 예측형 감시 시스템 구축 중",
+  "summary": "Anthropic은 AI 개발 반대 활동가와 임원 주변 시위를 사전 예측·신고하는 보안 체계를 확대한다. 위험 탐지 업체 Samdesk와 연계해 시위 정보를 실시간 추적하고, 의심 인물을 범죄 발생 전에 경찰에 신고한다. 내부 정책으로 실제 위협 메시지를 제공하지 않아 증거 확보에 한계가 있다.",
+  "why": "Claude를 백엔드 API로 호출하는 개발자에게는 직접적인 코드 변경 사항이 없다. 다만 자사 보안 정책이 플랫폼 내 발언 신고 절차에 영향을 미칠 수 있어, 서비스 약관과 데이터 처리 방식을 재확인할 필요가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Desert Ant Labs, 기기에서 직접 음성·이미지·텍스트를 처리하는 빠른 로컬 AI 모델 18개 공개",
+  "url": "https://news.hada.io/topic?id=33446",
+  "description": "음성 인식, 녹음 음질 개선, 개인정보 가리기 등을 기기 안에서 처리하는 소형 특화 모델 18개 를 공개함. 안정 버전 12개와 베타 6개로 구성 반복 작업마다 대형 모델 API를 호출하는 대신 작업에 맞는 작은 모델을 로컬에서 실행 해, 서버 왕복과 호출당 비용 없이...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788968051.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33446?v=6d260e2867be928685ffe71bcec9b81e",
+  "link_status": "ok",
+  "ko_title": "Desert Ant Labs, 기기에서 직접 음성·이미지·텍스트를 처리하는 빠른 로컬 AI 모델 18개 공개",
+  "summary": "Desert Ant Labs가 온디바이스에서 실행되는 18개의 소형 특화 AI 모델을 공개했다. 안정 버전 12개와 베타 6개로 구성돼 음성 인식·음질 개선·개인정보 가리기 등 작업을 로컬에서 처리한다. Swift·Kotlin·JavaScript SDK를 제공하며 월간 활성 기기 10만 대까지 무료로 사용할 수 있다.",
+  "why": "반복 작업마다 대형 모델 API를 호출하던 방식에서 벗어나, 작업별 소형 모델을 로컬에서 실행해 서버 왕복과 호출 비용을 없앨 수 있다. Swift·Kotlin·JavaScript SDK로 통합 가능하며, 월간 활성 기기 10만 대까지 무료로 쓸 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "language",
+   "release"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "나는 Google Ads에 ‘악성 소프트웨어’를 광고한다",
+  "url": "https://news.hada.io/topic?id=33445",
+  "description": "직접 만든 macOS 터미널 앱 RACE를 홍보하려고 Google Ads에 500달러를 쓴 개발자 가 ‘악성 소프트웨어’와 ‘침해된 사이트’를 이유로 광고 계정을 정지당함 Google은 무엇이 악성이며 어디가 침해됐는지 알려주지 않은 채 새로운 증거를 요구 했고, 이의신청을 반...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788965317.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33445?v=a85686dd0f3ce98e479391c47a0da35d",
+  "link_status": "ok",
+  "ko_title": "나는 Google Ads에 ‘악성 소프트웨어’를 광고한다",
+  "summary": "개발자가 만든 macOS 터미널 앱 RACE를 홍보하기 위해 Google Ads에 500달러를 사용했지만 “악성 소프트웨어”와 “침해된 사이트”라는 사유로 광고 계정이 정지되었습니다. Google은 구체적인 악성 여부나 침해 내용을 밝히지 않은 채 추가 증거를 요구했으며, 이의신청을 반복해도 설명 없이 거절당했습니다. 이후 Hacker News에 소개된 뒤 계정은 복구됐지만, 최초 정지 사유에 대한 명확한 답변은 받지 못했습니다.",
+  "why": "Google Ads의 자동 정지 판정은 Safe Browsing이나 VirusTotal과 같은 공개 보안 검사 결과와 무관하게 내려질 수 있다. 자체 보안 점검이 깨끗해도 광고 계정이 막힐 수 있으므로, 배포 전 광고 정책 위반 여부를 별도로 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "Tailwind Labs, Shopify에 합류",
+  "url": "https://news.hada.io/topic?id=33444",
+  "description": "수백만 사용자가 의존하는 Tailwind CSS를 개발중인 Tailwind Labs가 장기적인 개발과 유지보수 기반 을 확보하기 위해 Shopify에 합류함 Tailwind CSS와 다른 오픈소스 프로젝트는 MIT 라이선스와 기존 개발팀을 유지 하며, Shopify의 지원 아래 개발을 계속함 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788965137.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33444?v=56f7d63fc696e0c75070e3b45abede34",
+  "link_status": "ok",
+  "ko_title": "Tailwind Labs, Shopify에 합류",
+  "summary": "Tailwind CSS를 개발하는 Tailwind Labs가 장기적인 유지보수를 위해 Shopify에 합류한다. 오픈소스 프로젝트는 MIT 라이선스를 유지하고 기존 팀이 계속 개발을 주도한다. 신규 상용 사업은 중단하지만 기존 고객은 Tailwind Plus와 ui.sh 접근 권한을 유지한다.",
+  "why": "Tailwind CSS는 MIT 라이선스와 기존 개발팀 체제를 유지하므로 현재 프로젝트의 의존성은 그대로 유지된다. 다만 상용 서비스의 신규 가입이 종료되어 Tailwind Plus나 ui.sh를 새로 도입하려는 계획은 재검토가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "DeepSeek, V4 Pro보다 저렴하고 성능이 뛰어난 V4.1 Flash 출시 예정",
+  "url": "https://news.hada.io/topic?id=33443",
+  "description": "DeepSeek은 내부·외부 테스트에서 V4 Pro의 모든 주요 지표를 넘어선 V4.1 Flash를 2026년 9월 10일 전후(베이징 시간) 정식 출시할 계획임 비교 지표는 성능·비용·속도·작업 완료 시간 이며, 구체적인 벤치마크 수치나 테스트 조건은 공개하지 않...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1788964957.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33443?v=c76ef4970ff1945ec5cc6e40783f8f5c",
+  "link_status": "ok",
+  "ko_title": "DeepSeek, V4 Pro보다 저렴하고 성능이 뛰어난 V4.1 Flash 출시 예정",
+  "summary": "DeepSeek은 2026년 9월 10일 전후에 V4.1 Flash를 정식 출시한다. 내부·외부 테스트에서 V4 Pro의 주요 지표를 모두 앞섰다고 발표했으며, 구체적인 벤치마크 수치는 공개하지 않았다. 출시 이후 V4 Pro 요청은 모두 V4.1 Flash로 전환돼 새 요금이 적용된다. 요금은 비혼잡 시간대에 입력 캐시 적중 $0.003, 미적중 $0.15, 출력 $0.6이며, 혼잡 시간대는 두 배이다.",
+  "why": "9월 10일 이후 V4 Pro 요청은 자동으로 V4.1 Flash로 전환된다. 혼잡 시간대 요금은 2배이므로 시간대별 사용량 계획을 세워야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "griddaimyorun / Metatraider-Traiding-Bot",
+  "url": "https://github.com/griddaimyorun/Metatraider-Traiding-Bot",
+  "description": "Production-ready MetaTrader 5 (MT5) algorithmic trading bot framework. Features automated execution, real-time market data integration via Python API, risk management, and backtesting infrastructure for systematic strategies.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 379,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 379,
+  "score": 237.64999999999998,
+  "image": "https://opengraph.githubassets.com/1/griddaimyorun/Metatraider-Traiding-Bot",
+  "link_status": null,
+  "ko_title": "griddaimyorun / Metatraider-Traiding-Bot — MetaTrader 5 자동 매매 프레임워크",
+  "summary": "이 오픈소스 프레임워크는 MT5 공식 Python API를 활용해 자동 주문 실행, 실시간 데이터 파이프라인, 위험 관리 엔진 등을 제공한다. 파이썬 환경에서 Pandas·NumPy·TA-Lib와 연동해 포렉스·지수·상품·암호화폐 등 다중 자산 전략을 구현할 수 있다. 설치 스크립트가 PowerShell을 통해 자동으로 필요한 패키지를 다운로드하고 레지스트리 설정을 수행한다.",
+  "why": "MT5 공식 API를 파이썬으로 직접 붙이는 대신 이 프레임워크를 쓰면 위험 관리 엔진이 기본으로 들어간다. 설치 스크립트가 레지스트리를 건드리고 외부 URL에서 코드를 실행하므로 배포 전에 보안 검토가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
+  "title": "VectorMareSpell21 / AutoCad-Windows",
+  "url": "https://github.com/VectorMareSpell21/AutoCad-Windows",
+  "description": "AutoCAD Activation Guide & License Troubleshooting Tools. Solutions for installation errors, product key registration, and Autodesk license manager setup.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 379,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 379,
+  "score": 237.64999999999998,
+  "image": "https://opengraph.githubassets.com/1/VectorMareSpell21/AutoCad-Windows",
+  "link_status": null,
+  "ko_title": "VectorMareSpell21 / AutoCad-Windows",
+  "summary": "이 GitHub 저장소는 AutoCAD 설치 시 발생하는 레지스트리 오류, 제품 키 검증 문제, FLEXnet 라이선스 매니저 버그 등을 해결하기 위한 스크립트와 가이드를 제공한다. 라이선스 매니저 초기화, 레지스트리 최적화, 오프라인 우회 설정, 제품 키 및 시리얼 레지스트리 복구 기능을 자동화된 PowerShell 스크립트로 수행한다. 설치 및 문제 해결 절차가 단계별로 문서화돼 있어 관리자 권한으로 간단히 실행할 수 있다.",
+  "why": "이 저장소는 AutoCAD 라이선스 오류를 해결하기 위해 외부 스크립트를 실행하도록 안내한다. 관리자 권한으로 원격 PowerShell 스크립트를 실행하는 방식이라 보안 위험이 크다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-10T03:18:41.424432+09:00",
+  "batch_label": "9월 10일 03:18"
+ },
+ {
   "title": "On the Navier–Stokes Millennium Prize Problem",
   "url": "https://openai.com/index/navier-stokes-solution/",
   "description": "Further discussion: https://simonwillison.net/2026/Sep/8/on-navier-stokes/ ,  https://news.ycombinator.com/item?id=49621697 https://twitter.com/sama/status/2097385167002415140 ,  https://xcancel.com/sama/status/2097385167002415140",

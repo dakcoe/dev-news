@@ -1,14 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-02T09:49:16+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 15
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-02T20:57:20+09:00",
    "total": 20,
    "counts": {
@@ -421,6 +413,28 @@
     },
     {
      "url": "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-10T03:19:00+09:00",
+   "total": 17,
+   "counts": {
+    "short": 1,
+    "blocked": 1,
+    "ok": 13,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=49624603",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
      "source": "hackernews",
      "reason": "blocked"
     }
