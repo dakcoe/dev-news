@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-02T03:09:33+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=49522897",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-02T09:49:16+09:00",
    "total": 15,
    "counts": {
@@ -417,6 +401,28 @@
      "url": "https://mathstodon.xyz/@tao/117237320796901560",
      "source": "hackernews",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-09T21:09:44+09:00",
+   "total": 19,
+   "counts": {
+    "ok": 13,
+    "empty": 1,
+    "blocked": 1,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }
