@@ -206,7 +206,13 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
             + (f'<div class="snip">{_esc(d["snip"])}</div>' if d.get("snip") else "")
             + "</div><div></div><div></div></div>")
     return (
-        "<h1>오늘의 뉴스</h1>"
+        # ⚠️ 제목 마크는 JS가 그리는 것과 같은 마크업이어야 한다.
+        # 다르면 스크립트가 뜨는 순간 제목 줄이 흔들린다.
+        '<h1><svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
+        '<rect width="32" height="32" rx="7.5" fill="#7c6ee6"/>'
+        '<path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff"'
+        ' stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>'
+        "</svg><span>오늘의 뉴스</span></h1>"
         '<div class="sub">매일 00시·08시·16시에 수집합니다. '
         "30일 지난 기사는 검색으로 찾을 수 있습니다 "
         f"(최근 {batches}회차)</div>"

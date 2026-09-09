@@ -65,7 +65,7 @@ __ADS_HEAD__
      :focus-visible을 쓴다. 이걸 같이 지우면 키보드 사용자가 지금 어디에
      있는지 알 수 없게 된다. */
   html{-webkit-tap-highlight-color:transparent}
-  .rb,.brand,.ib,.ck,.cp,.dd,.dditem,.fitem,.expbtn,.tglb{
+  .rb,.ib,.ck,.cp,.dd,.dditem,.fitem,.expbtn,.tglb{
     -webkit-touch-callout:none;user-select:none;
   }
   :focus{outline:none}
@@ -151,8 +151,6 @@ __ADS_HEAD__
     width:74px;flex:none;background:var(--rail);border-right:1px solid var(--line);
     display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:8px;
   }
-  .brand{width:32px;height:32px;display:block;margin:5px 0 16px}
-  .brand svg{width:32px;height:32px;display:block}
   .rb{
     width:50px;height:50px;border-radius:13px;border:none;background:transparent;
     display:flex;align-items:center;justify-content:center;cursor:pointer;
@@ -172,7 +170,12 @@ __ADS_HEAD__
   .scroll{flex:1;overflow-y:auto;scrollbar-gutter:stable;padding:34px 34px 70px}
   .inner{max-width:1180px;margin:0 auto}
 
-  h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin-bottom:6px}
+  /* 브랜드 마크는 레일이 아니라 제목 앞에 둔다. 레일에서는 화면 구석의 장식일
+     뿐이었고, 좁은 화면에서는 하단 바에 여섯 칸을 만들어 균형을 흐렸다. */
+  h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin-bottom:6px;
+     display:flex;align-items:center;gap:11px}
+  .hmark{width:26px;height:26px;flex:none;display:block}
+  @media (max-width:640px){ h1{gap:9px} .hmark{width:23px;height:23px} }
   .sub{font-size:15px;color:var(--tx3);margin-bottom:26px}
 
   /* 수집 상태 */
@@ -510,11 +513,6 @@ __ADS_HEAD__
           flex-direction:row;justify-content:space-around;align-items:center;padding:0;gap:0;
           border-right:none;border-top:1px solid var(--line);z-index:70}
     .rb{width:46px;height:46px}
-    /* 브랜드 마크도 버튼과 같은 상자에 넣는다. 세로 레일용 여백(위 5px·아래 16px)이
-       그대로 남아 있으면 가로 바에서 혼자 위로 뜬다. */
-    .brand{width:46px;height:46px;margin:0;
-           display:flex;align-items:center;justify-content:center}
-    .brand svg{width:28px;height:28px}
     a.rb.gh{margin-top:0}    /* 하단 내비에선 나란히 */
     .facet{bottom:58px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
   }
@@ -527,13 +525,6 @@ __ADS_HEAD__
 </div>
 
 <nav class="rail">
-  <a class="brand" href="/" title="개발·AI 뉴스" aria-label="개발·AI 뉴스">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <rect width="32" height="32" rx="7.5" fill="#7c6ee6"/>
-      <path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff"
-            stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </a>
   <button class="rb on" data-v="news" title="오늘의 뉴스">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h11a1 1 0 011 1v12a2 2 0 002 2H5a1 1 0 01-1-1V5z"/><path d="M16 8h3a1 1 0 011 1v9a2 2 0 01-2 2"/><path d="M7 8h6M7 12h6M7 16h4"/></svg>
   </button>
@@ -603,6 +594,12 @@ try{
     if(old && TAGS[old]) tagSel.add(old);
   }
 }catch(e){}
+const HMARK = '<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
+  + '<rect width="32" height="32" rx="7.5" fill="#7c6ee6"/>'
+  + '<path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff"'
+  + ' stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function h1HTML(title){ return '<h1>'+HMARK+'<span>'+title+'</span></h1>'; }
+
 function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
 let openDrop=null;                     // 열려 있는 커스텀 드롭다운 id (렌더 간 비유지)
 document.addEventListener('click', ()=>{ if(openDrop){ openDrop=null; render(); } });
@@ -1025,7 +1022,7 @@ function apiBodyHTML(){
   return apiHubHTML();
 }
 function apiHTML(){
-  let h='<h1>무료 API 목록</h1>';
+  let h=h1HTML('무료 API 목록');
   if(APIS===null||APIS==='loading') return h+'<div class="none">목록을 불러오는 중…</div>';
   if(APIS==='fail') return h+'<div class="none">API 목록을 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다. (로컬 file:// 에서는 사용할 수 없습니다)</div>';
   h+='<div class="sub">'+(APIS.sources||[]).map(s=>escA(s.label)+' '+s.count+'개').join(' · ')
@@ -1069,7 +1066,7 @@ function render(){
   if(view==='api'){ ensureApis(); viewEl.innerHTML=apiHTML(); bindApi(); return; }
 
   if(view==='src'){
-    let h='<h1>수집 소스</h1><div class="sub">매일 00시·08시·16시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
+    let h=h1HTML('수집 소스')+'<div class="sub">매일 00시·08시·16시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
     /* 출처별 건수와, 그 안의 피드별 건수를 함께 센다. RSS는 피드 7개가
        "블로그 · RSS" 하나로 뭉뚱그려져 있어 Hugging Face 같은 피드가 화면에서
        보이지 않았다 (show-feeds-in-sources). 뷰 모델의 from이 RSS는 피드명,
@@ -1101,7 +1098,7 @@ function render(){
   }
 
   const isSaved=view==='saved';
-  let h='<h1>'+(isSaved?'보관함':'오늘의 뉴스')+'</h1>'
+  let h=h1HTML(isSaved?'보관함':'오늘의 뉴스')
       + '<div class="sub">'+(isSaved
           ? '체크한 기사만 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
           : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차)')+'</div>';
