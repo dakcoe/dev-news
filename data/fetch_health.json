@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-02T20:57:20+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "short": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=49522896",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-03T03:25:56+09:00",
    "total": 20,
    "counts": {
@@ -439,6 +423,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-09-10T09:51:13+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 15,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
