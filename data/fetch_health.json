@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-03T09:57:11+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 12,
-    "blocked": 2,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.nytimes.com/2026/09/01/nyregion/ai-ban-schools-nyc.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-03T20:55:53+09:00",
    "total": 18,
    "counts": {
@@ -428,6 +407,22 @@
    "failures": [
     {
      "url": "https://mastodon.social/@tristanbuckmaster/117237555794407063",
+     "source": "hackernews",
+     "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-11T03:06:34+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "short": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
      "source": "hackernews",
      "reason": "short"
     }
