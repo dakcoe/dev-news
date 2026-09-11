@@ -52,6 +52,13 @@ def test_제목에_검색어가_들어간다(html):
         assert word in title, f"제목에 '{word}'이(가) 없다: {title}"
 
 
+def test_제목에_날짜가_없다(html):
+    """날짜를 넣으면 검색 결과에 마지막 크롤링 날짜가 박제돼 오래된 페이지처럼
+    보인다. 신선도는 sitemap의 lastmod와 dateModified가 알린다."""
+    title = re.search(r"<title>(.*?)</title>", html).group(1)
+    assert not re.search(r"\d{4}-\d{2}-\d{2}|\d{4}년|\d{1,2}월", title), title
+
+
 def test_설명은_80자_이내다(html):
     """네이버 서치어드바이저가 80자 이내를 요구한다. 넘으면 뒤가 잘린다."""
     desc = re.search(r'<meta name="description" content="(.*?)">', html).group(1)
