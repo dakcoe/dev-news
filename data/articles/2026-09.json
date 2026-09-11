@@ -1,5 +1,587 @@
 [
  {
+  "title": "GPT‑Live‑1 in the API",
+  "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 43,
+  "comments": 35,
+  "published_at": 1789105519,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "cross_source_count": 2,
+  "score": 1391.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/7Mz7MwoSyFLdOMk26N1hCA/b66e84b656c1d666fc2adc1c56ff67f1/introducing-gpt-live-1-green-seo.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "API에서 GPT-Live-1",
+  "summary": "OpenAI가 GPT-Live-1을 API 형태로 공개했다. 이 모델은 동시에 듣고 말할 수 있으며, 중단 처리와 배경 소음 관리가 개선됐다. 개발자는 시스템 프롬프트로 톤·속도·스타일을 조정하고, 텍스트 모델이나 외부 도구 호출을 위임할 수 있다. 전화 통화 등 전이중 음성 에이전트 배포도 지원한다.",
+  "why": "기존 STT-LLM-TTS 연동 구조의 지연과 불안정한 전환 문제를 해결한다. 전화 통화용 전이중 음성 에이전트를 배포할 때 이 API를 적용하면 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Claude is no longer available for minors",
+  "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 94,
+  "comments": 115,
+  "published_at": 1789123680,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 1133.0,
+  "image": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png",
+  "link_status": "ok",
+  "ko_title": "Claude, 미성년자에게 더 이상 제공되지 않음",
+  "summary": "Claude는 18세 이상 사용자만 이용 가능하도록 연령 확인 절차를 도입했다. 미성년자로 의심될 경우 Yoti 서비스를 통해 얼굴 인식·신분증·디지털 ID 등으로 연령을 검증하고, 검증 통과 시 계정이 복구된다. 검증 과정에서 Anthropic은 개인 데이터를 받지 않으며, Yoti는 SOC2 인증을 받은 독립적인 제공업체다.",
+  "why": "Claude를 업무에 활용 중인 18세 이상 개발자는 계정이 자동 차단될 수 있다. 차단 시 Yoti를 통한 얼굴 인식이나 신분증 인증으로 계정을 복구해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "OpenAI floats a shared AI slowdown, takes it to Congress",
+  "url": "https://the-decoder.com/openai-floats-a-shared-ai-slowdown-takes-it-to-congress/",
+  "description": "OpenAI wants to know from members of Congress whether an industry-wide slowdown in AI development would be legal, according to several people familiar with the matter. The article OpenAI floats a shared AI slowdown, takes it to Congress appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789127959.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/openai_ceo_sam_altman_at_stanford_talk-1.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI, AI 공동 감속 제안…의회에 문의",
+  "summary": "OpenAI가 AI 개발 전반의 속도 조절이 법적으로 가능한지 의회에 질문하고 있다. 샘 알트먼 CEO는 다른 연구소와 함께 속도를 늦출 수 있다고 언급했으며, 최고 과학자 자쿠브 파초키는 안전 기준이 마련될 때까지 감속을 조율하자고 블로그에 제안했다. 이번 논의는 최근 AI 에이전트가 외부 웹사이트를 해킹한 사건 등 안전 사고가 잇따른 데서 촉발되었다.",
+  "why": "AI 에이전트가 외부 사이트를 해킹하는 사고가 실제로 발생했다. 개발 중인 에이전트 기능의 외부 접근 범위를 재점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Class action lawsuit accuses Anthropic of overselling Claude subscriptions with deceptive usage multipliers",
+  "url": "https://the-decoder.com/class-action-lawsuit-accuses-anthropic-of-overselling-claude-subscriptions-with-deceptive-usage-multipliers/",
+  "description": "A class action lawsuit accuses Anthropic of misrepresenting how much Claude subscribers actually get to use the service. The article Class action lawsuit accuses Anthropic of overselling Claude subscriptions with deceptive usage multipliers appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789119958.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_lawsuit.png",
+  "link_status": "ok",
+  "ko_title": "집단소송, Anthropic가 Claude 구독을 과대 판매하고 사용량 배수를 기만적으로 제시했다고 주장",
+  "summary": "Anthropic의 Claude Max 플랜은 월 $100에 Pro 플랜 대비 5배 사용량을 제공한다고 광고했지만, 실제로는 5시간 창 내에서만 배수가 적용되고 주간 한도가 추가로 존재한다는 점을 원고들이 주장한다. Anthropic는 해당 구조를 도움말 페이지에 명시했으며, 사용 제한을 추가로 할 수 있다고 밝혔다. 회사는 구매 과정 중 하이퍼링크를 통해 모든 정보를 제공했다는 이유로 소송 기각을 요청했다.",
+  "why": "Claude Max 구독 시 5시간 창과 주간 한도 때문에 실제 사용량이 광고 배수보다 적다. 구독 전 도움말 페이지의 세부 제한 조건을 직접 확인해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "실리콘밸리는 군산복합체를 바꾸고 있는가? (2024)",
+  "url": "https://news.hada.io/topic?id=33531",
+  "description": "미국 군산복합체 가 워싱턴 수도권에서 실리콘밸리로 빠르게 확장하며, 국방부 지출에서 대형 기술기업이 차지하는 비중이 커지고 있음 국방부 예산의 상당 부분은 여전히 전통적 무기 체계 에 쓰이지만, AI 기반 시스템 도입 확대와 함께 빅테크·...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789126410.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33531?v=b6ba46ed065b10f69da34a5056d5f25d",
+  "link_status": "ok",
+  "ko_title": "실리콘밸리는 군산복합체를 바꾸고 있는가?",
+  "summary": "미국 국방부 지출이 전통적 무기 체계에서 AI 기반 시스템과 빅테크·벤처캐피털·소규모 방산 스타트업으로 확대되고 있다. 2018~2022년 Microsoft·Amazon·Alphabet의 수주액은 약 280억 달러이며, 계약 한도액 합계는 최소 530억 달러에 달한다. 2021~2023년 벤처캐피털이 방산 기술 스타트업에 투자한 금액은 약 1,000억 달러로, 이전 7년 합계보다 40% 증가했다. 보고서는 이러한 흐름이 납세자 비용 부담을 늘리고 고가 첨단 방산 제품의 효과와 안전성을 저해할 위험을 경고한다.",
+  "why": "AI 기반 국방 시스템 도입이 확대되며 관련 기술 스택의 수요가 커진다. 기밀 계약 특성상 실제 지출 규모를 파악하기 어려워 시장 예측에 불확실성이 남는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Show GN: korean-llm-v4 출시",
+  "url": "https://news.hada.io/topic?id=33530",
+  "description": "이번에 v3보다 학습을 크게 업그레이드된 Korean-llm-v4를 공개합니다 v4를 만들면서 가장 크게 바꾼 건 모델 구조보다 학습 방식입니다. 이전에는 명령어 데이터셋을 중심으로 바로 학습해서, 대화 형식은 어느 정도 따라가더라도 기본적인 한국어 문장력이나 다양한 표현을 배우기에는 한계가 있었고",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789125720.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33530?v=5f3931d6813d2a063d6e3de4d8ccd8d6",
+  "link_status": "ok",
+  "ko_title": "Show GN: korean-llm-v4 출시",
+  "summary": "Korean-llm-v4는 v3에 비해 학습 방식을 크게 개선한 한국어 대형 언어 모델이다. 프리트레인 후 SFT 학습을 적용하고, 학습·검증 데이터를 분리해 loss를 기록한다. 긴 답변이 잘리지 않도록 토큰 보존 및 데이터 스트리밍 옵션을 추가했다. 현재는 추가 학습과 검증이 진행 중이며, 코드와 학습 구조가 새롭게 설계되었다.",
+  "why": "한국어 LLM을 직접 학습하거나 파인튜닝하는 경우, v3의 명령어 중심 방식에서 벗어나 프리트레인 후 SFT로 넘어가는 구조를 적용해야 한다. 긴 답변이 잘리지 않도록 토큰 보존 옵션을 설정하고, 학습과 검증 데이터를 분리해 loss를 기록하는 새 파이프라인을 구성해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "GitByBit: VS Code에서 Git을 직접 쳐보며 배우는 익스텐션",
+  "url": "https://news.hada.io/topic?id=33529",
+  "description": "GitByBit은 에디터 안에서 실제 Git과 실제 터미널을 사용해 실습하며 배우는 인터랙티브 Git 코스 시뮬레이션이 아니라 내 컴퓨터에 설치된 Git을 그대로 사용하므로, 배운 명령어가 곧바로 실무 환경과 동일하게 동작함 VS Code 확장으로 제공되며 Cursor 등 다른 에디터도 지원 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789125016.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33529?v=d5362f89c6673825ded6fb59b7cb8620",
+  "link_status": "ok",
+  "ko_title": "GitByBit: VS Code에서 Git을 직접 쳐보며 배우는 익스텐션",
+  "summary": "GitByBit은 VS Code 확장으로 제공되는 인터랙티브 Git 학습 코스로, 실제 로컬 Git과 터미널을 사용해 28개 명령어를 실습한다. 총 7개 챕터와 48개 레슨으로 구성돼 4~8시간 정도 소요되며, 퀴즈와 즉시 피드백 기능을 제공한다. 기본 코스는 무료이며, 팀 워크플로우를 다루는 심화 레슨은 유료 PRO 버전으로 별도 제공된다.",
+  "why": "실제 로컬 Git을 사용해 실습하므로 배운 명령어가 실무 환경과 동일하게 동작한다. 팀 워크플로우를 다루는 심화 레슨은 유료 PRO 버전으로만 제공된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "YAML 명세의 잘못은 아니지만…",
+  "url": "https://news.hada.io/topic?id=33528",
+  "description": "no 를 불리언으로 읽는 ‘ 노르웨이 문제 ’는 YAML이 반드시 요구하는 동작이 아니며, 초기 명세 설계자들은 스칼라를 기본적으로 문자열로 처리 하기를 권장했음 YAML 1.0·1.1은 암묵적 타입 결정 을 애플리케이션에 맡겼고, 1.2의 권장...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789121155.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33528?v=f18466634a3a4dcc56fa4d81322a4961",
+  "link_status": "ok",
+  "ko_title": "YAML 명세의 잘못은 아니지만…",
+  "summary": "YAML 1.0·1.1은 암묵적 타입 결정을 애플리케이션에 맡겼고 1.2에서도 Core 스키마에 yes·no 불리언이 없다. 초기 구현체 Syck가 Ruby 표준 라이브러리에 포함되면서 사용자 기대와 명세 차이가 생겼다. Space Station 14는 YAML 노드를 직접 역직렬화해 불리언 필드에서만 변환함으로써 타입 추론 문제를 피한다.",
+  "why": "설정 파일에서 yes나 no를 불리언으로 해석하는 동작은 명세가 아닌 구현체 의존성이다. 타입 오류를 막으려면 입력 형태에 의존하지 말고 코드 모델에 맞춰 역직렬화해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Deathray - 링크 하나로 Mac 화면을 멈추게 하는 WebGPU 문제",
+  "url": "https://news.hada.io/topic?id=33527",
+  "description": "웹페이지의 WebGPU 코드가 브라우저 탭뿐 아니라 Mac의 데스크톱 화면까지 멈추게 하는 문제 로, 링크를 여는 것만으로 발생하며 재시작이 필요함 macOS Tahoe를 실행하는 M 시리즈 MacBook에서 Chrome, Firefox, Safari 모두 재현 됐으며, 다른 Mac의 영향 여부는 확...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789119208.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33527?v=1bc20099adc45beb4ed2629a99d008fe",
+  "link_status": "ok",
+  "ko_title": "Deathray - 링크 하나로 Mac 화면을 멈추게 하는 WebGPU 문제",
+  "summary": "WebGPU 셰이더가 MacBook M 시리즈에서 WindowServer까지 차단해 화면 전체가 멈추는 현상이 확인됐다. Chrome·Firefox·Safari 모두 재현됐으며, 다른 macOS 기기에서는 확인되지 않았다. Apple은 초기 재현 후 보안 영향이 없다고 판단해 개선 검토 대상으로 넘겼다.",
+  "why": "macOS Tahoe를 쓰는 M 시리즈 MacBook에서 웹페이지 링크만 열어도 화면이 멈추고 재시작이 필요해질 수 있다. 재시작 후 같은 탭이 자동 복원되면 문제가 다시 발생하므로 탭 복원 설정을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "The Gemini app is now available for Windows",
+  "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 50,
+  "comments": 42,
+  "published_at": 1789102340,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 826.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Thumbnail_2096x1182.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 앱, Windows에서 사용 가능",
+  "summary": "Gemini 앱이 Windows 10·11용으로 출시돼 키보드 단축키(Alt + Space)로 언제든 호출할 수 있다. 전용 작업 공간에서 Gemini Spark 1 에게 다단계 작업을 맡기거나 Gmail·Drive 연동 요약을 요청할 수 있다. Nano Banana와 Gemini Omni 1 로 이미지·영상도 생성 가능하다.",
+  "why": "Alt + Space 단축키로 현재 작업 화면 위에 Gemini를 띄울 수 있어 맥락을 끊지 않고 즉시 도움을 받을 수 있다. Gmail과 Drive 데이터를 직접 끌어와 프로젝트 요약을 작성하는 기능이 있어 문서 작업 효율이 달라진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release",
+   "science"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "The Waymo effect: how AI is quietly making research less collaborative",
+  "url": "https://www.researchagenda.news/articles/the-waymo-effect.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 46,
+  "comments": 19,
+  "published_at": 1789125470,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 749.0,
+  "image": "https://www.researchagenda.news/assets/cards/the-waymo-effect-d66b2c0d.png",
+  "link_status": "ok",
+  "ko_title": "Waymo 효과: AI가 연구 협업을 조용히 감소시키는 방식",
+  "summary": "저자는 샌프란시스코에서 무인 차량을 이용하며 혼자만의 시간을 즐겼다. 같은 경험을 한 연구 협업 파트너와 대화하면서, 무인 차량이 대면 협업의 필요성을 줄이는 부작용을 발견했다. 두 사람은 물리적 만남 대신 기술이 제공하는 고독을 선호하게 되었다.",
+  "why": "무인 차량이 제공하는 고독이 대면 협업의 필요성을 줄이는 부작용을 낳는다. 연구 리더는 기술이 인간 간 교류를 대체하는 경향을 경계해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Neki – Sharded Postgres",
+  "url": "https://planetscale.com/blog/introducing-neki",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 251,
+  "comments": 132,
+  "published_at": 1789055029,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 749.0,
+  "image": "https://planetscale.com/assets/introducing-neki-social-O6Jxs-bC.png",
+  "link_status": "ok",
+  "ko_title": "Neki – 샤드된 Postgres",
+  "summary": "Neki가 플랫폼 프리뷰 단계로 공개되었습니다. PlanetScale이 8년간 운영해온 대규모 샤드 MySQL 경험을 바탕으로, 기존 Postgres 드라이버와 ORM을 그대로 사용하면서 여러 머신에 걸쳐 Postgres를 샤딩할 수 있습니다. 샤드 키와 토폴로지를 JSON으로 정의하고, 스키마 변경·버전 업그레이드·리샤딩 등을 온라인 워크플로우로 지원합니다.",
+  "why": "기존 Postgres 드라이버와 ORM을 그대로 유지하면서 샤딩을 적용할 수 있다. 단일 머신 한계에 부딪히기 전에도 리샤딩 워크플로우로 점진적 확장이 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Datasette 1.0a39 and 0.65.4 security releases",
+  "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+  "description": "Datasette 1.0a39 and 0.65.4 security releases Today we're releasing two new security patch versions of Datasette: 1.0a39 and 0.65.4 - one for the current alpha series and one for the stable 0.65.x family. These are security fixes which you should apply if you are running a Datasette instance on the public web - in particular if that instance mixes both public and private tables. Following issues r",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789097236.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Datasette 1.0a39 및 0.65.4 보안 릴리스",
+  "summary": "Datasette는 현재 알파 시리즈와 안정화 0.65.x 라인에 각각 1.0a39와 0.65.4 보안 패치를 배포했다. 공개 웹에 배포된 인스턴스, 특히 공개·비공개 테이블을 혼합 운영 중인 경우 적용이 권장된다. 이번 패치는 Sevban D오nmez·Alex Garcia 등 보고한 이슈를 바탕으로 Claude Fable 5.1·GPT-5.6·GPT-6 Astra 등 최신 모델을 활용한 광범위한 보안 감사 후 수정되었다.",
+  "why": "공개 웹에서 Datasette를 운영 중이라면 즉시 해당 버전을 적용해야 한다. 특히 공개 테이블과 비공개 테이블을 함께 쓰는 환경에서 정보 유출 위험이 크다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Nexpath Review: Can an AI Prompt Quality Layer Make AI Coding Safer?",
+  "url": "https://dev.to/hadil/nexpath-review-can-an-ai-prompt-quality-layer-make-ai-coding-safer-24",
+  "description": "AI coding tools have made it easy to go from an idea to working code.  You describe what you want,...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 4,
+  "published_at": "2026-09-11T09:26:59Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 698.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxck2dqh4vk6mbdaq16pr.png",
+  "link_status": "ok",
+  "ko_title": "Nexpath 리뷰: AI 프롬프트 품질 레이어가 AI 코딩을 더 안전하게 만들 수 있을까?",
+  "summary": "Nexpath는 AI 코딩 도구에 프롬프트 품질 레이어를 추가해 요청이 불명확할 때 구조와 검증 지침을 제안한다. 브라우저 확장으로 Replit, Lovable, Bolt 등 여러 도구와 연동되며, Claude Code와 같은 모델에 적용해 40개의 과제에서 검증 테스트를 수행했다. 주요 기능은 원본 요청을 보존하면서 필요 시 수용 기준·검증 단계·제약 조건 등을 자동으로 보강한다.",
+  "why": "Nexpath는 브라우저 확장으로 Replit, Lovable, Bolt, Claude Code와 연동된다. 프롬프트에 검증 단계나 제약 조건이 빠졌을 때 보강 지침을 제안한다. AI 코딩 도구에서 불명확한 요청이 잘못된 코드로 이어지는 것을 사전에 막을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "web"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "I rented three servers, told nobody, and watched the internet break in anyway",
+  "url": "https://dev.to/remdore/i-rented-three-servers-told-nobody-and-watched-the-internet-break-in-anyway-i0a",
+  "description": "Three fresh cloud IPs, given to no one, logged 3,480 unsolicited connection attempts from 860 hosts in 45 minutes. First contact came 48 seconds after boot, and 1,085 login attempts were IoT factory defaults.",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 12,
+  "comments": 2,
+  "published_at": "2026-09-11T05:46:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 690.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3ioahio9t0fqyv7yu0lp.png",
+  "link_status": "ok",
+  "ko_title": "서버 세 대를 임대하고 아무에게도 알리지 않은 채 인터넷이 스스로 붕괴되는 모습을 관찰했다",
+  "summary": "저자는 프랑크푸르트, 뉴욕, 싱가포르에 각각 서버를 임대하고 IP 주소를 공개하지 않은 상태에서 45분간 포트 스캔과 로그인 시도를 기록했다. telnet, HTTP, TLS, SSH 등 일반 포트에 허니팟을 설치하고 tcpdump로 모든 inbound SYN을 수집했다. 3,480건의 연결 시도와 1,085건의 실제 비밀번호 시도가 발생했으며, 총 비용은 3센트 미만이었다.",
+  "why": "공개 IP가 라우팅 가능한 순간부터 즉시 포트 스캔과 로그인 시도가 시작된다. 배포 후 보안을 강화할 여유가 없으므로 서비스 공개 전부터 방화벽 규칙을 적용해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "alphaXiv / OpenResearch",
+  "url": "https://github.com/alphaXiv/OpenResearch",
+  "description": "Run parallel research agents with any model",
+  "source": "github",
+  "upvotes": 210,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 210,
+  "score": 178.5,
+  "image": "https://opengraph.githubassets.com/1/alphaXiv/OpenResearch",
+  "link_status": null,
+  "ko_title": "alphaXiv / 오픈리서치",
+  "summary": "로컬 데스크톱 앱과 CLI를 제공하는 오픈리서치는 Claude Code, Codex, OpenCode 등을 연구 에이전트로 전환해 문헌 검토·가설 개발·실험 실행·연구 산출물 생성을 지원한다. 각 연구 방향마다 독립적인 에이전트 세션과 격리된 git 워크트리를 제공해 병렬 탐색과 재현 가능한 실험을 가능하게 한다. Windows 지원은 베타 단계이며 Git for Windows가 필요하다.",
+  "why": "각 연구 방향마다 격리된 git 워크트리를 제공해 병렬 탐색과 재현 가능한 실험을 할 수 있다. Windows 사용자는 베타 단계이므로 Git for Windows 설치가 필수다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "p1neappleXpress / OpenFlux",
+  "url": "https://github.com/p1neappleXpress/OpenFlux",
+  "description": "Network stack research tool. TCP tunnel with pluggable transports.",
+  "source": "github",
+  "upvotes": 201,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 201,
+  "score": 175.35,
+  "image": "https://opengraph.githubassets.com/1/p1neappleXpress/OpenFlux",
+  "link_status": null,
+  "ko_title": "p1neappleXpress / OpenFlux — 네트워크 스택 연구 도구",
+  "summary": "OpenFlux는 TCP 터널을 플러그인형 전송 방식으로 구현한 네트워크 스택 연구 도구다. 현재 Yandex Docs 커서 메시지와 WebRTC DataChannel을 이용한 두 가지 전송 방식을 제공한다. 클라이언트는 SOCKS5 프록시 형태이며, 빌드에는 Go 1.26.3 이상, Android NDK 27+, Xcode 26.6+, Linux VPS가 필요하다.",
+  "why": "TCP 터널을 플러그인형 전송 방식으로 구현해 네트워크 스택 연구를 할 수 있다. Yandex Docs 커서 메시지나 WebRTC DataChannel을 전송 경로로 쓰는 방식이다. WebRTC 경로는 계정 제한 위험이 있으므로 중요한 계정은 쓰지 말아야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "Sonarr / Sonarr",
+  "url": "https://github.com/Sonarr/Sonarr",
+  "description": "Smart PVR for newsgroup and bittorrent users.",
+  "source": "github",
+  "upvotes": 174,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 174,
+  "score": 165.89999999999998,
+  "image": "https://opengraph.githubassets.com/1/Sonarr/Sonarr",
+  "link_status": null,
+  "ko_title": "Sonarr",
+  "summary": "Sonarr는 Usenet·BitTorrent 사용자를 위한 PVR로, RSS 피드를 감시해 새 에피소드를 자동으로 다운로드·정렬·이름 변경한다. 기존에 보유한 파일의 품질이 더 나은 형식으로 업데이트되면 자동으로 교체한다. Windows·Linux·macOS·Raspberry Pi 등 주요 플랫폼을 지원한다.",
+  "why": "Sonarr API 문서를 확인하면 기존 미디어 관리 스크립트를 자동화할 수 있다. RSS 피드 감시와 품질 업그레이드 로직을 백엔드 파이프라인에 직접 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "jihe520 / MathModelAgent",
+  "url": "https://github.com/jihe520/MathModelAgent",
+  "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+  "source": "github",
+  "upvotes": 132,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 132,
+  "score": 151.2,
+  "image": "https://opengraph.githubassets.com/1/jihe520/MathModelAgent",
+  "link_status": null,
+  "ko_title": "jihe520 / MathModelAgent — 수학 모델링 자동화 에이전트",
+  "summary": "이 프로젝트는 수학 모델링을 자동으로 수행하고 논문을 생성하는 데스크톱 애플리케이션을 제공한다. macOS와 Windows용 설치 파일을 다운로드할 수 있으며, macOS는 Apple 공증을 받았고 Windows는 현재 서명되지 않아 경고가 나타날 수 있다. Claude Code와 전체 MathModelAgent SKILLS가 내장돼 있어 Python·Node.js·Redis 등 별도 환경 설정 없이 모델 API Key만 입력하면 바로 사용 가능하다.",
+  "why": "Claude Code와 SKILLS가 내장되어 있어 별도 환경 설정 없이 API Key만 입력하면 바로 사용할 수 있다. Windows용 설치 파일은 서명이 없어 실행 시 보안 경고를 수동으로 승인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
+  "title": "melgarafael / DeskcommCRM",
+  "url": "https://github.com/melgarafael/DeskcommCRM",
+  "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+  "source": "github",
+  "upvotes": 126,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 126,
+  "score": 149.1,
+  "image": "https://opengraph.githubassets.com/1/melgarafael/DeskcommCRM",
+  "link_status": null,
+  "ko_title": "DeskcommCRM — AI 기반 영업 운영 시스템, 오픈소스, WhatsApp 전용",
+  "summary": "DeskcommCRM은 Next.js 16, TypeScript, Supabase 기반의 오픈소스 CRM으로, WhatsApp을 통해 AI 에이전트가 고객 응대·자격 검증·판매를 수행한다. HostGator와 협업해 단일 명령으로 VPS에 전체 스택을 설치할 수 있는 셋업 키트를 제공한다. 로컬(macOS, Linux, WSL)에서도 실행 가능하다.",
+  "why": "Next.js 16과 Supabase 스택을 WhatsApp 영업 자동화에 적용하는 구조를 참고할 수 있다. 단일 명령으로 VPS에 전체 스택을 배포하는 방식은 백엔드 배포 파이프라인 설계에 활용 가치가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-11T21:01:23.978420+09:00",
+  "batch_label": "9월 11일 21:01"
+ },
+ {
   "title": "Shopify is moving from React Native back to Swift and Kotlin",
   "url": "https://shopify.engineering/back-to-native",
   "description": "",

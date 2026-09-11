@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-04T03:21:11+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 12,
-    "dead": 2,
-    "github": 1
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-     "source": "rss",
-     "reason": "dead"
-    },
-    {
-     "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
-     "source": "rss",
-     "reason": "dead"
-    }
-   ]
-  },
-  {
    "at": "2026-09-04T09:47:04+09:00",
    "total": 15,
    "counts": {
@@ -418,6 +397,15 @@
    "counts": {
     "ok": 15,
     "github": 2
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-11T21:01:41+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
    },
    "failures": []
   }
