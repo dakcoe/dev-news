@@ -1,21 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-05T03:06:40+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 14,
-    "blocked": 1
-   },
-   "failures": [
-    {
-     "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-05T09:37:12+09:00",
    "total": 15,
    "counts": {
@@ -414,6 +399,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-09-12T20:28:07+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
+   },
+   "failures": []
   }
  ]
 }
