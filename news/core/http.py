@@ -32,6 +32,9 @@ BACKOFF_BASE = 1.0      # 1s → 2s
 RETRY_CODES = range(500, 600)
 
 
+MAX_BYTES = 3 * 1024 * 1024      # 본문 상한. 정상 기사는 중앙값 15KB·최대 37KB다.
+
+
 def get(url: str, **kwargs) -> requests.Response:
     """GET 요청. 5xx와 연결 오류에만 재시도한다.
 
@@ -57,3 +60,38 @@ def get(url: str, **kwargs) -> requests.Response:
             time.sleep(BACKOFF_BASE * (2 ** attempt))
 
     raise last_error if last_error else requests.RequestException(url)
+
+
+def get_capped(url: str, max_bytes: int = MAX_BYTES,
+               allow_types: tuple[str, ...] = ("html", "xml"),
+               **kwargs) -> requests.Response:
+    """헤더를 먼저 받고, 본문은 상한까지만 읽는다.
+
+    get()은 본문을 통째로 받은 뒤에야 호출부가 content-type을 본다. 해커뉴스와
+    Lobsters는 PDF·데이터셋·릴리스 파일을 자주 링크하는데, 그게 러너 메모리로
+    다 내려온 뒤 "HTML이 아니다"로 버려진다. 5xx면 그걸 세 번 반복한다.
+    거대한 HTML이면 파싱이 CPU를 수 분 먹어 회차가 25분 제한에 걸린다.
+
+    상한에 걸리면 거기까지만 돌려준다 — 본문 추출은 앞부분만으로도 대개 된다.
+    """
+    kwargs["stream"] = True
+    resp = get(url, **kwargs)
+    # 형식이 아니면 본문을 아예 받지 않는다. 크기는 이유가 되지 않는다 —
+    # 큰 HTML은 잘라서 받으면 되고, 통째로 버리면 긴 기사를 잃는다.
+    ctype = (resp.headers.get("content-type") or "").split(";")[0].strip().lower()
+    if ctype and not any(t in ctype for t in allow_types):
+        resp.close()
+        resp._content = b""
+        resp._content_consumed = True
+        return resp
+
+    chunks, total = [], 0
+    for chunk in resp.iter_content(64 * 1024):
+        chunks.append(chunk)
+        total += len(chunk)
+        if total >= max_bytes:
+            break
+    resp.close()
+    resp._content = b"".join(chunks)
+    resp._content_consumed = True
+    return resp
