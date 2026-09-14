@@ -65,3 +65,30 @@ def test_병합_스크립트가_있고_읽힌다():
     # 더하기만 하는 자료 두 가지를 모두 다뤄야 한다
     assert "data/seen.json" in src
     assert "docs/data/articles" in src
+
+
+def test_병합이_있던_항목을_건드리지_않는다(tmp_path):
+    """복구 스크립트의 제1원칙. 원격을 뼈대로 다시 쓰면 줄 수는 덜 바뀌지만
+    같은 기사의 다른 판본으로 교체되면서 upvotes·출처가 조용히 달라진다."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "mrd", os.path.join(ROOT, "scripts", "merge_remote_data.py"))
+    mrd = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mrd)
+
+    local = [{"url": "https://a/1", "batch": "2026-09-03", "upvotes": 87},
+             {"url": "https://a/3", "batch": "2026-09-01", "upvotes": 5}]
+    missing = [{"url": "https://a/2", "batch": "2026-09-02", "upvotes": 0}]
+    out = mrd._insert_by_batch(local, missing)
+
+    assert [x["url"] for x in out] == ["https://a/1", "https://a/2", "https://a/3"]
+    assert out[0] == local[0] and out[2] == local[1], "있던 항목이 바뀌었다"
+
+
+def test_병합이_정본과_같은_형식으로_쓴다():
+    """형식이 다르면 몇 건 되살리는 데 파일 전체가 새 덩어리로 쌓인다."""
+    src = open(os.path.join(ROOT, "scripts", "merge_remote_data.py"),
+               encoding="utf-8").read()
+    assert "indent=1" in src, "archive·seen은 indent=1이다"
+    assert "sort_keys=sort_keys" in src, "seen은 키 정렬까지 맞춰야 한다"
+    assert "normalize_url" in src, "같은 기사 판정은 한 규칙으로 해야 한다"

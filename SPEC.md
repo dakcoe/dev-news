@@ -102,10 +102,11 @@ dev-news는 매일 세 번(KST 07:55·15:55·23:55) GitHub Actions에서 개발�
 ### 2.1 월별 샤딩
 
 ```
-data/articles/2026-08.json   # 이번 달 — 매일 이 파일만 수정됨
-data/articles/2026-07.json   # 지난 달 — 이후 절대 수정하지 않음 (불변)
+docs/data/articles/2026-08.json   # 이번 달 — 매일 이 파일만 수정됨
+docs/data/articles/2026-07.json   # 지난 달 — 이후 절대 수정하지 않음 (불변)
 data/candidates/2026-08.json # 판정 로그도 동일 규칙
-data/search-index.json       # 전체 색인 — 매일 재생성
+docs/data/search-index.json       # 어느 달이 있는지만 담는 목록
+docs/data/search-index-YYYY-MM.json  # 달별 색인 — 이번 달 것만 다시 쓰인다
 data/seen.json               # 중복 방지 — 영구 유지로 변경
 ```
 
@@ -115,7 +116,7 @@ data/seen.json               # 중복 방지 — 영구 유지로 변경
 
 ### 2.2 검색 인덱스
 
-`data/search-index.json`: **페이지에 실린 모든 기사**에 대해 {제목, url, 태그(1B 이후), 월(YYYY-MM), 소스, 수집일}만 담는다. 요약·본문 제외 — 기사당 100~200바이트 목표. 빌드마다 전체 재생성. 하루 20건 내외 × 수년치여도 수 MB 이내로 유지된다.
+`docs/data/search-index.json`: 어느 달의 색인이 있는지만 담는 목록이고, 실제 항목은 `docs/data/search-index-YYYY-MM.json`에 달별로 나뉜다. 항목은 {제목, url, 태그, 월(YYYY-MM), 소스, 수집일}만 담는다. 요약·본문 제외 — 기사당 100~200바이트 목표. 이번 달 파일만 회차마다 다시 쓰인다 — 한 파일에 전부 담으면 회차마다 그 파일 전체가 새 덩어리로 커밋된다. 하루 20건 내외 × 수년치여도 수 MB 이내로 유지된다.
 
 페이지에 실리지 못한 후보 전체(일 200~300건)는 인덱스에 넣지 않는다 — 넣으면 인덱스가 연 15MB+ 규모로 커져 즉시 검색이 무거워진다. 이들은 월별 `data/candidates/` 샤드에 남아 있으므로, 필요 시 아카이브 화면에서 "이 달의 전체 후보 보기"로 해당 월 candidates 샤드를 온디맨드 fetch해 조회하는 경로를 제공한다.
 
