@@ -138,6 +138,19 @@ quota_backfill_max:
 
 주 모델이 한도(429)에 걸리면 `llm.fallback_models` 순서대로 갈아타고 그 회차를 마저 끝낸다. Groq는 무료 한도를 모델별로 따로 세기 때문에 갈아타면 예산이 새로 생긴다. 비우면 summarizer의 기본 체인을 쓰고, 빈 목록(`[]`)을 주면 폴백 없이 회차를 접는다. 환경변수 `LLM_FALLBACK_MODELS`(쉼표 구분)가 우선한다.
 
+왜중요도 따로 체인을 둔다(`llm.why_fallback_models`). 그쪽이 다 떨어지면 주 모델이 쓴 왜중요를 그대로 쓰고 기사는 게시한다.
+
+기본값은 이렇다.
+
+    요약    openai/gpt-oss-120b → qwen/qwen3.8-27b
+    왜중요  qwen/qwen3.8-27b    → qwen/qwen3.6-27b
+
+**체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. 2026-09-14 기준 Groq 목록은 `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b` 넷이다. 확인은 이렇게 한다.
+
+```
+curl -s -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/models
+```
+
 폴백이 생기기 전에는 한 모델이 막히면 남은 기사가 통째로 미게시됐다. 2026-09-14 회차에서 19건 중 15건만 올라갔다.
 
 ```yaml
@@ -146,7 +159,8 @@ llm:
   model:                  # 비우면 공급자 기본 모델
   pause_seconds: 6.0      # 호출 간격. gpt-oss는 2초면 절반이 429였다
   why_model: qwen/qwen3.8-27b   # '왜 중요한가'만 다른 모델로. 비우면 model이 다 쓴다
-  fallback_models:        # 한도(429)에 걸리면 갈아탈 모델. 비우면 기본 체인
+  fallback_models:        # 요약이 한도(429)면 갈아탈 모델. 비우면 기본 체인
+  why_fallback_models:    # 왜중요가 한도면 갈아탈 모델. 비우면 기본 체인
 ```
 
 - 429는 Retry-After만큼 기다려 최대 2회 재시도하고, 그래도 실패하면 그 회차의 요약을 통째로 멈춘다(서킷 브레이커). 남은 기사는 다음 회차로 넘어간다.

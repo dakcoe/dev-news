@@ -272,7 +272,8 @@ def prepare_published(picked: list[dict], cfg: dict,
                                max_calls=llm_cfg.get("max_calls_per_run", 50),
                                stop_after=top_n if gate_on else None,
                                why_model=llm_cfg.get("why_model") or None,
-                               fallback_models=llm_cfg.get("fallback_models"))
+                               fallback_models=llm_cfg.get("fallback_models"),
+                               why_fallback_models=llm_cfg.get("why_fallback_models"))
 
     picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
     picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])

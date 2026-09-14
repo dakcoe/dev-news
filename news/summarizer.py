@@ -338,21 +338,24 @@ def _call_why(candidate: dict, article: dict, body: str, provider: str,
 MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 다음 모델로, 다 떨어지면 서킷 브레이커
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
 
-# 주 모델이 한도에 걸렸을 때 넘어갈 모델. Groq의 무료 한도는 모델별로 따로
-# 세므로, 다른 모델로 갈아타면 예산이 새로 생긴다 (why_model 분리가 통한 이유와
-# 같다). 없으면 그 회차의 남은 기사가 통째로 미게시됐다 — 2026-09-14 회차에서
-# 19건 중 15건만 올라갔다.
+# 한도(429)에 걸렸을 때 넘어갈 모델. Groq의 무료 한도는 모델별로 따로 세므로
+# 갈아타면 예산이 새로 생긴다. 없으면 그 회차의 남은 기사가 통째로 미게시됐다 —
+# 2026-09-14 회차에서 19건 중 15건만 올라갔다.
 #
-# ⚠️ 순서는 글 품질이 아니라 '호출을 덜 쓰고 끝나는가'로 정한다. 여기까지 온
-# 시점은 이미 호출이 모자란 상황이다.
-#   - qwen3.8은 글이 좋지만 다른 나라 문자가 자주 섞인다. 섞이면 재생성 1회 +
-#     번역 치환 1회를 더 쓰고, 그래도 남으면 미게시다. 게다가 why_model이
-#     qwen이라 그 예산은 이미 기사 수만큼 깎여 있다.
-#   - llama-3.3-70b는 번역 뉘앙스가 약해 주 모델에서 밀려났지만(오역 사례는
-#     switch-summarizer-model 참고) 문자는 깨끗하게 낸다.
-# 그래서 llama를 먼저 쓰고, 그것도 막히면 qwen으로 간다.
+# ⚠️ 이 계정에서 실제로 쓸 수 있는 모델만 적는다. 2026-09-14 기준 목록은
+# gpt-oss-120b / gpt-oss-20b / qwen3.8-27b / qwen3.6-27b 넷이다. 없는 이름을
+#적으면 폴백이 404로 죽는다 (llama-3.3-70b-versatile를 적었다가 겪었다).
 FALLBACK_MODELS = {
-    "groq": ["llama-3.3-70b-versatile", "qwen/qwen3.8-27b"],
+    "groq": ["qwen/qwen3.8-27b"],
+    "openrouter": [],
+    "gemini": [],
+}
+
+# 왜중요 전용 체인. 이 항목은 기사에 없는 판단을 쓰는 자리라 글이 좋은 모델을
+# 쓴다. qwen은 다른 나라 문자가 섞이는 일이 있지만 FOREIGN_RE가 걸러내고,
+# 여기서 실패해도 주 모델이 쓴 왜중요가 남으므로 기사는 게시된다.
+WHY_FALLBACK_MODELS = {
+    "groq": ["qwen/qwen3.6-27b"],
     "openrouter": [],
     "gemini": [],
 }
@@ -362,7 +365,8 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                   model: str | None = None, pause: float = 4.0,
                   max_calls: int = 50, stop_after: int | None = None,
                   why_model: str | None = None,
-                  fallback_models: list[str] | None = None) -> list[dict]:
+                  fallback_models: list[str] | None = None,
+                  why_fallback_models: list[str] | None = None) -> list[dict]:
     """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
 
     stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
@@ -388,9 +392,16 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     # 주 모델과 같은 이름이 섞여 있으면 같은 한도를 다시 두드리는 셈이라 뺀다
     chain = [m for m in fallback_models if m and m != model]
 
+    if why_fallback_models is None:
+        env = os.environ.get("LLM_WHY_FALLBACK_MODELS")
+        why_fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
+                               else WHY_FALLBACK_MODELS.get(provider, []))
+    why_chain = [m for m in why_fallback_models if m and m != why_model] if why_model else []
+
     print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"
           + (f" · 왜중요 {why_model}" if why_model else "")
-          + (f" · 예비 {'→'.join(chain)}" if chain else ""))
+          + (f" · 예비 {'→'.join(chain)}" if chain else "")
+          + (f" · 왜중요 예비 {'→'.join(why_chain)}" if why_chain else ""))
 
     calls = 0
     exhausted = False        # 서킷 브레이커 — 열리면 이후 호출을 시도조차 하지 않는다
@@ -421,18 +432,28 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 calls += 1
                 candidate = _parse(_call(prompt, provider, model, api_key))
                 if candidate["ko_title"] or candidate["summary"]:
-                    if why_model and not why_off and calls < max_calls:
+                    while why_model and not why_off and calls < max_calls:
                         calls += 1
                         try:
                             better = _call_why(candidate, article, body, provider,
                                                why_model, api_key)
                             if better:
                                 candidate["why"] = better
+                            break
                         except RateLimited:
+                            # 예비가 있으면 갈아타고 이 기사부터 다시 시도한다.
+                            # 다 떨어지면 주 모델이 쓴 왜중요를 그대로 둔다 —
+                            # 기사는 게시된다.
+                            if why_chain:
+                                why_model = why_chain.pop(0)
+                                print(f"  · 왜중요 한도(429) — 예비 {why_model}로 교체")
+                                continue
                             why_off = True
                             print(f"  · 왜중요 모델 한도(429) — 남은 기사는 {model}의 왜중요를 쓴다")
+                            break
                         except Exception as e:
                             print(f"  · 왜중요 생성 실패({e}) — {model} 결과 유지")
+                            break
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
                                                     candidate["summary"], candidate["why"]]))
                     # 외국 문자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회
