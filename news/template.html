@@ -138,8 +138,18 @@ __ADS_HEAD__
     /* 컴포지터 레이어로 올려 둔다. 이게 없으면 브라우저 판단에 따라 메인
        스레드에서 돌 수 있고, 그러면 로딩 중에 애니메이션이 멈춘다. */
     will-change:transform;backface-visibility:hidden;
-    animation:introReveal .45s steps(10,end) .1s forwards,
-              introCaret .5s steps(1) 3;
+  }
+  /* ⚠️ 글꼴이 준비된 뒤에 시작한다. 이동 거리가 퍼센트라 시작 시점의 글자 폭으로
+     굳는데, 그때 웹폰트가 아직 안 왔으면 대체 글꼴 기준으로 굳어 버린다.
+     윈도우 대체 글꼴 Consolas는 40px에서 한 글자가 21.99px라 걸음이 그만큼
+     짧아지고, 글꼴이 바뀌어 글자가 24px가 되면 커서가 글자 안쪽을 지나간다 —
+     d는 왼쪽이 잘리고 e는 한가운데서 잘리고 아직 안 나올 w·s가 미리 보인다.
+     맥은 대체 글꼴 Menlo가 우연히 24px로 같아서 이 문제가 드러나지 않았다.
+     타이핑 중에는 커서를 깜빡이지 않는다. 다 치고 나서부터 깜빡인다 — 두
+     애니메이션이 제각기 돌면 글자가 나오는 한가운데서 커서가 사라진다. */
+  .intro.ready .intro__cover{
+    animation:introReveal .45s steps(10,end) 0s forwards,
+              introCaret .5s steps(1) .45s 3;
   }
   /* ⚠️ 100%가 아니라 100%-4px 이다. 100%는 덮개 자기 폭(글자 240px + 오른쪽
      여유 4px)이라, 열 걸음으로 나누면 한 걸음이 24.4px가 된다. 글자 한 칸은
@@ -1397,8 +1407,23 @@ WIDE.addEventListener('change', function(){
      끝나므로 한 박자 쉬고 1,100ms에 걷는다. 로딩이 더 걸리면 그만큼 더 보인다.
      걷는 방식은 opacity — 뒤 콘텐츠가 겹쳐 드러난다. 컴포지터 몫이라
      메인 스레드가 막혀도 끊기지 않는다(EASE power3.inOut, base 0.6s). */
-  var left=Math.max(0, 1100-performance.now());
-  setTimeout(function(){ el.classList.add('is-done'); }, left);
+  /* 글꼴이 오면 그때 애니메이션을 켠다. 글꼴이 끝내 안 와도 250ms 뒤에는
+     켠다 — 대체 글꼴로라도 타이핑은 보이는 편이 낫다. 어느 쪽이든 켜진 뒤에
+     최소 1.1초는 보여 준다. */
+  var started = false;
+  function start(){
+    if(started) return;
+    started = true;
+    el.classList.add('ready');
+    // 켜진 순간부터 타이핑 0.45초 + 여운 0.35초를 보장한다.
+    setTimeout(function(){ el.classList.add('is-done'); }, 800);
+  }
+  if(document.fonts && document.fonts.load){
+    document.fonts.load("700 40px 'JBM Intro'").then(start).catch(start);
+    setTimeout(start, 250);
+  } else {
+    start();
+  }
 })();
 </script>
 </body>
