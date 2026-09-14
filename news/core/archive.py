@@ -1,6 +1,6 @@
 """수집한 기사를 월별 샤드에 무한 누적한다 (SPEC Phase 2.1~2.2).
 
-원칙: 저장과 표시를 분리한다. 저장은 data/articles/YYYY-MM.json에 무제한 누적하고,
+원칙: 저장과 표시를 분리한다. 저장은 docs/data/articles/YYYY-MM.json에 무제한 누적하고,
 표시 범위(index.html에 굽는 기간)는 빌드가 recent()로 골라낸다.
 
 단일 파일 무한 성장은 git 히스토리를 부풀리고 GitHub의 파일 100MB push 제한에
@@ -15,9 +15,12 @@ from datetime import datetime, timedelta, timezone
 
 from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
 from news.core.dedup import normalize_url
-DIR = os.path.join(ROOT, "data", "articles")
+# 정본은 docs/ 아래다. GitHub Pages가 서빙하는 곳이라 방문자가 여기서 받아 가고,
+# 빌드도 여기서 읽는다. 예전에는 data/에 두고 docs/로 복사해서 같은 내용이 두 벌
+# 커밋됐다 — 회차마다 1.6MB가 두 번씩 새 덩어리로 쌓였다.
+DIR = os.path.join(ROOT, "docs", "data", "articles")
 LEGACY_PATH = os.path.join(ROOT, "data", "articles.json")
-INDEX_PATH = os.path.join(ROOT, "data", "search-index.json")
+INDEX_PATH = os.path.join(ROOT, "docs", "data", "search-index.json")
 
 
 def _month(batch_iso: str) -> str:
@@ -121,14 +124,34 @@ def recent(articles: list[dict], days: int) -> list[dict]:
     return kept
 
 
-def write_search_index(articles: list[dict], path: str = INDEX_PATH) -> None:
-    """전체 게시 기사의 경량 색인 (기사당 100~200바이트). 빌드마다 재생성."""
-    idx = [{"t": a.get("ko_title") or a.get("title", ""),
+def _index_entry(a: dict) -> dict:
+    return {"t": a.get("ko_title") or a.get("title", ""),
             "u": a.get("url", ""),
             "m": _month(a.get("batch", "")),
             "s": a.get("source", ""),
             "g": a.get("tags", []),
             "d": (a.get("batch", "") or "")[:10]}
-           for a in articles]
-    _save_json(path, idx)
-    print(f"[index] 검색 인덱스 {len(idx)}건 재생성")
+
+
+def write_search_index(articles: list[dict], path: str = INDEX_PATH) -> None:
+    """검색용 경량 색인 (기사당 100~200바이트). 기사 샤드와 같이 월별로 나눈다.
+
+    한 파일에 전부 담으면 회차마다 그 파일 전체가 새로 쌓인다 — 6주에 564KB였고
+    1년이면 5MB짜리가 하루 세 번씩 통째로 커밋된다. 월별로 나누면 이번 달 것만
+    바뀌고 지난 달 것은 그대로 있다. 기사 샤드가 이미 쓰는 방식이다.
+
+    path에는 어느 달이 있는지만 적는다. 화면은 그걸 읽고 달별 파일을 받아 붙인다.
+    """
+    by_month: dict[str, list[dict]] = {}
+    for a in articles:
+        e = _index_entry(a)
+        by_month.setdefault(e["m"] or "unknown", []).append(e)
+
+    base = os.path.dirname(path)
+    os.makedirs(base, exist_ok=True)
+    for m, rows in by_month.items():
+        _save_json(os.path.join(base, f"search-index-{m}.json"), rows)
+
+    _save_json(path, {"months": sorted(by_month)})
+    print(f"[index] 검색 인덱스 {sum(map(len, by_month.values()))}건 · "
+          f"{len(by_month)}개 달로 나눔")

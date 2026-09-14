@@ -7,3 +7,8 @@ venv/
 !.env.example
 .claude/settings.local.json
 .DS_Store
+
+# 아카이브 정본은 docs/data/ 다 — GitHub Pages가 서빙하는 곳이다.
+# data/ 아래 사본은 옛 구조의 잔재라 추적하지 않는다.
+data/articles/
+data/search-index.json
