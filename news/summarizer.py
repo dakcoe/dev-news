@@ -231,6 +231,14 @@ def _parse(text: str) -> dict:
 
 
 # ---------------------------------------------------------------- providers
+class ModelGone(Exception):
+    """그 모델이 없거나 권한이 없다(404 model_not_found).
+
+    재시도해도 같은 답이 온다. 없는 이름을 체인에 적었다가 기사마다 3회씩
+    재시도하며 호출 12회를 태우고 4건을 떨궜다 (2026-09-14 22:38 회차).
+    """
+
+
 class RateLimited(Exception):
     """429. 서버가 알려준 대기 시간을 담는다."""
 
@@ -268,6 +276,8 @@ def _call_openai_compatible(prompt: str, model: str, api_key: str, url: str) -> 
     resp = requests.post(url, headers=headers, json=payload, timeout=90)
     if resp.status_code == 429:
         raise RateLimited(_retry_after(resp))
+    if resp.status_code == 404 and "model_not_found" in resp.text:
+        raise ModelGone(model)
     if resp.status_code >= 400:
         raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:300]}")
     # 추론형 모델은 content가 없고 reasoning만 오는 경우가 있다 — None이 아니라
@@ -440,6 +450,14 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                             if better:
                                 candidate["why"] = better
                             break
+                        except ModelGone:
+                            print(f"  · 왜중요 모델 없음({why_model})")
+                            if why_chain:
+                                why_model = why_chain.pop(0)
+                                print(f"  · 왜중요 예비 {why_model}로 교체")
+                                continue
+                            why_off = True
+                            break
                         except RateLimited:
                             # 예비가 있으면 갈아타고 이 기사부터 다시 시도한다.
                             # 다 떨어지면 주 모델이 쓴 왜중요를 그대로 둔다 —
@@ -476,6 +494,16 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                     break
                 print(f"  · 파싱 실패, 재시도 {attempt + 1}")
                 attempt += 1
+            except ModelGone:
+                # 재시도해도 같은 답이다. 이 모델을 버리고 다음으로 넘어간다.
+                print(f"  · 모델 없음({model}) — 체인에서 버린다")
+                if chain:
+                    model = chain.pop(0)
+                    retries_429 = 0
+                    print(f"  · 예비 모델 {model}로 교체하고 계속한다")
+                    continue
+                exhausted = True
+                break
             except RateLimited as e:
                 retries_429 += 1
                 if retries_429 > MAX_429_RETRIES or e.wait > MAX_RETRY_WAIT:

@@ -125,3 +125,54 @@ def test_체인에_없는_모델을_적지_않는다():
 def test_왜중요_체인이_groq에_있다():
     chain = S.WHY_FALLBACK_MODELS["groq"]
     assert chain, "왜중요 기본 체인이 비어 있다"
+
+
+# ---------------- 없는 모델 (404) ----------------
+
+def test_없는_모델은_재시도하지_않고_바로_버린다(monkeypatch):
+    """2026-09-14 22:38 회차에서 체인에 없는 이름을 적어 기사마다 3회씩
+    재시도했다. 호출 12회를 태우고 4건이 미게시됐다. 404는 재시도해도 같은
+    답이므로 즉시 다음 모델로 넘어간다."""
+    seen = []
+
+    def fake_call(prompt, provider, model, api_key):
+        seen.append(model)
+        if model == "없는-모델":
+            raise S.ModelGone(model)
+        return "번역제목: 제목\n요약: 요약이다.\n왜중요: 이유다."
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setattr(S.time, "sleep", lambda *a: None)
+    out = S.summarize_all(ARTICLES, model="없는-모델", pause=0, max_calls=50,
+                          fallback_models=["살아있는-모델"])
+
+    assert seen.count("없는-모델") == 1, f"재시도했다: {seen}"
+    assert all(a["llm_done"] for a in out)
+
+
+def test_없는_모델뿐이면_회차를_접는다(monkeypatch):
+    def fake_call(prompt, provider, model, api_key):
+        raise S.ModelGone(model)
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setattr(S.time, "sleep", lambda *a: None)
+    out = S.summarize_all(ARTICLES, model="없는-모델", pause=0, max_calls=50,
+                          fallback_models=[])
+    assert not any(a["llm_done"] for a in out)
+
+
+def test_404_응답이_ModelGone으로_올라온다(monkeypatch):
+    """Groq의 실제 응답 형태를 그대로 쓴다."""
+    class FakeResp:
+        status_code = 404
+        headers: dict = {}
+        text = ('{"error":{"message":"The model `x` does not exist or you do not '
+                'have access to it.","type":"invalid_request_error",'
+                '"code":"model_not_found"}}')
+
+    monkeypatch.setattr(S.requests, "post", lambda *a, **k: FakeResp())
+    try:
+        S._call_openai_compatible("p", "x", "k", "http://x")
+    except S.ModelGone:
+        return
+    raise AssertionError("ModelGone이 나오지 않았다")
