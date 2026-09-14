@@ -46,7 +46,10 @@ def _github_readme(owner: str, repo: str) -> str | None:
     for filename in ("README.md", "readme.md", "README.rst", "README"):
         url = f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{filename}"
         try:
-            resp = http.get(url, timeout=10)
+            # README도 상한을 건다. 저장소에 따라 수 MB짜리가 있다.
+            # content-type이 text/plain이라 형식 검사로는 안 걸린다.
+            resp = http.get_capped(url, timeout=10, max_bytes=512 * 1024,
+                                   allow_types=("text",))
             if resp.status_code == 200 and len(resp.text.strip()) >= MIN_CONTENT_CHARS:
                 return resp.text.strip()[:MAX_CONTENT_CHARS]
         except Exception:
@@ -89,7 +92,9 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None
         return readme, f"https://opengraph.githubassets.com/1/{owner}/{repo}", None, None
 
     try:
-        resp = http.get(url, timeout=15)
+        # 본문 상한을 건다. 상한이 없으면 링크된 대용량 파일이 통째로 내려와
+        # 러너 메모리를 먹고, 5xx면 그걸 세 번 반복한다.
+        resp = http.get_capped(url, timeout=15)
     except Exception as e:
         return None, None, classify(None, _error_kind(e)), None
 
