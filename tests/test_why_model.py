@@ -77,11 +77,36 @@ def test_why_429_stops_further_why_calls():
     os.environ["GROQ_API_KEY"] = "test"
     try:
         out = S.summarize_all([dict(ARTICLE), dict(ARTICLE)], pause=0,
-                              model="main-model", why_model="why-model")
+                              model="main-model", why_model="why-model",
+                              why_fallback_models=[])   # 예비 없이 종전 동작
     finally:
         S._call = orig
 
     assert seen == ["main-model", "why-model", "main-model"]   # 두 번째 기사엔 안 부른다
+    assert all(a["llm_done"] for a in out)
+
+
+def test_why_429면_예비_왜중요_모델로_갈아탄다():
+    """왜중요는 기사에 없는 판단을 쓰는 자리라 글이 좋은 모델을 붙잡는다.
+    첫 모델이 한도에 걸리면 끄지 말고 다음 모델로 넘어간다."""
+    def fake_call(prompt, provider, model, api_key):
+        seen.append(model)
+        if "왜 중요한가" in prompt and model == "why-1":
+            raise S.RateLimited(30)
+        return MAIN
+
+    seen = []
+    orig, S._call = S._call, fake_call
+    os.environ["GROQ_API_KEY"] = "test"
+    try:
+        out = S.summarize_all([dict(ARTICLE), dict(ARTICLE)], pause=0,
+                              model="main-model", why_model="why-1",
+                              why_fallback_models=["why-2"])
+    finally:
+        S._call = orig
+
+    assert "why-2" in seen
+    assert seen.count("why-1") == 1        # 막힌 모델을 다시 부르지 않는다
     assert all(a["llm_done"] for a in out)
 
 
