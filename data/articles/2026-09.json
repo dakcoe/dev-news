@@ -1,5 +1,433 @@
 [
  {
+  "title": "commit-rewriter 0.1",
+  "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+  "description": "Release: commit-rewriter 0.1 I vibe-coded this little web app the other day to help edit the commit messages for the Datasette security releases . The initial commits were full of coding agent cruft and references to issue IDs from our private repository, so they weren't fit for publication. If you want to edit the commit messages for a repository you can run it like this: uvx commit-rewriter path",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789345690.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.simonwillison/static/2026/commit-rewriter.webp",
+  "link_status": "ok",
+  "ko_title": "commit-rewriter 0.1",
+  "summary": "이 웹 앱은 Datasette 보안 릴리즈의 커밋 메시지를 편집하기 위해 만든 도구이다. 지정된 저장소 경로를 인자로 실행하면 첫 편집 커밋부터 최신 커밋까지 모두 재작성한다. 편집 후 현재 상태를 타임스탬프가 붙은 브랜치로 저장해 필요 시 되돌릴 수 있다.",
+  "why": "코딩 에이전트로 생성한 커밋 메시지에 사내 이슈 ID나 불필요한 텍스트가 섞여 있으면 공개 전 정리해야 한다. 이 도구는 첫 편집 커밋부터 최신 커밋까지 일괄 재작성해준다. 수정 후 타임스탬프가 붙은 브랜치가 자동으로 생성되어 원상복구가 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "shot-scraper 1.12",
+  "url": "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+  "description": "Release: shot-scraper 1.12 I've added WebP support to my shot-scraper screenshot automation tool. You can now take a WebP screenshot of a web page like this: shot-scraper https://simonwillison.net -o screenshot.webp --quality 80 The --quality option sets the quality - without that option the WebP file will be lossless. In my experience WebP screenshots are almost always significantly smaller in fi",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789343894.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "shot-scraper 1.12 — 웹사이트 스크린샷·비디오·스크래핑 CLI 도구",
+  "summary": "shot-scraper에 WebP 지원이 추가돼 웹 페이지를 WebP 형식으로 저장할 수 있다. `--quality` 옵션으로 손실 압축 품질을 지정할 수 있으며, 옵션 없이 저장하면 무손실이다. WebP 스크린샷은 JPEG·PNG 대비 파일 크기가 크게 줄어든다. 이 기능은 작성자가 새 커밋-리라이터 도구의 스크린샷을 만들기 위해 사용했다.",
+  "why": "스크린샷 자동화 파이프라인에 WebP 출력을 추가하면 저장 용량을 크게 줄일 수 있다. 품질 옵션을 지정하지 않으면 무손실로 저장되므로 기존 JPEG나 PNG와 용량 차이가 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "There Is No AI (It's Just People) with Jaron Lanier",
+  "url": "https://singjupost.com/startalk-there-is-no-ai-really-its-just-people-w-jaron-lanier-transcript/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 63,
+  "comments": 79,
+  "published_at": 1789328466,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 963.0,
+  "image": "https://singjupost.com/wp-content/uploads/2026/05/StarTalk-Podcast-There-Is-No-AI-Really-Its-Just-People-with-Jaron-Lanier.jpg",
+  "link_status": "ok",
+  "ko_title": "AI는 존재하지 않는다 (그냥 사람일 뿐) – 자론 라니어와 함께",
+  "summary": "",
+  "why": "AI를 독립된 존재가 아닌 인간의 협업 도구로 재정의하는 관점을 제시한다. 백엔드와 AI 시스템 설계 시 데이터 주권과 대체 비즈니스 모델을 고려해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "Diagram Design - AI가 만드는 다이어그램에 디자인 규칙을 더하는 스킬",
+  "url": "https://news.hada.io/topic?id=33664",
+  "description": "Claude Code/Codex/Pi 등에서 블로그와 문서, 발표 자료에 넣을 다이어그램 을 자연어로 요청해 만드는 에이전트 스킬 비슷한 둥근 상자와 화살표를 늘어놓는 대신, 정보의 위계와 읽는 순서가 드러나도록 배치와 글꼴, 색상, 연결선 규칙을 적용 아키텍처...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789345802.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33664?v=7491d9fe0c4565612919958dd889a974",
+  "link_status": "ok",
+  "ko_title": "Diagram Design - AI가 만드는 다이어그램에 디자인 규칙을 더하는 스킬",
+  "summary": "Claude Code·Codex·Pi 등에서 자연어로 다이어그램을 생성하고, 정보 위계와 읽는 순서를 고려해 배치·글꼴·색상·연결선 규칙을 적용한다. 아키텍처·시퀀스·ER·타임라인·조직도·사용자 여정·차트 등 다양한 유형을 지원하며, 브랜드 색상·글꼴을 추출해 스타일을 프로필로 저장한다. 결과물은 HTML 안에 SVG·CSS 형태로 제공되고, 정적 출력이 가능하며 SVG·PNG 내보내기와 접근성 검사를 포함한다. MIT 라이선스로 배포된다.",
+  "why": "Claude Code나 Codex에서 다이어그램을 만들 때 디자인 규칙을 자동 적용해 준다. 브랜드 스타일을 프로필로 저장해 여러 프로젝트에서 재사용할 수 있다. 결과물은 정적 HTML로 나와 빌드 과정 없이 바로 공유할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "내 Git 호스트가 정적 사이트 생성기라면?",
+  "url": "https://news.hada.io/topic?id=33662",
+  "description": "sorcery 는 저장소가 갱신될 때 개요, 브랜치별 최신 디렉터리 트리, 구문 강조된 소스 코드를 정적 HTML로 생성하는 Git 저장소 뷰어임 작은 개인 서버에서 Forgejo가 디스크 부족과 스크래퍼 부하로 중단되는 문제에 대응해, 사전 생성 비용 을 치르고 이후 요청은...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789344548.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33662?v=efd9ac6554648a2510df7b04dc459fb0",
+  "link_status": "ok",
+  "ko_title": "내 Git 호스트가 정적 사이트 생성기라면?",
+  "summary": "sorcery는 저장소가 업데이트될 때 개요, 브랜치별 최신 디렉터리 트리, 구문 강조된 소스 코드를 정적 HTML로 생성하는 Git 뷰어다. 사전 생성된 정적 파일을 통해 요청을 저비용으로 처리하고, 과거 버전은 브라우저 내 JavaScript Git 클라이언트가 .git 디렉터리와 보조 JSON을 읽어 렌더링한다. Forgejo의 디스크·메모리 부족 문제를 피하기 위한 대안으로 제시된다.",
+  "why": "개인 서버에서 Forgejo를 돌리다 디스크 부족이나 스크래퍼 부하로 중단된 경험이 있다면 대안이 될 수 있다. 최신 코드는 정적 파일로 빠르게 서빙하고, 과거 이력은 브라우저에서 렌더링하는 구조다. 협업 기능이 필요 없는 개인 코드 공유나 모바일 확인 용도에 적합하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "hardware"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "말조심하라: Apple이 상시 청취 기술의 악몽 같은 세상으로 문을 열다",
+  "url": "https://news.hada.io/topic?id=33661",
+  "description": "Apple이 최신 Apple Watch를 대상으로 상시 청취 기능 출시를 예고함. Live Rewind는 최근 15초의 주변 소리를 텍스트로 확인하게 하고, Siri Recap은 하루 동안의 대화를 요약해 iPhone에 보고서로 제공함 Apple은 오디오를 녹음하거나 저장하지 않으며 , 대화 요약...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789344368.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33661?v=9ed755079821b076612bfdad47768de9",
+  "link_status": "ok",
+  "ko_title": "말조심하라: Apple이 상시 청취 기술의 악몽 같은 세상으로 문을 열다",
+  "summary": "Apple은 최신 Apple Watch에 Live Rewind와 Siri Recap 기능을 도입해 최근 15초 음성을 텍스트로 표시하고 하루 대화를 요약해 iPhone에 보고한다. 오디오는 녹음·저장되지 않으며 요약 데이터는 종단 간 암호화로 보호한다. 그러나 기능이 주변 사람의 대화까지 지속적으로 청취해 일부 주의 동의법과 충돌할 가능성이 제기된다.",
+  "why": "상시 청취 기능이 켜져 있으면 주변 사람의 대화까지 수집되므로, 미국 일부 주의 모든 당사자 동의 요건과 충돌할 수 있다. 대화 상대가 수집을 거부할 방법이 제공되지 않아, 해당 지역에서는 법적 분쟁 위험이 남는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "태양 내부의 ‘지문’, 과거 행성을 삼켰는지 밝혀낼 수 있어",
+  "url": "https://news.hada.io/topic?id=33660",
+  "description": "젊은 태양이 슈퍼지구를 삼켰다면 , 그 사건이 남긴 구조적 변화와 화학적 흔적을 현재 태양 내부에서도 탐지할 수 있다는 연구 결과가 나옴 태양 진화 모형은 지구 질량의 5~10배인 행성 을 삼킨 시나리오를 지지하며, 태양 내부 관측과 낮은 리튬 함량을 동시에 재...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789342342.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33660?v=ec1e67caf969ef0b497527bd8f23c138",
+  "link_status": "ok",
+  "ko_title": "태양 내부의 ‘지문’, 과거 행성을 삼켰는지 밝혀낼 수 있어",
+  "summary": "연구진은 MESA 항성 진화 코드를 활용해 초기 태양이 지구 질량의 5~10배인 슈퍼지구를 삼켰을 가능성을 검증했다. 해당 시나리오는 현재 태양 내부의 구조적 변화와 낮은 리튬 함량을 동시에 재현한다. 계산 결과, 행성이 외곽층을 통과해도 질량 손실이 거의 없어 오래 지속되는 흔적을 남길 수 있음이 제시되었다. 향후 태양진동학 관측 등을 통해 이러한 흔적을 독립적으로 확인하는 것이 과제로 남았다.",
+  "why": "MESA 코드로 행성 흡수 시나리오를 검증하는 방식은 백엔드 시스템의 과거 장애나 설정 변경 이력을 재현하는 데 참고할 수 있다. 다만 이 연구는 천체물리학 분야에 국한된 결과이므로 개발 업무에 직접적인 조치나 변경 사항은 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "스타트업을 강력하게 만드는 법",
+  "url": "https://news.hada.io/topic?id=33659",
+  "description": "매출을 늘리는 방법보다 회사를 더 강력하게 만드는 방법 을 물으면, 점진적 개선을 넘어 기업 가치를 몇 자릿수나 키울 수 있는 전환을 발견하기도 함 고객 관계와 자금 흐름 을 확보하고, 다른 기업이 제품 위에 사업을 구축하게 하거나 네트워크 효과를 만들면 회...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789339356.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33659?v=b28df5009461839c6aa3e57bea38f467",
+  "link_status": "ok",
+  "ko_title": "스타트업을 강력하게 만드는 법",
+  "summary": "기업 가치를 급격히 높이는 전환 전략으로 고객 관계와 자금 흐름을 직접 확보하고, 풀스택 사업 모델이나 부수 기능 제품화를 통해 플랫폼 효과를 창출한다. 네트워크 효과와 마켓플레이스 전환을 모색하면 초기 스타트업도 생태계 주도자로 성장할 수 있다.",
+  "why": "AI 에이전트 결제 스타트업이라면 에이전트 간 상호 결제 가능성을 검토할 시점이다. 이 구조가 성립하면 단순 결제 도구가 마켓플레이스로 전환되어 사업 형태가 바뀐다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "AI recursive self-improvement might not come so quickly after all",
+  "url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 61,
+  "comments": 56,
+  "published_at": 1789325384,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 890.0,
+  "image": "https://wp.technologyreview.com/wp-content/uploads/2026/08/research-target2a.jpg?resize=1200,600",
+  "link_status": "ok",
+  "ko_title": "AI 재귀적 자기 개선이 생각보다 빨리 이루어지지 않을 수도 있다",
+  "summary": "프린스턴 대학 연구팀은 AI 에이전트가 엔지니어링 문제는 해결하지만, 최상위 학회 논문 수준의 창의적 연구를 수행하지 못한다는 결과를 발표했다. 연구진은 기존 평가 방식이 좁은 과제에 국한돼 있다고 지적하고, 논문 미공개 고품질 연구 질문에 답하도록 요구하는 “shadow evaluation” 방식을 제안했다. 현재 LLM은 코드 작성·데이터 생성·칩 최적화 등은 가능하지만, 판단·취향이 필요한 개방형 연구에는 한계가 있다.",
+  "why": "AI가 엔지니어링 과제는 해결해도 창의적 연구에는 한계가 있다는 점이 확인됐다. 재귀적 자기 개선에 의존하는 자동화 로드맵을 세울 때 이 한계를 고려해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "Data collected by cars and sold to third parties",
+  "url": "https://www.theverge.com/column/994172/your-car-is-selling-your-data",
+  "description": "https://web.archive.org/web/20260913134705/https://www.theve... https://archive.ph/TWEVZ",
+  "source": "hackernews",
+  "upvotes": 284,
+  "comments": 152,
+  "published_at": 1789307108,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 812.0,
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/gettyimages-144097019.jpg?quality=90&strip=all&crop=0%2C10.678370919471%2C100%2C78.643258161058&w=1200",
+  "link_status": "ok",
+  "ko_title": "자동차가 수집한 데이터를 제3자에 판매",
+  "summary": "연방거래위원회는 올해 초 제너럴 모터스(GM)에 고객 데이터를 소비자 보고 기관 및 제3자 브로커에 판매하는 것을 5년간 금지하는 조치를 내렸다. GM은 온스타 서비스 가입 시 활성화되는 Smart Driver 기능을 통해 운전 습관·위치 데이터를 수집해 보험사 위험 프로파일에 활용했으며, 일부 운전자는 이로 인해 보험료가 상승했다. FTC 합의에 따라 GM은 위치 추적을 쉽게 끄고, 사용자가 데이터에 접근·삭제할 수 있도록 해야 한다. Mozilla 재단 연구진은 2023년 주요 자동차 제조사의 개인정보 보호정책을 조사한 결과, 모두 “심각한 프라이버시 및 보안 문제”가 있다고 결론지었다.",
+  "why": "자동차 데이터 수집이 보험료 인상으로 직결되는 구조가 확인됐다. 연결 서비스 가입 시 동의 절차가 불투명하므로 가입 전 데이터 활용 범위를 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "Due to concerns about malicious applications, GPT2 will not be released (2019)",
+  "url": "https://openai.com/index/better-language-models/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 52,
+  "comments": 23,
+  "published_at": 1789341077,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "cross_source_count": 1,
+  "score": 773.0,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/8df9d1ca-5128-41d0-81527fd4752f/488482a9bebc41f8d72e1d0d423a5891/better-language-models.jpg?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "악성 활용 우려로 GPT-2 비공개 (2019)",
+  "summary": "연구팀은 40 GB 인터넷 텍스트로 1.5 억 파라미터 규모의 GPT-2를 학습했지만, 악용 가능성을 이유로 전체 모델을 공개하지 않았다. 대신 연구용으로 훨씬 작은 모델과 기술 논문을 제공한다. 이 모델은 사전 학습만으로 질문응답·번역·요약 등 여러 작업을 어느 정도 수행한다.",
+  "why": "사전 학습만으로 다중 작업을 수행하는 대규모 모델이 악용 우려로 비공개된 사례다. 이는 모델 배포 시 안전성 검토가 필수 절차가 되었음을 보여준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "release"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "Altman, Musk, and Hassabis back Amodei's call to add independent oversight",
+  "url": "https://the-decoder.com/altman-musk-and-hassabis-back-amodeis-call-to-add-independent-oversight/",
+  "description": "Sam Altman, Elon Musk, and Demis Hassabis back Dario Amodei's call to slow down AI development, at least in part. Altman says OpenAI is pushing its IPO to 2027 over safety concerns. The article Altman, Musk, and Hassabis back Amodei's call to add independent oversight appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789289580.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/RSI_recursive_self_improvement.png",
+  "link_status": "ok",
+  "ko_title": "Altman·Musk·Hassabis, Amodei의 독립적 감시 추가 요구에 동의",
+  "summary": "OpenAI CEO 샘 알트먼과 일론 머스크, 전 DeepMind CEO 데미스 하사비스가 Anthropic CEO 다리오 아모데이의 AI 연구실 내 독립 감시 도입 제안을 지지한다. 알트먼은 안전 문제를 이유로 올해 OpenAI의 상장을 포기한다는 입장을 밝혔다. 구글 연구원 페이만 밀란파르는 자체 개선 시스템의 불안정성을 들어 제안에 반대한다.",
+  "why": "독립 감시 도입 논의가 진행 중이므로 AI 모델 배포 시 안전성 검증 절차가 강화될 수 있다. 자체 개선 시스템의 불안정성을 지적하는 반론도 있어 속도 제한이 반드시 적용되지는 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "industry"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "Your AI Agent Has No Colleagues",
+  "url": "https://dev.to/fuyuki0/your-ai-agent-has-no-colleagues-514b",
+  "description": "\"The coordination of the builders is not direct. It is the work already done that directs and...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 5,
+  "published_at": "2026-09-13T20:51:42Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 679.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk1qdgqig6kipe50yoyaj.png",
+  "link_status": "ok",
+  "ko_title": "당신의 AI 에이전트는 동료가 없다",
+  "summary": "에이전트 프레임워크에서 툴 호출이 실패하면 모델이 재시도를 판단할 충분한 정보를 갖지 못하고 무작위로 재시도한다. 동일한 422 validation_error가 반복될 때, 필드 이름 변경인지 일시적 서비스 장애인지 구분할 수 없어 비효율적인 재시도가 발생한다. 시스템 프롬프트에 “즉시 재시도하지 말라”는 규칙을 추가해도, 필요한 상황 정보를 제공하지 않으면 모델은 여전히 재시도를 선택한다.",
+  "why": "툴 호출 실패 시 재시도 판단에 필요한 상황 정보가 빠져 있어 비효율적인 재시도가 반복된다. 시스템 프롬프트에 재시도 금지 규칙만 추가해서는 이 문제를 해결할 수 없다. 재시도 전 일시적 장애인지 스키마 변경인지 구분할 수 있는 정보를 제공해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "AI Avatar v20, Cursor Avatar, Notification Avatar (Voxel Avatar)🧊",
+  "url": "https://dev.to/webdeveloperhyper/ai-avatar-v20-cursor-avatar-notification-avatar-voxel-avatar-4dd2",
+  "description": "Intro   AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-09-13T23:30:12Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 673.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fw03r4jpc38l2bc7fosv1.png",
+  "link_status": "ok",
+  "ko_title": "AI 아바타 v20, 커서 아바타, 알림 아바타 (복셀 아바타)",
+  "summary": "AI Avatar는 VS Code 사이드바와 브라우저 사이드 패널에 표시되는 무료 앱으로, Claude Code·GitHub Copilot·ChatGPT·Claude와 연동해 아바타가 반응한다. 이번 업데이트에서는 복셀 정원 기반의 아이들 게임 모드, 무작위 배경을 제공하는 칼레이도스코프 모드, 커서와 알림에 반응하는 아바타, 그리고 설정이 간편한 Piper TTS를 추가했다. 3D 꽃 객체는 Three.js로 직접 구현했으며, 기존 TTS인 Kokoro보다 Piper TTS가 더 쉬운 옵션으로 제공된다.",
+  "why": "기존 Kokoro TTS보다 설정이 간편한 Piper TTS 옵션이 추가됐다. 음성 출력 지연을 줄이고 설정 부담을 낮추고자 한다면 이 기능을 확인하라.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "web"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
+  "title": "From Projects to Products in the AI Age: Why Ownership Matters More When Prototypes Are Free",
+  "url": "https://dev.to/debashish_ghosal/from-projects-to-products-in-the-ai-age-why-ownership-matters-more-when-prototypes-are-free-3d0k",
+  "description": "TLDR: AI has made prototypes, POCs and MVPs cheap — a plausible demo in days. What has not gotten...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-09-13T23:52:35Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "cross_source_count": 1,
+  "score": 673.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9jk1cdwh5yk1dc58voh5.png",
+  "link_status": "ok",
+  "ko_title": "프로젝트에서 제품으로, AI 시대: 프로토타입이 무료일 때 소유권이 더 중요한 이유",
+  "summary": "AI 덕분에 프로토타입·POC·MVP를 며칠 안에 만들 수 있게 되었지만, 이후 단계인 신뢰성·채택·거버넌스·운영 비용은 여전히 비싸다. 프로젝트 중심 팀은 시연은 빠르게 제공하지만, 소유권이 없어서 문제 해결이 지속되지 않는다. 제품 중심 팀은 지속적인 소유와 건강 지표를 관리해 장기적인 가치를 창출한다.",
+  "why": "프로토타입 제작 비용은 줄었지만 운영과 거버넌스 비용은 그대로다. 팀이 프로젝트 완료를 목표로 하면 같은 문제가 반복된다. 지속적인 소유권과 건강 지표 관리를 통해 장기적 가치를 확보해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-14T09:44:01.196106+09:00",
+  "batch_label": "9월 14일 09:44"
+ },
+ {
   "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
   "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
   "description": "",
