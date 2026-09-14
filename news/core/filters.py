@@ -24,6 +24,11 @@ from news.summarizer import IRRELEVANT
 #
 # 대신 차단 목록이 무거운 일을 한다. "개발 기사가 아닌 것"(연예·건강·정치·스포츠)은
 # 닫힌 갈래라 목록으로 감당된다. 차단은 면제 출처에도 적용된다.
+#
+# ⚠️ 2026-09-15 현재 켜져 있는 출처는 전부 여기 들어 있다(trendshift는 source가
+# "github"으로 기록된다). 즉 키워드 목록은 지금 한 건도 판정하지 않는다. 그래도
+# 지우지 않는 이유는 둘이다 — reddit이 꺼져 있을 뿐 코드는 준비돼 있고(승인받으면
+# 켜진다), 새 출처를 붙일 때 기본값이 "검사받는 쪽"이어야 안전하다.
 TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic", "hackernews", "lobsters"}
 
 
