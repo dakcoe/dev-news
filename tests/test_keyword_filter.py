@@ -18,11 +18,17 @@ KW = ["ai", "go", "git", "api", "cli", "container", "release", "agent",
       "machine learning", "security", "python"]
 
 
-def _art(title, source="hackernews", description=""):
+# ⚠️ 화이트리스트가 실제로 도는 출처를 써야 한다. 해커뉴스·Lobsters는 개발자가
+# 고른 목록이라 면제 대상이 됐다(TRUSTED) — 그걸로 검사하면 무엇이든 통과해
+# 이 파일 전체가 아무것도 안 보게 된다.
+UNTRUSTED = "reddit"
+
+
+def _art(title, source=UNTRUSTED, description=""):
     return {"title": title, "source": source, "description": description}
 
 
-def _passes(title, keywords=None, source="hackernews"):
+def _passes(title, keywords=None, source=UNTRUSTED):
     kept = keyword_filter([_art(title, source)], keywords or KW)
     return len(kept) == 1
 

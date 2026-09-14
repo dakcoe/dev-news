@@ -17,7 +17,21 @@ from news.summarizer import IRRELEVANT
 
 # 키워드 화이트리스트를 적용하지 않는 출처. 목록에 한국어가 없어서 긱뉴스
 # 한국어 제목이 통과할 수 없기 때문이다 — 차단 목록은 여기에도 적용된다.
-TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic"}
+# 화이트리스트를 면제할 출처. 개발자들이 이미 골라 놓은 목록이라 "개발 기사인가"를
+# 다시 판정할 이유가 없다. 해커뉴스·Lobsters를 여기에 넣지 않았을 때, 176개 키워드로도
+# uBlock Origin·Nitter·페르마 정리 형식화 같은 기사가 계속 탈락했다 — 개발 어휘는
+# 끝없이 늘어나서 목록으로 따라잡을 수 없다.
+#
+# 대신 차단 목록이 무거운 일을 한다. "개발 기사가 아닌 것"(연예·건강·정치·스포츠)은
+# 닫힌 갈래라 목록으로 감당된다. 차단은 면제 출처에도 적용된다.
+TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic", "hackernews", "lobsters"}
+
+
+# 설명문에는 링크가 흔하다. 주소 문자열 안의 글자가 키워드로 잡히면 기사 주제와
+# 무관하게 통과한다 — 게재된 해커뉴스·Lobsters 535건 중 44건이 그렇게 들어왔다.
+# "…further discussion: https://simonwillison.net/…" 의 https가 http 키워드를,
+# 주소에 든 ai·github·api가 각각 그 키워드를 대신 물어 준 것이다.
+_URL_RE = re.compile(r"https?://\S+|www\.\S+")
 
 
 @lru_cache(maxsize=8)
@@ -31,6 +45,11 @@ def _keyword_re(keywords: tuple[str, ...]) -> re.Pattern[str]:
     (`containers`·`released`), 3글자 이하는 복수형만 받는다 — 짧은 키워드에 시제
     어미를 허용하면 `going`(go+ing)·`aid`(ai+d)가 다시 새기 때문이다.
 
+    ⚠️ 뒤에 붙는 숫자는 막지 않는다. 막으면 `Qwen3.8`·`GPT5`·`java8`처럼 버전이
+    붙은 이름이 통째로 빠진다 — 모델 발표 기사는 거의 다 이 모양이라 실제로
+    DeepSeek·GLM·Qwen 발표가 전부 탈락하고 있었다. 앞은 여전히 막으므로
+    `said`의 ai는 안 걸린다.
+
     한글은 영숫자가 아니므로 한국어 제목은 이 경계 조건에 영향받지 않는다.
     """
     short = sorted((k for k in keywords if len(k) <= 3), key=len, reverse=True)
@@ -40,7 +59,7 @@ def _keyword_re(keywords: tuple[str, ...]) -> re.Pattern[str]:
         parts.append("(?:" + "|".join(re.escape(k) for k in long_) + ")(?:s|es|ed|ing|d)?")
     if short:
         parts.append("(?:" + "|".join(re.escape(k) for k in short) + ")s?")
-    return re.compile(r"(?<![a-z0-9])(?:" + "|".join(parts) + r")(?![a-z0-9])")
+    return re.compile(r"(?<![a-z0-9])(?:" + "|".join(parts) + r")(?![a-z])")
 
 
 @lru_cache(maxsize=8)
@@ -65,6 +84,9 @@ def keyword_filter(articles: list[dict], keywords: list[str],
                    block_keywords: dict | None = None) -> list[dict]:
     """개발 키워드로 거르고(화이트리스트), 비개발 주제를 뺀다(블랙리스트).
 
+    제목과 설명문에서 주소를 지운 뒤 본다. 주소 안 글자가 키워드로 잡히면 주제와
+    무관한 기사가 통과한다.
+
     화이트리스트는 TRUSTED 출처를 면제한다 — 키워드 140개에 한국어가 없어서
     긱뉴스 한국어 제목이 통과할 수 없기 때문이다. 그런데 그 면제 때문에
     비개발 기사가 그대로 실렸다(2026-08-30 배치 20건 중 4건).
@@ -83,7 +105,9 @@ def keyword_filter(articles: list[dict], keywords: list[str],
 
     kept, dropped, blocked = [], 0, 0
     for a in articles:
-        text = (a.get("title", "") + " " + a.get("description", "")).lower()
+        # 주소는 지우고 본다. 통과 근거도 차단 근거도 글의 주제여야 한다.
+        text = _URL_RE.sub(" ", (a.get("title", "") + " "
+                                 + a.get("description", "")).lower())
         has_dev = bool(pattern.search(text)) if pattern else False
 
         if block is not None and block.search(text) and not has_dev:
