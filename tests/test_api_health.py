@@ -70,7 +70,11 @@ def test_인증서_오류면_검증을_끄고_한_번_더_두드린다():
             raise R.exceptions.SSLError("expired")
         return type("R", (), {"status_code": 200, "close": lambda self: None})()
 
-    with patch.object(H.requests, "get", fake_get):
+    # probe는 Session을 쓴다 — 리다이렉트 상한(max_redirects)을 걸어야 해서다.
+    def fake_session_get(self, url, **kw):
+        return fake_get(url, **kw)
+
+    with patch.object(R.Session, "get", fake_session_get):
         assert H.probe("https://oldcert.test/") == (200, "ssl")
     assert calls == [True, False]
 
@@ -205,3 +209,20 @@ def test_확인_실패해도_회차를_죽이지_않는다(tmp_path):
         assert apis_catalog.sync(out, health={"enabled": True},
                                  cache_path=str(tmp_path / "c.json"))
         assert len(json.load(open(out, encoding="utf-8"))["apis"]) == 1
+
+
+def test_리다이렉트를_무한히_따라가지_않는다():
+    """timeout은 홉마다 따로 걸린다. 기본 30홉이면 주소 하나가 워커를 240초까지
+    잡는다. 실측(표본 60건)에서 가장 긴 사슬이 3홉이라 5면 정상 주소에 안 닿는다."""
+    assert H.MAX_REDIRECTS <= 5
+
+    seen = {}
+
+    def fake_session_get(self, url, **kw):
+        seen["limit"] = self.max_redirects
+        return type("R", (), {"status_code": 200, "close": lambda s: None})()
+
+    import requests as R
+    with patch.object(R.Session, "get", fake_session_get):
+        H.probe("https://e.test/")
+    assert seen["limit"] == H.MAX_REDIRECTS
