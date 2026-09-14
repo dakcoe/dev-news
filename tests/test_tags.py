@@ -11,7 +11,7 @@ import pytest
 from news.core import tags
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SHARD = os.path.join(ROOT, "data", "articles", "2026-08.json")
+SHARD = os.path.join(ROOT, "docs", "data", "articles", "2026-08.json")
 
 
 def test_vocab_integrity():

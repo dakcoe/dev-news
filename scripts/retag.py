@@ -16,7 +16,7 @@ from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from build import load_config, sync_docs_data          # noqa: E402
+from build import load_config          # noqa: E402
 from news.core import archive                          # noqa: E402
 from news.core.tags import tag_all                     # noqa: E402
 from news.render import render                         # noqa: E402
@@ -42,7 +42,6 @@ def main() -> int:
     display = archive.recent(all_articles, cfg.get("scraper", {}).get("keep_days", 30))
     render(display, os.path.join(ROOT, "docs", "index.html"),
            collected=datetime.now(KST), enabled=cfg.get("sources", {}))
-    sync_docs_data()
     print(f"[retag] 완료: 총 {total}건")
     return 0
 

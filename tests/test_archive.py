@@ -70,10 +70,33 @@ def test_recent_display_window():
 
 
 def test_search_index_light(tmp_path):
+    """항목은 가볍게. 요약 본문이 섞이면 방문자마다 그만큼 더 받는다."""
     path = str(tmp_path / "search-index.json")
     archive.write_search_index(
         [{"url": "https://a", "title": "t", "ko_title": "번역", "source": "rss",
           "batch": "2026-08-06T09:00:00+09:00", "summary": "긴 요약" * 100}], path=path)
-    idx = json.load(open(path, encoding="utf-8"))
-    assert idx == [{"t": "번역", "u": "https://a", "m": "2026-08", "s": "rss",
-                    "g": [], "d": "2026-08-06"}]
+    rows = json.load(open(tmp_path / "search-index-2026-08.json", encoding="utf-8"))
+    assert rows == [{"t": "번역", "u": "https://a", "m": "2026-08", "s": "rss",
+                     "g": [], "d": "2026-08-06"}]
+
+
+def test_search_index_is_sharded_by_month(tmp_path):
+    """한 파일에 전부 담으면 회차마다 그 파일 전체가 새로 커밋된다. 지난 달 것은
+    바뀌지 않아야 한다."""
+    path = str(tmp_path / "search-index.json")
+    arts = [{"url": f"https://a/{i}", "title": f"t{i}", "source": "rss",
+             "batch": f"2026-0{8 if i < 2 else 9}-06T09:00:00+09:00"}
+            for i in range(4)]
+    archive.write_search_index(arts, path=path)
+
+    manifest = json.load(open(path, encoding="utf-8"))
+    assert manifest == {"months": ["2026-08", "2026-09"]}
+    assert len(json.load(open(tmp_path / "search-index-2026-08.json", encoding="utf-8"))) == 2
+    assert len(json.load(open(tmp_path / "search-index-2026-09.json", encoding="utf-8"))) == 2
+
+    # 이번 달에만 기사가 늘어도 지난 달 파일은 그대로다
+    before = (tmp_path / "search-index-2026-08.json").read_bytes()
+    arts.append({"url": "https://a/9", "title": "t9", "source": "rss",
+                 "batch": "2026-09-07T09:00:00+09:00"})
+    archive.write_search_index(arts, path=path)
+    assert (tmp_path / "search-index-2026-08.json").read_bytes() == before
