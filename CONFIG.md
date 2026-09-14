@@ -194,10 +194,12 @@ python scripts/retag.py
 저장과 표시를 분리한다. 저장은 월별 샤드에 무제한 누적, 표시는 최근 `keep_days`.
 
 ```
-data/articles/2026-09.json    # 이번 달 — 매 회차 새 기사가 맨 앞에 붙는다
-data/articles/2026-08.json    # 지난 달 — 이후 수정하지 않는다 (retag만 예외)
+docs/data/articles/2026-09.json    # 이번 달 — 매 회차 새 기사가 맨 앞에 붙는다
+docs/data/articles/2026-08.json    # 지난 달 — 이후 수정하지 않는다 (retag만 예외)
 data/candidates/2026-09.json  # 후보 전체와 판정 로그 (실리지 못한 기사 포함)
-data/search-index.json        # 아카이브 검색용 경량 색인 — 제목·태그·월·출처만
+docs/data/search-index.json        # 어느 달이 있는지만 담는 목록
+docs/data/search-index-2026-09.json  # 이번 달 색인 — 제목·태그·월·출처만
+docs/data/search-index-2026-08.json  # 지난 달 색인 — 이후 수정하지 않는다
 data/seen.json                # 한 번 실린 URL — 영구 유지
 data/fetch_health.json        # 본문 추출 실패 기록 (원인 분류용)
 data/api_health.json          # 무료 API 링크 생존 확인 누적
