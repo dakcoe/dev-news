@@ -20,7 +20,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import shutil
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -173,21 +172,6 @@ def emit_actions_output(published: int, min_published: int,
     return degraded
 
 
-def sync_docs_data() -> None:
-    """아카이브 검색용 데이터를 docs/로 복사 (SPEC 2.4).
-
-    GitHub Pages는 /docs 폴더만 서빙하므로 data/를 직접 fetch할 수 없다.
-    지난 달 샤드는 불변이라 복사해도 내용이 같으면 git 변경이 생기지 않는다.
-    """
-    dst_dir = os.path.join(ROOT, "docs", "data", "articles")
-    os.makedirs(dst_dir, exist_ok=True)
-    for m in archive.months():
-        shutil.copyfile(os.path.join(archive.DIR, f"{m}.json"),
-                        os.path.join(dst_dir, f"{m}.json"))
-    if os.path.exists(archive.INDEX_PATH):
-        shutil.copyfile(archive.INDEX_PATH,
-                        os.path.join(ROOT, "docs", "data", "search-index.json"))
-
 def _gate_settings(cfg: dict) -> tuple[int, bool, int, int | None]:
     """설정에서 파생되는 선별 값들. 여러 단계가 같은 값을 봐야 해서 한곳에 둔다."""
     sc = cfg.get("scraper", {})
@@ -306,7 +290,6 @@ def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
     render(display, out, collected=now, enabled=cfg.get("sources", {}),
            ads=cfg.get("ads"))
     write_seo_files(os.path.dirname(out), now)
-    sync_docs_data()
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
                       health=cfg.get("apis", {}).get("health"),

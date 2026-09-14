@@ -78,10 +78,10 @@ def merge_seen() -> int:
 
 def merge_shards() -> int:
     """월별 기사 샤드. 같은 기사인지는 url로 가린다."""
-    shard_dir = os.path.join(ROOT, "data", "articles")
+    shard_dir = os.path.join(ROOT, "docs", "data", "articles")
     names = set(os.listdir(shard_dir)) if os.path.isdir(shard_dir) else set()
     try:
-        out = subprocess.run(["git", "ls-tree", "--name-only", f"{REF}:data/articles"],
+        out = subprocess.run(["git", "ls-tree", "--name-only", f"{REF}:docs/data/articles"],
                              cwd=ROOT, capture_output=True, check=True)
         names |= set(out.stdout.decode().split())
     except subprocess.CalledProcessError:
@@ -89,7 +89,7 @@ def merge_shards() -> int:
 
     total = 0
     for name in sorted(n for n in names if n.endswith(".json")):
-        path = f"data/articles/{name}"
+        path = f"docs/data/articles/{name}"
         remote, local = remote_json(path), local_json(path)
         if remote is None:
             continue
@@ -106,10 +106,10 @@ def merge_shards() -> int:
 
 
 def rebuild_derived() -> None:
-    """합쳐진 아카이브로 검색 인덱스·페이지·docs 사본을 다시 만든다."""
+    """합쳐진 아카이브로 검색 인덱스와 페이지를 다시 만든다."""
     from datetime import datetime
 
-    from build import KST, load_config, sync_docs_data
+    from build import KST, load_config
     from news.core import archive
     from news.render import render, write_seo_files
 
@@ -127,7 +127,6 @@ def rebuild_derived() -> None:
     render(display, out, collected=now, enabled=cfg.get("sources", {}),
            ads=cfg.get("ads"))
     write_seo_files(os.path.join(ROOT, "docs"), now)
-    sync_docs_data()
 
 
 def main() -> int:

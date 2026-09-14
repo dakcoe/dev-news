@@ -64,4 +64,4 @@ def test_병합_스크립트가_있고_읽힌다():
     src = open(path, encoding="utf-8").read()
     # 더하기만 하는 자료 두 가지를 모두 다뤄야 한다
     assert "data/seen.json" in src
-    assert "data/articles" in src
+    assert "docs/data/articles" in src

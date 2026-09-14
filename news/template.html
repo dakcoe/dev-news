@@ -815,9 +815,14 @@ const SHARDS={};
 function ensureIndex(){
   if(INDEX!==null) return;
   INDEX='loading';
+  /* 색인은 달별로 나뉘어 있다. 먼저 어느 달이 있는지 읽고 그 파일들을 한꺼번에
+     받아 붙인다 — 한 파일에 전부 담으면 회차마다 그 파일이 통째로 새로 커밋된다.
+     한 달치라도 못 받으면 검색이 조용히 빠지는 것보다 실패로 두는 편이 낫다. */
   fetch('data/search-index.json')
     .then(r=>{ if(!r.ok) throw 0; return r.json(); })
-    .then(j=>{ INDEX=j; renderList(); })      // 부분 갱신 — 로드 완료가 IME 조합을 끊지 않게
+    .then(j=>Promise.all((j.months||[]).map(m=>
+      fetch('data/search-index-'+m+'.json').then(r=>{ if(!r.ok) throw 0; return r.json(); }))))
+    .then(parts=>{ INDEX=[].concat(...parts); renderList(); })
     .catch(()=>{ INDEX='fail'; renderList(); });
 }
 function archMatches(){
