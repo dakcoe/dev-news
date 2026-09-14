@@ -335,14 +335,27 @@ def _call_why(candidate: dict, article: dict, body: str, provider: str,
 
 
 # ---------------------------------------------------------------- public
-MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 서킷 브레이커 (SPEC 1.6)
+MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 다음 모델로, 다 떨어지면 서킷 브레이커
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
+
+# 주 모델이 한도에 걸렸을 때 넘어갈 모델. Groq의 무료 한도는 모델별로 따로
+# 세므로, 다른 모델로 갈아타면 예산이 새로 생긴다 (why_model 분리가 통한 이유와
+# 같다). 품질 순서대로 둔다 — 앞의 모델이 먼저 쓰인다.
+#
+# 없으면 그 회차의 남은 기사가 통째로 미게시됐다. 2026-09-14 회차에서 19건 중
+# 15건만 올라가고 4건이 다음 실행으로 밀렸다.
+FALLBACK_MODELS = {
+    "groq": ["qwen/qwen3.8-27b", "llama-3.3-70b-versatile"],
+    "openrouter": [],
+    "gemini": [],
+}
 
 
 def summarize_all(articles: list[dict], provider: str | None = None,
                   model: str | None = None, pause: float = 4.0,
                   max_calls: int = 50, stop_after: int | None = None,
-                  why_model: str | None = None) -> list[dict]:
+                  why_model: str | None = None,
+                  fallback_models: list[str] | None = None) -> list[dict]:
     """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
 
     stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
@@ -360,8 +373,17 @@ def summarize_all(articles: list[dict], provider: str | None = None,
         )
     model = model or os.environ.get("LLM_MODEL") or DEFAULT_MODELS[provider]
     why_model = why_model or os.environ.get("LLM_WHY_MODEL") or None
+
+    if fallback_models is None:
+        env = os.environ.get("LLM_FALLBACK_MODELS")
+        fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
+                           else FALLBACK_MODELS.get(provider, []))
+    # 주 모델과 같은 이름이 섞여 있으면 같은 한도를 다시 두드리는 셈이라 뺀다
+    chain = [m for m in fallback_models if m and m != model]
+
     print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"
-          + (f" · 왜중요 {why_model}" if why_model else ""))
+          + (f" · 왜중요 {why_model}" if why_model else "")
+          + (f" · 예비 {'→'.join(chain)}" if chain else ""))
 
     calls = 0
     exhausted = False        # 서킷 브레이커 — 열리면 이후 호출을 시도조차 하지 않는다
@@ -429,6 +451,13 @@ def summarize_all(articles: list[dict], provider: str | None = None,
             except RateLimited as e:
                 retries_429 += 1
                 if retries_429 > MAX_429_RETRIES or e.wait > MAX_RETRY_WAIT:
+                    # 이 모델은 한도에 걸렸다. 예비 모델이 남아 있으면 갈아탄다 —
+                    # Groq는 한도를 모델별로 세므로 예산이 새로 생긴다.
+                    if chain:
+                        model = chain.pop(0)
+                        retries_429 = 0
+                        print(f"  · 한도(429) — 예비 모델 {model}로 교체하고 계속한다")
+                        continue          # 같은 기사를 새 모델로 다시 시도
                     exhausted = True
                     break
                 print(f"  · 한도(429) — {e.wait:.0f}초 대기 후 재시도 {retries_429}/{MAX_429_RETRIES}")
