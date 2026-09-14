@@ -140,10 +140,11 @@ quota_backfill_max:
 
 왜중요도 따로 체인을 둔다(`llm.why_fallback_models`). 그쪽이 다 떨어지면 주 모델이 쓴 왜중요를 그대로 쓰고 기사는 게시한다.
 
-기본값은 이렇다.
+모델은 하나의 사다리다(`summarizer.MODEL_LADDER`). 용도마다 들어가는 칸이 다를 뿐이고, 한도에 걸리면 아래 칸으로 내려간다.
 
-    요약    openai/gpt-oss-120b → qwen/qwen3.8-27b
-    왜중요  qwen/qwen3.8-27b    → qwen/qwen3.6-27b
+    사다리   gpt-oss-120b → qwen3.8-27b → qwen3.6-27b
+    요약     맨 위부터 내려간다
+    왜중요   qwen3.8-27b부터 내려간다
 
 **체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. 2026-09-14 기준 Groq 목록은 `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b` 넷이다. 확인은 이렇게 한다.
 
