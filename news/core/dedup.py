@@ -186,7 +186,18 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
         # 여러 곳에 올라오는데, 대표 주소 하나만 seen.json에 기록하면 다음 회차에
         # 다른 쪽 주소가 들어왔을 때 처음 보는 글로 판정돼 또 실린다 — 아카이브에
         # 실제로 그렇게 두 번 실린 기사가 있었다.
+        #
+        # 주소가 달라서 제목으로만 묶인 경우는 어림짐작이다. 잘못 묶이면 그 주소가
+        # seen에 박혀 진짜 다른 기사가 영영 안 실린다(seen에는 만료가 없다).
+        # 2026-09 후보 4,851건에서 이런 쌍은 8건이었고 전부 실제로 같은 기사였다.
+        # 그래서 기억은 하되, 잘못 묶였을 때 로그에서 찾을 수 있게 남긴다.
         merged_urls = sorted({i.get("url") for i in items if i.get("url")})
+        rep_key = normalize_url(best.get("url"))
+        by_title = [u for u in merged_urls if normalize_url(u) != rep_key]
+        if by_title:
+            print(f"[중복] 제목으로 묶음: {best.get('title','')[:40]} "
+                  f"← {len(by_title)}건 {by_title}")
+
         merged = {**best, "merged_sources": sources,
                   "merged_urls": merged_urls,
                   "cross_source_count": max(len(sources), 1)}
