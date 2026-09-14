@@ -182,7 +182,13 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
         # (add-trendshift-source). rss 피드 두 곳이 같은 글을 물어와도 마찬가지.
         sources = sorted({i.get("feed") or i.get("source") for i in items
                           if i.get("source")})
+        # 합쳐진 기사들의 주소를 전부 남긴다. 같은 글이 긱뉴스와 원문 블로그처럼
+        # 여러 곳에 올라오는데, 대표 주소 하나만 seen.json에 기록하면 다음 회차에
+        # 다른 쪽 주소가 들어왔을 때 처음 보는 글로 판정돼 또 실린다 — 아카이브에
+        # 실제로 그렇게 두 번 실린 기사가 있었다.
+        merged_urls = sorted({i.get("url") for i in items if i.get("url")})
         merged = {**best, "merged_sources": sources,
+                  "merged_urls": merged_urls,
                   "cross_source_count": max(len(sources), 1)}
         out.append(merged)
 

@@ -77,7 +77,7 @@ def merge_seen() -> int:
 
 
 def merge_shards() -> int:
-    """월별 기사 샤드. url이 신원이다."""
+    """월별 기사 샤드. 같은 기사인지는 url로 가린다."""
     shard_dir = os.path.join(ROOT, "data", "articles")
     names = set(os.listdir(shard_dir)) if os.path.isdir(shard_dir) else set()
     try:
