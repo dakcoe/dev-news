@@ -134,7 +134,11 @@ quota_backfill_max:
 | `openrouter` | `OPENROUTER_API_KEY` | 하루 50회 (크레딧 $10 넣으면 1,000회) | `meta-llama/llama-3.3-70b-instruct:free` |
 | `gemini` | `GEMINI_API_KEY` | AI Studio 대시보드에서 확인 | `requirements.txt`의 `google-genai` 주석 해제 필요 |
 
-모델만 바꾸려면 `LLM_MODEL`을 지정한다. 우선순위는 환경변수 `LLM_MODEL` → `config.yaml`의 `llm.model` → 공급자 기본값이다. 폴백 체인은 없다. 정해진 모델 하나만 끝까지 쓴다.
+모델만 바꾸려면 `LLM_MODEL`을 지정한다. 우선순위는 환경변수 `LLM_MODEL` → `config.yaml`의 `llm.model` → 공급자 기본값이다.
+
+주 모델이 한도(429)에 걸리면 `llm.fallback_models` 순서대로 갈아타고 그 회차를 마저 끝낸다. Groq는 무료 한도를 모델별로 따로 세기 때문에 갈아타면 예산이 새로 생긴다. 비우면 summarizer의 기본 체인을 쓰고, 빈 목록(`[]`)을 주면 폴백 없이 회차를 접는다. 환경변수 `LLM_FALLBACK_MODELS`(쉼표 구분)가 우선한다.
+
+폴백이 생기기 전에는 한 모델이 막히면 남은 기사가 통째로 미게시됐다. 2026-09-14 회차에서 19건 중 15건만 올라갔다.
 
 ```yaml
 llm:
@@ -142,6 +146,7 @@ llm:
   model:                  # 비우면 공급자 기본 모델
   pause_seconds: 6.0      # 호출 간격. gpt-oss는 2초면 절반이 429였다
   why_model: qwen/qwen3.8-27b   # '왜 중요한가'만 다른 모델로. 비우면 model이 다 쓴다
+  fallback_models:        # 한도(429)에 걸리면 갈아탈 모델. 비우면 기본 체인
 ```
 
 - 429는 Retry-After만큼 기다려 최대 2회 재시도하고, 그래도 실패하면 그 회차의 요약을 통째로 멈춘다(서킷 브레이커). 남은 기사는 다음 회차로 넘어간다.
