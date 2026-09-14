@@ -21,15 +21,15 @@ def _article(**over):
 
 def test_empty_summary_shows_no_body_notice():
     vm = to_view_model([_article()])[0]
-    assert "본문이 공개되지 않은 기사" in vm["body"]
-    assert "생성 실패" not in vm["body"]
+    assert "본문이 공개되지 않은 기사" in " ".join(vm["paras"])
+    assert "생성 실패" not in " ".join(vm["paras"])
 
 
 def test_normal_summary_untouched():
     vm = to_view_model([_article(summary="요약 문장이다.")])[0]
-    assert vm["body"] == "<p>요약 문장이다.</p>"
+    assert vm["paras"] == ["요약 문장이다."]
 
 
 def test_description_fallback_before_notice():
     vm = to_view_model([_article(description="피드 설명.")])[0]
-    assert vm["body"] == "<p>피드 설명.</p>"
+    assert vm["paras"] == ["피드 설명."]
