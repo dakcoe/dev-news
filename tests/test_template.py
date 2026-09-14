@@ -239,3 +239,32 @@ def test_인트로_커서가_글자_경계에_선다(html):
     assert "translateX(calc(100% - 4px))" in kf, kf
     # translateX(100%)는 상세 패널이 화면 밖에 대기하는 데도 쓴다 — 거긴 정상이다.
     assert "translateX(100%)" not in kf
+
+
+def test_인트로가_앱_스크립트보다_먼저_켜진다(html):
+    """앱 스크립트는 1.4MB JSON을 파싱하느라 메인 스레드를 600ms 막는다.
+    거기서 인트로를 켜면 덮개가 컴포지터에 있어도 시작이 밀려, 글자가 덮인 채
+    멈춰 있다가 한꺼번에 나타난다."""
+    intro = html.index('<div class="intro"')
+    start = html.index("classList.add('ready')")
+    app = html.rindex("PAGE = ")          # 큰 앱 스크립트의 앞부분
+    assert intro < start < app, "인트로 시작이 앱 스크립트 뒤에 있다"
+
+
+def test_색인_실패가_무한_재시도로_돌지_않는다(html):
+    """실패 직후 null로 되돌리면 renderList가 곧바로 ensureIndex를 다시 부르고
+    그게 또 실패해 끝없이 요청이 나간다."""
+    assert "INDEX='fail'; renderList();" in html
+    # 풀어 주는 곳은 검색어가 바뀌는 자리 하나뿐이어야 한다
+    assert html.count("if(INDEX==='fail') INDEX=null;") == 1
+
+
+def test_색인에_태그가_없는_기사를_태그로_지우지_않는다(html):
+    """색인의 5%는 태그가 비어 있다. 없는 값으로 거르면 태그를 한 번 고른
+    사람은 그 기사들을 영영 검색으로 못 찾는다."""
+    assert "tagSel.size && (e.g||[]).length &&" in html
+
+
+def test_선택된_출처는_0건이어도_목록에_남는다(html):
+    """버튼이 사라지면 무엇이 걸려 있는지 보이지도 않고 풀 수도 없다."""
+    assert "filter(k=>sc[k] || k===filter)" in html
