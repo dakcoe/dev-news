@@ -164,6 +164,9 @@ def test_update_schedule_text_matches_cron(html):
 
     워크플로는 cron "0 7,15,23 * * *"(UTC) = KST 00·08·16시 하루 3회인데
     페이지에는 "매일 오전 9시"로 적혀 있었다.
+
+    지금은 정각을 피해 :55에 돈다(깃허브 예약 작업이 정각일수록 밀린다).
+    분을 반올림해서 비교한다 — 15:55은 화면의 "16시"와 같은 회차다.
     """
     import re
     assert "9시" not in html
@@ -176,8 +179,14 @@ def test_update_schedule_text_matches_cron(html):
         with open(os.path.join(wf, name), encoding="utf-8") as f:
             crons += re.findall(r'cron:\s*"([^"]+)"', f.read())
     assert crons, "워크플로에 cron이 없음"
-    utc_hours = sorted(int(h) for c in crons for h in c.split()[1].split(","))
-    assert sorted((h + 9) % 24 for h in utc_hours) == [0, 8, 16]
+    kst = set()
+    for c in crons:
+        minute, hours = c.split()[0], c.split()[1]
+        for h in hours.split(","):
+            # UTC → KST(+9), 분을 시 단위로 반올림
+            total = (int(h) + 9) * 60 + int(minute)
+            kst.add(round(total / 60) % 24)
+    assert sorted(kst) == [0, 8, 16], f"cron {crons} → KST {sorted(kst)}"
 
 
 def test_mobile_layout_not_squeezed(html):
