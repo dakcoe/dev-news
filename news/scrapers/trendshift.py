@@ -20,11 +20,12 @@ from __future__ import annotations
 import re
 
 import requests
+
+from news.core import http
 from bs4 import BeautifulSoup
 
 URL = "https://trendshift.io/"
 FEED_NAME = "Trendshift"
-HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 
 _NAME_RE = re.compile(r"^[\w.-]+/[\w.-]+$")
 _DIGITS_RE = re.compile(r"^\d[\d,]*$")
@@ -86,8 +87,9 @@ def parse(html: str, limit: int = 25) -> list[dict]:
 
 
 def fetch(limit: int = 25) -> list[dict]:
+    # 공용 http를 쓴다 — 5xx 재시도가 없으면 순간 장애 한 번에 그 회차 몫이 빈다.
     try:
-        resp = requests.get(URL, headers=HEADERS, timeout=15)
+        resp = http.get(URL, timeout=15)
         resp.raise_for_status()
     except requests.RequestException as e:
         print(f"[trendshift] 요청 실패: {e}")

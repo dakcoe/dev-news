@@ -57,3 +57,32 @@ def test_override_does_not_leak_to_other_feeds():
         ], per_feed=3)
     assert calls["https://a.com/f.rss"]["User-Agent"] == "legacy/1.0"
     assert not calls["https://b.com/f.rss"]
+
+
+def test_모든_수집기가_공용_http를_쓴다():
+    """공용 http.get은 5xx에 재시도한다. 직접 requests.get을 부르면 순간 502 한
+    번에 그 회차 몫이 통째로 빈다 — 예외가 아니라 0건이라 침묵 경고도 3회차
+    연속돼야 뜬다. github와 trendshift가 그 상태였다.
+
+    POST는 보지 않는다. 공용 http에는 get만 있다.
+    """
+    import glob
+    import re
+    bad = []
+    for path in glob.glob(os.path.join(ROOT_DIR, "news", "scrapers", "*.py")):
+        src = open(path, encoding="utf-8").read()
+        if re.search(r"^\s*resp\s*=\s*requests\.get\(", src, re.M):
+            bad.append(os.path.basename(path))
+    assert not bad, f"공용 http를 안 쓰는 수집기: {bad}"
+
+
+def test_브라우저_위장을_쓰지_않는다():
+    """정직하게 밝힌다. 상대가 막을 근거를 주는 편이 낫고, 차단당하면
+    fetch_health에 남아 진단이 된다 (news/core/http.py의 방침)."""
+    import glob
+    bad = []
+    for path in glob.glob(os.path.join(ROOT_DIR, "news", "scrapers", "*.py")):
+        src = open(path, encoding="utf-8").read()
+        if "Mozilla/5.0" in src:
+            bad.append(os.path.basename(path))
+    assert not bad, f"브라우저 위장이 남아 있다: {bad}"
