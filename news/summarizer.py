@@ -348,27 +348,32 @@ def _call_why(candidate: dict, article: dict, body: str, provider: str,
 MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 다음 모델로, 다 떨어지면 서킷 브레이커
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
 
-# 한도(429)에 걸렸을 때 넘어갈 모델. Groq의 무료 한도는 모델별로 따로 세므로
-# 갈아타면 예산이 새로 생긴다. 없으면 그 회차의 남은 기사가 통째로 미게시됐다 —
-# 2026-09-14 회차에서 19건 중 15건만 올라갔다.
+# 모델 사다리. 하나의 계층이고, 용도마다 들어가는 칸이 다를 뿐이다.
 #
-# ⚠️ 이 계정에서 실제로 쓸 수 있는 모델만 적는다. 2026-09-14 기준 목록은
-# gpt-oss-120b / gpt-oss-20b / qwen3.8-27b / qwen3.6-27b 넷이다. 없는 이름을
-#적으면 폴백이 404로 죽는다 (llama-3.3-70b-versatile를 적었다가 겪었다).
-FALLBACK_MODELS = {
-    "groq": ["qwen/qwen3.8-27b"],
+#   요약    gpt-oss-120b → qwen3.8-27b → qwen3.6-27b   (맨 위부터)
+#   왜중요  qwen3.8-27b  → qwen3.6-27b                 (qwen3.8부터)
+#
+# 한 칸이 한도(429)에 걸리면 아래 칸으로 내려간다. Groq의 무료 한도는 모델별로
+# 따로 세므로 내려가면 예산이 새로 생긴다. 사다리가 없던 때는 한 모델이 막히면
+# 그 회차의 남은 기사가 통째로 미게시됐다 — 2026-09-14 회차에서 19건 중 15건.
+#
+# ⚠️ 계정에서 실제로 쓸 수 있는 모델만 적는다. 없는 이름을 적으면 폴백이 404로
+# 죽는다(llama-3.3-70b-versatile를 적었다가 겪었다). 확인은 이렇게 한다.
+#     curl -s -H "Authorization: Bearer $GROQ_API_KEY" \
+#          https://api.groq.com/openai/v1/models
+MODEL_LADDER = {
+    "groq": ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"],
     "openrouter": [],
     "gemini": [],
 }
 
-# 왜중요 전용 체인. 이 항목은 기사에 없는 판단을 쓰는 자리라 글이 좋은 모델을
-# 쓴다. qwen은 다른 나라 문자가 섞이는 일이 있지만 FOREIGN_RE가 걸러내고,
-# 여기서 실패해도 주 모델이 쓴 왜중요가 남으므로 기사는 게시된다.
-WHY_FALLBACK_MODELS = {
-    "groq": ["qwen/qwen3.6-27b"],
-    "openrouter": [],
-    "gemini": [],
-}
+
+def chain_below(provider: str, model: str | None) -> list[str]:
+    """사다리에서 model보다 아래 칸들. 사다리에 없는 모델이면 사다리 전체다."""
+    ladder = MODEL_LADDER.get(provider, [])
+    if model in ladder:
+        return ladder[ladder.index(model) + 1:]
+    return [m for m in ladder if m != model]
 
 
 def summarize_all(articles: list[dict], provider: str | None = None,
@@ -398,14 +403,14 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     if fallback_models is None:
         env = os.environ.get("LLM_FALLBACK_MODELS")
         fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
-                           else FALLBACK_MODELS.get(provider, []))
+                           else chain_below(provider, model))
     # 주 모델과 같은 이름이 섞여 있으면 같은 한도를 다시 두드리는 셈이라 뺀다
     chain = [m for m in fallback_models if m and m != model]
 
     if why_fallback_models is None:
         env = os.environ.get("LLM_WHY_FALLBACK_MODELS")
         why_fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
-                               else WHY_FALLBACK_MODELS.get(provider, []))
+                               else chain_below(provider, why_model))
     why_chain = [m for m in why_fallback_models if m and m != why_model] if why_model else []
 
     print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"

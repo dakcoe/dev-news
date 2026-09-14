@@ -103,28 +103,41 @@ def test_한도에_안_걸리면_주_모델만_쓴다(monkeypatch):
     assert set(seen) == {"주-모델"}
 
 
-def test_기본_체인이_groq에_있다():
-    """설정을 비워도 동작해야 한다. 주 모델과 겹치지 않아야 의미가 있다."""
-    chain = S.FALLBACK_MODELS["groq"]
-    assert chain, "groq 기본 체인이 비어 있다"
-    assert S.DEFAULT_MODELS["groq"] not in chain
+# ---------------- 사다리 ----------------
+
+def test_사다리는_하나다():
+    """요약과 왜중요는 같은 사다리를 쓰고 들어가는 칸만 다르다. 둘을 따로 두면
+    한쪽만 고쳐져 어긋난다."""
+    assert S.MODEL_LADDER["groq"] == [
+        "openai/gpt-oss-120b", "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
 
 
-def test_체인에_없는_모델을_적지_않는다():
-    """Groq 계정에서 쓸 수 있는 모델만 적어야 한다. 없는 이름을 적으면 폴백이
-    404로 죽는다 — llama-3.3-70b-versatile을 적었다가 겪었다.
-    2026-09-14 기준 목록: gpt-oss-120b / gpt-oss-20b / qwen3.8-27b / qwen3.6-27b."""
+def test_요약은_사다리_맨_위부터_내려간다():
+    top = S.DEFAULT_MODELS["groq"]
+    assert top == S.MODEL_LADDER["groq"][0]
+    assert S.chain_below("groq", top) == ["qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
+
+
+def test_왜중요는_qwen38부터_내려간다():
+    assert S.chain_below("groq", "qwen/qwen3.8-27b") == ["qwen/qwen3.6-27b"]
+
+
+def test_맨_아래_칸은_더_내려갈_곳이_없다():
+    assert S.chain_below("groq", "qwen/qwen3.6-27b") == []
+
+
+def test_사다리에_없는_모델이면_사다리_전체를_쓴다():
+    """config에서 사다리 밖 모델을 지정해도 폴백은 살아 있어야 한다."""
+    assert S.chain_below("groq", "바깥-모델") == S.MODEL_LADDER["groq"]
+
+
+def test_사다리에_없는_모델을_적지_않는다():
+    """계정에서 쓸 수 있는 모델만 적어야 한다. 없는 이름이면 404로 죽는다.
+    2026-09-14 기준 목록이다."""
     AVAILABLE = {"openai/gpt-oss-120b", "openai/gpt-oss-20b",
                  "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"}
-    for name, chain in [("요약", S.FALLBACK_MODELS["groq"]),
-                        ("왜중요", S.WHY_FALLBACK_MODELS["groq"])]:
-        unknown = set(chain) - AVAILABLE
-        assert not unknown, f"{name} 체인에 없는 모델: {unknown}"
-
-
-def test_왜중요_체인이_groq에_있다():
-    chain = S.WHY_FALLBACK_MODELS["groq"]
-    assert chain, "왜중요 기본 체인이 비어 있다"
+    unknown = set(S.MODEL_LADDER["groq"]) - AVAILABLE
+    assert not unknown, f"사다리에 없는 모델: {unknown}"
 
 
 # ---------------- 없는 모델 (404) ----------------
