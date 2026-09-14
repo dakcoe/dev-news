@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-06T20:31:21+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-07T02:30:39+09:00",
    "total": 20,
    "counts": {
@@ -415,6 +406,22 @@
     "github": 4
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-14T22:38:59+09:00",
+   "total": 20,
+   "counts": {
+    "github": 6,
+    "ok": 13,
+    "blocked": 1
+   },
+   "failures": [
+    {
+     "url": "https://www.lesswrong.com/posts/SCtkSz4nQ9icLZ4uq/watch-ai-materials-science-and-bioscience-abilities-closely",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
