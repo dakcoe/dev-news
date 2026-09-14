@@ -197,3 +197,58 @@ def test_same_source_different_feed_counts_as_cross_source():
     assert len(got) == 1
     assert got[0]["cross_source_count"] == 2
     assert got[0]["merged_sources"] == ["Trendshift", "github"]
+
+
+# ---------------- 같은 기사가 두 번 실리던 경로 ----------------
+
+def test_끝_슬래시만_다른_주소는_같은_기사로_본다(tmp_path):
+    """아카이브에 실제로 이렇게 두 번 실린 기사가 있었다.
+        https://openai.com/index/codex-quantum/
+        https://openai.com/index/codex-quantum
+    """
+    from news.core import seen as S
+    p = str(tmp_path / "seen.json")
+    S.mark_seen([{"url": "https://openai.com/index/codex-quantum/"}], p)
+    again = [{"url": "https://openai.com/index/codex-quantum"}]
+    assert S.filter_unseen(again, p) == []
+
+
+def test_합쳐진_기사의_주소를_모두_기억한다(tmp_path):
+    """같은 글이 긱뉴스와 원문 블로그에 함께 올라온다. 중복제거가 한 건으로
+    합치는데 대표 주소만 기록하면, 다음 회차에 다른 쪽 주소가 들어왔을 때
+    처음 보는 글로 판정돼 또 실린다."""
+    from news.core import seen as S
+    merged = merge_duplicates([
+        {"url": "https://news.hada.io/topic?id=1",
+         "title": "The purpose of DNS is to spread scams", "source": "geeknews"},
+        {"url": "https://char.lt/blog/same/",
+         "title": "The purpose of DNS is to spread scams", "source": "rss"},
+    ])
+    assert len(merged) == 1
+    assert len(merged[0]["merged_urls"]) == 2
+
+    p = str(tmp_path / "seen.json")
+    S.mark_seen(merged, p)
+    for url in ("https://news.hada.io/topic?id=1", "https://char.lt/blog/same/"):
+        assert S.filter_unseen([{"url": url}], p) == [], url
+
+
+def test_옛_seen_파일도_같은_규칙으로_읽는다(tmp_path):
+    """이미 쌓인 파일에는 다듬기 전 주소가 키로 들어 있다. 읽을 때 맞추지 않으면
+    2천 건이 통째로 '처음 보는 글'이 되어 다시 실린다."""
+    import json
+    from news.core import seen as S
+    p = tmp_path / "seen.json"
+    p.write_text(json.dumps({"https://www.example.com/a/?utm_source=x": "2026-01-01"}),
+                 encoding="utf-8")
+    assert S.filter_unseen([{"url": "https://example.com/a"}], str(p)) == []
+
+
+def test_아카이브도_같은_규칙으로_쌓는다(tmp_path):
+    from datetime import datetime, timezone
+    from news.core import archive
+    d = str(tmp_path)
+    now = datetime(2026, 9, 15, tzinfo=timezone.utc)
+    archive.append([{"url": "https://example.com/x/", "title": "제목"}], now, d)
+    archive.append([{"url": "https://example.com/x", "title": "제목"}], now, d)
+    assert len(archive.load_all(d)) == 1
