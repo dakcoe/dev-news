@@ -25,6 +25,8 @@ import re
 from news.core.common import to_timestamp
 
 import requests
+
+from news.core import http
 from bs4 import BeautifulSoup
 
 DEFAULT_SUBREDDITS = ["LocalLLaMA", "ClaudeAI", "MachineLearning", "programming", "singularity"]
@@ -42,6 +44,7 @@ def _get_token() -> str | None:
     if not cid or not secret:
         return None
     try:
+        # 토큰 발급만 requests를 직접 쓴다 — 공용 http에는 get만 있다.
         resp = requests.post(
             TOKEN_URL, auth=(cid, secret),
             data={"grant_type": "client_credentials"},
@@ -55,7 +58,7 @@ def _get_token() -> str | None:
 
 
 def _fetch_oauth(subreddit: str, token: str, limit: int) -> list[dict]:
-    resp = requests.get(
+    resp = http.get(
         f"{OAUTH_BASE}/r/{subreddit}/hot",
         headers={**HEADERS, "Authorization": f"bearer {token}"},
         params={"limit": limit, "raw_json": 1}, timeout=15,
@@ -80,7 +83,7 @@ def _fetch_oauth(subreddit: str, token: str, limit: int) -> list[dict]:
 
 
 def _fetch_rss(subreddit: str, limit: int) -> list[dict]:
-    resp = requests.get(
+    resp = http.get(
         f"https://www.reddit.com/r/{subreddit}/hot.rss",
         headers=HEADERS, params={"limit": limit}, timeout=15,
     )
