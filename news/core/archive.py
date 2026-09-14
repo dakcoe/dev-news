@@ -14,6 +14,7 @@ import os
 from datetime import datetime, timedelta, timezone
 
 from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
+from news.core.dedup import normalize_url
 DIR = os.path.join(ROOT, "data", "articles")
 LEGACY_PATH = os.path.join(ROOT, "data", "articles.json")
 INDEX_PATH = os.path.join(ROOT, "data", "search-index.json")
@@ -86,11 +87,14 @@ DROP_FIELDS = ("content",)
 
 def append(new_items: list[dict], batch: datetime, base_dir: str = DIR) -> list[dict]:
     """새 기사에 수집 회차를 찍어 이번 달 샤드 앞에 붙인다. 삭제·상한 없음."""
-    known = {a.get("url") for a in load_all(base_dir)}
+    # 같은 기사인지는 seen·중복제거와 같은 규칙으로 가린다. 주소 문자열을 그대로
+    # 비교하면 끝 슬래시 하나 차이로 같은 기사가 두 번 쌓인다.
+    known = {normalize_url(a.get("url")) or a.get("url") for a in load_all(base_dir)}
     stamped = [{**{k: v for k, v in a.items() if k not in DROP_FIELDS},
                 "batch": batch.isoformat(),
                 "batch_label": f"{batch.month}월 {batch.day}일 {batch:%H:%M}"}
-               for a in new_items if a.get("url") not in known]
+               for a in new_items
+               if (normalize_url(a.get("url")) or a.get("url")) not in known]
 
     m = _month(batch.isoformat())
     shard = stamped + _load_json(_shard_path(m, base_dir))
