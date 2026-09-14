@@ -189,3 +189,44 @@ def test_404_응답이_ModelGone으로_올라온다(monkeypatch):
     except S.ModelGone:
         return
     raise AssertionError("ModelGone이 나오지 않았다")
+
+
+# ---------------- 사다리 충돌 ----------------
+
+def test_요약이_내려와도_왜중요와_같은_칸에_앉지_않는다(monkeypatch):
+    """한 칸을 둘이 쓰면 한 기사에 같은 한도를 두 번 두드린다. 한도를 피해
+    내려왔는데 예산을 두 배로 쓰는 꼴이다."""
+    seen = []
+
+    def fake_call(prompt, provider, model, api_key):
+        seen.append(model)
+        if model == "openai/gpt-oss-120b":
+            raise S.RateLimited(2)
+        return "번역제목: 제목\n요약: 요약이다.\n왜중요: 이유다."
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setattr(S.time, "sleep", lambda *a: None)
+    out = S.summarize_all(ARTICLES, pause=0, max_calls=90,
+                          why_model="qwen/qwen3.8-27b")
+
+    assert all(a["llm_done"] for a in out)
+    # 요약이 qwen3.8로 내려왔으니 왜중요는 3.6으로 비켜야 한다
+    assert "qwen/qwen3.6-27b" in seen
+
+
+def test_왜중요_예비에_주_모델이_섞이지_않는다():
+    """사다리 밖 모델을 왜중요로 지정하면 사다리 전체가 예비가 되는데,
+    거기에 주 모델이 들어가면 요약과 같은 한도로 되돌아간다."""
+    chain = S.chain_below("groq", "사다리밖", exclude={"openai/gpt-oss-120b"})
+    assert "openai/gpt-oss-120b" not in chain
+    assert chain == ["qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
+
+
+def test_모델을_바꾸면_재생성_기회도_새로_준다(monkeypatch):
+    """예전에는 retries_429만 되돌리고 attempt는 남겨, 새 모델이 첫 응답에서
+    외국 문자를 내면 재생성 없이 바로 치환으로 갔다."""
+    import re
+    src = open(os.path.join(ROOT, "news", "summarizer.py"), encoding="utf-8").read()
+    body = src[src.index("def summarize_all("):]
+    for m in re.finditer(r"model = chain\.pop\(0\)(.{0,200})", body, re.S):
+        assert "attempt = 0" in m.group(1), "모델 교체 후 attempt를 되돌리지 않는다"
