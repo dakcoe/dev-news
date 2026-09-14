@@ -70,13 +70,17 @@ def _block_re(ko: tuple[str, ...], en: tuple[str, ...]) -> re.Pattern[str] | Non
     안에서 걸린다(실측 오탐). 한국어는 영숫자 경계가 통하지 않아 부분문자열로
     매칭되므로, `배우`(→배우다)처럼 다른 말에 파묻히는 모호어는 목록에 넣지
     않는 것으로 대응한다.
+
+    복수형은 받는다. 목록이 전부 명사인데 `infections`가 `infection`을,
+    `glp-1s`가 `glp-1`을 못 만나 그대로 통과했다. 시제 어미는 받지 않는다 —
+    명사에 붙일 일이 없고 다른 말로 번질 여지만 생긴다.
     """
     parts = []
     if ko:
         parts.append("(?:" + "|".join(re.escape(k) for k in ko) + ")")
     if en:
         parts.append(r"(?<![a-z0-9])(?:" + "|".join(re.escape(k) for k in en)
-                     + r")(?![a-z0-9])")
+                     + r")(?:e?s)?(?![a-z0-9])")
     return re.compile("|".join(parts)) if parts else None
 
 
