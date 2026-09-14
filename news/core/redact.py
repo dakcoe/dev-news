@@ -39,6 +39,15 @@ PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("sendgrid", re.compile(r"\bSG\.[A-Za-z0-9_\-]{16,}\.[A-Za-z0-9_\-]{16,}")),
     ("npm", re.compile(r"\bnpm_[A-Za-z0-9]{36}\b")),
     ("telegram_bot", re.compile(r"\b\d{8,10}:AA[A-Za-z0-9_\-]{32,}")),
+    # 2026-09-15 보강 — GitHub push protection이 실제로 막는 것들인데 빠져 있었다.
+    # 걸리면 GH013으로 push가 거부돼 회차가 통째로 죽고, 마스킹 경로가 없으면
+    # 사람이 손으로 치울 때까지 회복되지 않는다.
+    ("google_oauth", re.compile(r"\bGOCSPX-[A-Za-z0-9_\-]{20,}")),
+    ("pypi", re.compile(r"\bpypi-AgE[A-Za-z0-9_\-]{40,}")),
+    ("digitalocean", re.compile(r"\bdop_v1_[a-f0-9]{64}\b")),
+    ("shopify", re.compile(r"\bshpat_[a-f0-9]{32}\b")),
+    ("xai", re.compile(r"\bxai-[A-Za-z0-9]{40,}")),
+    ("slack_webhook", re.compile(r"https://hooks\.slack\.com/services/[A-Za-z0-9/+_\-]{20,}")),
 ]
 
 

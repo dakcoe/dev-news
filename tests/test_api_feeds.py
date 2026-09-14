@@ -312,3 +312,37 @@ def test_no_control_chars_in_shipped_sources():
         with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
             body = f.read()
         assert "\x08" not in body, f"{rel} 에 백스페이스 문자"
+
+
+# ---------------- 카탈로그 방어선 ----------------
+
+def test_직전_회차_대비_비율로_막는다(tmp_path, monkeypatch):
+    """고정값만 두면 실측과 벌어진다. global 방어선이 300인데 실제가 1,622건이라
+    형식이 부분적으로 깨져 800건만 파싱돼도 통과해 카탈로그가 반토막 났다."""
+    from news import apis_catalog as ac
+
+    prev = {"global": 1622, "kr": 280, "llm": 16}
+    floor = max(ac.MIN_COUNT["global"], int(prev["global"] * ac.MIN_RATIO))
+    assert floor > 800, f"반토막(811건)을 막지 못한다: 방어선 {floor}"
+
+
+def test_직전_회차가_없으면_바닥값을_쓴다(tmp_path):
+    """첫 회차에는 비교 대상이 없다. 그때도 완전히 무방비면 안 된다."""
+    from news.apis_catalog import _previous_counts
+    assert _previous_counts(str(tmp_path / "없는파일.json")) == {}
+
+
+def test_직전_회차를_실제_파일에서_읽는다(tmp_path):
+    import json
+    from news.apis_catalog import _previous_counts
+    p = tmp_path / "apis.json"
+    p.write_text(json.dumps({"sources": [{"id": "global", "count": 1622},
+                                         {"id": "kr", "count": 280}]}),
+                 encoding="utf-8")
+    assert _previous_counts(str(p)) == {"global": 1622, "kr": 280}
+
+
+def test_소스가_조금_줄어드는_것은_받아들인다():
+    """실제로 줄어드는 일도 있다. 30%까지는 형식 변경으로 보지 않는다."""
+    from news import apis_catalog as ac
+    assert int(1622 * ac.MIN_RATIO) < 1622 * 0.8

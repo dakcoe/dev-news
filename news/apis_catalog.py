@@ -31,6 +31,8 @@ from datetime import datetime
 
 import requests
 
+from news.core.redact import redact_articles
+
 from news import api_health
 
 from news.core.common import KST  # noqa: E402  (상수 재노출)
@@ -51,8 +53,17 @@ SOURCES = [
 LLM_CAT = "AI · LLM"
 
 # README 형식이 바뀌어 파싱이 거의 안 되는 회차에 기존 파일을 덮어쓰지 않기 위한
-# 소스별 최소 건수. 실측(2026-08): global 1,400+ · kr 300+ · llm 17.
+# 소스별 최소 건수. 첫 회차나 기존 파일이 없을 때만 쓰는 바닥값이다.
 MIN_COUNT = {"global": 300, "kr": 50, "llm": 10}
+
+# 평소에는 직전 회차 대비 비율로 막는다. 고정값만 두면 실측과 벌어진다 —
+# global은 방어선이 300인데 실제가 1,622건이라, 형식이 부분적으로 깨져 800건만
+# 파싱돼도 통과해 카탈로그가 반토막 난 채 덮어써진다. 이어서 api_health가
+# "목록에 없는 URL"이라며 사라진 800건의 생존 기록까지 지운다.
+#
+# 소스가 실제로 줄어드는 일도 있으므로 여유를 둔다. 0.7이면 30% 감소까지는
+# 받아들이고 그 이상은 형식 변경으로 본다.
+MIN_RATIO = 0.7
 
 _TOC_RE = re.compile(r"^##\s*(Index|목차)\b", re.I)
 _CAT_RE = re.compile(r"^###\s+(.+)")
@@ -136,17 +147,33 @@ def dedupe_llm_overlap(readme_apis: list[dict], llm_apis: list[dict]) -> list[di
             if not (_AI_CAT_RE.search(a["cat"]) and _norm_name(a["name"]) in known)]
 
 
-def build_catalog() -> dict:
+def _previous_counts(out_path: str) -> dict[str, int]:
+    """직전 회차의 소스별 건수. 파일이 없거나 깨졌으면 빈 dict."""
+    try:
+        with open(out_path, encoding="utf-8") as f:
+            return {s["id"]: s["count"] for s in json.load(f).get("sources", [])
+                    if isinstance(s.get("count"), int)}
+    except Exception:
+        return {}
+
+
+def build_catalog(prev_counts: dict[str, int] | None = None) -> dict:
     """세 소스를 받아 카탈로그 dict를 만든다. 실패는 예외로 올린다."""
+    prev_counts = prev_counts or {}
     by_source: dict[str, list[dict]] = {}
     for s in SOURCES:
         resp = requests.get(s["url"], headers=HEADERS, timeout=20)
         resp.raise_for_status()
         apis = (parse_llm_json(resp.json(), s["id"]) if s["kind"] == "llm_json"
                 else parse(resp.text, s["id"]))
-        floor = MIN_COUNT.get(s["id"], 0)
+        # 직전 회차가 있으면 그 비율이 기준이다. 없으면 바닥값만 본다.
+        before = prev_counts.get(s["id"], 0)
+        floor = max(MIN_COUNT.get(s["id"], 0), int(before * MIN_RATIO))
         if len(apis) < floor:
-            raise ValueError(f"{s['label']} 파싱 {len(apis)}건 < 최소 {floor}건 — 소스 형식 변경 의심")
+            raise ValueError(
+                f"{s['label']} 파싱 {len(apis)}건 < 최소 {floor}건"
+                + (f" (직전 {before}건의 {MIN_RATIO:.0%})" if before else "")
+                + " — 소스 형식 변경 의심")
         by_source[s["id"]] = apis
 
     # 중복 제거는 방어선(MIN_COUNT) 통과 뒤에 한다 — 제거분 때문에 회차가 죽으면 안 된다
@@ -162,6 +189,10 @@ def build_catalog() -> dict:
         sources.append({"id": s["id"], "label": s["label"],
                         "home": s["home"], "count": len(apis)})
         all_apis.extend(apis)
+    # 카탈로그는 남의 README 원문(설명 셀)을 그대로 담는데, 커밋되는 파일 중
+    # 유일하게 마스킹을 안 거치고 있었다. 토큰이 섞이면 GitHub push protection이
+    # GH013으로 push를 막아 회차가 통째로 죽는다.
+    all_apis = redact_articles(all_apis, "API 카탈로그")
     return {"updated": datetime.now(KST).isoformat(),
             "sources": sources, "apis": all_apis}
 
@@ -178,7 +209,7 @@ def sync(out_path: str, health: dict | None = None,
     남는 것보다 목록이 통째로 사라지는 쪽이 나쁘다.
     """
     try:
-        catalog = build_catalog()
+        catalog = build_catalog(_previous_counts(out_path))
     except Exception as e:
         print(f"[apis] 카탈로그 갱신 실패 — 기존 파일 유지: {e}")
         return False
