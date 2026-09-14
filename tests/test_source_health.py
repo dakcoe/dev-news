@@ -63,3 +63,28 @@ def test_disabled_source_is_ignored():
 def test_multiple_silent_sorted():
     hist = _runs({"b": 0, "a": 0, "c": 1}, {"b": 0, "a": 0, "c": 1}, {"b": 0, "a": 0, "c": 0})
     assert silent(hist, streak=3) == ["a", "b"]
+
+
+def test_피드별로_침묵을_잡는다():
+    """합계만 기록하면 피드 하나가 죽어도 rss 총계가 0이 아니라 경고가 영영
+    안 뛴다. 실제로 2026-09-13 21:32부터 세 회차 연속 rss가 64건이었다 —
+    피드 8개 × 8건이라 두 피드가 죽어 있었는데 아무 신호도 없었다."""
+    hist = [{"counts": {"rss:OpenAI": 8, "rss:The Decoder": 0, "hackernews": 60}}
+            for _ in range(3)]
+    assert silent(hist, streak=3) == ["rss:The Decoder"]
+
+
+def test_합계만_있으면_못_잡는다():
+    """고치기 전 상태를 기록해 둔다 — 같은 상황인데 신호가 없다."""
+    hist = [{"counts": {"rss": 64, "hackernews": 60}} for _ in range(3)]
+    assert silent(hist, streak=3) == []
+
+
+def test_rss_수집기가_피드별로_센다():
+    import inspect
+
+    from news.scrapers import rss
+    sig = inspect.signature(rss.fetch)
+    assert "counts" in sig.parameters
+    src = inspect.getsource(rss.fetch)
+    assert 'f"rss:{name}"' in src

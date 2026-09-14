@@ -76,15 +76,35 @@ def _one(feed: dict, limit: int) -> list[dict]:
     return out
 
 
-def fetch(feeds: list[dict] | None = None, per_feed: int = 8) -> list[dict]:
+def feed_name(feed: dict) -> str:
+    return feed.get("name") or urlparse(feed.get("url") or "").netloc.replace("www.", "")
+
+
+def fetch(feeds: list[dict] | None = None, per_feed: int = 8,
+          counts: dict[str, int] | None = None) -> list[dict]:
+    """counts를 주면 피드별 건수를 `rss:이름`으로 남긴다.
+
+    합계만 기록하면 피드 하나가 죽어도 rss 총계가 0이 아니라 출처 침묵 경고가
+    영영 안 뛴다. 실제로 2026-09-13 21:32부터 세 회차 연속 rss가 64건이었다 —
+    피드 8개 × 8건이라 두 피드가 죽어 있었는데 아무 신호도 없었다.
+
+    피드는 새 글이 없어도 기존 항목을 돌려주므로 0건은 곧 실패다. 조용한
+    블로그를 실패로 오인할 걱정은 없다.
+    """
     if not feeds:
         return []
     articles: list[dict] = []
     with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = [pool.submit(_one, f, per_feed) for f in feeds if f.get("url")]
+        futures = {pool.submit(_one, f, per_feed): f for f in feeds if f.get("url")}
         for future in as_completed(futures):
+            name = feed_name(futures[future])
             try:
-                articles.extend(future.result())
+                got = future.result()
+                articles.extend(got)
+                if counts is not None:
+                    counts[f"rss:{name}"] = len(got)
             except Exception as e:
-                print(f"[rss] 오류: {e}")
+                print(f"[rss] {name} 오류: {e}")
+                if counts is not None:
+                    counts[f"rss:{name}"] = 0
     return articles
