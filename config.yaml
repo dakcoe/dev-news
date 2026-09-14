@@ -117,6 +117,11 @@ llm:
   # 환경변수 LLM_FALLBACK_MODELS(쉼표 구분)가 있으면 그쪽이 우선한다.
   fallback_models:
 
+  # 왜중요 모델이 한도에 걸리면 갈아탈 모델. 여기까지 다 떨어지면 주 모델이 쓴
+  # 왜중요를 그대로 쓴다 — 기사는 게시된다.
+  # 환경변수 LLM_WHY_FALLBACK_MODELS(쉼표 구분)가 우선한다.
+  why_fallback_models:
+
 # 조용한 열화 감지 (add-failure-alert). 회차가 exit 0으로 끝나도 게시 건수가
 # 이보다 적으면 Actions가 이슈로 알린다 — 요약 한도(429)나 후보 고갈로 몇 건만
 # 올라오는 상태는 "실패"로 잡히지 않기 때문이다. top_n(20)의 절반을 기준으로 둔다.

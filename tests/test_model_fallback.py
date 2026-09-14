@@ -110,11 +110,18 @@ def test_기본_체인이_groq에_있다():
     assert S.DEFAULT_MODELS["groq"] not in chain
 
 
-def test_qwen은_체인_뒤쪽에_둔다():
-    """qwen3.8은 글이 좋지만 다른 나라 문자가 자주 섞인다. 섞이면 재생성과 번역
-    치환으로 호출을 더 쓴다. 폴백은 호출이 모자라서 오는 자리다. 게다가
-    why_model이 qwen이라 그 예산은 이미 기사 수만큼 깎여 있다."""
-    chain = S.FALLBACK_MODELS["groq"]
-    qwen = [i for i, m in enumerate(chain) if "qwen" in m]
-    assert qwen, "qwen이 체인에 없다"
-    assert qwen[0] > 0, f"qwen이 첫 예비로 와 있다: {chain}"
+def test_체인에_없는_모델을_적지_않는다():
+    """Groq 계정에서 쓸 수 있는 모델만 적어야 한다. 없는 이름을 적으면 폴백이
+    404로 죽는다 — llama-3.3-70b-versatile을 적었다가 겪었다.
+    2026-09-14 기준 목록: gpt-oss-120b / gpt-oss-20b / qwen3.8-27b / qwen3.6-27b."""
+    AVAILABLE = {"openai/gpt-oss-120b", "openai/gpt-oss-20b",
+                 "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"}
+    for name, chain in [("요약", S.FALLBACK_MODELS["groq"]),
+                        ("왜중요", S.WHY_FALLBACK_MODELS["groq"])]:
+        unknown = set(chain) - AVAILABLE
+        assert not unknown, f"{name} 체인에 없는 모델: {unknown}"
+
+
+def test_왜중요_체인이_groq에_있다():
+    chain = S.WHY_FALLBACK_MODELS["groq"]
+    assert chain, "왜중요 기본 체인이 비어 있다"
