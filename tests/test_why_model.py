@@ -115,3 +115,70 @@ def test_parse_why_strips_label_and_no_info():
     assert S._parse_why("왜 중요한가: 한 문장이다.") == "한 문장이다."
     assert S._parse_why("없음") == ""
     assert S._parse_why("**한 문장이다.**") == "한 문장이다."
+
+
+def test_왜중요가_더러워도_기사는_게시된다():
+    """왜중요는 기사의 부속이다. 거기에 외국 문자가 섞였다고 멀쩡한 요약까지
+    버리면 안 된다. 예전에는 세 항목을 합쳐 검사해서 매 회차 기사를 떨궜다."""
+    def fake_call(prompt, provider, model, api_key):
+        if "왜 중요한가" in prompt:
+            return "왜중요: прогресс 진행이다."        # 키릴
+        return "번역제목: 제목\n요약: 정상 요약이다.\n왜중요: 주 모델이 쓴 이유다."
+
+    orig, S._call = S._call, fake_call
+    os.environ["GROQ_API_KEY"] = "test"
+    try:
+        out = S.summarize_all([dict(ARTICLE)], pause=0,
+                              model="main-model", why_model="why-model")
+    finally:
+        S._call = orig
+
+    a = out[0]
+    assert a["llm_done"], "기사가 떨어졌다"
+    assert a["summary"] == "정상 요약이다."
+    assert a["why"] == "주 모델이 쓴 이유다.", "주 모델 왜중요로 되돌아가야 한다"
+    assert not S.FOREIGN_RE.search(a["why"])
+
+
+def test_주_모델_왜중요도_더러우면_그_항목만_비운다():
+    """되돌아갈 곳이 없으면 왜중요만 버린다. 기사는 그대로 나간다."""
+    def fake_call(prompt, provider, model, api_key):
+        if "왜 중요한가" in prompt:
+            return "왜중요: прогресс 진행이다."
+        return "번역제목: 제목\n요약: 정상 요약이다.\n왜중요: 超越 이유다."
+
+    orig, S._call = S._call, fake_call
+    os.environ["GROQ_API_KEY"] = "test"
+    try:
+        out = S.summarize_all([dict(ARTICLE)], pause=0,
+                              model="main-model", why_model="why-model")
+    finally:
+        S._call = orig
+
+    a = out[0]
+    assert a["llm_done"]
+    assert a["why"] == ""
+    assert a["summary"] == "정상 요약이다."
+
+
+def test_치환_호출의_한도가_주_체인을_태우지_않는다():
+    """치환은 보조 수단이다. 그 429가 주 모델용 처리로 새어 나가면 사다리를
+    통째로 내려간다 — 기사 2건에 호출 19회, 게시 0건을 만든 적이 있다."""
+    calls = []
+
+    def fake_call(prompt, provider, model, api_key):
+        calls.append(model)
+        if "나열된 단어를 한국어로" in prompt:
+            raise S.RateLimited(2)
+        return "번역제목: 제목\n요약: カタカナ 섞인 요약.\n왜중요: 이유다."
+
+    orig, S._call = S._call, fake_call
+    os.environ["GROQ_API_KEY"] = "test"
+    try:
+        S.summarize_all([dict(ARTICLE), dict(ARTICLE)], pause=0, max_calls=60,
+                        model="main-model", fallback_models=["fb1", "fb2"])
+    finally:
+        S._call = orig
+
+    assert "fb1" not in calls and "fb2" not in calls, f"사다리가 탔다: {calls}"
+    assert len(calls) <= 8, f"호출이 {len(calls)}회로 새고 있다"

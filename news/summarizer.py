@@ -368,12 +368,37 @@ MODEL_LADDER = {
 }
 
 
-def chain_below(provider: str, model: str | None) -> list[str]:
-    """사다리에서 model보다 아래 칸들. 사다리에 없는 모델이면 사다리 전체다."""
+def chain_below(provider: str, model: str | None, exclude: set[str] | None = None
+                ) -> list[str]:
+    """사다리에서 model보다 아래 칸들.
+
+    사다리에 없는 모델을 설정으로 지정했으면 사다리 전체를 예비로 쓴다. 다만
+    exclude에 든 것은 뺀다 — 왜중요 예비가 주 모델과 같은 칸으로 내려가면 한
+    회차에서 같은 한도를 두 번 두드리게 된다.
+    """
     ladder = MODEL_LADDER.get(provider, [])
-    if model in ladder:
-        return ladder[ladder.index(model) + 1:]
-    return [m for m in ladder if m != model]
+    below = ladder[ladder.index(model) + 1:] if model in ladder else list(ladder)
+    drop = {model} | (exclude or set())
+    return [m for m in below if m not in drop]
+
+
+def _dodge_collision(model: str, why_model: str | None, why_chain: list[str],
+                     why_off: bool) -> tuple[str | None, bool]:
+    """요약이 한 칸 내려와 왜중요와 같은 모델에 앉으면 비켜 준다.
+
+    같은 칸을 쓰면 한 기사에 같은 한도를 두 번 두드린다 — 한도를 피해 내려왔는데
+    예산을 두 배로 쓰는 꼴이다. 왜중요를 한 칸 더 내리고, 더 내려갈 곳이 없으면
+    이번 회차는 끈다. 왜중요는 없어도 기사가 나간다.
+    """
+    if why_off or not why_model or why_model != model:
+        return why_model, why_off
+    while why_chain:
+        nxt = why_chain.pop(0)
+        if nxt != model:
+            print(f"  · 왜중요가 요약과 같은 칸 — {nxt}로 한 칸 더 내린다")
+            return nxt, False
+    print(f"  · 왜중요가 요약과 같은 칸 — 이번 회차는 왜중요를 끈다")
+    return why_model, True
 
 
 def summarize_all(articles: list[dict], provider: str | None = None,
@@ -410,7 +435,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     if why_fallback_models is None:
         env = os.environ.get("LLM_WHY_FALLBACK_MODELS")
         why_fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
-                               else chain_below(provider, why_model))
+                               else chain_below(provider, why_model, exclude={model}))
     why_chain = [m for m in why_fallback_models if m and m != why_model] if why_model else []
 
     print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"
@@ -447,6 +472,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 calls += 1
                 candidate = _parse(_call(prompt, provider, model, api_key))
                 if candidate["ko_title"] or candidate["summary"]:
+                    base_why = candidate["why"]      # 왜중요 모델이 실패하면 돌아올 자리
                     while why_model and not why_off and calls < max_calls:
                         calls += 1
                         try:
@@ -477,10 +503,24 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                         except Exception as e:
                             print(f"  · 왜중요 생성 실패({e}) — {model} 결과 유지")
                             break
+                    # 왜중요는 기사의 부속이다. 여기가 더러우면 그 항목만 버리고
+                    # 주 모델이 쓴 왜중요로 되돌린다 — 기사까지 떨구지 않는다.
+                    # 예전에는 세 항목을 합쳐서 검사해, 요약이 멀쩡해도 왜중요에
+                    # 키릴 한 단어가 섞이면 기사 전체가 미게시됐다. qwen이 왜중요를
+                    # 쓰고 있어 매 회차 이 경로를 밟았다.
+                    if candidate["why"] and FOREIGN_RE.search(candidate["why"]):
+                        if base_why and not FOREIGN_RE.search(base_why):
+                            print("  · 왜중요에 외국 문자 — 주 모델 왜중요로 되돌린다")
+                            candidate["why"] = base_why
+                        else:
+                            print("  · 왜중요에 외국 문자 — 이 항목만 비운다")
+                            candidate["why"] = ""
+
+                    # 제목·요약은 기사의 본체다. 여기가 더러우면 고친다:
+                    # 재생성 1회 → 번역·일괄 치환 1회 → 그래도 남으면 미게시
+                    # (llm_done=False, 다음 실행에서 재시도).
                     joined = " ".join(filter(None, [candidate["ko_title"] or "",
-                                                    candidate["summary"], candidate["why"]]))
-                    # 외국 문자는 절대 수용하지 않는다: 재생성 1회 → 번역·일괄 치환 1회
-                    # → 그래도 남으면 미게시(llm_done=False, 다음 실행에서 재시도).
+                                                    candidate["summary"]]))
                     if FOREIGN_RE.search(joined):
                         if attempt < 1:
                             print("  · 외국 문자 섞임 — 재생성")
@@ -488,7 +528,20 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                             continue
                         if calls < max_calls:
                             calls += 1
-                            fixed = _translate_foreign(candidate, provider, model, api_key)
+                            # ⚠️ 이 호출의 실패는 이 기사만의 일이다. 바깥 except로
+                            # 새어 나가면 429 하나가 주 모델용 처리로 오인돼 사다리를
+                            # 통째로 내려간다 — 기사 2건에 호출 19회, 게시 0건을
+                            # 만든 적이 있다. 치환은 보조 수단이라 실패하면 그냥
+                            # 미게시하고 다음 실행에서 다시 시도한다.
+                            try:
+                                fixed = _translate_foreign(candidate, provider,
+                                                           model, api_key)
+                            except RateLimited:
+                                print("  · 치환 호출 한도(429) — 이 기사만 미게시")
+                                fixed = None
+                            except Exception as e:
+                                print(f"  · 치환 호출 실패({e}) — 이 기사만 미게시")
+                                fixed = None
                             if fixed is not None:
                                 print("  · 외국 문자 번역 치환 성공")
                                 parsed = fixed
@@ -505,7 +558,10 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if chain:
                     model = chain.pop(0)
                     retries_429 = 0
+                    attempt = 0
                     print(f"  · 예비 모델 {model}로 교체하고 계속한다")
+                    why_model, why_off = _dodge_collision(
+                        model, why_model, why_chain, why_off)
                     continue
                 exhausted = True
                 break
@@ -517,7 +573,11 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                     if chain:
                         model = chain.pop(0)
                         retries_429 = 0
+                        attempt = 0        # 새 모델에 재생성 기회를 그대로 준다
                         print(f"  · 한도(429) — 예비 모델 {model}로 교체하고 계속한다")
+                        _why_model, _why_off = _dodge_collision(
+                            model, why_model, why_chain, why_off)
+                        why_model, why_off = _why_model, _why_off
                         continue          # 같은 기사를 새 모델로 다시 시도
                     exhausted = True
                     break
