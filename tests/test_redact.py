@@ -144,3 +144,33 @@ def test_pipeline_wiring():
     assert collect < src.index("candidates.log(")      # 후보 로그 전에 마스킹
     assert body < src.index("summarize_all(")          # LLM 전송 전에 마스킹
     assert summary < src.index("archive.append(")      # 아카이브 기록 전에 마스킹
+
+
+# ---------------- 2026-09-15 보강분 ----------------
+
+def test_push_protection이_막는_패턴을_안다():
+    """걸리면 GH013으로 push가 거부돼 회차가 통째로 죽는다. 마스킹 경로가 없으면
+    사람이 손으로 치울 때까지 회복되지 않는다."""
+    cases = [
+        "GOCSPX-" + "a" * 24,
+        "pypi-AgE" + "b" * 45,
+        "dop_v1_" + "c" * 64,
+        "shpat_" + "d" * 32,
+        "xai-" + "e" * 45,
+        "https://hooks.slack.com/services/T0000/B0000/" + "f" * 24,
+    ]
+    for c in cases:
+        assert redact_text(c) != c, c
+
+
+def test_정상_문구를_마스킹하지_않는다():
+    for ok in ["정상 설명문입니다", "https://api.example.com/v1/users",
+               "Use the X-API-Key header", "sk-is-a-prefix"]:
+        assert redact_text(ok) == ok, ok
+
+
+def test_API_카탈로그가_마스킹을_거친다():
+    """커밋되는 파일 중 유일하게 안 거치고 있었다. 남의 README 원문을 담는다."""
+    import os
+    src = open(os.path.join(ROOT, "news", "apis_catalog.py"), encoding="utf-8").read()
+    assert "redact_articles(all_apis" in src
