@@ -104,3 +104,28 @@ def test_shipped_config_blocks_known_noise():
         assert not _passes(t, kw), f"잡음이 통과: {t}"
     for t in dev:
         assert _passes(t, kw), f"개발 기사가 차단: {t}"
+
+
+# ---------------- 실제 경로 ----------------
+
+def test_켜진_출처는_전부_면제_상태다():
+    """지금 상태를 기록해 둔다. 키워드 176개는 프로덕션에서 한 건도 판정하지
+    않는다 — 통과 여부는 차단 목록이 정한다. 이걸 모르면 키워드를 고치고
+    동작이 바뀌길 기대하게 된다.
+
+    새 출처를 붙였는데 여기 안 넣었다면 그 출처만 화이트리스트를 탄다. 그게
+    안전한 기본값이라 일부러 그렇게 둔다.
+    """
+    from news.core.filters import TRUSTED
+    cfg = yaml.safe_load(open(os.path.join(ROOT, "config.yaml"), encoding="utf-8"))
+    on = {k for k, v in cfg["sources"].items() if v}
+    on.discard("trendshift")          # source가 "github"으로 기록된다
+    assert on <= TRUSTED, f"화이트리스트를 타는 출처: {sorted(on - TRUSTED)}"
+
+
+def test_면제되지_않은_출처는_키워드를_탄다():
+    """reddit은 꺼져 있지만 코드가 준비돼 있다. 켜지면 이 경로가 유일한 방어선이다."""
+    from news.core.filters import TRUSTED
+    assert "reddit" not in TRUSTED
+    assert _passes("Rust 1.90 released", source="reddit")
+    assert not _passes("오늘 점심 메뉴 추천", source="reddit")
