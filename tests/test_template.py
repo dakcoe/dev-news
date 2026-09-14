@@ -234,5 +234,8 @@ def test_인트로_커서가_글자_경계에_선다(html):
 
     윈도우 실측: 고치기 전 0·24.4·48.8…244, 고친 뒤 0·24·48…240.
     """
-    assert "translateX(calc(100% - 4px))" in html
-    assert "translateX(100%)" not in html
+    import re
+    kf = re.search(r"@keyframes introReveal\{([^}]*\}?[^}]*)\}", html).group(1)
+    assert "translateX(calc(100% - 4px))" in kf, kf
+    # translateX(100%)는 상세 패널이 화면 밖에 대기하는 데도 쓴다 — 거긴 정상이다.
+    assert "translateX(100%)" not in kf
