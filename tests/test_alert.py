@@ -78,8 +78,10 @@ def test_issues_write_permission():
 
 
 def test_failure_step_exists():
+    """cancelled()도 함께 본다 — timeout-minutes를 넘기면 job이 cancelled로 끝나고
+    failure()는 거기서 거짓이라 알림이 통째로 건너뛰어졌다."""
     step = next(s for s in _steps() if s.get("name") == "실패 알림")
-    assert step["if"] == "failure()"
+    assert step["if"] == "failure() || cancelled()"
     assert "scripts/notify.sh" in step["run"]
 
 
