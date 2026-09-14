@@ -34,11 +34,30 @@ def test_429_circuit_breaker(monkeypatch):
     monkeypatch.setattr(summarizer.requests, "post",
                         lambda *a, **k: calls.append(1) or FakeResp(429, headers={"retry-after": "1"}))
 
-    out = summarizer.summarize_all(list(ARTICLES), provider="groq", max_calls=50)
+    # 예비 모델을 끈다. 켜져 있으면 갈아타며 계속 부르는 게 정상이고,
+    # 그 동작은 test_model_fallback.py가 본다.
+    out = summarizer.summarize_all(list(ARTICLES), provider="groq", max_calls=50,
+                                   fallback_models=[])
 
     # 첫 기사에서 최초 1회 + 재시도 2회 = 3회 후 서킷 오픈, 나머지는 호출 없음
     assert len(calls) == 1 + summarizer.MAX_429_RETRIES
     assert len(out) == 3
+    assert all(a["llm_done"] is False for a in out)
+
+
+def test_429_예비_모델을_다_쓴_뒤에_서킷이_열린다(monkeypatch):
+    """예비가 있으면 모델마다 재시도 예산을 새로 쓴다. 무한히 돌지는 않는다."""
+    calls = []
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    monkeypatch.setattr(summarizer.time, "sleep", lambda s: None)
+    monkeypatch.setattr(summarizer.requests, "post",
+                        lambda *a, **k: calls.append(1) or FakeResp(429, headers={"retry-after": "1"}))
+
+    out = summarizer.summarize_all(list(ARTICLES), provider="groq", max_calls=50,
+                                   fallback_models=["예비-1", "예비-2"])
+
+    # 모델 3개(주 + 예비 2) × (최초 1회 + 재시도 2회)
+    assert len(calls) == 3 * (1 + summarizer.MAX_429_RETRIES)
     assert all(a["llm_done"] is False for a in out)
 
 
