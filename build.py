@@ -101,7 +101,10 @@ def run_scrapers(cfg: dict, counts: dict[str, int] | None = None) -> list[dict]:
     if src.get("geeknews", True):
         tasks["geeknews"] = lambda: geeknews.fetch(limit=s.get("per_source", 30))
     if src.get("rss", True):
-        tasks["rss"] = lambda: rss.fetch(cfg.get("feeds"), per_feed=s.get("per_feed", 8))
+        # counts를 넘겨 피드별 건수를 남긴다. 합계만 기록하면 피드 하나가 죽어도
+        # rss 총계가 0이 아니라 출처 침묵 경고가 영영 안 뛴다.
+        tasks["rss"] = lambda: rss.fetch(cfg.get("feeds"), per_feed=s.get("per_feed", 8),
+                                         counts=counts)
     if src.get("anthropic", True):
         tasks["anthropic"] = lambda: anthropic.fetch(limit=s.get("per_feed", 8))
 
