@@ -110,11 +110,19 @@ def keyword_filter(articles: list[dict], keywords: list[str],
     kept, dropped, blocked = [], 0, 0
     for a in articles:
         # 주소는 지우고 본다. 통과 근거도 차단 근거도 글의 주제여야 한다.
+        title = _URL_RE.sub(" ", a.get("title", "").lower())
         text = _URL_RE.sub(" ", (a.get("title", "") + " "
                                  + a.get("description", "")).lower())
         has_dev = bool(pattern.search(text)) if pattern else False
 
-        if block is not None and block.search(text) and not has_dev:
+        # ⚠️ 차단은 제목만 본다. 설명문까지 보면 낱말 하나가 스친 것으로 개발
+        # 기사가 빠진다 — 실측으로 게재분에서 19건이 그렇게 막혔다. "딥러닝
+        # 선구자 벵기오, 훈련 과정 자체가 AI를 위험하게 만든다"(설명문의 '전쟁'),
+        # "미 법원, 국방부의 Anthropic 블랙리스트 지정은 위법"(설명문의 '군사')
+        # 같은 것들이라 이 사이트가 놓치면 안 되는 갈래다.
+        #
+        # 통과 판정에는 설명문을 계속 쓴다. 제목이 짧은 기사는 그게 유일한 근거다.
+        if block is not None and block.search(title) and not has_dev:
             blocked += 1
             continue
 
