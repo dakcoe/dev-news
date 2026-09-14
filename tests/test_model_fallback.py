@@ -108,3 +108,13 @@ def test_기본_체인이_groq에_있다():
     chain = S.FALLBACK_MODELS["groq"]
     assert chain, "groq 기본 체인이 비어 있다"
     assert S.DEFAULT_MODELS["groq"] not in chain
+
+
+def test_qwen은_체인_뒤쪽에_둔다():
+    """qwen3.8은 글이 좋지만 다른 나라 문자가 자주 섞인다. 섞이면 재생성과 번역
+    치환으로 호출을 더 쓴다. 폴백은 호출이 모자라서 오는 자리다. 게다가
+    why_model이 qwen이라 그 예산은 이미 기사 수만큼 깎여 있다."""
+    chain = S.FALLBACK_MODELS["groq"]
+    qwen = [i for i, m in enumerate(chain) if "qwen" in m]
+    assert qwen, "qwen이 체인에 없다"
+    assert qwen[0] > 0, f"qwen이 첫 예비로 와 있다: {chain}"
