@@ -68,7 +68,7 @@ def test_render_unaffected_without_content():
     assert vm["title"] == "예시"
     assert vm["why"] == "왜 중요한지."
     assert "두세 문장" in vm["snip"]
-    assert "<p>두세 문장 요약.</p>" == vm["body"]
+    assert vm["paras"] == ["두세 문장 요약."]
 
 
 def test_shipped_shards_have_no_content():

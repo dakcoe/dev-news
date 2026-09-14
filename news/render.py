@@ -149,7 +149,11 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
             "snip": _first_sentences(summary),
         })
         if inline:
-            out[-1]["body"] = "".join(f"<p>{p}</p>" for p in body_paras)
+            # ⚠️ HTML이 아니라 문단 목록으로 넘긴다. 예전에는 서버가 "<p>요약</p>"
+            # 문자열을 만들어 보냈는데, 요약은 외부에서 온 글이라 그 안에 태그가
+            # 섞이면 화면에서 그대로 실행됐다. 이스케이프할 지점이 아예 없는 구조라
+            # 템플릿 쪽에서는 고칠 수도 없었다. 마크업은 한 곳에서만 만든다.
+            out[-1]["paras"] = body_paras
             out[-1]["why"] = a.get("why") or ""
     return out
 
@@ -178,6 +182,33 @@ def site_url() -> str:
         return FALLBACK_URL
 
 
+def _json_for_script(obj) -> str:
+    """<script> 안에 심어도 안전한 JSON.
+
+    json.dumps는 HTML을 모른다. 기사 제목에 "</script>"가 들어 있으면 브라우저가
+    거기서 스크립트를 끝내고 그 뒤를 마크업으로 읽는다 — 남의 기사 제목은 우리가
+    정하는 값이 아니므로 실제로 들어올 수 있다. 파서가 태그로 볼 수 있는 조각만
+    막으면 되고, 이스케이프한 뒤에도 JSON으로서는 같은 값이다.
+
+    U+2028·U+2029는 JSON에서는 유효하지만 JS 소스에서는 줄바꿈이라 구문이 깨진다.
+    """
+    return (json.dumps(obj, ensure_ascii=False)
+            .replace("</", "<\\/")
+            .replace("<!--", "<\\!--")
+            .replace("\u2028", "\\u2028")
+            .replace("\u2029", "\\u2029"))
+
+
+def _safe_url(url: str) -> str:
+    """href·src에 넣어도 되는 주소만 통과시킨다.
+
+    "javascript:alert(1)" 같은 주소가 링크에 실리면 클릭 한 번에 실행된다.
+    출처에서 받은 값을 그대로 쓰므로 스킴을 직접 확인한다.
+    """
+    u = (url or "").strip()
+    return u if u[:7].lower() == "http://" or u[:8].lower() == "https://" else ""
+
+
 def _esc(text: str) -> str:
     return (str(text).replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
@@ -200,7 +231,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
             meta.append('<span class="sep">·</span><span>' + _esc(d["batchLabel"]) + "</span>")
         rows.append(
             '<div class="row"><div></div><div class="mid">'
-            f'<h2 class="rt"><a href="{_esc(d.get("url") or "")}" rel="noopener">'
+            f'<h2 class="rt"><a href="{_esc(_safe_url(d.get("url") or ""))}" rel="noopener">'
             f'{_esc(d.get("title") or "")}</a></h2>'
             '<div class="rm">' + "".join(meta) + "</div>"
             + (f'<div class="snip">{_esc(d["snip"])}</div>' if d.get("snip") else "")
@@ -270,7 +301,7 @@ def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS)
         ],
     }
     return ('<script type="application/ld+json">'
-            + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+            + _json_for_script(data)
             + "</script>")
 
 
@@ -345,12 +376,11 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
         html = f.read()
 
     html = (html
-            .replace("__DATA_JSON__", json.dumps(view_model, ensure_ascii=False))
-            .replace("__SRC_JSON__", json.dumps(sources, ensure_ascii=False))
-            .replace("__TAG_JSON__", json.dumps(
+            .replace("__DATA_JSON__", _json_for_script(view_model))
+            .replace("__SRC_JSON__", _json_for_script(sources))
+            .replace("__TAG_JSON__", _json_for_script(
                 {tid: {"label": spec["label"], "group": spec["group"]}
-                 for tid, spec in tag_vocab.VOCAB.items()},
-                ensure_ascii=False))
+                 for tid, spec in tag_vocab.VOCAB.items()}))
             .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
             .replace("__COLLECTED__", collected.isoformat())
             .replace("__DATE__", collected.strftime("%Y-%m-%d"))
@@ -359,7 +389,7 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
             .replace("__META_DESC__", _meta_desc(view_model))
             .replace("__SITE_URL__", site_url())
             .replace("__ADS_HEAD__", _ads_head(ads_cfg))
-            .replace("__ADS_JSON__", json.dumps(ads_cfg, ensure_ascii=False)))
+            .replace("__ADS_JSON__", _json_for_script(ads_cfg)))
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:

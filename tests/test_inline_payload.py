@@ -25,13 +25,13 @@ def _art(days_ago, url="https://a"):
 
 def test_recent_articles_keep_body_and_why():
     vm = to_view_model([_art(0)], inline_days=3)[0]
-    assert vm["body"] == "<p>요약 문장이다.</p>"
+    assert vm["paras"] == ["요약 문장이다."]
     assert vm["why"] == "중요한 이유."
 
 
 def test_old_articles_drop_body_and_why():
     vm = to_view_model([_art(10)], inline_days=3)[0]
-    assert "body" not in vm and "why" not in vm
+    assert "paras" not in vm and "why" not in vm
 
 
 def test_old_articles_keep_list_fields():
@@ -44,26 +44,26 @@ def test_old_articles_keep_list_fields():
 
 
 def test_boundary_is_inclusive():
-    assert "body" in to_view_model([_art(2)], inline_days=3)[0]
-    assert "body" not in to_view_model([_art(4)], inline_days=3)[0]
+    assert "paras" in to_view_model([_art(2)], inline_days=3)[0]
+    assert "paras" not in to_view_model([_art(4)], inline_days=3)[0]
 
 
 def test_inline_days_zero_keeps_everything():
-    assert "body" in to_view_model([_art(999)], inline_days=0)[0]
+    assert "paras" in to_view_model([_art(999)], inline_days=0)[0]
 
 
 def test_unknown_batch_stays_inline():
     """회차를 모르면 지연 로딩이 불가능하므로 안전하게 인라인한다."""
     a = _art(10)
     del a["batch"]
-    assert "body" in to_view_model([a], inline_days=3)[0]
+    assert "paras" in to_view_model([a], inline_days=3)[0]
 
 
 def test_client_falls_back_to_shard():
-    """openDetail이 body 부재를 감지해 openArchived로 위임하는지."""
+    """openDetail이 본문 부재를 감지해 openArchived로 위임하는지."""
     html = open(TEMPLATE, encoding="utf-8").read()
-    assert "d.body===undefined" in html
-    assert re.search(r"if\(d\.body===undefined\)\{\s*openArchived\(d\.url, d\.month", html)
+    assert "d.paras===undefined" in html
+    assert re.search(r"if\(d\.paras===undefined\)\{\s*openArchived\(d\.url, d\.month", html)
     # extra 병합이 없으면 지연 로딩분 상세만 메타가 빠진다
     assert "Object.assign({" in html
     assert "function openArchived(url, month, extra)" in html

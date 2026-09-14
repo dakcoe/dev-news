@@ -703,19 +703,22 @@ function rowHTML(d){
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
   (d.tags||[]).forEach(t=>{
-    meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+tagLabel(t)+'</span>';
+    meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+escA(tagLabel(t))+'</span>';
   });
   const isRead = read.has(d.url);
   return '<div class="row'+(cur===d.i?' act':'')+(isRead?' rd':'')+'" data-i="'+d.i+'">'
     + '<button class="ck'+(savedMap.has(d.url)?' on':'')+'" data-ck="'+d.i+'" title="보관">'+I.chk+'</button>'
     + '<div class="mid" data-open="'+d.i+'">'
-    +   '<h2 class="rt">'+d.title+'</h2>'
+    +   '<h2 class="rt">'+escA(d.title)+'</h2>'
     +   '<div class="rm">'+meta+'</div>'
-    +   (d.snip?'<div class="snip">'+d.snip+'</div>':'')
+    +   (d.snip?'<div class="snip">'+escA(d.snip)+'</div>':'')
     + '</div>'
-    + (d.img?'<div class="thumb"><img src="'+d.img+'" loading="lazy" alt="'+escA(d.title)+'" onerror="this.closest(\'.thumb\').remove()"></div>':'<div></div>')
+    + (safeU(d.img)?'<div class="thumb"><img src="'+safeU(d.img)+'" loading="lazy" alt="'+escA(d.title)+'" onerror="this.closest(\'.thumb\').remove()"></div>':'<div></div>')
     + '<div class="acts">'
-    +   '<button class="ib" title="원문 열기" onclick="event.stopPropagation();markRead(\''+d.url+'\');render();window.open(\''+d.url+'\',\'_blank\')">'+I.ext+'</button>'
+    /* 주소를 onclick 안 JS 문자열에 넣지 않는다. 주소에 작은따옴표가 하나만
+       있어도 문자열이 닫히고 그 뒤가 코드가 된다 — escA는 따옴표를 안 막는다.
+       data-*로 넘기고 bind()가 위임으로 처리한다. */
+    +   '<button class="ib" title="원문 열기" data-ext="'+d.i+'">'+I.ext+'</button>'
     +   '<button class="ib" title="번역 요약" data-open="'+d.i+'">'+I.doc+'</button>'
     +   '<button class="ib'+(isRead?' done':'')+'" title="'+(isRead?'안 읽음으로':'읽음으로')+' 표시" '
     +     'onclick="event.stopPropagation();toggleRead('+d.i+')">'+I.eye+'</button>'
@@ -726,9 +729,9 @@ function rowHTML(d){
 function archRowHTML(e){
   return '<div class="row" data-au="'+e.u+'" data-am="'+e.m+'" style="cursor:pointer">'
     + '<div></div>'
-    + '<div class="mid"><h2 class="rt">'+e.t+'</h2>'
-    + '<div class="rm"><span class="s">'+((SRC[e.s]||{}).name||e.s)+'</span>'
-    + '<span class="sep">·</span><span>'+e.d+'</span></div></div></div>';
+    + '<div class="mid"><h2 class="rt">'+escA(e.t)+'</h2>'
+    + '<div class="rm"><span class="s">'+escA((SRC[e.s]||{}).name||e.s)+'</span>'
+    + '<span class="sep">·</span><span>'+escA(e.d)+'</span></div></div></div>';
 }
 
 /* 활성 필터 수 = 패널 항목(태그·출처)만 — 기간·안읽음·정렬은 바에서 직접 보인다 */
@@ -829,11 +832,11 @@ function openArchived(url, month, extra){
   const show = list => {
     const a=list.find(x=>x.url===url);
     if(!a){ alert('기사를 찾지 못했습니다.'); return; }
-    const body=(a.summary||a.description||'').split('\n').filter(p=>p.trim());
+    const paras=(a.summary||a.description||'').split('\n').filter(p=>p.trim());
     showDetail(Object.assign({
       title:a.ko_title||a.title, from:(SRC[a.source]||{}).name||a.source,
       color:(SRC[a.source]||{}).color||'#999', pub:null, dateLabel:(a.batch||'').slice(0,10),
-      img:a.image, body:body.map(p=>'<p>'+p+'</p>').join('')||'<p>(요약 없음)</p>',
+      img:a.image, paras:paras,
       why:a.why||'', url:a.url
     }, extra||{}));
     markRead(url);
@@ -855,6 +858,11 @@ let APIS=null;                         // null=미시도, 'loading', 'fail', 객
 let apiQ='', apiSrc='all', apiCat=null, apiOpen=-1;   // apiCat='src|cat' 키, apiOpen=현재 목록 내 인덱스
 const A_LBL={kr:'한국판', global:'Public APIs', llm:'무료 LLM'};
 const escA=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* href·src에 넣어도 되는 주소만 통과시킨다. 기사 주소와 썸네일은 출처에서
+   받은 값이라 "javascript:..."가 섞여 들어올 수 있다. 통과하지 못하면 빈
+   문자열이 되어 링크가 죽고, 그림은 onerror가 지운다. */
+const safeU=u=>{const v=String(u??'').trim();
+  return /^https?:\/\//i.test(v)?escA(v):'';};
 function ensureApis(){
   if(APIS!==null) return;
   APIS='loading';
@@ -1292,22 +1300,33 @@ function bind(){
     e.stopPropagation(); savedMap.delete(b.dataset.un); persist(); render();});
   viewEl.querySelectorAll('[data-open]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); openDetail(+b.dataset.open);});
+  /* 원문 열기. 주소를 속성이나 인라인 코드에 싣지 않고 여기서 DATA에서 꺼낸다. */
+  viewEl.querySelectorAll('[data-ext]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation();
+    const d=DATA[+b.dataset.ext], u=safeU(d.url);
+    markRead(d.url); render();
+    if(u) window.open(d.url,'_blank','noopener');});
   viewEl.querySelectorAll('[data-au]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); openArchived(b.dataset.au, b.dataset.am);});
 }
 
 function showDetail(d){
-  let meta='<span class="s" style="color:'+d.color+';font-weight:700">'+d.from+'</span>';
+  let meta='<span class="s" style="color:'+escA(d.color)+';font-weight:700">'+escA(d.from)+'</span>';
   if(d.pub) meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   else if(d.dateLabel) meta+='<span class="sep">·</span><span>'+d.dateLabel+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span>'+d.cm+'댓글</span>';
   if(d.delta) meta+='<span class="sep">·</span><span>스타 +'+d.delta.toLocaleString()+'</span>';
+  /* 본문은 문단 목록으로 받아 여기서 <p>를 만든다. 서버가 HTML 문자열을
+     조립해 보내면 이스케이프할 자리가 사라진다. */
+  const paras=(d.paras&&d.paras.length?d.paras:[d.snip||'(요약 없음)']);
+  const link=safeU(d.url);
   document.getElementById('db').innerHTML =
-    (d.img?'<img class="hero" src="'+d.img+'" alt="" onerror="this.remove()">':'')
-    + '<div class="dc"><h2>'+d.title+'</h2><div class="dmeta">'+meta+'</div>'
-    + d.body
-    + (d.why?'<div class="why"><b>왜 중요한가</b>'+d.why+'</div>':'')
-    + '<a class="go" href="'+d.url+'" target="_blank" rel="noopener">원문 열기 ↗</a></div>';
+    (safeU(d.img)?'<img class="hero" src="'+safeU(d.img)+'" alt="" onerror="this.remove()">':'')
+    + '<div class="dc"><h2>'+escA(d.title)+'</h2><div class="dmeta">'+meta+'</div>'
+    + paras.map(t=>'<p>'+escA(t)+'</p>').join('')
+    + (d.why?'<div class="why"><b>왜 중요한가</b>'+escA(d.why)+'</div>':'')
+    + (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
+    + '</div>';
   document.getElementById('db').scrollTop=0;
   document.getElementById('dt').classList.add('open');
 }
@@ -1315,9 +1334,9 @@ function showDetail(d){
 function openDetail(i){
   cur=i; const d=DATA[i], s=SRC[d.src]||{name:d.src,color:'#999'};
   markRead(d.url);
-  /* 최근 N일 밖 기사는 body·why가 인라인되지 않는다 (split-initial-payload).
+  /* 최근 N일 밖 기사는 paras·why가 인라인되지 않는다 (split-initial-payload).
      월별 샤드에서 가져온다 — 같은 달은 SHARDS에 캐시되므로 한 번만 탄다. */
-  if(d.body===undefined){
+  if(d.paras===undefined){
     openArchived(d.url, d.month, {from:d.from, color:s.color, pub:d.pub, cm:d.cm,
       delta:(d.src==='github'?d.delta:0), img:d.img, title:d.title});
     render(); return;
@@ -1325,7 +1344,7 @@ function openDetail(i){
   showDetail({
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,
-    body:(d.body && d.body!=='<p></p>')?d.body:'<p>'+(d.snip||'(요약 없음)')+'</p>',
+    paras:d.paras, snip:d.snip,
     why:d.why||'', url:d.url
   });
   render();
