@@ -146,3 +146,23 @@ def test_ambiguous_korean_dev_words_excluded():
         kw = yaml.safe_load(f)["keywords"]
     for ambiguous in ("개발", "테스트", "기술", "모델", "학습"):
         assert ambiguous not in kw, f"모호어가 키워드에 있음: {ambiguous}"
+
+
+def test_차단어의_복수형도_막는다():
+    """목록이 전부 명사인데 복수형을 못 받아 그대로 통과했다.
+    'GLP-1s are linked to fewer serious infections'가 실측 사례다."""
+    from news.core.filters import _block_re
+    rx = _block_re((), ("infection", "glp-1", "climate", "arrest"))
+    for t in ["glp-1s linked to fewer serious infections",
+              "climates of the world", "arrests made"]:
+        assert rx.search(t), t
+
+
+def test_복수형_허용이_기존_오탐을_되살리지_않는다():
+    """`war`가 software·hardware 안에서 걸리던 실측 오탐이 있었다.
+    복수형을 받아도 그 경계는 그대로여야 한다."""
+    from news.core.filters import _block_re
+    rx = _block_re((), ("war", "police", "climate"))
+    for t in ["software is hard", "hardware review", "warsaw pact",
+              "policies changed", "acclimate the system"]:
+        assert not rx.search(t), t
