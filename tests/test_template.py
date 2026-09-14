@@ -224,3 +224,15 @@ def test_search_partial_render_keeps_input(html):
     assert "renderList()" in html
     # oninput이 전체 render()로 input을 갈아끼우던 이전 방식이 아니어야 한다
     assert "q=e.target.value; render()" not in html
+
+
+def test_인트로_커서가_글자_경계에_선다(html):
+    """덮개는 글자보다 4px 넓다(오른쪽 끝을 확실히 덮으려고 둔 여유). 이동량을
+    덮개 폭(100%) 기준으로 잡으면 한 걸음이 24.4px가 되는데 글자 한 칸은 24px다.
+    걸음마다 0.4px씩 밀려 커서가 글자 안으로 파고들고, 여덟 걸음째에 글자가 다
+    드러난 뒤 두 걸음을 빈자리에서 혼자 미끄러진다.
+
+    윈도우 실측: 고치기 전 0·24.4·48.8…244, 고친 뒤 0·24·48…240.
+    """
+    assert "translateX(calc(100% - 4px))" in html
+    assert "translateX(100%)" not in html

@@ -141,7 +141,12 @@ __ADS_HEAD__
     animation:introReveal .45s steps(10,end) .1s forwards,
               introCaret .5s steps(1) 3;
   }
-  @keyframes introReveal{to{transform:translateX(100%)}}
+  /* ⚠️ 100%가 아니라 100%-4px 이다. 100%는 덮개 자기 폭(글자 240px + 오른쪽
+     여유 4px)이라, 열 걸음으로 나누면 한 걸음이 24.4px가 된다. 글자 한 칸은
+     24px이므로 걸음이 0.4px씩 길어 커서가 글자 경계에서 점점 밀리고, 여덟
+     걸음째에 글자가 다 드러난 뒤 두 걸음을 빈자리에서 혼자 미끄러진다.
+     이동량을 글자 폭에 맞추면 걸음과 글자가 정확히 맞는다. */
+  @keyframes introReveal{to{transform:translateX(calc(100% - 4px))}}
   @keyframes introCaret{50%{border-left-color:transparent}}
   @keyframes introMark{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
   @keyframes introOut{to{opacity:0;visibility:hidden}}
@@ -727,7 +732,7 @@ function rowHTML(d){
 
 /* 아카이브 검색 결과 행 (SPEC 2.4) */
 function archRowHTML(e){
-  return '<div class="row" data-au="'+e.u+'" data-am="'+e.m+'" style="cursor:pointer">'
+  return '<div class="row" data-au="'+escA(e.u)+'" data-am="'+escA(e.m)+'" style="cursor:pointer">'
     + '<div></div>'
     + '<div class="mid"><h2 class="rt">'+escA(e.t)+'</h2>'
     + '<div class="rm"><span class="s">'+escA((SRC[e.s]||{}).name||e.s)+'</span>'
@@ -1128,8 +1133,8 @@ function render(){
       items.forEach(sv=>{
         const d=DATA.find(x=>x.url===sv.url);
         if(d) h+=rowHTML({...d, i:DATA.indexOf(d)});
-        else h+='<div class="row" data-au="'+sv.url+'" data-am="'+sv.month+'" style="cursor:pointer">'
-              +'<button class="ck on" data-un="'+sv.url+'" title="보관 해제">'+I.chk+'</button>'
+        else h+='<div class="row" data-au="'+escA(sv.url)+'" data-am="'+escA(sv.month)+'" style="cursor:pointer">'
+              +'<button class="ck on" data-un="'+escA(sv.url)+'" title="보관 해제">'+I.chk+'</button>'
               +'<div class="mid"><h2 class="rt">'+sv.title+'</h2>'
               +'<div class="rm"><span>'+(sv.month||'아카이브')+'</span></div></div></div>';
       });
