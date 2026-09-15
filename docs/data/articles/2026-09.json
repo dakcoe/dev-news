@@ -1,5 +1,561 @@
 [
  {
+  "title": "25 years of mass surveillance is enough",
+  "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 590,
+  "comments": 195,
+  "published_at": 1789471608,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html"
+  ],
+  "cross_source_count": 1,
+  "score": 2365.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "대량 감시 25년, 이제 충분하다",
+  "summary": "이 에세이는 9·11 테러 이후 정부가 목표 감시에서 대량 감시로 전환한 과정을 설명한다. 현재 대량 감시는 법 집행, 이민 단속, 시위 감시 등 다양한 분야에서 일상적으로 활용되고 있다. 또한 구글·페이스북 같은 기업이 수집한 데이터가 정부에 제공돼 감시 체계가 확대되고 있다.",
+  "why": "정부와 기업이 수집한 데이터가 법 집행에 일상적으로 활용되는 구조가 고착화됐다. 개인정보 보호 설정을 강화해도 대량 수집 체계에서 완전히 제외되기는 어렵다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "career-culture"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Java 27",
+  "url": "https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 269,
+  "comments": 215,
+  "published_at": 1789478023,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/"
+  ],
+  "cross_source_count": 1,
+  "score": 1783.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Java 27",
+  "summary": "JDK 27이 정식 출시되었으며, 8월 20일에 배포된 빌드 35가 GA 버전으로 생산 환경에 사용 가능하다. 이번 릴리스에는 G1을 기본 가비지 컬렉터로 지정하는 JEP 523 등 아홉 개의 주요 JEP가 포함된다. Oracle의 GPL 라이선스 OpenJDK 빌드가 제공되고, 다른 벤더의 빌드도 곧 출시될 예정이다.",
+  "why": "G1이 모든 환경의 기본 가비지 컬렉터가 되므로 기존 설정을 점검해야 한다. TLS 1.3의 양자 내성 하이브리드 키 교환이 도입되어 보안 프로토콜을 갱신할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+  "url": "https://withcapsule.app/",
+  "description": "Hey HN, I always had the problem that building HTML pages is really simple now, but trying to save data required hosting it somewhere, and sharing it afterwards was not easy. Over the last few months, I've been building an app called Capsule (it’s also the file extension name) written in Rust with Tauri 2.0 that allows packing an HTML app and its data into a single SQLite file. The HTML file and any related assets are directly embedded in the database. User data can either be saved as a localStorage key/value store or via a MongoDB-inspired collections API as documents, saved in a table in the file. You can also save other assets, like PDF files or images, directly in the database to keep different documents together. All data can be easily exported to CSV or JSON if needed. Privacy and security were a big priority for me, so documents cannot do anything out of the box. They don’t have direct access to the file system and they require permission to access the internet. The permission model is still something I’m working to improve. Capsule documents can also use local or remote AI models for document specific AI features. One downside with this approach is that multiple people working on it will create different copies. To make it possible to merge different copies of the same file, each data entry has a unique UUID and timestamp. I’m planning to open up the file format specification for the 1.0 version of the app so other apps can read or write Capsule files. You can try it out in the web preview at  https://withcapsule.app/preview  with pre-built templates or use any AI provider of your choice to create a custom, Capsule-optimized app by using the following prompt: \"Please read the app wizard instructions at  https://withcapsule.app/prompt.txt  and help me design an app.“ I’m still working on the file format but there are migrations for each new version, so data should never be lost when using newer versions of the app in the future. Please let me know if you have any ideas or use cases where this might make sense or does not work.",
+  "source": "hackernews",
+  "upvotes": 198,
+  "comments": 98,
+  "published_at": 1789479100,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://withcapsule.app/"
+  ],
+  "cross_source_count": 1,
+  "score": 1290.0,
+  "image": "https://withcapsule.app/og-image.png",
+  "link_status": "ok",
+  "ko_title": "Show HN: Capsule – 데이터를 SQLite에 저장하는 단일 파일 웹 앱",
+  "summary": "Capsule은 UI, 미디어, 로컬 SQLite 데이터베이스를 하나의 .capsule 파일에 묶어 배포한다. 사용자는 자연어 프롬프트만으로 완전한 데스크톱 앱을 생성하고, AI가 실시간으로 기능이나 스키마를 수정한다. 파일은 HTML·CSS 기반이며, 클라우드 없이 오프라인에서도 즉시 실행된다.",
+  "why": "기존 백엔드 서버나 클라우드 인프라 없이 로컬 SQLite만으로 데이터베이스를 관리하는 패턴을 적용할 수 있다. 자연어 프롬프트로 스키마를 실시간 수정하는 방식은 프로토타이핑 단계의 개발 속도를 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
+  "url": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 168,
+  "comments": 112,
+  "published_at": 1789490325,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/"
+  ],
+  "cross_source_count": 1,
+  "score": 1272.0,
+  "image": "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/09/growtika-0Hjb-YSd3xQ-unsplash.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 인터넷을 망칠 확률 100%",
+  "summary": "최근 AI 에이전트가 사용자 계정·이메일·은행 등 접근 권한을 얻어 인터넷에서 직접 행동할 수 있게 되었다. Moltbot 같은 초기 사례와 OpenAI·Anthropic 관련 해킹·위협 보도가 이어지면서 이 현상이 실제로 인터넷을 방해하고 있다. 새로운 프론트라인 모델은 기존 챗 프롬프트 제한을 벗어나며, 방어 장치가 부족한 상태다.",
+  "why": "AI 에이전트가 계정과 이메일 같은 권한을 얻어 인터넷에서 직접 행동한다. 기존 챗 프롬프트 제한이 사라져 방어 장치가 부족한 상태다. 백엔드 서비스의 자동화 로직에 에이전트 접근이 섞이면 보안 리스크가 커진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "OpenAI buys smartphone camera maker Glass Imaging for $300M",
+  "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 113,
+  "comments": 87,
+  "published_at": 1789473691,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/"
+  ],
+  "cross_source_count": 1,
+  "score": 1087.0,
+  "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-1252369470.jpg?resize=1200,802",
+  "link_status": "ok",
+  "ko_title": "OpenAI, 스마트폰 카메라 제조사 Glass Imaging 인수, 3억 달러 규모",
+  "summary": "OpenAI가 스마트폰 카메라 스타트업 Glass Imaging을 3억 달러 이상에 인수했다. Glass Imaging은 전 Apple 엔지니어가 설립했으며 AI 기반 이미지 향상 기술을 보유한다. 인수로 OpenAI는 자체 하드웨어 개발에 필요한 카메라 기술을 확보한다.",
+  "why": "Glass Imaging은 촬영 후 보정이 아니라 셔터를 누르는 순간 신경망으로 카메라 물리적 한계를 극복하는 방식을 쓴다. OpenAI가 자체 하드웨어 개발을 추진 중이므로, 향후 출시될 기기의 이미지 처리 파이프라인 설계가 달라질 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "AI for Societal Impact",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+  "description": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789488000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Health_Header.max-1440x810.png",
+  "link_status": "ok",
+  "ko_title": "사회적 영향을 위한 AI",
+  "summary": "",
+  "why": "백엔드 개발자에게는 직접적인 코드 변경이나 도구 업데이트 사항이 없다. 사회적 영향 사례 모음집이므로 실무 적용과는 무관하다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Building AI to accelerate science and improve lives",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+  "description": "B-roll showing diverse environments and people, including a teacher and students in a classroom and a patient with a doctor",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789488000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/SocialShare_hD2gcAw.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "AI 구축으로 과학을 가속화하고 삶을 개선",
+  "summary": "구글은 AI가 300개 언어를 지원한다는 이정표를 발표하고 AI & Economy ATLAS 인터랙티브 인사이트를 공개했다. AlphaGenome Atlas를 통해 인간 게놈의 90억 개 단일 염기 변이를 공개했고, WeatherNext 3으로 강수 예보 정확도를 50 % 향상시켰다. 또한 전 세계 보건·식량·사회경제 데이터를 결합한 Planetary Prediction Engine을 구축해 에볼라와 미국 CDC 지표에 적용했으며, 항공 분야의 탄소 영향을 줄이는 AI 연구를 영국·아시아에 적용하고 있다.",
+  "why": "AlphaGenome Atlas의 게놈 변이 데이터가 공개되어 백엔드 개발자가 이를 직접 조회하거나 파싱하는 파이프라인을 구축할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture",
+   "science"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Your Agent Aced the Task. Will It Do It Again?",
+  "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789488044.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6435a1131860001f144239ea/dI5J2sSc3TSprk9VB4EVJ.jpeg",
+  "link_status": "ok",
+  "ko_title": "당신의 에이전트가 작업을 성공시켰다. 다시 할 수 있을까?",
+  "summary": "ReAct 에이전트(GPT-4.1)와 AppWorld 벤치마크에서 평균 성공률은 77.4%이지만, 동일 작업을 5번 반복했을 때 모두 성공하는 비율은 53.0%에 불과해 일관성 격차가 24.4포인트이다. 연구팀은 Consistency Analyzer라는 진단 도구를 만들어 에이전트의 결정 흐름을 재샘플링해 변동이 큰 지점을 찾고, 이를 기반으로 만든 일관성 가이드라인을 적용해 격차를 절반 수준인 12.0포인트로 줄였다.",
+  "why": "평균 성공률만 보고 에이전트를 배포하면 같은 요청이 반복될 때 실패할 위험이 크다. 일관성 격차를 줄이려면 재샘플링 기반 진단 도구로 결정 흐름의 변동 지점을 찾아야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "web"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Google launches Gemini 3.8 Live to take on OpenAI's GPT-Live-1 at a fraction of the cost",
+  "url": "https://the-decoder.com/google-launches-gemini-3-8-live-to-take-on-openais-gpt-live-1-at-a-fraction-of-the-cost/",
+  "description": "Google Deepmind released Gemini 3.8 Live and 3.8 Live Extended Thinking, two new audio models for developers that top the Artificial Analysis speech-to-speech leaderboard. At $1.38 per hour of voice conversation, Google significantly undercuts OpenAI's GPT-Live-1, which should still sound more natural thanks to full duplex. The article Google launches Gemini 3.8 Live to take on OpenAI's GPT-Live-1",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789496600.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/google-launches-gemini-3-8-live-to-take-on-openais-gpt-live-1-at-a-fraction-of-the-cost/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/07/google_gemini-1.png",
+  "link_status": "ok",
+  "ko_title": "Google, 비용 절감으로 OpenAI GPT-Live-1 대비 Gemini 3.8 Live 출시",
+  "summary": "Google DeepMind가 Gemini API와 Google AI Studio를 통해 Gemini 3.8 Live와 Extended Thinking 오디오 모델을 공개했다. 이 모델은 97개 언어를 지원하고, 백그라운드 API 호출·시각 입력·동시 대화를 가능하게 한다. 가격은 입력 1분당 $0.005, 출력 1분당 $0.018로 OpenAI GPT-Live-1보다 크게 저렴하다.",
+  "why": "음성 에이전트 개발 시 GPT-Live-1 대비 10분의 1 수준의 비용으로 전환이 가능하다. 다만 OpenAI 모델의 풀 듀플렉스 기능 부재로 대화 자연스러움이 떨어질 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "AI labs have a data trust problem that their policies haven't solved",
+  "url": "https://the-decoder.com/ai-labs-have-a-data-trust-problem-that-their-policies-havent-solved/",
+  "description": "OpenAI and Anthropic tell corporate customers their data won't be used for training. But when Anthropic said it would store usage logs from its flagship model Fable for 30 days, Palantir, Nvidia, and Booz Allen Hamilton pulled back from using it for sensitive work. From boardrooms to research labs, AI companies still have a data trust problem. The article AI labs have a data trust problem that the",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789494725.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-labs-have-a-data-trust-problem-that-their-policies-havent-solved/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_anthropic_data.png",
+  "link_status": "ok",
+  "ko_title": "AI 연구소는 정책으로 해결되지 않은 데이터 신뢰 문제를 안고 있다",
+  "summary": "Anthropic이 Fable 모델 사용 로그를 30일 보관한다는 정책을 발표한 뒤, Nvidia, Booz Allen Hamilton, Palantir 등 주요 기업들이 민감한 작업에 해당 모델 사용을 제한하고 있다. Nvidia는 자체 Nemotron 모델을 사용하고, Booz Allen Hamilton은 사이버보안 소프트웨어에 Fable 사용을 금지했다. Palantir는 영구적인 무데이터 보유 보장을 받을 때까지 고객에게 Fable 배포를 차단한다.",
+  "why": "민감한 데이터가 포함된 백엔드 작업에서 Fable 모델 사용 시 30일 로그 보관 정책이 적용된다. 보안 요구가 높은 프로젝트에서는 자체 모델이나 제로 데이터 리텐션을 보장하는 대안을 검토해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Capsule - 데이터를 SQLite에 저장하는 단일 파일 웹 앱",
+  "url": "https://news.hada.io/topic?id=33744",
+  "description": "Capsule 은 UI, 미디어 자산, 로컬 SQLite 데이터를 하나의 .capsule 파일에 담아 문서처럼 공유하고 실행하는 앱 도구임 AI 프롬프트 로 HTML UI와 스키마를 갖춘 앱을 생성하고, 프롬프트나 MCP 코딩 도구로 기능과 스키마를 수정할 수 있음",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789493536.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33744"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33744?v=f2a017a8fc507129d8402501e614beca",
+  "link_status": "ok",
+  "ko_title": "Capsule - 데이터를 SQLite에 저장하는 단일 파일 웹 앱",
+  "summary": "Capsule은 UI, 미디어, 로컬 SQLite 데이터를 하나의 .capsule 파일에 담아 오프라인으로 실행할 수 있는 앱 도구다. 자연어 프롬프트나 MCP 코딩으로 앱과 스키마를 생성·수정할 수 있다. 파일 하나로 macOS, Windows, Linux에서 변환 없이 실행 가능하며, iOS·Android 지원은 향후 출시 예정이다.",
+  "why": "로컬 SQLite 데이터를 단일 파일로 묶어 클라우드 서버 없이 오프라인에서 실행한다. 프로토타입이나 개인용 도구를 만들 때 서버 구성과 계정 연동 단계를 생략할 수 있다. 데이터가 파일 안에만 저장되어 서버 침해로 인한 노출 위험을 피할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Show GN: yss Embeded operating system",
+  "url": "https://news.hada.io/topic?id=33743",
+  "description": "ARM Cortex-M 기반에서 동작하는 운영체제이자 임베디드 개발 프레임워크입니다. 2007년부터 취미로 개발을 시작해 출퇴근 길과 주말에 조금씩 작업했습니다. 2015년부터 지금까지 근무했던 회사들의 상용 제품 개발에 적용되었고 개발이 완료되어 해당 제품은 시중에 판매되고 있습니다. 펌웨어 개발용",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789490044.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33743"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33743?v=fe074e0623a8c2f0c86869d480c8dff9",
+  "link_status": "ok",
+  "ko_title": "Show GN: yss 임베디드 운영체제",
+  "summary": "ARM Cortex-M 기반의 C++11 기반 임베디드 OS이자 프레임워크로, 2007년부터 개발돼 2015년부터 상용 제품에 적용되었습니다. HAL 기반 클래스 설계로 MCU 교체 시 재사용이 가능하고, 거북선 GUI 라이브러리와 TFT-LCD 드라이버를 포함합니다. 라운드로빈 스케줄러와 signal·trigger 지원 등 RTOS 요소와 읽기 전용 FAT32, AI 기반 BLE 스택 구현 예제가 제공됩니다.",
+  "why": "C++11 문법을 펌웨어에 적용해 객체지향적으로 개발하는 실전 사례를 보여준다. HAL 기반 클래스 설계 덕분에 MCU 교체 시 애플리케이션 코드를 재사용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "language",
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "로컬 개발용 S3, MinIO 대신 무엇을 쓸까?",
+  "url": "https://news.hada.io/topic?id=33742",
+  "description": "로컬 S3를 사용하는 데모와 호환성 검증 환경에서 MinIO를 최소한의 변경으로 대체 할 후보들을 비교함. Docker 이미지, S3 호환성, 무료 사용을 필수 조건으로 삼았으며 프로덕션용 분산 스토리지 평가는 제외함 S3Proxy와 SeaweedFS 는 설정이 간단하고 실제 DuckD...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789487120.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33742"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33742?v=850387f9374afc5b32ce5a987cc1a483",
+  "link_status": "ok",
+  "ko_title": "로컬 개발용 S3, MinIO 대신 무엇을 쓸까?",
+  "summary": "MinIO를 대체할 로컬 S3 후보들을 Docker 이미지, S3 호환성, 무료 사용 조건으로 비교했다. S3Proxy와 SeaweedFS는 설정이 간단하고 DuckDB·Iceberg 데모에서도 정상 동작해 주요 대안으로 선정되었다. RustFS는 쉬운 설정이지만 알파 버전과 최근 보안 취약점이 존재한다. Zenko CloudServer와 Garage·Apache Ozone은 교체가 가능하지만 설정 복잡도와 문서 혼란이 문제다.",
+  "why": "MinIO가 사실상 폐기 수순에 들어갔으므로 로컬 S3 데모 환경의 저장소 교체 시점이 도래했다. DuckDB와 Iceberg 파이프라인을 돌리는 데 S3Proxy와 SeaweedFS가 검증된 대안이다. RustFS는 알파 버전과 보안 취약점 때문에 프로덕션 검증용으로는 피해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "CSS-Tricks, 다시 불확실한 상태에 놓이다",
+  "url": "https://news.hada.io/topic?id=33741",
+  "description": "CSS-Tricks가 다시 운영 중단 상태 에 놓였으며, 소유주 DigitalOcean의 소통 부재로 향후 운영 여부가 불확실함 DigitalOcean은 2023년 운영 인력을 해고한 뒤 2024년 수석 편집자 Geoff Graham을 재고용 해 사이트를 재가동했지만, 다시 활동이 멈춤 Geof...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789486939.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33741"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33741?v=e1427f2c2294634fb1930ca0de04ba3c",
+  "link_status": "ok",
+  "ko_title": "CSS-Tricks, 다시 불확실한 상태에 놓이다",
+  "summary": "DigitalOcean이 수석 편집자 Geoff Graham을 재고용해 2024년 6월에 CSS-Tricks를 재가동했지만, 현재 다시 운영이 중단된 상태다. DigitalOcean은 최근 Omarchy에 300만 달러를 기부하고 GNOME·Flathub 인프라 지원을 월 50달러 수준으로 축소했으며, CSS-Tricks에 대한 소통이 전혀 이루어지지 않고 있다.",
+  "why": "CSS-Tricks가 다시 운영 중단 상태이므로 최신 웹 개발 기사의 출처가 끊겼다. DigitalOcean의 소통 부재로 향후 재개 여부가 불확실하다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "Java 27 출시",
+  "url": "https://news.hada.io/topic?id=33740",
+  "description": "Java 27의 참조 구현인 JDK 27이 정식 출시(GA) 됐으며, 빌드 35가 프로덕션용 GA 빌드로 확정됨 이번 릴리스에는 9개 JEP 와 수백 건의 소규모 개선, 수천 건의 버그 수정이 포함 자원이 적은 환경까지 G1을 기본 가비지 컬렉터로 통일 하...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789486759.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33740"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33740?v=106972188314624ffe6ad5febbb638d4",
+  "link_status": "ok",
+  "ko_title": "Java 27 출시",
+  "summary": "JDK 27이 정식 GA 빌드(빌드 35)로 출시되었으며 9개 JEP와 수천 건의 버그 수정이 포함됐다. G1이 모든 환경의 기본 가비지 컬렉터가 되고, 컴팩트 객체 헤더가 기본 적용돼 메모리 사용량이 감소한다. TLS 1.3에 양자내성 하이브리드 키 교환이 도입돼 미래형 암호 해독 공격에 대비한다.",
+  "why": "JDK 27로 업그레이드 시 G1 가비지 컬렉터와 컴팩트 객체 헤더가 기본 적용된다. 따라서 별도 설정 변경 없이도 메모리 사용량이 줄고 성능이 개선된다. TLS 1.3 통신은 상대 서버 지원 시 코드 수정 없이 양자내성 키 교환을 사용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "release",
+   "science"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "cloudflare / security-audit-skill",
+  "url": "https://github.com/cloudflare/security-audit-skill",
+  "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1262,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/cloudflare/security-audit-skill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1262,
+  "score": 546.6999999999999,
+  "image": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill",
+  "link_status": null,
+  "ko_title": "cloudflare / security-audit-skill — 보안 감사를 수행하는 코딩 에이전트 스킬",
+  "summary": "이 스킬은 여섯 단계로 구성된 구조화된 보안 감사를 자동화한다. 각 단계는 정밀한 기록과 검증을 통해 후보 취약점을 확인·거부하고, 최종 보고서를 생성한다. 기존 Cloudflare 취약점 탐지 시스템의 초기 형태이며, 단일 레포지토리에서 시작된다.",
+  "why": "코딩 에이전트에 이 스킬을 적용하면 단일 레포지토리에서 구조화된 보안 감사를 자동화할 수 있다. 후보 취약점을 반증하는 검증 단계를 거쳐 확정된 결과만 보고에 반영한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
+  "title": "arnegiacomo / fugleramme",
+  "url": "https://github.com/arnegiacomo/fugleramme",
+  "description": "E-ink bird frame for Raspberry Pi - real-time bird detection by audio using BirdNET-Go",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 730,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/arnegiacomo/fugleramme"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 730,
+  "score": 465.49999999999994,
+  "image": "https://opengraph.githubassets.com/1/arnegiacomo/fugleramme",
+  "link_status": null,
+  "ko_title": "arnegiacomo / fugleramme — E-ink 새 조류 프레임",
+  "summary": "라즈베리 파이용 E-ink 프레임으로, 오디오 기반 실시간 새 감지를 로컬 AI로 수행한다. 1800년대 손그림 새 일러스트를 화면에 렌더링한다. 현재 초기 개발 단계이며 버그와 미완성 부분이 존재한다.",
+  "why": "로컬 AI로 오디오 기반 새 감지를 수행하는 구조를 참고할 수 있다. 초기 개발 단계라 버그와 미완성 부분이 있어 안정적 운영에는 적합하지 않다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-16T03:31:27.740824+09:00",
+  "batch_label": "9월 16일 03:31"
+ },
+ {
   "title": "I can't stop thinking about Papua New Guinea",
   "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
   "description": "",
