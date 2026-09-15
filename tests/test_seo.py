@@ -205,3 +205,24 @@ def test_favicon_ico가_루트에_있다():
 
 def test_head가_favicon_ico를_가리킨다(html):
     assert '<link rel="icon" href="/favicon.ico"' in html
+
+
+def test_광고_크롤러가_robots에_이름으로_있다(seo_dir):
+    """애드센스 크롤러는 `User-agent: *` 무리를 무시한다. 이름이 없으면 자기에게
+    적용할 규칙이 없다고 본다.
+
+    robots.txt가 아예 없던 2026-09-07에는 ads.txt가 확인됐는데, 08일에 이 파일을
+    만들면서 광고 쪽 이름을 빠뜨리자 "ads.txt를 찾을 수 없음"으로 바뀌었다.
+    """
+    txt = (seo_dir / "robots.txt").read_text(encoding="utf-8")
+    for agent in ("Mediapartners-Google", "AdsBot-Google", "AdsBot-Google-Mobile"):
+        assert re.search(rf"^User-agent: {re.escape(agent)}\nAllow: /$", txt, re.M), agent
+
+
+def test_ads_txt가_그대로_있다():
+    """수익 연결이 걸린 파일이다. 지우거나 옮기면 광고가 끊긴다."""
+    path = os.path.join(ROOT, "docs", "ads.txt")
+    assert os.path.exists(path)
+    body = open(path, encoding="utf-8").read().strip()
+    assert body.startswith("google.com,"), body
+    assert "DIRECT" in body
