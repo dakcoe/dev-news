@@ -310,6 +310,13 @@ def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS)
 # Applebot-Extended) 운영자가 막았는지를 이름 단위로 확인한다. 명시해 두면
 # AI 답변의 출처로 인용될 길이 열린다 — 이게 GEO의 기술적 절반이다.
 AI_AGENTS = [
+    # ⚠️ 광고 크롤러를 맨 앞에 둔다. 애드센스 크롤러는 `User-agent: *` 무리를
+    # 무시하므로 이름이 없으면 자기에게 적용할 규칙이 없다고 본다. robots.txt가
+    # 아예 없던 2026-09-07에는 ads.txt가 확인됐는데, 08일에 이 파일을 만들면서
+    # 광고 쪽 이름을 빠뜨리자 "ads.txt를 찾을 수 없음"으로 바뀌었다.
+    "Mediapartners-Google",        # 애드센스 콘텐츠 크롤러
+    "AdsBot-Google",               # ads.txt·방문 페이지 확인
+    "AdsBot-Google-Mobile",
     "Googlebot", "Google-Extended", "Bingbot", "Yeti",          # 검색 + 네이버
     "GPTBot", "OAI-SearchBot", "ChatGPT-User",                  # OpenAI
     "ClaudeBot", "Claude-User", "Claude-SearchBot",             # Anthropic
