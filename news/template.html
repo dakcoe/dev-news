@@ -1395,13 +1395,13 @@ function bind(){
   const tb=document.getElementById('tagbtn');
   if(tb) tb.onclick=()=>{
     // 좁은 화면 = 드로어 열기 / 데스크톱 = 패널 접기/펼치기 토글
-    if(window.matchMedia('(max-width:900px)').matches){ facetOpen=true; render(); }
+    if(window.matchMedia('(max-width:900px)').matches){ facetOpen=true; render(); pushOverlay(); }
     else setFold(!facetFold);
   };
   const tf=document.getElementById('tagfold');
   if(tf) tf.onclick=()=>setFold(true);
   const sc=document.getElementById('scrim');
-  if(sc) sc.onclick=()=>{ facetOpen=false; render(); };
+  if(sc) sc.onclick=()=>{ facetOpen=false; render(); popOverlay(); };
   viewEl.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); toggleSave(DATA[+b.dataset.ck]);});
   viewEl.querySelectorAll('[data-un]').forEach(b=>b.onclick=e=>{
@@ -1437,6 +1437,7 @@ function showDetail(d){
     + '</div>';
   document.getElementById('db').scrollTop=0;
   document.getElementById('dt').classList.add('open');
+  pushOverlay();
 }
 
 function openDetail(i){
@@ -1457,10 +1458,47 @@ function openDetail(i){
   });
   render();
 }
+/* 모바일에서 한 손으로 볼 때 가장 자연스러운 동작이 뒤로가기다. 그런데 기사를
+   열고 뒤로가기를 누르면 겹침만 닫히는 게 아니라 사이트를 통째로 나갔다.
+
+   겹침(기사 상세·필터 서랍)이 열릴 때 방문 기록을 한 칸 쌓는다. 그러면 뒤로가기가
+   그 칸을 소비해 겹침만 닫힌다. 겹침이 없을 때의 뒤로가기는 평소대로 사이트를
+   떠난다 — 나가는 길을 막지는 않는다.
+
+   칸은 한 번만 쌓는다. 기사를 여러 개 열어도 기록이 그만큼 쌓이면, 사이트를
+   나가려고 뒤로가기를 여러 번 눌러야 한다. */
+let overlayDepth = 0;
+
+function pushOverlay(){
+  if(overlayDepth) return;
+  overlayDepth = 1;
+  try{ history.pushState({devnewsOverlay:1}, ''); }catch(e){ overlayDepth = 0; }
+}
+
+function popOverlay(){
+  if(!overlayDepth) return;
+  overlayDepth = 0;
+  try{ history.back(); }catch(e){}
+}
+
+addEventListener('popstate', function(){
+  // 뒤로가기로 칸이 소비됐다. 열려 있는 겹침을 닫는다.
+  overlayDepth = 0;
+  let closed = false;
+  if(document.getElementById('dt').classList.contains('open')){
+    cur = null;
+    document.getElementById('dt').classList.remove('open');
+    closed = true;
+  }
+  if(facetOpen){ facetOpen = false; closed = true; }
+  if(closed) render();
+});
+
 function closeDetail(){
   cur=null;
   document.getElementById('dt').classList.remove('open');
   render();
+  popOverlay();
 }
 function copyMd(){
   const md=[...savedMap.values()]
@@ -1485,6 +1523,7 @@ document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{
   cur=null;
   document.getElementById('dt').classList.remove('open');
   render();
+  popOverlay();
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
 render();

@@ -268,3 +268,22 @@ def test_색인에_태그가_없는_기사를_태그로_지우지_않는다(html
 def test_선택된_출처는_0건이어도_목록에_남는다(html):
     """버튼이 사라지면 무엇이 걸려 있는지 보이지도 않고 풀 수도 없다."""
     assert "filter(k=>sc[k] || k===filter)" in html
+
+
+def test_겹침이_열리면_방문_기록을_한_칸_쌓는다(html):
+    """모바일에서 한 손으로 볼 때 가장 자연스러운 동작이 뒤로가기다. 그런데
+    기사를 열고 뒤로가기를 누르면 겹침만 닫히는 게 아니라 사이트를 나갔다."""
+    assert "pushState({devnewsOverlay:1}" in html
+    assert "addEventListener('popstate'" in html
+
+
+def test_칸은_한_번만_쌓는다(html):
+    """기사를 여러 개 열어도 기록이 그만큼 쌓이면, 사이트를 나가려고 뒤로가기를
+    여러 번 눌러야 한다."""
+    assert "if(overlayDepth) return;" in html
+
+
+def test_X로_닫아도_쌓인_칸을_되돌린다(html):
+    """닫는 길이 둘(뒤로가기·X)인데 한쪽만 기록을 정리하면 어긋난다."""
+    for fn in ("function closeDetail()", "facetOpen=false; render(); popOverlay()"):
+        assert fn in html
