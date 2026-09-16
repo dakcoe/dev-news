@@ -125,3 +125,11 @@ def test_로컬_실행_스크립트가_알림_세_가지를_그대로_낸다():
     assert "merge_remote_data.py origin/main" in src
     assert "pull --rebase -X theirs" in src
     assert 'git add -A docs data' in src
+
+
+def test_로컬_실행_스크립트가_후원_링크를_감시한다():
+    """외부 송금 링크는 예고 없이 끝날 수 있다. 회차마다 찔러 보고 200 이 아니면
+    이슈를 연다."""
+    src = open(os.path.join(ROOT, "scripts", "publish.sh"), encoding="utf-8").read()
+    assert "🟡 후원 링크 응답 이상" in src
+    assert 'about") or {}).get("coffee")' in src
