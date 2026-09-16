@@ -291,7 +291,7 @@ __ADS_HEAD__
   }
   /* display를 지정하면 hidden 속성(브라우저 기본값 display:none)을 이긴다.
      그래서 hidden일 때를 따로 적어 준다. */
-  .sharemenu[hidden]{display:none}
+  .ddpop[hidden]{display:none}
   .dditem{
     display:flex;align-items:center;gap:8px;border:none;background:none;
     font-family:inherit;font-size:13.5px;color:var(--tx);padding:8px 10px;
@@ -501,17 +501,10 @@ __ADS_HEAD__
           box-shadow:inset 0 0 0 1.5px var(--line);
           font-family:inherit;cursor:pointer}
   .go.alt:hover{background:var(--line2);box-shadow:inset 0 0 0 1.5px #d6d6e0}
-  .sharemenu{
-    position:absolute;left:0;top:calc(100% + 8px);z-index:10;min-width:186px;
-    background:var(--panel);border:1px solid var(--line);border-radius:11px;
-    box-shadow:0 6px 24px rgba(20,20,45,.13);padding:5px;
-    display:flex;flex-direction:column;
-  }
-  .sharemenu button{
-    font-family:inherit;font-size:14.5px;color:var(--tx);text-align:left;
-    background:none;border:none;cursor:pointer;padding:9px 11px;border-radius:7px;
-  }
-  .sharemenu button:hover{background:var(--pri-bg);color:var(--pri-dk)}
+  /* 공유 메뉴는 정렬 드롭다운(.ddpop · .dditem)과 같은 모양이다. 여기서는
+     너비와 글자 크기만 다르다. */
+  .sharemenu{min-width:186px}
+  .sharemenu .dditem{font-size:14.5px;padding:9px 11px}
   @media (max-width:640px){ .sharemenu{left:auto;right:0} }
 
   /* ---------------- sources view ---------------- */
@@ -959,9 +952,8 @@ function archMatches(){
 function shareUrl(d){
   const u = d && d.url ? d.url : '';
   if(!u) return location.origin + location.pathname;
-  const m = d.month || (d.batch || '').slice(0, 7);
   return location.origin + location.pathname
-       + '#a=' + encodeURIComponent(u) + (m ? '&m=' + m : '');
+       + '#a=' + encodeURIComponent(u) + (d.month ? '&m=' + d.month : '');
 }
 
 function openFromHash(){
@@ -973,7 +965,8 @@ function openFromHash(){
   const i = DATA.findIndex(x => x.url === url);
   if(i >= 0){ openDetail(i); return true; }
   const m = params.get('m');
-  if(m){ openArchived(url, m); return true; }
+  if(m && /^\d{4}-\d{2}$/.test(m)){ openArchived(url, m); return true; }
+  alert('공유된 기사를 찾지 못했습니다.');
   return false;
 }
 
@@ -1454,7 +1447,7 @@ function bind(){
   const tf=document.getElementById('tagfold');
   if(tf) tf.onclick=()=>setFold(true);
   const sc=document.getElementById('scrim');
-  if(sc) sc.onclick=()=>{ facetOpen=false; render(); popOverlay(); };
+  if(sc) sc.onclick=closeDetail;
   viewEl.querySelectorAll('[data-ck]').forEach(b=>b.onclick=e=>{
     e.stopPropagation(); toggleSave(DATA[+b.dataset.ck]);});
   viewEl.querySelectorAll('[data-un]').forEach(b=>b.onclick=e=>{
@@ -1491,9 +1484,9 @@ function showDetail(d){
     + '<div class="dacts">'
     +   (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
     +   '<button class="go alt" id="sharebtn">공유하기</button>'
-    +   '<div class="sharemenu" id="sharemenu" hidden>'
-    +     '<button data-share="card">뉴스카드 복사</button>'
-    +     '<button data-share="text">링크·내용 복사</button>'
+    +   '<div class="ddpop sharemenu" id="sharemenu" hidden>'
+    +     '<button class="dditem" data-share="card">뉴스카드 복사</button>'
+    +     '<button class="dditem" data-share="text">링크·내용 복사</button>'
     +   '</div>'
     + '</div>'
     + '</div>';
@@ -1521,40 +1514,64 @@ function openDetail(i){
   render();
 }
 /* 모바일에서 한 손으로 볼 때 가장 자연스러운 동작이 뒤로가기다. 그런데 기사를
-   열고 뒤로가기를 누르면 겹침만 닫히는 게 아니라 사이트를 통째로 나갔다.
+   열고 뒤로가기를 누르면 상세 패널만 닫히는 게 아니라 사이트를 통째로 나갔다.
 
-   겹침(기사 상세·필터 서랍)이 열릴 때 방문 기록을 한 칸 쌓는다. 그러면 뒤로가기가
-   그 칸을 소비해 겹침만 닫힌다. 겹침이 없을 때의 뒤로가기는 평소대로 사이트를
-   떠난다 — 나가는 길을 막지는 않는다.
+   기사 상세나 필터 서랍이 열릴 때 방문 기록에 항목 하나를 넣는다. 그러면
+   뒤로가기가 그 항목을 소비해 패널만 닫힌다. 아무것도 열려 있지 않을 때의
+   뒤로가기는 평소대로 사이트를 떠난다 — 나가는 길을 막지는 않는다.
 
-   칸은 한 번만 쌓는다. 기사를 여러 개 열어도 기록이 그만큼 쌓이면, 사이트를
-   나가려고 뒤로가기를 여러 번 눌러야 한다. */
-let overlayDepth = 0;
+   항목은 하나만 넣는다. 기사를 여러 개 열어도 그만큼 쌓이면, 사이트를 나가려고
+   뒤로가기를 여러 번 눌러야 한다. */
+/* 우리가 넣은 항목 위에 서 있는가. 변수로 들고 있지 않고 매번 history.state 를
+   본다. history.back() 이 비동기라 변수는 그 사이에 실제와 어긋난다 — X 로
+   닫고 곧바로 다른 기사를 열면 "넣었다"고 믿는 항목이 실제로는 없어서, 다음
+   X 가 사이트를 나가 버린 적이 있다. */
+const onOverlayEntry = () => !!(history.state && history.state.devnewsOverlay);
+let closingByScript = false;  // X·Escape 로 닫으며 history.back() 을 불렀다
 
 function pushOverlay(){
-  if(overlayDepth) return;
-  overlayDepth = 1;
-  try{ history.pushState({devnewsOverlay:1}, ''); }catch(e){ overlayDepth = 0; }
+  if(onOverlayEntry()) return;
+  try{ history.pushState({devnewsOverlay:1}, ''); }catch(e){}
 }
 
+/* X 나 Escape 로 닫을 때 넣어 둔 항목을 되돌린다. 우리가 부른 back() 의
+   popstate 는 표시해 두고 아래에서 따로 처리한다. */
 function popOverlay(){
-  if(!overlayDepth) return;
-  overlayDepth = 0;
-  try{ history.back(); }catch(e){}
+  if(!onOverlayEntry()) return;
+  closingByScript = true;
+  try{ history.back(); }catch(e){ closingByScript = false; }
+}
+
+function panelOpen(){
+  return cur !== null || document.getElementById('dt').classList.contains('open') || facetOpen;
 }
 
 addEventListener('popstate', function(){
-  // 뒤로가기로 칸이 소비됐다. 열려 있는 겹침을 닫는다.
-  overlayDepth = 0;
+  if(closingByScript){
+    closingByScript = false;
+    /* X 로 닫는 사이에 다른 기사를 열었다면 그 기사는 항목 없이 떠 있다.
+       지금 넣어 줘야 다음 뒤로가기가 사이트를 나가지 않는다. */
+    if(panelOpen()) pushOverlay();
+    return;
+  }
+  /* 앞으로가기로 우리 항목 위에 다시 올라온 경우다. 닫을 것이 없다. */
+  if(onOverlayEntry()) return;
+  closePanels();
+});
+
+/* 상세 패널과 필터 서랍을 닫는다. 화면 전환·뒤로가기·X·Escape 가 전부 이걸
+   부른다. 닫은 것이 있으면 true. */
+function closePanels(){
   let closed = false;
-  if(document.getElementById('dt').classList.contains('open')){
+  if(cur !== null || document.getElementById('dt').classList.contains('open')){
     cur = null;
     document.getElementById('dt').classList.remove('open');
     closed = true;
   }
   if(facetOpen){ facetOpen = false; closed = true; }
   if(closed) render();
-});
+  return closed;
+}
 
 /* ---------------- 공유 ----------------
    두 가지를 준비한다. 뉴스카드는 캔버스에 직접 그려 PNG로 복사한다 — 화면을
@@ -1562,6 +1579,8 @@ addEventListener('popstate', function(){
    순간 그 캔버스를 읽을 수 없게 되어서다(복사가 통째로 실패한다). 그래서
    글자만 그린다. 글·링크 복사는 제목·요약·왜 중요한가·주소를 글로 만든다. */
 const CARD_W=880, CARD_PAD=56, CARD_IMG_H=290;
+/* 카드와 글 복사가 같은 본문을 쓴다. 문단이 없으면 목록의 한 줄 요약이다. */
+const bodyText = d => (d.paras && d.paras.length) ? d.paras.join('\n') : (d.snip || '');
 
 /* 뉴스카드에 쓸 그림을 싣는다. 못 실으면 null 을 돌려 글자만 그린다.
 
@@ -1620,7 +1639,7 @@ function drawCard(d, img){
   F(700,34);
   const title=wrapLines(ctx, d.title, inner).slice(0,4);
   F(400,20);
-  const body=wrapLines(ctx, (d.paras&&d.paras.length?d.paras.join('\n'):(d.snip||'')), inner).slice(0,10);
+  const body=wrapLines(ctx, bodyText(d), inner).slice(0,10);
   const why=d.why ? wrapLines(ctx, d.why, inner-32).slice(0,5) : [];
 
   const imgH = img ? CARD_IMG_H : 0;
@@ -1628,7 +1647,7 @@ function drawCard(d, img){
   h+=title.length*46+18;
   h+=body.length*32;
   if(why.length) h+=24+18+why.length*30+18;
-  h+=28+CARD_PAD;                             // 발 + 아래 여백
+  h+=28+CARD_PAD;                             // 아래 표시줄(dev-news.net) + 아래 여백
 
   cv.width=CARD_W*ratio; cv.height=h*ratio;
   ctx.scale(ratio, ratio);
@@ -1681,7 +1700,7 @@ function drawCard(d, img){
 
 function shareText(d){
   const parts=[d.title||''];
-  const body=(d.paras&&d.paras.length?d.paras.join('\n'):(d.snip||''));
+  const body=bodyText(d);
   if(body) parts.push('', body);
   if(d.why) parts.push('', '[왜 중요한가] '+d.why);
   if(d.url) parts.push('', '원문: '+d.url);
@@ -1691,7 +1710,7 @@ function shareText(d){
 
 function copyCard(d){
   /* Safari는 클립보드 쓰기를 클릭 직후에만 허용해서, 그림을 싣고 toBlob 까지
-     기다린 뒤에 write 를 부르면 거절당한다. ClipboardItem 에 약속을 그대로
+     기다린 뒤에 write 를 부르면 거절당한다. ClipboardItem 에 Promise 를 그대로
      넘기면 기다리는 일은 브라우저가 대신 해 준다. */
   const blob=loadCardImage(d.img)
     .then(img=>new Promise(res=>drawCard(d, img).toBlob(res,'image/png')));
@@ -1730,10 +1749,7 @@ document.addEventListener('click', e=>{
 });
 
 function closeDetail(){
-  cur=null;
-  document.getElementById('dt').classList.remove('open');
-  render();
-  popOverlay();
+  if(closePanels()) popOverlay();
 }
 function copyMd(){
   const md=[...savedMap.values()]
@@ -1754,15 +1770,13 @@ document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{
   view=b.dataset.v;
   q='';
   shown=PAGE;
-  facetOpen=false;
-  cur=null;
-  document.getElementById('dt').classList.remove('open');
-  render();
+  if(!closePanels()) render();
   popOverlay();
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
 render();
 openFromHash();   // #a=... 로 들어오면 그 기사를 바로 연다
+addEventListener('hashchange', openFromHash);   // 같은 탭에 다른 공유 링크를 붙여 넣었을 때
 
 /* 폭이 1200px 경계를 넘나들면 광고 배치가 달라지므로 다시 그린다. */
 WIDE.addEventListener('change', function(){
