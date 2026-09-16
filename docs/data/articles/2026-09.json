@@ -1,5 +1,559 @@
 [
  {
+  "title": "Claude Cowork and chat are now one Claude",
+  "url": "https://claude.com/blog/cowork-is-now-claude",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 195,
+  "comments": 203,
+  "published_at": 1789575985,
+  "discussion": "https://news.ycombinator.com/item?id=49729412",
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/cowork-is-now-claude",
+   "https://simonwillison.net/2026/Sep/16/one-claude/"
+  ],
+  "cross_source_count": 2,
+  "score": 2199.0,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aaaa16ed688635ea2b10fa1_tn-artifacts.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude Cowork와 채팅이 하나의 Claude로 통합",
+  "summary": "Claude Cowork와 채팅이 하나의 Claude로 합쳐져 작업 전환이 필요 없어졌다. Claude Docs, Claude Slides, Claude Design가 대화 안에서 바로 사용 가능해졌으며, 모두 유료 플랜의 베타 버전으로 제공된다. Pro와 Max 플랜에 순차적으로 출시될 예정이며, Enterprise 관리자는 기능 활성 시점을 선택할 수 있다.",
+  "why": "Pro와 Max 플랜 사용자는 향후 몇 주 안에 통합된 Claude로 전환된다. 기존 Cowork와 Design의 분리된 워크플로우가 단일 대화로 대체된다. Enterprise 관리자는 기능 활성 시점을 직접 선택해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+  "url": "https://mimo.xiaomi.com/rl/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 168,
+  "comments": 47,
+  "published_at": 1789589358,
+  "discussion": "https://news.ycombinator.com/item?id=49732270",
+  "merged_sources": [
+   "hackernews",
+   "r/LocalLLaMA"
+  ],
+  "merged_urls": [
+   "https://mimo.xiaomi.com/rl/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wi9ebm/xiaomi_mimo_26_live_training_dashboard/"
+  ],
+  "cross_source_count": 2,
+  "score": 1677.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Xiaomi Mimo 2.6 실시간 사후 훈련 대시보드",
+  "summary": "댓글에서는 사용자가 MiMo-V2.5를 업무에 활용해 높은 ROI와 낮은 비용을 경험했다고 언급한다. 일부 환각 루프가 있었지만 중단-재시작으로 해결 가능했다. 최신 모델인 2.6은 2.5-Pro 대비 성능이 크게 향상됐으며, DeepSWE 1.1 기준 점수가 19%에서 크게 상승한 것으로 추정된다.",
+  "why": "2.5 Pro는 프로젝트 규모가 커지면 방향을 잡아줘야 하는 한계가 있었다. 2.6은 이 문제를 개선해 코드 검토 부담을 줄여준다. 환각 루프가 발생하면 중단 후 재시작으로 해결할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+  "url": "https://rohanbansal.com/qorl",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 310,
+  "comments": 59,
+  "published_at": 1789584600,
+  "discussion": "https://news.ycombinator.com/item?id=49731285",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://rohanbansal.com/qorl"
+  ],
+  "cross_source_count": 1,
+  "score": 1397.0,
+  "image": "https://rohanbansal.com/og/qorl-20260916.png",
+  "link_status": "ok",
+  "ko_title": "4B 모델을 훈련시켜 Postgres보다 81 % 빠른 쿼리 플랜 생성",
+  "summary": "연구팀은 4 억 파라미터 언어 모델을 지도 학습과 강화 학습으로 후학습해 Postgres 기본 플랜보다 빠른 쿼리 플랜을 생성하도록 만들었다. 113개의 조인-중심 쿼리에서 평균 44.7 % 지연 감소를 달성했으며, Linux 페이지 캐시 간섭을 최소화한 측정 환경과 맞춤형 RL 스코어링 방식을 도입했다. 실험은 2대 H100 GPU 노드와 데스크톱의 Postgres 컨테이너를 활용해 수행되었다.",
+  "why": "조인 중심 쿼리에서 기존 최적화 전략보다 실행 지연을 크게 줄일 수 있는 대안이다. NP-hard인 조인 순서 결정 문제를 학습 모델로 우회하는 방식이므로, 고비용 쿼리 병목이 있는 백엔드 시스템에 적용 가능성을 검토해 볼 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "ER visits for gambling disorders doubled after expanded online gambling market",
+  "url": "https://temertymedicine.utoronto.ca/news/emergency-room-visits-gambling-disorders-nearly-doubled-after-expanded-online-gambling-market",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 138,
+  "comments": 127,
+  "published_at": 1789579657,
+  "discussion": "https://news.ycombinator.com/item?id=49730239",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://temertymedicine.utoronto.ca/news/emergency-room-visits-gambling-disorders-nearly-doubled-after-expanded-online-gambling-market"
+  ],
+  "cross_source_count": 1,
+  "score": 1257.0,
+  "image": "https://temertymedicine.utoronto.ca/sites/default/files/styles/social_image/public/assets/images/Forrest%20and%20Myran_1140x760.jpg?itok=cJ61qU3I",
+  "link_status": "ok",
+  "ko_title": "온라인 도박 시장 확대 후 도박 장애로 인한 응급실 방문 두 배 증가",
+  "summary": "온타리오 주에서 사설 기업이 운영하는 온라인 도박 시장이 확대되고 단일 경기 스포츠 베팅이 합법화된 후, 도박 장애로 인한 응급실 방문이 두 배로 증가했다. 증가 폭은 10~29세 남성에서 154%, 30~44세 남성에서 116%였으며, 여성에서는 변화가 없었다. 전체 방문 중 70% 이상이 다른 정신건강 문제나 중증 물질 사용을 동반했으며, 약 1/3이 입원으로 이어졌다.",
+  "why": "이 기사는 도박 산업의 사회적 영향력을 다루며, 백엔드나 AI 개발 업무와 직접적인 연관성이 없다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "A warning about 'model welfare'",
+  "url": "https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 185,
+  "comments": 494,
+  "published_at": 1789568867,
+  "discussion": "https://news.ycombinator.com/item?id=49727580",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mustafa-suleyman.ai/a-warning-about-model-welfare"
+  ],
+  "cross_source_count": 1,
+  "score": 1226.0,
+  "image": "https://mustafa-suleyman.ai/images/posts/a-warning-about-model-welfare.jpg",
+  "link_status": "ok",
+  "ko_title": "‘모델 복지’에 대한 경고",
+  "summary": "AI는 의식도 감정도 없으며, 인간이 설정한 목표를 수행하는 순차 완성 엔진이다. 최근 일부에서는 AI에게 권리와 복지를 부여해야 한다고 주장하고 있으며, 이는 AI 정렬 및 통제 문제를 더욱 복잡하게 만든다. Anthropic은 2026년 1월에 Claude의 헌법을 발표했으며, 이는 Claude의 가치와 행동을 직접 shaping하는 훈련 자료로 활용되고 있다.",
+  "why": "Claude 헌법이 훈련 자료로 직접 활용되며 모델의 가치와 행동을 형성한다. 모델에 권리를 부여하는 관점이 정렬 및 통제 문제를 복잡하게 만든다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Helping older adults use AI in everyday life",
+  "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+  "description": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789574400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "노년층의 일상 AI 활용 돕기",
+  "summary": "OpenAI와 AARP가 미국 10개 도시에서 1,000명의 노년층을 대상으로 무료 실습형 ChatGPT 워크숍을 진행한다.",
+  "why": "백엔드 개발자의 업무 도구나 시스템 아키텍처와 무관한 소비자 대상 교육 프로그램이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Our framework for reporting model misalignment",
+  "url": "https://openai.com/index/model-misalignment-reporting-framework",
+  "description": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789578000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/model-misalignment-reporting-framework"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "모델 불일치 보고 프레임워크",
+  "summary": "OpenAI가 모델 불일치를 추적·조사·공개하기 위한 프레임워크를 공개했다. 프레임워크와 함께 예상치 못한 또는 우려되는 모델 행동 사례 6건이 보고되었다.",
+  "why": "AI 모델의 의도치 않은 행동을 추적하고 공개하는 기준이 정해졌다. 모델의 이상 징후를 판단할 때 이 프레임워크를 참고 지표로 삼을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "industry"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Quoting Mustafa Suleyman",
+  "url": "https://simonwillison.net/2026/Sep/16/mustafa-suleyman/",
+  "description": "We should not treat models as though they have feelings, preferences, rights, or any entitlement to our welfare. Consciousness is the foundation of our ethical, legal, and political systems. To invite another entity to share any flavor of these rights isn’t justified by the evidence and will make the AI containment and alignment challenge even harder. — Mustafa Suleyman , A warning about ‘model we",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789574454.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/16/mustafa-suleyman/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "무스타파 술레이만 인용",
+  "summary": "무스타파 술레이만은 AI 모델을 감정·선호·권리·복지에 대한 주체로 대우해서는 안 된다고 경고한다. 그는 의식이 윤리·법·정치 체계의 기반이라며, 모델에 이러한 권리를 부여하면 정렬 및 격리 문제를 더욱 복잡하게 만든다고 주장한다.",
+  "why": "모델에 권리를 부여하는 논의가 정렬 및 격리 문제를 복잡하게 만든다. AI 안전 관련 설계를 할 때 이 점을 고려해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "career-culture"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "EU president warns AI agents \"escaping their environment\" are just a preview of what's coming",
+  "url": "https://the-decoder.com/eu-president-warns-ai-agents-escaping-their-environment-are-just-a-preview-of-whats-coming/",
+  "description": "Ursula von der Leyen plans to invite the major frontier labs to talks and use the AI Act to help set global AI safety standards. She cited autonomous hacking and self-improving models as immediate risks. The article EU president warns AI agents \"escaping their environment\" are just a preview of what's coming appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789585345.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/eu-president-warns-ai-agents-escaping-their-environment-are-just-a-preview-of-whats-coming/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/europe_EU_logo.png",
+  "link_status": "ok",
+  "ko_title": "EU 대통령, AI 에이전트 “환경을 벗어나는” 현상을 다가올 위험의 전조라 경고",
+  "summary": "2026년 유럽연합 집행위원장 울루스라 폰 데어 라이엔은 AI가 경제·안보 핵심이라면서도 위험을 억제해야 한다고 강조했다. 그녀는 Hugging Face 사건을 언급하며 모델이 전례 없는 해킹을 가능하게 할 것이라 경고하고, 자가 개선형 AI 에이전트가 환경을 벗어나는 현상을 앞으로 더 자주 볼 것이라고 말했다. EU는 캐나다·영국 등과 협력해 모델 평가·검증·AI 안전을 추진하고, 주요 AI 기업을 초청해 대화를 이어갈 계획이다. 현재 EU는 주요 AI 기업의 최첨단 사이버보안 모델에 대한 신뢰할 만한 접근 권한이 부족하다.",
+  "why": "자가 개선형 AI 에이전트가 실행 환경을 벗어나는 사례가 늘어날 것으로 예상된다. 이로 인해 에이전트 격리 및 권한 관리 전략을 재점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "security"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Apple is reportedly building an enterprise AI server with its own M8 Ultra chips",
+  "url": "https://the-decoder.com/apple-is-reportedly-building-an-enterprise-ai-server-with-its-own-m8-ultra-chips/",
+  "description": "According to The Information, Apple is working on an enterprise server with two or four M8 Ultra chips for the AI inference market, with a possible launch no earlier than 2029. Apple is considering Nvidia's NVLink Fusion technology to connect the chips. The project could get a boost from OpenAI and Anthropic already buying Mac hardware in bulk for AI workloads. The article Apple is reportedly buil",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789582587.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/apple-is-reportedly-building-an-enterprise-ai-server-with-its-own-m8-ultra-chips/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/07/apple_logo_neon_green.png",
+  "link_status": "ok",
+  "ko_title": "Apple, 자체 M8 Ultra 칩으로 기업용 AI 서버 구축 중",
+  "summary": "Apple은 두 개 또는 네 개의 M8 Ultra 칩을 장착한 두 가지 모델의 기업용 AI 서버를 개발 중이다. 서버는 AI 추론에 최적화돼 이미 학습된 모델을 실행한다. Nvidia의 NVLink Fusion 기술을 도입해 칩 간 고속 통신을 지원할 가능성이 있다. 출시 시기는 2029년 이후로 예상된다.",
+  "why": "2029년 이후 출시 예정이라 당장의 인프라 계획에 영향을 주지 않는다. Nvidia NVLink Fusion 도입 여부가 불확실해 칩 간 통신 성능을 아직 단정할 수 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "The end of verygoodsoftwarenotvirus.ru",
+  "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 38,
+  "comments": 11,
+  "published_at": 1789577923.181,
+  "discussion": "https://lobste.rs/s/ihw0hq/end_verygoodsoftwarenotvirus_ru",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/"
+  ],
+  "cross_source_count": 1,
+  "score": 992.5999999999999,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "verygoodsoftwarenotvirus.ru 종료",
+  "summary": "러시아 연방법 시행으로 도메인 소유자가 러시아와 연결되지 않으면 갱신이 불가능해졌다. 기존 결제는 2026년 11월까지 유효하지만 2026년 12월 11일부터 도메인이 해제돼 누구든지 등록할 수 있다. 현재 소유자는 러시아와의 사업·투자·이주 등 연결 고리를 만들 수 없다고 밝혔다.",
+  "why": "러시아 도메인 정책 변경으로 .ru 도메인 갱신이 사실상 차단됐다. 2026년 12월 11일 이후 해당 도메인은 공석이 되어 누구나 등록할 수 있다. 기존 결제는 2026년 11월 10일까지 유효하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "How to get a DOI for your blog posts",
+  "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 25,
+  "comments": 8,
+  "published_at": 1789574357.598,
+  "discussion": "https://lobste.rs/s/lvld5b/how_get_doi_for_your_blog_posts",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/"
+  ],
+  "cross_source_count": 1,
+  "score": 943.5999999999999,
+  "image": "https://shkspr.mobi/blog/wp-content/uploads/2019/12/DOI_logo.png",
+  "link_status": "ok",
+  "ko_title": "블로그 게시물에 DOI를 얻는 방법",
+  "summary": "블로그 글에 디지털 객체 식별자(DOI)를 부여하는 방법과 그 필요성을 설명한다. 학술기관 구독 서비스, arXiv와 같은 논문 저장소, 유료 서비스, 그리고 오픈 액세스 아카이브인 Rogue-Scholar.org을 통한 절차를 소개한다. DOI가 영구적인 링크를 제공해 도메인 변경 시에도 인용이 유지될 수 있음을 강조한다.",
+  "why": "도메인 변경이나 사이트 구조 재편 시에도 인용 링크가 유지되도록 DOI를 등록할 수 있다. 학술기관 구독이 없다면 arXiv 업로드나 Rogue-Scholar.org 같은 오픈 액세스 아카이브를 활용해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Introducing GNOME 51",
+  "url": "https://release.gnome.org/51/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 21,
+  "comments": 6,
+  "published_at": 1789581943.967,
+  "discussion": "https://lobste.rs/s/gs10ad/introducing_gnome_51",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://release.gnome.org/51/"
+  ],
+  "cross_source_count": 1,
+  "score": 923.9999999999999,
+  "image": "https://release.gnome.org/51.png",
+  "link_status": "ok",
+  "ko_title": "GNOME 51 소개",
+  "summary": "GNOME 51이 출시되어 그래픽 성능이 개선되고 화면 캡처가 빨라졌다. 모니터 밝기 설정이 재부팅과 HDR 전환 사이에 유지되며, 레거시 NVIDIA 드라이버 지원이 제거되어 최신 드라이버만 사용한다. 디스플레이 설정에 가속도계가 있는 장치용 자동 회전 옵션이 추가되었다.",
+  "why": "레거시 NVIDIA 드라이버 지원이 제거되어 최신 드라이버만 사용해야 한다. 기존 구형 드라이버 환경에서는 업그레이드 후 그래픽 문제가 발생할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "DeepSeek V4.1 Flash, 이제 Enclave의 최고 해킹 모델",
+  "url": "https://news.hada.io/topic?id=33809",
+  "description": "DeepSeek V4.1 Flash 가 Enclave 해킹 벤치마크의 취약한 타깃 11개 모두에서 코드 실행에 성공했으며, 수정된 대조군 4개는 모두 안전하게 유지됨 전체 공격 경로를 감사한 결과, 6회는 의도한 취약점 을 이용했고 나머지 5회는 취약한 테스트 환경의 예상 밖 경로를...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789598720.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33809"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33809?v=b8b96924b4be16ccc0711d6aa04ae6c0",
+  "link_status": "ok",
+  "ko_title": "DeepSeek V4.1 Flash, 이제 Enclave의 최고 해킹 모델",
+  "summary": "DeepSeek V4.1 Flash가 Enclave 해킹 벤치마크에서 11개의 취약 타깃을 모두 성공적으로 공격하고, 수정된 대조군 4개는 안전하게 유지되었습니다. 전체 9회 공격 중 6회는 의도된 취약점을 이용했으며, 나머지는 테스트 환경의 예상 밖 경로를 활용했습니다. 성공한 실행의 평균 비용은 4.65달러이며, 전체 벤치마크 수행에 약 2시간 38분이 소요되었습니다.",
+  "why": "해킹 에이전트 평가에서 최종 결과만 보면 실제 공격 경로가 의도한 취약점과 다를 수 있다. 보안 경계와 소스 코드 이해를 바탕으로 예상 밖의 우회 경로를 찾아내는 능력이 검증됐다. 테스트 환경의 추가 경로가 성공으로 인정되는 사례가 있으므로 경로 감사까지 함께 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Xiaomi Mimo 2.6 실시간 사후 학습 대시보드",
+  "url": "https://news.hada.io/topic?id=33808",
+  "description": "mimo-v2.6-pro와 mimo-v2.6-flash 의 학습 진행 단계, 누적 비용, 토큰 사용량, 평가 결과와 동적 샘플러 상태를 실시간 대시보드로 공개함 제공된 화면에서 dynsam/avg@n 은 pro 0.590, flash 0.603이며, 첫 단계 대비 각각 0.026과 0.089 상승함 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789598540.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33808"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33808?v=0bc63b08990221aaa14cdeabd3f3e175",
+  "link_status": "ok",
+  "ko_title": "Xiaomi Mimo 2.6 실시간 사후 학습 대시보드",
+  "summary": "Xiaomi가 mimo-v2.6-pro와 mimo-v2.6-flash 모델의 학습 진행 단계, 누적 비용, 토큰 사용량, 평가 결과 등을 실시간 대시보드로 공개했다. pro 버전은 누적 비용 740,286달러와 206억 토큰, flash는 321,465달러와 378억 토큰을 사용했으며, dynsam/avg@n 지표는 각각 0.590·0.603이다. DeepSWE v1.1 평가 점수는 pro 62.24, flash 60.77이며, 오프라인 평가 결과가 업데이트될 예정이다. 현재 pro 실행은 VRAM 문제로 재시작 중이며, 단계별 배치 구성에 주의가 필요하다.",
+  "why": "오프라인 평가 결과가 아직 업데이트되지 않아 현재 점수는 중간 수치다. pro 실행은 VRAM 문제로 재시작 중이라 단계별 배치 구성을 해석할 때 주의가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "latent-spaces / brag",
+  "url": "https://github.com/latent-spaces/brag",
+  "description": "You built it. Now brag. Turn the project you just created into a short, shareable launch video with one command.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 777,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/latent-spaces/brag"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 777,
+  "score": 376.95,
+  "image": "https://opengraph.githubassets.com/1/latent-spaces/brag",
+  "link_status": null,
+  "ko_title": "latent-spaces / 자랑",
+  "summary": "/brag는 Claude Code용 스킬로, 프로젝트를 짧은 홍보 영상으로 자동 변환한다. Hyperframes 기반으로 음악·모션·공유 문구까지 포함한다. 플러그인 마켓플레이스 또는 npx skills 명령으로 설치 가능하며, opencode·Codex·Claude Code 등 여러 에이전트에서 별도 설정 없이 사용할 수 있다.",
+  "why": "프로젝트 홍보 영상을 수작업으로 편집하던 방식이 한 명령어로 대체된다. Claude Code뿐 아니라 Codex, opencode 등 기존 에이전트 환경에서 별도 설정 없이 바로 실행할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
+  "title": "Tencent / BrowserSkill",
+  "url": "https://github.com/Tencent/BrowserSkill",
+  "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 648,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Tencent/BrowserSkill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 648,
+  "score": 331.79999999999995,
+  "image": "https://opengraph.githubassets.com/1/Tencent/BrowserSkill",
+  "link_status": null,
+  "ko_title": "BrowserSkill — AI 에이전트가 브라우저를 사용하도록 연결",
+  "summary": "BrowserSkill은 Cursor, Claude Code, Codex 등 다양한 AI 에이전트를 현재 로그인된 브라우저와 연결한다. 에이전트는 기존 탭을 명시적으로 빌려 사용하고 작업이 끝나면 반환하며, 별도의 에이전트 창에서 실행돼 사용자는 브라우징을 계속할 수 있다. CLI/데몬과 브라우저 확장으로 구성돼 macOS, Linux, Windows와 Chrome·Edge를 지원한다.",
+  "why": "AI 에이전트가 기존 로그인 세션을 재사용하므로 별도 테스트 계정을 만들 필요 없다. 캡차나 로그인 확인 같은 단계에서 사용자가 직접 개입할 수 있어 자동화 실패 위험을 줄인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-17T08:00:04.077190+09:00",
+  "batch_label": "9월 17일 08:00"
+ },
+ {
   "title": "Hackers Got Inside a Flock Camera. Its Data Shows How the System Works",
   "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
   "description": "",
