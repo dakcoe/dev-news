@@ -9,7 +9,7 @@
   LLM_PROVIDER   groq(기본) — Groq 전용, 새 공급자 추가 금지 (SPEC 불변 제약)
   GROQ_API_KEY   Groq API 키
   LLM_MODEL      모델을 직접 지정하고 싶을 때만
-  GITHUB_TOKEN   있으면 GitHub API 한도가 시간당 60→1,000회+ (Actions는 자동 제공)
+  GITHUB_TOKEN   있으면 GitHub API 한도가 시간당 60→1,000회+ (publish.sh 가 gh 토큰을 넣는다)
 
 깔때기 (SPEC 1.2): 넓은 수집 → 중복 제거 + candidates 로그 → 보조 점수 top_n 선별
 → 최종 선별분만 본문·썸네일·요약. 파이프라인 수준의 차단 필터는 두지 않는다 —
