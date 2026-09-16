@@ -388,6 +388,15 @@ __ADS_HEAD__
   .group{font-size:13px;font-weight:700;color:var(--tx3);margin:28px 2px 12px;
          letter-spacing:.01em}
   .group:first-child{margin-top:6px}
+  /* 회차 안 주제 묶음 제목. 회차 제목보다 한 단계 작다. */
+  .topic{font-size:12px;font-weight:700;color:var(--pri-dk);margin:14px 2px 8px;letter-spacing:.02em}
+  /* 카드에 실리는 우리 문장(중요한 이유). 요약과 구분되게 보라 라벨을 앞에 둔다. */
+  .rwhy{font-size:13.5px;line-height:1.6;color:#3a3a44;margin-top:7px;padding-left:10px;border-left:2px solid #d9d4f7}
+  .rwhy b{font-size:11.5px;font-weight:800;color:var(--pri-dk);margin-right:6px}
+  .row.rd .rwhy{opacity:.55}
+  .foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+  .foot a{color:var(--tx3);text-decoration:none}
+  .foot a:hover{color:var(--pri-dk)}
   .row{
     display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:0 14px;
     background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
@@ -703,6 +712,11 @@ const HMARK = '<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
   + '<path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff"'
   + ' stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 function h1HTML(title){ return '<h1>'+HMARK+'<span>'+title+'</span></h1>'; }
+/* 목록 아래 링크 묶음. 프리렌더(render.py footer_html)와 같은 마크업이어야 스크립트가
+   뜰 때 자리가 안 흔들린다. */
+const FOOT_HTML = '<footer class="foot"><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a>'
+  + '<a href="https://github.com/dakcoe/dev-news" rel="noopener">GitHub 저장소</a>'
+  + '<span>© dev-news · 기사의 저작권은 각 원문 출처에 있습니다</span></footer>';
 
 /* 소개 화면. 글은 여기 고정이고, 이름·링크·후원 주소만 config.yaml(about)에서 온다.
    프로필 사진은 GitHub 이 주는 것(github.com/<아이디>.png)을 그대로 쓴다.
@@ -719,9 +733,13 @@ function aboutHTML(){
   const avatar=authorUrl ? authorUrl.replace(/\/+$/,'')+'.png?size=208' : '';
   const coffee=safeU(a.coffee);
   const srcNames=Object.values(SRC).filter(s=>s.on).map(s=>escA(s.name)).join(', ');
-  const sec=(t,inner,cls)=>'<section class="'+(cls||'')+'"><h2>'+t+'</h2>'+inner+'</section>';
-  const crit=[['01','커뮤니티 반응','추천 수와 댓글 수'],['02','여러 출처에 함께 오른 기사','출처가 겹칠수록 앞에 둡니다'],['03','개발과의 관련성','소송, 정치, 연예 등 기술 외 사안은 제외']]
-    .map(([n,t,d])=>'<div class="crit"><span class="cnt">'+n+'</span><div><b>'+t+'</b><span>'+d+'</span></div></div>').join('');
+  const btns='<div class="acts">'
+    + (coffee ? '<a class="go coffee" href="'+coffee+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.cup+escA(a.coffee_label||'후원하기')+'</a>' : '')
+    + (repo?'<a class="go alt" href="'+repo+'/issues" target="_blank" rel="noopener noreferrer">'+AB_ICON.issue+'Issues 열기</a>':'')
+    + '</div>';
+  /* 글은 render.py 의 about_copy() 에서 온다 — 정적 /about/ 페이지와 같은 글이다.
+     서버가 만든 HTML 이라 escA 를 거치지 않는다(우리 글이지 남이 정한 값이 아니다). */
+  const secs=(a.copy||[]).map(x=>'<section id="'+escA(x.id)+'"'+(x.id==='privacy'?' class="small"':'')+'><h2>'+escA(x.title)+'</h2>'+x.html+(x.id==='support'?btns:'')+'</section>').join('');
   return h1HTML('소개')
     + '<div class="sub">만든 사람과 운영 방식</div>'
     + '<div class="about">'
@@ -733,21 +751,7 @@ function aboutHTML(){
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
     +   '</div>'
     + '</div>'
-    + '<div class="doc">'
-    + sec('사이트 소개',
-        '<p>dev-news는 개발과 AI 분야의 소식을 직접 챙겨 보려고 만든 사이트입니다. 모은 소식을 한국어로 정리해 하루 세 번(00시, 08시, 16시) 갱신하며, 출처는 '+srcNames+'입니다. 모든 기사에 원문 링크를 함께 둡니다.</p>')
-    + sec('수집 및 요약 방식',
-        '<p>수집, 요약, 게시는 자동으로 이루어집니다. 요약과 제목 번역은 AI가 작성하며, 기사마다 중요한 이유를 한 문장으로 덧붙입니다. 원문 본문을 가져오지 못한 경우에는 해당 글에 달린 댓글을 바탕으로 요약하고, 그 사실을 표시합니다.</p>')
-    + sec('기사 선별 기준', '<p>하루 수백 건 중 회차당 20건을 게시합니다.</p><div class="crits">'+crit+'</div>')
-    + sec('후원 및 문의',
-        '<p>이 사이트가 도움이 되었다면 후원할 수 있습니다. 출처 추가·제외 요청, 오류 제보, 제안은 GitHub Issues로 보내 주세요.</p>'
-        + '<div class="acts">'
-        + (coffee ? '<a class="go coffee" href="'+coffee+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.cup+escA(a.coffee_label||'후원하기')+'</a>' : '')
-        + (repo?'<a class="go alt" href="'+repo+'/issues" target="_blank" rel="noopener noreferrer">'+AB_ICON.issue+'Issues 열기</a>':'')
-        + '</div>')
-    + sec('개인정보 처리',
-        '<p>이 사이트는 서버와 회원 기능이 없습니다. 보관함과 읽음 표시는 브라우저의 localStorage에만 저장되며 외부로 전송되지 않습니다. 광고가 게재되는 경우 광고 사업자가 쿠키 등을 통해 정보를 수집할 수 있으며, 해당 사항은 이 페이지에 명시합니다.</p>', 'small')
-    + '</div></div>';
+    + '<div class="doc">'+secs+'</div></div>'+FOOT_HTML;
 }
 
 function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
@@ -859,6 +863,7 @@ function rowHTML(d){
     +   '<h2 class="rt">'+escA(d.title)+'</h2>'
     +   '<div class="rm">'+meta+'</div>'
     +   (d.snip?'<div class="snip">'+escA(d.snip)+'</div>':'')
+    +   (d.why?'<div class="rwhy"><b>중요한 이유</b>'+escA(d.why)+'</div>':'')
     + '</div>'
     + (safeU(d.img)?'<div class="thumb"><img src="'+safeU(d.img)+'" loading="lazy" alt="'+escA(d.title)+'" onerror="this.closest(\'.thumb\').remove()"></div>':'<div></div>')
     + '<div class="acts">'
@@ -1340,7 +1345,7 @@ function render(){
   let h=h1HTML(isSaved?'보관함':'오늘의 뉴스')
       + '<div class="sub">'+(isSaved
           ? '체크한 기사만 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
-          : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차)')+'</div>';
+          : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차) · 하루 수백 건 중 회차당 20건을 고릅니다')+'</div>';
 
   if(isSaved){
     if(savedMap.size) h+='<button class="expbtn" onclick="copyMd()">선택 '+savedMap.size+'건 마크다운으로 복사</button>';
@@ -1421,6 +1426,14 @@ function initAds(){
 const PAGE = 120;   // 정적 마크업(SEO_ITEMS)과 같은 수 — 크롤러가 보는 양이 렌더 전후로 달라지지 않게
 let shown = PAGE;                        // 지금까지 그린 행 수 (필터·검색이 바뀌면 리셋)
 
+/* 기사의 주제 묶음. 태그 어휘의 group(AI · 개발 · 그 외) 중 첫 태그가 속한 것.
+   태그가 없으면 맨 뒤. */
+const TOPICS=['AI','개발','그 외'];
+function topicOf(d){
+  for(const t of (d.tags||[])){ const g=(TAGS[t]||{}).group; const i=TOPICS.indexOf(g); if(i>=0) return i; }
+  return TOPICS.length;
+}
+
 function layoutHTML(){
   const items=visible();
   // 레이아웃: 왼쪽 태그 패싯 사이드바 + 오른쪽 피드 (좁은 화면에선 패싯이 드로어로 전환)
@@ -1431,9 +1444,12 @@ function layoutHTML(){
     h+='<div class="none">'+(days?'이 기간에는 기사가 없습니다. 오른쪽 위 「전체」를 눌러보세요.'
                                   :'조건에 맞는 기사가 없습니다.')+'</div>';
   } else if(sort==='batch'){
+    /* 회차 안에서는 주제(AI → 개발 → 그 외)로 묶어 보여 준다. 같은 주제 안에서는
+       원래 순서(점수순)를 지킨다. 검색 중에는 묶지 않는다 — 결과가 흩어져 보인다. */
     let last=null, adRows=0;
-    items.slice(0, shown).forEach(d=>{
-      const label=d.batchLabel||'';
+    const page=items.slice(0, shown);
+    const byBatch=[]; page.forEach(d=>{ const l=d.batchLabel||''; if(!byBatch.length||byBatch[byBatch.length-1].label!==l) byBatch.push({label:l, rows:[]}); byBatch[byBatch.length-1].rows.push(d); });
+    byBatch.forEach(({label, rows})=>{
       if(label && label!==last){
         /* 회차가 갈리는 지점. 좁은 화면에서는 여기에 가로 광고를 하나 끼운다.
            첫 구분선은 건너뛴다 — 페이지가 광고로 시작하지 않게. */
@@ -1442,7 +1458,13 @@ function layoutHTML(){
         h+='<div class="group">'+label+' 수집 · '+n+'건</div>';
         last=label;
       }
-      h+=rowHTML(d);
+      const ordered = q ? rows : rows.map((d,i)=>[topicOf(d),i,d]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(x=>x[2]);
+      let lastTopic=-1;
+      ordered.forEach(d=>{
+        const t=q?-1:topicOf(d);
+        if(t!==lastTopic && t>=0 && t<TOPICS.length){ h+='<div class="topic">'+TOPICS[t]+'</div>'; lastTopic=t; }
+        h+=rowHTML(d);
+      });
     });
   } else {
     h+=items.slice(0, shown).map(rowHTML).join('');
@@ -1466,7 +1488,7 @@ function layoutHTML(){
     }
     else if(m && m.length){ h+='<div class="archead">지난 기사 (아카이브) '+m.length+'건</div>'+m.map(archRowHTML).join(''); }
   }
-  return h+'</div>'+adRailHTML()+'</div>';
+  return h+'</div>'+adRailHTML()+'</div>'+FOOT_HTML;
 }
 
 /* 목록만 갱신 — 바(검색 input)를 건드리지 않아 한글 IME 조합이 유지되고,

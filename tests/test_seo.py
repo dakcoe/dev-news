@@ -164,7 +164,8 @@ def test_사이트맵이_유효한_XML이고_주소가_맞다(seo_dir):
     root = ET.parse(seo_dir / "sitemap.xml").getroot()
     ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
     locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
-    assert locs == [site_url() + "/"]
+    # 소개·개인정보 처리 페이지가 정적으로 있어야 크롤러와 광고 심사 봇이 찾는다
+    assert locs == [site_url() + "/", site_url() + "/about/", site_url() + "/privacy/"]
 
 
 # ---------------- llms.txt ----------------
@@ -226,3 +227,44 @@ def test_ads_txt가_그대로_있다():
     body = open(path, encoding="utf-8").read().strip()
     assert body.startswith("google.com,"), body
     assert "DIRECT" in body
+
+
+# ---------------- 봇이 읽는 것 ----------------
+
+def test_프리렌더에_우리_문장이_보인다(tmp_path):
+    """첫 화면 마크업에 남의 기사 제목·요약만 있으면 "요약만 모아둔 곳"으로
+    읽힌다. 기사마다 쓴 '중요한 이유'가 스크립트 없이도 보여야 한다."""
+    import re
+    from news.render import render
+    a = [{"title": "t", "url": "https://e.com/1", "source": "hackernews", "summary": "요약이다.",
+          "why": "이유가 여기 있다.", "batch": "2026-09-17T08:00:00+09:00", "batch_label": "9월 17일 08:00",
+          "upvotes": 1, "comments": 1, "tags": []}]
+    out = tmp_path / "index.html"
+    render(a, str(out))
+    markup = re.sub(r"<script\b.*?</script>", "", out.read_text(encoding="utf-8"), flags=re.S)
+    assert "이유가 여기 있다." in markup
+    assert 'class="foot"' in markup and 'href="/about/"' in markup and 'href="/privacy/"' in markup
+    assert "회차당 20건을 고릅니다" in markup
+
+
+def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
+    """앱 안의 소개 화면은 스크립트가 그려서 봇에게는 빈 화면이다. /about/ 와
+    /privacy/ 를 정적으로 내보내고, 글은 about_copy() 한 곳에서 온다."""
+    from news.render import write_static_pages, about_copy
+    about = {"github": "https://github.com/x/y", "author": "me", "author_url": "https://github.com/x",
+             "bio": "안녕", "coffee": "https://pay.example/z", "coffee_label": "커피"}
+    write_static_pages(str(tmp_path), about, None)
+    a = (tmp_path / "about" / "index.html").read_text(encoding="utf-8")
+    p = (tmp_path / "privacy" / "index.html").read_text(encoding="utf-8")
+    for sec in about_copy(None):
+        assert sec["title"] in a
+    assert "https://github.com/x.png?size=208" in a and "커피" in a and "/issues" in a
+    assert "개인정보 처리" in p and "localStorage" in p and "커피" not in p
+    assert 'rel="canonical" href="' in a
+
+
+def test_후원_주소는_정적_페이지에서도_검사한다(tmp_path):
+    from news.render import write_static_pages
+    write_static_pages(str(tmp_path), {"coffee": "javascript:alert(1)", "github": "https://github.com/x/y"}, None)
+    a = (tmp_path / "about" / "index.html").read_text(encoding="utf-8")
+    assert "javascript:" not in a

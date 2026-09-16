@@ -353,3 +353,20 @@ def test_좁은_화면_공유_메뉴는_위로_연다(html):
     """버튼이 상세의 맨 아래라 아래로 열면 화면 밖으로 나가서 한 번 더 내려야
     보였다."""
     assert ".sharemenu{left:auto;right:0;top:auto;bottom:calc(100% + 8px)}" in html
+
+
+def test_카드에_중요한_이유가_실린다(html):
+    """우리가 쓴 문장을 첫 화면에 올린다. 상세를 열어야만 보이면 요약 모음으로
+    읽힌다."""
+    assert "(d.why?'<div class=\"rwhy\"><b>중요한 이유</b>'+escA(d.why)+'</div>':'')" in html
+
+
+def test_회차_안을_주제로_묶는다(html):
+    assert "const TOPICS=['AI','개발','그 외'];" in html
+    assert "function topicOf(d)" in html
+    assert "const ordered = q ? rows :" in html, "검색 중에는 묶지 않는다"
+
+
+def test_목록과_소개_아래에_같은_푸터(html):
+    assert html.count('class="foot"') >= 1
+    assert "+FOOT_HTML;" in html
