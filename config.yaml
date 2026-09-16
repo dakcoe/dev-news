@@ -137,6 +137,16 @@ alert:
 #   client 는 ca-pub-숫자, slot 은 숫자여야 한다 — 형식이 어긋나면 광고를 끈다.
 # 광고는 기사 사이가 아니라 피드 오른쪽 레일에 붙는다. 1200px 미만 화면에서는
 # 아예 그리지 않는다 — 피드를 좁히면서까지 넣을 자리가 아니다.
+# 소개 화면 (레일 맨 아래 GitHub 아이콘). 만든 사람·후원·저장소·문의.
+about:
+  github: "https://github.com/dakcoe/dev-news"      # 저장소. 문의는 여기 Issues
+  author: "suhyun"
+  author_url: "https://github.com/dakcoe"
+  bio: "개발자 한 명이 만들고 운영합니다."            # 원하는 말로 바꾸세요
+  # 후원 링크. 비어 있으면 버튼이 안 보인다. Buy Me a Coffee · 토스 · 카카오 등 아무 주소나.
+  coffee: ""
+  coffee_label: "커피 한 잔 사주기"
+
 ads:
   enabled: true
   provider: adsense
