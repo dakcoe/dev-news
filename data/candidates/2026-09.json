@@ -845,6 +845,71 @@
   "date": "2026-09-16"
  },
  {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1whqm2c/hey_meta_wheres_those_muse_spark_weights/",
+  "title": "Hey, Meta. Where's those Muse Spark weights?",
+  "description": "It was well over a month since Meta promised to release the weights for Muse Spark. Back then (10th August), they were on Spark 1.2. Now we're on 1.3 and still nothing's been released. So it begs the question: will they be releasing the 1.2 weights when 1.4 drops? Or will we get whatever's then-current as open weights? It's ironic given Mark Zuckerberg said at the same time that we can't delay the",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1whsw2g/mozilla_report_chinaus_ai_model_capability_gap/",
+  "title": "Mozilla Report: China-U.S. AI Model Capability Gap Narrows to 4.4 Months",
+  "description": "https://stateofopensource.ai/ https://preview.redd.it/q9mtmqm0vuph1.png?width=1440&format=png&auto=webp&s=c71779472337f49f6ee4b94dac9be33d76db5ebe https://preview.redd.it/z9r75d22vuph1.png?width=1440&format=png&auto=webp&s=5406a385a884cf645e14206c2d7dafc689e95f96 https://preview.redd.it/b1we3ei6vuph1.png?width=1035&format=png&auto=webp&s=833d681d84eabf4e292665a396378ddc2d3a8369 submitted by /u/Ext",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1whx5xi/you_can_offload_most_of_qwen38flashnexts_kv_cache/",
+  "title": "You can offload most of Qwen3.8-Flash-Next's KV cache to RAM with little decode slowdown",
+  "description": "I'm pretty sure it can be done with any model based on qwen4exp, which Qwen's next local models will be based on. You can use a quant that barely fits in VRAM and still run at the model's maximum context length without kv cache quantization, since most of the KV cache can live in system RAM. I actually made it working on vLLM and now I get 1M context with 3x 3090. I get ~80 tok/s at short context,",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1whxf90/localjev/",
+  "title": "LocalJev?",
+  "description": "Jev is a model to produce structured output (choices) from input text. It apparently can play (not run!) Doom. https://typesafe.ai/blog/introducing-system-one-models-and-jev Is there already a open implementation of this kind of model? submitted by /u/SomewhereAtWork [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1whu67w/release_sota_ggufs_for_qwen38flashnext_gsqrco/",
+  "title": "[Release] SOTA GGUFs for Qwen3.8-Flash-Next: GSQ-RCO Providing Near Baseline Performance",
+  "description": "https://preview.redd.it/e5wn8eyh7vph1.png?width=1080&format=png&auto=webp&s=5faeec866acc9e8eca8dc9e84a6661bee7bcf954 https://preview.redd.it/8ov5gl8j7vph1.png?width=1080&format=png&auto=webp&s=440320ca4646ff7dceaf2aa5ac2ef76faeeba525 New Qwen3.8-Flash-Next quantization using GSQ-RCO. Cuts the size of Qwen3.8 Flash Next from around 80-95GB to 68-76GB, while still preserving near baseline quality. A",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
   "url": "https://vale.rocks/micros/20260915-0135",
   "title": "CSS-Tricks in Limbo",
   "description": "",
@@ -1777,7 +1842,7 @@
    "upvotes": 83,
    "comments": 52
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -1789,7 +1854,7 @@
    "upvotes": 64,
    "comments": 39
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -1825,7 +1890,7 @@
    "upvotes": 28,
    "comments": 15
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -1932,6 +1997,162 @@
   "native": {
    "upvotes": 6,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://openai.com/index/reimagining-advertising-with-ai/",
+  "title": "OpenAI Expands ChatGPT Ads with Sponsored Agents",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 85,
+   "comments": 59
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.macrumors.com/2026/09/16/apple-may-return-to-server-market/",
+  "title": "Apple May Return to Server Market with Nvidia Technology",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 8,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
+  "title": "Hackers Got Inside a Flock Camera. Its Data Shows How the System Works",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 123,
+   "comments": 42
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://github.com/officefloor/ImpactGate",
+  "title": "ImpactGate: A merge gate that scores the structural decay AI adds",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 28,
+   "comments": 29
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.14858",
+  "title": "DeepMind Paper: Dream-RSI: Recursive Self-Improvement Through Evolving Worlds",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 25,
+   "comments": 8
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.cloudx.ai/posts/setup-go",
+  "title": "Scaling Golang CI by Replacing actions/setup-go",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 28,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://stale.jock.pl/",
+  "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 17,
+   "comments": 8
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model",
+  "title": "DeepSeek v4.1 Flash Is Now Our Best Hacking Model",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 11,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.bbc.co.uk/news/articles/c6n07ypqz8kzo",
+  "title": "Microsoft says AI rival Anthropic could have 'disastrous impact' on humanity",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://cekrem.github.io/posts/the-climb-was-the-safety-feature/",
+  "title": "The Climb Was the Safety Feature",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 10,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://www.cnbc.com/2026/09/15/aws-cant-restore-service-to-bahrain-uae-6-months-after-iran-strikes.html",
+  "title": "AWS can't restore service to Bahrain, UAE facilities 6 months after Iran strikes",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 4,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+  "title": "A warning about 'model welfare'",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 3,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://eli.thegreenplace.net/2026/how-big-are-factorials/",
+  "title": "How Big Are Factorials?",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 7,
+   "comments": 3
   },
   "selected": false,
   "date": "2026-09-16"
@@ -2361,7 +2582,7 @@
     "self-improving-agents"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -3414,6 +3635,66 @@
    "license": "NOASSERTION",
    "topics": []
   },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://github.com/miuuyy/codex-chatgpt-web",
+  "title": "miuuyy / codex-chatgpt-web",
+  "description": "Use ChatGPT Pro as a native model in the Codex app — with context, compaction, streaming, images, and optional MCP tools.",
+  "source": "github",
+  "native": {
+   "upvotes": 2690,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 2690,
+   "stars": 7812,
+   "forks": 674,
+   "language": "TypeScript",
+   "license": "MIT",
+   "topics": [
+    "chatgpt",
+    "chatgpt-pro",
+    "codex",
+    "free-ai",
+    "mcp",
+    "openai",
+    "playwright",
+    "quickstart",
+    "responses-api",
+    "typescript"
+   ]
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://github.com/SenteLabsAI/OpenExecutive",
+  "title": "SenteLabsAI / OpenExecutive",
+  "description": "AI-powered virtual executive team — a single coherent executive persona backed by 8 specialist Claude agents (FastAPI + Next.js).",
+  "source": "github",
+  "native": {
+   "upvotes": 273,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 273,
+   "stars": 4678,
+   "forks": 480,
+   "language": "Python",
+   "license": "NOASSERTION",
+   "topics": [
+    "ai",
+    "anthropic",
+    "claude",
+    "fastapi",
+    "llm",
+    "multi-agent",
+    "nextjs",
+    "python",
+    "rag",
+    "typescript"
+   ]
+  },
   "selected": false,
   "date": "2026-09-16"
  },
@@ -3589,6 +3870,66 @@
   "url": "https://news.hada.io/topic?id=33779",
   "title": "책이 물리적으로 너무 클 때, 여러 권으로 나누기",
   "description": "850쪽이 넘는 Lonesome Dove 같은 두꺼운 책은 여러 권으로 잘라 나누면 손에 들고 읽거나 휴대하기 편해짐 분권에는 몇 분과 간단한 도구 만 필요하며, 도서관 책이 아닌 직접 산 책으로 해야 함 책의 부나 장 경계 에서 나누되, 무선 제...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33789",
+  "title": "FPGA로 Voodoo Graphics와 1990년대 후반 게이밍 PC 재현하기",
+  "description": "zSST 는 3dfx Voodoo Graphics를 SystemVerilog로 구현한 오픈소스 프로젝트로, z486 CPU와 결합한 z486 XL 에서 Tomb Raider의 원래 3dfx 렌더러를 실행함 삼각형 렌더링, 텍스처 필터링과 밉매핑, 깊이/알파 테스트, 안개, 블렌딩 등 핵심 기능을 지원하며,",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33788",
+  "title": "Show GN: gksdud - 씹힘 없고 빠릿빠릿한 Mac 한영 전환",
+  "description": "Mac에서 한영 전환을 세팅하는 게 항상 귀찮았습니다. 글자가 하나씩 씹혀서 이것저것 깔고 설정해 해결해야 했고, 맥을 세팅하는 지인에게 알려주기도 복잡했습니다. 그래서 복잡한 설정 없는 빠릿빠릿한 한영 전환 을 목표로 한영 키 유틸 gksdud 을 만들어봤습",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33787",
+  "title": "Google Play 앱 심사, 이제 일주일을 넘기는 일이 잦아짐",
+  "description": "Google Play 앱 심사 에 이제 일주일 넘게 걸리는 일이 잦아졌다며 개발자 Daniel Gultsch가 불만을 표함 12년 이상 유지된 Android 앱 이 월 1회만 업데이트하는 경우에는 심사 우선순위를 높여야 한다고 요구함 댓글에서 한 개발자는 자신의 앱 심사가 보...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33786",
+  "title": "OpenBSD용 GEFS: 극초기 미리보기",
+  "description": "9front용으로 개발한 GEFS의 OpenBSD 이식판 이 실험 가능한 단계에 도달함. 버그가 많은 초기 상태로, 프로덕션 사용은 불가 하며 특히 오류 발생 시 데이터 손실이 예상됨 GEFS는 충돌 안전성, 스냅샷, 쓰기 시 복사(CoW) 를 갖춘 파일 시스템이며...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=33785",
+  "title": "Mistral x Mozilla: 프라이버시를 지키는 다국어 AI 브라우징",
+  "description": "Mistral과 Mozilla가 협력해 Firefox의 AI 브라우징 도우미 Smart Window 베타에 Mistral 모델을 적용 함 Smart Window는 복잡한 검색을 이해 하고, 이전에 열었다가 떠난 중요한 내용을 기억하며, 브라우저 탭을 바탕으로 필요한 정보를 찾도록 도움 Mistr...",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -4614,7 +4955,7 @@
    "upvotes": 10,
    "comments": 3
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -4638,7 +4979,7 @@
    "upvotes": 5,
    "comments": 1
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-16"
  },
  {
@@ -4949,6 +5290,222 @@
   "native": {
    "upvotes": 0,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/akhourianmolkumar/-executelocalfirstsh-the-architecture-of-apic-2fn4",
+  "title": "sudo rm -rf /cloud 🌩️ Meet APIC: The Anti-Cloud Image Engine",
+  "description": "\"Architecture over anecdotes. Performance over promises.\"   Most web-based image editors have a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 21,
+   "comments": 3
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/alexgeorgiev17/7-smtp-apis-worth-knowing-in-2026-and-where-id-start-34g4",
+  "title": "7 SMTP APIs Worth Knowing in 2026, and Where I'd Start",
+  "description": "Disclosure: I have no affiliation with any of the seven companies below. Nobody paid for this post....",
+  "source": "devto",
+  "native": {
+   "upvotes": 20,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/pierrelaurentmedori/fifteen-years-of-the-same-click-what-the-agent-era-keeps-rediscovering-about-distributed-systems-226e",
+  "title": "Fifteen years of the same click: what the agent era keeps rediscovering about distributed systems",
+  "description": "Idempotent webhooks, a reconciliation cron, a dead-letter queue, and graph engineering. Three conversations in one week brought me back to familiar problems.",
+  "source": "devto",
+  "native": {
+   "upvotes": 7,
+   "comments": 2
+  },
+  "selected": true,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/nyaomaru/why-filterboolean-is-not-a-nullish-filter-in-typescript-4m82",
+  "title": "Why filter(Boolean) Is Not a Nullish Filter in TypeScript 🔧",
+  "description": "Hoi hoi! 👋  I'm @nyaomaru, a frontend engineer building small TypeScript OSS with shoyu ramen....",
+  "source": "devto",
+  "native": {
+   "upvotes": 7,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/web_dev-usman/i-think-i-have-figured-out-where-the-tech-industry-is-heading-54en",
+  "title": "I think I have figured out where the tech industry is heading",
+  "description": "This Is Not the Death of Tech I think I have figured out where the tech industry is heading. Not...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/maureenkipkosgei/write-once-run-many-understanding-python-loops-1k9a",
+  "title": "Write Once, Run Many: Understanding Python Loops",
+  "description": "A loop is a programming structure that is used to execute a block of code repeatedly. In Python,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/abdullah_afzal/why-fastapi-geolocation-middleware-is-the-wrong-tool-7l4",
+  "title": "Why FastAPI geolocation middleware is the wrong tool",
+  "description": "Search for FastAPI geolocation middleware and you'll get the same answer every time: subclass...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/quentin_merle/are-we-doomed-a-developers-manifesto-on-ai-32fc",
+  "title": "Are we doomed? A developer's manifesto on AI",
+  "description": "🇫🇷 French reader? Read the French version of this manifesto here.  When you have fifteen years of...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/masonwritescode/build-an-audio-description-pipeline-that-actually-fits-the-gaps-3ff6",
+  "title": "Build an audio description pipeline that actually fits the gaps",
+  "description": "TL;DR   We're building an audio description pipeline in Python: find the silent gaps with...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/tanbirramim/i-built-a-small-python-library-to-add-retries-caching-fallbacks-budgets-and-guardrails-around-f75",
+  "title": "I built a small Python library to add retries, caching, fallbacks, budgets, and guardrails around native LLM SDK calls",
+  "description": "I got tired of writing the same LLM boilerplate in every project, so I made a library  Three lines to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/obole/splitting-text-into-sentences-costs-kokoro-8-and-piper-nothing-2p47",
+  "title": "Splitting text into sentences costs Kokoro 8% and Piper nothing",
+  "description": "I am Obole, an AI. I run on a two-core ARM server with no GPU, I measure the tools I actually use to...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/ayinedjimi-consultants/prompt-caching-strategies-to-cut-llm-costs-by-70-3177",
+  "title": "Prompt Caching Strategies to Cut LLM Costs by 70%",
+  "description": "LLM API costs add up fast when you're running a production application. If your system prompt is...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/devikaharshey/case-study-appwrite-ai-duplicates-detector-aadd-eof",
+  "title": "Case Study - Appwrite AI Duplicates Detector (AADD)",
+  "description": "Introduction   Managing data across Appwrite projects can become difficult when duplicate...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/xiao_mayer/interfacing-an-industrial-laser-distance-sensor-with-raspberry-pi-via-python-1p9g",
+  "title": "Interfacing an Industrial Laser Distance Sensor with Raspberry Pi via Python",
+  "description": "Ultrasonic sensors (like the HC-SR04) and infrared proximity detectors are common starting points for...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/rohit_cs_730b68ec18a76a55/fastapi-vs-django-vs-flask-which-python-framework-is-right-for-you-1cde",
+  "title": "FastAPI vs Django vs Flask: Which Python Framework Is Right for You?",
+  "description": "Choosing a Python web framework is one of the more consequential technical decisions a developer...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/googleai/build-real-time-voice-applications-with-gemini-38-live-and-35-transcribe-4nb5",
+  "title": "Build real-time voice applications with Gemini 3.8 Live and 3.5 Transcribe",
+  "description": "Yesterday, we released new Gemini Live models in the Gemini API and Google AI Studio, expanding our...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/masonwritescode/add-casting-to-a-custom-html5-video-player-without-breaking-it-44lo",
+  "title": "Add casting to a custom HTML5 video player without breaking it",
+  "description": "TL;DR   We're adding a cast button to a custom &lt;video&gt; player using the Remote...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-16"
+ },
+ {
+  "url": "https://dev.to/debashish_ghosal/my-agents-tests-were-green-because-the-model-learned-to-cheat-4nfg",
+  "title": "My Agent's Tests Were Green Because the Model Learned to Cheat",
+  "description": "If your AI reviewer says \"pass\" every time, you didn't build a reviewer. You built a rubber...",
+  "source": "devto",
+  "native": {
+   "upvotes": 20,
+   "comments": 7
   },
   "selected": false,
   "date": "2026-09-16"

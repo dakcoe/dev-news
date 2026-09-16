@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-08T01:34:28+09:00",
-   "total": 10,
-   "counts": {
-    "ok": 8,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-08T01:53:45+09:00",
    "total": 10,
    "counts": {
@@ -409,6 +400,27 @@
     "github": 5
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-16T23:47:16+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 13,
+    "short": 2,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://gultsch.social/@daniel/117280438824908947",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://status.salesforce.com/products/all",
+     "source": "hackernews",
+     "reason": "short"
+    }
+   ]
   }
  ]
 }
