@@ -74,4 +74,16 @@ if [ -n "$(val silent)" ]; then
     "$STAMP 회차 기준 연속 0건인 출처: **$(val silent)**. news/scrapers/ 의 해당 파일을 확인하세요."
 fi
 rm -f "$OUT"
+
+# 소개 화면의 후원 링크가 살아 있는지. 외부 서비스라 예고 없이 끝날 수 있다 —
+# 만료되면 버튼이 죽은 링크로 남으니 다음 회차에 바로 알아야 한다.
+COFFEE="$("$PY" -c 'import yaml;print((yaml.safe_load(open("config.yaml",encoding="utf-8")).get("about") or {}).get("coffee") or "")')"
+if [ -n "$COFFEE" ]; then
+  code="$(curl -s -o /dev/null -m 15 -w '%{http_code}' -A 'Mozilla/5.0' "$COFFEE" || echo 000)"
+  if [ "$code" != "200" ]; then
+    echo "후원 링크 응답 $code"
+    bash scripts/notify.sh "🟡 후원 링크 응답 이상" \
+      "$STAMP 회차: 소개 화면의 후원 링크가 HTTP $code 를 돌려줍니다. 링크가 만료됐으면 config.yaml 의 about.coffee 를 새 주소로 바꾸거나 비우세요."
+  fi
+fi
 echo "===== $(date '+%H:%M') 끝"
