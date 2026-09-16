@@ -1,5 +1,539 @@
 [
  {
+  "title": "Introducing System One Models and Jev",
+  "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 699,
+  "comments": 238,
+  "published_at": 1789500303,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  ],
+  "cross_source_count": 1,
+  "score": 2712.0,
+  "image": "https://framerusercontent.com/images/RtIGTDwO43jR4ZDilesXiR5znc.jpg",
+  "link_status": "ok",
+  "ko_title": "System One 모델 및 Jev 소개",
+  "summary": "TypeSafe AI가 자동화에 특화된 새로운 모델 계열인 System One 모델을 공개했다. 첫 번째 공개 모델인 Jev는 구조화된 출력에 최적화돼 문자열 생성은 포기했지만, 기존 LLM 대비 100배 빠르고 비용 효율이 높다. 모델은 병렬 샘플러와 강화학습 기반 결정 보정(RLCD) 방식을 사용한다.",
+  "why": "기존 LLM을 대체해 구조화된 결정 로직에 바로 연결할 수 있다. 문자열 생성 기능이 없어 자연어 응답이 필요한 작업에는 쓸 수 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "An Update on Wayback Machine Access",
+  "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 368,
+  "comments": 201,
+  "published_at": 1789494738,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/"
+  ],
+  "cross_source_count": 1,
+  "score": 1939.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Wayback Machine 접근 업데이트",
+  "summary": "인터넷 아카이브는 대량 자동 트래픽으로 인한 서비스 장애를 방지하기 위해 보호 조치를 도입했다. 최근 차단 시 표시되는 429 오류 메시지를 새롭게 작성했다. 보호 로직이 실제 사용자까지 차단할 수 있어, 차단된 경우 운영체제·브라우저·IP 정보를 이메일로 보내면 검토한다.",
+  "why": "서비스 이용 중 429 차단을 경험하면 연락처를 통해 해제 요청을 할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "release"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "GEFS on OpenBSD: A very early preview",
+  "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 45,
+  "comments": 7,
+  "published_at": 1789492907.861,
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2"
+  ],
+  "cross_source_count": 2,
+  "score": 1835.3999999999999,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenBSD에서 GEFS: 매우 초기 미리보기",
+  "summary": "GEFS는 9front용으로 만든 새로운 크래시 안전 스냅샷 복사-쓰기 파일 시스템이며, 현재 OpenBSD용 포트가 초기 단계에 있다. 코드량은 약 9천 줄이며 아직 버그와 데이터 손실 위험이 존재한다. 포트는 주요 문제들을 파악한 상태라 개발자들이 직접 실험해볼 수 있다.",
+  "why": "프로덕션 환경에서는 데이터 손실이 예상되므로 즉시 사용해서는 안 된다. 오류 처리와 쓰기 순서 문제가 남아 있어 안정화 전까지는 실험용으로만 접근해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Google, 대화하며 추론하는 Gemini 3.8 Live와 Extended Thinking 출시",
+  "url": "https://news.hada.io/topic?id=33755",
+  "description": "음성으로 대화하면서 복잡한 작업을 수행하는 두 모델로, Live는 비용 효율과 대규모 활용 , Extended Thinking은 고난도 작업과 다단계 추론에 초점을 맞춤 Gemini 3.8 Live는 시각 정보를 거의 실시간으로 파악하고, 97개 언어를 대화 도중 자동으로 감지해 전환 하...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789508007.0,
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+   "https://news.hada.io/topic?id=33755"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/33755?v=cde409723ac7be1040973f26cd875a5f",
+  "link_status": "ok",
+  "ko_title": "Google, 대화하며 추론하는 Gemini 3.8 Live와 Extended Thinking 출시",
+  "summary": "Google이 Gemini 3.8 Live와 Extended Thinking 두 음성 대화 모델을 발표했다. Live는 실시간 시각 입력과 97개 언어 자동 전환을 지원하며 비용 효율에 초점을 둔 반면, Extended Thinking은 다단계 추론과 백그라운드 작업 진행 상황을 음성으로 전달한다. 두 모델은 Gemini API와 Google AI Studio에 순차 제공되며, 일반 사용자는 Search Live와 Gemini Live에서 각각 이용할 수 있다.",
+  "why": "Gemini API와 Google AI Studio에 순차 제공되므로 프로덕션 음성 에이전트 개발 시 접근성을 확인해야 한다. Extended Thinking은 백그라운드 작업 진행을 음성으로 알리므로 비동기 처리 UX 설계 방식이 바뀐다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+  "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 203,
+  "comments": 108,
+  "published_at": 1789495884,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover"
+  ],
+  "cross_source_count": 1,
+  "score": 1330.0,
+  "image": "https://www.strix.ai/blog-baseten-cover.png",
+  "link_status": "ok",
+  "ko_title": "Baseten 프로덕션 GitHub에 25분 만에 관리자 접근 권한 획득",
+  "summary": "보안 회사가 자동 해킹 에이전트 Strix를 사용해 Baseten의 서브도메인을 무자격으로 스캔한 결과, 25분 안에 basetenbot 개인 액세스 토큰을 찾아냈다. 해당 토큰은 내부 레포지토리와 GitOps, Homebrew tap 등 주요 리포에 관리자·푸시 권한을 가졌다. 토큰은 2023년 3월에 생성됐으며 2026년 7월에도 여전히 유효했다. Baseten 보안팀은 문제를 심각하게 인식하고 즉시 토큰을 회전시켰다.",
+  "why": "서브도메인 스캔으로 노출된 토큰이 내부 레포지토리에 관리자 권한을 가질 수 있다. 제3자 AI 인프라를 도입하기 전 무자격 스캔을 수행해 토큰 유효성을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "US confirms for first time it has deployed space weapons",
+  "url": "https://www.bbc.com/news/articles/ck790xg41ygro",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 436,
+  "comments": 305,
+  "published_at": 1789444076,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.com/news/articles/ck790xg41ygro"
+  ],
+  "cross_source_count": 1,
+  "score": 1193.5,
+  "image": "https://ichef.bbci.co.uk/news/1024/branded_news/0b47/live/b32fd7a0-b0f1-11f1-bc1f-3f186ca4140c.jpg",
+  "link_status": "ok",
+  "ko_title": "미국, 최초로 우주 무기 배치 확인",
+  "summary": "미국 공군 차관이 우주 궤도에 무기를 배치했음을 처음으로 공식 확인했다. 무기의 구체적 기능이나 배치 시기는 공개되지 않았다. 이는 러시아·중국의 위성 공격 위협에 대응하기 위한 조치로 설명되었다.",
+  "why": "백엔드 인프라가 의존하는 위성 통신과 GPS 신호의 무결성이 위협받을 수 있다. 러시아와 중국의 위성 공격 프로그램이 현실화되고 있어, 글로벌 서비스의 장애 리스크가 높아졌다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "science"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Chopping up books when they're physically too big",
+  "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 112,
+  "comments": 112,
+  "published_at": 1789497931,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html"
+  ],
+  "cross_source_count": 1,
+  "score": 1160.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "책이 물리적으로 너무 클 때 잘라내기",
+  "summary": "저자는 850페이지 이상의 두꺼운 책을 손쉽게 여러 권으로 나누어 읽는 방법을 제안한다. 종이책을 구입해 자연스러운 장 구분이나 파트 구분을 찾아 등뼈를 부러뜨려 작은 책으로 만든다. 이 방법은 독서 편의성을 높이고 휴대성을 개선한다.",
+  "why": "백엔드 개발자의 업무와 무관한 종이책 분할 기법이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Gemini Live audio",
+  "url": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+  "description": "Tool: Gemini Live audio Google released Gemini 3.8 Live and 3.8 Live Extended Thinking today - two new speech-to-speech models that are a similar shape to OpenAI's GPT-Live family. I pointed GPT-6 Astra Extra High at the documentation and had it build me this web UI for trying out the new models. You can select a model and voice preset, enter an optional system prompt and then start a voice conver",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789512427.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/15/gemini-live/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.simonwillison.net/static/2026/gemini-live-tool.webp",
+  "link_status": "ok",
+  "ko_title": "Gemini Live 오디오",
+  "summary": "Google이 Gemini 3.8 Live와 3.8 Live Extended Thinking 두 가지 새로운 음성-음성 모델을 공개했다. 모델은 OpenAI GPT-Live 계열과 유사한 구조이며, 웹 UI는 GPT-6 Astra Extra High를 활용해 라이브러리 없이 WebSocket과 Web Audio API만으로 구현됐다. 해당 API는 wss://generativelanguage.googleapis.com/ws/... 엔드포인트를 통해 실시간 음성 대화를 지원한다.",
+  "why": "브라우저에서 라이브러리 없이 WebSocket과 Web Audio API만으로 실시간 음성 대화를 구현할 수 있다. 기존에 외부 라이브러리를 의존하던 방식과 달리 표준 웹 API만으로 백엔드 연동이 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "TermDOM - HTML, CSS와 DOM으로 터미널 UI 만들기",
+  "url": "https://news.hada.io/topic?id=33760",
+  "description": "웹 개발에 익숙한 HTML, CSS와 DOM API로 터미널 UI와 대화형 CLI를 만드는 JavaScript/TypeScript 라이브러리 별도의 터미널 위젯 API를 배우는 대신, HTML 요소를 만들고 DOM을 수정하는 방식으로 화면을 구성 노드가 바뀌면 스타일과 배치를 다시 계산하고, 이전...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789518602.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33760"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33760?v=6708bfaf936bb6660f7de454a2c0b486",
+  "link_status": "ok",
+  "ko_title": "TermDOM - HTML, CSS와 DOM으로 터미널 UI 만들기",
+  "summary": "TermDOM은 HTML, CSS, DOM API를 활용해 터미널 UI와 대화형 CLI를 구현하는 JavaScript/TypeScript 라이브러리다. 화면은 DOM 변화를 감지해 차이점만 ANSI 출력으로 갱신하며, Flexbox·Grid·Table 레이아웃과 다양한 입력 위젯을 지원한다. React·Vue·Svelte 등 프레임워크와 연동 예제가 제공되고, Node.js·Bun·Deno 환경에서도 네이티브 의존 없이 동작한다.",
+  "why": "기존 터미널 위젯 API 학습 없이 웹 스택 지식만으로 CLI를 구축할 수 있다. React나 Vue 등 기존 프레임워크 코드를 스타일시트 교체만으로 터미널에 이식할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Show HN: 20달러짜리 4G 무선 핫스팟을 메시지 기기로 개조하기",
+  "url": "https://news.hada.io/topic?id=33758",
+  "description": "배송비 포함 20달러 미만의 MF800 4G 모뎀 에 Linux를 설치하고, Clicks 물리 키보드와 SHARP 디스플레이를 결합해 메시지 전용 휴대 기기를 제작함 OpenStick 으로 기본 Android를 Linux로 교체하고, 원래 기기의 디바이스 트리에서 디스플레이 핀과 전원 정보를 추...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789515272.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33758"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33758?v=243cfe8076c8652f8815743dd1b5048b",
+  "link_status": "ok",
+  "ko_title": "20달러짜리 4G 무선 핫스팟을 메시지 기기로 개조하기",
+  "summary": "MF800 4G 모뎀에 Linux를 설치하고 Clicks 키보드와 SHARP 메모리 디스플레이를 결합해 저가 메시징 전용 휴대 기기를 제작했다. OpenStick을 이용해 Android를 Linux로 교체하고, 맞춤형 어댑터 PCB로 전원·신호 변환을 구현했다. 현재 절전 기능과 충전 방식에 제한이 있으며, 메시징 소프트웨어는 추후 개선 예정이다.",
+  "why": "SHARP 메모리 디스플레이의 고명암비 특성이 메시지 전용 기기에 적합하다. 절전 미해결과 부팅 상태 한정 충전은 실제 사용 시 제약이 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "디스토피아적 감시가 현실이 되고 있다",
+  "url": "https://news.hada.io/topic?id=33757",
+  "description": "Apple Watch에 도입될 예정인 Audio Intelligence 는 대화를 상시 청취하고 전사해 하루가 끝날 때 요약하며, 대화 상대는 인지하거나 동의하지 않은 채 기록될 수 있음 개인 일지 작성이나 업무 회의 기록에는 유용할 수 있지만, 기기 소유자의 개인정보 보호 장치 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789511968.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33757"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33757?v=5964bffab2b684a6f4e44b1fbbf3015e",
+  "link_status": "ok",
+  "ko_title": "디스토피아적 감시가 현실이 되고 있다",
+  "summary": "Apple Watch에 탑재될 Audio Intelligence 기능은 대화를 지속 청취·전사하고 하루 말미에 요약을 제공한다. 이 기능은 사용자는 물론 대화 상대의 동의 없이도 기록될 수 있어 개인정보 보호 논란을 일으킨다. Meta의 AI 안경도 착용자의 시야와 주변 사람을 실시간 촬영·저장할 수 있어 논란이 확대되고 있다.",
+  "why": "AI 기반 서비스 개발 시 대화 데이터의 동의 없이 수집되는 사례가 늘고 있다. 클라이언트와 대면 회의나 상담 시 상대의 웨어러블 기기에 의해 기록될 수 있음을 인지해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Baseten을 쓰려다 25분 만에 GitHub 저장소 관리자 권한을 얻게 됐다",
+  "url": "https://news.hada.io/topic?id=33756",
+  "description": "AI 추론 서비스 Baseten의 도입을 검토하던 Strix 개발팀이 자율 보안 점검을 실행해, 약 25분 만에 내부 GitHub 저장소 관리자 권한을 가진 토큰 을 발견함 공개된 Harbor 컨테이너 레지스트리 에서 이미지를 내려받을 수 있었고, Docker 빌드 이력에 GITHUB_...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789511788.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33756"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33756?v=9bbe309d91ac6413529fc329e99c0f06",
+  "link_status": "ok",
+  "ko_title": "Baseten을 쓰려다 25분 만에 GitHub 저장소 관리자 권한을 얻게 됐다",
+  "summary": "Strix 팀이 Baseten 보안 점검 중 Harbor 레지스트리에서 익명 토큰으로 이미지 매니페스트를 다운로드하고, Docker 이미지 빌드 이력에 노출된 GitHub 토큰을 발견했다. 해당 토큰은 basetenbot 계정으로 여러 비공개 저장소에 관리자·푸시 권한을 가졌으며, 2023년 3월 생성 후 2026년 7월까지 유효했다. Baseten은 문제를 Critical로 분류하고 다음 날 프로젝트 비공개와 토큰 교체를 완료했다.",
+  "why": "Docker 빌드 이력에 토큰이 남으면 자격 증명 파일을 삭제해도 노출이 해소되지 않는다. CI 파이프라인에서 시크릿을 인라인으로 확장하는 방식을 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "CSS-Tricks in Limbo",
+  "url": "https://vale.rocks/micros/20260915-0135",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 39,
+  "comments": 5,
+  "published_at": 1789463551.945,
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://vale.rocks/micros/20260915-0135"
+  ],
+  "cross_source_count": 2,
+  "score": 905.0999999999999,
+  "image": "https://vale.rocks/assets/og/micro.webp",
+  "link_status": "ok",
+  "ko_title": "CSS-Tricks, 리밈보 상태",
+  "summary": "CSS-Tricks는 2022년 DigitalOcean에 인수된 뒤 2023년 직원 해고, 2024년 편집장 재채용을 거쳐 다시 운영됐지만 현재 다시 비활성 상태이며 향후 계획이 불투명하다. DigitalOcean은 최근 $3,000,000을 Omarchy 프로젝트에 기부했으며, 기존에 GNOME·Flathub 인프라에 매월 $50을 지원하던 것을 중단했다.",
+  "why": "CSS-Tricks가 비활성화되어 향후 계획이 불투명하다. DigitalOcean이 기존에 GNOME과 Flathub 인프라에 매월 지원하던 50달러를 중단했다. Omarchy 프로젝트에 300만 달러를 기부한 것과 대비된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "industry",
+   "career-culture"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "Small Programming Tricks",
+  "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 4,
+  "published_at": 1789505457.381,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://will-keleher.com/posts/small-programming-tricks-matter/"
+  ],
+  "cross_source_count": 1,
+  "score": 887.5999999999999,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "작은 프로그래밍 트릭",
+  "summary": "엔지니어링 생산성을 높이는 작은 팁들을 모아 소개한다. 터미널 히스토리 검색을 fzf·atuin 등으로 강화하고, FROM 없이 SELECT, PostgreSQL·MySQL의 EXPLAIN ANALYZE 활용, 정규식 \\b 사용, 로그 기반 메트릭 변환 등 다양한 예시를 제공한다.",
+  "why": "쿼리 최적화 시 EXPLAIN ANALYZE를 실행해 실제 성능 데이터를 확보할 수 있다. 로그 기반 메트릭 변환 시 로그 함수를 적용해 값 분포를 파악하는 데 활용한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "AI for everyone in every language",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+  "description": "Animation of several words in different languages slowly zooming past",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789488000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_languages_blog_social.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "모두를 위한 AI, 모든 언어에서",
+  "summary": "구글은 현재 300개 이상의 언어를 지원하는 AI 기술을 제공한다. 번역 서비스는 2006년 출시 이후 250개 언어로 확대됐으며, 최신 Gemini 3.5 모델은 음성을 직접 처리해 70개 언어와 2,000여 언어 쌍을 실시간으로 번역한다. 이 기술은 억양·감정·맥락 등 음성의 풍부한 정보를 보존한다.",
+  "why": "기존 텍스트 변환 파이프라인은 억양과 감정을 잃지만, Gemini 3.5는 음성을 직접 처리해 이를 보존한다. 실시간 음성 번역을 백엔드에 통합할 때 이 차이를 고려해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "hypit-ai / hypit",
+  "url": "https://github.com/hypit-ai/hypit",
+  "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1393,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/hypit-ai/hypit"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1393,
+  "score": 592.55,
+  "image": "https://opengraph.githubassets.com/1/hypit-ai/hypit",
+  "link_status": null,
+  "ko_title": "hypit-ai / hypit — AI 에이전트로 바이럴 영상 복제",
+  "summary": "이 프로젝트는 하나의 명령으로 바이럴 영상을 AI 에이전트를 이용해 복제하고, 100가지 변형을 생성한다. Node.js 22.15+, pnpm 10.33, TypeScript 5.9 환경을 기반으로 한다. GitHub에서 공개되어 데모와 빠른 시작 가이드를 제공한다.",
+  "why": "Node.js 22.15 이상과 pnpm 10.33, TypeScript 5.9 환경이 갖춰져 있어야 실행할 수 있다. 라이선스가 Apache-2.0 with conditions이므로 배포 전 조건을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
+  "title": "abue-ammar / tinycast",
+  "url": "https://github.com/abue-ammar/tinycast",
+  "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1312,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/abue-ammar/tinycast"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1312,
+  "score": 564.1999999999999,
+  "image": "https://opengraph.githubassets.com/1/abue-ammar/tinycast",
+  "link_status": null,
+  "ko_title": "tinycast — 가벼운 macOS 런처",
+  "summary": "SwiftUI와 AppKit만 사용해 만든 macOS 전용 런처로, 단일 핫키로 일일 작업을 빠르게 실행한다. 메모리 사용량이 100 MB 미만이며 서드파티 종속성이 전혀 없고, Raycast 확장도 네이티브 SwiftUI로 실행한다. 최신 버전은 Swift 6.0 기반이며 macOS 15 이상에서 동작한다.",
+  "why": "Swift 6.0과 macOS 15를 요구하므로 기존 환경에서는 바로 쓸 수 없다. 서드파티 종속성이 없어 보안 감사나 의존성 관리 부담이 줄어든다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-16T09:51:06.684393+09:00",
+  "batch_label": "9월 16일 09:51"
+ },
+ {
   "title": "25 years of mass surveillance is enough",
   "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
   "description": "",
