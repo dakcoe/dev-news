@@ -159,34 +159,26 @@ def test_card_tags_display_only(html):
     assert "data-ft" in html                                # 사이드바 필터는 유지
 
 
-def test_update_schedule_text_matches_cron(html):
-    """안내 문구가 실제 Actions 스케줄과 일치해야 한다 (fix-update-schedule-text).
+def test_update_schedule_text_matches_schedule(html):
+    """안내 문구가 실제 실행 시각과 일치해야 한다 (fix-update-schedule-text).
 
-    워크플로는 cron "0 7,15,23 * * *"(UTC) = KST 00·08·16시 하루 3회인데
-    페이지에는 "매일 오전 9시"로 적혀 있었다.
-
-    지금은 정각을 피해 :55에 돈다(깃허브 예약 작업이 정각일수록 밀린다).
-    분을 반올림해서 비교한다 — 15:55은 화면의 "16시"와 같은 회차다.
+    주 실행은 바깥에서 workflow_dispatch 로 정각(KST 00·08·16시)에 보낸다.
+    페이지 문구는 그 시각을 말한다. 워크플로의 cron 은 예비라 그보다 55분 뒤에
+    걸려 있다 — 앞서면 guard 창에 아직 아무것도 없어 둘 다 돌기 때문이다.
+    여기서는 cron 이 "문구의 시각 + 55분"인지 본다.
     """
     import re
     assert "9시" not in html
     # 소스 뷰 + 뉴스 뷰 서브텍스트 + 스크립트 실행 전 목록(add-seo-prerender)
     assert html.count("매일 00시·08시·16시") == 3
 
-    wf = os.path.join(ROOT, ".github", "workflows")
-    crons = []
-    for name in os.listdir(wf):
-        with open(os.path.join(wf, name), encoding="utf-8") as f:
-            crons += re.findall(r'cron:\s*"([^"]+)"', f.read())
-    assert crons, "워크플로에 cron이 없음"
-    kst = set()
-    for c in crons:
-        minute, hours = c.split()[0], c.split()[1]
-        for h in hours.split(","):
-            # UTC → KST(+9), 분을 시 단위로 반올림
-            total = (int(h) + 9) * 60 + int(minute)
-            kst.add(round(total / 60) % 24)
-    assert sorted(kst) == [0, 8, 16], f"cron {crons} → KST {sorted(kst)}"
+    with open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8") as f:
+        crons = re.findall(r'cron:\s*"([^"]+)"', f.read())
+    assert len(crons) == 1, crons
+    minute, hours = crons[0].split()[0], crons[0].split()[1]
+    assert minute == "55", "예비 cron 은 정각 쏠림을 피해 :55 여야 한다"
+    kst_hours = sorted((int(h) + 9) % 24 for h in hours.split(","))
+    assert kst_hours == [0, 8, 16], f"cron {crons[0]} → KST {kst_hours}시 55분. 주 실행(0·8·16시) 55분 뒤여야 한다"
 
 
 def test_mobile_layout_not_squeezed(html):
@@ -270,29 +262,48 @@ def test_선택된_출처는_0건이어도_목록에_남는다(html):
     assert "filter(k=>sc[k] || k===filter)" in html
 
 
-def test_겹침이_열리면_방문_기록을_한_칸_쌓는다(html):
+def test_상세를_열면_방문_기록에_항목을_넣는다(html):
     """모바일에서 한 손으로 볼 때 가장 자연스러운 동작이 뒤로가기다. 그런데
-    기사를 열고 뒤로가기를 누르면 겹침만 닫히는 게 아니라 사이트를 나갔다."""
+    기사를 열고 뒤로가기를 누르면 상세만 닫히는 게 아니라 사이트를 나갔다."""
     assert "pushState({devnewsOverlay:1}" in html
     assert "addEventListener('popstate'" in html
 
 
-def test_칸은_한_번만_쌓는다(html):
+def test_항목은_하나만_넣는다(html):
     """기사를 여러 개 열어도 기록이 그만큼 쌓이면, 사이트를 나가려고 뒤로가기를
     여러 번 눌러야 한다."""
-    assert "if(overlayDepth) return;" in html
+    assert "if(onOverlayEntry()) return;" in html
 
 
-def test_X로_닫아도_쌓인_칸을_되돌린다(html):
-    """닫는 길이 둘(뒤로가기·X)인데 한쪽만 기록을 정리하면 어긋난다."""
-    for fn in ("function closeDetail()", "facetOpen=false; render(); popOverlay()"):
-        assert fn in html
+def test_닫는_길이_전부_한_함수를_거친다(html):
+    """뒤로가기·X·Escape·스크림·화면 전환이 각자 닫으면 한 곳만 고쳐져 어긋난다."""
+    body = html[html.index("function closePanels()"):]
+    assert "function closeDetail(){\n  if(closePanels()) popOverlay();" in html
+    assert "sc.onclick=closeDetail" in html
+    assert "if(!closePanels()) render();" in html
+
+
+def test_스크립트가_부른_뒤로가기는_무시한다(html):
+    """history.back() 은 비동기다. X 로 닫고 popstate 가 오기 전에 다른 기사를
+    열면 뒤늦은 popstate 가 새 기사를 닫는다."""
+    assert "closingByScript = true;" in html
+    body = html[html.index("addEventListener('popstate'"):]
+    assert body.index("if(closingByScript){") < body.index("closePanels();"), "표시를 먼저 봐야 한다"
+
+
+def test_항목_위에_있는지는_history_state_로_판단한다(html):
+    """변수로 들고 있으면 history.back() 이 끝나기 전에 실제와 어긋난다.
+    앞으로가기로 우리 항목 위에 다시 올라온 경우도 이걸로 가린다."""
+    assert "const onOverlayEntry = () => !!(history.state && history.state.devnewsOverlay);" in html
+    assert "overlayPushed" not in html
+    assert "if(panelOpen()) pushOverlay();" in html
 
 
 def test_공유_메뉴는_숨김_속성을_지킨다(html):
-    """`.sharemenu`에 display를 지정하면 hidden 속성(브라우저 기본값
-    display:none)을 이겨서, 메뉴가 처음부터 펼쳐진 채로 보인다."""
-    assert ".sharemenu[hidden]{display:none}" in html
+    """`.ddpop`에 display를 지정하면 hidden 속성(브라우저 기본값 display:none)을
+    이겨서, 메뉴가 처음부터 펼쳐진 채로 보인다. 공유 메뉴가 .ddpop 을 쓴다."""
+    assert ".ddpop[hidden]{display:none}" in html
+    assert 'class="ddpop sharemenu"' in html
 
 
 def test_공유_주소는_기사_번호가_아니라_원문_주소를_담는다(html):
@@ -302,9 +313,11 @@ def test_공유_주소는_기사_번호가_아니라_원문_주소를_담는다(
 
 
 def test_공유_주소에_달을_같이_담는다(html):
-    """30일이 지난 기사는 월별 샤드에서 찾아야 열린다."""
-    assert "d.month || (d.batch || '').slice(0, 7)" in html
-    assert "if(m){ openArchived(url, m); return true; }" in html
+    """30일이 지난 기사는 월별 샤드에서 찾아야 열린다. 달은 요청 경로에 그대로
+    들어가므로 YYYY-MM 꼴만 받는다."""
+    assert "(d.month ? '&m=' + d.month : '')" in html
+    assert "/^\\d{4}-\\d{2}$/.test(m)" in html
+    assert "addEventListener('hashchange', openFromHash)" in html
 
 
 def test_뉴스카드는_실린_그림만_그린다(html):
@@ -316,7 +329,7 @@ def test_뉴스카드는_실린_그림만_그린다(html):
     assert card.index("if(img){") < card.index("drawImage"), "가리기 전에 그린다"
 
 
-def test_클립보드_이미지는_약속을_그대로_넘긴다(html):
+def test_클립보드_이미지는_Promise_를_그대로_넘긴다(html):
     """toBlob 콜백까지 기다리면 Safari가 클릭과 무관한 쓰기로 보고 거절한다."""
     assert "new ClipboardItem({'image/png':blob})" in html
 

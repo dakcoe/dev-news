@@ -92,3 +92,28 @@ def test_병합이_정본과_같은_형식으로_쓴다():
     assert "indent=1" in src, "archive·seen은 indent=1이다"
     assert "sort_keys=sort_keys" in src, "seen은 키 정렬까지 맞춰야 한다"
     assert "normalize_url" in src, "같은 기사 판정은 한 규칙으로 해야 한다"
+
+
+def test_예비_cron_은_주_실행보다_뒤다():
+    """예약이 정각의 수동 실행보다 앞서 오면 guard 창에 아직 아무것도 없어
+    둘 다 돈다. 주 실행이 정각이므로 cron 은 그 뒤여야 한다."""
+    import yaml
+    d = yaml.safe_load(open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8"))
+    on = d.get(True) or d.get("on")
+    cron = on["schedule"][0]["cron"]
+    minute, hours = cron.split()[0], cron.split()[1]
+    assert minute == "55" and hours == "7,15,23", cron   # 정각(UTC 7·15·23) + 55분
+
+
+def test_guard_는_성공과_진행중만_인정한다():
+    """failure 만 빼는 식이면 timed_out 을 성공으로 세어 예비가 안 돈다."""
+    src = open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8").read()
+    assert 'conclusion == \\"success\\" or .conclusion == \\"\\"' in src
+    assert "8 hours ago" in src
+
+
+def test_guard_는_수동_실행에서_러너를_띄우지_않는다():
+    import yaml
+    d = yaml.safe_load(open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8"))
+    assert d["jobs"]["guard"]["if"] == "github.event_name == 'schedule'"
+    assert "!cancelled()" in d["jobs"]["build"]["if"]

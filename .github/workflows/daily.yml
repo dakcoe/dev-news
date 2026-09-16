@@ -11,15 +11,17 @@ on:
   # 시작했다. 늦게 줄 선 쪽이 먼저 나갔으니 같은 줄이 아니다. 수동 실행으로
   # 보내면 실측 3초 안에 시작한다.
   #
-  # cron 을 같은 시각에 두어도 어차피 몇 시간 늦게 쏘므로, 그때는 수동 실행이
-  # 이미 그 회차를 끝낸 뒤다. 그래서 아래 guard 작업이 그것을 확인하고 이미
-  # 했으면 즉시 끝낸다. 수동 실행이 오지 않았을 때만 실제로 수집이 돈다 —
+  # 아래 guard 작업이 "최근 8시간 안에 수동 실행 회차가 있었나"를 보고, 있으면
+  # 즉시 끝낸다. 수동 실행이 오지 않았거나 실패했을 때만 실제로 수집이 돈다 —
   # 몇 시간 늦어도 회차가 통째로 빠지는 것보다 낫다.
   schedule:
-    # 예비분은 :55 로 둔다. 이쪽은 여전히 큐를 타는데, 전 세계가 정각에 큐를
-    # 채워 정각일수록 오래 밀린다. 주 실행(정각)보다 5분 빠른 것은 상관없다 —
-    # 어차피 몇 시간 뒤에 도착한다.
-    - cron: "55 6,14,22 * * *"   # KST 15:55 / 23:55 / 07:55 (UTC+9)
+    # 주 실행(정각)보다 55분 뒤에 둔다. 예약이 제때 와도 정각의 수동 실행이 이미
+    # 돌고 있어서 guard 가 건너뛴다. 예약이 :00 보다 앞서면 guard 창에 아직
+    # 아무것도 없어 둘 다 돌게 된다 — 그래서 반드시 뒤여야 한다.
+    #
+    # :55 인 이유는 정각 쏠림을 피하려는 것이다. 전 세계가 정각에 큐를 채워
+    # 정각일수록 오래 밀린다.
+    - cron: "55 7,15,23 * * *"   # KST 16:55 / 00:55 / 08:55 (UTC+9)
   workflow_dispatch:        # 액션 탭에서 수동 실행 가능
 
 permissions:
@@ -34,31 +36,35 @@ concurrency:
 jobs:
   # 예비 회차(cron)가 주 회차와 겹쳐 하루 6회가 되는 것을 막는다.
   #
-  # 최근 7시간 안에 workflow_dispatch 회차가 있고 그게 성공했거나 아직 돌고
-  # 있으면 이번 예약 회차는 건너뛴다. 7시간인 이유: 예약 실행이 가장 늦었을
-  # 때가 398분(6시간 38분)이었고, 회차 간격이 8시간이라 그 사이 값이어야
-  # 직전 회차를 잘못 집지 않는다.
+  # 최근 8시간 안에 workflow_dispatch 회차가 있고 그게 성공했거나 아직 돌고
+  # 있으면 이번 예약 회차는 건너뛴다.
   #
-  # 그 회차가 실패했으면 건너뛰지 않는다 — 일시적인 실패였다면 이 예비 회차가
-  # 대신 성공할 수 있다.
+  # 8시간인 이유. 예약은 정각 + 55분에 걸려 있고 가장 늦었을 때 398분(6시간
+  # 38분) 뒤에 도착했으니, 정각의 수동 실행은 도착 시점에서 최대 7시간 33분
+  # 전이다. 8시간이면 그것을 잡는다. 직전 슬롯의 수동 실행은 그보다 8시간
+  # 더 앞이라 잡히지 않는다.
+  #
+  # 성공과 "아직 도는 중"(conclusion 이 빈 값)만 인정한다. failure 만 빼는
+  # 식으로 짜면 timed_out·action_required 같은 값을 성공으로 세어 예비가
+  # 안 돈다. 실패했으면 이 예비 회차가 대신 성공할 수 있다.
+  #
+  # 수동 실행 회차에서는 이 작업이 통째로 건너뛰어 러너를 띄우지 않는다.
   guard:
+    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     outputs:
       skip: ${{ steps.check.outputs.skip }}
     steps:
       - id: check
-        if: github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          since=$(date -u -d '7 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          since=$(date -u -d '8 hours ago' +%Y-%m-%dT%H:%M:%SZ)
           n=$(gh run list -R "$GITHUB_REPOSITORY" --workflow=daily.yml \
                 --event=workflow_dispatch --limit 20 --json createdAt,conclusion \
                 --jq "[.[]
                        | select(.createdAt > \"$since\")
-                       | select(.conclusion != \"failure\"
-                                and .conclusion != \"cancelled\"
-                                and .conclusion != \"startup_failure\")]
+                       | select(.conclusion == \"success\" or .conclusion == \"\")]
                       | length")
           if [ "$n" -gt 0 ]; then
             echo "$since 이후에 이미 $n 회차가 돌았다 — 예비 회차는 건너뛴다"
@@ -70,7 +76,9 @@ jobs:
 
   build:
     needs: guard
-    if: needs.guard.outputs.skip != 'true'
+    # guard 가 건너뛰어진 회차(수동 실행)에서도 돌아야 하므로 !cancelled() 가
+    # 필요하다. 이게 없으면 앞 작업이 skipped 일 때 이 작업도 함께 건너뛴다.
+    if: ${{ !cancelled() && (github.event_name != 'schedule' || needs.guard.outputs.skip != 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
 
