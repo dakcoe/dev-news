@@ -11,10 +11,9 @@ name: 예약 지연 탐침
 # 한도를 태운다. 그래서 별도 파일로 둔다. 한 회 실행이 5초 남짓이고 공개
 # 저장소라 사용 시간도 무료다.
 #
-# 바깥 스케줄러 쪽 짝은 scripts/probe_trigger.sh 와
-# ~/Library/LaunchAgents/net.dev-news.probe.plist 다.
+# 수동 실행 쪽은 바깥 스케줄러가 같은 시각에 보낸다.
 #
-# 결론이 나면 이 파일과 바깥 스케줄러 쪽 짝을 함께 지운다.
+# 결론이 나면 이 파일을 지운다.
 
 on:
   schedule:
