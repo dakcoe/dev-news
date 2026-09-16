@@ -162,23 +162,15 @@ def test_card_tags_display_only(html):
 def test_update_schedule_text_matches_schedule(html):
     """안내 문구가 실제 실행 시각과 일치해야 한다 (fix-update-schedule-text).
 
-    주 실행은 바깥에서 workflow_dispatch 로 정각(KST 00·08·16시)에 보낸다.
-    페이지 문구는 그 시각을 말한다. 워크플로의 cron 은 예비라 그보다 55분 뒤에
-    걸려 있다 — 앞서면 guard 창에 아직 아무것도 없어 둘 다 돌기 때문이다.
-    여기서는 cron 이 "문구의 시각 + 55분"인지 본다.
+    수집은 바깥 기계의 스케줄러가 정각(KST 00·08·16시)에 scripts/publish.sh 를
+    돌린다. 저장소 안에는 그 시각이 없으므로 여기서는 문구만 지킨다 — 그리고
+    수집 워크플로에 cron 이 다시 생기지 않았는지 본다(생기면 회차가 두 배다).
     """
-    import re
     assert "9시" not in html
     # 소스 뷰 + 뉴스 뷰 서브텍스트 + 스크립트 실행 전 목록(add-seo-prerender)
     assert html.count("매일 00시·08시·16시") == 3
-
     with open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8") as f:
-        crons = re.findall(r'cron:\s*"([^"]+)"', f.read())
-    assert len(crons) == 1, crons
-    minute, hours = crons[0].split()[0], crons[0].split()[1]
-    assert minute == "55", "예비 cron 은 정각 쏠림을 피해 :55 여야 한다"
-    kst_hours = sorted((int(h) + 9) % 24 for h in hours.split(","))
-    assert kst_hours == [0, 8, 16], f"cron {crons[0]} → KST {kst_hours}시 55분. 주 실행(0·8·16시) 55분 뒤여야 한다"
+        assert "cron:" not in f.read()
 
 
 def test_mobile_layout_not_squeezed(html):
