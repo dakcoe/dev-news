@@ -494,9 +494,13 @@ __ADS_HEAD__
   .go:hover{background:#000}
   /* 공유 — 원문 열기 옆에 나란히. 원문이 주가 되도록 공유는 테두리만 준다. */
   .dacts{position:relative;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .go.alt{background:none;color:var(--tx);border:1.5px solid var(--line);
-          font-family:inherit;cursor:pointer;padding:10.5px 18px}
-  .go.alt:hover{background:var(--line2);border-color:#d6d6e0}
+  /* 원문 열기(<a>)와 높이를 정확히 맞춘다. button 은 line-height 를 물려받지
+     않아 그냥 두면 8.5px 낮아진다. 테두리는 box-shadow 로 그려야 상자가
+     커지지 않는다. */
+  .go.alt{background:none;color:var(--tx);border:none;line-height:inherit;
+          box-shadow:inset 0 0 0 1.5px var(--line);
+          font-family:inherit;cursor:pointer}
+  .go.alt:hover{background:var(--line2);box-shadow:inset 0 0 0 1.5px #d6d6e0}
   .sharemenu{
     position:absolute;left:0;top:calc(100% + 8px);z-index:10;min-width:186px;
     background:var(--panel);border:1px solid var(--line);border-radius:11px;
@@ -1557,7 +1561,28 @@ addEventListener('popstate', function(){
    캡처하지 않는 이유는, 썸네일이 다른 도메인에서 오기 때문에 캔버스에 얹는
    순간 그 캔버스를 읽을 수 없게 되어서다(복사가 통째로 실패한다). 그래서
    글자만 그린다. 글·링크 복사는 제목·요약·왜 중요한가·주소를 글로 만든다. */
-const CARD_W=880, CARD_PAD=56;
+const CARD_W=880, CARD_PAD=56, CARD_IMG_H=290;
+
+/* 뉴스카드에 쓸 그림을 싣는다. 못 실으면 null 을 돌려 글자만 그린다.
+
+   crossOrigin 을 'anonymous' 로 두는 것이 핵심이다. 이러면 상대 서버가
+   허용 헤더(Access-Control-Allow-Origin)를 줄 때만 실린다. 안 주면 그냥
+   실패해서 null 이 된다 — 그 상태로 캔버스에 그렸다면 캔버스가 잠겨서
+   복사가 통째로 실패했을 것이다.
+
+   실측(2026-09-17, 최근 341건): 깃허브·dev.to·Contentful 등 133건(39%)이
+   실린다. 긱뉴스와 the-decoder 는 헤더를 안 줘서 글자만 그린다. */
+function loadCardImage(url){
+  return new Promise(res=>{
+    if(!url || !/^https?:\/\//i.test(url)) return res(null);
+    const img=new Image();
+    img.crossOrigin='anonymous';
+    img.onload=()=>res(img.naturalWidth>=200 ? img : null);   // 로고처럼 작은 그림은 뺀다
+    img.onerror=()=>res(null);
+    setTimeout(()=>res(null), 4000);                           // 느린 서버에 붙잡히지 않는다
+    img.src=url;
+  });
+}
 
 function wrapLines(ctx, text, maxW){
   /* 한국어는 단어 사이 공백이 드물어 낱말 단위로는 줄이 안 나뉜다.
@@ -1583,7 +1608,7 @@ function wrapLines(ctx, text, maxW){
   return out;
 }
 
-function drawCard(d){
+function drawCard(d, img){
   const ratio=Math.min(2, window.devicePixelRatio||1);
   const cv=document.createElement('canvas');
   const ctx=cv.getContext('2d');
@@ -1598,7 +1623,8 @@ function drawCard(d){
   const body=wrapLines(ctx, (d.paras&&d.paras.length?d.paras.join('\n'):(d.snip||'')), inner).slice(0,10);
   const why=d.why ? wrapLines(ctx, d.why, inner-32).slice(0,5) : [];
 
-  let h=CARD_PAD+26+22;                       // 위 여백 + 출처 줄
+  const imgH = img ? CARD_IMG_H : 0;
+  let h=imgH+CARD_PAD+26+22;                  // 그림 + 위 여백 + 출처 줄
   h+=title.length*46+18;
   h+=body.length*32;
   if(why.length) h+=24+18+why.length*30+18;
@@ -1608,9 +1634,20 @@ function drawCard(d){
   ctx.scale(ratio, ratio);
   ctx.textBaseline='alphabetic';
   ctx.fillStyle='#fff'; ctx.fillRect(0,0,CARD_W,h);
-  ctx.fillStyle=d.color||'#4b49d6'; ctx.fillRect(0,0,CARD_W,6);
 
-  let y=CARD_PAD+18;
+  if(img){
+    /* 가로세로 비가 제각각이라 짧은 쪽을 칸에 맞추고 넘치는 쪽을 가운데 기준
+       으로 잘라낸다 (CSS 의 object-fit:cover 와 같은 셈). */
+    const sc=Math.max(CARD_W/img.naturalWidth, CARD_IMG_H/img.naturalHeight);
+    const w=img.naturalWidth*sc, ih=img.naturalHeight*sc;
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,0,CARD_W,CARD_IMG_H); ctx.clip();
+    ctx.drawImage(img, (CARD_W-w)/2, (CARD_IMG_H-ih)/2, w, ih);
+    ctx.restore();
+  }
+  ctx.fillStyle=d.color||'#4b49d6'; ctx.fillRect(0,imgH,CARD_W,6);
+
+  let y=imgH+CARD_PAD+18;
   F(700,17); ctx.fillStyle=d.color||'#4b49d6';
   ctx.fillText(String(d.from||''), CARD_PAD, y);
   const fromW=ctx.measureText(String(d.from||'')).width;
@@ -1653,10 +1690,11 @@ function shareText(d){
 }
 
 function copyCard(d){
-  const cv=drawCard(d);
-  /* Safari는 클립보드 쓰기를 클릭 직후에만 허용해서, toBlob의 콜백까지
-     기다리면 거절당한다. ClipboardItem에 약속을 그대로 넘기면 된다. */
-  const blob=new Promise(res=>cv.toBlob(res,'image/png'));
+  /* Safari는 클립보드 쓰기를 클릭 직후에만 허용해서, 그림을 싣고 toBlob 까지
+     기다린 뒤에 write 를 부르면 거절당한다. ClipboardItem 에 약속을 그대로
+     넘기면 기다리는 일은 브라우저가 대신 해 준다. */
+  const blob=loadCardImage(d.img)
+    .then(img=>new Promise(res=>drawCard(d, img).toBlob(res,'image/png')));
   if(!(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write))
     return blob.then(saveCard);
   return navigator.clipboard.write([new ClipboardItem({'image/png':blob})])
