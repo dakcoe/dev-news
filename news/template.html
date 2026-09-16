@@ -289,6 +289,9 @@ __ADS_HEAD__
     box-shadow:0 10px 28px rgba(20,20,45,.13);padding:5px;
     display:flex;flex-direction:column;
   }
+  /* display를 지정하면 hidden 속성(브라우저 기본값 display:none)을 이긴다.
+     그래서 hidden일 때를 따로 적어 준다. */
+  .sharemenu[hidden]{display:none}
   .dditem{
     display:flex;align-items:center;gap:8px;border:none;background:none;
     font-family:inherit;font-size:13.5px;color:var(--tx);padding:8px 10px;
@@ -489,6 +492,23 @@ __ADS_HEAD__
   .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;
       text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px}
   .go:hover{background:#000}
+  /* 공유 — 원문 열기 옆에 나란히. 원문이 주가 되도록 공유는 테두리만 준다. */
+  .dacts{position:relative;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .go.alt{background:none;color:var(--tx);border:1.5px solid var(--line);
+          font-family:inherit;cursor:pointer;padding:10.5px 18px}
+  .go.alt:hover{background:var(--line2);border-color:#d6d6e0}
+  .sharemenu{
+    position:absolute;left:0;top:calc(100% + 8px);z-index:10;min-width:186px;
+    background:var(--panel);border:1px solid var(--line);border-radius:11px;
+    box-shadow:0 6px 24px rgba(20,20,45,.13);padding:5px;
+    display:flex;flex-direction:column;
+  }
+  .sharemenu button{
+    font-family:inherit;font-size:14.5px;color:var(--tx);text-align:left;
+    background:none;border:none;cursor:pointer;padding:9px 11px;border-radius:7px;
+  }
+  .sharemenu button:hover{background:var(--pri-bg);color:var(--pri-dk)}
+  @media (max-width:640px){ .sharemenu{left:auto;right:0} }
 
   /* ---------------- sources view ---------------- */
   .scard{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
@@ -924,6 +944,35 @@ function archMatches(){
 }
 /* extra = 목록이 이미 아는 메타(출처·발행시각·댓글수·썸네일). 지연 로딩분의
    상세가 아카이브 검색 결과처럼 빈약해지지 않도록 덮어쓴다. */
+/* 기사별 공유 주소.
+
+   주소를 늘리지 않으려고 `#` 뒤에 둔다. 검색엔진은 # 뒤를 다른 페이지로 보지
+   않으므로 canonical 하나를 유지한 채 깊은 링크만 얻는다.
+
+   기사 번호 대신 원문 주소를 담는 이유는, 번호가 회차마다 바뀌어서 어제 공유한
+   링크가 오늘 다른 기사를 열기 때문이다. 달(month)을 같이 담는 것은 30일이 지난
+   기사를 월별 샤드에서 찾아야 해서다. */
+function shareUrl(d){
+  const u = d && d.url ? d.url : '';
+  if(!u) return location.origin + location.pathname;
+  const m = d.month || (d.batch || '').slice(0, 7);
+  return location.origin + location.pathname
+       + '#a=' + encodeURIComponent(u) + (m ? '&m=' + m : '');
+}
+
+function openFromHash(){
+  const h = location.hash.slice(1);
+  if(!h.startsWith('a=')) return false;
+  const params = new URLSearchParams(h);
+  const url = params.get('a');
+  if(!url) return false;
+  const i = DATA.findIndex(x => x.url === url);
+  if(i >= 0){ openDetail(i); return true; }
+  const m = params.get('m');
+  if(m){ openArchived(url, m); return true; }
+  return false;
+}
+
 function openArchived(url, month, extra){
   const show = list => {
     const a=list.find(x=>x.url===url);
@@ -933,7 +982,7 @@ function openArchived(url, month, extra){
       title:a.ko_title||a.title, from:(SRC[a.source]||{}).name||a.source,
       color:(SRC[a.source]||{}).color||'#999', pub:null, dateLabel:(a.batch||'').slice(0,10),
       img:a.image, paras:paras,
-      why:a.why||'', url:a.url
+      why:a.why||'', url:a.url, month:month
     }, extra||{}));
     markRead(url);
   };
@@ -1418,7 +1467,9 @@ function bind(){
     e.stopPropagation(); openArchived(b.dataset.au, b.dataset.am);});
 }
 
+let curDetail=null;      // 지금 상세에 떠 있는 기사. 공유 버튼이 쓴다.
 function showDetail(d){
+  curDetail=d;
   let meta='<span class="s" style="color:'+escA(d.color)+';font-weight:700">'+escA(d.from)+'</span>';
   if(d.pub) meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   else if(d.dateLabel) meta+='<span class="sep">·</span><span>'+d.dateLabel+'</span>';
@@ -1433,7 +1484,14 @@ function showDetail(d){
     + '<div class="dc"><h2>'+escA(d.title)+'</h2><div class="dmeta">'+meta+'</div>'
     + paras.map(t=>'<p>'+escA(t)+'</p>').join('')
     + (d.why?'<div class="why"><b>왜 중요한가</b>'+escA(d.why)+'</div>':'')
-    + (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
+    + '<div class="dacts">'
+    +   (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
+    +   '<button class="go alt" id="sharebtn">공유하기</button>'
+    +   '<div class="sharemenu" id="sharemenu" hidden>'
+    +     '<button data-share="card">뉴스카드 복사</button>'
+    +     '<button data-share="text">링크·내용 복사</button>'
+    +   '</div>'
+    + '</div>'
     + '</div>';
   document.getElementById('db').scrollTop=0;
   document.getElementById('dt').classList.add('open');
@@ -1454,7 +1512,7 @@ function openDetail(i){
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,
     paras:d.paras, snip:d.snip,
-    why:d.why||'', url:d.url
+    why:d.why||'', url:d.url, month:d.month
   });
   render();
 }
@@ -1494,6 +1552,145 @@ addEventListener('popstate', function(){
   if(closed) render();
 });
 
+/* ---------------- 공유 ----------------
+   두 가지를 준비한다. 뉴스카드는 캔버스에 직접 그려 PNG로 복사한다 — 화면을
+   캡처하지 않는 이유는, 썸네일이 다른 도메인에서 오기 때문에 캔버스에 얹는
+   순간 그 캔버스를 읽을 수 없게 되어서다(복사가 통째로 실패한다). 그래서
+   글자만 그린다. 글·링크 복사는 제목·요약·왜 중요한가·주소를 글로 만든다. */
+const CARD_W=880, CARD_PAD=56;
+
+function wrapLines(ctx, text, maxW){
+  /* 한국어는 단어 사이 공백이 드물어 낱말 단위로는 줄이 안 나뉜다.
+     글자 하나씩 재서 폭이 넘치면 끊는다. */
+  const out=[];
+  for(const para of String(text||'').split('\n')){
+    let line='';
+    for(const ch of para){
+      if(ctx.measureText(line+ch).width <= maxW || !line){ line+=ch; continue; }
+      /* 한글은 아무 데서나 끊어도 읽히지만 영문은 낱말이 잘리면 못 읽는다.
+         넘친 글자가 영문이면 그 낱말이 시작한 자리까지 되돌아가 끊는다. */
+      let cut=line.length;
+      if(/[A-Za-z0-9]/.test(ch)){
+        let i=line.length;
+        while(i>0 && /[A-Za-z0-9.\-]/.test(line[i-1])) i--;
+        if(i>0 && line.length-i<20) cut=i;
+      }
+      out.push(line.slice(0,cut).replace(/\s+$/,''));
+      line=line.slice(cut)+ch;
+    }
+    out.push(line);
+  }
+  return out;
+}
+
+function drawCard(d){
+  const ratio=Math.min(2, window.devicePixelRatio||1);
+  const cv=document.createElement('canvas');
+  const ctx=cv.getContext('2d');
+  const inner=CARD_W-CARD_PAD*2;
+  const F=(w,px)=>{ ctx.font=w+' '+px+'px -apple-system,"Apple SD Gothic Neo","Malgun Gothic",'
+                    +'"Noto Sans KR",system-ui,sans-serif'; };
+
+  // 먼저 줄을 나눠 높이를 구한다 — 글이 길면 카드도 길어진다.
+  F(700,34);
+  const title=wrapLines(ctx, d.title, inner).slice(0,4);
+  F(400,20);
+  const body=wrapLines(ctx, (d.paras&&d.paras.length?d.paras.join('\n'):(d.snip||'')), inner).slice(0,10);
+  const why=d.why ? wrapLines(ctx, d.why, inner-32).slice(0,5) : [];
+
+  let h=CARD_PAD+26+22;                       // 위 여백 + 출처 줄
+  h+=title.length*46+18;
+  h+=body.length*32;
+  if(why.length) h+=24+18+why.length*30+18;
+  h+=28+CARD_PAD;                             // 발 + 아래 여백
+
+  cv.width=CARD_W*ratio; cv.height=h*ratio;
+  ctx.scale(ratio, ratio);
+  ctx.textBaseline='alphabetic';
+  ctx.fillStyle='#fff'; ctx.fillRect(0,0,CARD_W,h);
+  ctx.fillStyle=d.color||'#4b49d6'; ctx.fillRect(0,0,CARD_W,6);
+
+  let y=CARD_PAD+18;
+  F(700,17); ctx.fillStyle=d.color||'#4b49d6';
+  ctx.fillText(String(d.from||''), CARD_PAD, y);
+  const fromW=ctx.measureText(String(d.from||'')).width;
+  const dl=d.dateLabel || (d.pub ? new Date(d.pub).toISOString().slice(0,10) : '');
+  if(dl){ F(400,15); ctx.fillStyle='#8a8794'; ctx.fillText(dl, CARD_PAD+fromW+20, y); }
+  y+=48;
+
+  F(700,34); ctx.fillStyle='#17171d';
+  title.forEach(t=>{ ctx.fillText(t, CARD_PAD, y); y+=46; });
+  y+=18;
+
+  F(400,20); ctx.fillStyle='#45434f';
+  body.forEach(t=>{ ctx.fillText(t, CARD_PAD, y); y+=32; });
+
+  if(why.length){
+    y+=12;
+    const top=y-22, boxH=why.length*30+40;
+    ctx.fillStyle='#f3f2fb'; ctx.fillRect(CARD_PAD,top,inner,boxH);
+    ctx.fillStyle='#4b49d6'; ctx.fillRect(CARD_PAD,top,4,boxH);
+    y+=8;
+    F(700,15); ctx.fillStyle='#4b49d6'; ctx.fillText('왜 중요한가', CARD_PAD+20, y); y+=26;
+    F(400,18); ctx.fillStyle='#45434f';
+    why.forEach(t=>{ ctx.fillText(t, CARD_PAD+20, y); y+=30; });
+    y+=18;
+  }
+
+  y=h-CARD_PAD+4;
+  F(700,15); ctx.fillStyle='#8a8794'; ctx.fillText('dev-news.net', CARD_PAD, y);
+  return cv;
+}
+
+function shareText(d){
+  const parts=[d.title||''];
+  const body=(d.paras&&d.paras.length?d.paras.join('\n'):(d.snip||''));
+  if(body) parts.push('', body);
+  if(d.why) parts.push('', '[왜 중요한가] '+d.why);
+  if(d.url) parts.push('', '원문: '+d.url);
+  parts.push('dev-news: '+shareUrl(d));
+  return parts.join('\n');
+}
+
+function copyCard(d){
+  const cv=drawCard(d);
+  /* Safari는 클립보드 쓰기를 클릭 직후에만 허용해서, toBlob의 콜백까지
+     기다리면 거절당한다. ClipboardItem에 약속을 그대로 넘기면 된다. */
+  const blob=new Promise(res=>cv.toBlob(res,'image/png'));
+  if(!(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write))
+    return blob.then(saveCard);
+  return navigator.clipboard.write([new ClipboardItem({'image/png':blob})])
+    .then(()=>alert('뉴스카드를 클립보드에 복사했습니다.'))
+    .catch(()=>blob.then(saveCard));   // 권한이 없으면 파일로 내려준다
+}
+
+function saveCard(b){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(b);
+  a.download='dev-news.png';
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  alert('클립보드를 쓸 수 없어 이미지 파일로 저장했습니다.');
+}
+
+document.getElementById('db').addEventListener('click', e=>{
+  const sb=e.target.closest('#sharebtn');
+  const menu=document.getElementById('sharemenu');
+  if(sb){ if(menu) menu.hidden=!menu.hidden; return; }
+  const item=e.target.closest('[data-share]');
+  if(!item || !curDetail) return;
+  if(menu) menu.hidden=true;
+  if(item.dataset.share==='card'){ copyCard(curDetail); return; }
+  navigator.clipboard.writeText(shareText(curDetail))
+    .then(()=>alert('링크와 내용을 복사했습니다.'))
+    .catch(()=>alert('복사에 실패했습니다. 직접 선택해 복사해 주세요.'));
+});
+/* 바깥을 누르면 메뉴를 닫는다. 상세 안쪽 클릭은 위 핸들러가 먼저 처리한다. */
+document.addEventListener('click', e=>{
+  const menu=document.getElementById('sharemenu');
+  if(menu && !menu.hidden && !e.target.closest('.dacts')) menu.hidden=true;
+});
+
 function closeDetail(){
   cur=null;
   document.getElementById('dt').classList.remove('open');
@@ -1527,6 +1724,7 @@ document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
 render();
+openFromHash();   // #a=... 로 들어오면 그 기사를 바로 연다
 
 /* 폭이 1200px 경계를 넘나들면 광고 배치가 달라지므로 다시 그린다. */
 WIDE.addEventListener('change', function(){

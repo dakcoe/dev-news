@@ -287,3 +287,33 @@ def test_X로_닫아도_쌓인_칸을_되돌린다(html):
     """닫는 길이 둘(뒤로가기·X)인데 한쪽만 기록을 정리하면 어긋난다."""
     for fn in ("function closeDetail()", "facetOpen=false; render(); popOverlay()"):
         assert fn in html
+
+
+def test_공유_메뉴는_숨김_속성을_지킨다(html):
+    """`.sharemenu`에 display를 지정하면 hidden 속성(브라우저 기본값
+    display:none)을 이겨서, 메뉴가 처음부터 펼쳐진 채로 보인다."""
+    assert ".sharemenu[hidden]{display:none}" in html
+
+
+def test_공유_주소는_기사_번호가_아니라_원문_주소를_담는다(html):
+    """번호는 회차마다 바뀐다. 어제 공유한 링크가 오늘 다른 기사를 연다."""
+    assert "'#a=' + encodeURIComponent(u)" in html
+    assert "openFromHash();" in html
+
+
+def test_공유_주소에_달을_같이_담는다(html):
+    """30일이 지난 기사는 월별 샤드에서 찾아야 열린다."""
+    assert "d.month || (d.batch || '').slice(0, 7)" in html
+    assert "if(m){ openArchived(url, m); return true; }" in html
+
+
+def test_뉴스카드에_남의_도메인_그림을_얹지_않는다(html):
+    """썸네일을 캔버스에 그리면 그 캔버스를 읽을 수 없게 되어(tainted)
+    복사가 통째로 실패한다. 카드는 글자만 그린다."""
+    card = html[html.index("function drawCard("):html.index("function shareText(")]
+    assert "drawImage" not in card
+
+
+def test_클립보드_이미지는_약속을_그대로_넘긴다(html):
+    """toBlob 콜백까지 기다리면 Safari가 클릭과 무관한 쓰기로 보고 거절한다."""
+    assert "new ClipboardItem({'image/png':blob})" in html
