@@ -364,7 +364,8 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
 
 
 def render(articles: list[dict], out_path: str, collected: datetime | None = None,
-           enabled: dict[str, bool] | None = None, ads: dict | None = None) -> str:
+           enabled: dict[str, bool] | None = None, ads: dict | None = None,
+           about: dict | None = None) -> str:
     """enabled: config.yaml의 sources. 토글은 '설정에서 켜졌는지'를 나타낸다.
 
     오늘 결과에 그 출처 글이 없을 수도 있으므로(점수에서 밀렸거나 새 글이 없거나)
@@ -397,7 +398,8 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
             .replace("__META_DESC__", _meta_desc(view_model))
             .replace("__SITE_URL__", site_url())
             .replace("__ADS_HEAD__", _ads_head(ads_cfg))
-            .replace("__ADS_JSON__", _json_for_script(ads_cfg)))
+            .replace("__ADS_JSON__", _json_for_script(ads_cfg))
+            .replace("__ABOUT_JSON__", _json_for_script(about or {})))
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
