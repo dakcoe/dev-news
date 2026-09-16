@@ -50,10 +50,11 @@ data/
   seen.json             # 한 번 실린 URL. 기사를 지우면 여기서도 빼야 다시 올라온다
   candidates/YYYY-MM.json
   *_health.json         # 출처·본문 추출·API 링크 상태
-scripts/                # 소급 태깅 · 요약 채점 · 회차 합치기(merge_remote_data) · 이슈 알림
+scripts/                # publish(수집·커밋·푸시) · 소급 태깅 · 요약 채점 · 회차 합치기 · 이슈 알림
 tests/                  # pytest
 .github/workflows/
-  daily.yml             # 수집 파이프라인 (주 실행은 바깥의 workflow_dispatch, cron 은 예비)
+  daily.yml             # 수집 파이프라인 — 수동 실행 전용 (비상용)
+  watchdog.yml          # 10시간 넘게 갱신 커밋이 없으면 이슈를 연다
 ```
 
 ## 로컬 실행
@@ -70,11 +71,15 @@ python build.py            # 전체 실행 — .env에 GROQ_API_KEY 필요
 화면만 고쳤을 때는 수집을 다시 돌리지 않는다. 저장된 기사를 읽어 `render()`만 부르면
 수집도 LLM 호출도 없다.
 
-## 실행 시각
+## 실행 방식
 
-주 실행은 바깥에서 `workflow_dispatch`로 정각(00·08·16시 KST)에 보낸다. 워크플로의 cron은
-그 실행이 오지 않았을 때만 대신 도는 예비다 — GitHub 예약 실행은 실측으로 2~5시간 늦게
-시작하기 때문이다. 자세한 것은 [GITHUB_ACTIONS.md](GITHUB_ACTIONS.md) 2절.
+수집은 자기 기계에서 `scripts/publish.sh`를 정각(00·08·16시 KST)에 돌려 커밋·푸시한다.
+GitHub Pages가 `docs/`를 그대로 서빙한다. Actions는 두 가지만 한다 — `watchdog.yml`이
+10시간 넘게 갱신이 없으면 이슈를 열고, `daily.yml`은 손으로 한 번 돌리는 비상용이다.
+
+Actions에서 수집을 돌리지 않는 이유는 둘이다. 러너의 IP를 여러 사이트가 막아 본문 추출이
+8% 실패했고(같은 주소가 집에서는 멀쩡히 받아진다), 예약 실행이 실측으로 2~5시간 늦게
+시작했다. 자세한 것은 [GITHUB_ACTIONS.md](GITHUB_ACTIONS.md) 2절.
 
 ## 문서
 

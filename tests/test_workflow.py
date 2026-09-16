@@ -94,26 +94,34 @@ def test_병합이_정본과_같은_형식으로_쓴다():
     assert "normalize_url" in src, "같은 기사 판정은 한 규칙으로 해야 한다"
 
 
-def test_예비_cron_은_주_실행보다_뒤다():
-    """예약이 정각의 수동 실행보다 앞서 오면 guard 창에 아직 아무것도 없어
-    둘 다 돈다. 주 실행이 정각이므로 cron 은 그 뒤여야 한다."""
+def test_수집_워크플로는_수동_실행_전용이다():
+    """수집은 바깥 기계가 scripts/publish.sh 로 돌린다. 러너 IP 가 막혀 본문
+    추출이 8% 실패했고 예약은 2~5시간 늦었다. 여기 cron 이 다시 생기면 회차가
+    두 배가 된다."""
     import yaml
     d = yaml.safe_load(open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8"))
     on = d.get(True) or d.get("on")
-    cron = on["schedule"][0]["cron"]
-    minute, hours = cron.split()[0], cron.split()[1]
-    assert minute == "55" and hours == "7,15,23", cron   # 정각(UTC 7·15·23) + 55분
+    assert list(on.keys()) == ["workflow_dispatch"], on
+    assert "guard" not in d["jobs"]
 
 
-def test_guard_는_성공과_진행중만_인정한다():
-    """failure 만 빼는 식이면 timed_out 을 성공으로 세어 예비가 안 돈다."""
-    src = open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8").read()
-    assert 'conclusion == \\"success\\" or .conclusion == \\"\\"' in src
-    assert "8 hours ago" in src
-
-
-def test_guard_는_수동_실행에서_러너를_띄우지_않는다():
+def test_감시_워크플로는_키_없이_돈다():
+    """수집 기계가 죽은 것을 알 길이 이것뿐이다. 시크릿을 쓰면 안 된다 — 감시가
+    수집으로 변질되는 것을 막는다."""
     import yaml
-    d = yaml.safe_load(open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8"))
-    assert d["jobs"]["guard"]["if"] == "github.event_name == 'schedule'"
-    assert "!cancelled()" in d["jobs"]["build"]["if"]
+    p = os.path.join(ROOT, ".github", "workflows", "watchdog.yml")
+    src = open(p, encoding="utf-8").read()
+    d = yaml.safe_load(src)
+    on = d.get(True) or d.get("on")
+    assert "schedule" in on
+    assert "secrets." not in src
+    assert "notify.sh" in src and "36000" in src   # 10시간
+
+
+def test_로컬_실행_스크립트가_알림_세_가지를_그대로_낸다():
+    src = open(os.path.join(ROOT, "scripts", "publish.sh"), encoding="utf-8").read()
+    for t in ("🔴 뉴스 수집 실패", "🟡 게시 건수 급감", "🟡 출처 침묵"):
+        assert t in src, t
+    assert "merge_remote_data.py origin/main" in src
+    assert "pull --rebase -X theirs" in src
+    assert 'git add -A docs data' in src

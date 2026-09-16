@@ -1,0 +1,37 @@
+name: 수집 중단 감시
+
+# 수집은 바깥 기계가 돌려 커밋·푸시한다 (scripts/publish.sh). 이 워크플로는
+# 그 기계가 죽었을 때를 잡는 감시용이다 — 마지막 "뉴스 갱신" 커밋이 10시간
+# 넘게 없으면 이슈를 하나 연다. 열려 있으면 댓글로 붙는다(notify.sh).
+#
+# 여기서 수집을 대신 돌리지는 않는다. 러너 IP 가 막혀 품질이 떨어지고, 두
+# 경로가 겹치면 회차가 두 배가 된다. 시크릿도 필요 없다.
+#
+# 예약 실행이 몇 시간 늦어도 상관없는 일이라 cron 으로 충분하다.
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # 세 시간마다, 정각 쏠림을 피해 17분
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 마지막 갱신 커밋 나이
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          last=$(git log -1 --format=%ct --grep='^뉴스 갱신' || echo 0)
+          age=$(( $(date +%s) - last ))
+          hours=$(( age / 3600 ))
+          echo "마지막 뉴스 갱신 커밋: ${hours}시간 전"
+          if [ "$age" -gt 36000 ]; then
+            bash scripts/notify.sh "🔴 수집 중단" \
+              "마지막 뉴스 갱신 커밋이 ${hours}시간 전입니다. 수집 기계(launchd net.dev-news.daily)와 logs/publish.log 를 확인하세요."
+          fi
