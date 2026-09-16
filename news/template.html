@@ -540,9 +540,10 @@ __ADS_HEAD__
     h1{font-size:23px}
     /* .acts를 옆 칸에 두면 본문(.mid)이 100px 이하로 쪼그라든다 —
        카드 하단 전체 폭 행으로 내려 본문이 1fr을 전부 쓰게 한다 */
-    /* 썸네일은 작게 오른쪽에 남긴다. 없애면 좁은 화면에서만 기사가 밋밋해진다. */
-    .row{grid-template-columns:auto minmax(0,1fr) auto;padding:15px}
-    .thumb{width:64px;height:48px;border-radius:7px}
+    /* 썸네일은 오른쪽에 두고 글 덩어리(제목·메타·요약)의 세로 가운데에 맞춘다.
+       위쪽 정렬로 작게 두면 우표처럼 구석에 붙어 보인다. */
+    .row{grid-template-columns:auto minmax(0,1fr) auto;padding:15px;gap:0 12px}
+    .thumb{width:100px;height:75px;border-radius:9px;align-self:center}
     .acts{grid-column:1/-1;flex-direction:row;justify-content:flex-end;gap:2px;
           padding-top:8px;margin-top:4px;border-top:1px solid var(--line2)}
     .dc{padding:22px 20px 40px}
