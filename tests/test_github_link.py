@@ -20,14 +20,14 @@ def test_레일_아이콘은_소개_뷰_버튼이다():
 
 def test_소개_뷰에_저장소_링크가_새_탭으로_있다():
     body = TEMPLATE[TEMPLATE.index("function aboutHTML("):]
-    m = re.search(r'<a class="go" href="\'\+repo\+\'"[^>]*>', body)
+    m = re.search(r'<a class="go alt" href="\'\+repo\+\'"[^>]*>', body)
     assert m, "저장소 링크가 없다"
     assert 'target="_blank"' in m.group(0) and 'rel="noopener' in m.group(0)
 
 
 def test_후원_버튼은_주소가_있을_때만():
     body = TEMPLATE[TEMPLATE.index("function aboutHTML("):]
-    assert "(coffee?" in body
+    assert "(coffee ? " in body
     assert "safeU(a.coffee)" in body, "후원 주소도 남이 정하는 값처럼 다룬다"
 
 
@@ -38,3 +38,9 @@ def test_소개_설정이_페이지에_실린다():
     import yaml
     cfg = yaml.safe_load(open(os.path.join(ROOT, "config.yaml"), encoding="utf-8"))
     assert cfg["about"]["github"].startswith("https://github.com/")
+
+
+def test_프로필_사진은_깃허브_것을_쓴다():
+    body = TEMPLATE[TEMPLATE.index("function aboutHTML("):]
+    assert "'.png?size=160'" in body
+    assert 'class="avatar"' in body and 'onerror="this.remove()"' in body
