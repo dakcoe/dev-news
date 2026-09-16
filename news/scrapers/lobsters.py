@@ -20,5 +20,6 @@ def fetch(limit: int = 25) -> list[dict]:
             "description": item.get("description_plain", "")[:500],
             "source": "lobsters", "upvotes": item.get("score", 0),
             "comments": item.get("comment_count", 0), "published_at": published_at,
+            "discussion": item.get("comments_url", ""),   # 본문 대신 댓글을 넣을 때 쓴다
         })
     return articles
