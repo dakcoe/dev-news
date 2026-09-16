@@ -5,7 +5,7 @@
 # dev-news
 
 매일 세 번(00·08·16시 KST) 개발·AI 뉴스를 수집해 한국어로 요약하고 정적 페이지 한 장으로 만들어 두는 도구.
-GitHub Actions에서 돌면 서버가 필요 없고, `python build.py` 한 줄로 로컬에서도 똑같이 돌아간다.
+서버가 없다 — 자기 기계가 `scripts/publish.sh`로 수집해 커밋하고 GitHub Pages가 서빙한다. `python build.py` 한 줄이 파이프라인 전부다.
 
 **보기:** https://dev-news.net/
 
@@ -83,7 +83,7 @@ Actions에서 수집을 돌리지 않는 이유는 둘이다. 러너의 IP를 �
 
 ## 문서
 
-- [GitHub Actions로 운영하기](GITHUB_ACTIONS.md) — Pages 설정, 시크릿·변수, 스케줄, 알림, 문제 해결
+- [운영하기](GITHUB_ACTIONS.md) — Pages 설정, 시크릿, 실행 방식(자기 기계 + 감시 워크플로), 알림, 문제 해결
 - [설정 가이드](CONFIG.md) — 수집 소스, 선별·점수, 요약 모델, 태그, 저장 구조, 페이지 사용법
 - [개편 스펙](SPEC.md) — 설계 배경과 하지 말 것
 

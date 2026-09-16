@@ -1,16 +1,21 @@
-# GitHub Actions로 운영하기
+# 운영하기 — 자기 기계 + GitHub Pages
 
-dev-news는 서버 없이 GitHub Actions와 GitHub Pages만으로 돈다.
-워크플로 하나(`.github/workflows/daily.yml`)가 하루 세 번 수집해 결과를 저장소에 커밋하고, Pages가 `docs/` 폴더를 그대로 서빙한다.
+dev-news는 서버 없이 돈다. 수집은 **자기 기계**가 `scripts/publish.sh`로 하루 세 번 돌려
+저장소에 커밋하고, GitHub Pages가 `docs/` 폴더를 그대로 서빙한다. GitHub Actions는
+감시(`watchdog.yml`)와 비상용 수동 실행(`daily.yml`)만 맡는다.
 
 ```
-workflow_dispatch (바깥에서 정각에) · cron 은 예비
-  └─ guard: 최근 7시간 안에 돈 회차가 있으면 여기서 끝
-  └─ checkout (전체 이력)
-  └─ Python 3.12 + pip 캐시
-  └─ python build.py          ← 수집·요약·렌더
-  └─ git commit + pull --rebase + push   (docs/ · data/)
-  └─ 실패 시 🔴 이슈 / 게시 급감 시 🟡 이슈
+자기 기계 스케줄러 (KST 00:00 / 08:00 / 16:00)
+  └─ scripts/publish.sh
+       ├─ git pull --rebase
+       ├─ python build.py          ← 수집·요약·렌더
+       ├─ 원격이 앞서 있으면 merge_remote_data.py 로 합친다
+       ├─ git commit "뉴스 갱신 …" + pull --rebase + push   (docs/ · data/)
+       └─ 실패 시 🔴 이슈 / 게시 급감·출처 침묵 시 🟡 이슈   (notify.sh)
+
+GitHub Actions
+  ├─ watchdog.yml   세 시간마다 — 10시간 넘게 갱신 커밋이 없으면 🔴 이슈
+  └─ daily.yml      workflow_dispatch 전용 — 기계가 오래 멈췄을 때 손으로 한 번
 ```
 
 ## 1. 처음 설정
@@ -127,9 +132,9 @@ git push origin main
 
 - 변경이 없으면 커밋을 건너뛴다.
 - `pull --rebase -X theirs`는 충돌 시 방금 만든 데이터를 남긴다. 그래서 `fetch-depth: 0`으로 전체 이력을 받는다. 얕은 체크아웃이면 공통 조상을 못 찾아 rebase가 실패한다.
-- 커밋 작성자는 `github-actions[bot]`이다.
+- 커밋 작성자는 수집 기계의 git 설정을 따른다(`git config user.name / user.email`). 자기 계정 이메일이면 기여 그래프에 찍힌다. 비상용 `daily.yml`은 `github-actions[bot]`으로 남긴다.
 
-로컬에서 코드를 고쳐 push할 때 Actions 커밋과 겹치면 로컬 쪽이 거부된다. `git pull --rebase` 후 다시 push하면 된다. `docs/index.html`이 충돌하면 어느 쪽이든 받고 `python scripts/retag.py`로 재생성하면 된다.
+작업용 클론에서 코드를 고쳐 push할 때 수집 커밋과 겹치면 거부된다. `git pull --rebase` 후 다시 push하면 된다. `docs/index.html`이 충돌하면 어느 쪽이든 받고 저장된 기사로 `render()`만 다시 돌리면 된다.
 
 ## 5. 알림
 
@@ -146,7 +151,7 @@ git push origin main
 
 ## 6. 문제 해결
 
-로그는 **Actions 탭 → 해당 실행 → build 잡**에서 본다.
+로그는 수집 기계의 `logs/publish.log`에 있다. 회차마다 `===== 시각 시작` … `===== 시각 끝`으로 묶인다. 비상용 `daily.yml`을 돌렸다면 **Actions 탭 → 해당 실행 → build 잡**이다.
 
 ### 커밋 스텝에서 push 거부 (GH013)
 
