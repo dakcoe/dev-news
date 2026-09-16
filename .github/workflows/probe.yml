@@ -22,7 +22,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  시각기록:
+  # 작업 id 는 영문·숫자·_- 만 된다. 한글을 쓰면 워크플로 파일 자체가
+  # 해석되지 않아 실행이 startup_failure 로 죽는다 (2026-09-16 실측).
+  probe:
+    name: 시각 기록
     runs-on: ubuntu-latest
     steps:
       - name: 시작 시각
