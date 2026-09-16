@@ -165,6 +165,22 @@ def looks_like_identifier_title(title: str) -> bool:
     return all(_IDENT_TOKEN_RE.match(tok) for tok in tokens)
 
 
+NO_BODY = "(본문 없음 — 제목만으로 작성하되 추측하지 마라)"
+COMMENTS_BODY = ("(기사 본문을 가져오지 못했다. 아래는 이 글에 달린 독자 댓글이다. "
+                 "댓글에 근거가 있는 것만 쓰고, 댓글의 주장을 기사 내용으로 단정하지 마라. "
+                 "요약은 '댓글에서는 …'처럼 논의되는 것을 전하고, 알 수 없으면 \"없음\"이라고 써라)\n")
+
+
+def _body_for_prompt(article: dict, body: str) -> str:
+    """프롬프트에 넣을 본문. 분당 토큰 제한(Groq 무료 12K TPM)에 걸리지 않도록
+    2천 자로 자른다. 댓글로 메운 본문이면 그 사실을 앞에 밝힌다."""
+    if not body:
+        return NO_BODY
+    if article.get("body_from") == "comments":
+        return COMMENTS_BODY + body[:2000]
+    return body[:2000]
+
+
 LABELS = {"번역제목": "ko_title", "요약": "summary", "왜중요": "why",
           "분류": "relevance"}
 
@@ -339,7 +355,7 @@ def _call_why(candidate: dict, article: dict, body: str, provider: str,
             title=article["title"],
             ko_title=candidate.get("ko_title") or "",
             summary=candidate.get("summary") or "",
-            body=body[:2000] if body else "(본문 없음 — 제목과 요약만으로 쓰되 추측하지 마라)",
+            body=_body_for_prompt(article, body),
         ),
         provider, why_model, api_key))
 
@@ -457,8 +473,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
         prompt = PROMPT.format(
             title=article["title"],
             source=article.get("source", ""),
-            # 분당 토큰 제한(Groq 무료 12K TPM)에 걸리지 않도록 본문을 2천 자로 자른다
-            body=body[:2000] if body else "(본문 없음 — 제목만으로 작성하되 추측하지 마라)",
+            body=_body_for_prompt(article, body),
         )
 
         parsed = None

@@ -38,5 +38,7 @@ def fetch(limit: int = 30) -> list[dict]:
                 "title": item.get("title", ""), "url": url, "description": description,
                 "source": "hackernews", "upvotes": item.get("score", 0),
                 "comments": item.get("descendants", 0), "published_at": item.get("time"),
+                # 본문을 못 가져왔을 때 댓글을 대신 넣으려고 남긴다 (core/discussion.py)
+                "discussion": f"https://news.ycombinator.com/item?id={item['id']}",
             })
     return articles

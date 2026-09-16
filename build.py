@@ -243,7 +243,10 @@ def prepare_published(picked: list[dict], cfg: dict,
 
     # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM
     # 공급자에게 전송되는 것까지 막힌다.
-    picked = redact_articles(enrich(picked), "본문")
+    from news.core.discussion import fill_from_discussion
+    # 본문을 못 가져온 기사는 그 글의 댓글로 메운다. 마스킹 앞에 두어 댓글에
+    # 섞인 토큰도 같이 걸러진다.
+    picked = redact_articles(fill_from_discussion(enrich(picked)), "본문")
     # 죽은 링크는 요약 전에 뺀다 — LLM 호출을 쓰지 않게 된다
     picked, dead_links = drop_dead_links(picked)
 

@@ -138,7 +138,8 @@ def test_pipeline_wiring():
     assert src.count("redact_articles(") == 3
 
     collect = src.index('redact_articles(articles, "수집")')
-    body = src.index('redact_articles(enrich(picked), "본문")')
+    # 댓글로 메운 본문도 마스킹을 거쳐야 한다 — enrich 와 redact 사이에 들어간다
+    body = src.index('redact_articles(fill_from_discussion(enrich(picked)), "본문")')
     summary = src.index('redact_articles(picked, "요약")')
 
     assert collect < src.index("candidates.log(")      # 후보 로그 전에 마스킹

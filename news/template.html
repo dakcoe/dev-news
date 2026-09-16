@@ -492,6 +492,7 @@ __ADS_HEAD__
   .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;
       text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px}
   .go:hover{background:#000}
+  .dnote{font-size:13px;color:var(--tx2);margin:-6px 0 18px}
   /* 공유 — 원문 열기 옆에 나란히. 원문이 주가 되도록 공유는 테두리만 준다. */
   .dacts{position:relative;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   /* 원문 열기(<a>)와 높이를 정확히 맞춘다. button 은 line-height 를 물려받지
@@ -983,7 +984,7 @@ function openArchived(url, month, extra){
       title:a.ko_title||a.title, from:(SRC[a.source]||{}).name||a.source,
       color:(SRC[a.source]||{}).color||'#999', pub:null, dateLabel:(a.batch||'').slice(0,10),
       img:a.image, paras:paras,
-      why:a.why||'', url:a.url, month:month
+      why:a.why||'', url:a.url, month:month, bodyFrom:a.body_from
     }, extra||{}));
     markRead(url);
   };
@@ -1485,6 +1486,7 @@ function showDetail(d){
     + '<div class="dc"><h2>'+escA(d.title)+'</h2><div class="dmeta">'+meta+'</div>'
     + paras.map(t=>'<p>'+escA(t)+'</p>').join('')
     + (d.why?'<div class="why"><b>왜 중요한가</b>'+escA(d.why)+'</div>':'')
+    + (d.bodyFrom==='comments'?'<p class="dnote">원문 본문을 가져오지 못해 이 글에 달린 댓글을 바탕으로 썼습니다.</p>':'')
     + '<div class="dacts">'
     +   (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
     +   '<button class="go alt" id="sharebtn">공유하기</button>'
@@ -1513,7 +1515,7 @@ function openDetail(i){
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,
     paras:d.paras, snip:d.snip,
-    why:d.why||'', url:d.url, month:d.month
+    why:d.why||'', url:d.url, month:d.month, bodyFrom:d.bodyFrom
   });
   render();
 }

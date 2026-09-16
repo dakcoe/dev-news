@@ -147,6 +147,7 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
             "pub": _pub_iso(a),
             "tags": a.get("tags") or [],
             "snip": _first_sentences(summary),
+            "bodyFrom": a.get("body_from") or "",   # 'comments' 면 댓글로 쓴 요약
         })
         if inline:
             # ⚠️ HTML이 아니라 문단 목록으로 넘긴다. 예전에는 서버가 "<p>요약</p>"
