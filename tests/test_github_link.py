@@ -42,5 +42,5 @@ def test_소개_설정이_페이지에_실린다():
 
 def test_프로필_사진은_깃허브_것을_쓴다():
     body = TEMPLATE[TEMPLATE.index("function aboutHTML("):]
-    assert "'.png?size=160'" in body
+    assert "'.png?size=208'" in body
     assert 'class="avatar"' in body and 'onerror="this.remove()"' in body
