@@ -190,9 +190,12 @@ def test_mobile_layout_not_squeezed(html):
     """
     mobile = html.split("@media (max-width:820px)")[1].split("}\n")[0:20]
     mobile = "@media (max-width:820px)" + "}\n".join(mobile)
-    # 본문 옆에 acts 칸이 없다 — 2칸 그리드(체크박스 + 본문)
-    assert ".row{grid-template-columns:auto minmax(0,1fr);" in mobile
-    assert "auto minmax(0,1fr) auto" not in mobile
+    # 본문 옆에 acts 칸이 없다 — 체크박스 + 본문 + 작은 썸네일(64px) 세 칸.
+    # 본문을 짓누르던 것은 acts(버튼 3개)였지 썸네일이 아니다. 썸네일은 폭이
+    # 고정이라 본문이 340px 남짓 남는다.
+    assert ".row{grid-template-columns:auto minmax(0,1fr) auto;" in mobile
+    assert ".thumb{width:64px;height:48px" in mobile
+    assert ".thumb{display:none}" not in mobile
     # acts는 하단 전체 폭 행
     assert "grid-column:1/-1" in mobile
     # 레일은 하단 고정 내비 — 스크롤 영역이 그만큼 하단 여백을 확보
@@ -352,3 +355,9 @@ def test_공유_버튼이_원문_열기와_같은_높이다(html):
     테두리도 box-shadow 로 그려야 상자가 커지지 않는다."""
     assert "line-height:inherit" in html
     assert "box-shadow:inset 0 0 0 1.5px var(--line)" in html
+
+
+def test_좁은_화면_공유_메뉴는_위로_연다(html):
+    """버튼이 상세의 맨 아래라 아래로 열면 화면 밖으로 나가서 한 번 더 내려야
+    보였다."""
+    assert ".sharemenu{left:auto;right:0;top:auto;bottom:calc(100% + 8px)}" in html
