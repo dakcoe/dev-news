@@ -190,11 +190,11 @@ def test_mobile_layout_not_squeezed(html):
     """
     mobile = html.split("@media (max-width:820px)")[1].split("}\n")[0:20]
     mobile = "@media (max-width:820px)" + "}\n".join(mobile)
-    # 본문 옆에 acts 칸이 없다 — 체크박스 + 본문 + 작은 썸네일(64px) 세 칸.
+    # 본문 옆에 acts 칸이 없다 — 체크박스 + 본문 + 썸네일(100px) 세 칸.
     # 본문을 짓누르던 것은 acts(버튼 3개)였지 썸네일이 아니다. 썸네일은 폭이
-    # 고정이라 본문이 340px 남짓 남는다.
+    # 고정이라 390px 화면에서 본문이 210px 남짓 남는다.
     assert ".row{grid-template-columns:auto minmax(0,1fr) auto;" in mobile
-    assert ".thumb{width:64px;height:48px" in mobile
+    assert ".thumb{width:100px;height:75px;border-radius:9px;align-self:center}" in mobile
     assert ".thumb{display:none}" not in mobile
     # acts는 하단 전체 폭 행
     assert "grid-column:1/-1" in mobile
