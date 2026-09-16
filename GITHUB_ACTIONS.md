@@ -43,7 +43,7 @@ git push -u origin main
 | `OPENROUTER_API_KEY` | `LLM_PROVIDER=openrouter`일 때만 | https://openrouter.ai |
 | `GEMINI_API_KEY` | `LLM_PROVIDER=gemini`일 때만 | https://aistudio.google.com |
 
-`GITHUB_TOKEN`은 등록하지 않는다. Actions가 자동으로 넣어 주며, GitHub API 한도를 시간당 60회에서 1,000회 이상으로 올리는 데 쓴다.
+`GITHUB_TOKEN`은 등록하지 않는다. 비상용 워크플로에서는 Actions가 자동으로 넣고, 수집 기계에서는 `publish.sh`가 `gh auth token`으로 채운다. GitHub API 한도를 시간당 60회에서 1,000회 이상으로 올리는 데 쓴다.
 
 ### 1-3. 변수 등록 (선택)
 
@@ -61,7 +61,6 @@ git push -u origin main
 **Settings → Actions → General → Workflow permissions** 에서 **Read and write permissions** 를 고른다.
 
 워크플로가 결과를 커밋하고 알림 이슈를 만들어야 하므로 `contents: write`와 `issues: write`가 필요하다.
-`actions: read`는 예비 회차(guard)가 지난 회차 목록을 읽는 데 쓴다.
 이 설정이 Read only면 마지막 커밋 스텝에서 403으로 실패한다.
 
 ### 1-5. Pages 켜기
