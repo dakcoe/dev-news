@@ -1,5 +1,530 @@
 [
  {
+  "title": "Hackers Got Inside a Flock Camera. Its Data Shows How the System Works",
+  "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 133,
+  "comments": 51,
+  "published_at": 1789564727,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/"
+  ],
+  "cross_source_count": 1,
+  "score": 1019.0,
+  "image": "https://media.wired.com/photos/6aa9a89861c11f99a88f271a/191:100/w_1280,c_limit/Security_Hackers%20Got%20Inside%20a%20Flock%20Camera.%20Its%20Data%20Shows%20How%20the%20System%20Really%20Works.jpg",
+  "link_status": "ok",
+  "ko_title": "해커가 Flock 카메라에 침투했다. 데이터가 시스템 작동 방식을 보여준다",
+  "summary": "해커들이 도로 위에 설치된 Flock 카메라를 분리해 내부 저장소를 거의 완전 복제하고, 복구한 암호키로 수천 건의 차량 탐지 영상을 복호화했다. 복제된 로그에는 차량, 사람, 자전거, 번호판을 식별하고, 한 차량당 수십 장의 이미지와 100만 장 이상의 이미지가 생성된 기록이 포함돼 있다. 이 자료는 404 Media와 WIRED가 분석했으며, 일부 민감 데이터는 여전히 암호화돼 접근 불가하다.",
+  "why": "디바이스 내 암호키가 물리적 접근 시 복구 가능하다는 점이 확인됐다. 온디바이스 암호화만으로는 하드웨어 탈취를 막지 못한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Original Sony PlayStation 2 security chip 'broken wide open' after 26 years",
+  "url": "https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 115,
+  "comments": 34,
+  "published_at": 1789559380,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip"
+  ],
+  "cross_source_count": 1,
+  "score": 932.0,
+  "image": "https://cdn.mos.cms.futurecdn.net/YT8szWTawNgyAr5wNtX4gh-1920-80.jpg",
+  "link_status": "ok",
+  "ko_title": "원래 소니 플레이스테이션 2 보안 칩, 26년 만에 완전히 해제",
+  "summary": "캐나다 레트로 하드웨어 애호가가 CXP102064 MechaCon 칩을 화학적 디캡핑과 4년간의 역공학으로 분석·덤프했다. 이 칩은 PS2의 광학·플래시 드라이브 제어와 디스크 보안에 핵심 역할을 했다. 결과물은 하드웨어 보존, 수리, 에뮬레이션 및 홈브류 개발에 활용될 수 있다.",
+  "why": "PS2 호환 에뮬레이터나 홈브류 개발을 하는 경우 디스크 보안 우회 로직을 직접 구현할 수 있게 된다. 광학 드라이브 고장 시 칩 동작 원리를 파악해 수리 범위를 넓힐 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "ImpactGate: A merge gate that scores the structural decay AI adds",
+  "url": "https://github.com/officefloor/ImpactGate",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 32,
+  "comments": 31,
+  "published_at": 1789563669,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/officefloor/ImpactGate"
+  ],
+  "cross_source_count": 1,
+  "score": 757.0,
+  "image": "https://opengraph.githubassets.com/1/officefloor/ImpactGate",
+  "link_status": null,
+  "ko_title": "ImpactGate: 구조적 부패 점수를 매기는 머지 게이트",
+  "summary": "ImpactGate는 파일 변경 수, 기존 코드 복잡도, 사이클 복잡도, 라인 변화량을 곱해 구조적 부패 정도를 점수화한다. 기본적으로 CLI, git pre-commit 훅, GitHub·GitLab·Jenkins 플러그인 형태로 사용할 수 있다. pip 또는 Docker 이미지로 설치 가능하며, 점수가 높으면 변경을 단순화하거나 리팩터링하도록 경고하거나 빌드를 차단한다.",
+  "why": "기존 코드의 복잡도가 높을수록 같은 변경도 더 높은 점수를 받는다. 이미 무거운 클래스에 코드를 더할 때만 경고가 뜨므로 신규 파일 생성은 무시해도 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Let's make quality the norm again",
+  "url": "https://www.forbrukerradet.no/short-life/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 440,
+  "comments": 449,
+  "published_at": 1789466416,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.forbrukerradet.no/short-life/"
+  ],
+  "cross_source_count": 1,
+  "score": 706.75,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "품질을 다시 표준으로 만들자",
+  "summary": "이 보고서는 순환 경제가 환경뿐 아니라 소비자 권리 강화와 사회 회복력 향상에 기여한다는 점을 강조한다. 소비자 정책이 순환 선택을 더 쉽고 안전하며 매력적으로 만들 수 있는 방안을 제시한다.",
+  "why": "백엔드와 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
+  "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 253,
+  "comments": 95,
+  "published_at": 1789506467,
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html"
+  ],
+  "cross_source_count": 1,
+  "score": 695.5,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "독일 라인메탈, Battlesuite 연결 무기 시스템 프로토콜 오픈소스화",
+  "summary": "라인메탈은 센서와 소프트웨어 컴포넌트 간 통신을 위한 온보드 API 인터페이스 라이브러리와 미들웨어를 공개했다. 이 라이브러리는 OMG의 DDS 표준을 기반으로 하며, ddkit SDK 위에 구축되어 저지연 데이터 교환을 제공한다. DDS XTypes와 XCDR2 인코딩을 활용해 데이터 모델이 진화해도 버전 간 호환성을 유지한다. 핵심은 C++ 구현이지만 Java, C#/.NET, Python용 래퍼를 통해 다중 언어 통합이 가능하다.",
+  "why": "DDS 기반 저지연 통신을 다룰 때 XCDR2 인코딩으로 데이터 모델 진화 시 버전 호환성을 확보할 수 있다. C++ 코어 외에 Python, Java, C# 래퍼가 제공되어 기존 스택에 바로 통합 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "OpenAI's Software Factory Can Skip Human Review. Who Evaluates That Decision?",
+  "url": "https://dev.to/sara_mo/openais-software-factory-can-skip-human-review-who-evaluates-that-decision-21bf",
+  "description": "A pull request is green.  The specialist reviewers found nothing that should block it. The risk...",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 3,
+  "comments": 8,
+  "published_at": "2026-09-16T08:07:23Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sara_mo/openais-software-factory-can-skip-human-review-who-evaluates-that-decision-21bf"
+  ],
+  "cross_source_count": 1,
+  "score": 690.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kp3bcnqvpxvlvyz7s27.jpg",
+  "link_status": "ok",
+  "ko_title": "OpenAI 소프트웨어 팩토리, 인간 검토 생략 가능… 그 결정은 누가 평가할까",
+  "summary": "OpenAI는 저위험 풀 리퀘스트에 대해 자동 승인 옵션을 제공하고, 위험 분류기가 인간 검토를 건너뛰게 한다. 저자는 이 자동화된 라우팅 결정의 평가 문제를 제기한다. 시스템이 인간 검토를 생략하도록 판단하는 기준과 증거가 부족하다는 점을 강조한다.",
+  "why": "자동 승인 라우팅 결정 자체의 정확성을 검증하는 절차가 부재하다. 인간 검토를 생략하는 기준의 신뢰성을 확보하지 못하면 배포 경로에 숨은 위험이 남는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Why filter(Boolean) Is Not a Nullish Filter in TypeScript 🔧",
+  "url": "https://dev.to/nyaomaru/why-filterboolean-is-not-a-nullish-filter-in-typescript-4m82",
+  "description": "Hoi hoi! 👋  I'm @nyaomaru, a frontend engineer building small TypeScript OSS with shoyu ramen....",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": "2026-09-16T14:24:28Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nyaomaru/why-filterboolean-is-not-a-nullish-filter-in-typescript-4m82"
+  ],
+  "cross_source_count": 1,
+  "score": 676.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxuo3rfp34t54swupq4q0.gif",
+  "link_status": "ok",
+  "ko_title": "filter(Boolean)가 TypeScript에서 Nullish 필터가 아닌 이유",
+  "summary": "filter(Boolean)는 falsy 값을 모두 제거하지만 null과 undefined만을 목표로 할 때는 의도와 다르게 빈 문자열, 0, false까지 삭제한다. 런타임에서는 falsy 값만 남기고 TypeScript 타입 시스템은 null과 undefined이 제거됐음을 인식하지 못한다. 따라서 nullish 값만 제거하려면 별도의 타입 가드나 필터 함수를 사용해야 한다.",
+  "why": "설정 값으로 0, false, 빈 문자열을 쓰는 백엔드 로직에서 filter(Boolean)을 쓰면 유효한 데이터가 사라진다. TypeScript는 이 호출로 nullish가 제거됐다고 타입을 좁히지 않아 컴파일러가 오류를 잡아주지 않는다. null과 undefined만 제거하려면 명시적인 타입 가드나 필터 함수를 써야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Anthropic's grammar compiler counts properties, not characters",
+  "url": "https://dev.to/robswierk/anthropics-grammar-compiler-counts-properties-not-characters-5el6",
+  "description": "A 400 error from Anthropic's structured-output compiler taught us that the ceiling is 42 schema properties across all objects, not a character budget.",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-09-16T10:00:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/robswierk/anthropics-grammar-compiler-counts-properties-not-characters-5el6"
+  ],
+  "cross_source_count": 1,
+  "score": 673.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvtqnenzbix140alqcyr2.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic의 문법 컴파일러는 문자 수가 아니라 속성 수를 기준으로 한다",
+  "summary": "Anthropic의 구조화 출력 컴파일러는 스키마의 전체 속성 수가 42개를 초과하면 400 오류를 반환한다. 문자 길이는 제한에 영향을 주지 않으며, 4466자 스키마도 거부되고 5207자 스키마는 통과한다. 속성 수 초과는 Beat 객체에 새 필드가 추가돼 발생했으며, 속성을 다른 객체로 재배치해 문제를 해결했다.",
+  "why": "Anthropic 구조화 출력 스키마가 400 오류를 내면 문자 수 대신 전체 속성 수를 세야 한다. 속성 42개 초과 시 컴파일러가 거부하므로, 필드를 다른 객체로 재배치해 제한을 피할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "A Million Go Map Entries Take 38MB, Not 16MB",
+  "url": "https://dev.to/nazar-boyko/a-million-go-map-entries-take-38mb-not-16mb-2ij3",
+  "description": "A few months ago, I noticed an issue with the internal structure of the new Go map—specifically...",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-09-16T14:47:35Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nazar-boyko/a-million-go-map-entries-take-38mb-not-16mb-2ij3"
+  ],
+  "cross_source_count": 1,
+  "score": 672.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fth93xyfhucbmy7vw1e4q.png",
+  "link_status": "ok",
+  "ko_title": "백만 개 Go 맵 엔트리, 38 MB 차지, 16 MB가 아니다",
+  "summary": "Go 1.27.1에서 map[int64]int64 1 백만 개 엔트리는 약 37.8 MB를 사용한다. 이는 키와 값만 합친 16 바이트보다 21~44 바이트가 추가로 소요되는 것으로, 버킷 구조와 오버플로우 처리 방식이 원인이다. 버전 1.24부터 기존 버킷 설계가 교체됐으며, 삽입·삭제 동작도 기존 문서와 다르게 동작한다. 실험은 Apple M5 Max에서 1.26.4와 1.27.1 모두 동일하게 재현되었다.",
+  "why": "Go 1.24 이후 맵의 내부 구조가 바뀌어 기존 문서와 동작이 달라졌다. 삽입과 삭제 로직을 점검할 때 최신 런타임 기준을 적용해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "I think I have figured out where the tech industry is heading",
+  "url": "https://dev.to/web_dev-usman/i-think-i-have-figured-out-where-the-tech-industry-is-heading-54en",
+  "description": "This Is Not the Death of Tech I think I have figured out where the tech industry is heading. Not...",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-09-16T13:01:34Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/web_dev-usman/i-think-i-have-figured-out-where-the-tech-industry-is-heading-54en"
+  ],
+  "cross_source_count": 1,
+  "score": 672.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvuds7au6zllgda9agvs1.jpg",
+  "link_status": "ok",
+  "ko_title": "나는 기술 산업이 어디로 가는지 알아냈다",
+  "summary": "",
+  "why": "기술 산업의 중심이 코드 작성에서 콘텐츠 제작으로 이동하고 있다. 실무 능력만으로는 시장 경쟁력이 약화되는 구조가 고착화되고 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "What blog posts influenced your thinking the most?",
+  "url": "https://simonwillison.net/2026/Sep/14/influences/",
+  "description": "My comment on What blog posts influenced your thinking the most? — Lobste.rs. An early Joel Spolsky one for me was The Law of Leaky Abstractions . I read that near the start of my career and it's encouraged me to always be looking for improved understanding of the layers under where I'm working, just in case one of those abstractions leaks. A more recent one, from 2018, is Migrations: the sole sca",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789417308.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/14/influences/"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "가장 큰 영향을 준 블로그 글은 무엇인가?",
+  "summary": "글쓴이는 초기 커리어에 Joel Spolsky의 “Leaky Abstractions”가 레이어 이해를 촉진했으며, Will Larson의 2018년 글 “Migrations: the sole scalable fix to tech debt”를 통해 마이그레이션을 핵심 기술로 인식하게 되었다고 설명한다. 또한 Charity Majors의 “Engineer/Manager Pendulum”이 엔지니어와 매니저 역할 전환을 정상화시켜 주었다고 언급한다. 최근에는 GPT-6 Astra와 ChatGPT Work를 활용한 러닝 코스 생성, OpenAI 에이전트가 RubyGems를 공격한 사건, Navier–Stokes 백만 달러 문제에 대한 고찰이 소개된다.",
+  "why": "마이그레이션을 일회성 작업이 아닌 반복 투자 대상으로 보라는 관점이 백엔드 구조 설계에 적용된다. 레이어 추상화가 누수될 가능성을 항상 점검하는 습관이 시스템 안정성 확보에 도움이 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "career-culture"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "After warning AI is too dangerous, Bill Gates bets a billion on its upside",
+  "url": "https://the-decoder.com/after-warning-ai-is-too-dangerous-bill-gates-bets-a-billion-on-its-upside/",
+  "description": "The Gates Foundation is investing at least a billion dollars over two years to make AI tools more widely available in health, education, and agriculture. Bill Gates warns that more than 90 percent of the training data behind early language models came from English sources, and that speech recognition fails 60 percent of the time in Yoruba. The market, he says, is \"a terrible guarantor of equal opp",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789482408.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/after-warning-ai-is-too-dangerous-bill-gates-bets-a-billion-on-its-upside/"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2023/10/bill_gates_gates_foundation.png",
+  "link_status": "ok",
+  "ko_title": "AI가 위험하다고 경고한 후, 빌 게이츠가 그 잠재력에 10억 달러를 투자",
+  "summary": "게이츠 재단은 향후 2년간 최소 10억 달러를 투자해 보건·교육·농업 분야에서 AI 도구를 확대한다. 비영어 데이터 소스를 확보하고 케냐·시에라리온·인도 등에서 진단 보조·학습 시스템·디지털 농업 조언 프로젝트를 지원한다. 빌 게이츠는 AI가 부의 격차를 심화시킬 위험을 경고하며, 이번 투자가 균등한 접근을 촉진할 수 있다고 주장한다.",
+  "why": "기존 언어 모델이 영어 데이터에 편중되어 있어 비영어권 개발 환경에서 성능이 떨어지는 한계가 있다. 게이츠 재단의 투자가 비영어 데이터 소스 확보로 이어지면 다국어 AI 개발 시 활용할 수 있는 학습 자원이 늘어난다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Agility Robotics says its new Digit 5 robot can work next to people without safety fences",
+  "url": "https://the-decoder.com/agility-robotics-says-its-new-digit-5-robot-can-work-next-to-people-without-safety-fences/",
+  "description": "Agility Robotics has unveiled Digit 5, the next version of its humanoid robot for warehouses and factories. The article Agility Robotics says its new Digit 5 robot can work next to people without safety fences appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789477030.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/agility-robotics-says-its-new-digit-5-robot-can-work-next-to-people-without-safety-fences/"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/Agility-Robotics-Digit-5.png",
+  "link_status": "ok",
+  "ko_title": "Agility Robotics, 새로운 Digit 5 로봇이 안전 펜스 없이 사람과 함께 작업 가능",
+  "summary": "Digit 5는 이전 모델보다 40 % 더 무거운 22.7 kg까지 들어올릴 수 있고, 9분 충전으로 90분 가동, 하루 20시간 이상 작업이 가능하다. AI와 센서를 이용해 사람을 인식하고 멈추거나 회피하며 시각·음성 신호로 경고한다. 교체 가능한 그리퍼로 다양한 물류 작업을 수행한다.",
+  "why": "Digit 4가 OSHA 안전 심사를 통과한 사례가 있어, 안전 펜스 설치가 불필요한 환경 구성을 검토할 근거가 된다. 2027년 초부터 EU를 포함한 초기 납품이 시작되므로, 물류 자동화 도입 시점을 계획할 때 참고해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "토스증권이 GPU-aware를 넘어 GPU-native 클러스터를 구축한 방법",
+  "url": "https://toss.tech/article/gpu-native-cluster",
+  "description": "토스증권이 Kubernetes GPU 클러스터의 운영 한계를 해결한 방법",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789436520.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/gpu-native-cluster"
+  ],
+  "cross_source_count": 1,
+  "score": 570.0,
+  "image": "https://static.toss.im/disposables/contents/gpu_k8s.png",
+  "link_status": "ok",
+  "ko_title": "토스증권이 GPU-aware를 넘어 GPU-native 클러스터를 구축한 방법",
+  "summary": "토스증권 Data Infra 팀이 Kubernetes 기반 멀티테넌트 GPU 클러스터를 구축하고 운영 중 발생한 문제들을 해결한 과정을 공유한다. GPU를 자원으로 인식하고 할당하기 위한 하드웨어·드라이버·NVIDIA Container Toolkit·Device Plugin·파드 설정 단계와, 노드 상태 검증·자원 단위 분할·배치 로직을 추가해 GPU-native 상태를 구현했다. 또한 Kubernetes의 Dynamic Resource Allocation(DRA) 기능이 이러한 요구를 원천적으로 지원하도록 발전하고 있음을 언급한다.",
+  "why": "기존에 GPU를 한 장씩만 할당하던 방식에서 벗어나 서비스별 필요 자원에 맞춰 분할 배치할 수 있게 됩니다. 노드 상태 검증과 자원 분할 로직을 직접 구현해야 했던 부담이 줄어드는 대신, 쿠버네티스 DRA 기능의 도입 시점을 주시해야 합니다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "Ubuntu 26.10 completes transition to Rust-based coreutils",
+  "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 26,
+  "comments": 22,
+  "published_at": 1789529945.47,
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete"
+  ],
+  "cross_source_count": 1,
+  "score": 502.59999999999997,
+  "image": "https://www.omgubuntu.co.uk/wp-content/uploads/2025/05/ubuntu-rust.jpg",
+  "link_status": "ok",
+  "ko_title": "Ubuntu 26.10, Rust 기반 coreutils 전환 완료",
+  "summary": "Ubuntu 26.10 ‘Ston킹 스팅레이’는 cp·mv·rm을 포함한 전체 coreutils를 Rust 구현인 uutils로 교체했다. 이전 버전에서 보안 문제로 보류됐던 명령들이 upstream에서 해결돼 적용되었다. Canonical은 uutils 보안 감사를 진행했으며, Rust 기반 NTP 재작성 프로젝트를 27.10에 기본 클라이언트로 사용할 계획이다.",
+  "why": "uutils는 GNU 버전과 드롭인 호환성을 목표로 하므로 기존 스크립트 수정이 필요 없다. TOCTOU 취약점이 해결된 Rust 구현으로 교체되어 메모리 안전성이 강화됐다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "eternity4719 / HowToLiveBetter",
+  "url": "https://github.com/eternity4719/HowToLiveBetter",
+  "description": "354 条循证建议，覆盖长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 870,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/eternity4719/HowToLiveBetter"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 870,
+  "score": 409.5,
+  "image": "https://opengraph.githubassets.com/1/eternity4719/HowToLiveBetter",
+  "link_status": null,
+  "ko_title": "eternity4719 / 더 나은 삶을 사는 방법",
+  "summary": "이 GitHub 저장소는 498개의 구체적인 생활 개선 조언을 제공한다. 각 항목은 소요 비용, 기대 효과, 논문·공식 문서 등 근거를 명시한다. 장수·질병 예방, 재무·법률·취업·연애 등 다양한 주제를 다루며 온라인 검색 페이지를 제공한다.",
+  "why": "11장에서 개발자가 작성하는 코드나 수주 작업 중 형사 처벌 대상이 되는 사례를 다루고 있다. 기술적 판단이 법적 리스크로 직결되는 지점을 사전에 확인해 두면 사고를 예방할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
+  "title": "ai-sucks-butt / ai-sucks-butt",
+  "url": "https://github.com/ai-sucks-butt/ai-sucks-butt",
+  "description": "If you think AI sucks, star the repo.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 597,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ai-sucks-butt/ai-sucks-butt"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 597,
+  "score": 313.95,
+  "image": "https://opengraph.githubassets.com/1/ai-sucks-butt/ai-sucks-butt",
+  "link_status": null,
+  "ko_title": "ai-sucks-butt / ai-sucks-butt — AI가 별로일 때 별표 달기",
+  "summary": "AI가 별로라고 생각하는 사람들을 위한 GitHub 저장소이며, 별표(star)를 달아 의견을 표시하도록 유도한다.",
+  "why": "",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-09-16T23:55:28.525844+09:00",
+  "batch_label": "9월 16일 23:55"
+ },
+ {
   "title": "OpenAI Expands ChatGPT Ads with Sponsored Agents",
   "url": "https://openai.com/index/reimagining-advertising-with-ai/",
   "description": "",
