@@ -504,6 +504,27 @@ __ADS_HEAD__
   .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;
       text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px}
   .go:hover{background:#000}
+  /* 스킬 순위 행 */
+  .sk{display:grid;grid-template-columns:34px 52px minmax(0,1fr) auto auto auto;gap:10px;align-items:center;
+      background:var(--panel);border-radius:12px;box-shadow:var(--shadow-card);padding:11px 14px;margin-bottom:8px}
+  .skr{font-size:14px;font-weight:700;color:var(--tx3);text-align:right;font-variant-numeric:tabular-nums}
+  .skd{font-size:11.5px;font-weight:800;text-align:center;padding:2px 6px;border-radius:6px;background:#f0f0f5;color:var(--tx3)}
+  .skd.up{background:#e6f6ec;color:#1f7a44} .skd.dn{background:#fdeef2;color:#c2415e} .skd.new{background:var(--pri-bg);color:var(--pri-dk)}
+  .skm{min-width:0;display:flex;flex-direction:column}
+  .skn{font-size:15.5px;font-weight:700;color:var(--tx);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .skn:hover{color:var(--pri-dk)}
+  .sko{font-size:12.5px;color:var(--tx3);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sko:hover{color:var(--pri-dk)}
+  .skv{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--tx2)}
+  .skc{font-family:inherit;font-size:12.5px;font-weight:700;color:var(--pri-dk);background:var(--pri-bg);border:none;border-radius:7px;padding:6px 10px;cursor:pointer}
+  .skc:hover{background:#e3dffb}
+  .ck.sm{width:26px;height:26px;flex:none}
+  /* 기사 행은 호버할 때만 체크가 보인다(.row:hover). API·스킬 행도 같게, 터치
+     화면에서는 호버가 없으니 항상 보인다. */
+  .sk:hover .ck,.aihead:hover .ck{visibility:visible}
+  @media (hover:none){ .sk .ck,.aihead .ck{visibility:visible} }
+  .aihead .ck.sm{margin-left:auto}
+  @media (max-width:640px){ .sk{grid-template-columns:30px 46px minmax(0,1fr) auto auto;padding:10px 12px} .skc{display:none} }
   /* 소개 화면 — 왼쪽 프로필 칸(320px), 오른쪽 본문 패널. 좁은 화면에서는 한 열. */
   .about{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
   .about .profile{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
@@ -642,15 +663,15 @@ __ADS_HEAD__
   <button class="rb on" data-v="news" title="오늘의 뉴스">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h11a1 1 0 011 1v12a2 2 0 002 2H5a1 1 0 01-1-1V5z"/><path d="M16 8h3a1 1 0 011 1v9a2 2 0 01-2 2"/><path d="M7 8h6M7 12h6M7 16h4"/></svg>
   </button>
-  <button class="rb" data-v="saved" title="보관함">
-    <span class="dot"></span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg>
-  </button>
   <button class="rb" data-v="api" title="무료 API 목록">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 01-10 0V7zM12 16v5"/></svg>
   </button>
-  <button class="rb" data-v="src" title="수집 소스">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+  <button class="rb" data-v="skills" title="스킬 순위">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20v-7M10 20V5M16 20v-10M22 20H2"/></svg>
+  </button>
+  <button class="rb" data-v="saved" title="보관함">
+    <span class="dot"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg>
   </button>
   <button class="rb gh" data-v="about" title="소개">
     <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
@@ -781,7 +802,8 @@ try{
       const d = DATA.find(x=>x.url===item);
       savedMap.set(item, {url:item, title: d?d.title:item, month: d?d.month:''});
     } else if(item && item.url){
-      savedMap.set(item.url, {url:item.url, title:item.title||item.url, month:item.month||''});
+      savedMap.set(item.url, {url:item.url, title:item.title||item.url, month:item.month||'',
+        kind:item.kind||'news', sub:item.sub||'', desc:item.desc||''});
     }
   });
 }catch(e){}
@@ -800,8 +822,16 @@ function toggleRead(i){
 }
 function toggleSave(d){
   if(savedMap.has(d.url)) savedMap.delete(d.url);
-  else savedMap.set(d.url, {url:d.url, title:d.title, month:d.month||''});
+  else savedMap.set(d.url, {url:d.url, title:d.title, month:d.month||'', kind:'news'});
   persist(); render();
+}
+/* 기사 말고 API 항목·스킬도 같은 보관함에 둔다. kind 로 구분하고, 화면 갱신은
+   부른 쪽이 한다 — API 화면은 검색어를 지키려고 본문만 다시 그린다. */
+function toggleSaveEntry(e){
+  if(savedMap.has(e.url)) savedMap.delete(e.url);
+  else savedMap.set(e.url, {url:e.url, title:e.title, month:'', kind:e.kind, sub:e.sub||'', desc:e.desc||''});
+  persist();
+  document.querySelector('.rb[data-v="saved"]').classList.toggle('has', savedMap.size>0);
 }
 
 const viewEl=document.getElementById('view');
@@ -1097,6 +1127,75 @@ const escA=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&
    문자열이 되어 링크가 죽고, 그림은 onerror가 지운다. */
 const safeU=u=>{const v=String(u??'').trim();
   return /^https?:\/\//i.test(v)?escA(v):'';};
+/* ---------------- 스킬 순위 (skills.sh) ----------------
+   매 회차 만든 data/skills.json 을 첫 진입 때 읽는다. 상승(최근 8주 활동)과
+   누적 설치 두 목록, 지난 회차 대비 순위 변화, 설치 명령 복사. */
+let SKILLS=null, skQ='', skTab='trending';
+function ensureSkills(){
+  if(SKILLS!==null) return;
+  SKILLS='loading';
+  fetch('data/skills.json')
+    .then(r=>{ if(!r.ok) throw 0; return r.json(); })
+    .then(j=>{ SKILLS=j; if(view==='skills') render(); })
+    .catch(()=>{ SKILLS='fail'; if(view==='skills') render(); });
+}
+const fmtN=n=>n==null?'':(n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1)+'K':String(n));
+function skRowsHTML(){
+  const rows=(SKILLS[skTab]||[]);
+  const q=skQ.trim().toLowerCase();
+  const list=q?rows.filter(r=>(r.name+' '+r.owner+'/'+r.repo).toLowerCase().includes(q)):rows;
+  if(!list.length) return '<div class="none">조건에 맞는 스킬이 없습니다.</div>';
+  return list.map(r=>{
+    const d = r.prev==null ? '<span class="skd new">NEW</span>'
+            : r.prev>r.rank ? '<span class="skd up">▲'+(r.prev-r.rank)+'</span>'
+            : r.prev<r.rank ? '<span class="skd dn">▼'+(r.rank-r.prev)+'</span>'
+            : '<span class="skd">–</span>';
+    const gh='https://github.com/'+encodeURIComponent(r.owner)+'/'+encodeURIComponent(r.repo);
+    const cmd='npx skills add '+gh+' --skill '+r.name;
+    return '<div class="sk">'
+      + '<span class="skr">'+r.rank+'</span>'+d
+      + '<div class="skm"><a class="skn" href="'+safeU(r.url)+'" target="_blank" rel="noopener noreferrer">'+escA(r.name)+'</a>'
+      +   '<a class="sko" href="'+gh+'" target="_blank" rel="noopener noreferrer">'+escA(r.owner+'/'+r.repo)+'</a></div>'
+      + '<span class="skv" title="'+(skTab==='trending'?'최근 8주 설치':'누적 설치')+'">'+fmtN(r.metric)+'</span>'
+      + '<button class="skc" data-cmd="'+escA(cmd)+'" title="설치 명령 복사">복사</button>'
+      + '<button class="ck sm'+(savedMap.has(r.url)?' on':'')+'" data-cksk="'+escA(r.url)+'" title="보관">'+I.chk+'</button>'
+      + '</div>';
+  }).join('');
+}
+function skillsHTML(){
+  let h=h1HTML('스킬 순위');
+  if(SKILLS===null||SKILLS==='loading') return h+'<div class="none">순위를 불러오는 중…</div>';
+  if(SKILLS==='fail') return h+'<div class="none">스킬 순위를 아직 불러올 수 없습니다. 다음 수집 회차 후 생성됩니다.</div>';
+  h+='<div class="sub"><a href="https://www.skills.sh" target="_blank" rel="noopener noreferrer">skills.sh</a> 리더보드 · '
+    +'상승은 최근 8주 설치, 누적은 전체 설치 기준 · 순위 변화는 지난 회차 대비'
+    +(SKILLS.updated?' · 갱신 '+SKILLS.updated.slice(0,16).replace('T',' ')+' UTC':'')+'</div>';
+  h+='<div class="bar">'
+    +'<div class="search">'+I.sch+'<input id="skq" placeholder="스킬 · 저장소 검색…" value="'+skQ.replace(/"/g,'&quot;')+'"></div>'
+    +'<div class="segs">'+[['trending','이번 주 상승'],['top','누적 설치']].map(([v,l])=>
+      '<button class="sg'+(skTab===v?' on':'')+'" data-sktab="'+v+'">'+l+'</button>').join('')+'</div>'
+    +'</div>';
+  return h+'<div id="skbody">'+skRowsHTML()+'</div>';
+}
+function bindSkBody(){
+  viewEl.querySelectorAll('[data-cksk]').forEach(b=>b.onclick=()=>{
+    const r=[...(SKILLS.trending||[]),...(SKILLS.top||[])].find(x=>x.url===b.dataset.cksk); if(!r) return;
+    toggleSaveEntry({url:r.url, title:r.name, kind:'skill', sub:r.owner+'/'+r.repo,
+      desc:'npx skills add https://github.com/'+r.owner+'/'+r.repo+' --skill '+r.name});
+    const box=document.getElementById('skbody'); if(box){ box.innerHTML=skRowsHTML(); bindSkBody(); }
+  });
+  viewEl.querySelectorAll('[data-cmd]').forEach(b=>b.onclick=()=>{
+    navigator.clipboard.writeText(b.dataset.cmd)
+      .then(()=>{ b.textContent='복사됨'; setTimeout(()=>b.textContent='복사',1200); })
+      .catch(()=>alert('복사에 실패했습니다. 직접 선택해 복사해 주세요.'));
+  });
+}
+function bindSkills(){
+  const qi=document.getElementById('skq');
+  if(qi) qi.oninput=e=>{ skQ=e.target.value; const box=document.getElementById('skbody'); if(box){ box.innerHTML=skRowsHTML(); bindSkBody(); } };
+  viewEl.querySelectorAll('[data-sktab]').forEach(b=>b.onclick=()=>{ skTab=b.dataset.sktab; render(); });
+  bindSkBody();
+}
+
 function ensureApis(){
   if(APIS!==null) return;
   APIS='loading';
@@ -1180,6 +1279,7 @@ function apiRowHTML(x,i){
     +(x.src==='kr'?'<span class="akr">KR</span>':'')
     +(x.auth?'<span class="abadge">'+escA(x.auth)+'</span>':'<span class="abadge free">인증 불필요</span>')
     +(open?'':'<span class="ap">'+escA(x.desc)+'</span>')
+    +'<button class="ck sm'+(savedMap.has(x.url)?' on':'')+'" data-ckapi="'+escA(x.url)+'" title="보관">'+I.chk+'</button>'
     +'</div>';
   if(open){
     h+='<div class="aibody">'
@@ -1290,6 +1390,12 @@ function refreshApiBody(){
   if(box){ box.innerHTML=apiBodyHTML(); bindApiBody(); }
 }
 function bindApiBody(){
+  viewEl.querySelectorAll('[data-ckapi]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation();
+    const x=(APIS.apis||[]).find(a=>a.url===b.dataset.ckapi); if(!x) return;
+    toggleSaveEntry({url:x.url, title:x.name, kind:'api', sub:apiCatLabel(x.cat), desc:x.desc||''});
+    refreshApiBody();
+  });
   viewEl.querySelectorAll('[data-acat]').forEach(b=>b.onclick=()=>{ apiCat=b.dataset.acat; apiOpen=-1; refreshApiBody(); });
   viewEl.querySelectorAll('[data-aback]').forEach(b=>b.onclick=()=>{ apiCat=null; apiOpen=-1; refreshApiBody(); });
   viewEl.querySelectorAll('[data-ai]').forEach(b=>b.onclick=()=>{
@@ -1312,58 +1418,38 @@ function render(){
 
   if(view==='about'){ viewEl.innerHTML=aboutHTML(); return; }
 
-  if(view==='src'){
-    let h=h1HTML('수집 소스')+'<div class="sub">매일 00시·08시·16시에 이 소스들을 훑습니다. 추가·제외는 말씀만 하세요.</div>';
-    /* 출처별 건수와, 그 안의 피드별 건수를 함께 센다. RSS는 피드 7개가
-       "블로그 · RSS" 하나로 뭉뚱그려져 있어 Hugging Face 같은 피드가 화면에서
-       보이지 않았다 (show-feeds-in-sources). 뷰 모델의 from이 RSS는 피드명,
-       레딧은 r/이름을 들고 있으므로 그걸로 묶는다. */
-    const c={}, sub={};
-    DATA.forEach(d=>{
-      c[d.src]=(c[d.src]||0)+1;
-      const f=d.from;
-      if(!f) return;
-      (sub[d.src]=sub[d.src]||{})[f]=(sub[d.src][f]||0)+1;
-    });
-    Object.keys(SRC).forEach(k=>{
-      const s=SRC[k];
-      /* 피드가 여럿인 출처만 펼친다 — 특정 출처를 하드코딩하지 않으므로
-         config에 피드를 추가해도 화면이 알아서 따라간다. */
-      const feeds=Object.entries(sub[k]||{}).sort((a,b)=>b[1]-a[1]);
-      const many=feeds.length>1;
-      h+='<div class="scard"><div style="min-width:0"><div class="sn">'
-        +'<span class="sq" style="width:9px;height:9px;border-radius:3px;background:'+s.color+';display:inline-block"></span>'
-        + s.name + (c[k] ? ' <span class="cnt">최근 '+c[k]+'건</span>'
-                         : ' <span class="cnt" style="background:#f0f0f4;color:#8b8b98">최근 0건</span>') + '</div>'
-        +'<div class="sd">'+s.desc+'</div>'
-        + (many ? '<div class="subfeeds">'+feeds.map(([name,n])=>
-              '<span class="subfeed">'+escA(name)+' <b>'+n+'</b></span>').join('')+'</div>' : '')
-        +'</div>'
-        +'<div class="tglb'+(s.on?'':' off')+'"></div></div>';
-    });
-    viewEl.innerHTML=h; return;
-  }
+  if(view==='skills'){ ensureSkills(); viewEl.innerHTML=skillsHTML(); bindSkills(); return; }
 
   const isSaved=view==='saved';
   let h=h1HTML(isSaved?'보관함':'오늘의 뉴스')
       + '<div class="sub">'+(isSaved
-          ? '체크한 기사만 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
+          ? '체크한 기사 · API · 스킬을 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
           : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차) · 하루 수백 건 중 회차당 20건을 고릅니다')+'</div>';
 
   if(isSaved){
     if(savedMap.size) h+='<button class="expbtn" onclick="copyMd()">선택 '+savedMap.size+'건 마크다운으로 복사</button>';
-    const items=[...savedMap.values()];
-    if(!items.length){
-      h+='<div class="none">아직 보관한 기사가 없습니다. 목록에서 체크박스를 눌러보세요.</div>';
+    const all=[...savedMap.values()];
+    const news=all.filter(sv=>(sv.kind||'news')==='news'), apis=all.filter(sv=>sv.kind==='api'), skills=all.filter(sv=>sv.kind==='skill');
+    if(!all.length){
+      h+='<div class="none">아직 보관한 항목이 없습니다. 기사 · API · 스킬 목록에서 체크 표시를 눌러보세요.</div>';
     } else {
-      items.forEach(sv=>{
+      if(news.length && (apis.length||skills.length)) h+='<div class="group">기사 · '+news.length+'건</div>';
+      news.forEach(sv=>{
         const d=DATA.find(x=>x.url===sv.url);
         if(d) h+=rowHTML({...d, i:DATA.indexOf(d)});
         else h+='<div class="row" data-au="'+escA(sv.url)+'" data-am="'+escA(sv.month)+'" style="cursor:pointer">'
               +'<button class="ck on" data-un="'+escA(sv.url)+'" title="보관 해제">'+I.chk+'</button>'
-              +'<div class="mid"><h2 class="rt">'+sv.title+'</h2>'
+              +'<div class="mid"><h2 class="rt">'+escA(sv.title)+'</h2>'
               +'<div class="rm"><span>'+(sv.month||'아카이브')+'</span></div></div></div>';
       });
+      /* API·스킬은 기사와 달리 본문이 없다 — 이름·부제·설명과 바깥 링크만. */
+      const plain=(sv,label)=>'<div class="row">'
+        +'<button class="ck on" data-un="'+escA(sv.url)+'" title="보관 해제">'+I.chk+'</button>'
+        +'<div class="mid"><h2 class="rt"><a href="'+safeU(sv.url)+'" target="_blank" rel="noopener noreferrer">'+escA(sv.title)+'</a></h2>'
+        +'<div class="rm"><span class="s">'+label+'</span>'+(sv.sub?'<span class="sep">·</span><span>'+escA(sv.sub)+'</span>':'')+'</div>'
+        +(sv.desc?'<div class="snip">'+escA(sv.desc)+'</div>':'')+'</div></div>';
+      if(apis.length){ h+='<div class="group">무료 API · '+apis.length+'건</div>'; apis.forEach(sv=>h+=plain(sv,'API')); }
+      if(skills.length){ h+='<div class="group">스킬 · '+skills.length+'건</div>'; skills.forEach(sv=>h+=plain(sv,'스킬')); }
     }
     viewEl.innerHTML=h; bind(); return;
   }
@@ -1865,12 +1951,17 @@ function closeDetail(){
   if(closePanels()) popOverlay();
 }
 function copyMd(){
-  const md=[...savedMap.values()]
-    .map(sv=>{
-      const d=DATA.find(x=>x.url===sv.url);
-      return '- ['+sv.title+']('+sv.url+')'+(d&&d.snip?'\n  '+d.snip:'');
-    }).join('\n');
-  navigator.clipboard.writeText('## __DATE__ 개발·AI 뉴스\n\n'+md)
+  const all=[...savedMap.values()];
+  const line=sv=>{
+    const d=DATA.find(x=>x.url===sv.url);
+    return '- ['+sv.title+']('+sv.url+')'+(sv.sub?' — '+sv.sub:'')+((d&&d.snip)||sv.desc?'\n  '+((d&&d.snip)||sv.desc):'');
+  };
+  const parts=[];
+  for(const [kind,label] of [['news','개발·AI 뉴스'],['api','무료 API'],['skill','에이전트 스킬']]){
+    const xs=all.filter(sv=>(sv.kind||'news')===kind);
+    if(xs.length) parts.push('## __DATE__ '+label+'\n\n'+xs.map(line).join('\n'));
+  }
+  navigator.clipboard.writeText(parts.join('\n\n'))
     .then(()=>alert('클립보드에 복사했습니다.'))
     .catch(()=>alert('복사에 실패했습니다. 직접 선택해 복사해 주세요.'));
 }

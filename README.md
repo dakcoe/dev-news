@@ -28,7 +28,7 @@
 | 저장 | 월별 샤드 + 월별 검색 색인 + 후보 로그 | `news/core/archive.py` · `candidates.py` |
 | 렌더 | 템플릿 하나에 최근 30일 기사를 구워 넣는다. SEO 파일(sitemap·robots·llms.txt)도 여기서 | `news/render.py` · `template.html` |
 
-기사와 별개로 무료 API 카탈로그(`news/apis_catalog.py`)를 매 회차 다시 파싱해 `docs/data/apis.json`으로 내보낸다.
+기사와 별개로 무료 API 카탈로그(`news/apis_catalog.py` → `docs/data/apis.json`)와 skills.sh 에이전트 스킬 순위(`news/skills_catalog.py` → `docs/data/skills.json`, 지난 회차 대비 순위 변화 포함)를 매 회차 다시 만든다.
 
 ## 디렉터리
 

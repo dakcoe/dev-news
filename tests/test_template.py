@@ -167,8 +167,9 @@ def test_update_schedule_text_matches_schedule(html):
     수집 워크플로에 cron 이 다시 생기지 않았는지 본다(생기면 회차가 두 배다).
     """
     assert "9시" not in html
-    # 소스 뷰 + 뉴스 뷰 서브텍스트 + 스크립트 실행 전 목록(add-seo-prerender)
-    assert html.count("매일 00시·08시·16시") == 3
+    # 뉴스 뷰 서브텍스트 + 스크립트 실행 전 목록(add-seo-prerender). 수집 소스 화면은
+    # 스킬 순위로 바뀌어 사라졌다.
+    assert html.count("매일 00시·08시·16시") == 2
     with open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8") as f:
         assert "cron:" not in f.read()
 
@@ -370,3 +371,18 @@ def test_회차_안을_주제로_묶는다(html):
 def test_목록과_소개_아래에_같은_푸터(html):
     assert html.count('class="foot"') >= 1
     assert "+FOOT_HTML;" in html
+
+
+def test_API와_스킬도_보관함에_들어간다(html):
+    """보관 항목에 kind 가 붙고, 기사가 아닌 것은 이름·부제·바깥 링크로 보인다."""
+    assert 'data-ckapi="' in html and 'data-cksk="' in html
+    assert "kind:item.kind||'news'" in html, "옛 저장분은 기사로 읽는다"
+    assert "function toggleSaveEntry(e)" in html
+    assert "'<div class=\"group\">무료 API · '" in html and "'<div class=\"group\">스킬 · '" in html
+    assert "['skill','에이전트 스킬']" in html, "마크다운 복사도 종류별"
+
+
+def test_레일_순서(html):
+    import re
+    rail = re.search(r'<nav class="rail">(.*?)</nav>', html, re.S).group(1)
+    assert re.findall(r'data-v="([a-z]+)"', rail) == ["news", "api", "skills", "saved", "about"]
