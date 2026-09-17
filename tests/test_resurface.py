@@ -61,7 +61,7 @@ def test_다시_실리면_기록이_지금으로_갱신된다(tmp_path):
 def test_설정과_화면이_연결돼_있다():
     import yaml
     cfg = yaml.safe_load(open(os.path.join(ROOT, "config.yaml"), encoding="utf-8"))
-    assert cfg["seen"]["resurface_days"]["github"] == 90
+    assert cfg["seen"]["resurface_days"]["github"] == 30
     b = open(os.path.join(ROOT, "build.py"), encoding="utf-8").read()
     assert 'resurface_days=(cfg.get("seen") or {}).get("resurface_days")' in b
     r = open(os.path.join(ROOT, "news", "render.py"), encoding="utf-8").read()
