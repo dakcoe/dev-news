@@ -349,10 +349,10 @@ def test_공유_버튼이_원문_열기와_같은_높이다(html):
     assert "box-shadow:inset 0 0 0 1.5px var(--line)" in html
 
 
-def test_좁은_화면_공유_메뉴는_위로_연다(html):
-    """버튼이 상세의 맨 아래라 아래로 열면 화면 밖으로 나가서 한 번 더 내려야
-    보였다."""
-    assert ".sharemenu{left:auto;right:0;top:auto;bottom:calc(100% + 8px)}" in html
+def test_공유_메뉴는_어디서든_위로_연다(html):
+    """버튼이 상세의 맨 아래라 아래로 열면 데스크톱에서도 화면 밖으로 나가서
+    한 번 더 내려야 보였다."""
+    assert ".sharemenu{min-width:186px;top:auto;bottom:calc(100% + 8px)}" in html
 
 
 def test_카드에_중요한_이유가_실린다(html):
