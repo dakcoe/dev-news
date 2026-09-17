@@ -74,3 +74,32 @@ def test_화면은_레일에서_수집_소스_자리를_쓴다():
     assert "view==='src'" not in t
     assert "npx skills add '+gh+' --skill '+r.name" in t
     assert "safeU(r.url)" in t, "순위표 주소도 남이 정하는 값처럼 다룬다"
+
+
+def test_스킬_페이지의_설명을_읽는다():
+    d = SC.parse_desc(_fx("skill_page_head.html"))
+    assert d.startswith("Helps users discover and install agent skills")
+
+
+def test_설명은_지난_스냅샷에서_이어받고_없는_것만_읽는다():
+    prev = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "desc": "이미 있음"}]
+    rows = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "url": SC.SITE + "/o/r/a"},
+            {"rank": 2, "name": "b", "owner": "o", "repo": "r", "url": SC.SITE + "/o/r/b"}]
+    calls = []
+    def fake(path):
+        calls.append(path); return '<html><head><meta name="description" content="새로 읽음"></head></html>'
+    got = SC.fill_descs(rows, prev, fetch=fake)
+    assert got == 1 and calls == ["/o/r/b"]
+    assert rows[0]["desc"] == "이미 있음" and rows[1]["desc"] == "새로 읽음"
+
+
+def test_한_회차에_읽는_설명_수에_상한이_있다():
+    rows = [{"rank": i, "name": f"s{i}", "owner": "o", "repo": "r", "url": SC.SITE + f"/o/r/s{i}"} for i in range(10)]
+    calls = []
+    SC.fill_descs(rows, [], fetch=lambda p: (calls.append(p), "<html></html>")[1], limit=3)
+    assert len(calls) == 3
+
+
+def test_화면에_설명과_빈_변화칸(monkeypatch):
+    t = open(os.path.join(ROOT, "news", "template.html"), encoding="utf-8").read()
+    assert "class=\"skdesc\"" in t and "'<span class=\"skd none\"></span>'" in t

@@ -510,7 +510,11 @@ __ADS_HEAD__
   .skr{font-size:14px;font-weight:700;color:var(--tx3);text-align:right;font-variant-numeric:tabular-nums}
   .skd{font-size:11.5px;font-weight:800;text-align:center;padding:2px 6px;border-radius:6px;background:#f0f0f5;color:var(--tx3)}
   .skd.up{background:#e6f6ec;color:#1f7a44} .skd.dn{background:#fdeef2;color:#c2415e} .skd.new{background:var(--pri-bg);color:var(--pri-dk)}
+  .skd.none{background:none}
+  .skdesc{font-size:13px;color:var(--tx2);line-height:1.5;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .skm{min-width:0;display:flex;flex-direction:column}
+  .sk{align-items:start}
+  .sk .skr,.sk .skd,.sk .skv,.sk .skc,.sk .ck{margin-top:3px}
   .skn{font-size:15.5px;font-weight:700;color:var(--tx);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .skn:hover{color:var(--pri-dk)}
   .sko{font-size:12.5px;color:var(--tx3);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1146,16 +1150,18 @@ function skRowsHTML(){
   const list=q?rows.filter(r=>(r.name+' '+r.owner+'/'+r.repo).toLowerCase().includes(q)):rows;
   if(!list.length) return '<div class="none">조건에 맞는 스킬이 없습니다.</div>';
   return list.map(r=>{
+    /* 순위 변화. 그대로면 칸을 비운다 — '–'를 그림 자리로 오해했다. */
     const d = r.prev==null ? '<span class="skd new">NEW</span>'
             : r.prev>r.rank ? '<span class="skd up">▲'+(r.prev-r.rank)+'</span>'
             : r.prev<r.rank ? '<span class="skd dn">▼'+(r.rank-r.prev)+'</span>'
-            : '<span class="skd">–</span>';
+            : '<span class="skd none"></span>';
     const gh='https://github.com/'+encodeURIComponent(r.owner)+'/'+encodeURIComponent(r.repo);
     const cmd='npx skills add '+gh+' --skill '+r.name;
     return '<div class="sk">'
       + '<span class="skr">'+r.rank+'</span>'+d
       + '<div class="skm"><a class="skn" href="'+safeU(r.url)+'" target="_blank" rel="noopener noreferrer">'+escA(r.name)+'</a>'
-      +   '<a class="sko" href="'+gh+'" target="_blank" rel="noopener noreferrer">'+escA(r.owner+'/'+r.repo)+'</a></div>'
+      +   '<a class="sko" href="'+gh+'" target="_blank" rel="noopener noreferrer">'+escA(r.owner+'/'+r.repo)+'</a>'
+      +   (r.desc?'<span class="skdesc">'+escA(r.desc)+'</span>':'')+'</div>'
       + '<span class="skv" title="'+(skTab==='trending'?'최근 8주 설치':'누적 설치')+'">'+fmtN(r.metric)+'</span>'
       + '<button class="skc" data-cmd="'+escA(cmd)+'" title="설치 명령 복사">복사</button>'
       + '<button class="ck sm'+(savedMap.has(r.url)?' on':'')+'" data-cksk="'+escA(r.url)+'" title="보관">'+I.chk+'</button>'
