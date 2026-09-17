@@ -73,6 +73,7 @@ def test_화면은_레일에서_수집_소스_자리를_쓴다():
     assert 'data-v="skills"' in t and 'data-v="src"' not in t
     assert "view==='src'" not in t
     assert "npx skills add '+gh+' --skill '+r.name" in t
+    assert 'class="skav"' in t and "data-ski=" in t and 'class="skbody"' in t
     assert "safeU(r.url)" in t, "순위표 주소도 남이 정하는 값처럼 다룬다"
 
 
