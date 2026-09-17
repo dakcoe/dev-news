@@ -168,8 +168,15 @@ def translate_descs(rows: list[dict], previous: list[dict], call=None,
     for i in range(0, len(todo), batch):
         chunk = todo[i:i + batch]
         items = "\n".join(f"{j + 1}. {r['desc']}" for j, r in enumerate(chunk))
+        prompt = KO_PROMPT.format(items=items)
         try:
-            got = _parse_numbered(call(KO_PROMPT.format(items=items)), len(chunk))
+            try:
+                text = call(prompt)
+            except S.RateLimited as e:          # 분당 한도 — 기다렸다 한 번만 더
+                import time
+                time.sleep(min(e.wait, 30) + 1)
+                text = call(prompt)
+            got = _parse_numbered(text, len(chunk))
         except Exception as e:
             print(f"[skills] 번역 호출 실패 — 다음 회차에 다시: {e}")
             break
