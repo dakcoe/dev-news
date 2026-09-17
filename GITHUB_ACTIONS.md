@@ -133,7 +133,7 @@ git push origin main
 - `pull --rebase -X theirs`는 충돌 시 방금 만든 데이터를 남긴다. 그래서 `fetch-depth: 0`으로 전체 이력을 받는다. 얕은 체크아웃이면 공통 조상을 못 찾아 rebase가 실패한다.
 - 커밋 작성자는 수집 기계의 git 설정을 따른다(`git config user.name / user.email`). 자기 계정 이메일이면 기여 그래프에 찍힌다. 비상용 `daily.yml`은 `github-actions[bot]`으로 남긴다.
 
-작업용 클론에서 코드를 고쳐 push할 때 수집 커밋과 겹치면 거부된다. `git pull --rebase` 후 다시 push하면 된다. `docs/index.html`이 충돌하면 어느 쪽이든 받고 저장된 기사로 `render()`만 다시 돌리면 된다.
+화면만 고쳤을 때는 `scripts/rerender.sh`를 쓴다 — pull → 렌더 → 커밋 → 푸시를 한 번에 한다. 수집은 다른 클론이 하므로 pull 없이 렌더하면 옛 기사로 페이지를 만들어 원격과 충돌한다.
 
 ## 5. 알림
 
