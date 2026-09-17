@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-08T20:58:58+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-09T03:19:08+09:00",
    "total": 17,
    "counts": {
@@ -443,6 +434,33 @@
      "url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
      "source": "hackernews",
      "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-18T08:00:32+09:00",
+   "total": 17,
+   "counts": {
+    "blocked": 2,
+    "ok": 12,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/astra-for-law/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.economist.com/science-and-technology/2026/09/16/artificial-intelligence-now-beats-some-of-the-best-human-forecasters",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=49742976",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
