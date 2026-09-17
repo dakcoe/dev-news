@@ -103,7 +103,7 @@ def _insert_by_batch(local: list[dict], missing: list[dict]) -> list[dict]:
 
 
 def merge_shards() -> int:
-    """월별 기사 샤드. 같은 기사인지는 url로 가린다."""
+    """월별 기사 샤드. 같은 기사인지는 url 과 회차로 가린다."""
     shard_dir = os.path.join(ROOT, "docs", "data", "articles")
     names = set(os.listdir(shard_dir)) if os.path.isdir(shard_dir) else set()
     try:
@@ -122,9 +122,11 @@ def merge_shards() -> int:
         local = local or []
         # 같은 기사인지는 archive·seen·중복제거와 같은 규칙으로 가린다. 주소를
         # 그대로 비교하면 끝 슬래시 하나 차이로 같은 기사가 두 번 들어간다.
-        have = {normalize_url(a.get("url")) or a.get("url") for a in local}
-        missing = [a for a in remote
-                   if (normalize_url(a.get("url")) or a.get("url")) not in have]
+        # 회차까지 같아야 같은 항목이다 — 다시 트렌딩에 오른 저장소는 같은 URL 로
+        # 다른 회차에 한 번 더 실린다.
+        key = lambda a: (normalize_url(a.get("url")) or a.get("url"), a.get("batch") or "")
+        have = {key(a) for a in local}
+        missing = [a for a in remote if key(a) not in have]
         if missing:
             # 있는 줄은 건드리지 않고 빠진 것만 제자리에 끼운다. 전체를 다시
             # 정렬하면 회차 안의 순서가 바뀌어 파일이 통째로 새로 쌓인다 —

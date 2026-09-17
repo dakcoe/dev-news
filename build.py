@@ -223,7 +223,8 @@ def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[di
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
 
-    fresh = seen_db.filter_unseen(page_eligible(articles))
+    fresh = seen_db.filter_unseen(page_eligible(articles),
+                                  resurface_days=(cfg.get("seen") or {}).get("resurface_days"))
     picked = pick(fresh, top_n + overpick, sc.get("per_source", 5),
                   quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page,
                   quota_backfill=cfg.get("quota_backfill", {}),

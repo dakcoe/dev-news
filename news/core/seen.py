@@ -36,19 +36,51 @@ def load_seen(path: str = DEFAULT_PATH) -> set[str]:
     return {normalize_url(k) or k for k in _load(path)}
 
 
-def filter_unseen(articles: list[dict], path: str = DEFAULT_PATH) -> list[dict]:
-    seen = load_seen(path)
-    # 기억 상태를 항상 찍는다. 0건이면 seen.json이 비었거나 덮어써진 것이다.
+def _seen_at(value: str):
+    """기록 시각. 옛 파일에는 다른 형식이 섞여 있을 수 있다 — 못 읽으면 None."""
+    try:
+        dt = datetime.fromisoformat(str(value))
+        return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def filter_unseen(articles: list[dict], path: str = DEFAULT_PATH,
+                  resurface_days: dict[str, int] | None = None) -> list[dict]:
+    """이미 소개한 기사를 뺀다.
+
+    resurface_days 에 든 출처는 예외다 — 기록된 지 그 날짜가 지났으면 다시
+    후보가 되고, 기사에 resurfaced(지난 게시일)가 붙는다. 깃허브 저장소가 몇 달
+    뒤 다시 트렌딩에 오르는 경우를 위한 것이다. 기록 시각을 못 읽는 항목은
+    안전하게 '본 것'으로 친다.
+    """
+    raw = _load(path)
+    seen = {normalize_url(k) or k: v for k, v in raw.items()}
     print(f"[seen] 기억 중인 URL {len(seen)}건 ({path})")
-    fresh = [a for a in articles if (normalize_url(a["url"]) or a["url"]) not in seen]
+    rule = resurface_days or {}
+    now = datetime.now(timezone.utc)
+    fresh, again = [], 0
+    for a in articles:
+        key = normalize_url(a["url"]) or a["url"]
+        if key not in seen:
+            fresh.append(a)
+            continue
+        days = rule.get(a.get("source") or "")
+        at = _seen_at(seen[key]) if days else None
+        if at is not None and (now - at).days >= days:
+            fresh.append({**a, "resurfaced": at.date().isoformat()})
+            again += 1
     if len(fresh) != len(articles):
         print(f"[seen] 이미 소개한 {len(articles) - len(fresh)}건 제외")
+    if again:
+        print(f"[seen] 기간이 지나 다시 후보가 된 {again}건")
     return fresh
 
 
 def mark_seen(articles: list[dict], path: str = DEFAULT_PATH) -> None:
-    # 영구 유지 (SPEC 2.3) — 만료를 두면 30일 뒤 다시 트렌딩에 오른 기사가 중복 등장한다.
-    # URL 집합이라 무한 누적해도 용량 문제가 없다.
+    # 영구 유지 (SPEC 2.3). 다시 실을 수 있는 출처(config seen.resurface_days)는
+    # 읽을 때 기록 시각으로 가리므로 여기서는 늘 지금 시각으로 덮어쓴다 —
+    # 다시 실리면 그때부터 다시 기간을 센다.
     # 키를 정규화해 다시 쓴다. 옛 파일의 원문 주소 키도 이때 한 번에 맞춰진다.
     old = _load(path)
     data: dict[str, str] = {}

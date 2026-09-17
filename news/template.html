@@ -854,6 +854,7 @@ function rowHTML(d){
   let meta='<span class="s" style="color:'+s.color+'">'+(d.from||s.name)+'</span>';
   if(d.src==='github' && d.delta) meta+='<span class="sep">·</span><span class="num">+'+d.delta.toLocaleString()+'</span>';
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
+  if(d.again) meta+='<span class="tg hit" title="지난 게시 '+escA(d.again)+'">다시 트렌딩</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
   (d.tags||[]).forEach(t=>{
     meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+escA(tagLabel(t))+'</span>';
@@ -1582,6 +1583,7 @@ function showDetail(d){
   else if(d.dateLabel) meta+='<span class="sep">·</span><span>'+d.dateLabel+'</span>';
   if(d.cm) meta+='<span class="sep">·</span><span>'+d.cm+'댓글</span>';
   if(d.delta) meta+='<span class="sep">·</span><span>스타 +'+d.delta.toLocaleString()+'</span>';
+  if(d.again) meta+='<span class="sep">·</span><span>다시 트렌딩 (지난 게시 '+escA(d.again)+')</span>';
   /* 본문은 문단 목록으로 받아 여기서 <p>를 만든다. 서버가 HTML 문자열을
      조립해 보내면 이스케이프할 자리가 사라진다. */
   const paras=(d.paras&&d.paras.length?d.paras:[d.snip||'(요약 없음)']);
@@ -1620,7 +1622,7 @@ function openDetail(i){
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,
     paras:d.paras, snip:d.snip,
-    why:d.why||'', url:d.url, month:d.month, bodyFrom:d.bodyFrom
+    why:d.why||'', url:d.url, month:d.month, bodyFrom:d.bodyFrom, again:d.again
   });
   render();
 }
