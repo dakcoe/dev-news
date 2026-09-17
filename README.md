@@ -68,8 +68,8 @@ python build.py            # 전체 실행 — .env에 GROQ_API_KEY 필요
 
 `.env.example`을 `.env`로 복사해 키를 채운다. 결과는 `docs/index.html`.
 
-화면만 고쳤을 때는 수집을 다시 돌리지 않는다. 저장된 기사를 읽어 `render()`만 부르면
-수집도 LLM 호출도 없다.
+화면만 고쳤을 때는 수집을 다시 돌리지 않는다. `scripts/rerender.sh`가 pull → 렌더 → 커밋 →
+푸시를 한 번에 한다 (수집도 LLM 호출도 없다).
 
 ## 실행 방식
 
