@@ -176,7 +176,7 @@ __ADS_HEAD__
   }
   .rb:hover{background:#eeeef3;color:var(--tx2)}
   .rb.on{background:var(--pri-bg);color:var(--pri-dk)}
-  .rb svg{width:25px;height:25px;stroke-width:1.9}
+  .rb svg{width:25px;height:25px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
   .rb .dot{position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;
            background:var(--pri);display:none}
   .rb.has .dot{display:block}
@@ -669,13 +669,13 @@ __ADS_HEAD__
 
 <nav class="rail">
   <button class="rb on" data-v="news" title="오늘의 뉴스">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h11a1 1 0 011 1v12a2 2 0 002 2H5a1 1 0 01-1-1V5z"/><path d="M16 8h3a1 1 0 011 1v9a2 2 0 01-2 2"/><path d="M7 8h6M7 12h6M7 16h4"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/><path d="M8 8h4v4H8zM15 9h1M15 12h1M8 16h8"/></svg>
   </button>
   <button class="rb" data-v="api" title="무료 API 목록">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 01-10 0V7zM12 16v5"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9.5 4C7.5 4 6.5 5 6.5 7v3c0 1.2-.8 2-2 2 1.2 0 2 .8 2 2v3c0 2 1 3 3 3M14.5 4c2 0 3 1 3 3v3c0 1.2.8 2 2 2-1.2 0-2 .8-2 2v3c0 2-1 3-3 3"/></svg>
   </button>
   <button class="rb" data-v="skills" title="스킬 순위">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20v-7M10 20V5M16 20v-10M22 20H2"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 4h8v5.5a4 4 0 01-8 0V4z"/><path d="M16 6h2.5a.5.5 0 01.5.5V8a3 3 0 01-3 3M8 6H5.5a.5.5 0 00-.5.5V8a3 3 0 003 3M12 13.5V17M9 20h6M10 17h4v3"/></svg>
   </button>
   <button class="rb" data-v="saved" title="보관함">
     <span class="dot"></span>
