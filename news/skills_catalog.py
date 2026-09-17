@@ -25,6 +25,8 @@ SITE = "https://www.skills.sh"
 PAGES = {"trending": "/trending", "top": "/"}
 MIN_ROWS = 50        # 이보다 적게 읽히면 화면이 바뀐 것이다 — 기존 파일을 지킨다
 KEEP = 100           # 목록마다 앞에서부터 이만큼
+DESC_PER_RUN = 60    # 한 회차에 새로 읽는 설명 수. 나머지는 다음 회차가 채운다
+DESC_WORKERS = 6
 
 _NUM = re.compile(r"^([\d.]+)\s*([KMB]?)$", re.I)
 
@@ -84,6 +86,39 @@ def with_delta(rows: list[dict], previous: list[dict] | None) -> list[dict]:
     return [{**r, "prev": prev.get(_key(r))} for r in rows]
 
 
+def parse_desc(html: str) -> str:
+    """스킬 페이지의 meta description. 사이트가 SKILL.md 의 description 을 그대로
+    넣어 준다(영문, 160자쯤에서 …로 잘림)."""
+    soup = BeautifulSoup(html, "html.parser")
+    m = soup.select_one('meta[name="description"]') or soup.select_one('meta[property="og:description"]')
+    return (m.get("content") or "").strip() if m else ""
+
+
+def fill_descs(rows: list[dict], previous: list[dict], fetch=None, limit: int = DESC_PER_RUN) -> int:
+    """설명을 채운다. 지난 스냅샷에 있던 것은 그대로 쓰고, 없는 것만 페이지를
+    읽는다 — 한 회차에 limit 개까지. 그래서 첫 회차 뒤로는 새 스킬 몇 개만
+    읽는다. 못 읽은 것은 빈 채로 두고 다음 회차가 다시 시도한다."""
+    from concurrent.futures import ThreadPoolExecutor
+    fetch = fetch or fetch_page
+    known = {_key(r): r.get("desc") for r in (previous or []) if r.get("desc")}
+    todo = []
+    for r in rows:
+        r["desc"] = known.get(_key(r), "")
+        if not r["desc"]:
+            todo.append(r)
+    todo = todo[:limit]
+
+    def one(r):
+        try:
+            return parse_desc(fetch(r["url"][len(SITE):]))
+        except Exception:
+            return ""
+    with ThreadPoolExecutor(DESC_WORKERS) as pool:
+        for r, d in zip(todo, pool.map(one, todo)):
+            r["desc"] = d
+    return sum(1 for r in todo if r["desc"])
+
+
 def fetch_page(path: str) -> str:
     resp = http.get_capped(SITE + path, timeout=20)
     resp.raise_for_status()
@@ -102,11 +137,21 @@ def build(out_path: str, fetch=None) -> dict:
     fetch = fetch or fetch_page          # 실행 시점에 찾는다 — 테스트가 바꿔 끼울 수 있게
     previous = _previous(out_path)
     data = {"updated": datetime.now(timezone.utc).isoformat(), "site": SITE}
+    lists = {}
     for key, path in PAGES.items():
         rows = parse_rows(fetch(path))
         if len(rows) < MIN_ROWS:
             raise RuntimeError(f"{path} 에서 {len(rows)}행만 읽혔다 — 화면이 바뀐 듯하다")
-        data[key] = with_delta(rows, previous.get(key))
+        lists[key] = with_delta(rows, previous.get(key))
+    # 설명은 두 목록을 합쳐 한 번만 읽는다 — 같은 스킬이 양쪽에 있는 일이 많다
+    prev_all = (previous.get("trending") or []) + (previous.get("top") or [])
+    got = fill_descs(lists["trending"] + lists["top"], prev_all, fetch)
+    seen: dict[str, str] = {}
+    for r in lists["trending"] + lists["top"]:      # 한쪽에서 읽은 설명을 다른 쪽에도
+        seen.setdefault(_key(r), r["desc"]) if r["desc"] else None
+        r["desc"] = r["desc"] or seen.get(_key(r), "")
+    data.update(lists)
+    data["desc_fetched"] = got
     return data
 
 
@@ -121,5 +166,7 @@ def sync(out_path: str) -> bool:
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False)
     new = sum(1 for r in data["trending"] if r["prev"] is None)
-    print(f"[skills] 순위 갱신: 상승 {len(data['trending'])}건(새 진입 {new}) · 누적 {len(data['top'])}건")
+    missing = sum(1 for r in data["trending"] + data["top"] if not r.get("desc"))
+    print(f"[skills] 순위 갱신: 상승 {len(data['trending'])}건(새 진입 {new}) · 누적 {len(data['top'])}건"
+          f" · 설명 새로 읽음 {data.get('desc_fetched', 0)}건 · 아직 없음 {missing}건")
     return True
