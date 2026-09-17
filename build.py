@@ -26,7 +26,7 @@ from datetime import datetime
 
 import yaml
 
-from news import apis_catalog
+from news import apis_catalog, skills_catalog
 from news.core import archive, candidates, source_health
 from news.core import seen as seen_db
 from news.core.dedup import merge_duplicates
@@ -301,6 +301,8 @@ def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
                       health=cfg.get("apis", {}).get("health"),
                       cache_path=os.path.join(ROOT, "data", "api_health.json"))
+    # 에이전트 스킬 순위 (skills.sh) — 같은 이유로 실패해도 회차를 죽이지 않는다
+    skills_catalog.sync(os.path.join(ROOT, "docs", "data", "skills.json"))
 
 
 def main() -> int:
