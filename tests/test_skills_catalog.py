@@ -74,6 +74,8 @@ def test_화면은_레일에서_수집_소스_자리를_쓴다():
     assert "view==='src'" not in t
     assert "npx skills add '+gh+' --skill '+r.name" in t
     assert 'class="skav"' in t and "data-ski=" in t and 'class="skbody"' in t
+    assert "escA(r.desc_ko||r.desc)" in t, "번역이 있으면 번역을, 없으면 영문을"
+    assert "'<span class=\"skr\">'+r.rank+d+'</span>'" in t, "변동 칩은 순위 아래에"
     assert "safeU(r.url)" in t, "순위표 주소도 남이 정하는 값처럼 다룬다"
 
 
@@ -104,3 +106,40 @@ def test_한_회차에_읽는_설명_수에_상한이_있다():
 def test_화면에_설명과_빈_변화칸(monkeypatch):
     t = open(os.path.join(ROOT, "news", "template.html"), encoding="utf-8").read()
     assert "class=\"skdesc\"" in t and "'<span class=\"skd none\"></span>'" in t
+
+
+def test_번역은_열_개씩_묶어_부르고_결과를_나눈다():
+    rows = [{"rank": i, "name": f"s{i}", "owner": "o", "repo": "r", "desc": f"english {i}"} for i in range(12)]
+    calls = []
+    def fake(prompt):
+        calls.append(prompt)
+        n = prompt.count("\n") - prompt.rstrip().count("\n\n") - 3   # 항목 줄 수는 아래에서 다시 센다
+        items = [l for l in prompt.splitlines() if l[:1].isdigit()]
+        return "\n".join(f"{i + 1}. 한국어 {i}" for i in range(len(items)))
+    done = SC.translate_descs(rows, [], call=fake)
+    assert done == 12 and len(calls) == 2
+    assert rows[0]["desc_ko"] == "한국어 0" and rows[11]["desc_ko"] == "한국어 1"   # 둘째 묶음의 두 번째
+
+
+def test_번역은_지난_스냅샷에서_이어받는다():
+    prev = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "desc_ko": "예전 번역"}]
+    rows = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "desc": "x"},
+            {"rank": 2, "name": "b", "owner": "o", "repo": "r", "desc": "y"}]
+    calls = []
+    SC.translate_descs(rows, prev, call=lambda p: (calls.append(p), "1. 새 번역")[1])
+    assert rows[0]["desc_ko"] == "예전 번역" and rows[1]["desc_ko"] == "새 번역" and len(calls) == 1
+
+
+def test_개수가_안_맞거나_한자가_섞이면_버린다():
+    rows = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "desc": "x"},
+            {"rank": 2, "name": "b", "owner": "o", "repo": "r", "desc": "y"}]
+    assert SC.translate_descs(rows, [], call=lambda p: "1. 하나만") == 0
+    assert rows[0]["desc_ko"] == ""
+    assert SC.translate_descs(rows, [], call=lambda p: "1. 漢字 섞임\n2. 정상") == 1
+    assert rows[0]["desc_ko"] == "" and rows[1]["desc_ko"] == "정상"
+
+
+def test_키가_없으면_번역하지_않는다(monkeypatch):
+    monkeypatch.delenv("GROQ_API_KEY", raising=False)
+    rows = [{"rank": 1, "name": "a", "owner": "o", "repo": "r", "desc": "x"}]
+    assert SC.translate_descs(rows, []) == 0

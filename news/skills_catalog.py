@@ -27,6 +27,8 @@ MIN_ROWS = 50        # 이보다 적게 읽히면 화면이 바뀐 것이다 —
 KEEP = 100           # 목록마다 앞에서부터 이만큼
 DESC_PER_RUN = 60    # 한 회차에 새로 읽는 설명 수. 나머지는 다음 회차가 채운다
 DESC_WORKERS = 6
+KO_PER_RUN = 60      # 한 회차에 번역하는 설명 수 (10개씩 묶어 부르므로 호출 6회)
+KO_BATCH = 10
 
 _NUM = re.compile(r"^([\d.]+)\s*([KMB]?)$", re.I)
 
@@ -119,6 +121,68 @@ def fill_descs(rows: list[dict], previous: list[dict], fetch=None, limit: int = 
     return sum(1 for r in todo if r["desc"])
 
 
+KO_PROMPT = """아래 영문 설명들을 각각 자연스러운 한국어 한두 문장으로 옮겨라.
+제품명·도구명·명령어·저장소명 같은 고유명사와 코드는 영문 그대로 둔다. 원문에 없는 내용을 덧붙이지 마라.
+출력은 번호와 번역문만, 한 줄에 하나씩. 다른 말은 붙이지 마라.
+
+{items}
+"""
+
+
+def _parse_numbered(text: str, n: int) -> list[str] | None:
+    """"1. …" 꼴 n 줄을 순서대로. 개수가 안 맞으면 None — 다음 회차에 다시 한다."""
+    import re as _re
+    found = {}
+    for line in text.splitlines():
+        m = _re.match(r"\s*(\d+)[.)]\s*(.+)", line)
+        if m:
+            found[int(m.group(1))] = m.group(2).strip()
+    out = [found.get(i + 1, "") for i in range(n)]
+    return out if all(out) else None
+
+
+def translate_descs(rows: list[dict], previous: list[dict], call=None,
+                    limit: int = KO_PER_RUN, batch: int = KO_BATCH) -> int:
+    """영문 설명을 한국어로. 지난 스냅샷의 번역은 이어받고 없는 것만 부른다.
+
+    호출은 요약기와 같은 경로(summarizer._call)다. 열 개씩 묶어 한 번에 보내
+    회차당 호출을 몇 번으로 줄인다. 번역에 한자·가나가 섞이면 버린다 — 요약과
+    같은 기준이다. 키가 없으면(로컬 실행) 아무것도 안 한다."""
+    from news import summarizer as S
+    known = {_key(r): r.get("desc_ko") for r in (previous or []) if r.get("desc_ko")}
+    todo = []
+    for r in rows:
+        r["desc_ko"] = known.get(_key(r), "")
+        if r.get("desc") and not r["desc_ko"]:
+            todo.append(r)
+    todo = todo[:limit]
+    if not todo:
+        return 0
+    api_key = os.environ.get("GROQ_API_KEY") or ""
+    if call is None:
+        if not api_key:
+            return 0
+        model = S.DEFAULT_MODELS.get("groq")
+        call = lambda prompt: S._call(prompt, "groq", model, api_key)
+    done = 0
+    for i in range(0, len(todo), batch):
+        chunk = todo[i:i + batch]
+        items = "\n".join(f"{j + 1}. {r['desc']}" for j, r in enumerate(chunk))
+        try:
+            got = _parse_numbered(call(KO_PROMPT.format(items=items)), len(chunk))
+        except Exception as e:
+            print(f"[skills] 번역 호출 실패 — 다음 회차에 다시: {e}")
+            break
+        if not got:
+            continue
+        for r, ko in zip(chunk, got):
+            if S.FOREIGN_RE.search(ko):
+                continue
+            r["desc_ko"] = ko
+            done += 1
+    return done
+
+
 def fetch_page(path: str) -> str:
     resp = http.get_capped(SITE + path, timeout=20)
     resp.raise_for_status()
@@ -133,7 +197,7 @@ def _previous(out_path: str) -> dict:
         return {}
 
 
-def build(out_path: str, fetch=None) -> dict:
+def build(out_path: str, fetch=None, translate=None) -> dict:
     fetch = fetch or fetch_page          # 실행 시점에 찾는다 — 테스트가 바꿔 끼울 수 있게
     previous = _previous(out_path)
     data = {"updated": datetime.now(timezone.utc).isoformat(), "site": SITE}
@@ -150,8 +214,16 @@ def build(out_path: str, fetch=None) -> dict:
     for r in lists["trending"] + lists["top"]:      # 한쪽에서 읽은 설명을 다른 쪽에도
         seen.setdefault(_key(r), r["desc"]) if r["desc"] else None
         r["desc"] = r["desc"] or seen.get(_key(r), "")
+    # 번역도 같은 식으로 — 두 목록을 합쳐 한 번, 한쪽 결과를 다른 쪽에도
+    uniq: dict[str, dict] = {}
+    for r in lists["trending"] + lists["top"]:
+        uniq.setdefault(_key(r), r)
+    ko = translate_descs(list(uniq.values()), prev_all, translate)
+    for r in lists["trending"] + lists["top"]:
+        r["desc_ko"] = uniq[_key(r)].get("desc_ko", "")
     data.update(lists)
     data["desc_fetched"] = got
+    data["ko_translated"] = ko
     return data
 
 
@@ -167,6 +239,8 @@ def sync(out_path: str) -> bool:
         json.dump(data, f, ensure_ascii=False)
     new = sum(1 for r in data["trending"] if r["prev"] is None)
     missing = sum(1 for r in data["trending"] + data["top"] if not r.get("desc"))
+    no_ko = sum(1 for r in data["trending"] + data["top"] if r.get("desc") and not r.get("desc_ko"))
     print(f"[skills] 순위 갱신: 상승 {len(data['trending'])}건(새 진입 {new}) · 누적 {len(data['top'])}건"
-          f" · 설명 새로 읽음 {data.get('desc_fetched', 0)}건 · 아직 없음 {missing}건")
+          f" · 설명 새로 읽음 {data.get('desc_fetched', 0)}건 · 아직 없음 {missing}건"
+          f" · 번역 {data.get('ko_translated', 0)}건 · 미번역 {no_ko}건")
     return True
