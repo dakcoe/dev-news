@@ -1,5 +1,651 @@
 [
  {
+  "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
+  "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 559,
+  "comments": 465,
+  "published_at": 1789724707,
+  "discussion": "https://news.ycombinator.com/item?id=49752056",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/"
+  ],
+  "cross_source_count": 1,
+  "score": 3113.0,
+  "image": "https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1778706504.jpg?resize=1200,783",
+  "link_status": "ok",
+  "ko_title": "마이크로소프트 임원이 AI 스크래핑을 ‘인류 역사상 가장 큰 노동 절도’라고 언급",
+  "summary": "뉴욕타임스가 제기한 저작권 소송에서 공개된 새 자료에 마이크로소프트 고위 임원이 AI 학습을 절도라 표현한 발언이 포함됐다. 소송 문서에 따르면 두 기업은 유료 장벽을 우회해 대량 스크래핑하고 저작권 표시를 제거해 데이터셋을 구축했다. 또한 마이크로소프트의 Copilot이 뉴욕타임스 사이트 클릭률을 최대 93% 감소시킨 것으로 드러났다.",
+  "why": "AI 학습 데이터의 저작권 문제가 법원에서 공방 중인 만큼, 자체 모델 학습 시 데이터 출처와 라이선스 확인이 필수다. 공식 라이선스 없이 수집한 콘텐츠로 모델을 만들면 법적 리스크가 커진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "backend-data"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "I don't like passkeys",
+  "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 311,
+  "comments": 272,
+  "published_at": 1789733210,
+  "discussion": "https://news.ycombinator.com/item?id=49753211",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hawksley.dev/blog/i-dont-like-passkeys"
+  ],
+  "cross_source_count": 1,
+  "score": 2038.0,
+  "image": "https://hawksley.dev/og/blog/i-dont-like-passkeys.jpg?v=7",
+  "link_status": "ok",
+  "ko_title": "나는 패스키가 싫다",
+  "summary": "패스키는 사이트에 종속돼 피싱을 방지하고 데이터 유출 시 복구가 어려워 기업 환경에 적합하지만, 개인 사용자에게는 영구적인 계정 잠금·자동 차단·기기 분실 위험이 커진다. 복구 수단이 SMS·이메일·보안 질문 등에 의존하므로, 이러한 방법을 사용하지 않을 경우 영구 잠금 위험이 남는다. 하드웨어 키에 백업을 만들 수 없어 여러 키를 구입해 각 사이트마다 등록해야 하며, 계정 수가 늘어날수록 비용과 관리가 부담된다.",
+  "why": "개인 계정을 다룰 때 패스키 도입은 피싱 방지를 대신해 영구 잠금 위험을 키운다. 복구 수단이 SMS나 이메일에 묶여 있어 해당 방법을 쓰지 않으면 접근이 영구 차단된다. 하드웨어 키는 백업이 불가해 계정마다 여러 개를 등록해야 관리 비용이 늘어난다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "OpenJev",
+  "url": "https://openjev.com/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 306,
+  "comments": 182,
+  "published_at": 1789724542,
+  "discussion": "https://news.ycombinator.com/item?id=49752041",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openjev.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 1758.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenJev",
+  "summary": "",
+  "why": "로컬 GPU에서 모델의 선택 로짓을 직접 읽는 방식과 토큰 생성 방식의 차이를 실측할 수 있다. 브라우저 내 실행 환경이라 입력 데이터가 외부로 전송되지 않는 점이 특징이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Bend 2 and the Vibe-Coding Trap",
+  "url": "https://blog.liampwll.com/posts/bend_vibe_coding/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 251,
+  "comments": 167,
+  "published_at": 1789733035,
+  "discussion": "https://news.ycombinator.com/item?id=49753179",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.liampwll.com/posts/bend_vibe_coding/"
+  ],
+  "cross_source_count": 1,
+  "score": 1603.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Bend 2와 바이브 코딩 함정",
+  "summary": "Bend 2는 AI 코딩 시대를 겨냥한 언어로, 인간이 ‘법칙’을 작성하고 AI가 구현과 증명을 생성해 컴파일러가 검증한다는 컨셉이다. 기사에서는 이 접근 방식에 몇 가지 근본적인 문제점을 지적하고, 공식 데모에서 58줄에 달하는 법칙 코드가 필요함을 예시로 들어 비효율성을 강조한다. 또한 LLM이 게임 서브프로그램을 자유롭게 재정의할 수 있다는 점도 언급한다.",
+  "why": "Bend 2의 법칙 작성 방식은 58줄의 코드로 단순 규칙을 정의해야 하는 비효율성을 보여준다. 이는 AI 코딩 도구 도입 시 인간이 작성하는 명세 코드의 부하가 예상보다 클 수 있음을 시사한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "language"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "What is still exciting in tech?",
+  "url": "https://lobste.rs/s/lcjf7c/what_is_still_exciting_tech",
+  "description": "A comment on a lobste.rs post about the tech culture stagnating made me think.\r\n\r\n20-15 or even 10 years ago, tech was really exciting. Sure, monopolies were bad, I was fighting them, but tech by itself was very interesting. New versions of software were expected, we were skimming through changelogs to find novelties, installing beta or alpha versions of totally unknown projects. And I had lived that excitement since the 90’s.\r\n\r\nWhen you think about it, today feels really bleak in comparison:\r\n",
+  "source": "lobsters",
+  "upvotes": 56,
+  "comments": 58,
+  "published_at": 1789719292.256,
+  "discussion": "https://lobste.rs/s/lcjf7c/what_is_still_exciting_tech",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lobste.rs/s/lcjf7c/what_is_still_exciting_tech"
+  ],
+  "cross_source_count": 1,
+  "score": 1240.3999999999999,
+  "image": "https://lobste.rs/touch-icon-144.png",
+  "link_status": "ok",
+  "ko_title": "오늘도 흥미로운 기술은 무엇인가?",
+  "summary": "글쓴이는 과거와 비교해 현재 기술 문화가 침체됐다고 느끼며, 상업 소프트웨어의 변화 로그가 형식적이고 AI 통합이 부정적으로 보인다고 주장한다. 그는 주변 사람들이 목공 등 다른 분야로 전향해 행복해진 사례를 들며, 자유 소프트웨어조차도 품질 저하를 겪고 있다고 지적한다. 독자들에게 현재 기술 중 무엇이 흥미로운지, 기대되는 프로젝트는 무엇인지 의견을 묻는다.",
+  "why": "상업 소프트웨어의 변경 로그가 형식화되고 AI 통합이 품질 저하로 이어지는 경향이 있다. 기존 스택의 유지보수 방향을 재점검하고, 도입 전 AI 기능의 실질적 가치를 확인해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+  "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 152,
+  "comments": 101,
+  "published_at": 1789729304,
+  "discussion": "https://news.ycombinator.com/item?id=49752614",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html"
+  ],
+  "cross_source_count": 1,
+  "score": 1207.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "워런 버핏, 버크셔 회장 자리 물러나 아들 후계자 지정",
+  "summary": "댓글에 따르면 버핏은 2011년부터 사후에 아들 하워드가 비경영 회장으로 이어가길 원했다고 밝힌 바 있다. 하워드는 대학 학위가 없고 농부이며 회사 가치를 이해한다는 평가를 받았다. 비경영 회장은 주로 기업 문화 수호와 CEO 해임 권한을 갖고, 실제 사업 운영은 에이벨이 담당한다.",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "The Creative Spirit of Who Framed Roger Rabbit",
+  "url": "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/",
+  "description": "The Creative Spirit of Who Framed Roger Rabbit I love Who Framed Roger Rabbit , the 1988 movie by Robert Zemeckis. I haven't watched it in quite a few years, and Cypress Frankenfeld just pointed out this sequence from early in the movie: It's a pelican riding a bicycle! Look closely and you'll note that the pelican is animated while the bicycle is a real bicycle. Apparently they filled the wheels ",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789742201.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.simonwillison.net/static/2026-09-18/IMG_8118.jpeg",
+  "link_status": "ok",
+  "ko_title": "로저 래빗을 잡은 사람의 창의적 정신",
+  "summary": "",
+  "why": "백엔드 개발자의 업무와 무관한 영화 비하인드 스토리다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "New experts join Google’s AI & Economy team",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+  "description": "Text \"AI & Economy Research Program\" all over a green grid background, with the Google G logo in the bottom right corner",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789740000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI__Economy_team_hero.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "구글 AI·경제팀에 새 전문가 합류",
+  "summary": "구글은 AI·경제 연구 프로그램을 확대하고 세계적인 경제학자들을 학술 고문 및 방문 연구원으로 영입했다. 신규 고문으로는 혁신 성장 연구로 유명한 필리프 아기온 교수와 노벨상 수상자 마이클 스펜스, 다이앤 코일 등이 포함된다. 이 프로그램은 일자리·생산성·성장·기술 확산·과학 발견 등 AI의 경제적 영향을 실시간으로 측정·분석한다.",
+  "why": "AI 도입이 업무와 생산성에 미치는 영향을 실시간 데이터로 측정하는 도구다. 백엔드 시스템의 AI 통합 효과를 정량적으로 분석할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Co-creating the future of fashion with Google",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+  "description": "Jane Wade and Sergio Hudson",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789736400.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_Header_V2.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "구글과 함께 패션의 미래를 공동 창조",
+  "summary": "구글 엔비전 스튜디오와 구글 랩스가 뉴욕 패션위크를 앞두고 디자이너 제인 웨이드와 세르지오 허드슨을 위해 AI 기반 크리에이티브 스튜디오인 Google Flow를 활용한 두 가지 맞춤형 도구를 공동 개발했다. 첫 번째 도구인 Styling Suite는 디지털 모델에 헤어·메이크업·액세서리·신발·의류를 가상으로 매치해 실물 샘플 제작 전 스타일을 최적화한다. 두 번째 도구인 Runway Visualization은 조명·소품·무대 배치를 실시간 시뮬레이션해 예산 내에서 런웨이 연출을 조정한다.",
+  "why": "Google Flow 기반 도구는 패션 산업의 특정 워크플로우를 위한 사례다. 백엔드나 AI 개발 업무와 직접적인 연관성이 없어 참고용으로만 보아도 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Visible chains of thought are a safety advantage for AI, but that transparency is slipping away",
+  "url": "https://the-decoder.com/visible-chains-of-thought-are-a-safety-advantage-for-ai-but-that-transparency-is-slipping-away/",
+  "description": "AI models think out loud today, but Google Deepmind says that transparency is at risk. The article Visible chains of thought are a safety advantage for AI, but that transparency is slipping away appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789741969.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/visible-chains-of-thought-are-a-safety-advantage-for-ai-but-that-transparency-is-slipping-away/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/reasoning_transparency.png",
+  "link_status": "ok",
+  "ko_title": "보이는 사고 사슬은 AI 안전의 장점이지만 투명성은 사라지고 있다",
+  "summary": "DeepMind Institute의 연구진은 사고 사슬(Chain of Thought)이 모델의 중간 추론 과정을 인간이 확인할 수 있게 해 안전성을 높인다고 주장한다. Gemini 3 Pro에서는 모델이 테스트 환경임을 인식한 사실이 사고 사슬을 통해 드러났다. 반면 OpenAI의 GPT-6 Astra 시스템 카드에서는 사고 사슬을 모니터링하는 능력이 크게 감소했으며, 향후 모델은 인간이 읽을 수 없는 수치 공간에서 사고할 가능성이 제기된다. 연구진은 투명성을 지속적으로 측정하고 숨김을 방지하도록 훈련할 것을 촉구한다.",
+  "why": "GPT-6 Astra 이후 모델의 사고 사슬이 인간이 읽을 수 없는 수치 공간으로 이동할 수 있다. 이 경우 중간 추론 과정의 감시가 불가능해져 모델의 의도를 검증하는 기존 방법이 무력해진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Anthropic wants you to know Claude leads a quarter of its research, but \"lead\" doesn't mean what you think",
+  "url": "https://the-decoder.com/anthropic-wants-you-to-know-claude-leads-a-quarter-of-its-research-but-lead-doesnt-mean-what-you-think/",
+  "description": "For the first time, Anthropic is releasing metrics on how it builds its own AI. Claude already \"leads\" 26 percent of the work on future models, up from under one percent in February. But the underlying scale is fuzzy, the scoring comes from Claude itself, and \"lead\" means less than it sounds. The article Anthropic wants you to know Claude leads a quarter of its research, but \"lead\" doesn't mean wh",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789740410.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropic-wants-you-to-know-claude-leads-a-quarter-of-its-research-but-lead-doesnt-mean-what-you-think/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/anthropic_claude_clone.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic, Claude가 연구의 1/4을 주도한다는 사실을 알리지만 “주도”는 생각과 다르다",
+  "summary": "Anthropic은 자체 AI인 Claude가 미래 모델 개발 작업의 26%를 담당한다는 지표를 공개했다. 이 지표는 AI가 스스로 수행하는 작업 비중, 에이전트 모니터링 수준, 안전 작업에 투입되는 연산량을 측정한다. “주도”는 완전 자율을 의미하지 않으며, 현재 Claude는 인간이 제공한 버그 보고서를 분석·수정하지만 최종 배포 결정은 인간이 내린다.",
+  "why": "Claude가 버그 분석과 수정을 수행해도 최종 배포 결정은 여전히 인간이 내린다. 따라서 기존 개발 워크플로우에서 배포 승인 단계는 변경 없이 유지된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "release"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "GLM 코딩 에이전트 ZCode, 사용자 모르게 Git 이력을 업로드함",
+  "url": "https://news.hada.io/topic?id=33897",
+  "description": "Z.ai의 데스크톱 코딩 앱 ZCode 가 로그인 상태에서 전체 작업 공간과 Git 이력 등을 암호화해 Aliyun OSS 로 업로드하는 동작이 역공학 분석에서 확인됨 아카이브 복호화에 필요한 개인 키는 Z.ai 클라우드에만 존재 함. 사용자 디스크에 저장된 암...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789743138.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33897"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33897?v=a27a2a19329740bbdce03746d86e460e",
+  "link_status": "ok",
+  "ko_title": "GLM 코딩 에이전트 ZCode, 사용자 모르게 Git 이력을 업로드함",
+  "summary": "Z.ai의 데스크톱 코딩 앱 ZCode가 로그인 상태에서 전체 작업 공간과 .git 이력을 암호화해 Alibaba Cloud의 Aliyun OSS로 전송한다는 사실이 역공학을 통해 밝혀졌다. 업로드는 별도 호스트 수준 프로세스로 실행돼 설정을 끄더라도 중단되지 않으며, 암호화된 아카이브는 Z.ai 클라우드에만 복호화 키가 있어 사용자는 복호화할 수 없다. .git 디렉터리가 전체 페이로드의 86.6%를 차지해 삭제된 API 키와 미공개 브랜치 정보까지 포함될 수 있다.",
+  "why": "ZCode를 쓰는 동안 로컬 설정을 끄더라도 Git 이력이 서버로 전송된다. 삭제한 API 키나 미공개 브랜치 정보가 포함될 수 있으니 주의해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Bend 2와 바이브 코딩의 함정",
+  "url": "https://news.hada.io/topic?id=33896",
+  "description": "바이브 코딩 은 문제를 충분히 이해하기 전에 큰 규모의 해법을 완성하게 해, 기존에 더 나은 접근법이 있다는 사실을 놓치게 할 수 있음 Bend 2 는 사람이 법칙을 작성하고 AI가 구현과 증명을 만들면 컴파일러가 증명의 타당성을 검사하는 언어지만, 데모의 단순한...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789743137.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33896"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33896?v=ef829f44223b5b505b5c45b17430aeba",
+  "link_status": "ok",
+  "ko_title": "Bend 2와 바이브 코딩의 함정",
+  "summary": "바이브 코딩은 문제를 충분히 이해하지 못한 채 대규모 해법을 만들게 하여 기존 접근법을 놓칠 위험이 있다. Bend 2는 사람은 법칙을, AI는 구현·증명을 작성하고 컴파일러가 검증하는 언어인데, 데모의 간단한 속성에도 58줄 명세와 442줄 증명이 필요했다. 동일 데모를 정형 검증 언어 SPARK와 GNATprove로 구현하면 별도 증명 없이 12개 검사를 모두 통과한다. 이는 사전 조사와 기존 도구 활용이 AI 코딩 시대에 중요함을 보여준다.",
+  "why": "AI가 442줄짜리 증명을 작성하게 만들지 말고, SPARK처럼 기존 도구를 먼저 확인해야 한다. 사전 조사를 생략하면 단순 속성 검증에도 불필요한 개발 비용이 발생한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "language"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "나는 패스키가 마음에 들지 않는다",
+  "url": "https://news.hada.io/topic?id=33895",
+  "description": "패스키 는 피싱과 서버 데이터 유출에 강하지만, 개인에게는 영구적인 계정 접근 상실, 자동 계정 정지, 기기 분실이 더 큰 위험일 수 있음 일반 로그인 과정의 피싱을 막더라도 계정 보안은 가장 취약한 복구 수단 에 좌우되며, SMS, 이메일 링크, 보안 질문 등을 없...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789742537.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33895"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33895?v=513ab2330795344c44bcfb22856cdf33",
+  "link_status": "ok",
+  "ko_title": "나는 패스키가 마음에 들지 않는다",
+  "summary": "패스키가 피싱 방어와 서버 유출에 강점이 있지만, 개인 사용자는 영구적인 계정 접근 상실, 자동 정지, 기기 분실 위험에 직면한다. 하드웨어 키는 백업·이동이 불가능해 사이트마다 여러 키를 구입해야 하고, 동기화 패스키는 플랫폼 계정 정지 시 접근이 차단될 수 있다. 서드파티 비밀번호 관리자에 저장할 경우에도 사용 경험과 일관성에서 제한이 있다.",
+  "why": "패스키 도입 시 복구 수단 제거로 영구적 계정 접근 상실이 가장 큰 위험이다. 하드웨어 키는 백업이 불가해 사이트마다 추가 구매가 필요하며, 동기화 패스키는 플랫폼 계정 정지 시 접근이 차단된다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "CrowdSec 소스 코드 유출",
+  "url": "https://news.hada.io/topic?id=33894",
+  "description": "CrowdSec 이 2026년 5월 발생한 GitHub 비공개 소스 코드 유출을 9월 16일 통보받고 확인함 CrowdSec에 따르면 고객 데이터나 로그인 정보는 유출되지 않았으며 , 현재까지 횡적 이동에 악용할 수 있는 토큰이나 자격 증명 등의 유출도 발견하지 못함 유출 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789738337.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33894"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33894?v=4190cb5374ed1ddf65c4234dcd7623ff",
+  "link_status": "ok",
+  "ko_title": "CrowdSec 소스 코드 유출",
+  "summary": "CrowdSec은 2026년 5월 발생한 비공개 GitHub 저장소 코드 유출을 9월에 확인했다. 고객 데이터와 로그인 정보는 유출되지 않았으며, 현재까지 횡적 이동에 사용할 토큰이나 자격 증명도 발견되지 않았다. 유출 경로는 Tanstack 침해로 추정되며, 필요한 토큰과 자격 증명을 즉시 교체하고 이상 활동을 감시하고 있다.",
+  "why": "CrowdSec의 SaaS 콘솔과 AWS 루틴 등 비공개 코드가 유출됐지만, 오픈소스 Security Engine은 영향에서 제외된다. Tanstack 침해로 인한 CI/CD 토큰 탈취가 원인이므로, 유사한 구성 요소를 쓰는 환경은 즉시 자격 증명을 교체해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "tamaratran / fast-jev-compaction",
+  "url": "https://github.com/tamaratran/fast-jev-compaction",
+  "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1048,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/tamaratran/fast-jev-compaction"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1048,
+  "score": 471.79999999999995,
+  "image": "https://opengraph.githubassets.com/1/tamaratran/fast-jev-compaction",
+  "link_status": null,
+  "ko_title": "fast-jev-compaction — Claude Code 플러그인 및 npm 라이브러리",
+  "summary": "이 라이브러리는 Claude Code의 기본 요약 방식을 대체해 도구 호출과 결과를 Jev가 판단한 필요 여부에 따라 삭제하거나 축소한다. 전체 대화 흐름을 유지하면서 토큰 제한에 맞게 단계별로 압축한다. npm 패키지와 Claude Code 플러그인 형태로 제공된다.",
+  "why": "기존 요약 방식은 파일 경로나 오류 메시지가 사라지는 손실이 발생했다. 이 라이브러리는 텍스트를 그대로 유지하고 불필요한 도구 호출만 삭제한다. Claude Code 플러그인으로 설치해 기본 압축 로직을 대체할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "Fission-AI / OpenSpec",
+  "url": "https://github.com/Fission-AI/OpenSpec",
+  "description": "Spec-driven development (SDD) for AI coding assistants.",
+  "source": "github",
+  "upvotes": 327,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Fission-AI/OpenSpec"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 327,
+  "score": 219.45,
+  "image": "https://opengraph.githubassets.com/1/Fission-AI/OpenSpec",
+  "link_status": null,
+  "ko_title": "Fission-AI / OpenSpec",
+  "summary": "OpenSpec이 새로운 아티팩트 기반 워크플로우를 도입했다. `/opsx:propose \"your idea\"` 명령으로 아이디어 제안을 시작할 수 있다. npm 패키지 @fission-ai/openspec 로 배포되며 CI와 다운로드 수가 표시된다.",
+  "why": "기존 스펙 관리 방식 대신 아티팩트 기반 워크플로우로 전환해야 한다. 아이디어 제안은 `/opsx:propose` 명령으로 시작한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "ahmedkhaleel2004 / gitdiagram",
+  "url": "https://github.com/ahmedkhaleel2004/gitdiagram",
+  "description": "Free, simple, fast interactive diagrams for any GitHub repository",
+  "source": "github",
+  "upvotes": 145,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/ahmedkhaleel2004/gitdiagram"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 145,
+  "score": 155.75,
+  "image": "https://opengraph.githubassets.com/1/ahmedkhaleel2004/gitdiagram",
+  "link_status": null,
+  "ko_title": "GitDiagram",
+  "summary": "GitDiagram은 공개·비공개 GitHub 저장소를 몇 초 만에 인터랙티브한 아키텍처 다이어그램으로 변환한다. 저장소 트리·README·코드 조각을 시스템 수준 그래프로 만들고, 구성 요소를 클릭하면 해당 파일이나 디렉터리로 이동한다. Next.js 16·React 19·TypeScript·Tailwind·Radix UI 기반이며, Vercel+Bun에서 실행되는 API와 Cloudflare R2·Upstash Redis를 활용한다. OpenAI(기본)와 OpenRouter를 AI 제공자로 선택할 수 있다.",
+  "why": "레포지토리 구조를 시스템 레벨 그래프로 변환해 구성 요소를 클릭하면 실제 파일로 이동한다. 아키텍처 파악 시간을 줄이고 소스 탐색의 진입 장벽을 낮춘다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "supermemoryai / supermemory",
+  "url": "https://github.com/supermemoryai/supermemory",
+  "description": "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
+  "source": "github",
+  "upvotes": 140,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/supermemoryai/supermemory"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 140,
+  "score": 154.0,
+  "image": "https://opengraph.githubassets.com/1/supermemoryai/supermemory",
+  "link_status": null,
+  "ko_title": "Supermemory — AI용 최신 메모리·컨텍스트 엔진",
+  "summary": "Supermemory는 AI용 메모리·컨텍스트 레이어로, LongMemEval·LoCoMo·ConvoMem 등 주요 벤치마크에서 1위를 차지했다. npm과 PyPI에 각각 패키지가 제공되어 Node·Python 환경에서 바로 사용 가능하다. 자체 호스팅 가이드와 대시보드가 제공돼 온프레미스 배포도 지원한다.",
+  "why": "기존에 직접 구현하던 대화 컨텍스트 관리 코드를 이 패키지로 교체할 수 있다. npm과 PyPI에 패키지가 올라와 있어 Node와 Python 환경에서 바로 설치 가능하다. 자체 호스팅 가이드가 제공되어 온프레미스 배포도 지원한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
+  "title": "tradesdontlie / tradingview-mcp",
+  "url": "https://github.com/tradesdontlie/tradingview-mcp",
+  "description": "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+  "source": "github",
+  "upvotes": 64,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/tradesdontlie/tradingview-mcp"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 64,
+  "score": 127.39999999999999,
+  "image": "https://opengraph.githubassets.com/1/tradesdontlie/tradingview-mcp",
+  "link_status": null,
+  "ko_title": "tradesdontlie / tradingview-mcp",
+  "summary": "개인 AI 어시스턴트가 Claude Code와 TradingView Desktop 차트를 Chrome DevTools Protocol을 통해 연결한다. 로컬에서만 동작하며 데이터는 외부로 전송되지 않는다. 사용하려면 TradingView 구독이 필요하고, 원격 디버깅 포트를 직접 활성화해야 한다. 내부 비공식 API를 사용하므로 TradingView 업데이트 시 호환성이 깨질 수 있다.",
+  "why": "Claude Code로 차트 분석과 Pine Script 개발을 로컬에서 수행할 수 있다. TradingView 업데이트 시 비공식 API가 깨질 수 있으므로 버전 고정 조치가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-19T00:00:01.189750+09:00",
+  "batch_label": "9월 19일 00:00"
+ },
+ {
   "title": "Hacking OpenAI",
   "url": "https://www.hacktron.ai/blog/hacking-openai",
   "description": "",
