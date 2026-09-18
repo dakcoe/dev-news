@@ -328,6 +328,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
     author_url = _safe_url(about.get("author_url") or "")
     repo = _safe_url(about.get("github") or "")
     avatar = author_url.rstrip("/") + ".png?size=208" if author_url else ""
+    home = _safe_url(about.get("homepage") or "") or author_url
     bio = _esc(about.get("bio") or "")
 
     def page(title: str, desc: str, path: str, body: str) -> str:
@@ -345,7 +346,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                + (f'<img class="avatar" src="{_esc(avatar)}" alt="">' if avatar else "")
                + f'<div class="who"><b>{author}</b>' + (f"<p>{bio}</p>" if bio else "") + "</div>"
                + '<div class="pacts">'
-               + (f'<a class="go" href="{_esc(author_url)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 프로필</a>' if author_url else "")
+               + (f'<a class="go" href="{_esc(home)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 페이지</a>' if home else "")
                + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">저장소 {_ICON["ext"]}</a>' if repo else "")
                + "</div></div>")
     about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1><div class=\"sub\">만든 사람과 운영 방식</div>"

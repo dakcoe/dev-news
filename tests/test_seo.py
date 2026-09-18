@@ -259,6 +259,15 @@ def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
     for sec in about_copy(None):
         assert sec["title"] in a
     assert "https://github.com/x.png?size=208" in a and "커피" in a and "/issues" in a
+
+
+def test_첫_버튼은_홈페이지로_사진은_깃허브에서(tmp_path):
+    """github.io 페이지를 열되, 프로필 사진은 여전히 github.com/<아이디>.png 다."""
+    from news.render import write_static_pages
+    write_static_pages(str(tmp_path), {"author_url": "https://github.com/x", "homepage": "https://x.github.io"}, None)
+    a = (tmp_path / "about" / "index.html").read_text(encoding="utf-8")
+    assert 'href="https://x.github.io"' in a and "https://github.com/x.png?size=208" in a
+    assert 'href="https://github.com/x"' not in a
     assert "개인정보 처리" in p and "localStorage" in p and "커피" not in p
     assert 'rel="canonical" href="' in a
 

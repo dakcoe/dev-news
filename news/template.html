@@ -761,6 +761,7 @@ const AB_ICON = {
 function aboutHTML(){
   const a=ABOUT||{};
   const repo=safeU(a.github), author=escA(a.author||''), authorUrl=safeU(a.author_url);
+  const home=safeU(a.homepage)||authorUrl;   // 첫 버튼. 사진은 여전히 GitHub 프로필에서
   const avatar=authorUrl ? authorUrl.replace(/\/+$/,'')+'.png?size=208' : '';
   const coffee=safeU(a.coffee);
   const srcNames=Object.values(SRC).filter(s=>s.on).map(s=>escA(s.name)).join(', ');
@@ -778,7 +779,7 @@ function aboutHTML(){
     +   (avatar?'<img class="avatar" src="'+avatar+'" alt="" onerror="this.remove()">':'')
     +   '<div class="who"><b>'+author+'</b>'+(a.bio?'<p>'+escA(a.bio)+'</p>':'')+'</div>'
     +   '<div class="pacts">'
-    +     (authorUrl?'<a class="go" href="'+authorUrl+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 프로필</a>':'')
+    +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
     +   '</div>'
     + '</div>'
