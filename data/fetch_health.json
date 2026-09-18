@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-09T21:09:44+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 13,
-    "empty": 1,
-    "blocked": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-10T03:19:00+09:00",
    "total": 17,
    "counts": {
@@ -466,6 +444,28 @@
    "failures": [
     {
      "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-19T08:00:34+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "short": 1,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/",
      "source": "hackernews",
      "reason": "blocked"
     }
