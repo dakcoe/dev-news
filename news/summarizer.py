@@ -366,8 +366,11 @@ MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 �
 
 # 모델 사다리. 하나의 계층이고, 용도마다 들어가는 칸이 다를 뿐이다.
 #
-#   요약    gpt-oss-120b → qwen3.8-27b → qwen3.6-27b   (맨 위부터)
-#   왜중요  qwen3.8-27b  → qwen3.6-27b                 (qwen3.8부터)
+#   요약    gpt-oss-120b → qwen3.8-27b → gpt-oss-20b   (맨 위부터)
+#   왜중요  qwen3.8-27b  → gpt-oss-20b                 (qwen3.8부터)
+#
+# 2026-09-18: qwen3.6-27b 가 Groq 에서 내려갔다. 맨 아래 칸을 gpt-oss-20b 로.
+# 계정에서 쓸 수 있는 모델은 GET /openai/v1/models 로 확인한다.
 #
 # 한 칸이 한도(429)에 걸리면 아래 칸으로 내려간다. Groq의 무료 한도는 모델별로
 # 따로 세므로 내려가면 예산이 새로 생긴다. 사다리가 없던 때는 한 모델이 막히면
@@ -378,7 +381,7 @@ MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 �
 #     curl -s -H "Authorization: Bearer $GROQ_API_KEY" \
 #          https://api.groq.com/openai/v1/models
 MODEL_LADDER = {
-    "groq": ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"],
+    "groq": ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"],
     "openrouter": [],
     "gemini": [],
 }
