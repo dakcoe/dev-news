@@ -109,21 +109,21 @@ def test_사다리는_하나다():
     """요약과 왜중요는 같은 사다리를 쓰고 들어가는 칸만 다르다. 둘을 따로 두면
     한쪽만 고쳐져 어긋난다."""
     assert S.MODEL_LADDER["groq"] == [
-        "openai/gpt-oss-120b", "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
+        "openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
 
 
 def test_요약은_사다리_맨_위부터_내려간다():
     top = S.DEFAULT_MODELS["groq"]
     assert top == S.MODEL_LADDER["groq"][0]
-    assert S.chain_below("groq", top) == ["qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
+    assert S.chain_below("groq", top) == ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
 
 
 def test_왜중요는_qwen38부터_내려간다():
-    assert S.chain_below("groq", "qwen/qwen3.8-27b") == ["qwen/qwen3.6-27b"]
+    assert S.chain_below("groq", "qwen/qwen3.8-27b") == ["openai/gpt-oss-20b"]
 
 
 def test_맨_아래_칸은_더_내려갈_곳이_없다():
-    assert S.chain_below("groq", "qwen/qwen3.6-27b") == []
+    assert S.chain_below("groq", "openai/gpt-oss-20b") == []
 
 
 def test_사다리에_없는_모델이면_사다리_전체를_쓴다():
@@ -133,9 +133,8 @@ def test_사다리에_없는_모델이면_사다리_전체를_쓴다():
 
 def test_사다리에_없는_모델을_적지_않는다():
     """계정에서 쓸 수 있는 모델만 적어야 한다. 없는 이름이면 404로 죽는다.
-    2026-09-14 기준 목록이다."""
-    AVAILABLE = {"openai/gpt-oss-120b", "openai/gpt-oss-20b",
-                 "qwen/qwen3.8-27b", "qwen/qwen3.6-27b"}
+    2026-09-18 기준 목록이다 — qwen3.6-27b 는 이날 내려갔다."""
+    AVAILABLE = {"openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"}
     unknown = set(S.MODEL_LADDER["groq"]) - AVAILABLE
     assert not unknown, f"사다리에 없는 모델: {unknown}"
 
@@ -210,8 +209,8 @@ def test_요약이_내려와도_왜중요와_같은_칸에_앉지_않는다(monk
                           why_model="qwen/qwen3.8-27b")
 
     assert all(a["llm_done"] for a in out)
-    # 요약이 qwen3.8로 내려왔으니 왜중요는 3.6으로 비켜야 한다
-    assert "qwen/qwen3.6-27b" in seen
+    # 요약이 qwen3.8로 내려왔으니 왜중요는 gpt-oss-20b 로 비켜야 한다
+    assert "openai/gpt-oss-20b" in seen
 
 
 def test_왜중요_예비에_주_모델이_섞이지_않는다():
@@ -219,7 +218,7 @@ def test_왜중요_예비에_주_모델이_섞이지_않는다():
     거기에 주 모델이 들어가면 요약과 같은 한도로 되돌아간다."""
     chain = S.chain_below("groq", "사다리밖", exclude={"openai/gpt-oss-120b"})
     assert "openai/gpt-oss-120b" not in chain
-    assert chain == ["qwen/qwen3.8-27b", "qwen/qwen3.6-27b"]
+    assert chain == ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
 
 
 def test_모델을_바꾸면_재생성_기회도_새로_준다(monkeypatch):
