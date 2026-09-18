@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-09T03:19:08+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-09T10:03:11+09:00",
    "total": 17,
    "counts": {
@@ -461,6 +452,28 @@
      "url": "https://news.ycombinator.com/item?id=49742976",
      "source": "hackernews",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-18T16:00:40+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "empty": 1,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://openai.com/index/cooley-gopublic",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
