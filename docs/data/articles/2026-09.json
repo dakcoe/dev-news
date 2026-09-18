@@ -1,5 +1,553 @@
 [
  {
+  "title": "US Military had close call after using AI for hallucinated intelligence report",
+  "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 342,
+  "comments": 275,
+  "published_at": 1789752481,
+  "discussion": "https://news.ycombinator.com/item?id=49757520",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship"
+  ],
+  "cross_source_count": 1,
+  "score": 2109.0,
+  "image": "https://media.cnn.com/api/v1/images/stellar/prod/9884637.jpg?c=16x9&q=w_800,c_fill",
+  "link_status": "ok",
+  "ko_title": "미군, AI로 만든 허위 정보 보고서 사용 후 위기 겪어",
+  "summary": "AI 챗봇이 만든 정보 보고서가 중동에서 중국 선박이 핵무기 부품을 운반한다는 허위 내용을 담고 있었다. 이 보고서를 근거로 미군은 선박 급습을 준비했으나, 작전 직전 보고서가 AI 생성임이 밝혀져 중단되었다. 해당 사건은 전쟁 중 AI 기반 정찰·목표 선정의 위험성을 드러냈다.",
+  "why": "AI 생성 결과의 검증 절차가 부실하면 잘못된 데이터가 실제 의사결정으로 이어질 수 있다. AI를 정찰이나 목표 선정에 활용할 때 환각 현상으로 인한 치명적 오류 위험을 상시 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
+  "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 388,
+  "comments": 177,
+  "published_at": 1789758189,
+  "discussion": "https://news.ycombinator.com/item?id=49758736",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://grapheneos.social/@GrapheneOS/117282080803799576"
+  ],
+  "cross_source_count": 1,
+  "score": 1907.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Android 17은 3.x 이후 처음으로 AOSP에 릴리스 없이 새로운 API를 추가",
+  "summary": "댓글에서는 Google이 GrapheneOS에 대한 제약을 강화하고, 최신 API를 Pixel 전용 업데이트에만 포함시켜 OEM에 제공하지 않는다고 지적한다. 또한 이러한 Pixel-전용 API가 시장 점유율이 작아 실제 앱 개발에 크게 영향을 미치지 않을 가능성이 높다고 언급한다.",
+  "why": "Pixel 전용으로 제공되는 새 API는 시장 점유율이 낮아 앱 개발에 직접적인 영향을 미치지 않을 가능성이 크다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 304,
+  "comments": 128,
+  "published_at": 1789765232,
+  "discussion": "https://news.ycombinator.com/item?id=49760187",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://code.claude.com/docs/en/changelog"
+  ],
+  "cross_source_count": 1,
+  "score": 1592.0,
+  "image": "https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DGetting%2Bstarted%26title%3DClaude%2BCode%2Bchangelog%26description%3DRelease%2Bnotes%2Bfor%2BClaude%2BCode%252C%2Bincluding%2Bnew%2Bfeatures%252C%2Bimprovements%252C%2Band%2Bbug%2Bfixes%2Bby%2Bversion.%26theme%3D03628e99c753a03aec319053&w=1200&q=100",
+  "link_status": "ok",
+  "ko_title": "Claude Code, Claude.md가 없으면 AGENTS.md를 읽음",
+  "summary": "이번 업데이트에서는 프로젝트에 Claude.md 파일이 없을 경우 AGENTS.md 파일을 읽어 프로젝트 지시를 적용한다. 또한 프록시 경계 설정, 정적 헤더 전송, 백그라운드 작업 상태 표시 등 여러 설정 옵션이 추가되었다. 여러 오류가 수정돼 CLI 사용 시 오류 발생과 업데이트 체크 문제 등이 해결되었다.",
+  "why": "Claude.md가 없는 프로젝트에서 AGENTS.md를 읽는 기능이 추가됐다. Bedrock, Vertex, Foundry 환경에서는 이 기능이 아직 지원되지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Border agents can search cellphones without a warrant or reasonable suspicion",
+  "url": "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 171,
+  "comments": 130,
+  "published_at": 1789754912,
+  "discussion": "https://news.ycombinator.com/item?id=49758028",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/"
+  ],
+  "cross_source_count": 1,
+  "score": 1332.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "국경 요원은 영장이나 합리적 의심 없이 휴대폰을 수색할 수 있다",
+  "summary": "댓글에서는 관세당국이 영장·의심 없이 디지털 기기까지 수색할 수 있다고 언급한다. 한 댓글은 미국 헌법 제4조와의 충돌을 지적하고, 다른 댓글은 실제 사례로 미국 입국이 영구 금지된 경험을 제시한다.",
+  "why": "미국 국경 통과 시 영장 없이 휴대폰 디지털 콘텐츠가 수색될 수 있다. 해외 출장이나 이주 계획이 있는 개발자는 기기에 저장된 민감한 데이터를 사전에 점검해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Korea raises data breach fines to 10% of revenue",
+  "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 223,
+  "comments": 70,
+  "published_at": 1789761774,
+  "discussion": "https://news.ycombinator.com/item?id=49759466",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899"
+  ],
+  "cross_source_count": 1,
+  "score": 1256.0,
+  "image": "https://image.koreajoongangdaily.com/12869908.jpg?imageId=12869908&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+  "link_status": "ok",
+  "ko_title": "한국, 데이터 유출 벌금 10% 매출까지 인상",
+  "summary": "개인정보보호법 개정으로 1천만 명 이상 데이터가 유출된 경우 기업에 매출액의 최대 10%까지 벌금을 부과한다. 기존 최대 3%에서 대폭 상향되며, 3년 내 반복 위반이나 시정 명령 불이행 시 적용된다. 위반 시 72시간 이내 사용자 통지도 의무화된다.",
+  "why": "1천만 명 이상 유출 시 매출 10% 벌금이 적용되므로 데이터 보안 투자가 필수다. 위험이 높으면 유출 확인과 무관하게 72시간 내 사용자에게 통보해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Partnering with Accenture on embedded evaluation",
+  "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+  "description": "",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789689600.0,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/accenture-embedded-evaluation"
+  ],
+  "cross_source_count": 1,
+  "score": 1200.0,
+  "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic, Accenture와 임베디드 평가 협업",
+  "summary": "Anthropic은 Accenture와 협력해 AI 모델의 임베디드 평가와 레드팀 테스트를 진행한다. 양사는 향후 5년간 각각 최소 10억 달러를 투자해 평가 역량을 구축할 계획이다. 임베디드 평가자는 기업 내부에 배치돼 모델 개발 전 과정을 직접 관찰하고 안전성을 검증한다. 현재 평가 접근 권한 및 보고 방식에 대한 표준은 아직 마련되지 않았다.",
+  "why": "임베디드 평가자의 접근 권한과 보고 방식에 대한 표준이 아직 없다. AI 모델 개발 전 과정을 내부에서 관찰하는 방식이 도입된다. 기존의 외부 평가자와는 다른 접근 방식이 적용된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Note on 18th September 2026",
+  "url": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+  "description": "Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park. Tags: llms , ai , generative-ai",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789759292.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "2026년 9월 18일 노트",
+  "summary": "",
+  "why": "LLM 기술이 백엔드 개발의 핵심 영역으로 편입되고 있다. 기존 개발 방식과 AI 활용 방식의 경계가 사라지고 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Quoting Thariq Shihipar",
+  "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+  "description": "We're adding support for AGENTS.md to Claude Code. Starting today in version 2.1.277, if there is no CLAUDE.md in a folder, Claude will check for and use AGENTS.md. AGENTS.md support is built off of Claude Code mods, our upcoming way to customize the Claude Code harness. This is a built-in mod, but you’ll be able to build custom versions of project instructions yourself as you’d like too. You can ",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789758567.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Thariq Shihipar 인용",
+  "summary": "Claude Code 버전 2.1.277부터 폴더에 CLAUDE.md가 없으면 AGENTS.md를 자동으로 읽어 프로젝트 지시를 적용한다. AGENTS.md 지원은 Claude Code 모드 기반으로 구현됐으며, 향후 사용자가 직접 커스텀 프로젝트 지시 모드를 만들 수 있다. 모드 소스 코드는 공개되어 있다.",
+  "why": "기존 CLAUDE.md 대신 AGENTS.md를 쓰는 프로젝트에서 별도 설정 없이 지시가 자동 적용된다. 커스텀 프로젝트 지시 모드를 직접 만들 수 있어 기존 방식과 차별화된 워크플로우를 구성할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "California Governor Newsom signs executive order demanding \"kill switch\" for AI models",
+  "url": "https://the-decoder.com/california-governor-newsom-signs-executive-order-demanding-kill-switch-for-ai-models/",
+  "description": "California Governor Gavin Newsom signed an executive order seeking independent auditors inside AI labs and a \"kill switch\" for AI models. An expert panel has two months to deliver recommendations. Newsom says no federal law requires AI companies to report dangerous incidents. The article California Governor Newsom signs executive order demanding \"kill switch\" for AI models appeared first on The De",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789753517.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/california-governor-newsom-signs-executive-order-demanding-kill-switch-for-ai-models/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/03/us_flag_neural_network-2-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "캘리포니아 주지사 뉴스엄, AI 모델에 “킬 스위치” 요구하는 행정명령 서명",
+  "summary": "캘리포니아 주는 AI 기업에 독립적인 감시를 강화하고 모델에 “킬 스위치”를 삽입하도록 요구하는 행정명령을 발표했다. 전문가 패널은 2개월 내에 독립 감사자를 연구실에 직접 배치하는 방안을 포함한 권고안을 제출한다. 이번 조치는 최근 Hugging Face 공격 등 위험 사건에 대응하기 위한 것으로, 주는 기존 AI 안전·아동 보호·딥페이크·데이터 프라이버시·사이버보안 법안을 기반으로 전국적 기준을 제안한다.",
+  "why": "독립 감사자가 연구소에 직접 배치되고 모델에 킬 스위치가 삽입되면, 배포 파이프라인에 외부 승인 단계가 추가된다. 이는 기존에 내부 검증만 거치던 프로세스와 달라지며, 서비스 출시 일정에 직접적인 영향을 미친다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Security researchers used Anthropic's Claude to hack OpenAI's internal systems in under 72 hours",
+  "url": "https://the-decoder.com/security-researchers-used-anthropics-claude-to-hack-openais-internal-systems-in-under-72-hours/",
+  "description": "Three security researchers used Anthropic's Claude models to break into OpenAI's internal systems through its community forum in less than 72 hours. According to the team, Opus 5 succeeded where its predecessor couldn't bypass a common security measure. The attack shows how newer AI models can cut the time and expertise needed to exploit security flaws. The article Security researchers used Anthro",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789752030.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/security-researchers-used-anthropics-claude-to-hack-openais-internal-systems-in-under-72-hours/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_anthropic_hack.png",
+  "link_status": "ok",
+  "ko_title": "보안 연구원, Anthropic의 Claude로 OpenAI 내부 시스템을 72시간 이내 해킹",
+  "summary": "보안 연구팀은 Anthropic의 Claude 모델을 이용해 OpenAI 커뮤니티 포럼의 이미지 처리 라이브러리와 인증 결함을 연계해 직원들의 ChatGPT·Codex 계정에 접근했다. 이를 통해 GitHub 내부 모노레포에 무해한 풀 리퀘스트를 생성했으며, 전체 공격은 72시간 안에 완성되었다. 해당 공격은 Opus 5 모델이 배포된 이후 가능해졌다.",
+  "why": "이미지 처리 라이브러리 미반영 패치와 인증 결함 연계를 통한 내부 침입이 72시간 안에 가능해졌다. 외부 서비스와 계정을 연결하는 백엔드 구조에서 유사한 취약점 연쇄가 발생할 위험이 커졌다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "research",
+   "security"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Claude Code, 이제 CLAUDE.md가 없으면 AGENTS.md를 읽음",
+  "url": "https://news.hada.io/topic?id=33913",
+  "description": "프로젝트에 CLAUDE.md 가 없으면 AGENTS.md 를 대신 읽는 기능 이 추가됨 해당 동작은 /config 의 “ Project instructions ”에서 변경할 수 있으며, Bedrock, Vertex, Foundry에서는 아직 지원하지 않음 비대...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789771939.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33913"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33913?v=602b21b6ec5348906a503c9037295929",
+  "link_status": "ok",
+  "ko_title": "Claude Code, 이제 CLAUDE.md가 없으면 AGENTS.md를 읽음",
+  "summary": "프로젝트에 CLAUDE.md 파일이 없을 경우 AGENTS.md를 대체 읽는 기능이 추가되었다. 이 동작은 /config의 “Project instructions” 설정에서 변경 가능하지만 Bedrock, Vertex, Foundry에서는 아직 지원되지 않는다. 비대화형 실행 시 내부 오류가 발생하면 claude -p와 Agent SDK가 오류를 보고하고 종료 코드 1로 종료하도록 수정되었다. TaskOutput 도구가 제거되고 백그라운드 작업 출력은 Read 명령으로 읽어야 한다.",
+  "why": "TaskOutput 도구가 사라져 백그라운드 작업 출력을 Read 명령으로 읽어야 한다. taskOutputMaxChars와 TASK_MAX_OUTPUT_LENGTH 설정은 더 이상 효과가 없다. Bedrock, Vertex, Foundry 환경에서는 AGENTS.md 대체 읽기 기능이 아직 지원되지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "한국, 개인정보 유출 과징금 상한을 매출의 10%로 인상",
+  "url": "https://news.hada.io/topic?id=33911",
+  "description": "개정 개인정보보호법 에 따라 고의나 중대한 과실로 1,000만 명 이상의 개인정보를 유출한 기업에는 전체 매출의 최대 10% 과징금 을 부과할 수 있으며, 기존 상한은 3%였음 유출이 확정되지 않아도 개인정보 노출 가능성이 높다고 판단하면 72시간 이내 이용...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789767739.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33911"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33911?v=c4e0be43ed169357e2d4e8543df8a74a",
+  "link_status": "ok",
+  "ko_title": "한국, 개인정보 유출 과징금 상한을 매출의 10%로 인상",
+  "summary": "개정 개인정보보호법이 고의·중대한 과실로 1,000만 명 이상 유출한 기업에 매출 최대 10%까지 과징금을 부과한다. 기존 3% 상한에서 크게 상승했으며, 사전 투자·신속 대응 시 최대 40% 감경이 가능하다. 72시간 이내 이용자 통지 의무와 보호책임자 선임·변경·해임 시 이사회 승인·보고 의무도 새롭게 적용된다.",
+  "why": "백엔드 개발자는 72시간 내 이용자 통지 의무를 충족할 수 있는 로그와 알림 체계를 점검해야 한다. 사전 보호 투자와 신속한 대응이 과징금 최대 40% 감경 요건이므로 보안 예산과 대응 프로세스가 핵심 지표가 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "Android 17, 3.x 이후 처음으로 AOSP에 공개하지 않고 새 API 추가",
+  "url": "https://news.hada.io/topic?id=33910",
+  "description": "Android 17 QPR1 에 추가된 표준 Android API가 현재 Pixel에만 제공되며, AOSP와 다른 제조사에는 2026년 12월 QPR2를 통해 공개될 예정임 GrapheneOS에 따르면 Pixel 외 기기에도 필요한 표준 Android 플랫폼 보안 패치 일부 가 일반 보안 공지와 사전 제공 패치에...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789765338.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33910"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33910?v=e905b99c9097991ab5d0975278699aa8",
+  "link_status": "ok",
+  "ko_title": "Android 17, 3.x 이후 처음으로 AOSP에 공개하지 않고 새 API 추가",
+  "summary": "Android 17 QPR1에 추가된 표준 API가 현재 Pixel에만 제공되고 AOSP와 타 제조사는 2026년 12월 QPR2에 공개될 예정이다. GrapheneOS는 QPR1 코드를 이식했지만 배포 허가를 받지 못해 Pixel 펌웨어와 드라이버를 백포트하고 있다. 보안 패치 접근 제한으로 인해 타 제조사는 몇 개월 늦게 업데이트를 받으며, Google의 사전 제공 제도에 대한 비판이 제기되고 있다.",
+  "why": "Pixel 외 기기는 표준 API와 보안 패치를 2026년 12월 QPR2까지 기다려야 한다. 이 기간 동안 타 제조사 기기는 수개월간 보안 취약점에 노출될 위험이 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "생각을 멈추는 방식이 통하는 시점은 오지 않음",
+  "url": "https://news.hada.io/topic?id=33909",
+  "description": "LLM의 결과를 검증 없이 받아들이거나 오류 수정을 다시 맡기기만 하는 방식 은 모델이 발전해도 직원에게 유효한 전략이 되지 못함 지금은 이런 방식으로 만든 소프트웨어에 심각한 문제가 남고, 미래에 LLM이 혼자 훌륭한 소프트웨어를 만들게 된다면 기업은 중간에서 요청...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789764740.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33909"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33909?v=3e77280b36ac63489bea80244d99cf85",
+  "link_status": "ok",
+  "ko_title": "생각을 멈추는 방식이 통하는 시점은 오지 않음",
+  "summary": "",
+  "why": "LLM 결과 검증 없이 전달만 하는 방식은 모델 발전과 무관하게 유효하지 않다. 명세로 옮기기 어려운 요구사항과 학습 분포 밖의 문제에서는 사람의 설계 판단이 필수다. 에이전트 처리량이 높아질수록 예외 상황 탐색과 품질 검증 기준도 함께 올라간다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "There's no point at which turning your brain off will work",
+  "url": "https://danluu.com/brain-off/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 16,
+  "comments": 4,
+  "published_at": 1789751740.357,
+  "discussion": "https://lobste.rs/s/dd6if1/there_s_no_point_at_which_turning_your",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://danluu.com/brain-off/"
+  ],
+  "cross_source_count": 1,
+  "score": 901.5999999999999,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "뇌를 끄는 것이 효과가 있는 순간은 없다",
+  "summary": "LLM을 사용해 작업을 자동화하고 결과를 검증 없이 그대로 받아들이는 행위가 초기 2025년엔 자주 실패했지만, 2026년 현재는 일부 경우에 제한적으로 동작한다. 저자는 인간이 개입하지 않은 상태에서 LLM이 만든 코드가 평균 수준의 품질을 내는 ‘meat proxy’ 방식이 아직은 실용적이지 않다고 평가한다.",
+  "why": "LLM 생성 코드를 검증 없이 수용하는 방식은 아직 평균 품질을 보장하지 못한다. 백엔드 개발자는 자동화 파이프라인에 반드시 수동 검증 단계를 유지해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "wide-trace / open-higgsfield",
+  "url": "https://github.com/wide-trace/open-higgsfield",
+  "description": "A studio for image and video generation — one prompt bar, each model’s own settings, and every finished run in one gallery.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1070,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/wide-trace/open-higgsfield"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1070,
+  "score": 479.49999999999994,
+  "image": "https://opengraph.githubassets.com/1/wide-trace/open-higgsfield",
+  "link_status": null,
+  "ko_title": "wide-trace / open-higgsfield",
+  "summary": "OpenHiggsfield AI는 Higgsfield AI의 무료 오픈소스 대안으로, 하나의 프롬프트 바로 38개의 이미지·비디오 모델을 이용해 생성한다. 브라우저에서 바로 사용할 수 있는 호스팅 버전(openhiggsfield.ai)과 자체 호스팅 옵션을 제공한다. Next.js 16 App Router, React 19, Zustand, pnpm 등 최신 웹 스택으로 구현되었다.",
+  "why": "자체 호스팅 시 Next.js 16과 React 19 기반 웹 스택을 직접 다루게 된다. 플랫폼 키를 직접 등록해 38개 모델을 단일 프롬프트로 호출하는 구조다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
+  "title": "TheoLeeCJ / SemIf",
+  "url": "https://github.com/TheoLeeCJ/SemIf",
+  "description": "Can we run something like Jev on a 3090 at home?",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 827,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/TheoLeeCJ/SemIf"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 827,
+  "score": 394.45,
+  "image": "https://opengraph.githubassets.com/1/TheoLeeCJ/SemIf",
+  "link_status": null,
+  "ko_title": "TheoLeeCJ / SemIf",
+  "summary": "최신 업데이트에서는 MiniCPM5 2B와 Qwen3.5 4B 모델이 브라우저 데모에 추가되었으며, 전통적인 인터페이스로 전환하는 Unsloppify 사이트가 도입되었다. 이 프로젝트는 오픈 모델을 이용해 Jev와 유사한 semantic if 인터페이스를 구현하고, 별도의 대기열 없이 웹에서 바로 실행할 수 있다.",
+  "why": "에이전트의 경로나 재시도 같은 작은 결정에 텍스트 생성을 거치지 않고 옵션 확률을 직접 읽는 방식이다. JSON 파싱이나 복구 루프를 생략해 백엔드 로직의 지연을 줄일 수 있다. RTX 3090급 GPU에서 4B 모델을 돌릴 수 있어 로컬 환경 적용이 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-19T08:00:05.713484+09:00",
+  "batch_label": "9월 19일 08:00"
+ },
+ {
   "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
   "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
   "description": "",
