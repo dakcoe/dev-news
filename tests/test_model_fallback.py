@@ -118,12 +118,13 @@ def test_요약은_사다리_맨_위부터_내려간다():
     assert S.chain_below("groq", top) == ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
 
 
-def test_왜중요는_qwen38부터_내려간다():
-    assert S.chain_below("groq", "qwen/qwen3.8-27b") == ["openai/gpt-oss-20b"]
+def test_왜중요는_qwen38에서_시작해_나머지를_좋은_순으로():
+    """아래 칸만 주면 더 나은 120b 를 못 쓴다. 나머지 전부를 사다리 순으로."""
+    assert S.chain_below("groq", "qwen/qwen3.8-27b") == ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
 
-def test_맨_아래_칸은_더_내려갈_곳이_없다():
-    assert S.chain_below("groq", "openai/gpt-oss-20b") == []
+def test_맨_아래_칸에서도_위_칸들을_예비로_쓴다():
+    assert S.chain_below("groq", "openai/gpt-oss-20b") == ["openai/gpt-oss-120b", "qwen/qwen3.8-27b"]
 
 
 def test_사다리에_없는_모델이면_사다리_전체를_쓴다():
@@ -213,12 +214,29 @@ def test_요약이_내려와도_왜중요와_같은_칸에_앉지_않는다(monk
     assert "openai/gpt-oss-20b" in seen
 
 
-def test_왜중요_예비에_주_모델이_섞이지_않는다():
-    """사다리 밖 모델을 왜중요로 지정하면 사다리 전체가 예비가 되는데,
-    거기에 주 모델이 들어가면 요약과 같은 한도로 되돌아간다."""
+def test_exclude_는_여전히_뺀다():
     chain = S.chain_below("groq", "사다리밖", exclude={"openai/gpt-oss-120b"})
-    assert "openai/gpt-oss-120b" not in chain
     assert chain == ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
+
+
+def test_한도에_걸린_모델로는_왜중요도_안_간다(monkeypatch):
+    """요약이 120b 한도로 qwen3.8 에 내려오면 왜중요는 비켜야 하는데, 그 예비
+    첫 칸이 120b 다. 방금 한도에 걸린 모델이니 건너뛰고 20b 로 가야 한다."""
+    seen = []
+
+    def fake_call(prompt, provider, model, api_key):
+        seen.append(model)
+        if model == "openai/gpt-oss-120b":
+            raise S.RateLimited(2)
+        return "번역제목: 제목\n요약: 요약이다.\n왜중요: 이유다."
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setattr(S.time, "sleep", lambda *a: None)
+    out = S.summarize_all(ARTICLES, pause=0, max_calls=90, why_model="qwen/qwen3.8-27b")
+    assert all(a["llm_done"] for a in out)
+    assert "openai/gpt-oss-20b" in seen
+    # 한도에 걸린 뒤로는 120b 를 다시 부르지 않는다 (처음 재시도 몇 번만)
+    assert seen.count("openai/gpt-oss-120b") <= S.MAX_429_RETRIES + 1
 
 
 def test_모델을_바꾸면_재생성_기회도_새로_준다(monkeypatch):

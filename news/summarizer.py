@@ -367,7 +367,7 @@ MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 �
 # 모델 사다리. 하나의 계층이고, 용도마다 들어가는 칸이 다를 뿐이다.
 #
 #   요약    gpt-oss-120b → qwen3.8-27b → gpt-oss-20b   (맨 위부터)
-#   왜중요  qwen3.8-27b  → gpt-oss-20b                 (qwen3.8부터)
+#   왜중요  qwen3.8-27b  → gpt-oss-120b → gpt-oss-20b  (qwen3.8부터, 나머지를 좋은 순으로)
 #
 # 2026-09-18: qwen3.6-27b 가 Groq 에서 내려갔다. 맨 아래 칸을 gpt-oss-20b 로.
 # 계정에서 쓸 수 있는 모델은 GET /openai/v1/models 로 확인한다.
@@ -389,20 +389,33 @@ MODEL_LADDER = {
 
 def chain_below(provider: str, model: str | None, exclude: set[str] | None = None
                 ) -> list[str]:
-    """사다리에서 model보다 아래 칸들.
+    """사다리에서 model 을 뺀 나머지 칸들, 사다리 순서(품질 순)대로.
 
-    사다리에 없는 모델을 설정으로 지정했으면 사다리 전체를 예비로 쓴다. 다만
-    exclude에 든 것은 뺀다 — 왜중요 예비가 주 모델과 같은 칸으로 내려가면 한
-    회차에서 같은 한도를 두 번 두드리게 된다.
+    예전에는 model 보다 아래 칸만 줬다. 그러면 qwen3.8 에서 시작하는 왜중요는
+    gpt-oss-20b 로만 떨어지고, 더 나은 gpt-oss-120b 는 위 칸이라 못 썼다. 이제는
+    나머지 전부를 좋은 것부터 준다 — 왜중요: qwen3.8 → gpt-oss-120b → gpt-oss-20b.
+    120b 는 요약과 한도를 나눠 쓰게 되지만, 한도에 걸린 모델은 summarize_all 이
+    따로 기억해 건너뛴다.
+
+    사다리에 없는 모델을 설정으로 지정했으면 사다리 전체를 예비로 쓴다.
+    exclude 에 든 것은 뺀다.
     """
     ladder = MODEL_LADDER.get(provider, [])
-    below = ladder[ladder.index(model) + 1:] if model in ladder else list(ladder)
     drop = {model} | (exclude or set())
-    return [m for m in below if m not in drop]
+    return [m for m in ladder if m not in drop]
+
+
+def _next_free(chain: list[str], limited: set[str] | None) -> str | None:
+    """예비 목록에서 한도에 안 걸린 첫 모델을 꺼낸다. 없으면 None."""
+    while chain:
+        m = chain.pop(0)
+        if not limited or m not in limited:
+            return m
+    return None
 
 
 def _dodge_collision(model: str, why_model: str | None, why_chain: list[str],
-                     why_off: bool) -> tuple[str | None, bool]:
+                     why_off: bool, limited: set[str] | None = None) -> tuple[str | None, bool]:
     """요약이 한 칸 내려와 왜중요와 같은 모델에 앉으면 비켜 준다.
 
     같은 칸을 쓰면 한 기사에 같은 한도를 두 번 두드린다 — 한도를 피해 내려왔는데
@@ -413,7 +426,7 @@ def _dodge_collision(model: str, why_model: str | None, why_chain: list[str],
         return why_model, why_off
     while why_chain:
         nxt = why_chain.pop(0)
-        if nxt != model:
+        if nxt != model and not (limited and nxt in limited):
             print(f"  · 왜중요가 요약과 같은 칸 — {nxt}로 한 칸 더 내린다")
             return nxt, False
     print(f"  · 왜중요가 요약과 같은 칸 — 이번 회차는 왜중요를 끈다")
@@ -454,7 +467,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     if why_fallback_models is None:
         env = os.environ.get("LLM_WHY_FALLBACK_MODELS")
         why_fallback_models = ([m.strip() for m in env.split(",") if m.strip()] if env
-                               else chain_below(provider, why_model, exclude={model}))
+                               else chain_below(provider, why_model))
     why_chain = [m for m in why_fallback_models if m and m != why_model] if why_model else []
 
     print(f"[summarizer] {provider} · {model} · 호출 예산 {max_calls}회"
@@ -465,6 +478,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     calls = 0
     exhausted = False        # 서킷 브레이커 — 열리면 이후 호출을 시도조차 하지 않는다
     why_off = False          # 왜중요 모델이 한도에 걸리면 이번 회차는 더 부르지 않는다
+    limited: set[str] = set()   # 이번 회차에 한도(429)로 버린 모델. 다른 쪽도 여기로는 안 간다
     out = []
 
     for i, article in enumerate(articles, 1):
@@ -511,8 +525,10 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                             # 예비가 있으면 갈아타고 이 기사부터 다시 시도한다.
                             # 다 떨어지면 주 모델이 쓴 왜중요를 그대로 둔다 —
                             # 기사는 게시된다.
-                            if why_chain:
-                                why_model = why_chain.pop(0)
+                            limited.add(why_model)
+                            nxt = _next_free(why_chain, limited)
+                            if nxt:
+                                why_model = nxt
                                 print(f"  · 왜중요 한도(429) — 예비 {why_model}로 교체")
                                 continue
                             why_off = True
@@ -579,7 +595,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                     attempt = 0
                     print(f"  · 예비 모델 {model}로 교체하고 계속한다")
                     why_model, why_off = _dodge_collision(
-                        model, why_model, why_chain, why_off)
+                        model, why_model, why_chain, why_off, limited)
                     continue
                 exhausted = True
                 break
@@ -588,13 +604,15 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if retries_429 > MAX_429_RETRIES or e.wait > MAX_RETRY_WAIT:
                     # 이 모델은 한도에 걸렸다. 예비 모델이 남아 있으면 갈아탄다 —
                     # Groq는 한도를 모델별로 세므로 예산이 새로 생긴다.
-                    if chain:
-                        model = chain.pop(0)
+                    limited.add(model)
+                    nxt = _next_free(chain, limited)
+                    if nxt:
+                        model = nxt
                         retries_429 = 0
                         attempt = 0        # 새 모델에 재생성 기회를 그대로 준다
                         print(f"  · 한도(429) — 예비 모델 {model}로 교체하고 계속한다")
                         _why_model, _why_off = _dodge_collision(
-                            model, why_model, why_chain, why_off)
+                            model, why_model, why_chain, why_off, limited)
                         why_model, why_off = _why_model, _why_off
                         continue          # 같은 기사를 새 모델로 다시 시도
                     exhausted = True
