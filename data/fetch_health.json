@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-09T10:03:11+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 12,
-    "empty": 1,
-    "github": 3,
-    "short": 1
-   },
-   "failures": [
-    {
-     "url": "https://ai.meta.com/muse/",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://mathstodon.xyz/@tao/117237320796901560",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-09T21:09:44+09:00",
    "total": 19,
    "counts": {
@@ -473,6 +451,22 @@
     {
      "url": "https://openai.com/index/cooley-gopublic",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-19T00:00:27+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+     "source": "hackernews",
      "reason": "blocked"
     }
    ]
