@@ -1471,7 +1471,7 @@ function render(){
   let h=h1HTML(isSaved?'보관함':'오늘의 뉴스')
       + '<div class="sub">'+(isSaved
           ? '체크한 기사 · API · 스킬을 모아둔 곳입니다. 이 브라우저에 저장됩니다.'
-          : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차) · 하루 수백 건 중 회차당 20건을 고릅니다')+'</div>';
+          : '매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 (최근 '+batches().length+'회차) · 하루 수백 건 중 회차당 최대 20건을 고릅니다')+'</div>';
 
   if(isSaved){
     if(savedMap.size) h+='<button class="expbtn" onclick="copyMd()">선택 '+savedMap.size+'건 마크다운으로 복사</button>';

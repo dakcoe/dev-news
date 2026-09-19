@@ -244,7 +244,7 @@ def test_프리렌더에_우리_문장이_보인다(tmp_path):
     markup = re.sub(r"<script\b.*?</script>", "", out.read_text(encoding="utf-8"), flags=re.S)
     assert "이유가 여기 있다." in markup
     assert 'class="foot"' in markup and 'href="/about/"' in markup and 'href="/privacy/"' in markup
-    assert "회차당 20건을 고릅니다" in markup
+    assert "회차당 최대 20건을 고릅니다" in markup
 
 
 def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
