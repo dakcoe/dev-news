@@ -166,13 +166,14 @@ __ADS_HEAD__
   .no-intro .intro{display:none}
 
   /* 아이콘만 두면 무슨 화면인지 안 읽힌다. title 속성은 마우스를 1초 얹어야 뜨고
-     하단 내비에서는 아예 안 뜬다 — 글자를 함께 둔다. 레일이 74px에서 84px로 넓어진다. */
+     하단 내비에서는 아예 안 뜬다 — 글자를 함께 둔다. 아이콘을 25px에서 22px로 줄여
+     자리를 만들었으므로 레일은 오히려 74px에서 72px로 좁아진다. */
   .rail{
-    width:84px;flex:none;background:var(--rail);border-right:1px solid var(--line);
-    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:4px;
+    width:72px;flex:none;background:var(--rail);border-right:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:3px;
   }
   .rb{
-    width:70px;height:56px;border-radius:13px;border:none;background:transparent;
+    width:58px;height:54px;border-radius:13px;border:none;background:transparent;
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
     cursor:pointer;color:#9a9aa8;transition:.14s;position:relative;
   }
@@ -180,7 +181,7 @@ __ADS_HEAD__
   .rb.on{background:var(--pri-bg);color:var(--pri-dk)}
   .rb svg{width:22px;height:22px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
   .rb .lb{font-size:10.5px;font-weight:600;letter-spacing:-.01em;line-height:1}
-  .rb .dot{position:absolute;top:8px;right:14px;width:7px;height:7px;border-radius:50%;
+  .rb .dot{position:absolute;top:7px;right:9px;width:7px;height:7px;border-radius:50%;
            background:var(--pri);display:none}
   .rb.has .dot{display:block}
   .rb.gh{margin-top:auto}    /* 데스크톱: 레일 맨 아래 */
@@ -623,7 +624,7 @@ __ADS_HEAD__
     .acts{grid-column:1/-1;flex-direction:row;justify-content:flex-end;gap:2px;
           padding-top:8px;margin-top:4px;border-top:1px solid var(--line2)}
     .dc{padding:22px 20px 40px}
-    /* 좌측 레일(84px)은 좁은 화면에서 폭을 너무 먹는다 — 하단 내비로 전환.
+    /* 좌측 레일(72px)은 좁은 화면에서 폭을 너무 먹는다 — 하단 내비로 전환.
        글자를 함께 두느라 높이가 58px에서 62px로 커졌다. */
     .rail{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;height:62px;
           flex-direction:row;justify-content:space-around;align-items:center;padding:0;gap:0;
