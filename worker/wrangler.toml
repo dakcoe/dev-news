@@ -1,0 +1,20 @@
+name = "dev-news-sync"
+main = "src/index.js"
+compatibility_date = "2026-09-19"
+
+# 공개해도 되는 값이라 여기 둔다. client_secret 은 여기 적지 않는다 —
+# `wrangler secret put GITHUB_CLIENT_SECRET` 으로 Cloudflare 에만 넣는다.
+[vars]
+GITHUB_CLIENT_ID = "Ov23lik76aRDn26bevOI"
+
+# `wrangler d1 create dev-news-sync` 가 출력하는 UUID 를 database_id 에 넣는다.
+[[d1_databases]]
+binding = "DB"
+database_name = "dev-news-sync"
+database_id = "73cd3e3b-d9a5-4f4a-91d9-c0482d3ed5cb"
+
+# 커스텀 도메인. dev-news.net 존이 이미 Cloudflare 에 있으므로 서브도메인만 붙인다.
+# 본 사이트(dev-news.net)는 GitHub Pages 그대로고 여기서 건드리지 않는다.
+[[routes]]
+pattern = "api.dev-news.net"
+custom_domain = true

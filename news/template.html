@@ -507,7 +507,8 @@ __ADS_HEAD__
   code{background:#f2f2f6;border:1px solid var(--line);padding:1.5px 6px;border-radius:5px;
        font-size:14.5px;font-family:"SF Mono",Consolas,monospace;color:#6b4bd0}
   .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;
-      text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px}
+      text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px;
+      font-family:inherit;border:none;cursor:pointer}
   .go:hover{background:#000}
   /* 스킬 순위 행: 순위 / 변동 / 소유자 아바타 / 이름·저장소·설명 / 설치 수 / 보관.
      누르면 아래로 펼쳐져 설명 전문과 설치 명령이 나온다 (API 목록의 아코디언과 같다). */
@@ -547,6 +548,7 @@ __ADS_HEAD__
   .about .who p{font-size:14.5px;color:var(--tx2);margin:2px 0 0}
   .about .pacts{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:6px}
   .about .pacts .go{justify-content:center}
+  .about .pnote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
   /* 필기하는 고양이. 프레임 6장을 세로로 쌓아 두고 창을 한 칸씩 내린다 —
      steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
   .about .whorow{display:flex;align-items:center;justify-content:center;gap:14px}
@@ -803,7 +805,13 @@ function aboutHTML(){
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
+    +     (syncUser
+             ? '<button type="button" class="go alt" onclick="syncLogout()">'+AB_ICON.gh+'로그아웃</button>'
+             : '<button type="button" class="go alt" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>')
     +   '</div>'
+    +   (syncUser
+           ? '<p class="pnote">보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
+           : '<p class="pnote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
     + '<div class="doc">'+secs+'</div></div>'+FOOT_HTML;
 }
@@ -840,12 +848,133 @@ try{
 }catch(e){}
 try{ const r=localStorage.getItem(READ_KEY); if(r) JSON.parse(r).forEach(u=>read.add(u)); }catch(e){}
 
-function persist(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify([...savedMap.values()])); }catch(e){} }
+function persist(){
+  try{ localStorage.setItem(SAVE_KEY, JSON.stringify([...savedMap.values()])); }catch(e){}
+  syncQueueSaved();
+}
 function persistRead(){
   // 목록에서 사라진 기사까지 무한정 쌓이지 않도록 최근 1000건만 유지
   try{ localStorage.setItem(READ_KEY, JSON.stringify([...read].slice(-1000))); }catch(e){}
+  syncQueueRead();
 }
 function markRead(url){ if(!read.has(url)){ read.add(url); persistRead(); } }
+
+/* ---------------- 기기 간 동기화 ----------------
+   로그인한 사람만 돈다. 로그인하지 않으면 아래 함수들은 전부 즉시 빠져나가고
+   지금까지처럼 localStorage 만 쓴다.
+
+   화면은 언제나 localStorage 로 먼저 그린다. 서버 응답은 뒤에서 도착해 조용히
+   맞춘다 — 사용자가 로딩을 기다리는 구간을 만들지 않으려는 것이다.
+
+   서버로는 전체 목록이 아니라 변경분만 보낸다. 전체를 보내면 다른 기기가 그 사이
+   추가한 항목을 덮어 지운다. */
+const SYNC_API = 'https://api.dev-news.net';
+const SYNCED_KEY = 'dev-news-synced';   // 이 브라우저가 한 번이라도 서버와 맞췄는가
+let syncUser = null;                    // 로그인했으면 {id}
+let syncBase = { saved: new Set(), read: new Set() };  // 마지막으로 서버에 반영된 상태
+let syncPending = [];
+let syncTimer = null;
+
+const syncApi = (path, opts = {}) =>
+  fetch(SYNC_API + path, { credentials: 'include', ...opts });
+
+function syncQueueSaved(){
+  if(!syncUser) return;
+  const cur = new Set(savedMap.keys());
+  for(const url of cur) if(!syncBase.saved.has(url)){
+    const it = savedMap.get(url);
+    syncPending.push({t:'bm+', url, title:it.title, month:it.month,
+                      kind:it.kind || 'news', sub:it.sub || '', desc:it.desc || ''});
+  }
+  for(const url of syncBase.saved) if(!cur.has(url)) syncPending.push({t:'bm-', url});
+  syncBase.saved = cur;
+  syncSchedule();
+}
+
+function syncQueueRead(){
+  if(!syncUser) return;
+  const at = Math.floor(Date.now()/1000);
+  for(const url of read) if(!syncBase.read.has(url)){
+    syncPending.push({t:'rd', url, at});
+    syncBase.read.add(url);
+  }
+  syncSchedule();
+}
+
+/* 기사를 열 때마다 한 번씩 보내면 요청이 금방 불어난다. 1초 모아서 한 번에 보낸다. */
+function syncSchedule(){
+  if(!syncPending.length || syncTimer) return;
+  syncTimer = setTimeout(()=>{ syncTimer = null; syncFlush(); }, 1000);
+}
+
+function syncFlush(){
+  if(!syncUser || !syncPending.length) return;
+  const ops = syncPending.splice(0, 500);
+  syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
+                    body: JSON.stringify({ops})})
+    .catch(()=>{ syncPending.unshift(...ops); });   // 실패하면 다음 기회에 다시
+}
+
+/* 탭을 닫아도 마지막 변경분을 잃지 않게 한 번 더 민다. */
+addEventListener('pagehide', ()=>{
+  if(!syncUser || !syncPending.length) return;
+  const body = JSON.stringify({ops: syncPending.splice(0, 500)});
+  try{ navigator.sendBeacon(SYNC_API + '/sync', new Blob([body], {type:'application/json'})); }catch(e){}
+});
+
+async function syncPull(){
+  let res;
+  try{ res = await syncApi('/sync'); }catch(e){ return; }    // 오프라인이면 조용히 넘어간다
+  if(res.status === 401){ syncUser = null; render(); return; }
+  if(!res.ok) return;
+  const d = await res.json();
+
+  let first = false;
+  try{ first = localStorage.getItem(SYNCED_KEY) !== '1'; }catch(e){}
+
+  if(first){
+    // 이 브라우저의 첫 동기화. 여기까지 localStorage 에만 있던 것을 잃으면 안 되므로
+    // 합집합으로 두고, 서버에 없는 것은 올린다. 이후부터는 서버를 정본으로 본다.
+    for(const it of d.saved) if(!savedMap.has(it.url)) savedMap.set(it.url, it);
+    d.read.forEach(u=>read.add(u));
+    syncBase = {saved: new Set(d.saved.map(x=>x.url)), read: new Set(d.read)};
+    try{ localStorage.setItem(SYNCED_KEY, '1'); }catch(e){}
+    persist(); persistRead();            // 로컬에만 있던 것이 여기서 변경분으로 잡힌다
+  } else {
+    // 서버가 정본이다. 다른 기기에서 지운 것이 여기서도 사라져야 한다.
+    savedMap.clear();
+    d.saved.forEach(it=>savedMap.set(it.url, it));
+    read.clear();
+    d.read.forEach(u=>read.add(u));
+    syncBase = {saved: new Set(savedMap.keys()), read: new Set(read)};
+    try{
+      localStorage.setItem(SAVE_KEY, JSON.stringify([...savedMap.values()]));
+      localStorage.setItem(READ_KEY, JSON.stringify([...read].slice(-1000)));
+    }catch(e){}
+  }
+  render();
+}
+
+function syncLogin(){ location.href = SYNC_API + '/auth/login'; }
+
+async function syncLogout(){
+  try{ await syncApi('/auth/logout', {method:'POST'}); }catch(e){}
+  syncUser = null;
+  try{ localStorage.removeItem(SYNCED_KEY); }catch(e){}
+  render();
+}
+
+/* 페이지를 열 때마다 한 번. 로그인 안 했으면 /me 한 번으로 끝난다. */
+(async ()=>{
+  let res;
+  try{ res = await syncApi('/me'); }catch(e){ return; }
+  if(!res.ok) return;
+  const d = await res.json();
+  if(!d.user) return;
+  syncUser = d.user;
+  render();
+  syncPull();
+})();
 function toggleRead(i){
   const u=DATA[i].url;
   read.has(u) ? read.delete(u) : read.add(u);
