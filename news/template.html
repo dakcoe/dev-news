@@ -552,7 +552,9 @@ __ADS_HEAD__
   .about .pacts{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:6px}
   .about .pacts .go{justify-content:center}
   .about .pnote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
-  .about .acct-m{display:none}   /* 좁은 화면에서만 — 넓은 화면은 레일에 있다 */
+  .acctbar{display:none}   /* 좁은 화면에서만 — 넓은 화면은 레일에 있다 */
+  .acctbar .go{width:100%;justify-content:center}
+  .acctbar .anote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
   /* 필기하는 고양이. 프레임 6장을 세로로 쌓아 두고 창을 한 칸씩 내린다 —
      steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
   .about .whorow{display:flex;align-items:center;justify-content:center;gap:14px}
@@ -656,7 +658,9 @@ __ADS_HEAD__
     /* 하단 바에서는 계정 칸을 뺀다. 엄지가 닿는 자리라 실수로 눌리고, 로그아웃은
        되돌리기 번거롭다. 대신 소개 화면 안에서 누르게 한다. */
     .rb.acct{display:none}
-    .about .acct-m{display:inline-flex}
+    .acctbar{display:block;background:var(--panel);border-radius:14px;
+             box-shadow:var(--shadow-card);padding:18px;margin-bottom:12px}
+    .about .pnote{display:none}   /* 위 계정 블록이 같은 말을 한다 */
     .rb .lb{font-size:10px;letter-spacing:-.03em}
     .rb .lb-w{display:none}
     .rb .lb-n{display:inline}
@@ -815,6 +819,16 @@ function aboutHTML(){
   const secs=(a.copy||[]).map(x=>'<section id="'+escA(x.id)+'"'+(x.id==='privacy'?' class="small"':'')+'><h2>'+escA(x.title)+'</h2>'+x.html+(x.id==='support'?btns:'')+'</section>').join('');
   return h1HTML('소개')
     + '<div class="sub">만든 사람과 운영 방식</div>'
+    /* 좁은 화면에서는 계정이 소개 화면 맨 위에 선다. 프로필 카드 아래에 두면
+       스크롤해야 로그인 여부가 보인다. 하단 바에는 두지 않는다 — 엄지가 닿는
+       자리라 실수로 눌린다. */
+    + '<div class="acctbar">'
+    +   (syncUser
+           ? '<button type="button" class="go alt" onclick="syncLogout()">'+AB_ICON.gh+'로그아웃</button>'
+             + '<p class="anote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
+           : '<button type="button" class="go" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>'
+             + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
+    + '</div>'
     + '<div class="about">'
     + '<div class="profile">'
     +   (avatar?'<img class="avatar" src="'+avatar+'" alt="" onerror="this.remove()">':'')
@@ -824,9 +838,6 @@ function aboutHTML(){
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.star+'저장소 추천하기</a>':'')
-    +     (syncUser
-             ? '<button type="button" class="go alt acct-m" onclick="syncLogout()">'+AB_ICON.gh+'로그아웃</button>'
-             : '<button type="button" class="go alt acct-m" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>')
     +   '</div>'
     +   (syncUser
            ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
