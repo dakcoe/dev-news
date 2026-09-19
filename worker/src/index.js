@@ -58,13 +58,15 @@ export function parseCookies(header) {
 }
 
 function setCookie(name, value, maxAge, path = '/') {
-  // Domain 을 상위 도메인으로 둬야 dev-news.net 에서 보낸 요청에도 실린다.
-  // 둘은 오리진이 다르지만 같은 사이트라 SameSite=Lax 로 통과한다.
+  // Domain 을 적지 않는다. 그러면 쿠키가 api.dev-news.net 전용이 되고, 그래도
+  // dev-news.net 페이지가 보내는 요청에는 실린다 — 목적지가 이 호스트이고 둘이
+  // 같은 사이트라 SameSite=Lax 를 통과하기 때문이다. 상위 도메인으로 넓히면
+  // 세션 토큰이 dev-news.net(= GitHub Pages 서버)에도 매 요청 전달되고, 나중에
+  // 만들 다른 서브도메인에도 따라간다.
   const bits = [
     `${name}=${encodeURIComponent(value)}`,
     `Max-Age=${maxAge}`,
     `Path=${path}`,
-    'Domain=.dev-news.net',
     'HttpOnly', 'Secure', 'SameSite=Lax',
   ];
   return bits.join('; ');

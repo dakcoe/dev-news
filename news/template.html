@@ -1042,7 +1042,18 @@ function syncLogin(){
 async function syncLogout(){
   try{ await syncApi('/auth/logout', {method:'POST'}); }catch(e){}
   syncUser = null;
+  /* 이 브라우저에 남은 사본까지 비운다. 안 비우면 다음에 다른 계정이 로그인할 때
+     앞사람의 보관함과 읽음 표시가 그 계정으로 올라간다 — 로그아웃이 SYNCED_KEY 를
+     지워서 "이 브라우저는 처음" 합집합 분기를 타기 때문이다. 공용 컴퓨터에서 두
+     사람이 번갈아 쓰면 악의 없이도 섞인다.
+     지운 자료는 서버에 그대로 있으니 다시 로그인하면 돌아온다. */
+  savedMap.clear(); read.clear();
+  syncPending = [];
+  syncBase = {saved: new Set(), read: new Set()};
   try{
+    localStorage.removeItem(SAVE_KEY);
+    localStorage.removeItem(READ_KEY);
+    localStorage.removeItem(QUEUE_KEY);
     localStorage.removeItem(SYNCED_KEY);
     localStorage.setItem(SWITCH_KEY, '1');   // 다음 로그인에서 계정을 고르게 한다
   }catch(e){}
@@ -1705,7 +1716,7 @@ function render(){
         else h+='<div class="row" data-au="'+escA(sv.url)+'" data-am="'+escA(sv.month)+'" style="cursor:pointer">'
               +'<button class="ck on" data-un="'+escA(sv.url)+'" title="보관 해제">'+I.chk+'</button>'
               +'<div class="mid"><h2 class="rt">'+escA(sv.title)+'</h2>'
-              +'<div class="rm"><span>'+(sv.month||'아카이브')+'</span></div></div></div>';
+              +'<div class="rm"><span>'+escA(sv.month||'아카이브')+'</span></div></div></div>';
       });
       /* API·스킬은 기사와 달리 본문이 없다 — 이름·부제·설명과 바깥 링크만. */
       const plain=(sv,label)=>'<div class="row">'
