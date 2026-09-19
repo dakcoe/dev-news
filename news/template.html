@@ -187,6 +187,8 @@ __ADS_HEAD__
   .rb.has .dot{display:block}
   .rb.gh{margin-top:auto}    /* 데스크톱: 레일 맨 아래 */
   .rb.gh svg{width:22px;height:22px}
+  .rb.acct svg{width:22px;height:22px}
+  .rb.acct img{width:22px;height:22px;border-radius:50%;display:block}
 
   /* ---------------- main ---------------- */
   .wrap{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
@@ -646,6 +648,7 @@ __ADS_HEAD__
     .rb{width:46px;height:46px}
     .rb .dot{top:3px;right:calc(50% - 14px)}
     .rb.gh{margin-top:0}     /* 하단 내비에선 나란히 */
+    .rb{width:42px;height:42px}   /* 칸이 여섯이라 46 에서 줄인다 */
     .facet{bottom:58px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
   }
 </style>
@@ -704,6 +707,9 @@ __ADS_HEAD__
   <button class="rb gh" data-v="about" title="소개">
     <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg><span class="lb">소개</span>
   </button>
+  <!-- 계정은 소개와 다른 일이다 — 소개는 읽는 화면이고 이건 누르면 상태가 바뀐다.
+       내용은 syncRenderAccount() 가 로그인 여부에 따라 다시 그린다. -->
+  <button class="rb acct" id="acct" title="로그인"></button>
 </nav>
 
 <div class="wrap">
@@ -805,13 +811,10 @@ function aboutHTML(){
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
-    +     (syncUser
-             ? '<button type="button" class="go alt" onclick="syncLogout()">'+AB_ICON.gh+'로그아웃</button>'
-             : '<button type="button" class="go alt" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>')
     +   '</div>'
     +   (syncUser
-           ? '<p class="pnote">보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
-           : '<p class="pnote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
+           ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
+           : '<p class="pnote">왼쪽 아래 <b>로그인</b>을 누르면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
     + '<div class="doc">'+secs+'</div></div>'+FOOT_HTML;
 }
@@ -925,7 +928,7 @@ addEventListener('pagehide', ()=>{
 async function syncPull(){
   let res;
   try{ res = await syncApi('/sync'); }catch(e){ return; }    // 오프라인이면 조용히 넘어간다
-  if(res.status === 401){ syncUser = null; render(); return; }
+  if(res.status === 401){ syncUser = null; syncRenderAccount(); render(); return; }
   if(!res.ok) return;
   const d = await res.json();
 
@@ -955,13 +958,38 @@ async function syncPull(){
   render();
 }
 
+/* 레일 맨 아래 계정 버튼. 로그인 전에는 들어가는 화살표, 로그인 뒤에는 깃허브
+   아바타를 보여준다. 아바타는 저장해 둔 숫자 id 하나로 만들 수 있어서 이름이나
+   사진 주소를 따로 보관할 필요가 없다. */
+const SYNC_IN  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4"/><path d="M10 17l5-5-5-5M15 12H3"/></svg>';
+const SYNC_OUT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>';
+
+function syncRenderAccount(){
+  const b = document.getElementById('acct');
+  if(!b) return;
+  if(syncUser){
+    b.title = '로그아웃';
+    b.innerHTML = '<img src="https://avatars.githubusercontent.com/u/' + syncUser.id
+                + '?s=44" alt="" onerror="this.replaceWith(document.createRange()'
+                + '.createContextualFragment(\'' + SYNC_OUT.replace(/'/g, "\\'") + '\'))">'
+                + '<span class="lb">로그아웃</span>';
+  } else {
+    b.title = '로그인하면 보관함이 기기 사이에서 유지됩니다';
+    b.innerHTML = SYNC_IN + '<span class="lb">로그인</span>';
+  }
+}
+document.getElementById('acct')?.addEventListener('click', ()=>{
+  syncUser ? syncLogout() : syncLogin();
+});
+syncRenderAccount();
+
 function syncLogin(){ location.href = SYNC_API + '/auth/login'; }
 
 async function syncLogout(){
   try{ await syncApi('/auth/logout', {method:'POST'}); }catch(e){}
   syncUser = null;
   try{ localStorage.removeItem(SYNCED_KEY); }catch(e){}
-  render();
+  syncRenderAccount(); render();
 }
 
 /* 페이지를 열 때마다 한 번. 로그인 안 했으면 /me 한 번으로 끝난다. */
@@ -972,7 +1000,7 @@ async function syncLogout(){
   const d = await res.json();
   if(!d.user) return;
   syncUser = d.user;
-  render();
+  syncRenderAccount(); render();
   syncPull();
 })();
 function toggleRead(i){
