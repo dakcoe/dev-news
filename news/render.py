@@ -306,7 +306,7 @@ p+p{margin-top:12px}p+ul{margin-top:6px}ul+p{margin-top:12px}
 ul{font-size:15px;line-height:1.75;color:var(--tx2);margin:0;padding-left:20px}
 section.small ul{font-size:14px;color:var(--tx3)}
 .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px;line-height:1.7}
-.go.alt{background:none;color:var(--tx);box-shadow:inset 0 0 0 1.5px var(--line)}.go.coffee{background:#ffdd00;color:#1a1a1a}.go svg{width:18px;height:18px;flex:none}
+.go.alt{background:none;color:var(--tx);box-shadow:inset 0 0 0 1.5px var(--line)}.go.coffee{background:#ffdd00;color:#1a1a1a}.go.yt{background:#ff0000;color:#fff;box-shadow:none}.go.yt:hover{background:#d90000}.go svg{width:18px;height:18px;flex:none}
 .crits{display:flex;flex-direction:column;gap:12px;margin-top:12px}.crit{display:flex;gap:12px;align-items:flex-start}
 .crit b{display:block;font-size:15px;font-weight:700}.crit span:last-child{font-size:14px;color:var(--tx3)}
 .cnt{font-size:13px;font-weight:700;color:var(--pri-dk);background:var(--pri-bg);padding:3px 9px;border-radius:7px;line-height:1.5}
@@ -383,7 +383,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                + '<div class="pacts">'
                + (f'<a class="go" href="{_esc(home)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 페이지</a>' if home else "")
                + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">{_ICON["star"]}저장소 추천하기</a>' if repo else "")
-               + (f'<a class="go alt" href="{_esc(yt)}" target="_blank" rel="noopener noreferrer">{_ICON["yt"]}YouTube</a>' if yt else "")
+               + (f'<a class="go yt" href="{_esc(yt)}" target="_blank" rel="noopener noreferrer">{_ICON["yt"]}YouTube</a>' if yt else "")
                + "</div></div>")
     about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1><div class=\"sub\">만든 사람과 운영 방식</div>"
                   '<div class="about">' + profile + '<div class="doc">'
