@@ -875,6 +875,7 @@ function markRead(url){ if(!read.has(url)){ read.add(url); persistRead(); } }
    추가한 항목을 덮어 지운다. */
 const SYNC_API = 'https://api.dev-news.net';
 const SYNCED_KEY = 'dev-news-synced';   // 이 브라우저가 한 번이라도 서버와 맞췄는가
+const QUEUE_KEY  = 'dev-news-queue';    // 아직 서버에 못 보낸 변경분
 let syncUser = null;                    // 로그인했으면 {id}
 let syncBase = { saved: new Set(), read: new Set() };  // 마지막으로 서버에 반영된 상태
 let syncPending = [];
@@ -908,7 +909,9 @@ function syncQueueRead(){
 
 /* 기사를 열 때마다 한 번씩 보내면 요청이 금방 불어난다. 1초 모아서 한 번에 보낸다. */
 function syncSchedule(){
-  if(!syncPending.length || syncTimer) return;
+  if(!syncPending.length) return;
+  syncSaveQueue();                 // 보내기 전에 먼저 적어 둔다 — 탭이 닫혀도 남게
+  if(syncTimer) return;
   syncTimer = setTimeout(()=>{ syncTimer = null; syncFlush(); }, 1000);
 }
 
@@ -922,22 +925,47 @@ async function syncFlush(){
   try{
     while(syncPending.length){
       const ops = syncPending.splice(0, 500);
+      let ok = false;
       try{
-        await syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
-                                body: JSON.stringify({ops})});
-      }catch(e){
-        syncPending.unshift(...ops);   // 실패하면 되돌려 두고 다음 기회에
-        break;
-      }
+        const res = await syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
+                                            body: JSON.stringify({ops})});
+        // fetch 는 네트워크가 끊겼을 때만 예외를 던진다. 무료 한도 초과(1027)나
+        // 5xx 는 정상 응답으로 들어오므로 여기서 직접 봐야 한다 — 안 보면 서버가
+        // 받지도 않은 변경분을 보냈다고 여기고 버린다.
+        ok = res.ok;
+        if(res.status === 401){ syncUser = null; syncRenderAccount(); ok = true; }
+      }catch(e){}
+      if(!ok){ syncPending.unshift(...ops); break; }   // 되돌려 두고 다음 기회에
     }
-  } finally { syncFlushing = false; }
+  } finally {
+    syncFlushing = false;
+    syncSaveQueue();
+  }
+}
+
+/* 큐를 메모리에만 두면 탭을 닫는 순간 사라진다. 한도 초과나 장애로 못 보낸
+   변경분은 며칠 뒤에라도 올라가야 하므로 localStorage 에 함께 둔다. */
+function syncSaveQueue(){
+  try{
+    if(syncPending.length) localStorage.setItem(QUEUE_KEY, JSON.stringify(syncPending.slice(0, 5000)));
+    else localStorage.removeItem(QUEUE_KEY);
+  }catch(e){}
+}
+function syncLoadQueue(){
+  try{
+    const raw = JSON.parse(localStorage.getItem(QUEUE_KEY) || '[]');
+    if(Array.isArray(raw) && raw.length) syncPending.unshift(...raw);
+  }catch(e){}
 }
 
 /* 탭을 닫아도 마지막 변경분을 잃지 않게 한 번 더 민다. */
 addEventListener('pagehide', ()=>{
   if(!syncUser || !syncPending.length) return;
-  const body = JSON.stringify({ops: syncPending.splice(0, 500)});
+  // 비컨은 도착 여부를 알 수 없다. 큐는 그대로 두고 저장해 둔 뒤, 다음 방문에
+  // 다시 보낸다 — 연산이 전부 덮어쓰기라 두 번 도착해도 결과가 같다.
+  const body = JSON.stringify({ops: syncPending.slice(0, 500)});
   try{ navigator.sendBeacon(SYNC_API + '/sync', new Blob([body], {type:'application/json'})); }catch(e){}
+  syncSaveQueue();
 });
 
 async function syncPull(){
@@ -1030,6 +1058,8 @@ async function syncLogout(){
   if(!d.user) return;
   syncUser = d.user;
   syncRenderAccount(); render();
+  syncLoadQueue();
+  await syncFlush();     // 지난번에 못 보낸 것부터 올린다
   syncPull();
 })();
 function toggleRead(i){
