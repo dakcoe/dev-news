@@ -565,7 +565,11 @@ __ADS_HEAD__
   @media (hover:none){ .sk .ck,.aihead .ck{visibility:visible} }
   @media (max-width:640px){ .sk{grid-template-columns:40px 30px minmax(0,1fr) 26px;padding:10px 12px} .skav{width:30px;height:30px} .skv{display:none} }
   /* 소개 화면 — 왼쪽 프로필 칸(320px), 오른쪽 본문 패널. 좁은 화면에서는 한 열. */
-  .about{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
+  /* 넓은 화면: 읽는 글을 왼쪽에, 프로필을 오른쪽에. DOM 은 프로필이 먼저라
+     좁은 화면에서는 프로필이 위로 온다 — order 로 넓은 화면만 뒤집는다. */
+  .about{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+  .about .doc{order:1}
+  .about .profile{order:2}
   .about .profile{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
                   padding:30px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
   .about .avatar{width:104px;height:104px;border-radius:50%;display:block}
@@ -619,6 +623,7 @@ __ADS_HEAD__
   .about .acts{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;gap:10px;margin-top:14px;padding:0;border:none}
   @media (max-width:900px){
     .about{grid-template-columns:minmax(0,1fr);gap:12px}
+    .about .doc,.about .profile{order:0}   /* 좁은 화면은 DOM 순서대로 */
     .about .avatar{width:88px;height:88px}
     .about .doc{padding:0 18px 4px}
     .about p{font-size:14px}
