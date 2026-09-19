@@ -9,6 +9,18 @@ from datetime import datetime, timedelta, timezone
 from news.core import tags as tag_vocab
 
 from news.core.common import KST  # noqa: E402  (상수 재노출)
+# 소개 화면 프로필 옆에서 도는 필기 애니메이션. 프레임 6장 × 3줄 = 18줄을
+# 세로로 쌓아 두고 CSS 가 3줄씩 내린다. 삼중따옴표로는 못 적는다 —
+# 줄 끝의 역슬래시가 줄바꿈을 먹고, 마지막 역슬래시가 닫는 따옴표를 탈출시킨다.
+_STUDY_FRAMES = "\n".join((
+    "  o.o", " /|=|\\", " \\",
+    "  o.o", " /|=|\\", " _\\",
+    "  o.o", " /|=|\\", " __\\",
+    "  -.-", " /|=|\\", " ___\\",
+    "  o.o", " /|=|\\", " ____\\",
+    "  o.o", " /|=|\\", " _____\\",
+))
+
 TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")
 
 # 화면에 쓰이는 출처 메타데이터. config.yaml의 sources와 키를 맞춘다.
@@ -268,6 +280,15 @@ h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin:0 0 6px;display:
 .avatar{width:104px;height:104px;border-radius:50%;display:block}
 .who b{font-size:21px;font-weight:800}.who p{font-size:14.5px;color:var(--tx2);margin:2px 0 0}
 .pacts{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:6px}.pacts .go{justify-content:center}
+/* 필기하는 사람. 프레임 6장을 세로로 쌓아 두고 3줄 창을 한 칸씩 내린다 —
+   steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
+.whorow{display:flex;align-items:center;justify-content:center;gap:14px}
+.whorow .who{text-align:left}
+.study{height:51px;overflow:hidden;flex:none;color:var(--tx2)}
+.study pre{margin:0;font:13px/17px ui-monospace,SFMono-Regular,Menlo,monospace;
+  white-space:pre;animation:study 3.6s steps(6) infinite}
+@keyframes study{to{transform:translateY(-306px)}}
+@media (prefers-reduced-motion:reduce){.study pre{animation:none}}
 .doc{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:0 28px 6px}
 section{padding:22px 0;border-bottom:1px solid var(--line2)}section:last-child{border-bottom:none}
 h2{font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0 0 8px}section.small h2{font-size:15px}
@@ -343,7 +364,9 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
 
     profile = ('<div class="profile">'
                + (f'<img class="avatar" src="{_esc(avatar)}" alt="">' if avatar else "")
+               + '<div class="whorow">'
                + f'<div class="who"><b>{author}</b>' + (f"<p>{bio}</p>" if bio else "") + "</div>"
+               + f'<div class="study" aria-hidden="true"><pre>{_STUDY_FRAMES}</pre></div></div>'
                + '<div class="pacts">'
                + (f'<a class="go" href="{_esc(home)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 페이지</a>' if home else "")
                + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">저장소 {_ICON["ext"]}</a>' if repo else "")
