@@ -910,12 +910,25 @@ function syncSchedule(){
   syncTimer = setTimeout(()=>{ syncTimer = null; syncFlush(); }, 1000);
 }
 
-function syncFlush(){
-  if(!syncUser || !syncPending.length) return;
-  const ops = syncPending.splice(0, 500);
-  syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
-                    body: JSON.stringify({ops})})
-    .catch(()=>{ syncPending.unshift(...ops); });   // 실패하면 다음 기회에 다시
+/* 서버가 한 번에 500개까지 받는다. 첫 로그인에서 읽음 표시가 그보다 많으면
+   여러 번 나눠 보내야 한다 — 한 덩어리만 보내고 끝내면 나머지가 브라우저에
+   남은 채 잊힌다. */
+let syncFlushing = false;
+async function syncFlush(){
+  if(!syncUser || syncFlushing) return;
+  syncFlushing = true;
+  try{
+    while(syncPending.length){
+      const ops = syncPending.splice(0, 500);
+      try{
+        await syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
+                                body: JSON.stringify({ops})});
+      }catch(e){
+        syncPending.unshift(...ops);   // 실패하면 되돌려 두고 다음 기회에
+        break;
+      }
+    }
+  } finally { syncFlushing = false; }
 }
 
 /* 탭을 닫아도 마지막 변경분을 잃지 않게 한 번 더 민다. */
