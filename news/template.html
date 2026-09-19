@@ -785,6 +785,8 @@ const AB_ICON = {
   ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>',
   cup:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8zM16 9h2a2.5 2.5 0 0 1 0 5h-2M6 3v2M10 3v2M14 3v2"/></svg>',
   issue:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>'
+,
+  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3.5l2.6 5.5 6 .85-4.35 4.2 1.05 5.95L12 17.2l-5.3 2.8 1.05-5.95L3.4 9.85l6-.85z"/></svg>'
 };
 function aboutHTML(){
   const a=ABOUT||{};
@@ -810,7 +812,7 @@ function aboutHTML(){
     +   '<div class="study" aria-hidden="true"><pre>'+STUDY+'</pre></div></div>'
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
-    +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
+    +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.star+'저장소 추천하기</a>':'')
     +   '</div>'
     +   (syncUser
            ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
