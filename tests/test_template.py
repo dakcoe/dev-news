@@ -48,8 +48,8 @@ def test_detail_panel_kept(html):
 def test_rail_buttons_carry_a_label(html):
     """아이콘만으로는 무슨 화면인지 안 읽힌다. title 속성은 마우스를 얹어야 뜨고
     하단 내비에서는 안 뜬다 — 다섯 칸 전부 글자를 함께 둔다."""
-    assert "width:84px" in html                  # .rail — 글자 자리만큼 넓다
-    assert "width:70px;height:56px" in html      # .rb — 아이콘 위, 글자 아래
+    assert "width:72px" in html                  # .rail — 옛 74px 보다 오히려 좁다
+    assert "width:58px;height:54px" in html      # .rb — 아이콘 위, 글자 아래
     assert ".rb .lb{" in html
     for label in ("뉴스", "API", "스킬", "보관함", "소개"):
         assert f'<span class="lb">{label}</span>' in html, label
