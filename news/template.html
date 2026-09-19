@@ -181,7 +181,7 @@ __ADS_HEAD__
   .rb:hover{background:#eeeef3;color:var(--tx2)}
   .rb.on{background:var(--pri-bg);color:var(--pri-dk)}
   .rb svg{width:24px;height:24px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-  .rb .lb{font-size:11px;font-weight:600;letter-spacing:-.01em;line-height:1}
+  .rb .lb{font-size:11px;font-weight:600;letter-spacing:-.01em;line-height:1;white-space:nowrap}
   .rb .dot{position:absolute;top:8px;right:8px;width:7px;height:7px;border-radius:50%;
            background:var(--pri);display:none}
   .rb.has .dot{display:block}
@@ -189,6 +189,7 @@ __ADS_HEAD__
   .rb.gh svg{width:22px;height:22px}
   .rb.acct svg{width:22px;height:22px}
   .rb.acct img{width:22px;height:22px;border-radius:50%;display:block}
+  .rb .lb-n{display:none}   /* 좁은 화면 전용 짧은 라벨 */
 
   /* ---------------- main ---------------- */
   .wrap{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
@@ -648,7 +649,12 @@ __ADS_HEAD__
     .rb{width:46px;height:46px}
     .rb .dot{top:3px;right:calc(50% - 14px)}
     .rb.acct{margin-top:0}   /* 하단 내비에선 나란히 */
-    .rb{width:42px;height:42px}   /* 칸이 여섯이라 46 에서 줄인다 */
+    /* 칸이 여섯이다. 46px 로는 라벨이 서로 닿고 '로그아웃' 은 두 줄로 접힌다 —
+       버튼을 줄이고, 글자를 한 단계 작게 하고, 긴 라벨은 짧은 쪽으로 바꾼다. */
+    .rb{width:52px;height:46px}
+    .rb .lb{font-size:10px;letter-spacing:-.03em}
+    .rb .lb-w{display:none}
+    .rb .lb-n{display:inline}
     .facet{bottom:58px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
   }
 </style>
@@ -1012,8 +1018,11 @@ function syncRenderAccount(){
   if(!b) return;
   if(syncUser){
     b.title = '로그아웃';
+    // 좁은 화면에서는 '로그아웃' 이 네 글자라 두 줄로 접힌다. 아바타가 이미
+    // 로그인 상태를 말해 주므로 그쪽에서는 '계정' 으로 줄인다.
     b.innerHTML = '<img src="https://avatars.githubusercontent.com/u/' + syncUser.id
-                + '?s=44" alt=""><span class="lb">로그아웃</span>';
+                + '?s=44" alt=""><span class="lb">'
+                + '<span class="lb-w">로그아웃</span><span class="lb-n">계정</span></span>';
     // 아바타를 못 불러오면 아이콘으로 되돌린다. onerror 속성에 마크업을 넣으면
     // 따옴표가 엉켜 그대로 화면에 찍힌다 — 그래서 여기서 붙인다.
     b.querySelector('img').addEventListener('error', function(){
