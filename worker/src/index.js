@@ -150,7 +150,25 @@ function login(req, env) {
   // 콜백 링크를 눌린 사람이 공격자 계정으로 로그인된다.
   headers.append('Set-Cookie', setCookie('oauth_state', state, STATE_MAX_AGE, '/auth'));
   headers.append('Set-Cookie', clearLegacyCookie('oauth_state', '/auth'));
+  // 탈퇴는 깃허브를 한 번 더 거친다. 새로 받은 토큰으로 앱 승인을 취소해야
+  // 다음 로그인이 동의 화면부터 다시 시작한다. 토큰은 여기서도 저장하지 않는다.
+  headers.append('Set-Cookie',
+    setCookie('oauth_intent', here.searchParams.get('intent') === 'delete' ? 'delete' : '',
+              STATE_MAX_AGE, '/auth'));
   return new Response(null, { status: 302, headers });
+}
+
+/* 탈퇴를 시작해도 된다는 증표를 발급한다. 이 한 단계가 없으면 링크 한 줄로
+   남의 계정을 지울 수 있다 — 깃허브 승인이 살아 있으면 클릭 한 번에 왕복이
+   끝나기 때문이다. SameSite=Lax 라 다른 사이트에서 온 POST 에는 쿠키가 실리지
+   않으므로, 이 요청은 우리 화면에서만 성공한다. */
+async function prepareDelete(req, env) {
+  const uid = await currentUser(req, env);
+  if (!uid) return json({ error: 'unauthorized' }, 401, cors(req));
+  const nonce = randomToken();
+  const sid = parseCookies(req.headers.get('Cookie')).sid;
+  await env.DB.prepare('UPDATE session SET del_nonce = ? WHERE id = ?').bind(nonce, sid).run();
+  return json({ ok: true }, 200, { ...cors(req), 'Set-Cookie': setCookie('del_nonce', nonce, 600, '/') });
 }
 
 async function callback(req, env) {
@@ -210,6 +228,9 @@ async function callback(req, env) {
   if (!ghRes.ok) return json({ error: 'github_user_failed' }, 502);
   const gh = await ghRes.json();
   if (!Number.isFinite(gh.id)) return json({ error: 'github_user_failed' }, 502);
+
+  const intent = parseCookies(req.headers.get('Cookie')).oauth_intent;
+  if (intent === 'delete') return finishDelete(req, env, gh.id, token.access_token);
 
   // 여기서 깃허브 토큰의 역할은 끝난다. 저장하지 않는다.
   const sid = randomToken();
@@ -298,6 +319,54 @@ async function push(req, env) {
   return json({ ok: true, applied: ops.length }, 200, cors(req));
 }
 
+/* 증표를 확인하고, 자료를 지우고, 깃허브 앱 승인까지 취소한다.
+   순서가 중요하다 — 승인을 취소하면 토큰이 죽으므로 취소가 마지막이다. */
+async function finishDelete(req, env, ghId, accessToken) {
+  const cookies = parseCookies(req.headers.get('Cookie'));
+  const row = cookies.sid
+    ? await env.DB.prepare('SELECT user_id, del_nonce FROM session WHERE id = ?').bind(cookies.sid).first()
+    : null;
+
+  const headers = new Headers({ 'Cache-Control': 'no-store' });
+  headers.append('Set-Cookie', clearCookie('oauth_state', '/auth'));
+  headers.append('Set-Cookie', clearCookie('oauth_intent', '/auth'));
+  headers.append('Set-Cookie', clearCookie('del_nonce'));
+
+  // 우리 화면에서 확인했고, 다시 로그인한 계정이 그 계정과 같아야 한다
+  const allowed = row && row.del_nonce && cookies.del_nonce === row.del_nonce
+                  && row.user_id === ghId;
+  if (!allowed) {
+    headers.set('Location', SITE + '/?left=denied');
+    return new Response(null, { status: 302, headers });
+  }
+
+  await env.DB.batch([
+    env.DB.prepare('DELETE FROM bookmark  WHERE user_id = ?').bind(ghId),
+    env.DB.prepare('DELETE FROM read_mark WHERE user_id = ?').bind(ghId),
+    env.DB.prepare('DELETE FROM session   WHERE user_id = ?').bind(ghId),
+    env.DB.prepare('DELETE FROM app_user  WHERE id = ?').bind(ghId),
+  ]);
+
+  // 앱 승인 취소. 실패해도 자료는 이미 지웠으므로 탈퇴는 성립한다.
+  let revoked = false;
+  try {
+    const r = await fetch(`https://api.github.com/applications/${env.GITHUB_CLIENT_ID}/grant`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Basic ' + btoa(`${env.GITHUB_CLIENT_ID}:${env.GITHUB_CLIENT_SECRET}`),
+        Accept: 'application/vnd.github+json',
+        'content-type': 'application/json',
+        'User-Agent': 'dev-news-sync',
+      },
+      body: JSON.stringify({ access_token: accessToken }),
+    });
+    revoked = r.status === 204;
+  } catch (e) {}
+
+  headers.set('Location', SITE + (revoked ? '/?left=1' : '/?left=kept'));
+  return new Response(null, { status: 302, headers });
+}
+
 /** 계정과 딸린 데이터를 전부 지운다. 개인정보 삭제 요구의 실행 경로다. */
 async function erase(req, env) {
   const uid = await currentUser(req, env);
@@ -332,6 +401,7 @@ export default {
     if (pathname === '/auth/login' && req.method === 'GET') return login(req, env);
     if (pathname === '/auth/callback' && req.method === 'GET') return callback(req, env);
     if (pathname === '/auth/logout' && req.method === 'POST') return logout(req, env);
+    if (pathname === '/account/prepare' && req.method === 'POST') return prepareDelete(req, env);
     if (pathname === '/account' && req.method === 'DELETE') return erase(req, env);
     if (pathname === '/sync' && req.method === 'GET') return pull(req, env);
     if (pathname === '/sync' && req.method === 'POST') return push(req, env);
