@@ -48,6 +48,15 @@ PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("shopify", re.compile(r"\bshpat_[a-f0-9]{32}\b")),
     ("xai", re.compile(r"\bxai-[A-Za-z0-9]{40,}")),
     ("slack_webhook", re.compile(r"https://hooks\.slack\.com/services/[A-Za-z0-9/+_\-]{20,}")),
+    # 2026-09-19 보강 — 접두사와 길이가 뚜렷한 것만 골랐다. `Bearer <토큰>`·JWT·
+    # `?api_key=` 는 일부러 뺐다. 개발 기사 본문에 예제로 늘 나오는 모양이라
+    # 넣으면 매 회차 멀쩡한 본문이 [REDACTED] 로 가려진다.
+    ("gitlab_pat", re.compile(r"\bglpat-[A-Za-z0-9_\-]{20,}")),
+    ("discord_webhook", re.compile(
+        r"https://(?:\w+\.)?discord(?:app)?\.com/api/webhooks/\d{17,}/[A-Za-z0-9_\-]{60,}")),
+    ("atlassian", re.compile(r"\bATATT[A-Za-z0-9_\-=]{40,}")),
+    ("twilio", re.compile(r"\bSK[0-9a-f]{32}\b")),
+    ("mailgun", re.compile(r"\bkey-[0-9a-f]{32}\b")),
 ]
 
 

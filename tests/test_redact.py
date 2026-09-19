@@ -40,6 +40,11 @@ SAMPLES = {
     "sendgrid": "SG." + "w" * 22 + "." + "x" * 43,
     "npm": "npm_" + "y" * 36,
     "telegram_bot": "1234567890:AA" + "z" * 33,
+    "gitlab_pat": "glpat-" + "A" * 20,
+    "discord_webhook": ("https://discord.com/api/webhooks/" + "1" * 19 + "/" + "B" * 68),
+    "atlassian": "ATATT" + "C" * 44,
+    "twilio": "SK" + "0123456789abcdef" * 2,
+    "mailgun": "key-" + "fedcba9876543210" * 2,
     "private_key": (
         "-----BEGIN RSA PRIVATE KEY-----\n" + "MIIE" * 20 + "\n-----END RSA PRIVATE KEY-----"
     ),
