@@ -1311,7 +1311,7 @@ function apiRowHTML(x,i){
   if(open){
     h+='<div class="aibody">'
       +'<div class="ad">'+(x.desc?escA(x.desc):'(설명 없음 — 문서를 확인하세요)')+'</div>'
-      +'<a class="agoto" href="'+escA(x.url)+'" target="_blank" rel="noopener">문서 바로가기'
+      +'<a class="agoto" href="'+safeU(x.url)+'" target="_blank" rel="noopener">문서 바로가기'
       +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>'
       +'</div>';
   }
