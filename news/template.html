@@ -555,6 +555,10 @@ __ADS_HEAD__
   .acctbar{display:none}   /* 좁은 화면에서만 — 넓은 화면은 레일에 있다 */
   .acctbar .go{width:100%;justify-content:center}
   .acctbar .anote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
+  .acctbar .acctme{display:flex;align-items:center;gap:12px;text-align:left;margin-bottom:14px}
+  .acctbar .acctav{width:42px;height:42px;border-radius:50%;flex:none;background:var(--line2)}
+  .acctbar .acctme b{display:block;font-size:15px;font-weight:700}
+  .acctbar .acctme span{display:block;font-size:13px;color:var(--tx3);line-height:1.5;margin-top:2px}
   /* 필기하는 고양이. 프레임 6장을 세로로 쌓아 두고 창을 한 칸씩 내린다 —
      steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
   .about .whorow{display:flex;align-items:center;justify-content:center;gap:14px}
@@ -824,8 +828,14 @@ function aboutHTML(){
        자리라 실수로 눌린다. */
     + '<div class="acctbar">'
     +   (syncUser
-           ? '<button type="button" class="go alt" onclick="syncLogout()">'+AB_ICON.gh+'로그아웃</button>'
-             + '<p class="anote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
+           /* 로그인 여부를 버튼 글자로만 알리면 눈에 안 들어온다. 아바타를 앞에
+              세운다 — 저장해 둔 숫자 id 하나로 주소를 만들 수 있어서 이름이나
+              사진 주소를 따로 보관하지 않는다. */
+           ? '<div class="acctme">'
+             + '<img class="acctav" src="https://avatars.githubusercontent.com/u/'+syncUser.id+'?s=96" alt="">'
+             + '<div><b>로그인됨</b><span>보관함과 읽음 표시가 기기 사이에서 유지됩니다.</span></div>'
+             + '</div>'
+             + '<button type="button" class="go alt" onclick="syncLogout()">로그아웃</button>'
            : '<button type="button" class="go" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>'
              + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
