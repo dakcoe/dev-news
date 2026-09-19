@@ -263,6 +263,7 @@ _ICON = {
     "ext": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>',
     "cup": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8zM16 9h2a2.5 2.5 0 0 1 0 5h-2M6 3v2M10 3v2M14 3v2"/></svg>',
     "issue": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>',
+    "star": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3.5l2.6 5.5 6 .85-4.35 4.2 1.05 5.95L12 17.2l-5.3 2.8 1.05-5.95L3.4 9.85l6-.85z"/></svg>',
 }
 
 _STATIC_CSS = """
@@ -372,7 +373,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                + f'<div class="study" aria-hidden="true"><pre>{_STUDY_FRAMES}</pre></div></div>'
                + '<div class="pacts">'
                + (f'<a class="go" href="{_esc(home)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 페이지</a>' if home else "")
-               + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">저장소 {_ICON["ext"]}</a>' if repo else "")
+               + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">{_ICON["star"]}저장소에 별 주기</a>' if repo else "")
                + "</div></div>")
     about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1><div class=\"sub\">만든 사람과 운영 방식</div>"
                   '<div class="about">' + profile + '<div class="doc">'
