@@ -45,9 +45,14 @@ def test_detail_panel_kept(html):
     assert "openDetail" in html
 
 
-def test_rail_buttons_bigger(html):
-    assert "width:74px" in html          # .rail
-    assert "width:50px;height:50px" in html  # .rb
+def test_rail_buttons_carry_a_label(html):
+    """아이콘만으로는 무슨 화면인지 안 읽힌다. title 속성은 마우스를 얹어야 뜨고
+    하단 내비에서는 안 뜬다 — 다섯 칸 전부 글자를 함께 둔다."""
+    assert "width:84px" in html                  # .rail — 글자 자리만큼 넓다
+    assert "width:70px;height:56px" in html      # .rb — 아이콘 위, 글자 아래
+    assert ".rb .lb{" in html
+    for label in ("뉴스", "API", "스킬", "보관함", "소개"):
+        assert f'<span class="lb">{label}</span>' in html, label
 
 
 def test_unread_toggle_has_checkbox(html):
@@ -194,7 +199,7 @@ def test_mobile_layout_not_squeezed(html):
     # 레일은 하단 고정 내비 — 스크롤 영역이 그만큼 하단 여백을 확보
     assert "bottom:0;top:auto" in mobile
     assert "flex-direction:row" in mobile
-    assert "88px" in mobile, "하단 내비 높이만큼 스크롤 여백이 없음"
+    assert "92px" in mobile, "하단 내비 높이(62px)만큼 스크롤 여백이 없음"
     # 전체 스케일 축소 — fixed 요소 좌표가 틀어지지 않게 .inner에만 건다
     assert ".inner{zoom:.8}" in mobile
     assert "body{zoom" not in mobile
