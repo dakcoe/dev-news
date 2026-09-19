@@ -28,8 +28,10 @@ from news.render import _json_for_script, _safe_url, render  # noqa: E402
 PAYLOAD = "window.__pwned=1"
 
 POISON = [{
-    "title": f'boom </script><img src=x onerror="{PAYLOAD}">',
-    "ko_title": f'boom </script><img src=x onerror="{PAYLOAD}">',
+    # __JSONLD__ 는 템플릿 빈칸 이름이다. 제목에 적어 두면 렌더러가 그 자리에
+    # JSON-LD 블록을 펼치고, 그 </script> 가 데이터 스크립트를 닫는다 (2026-09-19).
+    "title": f'boom </script><img src=x onerror="{PAYLOAD}">__JSONLD__',
+    "ko_title": f'boom </script><img src=x onerror="{PAYLOAD}">__JSONLD__',
     "url": "javascript:" + PAYLOAD,
     "source": "hackernews",
     "from": "Hacker News",
@@ -150,3 +152,10 @@ def test_삽입부가_헬퍼를_거친다(template, expr):
 def test_safeU가_정의돼_있다(template):
     assert "const safeU=" in template
     assert "https?:" in template
+
+
+def test_제목에_빈칸_이름을_넣어도_펼쳐지지_않는다(html):
+    """템플릿 빈칸은 한 번만 채운다. 채워 넣은 값 안의 `__JSONLD__` 같은 글자를
+    다음 차례가 또 빈칸으로 보면, 남이 정한 제목 하나로 스크립트가 끊긴다."""
+    assert html.count('application/ld+json') == 1, "JSON-LD 블록이 여러 번 펼쳐졌다"
+    assert '<script type="application/ld+json">' in html, "정상 빈칸은 채워져야 한다"
