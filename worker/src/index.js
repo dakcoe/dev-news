@@ -82,6 +82,11 @@ const clearLegacyCookie = (name, path = '/') =>
 
 const now = () => Math.floor(Date.now() / 1000);
 
+/* 깃허브에서 돌아오는 주소에 시각을 붙인다. GitHub Pages 가 index.html 에
+   max-age=600 을 주기 때문에, 방금 고친 것이 최대 10분간 반영되지 않는다.
+   주소가 달라지면 브라우저가 새로 받아 온다. */
+const backTo = (extra = '') => `${SITE}/?v=${Date.now()}${extra}`;
+
 /* ---------------- 입력 검증 ---------------- */
 
 /** 변경분 하나를 검사해 정규화한다. 못 쓰는 건 null 로 버린다. */
@@ -242,7 +247,7 @@ async function callback(req, env) {
     env.DB.prepare('DELETE FROM session WHERE expires_at < ?').bind(t),
   ]);
 
-  const headers = new Headers({ Location: SITE, 'Cache-Control': 'no-store' });
+  const headers = new Headers({ Location: backTo(), 'Cache-Control': 'no-store' });
   headers.append('Set-Cookie', setCookie('sid', sid, SESSION_DAYS * 86400));
   headers.append('Set-Cookie', clearCookie('oauth_state', '/auth'));
   return new Response(null, { status: 302, headers });
@@ -336,7 +341,7 @@ async function finishDelete(req, env, ghId, accessToken) {
   const allowed = row && row.del_nonce && cookies.del_nonce === row.del_nonce
                   && row.user_id === ghId;
   if (!allowed) {
-    headers.set('Location', SITE + '/?left=denied');
+    headers.set('Location', backTo('&left=denied'));
     return new Response(null, { status: 302, headers });
   }
 
@@ -363,7 +368,7 @@ async function finishDelete(req, env, ghId, accessToken) {
     revoked = r.status === 204;
   } catch (e) {}
 
-  headers.set('Location', SITE + (revoked ? '/?left=1' : '/?left=kept'));
+  headers.set('Location', backTo(revoked ? '&left=1' : '&left=kept'));
   return new Response(null, { status: 302, headers });
 }
 
