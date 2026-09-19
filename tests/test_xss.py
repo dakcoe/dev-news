@@ -159,3 +159,11 @@ def test_제목에_빈칸_이름을_넣어도_펼쳐지지_않는다(html):
     다음 차례가 또 빈칸으로 보면, 남이 정한 제목 하나로 스크립트가 끊긴다."""
     assert html.count('application/ld+json') == 1, "JSON-LD 블록이 여러 번 펼쳐졌다"
     assert '<script type="application/ld+json">' in html, "정상 빈칸은 채워져야 한다"
+
+
+def test_링크_주소는_전부_safeU를_거친다(template):
+    """escA 는 따옴표만 막는다. "javascript:" 를 그대로 통과시키므로 href 에는
+    쓸 수 없다. 2026-09-19 API 카탈로그 행이 escA 로 열려 있었다 —
+    apis_catalog.parse_llm_json 은 url 의 스킴을 검사하지 않는다."""
+    for m in re.finditer(r"""href=["']{1,2}\s*\+\s*(\w+)\(""", template):
+        assert m.group(1) == "safeU", f"href 에 {m.group(1)}() 를 썼다"
