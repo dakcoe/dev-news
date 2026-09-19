@@ -281,12 +281,14 @@ h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin:0 0 6px;display:
 .avatar{width:104px;height:104px;border-radius:50%;display:block}
 .who b{font-size:21px;font-weight:800}.who p{font-size:14.5px;color:var(--tx2);margin:2px 0 0}
 .pacts{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:6px}.pacts .go{justify-content:center}
-/* 필기하는 사람. 프레임 6장을 세로로 쌓아 두고 3줄 창을 한 칸씩 내린다 —
+/* 필기하는 고양이. 프레임 6장을 세로로 쌓아 두고 창을 한 칸씩 내린다 —
    steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
 .whorow{display:flex;align-items:center;justify-content:center;gap:14px}
 .whorow .who{text-align:left}
 .study{height:34px;overflow:hidden;flex:none;color:var(--tx2)}
-.study pre{margin:0;font:13px/17px ui-monospace,SFMono-Regular,Menlo,monospace;
+/* 폰트 목록을 길게 두는 이유: 한글 폰트(굴림·바탕·맑은고딕 등)는 역슬래시를
+   원화 기호로 그린다. generic monospace 까지 내려가면 고양이 귀가 /₩_/₩ 가 된다. */
+.study pre{margin:0;font:13px/17px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Cascadia Mono","Segoe UI Mono","Liberation Mono",monospace;
   white-space:pre;text-align:left;animation:study 3.6s steps(6) infinite}
 @keyframes study{to{transform:translateY(-204px)}}
 @media (prefers-reduced-motion:reduce){.study pre{animation:none}}
