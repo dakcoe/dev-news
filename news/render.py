@@ -518,6 +518,21 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
                 '</urlset>\n')
 
 
+def _fill_slots(html: str, slots: dict[str, str]) -> str:
+    """빈칸을 한 번에 채운다. `.replace()` 를 이어 붙이면 안 되는 이유가 있다.
+
+    앞서 채운 값 안에 다음 빈칸 이름과 같은 글자가 들어 있으면, 뒤따르는 replace 가
+    그걸 빈칸으로 착각하고 내용을 펼친다. 기사 제목은 남이 정하는 값이라
+    제목에 `__JSONLD__` 라고 적어 두기만 하면 데이터 스크립트 안에서 JSON-LD 블록이
+    펼쳐지고, 그 `</script>` 가 스크립트를 닫아 남은 JSON 이 HTML 로 읽힌다 (XSS).
+
+    한 번만 훑으면 채워 넣은 값은 다시 검사되지 않는다.
+    """
+    pattern = re.compile("|".join(re.escape(k) for k in
+                                  sorted(slots, key=len, reverse=True)))
+    return pattern.sub(lambda m: slots[m.group(0)], html)
+
+
 def render(articles: list[dict], out_path: str, collected: datetime | None = None,
            enabled: dict[str, bool] | None = None, ads: dict | None = None,
            about: dict | None = None) -> str:
@@ -539,22 +554,24 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
     with open(TEMPLATE, encoding="utf-8") as f:
         html = f.read()
 
-    html = (html
-            .replace("__DATA_JSON__", _json_for_script(view_model))
-            .replace("__SRC_JSON__", _json_for_script(sources))
-            .replace("__TAG_JSON__", _json_for_script(
-                {tid: {"label": spec["label"], "group": spec["group"]}
-                 for tid, spec in tag_vocab.VOCAB.items()}))
-            .replace("__COLLECTED_LABEL__", collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"))
-            .replace("__COLLECTED__", collected.isoformat())
-            .replace("__DATE__", collected.strftime("%Y-%m-%d"))
-            .replace("__SEO_HTML__", _seo_html(view_model, collected))
-            .replace("__JSONLD__", _jsonld(view_model, collected))
-            .replace("__META_DESC__", _meta_desc(view_model))
-            .replace("__SITE_URL__", site_url())
-            .replace("__ADS_HEAD__", _ads_head(ads_cfg))
-            .replace("__ADS_JSON__", _json_for_script(ads_cfg))
-            .replace("__ABOUT_JSON__", _json_for_script({**(about or {}), "copy": about_copy(enabled)})))
+    slots = {
+        "__DATA_JSON__": _json_for_script(view_model),
+        "__SRC_JSON__": _json_for_script(sources),
+        "__TAG_JSON__": _json_for_script(
+            {tid: {"label": spec["label"], "group": spec["group"]}
+             for tid, spec in tag_vocab.VOCAB.items()}),
+        "__COLLECTED_LABEL__": collected.strftime("%p %I:%M").replace("AM", "오전").replace("PM", "오후"),
+        "__COLLECTED__": collected.isoformat(),
+        "__DATE__": collected.strftime("%Y-%m-%d"),
+        "__SEO_HTML__": _seo_html(view_model, collected),
+        "__JSONLD__": _jsonld(view_model, collected),
+        "__META_DESC__": _meta_desc(view_model),
+        "__SITE_URL__": site_url(),
+        "__ADS_HEAD__": _ads_head(ads_cfg),
+        "__ADS_JSON__": _json_for_script(ads_cfg),
+        "__ABOUT_JSON__": _json_for_script({**(about or {}), "copy": about_copy(enabled)}),
+    }
+    html = _fill_slots(html, slots)
     write_static_pages(os.path.dirname(os.path.abspath(out_path)), about, enabled)
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
