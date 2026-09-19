@@ -547,6 +547,15 @@ __ADS_HEAD__
   .about .who p{font-size:14.5px;color:var(--tx2);margin:2px 0 0}
   .about .pacts{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:6px}
   .about .pacts .go{justify-content:center}
+  /* 필기하는 사람. 프레임 6장을 세로로 쌓아 두고 3줄 창을 한 칸씩 내린다 —
+     steps(6) 이라 중간이 미끄러지지 않는다. 스크립트가 필요 없다. */
+  .about .whorow{display:flex;align-items:center;justify-content:center;gap:14px}
+  .about .whorow .who{text-align:left}
+  .about .study{height:51px;overflow:hidden;flex:none;color:var(--tx2)}
+  .about .study pre{margin:0;font:13px/17px ui-monospace,SFMono-Regular,Menlo,monospace;
+    white-space:pre;animation:study 3.6s steps(6) infinite}
+  @keyframes study{to{transform:translateY(-306px)}}
+  @media (prefers-reduced-motion:reduce){.about .study pre{animation:none}}
   .about .doc{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:0 28px 6px}
   .about section{padding:22px 0;border-bottom:1px solid var(--line2)}
   .about section:last-child{border-bottom:none}
@@ -759,6 +768,8 @@ const FOOT_HTML = '<footer class="foot"><a href="/about/">소개</a><a href="/pr
 /* 소개 화면. 글은 여기 고정이고, 이름·링크·후원 주소만 config.yaml(about)에서 온다.
    프로필 사진은 GitHub 이 주는 것(github.com/<아이디>.png)을 그대로 쓴다.
    후원 주소가 비어 있으면 그 버튼만 빠진다. 왼쪽 프로필 칸, 오른쪽 본문 패널. */
+/* 소개 화면 프로필 옆 필기 애니메이션. 프레임 6장 × 3줄 을 쌓아 두고 CSS 가 내린다. */
+const STUDY = "  o.o\n /|=|\\\n \\\n  o.o\n /|=|\\\n _\\\n  o.o\n /|=|\\\n __\\\n  -.-\n /|=|\\\n ___\\\n  o.o\n /|=|\\\n ____\\\n  o.o\n /|=|\\\n _____\\";
 const AB_ICON = {
   gh:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>',
   ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>',
@@ -784,7 +795,9 @@ function aboutHTML(){
     + '<div class="about">'
     + '<div class="profile">'
     +   (avatar?'<img class="avatar" src="'+avatar+'" alt="" onerror="this.remove()">':'')
+    +   '<div class="whorow">'
     +   '<div class="who"><b>'+author+'</b>'+(a.bio?'<p>'+escA(a.bio)+'</p>':'')+'</div>'
+    +   '<div class="study" aria-hidden="true"><pre>'+STUDY+'</pre></div></div>'
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">저장소 '+AB_ICON.ext+'</a>':'')
