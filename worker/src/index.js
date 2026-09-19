@@ -11,7 +11,8 @@
 
 const SITE = 'https://dev-news.net';
 const SESSION_DAYS = 30;
-const STATE_MAX_AGE = 600;      // 로그인 왕복에 10분이면 넉넉하다
+const STATE_MAX_AGE = 1800;     // 로그인 왕복 제한. 10분은 짧았다 — 승인 화면을
+                                // 띄워두고 딴 일을 하다 오면 그 사이 만료됐다
 const MAX_OPS = 500;            // 한 번에 받는 변경분 개수 상한
 const MAX_URL = 512;
 const MAX_TEXT = 300;
@@ -73,6 +74,11 @@ function setCookie(name, value, maxAge, path = '/') {
 }
 
 const clearCookie = (name, path = '/') => setCookie(name, '', 0, path);
+
+/* Domain=.dev-news.net 로 심겼던 예전 쿠키를 지운다. 안 지우면 같은 이름이 둘
+   전송되고, 어느 쪽이 먼저 올지는 브라우저가 정해서 옛 값이 이길 수 있다. */
+const clearLegacyCookie = (name, path = '/') =>
+  `${name}=; Max-Age=0; Path=${path}; Domain=.dev-news.net; HttpOnly; Secure; SameSite=Lax`;
 
 const now = () => Math.floor(Date.now() / 1000);
 
@@ -139,16 +145,12 @@ function login(req, env) {
     url.searchParams.set('prompt', 'select_account');
   }
 
-  return new Response(null, {
-    status: 302,
-    headers: {
-      Location: url.toString(),
-      'Cache-Control': 'no-store',
-      // state 를 쿠키에도 심어 두고 콜백에서 대조한다. 이게 없으면 공격자가 만든
-      // 콜백 링크를 눌린 사람이 공격자 계정으로 로그인된다.
-      'Set-Cookie': setCookie('oauth_state', state, STATE_MAX_AGE, '/auth'),
-    },
-  });
+  const headers = new Headers({ Location: url.toString(), 'Cache-Control': 'no-store' });
+  // state 를 쿠키에도 심어 두고 콜백에서 대조한다. 이게 없으면 공격자가 만든
+  // 콜백 링크를 눌린 사람이 공격자 계정으로 로그인된다.
+  headers.append('Set-Cookie', setCookie('oauth_state', state, STATE_MAX_AGE, '/auth'));
+  headers.append('Set-Cookie', clearLegacyCookie('oauth_state', '/auth'));
+  return new Response(null, { status: 302, headers });
 }
 
 async function callback(req, env) {
@@ -158,7 +160,27 @@ async function callback(req, env) {
   const saved = parseCookies(req.headers.get('Cookie')).oauth_state;
 
   if (!code || !state || !saved || state !== saved) {
-    return json({ error: 'bad_state' }, 400, { 'Set-Cookie': clearCookie('oauth_state', '/auth') });
+    /* 대개는 공격이 아니라 제한시간이 지난 것이다 — 승인 화면을 띄워두고 딴 일을
+       하다 온 경우. 한 번은 조용히 다시 걸어준다. 그래도 안 되면 JSON 대신 사람이
+       읽을 수 있는 안내를 준다. 무한 왕복을 막으려고 한 번으로 제한한다. */
+    const headers = new Headers({ 'Cache-Control': 'no-store' });
+    headers.append('Set-Cookie', clearCookie('oauth_state', '/auth'));
+    headers.append('Set-Cookie', clearLegacyCookie('oauth_state', '/auth'));
+    if (url.searchParams.get('retried') !== '1') {
+      headers.set('Location', `${url.origin}/auth/login?retried=1`);
+      return new Response(null, { status: 302, headers });
+    }
+    headers.set('content-type', 'text/html; charset=utf-8');
+    return new Response(
+      '<!doctype html><meta charset="utf-8">'
+      + '<title>로그인하지 못했습니다 — dev-news</title>'
+      + '<div style="max-width:32em;margin:16vh auto;padding:0 24px;'
+      + 'font:16px/1.7 -apple-system,BlinkMacSystemFont,\'Apple SD Gothic Neo\',sans-serif">'
+      + '<h1 style="font-size:22px;margin:0 0 12px">로그인하지 못했습니다</h1>'
+      + '<p style="color:#54545f;margin:0 0 20px">승인까지 시간이 너무 오래 걸렸거나 '
+      + '창을 여러 개 띄운 상태였습니다. 다시 시도하면 대개 됩니다.</p>'
+      + `<p><a href="${SITE}" style="color:#5b4fd0">dev-news 로 돌아가기</a></p></div>`,
+      { status: 400, headers });
   }
 
   const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
