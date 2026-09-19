@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
 from news.core import http
+from news.core.redact import redact_articles
 
 SITE = "https://www.skills.sh"
 PAGES = {"trending": "/trending", "top": "/"}
@@ -229,6 +230,10 @@ def build(out_path: str, fetch=None, translate=None) -> dict:
     for r in lists["trending"] + lists["top"]:
         r["desc_ko"] = uniq[_key(r)].get("desc_ko", "")
     data.update(lists)
+    # 설명은 남의 SKILL.md 에서 긁어온 텍스트다. 토큰이 섞이면 그대로 커밋돼
+    # GitHub push protection이 GH013으로 push를 막는다 (apis_catalog 와 같은 이유).
+    for key in ("trending", "top"):
+        data[key] = redact_articles(data[key], "스킬 카탈로그")
     data["desc_fetched"] = got
     data["ko_translated"] = ko
     return data
