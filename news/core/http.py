@@ -9,7 +9,10 @@ requests를 감싸기만 하고 의미는 바꾸지 않는다. 응답을 그대�
 """
 from __future__ import annotations
 
+import ipaddress
+import socket
 import time
+from urllib.parse import urljoin, urlparse
 
 import requests
 
@@ -35,13 +38,68 @@ RETRY_CODES = range(500, 600)
 MAX_BYTES = 3 * 1024 * 1024      # 본문 상한. 정상 기사는 중앙값 15KB·최대 37KB다.
 
 
+# 수집하는 주소는 남이 정한다 — 해커뉴스나 dev.to 에 글을 올리는 사람이 링크를
+# 고른다. 그 주소가 사설망을 가리키면 수집기가 대신 집 안의 서비스를 긁어
+# 본문을 공개 페이지에 싣는다. 이 기계는 Tailscale(100.64.0.0/10) 위에서
+# 다른 서비스도 돌린다.
+MAX_REDIRECTS = 5
+_CGNAT = ipaddress.ip_network("100.64.0.0/10")   # ipaddress 는 이 대역을 사설로 안 본다
+
+
+def _blocked(ip: ipaddress.IPv4Address | ipaddress.IPv6Address) -> bool:
+    return (ip.is_private or ip.is_loopback or ip.is_link_local
+            or ip.is_reserved or ip.is_multicast or ip.is_unspecified
+            or (ip.version == 4 and ip in _CGNAT))
+
+
+def check_public(url: str) -> None:
+    """공인 주소를 가리키는 http(s) 주소가 아니면 거른다.
+
+    ponytail: 이름을 풀고 나서 requests 가 다시 풀기 때문에 DNS 리바인딩은 못 막는다.
+    그건 소켓을 직접 열어야 막힌다 — 게시되는 본문을 지키는 데는 이걸로 충분하다.
+    """
+    parts = urlparse(url)
+    if parts.scheme not in ("http", "https"):
+        raise requests.RequestException(f"허용하지 않는 스킴: {url}")
+    host = parts.hostname
+    if not host:
+        raise requests.RequestException(f"호스트가 없다: {url}")
+    try:
+        infos = socket.getaddrinfo(host, parts.port or (443 if parts.scheme == "https" else 80),
+                                   proto=socket.IPPROTO_TCP)
+    except socket.gaierror as e:
+        raise requests.RequestException(f"이름을 풀지 못했다: {host}") from e
+    for info in infos:
+        if _blocked(ipaddress.ip_address(info[4][0])):
+            raise requests.RequestException(f"사설망 주소라 받지 않는다: {host}")
+
+
 def get(url: str, **kwargs) -> requests.Response:
     """GET 요청. 5xx와 연결 오류에만 재시도한다.
 
     호출부가 headers를 주면 그 값이 이긴다 — 기본값 위에 덮어쓴다.
+
+    리다이렉트는 requests 에 맡기지 않고 직접 따라간다. 맡기면 첫 주소만 검사해도
+    상대가 302로 사설망에 보낼 수 있다. 한 번 뛸 때마다 다시 검사한다.
     """
+    follow = kwargs.pop("allow_redirects", True)
+    history: list[requests.Response] = []
+    for _ in range(MAX_REDIRECTS + 1):
+        resp = _get_once(url, **kwargs)
+        if not (follow and resp.is_redirect and resp.headers.get("location")):
+            resp.history = history
+            return resp
+        resp.close()
+        history.append(resp)
+        url = urljoin(url, resp.headers["location"])
+    raise requests.TooManyRedirects(f"리다이렉트가 {MAX_REDIRECTS}번을 넘었다: {url}")
+
+
+def _get_once(url: str, **kwargs) -> requests.Response:
+    check_public(url)
     headers = {**DEFAULT_HEADERS, **(kwargs.pop("headers", None) or {})}
     kwargs.setdefault("timeout", 15)
+    kwargs["allow_redirects"] = False
 
     last_error: Exception | None = None
     for attempt in range(MAX_ATTEMPTS):

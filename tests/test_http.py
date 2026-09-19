@@ -20,7 +20,14 @@ from news.core import http  # noqa: E402
 def _resp(code=200):
     r = MagicMock()
     r.status_code = code
+    r.is_redirect = False          # MagicMock 은 뭐든 참이다 — 리다이렉트로 오해한다
     return r
+
+
+@pytest.fixture(autouse=True)
+def _skip_dns(monkeypatch):
+    """이 파일은 재시도·헤더만 본다. 사설망 차단은 tests/test_ssrf.py 에서 본다."""
+    monkeypatch.setattr(http, "check_public", lambda url: None)
 
 
 # ------------------------------------------------------------------ 기본 헤더
