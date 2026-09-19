@@ -189,7 +189,9 @@ __ADS_HEAD__
   .rb.acct{margin-top:auto}  /* 데스크톱: 계정과 소개를 레일 맨 아래로 */
   .rb.gh svg{width:22px;height:22px}
   .rb.acct svg{width:22px;height:22px}
-  .rb.acct img{width:22px;height:22px;border-radius:50%;display:block}
+  /* 로그인 뒤에는 라벨이 없어 자리가 남는다. 다른 칸의 선 아이콘(24px)보다
+     사진은 작아 보이므로 더 키운다. */
+  .rb.acct img{width:34px;height:34px;border-radius:50%;display:block}
   .rb.acct.on{background:#eeeef3}
   .acctpop{position:absolute;left:78px;bottom:18px;z-index:80;min-width:132px;padding:6px;
            background:var(--panel);border-radius:12px;box-shadow:var(--shadow-card);
