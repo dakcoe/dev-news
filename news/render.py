@@ -242,7 +242,7 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  "기사마다 중요한 이유를 한 문장으로 덧붙입니다. 원문 본문을 가져오지 못한 경우에는 "
                  "해당 글에 달린 댓글을 바탕으로 요약하고, 그 사실을 표시합니다.</p>"},
         {"id": "criteria", "title": "기사 선별 기준",
-         "html": "<p>하루 수백 건 중 회차당 20건을 게시합니다.</p>"
+         "html": "<p>하루 수백 건 중 회차당 최대 20건을 게시합니다.</p>"
                  '<div class="crits">'
                  '<div class="crit"><span class="cnt">01</span><div><b>커뮤니티 반응</b><span>추천 수와 댓글 수</span></div></div>'
                  '<div class="crit"><span class="cnt">02</span><div><b>여러 출처에 함께 오른 기사</b><span>출처가 겹칠수록 앞에 둡니다</span></div></div>'
@@ -422,7 +422,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         "</svg><span>오늘의 뉴스</span></h1>"
         '<div class="sub">매일 00시·08시·16시에 수집합니다. '
         "30일 지난 기사는 검색으로 찾을 수 있습니다 "
-        f"(최근 {batches}회차) · 하루 수백 건 중 회차당 20건을 고릅니다</div>"
+        f"(최근 {batches}회차) · 하루 수백 건 중 회차당 최대 20건을 고릅니다</div>"
         '<div class="status"><div class="stmeta">'
         f'<b>최근 30일 {len(view_model)}건</b> · 수집 {collected.strftime("%Y년 %m월 %d일")}<br>'
         f'<span class="l2">회차 {batches}개 · 해커뉴스·GitHub 트렌딩·Lobsters·'
