@@ -202,6 +202,15 @@ __ADS_HEAD__
   .acctpop button:hover{background:var(--line2)}
   .acctpop button.danger{color:#c0392b}
   .acctpop button.danger:hover{background:#fdf3f2}
+  .qmask{position:fixed;inset:0;z-index:200;background:rgba(20,20,26,.45);
+         display:flex;align-items:center;justify-content:center;padding:20px}
+  .qmask[hidden]{display:none}
+  .qbox{background:var(--panel);border-radius:16px;box-shadow:var(--shadow-card);
+        padding:24px;max-width:360px;width:100%}
+  .qbox h3{font-size:18px;font-weight:800;margin:0 0 8px}
+  .qbox p{font-size:14.5px;line-height:1.7;color:var(--tx2);margin:0}
+  .qacts{display:flex;gap:8px;margin-top:18px}
+  .qacts .go{flex:1 1 0;width:auto;justify-content:center}
   .rb .lb-n{display:none}   /* 좁은 화면 전용 짧은 라벨 */
 
   /* ---------------- main ---------------- */
@@ -686,7 +695,6 @@ __ADS_HEAD__
     .acctbar{display:block;background:var(--panel);border-radius:14px;
              box-shadow:var(--shadow-card);padding:18px;margin-bottom:12px}
     .about .pnote{display:none}   /* 위 계정 블록이 같은 말을 한다 */
-    .about .doc .quit{display:none}   /* 탈퇴는 위 계정 카드에 있다 */
     .rb .lb{font-size:10px;letter-spacing:-.03em}
     .rb .lb-w{display:none}
     .rb .lb-n{display:inline}
@@ -750,12 +758,15 @@ __ADS_HEAD__
   <button class="rb acct" id="acct" title="로그인"></button>
   <div class="acctpop" id="acctpop" hidden>
     <button type="button" onclick="syncLogout()">로그아웃</button>
-    <button type="button" class="danger" onclick="acctQuitFromRail()">탈퇴</button>
+    <button type="button" class="danger" onclick="acctQuitAsk()">탈퇴</button>
   </div>
   <button class="rb gh" data-v="about" title="소개">
     <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg><span class="lb">소개</span>
   </button>
 </nav>
+<div class="qmask" id="qmask" hidden><div class="qbox" role="dialog" aria-modal="true" aria-labelledby="qtitle">
+  <h3 id="qtitle"></h3><p id="qtext"></p><div class="qacts" id="qacts"></div>
+</div></div>
 
 <div class="wrap">
   <div class="scroll"><div class="inner" id="view">__SEO_HTML__</div></div>
@@ -861,16 +872,10 @@ function aboutHTML(){
              + '<img class="acctav" src="https://avatars.githubusercontent.com/u/'+syncUser.id+'?s=96" alt="">'
              + '<div><b>로그인됨</b><span>보관함과 읽음 표시가 기기 사이에서 유지됩니다.</span></div>'
              + '</div>'
-             + (acctConfirmDelete
-                 ? '<p class="anote" style="margin-top:0">저장된 보관함과 읽음 표시가 모두 지워집니다. 되돌릴 수 없습니다.</p>'
-                   + '<div class="arow">'
-                   + '<button type="button" class="go danger" onclick="syncDeleteAccount()">삭제하고 탈퇴</button>'
-                   + '<button type="button" class="go alt" onclick="acctConfirmDelete=false;render()">취소</button>'
-                   + '</div>'
-                 : '<div class="arow">'
-                   + '<button type="button" class="go alt" onclick="syncLogout()">로그아웃</button>'
-                   + '<button type="button" class="go danger" onclick="acctConfirmDelete=true;render()">탈퇴하기</button>'
-                   + '</div>')
+             + '<div class="arow">'
+               + '<button type="button" class="go alt" onclick="syncLogout()">로그아웃</button>'
+               + '<button type="button" class="go danger" onclick="acctQuitAsk()">탈퇴하기</button>'
+             + '</div>'
            : '<button type="button" class="go" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>'
              + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
@@ -888,22 +893,7 @@ function aboutHTML(){
            ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
            : '<p class="pnote">GitHub 로그인을 하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
-    + '<div class="doc">'+secs
-    +   (syncUser
-           ? '<section class="small quit"><h2>탈퇴</h2>'
-             + (acctConfirmDelete
-                 ? '<p>저장된 보관함과 읽음 표시가 모두 지워집니다. 되돌릴 수 없습니다.</p>'
-                   + '<div class="acts">'
-                   + '<button type="button" class="go danger" onclick="syncDeleteAccount()">삭제하고 탈퇴</button>'
-                   + '<button type="button" class="go alt" onclick="acctConfirmDelete=false;render()">취소</button>'
-                   + '</div>'
-                 : '<p>서버에 저장된 기록을 모두 지웁니다.</p>'
-                   + '<div class="acts">'
-                   + '<button type="button" class="go alt" onclick="acctConfirmDelete=true;render()">탈퇴하기</button>'
-                   + '</div>')
-             + '</section>'
-           : '')
-    + '</div></div>'+FOOT_HTML;
+    + '<div class="doc">'+secs+'</div></div>'+FOOT_HTML;
 }
 
 function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([...tagSel])); }catch(e){} }
@@ -1129,28 +1119,40 @@ addEventListener('click', ()=>acctPopToggle(false));
 addEventListener('keydown', e=>{ if(e.key === 'Escape') acctPopToggle(false); });
 document.getElementById('acctpop')?.addEventListener('click', e=>e.stopPropagation());
 
-/* 탈퇴는 확인을 거쳐야 한다. 메뉴를 닫고 소개 화면의 확인 단계로 보낸다. */
-function acctQuitFromRail(){
-  acctPopToggle(false);
-  acctConfirmDelete = true;
-  view = 'about';
-  render();
-  document.querySelector('.doc .quit')?.scrollIntoView({block:'center'});
-}
 syncRenderAccount();
 
 /* 로그아웃을 직접 누른 다음 로그인일 때만 계정 선택 화면을 요청한다. 로그아웃은
    계정을 바꾸겠다는 신호로 본다. 세션이 그냥 만료된 경우에는 표시가 없으므로
    지금까지처럼 한 번에 통과한다. */
 const SWITCH_KEY = 'dev-news-switch';
-/* 탈퇴. 서버가 그 사용자의 보관함·읽음 표시·세션·계정을 한 번에 지운다.
-   되돌릴 수 없어서 화면에서 한 번 더 확인받는다 — 브라우저 확인창은 쓰지 않는다. */
-let acctConfirmDelete = false;
+/* 탈퇴 확인 모달. 브라우저 기본 confirm 은 쓰지 않는다 — 문구를 못 고치고
+   화면 전체를 멈춘다. 확인·진행·완료를 이 상자 하나에서 보여준다. */
+function qbox(title, text, actsHTML){
+  document.getElementById('qtitle').textContent = title;
+  document.getElementById('qtext').textContent = text;
+  document.getElementById('qacts').innerHTML = actsHTML;
+  document.getElementById('qmask').hidden = false;
+}
+function qboxClose(){ document.getElementById('qmask').hidden = true; }
+addEventListener('keydown', e=>{ if(e.key === 'Escape') qboxClose(); });
+
+function acctQuitAsk(){
+  acctPopToggle(false);
+  qbox('탈퇴할까요?',
+       '저장된 보관함과 읽음 표시가 모두 지워집니다. 되돌릴 수 없습니다.',
+       '<button type="button" class="go alt" onclick="qboxClose()">취소</button>'
+       + '<button type="button" class="go danger" onclick="syncDeleteAccount()">삭제하고 탈퇴</button>');
+}
+
 async function syncDeleteAccount(){
+  qbox('지우는 중', '잠시만 기다려 주세요.', '');
   let ok = false;
   try{ ok = (await syncApi('/account', {method:'DELETE'})).ok; }catch(e){}
-  if(!ok) return;                      // 실패하면 확인 화면을 그대로 둔다
-  acctConfirmDelete = false;
+  if(!ok){
+    qbox('지우지 못했습니다', '잠시 뒤에 다시 시도해 주세요. 기록은 그대로 남아 있습니다.',
+         '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+    return;
+  }
   syncUser = null;
   savedMap.clear(); read.clear();
   syncPending = [];
@@ -1160,6 +1162,8 @@ async function syncDeleteAccount(){
     localStorage.removeItem(QUEUE_KEY); localStorage.removeItem(SYNCED_KEY);
   }catch(e){}
   syncRenderAccount(); render();
+  qbox('탈퇴했습니다', '저장된 보관함과 읽음 표시를 모두 지웠습니다.',
+       '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
 }
 
 function syncLogin(){
