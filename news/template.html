@@ -1099,6 +1099,9 @@ function syncRenderAccount(){
   } else {
     b.title = '로그인하면 보관함이 기기 사이에서 유지됩니다';
     b.innerHTML = SYNC_IN + '<span class="lb">로그인</span>';
+    // 메뉴 안에서 로그아웃하면 바깥 클릭이 아니라 메뉴가 닫히지 않는다.
+    // 로그아웃·세션 만료·탈퇴가 모두 여기를 지나므로 한 군데서 닫는다.
+    acctPopToggle(false);
   }
 }
 document.getElementById('acct')?.addEventListener('click', e=>{
