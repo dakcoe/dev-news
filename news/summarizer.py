@@ -273,6 +273,18 @@ def _retry_after(resp: requests.Response) -> float:
     return 60.0
 
 
+# 회차 동안 쓴 토큰을 모델별로 센다. 무료 한도(TPD)가 모델마다 따로 잡혀서
+# 합산하면 의미가 없다. 응답이 usage를 주는데 그동안 버리고 있었다.
+TOKENS: dict[str, dict[str, int]] = {}
+
+
+def _note_usage(model: str, usage: dict) -> None:
+    t = TOKENS.setdefault(model, {"calls": 0, "in": 0, "out": 0})
+    t["calls"] += 1
+    t["in"] += int(usage.get("prompt_tokens") or 0)
+    t["out"] += int(usage.get("completion_tokens") or 0)
+
+
 def _call_openai_compatible(prompt: str, model: str, api_key: str, url: str) -> str:
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     payload = {
@@ -296,9 +308,11 @@ def _call_openai_compatible(prompt: str, model: str, api_key: str, url: str) -> 
         raise ModelGone(model)
     if resp.status_code >= 400:
         raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:300]}")
+    data = resp.json()
+    _note_usage(model, data.get("usage") or {})
     # 추론형 모델은 content가 없고 reasoning만 오는 경우가 있다 — None이 아니라
     # 빈 문자열로 넘겨서 호출자의 파싱 실패 재시도 경로를 타게 한다.
-    return resp.json()["choices"][0]["message"].get("content") or ""
+    return data["choices"][0]["message"].get("content") or ""
 
 
 def _call_gemini(prompt: str, model: str, api_key: str) -> str:
@@ -652,4 +666,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
 
     ok = sum(1 for a in out if a.get("llm_done"))
     print(f"[summarizer] 성공 {ok}/{len(out)} · 호출 {calls}회")
+    for m, t in sorted(TOKENS.items()):
+        print(f"[토큰] {m} · 호출 {t['calls']}회 · 입력 {t['in']:,} + 출력 {t['out']:,}"
+              f" = {t['in'] + t['out']:,} (일 한도 200,000)")
     return out
