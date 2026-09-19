@@ -17,10 +17,15 @@ const MAX_URL = 512;
 const MAX_TEXT = 300;
 const READ_KEEP = 1000;         // 프론트의 persistRead 와 같은 상한
 
+/* 모든 응답에 no-store 를 붙인다. 여기 오가는 것은 전부 특정 사용자의 것이라
+   어디에도 보관되면 안 된다 — 지금 Cloudflare 가 캐시하고 있지는 않지만, 중간
+   프록시나 브라우저, 나중에 누군가 켤 캐시 규칙까지 막으려면 명시해야 한다. */
+const noStore = { 'Cache-Control': 'no-store', 'Vary': 'Origin, Cookie' };
+
 const json = (body, status = 200, extra = {}) =>
   new Response(JSON.stringify(body), {
     status,
-    headers: { 'content-type': 'application/json; charset=utf-8', ...extra },
+    headers: { 'content-type': 'application/json; charset=utf-8', ...noStore, ...extra },
   });
 
 /* CORS. dev-news.net 과 api.dev-news.net 은 오리진이 다르므로 명시해야 하고,
@@ -31,7 +36,7 @@ function cors(req) {
   return {
     'Access-Control-Allow-Origin': SITE,
     'Access-Control-Allow-Credentials': 'true',
-    'Vary': 'Origin',
+    'Vary': 'Origin, Cookie',
   };
 }
 
@@ -136,6 +141,7 @@ function login(req, env) {
     status: 302,
     headers: {
       Location: url.toString(),
+      'Cache-Control': 'no-store',
       // state 를 쿠키에도 심어 두고 콜백에서 대조한다. 이게 없으면 공격자가 만든
       // 콜백 링크를 눌린 사람이 공격자 계정으로 로그인된다.
       'Set-Cookie': setCookie('oauth_state', state, STATE_MAX_AGE, '/auth'),
@@ -191,7 +197,7 @@ async function callback(req, env) {
     env.DB.prepare('DELETE FROM session WHERE expires_at < ?').bind(t),
   ]);
 
-  const headers = new Headers({ Location: SITE });
+  const headers = new Headers({ Location: SITE, 'Cache-Control': 'no-store' });
   headers.append('Set-Cookie', setCookie('sid', sid, SESSION_DAYS * 86400));
   headers.append('Set-Cookie', clearCookie('oauth_state', '/auth'));
   return new Response(null, { status: 302, headers });
