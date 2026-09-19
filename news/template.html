@@ -165,23 +165,26 @@ __ADS_HEAD__
   @media (prefers-reduced-motion:reduce){ .intro{display:none} }
   .no-intro .intro{display:none}
 
+  /* 아이콘만 두면 무슨 화면인지 안 읽힌다. title 속성은 마우스를 1초 얹어야 뜨고
+     하단 내비에서는 아예 안 뜬다 — 글자를 함께 둔다. 레일이 74px에서 84px로 넓어진다. */
   .rail{
-    width:74px;flex:none;background:var(--rail);border-right:1px solid var(--line);
-    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:8px;
+    width:84px;flex:none;background:var(--rail);border-right:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:4px;
   }
   .rb{
-    width:50px;height:50px;border-radius:13px;border:none;background:transparent;
-    display:flex;align-items:center;justify-content:center;cursor:pointer;
-    color:#9a9aa8;transition:.14s;position:relative;
+    width:70px;height:56px;border-radius:13px;border:none;background:transparent;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    cursor:pointer;color:#9a9aa8;transition:.14s;position:relative;
   }
   .rb:hover{background:#eeeef3;color:var(--tx2)}
   .rb.on{background:var(--pri-bg);color:var(--pri-dk)}
-  .rb svg{width:25px;height:25px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-  .rb .dot{position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;
+  .rb svg{width:22px;height:22px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .rb .lb{font-size:10.5px;font-weight:600;letter-spacing:-.01em;line-height:1}
+  .rb .dot{position:absolute;top:8px;right:14px;width:7px;height:7px;border-radius:50%;
            background:var(--pri);display:none}
   .rb.has .dot{display:block}
   .rb.gh{margin-top:auto}    /* 데스크톱: 레일 맨 아래 */
-  .rb.gh svg{width:23px;height:23px}
+  .rb.gh svg{width:20px;height:20px}
 
   /* ---------------- main ---------------- */
   .wrap{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
@@ -605,8 +608,8 @@ __ADS_HEAD__
   .expbtn:hover{background:#000}
 
   @media (max-width:820px){
-    /* 하단 내비 높이(58px)만큼 스크롤 여백 확보 */
-    .scroll{padding:22px 16px 88px}
+    /* 하단 내비 높이(62px)만큼 스크롤 여백 확보 */
+    .scroll{padding:22px 16px 92px}
     /* 전체 스케일 축소 — 한 화면에 카드 여러 장이 보이게. body가 아니라 .inner에
        거는 이유: fixed 요소(.rail·.dt·.facet)가 zoom을 물려받으면 좌표가 틀어진다 */
     .inner{zoom:.8}
@@ -620,13 +623,15 @@ __ADS_HEAD__
     .acts{grid-column:1/-1;flex-direction:row;justify-content:flex-end;gap:2px;
           padding-top:8px;margin-top:4px;border-top:1px solid var(--line2)}
     .dc{padding:22px 20px 40px}
-    /* 좌측 레일(74px)은 좁은 화면에서 폭 19%를 먹는다 — 하단 내비로 전환 */
-    .rail{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;height:58px;
+    /* 좌측 레일(84px)은 좁은 화면에서 폭을 너무 먹는다 — 하단 내비로 전환.
+       글자를 함께 두느라 높이가 58px에서 62px로 커졌다. */
+    .rail{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;height:62px;
           flex-direction:row;justify-content:space-around;align-items:center;padding:0;gap:0;
           border-right:none;border-top:1px solid var(--line);z-index:70}
-    .rb{width:46px;height:46px}
+    .rb{width:58px;height:54px}
+    .rb .dot{top:6px;right:calc(50% - 16px)}
     .rb.gh{margin-top:0}     /* 하단 내비에선 나란히 */
-    .facet{bottom:58px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
+    .facet{bottom:62px}     /* 태그 드로어가 하단 내비를 가리지 않게 */
   }
 </style>
 </head>
@@ -669,20 +674,20 @@ __ADS_HEAD__
 
 <nav class="rail">
   <button class="rb on" data-v="news" title="오늘의 뉴스">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/><path d="M8 8h4v4H8zM15 9h1M15 12h1M8 16h8"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6a2 2 0 012-2h9a2 2 0 012 2v12a2 2 0 002 2H6a2 2 0 01-2-2z"/><path d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2"/><path d="M7.5 8.5h6M7.5 12h6M7.5 15.5h4"/></svg><span class="lb">뉴스</span>
   </button>
   <button class="rb" data-v="api" title="무료 API 목록">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9.5 4C7.5 4 6.5 5 6.5 7v3c0 1.2-.8 2-2 2 1.2 0 2 .8 2 2v3c0 2 1 3 3 3M14.5 4c2 0 3 1 3 3v3c0 1.2.8 2 2 2-1.2 0-2 .8-2 2v3c0 2-1 3-3 3"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3v5M15 3v5"/><path d="M6.5 8h11v3a5.5 5.5 0 01-11 0z"/><path d="M12 16.5V21"/></svg><span class="lb">API</span>
   </button>
   <button class="rb" data-v="skills" title="스킬 순위">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 4h8v5.5a4 4 0 01-8 0V4z"/><path d="M16 6h2.5a.5.5 0 01.5.5V8a3 3 0 01-3 3M8 6H5.5a.5.5 0 00-.5.5V8a3 3 0 003 3M12 13.5V17M9 20h6M10 17h4v3"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10 4.6a2 2 0 114 0V6h3a1 1 0 011 1v3h1.4a2 2 0 110 4H18v3a1 1 0 01-1 1h-3v-1.4a2 2 0 10-4 0V18H7a1 1 0 01-1-1v-3H4.6a2 2 0 110-4H6V7a1 1 0 011-1h3z"/></svg><span class="lb">스킬</span>
   </button>
   <button class="rb" data-v="saved" title="보관함">
     <span class="dot"></span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg><span class="lb">보관함</span>
   </button>
   <button class="rb gh" data-v="about" title="소개">
-    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg><span class="lb">소개</span>
   </button>
 </nav>
 
