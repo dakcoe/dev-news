@@ -14,11 +14,11 @@ from news.core.common import KST  # noqa: E402  (상수 재노출)
 # 왼쪽으로 밀려 보인다. 삼중따옴표로는 못 적는다: 줄 끝 역슬래시가 줄바꿈을 먹고
 # 마지막 역슬래시가 닫는 따옴표를 탈출시킨다.
 _STUDY_FRAMES = "\n".join((
-    " /\\_/\\      ", "(=oωo=)φ     ",
-    " /\\_/\\      ", "(=oωo=)φ_    ",
-    " /\\_/\\      ", "(=oωo=)φ__   ",
+    " /\\_/\\      ", "(=･ω･=)φ     ",
+    " /\\_/\\      ", "(=･ω･=)φ_    ",
+    " /\\_/\\      ", "(=･ω･=)φ__   ",
     " /\\_/\\      ", "(=-ω-=)φ___  ",
-    " /\\_/\\      ", "(=oωo=)φ____ ",
+    " /\\_/\\      ", "(=･ω･=)φ____ ",
     " /\\_/\\      ", "(=^ω^=)φ_____",
 ))
 
@@ -287,7 +287,7 @@ h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin:0 0 6px;display:
 .whorow .who{text-align:left}
 .study{height:34px;overflow:hidden;flex:none;color:var(--tx2)}
 .study pre{margin:0;font:13px/17px ui-monospace,SFMono-Regular,Menlo,monospace;
-  white-space:pre;animation:study 3.6s steps(6) infinite}
+  white-space:pre;text-align:left;animation:study 3.6s steps(6) infinite}
 @keyframes study{to{transform:translateY(-204px)}}
 @media (prefers-reduced-motion:reduce){.study pre{animation:none}}
 .doc{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:0 28px 6px}
