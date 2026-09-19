@@ -235,13 +235,18 @@ def about_copy(enabled: dict | None) -> list[dict]:
     names = ", ".join(m["name"] for k, m in SOURCE_META.items() if (enabled or {}).get(k, True))
     return [
         {"id": "intro", "title": "사이트 소개",
-         "html": "<p>dev-news는 개발과 AI 분야의 소식을 직접 챙겨 보려고 만든 사이트입니다. "
-                 "모은 소식을 한국어로 정리해 하루 세 번(00시, 08시, 16시) 갱신하며, 출처는 "
-                 + _esc(names) + "입니다. 모든 기사에 원문 링크를 함께 둡니다.</p>"},
+         "html": "<p>평소 제가 직접 보려고 개발과 AI 관련 소식을 모아 한국어로 정리하는 "
+                 "사이트입니다.</p>"
+                 "<p>" + _esc(names) + "에서 글을 모아 하루 세 번(00시, 08시, 16시) "
+                 "갱신합니다.</p>"
+                 "<p>원글이 궁금할 때 바로 확인하실 수 있도록 모든 글에 원문 링크를 "
+                 "달아 두었습니다.</p>"},
         {"id": "method", "title": "수집 및 요약 방식",
-         "html": "<p>수집, 요약, 게시는 자동으로 이루어집니다. 요약과 제목 번역은 AI가 작성하며, "
-                 "기사마다 중요한 이유를 한 문장으로 덧붙입니다. 원문 본문을 가져오지 못한 경우에는 "
-                 "해당 글에 달린 댓글을 바탕으로 요약하고, 그 사실을 표시합니다.</p>"},
+         "html": "<p>수집, 요약, 게시는 자동으로 이루어집니다.</p>"
+                 "<p>요약과 제목 번역은 AI가 작성하며, 기사마다 중요한 이유를 한 문장으로 "
+                 "덧붙입니다.</p>"
+                 "<p>원문 본문을 가져오지 못한 경우에는 해당 글에 달린 댓글을 바탕으로 "
+                 "요약하고, 그 사실을 표시합니다.</p>"},
         {"id": "criteria", "title": "기사 선별 기준",
          "html": "<p>하루 수백 건 중 회차당 최대 20건을 게시합니다.</p>"
                  '<div class="crits">'
@@ -385,7 +390,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">{_ICON["star"]}저장소 추천하기</a>' if repo else "")
                + (f'<a class="go yt" href="{_esc(yt)}" target="_blank" rel="noopener noreferrer">{_ICON["yt"]}YouTube</a>' if yt else "")
                + "</div></div>")
-    about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1><div class=\"sub\">만든 사람과 운영 방식</div>"
+    about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1>"
                   '<div class="about">' + profile + '<div class="doc">'
                   + "".join(_section_html(x, about) for x in secs) + "</div></div>")
     privacy_body = (f"<h1>{HMARK_SVG}<span>개인정보 처리</span></h1><div class=\"sub\">dev-news 가 다루는 정보</div>"

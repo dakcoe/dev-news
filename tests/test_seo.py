@@ -259,7 +259,9 @@ def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
     for sec in about_copy(None):
         assert sec["title"] in a
     assert "https://github.com/x.png?size=208" in a and "커피" in a and "/issues" in a
-    assert "개인정보 처리" in p and "localStorage" in p and "커피" not in p
+    # 본문이 실렸는지만 본다. 예전에는 localStorage 라는 단어를 찾았는데,
+    # 그 말을 빼는 것이 개인정보 문단을 다시 쓴 이유였다.
+    assert "개인정보 처리" in p and "수집되는 정보" in p and "커피" not in p
     assert 'rel="canonical" href="' in a
 
 
