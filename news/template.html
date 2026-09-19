@@ -1153,11 +1153,17 @@ function acctQuitAsk(){
    먼저 증표를 받는다 — 이 POST 가 있어야 링크 한 줄로 남의 계정이 지워지지 않는다. */
 async function syncDeleteAccount(){
   qbox('확인하는 중', '잠시만 기다려 주세요.', '');
-  let ok = false;
-  try{ ok = (await syncApi('/account/prepare', {method:'POST'})).ok; }catch(e){}
-  if(!ok){
-    qbox('탈퇴하지 못했습니다', '잠시 뒤에 다시 시도해 주세요. 기록은 그대로 남아 있습니다.',
-         '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+  let status = 0;
+  try{ status = (await syncApi('/account/prepare', {method:'POST'})).status; }catch(e){}
+  const 닫기 = '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>';
+  if(status === 401){
+    // 세션이 풀린 것이므로 다시 시도해도 안 된다. 화면도 로그아웃 상태로 맞춘다.
+    syncUser = null; syncRenderAccount(); render();
+    qbox('로그인이 풀렸습니다', '다시 로그인한 뒤 탈퇴해 주세요. 기록은 그대로 남아 있습니다.', 닫기);
+    return;
+  }
+  if(status !== 200){
+    qbox('탈퇴하지 못했습니다', '잠시 뒤에 다시 시도해 주세요. 기록은 그대로 남아 있습니다.', 닫기);
     return;
   }
   // 로컬 사본은 돌아온 뒤에 비운다 — 도중에 그만두면 그대로 두어야 한다.
