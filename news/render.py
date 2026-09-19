@@ -287,7 +287,7 @@ body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Varia
 h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin:0 0 6px;display:flex;align-items:center;gap:11px}
 .hmark{width:26px;height:26px;flex:none;display:block}
 .sub{font-size:15px;color:var(--tx3);margin-bottom:26px}
-.about{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start}
+.about{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}.about .doc{order:1}.about .profile{order:2}
 .profile{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:30px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .avatar{width:104px;height:104px;border-radius:50%;display:block}
 .who b{font-size:21px;font-weight:800}.who p{font-size:14.5px;color:var(--tx2);margin:2px 0 0}
@@ -318,7 +318,7 @@ section.small ul{font-size:14px;color:var(--tx3)}
 .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
 .foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
 .foot a{color:var(--tx3);text-decoration:none}.foot a:hover{color:var(--pri-dk)}
-@media (max-width:900px){.page{padding:22px 16px 60px}.about{grid-template-columns:minmax(0,1fr);gap:12px}.avatar{width:88px;height:88px}.doc{padding:0 18px 4px}p{font-size:14px}}
+@media (max-width:900px){.page{padding:22px 16px 60px}.about{grid-template-columns:minmax(0,1fr);gap:12px}.about .doc,.about .profile{order:0}.avatar{width:88px;height:88px}.doc{padding:0 18px 4px}p{font-size:14px}}
 """
 
 HMARK_SVG = ('<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
