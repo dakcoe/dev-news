@@ -252,26 +252,13 @@ def about_copy(enabled: dict | None) -> list[dict]:
         {"id": "support", "title": "문의",
          "html": "<p>출처 추가·제외 요청, 오류 제보, 제안은 GitHub Issues로 보내 주세요.</p>"},
         {"id": "privacy", "title": "개인정보 처리",
-         "html": "<p><b>로그인하지 않으면 아무것도 나가지 않습니다.</b> 보관함과 읽음 표시는 이 브라우저 "
-                 "안에만 남습니다. 브라우저 기록을 지우면 같이 사라지고, 다른 기기에서는 보이지 "
-                 "않습니다.</p>"
-                 "<p><b>로그인하면 이것만 저장합니다.</b></p>"
-                 "<ul><li>보관한 기사의 주소와 제목</li>"
-                 "<li>읽은 기사의 주소 — 최근 1000건까지만 남고 오래된 것부터 지워집니다</li>"
-                 "<li>회원을 구분하기 위한 GitHub 계정 번호 하나</li></ul>"
-                 "<p><b>이것은 저장하지 않습니다.</b></p>"
-                 "<ul><li>이름, 이메일 주소, 프로필 사진</li>"
-                 "<li>비밀번호 — 비밀번호는 GitHub 화면에만 입력하고 이 사이트는 볼 수 없습니다</li>"
-                 "<li>계정을 대신 조작할 수 있는 열쇠 — 로그인하는 순간에만 쓰고 바로 버립니다</li></ul>"
-                 "<p><b>이 사이트가 GitHub 계정으로 할 수 있는 일은 프로필을 읽는 것뿐입니다.</b> "
-                 "저장소를 만들거나 고치거나 글을 남길 수 없습니다. 로그인할 때 GitHub 가 보여주는 "
-                 "동의 화면에 요청하는 권한이 그대로 적혀 있으니 확인하고 누르시면 됩니다.</p>"
-                 "<p><b>보관함과 읽음 표시는 본인에게만 보입니다.</b> 다른 이용자는 볼 수 없습니다.</p>"
-                 "<p><b>지우려면</b> 소개 화면에서 로그아웃하면 이 브라우저에서 사라집니다. 서버에 "
-                 "저장된 것까지 지우려면 아래 문의로 알려 주세요. GitHub 쪽 연결 해제는 GitHub 설정의 "
-                 "애플리케이션 목록에서 직접 하실 수 있습니다.</p>"
-                 "<p>광고가 게재되는 경우 광고 사업자가 쿠키 등을 통해 정보를 수집할 수 있으며, "
-                 "해당 사항은 이 페이지에 명시합니다.</p>"},
+         "html": "<p>이 사이트에서 로그인 시 수집되는 정보</p>"
+                 "<ul><li>보관한 기사</li><li>읽은 기사</li><li>GitHub 계정</li></ul>"
+                 "<p>그 외 이름이나 이메일 주소, 비밀번호는 저장되지 않습니다.</p>"
+                 "<p>저장된 기록은 소개 화면에서 탈퇴하면 모두 지워집니다.</p>"
+                 "<p>로그인하지 않는다면 읽은 기사와 보관함은 해당 기기에서만 기록되고 별도로 "
+                 "수집되지 않습니다.</p>"
+                 "<p>광고가 게재되는 경우 광고 사업자가 쿠키로 정보를 수집할 수 있습니다.</p>"},
     ]
 
 
@@ -314,9 +301,9 @@ h1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin:0 0 6px;display:
 section{padding:22px 0;border-bottom:1px solid var(--line2)}section:last-child{border-bottom:none}
 h2{font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0 0 8px}section.small h2{font-size:15px}
 p{font-size:15px;line-height:1.75;color:var(--tx2);margin:0}section.small p{font-size:14px;color:var(--tx3)}
-p+p{margin-top:12px}p+ul{margin-top:8px}
-ul{font-size:15px;line-height:1.75;color:var(--tx2);margin:0 0 4px;padding-left:20px}
-section.small ul{font-size:14px;color:var(--tx3)}li{margin:2px 0}
+p+p{margin-top:12px}p+ul{margin-top:6px}ul+p{margin-top:12px}
+ul{font-size:15px;line-height:1.75;color:var(--tx2);margin:0;padding-left:20px}
+section.small ul{font-size:14px;color:var(--tx3)}
 .go{display:inline-flex;align-items:center;gap:8px;background:var(--tx);color:#fff;text-decoration:none;font-size:15px;font-weight:700;padding:12px 20px;border-radius:10px;line-height:1.7}
 .go.alt{background:none;color:var(--tx);box-shadow:inset 0 0 0 1.5px var(--line)}.go.coffee{background:#ffdd00;color:#1a1a1a}.go svg{width:18px;height:18px;flex:none}
 .crits{display:flex;flex-direction:column;gap:12px;margin-top:12px}.crit{display:flex;gap:12px;align-items:flex-start}
