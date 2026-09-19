@@ -11,7 +11,9 @@ CREATE TABLE IF NOT EXISTS app_user (
 CREATE TABLE IF NOT EXISTS session (
   id         TEXT    PRIMARY KEY,
   user_id    INTEGER NOT NULL,
-  expires_at INTEGER NOT NULL
+  expires_at INTEGER NOT NULL,
+  -- 탈퇴를 우리 화면에서 확인했다는 증표. 링크 한 줄로 남의 계정이 지워지는 것을 막는다.
+  del_nonce  TEXT
 );
 CREATE INDEX IF NOT EXISTS session_expires ON session(expires_at);
 

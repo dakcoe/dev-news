@@ -1144,12 +1144,30 @@ function acctQuitAsk(){
        + '<button type="button" class="go danger" onclick="syncDeleteAccount()">삭제하고 탈퇴</button>');
 }
 
+/* 탈퇴는 깃허브를 한 번 더 거친다. 그래야 앱 승인까지 취소되어, 다음 로그인이
+   동의 화면부터 다시 시작한다. 승인을 남겨 두면 탈퇴한 계정이 클릭 한 번에
+   조용히 되살아난다.
+   먼저 증표를 받는다 — 이 POST 가 있어야 링크 한 줄로 남의 계정이 지워지지 않는다. */
 async function syncDeleteAccount(){
-  qbox('지우는 중', '잠시만 기다려 주세요.', '');
+  qbox('확인하는 중', '잠시만 기다려 주세요.', '');
   let ok = false;
-  try{ ok = (await syncApi('/account', {method:'DELETE'})).ok; }catch(e){}
+  try{ ok = (await syncApi('/account/prepare', {method:'POST'})).ok; }catch(e){}
   if(!ok){
-    qbox('지우지 못했습니다', '잠시 뒤에 다시 시도해 주세요. 기록은 그대로 남아 있습니다.',
+    qbox('탈퇴하지 못했습니다', '잠시 뒤에 다시 시도해 주세요. 기록은 그대로 남아 있습니다.',
+         '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+    return;
+  }
+  // 로컬 사본은 돌아온 뒤에 비운다 — 도중에 그만두면 그대로 두어야 한다.
+  location.href = SYNC_API + '/auth/login?intent=delete';
+}
+
+/* 탈퇴를 마치고 돌아왔을 때 결과를 알린다. 주소의 흔적은 지운다. */
+(function(){
+  const left = new URLSearchParams(location.search).get('left');
+  if(!left) return;
+  history.replaceState(null, '', location.pathname);
+  if(left === 'denied'){
+    qbox('탈퇴하지 못했습니다', '확인 절차가 끝나기 전에 시간이 지났습니다. 기록은 그대로 남아 있습니다.',
          '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
     return;
   }
@@ -1162,9 +1180,12 @@ async function syncDeleteAccount(){
     localStorage.removeItem(QUEUE_KEY); localStorage.removeItem(SYNCED_KEY);
   }catch(e){}
   syncRenderAccount(); render();
-  qbox('탈퇴했습니다', '저장된 보관함과 읽음 표시를 모두 지웠습니다.',
+  qbox('탈퇴했습니다',
+       left === 'kept'
+         ? '저장된 보관함과 읽음 표시를 모두 지웠습니다. GitHub 쪽 연결 해제만 되지 않았으니, GitHub 설정의 애플리케이션 목록에서 직접 해제해 주세요.'
+         : '저장된 보관함과 읽음 표시를 모두 지웠고, GitHub 계정 연결도 해제했습니다.',
        '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
-}
+})();
 
 function syncLogin(){
   let sw = false;
