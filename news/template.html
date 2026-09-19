@@ -554,6 +554,8 @@ __ADS_HEAD__
   .about .pnote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
   .acctbar{display:none}   /* 좁은 화면에서만 — 넓은 화면은 레일에 있다 */
   .acctbar .go{width:100%;justify-content:center}
+  .acctbar .arow{display:flex;gap:8px}
+  .acctbar .arow .go{flex:1 1 0;width:auto;min-width:0}
   .acctbar .anote{font-size:13px;color:var(--tx3);line-height:1.6;margin:10px 2px 0}
   .acctbar .acctme{display:flex;align-items:center;gap:12px;text-align:left;margin-bottom:14px}
   .acctbar .acctav{width:42px;height:42px;border-radius:50%;flex:none;background:var(--line2)}
@@ -670,6 +672,7 @@ __ADS_HEAD__
     .acctbar{display:block;background:var(--panel);border-radius:14px;
              box-shadow:var(--shadow-card);padding:18px;margin-bottom:12px}
     .about .pnote{display:none}   /* 위 계정 블록이 같은 말을 한다 */
+    .about .doc .quit{display:none}   /* 탈퇴는 위 계정 카드에 있다 */
     .rb .lb{font-size:10px;letter-spacing:-.03em}
     .rb .lb-w{display:none}
     .rb .lb-n{display:inline}
@@ -840,7 +843,16 @@ function aboutHTML(){
              + '<img class="acctav" src="https://avatars.githubusercontent.com/u/'+syncUser.id+'?s=96" alt="">'
              + '<div><b>로그인됨</b><span>보관함과 읽음 표시가 기기 사이에서 유지됩니다.</span></div>'
              + '</div>'
-             + '<button type="button" class="go alt" onclick="syncLogout()">로그아웃</button>'
+             + (acctConfirmDelete
+                 ? '<p class="anote" style="margin-top:0">저장된 보관함과 읽음 표시가 모두 지워집니다. 되돌릴 수 없습니다.</p>'
+                   + '<div class="arow">'
+                   + '<button type="button" class="go danger" onclick="syncDeleteAccount()">삭제하고 탈퇴</button>'
+                   + '<button type="button" class="go alt" onclick="acctConfirmDelete=false;render()">취소</button>'
+                   + '</div>'
+                 : '<div class="arow">'
+                   + '<button type="button" class="go alt" onclick="syncLogout()">로그아웃</button>'
+                   + '<button type="button" class="go danger" onclick="acctConfirmDelete=true;render()">탈퇴하기</button>'
+                   + '</div>')
            : '<button type="button" class="go" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>'
              + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
     + '</div>'
@@ -860,7 +872,7 @@ function aboutHTML(){
     + '</div>'
     + '<div class="doc">'+secs
     +   (syncUser
-           ? '<section class="small"><h2>탈퇴</h2>'
+           ? '<section class="small quit"><h2>탈퇴</h2>'
              + (acctConfirmDelete
                  ? '<p>저장된 보관함과 읽음 표시가 모두 지워집니다. 되돌릴 수 없습니다.</p>'
                    + '<div class="acts">'
