@@ -236,9 +236,8 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  '<div class="crit"><span class="cnt">02</span><div><b>여러 출처에 함께 오른 기사</b><span>출처가 겹칠수록 앞에 둡니다</span></div></div>'
                  '<div class="crit"><span class="cnt">03</span><div><b>개발과의 관련성</b><span>소송, 정치, 연예 등 기술 외 사안은 제외</span></div></div>'
                  "</div>"},
-        {"id": "support", "title": "후원 및 문의",
-         "html": "<p>이 사이트가 도움이 되었다면 후원할 수 있습니다. 출처 추가·제외 요청, 오류 제보, "
-                 "제안은 GitHub Issues로 보내 주세요.</p>"},
+        {"id": "support", "title": "문의",
+         "html": "<p>출처 추가·제외 요청, 오류 제보, 제안은 GitHub Issues로 보내 주세요.</p>"},
         {"id": "privacy", "title": "개인정보 처리",
          "html": "<p>이 사이트는 서버와 회원 기능이 없습니다. 보관함과 읽음 표시는 브라우저의 "
                  "localStorage에만 저장되며 외부로 전송되지 않습니다. 광고가 게재되는 경우 광고 사업자가 "
@@ -357,7 +356,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                     + "".join(_section_html(x, about) for x in secs if x["id"] == "privacy")
                     + '<section><p><a href="/about/">사이트 소개 전체 보기 →</a></p></section></div>')
     for path, title, desc, body in (
-        ("/about/", "소개", "dev-news 를 만든 사람, 수집·요약 방식, 기사 선별 기준, 후원 및 문의.", about_body),
+        ("/about/", "소개", "dev-news 를 만든 사람, 수집·요약 방식, 기사 선별 기준, 문의.", about_body),
         ("/privacy/", "개인정보 처리", "dev-news 는 서버와 회원 기능이 없으며 보관함·읽음 표시는 브라우저에만 저장됩니다.", privacy_body),
     ):
         d = os.path.join(out_dir, path.strip("/"))
