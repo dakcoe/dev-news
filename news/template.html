@@ -970,9 +970,12 @@ function syncRenderAccount(){
   if(syncUser){
     b.title = '로그아웃';
     b.innerHTML = '<img src="https://avatars.githubusercontent.com/u/' + syncUser.id
-                + '?s=44" alt="" onerror="this.replaceWith(document.createRange()'
-                + '.createContextualFragment(\'' + SYNC_OUT.replace(/'/g, "\\'") + '\'))">'
-                + '<span class="lb">로그아웃</span>';
+                + '?s=44" alt=""><span class="lb">로그아웃</span>';
+    // 아바타를 못 불러오면 아이콘으로 되돌린다. onerror 속성에 마크업을 넣으면
+    // 따옴표가 엉켜 그대로 화면에 찍힌다 — 그래서 여기서 붙인다.
+    b.querySelector('img').addEventListener('error', function(){
+      this.outerHTML = SYNC_OUT;
+    });
   } else {
     b.title = '로그인하면 보관함이 기기 사이에서 유지됩니다';
     b.innerHTML = SYNC_IN + '<span class="lb">로그인</span>';
