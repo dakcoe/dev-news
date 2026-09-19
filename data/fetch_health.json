@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-10T03:19:00+09:00",
-   "total": 17,
-   "counts": {
-    "short": 1,
-    "blocked": 1,
-    "ok": 13,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=49624603",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-10T09:51:13+09:00",
    "total": 17,
    "counts": {
@@ -467,6 +445,22 @@
     {
      "url": "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/",
      "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-19T16:00:30+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/australian-youth-safety-blueprint",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
