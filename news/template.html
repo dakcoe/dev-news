@@ -609,6 +609,8 @@ __ADS_HEAD__
   .about .go,.acctbar .go{text-decoration:none;line-height:1.7}
   .about .go svg,.acctbar .go svg{width:18px;height:18px;flex:none}
   .about .go.coffee{background:#ffdd00;color:#1a1a1a}
+  .go.yt{background:#ff0000;color:#fff;box-shadow:none}
+  .go.yt:hover{background:#d90000}
   .about .go.coffee:hover{background:#f5d000}
   .about .crits{display:flex;flex-direction:column;gap:12px;margin-top:12px}
   .about .crit{display:flex;gap:12px;align-items:flex-start}
@@ -890,7 +892,7 @@ function aboutHTML(){
     +   '<div class="pacts">'
     +     (home?'<a class="go" href="'+home+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.gh+'GitHub 페이지</a>':'')
     +     (repo?'<a class="go alt" href="'+repo+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.star+'저장소 추천하기</a>':'')
-    +     (yt?'<a class="go alt" href="'+yt+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.yt+'YouTube</a>':'')
+    +     (yt?'<a class="go yt" href="'+yt+'" target="_blank" rel="noopener noreferrer">'+AB_ICON.yt+'YouTube</a>':'')
     +   '</div>'
     +   (syncUser
            ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
