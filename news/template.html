@@ -1174,8 +1174,9 @@ async function syncDeleteAccount(){
    스크립트가 다 로드된 뒤로 미룬다 — 여기서 바로 render() 를 부르면 아직
    초기화되지 않은 뒤쪽 상수를 건드려 스크립트 전체가 멈춘다. */
 setTimeout(function(){
+ try{
   const left = new URLSearchParams(location.search).get('left');
-  if(!left) return;
+  if(!left){ if(location.search) history.replaceState(null, '', location.pathname); return; }
   history.replaceState(null, '', location.pathname);
   if(left === 'denied'){
     qbox('탈퇴하지 못했습니다', '확인 절차가 끝나기 전에 시간이 지났습니다. 기록은 그대로 남아 있습니다.',
@@ -1196,6 +1197,7 @@ setTimeout(function(){
          ? '저장된 보관함과 읽음 표시를 모두 지웠습니다. GitHub 쪽 연결 해제만 되지 않았으니, GitHub 설정의 애플리케이션 목록에서 직접 해제해 주세요.'
          : '저장된 보관함과 읽음 표시를 모두 지웠고, GitHub 계정 연결도 해제했습니다.',
        '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+ }catch(e){ console.error('탈퇴 복귀 처리 실패', e); }   // 여기서 터져도 본문은 살린다
 }, 0);
 
 function syncLogin(){
