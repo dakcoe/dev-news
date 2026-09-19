@@ -986,12 +986,23 @@ document.getElementById('acct')?.addEventListener('click', ()=>{
 });
 syncRenderAccount();
 
-function syncLogin(){ location.href = SYNC_API + '/auth/login'; }
+/* 로그아웃을 직접 누른 다음 로그인일 때만 계정 선택 화면을 요청한다. 로그아웃은
+   계정을 바꾸겠다는 신호로 본다. 세션이 그냥 만료된 경우에는 표시가 없으므로
+   지금까지처럼 한 번에 통과한다. */
+const SWITCH_KEY = 'dev-news-switch';
+function syncLogin(){
+  let sw = false;
+  try{ sw = localStorage.getItem(SWITCH_KEY) === '1'; localStorage.removeItem(SWITCH_KEY); }catch(e){}
+  location.href = SYNC_API + '/auth/login' + (sw ? '?prompt=select_account' : '');
+}
 
 async function syncLogout(){
   try{ await syncApi('/auth/logout', {method:'POST'}); }catch(e){}
   syncUser = null;
-  try{ localStorage.removeItem(SYNCED_KEY); }catch(e){}
+  try{
+    localStorage.removeItem(SYNCED_KEY);
+    localStorage.setItem(SWITCH_KEY, '1');   // 다음 로그인에서 계정을 고르게 한다
+  }catch(e){}
   syncRenderAccount(); render();
 }
 
