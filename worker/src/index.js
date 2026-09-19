@@ -117,12 +117,20 @@ async function currentUser(req, env) {
 /* ---------------- 로그인 ---------------- */
 
 function login(req, env) {
+  const here = new URL(req.url);
   const state = randomToken();
   const url = new URL('https://github.com/login/oauth/authorize');
   url.searchParams.set('client_id', env.GITHUB_CLIENT_ID);
   url.searchParams.set('scope', 'read:user');
   url.searchParams.set('state', state);
-  url.searchParams.set('redirect_uri', `${new URL(req.url).origin}/auth/callback`);
+  url.searchParams.set('redirect_uri', `${here.origin}/auth/callback`);
+
+  /* 로그아웃을 직접 누른 직후에만 계정 선택 화면을 띄운다. 깃허브 세션과 앱 승인은
+     우리 로그아웃과 무관하게 남아 있어서, 그냥 두면 같은 계정으로 곧장 돌아온다.
+     허용하는 값은 select_account 하나다 — 받은 문자열을 그대로 넘기지 않는다. */
+  if (here.searchParams.get('prompt') === 'select_account') {
+    url.searchParams.set('prompt', 'select_account');
+  }
 
   return new Response(null, {
     status: 302,
