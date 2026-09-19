@@ -267,6 +267,7 @@ _ICON = {
     "ext": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>',
     "cup": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8zM16 9h2a2.5 2.5 0 0 1 0 5h-2M6 3v2M10 3v2M14 3v2"/></svg>',
     "issue": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>',
+    "yt": '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8a2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>',
     "star": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3.5l2.6 5.5 6 .85-4.35 4.2 1.05 5.95L12 17.2l-5.3 2.8 1.05-5.95L3.4 9.85l6-.85z"/></svg>',
 }
 
@@ -358,6 +359,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
     author = _esc(about.get("author") or "")
     author_url = _safe_url(about.get("author_url") or "")
     repo = _safe_url(about.get("github") or "")
+    yt = _safe_url(about.get("youtube") or "")
     avatar = author_url.rstrip("/") + ".png?size=208" if author_url else ""
     home = _safe_url(about.get("homepage") or "") or author_url
     bio = _esc(about.get("bio") or "")
@@ -381,6 +383,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                + '<div class="pacts">'
                + (f'<a class="go" href="{_esc(home)}" target="_blank" rel="noopener noreferrer">{_ICON["gh"]}GitHub 페이지</a>' if home else "")
                + (f'<a class="go alt" href="{_esc(repo)}" target="_blank" rel="noopener noreferrer">{_ICON["star"]}저장소 추천하기</a>' if repo else "")
+               + (f'<a class="go alt" href="{_esc(yt)}" target="_blank" rel="noopener noreferrer">{_ICON["yt"]}YouTube</a>' if yt else "")
                + "</div></div>")
     about_body = (f"<h1>{HMARK_SVG}<span>소개</span></h1><div class=\"sub\">만든 사람과 운영 방식</div>"
                   '<div class="about">' + profile + '<div class="doc">'
