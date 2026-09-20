@@ -33,6 +33,7 @@ from news.core.dedup import merge_duplicates
 from news.core.filters import (
     drop_dead_links,
     drop_irrelevant,
+    drop_self_declared_irrelevant,
     keyword_filter,
     page_eligible,
     recent_only,
@@ -268,6 +269,10 @@ def prepare_published(picked: list[dict], cfg: dict,
 
     picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
     picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
+    # 요약이 스스로 '개발자 업무와 무관'이라고 말한 기사. 추가 호출이 없어
+    # 분류 게이트와 별개로 항상 켠다.
+    picked, self_irrelevant = drop_self_declared_irrelevant(picked)
+    irrelevant = irrelevant + self_irrelevant
 
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)

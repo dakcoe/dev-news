@@ -210,6 +210,37 @@ def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     return kept, dropped
 
 
+# '왜 중요한가'가 스스로 무관하다고 선언한 경우를 잡는 문장 형태.
+# "백엔드 개발자의 업무와 무관한 영화 비하인드 스토리다" 처럼 주어가 개발자/개발이고
+# 서술이 무관·관련없음인 판정문만 본다. '무관' 단어만 찾으면 "유출 확인과 무관하게
+# 72시간 내 통보해야 한다" 같은 조건절이 걸린다 — 실측 15건 중 8건이 그랬다.
+_SELF_IRRELEVANT = re.compile(
+    r"(백엔드|개발자|AI 개발|개발)[^.]{0,40}?(업무|실무|현장|아키텍처)?[^.]{0,25}?"
+    r"(와|과)\s*(직접적인\s*)?(무관|관련이?\s*없)"
+)
+
+
+def drop_self_declared_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
+    """'개발자의 업무와 무관하다'고 요약이 스스로 말한 기사를 게재에서 뺀다.
+
+    프롬프트는 그런 판정을 쓰지 말라고 금지한다(summarizer.PROMPT). 금지를 어기고
+    나왔다면 모델이 이 기사에서 개발자용 의미를 찾다 실패한 것이다.
+
+    LLM 분류 게이트와 다른 신호다. 최근 10일 540건에서 9건이 걸렸고 오탐은 없었다.
+    그 9건 중 5건은 분류가 `게재`로 통과시킨 것들이었다 — 분류가 놓치는 자리를 메운다.
+    추가 호출이 없으므로 relevance_gate와 무관하게 켤 수 있다.
+    """
+    kept, dropped = [], []
+    for a in articles:
+        why = re.sub(r"\s+", " ", a.get("why") or "")
+        (dropped if why and _SELF_IRRELEVANT.search(why) else kept).append(a)
+    if dropped:
+        print(f"[요약자평] 무관 선언 {len(dropped)}건 게재 제외")
+        for a in dropped:
+            print(f"   · {(a.get('ko_title') or a.get('title', ''))[:60]}")
+    return kept, dropped
+
+
 def page_eligible(articles: list[dict]) -> list[dict]:
     """페이지 게재 자격이 있는 것만 남긴다 (SPEC 1.1 — 기록과 게재는 별개).
 
