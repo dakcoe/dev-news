@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-11T09:50:21+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-11T21:01:41+09:00",
    "total": 20,
    "counts": {
@@ -471,6 +462,22 @@
     },
     {
      "url": "https://www.stepfun.com/step-5-preview",
+     "source": "hackernews",
+     "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-21T00:00:31+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "empty": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://qwen.ai/blog?id=qwen-image-2.1",
      "source": "hackernews",
      "reason": "empty"
     }
