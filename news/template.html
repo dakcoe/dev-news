@@ -1923,7 +1923,7 @@ function render(){
     +'곳 · 안 읽음 '+DATA.filter(d=>!read.has(d.url)).length+'건 · 보관 '+savedMap.size+'건</span></div></div>';
 
   h+=barHTML();
-  h+=layoutHTML();
+  h+=layoutHTML()+FOOT_HTML;   // 전체 렌더에서만 푸터를 붙인다
 
   viewEl.innerHTML=h; bind();
 }
@@ -2039,7 +2039,9 @@ function layoutHTML(){
     }
     else if(m && m.length){ h+='<div class="archead">지난 기사 (아카이브) '+m.length+'건</div>'+m.map(archRowHTML).join(''); }
   }
-  return h+'</div>'+adRailHTML()+'</div>'+FOOT_HTML;
+  // 푸터는 여기서 반환하지 않는다. renderList() 가 .layout 만 교체하는데
+  // 형제 요소인 푸터까지 반환하면 검색·무한스크롤 갱신마다 하나씩 쌓인다.
+  return h+'</div>'+adRailHTML()+'</div>';
 }
 
 /* 목록만 갱신 — 바(검색 input)를 건드리지 않아 한글 IME 조합이 유지되고,

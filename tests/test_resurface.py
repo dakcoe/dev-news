@@ -76,3 +76,23 @@ def test_병합은_URL과_회차로_가린다():
     from scripts.merge_remote_data import _insert_by_batch  # noqa: F401  (임포트 가능 확인)
     src = open(os.path.join(ROOT, "scripts", "merge_remote_data.py"), encoding="utf-8").read()
     assert 'a.get("batch") or "")' in src and "key(a) not in have" in src
+
+
+def test_재등장_기사는_아카이브에_다시_쌓인다(tmp_path):
+    """seen 이 기간을 보고 통과시킨 기사를 archive 가 주소 중복으로 버리면,
+    요약을 새로 만들어 놓고 저장하지 않는다 — 다시 트렌딩이 화면에 안 뜬다."""
+    from datetime import datetime, timezone
+    from news.core import archive
+    url = "https://github.com/x/y"
+    first = datetime(2026, 6, 1, tzinfo=timezone.utc)
+    again = datetime(2026, 9, 1, tzinfo=timezone.utc)
+
+    archive.append([{"url": url, "title": "t"}], first, str(tmp_path))
+    # 같은 주소를 그냥 다시 넣으면 걸러진다
+    archive.append([{"url": url, "title": "t"}], again, str(tmp_path))
+    assert len(archive.load_all(str(tmp_path))) == 1
+    # resurfaced 가 붙으면 새 회차로 쌓인다
+    archive.append([{"url": url, "title": "t", "resurfaced": "2026-06-01"}], again, str(tmp_path))
+    rows = archive.load_all(str(tmp_path))
+    assert len(rows) == 2
+    assert any(r.get("resurfaced") for r in rows)
