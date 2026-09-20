@@ -909,7 +909,7 @@ function persistTags(){ try{ localStorage.setItem(TAGSEL_KEY, JSON.stringify([..
 let openDrop=null;                     // 열려 있는 커스텀 드롭다운 id (렌더 간 비유지)
 document.addEventListener('click', ()=>{ if(openDrop){ openDrop=null; render(); } });
 
-/* 사이드바 접힘 상태 (데스크톱) — 재방문 시 유지 */
+/* 넓은 화면에서 목록에 공간을 내준 선택은 재방문해도 유지한다 (facet-collapse-toggle). */
 const FOLD_KEY='dev-news-facetfold';
 let facetFold=false;
 try{ facetFold = localStorage.getItem(FOLD_KEY)==='1'; }catch(e){}
