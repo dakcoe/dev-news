@@ -13,7 +13,10 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
-from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
+from news.core.common import ROOT, DataUnreadable, load_json  # noqa: E402  (경로 상수 재노출)
+
+# 옛 이름. archive 만 쓰던 예외를 공용으로 올렸다.
+ShardUnreadable = DataUnreadable
 from news.core.dedup import normalize_url
 # 정본은 docs/ 아래다. GitHub Pages가 서빙하는 곳이라 방문자가 여기서 받아 가고,
 # 빌드도 여기서 읽는다. 예전에는 data/에 두고 docs/로 복사해서 같은 내용이 두 벌
@@ -31,28 +34,10 @@ def _shard_path(month: str, base_dir: str = DIR) -> str:
     return os.path.join(base_dir, f"{month}.json")
 
 
-class ShardUnreadable(RuntimeError):
-    """있는 샤드를 못 읽었다. 회차를 멈춰야 한다."""
-
-
 def _load_json(path: str) -> list:
-    """없는 파일은 빈 목록, 있는데 못 읽으면 예외.
-
-    예전에는 둘 다 빈 목록이었다. append() 가 `stamped + _load_json(...)` 를
-    같은 경로에 바로 저장하므로, 파싱이 한 번 실패하면 그달 기사가 새 기사만
-    남기고 통째로 사라진다. 파일이 남아 있는 한 되살릴 수 있으니 저장을
-    멈추는 쪽이 맞다.
-    """
-    if not os.path.exists(path):
-        return []
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        raise ShardUnreadable(f"{path}: {e}") from e
-    if not isinstance(data, list):
-        raise ShardUnreadable(f"{path}: 목록이 아니라 {type(data).__name__}")
-    return data
+    """append() 는 `stamped + _load_json(...)` 를 같은 경로에 바로 저장한다.
+    읽기 실패가 빈 목록이 되면 그달 기사가 새 기사만 남기고 사라진다."""
+    return load_json(path, [])
 
 
 def _save_json(path: str, data) -> None:
