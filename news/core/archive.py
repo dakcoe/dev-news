@@ -31,16 +31,28 @@ def _shard_path(month: str, base_dir: str = DIR) -> str:
     return os.path.join(base_dir, f"{month}.json")
 
 
+class ShardUnreadable(RuntimeError):
+    """있는 샤드를 못 읽었다. 회차를 멈춰야 한다."""
+
+
 def _load_json(path: str) -> list:
+    """없는 파일은 빈 목록, 있는데 못 읽으면 예외.
+
+    예전에는 둘 다 빈 목록이었다. append() 가 `stamped + _load_json(...)` 를
+    같은 경로에 바로 저장하므로, 파싱이 한 번 실패하면 그달 기사가 새 기사만
+    남기고 통째로 사라진다. 파일이 남아 있는 한 되살릴 수 있으니 저장을
+    멈추는 쪽이 맞다.
+    """
     if not os.path.exists(path):
         return []
     try:
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
-        return data if isinstance(data, list) else []
     except Exception as e:
-        print(f"[archive] 읽기 실패({path}: {e}) — 빈 목록으로 처리")
-        return []
+        raise ShardUnreadable(f"{path}: {e}") from e
+    if not isinstance(data, list):
+        raise ShardUnreadable(f"{path}: 목록이 아니라 {type(data).__name__}")
+    return data
 
 
 def _save_json(path: str, data) -> None:

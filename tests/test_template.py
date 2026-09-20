@@ -247,9 +247,21 @@ def test_인트로가_앱_스크립트보다_먼저_켜진다(html):
 def test_색인_실패가_무한_재시도로_돌지_않는다(html):
     """실패 직후 null로 되돌리면 renderList가 곧바로 ensureIndex를 다시 부르고
     그게 또 실패해 끝없이 요청이 나간다."""
-    assert "INDEX='fail'; renderList();" in html
-    # 풀어 주는 곳은 검색어가 바뀌는 자리 하나뿐이어야 한다
-    assert html.count("if(INDEX==='fail') INDEX=null;") == 1
+    assert "INDEX='fail';" in html
+    # 풀어 주는 곳은 검색어가 바뀌는 자리 하나뿐이어야 한다.
+    # 선언(let INDEX=null)은 되돌리는 자리가 아니니 뺀다.
+    assert html.count("INDEX=null;") - html.count("let INDEX=null;") == 1
+
+
+def test_못_받은_달을_기사_없는_달과_섞지_않는다(html):
+    """달 샤드 하나가 실패하면 예전에는 빈 배열이 됐다. 다른 달이 하나라도
+    받아지면 INDEX가 배열이 되어 완전한 색인처럼 굳고, 그 달 기사를 찾는
+    사람에게는 평범한 '결과 없음'으로 보였다."""
+    assert ".catch(()=>[])" not in html          # 실패를 빈 달로 바꾸던 자리
+    assert "INDEX_MISSING.push(m); return null;" in html
+    assert "parts.filter(Boolean)" in html       # 실패한 달은 붙이지 않는다
+    assert "그 기간은 검색에 나오지 않습니다" in html
+    assert "INDEX==='fail' || INDEX_MISSING.length" in html   # 다음 검색에 재시도
 
 
 def test_색인에_태그가_없는_기사를_태그로_지우지_않는다(html):
