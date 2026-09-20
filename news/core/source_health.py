@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import os
+from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEFAULT_PATH = os.path.join(ROOT, "data", "source_health.json")
@@ -28,10 +29,18 @@ def load(path: str = DEFAULT_PATH) -> list[dict]:
 
 
 def record(counts: dict[str, int], when: str,
-           path: str = DEFAULT_PATH, keep: int = KEEP) -> list[dict]:
-    """회차 결과를 뒤에 붙이고 최근 keep개만 남긴다. 갱신된 이력을 돌려준다."""
+           path: str = DEFAULT_PATH, keep: int = KEEP,
+           skip_days: dict[str, list[int]] | None = None) -> list[dict]:
+    """회차 결과를 뒤에 붙이고 최근 keep개만 남긴다. 갱신된 이력을 돌려준다.
+
+    skip_days 는 출처가 발행을 쉬는 요일(0=월 … 6=일)이다. 피드가 <skipDays>로
+    직접 알려준 값만 들어온다.
+    """
     history = load(path)
-    history.append({"at": when, "counts": dict(counts)})
+    entry = {"at": when, "counts": dict(counts)}
+    if skip_days:
+        entry["skip"] = {k: list(v) for k, v in skip_days.items() if v}
+    history.append(entry)
     history = history[-keep:]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -39,12 +48,35 @@ def record(counts: dict[str, int], when: str,
     return history
 
 
+def _weekday(at: str) -> int | None:
+    try:
+        return datetime.fromisoformat(at).weekday()
+    except (TypeError, ValueError):
+        return None
+
+
 def silent(history: list[dict], streak: int = DEFAULT_STREAK) -> list[str]:
-    """마지막 streak 회차에 전부 등장하면서 전부 0건인 출처 이름 (정렬)."""
+    """마지막 streak 회차에 전부 등장하면서 전부 0건인 출처 이름 (정렬).
+
+    출처가 <skipDays>로 쉰다고 밝힌 요일의 회차는 그 출처에 한해 세지 않는다.
+    arXiv 는 주말에 <item> 이 없는 껍데기를 주므로, 그걸 모르면 매주 토·일에
+    죽은 출처로 잡힌다. 쉬는 날을 빼고 나서 셀 회차가 없으면 판정하지 않는다.
+    """
     if streak <= 0 or len(history) < streak:
         return []
-    recent = [h.get("counts", {}) for h in history[-streak:]]
-    names = set(recent[0])
-    for c in recent[1:]:
-        names &= set(c)
-    return sorted(n for n in names if all(c.get(n, 0) == 0 for c in recent))
+    names = set(history[-streak:][0].get("counts", {}))
+    for h in history[-streak:][1:]:
+        names &= set(h.get("counts", {}))
+
+    out = []
+    for n in names:
+        # 휴재 요일 회차는 빼고, 남은 것 중 최근 streak개로 판정한다. 그만큼
+        # 모이지 않았으면 아직 판정하지 않는다 — 한 회차 0건은 정상일 수 있다는
+        # 원래 기준을 휴재 요일을 빼고도 지키려면 창을 뒤로 넓혀야 한다.
+        judged = [h for h in history
+                  if n in h.get("counts", {})
+                  and _weekday(h.get("at", "")) not in (h.get("skip", {}).get(n) or [])]
+        judged = judged[-streak:]
+        if len(judged) >= streak and all(h["counts"].get(n, 0) == 0 for h in judged):
+            out.append(n)
+    return sorted(out)

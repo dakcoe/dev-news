@@ -88,3 +88,35 @@ def test_rss_수집기가_피드별로_센다():
     assert "counts" in sig.parameters
     src = inspect.getsource(rss.fetch)
     assert 'f"rss:{name}"' in src
+
+
+def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6)):
+    """2026-09월 어느 날의 회차 한 건. 09-19가 토, 09-20이 일이다."""
+    e = {"at": f"2026-09-{day:02d}T08:00:00+09:00", "counts": {name: cnt}}
+    if skip:
+        e["skip"] = {name: list(skip)}
+    return e
+
+
+def test_휴재_요일은_침묵으로_세지_않는다():
+    """arXiv는 주말에 <item>이 없는 껍데기를 준다. 그걸 죽음으로 보면 매주
+    토·일마다 알람이 뜬다 — 2026-09-19·20에 실제로 그랬다."""
+    from news.core.source_health import silent
+    # 금·토·일 연속 0건. 주말을 빼면 유효 회차가 금요일 하나뿐이라 아직 판정하지 않는다.
+    assert silent([_h(18, 0), _h(19, 0), _h(20, 0)]) == []
+    # 정상적으로 받던 출처가 주말에만 0건인 경우도 마찬가지.
+    assert silent([_h(17, 8), _h(18, 8), _h(19, 0), _h(20, 0)]) == []
+
+
+def test_주말을_빼고도_연속_0건이면_알린다():
+    """휴재 요일 예외가 진짜 고장까지 덮으면 안 된다."""
+    from news.core.source_health import silent
+    # 목·금·월이 0건 — 주말을 빼고도 유효 회차 셋이 전부 0이다.
+    hist = [_h(17, 0), _h(18, 0), _h(19, 0), _h(20, 0), _h(21, 0)]
+    assert silent(hist) == ["rss:arXiv cs.AI"]
+
+
+def test_휴재_정보가_없으면_예전처럼_판정한다():
+    from news.core.source_health import silent
+    hist = [_h(d, 0, name="rss:x", skip=None) for d in (22, 23, 24)]
+    assert silent(hist) == ["rss:x"]

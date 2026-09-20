@@ -28,6 +28,21 @@ def _text(html: str, limit: int = 400) -> str:
     return re.sub(r"\s+", " ", plain).strip()[:limit]
 
 
+# RSS 2.0 <skipDays>. 발행을 쉬는 요일을 피드가 스스로 선언한다. arXiv 가
+# Saturday·Sunday 를 내보내고, 그 날에는 <item> 이 하나도 없는 껍데기가 온다.
+# 그걸 모르면 죽은 출처로 보여 주말마다 침묵 알람이 뜬다.
+_WEEKDAY = {"monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3,
+            "friday": 4, "saturday": 5, "sunday": 6}
+
+
+def _skip_days(soup) -> list[int]:
+    tag = soup.find("skipDays")
+    if tag is None:
+        return []
+    days = [_WEEKDAY.get(d.get_text(strip=True).lower()) for d in tag.find_all("day")]
+    return sorted({d for d in days if d is not None})
+
+
 def _one(feed: dict, limit: int) -> list[dict]:
     url = feed["url"]
     name = feed.get("name") or urlparse(url).netloc.replace("www.", "")
@@ -42,6 +57,7 @@ def _one(feed: dict, limit: int) -> list[dict]:
         return []
 
     soup = BeautifulSoup(resp.content, "xml")
+    feed["_skip_days"] = _skip_days(soup)
     entries = soup.find_all("item") or soup.find_all("entry")
     out = []
     for entry in entries[:limit]:
@@ -81,7 +97,8 @@ def feed_name(feed: dict) -> str:
 
 
 def fetch(feeds: list[dict] | None = None, per_feed: int = 8,
-          counts: dict[str, int] | None = None) -> list[dict]:
+          counts: dict[str, int] | None = None,
+          skip_days: dict[str, list[int]] | None = None) -> list[dict]:
     """counts를 주면 피드별 건수를 `rss:이름`으로 남긴다.
 
     합계만 기록하면 피드 하나가 죽어도 rss 총계가 0이 아니라 출처 침묵 경고가
@@ -103,6 +120,8 @@ def fetch(feeds: list[dict] | None = None, per_feed: int = 8,
                 articles.extend(got)
                 if counts is not None:
                     counts[f"rss:{name}"] = len(got)
+                if skip_days is not None and futures[future].get("_skip_days"):
+                    skip_days[f"rss:{name}"] = futures[future]["_skip_days"]
             except Exception as e:
                 print(f"[rss] {name} 오류: {e}")
                 if counts is not None:

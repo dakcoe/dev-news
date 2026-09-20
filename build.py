@@ -82,8 +82,12 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def run_scrapers(cfg: dict, counts: dict[str, int] | None = None) -> list[dict]:
-    """출처별 수집. counts를 주면 출처 이름 → 건수를 채운다 (예외는 0건)."""
+def run_scrapers(cfg: dict, counts: dict[str, int] | None = None,
+                 skip_days: dict[str, list[int]] | None = None) -> list[dict]:
+    """출처별 수집. counts를 주면 출처 이름 → 건수를 채운다 (예외는 0건).
+
+    skip_days를 주면 피드가 <skipDays>로 밝힌 휴재 요일을 함께 채운다.
+    """
     s = cfg.get("scraper", {})
     src = cfg.get("sources", {})
     tasks = {}
@@ -105,7 +109,7 @@ def run_scrapers(cfg: dict, counts: dict[str, int] | None = None) -> list[dict]:
         # counts를 넘겨 피드별 건수를 남긴다. 합계만 기록하면 피드 하나가 죽어도
         # rss 총계가 0이 아니라 출처 침묵 경고가 영영 안 뛴다.
         tasks["rss"] = lambda: rss.fetch(cfg.get("feeds"), per_feed=s.get("per_feed", 8),
-                                         counts=counts)
+                                         counts=counts, skip_days=skip_days)
     if src.get("anthropic", True):
         tasks["anthropic"] = lambda: anthropic.fetch(limit=s.get("per_feed", 8))
 
@@ -186,10 +190,15 @@ def _gate_settings(cfg: dict) -> tuple[int, bool, int, int | None]:
     return top_n, gate_on, overpick, sc.get("per_feed_page")
 
 
-def check_source_silence(counts: dict[str, int], cfg: dict, when: str) -> list[str]:
-    """출처별 건수를 기록하고 연속 0건인 출처를 돌려준다 (add-source-silence-alert)."""
+def check_source_silence(counts: dict[str, int], cfg: dict, when: str,
+                         skip_days: dict[str, list[int]] | None = None) -> list[str]:
+    """출처별 건수를 기록하고 연속 0건인 출처를 돌려준다 (add-source-silence-alert).
+
+    휴재 요일을 밝힌 출처는 그 요일 회차를 세지 않는다 — arXiv는 주말에 항목이
+    없는 껍데기를 주므로, 그걸 모르면 매주 토·일에 죽은 출처로 잡힌다.
+    """
     streak = cfg.get("alert", {}).get("silent_streak", source_health.DEFAULT_STREAK)
-    history = source_health.record(counts, when)
+    history = source_health.record(counts, when, skip_days=skip_days)
     quiet = source_health.silent(history, streak)
     if quiet:
         print(f"[알림] {streak}회차 연속 0건 출처: {', '.join(quiet)}")
@@ -203,8 +212,9 @@ def collect_candidates(cfg: dict, when: str = "") -> tuple[list[dict], list[str]
     """
     sc = cfg.get("scraper", {})
     counts: dict[str, int] = {}
-    raw = run_scrapers(cfg, counts)
-    quiet = check_source_silence(counts, cfg, when)
+    skip_days: dict[str, list[int]] = {}
+    raw = run_scrapers(cfg, counts, skip_days)
+    quiet = check_source_silence(counts, cfg, when, skip_days)
     articles = keyword_filter(raw, cfg.get("keywords", []), cfg.get("block_keywords"))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
     articles = merge_duplicates(articles)
