@@ -223,6 +223,7 @@ def check_source_silence(counts: dict[str, int], cfg: dict, when: str,
     return quiet
 
 
+# 수집·선별·요약·출력의 실패 지점을 따로 확인하려고 main의 단계를 나눴다 (split-main).
 def collect_candidates(cfg: dict, when: str = "") -> tuple[list[dict], list[str]]:
     """수집 → 필터 → 중복 제거. 깔때기의 넓은 쪽 (SPEC 1.2).
 
