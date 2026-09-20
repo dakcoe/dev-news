@@ -28,7 +28,7 @@ import json
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
+from datetime import date, datetime
 
 import yaml
 
@@ -138,6 +138,14 @@ def run_scrapers(cfg: dict, counts: dict[str, int] | None = None,
     return articles
 
 
+def _is_yesterday(snapshot_date: str, today: str) -> bool:
+    try:
+        d = date.fromisoformat(today) - date.fromisoformat(snapshot_date)
+    except ValueError:
+        return False
+    return d.days == 1
+
+
 def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
     """GitHub 아이템의 지표를 절대 스타에서 전일 대비 증가량(Δ)으로 교체 (SPEC 1.5).
 
@@ -151,10 +159,13 @@ def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
         meta = candidates.github_meta(a["url"])
         meta_map[a["url"]] = meta
         prev = candidates.previous_stars(a["url"], before_date=today)
-        if meta.get("stars") is not None and prev is not None:
-            delta = max(meta["stars"] - prev, 0)
+        # 어제 스냅샷일 때만 뺀다. 그보다 오래된 것을 쓰면 며칠치 증가분이
+        # 하루치 Δ 로 나가고, 옆줄의 하루치 숫자와 비교가 안 된다.
+        # 그럴 때는 trending 이 직접 주는 stars today 가 더 정확하다.
+        if meta.get("stars") is not None and prev is not None and _is_yesterday(prev[1], today):
+            delta = max(meta["stars"] - prev[0], 0)
         else:
-            delta = a.get("upvotes", 0)        # 첫 등장 — trending의 stars today
+            delta = a.get("upvotes", 0)        # 첫 등장이거나 간격이 벌어짐
         a["upvotes"] = delta
         a["delta_stars"] = delta
     if gh_items:
