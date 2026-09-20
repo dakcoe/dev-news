@@ -33,7 +33,7 @@ def record(counts: dict[str, int], when: str,
            skip_days: dict[str, list[int]] | None = None) -> list[dict]:
     """회차 결과를 뒤에 붙이고 최근 keep개만 남긴다. 갱신된 이력을 돌려준다.
 
-    skip_days 는 출처가 발행을 쉬는 요일(0=월 … 6=일)이다. 피드가 <skipDays>로
+    skip_days 는 출처가 발행을 쉬는 요일(0=월 … 6=일)이다 (feed-skip-days). 피드가 <skipDays>로
     직접 알려준 값만 들어온다.
     """
     history = load(path)

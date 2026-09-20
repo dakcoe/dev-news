@@ -99,7 +99,7 @@ def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6)):
 
 
 def test_휴재_요일은_침묵으로_세지_않는다():
-    """arXiv는 주말에 <item>이 없는 껍데기를 준다. 그걸 죽음으로 보면 매주
+    """feed-skip-days. arXiv는 주말에 <item>이 없는 껍데기를 준다. 그걸 죽음으로 보면 매주
     토·일마다 알람이 뜬다 — 2026-09-19·20에 실제로 그랬다."""
     from news.core.source_health import silent
     # 금·토·일 연속 0건. 주말을 빼면 유효 회차가 금요일 하나뿐이라 아직 판정하지 않는다.

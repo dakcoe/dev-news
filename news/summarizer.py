@@ -273,7 +273,7 @@ def _retry_after(resp: requests.Response) -> float:
     return 60.0
 
 
-# 회차 동안 쓴 토큰을 모델별로 센다. 무료 한도(TPD)가 모델마다 따로 잡혀서
+# 회차 동안 쓴 토큰을 모델별로 센다 (log-token-usage). 무료 한도(TPD)가 모델마다 따로 잡혀서
 # 합산하면 의미가 없다. 응답이 usage를 주는데 그동안 버리고 있었다.
 TOKENS: dict[str, dict[str, int]] = {}
 
