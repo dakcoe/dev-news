@@ -168,6 +168,7 @@ function login(req, env) {
    남의 계정을 지울 수 있다 — 깃허브 승인이 살아 있으면 클릭 한 번에 왕복이
    끝나기 때문이다. SameSite=Lax 라 다른 사이트에서 온 POST 에는 쿠키가 실리지
    않으므로, 이 요청은 우리 화면에서만 성공한다. */
+/* account-deletion 1단계. */
 async function prepareDelete(req, env) {
   const uid = await currentUser(req, env);
   if (!uid) return json({ error: 'unauthorized' }, 401, cors(req));
