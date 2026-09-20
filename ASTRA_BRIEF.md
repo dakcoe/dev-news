@@ -2,6 +2,25 @@
 
 이 문서는 작업이 끝나면 삭제한다. 저장소에 남기지 않는다.
 
+## 먼저 — 1차 보고는 받았고, 그 6건은 이미 고쳤다
+
+`review/astra-fix` 브랜치를 본다. **`git log --oneline origin/main..HEAD`** 로
+이번에 고친 것을 먼저 훑어라. 아래는 다시 보고하지 않아도 된다.
+
+- 읽기 실패를 빈 값으로 처리하고 그 위에 덮어쓰던 곳 6개
+  (`seen`·`candidates`·`source_health`·`skills_catalog`·`apis_catalog`·`archive`)
+  → `news/core/common.py` 의 `load_json` 하나로 모았다
+- `publish.sh` 가 병합 실패를 무시하던 것 + `merge_remote_data.py` 가 실패해도
+  0 으로 끝나던 것
+- 검색 색인의 달 샤드 일부 실패가 완전한 색인으로 굳던 것
+- `template.html` 의 전송·세션 실패 처리 5건
+- `<skipDays>` 예외가 KST 요일을 쓰고 회차별 값만 봐서 빗나가던 것
+- `candidates.py` 의 `GITHUB_REPO_RE` 사본, `llm` 태그의 `grok` 이 `ngrok` 에 걸리던 것
+- 스타 Δ 가 최대 38일치를 하루치로 발행하던 것
+- 문서·주석이 코드와 어긋난 곳 6개
+
+**그래서 이번에는 "조용한 실패" 말고 나머지를 봐 달라.** 특히 아래 3·4·5 다.
+
 ## 이 단계에서 할 일
 
 **읽기만 한다. 코드를 고치지 않는다.** 문제 목록과 근거만 낸다.
@@ -35,8 +54,8 @@
   build.py               362   파이프라인 조립
   news/core/*.py               필터·중복·점수·태그·아카이브
 
-테스트        618개 · 46파일 · 전부 mock · 1초
-기능          66개 (_workspace/ 폴더 기준)
+테스트        655개 · 50파일 · 전부 mock · 1초
+기능          71개 (_workspace/ 폴더 기준)
 ```
 
 ## 이 저장소의 규약
@@ -49,9 +68,9 @@
 현재 상태:
 
 ```
-기능 66개 · 코드에 연결된 것 53개
+기능 71개 · 코드에 연결된 것 58개
 코드 없음 13개    슬러그가 코드에 안 남은 기능
-테스트 없음 4개    코드는 있는데 tests/ 에 흔적이 없다
+테스트 없음 6개    코드는 있는데 tests/ 에 흔적이 없다
 ```
 
 주석은 한국어로 쓴다. **무엇을 하는지가 아니라 왜 그렇게 했는지**를 적는
@@ -96,10 +115,9 @@
 
 우선순위 순이다.
 
-**1. 조용한 실패**
-에러 없이 잘못된 결과가 나가는 경로. 실제로 있었던 예 — LLM 호출이 429로
-재시도까지 실패했는데 기사 한 건이 아무 신호 없이 게시되지 않았다.
-`except: pass`, 빈 폴백, 검사 없는 기본값을 중심으로.
+**1. 조용한 실패 — 이번엔 낮은 우선순위다**
+위 목록대로 한 바퀴 돌았다. `except: pass`·빈 폴백·검사 없는 기본값은 이미
+훑었으니, 그 바깥에서 같은 성질을 띠는 것만 보라.
 
 **2. 문서와 코드의 어긋남**
 `SPEC.md`, `CONFIG.md`, 코드 주석이 현재 동작을 설명하는가. 특히 설정값이
@@ -110,9 +128,9 @@ HTML·CSS·JS 가 한 파일에 있다. 나누는 것이 실제로 이득인지,
 배포라는 제약 때문에 그대로 두는 게 맞는지 판단해 달라. 이 파일은
 `render.py` 가 읽어 치환하는 템플릿이다.
 
-**4. 테스트 없는 4개 기능**
-`fix-hanja-residual`, `move-pipeline-to-core`, `remove-tag-cap`,
-`unified-filter-panel`. 테스트가 필요한지, 필요 없는 종류인지.
+**4. 테스트 없는 6개 기능**
+`account-deletion`, `fix-hanja-residual`, `log-token-usage`, `move-pipeline-to-core`,
+`remove-tag-cap`, `unified-filter-panel`. 테스트가 필요한지, 필요 없는 종류인지.
 
 **5. 코드에 슬러그가 없는 13개 기능**
 지운 기능인지, 작업하며 표시를 안 남긴 것인지 가려 달라.
@@ -138,7 +156,7 @@ HTML·CSS·JS 가 한 파일에 있다. 나누는 것이 실제로 이득인지,
 ## 확인 방법
 
 ```bash
-python -m pytest tests/ -q      # 618개, 1초
+venv/bin/python -m pytest tests/ -q   # 655개, 1초
 python scripts/graph.py         # 기능별 구성 파일
 python scripts/graph.py --gaps  # 끊긴 자리
 ```
