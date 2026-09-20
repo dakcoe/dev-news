@@ -1,0 +1,27 @@
+name: 테스트
+
+# 테스트가 618개 있는데 아무도 돌리지 않았다. tests/test_seo.py 의 한 건은
+# 2026-09-17에 깨져 사흘 뒤에야 우연히 발견됐다 — 그 사이 열 번 넘게 푸시됐다.
+on:
+  push:
+    branches: [main]
+    # 수집이 하루 세 번 커밋하는 기사 데이터로는 테스트 결과가 달라지지 않는다.
+    paths-ignore:
+      - "docs/**"
+      - "data/**"
+      - "*.md"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      # 전부 mock 을 쓰므로 네트워크 없이 1초 안에 끝난다.
+      - run: python -m pytest tests/ -q
