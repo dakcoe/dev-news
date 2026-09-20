@@ -1,4 +1,4 @@
-/* dev-news 동기화 Worker.
+/* dev-news 동기화 Worker (sync-across-devices).
  *
  * 정적 사이트(GitHub Pages)는 그대로 두고 이 Worker 만 api.dev-news.net 에 붙는다.
  * 하는 일은 둘이다 — 깃허브 OAuth 로 "누구인지" 확인하기, 그 사람의 보관함·읽음
@@ -109,6 +109,7 @@ export function normalizeOp(op) {
     };
   }
   if (op.t === 'bm-') return { t: 'bm-', url };
+  if (op.t === 'rd-') return { t: 'rd-', url };
   if (op.t === 'rd') {
     const at = Number.isFinite(op.at) ? Math.floor(op.at) : now();
     return { t: 'rd', url, at };
@@ -307,6 +308,11 @@ async function push(req, env) {
     }
     if (op.t === 'bm-') {
       return env.DB.prepare('DELETE FROM bookmark WHERE user_id = ? AND url = ?').bind(uid, op.url);
+    }
+    // 읽음 해제. 이게 없으면 한 기기에서 해제해도 다른 기기는 계속 읽음으로 보고,
+    // 다음 pull 이 서버 값을 씌워 해제한 기기에서도 되살아난다.
+    if (op.t === 'rd-') {
+      return env.DB.prepare('DELETE FROM read_mark WHERE user_id = ? AND url = ?').bind(uid, op.url);
     }
     return env.DB.prepare(
       `INSERT INTO read_mark (user_id, url, read_at) VALUES (?, ?, ?)

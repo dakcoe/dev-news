@@ -1,4 +1,4 @@
-/* 순수 함수만 검사한다. D1 과 fetch 가 걸린 경로는 `wrangler dev` 로 직접 확인한다.
+/* 순수 함수만 검사한다 (sync-across-devices). D1 과 fetch 가 걸린 경로는 `wrangler dev` 로 직접 확인한다.
  * 실행: node test.mjs
  */
 import assert from 'node:assert/strict';
@@ -41,6 +41,9 @@ assert.equal(normalizeOp({ t: 'bm+', url: 'https://example.com/a' }).kind, 'news
 assert.equal(normalizeOp({ t: 'bm+', url: 'https://example.com/a', title: 'ㄱ'.repeat(500) }).title.length, 300);
 
 assert.deepEqual(normalizeOp({ t: 'bm-', url: 'https://example.com/a' }), { t: 'bm-', url: 'https://example.com/a' });
+assert.deepEqual(normalizeOp({ t: 'rd-', url: 'https://example.com/a' }), { t: 'rd-', url: 'https://example.com/a' });
+// 읽음 해제도 주소 검사를 거친다
+assert.equal(normalizeOp({ t: 'rd-', url: 'javascript:alert(1)' }), null);
 
 // 읽음 시각이 숫자가 아니면 서버 시각으로 대체한다
 const rd = normalizeOp({ t: 'rd', url: 'https://example.com/a', at: 'nope' });
