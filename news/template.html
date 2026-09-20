@@ -1029,7 +1029,9 @@ async function syncFlush(){
         ok = res.ok;
         // 401 도 실패다. 예전에는 ok 로 쳐서 큐에서 꺼낸 변경을 그대로 버렸다 —
         // 세션이 만료된 순간의 보관·읽음 변경이 재로그인 뒤에도 돌아오지 않았다.
-        if(res.status === 401){ syncUser = null; syncRenderAccount(); }
+        // 소개 화면의 계정 칸에도 같은 값이 박혀 있다. 레일 버튼은 좁은 화면에서
+        // 숨겨지므로, 여기서 안 그리면 모바일에서는 아무것도 안 바뀐다.
+        if(res.status === 401){ syncUser = null; syncRenderAccount(); render(); }
       }catch(e){}
       // 전송하는 동안 로그아웃이나 탈퇴가 있었으면 되돌리지 않는다. 그 변경은
       // 이미 지워진 계정의 것이다.
@@ -1097,7 +1099,8 @@ async function syncPull(){
       localStorage.setItem(READ_KEY, JSON.stringify([...read].slice(-1000)));
     }catch(e){}
   }
-  render();
+  // 목록만 갱신한다. 뉴스 화면이 아니면 renderList 가 전체 렌더로 폴백한다.
+  renderList();
 }
 
 /* 레일 맨 아래 계정 버튼. 로그인 전에는 들어가는 화살표, 로그인 뒤에는 깃허브
@@ -1232,7 +1235,16 @@ function syncLogin(){
 }
 
 async function syncLogout(){
-  try{ await syncApi('/auth/logout', {method:'POST'}); }catch(e){}
+  /* 서버가 세션을 안 지웠는데 로컬만 비우면, 화면은 로그아웃인데 sid 쿠키는
+     HttpOnly 라 브라우저가 못 지운다 — 새로고침 한 번에 앞사람 계정으로
+     되돌아간다. 공용 컴퓨터에서 로그아웃이 안 먹는 것과 같다. */
+  let ok = false;
+  try{ ok = (await syncApi('/auth/logout', {method:'POST'})).ok; }catch(e){}
+  if(!ok){
+    qbox('로그아웃하지 못했습니다', '잠시 뒤에 다시 시도해 주세요.',
+         '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+    return;
+  }
   syncUser = null;
   /* 이 브라우저에 남은 사본까지 비운다. 안 비우면 다음에 다른 계정이 로그인할 때
      앞사람의 보관함과 읽음 표시가 그 계정으로 올라간다 — 로그아웃이 SYNCED_KEY 를
@@ -1259,9 +1271,18 @@ async function syncLogout(){
   try{ res = await syncApi('/me'); }catch(e){ return; }
   if(!res.ok) return;
   const d = await res.json();
-  if(!d.user) return;
+  if(!d.user){
+    /* 로그아웃한 적은 없는데 세션이 끝난 상태다(만료·서버 초기화). SYNCED_KEY 를
+       그대로 두면 다음 로그인이 "서버가 정본" 분기를 타서, 그동안 이 기기에서
+       보관한 기사가 첫 pull 에 통째로 지워진다 — 서버에 올라간 적이 없기
+       때문이다. 로그아웃과 같게 '이 브라우저는 처음' 으로 되돌려 합집합을 태운다. */
+    try{ localStorage.removeItem(SYNCED_KEY); }catch(e){}
+    return;
+  }
   syncUser = d.user;
-  syncRenderAccount(); render();
+  // 뉴스 화면은 로그인 상태를 쓰지 않는다. 여기서 전체 렌더를 부르면 검색창이
+  // 새로 만들어져, 느린 회선에서 막 치기 시작한 한글 조합이 끊긴다.
+  syncRenderAccount(); if(view === 'about') render();
   syncLoadQueue();
   await syncFlush();     // 지난번에 못 보낸 것부터 올린다
   // 큐가 비었을 때만 정본을 받는다. 아직 못 보낸 변경이 있는데 서버 값을 씌우면
@@ -2458,6 +2479,12 @@ function copyMd(){
    없어 되돌아올 때까지 열려 있었다. */
 document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{
   view=b.dataset.v;
+  /* 한 번 끊긴 것이 세션 내내 "다음 수집 회차 후 생성됩니다" 로 남아 있었다.
+     파일은 멀쩡한데 새로고침해야 풀렸다. 검색 색인이 검색어가 바뀔 때 푸는
+     것과 같은 자리 — 사람이 탭을 다시 누른 순간에만 되돌린다. 렌더 안에서
+     풀면 실패한 fetch 가 곧바로 다시 나가 끝없이 돈다. */
+  if(view==='skills' && SKILLS==='fail') SKILLS=null;
+  if(view==='api'    && APIS==='fail')   APIS=null;
   q='';
   shown=PAGE;
   if(!closePanels()) render();
