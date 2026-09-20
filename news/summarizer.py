@@ -172,8 +172,11 @@ COMMENTS_BODY = ("(기사 본문을 가져오지 못했다. 아래는 이 글에
 
 
 def _body_for_prompt(article: dict, body: str) -> str:
-    """프롬프트에 넣을 본문. 분당 토큰 제한(Groq 무료 12K TPM)에 걸리지 않도록
-    2천 자로 자른다. 댓글로 메운 본문이면 그 사실을 앞에 밝힌다."""
+    """프롬프트에 넣을 본문. 분당 토큰 제한에 걸리지 않게 2천 자로 자른다.
+    댓글로 메운 본문이면 그 사실을 앞에 밝힌다.
+
+    한도 값은 여기 적지 않는다 — config.yaml 의 pause_seconds 주석에 실측과
+    함께 있고, 두 곳에 적었더니 8K 와 12K 로 갈렸다."""
     if not body:
         return NO_BODY
     if article.get("body_from") == "comments":
