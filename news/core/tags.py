@@ -25,7 +25,10 @@ VOCAB: dict[str, dict] = {
         "label": "LLM · 모델",
         "group": "AI",
         "patterns": [r"\bllms?\b", r"\bgpt", r"claude", r"gemini", r"qwen",
-                     r"deepseek", r"\bllama", r"mistral", r"chatgpt", r"grok",
+                     r"deepseek", r"\bllama", r"mistral", r"chatgpt",
+                     # 경계가 없으면 ngrok 이 걸린다 — 웹훅 기사 한 건이 실제로
+                     # llm·ai 로 분류됐다. grokking(학습 현상)은 남긴다.
+                     r"\bgrok(king)?\b",
                      r"언어\s?모델", r"transformer", r"\binference\b", r"추론",
                      r"프롬프트", r"prompt", r"\btokens?\b", r"토큰",
                      r"open[- ]?weights?", r"reasoning", r"\brag\b",

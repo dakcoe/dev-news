@@ -19,9 +19,12 @@ from datetime import datetime
 from news.core import http
 
 from news.core.common import ROOT, load_json  # noqa: E402  (경로 상수 재노출)
-DIR = os.path.join(ROOT, "data", "candidates")
+# 같은 정규식을 두 벌 들고 있었다. enrich 쪽은 저장소 뒤 경로를 삼키지 않게
+# 고쳤는데 이 사본은 옛 꼬리가 그대로라, /issues/123 · /releases/tag/v1 이
+# 저장소 루트로 잡혀 그 레포의 스타 수가 이슈 항목에 기록됐다. 한 벌만 쓴다.
+from news.core.enrich import GITHUB_REPO_RE  # noqa: E402  (사본 금지)
 
-GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
+DIR = os.path.join(ROOT, "data", "candidates")
 
 
 def _shard_path(month: str, base_dir: str = DIR) -> str:
