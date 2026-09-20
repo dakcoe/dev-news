@@ -11,9 +11,15 @@
   LLM_MODEL      모델을 직접 지정하고 싶을 때만
   GITHUB_TOKEN   있으면 GitHub API 한도가 시간당 60→1,000회+ (publish.sh 가 gh 토큰을 넣는다)
 
-깔때기 (SPEC 1.2): 넓은 수집 → 중복 제거 + candidates 로그 → 보조 점수 top_n 선별
-→ 최종 선별분만 본문·썸네일·요약. 파이프라인 수준의 차단 필터는 두지 않는다 —
-무엇을 보고 숨길지는 열람 단계(클라이언트 검색·필터)가 담당한다 (SPEC 1.1).
+깔때기 (SPEC 1.2): 넓은 수집 → 차단어·기간 컷 → 중복 제거 + candidates 로그
+→ 보조 점수 top_n 선별 → 최종 선별분만 본문·썸네일·요약 → 죽은 링크·무관 선언 컷.
+
+SPEC 1.1 은 "파이프라인 수준의 차단 필터를 두지 않는다" 고 적었고 1.4 는
+candidates 를 "전체 후보" 라고 부르지만, 지금은 둘 다 그대로가 아니다.
+candidates 로그 앞에 keyword_filter(block_keywords)·recent_only 가 있어
+후보의 20% 안팎이 기록 전에 빠진다. 1B 어휘 도출은 그 점을 알고 시작해야
+한다 — "데이터는 전부 보존되므로 소급 적용이 가능하다" 가 빠진 몫에는
+성립하지 않는다.
 """
 from __future__ import annotations
 
@@ -49,7 +55,8 @@ from news.scrapers import (anthropic, devto, geeknews, github, hackernews, lobst
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 from news.core.common import KST  # noqa: E402  (상수 재노출)
-TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic"}   # 키워드 필터를 적용하지 않는 출처
+# TRUSTED 는 news.core.filters 에만 둔다. 여기 사본이 있었는데 아무도 읽지
+# 않는 사이 두 항목(hackernews·lobsters)이 저쪽에만 추가돼 값이 갈렸다.
 
 
 def load_dotenv(path: str | None = None) -> None:

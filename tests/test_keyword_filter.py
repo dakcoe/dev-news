@@ -129,3 +129,10 @@ def test_면제되지_않은_출처는_키워드를_탄다():
     assert "reddit" not in TRUSTED
     assert _passes("Rust 1.90 released", source="reddit")
     assert not _passes("오늘 점심 메뉴 추천", source="reddit")
+
+
+def test_TRUSTED_사본이_다시_생기지_않는다():
+    """build.py 에 옛 사본이 있었다. 아무도 읽지 않는 사이 filters 쪽에만
+    hackernews·lobsters 가 추가돼 두 값이 갈렸다. 정의는 한 곳뿐이어야 한다."""
+    src = open(os.path.join(ROOT, "build.py"), encoding="utf-8").read()
+    assert "TRUSTED = {" not in src
