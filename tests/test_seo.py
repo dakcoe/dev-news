@@ -236,8 +236,14 @@ def test_프리렌더에_우리_문장이_보인다(tmp_path):
     읽힌다. 기사마다 쓴 '중요한 이유'가 스크립트 없이도 보여야 한다."""
     import re
     from news.render import render
+    # why 는 최근 INLINE_DAYS 이내 기사에만 실린다(render.to_view_model). 날짜를
+    # 고정해 두면 그 기간이 지나는 순간 기능과 무관하게 깨진다 — 2026-09-17에
+    # 작성돼 사흘 뒤부터 실패하고 있었다.
+    from datetime import datetime, timedelta
+    from news.render import KST
+    batch = (datetime.now(KST) - timedelta(hours=1)).isoformat()
     a = [{"title": "t", "url": "https://e.com/1", "source": "hackernews", "summary": "요약이다.",
-          "why": "이유가 여기 있다.", "batch": "2026-09-17T08:00:00+09:00", "batch_label": "9월 17일 08:00",
+          "why": "이유가 여기 있다.", "batch": batch, "batch_label": "오늘 08:00",
           "upvotes": 1, "comments": 1, "tags": []}]
     out = tmp_path / "index.html"
     render(a, str(out))
