@@ -93,11 +93,16 @@ def append(new_items: list[dict], batch: datetime, base_dir: str = DIR) -> list[
     # 같은 기사인지는 seen·중복제거와 같은 규칙으로 가린다. 주소 문자열을 그대로
     # 비교하면 끝 슬래시 하나 차이로 같은 기사가 두 번 쌓인다.
     known = {normalize_url(a.get("url")) or a.get("url") for a in load_all(base_dir)}
+    # resurfaced 가 붙은 기사는 seen 이 "기간이 지나 다시 실을 만하다"고 판단해
+    # 통과시킨 것이다(seen.filter_unseen). 여기서 주소가 같다는 이유로 버리면
+    # 요약을 새로 만들어 놓고 저장하지 않게 된다 — 다시 트렌딩이 화면에 안 뜨고
+    # LLM 호출만 버려진다.
     stamped = [{**{k: v for k, v in a.items() if k not in DROP_FIELDS},
                 "batch": batch.isoformat(),
                 "batch_label": f"{batch.month}월 {batch.day}일 {batch:%H:%M}"}
                for a in new_items
-               if (normalize_url(a.get("url")) or a.get("url")) not in known]
+               if a.get("resurfaced")
+               or (normalize_url(a.get("url")) or a.get("url")) not in known]
 
     m = _month(batch.isoformat())
     shard = stamped + _load_json(_shard_path(m, base_dir))
