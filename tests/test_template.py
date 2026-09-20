@@ -403,3 +403,43 @@ def test_레일_순서(html):
     import re
     rail = re.search(r'<nav class="rail">(.*?)</nav>', html, re.S).group(1)
     assert re.findall(r'data-v="([a-z]+)"', rail) == ["news", "api", "skills", "saved", "about"]
+
+
+# ---- sync-across-devices: 전송·세션 실패를 성공으로 치지 않는다 ----
+
+def test_세션이_풀리면_다음_로그인은_합집합을_탄다(html):
+    """SYNCED_KEY 를 그대로 두면 다음 로그인이 '서버가 정본' 분기를 타서,
+    세션이 끊긴 동안 이 기기에서 보관한 기사가 첫 pull 에 지워진다."""
+    assert "if(!d.user){" in html
+    assert "localStorage.removeItem(SYNCED_KEY); }catch(e){}\n    return;" in html
+
+
+def test_로그아웃이_실패하면_로컬을_비우지_않는다(html):
+    """sid 는 HttpOnly 라 서버가 안 지우면 브라우저가 못 지운다. 화면만
+    로그아웃해 두면 새로고침 한 번에 앞사람 계정으로 돌아간다."""
+    assert "ok = (await syncApi('/auth/logout', {method:'POST'})).ok;" in html
+    assert "qbox('로그아웃하지 못했습니다'" in html
+
+
+def test_동기화_응답이_검색창을_새로_만들지_않는다(html):
+    """뉴스 화면은 로그인 상태를 쓰지 않는다. 응답이 올 때 전체 렌더를 하면
+    느린 회선에서 막 치기 시작한 한글 조합이 끊긴다."""
+    assert "syncRenderAccount(); if(view === 'about') render();" in html
+    assert "renderList();\n}\n\n/* 레일 맨 아래 계정 버튼." in html
+
+
+def test_전송_중_401도_소개_화면을_맞춘다(html):
+    """레일 계정 버튼은 좁은 화면에서 display:none 이다. 거기만 그리면
+    모바일에서는 '로그인됨'이 그대로 남는다."""
+    assert "if(res.status === 401){ syncUser = null; syncRenderAccount(); render(); }" in html
+
+
+def test_스킬_API_목록의_실패는_탭을_다시_누르면_풀린다(html):
+    """한 번 끊기면 파일이 멀쩡해도 세션 내내 '다음 수집 회차 후 생성됩니다'
+    가 남았다. 렌더 안에서 풀면 실패한 fetch 가 곧바로 다시 나가 끝없이 돈다
+    — 사람이 탭을 누른 자리에서만 되돌린다."""
+    assert "if(view==='skills' && SKILLS==='fail') SKILLS=null;" in html
+    assert "if(view==='api'    && APIS==='fail')   APIS=null;" in html
+    # 같은 선택자가 render() 안에도 있다. 클릭 핸들러 쪽만 본다.
+    nav = html.split(".rb[data-v]').forEach(b=>b.onclick=")[1][:700]
+    assert "SKILLS=null" in nav and "APIS=null" in nav
