@@ -102,9 +102,13 @@ def test_rss_수집기가_피드별로_센다():
     assert 'f"rss:{name}"' in src
 
 
-def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6)):
-    """2026-09월 어느 날의 회차 한 건. 09-19가 토, 09-20이 일이다."""
-    e = {"at": f"2026-09-{day:02d}T08:00:00+09:00", "counts": {name: cnt}}
+def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6), hour=16):
+    """2026-09월 어느 날의 회차 한 건. at 은 수집 기계 시각(KST)이다.
+
+    요일 판정은 UTC 다. hour=16(KST)이면 UTC 는 같은 날 07시라 날짜가 그대로다
+    — 2026-09-19가 토, 09-20이 일. hour=0·8 이면 UTC 는 전날이 된다.
+    """
+    e = {"at": f"2026-09-{day:02d}T{hour:02d}:00:00+09:00", "counts": {name: cnt}}
     if skip:
         e["skip"] = {name: list(skip)}
     return e
@@ -118,6 +122,32 @@ def test_휴재_요일은_침묵으로_세지_않는다():
     assert silent([_h(18, 0), _h(19, 0), _h(20, 0)]) == []
     # 정상적으로 받던 출처가 주말에만 0건인 경우도 마찬가지.
     assert silent([_h(17, 8), _h(18, 8), _h(19, 0), _h(20, 0)]) == []
+
+
+def test_요일은_UTC로_본다():
+    """at 은 KST 다. 그대로 요일을 뽑으면 피드가 말한 요일과 어긋난다 — KST
+    월요일 00시는 UTC 일요일 15시라, arXiv 가 주말 껍데기를 주는 그 회차를
+    월요일로 세어 휴재 예외가 빗나간다. 하루 세 회차 중 둘이 그렇다."""
+    from news.core.source_health import _weekday, silent
+    assert _weekday("2026-09-21T00:00:00+09:00") == 6   # KST 월요일 → UTC 일요일
+    assert _weekday("2026-09-21T08:00:00+09:00") == 6
+    assert _weekday("2026-09-21T16:00:00+09:00") == 0   # 여기서야 UTC 월요일
+    # KST 월요일 00·08시는 UTC 일요일이라 세지 않는다. 남는 유효 회차가
+    # 부족해 아직 판정하지 않는다.
+    assert silent([_h(19, 0), _h(20, 0), _h(21, 0, hour=0), _h(21, 0, hour=8)]) == []
+
+
+def test_휴재_요일은_출처의_최신_값을_쓴다():
+    """휴재 요일은 회차가 아니라 출처의 성질이다. 회차별 값만 보면 기능이
+    생기기 전 회차와 피드 요청이 실패한 회차에 값이 없어, 그 회차들이 전부
+    '쉬는 날이 아니다'로 세어져 거짓 침묵을 만든다. 실제로 이력 30건 전부에
+    skip 이 없어 다음 회차에 알람이 뜰 상태였다."""
+    from news.core.source_health import silent
+    # 목·금·토·일이 전부 0건인데 skip 기록은 마지막 회차에만 있다.
+    # 회차별 값만 보면 토요일이 세어져 목·금·토 셋으로 알람이 뜬다.
+    hist = [_h(17, 0, skip=None), _h(18, 0, skip=None),
+            _h(19, 0, skip=None), _h(20, 0)]
+    assert silent(hist) == []
 
 
 def test_주말을_빼고도_연속_0건이면_알린다():
