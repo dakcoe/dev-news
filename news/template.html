@@ -1155,6 +1155,10 @@ syncRenderAccount();
    계정을 바꾸겠다는 신호로 본다. 세션이 그냥 만료된 경우에는 표시가 없으므로
    지금까지처럼 한 번에 통과한다. */
 const SWITCH_KEY = 'dev-news-switch';
+// 이 기기에서 탈퇴를 시작했다는 표식. 아래 복귀 처리가 이것 없이는 아무것도
+// 지우지 않는다 — 주소의 left 값만 믿으면 남이 보낸 ?left=1 링크를 여는 것
+// 만으로 보관함과 아직 못 보낸 변경이 사라진다. 서버에는 한 번도 안 묻는다.
+const DEL_KEY = 'dev-news-deleting';
 /* 탈퇴 확인 모달. 브라우저 기본 confirm 은 쓰지 않는다 — 문구를 못 고치고
    화면 전체를 멈춘다. 확인·진행·완료를 이 상자 하나에서 보여준다. */
 function qbox(title, text, actsHTML){
@@ -1194,6 +1198,8 @@ async function syncDeleteAccount(){
     return;
   }
   // 로컬 사본은 돌아온 뒤에 비운다 — 도중에 그만두면 그대로 두어야 한다.
+  // 대신 시작했다는 것만 남긴다. 서버 증표(del_nonce)는 600초짜리라 여기도 같게 본다.
+  try{ localStorage.setItem(DEL_KEY, String(Date.now())); }catch(e){}
   location.href = SYNC_API + '/auth/login?intent=delete';
 }
 
@@ -1205,6 +1211,11 @@ setTimeout(function(){
   const left = new URLSearchParams(location.search).get('left');
   if(!left){ if(location.search) history.replaceState(null, '', location.pathname); return; }
   history.replaceState(null, '', location.pathname);
+  /* 이 기기에서 시작한 탈퇴인지 본다. 서버는 우리에게 돌아오는 주소로만
+     결과를 알리므로, 그 주소는 누구나 만들 수 있다. */
+  let started = 0;
+  try{ started = +(localStorage.getItem(DEL_KEY) || 0); localStorage.removeItem(DEL_KEY); }catch(e){}
+  if(!started || Date.now() - started > 600000) return;
   if(left === 'denied'){
     qbox('탈퇴하지 못했습니다', '확인 절차가 끝나기 전에 시간이 지났습니다. 기록은 그대로 남아 있습니다.',
          '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
@@ -1531,6 +1542,9 @@ function archMatches(){
   const cutoff = days ? Date.now() - days*24*3600*1000 : null;
   return INDEX.filter(e=>{
     if(here.has(e.u)) return false;
+    // 안 읽음도 그 조건 중 하나다. 빠져 있어서 한 화면의 위아래 두 목록이
+    // 서로 다른 기준으로 보였다 — 위에서는 사라진 기사가 아래에 남았다.
+    if(unreadOnly && read.has(e.u)) return false;
     if(!(e.t||'').toLowerCase().includes(s)) return false;
     if(filter!=='all' && e.s!==filter) return false;
     /* 색인의 5%(2,060건 중 103건)는 태그가 비어 있다. 없는 값으로 거르면

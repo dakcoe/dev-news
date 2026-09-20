@@ -443,3 +443,26 @@ def test_스킬_API_목록의_실패는_탭을_다시_누르면_풀린다(html):
     # 같은 선택자가 render() 안에도 있다. 클릭 핸들러 쪽만 본다.
     nav = html.split(".rb[data-v]').forEach(b=>b.onclick=")[1][:700]
     assert "SKILLS=null" in nav and "APIS=null" in nav
+
+
+# ---- account-deletion: 주소의 left 값만 믿지 않는다 ----
+
+def test_탈퇴_복귀는_이_기기에서_시작한_것만_받는다(html):
+    """서버는 돌아오는 주소로만 결과를 알린다. 그 주소는 누구나 만들 수 있다
+    — 예전에는 ?left=1 링크를 여는 것만으로 보관함·읽음 표시·아직 못 보낸
+    변경이 서버에 한 번도 안 묻고 지워졌다 (2026-09-21 외부 검토)."""
+    assert "const DEL_KEY = 'dev-news-deleting';" in html
+    # 시작할 때 표식을 남긴다
+    assert "localStorage.setItem(DEL_KEY, String(Date.now()))" in html
+    # 돌아와서 그 표식을 확인하고 지운다
+    assert "localStorage.getItem(DEL_KEY) || 0" in html
+    assert "localStorage.removeItem(DEL_KEY)" in html
+    # 표식이 없거나 오래됐으면 아무것도 하지 않는다 (서버 증표와 같은 600초)
+    assert "if(!started || Date.now() - started > 600000) return;" in html
+
+
+def test_탈퇴_확인이_지우기보다_먼저_온다(html):
+    """확인을 지운 뒤에 하면 막을 게 없다. denied 안내도 같은 확인 뒤다."""
+    guard = html.index("if(!started || Date.now() - started > 600000) return;")
+    assert guard < html.index("if(left === 'denied')")
+    assert guard < html.index("savedMap.clear(); read.clear();\n  syncPending = [];")
