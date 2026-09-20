@@ -92,17 +92,36 @@ def append(new_items: list[dict], batch: datetime, base_dir: str = DIR) -> list[
     """새 기사에 수집 회차를 찍어 이번 달 샤드 앞에 붙인다. 삭제·상한 없음."""
     # 같은 기사인지는 seen·중복제거와 같은 규칙으로 가린다. 주소 문자열을 그대로
     # 비교하면 끝 슬래시 하나 차이로 같은 기사가 두 번 쌓인다.
-    known = {normalize_url(a.get("url")) or a.get("url") for a in load_all(base_dir)}
-    # resurfaced 가 붙은 기사는 seen 이 "기간이 지나 다시 실을 만하다"고 판단해
-    # 통과시킨 것이다(seen.filter_unseen). 여기서 주소가 같다는 이유로 버리면
-    # 요약을 새로 만들어 놓고 저장하지 않게 된다 — 다시 트렌딩이 화면에 안 뜨고
-    # LLM 호출만 버려진다.
+    # 주소별로 가장 최근 회차를 들고 있는다. resurfaced 기사를 받아들일지
+    # 판단하려면 "언제 마지막으로 실렸는가"를 알아야 한다.
+    latest: dict[str, str] = {}
+    for a in load_all(base_dir):
+        key = normalize_url(a.get("url")) or a.get("url")
+        at = a.get("batch") or ""
+        if at > latest.get(key, ""):
+            latest[key] = at
+
+    def keep(a: dict) -> bool:
+        key = normalize_url(a.get("url")) or a.get("url")
+        prev = latest.get(key)
+        if prev is None:
+            return True
+        # seen 이 "기간이 지나 다시 실을 만하다"고 판단해 통과시킨 기사다
+        # (seen.filter_unseen). 주소가 같다는 이유로 버리면 요약을 새로 만들어
+        # 놓고 저장하지 않게 된다 — 다시 트렌딩이 화면에 안 뜨고 LLM 호출만
+        # 버려진다.
+        #
+        # 다만 무조건 받으면 중복 방지가 통째로 풀린다. 저장 뒤 렌더나 푸시가
+        # 실패하면 seen 만 남고 아카이브는 롤백되지 않아, 다음 회차에 같은
+        # 기사가 또 쌓인다. seen 이 쓰는 기준을 그대로 적용한다 — 마지막으로
+        # 실린 회차가 resurfaced(지난 게시일)보다 뒤면 이미 이번 재등장으로
+        # 실린 것이므로 받지 않는다.
+        return bool(a.get("resurfaced")) and prev[:10] <= a["resurfaced"]
+
     stamped = [{**{k: v for k, v in a.items() if k not in DROP_FIELDS},
                 "batch": batch.isoformat(),
                 "batch_label": f"{batch.month}월 {batch.day}일 {batch:%H:%M}"}
-               for a in new_items
-               if a.get("resurfaced")
-               or (normalize_url(a.get("url")) or a.get("url")) not in known]
+               for a in new_items if keep(a)]
 
     m = _month(batch.isoformat())
     shard = stamped + _load_json(_shard_path(m, base_dir))

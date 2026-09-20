@@ -964,6 +964,10 @@ let syncUser = null;                    // 로그인했으면 {id}
 let syncBase = { saved: new Set(), read: new Set() };  // 마지막으로 서버에 반영된 상태
 let syncPending = [];
 let syncTimer = null;
+/* 로그아웃·탈퇴가 큐를 비울 때마다 올린다. 전송은 await 를 끼고 도는데 그 사이
+   로그아웃하면 syncPending 이 새 배열로 바뀐다. 세대를 안 보면 실패한 배치를
+   그 새 배열에 되돌려, 로그아웃한 앞사람의 변경이 다음 로그인 계정으로 올라간다. */
+let syncEpoch = 0;
 
 const syncApi = (path, opts = {}) =>
   fetch(SYNC_API + path, { credentials: 'include', ...opts });
@@ -1014,6 +1018,7 @@ async function syncFlush(){
   try{
     while(syncPending.length){
       const ops = syncPending.splice(0, 500);
+      const epoch = syncEpoch;
       let ok = false;
       try{
         const res = await syncApi('/sync', {method:'POST', headers:{'content-type':'application/json'},
@@ -1026,6 +1031,9 @@ async function syncFlush(){
         // 세션이 만료된 순간의 보관·읽음 변경이 재로그인 뒤에도 돌아오지 않았다.
         if(res.status === 401){ syncUser = null; syncRenderAccount(); }
       }catch(e){}
+      // 전송하는 동안 로그아웃이나 탈퇴가 있었으면 되돌리지 않는다. 그 변경은
+      // 이미 지워진 계정의 것이다.
+      if(epoch !== syncEpoch) break;
       if(!ok){ syncPending.unshift(...ops); break; }   // 되돌려 두고 다음 기회에
     }
   } finally {
@@ -1199,6 +1207,7 @@ setTimeout(function(){
          '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
     return;
   }
+  syncEpoch++;          // 전송 중이던 배치가 지워진 계정으로 되돌아오지 않게
   syncUser = null;
   savedMap.clear(); read.clear();
   syncPending = [];
@@ -1230,6 +1239,7 @@ async function syncLogout(){
      지워서 "이 브라우저는 처음" 합집합 분기를 타기 때문이다. 공용 컴퓨터에서 두
      사람이 번갈아 쓰면 악의 없이도 섞인다.
      지운 자료는 서버에 그대로 있으니 다시 로그인하면 돌아온다. */
+  syncEpoch++;
   savedMap.clear(); read.clear();
   syncPending = [];
   syncBase = {saved: new Set(), read: new Set()};

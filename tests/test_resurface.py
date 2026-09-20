@@ -96,3 +96,28 @@ def test_재등장_기사는_아카이브에_다시_쌓인다(tmp_path):
     rows = archive.load_all(str(tmp_path))
     assert len(rows) == 2
     assert any(r.get("resurfaced") for r in rows)
+
+
+def test_재등장_기사가_회차마다_쌓이지_않는다(tmp_path):
+    """저장 뒤 렌더나 푸시가 실패하면 seen 만 남고 아카이브는 롤백되지 않는다.
+    resurfaced 를 무조건 통과시키면 그 다음 회차마다 같은 기사가 또 쌓인다."""
+    from datetime import datetime, timedelta, timezone
+    from news.core import archive
+    url = "https://github.com/x/y"
+    first = datetime(2026, 6, 1, tzinfo=timezone.utc)
+    archive.append([{"url": url, "title": "t"}], first, str(tmp_path))
+
+    again = datetime(2026, 9, 1, tzinfo=timezone.utc)
+    item = {"url": url, "title": "t", "resurfaced": "2026-06-01"}
+    archive.append([item], again, str(tmp_path))
+    assert len(archive.load_all(str(tmp_path))) == 2
+
+    # 같은 재등장을 다시 보내도 늘지 않는다 — 이미 그 재등장으로 실렸다
+    archive.append([item], again + timedelta(hours=8), str(tmp_path))
+    archive.append([item], again + timedelta(hours=16), str(tmp_path))
+    assert len(archive.load_all(str(tmp_path))) == 2
+
+    # 더 뒤에 다시 트렌딩에 오르면 그때는 받는다
+    later = {"url": url, "title": "t", "resurfaced": "2026-09-01"}
+    archive.append([later], datetime(2026, 12, 1, tzinfo=timezone.utc), str(tmp_path))
+    assert len(archive.load_all(str(tmp_path))) == 3
