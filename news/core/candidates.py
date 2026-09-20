@@ -66,8 +66,15 @@ def github_meta(url: str, token: str | None = None) -> dict:
         return {}
 
 
-def previous_stars(url: str, before_date: str, base_dir: str = DIR) -> int | None:
-    """이전 날짜 스냅샷의 절대 스타 수. Δ = 오늘 스타 - 이 값. 없으면 None(첫 등장)."""
+def previous_stars(url: str, before_date: str,
+                   base_dir: str = DIR) -> tuple[int, str] | None:
+    """가장 최근 이전 스냅샷의 (절대 스타 수, 그 날짜). 없으면 None(첫 등장).
+
+    날짜를 같이 돌려준다. 예전에는 숫자만 줘서 부른 쪽이 그게 언제 것인지
+    알 수 없었다 — 어제 API 호출이 실패했거나(스냅샷 1,467개 중 9개) 그
+    레포가 며칠 만에 다시 트렌딩에 올라오면, 며칠치 증가분이 하루치 Δ 로
+    발행됐다. 실측 918쌍 중 132쌍(14%)이 이틀 이상 벌어져 있고 최대 38일이다.
+    """
     months_avail = sorted((fn[:-5] for fn in os.listdir(base_dir) if fn.endswith(".json")),
                           reverse=True) if os.path.isdir(base_dir) else []
     for m in months_avail[:2]:                     # 이번 달 + 지난 달이면 충분
@@ -75,7 +82,7 @@ def previous_stars(url: str, before_date: str, base_dir: str = DIR) -> int | Non
             if row.get("url") == url and row.get("date", "") < before_date:
                 stars = (row.get("native") or {}).get("stars")
                 if stars is not None:
-                    return stars
+                    return stars, row["date"]
     return None
 
 
