@@ -18,7 +18,7 @@ from datetime import datetime
 
 from news.core import http
 
-from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
+from news.core.common import ROOT, load_json  # noqa: E402  (경로 상수 재노출)
 DIR = os.path.join(ROOT, "data", "candidates")
 
 GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
@@ -29,14 +29,10 @@ def _shard_path(month: str, base_dir: str = DIR) -> str:
 
 
 def _load(path: str) -> list:
-    if not os.path.exists(path):
-        return []
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, list) else []
-    except Exception:
-        return []
+    """log() 가 이 값 위에 오늘 행을 얹어 같은 샤드에 다시 쓴다. 빈 목록으로
+    돌려주면 그달 판정 로그가 하루치로 교체된다 — 스타 Δ 의 근거도 함께
+    사라져 다음 회차 Δ 가 전부 첫 등장 값이 된다."""
+    return load_json(path, [])
 
 
 def github_meta(url: str, token: str | None = None) -> dict:

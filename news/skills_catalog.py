@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
 from news.core import http
+from news.core.common import load_json
 from news.core.redact import redact_articles
 
 SITE = "https://www.skills.sh"
@@ -198,11 +199,13 @@ def fetch_page(path: str) -> str:
 
 
 def _previous(out_path: str) -> dict:
-    try:
-        with open(out_path, encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    """직전 스냅샷. 없으면 빈 dict, 있는데 못 읽으면 예외 — sync() 가 받아
+    기존 파일을 그대로 둔다.
+
+    빈 dict 로 돌려주면 "지난 스냅샷이 없다"와 같아져, 200건 전부 새 진입으로
+    발행되고 누적해 둔 desc·desc_ko 가 사라진다 (회차당 60건씩만 다시 채운다).
+    """
+    return load_json(out_path, {})
 
 
 def build(out_path: str, fetch=None, translate=None) -> dict:

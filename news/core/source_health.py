@@ -13,19 +13,17 @@ import json
 import os
 from datetime import datetime
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from news.core.common import ROOT, load_json
 DEFAULT_PATH = os.path.join(ROOT, "data", "source_health.json")
 KEEP = 30           # 보관할 회차 수 (하루 3회 → 열흘)
 DEFAULT_STREAK = 3  # 연속 0건 판정 회차 수 (하루)
 
 
 def load(path: str = DEFAULT_PATH) -> list[dict]:
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, list) else []
-    except (OSError, ValueError):
-        return []
+    """record() 가 이 값 뒤에 이번 회차를 붙여 같은 경로에 다시 쓴다. 빈
+    목록으로 돌려주면 30회차 이력이 1회로 줄고, silent() 의 이력 부족 조건
+    때문에 그 뒤 최소 streak 회차 동안 침묵 판정 자체가 불가능해진다."""
+    return load_json(path, [])
 
 
 def record(counts: dict[str, int], when: str,

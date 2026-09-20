@@ -26,11 +26,23 @@ def test_record_appends_and_trims(tmp_path):
     assert json.load(open(p, encoding="utf-8")) == hist
 
 
-def test_load_missing_or_corrupt_is_empty(tmp_path):
+def test_없는_이력은_빈_목록이다(tmp_path):
     assert load(str(tmp_path / "none.json")) == []
+
+
+def test_깨진_이력을_빈_목록으로_바꾸지_않는다(tmp_path):
+    """record() 가 load() 결과 뒤에 이번 회차를 붙여 같은 경로에 다시 쓴다.
+    빈 목록으로 돌려주면 30회차 이력이 1회로 줄어 커밋되고, 그 뒤 최소
+    streak 회차 동안 출처 침묵 판정이 불가능해진다."""
+    import pytest
+    from news.core.common import DataUnreadable
+
     p = tmp_path / "bad.json"
     p.write_text("{not json", encoding="utf-8")
-    assert load(str(p)) == []
+    with pytest.raises(DataUnreadable):
+        load(str(p))
+    # 원본은 그대로다 — 되살릴 수 있다
+    assert p.read_text(encoding="utf-8") == "{not json"
 
 
 def test_silent_after_streak_zero_runs():
