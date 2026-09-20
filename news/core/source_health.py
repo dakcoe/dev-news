@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
 from news.core.common import ROOT, load_json
 DEFAULT_PATH = os.path.join(ROOT, "data", "source_health.json")
@@ -47,10 +47,20 @@ def record(counts: dict[str, int], when: str,
 
 
 def _weekday(at: str) -> int | None:
+    """회차 시각의 요일 — **UTC 기준**.
+
+    at 은 수집 기계의 시각(KST)이다. 그대로 요일을 뽑으면 피드가 말한 요일과
+    어긋난다. KST 월요일 00시는 UTC 일요일 15시라, arXiv 가 주말 껍데기를
+    주는 그 회차를 월요일로 세어 휴재 예외가 빗나간다 — 하루 세 회차 중 둘이
+    그렇다. <skipDays> 는 피드 자신의 발행 일정이므로 피드 쪽 시간대로 본다.
+    """
     try:
-        return datetime.fromisoformat(at).weekday()
+        dt = datetime.fromisoformat(at)
     except (TypeError, ValueError):
         return None
+    if dt.tzinfo is None:
+        return dt.weekday()
+    return dt.astimezone(timezone.utc).weekday()
 
 
 def silent(history: list[dict], streak: int = DEFAULT_STREAK) -> list[str]:
@@ -66,6 +76,16 @@ def silent(history: list[dict], streak: int = DEFAULT_STREAK) -> list[str]:
     for h in history[-streak:][1:]:
         names &= set(h.get("counts", {}))
 
+    # 휴재 요일은 회차가 아니라 출처의 성질이다. 회차별 값만 보면 두 군데서
+    # 빗나간다 — 기능이 생기기 전 회차에는 아예 없고, 피드 요청이 실패한
+    # 회차에도 안 남는다. 그 회차들이 전부 '쉬는 날이 아니다'로 세어져 거짓
+    # 침묵을 만든다. 이력에서 가장 최근에 알려진 값을 그 출처에 쓴다.
+    latest_skip: dict[str, list[int]] = {}
+    for h in reversed(history):
+        for n, days in (h.get("skip") or {}).items():
+            if days and n not in latest_skip:
+                latest_skip[n] = days
+
     out = []
     for n in names:
         # 휴재 요일 회차는 빼고, 남은 것 중 최근 streak개로 판정한다. 그만큼
@@ -73,7 +93,7 @@ def silent(history: list[dict], streak: int = DEFAULT_STREAK) -> list[str]:
         # 원래 기준을 휴재 요일을 빼고도 지키려면 창을 뒤로 넓혀야 한다.
         judged = [h for h in history
                   if n in h.get("counts", {})
-                  and _weekday(h.get("at", "")) not in (h.get("skip", {}).get(n) or [])]
+                  and _weekday(h.get("at", "")) not in latest_skip.get(n, [])]
         judged = judged[-streak:]
         if len(judged) >= streak and all(h["counts"].get(n, 0) == 0 for h in judged):
             out.append(n)
