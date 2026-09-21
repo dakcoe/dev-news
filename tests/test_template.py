@@ -247,9 +247,21 @@ def test_인트로가_앱_스크립트보다_먼저_켜진다(html):
 def test_색인_실패가_무한_재시도로_돌지_않는다(html):
     """실패 직후 null로 되돌리면 renderList가 곧바로 ensureIndex를 다시 부르고
     그게 또 실패해 끝없이 요청이 나간다."""
-    assert "INDEX='fail'; renderList();" in html
-    # 풀어 주는 곳은 검색어가 바뀌는 자리 하나뿐이어야 한다
-    assert html.count("if(INDEX==='fail') INDEX=null;") == 1
+    assert "INDEX='fail';" in html
+    # 풀어 주는 곳은 검색어가 바뀌는 자리 하나뿐이어야 한다.
+    # 선언(let INDEX=null)은 되돌리는 자리가 아니니 뺀다.
+    assert html.count("INDEX=null;") - html.count("let INDEX=null;") == 1
+
+
+def test_못_받은_달을_기사_없는_달과_섞지_않는다(html):
+    """달 샤드 하나가 실패하면 예전에는 빈 배열이 됐다. 다른 달이 하나라도
+    받아지면 INDEX가 배열이 되어 완전한 색인처럼 굳고, 그 달 기사를 찾는
+    사람에게는 평범한 '결과 없음'으로 보였다."""
+    assert ".catch(()=>[])" not in html          # 실패를 빈 달로 바꾸던 자리
+    assert "INDEX_MISSING.push(m); return null;" in html
+    assert "parts.filter(Boolean)" in html       # 실패한 달은 붙이지 않는다
+    assert "그 기간은 검색에 나오지 않습니다" in html
+    assert "INDEX==='fail' || INDEX_MISSING.length" in html   # 다음 검색에 재시도
 
 
 def test_색인에_태그가_없는_기사를_태그로_지우지_않는다(html):
@@ -391,3 +403,66 @@ def test_레일_순서(html):
     import re
     rail = re.search(r'<nav class="rail">(.*?)</nav>', html, re.S).group(1)
     assert re.findall(r'data-v="([a-z]+)"', rail) == ["news", "api", "skills", "saved", "about"]
+
+
+# ---- sync-across-devices: 전송·세션 실패를 성공으로 치지 않는다 ----
+
+def test_세션이_풀리면_다음_로그인은_합집합을_탄다(html):
+    """SYNCED_KEY 를 그대로 두면 다음 로그인이 '서버가 정본' 분기를 타서,
+    세션이 끊긴 동안 이 기기에서 보관한 기사가 첫 pull 에 지워진다."""
+    assert "if(!d.user){" in html
+    assert "localStorage.removeItem(SYNCED_KEY); }catch(e){}\n    return;" in html
+
+
+def test_로그아웃이_실패하면_로컬을_비우지_않는다(html):
+    """sid 는 HttpOnly 라 서버가 안 지우면 브라우저가 못 지운다. 화면만
+    로그아웃해 두면 새로고침 한 번에 앞사람 계정으로 돌아간다."""
+    assert "ok = (await syncApi('/auth/logout', {method:'POST'})).ok;" in html
+    assert "qbox('로그아웃하지 못했습니다'" in html
+
+
+def test_동기화_응답이_검색창을_새로_만들지_않는다(html):
+    """뉴스 화면은 로그인 상태를 쓰지 않는다. 응답이 올 때 전체 렌더를 하면
+    느린 회선에서 막 치기 시작한 한글 조합이 끊긴다."""
+    assert "syncRenderAccount(); if(view === 'about') render();" in html
+    assert "renderList();\n}\n\n/* 레일 맨 아래 계정 버튼." in html
+
+
+def test_전송_중_401도_소개_화면을_맞춘다(html):
+    """레일 계정 버튼은 좁은 화면에서 display:none 이다. 거기만 그리면
+    모바일에서는 '로그인됨'이 그대로 남는다."""
+    assert "if(res.status === 401){ syncUser = null; syncRenderAccount(); render(); }" in html
+
+
+def test_스킬_API_목록의_실패는_탭을_다시_누르면_풀린다(html):
+    """한 번 끊기면 파일이 멀쩡해도 세션 내내 '다음 수집 회차 후 생성됩니다'
+    가 남았다. 렌더 안에서 풀면 실패한 fetch 가 곧바로 다시 나가 끝없이 돈다
+    — 사람이 탭을 누른 자리에서만 되돌린다."""
+    assert "if(view==='skills' && SKILLS==='fail') SKILLS=null;" in html
+    assert "if(view==='api'    && APIS==='fail')   APIS=null;" in html
+    # 같은 선택자가 render() 안에도 있다. 클릭 핸들러 쪽만 본다.
+    nav = html.split(".rb[data-v]').forEach(b=>b.onclick=")[1][:700]
+    assert "SKILLS=null" in nav and "APIS=null" in nav
+
+
+# ---- account-deletion: 주소의 left 값만 믿지 않는다 ----
+
+def test_탈퇴_복귀는_이_기기에서_시작한_것만_받는다(html):
+    """서버는 돌아오는 주소로만 결과를 알린다. 그 주소는 누구나 만들 수 있다
+    — 예전에는 ?left=1 링크를 여는 것만으로 보관함·읽음 표시·아직 못 보낸
+    변경이 서버에 한 번도 안 묻고 지워졌다 (2026-09-21 외부 검토)."""
+    assert "const DEL_KEY = 'dev-news-deleting';" in html
+    # 시작할 때 표식을 남긴다
+    assert "localStorage.setItem(DEL_KEY, String(Date.now()))" in html
+    # 돌아와서 그 표식을 확인하고 지운다
+    assert "localStorage.getItem(DEL_KEY) || 0" in html
+    assert "localStorage.removeItem(DEL_KEY)" in html
+    # 표식이 없거나 오래됐으면 아무것도 하지 않는다 (서버 증표와 같은 600초)
+    assert "if(!started || Date.now() - started > 600000) return;" in html
+
+
+def test_탈퇴_확인이_지우기보다_먼저_온다(html):
+    """확인을 지운 뒤에 하면 막을 게 없다. denied 안내도 같은 확인 뒤다."""
+    guard = html.index("if(!started || Date.now() - started > 600000) return;")
+    assert guard < html.index("if(left === 'denied')")
+    assert guard < html.index("savedMap.clear(); read.clear();\n  syncPending = [];")

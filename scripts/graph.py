@@ -30,7 +30,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 WORKSPACE = ROOT / "_workspace"
 SKIP = ("venv", "__pycache__", ".git", "node_modules", "docs/data", "docs/index.html",
         "_workspace")
-EXTS = (".py", ".html", ".yaml", ".yml", ".sh")
+# worker/ 는 자바스크립트다. 처음에 파이썬 저장소로만 보고 .js 를 빼놓아서
+# 동기화 Worker 가 그래프에 안 잡혔다.
+EXTS = (".py", ".js", ".mjs", ".html", ".yaml", ".yml", ".sh")
 
 
 def features() -> dict[str, str]:
@@ -62,7 +64,8 @@ def _kinds(files: set[pathlib.Path]) -> dict[str, list[str]]:
     out: dict[str, list[str]] = collections.defaultdict(list)
     for f in sorted(files):
         p = f.as_posix()
-        kind = ("테스트" if p.startswith("tests/")
+        # 테스트가 두 곳이다 — 파이썬은 tests/, Worker 는 worker/test.mjs.
+        kind = ("테스트" if p.startswith("tests/") or "test" in pathlib.Path(p).stem
                 else "설정" if f.suffix in (".yaml", ".yml")
                 else "코드")
         out[kind].append(p)

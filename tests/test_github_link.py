@@ -44,3 +44,17 @@ def test_프로필_사진은_깃허브_것을_쓴다():
     body = TEMPLATE[TEMPLATE.index("function aboutHTML("):]
     assert "'.png?size=208'" in body
     assert 'class="avatar"' in body and 'onerror="this.remove()"' in body
+
+
+def test_저장소_루트만_README로_우회한다():
+    """예전 정규식은 저장소 뒤를 다 삼켜서 이슈·릴리스·커밋까지 README를 받아왔다.
+    2026-08 아카이브에 `Feature Request: Support AGENTS.md` 이슈 기사의 요약이
+    Claude Code 설치 안내로 들어가 있다."""
+    from news.core.enrich import GITHUB_REPO_RE
+    repo = "https://github.com/anthropics/claude-code"
+    for url in (repo, repo + "/", repo + ".git", repo + "?tab=readme", repo + "#install"):
+        assert GITHUB_REPO_RE.match(url), url
+    for url in (repo + "/issues/6235", repo + "/releases/tag/v2.0",
+                repo + "/commit/abc", repo + "/pull/42",
+                repo + "/blob/main/README.md"):
+        assert GITHUB_REPO_RE.match(url) is None, url

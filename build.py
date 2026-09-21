@@ -11,9 +11,15 @@
   LLM_MODEL      모델을 직접 지정하고 싶을 때만
   GITHUB_TOKEN   있으면 GitHub API 한도가 시간당 60→1,000회+ (publish.sh 가 gh 토큰을 넣는다)
 
-깔때기 (SPEC 1.2): 넓은 수집 → 중복 제거 + candidates 로그 → 보조 점수 top_n 선별
-→ 최종 선별분만 본문·썸네일·요약. 파이프라인 수준의 차단 필터는 두지 않는다 —
-무엇을 보고 숨길지는 열람 단계(클라이언트 검색·필터)가 담당한다 (SPEC 1.1).
+깔때기 (SPEC 1.2): 넓은 수집 → 차단어·기간 컷 → 중복 제거 + candidates 로그
+→ 보조 점수 top_n 선별 → 최종 선별분만 본문·썸네일·요약 → 죽은 링크·무관 선언 컷.
+
+SPEC 1.1 은 "파이프라인 수준의 차단 필터를 두지 않는다" 고 적었고 1.4 는
+candidates 를 "전체 후보" 라고 부르지만, 지금은 둘 다 그대로가 아니다.
+candidates 로그 앞에 keyword_filter(block_keywords)·recent_only 가 있어
+후보의 20% 안팎이 기록 전에 빠진다. 1B 어휘 도출은 그 점을 알고 시작해야
+한다 — "데이터는 전부 보존되므로 소급 적용이 가능하다" 가 빠진 몫에는
+성립하지 않는다.
 """
 from __future__ import annotations
 
@@ -22,7 +28,7 @@ import json
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
+from datetime import date, datetime
 
 import yaml
 
@@ -49,7 +55,8 @@ from news.scrapers import (anthropic, devto, geeknews, github, hackernews, lobst
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 from news.core.common import KST  # noqa: E402  (상수 재노출)
-TRUSTED = {"github", "devto", "geeknews", "rss", "anthropic"}   # 키워드 필터를 적용하지 않는 출처
+# TRUSTED 는 news.core.filters 에만 둔다. 여기 사본이 있었는데 아무도 읽지
+# 않는 사이 두 항목(hackernews·lobsters)이 저쪽에만 추가돼 값이 갈렸다.
 
 
 def load_dotenv(path: str | None = None) -> None:
@@ -131,6 +138,14 @@ def run_scrapers(cfg: dict, counts: dict[str, int] | None = None,
     return articles
 
 
+def _is_yesterday(snapshot_date: str, today: str) -> bool:
+    try:
+        d = date.fromisoformat(today) - date.fromisoformat(snapshot_date)
+    except ValueError:
+        return False
+    return d.days == 1
+
+
 def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
     """GitHub 아이템의 지표를 절대 스타에서 전일 대비 증가량(Δ)으로 교체 (SPEC 1.5).
 
@@ -144,10 +159,13 @@ def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
         meta = candidates.github_meta(a["url"])
         meta_map[a["url"]] = meta
         prev = candidates.previous_stars(a["url"], before_date=today)
-        if meta.get("stars") is not None and prev is not None:
-            delta = max(meta["stars"] - prev, 0)
+        # 어제 스냅샷일 때만 뺀다. 그보다 오래된 것을 쓰면 며칠치 증가분이
+        # 하루치 Δ 로 나가고, 옆줄의 하루치 숫자와 비교가 안 된다.
+        # 그럴 때는 trending 이 직접 주는 stars today 가 더 정확하다.
+        if meta.get("stars") is not None and prev is not None and _is_yesterday(prev[1], today):
+            delta = max(meta["stars"] - prev[0], 0)
         else:
-            delta = a.get("upvotes", 0)        # 첫 등장 — trending의 stars today
+            delta = a.get("upvotes", 0)        # 첫 등장이거나 간격이 벌어짐
         a["upvotes"] = delta
         a["delta_stars"] = delta
     if gh_items:
@@ -205,6 +223,7 @@ def check_source_silence(counts: dict[str, int], cfg: dict, when: str,
     return quiet
 
 
+# 수집·선별·요약·출력의 실패 지점을 따로 확인하려고 main의 단계를 나눴다 (split-main).
 def collect_candidates(cfg: dict, when: str = "") -> tuple[list[dict], list[str]]:
     """수집 → 필터 → 중복 제거. 깔때기의 넓은 쪽 (SPEC 1.2).
 

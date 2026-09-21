@@ -30,7 +30,12 @@ export GITHUB_TOKEN GH_TOKEN
 GITHUB_TOKEN="$(gh auth token 2>/dev/null || true)"; GH_TOKEN="$GITHUB_TOKEN"
 
 # 원격이 앞서 있으면 먼저 받는다 (다른 기계에서 고친 코드·수동 회차).
-git pull --rebase -q origin main || { echo "pull 실패"; }
+# 못 받아도 회차는 돈다 — 원격이 앞서 있으면 아래 병합 단계가 잡는다. 다만
+# 충돌로 멈춘 rebase 를 그대로 두면 build.py 의 커밋이 그 상태 위에 쌓인다.
+if ! git pull --rebase -q origin main; then
+  echo "pull 실패 — 멈춘 rebase 가 있으면 되돌린다"
+  git rebase --abort 2>/dev/null || true
+fi
 
 # build.py 는 GITHUB_OUTPUT 파일에 published/degraded/silent 를 적는다.
 OUT="$(mktemp)"; export GITHUB_OUTPUT="$OUT"
@@ -51,11 +56,24 @@ else
   git fetch -q origin main
   if ! git merge-base --is-ancestor origin/main HEAD; then
     echo "원격이 앞서 있다 — 데이터를 합친다"
-    "$PY" scripts/merge_remote_data.py origin/main
+    # 합집합 생성이 실패했는데 아래 rebase 를 계속하면 -X theirs 가 충돌을 우리
+    # 쪽으로 밀어 원격에만 있던 기사와 seen 기록을 잃는다
+    # (scripts/merge_remote_data.py 머리말). 멈추는 쪽이 맞다.
+    if ! "$PY" scripts/merge_remote_data.py origin/main; then
+      echo "원격 데이터 병합 실패"
+      bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+        "$STAMP 회차: 원격 데이터 병합이 실패해 발행을 멈췄습니다. 그대로 rebase 하면 원격 기사와 seen 기록을 잃습니다."
+      exit 1
+    fi
     git add -A docs data
     git diff --staged --quiet || git commit -q -m "원격 회차 데이터 병합"
   fi
-  git pull --rebase -X theirs -q origin main
+  if ! git pull --rebase -X theirs -q origin main; then
+    echo "최종 rebase 실패"
+    bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+      "$STAMP 회차: 발행 직전 rebase 가 실패했습니다. 수집 기계에서 rebase 상태를 풀어야 다음 회차가 돕니다."
+    exit 1
+  fi
   if ! git push -q origin main; then
     echo "push 실패"
     bash scripts/notify.sh "🔴 뉴스 수집 실패" \

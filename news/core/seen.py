@@ -9,21 +9,16 @@ import json
 import os
 from datetime import datetime, timezone
 
-from news.core.common import ROOT
+from news.core.common import ROOT, load_json
 from news.core.dedup import normalize_url
 
 DEFAULT_PATH = os.path.join(ROOT, "data", "seen.json")
 
 
 def _load(path: str) -> dict[str, str]:
-    if not os.path.exists(path):
-        return {}
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, dict) else {}
-    except Exception:
-        return {}
+    """mark_seen() 이 이 값에 오늘 것을 얹어 같은 경로에 다시 쓴다. 빈 dict 로
+    돌려주면 영구 보관(SPEC 2.3) 기록이 이번 회차 20여 건으로 줄어 커밋된다."""
+    return load_json(path, {})
 
 
 def load_seen(path: str = DEFAULT_PATH) -> set[str]:

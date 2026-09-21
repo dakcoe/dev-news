@@ -28,7 +28,8 @@ def _text(html: str, limit: int = 400) -> str:
     return re.sub(r"\s+", " ", plain).strip()[:limit]
 
 
-# RSS 2.0 <skipDays>. 발행을 쉬는 요일을 피드가 스스로 선언한다. arXiv 가
+# RSS 2.0 <skipDays> (feed-skip-days). 발행을 쉬는 요일을 피드가 스스로
+# 선언한다. arXiv 가
 # Saturday·Sunday 를 내보내고, 그 날에는 <item> 이 하나도 없는 껍데기가 온다.
 # 그걸 모르면 죽은 출처로 보여 주말마다 침묵 알람이 뜬다.
 _WEEKDAY = {"monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3,
@@ -105,8 +106,10 @@ def fetch(feeds: list[dict] | None = None, per_feed: int = 8,
     영영 안 뛴다. 실제로 2026-09-13 21:32부터 세 회차 연속 rss가 64건이었다 —
     피드 8개 × 8건이라 두 피드가 죽어 있었는데 아무 신호도 없었다.
 
-    피드는 새 글이 없어도 기존 항목을 돌려주므로 0건은 곧 실패다. 조용한
-    블로그를 실패로 오인할 걱정은 없다.
+    대개 피드는 새 글이 없어도 기존 항목을 돌려주므로 0건은 실패로 본다.
+    다만 그게 전부는 아니다 — arXiv 는 주말에 <item> 이 하나도 없는 껍데기를
+    준다. 그래서 피드가 <skipDays> 로 밝힌 휴재 요일을 함께 올려 보내고,
+    source_health.silent() 이 그 요일의 회차를 세지 않는다 (feed-skip-days).
     """
     if not feeds:
         return []

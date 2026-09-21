@@ -27,6 +27,13 @@ from news.core.dedup import normalize_url  # noqa: E402
 REF = sys.argv[1] if len(sys.argv) > 1 else "origin/main"
 
 
+# 읽지 못했거나 형태가 달라 합치지 못한 것. 비어 있지 않으면 0 이 아닌 값으로
+# 끝낸다 — publish.sh 가 이 값을 보고 멈춘다. 예전에는 무엇이 실패하든 0 으로
+# 끝나서, 바로 다음 줄의 `git pull --rebase -X theirs` 가 충돌을 우리 쪽으로
+# 밀어 원격에만 있던 기사와 seen 기록을 그대로 잃었다.
+FAILED: list[str] = []
+
+
 def remote_json(path: str):
     """원격 ref의 파일을 읽는다. 그 ref에 없으면 None (새로 생긴 파일이다)."""
     try:
@@ -36,8 +43,9 @@ def remote_json(path: str):
         return None
     try:
         return json.loads(raw.decode("utf-8"))
-    except (ValueError, UnicodeDecodeError):
-        print(f"[merge] {path} 원격본을 읽지 못했다 — 건너뛴다")
+    except (ValueError, UnicodeDecodeError) as e:
+        print(f"[merge] {path} 원격본을 읽지 못했다: {e}")
+        FAILED.append(path)
         return None
 
 
@@ -76,7 +84,9 @@ def merge_seen() -> int:
         added = [k for k in remote if str(k) not in seen]
         merged = local + added
     else:
-        print(f"[merge] {path} 형태가 달라 합치지 않는다")
+        print(f"[merge] {path} 형태가 달라 합치지 않는다 "
+              f"(원격 {type(remote).__name__} · 로컬 {type(local).__name__})")
+        FAILED.append(path)
         return 0
     if added:
         write_json(path, merged, sort_keys=True)
@@ -171,6 +181,11 @@ def main() -> int:
         print("[merge] 검색 인덱스·페이지를 다시 만들었다")
     else:
         print("[merge] 원격에만 있는 데이터 없음 — 합칠 것이 없다")
+    # "합칠 것이 없다" 와 "합쳐야 하는데 못 했다" 는 다르다. 뒤엣것을 0 으로
+    # 끝내면 부르는 쪽이 구별할 방법이 없다.
+    if FAILED:
+        print(f"[merge] 합치지 못한 파일 {len(FAILED)}개: {', '.join(FAILED)}")
+        return 1
     return 0
 
 

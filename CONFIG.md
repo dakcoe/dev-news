@@ -57,7 +57,8 @@ block_keywords:
   en: [...]              # 단어 경계 매칭
 ```
 
-- `github` / `devto` / `geeknews` / `rss` / `anthropic`은 개발 전용 소스라 `keywords` 화이트리스트는 건너뛴다. `block_keywords`는 이들에게도 적용된다.
+- 개발 전용 소스는 `keywords` 화이트리스트를 건너뛴다. 목록은 `news/core/filters.py` 의 `TRUSTED` 하나뿐이다 — 여기에 다시 적어 두었더니 출처를 늘릴 때마다 값이 갈렸다. `block_keywords`는 이들에게도 적용된다.
+- 지금 켜진 출처 중 화이트리스트를 타는 것은 `trendshift` 뿐이고, 그 기사는 `source`가 `github`으로 기록된다. **`keywords` 를 고쳐도 게재 여부는 거의 안 바뀐다** — 통과 여부를 정하는 것은 차단 목록이다 (`tests/test_keyword_filter.py` 에 그대로 박아 두었다).
 - 차단어가 있어도 `keywords`가 하나라도 같이 걸리면 남긴다.
 - 짧고 흔한 영어 단어(rest, data, set)는 `keywords`에 넣지 않는다. 단어 경계로도 못 막는다.
 - 한국어 차단어는 다른 말에 파묻히는 모호어를 피한다. `배우`는 `배우다`에 걸린다.
