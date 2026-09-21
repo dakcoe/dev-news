@@ -1,5 +1,524 @@
 [
  {
+  "title": "AX – Google’s Open Agentic Orchestrator",
+  "url": "https://agentexecutor.io",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 409,
+  "comments": 162,
+  "published_at": 1789943563,
+  "discussion": "https://news.ycombinator.com/item?id=49780797",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://agentexecutor.io"
+  ],
+  "cross_source_count": 1,
+  "score": 952.0,
+  "image": "https://agentexecutor.io/axolotl.svg",
+  "link_status": "ok",
+  "ko_title": "AX – 구글의 오픈 에이전틱 오케스트레이터",
+  "summary": "AX는 에이전트 작업을 선언형 YAML로 정의하고, 샌드박스와 워크스페이스를 자동으로 구성해 대규모 클러스터에서 실행한다. 작업은 CPU·메모리 제한이 있는 격리된 환경에서 실행되며, 일시 중지·재개·삭제가 간편하다. 현재 Go 코드 빌드 예시와 함께 CLI 명령어 사용법이 제공된다.",
+  "why": "에이전트 워크로드를 선언형 YAML로 정의해 대규모 클러스터에서 격리 실행할 수 있다. CPU와 메모리 제한이 있는 샌드박스에서 실행되며, 일시 중지나 재개가 간편하다. 비신뢰 에이전트 코드를 실행할 때 비용 낭비를 막는 안전장치로 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "hardware"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "What happened to the Snowden archive",
+  "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 332,
+  "comments": 212,
+  "published_at": 1789943749,
+  "discussion": "https://news.ycombinator.com/item?id=49780820",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://libroot.org/posts/what-happened-to-the-snowden-archive"
+  ],
+  "cross_source_count": 1,
+  "score": 950.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "스노든 아카이브에 무슨 일이 있었나",
+  "summary": "2019년 5월 29일에 마지막 문서가 공개된 이후, 가디언·스피겔·뉴욕타임스·프로퍼시아 등 주요 언론은 더 이상 스노든 아카이브 문서를 발표하지 않았다. 인터셉트가 2019년 3월에 아카이브를 종료한 뒤, 그 이후 어떤 언론이나 기관도 새로운 문서를 공개하지 않았다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Jev을 (형편없는) 챗봇으로 만들어 봄",
+  "url": "https://news.hada.io/topic?id=34057",
+  "description": "jevchat 은 사용자 질문과 지금까지 쓴 답변을 바탕으로 Jev에 다음 기호의 확률을 묻고, 이를 반복 샘플링해 답변을 생성하는 실험임 후보는 문자나 토큰으로 구성된 기호 집합과 STOP 이며, Jev이 반환한 확률을 정규화해 다음 기호를 뽑고 STOP이 선택되면 생성을...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789972335.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34057"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34057?v=09d5975a70844b79755a1fd34dd32dd2",
+  "link_status": "ok",
+  "ko_title": "Jev을 (형편없는) 챗봇으로 만들어 봄",
+  "summary": "jevchat은 Jev에게 현재 대화와 이전 답변을 기반으로 다음 기호의 확률을 묻고, 이를 반복 샘플링해 답변을 생성하는 실험 프로젝트다. 문자 집합에서 완성된 후보 문자열을 평가하는 방식으로 전환하면 top-1 정확도가 약 3배, 올바른 기호에 할당된 확률 질량이 약 2배 상승한다. 다양한 샘플링 전략·기호 집합·빔 탐색 등을 조합해 실험할 수 있지만, 비용이 높고 결과는 우스꽝스러운 수준이다.",
+  "why": "Jev를 채팅 모델로 만드는 실험은 비용이 비실용적이고 결과 품질이 낮아 실무 적용이 어렵다. 기호 대신 완성된 후보 문자열을 평가하는 방식이 성능을 크게 높였지만, 이는 LLM 기반 생성 파이프라인 설계 시 참고할 수 있는 실험적 접근법이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Show GN: Umtri.io - 프로젝트를 시각화하는 형상 관리 도구",
+  "url": "https://news.hada.io/topic?id=34055",
+  "description": "문제의식 프로젝트 개발, 특히 바이브 코딩 시 자신의 프로젝트가 어떻게 자라나는지 알기 어려움 코드 베이스 내부에서 연결이나 종속성 문제가 있는 경우 단발적인 세션이 놓쳐 문제가 커지는 경우가 생김 프롬프트를 통한 개발 명령의 프레임이 좁아서 장기적인 계획에서 잘못된...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789970241.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34055"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34055?v=a9736edba5158dd9f9cdb956804b7ddc",
+  "link_status": "ok",
+  "ko_title": "Show GN: Umtri.io - 프로젝트를 시각화하는 형상 관리 도구",
+  "summary": "Umtri.io는 프로젝트 코드를 나무 형태로 시각화해 연결 구조와 종속성을 한눈에 파악하도록 돕는다. 사용자는 시즌 개념으로 버전 관리와 이력 보존이 가능하며, AI를 활용해 버그 위치와 영향 범위를 자동으로 분석한다. 현재 베타 서비스 중이며, 5개 운영 프로젝트에서 6개월 테스트 결과 기존 방식보다 효율성이 높았다.",
+  "why": "MCP 연동으로 AI 에이전트가 코드베이스의 종속성을 참조해 수정 범위를 파악하게 된다. 기존의 단발적 프롬프트 개발에서 벗어나 장기적 계획과 버그 확산을 구조적으로 관리할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "가장 별난 글자 W의 알아둘 만한 역사",
+  "url": "https://news.hada.io/topic?id=34053",
+  "description": "W는 로마 제국 붕괴 이후 , 게르만어 이름에 들어 있는 /w/ 소리를 라틴어 문서에 적기 위해 탄생함 6세기부터 필경사들이 U 두 개를 나란히 쓰기 시작했고, 늦어도 11세기에는 오늘날의 W로 합쳐짐 고대 영어에서는 룬 문자 Ƿ(wynn) 도 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789968940.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34053"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34053?v=578ccf7bd7bb2134704a21e744e1475a",
+  "link_status": "ok",
+  "ko_title": "가장 별난 글자 W의 알아둘 만한 역사",
+  "summary": "W는 로마 제국 붕괴 후 게르만어 /w/ 소리를 라틴어에 표기하기 위해 두 개의 U를 결합해 만든 문자이다. 6세기부터 사용되었으며 11세기에 현재 형태가 확정되었다. 고대 영어에서는 룬 문자 윈가 사용됐지만 프랑스어와 라틴어 영향으로 W가 자리 잡았다. 필경사들의 가독성 개선 작업이 현대 영어의 철자·발음 불일치에 영향을 주었다.",
+  "why": "백엔드 개발자의 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Show HN: Radius - Meetup.com 대안",
+  "url": "https://news.hada.io/topic?id=34051",
+  "description": "Radius 는 그룹, 이벤트, 활동을 통해 지역 커뮤니티를 찾고 사람들과 연결하는 서비스임 전 세계 도시의 수백 개 그룹 을 둘러보고 가입하거나 직접 커뮤니티를 만들 수 있음 초근거리 탐색 기능은 베타 로 제공되며, 관심사와 시간, 장소...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789965152.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34051"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34051?v=3ba74de6bec6e886cf8a9ce9a8daed24",
+  "link_status": "ok",
+  "ko_title": "Radius – Meetup.com 대안",
+  "summary": "Radius는 전 세계 도시의 수백 개 그룹을 탐색하거나 직접 커뮤니티를 만들 수 있는 서비스다. 베타 기능인 초근거리 탐색을 통해 관심사와 시간·장소를 지정하면 주변 사람들을 초대하거나 참여 의사를 표시할 수 있다. 그룹 생성은 무료이며 60초 만에 개설할 수 있다.",
+  "why": "Radius는 Meetup.com 대안으로 지역 커뮤니티 탐색과 그룹 생성을 제공한다. 개발 관련 모임이나 기술 커뮤니티를 빠르게 찾고 개설할 때 활용 가치가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "화폐의 위계",
+  "url": "https://news.hada.io/topic?id=34050",
+  "description": "화폐는 상대방이 채무의 최종 결제로 받아들이는 것 이며, 개인에게 통하는 돈이 은행이나 다른 통화권에서도 돈으로 통하는 것은 아님 은행 예금과 은행권 은 상위 기관의 지급 약속으로 개인 간 채무를 결제하게 해주며, 은행은 대출 자산과 예금 부채를 함께 늘려...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789962427.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34050"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34050?v=402d39ace12cb5a1523bd26cb4f6c378",
+  "link_status": "ok",
+  "ko_title": "화폐의 위계",
+  "summary": "",
+  "why": "이 글은 중앙은행과 기축통화까지 확장된 화폐의 제도적 위계를 설명한다. AI 인프라 구축 시 국제 결제와 외환 리스크를 고려해야 하는 백엔드 개발자에게 참고가 된다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Software sandboxing: The basics (2025)",
+  "url": "https://blog.emilua.org/2025/01/12/software-sandboxing-basics/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 35,
+  "comments": 8,
+  "published_at": 1789913591.598,
+  "discussion": "https://lobste.rs/s/brptxb/software_sandboxing_basics_2025",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.emilua.org/2025/01/12/software-sandboxing-basics/"
+  ],
+  "cross_source_count": 2,
+  "score": 905.8,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "소프트웨어 샌드박싱: 기본 개념 (2025)",
+  "summary": "이 블로그 글은 2025년 기준으로 소프트웨어 샌드박싱을 구현하기 위한 핵심 원칙과 최신 권장 사항을 정리한다. Julien Tinnes와 Chris Evans가 2009년에 제시한 정의를 바탕으로 프로그래밍 방식 권한 감소, 관리자 권한 없이 실행, 임의 권한 포기를 설명한다. 글쓴이는 Emilua 프로젝트에서 얻은 실무 경험을 통해 기존 방법과 차별화된 최신 실천 방안을 제시한다.",
+  "why": "백엔드 서비스에서 관리자 권한 없이 프로세스 권한을 줄이는 구현 기준이 달라졌다. 기존 유닉스 파일 권한 대신 프로그래밍 방식의 임의 권한 포기를 적용해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Amiga Unix, Again",
+  "url": "https://amigaux.org/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 61,
+  "comments": 24,
+  "published_at": 1789948630,
+  "discussion": "https://news.ycombinator.com/item?id=49781436",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://amigaux.org/"
+  ],
+  "cross_source_count": 1,
+  "score": 794.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Amiga Unix, 다시",
+  "summary": "Amiga Unix(Amix) 프로젝트가 68040·68060 기반 Amiga와 최신 가속기 하드웨어에서 동작하도록 재구성됐다. 현대 툴체인, 패키지 매니저(apkg), SCSI·이더넷 드라이버 등을 포함해 플로피·CD-ROM 부팅 설치가 가능하다. 현재 2.1 버전이 실기기와 에뮬레이터 모두에서 설치·패키지 설치를 지원한다. 추가로 OpenLook 데스크톱과 Quake 실행이 포함돼 있다.",
+  "why": "68040·68060 기반 Amiga에서 최신 툴체인과 패키지 매니저를 사용할 수 있게 됐다. 기존 Amix 환경에서 GNU 도구 빌드나 패키지 설치를 계획 중인 경우 2.1 버전의 지원 범위를 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Winning the Visa Lottery",
+  "url": "https://www.aeaweb.org/research/immigration-restrictions-firms-workers",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 49,
+  "comments": 30,
+  "published_at": 1789961822,
+  "discussion": "https://news.ycombinator.com/item?id=49782775",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.aeaweb.org/research/immigration-restrictions-firms-workers"
+  ],
+  "cross_source_count": 1,
+  "score": 788.0,
+  "image": "https://www.aeaweb.org/content/file?id=25269",
+  "link_status": "ok",
+  "ko_title": "비자 추첨 당첨",
+  "summary": "미국 정부가 운영한 H-2B 비자 추첨을 무작위로 처리한 결과, 저숙련 외국인 노동자를 제한하면 기업 규모가 축소되고 미국인 고용은 늘어나지 않는 것으로 나타났다. 연구진은 2021·2022년 추첨에 참여한 472개 기업을 조사해 비자 할당량이 수요에 크게 못 미치는 상황을 확인했다. 2022년 하반기에는 33,000개 비자 슬롯에 대해 136,555명의 노동자를 요청한 것으로 보고됐다.",
+  "why": "백엔드 개발자의 미국 취업이나 현지 팀 구성에 직접적인 변수가 아니다. 이 연구는 저숙련 노동력 시장 분석이므로 개발자 도구나 인프라와는 무관하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "AI chatbots give wrong answers to financial queries 'most of the time'",
+  "url": "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 59,
+  "comments": 22,
+  "published_at": 1789964924,
+  "discussion": "https://news.ycombinator.com/item?id=49783062",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666"
+  ],
+  "cross_source_count": 1,
+  "score": 784.0,
+  "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F55ab023f-71c0-4ffb-8eaa-9befa8dc11b8.jpg?source=next-barrier-page&fit=scale-down&quality=highest&width=700&dpr=1",
+  "link_status": "ok",
+  "ko_title": "AI 챗봇이 금융 질문에 대부분 틀린 답변을 제공",
+  "summary": "",
+  "why": "금융 데이터 기반 AI 응답을 신뢰할 수 없으므로, 백엔드에서 최종 검증 로직을 반드시 구현해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Simulated students that make realistic mistakes help AI tutors learn faster",
+  "url": "https://the-decoder.com/simulated-students-that-make-realistic-mistakes-help-ai-tutors-learn-faster/",
+  "description": "Microsoft and the University of Illinois built StudentSim to replicate individual students from limited data and give AI tutors fast, low-cost feedback. In tests covering 60 students across chess, English, and math, it outperformed GPT-5.4. A chess tutor trained with StudentSim also earned the highest expert ratings among three versions tested. The article Simulated students that make realistic mi",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789897832.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/simulated-students-that-make-realistic-mistakes-help-ai-tutors-learn-faster/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/ai-tutors-microsoft-nano-banana-pro.jpg",
+  "link_status": "ok",
+  "ko_title": "실제 같은 실수를 하는 시뮬레이션 학생이 AI 튜터 학습을 가속화",
+  "summary": "Microsoft와 일리노이 대학교가 제한된 데이터로 개별 학생을 복제하는 StudentSim 시스템을 발표했다. 이 디지털 복제본은 실제 학생이 제공하기엔 비용과 시간이 많이 드는 피드백을 빠르게 제공한다. 기존 모델은 학생 행동 재현이나 튜터 힌트 활용 중 하나만 가능했지만, StudentSim은 두 가지를 동시에 측정한다. 제한된 학생 데이터에서도 두 단계 학습으로 효과적인 튜터 훈련이 가능하다.",
+  "why": "AI 튜터 개발 시 실제 학생 피드백에 의존하던 방식에서 벗어나 제한된 데이터로 시뮬레이션 학생을 구축해 학습 속도를 높일 수 있다. 기존 모델이 재현과 힌트 활용 중 하나만 처리했던 한계를 두 단계 학습으로 극복하는 구조다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture",
+   "science"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Trump announces \"AI Force\" and plans for an \"AI czar\" as he pushes unchecked AI growth",
+  "url": "https://the-decoder.com/trump-announces-ai-force-and-plans-for-an-ai-czar-as-he-pushes-unchecked-ai-growth/",
+  "description": "Trump announces an \"AI Force\" modeled after the Space Force and plans to appoint an \"AI czar\" with a \"high IQ.\" He claims AI could reach 25 percent of US economic output, rejects new regulation, and frames criticism of data centers as a left-wing attack. The article Trump announces \"AI Force\" and plans for an \"AI czar\" as he pushes unchecked AI growth appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789894326.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/trump-announces-ai-force-and-plans-for-an-ai-czar-as-he-pushes-unchecked-ai-growth/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2024/04/us_flag_neural_network.png",
+  "link_status": "ok",
+  "ko_title": "트럼프, “AI 포스”와 “AI 차르” 계획 발표…미국 AI 무제한 성장 추진",
+  "summary": "트럼프 전 대통령이 “AI 포스”를 만들고 “AI 차르”를 임명하겠다고 발표했다. 그는 AI가 미국 경제 생산량의 25%를 차지할 수 있다고 주장하며, 기존 형법·민법을 활용해 남용을 제재하겠다고 밝혔다. 이 발언은 AI 연구자들의 위험 경고와 대조된다.",
+  "why": "신규 규제 대신 기존 형법과 민법으로 남용을 제재하겠다는 방침이다. 개발 속도를 늦추는 별도 규제 도입을 배제하고 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release",
+   "science"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Dev log #22 Tearing out the old: Deleting 3,800 lines of legacy p2p code",
+  "url": "https://dev.to/yashksaini/dev-log-22-tearing-out-the-old-deleting-3800-lines-of-legacy-p2p-code-3n0i",
+  "description": "Hi, glad you found your way here. I'm Yash, a developer who contributes to open source, mostly p2p...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 25,
+  "comments": 1,
+  "published_at": "2026-09-21T04:00:59Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yashksaini/dev-log-22-tearing-out-the-old-deleting-3800-lines-of-legacy-p2p-code-3n0i"
+  ],
+  "cross_source_count": 1,
+  "score": 713.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuarz7f275t29lk144qeq.png",
+  "link_status": "ok",
+  "ko_title": "Dev log #22 오래된 코드 정리: 레거시 p2p 코드 3,800줄 삭제",
+  "summary": "이번 주에 저자는 Rust 기반 p2p 스택인 minip2p에서 Floodsub 구현을 완전히 제거하고 Gossipsub만 남겼다. 이를 위해 53개의 파일을 수정하고 5개의 커밋·3개의 PR로 약 3,800줄을 삭제하고 160줄을 추가했다. Python 쪽 py-libp2p에서도 저장소 레이어를 정리했다.",
+  "why": "minip2p에서 Floodsub가 제거되어 Gossipsub만 사용할 수 있게 됐다. 기존에 Floodsub 라우터를 명시적으로 선택하던 코드는 이제 동작하지 않는다. 공개 API와 문서가 변경되었으므로 해당 스택을 쓰는 프로젝트는 업그레이드 시점에 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "How to stop AI from confidently shipping broken code (a pattern that actually works)",
+  "url": "https://dev.to/infoinlet1/how-to-stop-ai-from-confidently-shipping-broken-code-a-pattern-that-actually-works-2gn7",
+  "description": "The scariest diff passed every test — and would've lost a customer money.  The scariest diff AI ever...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": "2026-09-21T05:14:58Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/how-to-stop-ai-from-confidently-shipping-broken-code-a-pattern-that-actually-works-2gn7"
+  ],
+  "cross_source_count": 1,
+  "score": 678.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9smu7pnkimjntxu0exy2.png",
+  "link_status": "ok",
+  "ko_title": "AI가 자신 있게 깨진 코드를 배포하지 못하도록 하는 방법 (실제로 효과 있는 패턴)",
+  "summary": "저자는 30일 동안 AI에게 전체 애플리케이션 코드를 작성하게 하고, 실제 프로덕션 환경에서 발생할 수 있는 위험을 탐색했다. 테스트를 모두 통과하고 코드가 깔끔해 보여도 AI는 자신감 때문에 결함을 놓칠 수 있다. 기존의 “코드 검토” 요청은 효과가 없으며, 대신 코드를 의도적으로 깨뜨리는 두 번째 검토자를 두는 규칙이 필요하다.",
+  "why": "기존의 코드 검토 요청은 AI가 스스로를 확인하는 것이라 결함 탐지에 실패한다. 대신 코드를 의도적으로 깨뜨리는 역할을 부여한 두 번째 검토자를 두어야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "google / ax",
+  "url": "https://github.com/google/ax",
+  "description": "Google's open agentic orchestrator",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 976,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/google/ax"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 976,
+  "score": 446.59999999999997,
+  "image": "https://opengraph.githubassets.com/1/google/ax",
+  "link_status": null,
+  "ko_title": "구글 / ax",
+  "summary": "AX는 클러스터에서 수십억 개의 자율 에이전트 작업을 선언형으로 오케스트레이션하는 고처리량 도구다. Agent Substrate 위에서 샌드박스 실행을 제공하며, 작업, 워크스페이스, 게이트웨이 등 네 가지 원시 요소로 격리와 사전 설정을 지원한다. 현재 핵심 개념과 프로토콜을 지속적으로 다듬는 중이며, 안정화 전까지 큰 파괴적 변경이 있을 수 있다.",
+  "why": "Kubernetes와 유사한 선언형 YAML로 에이전트 작업을 정의한다. 안정화 전이라 큰 파괴적 변경이 생길 수 있다. 지금 도입하면 프로토콜 변경에 맞춰 코드를 다시 써야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
+  "title": "Albert-Weasker / niubigeo",
+  "url": "https://github.com/Albert-Weasker/niubigeo",
+  "description": "Open-source AI brand visibility and competitor reports",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 959,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Albert-Weasker/niubigeo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 959,
+  "score": 440.65,
+  "image": "https://opengraph.githubassets.com/1/Albert-Weasker/niubigeo",
+  "link_status": null,
+  "ko_title": "Albert-Weasker / niubigeo",
+  "summary": "NiubiGEO는 도메인을 입력하면 여러 AI 모델이 제품을 어떻게 설명하고 추천하는지, 인용한 출처를 비교해 보여주는 도구다. 자체 호스팅이 가능하며 Docker 배포와 Apache-2.0 라이선스를 제공한다. 현재 v0.2.0 버전이 릴리스 되었고, 영어·중국어·포르투갈어 UI를 지원한다.",
+  "why": "GEO 최적화 전략을 세울 때 AI 모델별 답변 편차를 직접 비교할 수 있다. 자체 호스팅이 가능해 민감한 도메인 데이터를 외부에 노출하지 않고 분석할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-21T16:00:03.379095+09:00",
+  "batch_label": "9월 21일 16:00"
+ },
+ {
   "title": "ChatGPT now knows what you do on other websites via ad collector",
   "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
   "description": "",

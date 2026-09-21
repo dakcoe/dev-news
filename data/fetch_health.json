@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-12T03:11:01+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 12,
-    "empty": 2,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://huggingface.co/security.txt",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://sprinklz.io/public/pdwt4dve5uai",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-09-12T09:55:12+09:00",
    "total": 17,
    "counts": {
@@ -480,6 +459,15 @@
    "counts": {
     "ok": 15,
     "github": 2
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-21T16:00:34+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 15,
+    "github": 3
    },
    "failures": []
   }
