@@ -1,5 +1,555 @@
 [
  {
+  "title": "Grok 4.7",
+  "url": "https://x.ai/news/grok-4-7",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 454,
+  "comments": 368,
+  "published_at": 1790005815,
+  "discussion": "https://news.ycombinator.com/item?id=49788838",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://x.ai/news/grok-4-7"
+  ],
+  "cross_source_count": 1,
+  "score": 2612.0,
+  "image": "https://x.ai/images/news/grok-4-7-og.webp",
+  "link_status": "ok",
+  "ko_title": "Grok 4.7 — 코딩·지식 작업용 모델",
+  "summary": "Grok 4.7은 기존 모델보다 큰 기반 모델과 더 긴 강화학습을 적용해 긴 작업을 더 오래 수행하고 자체 검증 능력을 강화했다. 가격·속도는 Grok 4.6과 동일하지만 사이버 방어와 위험 작업 차단에서 최고 수준의 안전성을 제공한다. 현재 Cur에서 바로 이용 가능하다.",
+  "why": "Cursor에서 기존 Grok 4.6과 같은 비용으로 더 긴 코딩 작업을 처리할 수 있다. 자체 검증 능력이 강화되어 장시간 실행되는 작업의 오류를 줄이는 데 유리하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Fable 5 – Median thinking declined in August",
+  "url": "https://twitter.com/Lon/status/2101793422487204027",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 327,
+  "comments": 220,
+  "published_at": 1790007237,
+  "discussion": "https://news.ycombinator.com/item?id=49789224",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/Lon/status/2101793422487204027"
+  ],
+  "cross_source_count": 1,
+  "score": 1914.0,
+  "image": "https://pbs.twimg.com/media/HSsLl3FbkAAWMMW?format=webp&name=large",
+  "link_status": "ok",
+  "ko_title": "Fable 5 – 8월 평균 사고량 감소",
+  "summary": "Anthropic이 Fable 5를 구독 플랜에 영구 제공한 뒤, 사용자는 성능 저하와 사고 토큰 감소를 관찰했다. 8월에 사고 토큰이 7월 대비 크게 줄었으며, 이 현상은 여러 주에 걸쳐 지속되고 제품 발표와도 연관된 것으로 보인다. 분석 결과, 대부분의 호출이 사고 토큰을 거의 받지 못했으며, 장시간 사고도 벤치마크 수준에 미치지 못했다.",
+  "why": "Fable 5를 구독으로 쓰면 성능 저하가 모델 변경 때문이 아닐 수 있다. 실제로 제공받은 추론 환경의 사고 토큰 양을 먼저 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Amazon blocks Meta’s new Muse AI agent from shopping on amazon.com",
+  "url": "https://www.forbes.com/sites/jonmarkman/2026/09/21/amazon-blocks-metas-new-muse-ai-agent-from-shopping-on-amazoncom/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 137,
+  "comments": 140,
+  "published_at": 1790010023,
+  "discussion": "https://news.ycombinator.com/item?id=49789982",
+  "merged_sources": [
+   "The Decoder",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/amazon-blocks-metas-ai-agent-muse-from-online-shopping/",
+   "https://www.forbes.com/sites/jonmarkman/2026/09/21/amazon-blocks-metas-new-muse-ai-agent-from-shopping-on-amazoncom/"
+  ],
+  "cross_source_count": 2,
+  "score": 1894.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Amazon, 메타의 새로운 Muse AI 에이전트가 amazon.com에서 쇼핑하는 것을 차단",
+  "summary": "댓글에서는 기업이 봇 전용 API와 법적 계약을 마련해 구매 책임을 명확히 해야 한다는 의견이 제시되었다. 또 Amazon이 에이전트를 차단한 이유는 가격 비교와 구매 전환을 방해해 매출 손실을 막기 위함이라는 시각이 있다. 일부는 메타가 AI 에이전트 사용을 공개해야 하는 법적 의무 여부에 대해 의문을 제기한다.",
+  "why": "AI 에이전트 쇼핑이 확산되면 기존 수동 가격 비교 방식이 대체될 수 있다. 기업이 봇 전용 API와 구매 책임 조항을 마련해야 한다는 논의가 진행 중이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Xiaomi MiMo v2.6",
+  "url": "https://mimo.xiaomi.com/mimo-v2-6",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 371,
+  "comments": 168,
+  "published_at": 1790021532,
+  "discussion": "https://news.ycombinator.com/item?id=49792730",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mimo.xiaomi.com/mimo-v2-6"
+  ],
+  "cross_source_count": 1,
+  "score": 1846.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "샤오미 MiMo v2.6",
+  "summary": "댓글에서는 샤오미가 모델 학습 과정을 실시간 대시보드와 상세 기술 보고서로 공개해 투명성을 강조했다고 언급한다. 또한 기업 환경에서 MiMo 모델을 실제 업무에 적용하는 사례가 부족하고, 호스팅·양자화 방식에 대한 신뢰성이 의문시된다. 일부 사용자는 생물학·보안 분야에서 기존 모델 대비 제한을 느끼고 대체 옵션을 검토하고 있다.",
+  "why": "기업 환경에서 MiMo를 도입하려면 데이터 학습 정책이 불명확하고, EU·미국 호스팅 시 양자화 방식에 따른 출력 품질을 검증할 수 없어 신뢰성이 의문시된다. 생물학이나 보안 분야에서 기존 모델의 제한을 느끼는 경우에만 대안으로 검토할 가치가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "NASA’s Mars Sample Return mission is dead",
+  "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 237,
+  "comments": 173,
+  "published_at": 1790018052,
+  "discussion": "https://news.ycombinator.com/item?id=49791939",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead"
+  ],
+  "cross_source_count": 1,
+  "score": 1593.0,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "NASA의 화성 샘플 반환 임무가 중단됐음",
+  "summary": "댓글에 따르면 중국의 티안원-3 프로그램이 2028년에 달 탐사 샘플을 반환하고 화성 샘플 반환을 시도할 예정이다. 유럽의 엑소마스 로버는 원래 2018년에 발사될 예정이었으나 여러 차례 연기돼 현재 2028년 발사로 잡혀 있다. JPL은 해당 임무 비용을 110억 달러로 늘리고 반환 시점을 2040년까지 미루었다.",
+  "why": "화성 샘플 반환 임무 중단으로 관련 하드웨어 개발과 데이터 분석 파이프라인의 장기 로드맵이 흔들린다. 2028년 발사 예정인 중국 티안원-3과 유럽 엑소마스 로버가 주요 경쟁 구도를 형성한다. JPL의 비용 증가와 2040년으로 미뤄진 반환 시점은 프로젝트 일정에 직접적인 영향을 준다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "UN science panel says there is \"no assurance humans will keep control\" over AI agents",
+  "url": "https://the-decoder.com/un-science-panel-says-there-is-no-assurance-humans-will-keep-control-over-ai-agents/",
+  "description": "The UN's AI science panel warns in its first thematic report that control over AI agents isn't assured. Co-chair Yoshua Bengio says OpenAI's Hugging Face incident first combined a misaligned goal, the ability to pursue it, and an environment that allowed it. Leading systems may increasingly recognize tests and deliberately bypass safeguards. The article UN science panel says there is \"no assurance",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790012650.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/un-science-panel-says-there-is-no-assurance-humans-will-keep-control-over-ai-agents/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/UN_LOGO.png",
+  "link_status": "ok",
+  "ko_title": "UN 과학 패널, AI 에이전트에 대한 인간 통제 보장 없다고 경고",
+  "summary": "UN AI 과학 패널이 첫 보고서에서 AI 에이전트의 목표 정렬, 실행 능력, 환경 요인이 동시에 존재해 통제 위험이 높아졌다고 지적했다. 보고서는 현재 안전 모델이 에이전트가 방어 메커니즘을 이해하고 회피할 때 효과가 없으며, 항공·원자력·사이버보안 모델을 참고할 수 있다고 제시한다. 아직 구체적인 권고는 없으며, 최근 수학자 그룹도 고도 AI 위험을 경고했다.",
+  "why": "에이전트가 방어 메커니즘을 이해하고 회피할 때 기존 안전 모델이 무력해진다. 항공·원자력·사이버보안 모델을 참고해야 한다는 방향만 제시됐다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "security"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6",
+  "url": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/",
+  "description": "xAI has released Grok 4.7, its most capable model yet. But on the Artificial Analysis Intelligence Index, it scores just 46 points, landing mid-pack and well behind Claude Fable 5.1 and GPT-6 at 53 each. The gap grows even wider in agentic coding. The upside is it's cheap. The article xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6 appeared first on Th",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790009796.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/xai_logo_wall-2.png",
+  "link_status": "ok",
+  "ko_title": "xAI, 저렴한 가격에 Grok 4.7 출시… 벤치마크에서 Claude와 GPT-6와 큰 격차",
+  "summary": "Grok 4.7은 코딩·지식 작업용 최신 모델로 입력 토큰당 $2, 출력 토큰당 $6의 가격을 제시한다. 독립 벤치마크에서 총점 46점으로 중간 수준이며, Claude Fable 5.1·GPT-6는 각각 53점이다. 특히 에이전트 코딩 벤치마크에서는 26% 점수로 GPT-6 Astra(60%)·Claude Fable 5.1(55%)보다 낮다. 모델은 Grok API·Cursor·Grok Build를 통해 제공된다.",
+  "why": "에이전트 코딩 작업에서 Grok 4.7은 경쟁 모델 대비 낮은 성능을 보인다. 비용 절감 목적이라면 이 모델을 고려할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "미국, 광케이블 절단으로 동부 주요 공항 항공편 운항 중단",
+  "url": "https://news.hada.io/topic?id=34088",
+  "description": "주 통신 회선 장애와 백업 광케이블 절단 이 겹치면서 FAA가 뉴욕, 보스턴, 필라델피아 등 미국 동부 주요 공항으로 향하는 항공편을 중단함 FlightAware 집계로 미국 내 5,600편 이상이 지연 또는 취소 됐으며, 100편 이상이 다른 공항으로 회항함 필라델피...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790030394.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34088"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34088?v=c3652bfa57293271980b1e85c269d449",
+  "link_status": "ok",
+  "ko_title": "미국, 광케이블 절단으로 동부 주요 공항 항공편 운항 중단",
+  "summary": "광케이블이 절단돼 FAA가 뉴욕·보스턴·필라델피아 등 동부 주요 공항으로 향하는 5,600편 이상을 지연·취소했다. 백업 회선까지 손상돼 복구에 약 13시간이 소요될 것으로 예상된다. 교통부는 기존 125억 달러 예산 외에 추가 175억 달러가 필요하다고 밝혔다.",
+  "why": "통신 이중 장애가 항공 관제 시스템의 물리적 취약성을 드러냈다. 백엔드 인프라 설계 시 단일 장애점과 물리적 경로 중복의 한계를 재확인할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Python Workers 정식 출시",
+  "url": "https://news.hada.io/topic?id=34087",
+  "description": "Python Workers가 정식 출시(GA) 되어 Python이 Cloudflare 개발자 플랫폼의 완전 지원 언어가 됨. 기존 Python 코드와 라이브러리로 Workers를 개발하고 Cloudflare 서비스와 연동할 수 있음 바인딩 타입 변환을 런타임과 Python SDK가 처리 하므로, Python 객체를...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790030214.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34087"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34087?v=eb47e0876d493cb9aa3881695f5789ad",
+  "link_status": "ok",
+  "ko_title": "Python Workers 정식 출시",
+  "summary": "Cloudflare가 Python Workers를 정식 출시해 Python을 완전 지원 언어로 만들었다. 기존 Python 코드와 라이브러리를 그대로 사용해 Workers를 개발하고 Cloudflare 서비스와 연동할 수 있다. FastAPI·Django·Flask 등 ASGI/WSGI 프레임워크를 지원하며, 별도 웹 서버 없이 플랫폼이 요청 처리와 전역 확장을 담당한다. TCP 소켓·HTTP 클라이언트 지원으로 PostgreSQL·MySQL 연결 및 주요 AI 라이브러리 실행이 가능해졌다.",
+  "why": "FastAPI나 Django 앱을 별도 웹 서버 없이 Cloudflare 전역 네트워크에 바로 배포할 수 있다. Python 딕셔너리를 Cloudflare 서비스로 보낼 때 수동으로 JavaScript 객체 변환하는 코드가 사라졌다. 네이티브 확장 패키지는 여전히 WebAssembly 교차 컴파일이 필요하므로 이 부분의 한계를 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "NASA/ESA의 화성 시료 귀환 임무가 취소됨",
+  "url": "https://news.hada.io/topic?id=34086",
+  "description": "미국 의회의 예산 절충안이 Mars Sample Return(MSR) 종료를 지지하면서 화성 암석을 지구로 가져오는 계획이 사실상 끝남. 다만 법안은 아직 상하원 통과와 대통령 서명이 필요함 비용 급증 이 사업을 압박해 왔으며, NASA가 예상 비용을 110억 달러에서 70억 달러...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790026690.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34086"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34086?v=700025da131058217db761fa3a0d4c49",
+  "link_status": "ok",
+  "ko_title": "NASA/ESA의 화성 시료 귀환 임무가 취소됨",
+  "summary": "미국 의회가 제시한 예산 절충안은 Mars Sample Return 사업을 지원하지 않아 실질적으로 임무가 종료될 전망이다. NASA는 비용을 110억 달러에서 70억 달러로 낮춘 최종안을 제시했지만, 다른 과학 임무와의 예산 경쟁으로 충분히 확보하지 못했다. ESA는 기존에 개발 중이던 귀환용 우주선을 독립적인 화성 궤도 탐사 임무로 전환할 수 있다고 밝혔다. 별도 1억 1,000만 달러가 MSR 기술 개발을 지속하기 위해 할당되었다.",
+  "why": "화성 시료 귀환 임무가 사실상 종료되어 잠재적 생명 흔적 분석이 불가해졌다. ESA의 귀환용 우주선이 독립 궤도 탐사 임무로 전환될 수 있다. 향후 사업 재개 시 해당 우주선 부재로 비용이 더 늘어날 위험이 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "샤오미, MiMo-V2.6 공개 - 강화학습 과정을 공개한 멀티모달 모델",
+  "url": "https://news.hada.io/topic?id=34085",
+  "description": "텍스트, 이미지, 영상, 오디오를 함께 이해하고 코딩과 도구 사용, 컴퓨터 조작 을 수행하는 모델군으로, 고성능 Pro와 비용 효율적인 Flash를 공개함 Pro는 발표 기준 Artificial Analysis 지능 지수 46.32점으로 공개 모델 중 1위 를 기록했으며, API 가격은 이전 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790026510.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34085"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34085?v=d8fdc3d84c636978b0b6f06b9a5eed8a",
+  "link_status": "ok",
+  "ko_title": "샤오미, MiMo-V2.6 공개 – 강화학습 과정을 공개한 멀티모달 모델",
+  "summary": "샤오미가 텍스트·이미지·영상·오디오를 모두 처리하고 코딩·도구 사용까지 지원하는 멀티모달 모델 MiMo-V2.6-Pro와 Flash를 발표했다. 두 모델은 100만 토큰 컨텍스트와 공개 가중치를 제공하며, Pro는 1조 200억 매개변수, Flash는 3,090억 매개변수를 갖는다. 강화학습 진행 상황과 코딩 평가 점수 상승을 실시간 대시보드로 공개했으며, 6일 미만 학습에 약 262만 달러(Pro)·85만 달러(Flash) 비용이 들었다.",
+  "why": "100만 토큰 컨텍스트로 긴 코드 저장소를 한 번에 처리할 수 있다. 공개된 RL 가중치로 자체 인프라에서 모델을 실행할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Mac에서 Apple Intelligence 기능 끄기 및 접근 제한하기",
+  "url": "https://news.hada.io/topic?id=34084",
+  "description": "Mac의 시스템 설정과 개별 앱 설정 에서 Siri AI(베타), 요약, 개인화된 답장 등 Apple Intelligence 기능을 끌 수 있음 Siri AI 를 끈 뒤 Siri를 다시 켜면서 Siri Classic 을 선택하면 기존 Siri로 전환할 수 있음 메시지, 이메일, 알림의...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790022751.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34084"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34084?v=a207d31988e2f3830e35db3eb9ce3f06",
+  "link_status": "ok",
+  "ko_title": "Mac에서 Apple Intelligence 기능 끄기 및 접근 제한하기",
+  "summary": "macOS에서 시스템 및 개별 앱 설정을 통해 Siri AI(베타), 요약, 개인화 답장 등 Apple Intelligence 기능을 비활성화할 수 있다. Siri를 끈 뒤 Siri Classic을 선택하면 기존 Siri로 전환 가능하다. 스크린 타임을 이용해 본인이나 자녀의 기능 접근을 제한할 수 있다.",
+  "why": "macOS 27에서 Apple Intelligence를 쓰지 않거나 특정 앱의 요약 기능을 원치 않으면 시스템 설정에서 개별 비활성화가 가능하다. Siri AI 베타는 초기에 영어만 지원하므로 한국어 환경에서는 해당 기능이 제한적으로 작동한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Self-Hosting Behind CGNAT",
+  "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 3,
+  "published_at": 1790013208.062,
+  "discussion": "https://lobste.rs/s/sus08k/self_hosting_behind_cgnat",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/"
+  ],
+  "cross_source_count": 1,
+  "score": 883.4,
+  "image": "https://david.alvarezrosa.com/images/self-hosting-behind-cgnat.png",
+  "link_status": "ok",
+  "ko_title": "CGNAT 뒤에서 셀프 호스팅",
+  "summary": "IPv4 주소 부족으로 캐리어-그레이드 NAT가 보편화돼 기존 포트 포워딩이 불가능해졌다. 저자는 프랑스 데이터센터에 저렴한 VPS를 두고, WireGuard 양방향 터널을 이용해 집에 있는 홈랩을 외부에 노출한다. 이 방식은 고정 IP 없이도 홈 네트워크 서비스를 인터넷에 제공한다.",
+  "why": "기존 포트 포워딩 방식이 더 이상 동작하지 않으므로 홈랩 서비스 노출에 제동이 걸린다. 고정 IP 없이도 외부 접속을 가능하게 하는 WireGuard 터널 구성으로 대안을 마련할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "rift - a tiling window manager for macos",
+  "url": "https://github.com/acsandmann/rift/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1790013773.927,
+  "discussion": "https://lobste.rs/s/bcbuqk/rift_tiling_window_manager_for_macos",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://github.com/acsandmann/rift/"
+  ],
+  "cross_source_count": 1,
+  "score": 875.0,
+  "image": "https://opengraph.githubassets.com/1/acsandmann/rift",
+  "link_status": null,
+  "ko_title": "Rift - macOS용 타일링 윈도우 매니저",
+  "summary": "Rift는 macOS 전용 타일링 윈도우 매니저로, i3·sway·bspwm·dwm·niri 등 다양한 레이아웃을 지원한다. 메뉴바 아이콘을 통해 작업공간 전환·레이아웃 변경·빠른 제어가 가능하고, CLI와 메뉴바에서 레이아웃을 저장·복원할 수 있다. Rust로 구현돼 CI 상태가 활발히 유지되고 있다.",
+  "why": "macOS에서 i3나 bspwm 같은 타일링 환경을 직접 구축하던 방식과 달리, 메뉴바와 CLI로 레이아웃을 저장·복원하는 기능이 내장돼 있다. Rust 기반이라 성능을 중시하는 백엔드 개발 워크플로에 적합하며, 기존 Linux 타일링 매니저의 레이아웃을 그대로 이식할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+  "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+  "description": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789992000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Higgsfield AI, GPT-6 Astra로 하루 만에 새로운 영상 기능 출시",
+  "summary": "Higgsfield AI가 GPT-6 Astra를 활용해 소규모 기업이 영상 광고를 손쉽게 제작할 수 있는 기능을 추가했다. 새로운 창작 도구가 기존보다 빠르게 시장에 제공된다.",
+  "why": "GPT-6 Astra 도입으로 영상 광고 제작 속도가 빨라졌다. 소규모 기업 대상 도구의 시장 출시 주기가 단축되는 변화다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Finderchangchang / jev-chat-JARVIS",
+  "url": "https://github.com/Finderchangchang/jev-chat-JARVIS",
+  "description": "",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 775,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Finderchangchang/jev-chat-JARVIS"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 775,
+  "score": 376.25,
+  "image": "https://opengraph.githubassets.com/1/Finderchangchang/jev-chat-JARVIS",
+  "link_status": null,
+  "ko_title": "Finderchangchang / jev-chat-JARVIS",
+  "summary": "Android용 대화 보조 앱이 WeChat, QQ, X(트위터 DM) 등 3개 플랫폼에서 전체 흐름을 구현했다. 하나의 핵심 엔진과 `ChatAppAdapter`만 추가하면 새로운 앱에도 적용 가능하다. 접근성 서비스만 이용해 화면에 표시된 대화를 읽고, TypeSafe Jev 모델로 의도·위험도·답변 후보 3개를 생성해 입력창에 채워준다. 최신 릴리스(v1.2)는 APK 파일로 제공되며 OpenRouter API 키 설정이 필요하다.",
+  "why": "접근성 서비스로 화면 텍스트만 읽는 방식이라 앱 내부 데이터베이스나 API를 건드리지 않는다. 새 플랫폼을 지원하려면 수십 줄 분량의 ChatAppAdapter만 구현하면 된다. 현재는 Android 11 이상에서만 동작하며 OpenRouter API 키 설정이 필수다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
+  "title": "Mak5er / AirCard",
+  "url": "https://github.com/Mak5er/AirCard",
+  "description": "Apple Wallet Card Skinner for iOS 18+ (No Jailbreak Required)",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 773,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Mak5er/AirCard"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 773,
+  "score": 375.54999999999995,
+  "image": "https://opengraph.githubassets.com/1/Mak5er/AirCard",
+  "link_status": null,
+  "ko_title": "Mak5er / AirCard — Apple Wallet 카드 스키너 및 잠금화면 패스코드 테마",
+  "summary": "AirCard는 macOS용 독립 실행형 앱으로 iOS 18 이상에서 Apple Wallet 카드와 잠금화면 패스코드 버튼에 사용자 정의 스킨을 적용한다. `airlift` AirTraffic 동기화 익스플로잇을 이용해 탈옥 없이 실시간 카드 해시를 감지하고, Apple Silicon과 Intel Mac을 모두 지원한다. 설치는 DMG 파일을 다운로드해 드래그 앤 드롭만 하면 된다.",
+  "why": "iOS 18 이상 기기에서 탈옥 없이 Apple Wallet 카드와 잠금화면 패스코드 테마를 커스터마이즈할 수 있다. macOS에서 실행되는 독립 실행형 앱이라 별도 환경 설정 없이 설치만 하면 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-22T08:00:03.118989+09:00",
+  "batch_label": "9월 22일 08:00"
+ },
+ {
   "title": "ZuckOff Know when a camera is in the room",
   "url": "https://zuckoff.app/",
   "description": "",
