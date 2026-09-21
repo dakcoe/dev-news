@@ -297,37 +297,48 @@ async function push(req, env) {
   if (!ops.length) return json({ ok: true, applied: 0 }, 200, cors(req));
 
   const t = now();
+  const sid = parseCookies(req.headers.get('Cookie')).sid;
+  // 인증 뒤 본문을 기다리는 동안 다른 기기에서 탈퇴·로그아웃할 수 있다.
+  // 같은 트랜잭션 안에서 옛 세션을 다시 확인해야 지운 기록이 되살아나지 않는다.
+  const active = 'EXISTS (SELECT 1 FROM session WHERE id = ? AND user_id = ? AND expires_at >= ?)';
   const stmts = ops.map(op => {
     if (op.t === 'bm+') {
       return env.DB.prepare(
         `INSERT INTO bookmark (user_id, url, title, month, kind, sub, descr, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+         SELECT ?, ?, ?, ?, ?, ?, ?, ? WHERE ${active}
          ON CONFLICT(user_id, url) DO UPDATE SET
            title = excluded.title, month = excluded.month, kind = excluded.kind,
            sub = excluded.sub, descr = excluded.descr`
-      ).bind(uid, op.url, op.title, op.month, op.kind, op.sub, op.descr, t);
+      ).bind(uid, op.url, op.title, op.month, op.kind, op.sub, op.descr, t, sid, uid, t);
     }
     if (op.t === 'bm-') {
-      return env.DB.prepare('DELETE FROM bookmark WHERE user_id = ? AND url = ?').bind(uid, op.url);
+      return env.DB.prepare(`DELETE FROM bookmark WHERE user_id = ? AND url = ? AND ${active}`)
+        .bind(uid, op.url, sid, uid, t);
     }
     // 읽음 해제. 이게 없으면 한 기기에서 해제해도 다른 기기는 계속 읽음으로 보고,
     // 다음 pull 이 서버 값을 씌워 해제한 기기에서도 되살아난다.
     if (op.t === 'rd-') {
-      return env.DB.prepare('DELETE FROM read_mark WHERE user_id = ? AND url = ?').bind(uid, op.url);
+      return env.DB.prepare(`DELETE FROM read_mark WHERE user_id = ? AND url = ? AND ${active}`)
+        .bind(uid, op.url, sid, uid, t);
     }
     return env.DB.prepare(
-      `INSERT INTO read_mark (user_id, url, read_at) VALUES (?, ?, ?)
+      `INSERT INTO read_mark (user_id, url, read_at) SELECT ?, ?, ? WHERE ${active}
        ON CONFLICT(user_id, url) DO UPDATE SET read_at = excluded.read_at`
-    ).bind(uid, op.url, op.at);
+    ).bind(uid, op.url, op.at, sid, uid, t);
   });
 
   // 읽음 표시가 무한정 쌓이지 않게 사용자당 최근 READ_KEEP 건만 남긴다.
   stmts.push(env.DB.prepare(
-    `DELETE FROM read_mark WHERE user_id = ?1 AND url NOT IN
-       (SELECT url FROM read_mark WHERE user_id = ?1 ORDER BY read_at DESC LIMIT ?2)`
-  ).bind(uid, READ_KEEP));
+    `DELETE FROM read_mark WHERE user_id = ? AND ${active} AND url NOT IN
+       (SELECT url FROM read_mark WHERE user_id = ? ORDER BY read_at DESC LIMIT ?)`
+  ).bind(uid, sid, uid, t, uid, READ_KEEP));
 
-  await env.DB.batch(stmts);
+  const result = await env.DB.batch([
+    env.DB.prepare('SELECT user_id FROM session WHERE id = ? AND user_id = ? AND expires_at >= ?')
+      .bind(sid, uid, t),
+    ...stmts,
+  ]);
+  if (!result[0].results.length) return json({ error: 'unauthorized' }, 401, cors(req));
   return json({ ok: true, applied: ops.length }, 200, cors(req));
 }
 
