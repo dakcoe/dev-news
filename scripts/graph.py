@@ -74,6 +74,13 @@ def _kinds(files: set[pathlib.Path]) -> dict[str, list[str]]:
 
 def main() -> int:
     feats = features()
+    if not feats:
+        # _workspace/ 는 공개하지 않는다(.gitignore). 저장소만 받은 사람에게
+        # "기능 0개"만 찍히면 도구가 고장 난 것처럼 보인다.
+        print(f"_workspace/ 가 없다 — 기능 목록은 그 폴더다.\n"
+              f"  찾은 곳: {WORKSPACE}\n"
+              f"  이 저장소는 그 폴더를 공개하지 않는다. 만든 사람의 기계에서만 돈다.")
+        return 0
     found = wiring(set(feats))
     only_gaps = "--gaps" in sys.argv
 

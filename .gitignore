@@ -17,3 +17,8 @@ logs/
 # 동기화 Worker
 worker/node_modules/
 worker/.wrangler/
+
+# 기능별 작업 기록과 검토 보고서. 만드는 사람의 중간 과정이라 받는 쪽에는
+# 쓸모가 없고, 저장소 어디에도 이 폴더를 설명하는 문서가 없다.
+# 지운 것이 아니라 공개만 안 한다 — scripts/graph.py 가 내 기계에서는 그대로 읽는다.
+_workspace/
