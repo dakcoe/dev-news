@@ -20,7 +20,8 @@ def sync_page(tmp_path_factory):
 
 
 @pytest.mark.parametrize("case", ["failed_read", "failed_bookmark", "first_union",
-                                 "pull_edit", "pull_json_edit", "pull_logout", "init_reset"])
+                                 "pull_edit", "pull_json_edit", "pull_logout", "init_reset",
+                                 "inflight_queue", "retry_401", "batch_drain"])
 def test_sync_execution(sync_page, case):
     result = subprocess.run(
         ["node", str(ROOT / "tests/js/sync_execution.mjs"), str(sync_page), case],

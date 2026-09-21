@@ -104,5 +104,42 @@ if (testCase === 'failed_read' || testCase === 'failed_bookmark') {
   release({ok: true, json: async () => ({user: {id:101}})});
   await pending; await settle();
   assert.equal(run('syncUser'), null, '초기화 중 탈퇴가 끝나면 이전 계정 응답을 무시한다');
+} else if (testCase === 'inflight_queue' || testCase === 'retry_401') {
+  run('syncUser = {id:101}; syncBase = {saved:new Set(savedMap.keys()), read:new Set(read)}; read.delete(a.url); persistRead();');
+  if (testCase === 'inflight_queue') {
+    const fetch = ctx.fetch;
+    let release;
+    ctx.fetch = () => new Promise(resolve => { release = resolve; });
+    const pending = run('syncFlush()');
+    run('savedMap.set(b.url, b); persist();');
+    const durable = JSON.parse(state.get('dev-news-queue'));
+    assert.ok(durable.some(op => op.t === 'rd-' && op.url === a.url), '다음 변경을 저장할 때 전송 중인 앞 변경도 남긴다');
+    assert.ok(durable.some(op => op.t === 'bm+' && op.url === b.url));
+    release({ok: false, status: 503});
+    await pending;
+    ctx.fetch = fetch;
+  } else {
+    postStatus = 401;
+    await run('syncFlush()');
+    assert.equal(run('syncUser'), null);
+    assert.equal(JSON.parse(state.get('dev-news-queue')).length, 1);
+    run('syncUser = {id:101};');
+  }
+  postStatus = 200;
+  await run('syncFlush()');
+  assert.equal(server.read.has(a.url), false);
+  assert.equal(run('syncPending.length'), 0);
+  assert.equal(state.has('dev-news-queue'), false);
+} else if (testCase === 'batch_drain') {
+  const dir = new URL('../../docs/data/articles/', import.meta.url);
+  const urls = [...new Set(fs.readdirSync(dir).filter(p => p.endsWith('.json'))
+    .flatMap(p => JSON.parse(fs.readFileSync(new URL(p, dir), 'utf8')).map(a => a.url)))].slice(0, 501);
+  assert.equal(urls.length, 501);
+  ctx.operations = urls.map(url => ({t: 'rd', url, at: 1}));
+  run('syncUser = {id:101}; syncPending = operations; syncSaveQueue();');
+  await run('syncFlush()');
+  assert.deepEqual(sent.map(batch => batch.length), [500, 1]);
+  assert.ok(urls.every(url => server.read.has(url)));
+  assert.equal(state.has('dev-news-queue'), false);
 } else throw new Error(testCase);
 console.log(testCase + ': 통과');
