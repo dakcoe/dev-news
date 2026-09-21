@@ -1,5 +1,609 @@
 [
  {
+  "title": "ZuckOff Know when a camera is in the room",
+  "url": "https://zuckoff.app/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 565,
+  "comments": 234,
+  "published_at": 1789986794,
+  "discussion": "https://news.ycombinator.com/item?id=49785429",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://zuckoff.app/"
+  ],
+  "cross_source_count": 1,
+  "score": 2432.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "ZuckOff, 방 안에 카메라가 있을 때 알려줍니다",
+  "summary": "ZuckOff은 Bluetooth 신호를 감지해 Ray-Ban Meta, Oakley Meta, Snap Spectacles 등 카메라 안경이 근처에 있으면 알림을 제공한다. 앱은 전화기 외에 데이터를 전송하지 않으며 계정도 필요 없다. 로그를 CSV로 내보내고, iPhone 홈 화면 위젯·잠금 화면 라이브 액티비티 등으로 실시간 알림을 표시한다.",
+  "why": "블루투스 신호만으로 카메라 안경의 존재를 감지하므로, 녹화 여부는 알 수 없다. 신호 강도는 거리를 대략적으로만 알려주며 방향 정보는 제공하지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "What Sun got wrong",
+  "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 58,
+  "comments": 21,
+  "published_at": 1789974879.869,
+  "discussion": "https://lobste.rs/s/vwl2kn/what_sun_got_wrong",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/"
+  ],
+  "cross_source_count": 2,
+  "score": 1930.6,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Sun이 잘못한 점",
+  "summary": "Oxide 팀이 회의 준비 차원에서 Sun 로고를 패러디한 티셔츠를 제작하며 Sun의 과거 실수를 회고한다. 2005년 OpenSolaris 기반 스타트업이 Sun 하드웨어 구매 시 전화 연결이 안 된 사례를 들어 Sun의 고객 대응 부재를 지적한다.",
+  "why": "Sun이 OpenSolaris를 오픈소스로 공개해 클라우드 기반 스타트업의 성장을 이끈 사례가 나온다. 하지만 해당 고객이 하드웨어 구매를 시도했을 때 Sun은 전화 연결조차 거부했다. 고객 대응 부재가 오픈소스 전략의 성과를 무력화할 수 있음을 보여준다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Disney+: New user agreement allows ads before movies in all subscriptions",
+  "url": "https://consumerrights.wiki/w/Disney%2B_ad_policy_change",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 340,
+  "comments": 216,
+  "published_at": 1789977328,
+  "discussion": "https://news.ycombinator.com/item?id=49784336",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://consumerrights.wiki/w/Disney%2B_ad_policy_change"
+  ],
+  "cross_source_count": 1,
+  "score": 1928.0,
+  "image": "https://consumerrights.wiki/images/logo/new_fixed_logo.png",
+  "link_status": "ok",
+  "ko_title": "Disney+: 새 이용자 계약이 모든 구독에 광고를 허용",
+  "summary": "Disney+는 2025년 1월부터 구독자 계약에 모든 구독 등급에 광고를 삽입할 수 있는 조항을 추가했다. 기존에 광고 없이 제공되던 프리미엄 등급도 예외 없이 광고가 포함될 수 있다. 계약 조항에는 스트리밍 권리 제한이나 라이브·특별 이벤트 등에서 광고가 표시될 수 있다는 예외 조항도 명시된다.",
+  "why": "프리미엄 등급도 광고가 삽입될 수 있어 기존 무광고 전제가 무너졌다. 스트리밍 권리 제한이나 라이브 이벤트에서는 광고가 표시된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+  "url": "https://github.com/jaredpalmer/kev/tree/main",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 248,
+  "comments": 108,
+  "published_at": 1789974715,
+  "discussion": "https://news.ycombinator.com/item?id=49783999",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/jaredpalmer/kev/tree/main"
+  ],
+  "cross_source_count": 1,
+  "score": 1420.0,
+  "image": "https://opengraph.githubassets.com/91f206046760c9ac5b983c316fb7297913b5dd422c7b5a38a5784e93386ae458/jaredpalmer/kev",
+  "link_status": "ok",
+  "ko_title": "Kev: Qwen3.5 기반의 경량 Jev 유사 의사결정 모델 패밀리",
+  "summary": "Kev는 Qwen3.5 위에 구축된 0.8B·4B·9B 규모의 작은 의사결정 모델군으로, 사전학습 가중치를 사용하거나 직접 학습할 수 있다. API는 TypeSafe의 System One과 호환돼 Python SDK로 로컬 서버에 연결 가능하며, CUDA와 Apple Silicon에서 동작한다. 모델은 yes/no, 다중 선택, 평점 질문을 하나의 요청에 포함시킬 수 있고, 웹 플레이그라운드와 Hugging Face Space에서 설치 없이 체험할 수 있다.",
+  "why": "TypeSafe System One SDK를 그대로 써서 로컬 서버에 연결할 수 있다. CUDA와 Apple Silicon에서 동작해 별도 클라우드 인프라 없이 배포가 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "language",
+   "science"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "ZuckOff Is a Free App That Sees Meta Glasses Before They See You",
+  "url": "https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 284,
+  "comments": 37,
+  "published_at": 1789986470,
+  "discussion": "https://news.ycombinator.com/item?id=49785397",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff"
+  ],
+  "cross_source_count": 1,
+  "score": 1279.0,
+  "image": "https://media.wired.me/photos/6aa94578e4d360c9269b01f7/191:100/w_1280,c_limit/MetaGlasses_lead.jpg",
+  "link_status": "ok",
+  "ko_title": "ZuckOff, 메타 안경을 당신보다 먼저 감지하는 무료 앱",
+  "summary": "30세 폴란드 개발자가 만든 무료 블루투스 탐지 앱 ZuckOff은 스마트 안경의 블루투스 신호를 기록해 디지털 지문을 구축한다. 출시 첫 달에 Apple 앱스토어에서 5,000회 이상, Google Play에서는 1,000회 다운로드되었다. 현재는 Ray-Ban Meta, Oakley Meta, Snap Spectacles 등 여러 모델을 근접 감지하지만 녹화 여부나 착용자를 식별하지는 못한다.",
+  "why": "ZuckOff는 녹화 여부나 착용자 식별이 불가능하다. 따라서 스마트 안경의 존재만 감지할 뿐 실제 촬영 위험을 차단하지 못한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Jev-Leftpad",
+  "url": "https://github.com/f/jev-leftpad",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 185,
+  "comments": 70,
+  "published_at": 1789979972,
+  "discussion": "https://news.ycombinator.com/item?id=49784706",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/f/jev-leftpad"
+  ],
+  "cross_source_count": 1,
+  "score": 1180.0,
+  "image": "https://opengraph.githubassets.com/1/f/jev-leftpad",
+  "link_status": null,
+  "ko_title": "Jev-Leftpad",
+  "summary": "Jev-Leftpad는 TypeSafe AI SDK를 이용해 문자열을 왼쪽에 공백을 추가하는 npm 패키지다. `leftPad` 함수는 목표 길이를 지정하면 AI 모델이 0~10개의 공백 옵션 중 하나를 선택해 반환한다. Node.js 20 이상과 `TYPESAFE_API_KEY`가 필요하며, 호출당 API 요청이 발생하고 비용이 발생한다. 제작자는 이 패키지를 프로덕션이나 중요한 용도에 사용하지 말 것을 권고한다.",
+  "why": "기존 padStart()로 해결되는 작업에 AI 호출을 얹는 구조다. 프로덕션에서는 요청 실패와 비용 증가 위험이 있어 사용하지 말아야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
+  "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789998274.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/693c2a4eb0871ba57155b4ed/q4gZV9ENtfFwge7H3Q7YJ.png",
+  "link_status": "ok",
+  "ko_title": "물리학자처럼 LLM 가지치기: 블록 제거를 이징 최적화 문제로",
+  "summary": "최신 논문에서 블록 선택을 제약 이진 최적화 문제로 재구성해 이징 유리 모델에 매핑했다. 이 스핀 시스템의 에너지를 프루닝 성능의 저렴한 프록시로 사용해 후보 구성을 벤치마크 없이 순위 매길 수 있다. Llama-3.3-70B-Instruct를 50 % 압축했을 때 기존 방법 대비 MMLU 점수가 약 23 포인트 상승했다.",
+  "why": "블록 간 결합을 무시하던 기존 가지치기 방식과 달리, 이징 모델 매핑으로 후보 구성을 벤치마크 없이 순위 매길 수 있다. 이는 대규모 블록 제거 시 성능 저하를 줄여 압축된 모델의 실용성을 높인다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "도메인 지식 없는 디자이너가 팀의 기준을 바꾼 방법",
+  "url": "https://toss.tech/article/remittance_transfer",
+  "description": "은행 지식이 없던 디자이너가 규제가 가득한 도메인에서 어떻게 팀의 기준을 바꿨는지 이야기해 보려고 해요.",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789985700.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/remittance_transfer"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://static.toss.im/illusts-content/1201-tossfeed-thumb.png",
+  "link_status": "ok",
+  "ko_title": "도메인 지식 없는 디자이너가 팀의 기준을 바꾼 방법",
+  "summary": "디자이너가 해외송금 사용자 인터뷰를 통해 수수료보다 불안감 해소가 핵심임을 발견하고, 팀원들에게 직접 송금 경험을 시키며 제품 기준을 ‘불안 최소화’로 전환했다. 인터뷰 과정과 팀 내 실험 사례가 구체적으로 제시된다.",
+  "why": "백엔드 로직 설계 시 수수료 최적화보다 상태 추적의 명확성을 우선해야 한다. 송금 처리 중 '정상' 상태만 반복 노출하면 사용자 불안이 해소되지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "SoftBank to borrow over $11 billion in risky bonds for OpenAI stake",
+  "url": "https://the-decoder.com/softbank-to-borrow-over-11-billion-in-risky-bonds-for-openai-stake/",
+  "description": "SoftBank plans to borrow more than $11 billion from investors through risky bonds to fund another payment for its stake in OpenAI. The article SoftBank to borrow over $11 billion in risky bonds for OpenAI stake appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790001311.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/softbank-to-borrow-over-11-billion-in-risky-bonds-for-openai-stake/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/05/softbank_logo.png",
+  "link_status": "ok",
+  "ko_title": "소프트뱅크, OpenAI 지분 확보 위해 위험채 110억 달러 이상 차입",
+  "summary": "소프트뱅크는 OpenAI 지분 투자금을 마련하기 위해 110억 달러 규모의 위험채(정크본드)를 발행한다. 채권 규모는 100억 달러와 10억 유로이며, 조건은 목요일에 확정될 예정이다. 기존에 확보한 400억 달러 규모의 단기 대출을 장기 부채로 전환하려는 계획이다. 이로 인해 일시적으로 소프트뱅크의 부채 한도를 초과할 가능성이 있다.",
+  "why": "소프트뱅크가 OpenAI 지분 대금을 위해 정크본드를 발행하며 부채 한도를 초과할 수 있다. 이는 AI 인프라 투자가 고위험 금융 상품으로 재조달되는 구조를 보여준다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Bristol researchers say medicine already knows how to handle black boxes and AI could learn from it",
+  "url": "https://the-decoder.com/bristol-researchers-say-medicine-already-knows-how-to-handle-black-boxes-and-ai-could-learn-from-it/",
+  "description": "Researchers at the University of Bristol want to make medical AI systems safer by borrowing from how drugs get approved. Their \"Learning Ensemble\" framework defines three areas to check, including system limits, fairness across patient groups, and clinical fit. The goal is to catch models that work technically but can still be dangerously wrong in the clinic. The article Bristol researchers say me",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789999588.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/bristol-researchers-say-medicine-already-knows-how-to-handle-black-boxes-and-ai-could-learn-from-it/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/ai_medicine.png",
+  "link_status": "ok",
+  "ko_title": "브리스톨 연구진, 의학이 블랙박스 처리 방법을 이미 알고 AI가 배워야 한다",
+  "summary": "브리스톨 대학 연구진이 의료 AI 시스템의 신뢰성을 약물 승인 절차와 유사하게 체계적으로 검증하는 프레임워크 “Learning Ensemble”을 제안했다. 이 프레임워크는 시스템의 작동 한계·훈련 데이터, 환자군별 신뢰성, 실제 임상 적용 적합성을 검증한다. 의료 AI가 훈련 데이터의 무관한 특징에 의존해 임상에서 실패하는 문제를 예방한다.",
+  "why": "의료 AI가 훈련 데이터의 무관한 특징에 의존해 임상에서 실패하는 문제를 예방한다. 개발자는 시스템의 작동 한계와 환자군별 신뢰성을 문서화해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "What are you doing this week?",
+  "url": "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week",
+  "description": "What are you doing this week? Feel free to share!\r\n\r\nKeep in mind it’s OK to do nothing at all, too.",
+  "source": "lobsters",
+  "upvotes": 10,
+  "comments": 15,
+  "published_at": 1789993837.334,
+  "discussion": "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week"
+  ],
+  "cross_source_count": 1,
+  "score": 930.9999999999999,
+  "image": "https://lobste.rs/touch-icon-144.png",
+  "link_status": "ok",
+  "ko_title": "이번 주에 무엇을 하고 있나요?",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "AI 챗봇, 금융 질문에 ‘대부분’ 잘못된 답변",
+  "url": "https://news.hada.io/topic?id=34070",
+  "description": "ChatGPT, Claude, Grok, Gemini 등 18개 AI 모델 에 금융 관련 질문을 테스트한 결과, 평균 57% 에서 잘못된 답변을 내놓았으며 복잡한 질문에서는 오류율이 평균 88%까지 올라감 100개 이상의 금융 질문을 최대 5회씩 반복해 * 총 1만 건 이상 - 질의했으며...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790001082.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34070"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34070?v=a6cf0221a44a85b30c8fe03b1907cca0",
+  "link_status": "ok",
+  "ko_title": "AI 챗봇, 금융 질문에 대부분 잘못된 답변",
+  "summary": "18개 AI 모델을 1만 건 이상의 금융 질문에 테스트한 결과 평균 57%가 오류를 내었으며 복잡한 질문에서는 오류율이 88%까지 상승했다. 무료 모델보다 유료·신형 모델이 정확도가 높았지만, 가장 좋은 모델인 Claude Opus 5도 39% 오류를 보였다. 오류 사례로는 연금 세금 규칙 오답으로 £17,500 과세 위험과 존재하지 않는 규칙을 제시해 학자금 대출 상환 중단을 주장한 경우가 있다.",
+  "why": "AI 챗봇을 금융 계산이나 세금 규칙 확인에 쓰면 실제 금전 손실로 이어질 수 있다. 예산 관리나 지출 분석 같은 단순 조사 용도로만 한정해서 활용해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "jev-leftpad - Jev로 값 왼쪽에 패딩 추가",
+  "url": "https://news.hada.io/topic?id=34069",
+  "description": "jev-leftpad 는 값의 왼쪽에 붙일 공백 수를 Jev 모델이 선택하도록 하는 패키지로, padStart() 한 줄이면 가능한 작업에 모델을 호출함 모델이 space_0 부터 space_10 까지 의 선택지 중 하나를 고르면, JavaScript가 해당 개...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789997810.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34069"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34069?v=7c2120d64c799b6361db84854f2cc6fb",
+  "link_status": "ok",
+  "ko_title": "jev-leftpad - Jev로 값 왼쪽에 패딩 추가",
+  "summary": "jev-leftpad는 Jev 모델을 호출해 문자열 앞에 0~10개의 공백을 추가하는 Node.js 패키지다. 호출당 TypeSafe API 요청이 한 번 발생하고 재시도는 비활성화돼 비용이 높으며, 실패 가능성이 있다. Node.js 20 이상과 TYPESAFE_API_KEY가 필요하고, MIT 라이선스로 배포된다.",
+  "why": "padStart()로 처리하던 문자열 패딩 작업에 모델 호출을 얹는 방식이다. 프로덕션 환경에서는 비용 증가와 실패 가능성을 이유로 사용을 피해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Disney+, 새 이용약관으로 모든 구독 요금제에서 영화 시작 전 광고 허용",
+  "url": "https://news.hada.io/topic?id=34068",
+  "description": "Disney+ 가 2025년 1월 구독 약관을 변경해, ‘광고 없음’으로 판매하는 요금제를 포함한 모든 구독 등급에 광고가 들어갈 수 있도록 함 광고 없는 요금제 는 일반적으로 상업 광고로 재생이 중단되지 않지만, 스트리밍 권리나 기타 제약, 실시간 방송과 특별 행사...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789997630.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34068"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34068?v=9713f2e98b588264779e833f0ebaea74",
+  "link_status": "ok",
+  "ko_title": "Disney+, 새 이용약관으로 모든 구독 요금제에서 영화 시작 전 광고 허용",
+  "summary": "Disney+가 2025년 1월부터 모든 구독 등급에 광고 삽입을 허용한다. 기존 ‘광고 없음’ 요금제에도 번들 홍보 영상·브랜드 콘텐츠·후원 메시지가 포함될 수 있다. 변경은 기존 가입자에게도 적용되며, 독일에서는 Standard와 Premium 요금제에 광고가 들어갈 수 있음을 이메일로 안내했다.",
+  "why": "이 기사는 백엔드나 AI 개발 업무와 직접적인 연관성이 없어 기술적 조치나 설계 변경을 요구하지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "Show HN: Mini-AGI - 8GB VRAM에서 학습하는 동적 지속 학습 모델",
+  "url": "https://news.hada.io/topic?id=34067",
+  "description": "mini-AGI 는 단일 8GB VRAM GPU에서 처음부터 학습하고, 읽는 데이터에 따라 전문가 풀과 연산 깊이를 바꾸는 바이트 단위 언어 모델임 가중치와 옵티마이저 상태를 디스크에 저장 하고 필요한 전문가만 GPU에 올리므로, 전체 파라미터 수보다 현재 작업 집합이 VRAM...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1789994285.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34067"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34067?v=5c7d323a8f837bda83ac92ed47e910df",
+  "link_status": "ok",
+  "ko_title": "Show HN: Mini-AGI - 8GB VRAM에서 학습하는 동적 지속 학습 모델",
+  "summary": "mini-AGI는 8GB VRAM GPU에서 가중치와 옵티마이저 상태를 디스크에 저장해 필요한 전문가만 메모리에 올리는 방식으로 지속 학습을 수행한다. 입력 바이트마다 적응형 깊이와 top-8 라우팅을 적용해 연산량을 조절하며, 읽기와 생성이 동일한 순전파 경로를 공유한다. 현재는 실험용 장난감 수준이며, 가중치는 첫 순회가 끝난 뒤 공개될 예정이다.",
+  "why": "8GB VRAM 환경에서 가중치를 디스크에 두고 필요한 전문가만 메모리에 올리는 방식이 핵심이다. 고정된 모델에 데이터를 얹는 대신 하드웨어와 데이터로 처음부터 학습해 계속 갱신하는 구조다. 현재는 실험용 수준이라 실전에 쓰기엔 성능 한계가 명확하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "zai-org / ZCode",
+  "url": "https://github.com/zai-org/ZCode",
+  "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1211,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/zai-org/ZCode"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1211,
+  "score": 528.85,
+  "image": "https://opengraph.githubassets.com/1/zai-org/ZCode",
+  "link_status": null,
+  "ko_title": "ZCode",
+  "summary": "ZCode는 AI 기반 프로그래밍 작업대를 제공하는 오픈소스 프로젝트다. 데스크톱(Electron), 웹, 터미널용 Agent CLI 등 여러 인터페이스를 하나의 저장소에서 관리한다. 개발 환경은 Node.js 24.14.0과 pnpm 10.33.2이며, `pnpm bootstrap` 명령으로 전체 워크스페이스를 초기화한다.",
+  "why": "터미널에서 에이전트 CLI를 실행할 때 별도 서브모듈 초기화 과정이 생략된다. 데스크톱과 웹 클라이언트, 백엔드, 에이전트 런타임 소스가 단일 저장소에 묶여 있어 통합 개발이 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "hardware",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "jaredpalmer / kev",
+  "url": "https://github.com/jaredpalmer/kev",
+  "description": "tiny Jev-like model built on top of Qwen2.5-0.5B you can train and run on your MacBook",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 904,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/jaredpalmer/kev"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 904,
+  "score": 421.4,
+  "image": "https://opengraph.githubassets.com/1/jaredpalmer/kev",
+  "link_status": null,
+  "ko_title": "jaredpalmer / kev — 작은 Jev-like 의사결정 모델",
+  "summary": "Kev는 Qwen3.5 기반의 0.8B, 4B, 9B 규모 작은 의사결정 모델군이다. 사전 학습 가중치를 제공하며 자체 학습도 가능하고, TypeSafe System One API와 호환되는 Python SDK를 로컬 서버에 연결해 사용할 수 있다. CUDA와 Apple Silicon에서 실행된다.",
+  "why": "TypeSafe System One API와 호환되어 기존 Python SDK를 로컬 서버로 바로 연결할 수 있다. 클라우드 의존 없이 로컬에서 의사결정 모델을 실행하거나 자체 학습하는 환경이 구축된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "zhouxiaoka / autoclip",
+  "url": "https://github.com/zhouxiaoka/autoclip",
+  "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+  "source": "github",
+  "upvotes": 263,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/zhouxiaoka/autoclip"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 263,
+  "score": 197.04999999999998,
+  "image": "https://opengraph.githubassets.com/1/zhouxiaoka/autoclip",
+  "link_status": null,
+  "ko_title": "AutoClip - AI 영상 스마트 클립 시스템",
+  "summary": "AutoClip은 YouTube와 B역 등에서 영상을 다운로드하고 AI가 자동으로 하이라이트를 추출해 클립을 생성하는 시스템이다. Python 3.8+, FastAPI, React 18+, TypeScript 5.0 기반의 프론트·백엔드 분리 구조를 갖추고 있다. Ollama·LM Studio 등 로컬 모델을 사용해 키 없이 오프라인으로도 동작한다.",
+  "why": "로컬 모델 연동으로 API 키 없이 오프라인에서 영상 클립 생성 파이프라인을 구축할 수 있다. MCP 서버 내장 덕분에 Cursor나 Claude 같은 에이전트 도구에서 바로 호출해 워크플로우에 통합할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
+  "title": "mvt-project / mvt",
+  "url": "https://github.com/mvt-project/mvt",
+  "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+  "source": "github",
+  "upvotes": 177,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/mvt-project/mvt"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 177,
+  "score": 166.95,
+  "image": "https://opengraph.githubassets.com/1/mvt-project/mvt",
+  "link_status": null,
+  "ko_title": "mvt-project / mvt",
+  "summary": "최근 “v3” 브랜치를 병합하면서 파괴적 변경이 도입돼 기존 스크립트가 동작하지 않을 수 있다. 모바일 검증 툴킷(MVT)은 Android·iOS 기기의 포렌식 흔적을 자동으로 수집·분석하는 유틸리티 모음이며, 2021년 7월 암네스티 인터내셔널 보안 연구소가 Pegasus 프로젝트와 함께 공개했다. 현재도 암네스티와 외부 기여자들이 유지보수하고 있다.",
+  "why": "MVT v3 병합으로 기존 스크립트가 깨질 수 있다. MVT 출력을 파싱하는 자동화 파이프라인을 돌리려면 출력 형식 변경 사항을 먼저 점검해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-22T00:00:06.484451+09:00",
+  "batch_label": "9월 22일 00:00"
+ },
+ {
   "title": "AX – Google’s Open Agentic Orchestrator",
   "url": "https://agentexecutor.io",
   "description": "",
