@@ -466,3 +466,31 @@ def test_탈퇴_확인이_지우기보다_먼저_온다(html):
     guard = html.index("if(!started || Date.now() - started > 600000) return;")
     assert guard < html.index("if(left === 'denied')")
     assert guard < html.index("savedMap.clear(); read.clear();\n  syncPending = [];")
+
+
+# ---- prewarm-during-intro: 인트로 3초 동안 미리 받는다 ----
+
+def test_인트로_동안_목록과_사진을_미리_받는다(html):
+    """인트로가 3초 덮고 있는 동안 네트워크는 논다. 실측으로 세 요청이
+    DOMContentLoaded 6ms 뒤(146ms)에 나가고 첫 페인트는 156ms 라, 기사
+    목록을 늦추지 않는다."""
+    assert "function prewarm()" in html
+    assert "ensureApis(true);" in html
+    assert "ensureSkills(true);" in html
+    assert "new Image().src = au" in html          # 소개 화면 프로필 사진
+
+
+def test_미리_받기_실패는_굳지_않는다(html):
+    """사람이 탭을 누르기도 전에 오류 화면이 준비돼 있으면 안 된다.
+    미리 받기가 실패하면 null 로 되돌려 평소대로 다시 받게 둔다."""
+    assert "function ensureApis(warm)" in html
+    assert "function ensureSkills(warm)" in html
+    assert "APIS = warm ? null : 'fail';" in html
+    assert "SKILLS = warm ? null : 'fail';" in html
+
+
+def test_데이터_절약_모드에서는_미리_받지_않는다(html):
+    """안 열어 볼 수도 있는 탭 때문에 490KB(apis 383 + skills 107)를
+    쓰게 할 일은 아니다."""
+    assert "if(c.saveData) return;" in html
+    assert "/^(slow-)?2g$/.test(c.effectiveType" in html

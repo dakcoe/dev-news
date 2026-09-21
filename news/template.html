@@ -1644,13 +1644,15 @@ const safeU=u=>{const v=String(u??'').trim();
    매 회차 만든 data/skills.json 을 첫 진입 때 읽는다. 상승(최근 8주 활동)과
    누적 설치 두 목록, 지난 회차 대비 순위 변화, 설치 명령 복사. */
 let SKILLS=null, skQ='', skTab='trending';
-function ensureSkills(){
+/* warm=true 는 인트로 동안 미리 받는 호출이다. 그때의 실패는 'fail' 로 굳히지
+   않는다 — 사람이 탭을 누르기도 전에 오류 화면이 준비돼 있으면 안 된다. */
+function ensureSkills(warm){
   if(SKILLS!==null) return;
   SKILLS='loading';
   fetch('data/skills.json')
     .then(r=>{ if(!r.ok) throw 0; return r.json(); })
     .then(j=>{ SKILLS=j; if(view==='skills') render(); })
-    .catch(()=>{ SKILLS='fail'; if(view==='skills') render(); });
+    .catch(()=>{ SKILLS = warm ? null : 'fail'; if(view==='skills') render(); });
 }
 const fmtN=n=>n==null?'':(n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1)+'K':String(n));
 let skOpen='';   // 펼친 행의 주소
@@ -1727,13 +1729,13 @@ function bindSkills(){
   bindSkBody();
 }
 
-function ensureApis(){
+function ensureApis(warm){
   if(APIS!==null) return;
   APIS='loading';
   fetch('data/apis.json')
     .then(r=>{ if(!r.ok) throw 0; return r.json(); })
     .then(j=>{ APIS=j; if(view==='api') render(); })
-    .catch(()=>{ APIS='fail'; if(view==='api') render(); });
+    .catch(()=>{ APIS = warm ? null : 'fail'; if(view==='api') render(); });
 }
 /* 카테고리 아이콘 — 이름 키워드로 매핑, 위에서부터 첫 매칭 (api-category-hub 피드백:
    첫 글자 타일은 정보가 없다). 새 카테고리가 생겨도 폴백(플러그)이 받는다. */
@@ -2526,6 +2528,34 @@ document.querySelectorAll('.rb[data-v]').forEach(b=>b.onclick=()=>{
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
 render();
 openFromHash();   // #a=... 로 들어오면 그 기사를 바로 연다
+
+/* 인트로가 3초 덮고 있는 동안 네트워크는 논다. API 목록(383KB)·스킬 순위(107KB)
+   와 소개 화면 프로필 사진을 그때 받아 두면 탭을 눌렀을 때 바로 뜬다 — 지금은
+   누른 뒤에 받기 시작해 "불러오는 중" 을 한 번 본다.
+
+   메인 렌더보다 뒤로 미룬다. 앱 스크립트가 1.4MB JSON 을 파싱하며 메인 스레드를
+   600ms 막는데(위 인트로 주석), 거기에 490KB 를 얹으면 기사 목록이 늦어진다.
+   기사가 먼저다.
+
+   데이터 절약 모드나 느린 회선에서는 하지 않는다. 안 열어 볼 수도 있는 탭 때문에
+   490KB 를 쓰게 할 일은 아니다. */
+(function prewarm(){
+  const c = navigator.connection || {};
+  if(c.saveData) return;
+  if(/^(slow-)?2g$/.test(c.effectiveType || '')) return;
+
+  const run = ()=>{
+    ensureApis(true);
+    ensureSkills(true);
+    const au = (ABOUT||{}).author_url;
+    if(au) new Image().src = au.replace(/\/+$/,'') + '.png?size=208';
+  };
+  // 첫 화면이 그려진 다음 프레임부터, 그것도 한가할 때만.
+  requestAnimationFrame(()=>{
+    if(window.requestIdleCallback) requestIdleCallback(run, {timeout:2000});
+    else setTimeout(run, 800);
+  });
+})();
 addEventListener('hashchange', openFromHash);   // 같은 탭에 다른 공유 링크를 붙여 넣었을 때
 
 /* 폭이 1200px 경계를 넘나들면 광고 배치가 달라지므로 다시 그린다. */
