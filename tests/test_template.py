@@ -471,9 +471,7 @@ def test_탈퇴_확인이_지우기보다_먼저_온다(html):
 # ---- prewarm-during-intro: 인트로 3초 동안 미리 받는다 ----
 
 def test_인트로_동안_목록과_사진을_미리_받는다(html):
-    """인트로가 3초 덮고 있는 동안 네트워크는 논다. 실측으로 세 요청이
-    DOMContentLoaded 6ms 뒤(146ms)에 나가고 첫 페인트는 156ms 라, 기사
-    목록을 늦추지 않는다."""
+    """호출 연결만 검사한다. 실제 요청 시점과 페인트 지연은 브라우저에서 잰다."""
     assert "function prewarm()" in html
     assert "ensureApis(true);" in html
     assert "ensureSkills(true);" in html
