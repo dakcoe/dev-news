@@ -1293,6 +1293,9 @@ async function syncLogout(){
     return;
   }
   syncUser = d.user;
+  // 초기 전송이 실패해 pull을 건너뛰어도 이후 해제는 잡아야 한다. 빈 기준으로
+  // 시작하면 로컬에 있던 항목을 지웠다는 차이가 사라진다. 첫 합집합은 pull에서 별도로 한다.
+  syncBase = {saved: new Set(savedMap.keys()), read: new Set(read)};
   // 뉴스 화면은 로그인 상태를 쓰지 않는다. 여기서 전체 렌더를 부르면 검색창이
   // 새로 만들어져, 느린 회선에서 막 치기 시작한 한글 조합이 끊긴다.
   syncRenderAccount(); if(view === 'about') render();
