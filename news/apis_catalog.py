@@ -35,7 +35,7 @@ from news.core.redact import redact_articles
 
 from news import api_health
 
-from news.core.common import KST  # noqa: E402  (상수 재노출)
+from news.core.common import KST, load_json  # noqa: E402  (상수 재노출)
 HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 
 SOURCES = [
@@ -148,13 +148,15 @@ def dedupe_llm_overlap(readme_apis: list[dict], llm_apis: list[dict]) -> list[di
 
 
 def _previous_counts(out_path: str) -> dict[str, int]:
-    """직전 회차의 소스별 건수. 파일이 없거나 깨졌으면 빈 dict."""
-    try:
-        with open(out_path, encoding="utf-8") as f:
-            return {s["id"]: s["count"] for s in json.load(f).get("sources", [])
-                    if isinstance(s.get("count"), int)}
-    except Exception:
-        return {}
+    """직전 회차의 소스별 건수. 파일이 없으면 빈 dict.
+
+    못 읽으면 예외를 올린다 — sync() 가 받아 기존 파일을 그대로 둔다.
+    빈 dict 로 돌려주면 MIN_RATIO 방어선이 조용히 꺼진다. global 은 직전
+    1,622건인데 바닥값(MIN_COUNT)은 300이라, 800건만 파싱돼도 통과해 반토막
+    카탈로그가 발행되고 이어서 api_health 가 빠진 URL 의 생존 기록까지 지운다.
+    """
+    return {s["id"]: s["count"] for s in load_json(out_path, {}).get("sources", [])
+            if isinstance(s.get("count"), int)}
 
 
 def build_catalog(prev_counts: dict[str, int] | None = None) -> dict:

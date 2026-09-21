@@ -26,11 +26,23 @@ def test_record_appends_and_trims(tmp_path):
     assert json.load(open(p, encoding="utf-8")) == hist
 
 
-def test_load_missing_or_corrupt_is_empty(tmp_path):
+def test_없는_이력은_빈_목록이다(tmp_path):
     assert load(str(tmp_path / "none.json")) == []
+
+
+def test_깨진_이력을_빈_목록으로_바꾸지_않는다(tmp_path):
+    """record() 가 load() 결과 뒤에 이번 회차를 붙여 같은 경로에 다시 쓴다.
+    빈 목록으로 돌려주면 30회차 이력이 1회로 줄어 커밋되고, 그 뒤 최소
+    streak 회차 동안 출처 침묵 판정이 불가능해진다."""
+    import pytest
+    from news.core.common import DataUnreadable
+
     p = tmp_path / "bad.json"
     p.write_text("{not json", encoding="utf-8")
-    assert load(str(p)) == []
+    with pytest.raises(DataUnreadable):
+        load(str(p))
+    # 원본은 그대로다 — 되살릴 수 있다
+    assert p.read_text(encoding="utf-8") == "{not json"
 
 
 def test_silent_after_streak_zero_runs():
@@ -90,22 +102,52 @@ def test_rss_수집기가_피드별로_센다():
     assert 'f"rss:{name}"' in src
 
 
-def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6)):
-    """2026-09월 어느 날의 회차 한 건. 09-19가 토, 09-20이 일이다."""
-    e = {"at": f"2026-09-{day:02d}T08:00:00+09:00", "counts": {name: cnt}}
+def _h(day, cnt, name="rss:arXiv cs.AI", skip=(5, 6), hour=16):
+    """2026-09월 어느 날의 회차 한 건. at 은 수집 기계 시각(KST)이다.
+
+    요일 판정은 UTC 다. hour=16(KST)이면 UTC 는 같은 날 07시라 날짜가 그대로다
+    — 2026-09-19가 토, 09-20이 일. hour=0·8 이면 UTC 는 전날이 된다.
+    """
+    e = {"at": f"2026-09-{day:02d}T{hour:02d}:00:00+09:00", "counts": {name: cnt}}
     if skip:
         e["skip"] = {name: list(skip)}
     return e
 
 
 def test_휴재_요일은_침묵으로_세지_않는다():
-    """arXiv는 주말에 <item>이 없는 껍데기를 준다. 그걸 죽음으로 보면 매주
+    """feed-skip-days. arXiv는 주말에 <item>이 없는 껍데기를 준다. 그걸 죽음으로 보면 매주
     토·일마다 알람이 뜬다 — 2026-09-19·20에 실제로 그랬다."""
     from news.core.source_health import silent
     # 금·토·일 연속 0건. 주말을 빼면 유효 회차가 금요일 하나뿐이라 아직 판정하지 않는다.
     assert silent([_h(18, 0), _h(19, 0), _h(20, 0)]) == []
     # 정상적으로 받던 출처가 주말에만 0건인 경우도 마찬가지.
     assert silent([_h(17, 8), _h(18, 8), _h(19, 0), _h(20, 0)]) == []
+
+
+def test_요일은_UTC로_본다():
+    """at 은 KST 다. 그대로 요일을 뽑으면 피드가 말한 요일과 어긋난다 — KST
+    월요일 00시는 UTC 일요일 15시라, arXiv 가 주말 껍데기를 주는 그 회차를
+    월요일로 세어 휴재 예외가 빗나간다. 하루 세 회차 중 둘이 그렇다."""
+    from news.core.source_health import _weekday, silent
+    assert _weekday("2026-09-21T00:00:00+09:00") == 6   # KST 월요일 → UTC 일요일
+    assert _weekday("2026-09-21T08:00:00+09:00") == 6
+    assert _weekday("2026-09-21T16:00:00+09:00") == 0   # 여기서야 UTC 월요일
+    # KST 월요일 00·08시는 UTC 일요일이라 세지 않는다. 남는 유효 회차가
+    # 부족해 아직 판정하지 않는다.
+    assert silent([_h(19, 0), _h(20, 0), _h(21, 0, hour=0), _h(21, 0, hour=8)]) == []
+
+
+def test_휴재_요일은_출처의_최신_값을_쓴다():
+    """휴재 요일은 회차가 아니라 출처의 성질이다. 회차별 값만 보면 기능이
+    생기기 전 회차와 피드 요청이 실패한 회차에 값이 없어, 그 회차들이 전부
+    '쉬는 날이 아니다'로 세어져 거짓 침묵을 만든다. 실제로 이력 30건 전부에
+    skip 이 없어 다음 회차에 알람이 뜰 상태였다."""
+    from news.core.source_health import silent
+    # 목·금·토·일이 전부 0건인데 skip 기록은 마지막 회차에만 있다.
+    # 회차별 값만 보면 토요일이 세어져 목·금·토 셋으로 알람이 뜬다.
+    hist = [_h(17, 0, skip=None), _h(18, 0, skip=None),
+            _h(19, 0, skip=None), _h(20, 0)]
+    assert silent(hist) == []
 
 
 def test_주말을_빼고도_연속_0건이면_알린다():

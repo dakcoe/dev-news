@@ -18,7 +18,12 @@ from news.core.fetch_health import reason_of, record
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
 
-GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
+# 저장소 루트만 README 로 우회한다. 예전 정규식은 (?:[/?#].*)?$ 로 뒤를 다 삼켜서
+# /issues/6235 · /releases/tag/v2.0 · /commit/… · /pull/… 까지 걸렸다. 그러면
+# 이슈 제목으로 실린 기사의 본문이 저장소 소개가 된다 — 2026-08 아카이브에
+# "Feature Request: Support AGENTS.md" 기사의 요약이 Claude Code 설치 안내로
+# 들어가 있다. 뒤에 붙을 수 있는 것은 쿼리·프래그먼트·끝 슬래시뿐이다.
+GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?/?(?:[?#].*)?$")
 
 
 def usable_content(text, description=None):

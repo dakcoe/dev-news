@@ -100,3 +100,32 @@ def test_search_index_is_sharded_by_month(tmp_path):
                  "batch": "2026-09-07T09:00:00+09:00"})
     archive.write_search_index(arts, path=path)
     assert (tmp_path / "search-index-2026-08.json").read_bytes() == before
+
+
+def test_못_읽는_샤드를_덮어쓰지_않는다(tmp_path):
+    """append() 는 `새 기사 + 기존 샤드` 를 같은 경로에 바로 저장한다. 읽기
+    실패를 빈 목록으로 처리하면 파싱이 한 번 어긋나는 것만으로 그달 기사가
+    새 기사만 남기고 사라진다."""
+    import json
+    from datetime import datetime, timezone
+    import pytest
+    from news.core import archive
+
+    when = datetime(2026, 9, 1, tzinfo=timezone.utc)
+    archive.append([{"url": "https://e.com/1", "title": "t"}], when, str(tmp_path))
+    shard = tmp_path / "2026-09.json"
+    before = shard.read_text(encoding="utf-8")
+
+    shard.write_text("{망가진 JSON", encoding="utf-8")
+    with pytest.raises(archive.ShardUnreadable):
+        archive.append([{"url": "https://e.com/2", "title": "t2"}], when, str(tmp_path))
+    # 원본이 남아 있어야 되살릴 수 있다
+    assert shard.read_text(encoding="utf-8") == "{망가진 JSON"
+
+    shard.write_text(before, encoding="utf-8")
+    assert len(archive.load_all(str(tmp_path))) == 1
+
+    # 목록이 아닌 JSON 도 같다
+    shard.write_text(json.dumps({"url": "x"}), encoding="utf-8")
+    with pytest.raises(archive.ShardUnreadable):
+        archive.load_all(str(tmp_path))

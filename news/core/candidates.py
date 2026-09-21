@@ -18,10 +18,13 @@ from datetime import datetime
 
 from news.core import http
 
-from news.core.common import ROOT  # noqa: E402  (경로 상수 재노출)
-DIR = os.path.join(ROOT, "data", "candidates")
+from news.core.common import ROOT, load_json  # noqa: E402  (경로 상수 재노출)
+# 같은 정규식을 두 벌 들고 있었다. enrich 쪽은 저장소 뒤 경로를 삼키지 않게
+# 고쳤는데 이 사본은 옛 꼬리가 그대로라, /issues/123 · /releases/tag/v1 이
+# 저장소 루트로 잡혀 그 레포의 스타 수가 이슈 항목에 기록됐다. 한 벌만 쓴다.
+from news.core.enrich import GITHUB_REPO_RE  # noqa: E402  (사본 금지)
 
-GITHUB_REPO_RE = re.compile(r"^https?://github\.com/([^/]+)/([^/?#]+?)(?:\.git)?(?:[/?#].*)?$")
+DIR = os.path.join(ROOT, "data", "candidates")
 
 
 def _shard_path(month: str, base_dir: str = DIR) -> str:
@@ -29,14 +32,10 @@ def _shard_path(month: str, base_dir: str = DIR) -> str:
 
 
 def _load(path: str) -> list:
-    if not os.path.exists(path):
-        return []
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, list) else []
-    except Exception:
-        return []
+    """log() 가 이 값 위에 오늘 행을 얹어 같은 샤드에 다시 쓴다. 빈 목록으로
+    돌려주면 그달 판정 로그가 하루치로 교체된다 — 스타 Δ 의 근거도 함께
+    사라져 다음 회차 Δ 가 전부 첫 등장 값이 된다."""
+    return load_json(path, [])
 
 
 def github_meta(url: str, token: str | None = None) -> dict:
@@ -67,8 +66,15 @@ def github_meta(url: str, token: str | None = None) -> dict:
         return {}
 
 
-def previous_stars(url: str, before_date: str, base_dir: str = DIR) -> int | None:
-    """이전 날짜 스냅샷의 절대 스타 수. Δ = 오늘 스타 - 이 값. 없으면 None(첫 등장)."""
+def previous_stars(url: str, before_date: str,
+                   base_dir: str = DIR) -> tuple[int, str] | None:
+    """가장 최근 이전 스냅샷의 (절대 스타 수, 그 날짜). 없으면 None(첫 등장).
+
+    날짜를 같이 돌려준다. 예전에는 숫자만 줘서 부른 쪽이 그게 언제 것인지
+    알 수 없었다 — 어제 API 호출이 실패했거나(스냅샷 1,467개 중 9개) 그
+    레포가 며칠 만에 다시 트렌딩에 올라오면, 며칠치 증가분이 하루치 Δ 로
+    발행됐다. 실측 918쌍 중 132쌍(14%)이 이틀 이상 벌어져 있고 최대 38일이다.
+    """
     months_avail = sorted((fn[:-5] for fn in os.listdir(base_dir) if fn.endswith(".json")),
                           reverse=True) if os.path.isdir(base_dir) else []
     for m in months_avail[:2]:                     # 이번 달 + 지난 달이면 충분
@@ -76,7 +82,7 @@ def previous_stars(url: str, before_date: str, base_dir: str = DIR) -> int | Non
             if row.get("url") == url and row.get("date", "") < before_date:
                 stars = (row.get("native") or {}).get("stars")
                 if stars is not None:
-                    return stars
+                    return stars, row["date"]
     return None
 
 
