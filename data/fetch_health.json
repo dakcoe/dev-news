@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-12T09:55:12+09:00",
-   "total": 17,
-   "counts": {
-    "blocked": 1,
-    "ok": 13,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://mathandai.org/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-12T20:28:07+09:00",
    "total": 20,
    "counts": {
@@ -468,6 +452,15 @@
    "counts": {
     "ok": 15,
     "github": 3
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-22T00:00:37+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "github": 6
    },
    "failures": []
   }
