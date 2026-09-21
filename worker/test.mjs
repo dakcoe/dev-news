@@ -1,4 +1,4 @@
-/* 순수 함수만 검사한다 (sync-across-devices). D1 과 fetch 가 걸린 경로는 `wrangler dev` 로 직접 확인한다.
+/* 순수 함수와 계정 삭제 경로를 검사한다 (sync-across-devices, account-deletion).
  * 실행: node test.mjs
  */
 import assert from 'node:assert/strict';
@@ -52,3 +52,5 @@ assert.ok(Number.isInteger(rd.at) && rd.at > 1700000000, '서버 시각으로 �
 assert.equal(normalizeOp({ t: 'rd', url: 'https://example.com/a', at: 1789806000.9 }).at, 1789806000, '소수는 버린다');
 
 console.log('통과');
+
+await import('./test-account.mjs');
