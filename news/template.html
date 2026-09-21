@@ -443,6 +443,7 @@ __ADS_HEAD__
     cursor:pointer;margin-top:4px;flex:none;display:flex;align-items:center;
     justify-content:center;transition:.12s;padding:0;visibility:hidden;
   }
+  /* 읽는 동안 체크박스가 시선을 빼앗지 않게, 선택했거나 조작할 때만 보인다 (trim-ui-elements). */
   .row:hover .ck,.ck.on{visibility:visible}   /* 호버 시에만 노출, 체크된 건 항상 */
   @media (hover:none){ .ck{visibility:visible} }
   .ck:hover{border-color:var(--pri)}
