@@ -48,7 +48,8 @@ IDX = [{"t": "Rust 1.90 릴리스", "u": "https://e.com/rust", "m": "2026-08",
 
 def test_검색어로_찾는다(page):
     got = arch(page, INDEX=IDX, q="rust")
-    assert [e["u"] for e in got] == ["https://e.com/rust", "https://e.com/infer"]
+    # 둘 다 제목에 걸려 점수가 같으면 최근 회차가 위다
+    assert [e["u"] for e in got] == ["https://e.com/infer", "https://e.com/rust"]
 
 
 def test_안_읽음이면_읽은_기사는_빠진다(page):

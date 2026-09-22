@@ -145,13 +145,26 @@ def recent(articles: list[dict], days: int) -> list[dict]:
     return kept
 
 
+# 검색이 보는 요약 앞부분 길이. 제목에 없는 낱말로도 찾게 하되, 색인은 검색할
+# 때마다 통째로 내려받으므로 요약 전체는 싣지 않는다.
+INDEX_SUMMARY_CHARS = 80
+
+
 def _index_entry(a: dict) -> dict:
-    return {"t": a.get("ko_title") or a.get("title", ""),
-            "u": a.get("url", ""),
-            "m": _month(a.get("batch", "")),
-            "s": a.get("source", ""),
-            "g": a.get("tags", []),
-            "d": (a.get("batch", "") or "")[:10]}
+    title = a.get("ko_title") or a.get("title", "")
+    e = {"t": title,
+         "u": a.get("url", ""),
+         "m": _month(a.get("batch", "")),
+         "s": a.get("source", ""),
+         "g": a.get("tags", []),
+         "d": (a.get("batch", "") or "")[:10]}
+    # 원제(o)는 번역 제목과 다를 때만 — 영어로 검색해도 찾게 한다
+    if a.get("title") and a["title"] != title:
+        e["o"] = a["title"]
+    summary = (a.get("summary") or "").strip()
+    if summary:
+        e["x"] = summary[:INDEX_SUMMARY_CHARS]
+    return e
 
 
 def write_search_index(articles: list[dict], path: str = INDEX_PATH) -> None:

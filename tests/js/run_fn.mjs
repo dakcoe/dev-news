@@ -10,14 +10,20 @@ const [htmlPath, fnName, globalsJson] = process.argv.slice(2);
 const html = fs.readFileSync(htmlPath, 'utf8');
 
 // function 이름(...){ ... } 를 중괄호 짝을 세어 떼어 온다.
-const start = html.indexOf(`function ${fnName}(`);
-if (start < 0) throw new Error(`${fnName} 없음`);
-let i = html.indexOf('{', start), depth = 0, end = -1;
-for (let j = i; j < html.length; j++) {
-  if (html[j] === '{') depth++;
-  else if (html[j] === '}' && --depth === 0) { end = j + 1; break; }
+function extract(name) {
+  const start = html.indexOf(`function ${name}(`);
+  if (start < 0) throw new Error(`${name} 없음`);
+  let i = html.indexOf('{', start), depth = 0, end = -1;
+  for (let j = i; j < html.length; j++) {
+    if (html[j] === '{') depth++;
+    else if (html[j] === '}' && --depth === 0) { end = j + 1; break; }
+  }
+  return html.slice(start, end);
 }
-const src = html.slice(start, end);
+// 검색을 쓰는 함수는 검색 도우미와 별칭 표가 같이 있어야 돈다.
+const alias = html.match(/const ALIAS=[\s\S]*?\]\];/)[0];
+const helpers = ['qTokens', 'grams', 'tokHit', 'searchScore'].map(extract).join('\n');
+const src = `${alias}\n${helpers}\n${extract(fnName)}`;
 
 const ctx = { ...JSON.parse(globalsJson), console };
 // Set 으로 받아야 하는 전역은 배열로 넘어온다.

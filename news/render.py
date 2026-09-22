@@ -163,6 +163,10 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
             "bodyFrom": a.get("body_from") or "",   # 'comments' 면 댓글로 쓴 요약
             "again": a.get("resurfaced") or "",     # 지난 게시일. 있으면 "다시 트렌딩" 표시
         })
+        # 원제. 번역 제목과 다를 때만 싣는다 — 영어로 검색해도 찾게 한다.
+        orig = a.get("title", "")
+        if orig and orig != out[-1]["title"]:
+            out[-1]["orig"] = orig
         if inline:
             # ⚠️ HTML이 아니라 문단 목록으로 넘긴다. 예전에는 서버가 "<p>요약</p>"
             # 문자열을 만들어 보냈는데, 요약은 외부에서 온 글이라 그 안에 태그가

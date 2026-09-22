@@ -28,7 +28,7 @@ def filter_page(tmp_path_factory):
     return page
 
 
-@pytest.mark.parametrize("case", ["filters", "sort", "controls", "archive"])
+@pytest.mark.parametrize("case", ["filters", "sort", "controls", "archive", "search"])
 def test_filter_execution(filter_page, case):
     result = subprocess.run(
         ["node", str(RUNNER), str(filter_page), str(ROOT / "docs/data"), case],

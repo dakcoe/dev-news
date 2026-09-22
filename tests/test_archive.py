@@ -70,14 +70,15 @@ def test_recent_display_window():
 
 
 def test_search_index_light(tmp_path):
-    """항목은 가볍게. 요약 본문이 섞이면 방문자마다 그만큼 더 받는다."""
+    """항목은 가볍게. 요약은 앞부분만 싣는다 — 전부 섞이면 방문자마다 그만큼 더 받는다."""
     path = str(tmp_path / "search-index.json")
     archive.write_search_index(
         [{"url": "https://a", "title": "t", "ko_title": "번역", "source": "rss",
           "batch": "2026-08-06T09:00:00+09:00", "summary": "긴 요약" * 100}], path=path)
     rows = json.load(open(tmp_path / "search-index-2026-08.json", encoding="utf-8"))
     assert rows == [{"t": "번역", "u": "https://a", "m": "2026-08", "s": "rss",
-                     "g": [], "d": "2026-08-06"}]
+                     "g": [], "d": "2026-08-06", "o": "t",
+                     "x": ("긴 요약" * 100)[:archive.INDEX_SUMMARY_CHARS]}]
 
 
 def test_search_index_is_sharded_by_month(tmp_path):
