@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-13T21:33:13+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-14T02:55:14+09:00",
    "total": 20,
    "counts": {
@@ -466,6 +457,52 @@
     "github": 5
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-23T08:00:28+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 8,
+    "blocked": 7,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34143",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34142",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34141",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34140",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
