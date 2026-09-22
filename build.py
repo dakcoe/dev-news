@@ -306,6 +306,12 @@ def prepare_published(picked: list[dict], cfg: dict,
     # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
     # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
     ready = [a for a in picked if a.get("llm_done")]
+    # 주소·제목으로 못 잡은 같은 사건을 요약까지 본 뒤 거른다. 아래 pick 앞에서
+    # 해야 여유분이 빈자리를 채운다. 빠진 것은 seen 에 넣는다 — 안 넣으면 회차마다
+    # 다시 뽑혀 요약을 또 받고, 원본이 48시간 창을 벗어나면 그대로 실린다.
+    from news.core.similar import drop_same_story, recent_published
+    ready, same = drop_same_story(ready, recent_published(archive.load_all(), datetime.now(KST)))
+    irrelevant = irrelevant + same
     # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 앞에서 그냥 자르면
     # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
     if gate_on:
@@ -368,11 +374,6 @@ def main() -> int:
         return 0
 
     published, irrelevant, dead_links = prepare_published(picked, cfg, args.no_ai)
-    # 주소·제목으로 못 잡은 같은 사건을 요약까지 본 뒤 거른다. 여기서 빠진 것은
-    # seen 에 넣지 않는다 — 판정이 틀려도 다음 회차에 다시 후보가 된다.
-    if (cfg.get("same_story") or {}).get("enabled", True):
-        from news.core.similar import drop_same_story, recent_published
-        published, _ = drop_same_story(published, recent_published(archive.load_all(), now))
     write_outputs(published, cfg, now, args.out)
 
     # 무관·죽은 링크 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로

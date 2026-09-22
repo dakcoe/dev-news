@@ -85,3 +85,15 @@ def test_판정은_기사당_몇_번까지만_묻는다():
     j = _Judge(False)
     similar.drop_same_story([_art("n", "new")], olds, judge=j, embed=_embed_by(table))
     assert len(j.asked) == similar.MAX_JUDGE_PER_ARTICLE
+
+
+def test_판정은_추론_블록_밖의_답만_본다(monkeypatch):
+    """추론이 토큰 상한에 걸려 닫히지 않으면 그 안에 인용된 '같음' 에 속는다."""
+    from news import summarizer
+    monkeypatch.setenv("GROQ_API_KEY", "x")
+    a, b = _art("a", "A"), _art("b", "B")
+    for reply, want in [("<think>기준에 따르면 같음 인지 보자", False),
+                        ("<think>같음? 아니다</think>다름", False),
+                        ("<think>…</think>같음", True), ("같음", True)]:
+        monkeypatch.setattr(summarizer, "_call_openai_compatible", lambda *a, r=reply: r)
+        assert similar._Judge().same(a, b) is want, reply

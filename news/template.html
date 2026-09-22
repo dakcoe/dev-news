@@ -1411,6 +1411,7 @@ function tokHit(alts, text){
 /* fields = [[글, 가중치], …]. 제목에 걸리면 요약에만 걸린 것보다 위로 간다.
    낱말 하나라도 어디에도 없으면 0. */
 function searchScore(toks, fields){
+  if(!toks.length) return 1;     // 공백뿐인 검색어는 거르지 않는다
   let total=0;
   for(const alts of toks){
     let best=0;
