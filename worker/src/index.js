@@ -17,6 +17,8 @@ const MAX_OPS = 500;            // 한 번에 받는 변경분 개수 상한
 const MAX_URL = 512;
 const MAX_TEXT = 300;
 const READ_KEEP = 1000;         // 프론트의 persistRead 와 같은 상한
+const BOOKMARK_MAX = 2000;      // 사용자당 북마크 상한. MAX_OPS 는 요청 한 번만 막아서, 요청을
+                                // 되풀이하면 D1 저장 한도를 혼자 다 채울 수 있었다
 
 /* 모든 응답에 no-store 를 붙인다. 여기 오가는 것은 전부 특정 사용자의 것이라
    어디에도 보관되면 안 된다 — 지금 Cloudflare 가 캐시하고 있지는 않지만, 중간
@@ -306,10 +308,13 @@ async function push(req, env) {
       return env.DB.prepare(
         `INSERT INTO bookmark (user_id, url, title, month, kind, sub, descr, created_at)
          SELECT ?, ?, ?, ?, ?, ?, ?, ? WHERE ${active}
+           AND ((SELECT COUNT(*) FROM bookmark WHERE user_id = ?) < ?
+                OR EXISTS (SELECT 1 FROM bookmark WHERE user_id = ? AND url = ?))
          ON CONFLICT(user_id, url) DO UPDATE SET
            title = excluded.title, month = excluded.month, kind = excluded.kind,
            sub = excluded.sub, descr = excluded.descr`
-      ).bind(uid, op.url, op.title, op.month, op.kind, op.sub, op.descr, t, sid, uid, t);
+      ).bind(uid, op.url, op.title, op.month, op.kind, op.sub, op.descr, t, sid, uid, t,
+              uid, BOOKMARK_MAX, uid, op.url);
     }
     if (op.t === 'bm-') {
       return env.DB.prepare(`DELETE FROM bookmark WHERE user_id = ? AND url = ? AND ${active}`)
