@@ -21,6 +21,7 @@ from __future__ import annotations
 import concurrent.futures as cf
 import json
 import os
+import socket
 from datetime import datetime
 
 import requests
@@ -73,7 +74,9 @@ def _error_kind(exc: Exception) -> str:
         return "badurl"
     if name in ("ConnectTimeout", "ReadTimeout", "Timeout"):
         return "timeout"
-    if "NameResolutionError" in msg or "getaddrinfo" in msg or "Name or service not known" in msg:
+    # http.check_public 은 이름 풀기 실패를 자체 메시지로 감싸 던진다 — 원인으로 가린다
+    if (isinstance(exc.__cause__, socket.gaierror) or "NameResolutionError" in msg
+            or "getaddrinfo" in msg or "Name or service not known" in msg):
         return "dns"
     if "refused" in msg.lower() or "No route to host" in msg:
         return "refused"
