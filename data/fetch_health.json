@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-13T02:41:11+09:00",
-   "total": 19,
-   "counts": {
-    "blocked": 1,
-    "ok": 13,
-    "short": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://hachyderm.io/@simontatham/117201594980991062",
-     "source": "lobsters",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-13T09:38:06+09:00",
    "total": 17,
    "counts": {
@@ -486,6 +464,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-09-22T16:00:31+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 15,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
