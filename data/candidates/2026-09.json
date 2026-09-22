@@ -100,7 +100,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -763,7 +763,7 @@
    "comments": 0,
    "feed": "The Decoder"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -789,7 +789,7 @@
    "comments": 0,
    "feed": "OpenAI"
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -814,6 +814,188 @@
    "upvotes": 0,
    "comments": 0,
    "feed": "Simon Willison"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://huggingface.co/blog/omlx",
+  "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+  "description": "",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "Hugging Face"
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22090",
+  "title": "Recognition, Simulation, and Refusal: A Contamination-Aware Study of Classic Psychological Effects in LLM Agents",
+  "description": "arXiv:2609.22090v1 Announce Type: new Abstract: An LLM producing the response pattern associated with a human psychological effect is not the same claim as the LLM possessing that bias. We present PsyAgentBench, a benchmark that re-runs classic psychology experiments on LLM agents under a factorial design built to separate these: each paradigm is run with the paradigm explicitly labeled in the pro",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22091",
+  "title": "Memory That Looks Forward: A Zero-Inference Prospective Term for Personal Memory Retrieval",
+  "description": "arXiv:2609.22091v1 Announce Type: new Abstract: Retrieval over a personal memory store is retrospective: it surfaces what resembles the query, and it is blind to what the user has committed to do. We describe a prospective term for memory retrieval that costs no inference at query time. Commitments are held in an explicit ledger as dated or trigger-conditioned entries; memory items linked to a fir",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22094",
+  "title": "Summarize, Judge, Refine: Decoupled Content Understanding and Policy Learning for Multimodal Content Moderation",
+  "description": "arXiv:2609.22094v1 Announce Type: new Abstract: Content moderation systems traditionally entangle multimodal understanding with policy-specific classification, requiring full pipeline retraining for every policy change and suffering from label scarcity since multimedia cannot be meaningfully augmented. We propose Summarize-Judge-Refine (SJR), a two-model architecture that decouples these concerns ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22096",
+  "title": "AI-inferred expressed well-being and collective-action discourse in climate-change campaigns on X",
+  "description": "arXiv:2609.22096v1 Announce Type: new Abstract: Climate campaigns are often evaluated through attention and mobilization, but less is known about the well-being language that accompanies them. Whether campaign periods alter positive affect and hope, and whether happiness aligns with action language, remains unresolved. We analysed 364,118 public Twitter/X posts from Earth Day, Earth Hour, Global C",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22097",
+  "title": "Token Signatures of Code: Comparing Coding Behaviors Across Large Language Models",
+  "description": "arXiv:2609.22097v1 Announce Type: new Abstract: The evaluation of large language models (LLMs) on coding tasks has primarily focused on performance metrics such as pass@k. As LLMs continue to advance, many models now meet baseline performance requirements, reducing the discriminative power of performance-based evaluation alone. Yet a key question remains largely unexplored: how do LLMs differ in t",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22098",
+  "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+  "description": "arXiv:2609.22098v1 Announce Type: new Abstract: Speculative decoding accelerates language-model inference by letting a cheap drafter propose tokens that the target model verifies in parallel. Recent block drafters make drafting nearly free: a single backbone pass emits an entire block of draft tokens. Draft trees promise a further gain -- several alternative continuations verified in one target fo",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22099",
+  "title": "A framework for recipe data structure with applications for culinary and nutritional insights",
+  "description": "arXiv:2609.22099v1 Announce Type: new Abstract: Cooking is a complex process that transforms raw ingredients into delicious and nutritious dishes, yet the recipes that encode this process remain largely free text; readable by people but not directly computable. Existing recipe collections capture fragments of this information, but no shared representation links a recipe's structured ingredient com",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.22100",
+  "title": "AdaMem: Adaptive Memory Token Allocation for Soft Compression in Retrieval-Augmented Generation",
+  "description": "arXiv:2609.22100v1 Announce Type: new Abstract: Retrieval-augmented generation (RAG) improves language models with retrieved evidence, but processing many long passages is costly and can introduce distracting information. Soft compression addresses this challenge by encoding passages as compact sequences of continuous memory embeddings before generation. However, existing methods typically assign ",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "arXiv cs.CL"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://toss.tech/article/toss-doctor",
+  "title": "쉼 없이 도는 테스트, 사람이 어디까지 돌봐야 할까요? - 토스닥터(Toss Doctor)",
+  "description": "스스로 만들고 고치는 자동화, 토스닥터 V2를 다시 만든 이야기",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "토스 기술블로그"
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wmxfjs/qwen_4_announced_at_apsara_conference/",
+  "title": "Qwen 4 Announced at Apsara Conference",
+  "description": "https://preview.redd.it/bpbc9i6hizqh1.png?width=1270&format=png&auto=webp&s=e8aa8301895735a05c3c61a5e793018a23d1cac5 I wanted to share a quick update: Alibaba has officially announced Qwen 4 at the Apsara Conference, submitted by /u/Salah_H_Hasan [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wmyh9z/alibaba_plans_ai_model_with_5_trillion_to_10/",
+  "title": "Alibaba plans AI model with 5 trillion to 10 trillion parameters, unveils new chip",
+  "description": "submitted by /u/tengo_harambe [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wmtjqu/mimov26_distilled_themselves_into_qwen_9b/",
+  "title": "MiMo-V2.6 distilled themselves into Qwen 9B!",
+  "description": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B That's serious. submitted by /u/Beamsters [link] [댓글]",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wms904/uncensor_an_llm_without_touching_weights_inject_a/",
+  "title": "Uncensor an LLM without touching weights: inject a tiny trained KV-cache bank (~18MB) and unload it anytime",
+  "description": "I shipped something I've been building for the last few weeks : phantom-kv , a refusal-removal system for large language models that doesn't touch a single weight. Instead of editing the model, it loads a small, learned bank of key/value tensors into the model's KV cache as context. Attention reads it like conversation history that's already there. https://github.com/lordx64/phantom-kv/ https://re",
+  "source": "rss",
+  "native": {
+   "upvotes": 0,
+   "comments": 0,
+   "feed": "r/LocalLLaMA"
   },
   "selected": false,
   "date": "2026-09-22"
@@ -910,6 +1092,18 @@
   "native": {
    "upvotes": 27,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://botahamec.dev/named-optional-args",
+  "title": "Named and Optional Arguments are Awesome",
+  "description": "",
+  "source": "lobsters",
+  "native": {
+   "upvotes": 23,
+   "comments": 11
   },
   "selected": false,
   "date": "2026-09-22"
@@ -1643,7 +1837,7 @@
    "upvotes": 516,
    "comments": 152
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -1763,7 +1957,7 @@
    "upvotes": 36,
    "comments": 6
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -1954,6 +2148,210 @@
   "native": {
    "upvotes": 3,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://brand.io/article/spymarks/",
+  "title": "Spymarks, Not Watermarks",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 335,
+   "comments": 76
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://simonwillison.net/2026/Sep/21/jev/",
+  "title": "Jev introduces a new shape of LLM",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 13,
+   "comments": 1
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
+  "title": "Claude Status – Elevated errors for multiple models",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 93,
+   "comments": 70
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+  "title": "Looking forward to Git 2.56 – and 3.0",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 98,
+   "comments": 38
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.bbc.com/news/articles/c607l2j2rj8ro",
+  "title": "Apple Music to open concert venue in Battersea Power Station",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 40,
+   "comments": 25
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://wondermark.com/socrates-vs-writing/",
+  "title": "Socrates vs. the Written Word (2011)",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 36,
+   "comments": 10
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.aljazeera.com/economy/2026/9/21/us-threatens-to-ground-iranian-airlines-worldwide-from-wednesday",
+  "title": "US threatens to ground Iranian airlines worldwide from Wednesday",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 30,
+   "comments": 2
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.bloomberg.com/news/articles/2026-09-18/to-quit-vaping-some-are-starting-to-smoke",
+  "title": "People Hooked on Vapes Try a New Way to Quit: Cigarettes",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 22,
+   "comments": 6
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.bloomberg.com/news/articles/2026-09-21/smart-ring-maker-oura-backers-seek-2-2-billion-in-us-ipo",
+  "title": "Smart Ring Maker Oura, Backers Seek $2.2B in US IPO",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 19,
+   "comments": 5
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+  "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 14,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://playtaurus.com/blog/firmware-freedom",
+  "title": "Firmware Freedom",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 11,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.sky.com/story/nearly-half-of-young-people-trust-ai-over-a-human-for-fact-checking-report-says-13590558",
+  "title": "Nearly half of young people trust AI over a human for fact-checking, report says",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 6,
+   "comments": 3
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://theconversation.com/why-ai-resembles-a-charismatic-religious-leader-291831",
+  "title": "Why AI resembles a charismatic religious leader",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 7,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.theregister.com/systems/2026/09/21/perpetual-underdog-amd-nips-at-nvidias-heels-as-it-joins-the-1t-club/5297998",
+  "title": "AMD briefly joins the $1T club",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 3,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://www.gdquest.com/library/first_shader_godot4_portal/",
+  "title": "First Shader from Zero in Godot 4",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 67,
+   "comments": 6
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://htmx.org/essays/markdown-in-src/",
+  "title": "Markdown in /src",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 14,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://gwern.net/blog/2022/pdf-forgery",
+  "title": "PDF Forgeries Are Surprisingly Rare (2022)",
+  "description": "",
+  "source": "hackernews",
+  "native": {
+   "upvotes": 26,
+   "comments": 21
   },
   "selected": false,
   "date": "2026-09-22"
@@ -2571,7 +2969,7 @@
     "raiding"
    ]
   },
-  "selected": false,
+  "selected": true,
   "date": "2026-09-22"
  },
  {
@@ -2972,6 +3370,243 @@
   "date": "2026-09-22"
  },
  {
+  "url": "https://github.com/jev-chat/jev-chat-jarvis",
+  "title": "jev-chat / jev-chat-jarvis",
+  "description": "",
+  "source": "github",
+  "native": {
+   "upvotes": 901,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 901,
+   "stars": 1908,
+   "forks": 609,
+   "language": "Kotlin",
+   "license": "MIT",
+   "topics": [
+    "accessibility-service",
+    "android",
+    "chat-assistant",
+    "llm",
+    "qq",
+    "wechat"
+   ]
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/arcboxlabs/arcbox",
+  "title": "arcboxlabs / arcbox",
+  "description": "Run AI agents on real and isolated machines — own kernel, filesystem, and network — with <200ms boot. Local first, OCI compatible, pure Rust.",
+  "source": "github",
+  "native": {
+   "upvotes": 441,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 441,
+   "stars": 6497,
+   "forks": 224,
+   "language": "Rust",
+   "license": "Apache-2.0",
+   "topics": [
+    "ai-agents",
+    "computer-use",
+    "containers",
+    "docker",
+    "firecracker",
+    "microvm",
+    "rust",
+    "sandbox",
+    "virtual-machine",
+    "virtualization"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+  "title": "jbiaojerry / ebook-treasure-chest",
+  "description": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
+  "source": "github",
+  "native": {
+   "upvotes": 286,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 286,
+   "stars": 18943,
+   "forks": 2663,
+   "language": "Python",
+   "license": null,
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/whitecircle/halo",
+  "title": "whitecircle / halo",
+  "description": "Halo is an open-source framework built by White Circle for training large language and multimodal models",
+  "source": "github",
+  "native": {
+   "upvotes": 180,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 180,
+   "stars": 476,
+   "forks": 17,
+   "language": "Python",
+   "license": "NOASSERTION",
+   "topics": [
+    "agent",
+    "async-rl",
+    "distributed-training",
+    "fine-tuning",
+    "grpo",
+    "large-language-models",
+    "llm",
+    "lora",
+    "model-parallelism",
+    "moe",
+    "multimodal",
+    "peft",
+    "post-training",
+    "pytorch",
+    "qlora",
+    "quantization",
+    "reinforcement-learning",
+    "rlhf",
+    "transformers",
+    "vllm"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/wang2122/sprix-sage-router",
+  "title": "wang2122 / sprix-sage-router",
+  "description": "Sprix AI at 屿智同行 — state-aware SELF/COLLABORATE/HANDOFF routing for A2A agent networks.",
+  "source": "github",
+  "native": {
+   "upvotes": 162,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 162,
+   "stars": 4107,
+   "forks": 187,
+   "language": "Python",
+   "license": "MIT",
+   "topics": [
+    "a2a",
+    "agent-orchestration",
+    "agent-routing",
+    "ai-agents",
+    "multi-agent-systems",
+    "python",
+    "sprix-ai",
+    "task-scheduling"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/newliver666/apk-reverse",
+  "title": "newliver666 / apk-reverse",
+  "description": "Suitable for Android APK reverse engineering analysis",
+  "source": "github",
+  "native": {
+   "upvotes": 141,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 141,
+   "stars": 754,
+   "forks": 266,
+   "language": "Python",
+   "license": "MIT",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
+  "title": "brycewang-stanford / Auto-Empirical-Research-Skills",
+  "description": "🔬 A curated collection of 23,000+ agent skills for empirical research across 8 social science disciplines. | 精选 23,000+ AI Agent 技能库，覆盖8大社会科学学科的实证研究。CoPaper.AI 20分钟完成一篇可复现的规范实证论文，并支持用户上传 Skills。-- Maintained by CoPaper.AI from Stanford REAP.",
+  "source": "github",
+  "native": {
+   "upvotes": 134,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 134,
+   "stars": 4069,
+   "forks": 503,
+   "language": "Stata",
+   "license": "NOASSERTION",
+   "topics": [
+    "academic-research",
+    "agent-skills",
+    "ai-agent",
+    "awesome-list",
+    "communication",
+    "copaper",
+    "economics",
+    "education",
+    "empirical-research",
+    "international-relations",
+    "political-science",
+    "psychology",
+    "public-administration",
+    "reproducible-research",
+    "skills-library",
+    "social-science",
+    "sociology"
+   ]
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/evenfire-ai/evenfire",
+  "title": "evenfire-ai / evenfire",
+  "description": "Evenfire is an intelligence layer platform for running LLM agents that take real actions, on your infrastructure",
+  "source": "github",
+  "native": {
+   "upvotes": 129,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 129,
+   "stars": 244,
+   "forks": 2,
+   "language": "TypeScript",
+   "license": "MPL-2.0",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://github.com/heyjunpenn/awesome-jev",
+  "title": "heyjunpenn / awesome-jev",
+  "description": "A verified, community-maintained catalog of 433 open-source projects built with Jev.",
+  "source": "github",
+  "native": {
+   "upvotes": 123,
+   "comments": 0,
+   "feed": "Trendshift",
+   "stars_today": 123,
+   "stars": 234,
+   "forks": 15,
+   "language": "Astro",
+   "license": "MIT",
+   "topics": []
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
   "url": "https://news.hada.io/topic?id=34070",
   "title": "AI 챗봇, 금융 질문에 ‘대부분’ 잘못된 답변",
   "description": "ChatGPT, Claude, Grok, Gemini 등 18개 AI 모델 에 금융 관련 질문을 테스트한 결과, 평균 57% 에서 잘못된 답변을 내놓았으며 복잡한 질문에서는 오류율이 평균 88%까지 올라감 100개 이상의 금융 질문을 최대 5회씩 반복해 * 총 1만 건 이상 - 질의했으며...",
@@ -3083,6 +3718,66 @@
   "url": "https://news.hada.io/topic?id=34084",
   "title": "Mac에서 Apple Intelligence 기능 끄기 및 접근 제한하기",
   "description": "Mac의 시스템 설정과 개별 앱 설정 에서 Siri AI(베타), 요약, 개인화된 답장 등 Apple Intelligence 기능을 끌 수 있음 Siri AI 를 끈 뒤 Siri를 다시 켜면서 Siri Classic 을 선택하면 기존 Siri로 전환할 수 있음 메시지, 이메일, 알림의...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=34109",
+  "title": "Show GN: RouteMind – 인간의 개입은 RAG 성능을 얼마나 바꿀까?",
+  "description": "RouteMind라는 Agentic RAG 프로젝트를 만들고 있습니다. 일반적인 RAG가 문서를 chunking하고 embedding한 뒤 검색하는 방식이라면, RouteMind는 사람이 지식의 영역(Area)과 그 관계를 정의하고 Agent가 먼저 어디를 찾아야 하는지 routing한 뒤 해당 영역의 문서를 읽도록 합니다.",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=34106",
+  "title": "Show GN: ITLAND - 짧게 플레이하고 기록을 겨루는 웹 게임 플랫폼",
+  "description": "게임을 좋아하는 학생이나 직장인이 게임을 시작하기 전에 가볍게 손을 풀고, 친구나 동료와 기록으로 내기할 수 있는 웹 플랫폼을 만들었습니다. 처음에는 반응속도 게임 QUEUE ZERO로 시작했는데, 타자와 계산처럼 짧게 집중해서 즐길 수 있는 도구들을 하나씩 추가하면서 ITLAND라는 플랫폼으로 확장했습니",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=34105",
+  "title": "AI 코딩으로 병목이 된 CI, 개발 속도에 맞춰 재설계함",
+  "description": "Linear는 연초 이후 테스트 스위트가 거의 4배 로 늘어났는데도 PR의 CI 대기 시간을 6분 초과에서 5분 남짓으로 줄이고, 테스트당 러너 사용 시간을 약 절반으로 낮춤 더 빠른 외부 러너와 tsgo 로 전환하고 린트 규칙의 타입 정보 의존성을 제거해, ...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=34104",
+  "title": "워터마크가 아니라 스파이마크",
+  "description": "사용자의 인지나 동의 없이 콘텐츠를 추적할 수 있게 하는 숨은 신호는 스파이마크(spymark) 로 구분해 부르자는 제안임 Google SynthID 같은 기술은 이미지, 오디오, 텍스트, 영상에 사람이 감지하기 어려운 신호를 삽입하며, 그 안에 개인정보와 연결되는 데이터...",
+  "source": "geeknews",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": true,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://news.hada.io/topic?id=34101",
+  "title": "Show GN: ArtifactBench - AI 생성 음악 탐지기를 비교 평가하는 벤치마크 도구",
+  "description": "안녕하세요. ArtifactNet을 개발하는 Intrect의 오희원입니다. AI 음악 탐지기를 비교하면서, 종합 점수뿐 아니라 어떤 곡을 평가했는지, 데이터가 서로 겹치는지, 처리하지 못한 파일을 어떻게 계산하는지가 결과 해석에 중요하다는 문제를 다루게 됐습니다. 이를 점검하기 위한 평가 코드와 프로토콜",
   "source": "geeknews",
   "native": {
    "upvotes": 0,
@@ -4419,6 +5114,354 @@
   "native": {
    "upvotes": 0,
    "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/robertadam987_/how-to-keep-ai-generated-code-maintainable-after-6-months-3ha4",
+  "title": "How to Keep AI-Generated Code Maintainable After 6 Months",
+  "description": "AI can help you write code incredibly fast.  That part is no longer surprising.  The harder question...",
+  "source": "devto",
+  "native": {
+   "upvotes": 16,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/kironovlazizdel/why-monitoring-isnt-enough-for-ai-agents-and-how-i-made-delegation-cryptographically-verifiable-5bad",
+  "title": "Why 'monitoring' isn't enough for AI agents — and how I made delegation cryptographically verifiable",
+  "description": "The problem nobody talks about with AI agents   We're rushing to give AI agents autonomy. An...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 4
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/ivan_cryptovazimazima/how-to-configure-standalone-ton-connect-mode-in-the-omniston-widget-1kd7",
+  "title": "How to Configure Standalone TON Connect Mode in the Omniston Widget",
+  "description": "Use the STON.fi swap widget with wallet connectivity built in, without creating or managing a...",
+  "source": "devto",
+  "native": {
+   "upvotes": 6,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/tokenlat/your-agents-cost-problem-isnt-the-model-its-the-steps-you-never-measured-38ag",
+  "title": "Your agent's cost problem isn't the model. It's the steps you never measured.",
+  "description": "A few weeks back I watched an agentic pipeline burn a month of budget in three days. The instinct...",
+  "source": "devto",
+  "native": {
+   "upvotes": 5,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/earlgreyhot1701d/i-wrote-the-code-this-time-does-it-count-if-the-answer-was-wrong-1f2k",
+  "title": "I Wrote the Code This Time. Does It Count If the Answer Was Wrong?",
+  "description": "TL;DR: I've shipped 26+ projects by directing AI agents, and I still couldn't write a Python program...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/janarthanan_soundararajan/never-use-a-display-name-for-authorization-secure-anonymous-editing-1gn7",
+  "title": "Never Use a Display Name for Authorization: Secure Anonymous Editing",
+  "description": "Public polls, surveys, and collaborative boards often ask participants for a name. The name helps...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/sizzlebop/managing-the-hidden-overhead-of-ai-software-engineering-179a",
+  "title": "Managing the Hidden Overhead of AI Software Engineering",
+  "description": "There is a scene that is becoming more and more common in software development right now.  You have...",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/kooboo/how-one-2-vcpu-vps-hosts-5000-dynamic-sites-and-renders-a-10-blog-item-page-in-under-1-ms-pln",
+  "title": "How One 2-vCPU VPS Hosts 5,000 Dynamic Sites and Renders a 10-Blog-Item Page in Under 1 ms?",
+  "description": "For years, I saw companies maintain hundreds of servers to host WordPress websites for their clients....",
+  "source": "devto",
+  "native": {
+   "upvotes": 2,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/waqar112/i-built-a-4k-screen-recorder-that-runs-entirely-in-the-browser-heres-howwebdev-javascript-fd7",
+  "title": "I Built a 4K Screen Recorder That Runs Entirely in the Browser — Here's How#webdev #javascript #showdev #opensource",
+  "description": "A post by Waqar Ahmed",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 1
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/ake2l/archkeel-after-a-121-file-refactoring-experiment-5bb9",
+  "title": "ArchKeel After a 121-File Refactoring Experiment",
+  "description": "Before the first coding agent touched DATAMIMIC CE, I froze the target architecture.  The current...",
+  "source": "devto",
+  "native": {
+   "upvotes": 1,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/ink_gu/text-is-the-wrong-way-to-check-whether-unicode-normalization-ate-your-data-b5h",
+  "title": "text === '' is the wrong way to check whether Unicode normalization ate your data",
+  "description": "qbofile converts bank files between the formats accounting software uses. One of its output formats,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/augurone/lets-define-undefined-3ej",
+  "title": "Let's Define Undefined",
+  "description": "Falsifiable Defaults and the Semantics of Undefined      Artikulates Resilient GitHub...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/anirban00537/i-built-buttershare-free-p2p-file-transfer-without-cloud-storage-26bo",
+  "title": "I Built ButterShare: Free P2P File Transfer Without Cloud Storage",
+  "description": "You have a large video on your phone. You need it on your laptop.  You don’t need a shared drive,...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/er-raj-aryan/how-office-politics-can-destroy-your-career-345j",
+  "title": "How Office Politics Can Destroy Your Career",
+  "description": "You joined the company to write code, design products, solve problems, close tickets, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/mognotaapp/i-built-a-real-time-multiplayer-brain-games-platform-on-nothing-but-firebase-and-vanilla-js-4k9a",
+  "title": "I built a real-time multiplayer brain-games platform on nothing but Firebase and vanilla JS",
+  "description": "I've been building Mognota — a free, real-time multiplayer hub of head-to-head brain games (chess...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/eva_clari_289d85ecc68da48/platform-engineering-in-2026-building-the-internal-developer-platform-your-ai-agents-actually-need-57cm",
+  "title": "Platform Engineering in 2026: Building the Internal Developer Platform Your AI Agents Actually Need",
+  "description": "An in-depth DEV.to article about platform engineering, AI-powered development, and designing internal...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/shaarkymoo/designing-an-eval-harness-for-prompt-injection-detection-what-measuring-my-defenses-actually-ed6",
+  "title": "Designing an eval harness for prompt-injection detection: what measuring my defenses actually taught me",
+  "description": "Designing an eval harness for prompt-injection detection: what measuring my defenses...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/ilan_kim/blender-5x-and-the-vrm-add-on-52-lts-needs-440-53-alpha-blocks-even-471-4l74",
+  "title": "Blender 5.x and the VRM add-on: 5.2 LTS needs 4.4.0+, 5.3 alpha blocks even 4.7.1 (blender_version_max is exclusive)",
+  "description": "On Blender 5.2 LTS, VRM Addon for Blender only enables from 4.4.0 up, and on 5.3 alpha even the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/megapixel99/proving-the-tree-came-back-after-breaking-it-on-purpose-46cc",
+  "title": "Proving the Tree Came Back After Breaking It on Purpose",
+  "description": "finally does not run on SIGTERM, and a restore that ran is not a restore that worked. The suite kills real children: a try/finally harness leaves the mutated file on disk, the guarded one comes back byte for byte, and SIGKILL defeats both, so the last check lives one process out.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/luoms/stop-making-ai-agents-grind-through-huge-codebases-i-built-a-deterministic-wiki-build-system-for-394h",
+  "title": "Stop Making AI Agents Grind Through Huge Codebases — I Built a Deterministic Wiki Build System for Them",
+  "description": "Joining an unfamiliar codebase, what you want isn't more code — it's a wiki that explains how the...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/euloge/everycli-a-natural-language-command-line-assistant-1ki9",
+  "title": "EveryCli : a natural-language command-line assistant",
+  "description": "Demo video  The concept is simple: you describe what you want to do (English or French), and the tool...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/hirofumi_tsuda/zero-code-opentelemetry-tracing-for-dagster-3h6i",
+  "title": "Zero-Code OpenTelemetry Tracing for Dagster",
+  "description": "If you run Dagster pipelines in production, you've probably wanted distributed tracing at some point...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/_8729c5bde46be2/transparent-pngs-the-3-background-removal-algorithms-why-jpg-cant-do-it-and-the-color-key-gotcha-3gl6",
+  "title": "Transparent PNGs: the 3 background-removal algorithms, why JPG can't do it, and the color-key gotcha",
+  "description": "Every \"make this background transparent\" tool is doing one of three things under the hood, and...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/gara501/apex-bestiary-a-living-cryptid-archive-powered-by-sanity-5aae",
+  "title": "Apex Bestiary: a living cryptid archive powered by Sanity",
+  "description": "This is a submission for the Sanity Challenge, Path Two: Vibe-Code Something Strange.           What...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/guobug/resisting-mode-gravity-why-bigger-llms-produce-mediocre-output-4if2",
+  "title": "Resisting Mode Gravity: Why Bigger LLMs Produce Mediocre Output",
+  "description": "Why swapping in a frontier LLM still yields polite boilerplate. Deconstructing Mode Gravity, the triple lock-in flywheel, Differential Diffing, and Model vs. Harness decoupling.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/shaban_umar_eb956a5f684ce/why-your-playwright-suite-gets-flaky-after-50-tests-and-how-to-fix-it-1b44",
+  "title": "Why Your Playwright Suite Gets Flaky After 50 Tests (And How to Fix It)",
+  "description": "Every Playwright suite starts clean. Twenty tests, all green, runs in ninety seconds. Then it...",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/david_lee_bf42eec7236085d/two-of-our-products-cost-the-same-and-pointed-at-each-others-checkout-4m2",
+  "title": "Two of our products cost the same, and pointed at each other's checkout",
+  "description": "Both packs were $149, so the swapped checkout URL in our structured data was invisible. A three-line assertion found it, not a test and not a customer.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/david_lee_bf42eec7236085d/your-cloudflare-pages-secret-is-set-production-cannot-see-it-4gf4",
+  "title": "Your Cloudflare Pages secret is set. Production cannot see it.",
+  "description": "Pages binds secrets at deploy time, so wrangler pages secret put does nothing until something deploys. The mechanism, and an exact check that needs no timestamp.",
+  "source": "devto",
+  "native": {
+   "upvotes": 0,
+   "comments": 0
+  },
+  "selected": false,
+  "date": "2026-09-22"
+ },
+ {
+  "url": "https://dev.to/georgekobaidze/real-talk-you-dont-miss-engineering-you-miss-typing-1bc3",
+  "title": "Real Talk: You Don't Miss Engineering. You Miss Typing",
+  "description": "A Sci-Fi Scenario Come True   As a kid, when I watched sci-fi movies about computers with...",
+  "source": "devto",
+  "native": {
+   "upvotes": 7,
+   "comments": 2
   },
   "selected": false,
   "date": "2026-09-22"
