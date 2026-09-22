@@ -13,6 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from news.core import seen as S  # noqa: E402
+from news.core.common import KST  # noqa: E402
 
 RULE = {"github": 90}
 
@@ -31,7 +32,7 @@ HN = {"title": "x", "url": "https://news.example/x", "source": "hackernews"}
 def test_기간이_지난_깃허브_저장소는_다시_후보가_된다(tmp_path):
     out = S.filter_unseen([GH, HN], _seen_file(tmp_path, 100), resurface_days=RULE)
     assert [a["url"] for a in out] == [GH["url"]]
-    assert out[0]["resurfaced"] == (datetime.now(timezone.utc) - timedelta(days=100)).date().isoformat()
+    assert out[0]["resurfaced"] == (datetime.now(KST) - timedelta(days=100)).date().isoformat()
 
 
 def test_기간이_안_지났으면_여전히_막힌다(tmp_path):
@@ -121,3 +122,23 @@ def test_재등장_기사가_회차마다_쌓이지_않는다(tmp_path):
     later = {"url": url, "title": "t", "resurfaced": "2026-09-01"}
     archive.append([later], datetime(2026, 12, 1, tzinfo=timezone.utc), str(tmp_path))
     assert len(archive.load_all(str(tmp_path))) == 3
+
+
+def test_자정_회차에_실린_저장소도_재등장하면_아카이브에_쌓인다(tmp_path):
+    """KST 00시 회차는 seen 에 UTC 로 전날 날짜로 적힌다. 재등장 날짜를 UTC 로
+    뽑으면 아카이브의 KST 회차 날짜보다 하루 앞서, 요약을 받고도 저장되지 않았다."""
+    from news.core import archive
+    from news.core.common import KST
+
+    url = "https://github.com/a/b"
+    shards = str(tmp_path / "articles")
+    first = datetime.now(KST).replace(hour=0, minute=5) - timedelta(days=40)
+    archive.append([{"url": url, "title": "t"}], first, shards)
+    seen_at = (first + timedelta(minutes=1)).astimezone(timezone.utc).isoformat()
+    p = tmp_path / "seen.json"
+    p.write_text(json.dumps({url: seen_at}), encoding="utf-8")
+
+    back = S.filter_unseen([GH], str(p), resurface_days={"github": 30})
+    assert back and back[0]["resurfaced"] == first.date().isoformat()
+    archive.append(back, datetime.now(KST), shards)
+    assert len(archive.load_all(shards)) == 2

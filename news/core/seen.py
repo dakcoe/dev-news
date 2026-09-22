@@ -9,7 +9,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-from news.core.common import ROOT, load_json
+from news.core.common import KST, ROOT, load_json
 from news.core.dedup import normalize_url
 
 DEFAULT_PATH = os.path.join(ROOT, "data", "seen.json")
@@ -63,7 +63,10 @@ def filter_unseen(articles: list[dict], path: str = DEFAULT_PATH,
         days = rule.get(a.get("source") or "")
         at = _seen_at(seen[key]) if days else None
         if at is not None and (now - at).days >= days:
-            fresh.append({**a, "resurfaced": at.date().isoformat()})
+            # 게시일은 KST 로 적는다. 아카이브의 batch 가 KST 라 archive.append 가
+            # 둘을 날짜 문자열로 비교한다 — UTC 로 적으면 00·08시 회차 기사는
+            # 하루 앞선 날짜가 돼 요약까지 받고도 저장되지 않는다.
+            fresh.append({**a, "resurfaced": at.astimezone(KST).date().isoformat()})
             again += 1
     if len(fresh) != len(articles):
         print(f"[seen] 이미 소개한 {len(articles) - len(fresh)}건 제외")
