@@ -368,6 +368,11 @@ def main() -> int:
         return 0
 
     published, irrelevant, dead_links = prepare_published(picked, cfg, args.no_ai)
+    # 주소·제목으로 못 잡은 같은 사건을 요약까지 본 뒤 거른다. 여기서 빠진 것은
+    # seen 에 넣지 않는다 — 판정이 틀려도 다음 회차에 다시 후보가 된다.
+    if (cfg.get("same_story") or {}).get("enabled", True):
+        from news.core.similar import drop_same_story, recent_published
+        published, _ = drop_same_story(published, recent_published(archive.load_all(), now))
     write_outputs(published, cfg, now, args.out)
 
     # 무관·죽은 링크 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로
