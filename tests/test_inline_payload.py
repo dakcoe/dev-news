@@ -72,8 +72,8 @@ def test_client_falls_back_to_shard():
 def test_search_does_not_depend_on_body():
     """visible()의 검색 대상에 body가 들어가면 지연 로딩분이 검색에서 누락된다."""
     html = open(TEMPLATE, encoding="utf-8").read()
-    search = re.search(r"a=a\.filter\(d=>\(d\.title.*?\)\.toLowerCase\(\)\.includes\(s\)\)", html)
-    assert search and "d.body" not in search.group(0)
+    search = re.search(r"function docFields\(d\)\{.*?\n\}", html, re.S)
+    assert search and "d.body" not in search.group(0) and "d.paras" not in search.group(0)
 
 
 def test_default_window_is_small():
