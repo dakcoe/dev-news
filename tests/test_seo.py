@@ -165,7 +165,7 @@ def test_사이트맵이_유효한_XML이고_주소가_맞다(seo_dir):
     ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
     locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
     # 소개·개인정보 처리 페이지가 정적으로 있어야 크롤러와 광고 심사 봇이 찾는다
-    assert locs == [site_url() + "/", site_url() + "/about/", site_url() + "/privacy/"]
+    assert locs == [site_url() + "/", site_url() + "/about/", site_url() + "/tour/", site_url() + "/privacy/"]
 
 
 # ---------------- llms.txt ----------------
