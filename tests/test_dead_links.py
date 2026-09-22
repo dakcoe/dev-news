@@ -79,3 +79,16 @@ def test_이름이_안_풀리는_주소는_죽은_링크다(monkeypatch):
         assert _error_kind(e) == "dns"
     else:
         raise AssertionError("check_public 이 예외를 던지지 않았다")
+
+
+def test_회차의_절반이_죽었으면_네트워크_장애로_보고_빼지_않는다():
+    """DNS 가 잠깐 끊기면 모든 링크가 dead 로 나온다. 빼면 seen 에 영구히 묻힌다."""
+    arts = [_art("dead", f"https://e.com/{i}") for i in range(6)] + [_art("ok", "https://e.com/ok")]
+    kept, dropped = drop_dead_links(arts)
+    assert dropped == [] and len(kept) == 7
+
+
+def test_몇_건만_죽었으면_그것만_뺀다():
+    arts = [_art("ok", f"https://e.com/{i}") for i in range(9)] + [_art("dead", "https://e.com/x")]
+    kept, dropped = drop_dead_links(arts)
+    assert len(dropped) == 1 and len(kept) == 9

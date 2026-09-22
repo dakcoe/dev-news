@@ -169,6 +169,10 @@ def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] |
     return kept
 
 
+DEAD_GUARD_MIN = 5
+DEAD_GUARD_RATIO = 0.3
+
+
 def drop_dead_links(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     """이미 사라진 링크를 게재에서 뺀다.
 
@@ -180,6 +184,12 @@ def drop_dead_links(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     kept, dropped = [], []
     for a in articles:
         (dropped if a.get("link_status") == "dead" else kept).append(a)
+    # 한 회차에 이만큼 죽었다면 링크가 아니라 수집 기계의 네트워크(DNS)가 끊긴
+    # 것이다. 여기서 빠진 기사는 seen 에 영구히 남으므로 이때는 하나도 빼지 않는다.
+    # api_health.apply 의 max_drop_ratio 와 같은 발상이다.
+    if len(articles) >= DEAD_GUARD_MIN and len(dropped) / len(articles) > DEAD_GUARD_RATIO:
+        print(f"[링크] 죽은 링크 {len(dropped)}/{len(articles)}건 — 네트워크 장애로 보고 빼지 않는다")
+        return articles, []
     if dropped:
         print(f"[링크] 죽은 링크 {len(dropped)}건 게재 제외")
         for a in dropped:
