@@ -60,3 +60,22 @@ def test_classify_table_matches_requirements():
     assert classify(503, None) == "unknown"
     assert classify(500, None) == "unknown"
     assert classify(None, "timeout") == "unknown"
+
+
+def test_이름이_안_풀리는_주소는_죽은_링크다(monkeypatch):
+    """check_public 이 gaierror 를 자체 메시지로 감싸도 dns 로 판정돼야 한다.
+    예전에는 unknown 으로 떨어져 도메인이 사라진 기사가 계속 게시됐다."""
+    import socket
+
+    from news.api_health import _error_kind
+    from news.core import http
+
+    def boom(*a, **k):
+        raise socket.gaierror(8, "nodename nor servname provided")
+    monkeypatch.setattr(http.socket, "getaddrinfo", boom)
+    try:
+        http.check_public("https://gone.example/x")
+    except Exception as e:
+        assert _error_kind(e) == "dns"
+    else:
+        raise AssertionError("check_public 이 예외를 던지지 않았다")
