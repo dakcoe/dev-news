@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-13T09:38:06+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
-     "source": "rss",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-13T21:33:13+09:00",
    "total": 20,
    "counts": {
@@ -471,6 +455,15 @@
    "counts": {
     "ok": 15,
     "github": 2
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-23T00:00:34+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
    },
    "failures": []
   }
