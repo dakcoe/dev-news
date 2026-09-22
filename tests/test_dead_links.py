@@ -71,7 +71,7 @@ def test_이름이_안_풀리는_주소는_죽은_링크다(monkeypatch):
     from news.core import http
 
     def boom(*a, **k):
-        raise socket.gaierror(8, "nodename nor servname provided")
+        raise socket.gaierror(socket.EAI_NONAME, "nodename nor servname provided")
     monkeypatch.setattr(http.socket, "getaddrinfo", boom)
     try:
         http.check_public("https://gone.example/x")
@@ -92,3 +92,18 @@ def test_몇_건만_죽었으면_그것만_뺀다():
     arts = [_art("ok", f"https://e.com/{i}") for i in range(9)] + [_art("dead", "https://e.com/x")]
     kept, dropped = drop_dead_links(arts)
     assert len(dropped) == 1 and len(kept) == 9
+
+
+def test_일시적인_DNS_실패는_죽은_링크가_아니다(monkeypatch):
+    import socket
+
+    from news.api_health import _error_kind
+    from news.core import http
+
+    def again(*a, **k):
+        raise socket.gaierror(socket.EAI_AGAIN, "temporary failure")
+    monkeypatch.setattr(http.socket, "getaddrinfo", again)
+    try:
+        http.check_public("https://flaky.example/x")
+    except Exception as e:
+        assert _error_kind(e) != "dns"

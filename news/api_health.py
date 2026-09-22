@@ -62,6 +62,9 @@ def classify(code: int | None, err: str | None) -> str:
     return "ok"                 # 2xx·3xx는 물론 401·403·429도 "응답은 한다"
 
 
+_NO_SUCH_NAME = {socket.EAI_NONAME, getattr(socket, "EAI_NODATA", socket.EAI_NONAME)}
+
+
 def _error_kind(exc: Exception) -> str:
     """requests 예외를 판정에 쓸 몇 갈래로 줄인다.
 
@@ -75,7 +78,10 @@ def _error_kind(exc: Exception) -> str:
     if name in ("ConnectTimeout", "ReadTimeout", "Timeout"):
         return "timeout"
     # http.check_public 은 이름 풀기 실패를 자체 메시지로 감싸 던진다 — 원인으로 가린다
-    if (isinstance(exc.__cause__, socket.gaierror) or "NameResolutionError" in msg
+    # EAI_AGAIN 같은 일시적 실패는 dns 로 치지 않는다 — dead 는 seen 에 영구히 남는다.
+    cause = exc.__cause__
+    if ((isinstance(cause, socket.gaierror) and cause.errno in _NO_SUCH_NAME)
+            or "NameResolutionError" in msg
             or "getaddrinfo" in msg or "Name or service not known" in msg):
         return "dns"
     if "refused" in msg.lower() or "No route to host" in msg:

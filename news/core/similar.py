@@ -16,8 +16,7 @@
 (gpt-oss-120b 는 이런 쌍을 묶어서 정밀도 0.63 이었다).
 
 임베딩 모델은 이 단계에서만 올리고 끝나면 내린다 (약 2GB).
-실패하면 아무것도 빼지 않는다. 여기서 빠진 기사는 seen 에 넣지 않으므로
-판정이 틀려도 다음 회차에 다시 후보가 된다.
+실패하면 아무것도 빼지 않는다. 여기서 빠진 기사는 seen 에 넣는다 (build.py).
 """
 from __future__ import annotations
 
@@ -105,7 +104,10 @@ class _Judge:
             try:
                 out = _call_openai_compatible(msg, JUDGE_MODEL, os.environ["GROQ_API_KEY"],
                                               ENDPOINTS["groq"])
-                return "같음" in re.sub(r"<think>.*?</think>", "", out, flags=re.S)
+                # 추론이 토큰 상한에 걸려 닫히지 않은 <think> 는 끝까지 지운다. 추론
+                # 안에서 프롬프트의 "같음" 을 인용하므로 그대로 두면 오탐이 난다.
+                ans = re.sub(r"<think>.*?(</think>|$)", "", out, flags=re.S).strip()
+                return ans.startswith("같음")
             except RateLimited as e:
                 # 분당 토큰 한도를 '왜 중요한가'와 나눠 쓴다. 한 번만 기다린다.
                 if attempt or e.wait > 60:
