@@ -334,7 +334,7 @@ HMARK_SVG = ('<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
 def footer_html() -> str:
     """목록 아래와 정적 페이지 아래에 같은 링크 묶음. 크롤러가 소개·개인정보 페이지를
     찾는 길이다 — 레일 아이콘은 스크립트가 있어야 눌린다."""
-    return ('<footer class="foot"><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a>'
+    return ('<footer class="foot"><a href="/about/">소개</a><a href="/tour/">둘러보기</a><a href="/privacy/">개인정보 처리</a>'
             '<a href="https://github.com/dakcoe/dev-news" rel="noopener">GitHub 저장소</a>'
             '<span>© dev-news · 기사의 저작권은 각 원문 출처에 있습니다</span></footer>')
 
@@ -560,6 +560,7 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
                 f'<lastmod>{collected.date().isoformat()}</lastmod>'
                 '<changefreq>daily</changefreq></url>\n'
                 f'  <url><loc>{base}/about/</loc><changefreq>monthly</changefreq></url>\n'
+                f'  <url><loc>{base}/tour/</loc><changefreq>monthly</changefreq></url>\n'
                 f'  <url><loc>{base}/privacy/</loc><changefreq>monthly</changefreq></url>\n'
                 '</urlset>\n')
 
