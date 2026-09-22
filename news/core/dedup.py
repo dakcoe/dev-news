@@ -81,6 +81,11 @@ def normalize_url(url) -> str:
     ))
 
     path = (parts.path or "").rstrip("/")
+    # 저장소 첫 화면을 브랜치까지 붙여 링크하는 경우가 있다 (…/kev/tree/main).
+    # 브랜치 뒤에 하위 경로가 있으면 다른 내용이라 그대로 둔다.
+    segs = path.strip("/").split("/")
+    if host == "github.com" and len(segs) == 4 and segs[2] == "tree":
+        path = "/" + "/".join(segs[:2])
     if not host and not path:
         return url.strip().lower()
     return urlunsplit(("", host, path, query, "")).lstrip("/").lower() or url.strip().lower()
@@ -134,6 +139,20 @@ def title_similarity(a: str, b: str) -> float:
     return len(ta & tb) / len(union)
 
 
+def url_keys(a: dict) -> list[str]:
+    """이 기사를 가리키는 주소 키들. 기사 주소와, 있으면 원문 주소(origin_url).
+
+    긱뉴스 글은 기사 주소가 긱뉴스 글이고 원문은 따로 들고 온다
+    (scrapers/geeknews.py). 둘 다 봐야 해커뉴스가 물어온 같은 원문과 만난다.
+    """
+    keys = []
+    for u in (a.get("url"), a.get("origin_url")):
+        k = normalize_url(u)
+        if k and k not in keys:
+            keys.append(k)
+    return keys
+
+
 def _score(a: dict) -> float:
     try:
         return float(a.get("score") or 0)
@@ -154,8 +173,8 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
     by_url: dict[str, int] = {}
 
     for a in articles:
-        key = normalize_url(a.get("url"))
-        idx = by_url.get(key) if key else None
+        keys = url_keys(a)
+        idx = next((by_url[k] for k in keys if k in by_url), None)
 
         if idx is None:
             for i, g in enumerate(groups):
@@ -171,8 +190,8 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
             groups[idx]["titles"].append(a.get("title", ""))
             groups[idx]["items"].append(a)
 
-        if key:
-            by_url.setdefault(key, idx)
+        for k in keys:
+            by_url.setdefault(k, idx)
 
     out = []
     for g in groups:
@@ -191,9 +210,11 @@ def merge_duplicates(articles: list[dict]) -> list[dict]:
         # seen에 박혀 진짜 다른 기사가 영영 안 실린다(seen에는 만료가 없다).
         # 2026-09 후보 4,851건에서 이런 쌍은 8건이었고 전부 실제로 같은 기사였다.
         # 그래서 기억은 하되, 잘못 묶였을 때 로그에서 찾을 수 있게 남긴다.
-        merged_urls = sorted({i.get("url") for i in items if i.get("url")})
-        rep_key = normalize_url(best.get("url"))
-        by_title = [u for u in merged_urls if normalize_url(u) != rep_key]
+        # 원문 주소도 넣는다. 긱뉴스 글만 실린 회차 뒤에 해커뉴스가 같은 원문을
+        # 물어오면 seen 이 알아봐야 한다.
+        merged_urls = sorted({u for i in items for u in (i.get("url"), i.get("origin_url")) if u})
+        rep_keys = set(url_keys(best))
+        by_title = [u for u in merged_urls if normalize_url(u) not in rep_keys]
         if by_title:
             print(f"[중복] 제목으로 묶음: {best.get('title','')[:40]} "
                   f"← {len(by_title)}건 {by_title}")

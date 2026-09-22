@@ -10,7 +10,7 @@ import os
 from datetime import datetime, timezone
 
 from news.core.common import KST, ROOT, load_json
-from news.core.dedup import normalize_url
+from news.core.dedup import normalize_url, url_keys
 
 DEFAULT_PATH = os.path.join(ROOT, "data", "seen.json")
 
@@ -56,8 +56,10 @@ def filter_unseen(articles: list[dict], path: str = DEFAULT_PATH,
     now = datetime.now(timezone.utc)
     fresh, again = [], 0
     for a in articles:
-        key = normalize_url(a["url"]) or a["url"]
-        if key not in seen:
+        # 원문 주소로 이미 실렸어도 본 것이다 — 해커뉴스로 실린 글을 긱뉴스가
+        # 하루 늦게 소개하는 일이 흔하다.
+        key = next((k for k in url_keys(a) if k in seen), None)
+        if key is None:
             fresh.append(a)
             continue
         days = rule.get(a.get("source") or "")
