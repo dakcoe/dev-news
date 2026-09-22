@@ -23,7 +23,7 @@ function extract(name) {
 // 검색을 쓰는 함수는 검색 도우미와 별칭 표가 같이 있어야 돈다.
 const alias = html.match(/const ALIAS=[\s\S]*?\]\];/)[0];
 const helpers = ['qTokens', 'grams', 'tokHit', 'searchScore'].map(extract).join('\n');
-const src = `${alias}\n${helpers}\n${extract(fnName)}`;
+const src = `${alias}\nconst GRAMS = new Map();\n${helpers}\n${extract(fnName)}`;
 
 const ctx = { ...JSON.parse(globalsJson), console };
 // Set 으로 받아야 하는 전역은 배열로 넘어온다.

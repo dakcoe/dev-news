@@ -15,7 +15,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(dataDir, 'search-index.jso
 const INDEX = manifest.months.flatMap(m => JSON.parse(fs.readFileSync(path.join(dataDir, `search-index-${m}.json`))));
 const ctx = {
   DATA, INDEX, TAGS, view: 'news', sort: 'batch', days: 0, q: '', filter: 'all',
-  tagSel: new Set(), read: new Set(), unreadOnly: false,
+  tagSel: new Set(), read: new Set(), unreadOnly: false, GRAMS: new Map(),
   Date: class extends Date { static now() { return now; } },
 };
 vm.createContext(ctx);
