@@ -23,6 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 기본값(1)이면 HEAD 커밋 하나만 받는다. HEAD 가 chore·Merge 커밋이면
+          # --grep 이 빈 값을 돌려 나이가 수십만 시간으로 계산돼 오탐이 난다.
+          fetch-depth: 50
       - name: 마지막 갱신 커밋 나이
         env:
           GH_TOKEN: ${{ github.token }}
