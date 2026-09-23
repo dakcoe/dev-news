@@ -109,6 +109,9 @@ html.motion .plain{display:none}
 .obj{position:absolute;left:var(--cx);top:var(--cy);will-change:transform,opacity}
 .mid{position:absolute;left:50%;top:50%;will-change:transform,opacity}
 
+/* 그림 층: 넓은 화면은 그대로(배율 1). 좁은 화면은 스크립트가 --cy 와 장면별 배율을 정한다 */
+.art{position:absolute;inset:0;pointer-events:none;transform-origin:var(--cx) var(--cy)}
+
 /* 글 층 */
 .txt{position:absolute;left:6vw;top:50%;width:min(420px,32vw);opacity:0;will-change:transform,opacity}
 .txt.light{color:#f4f4f6}
@@ -204,10 +207,10 @@ html.motion .chip.on{visibility:visible}
 .srch .caret{width:1.5px;height:18px;background:var(--pri);margin-left:-8px}
 /* 보관함: 노트북과 휴대폰 */
 .devices{width:var(--card-w);display:flex;align-items:flex-end;justify-content:center;gap:clamp(18px,3vw,34px)}
-.lap{flex:0 0 68%;display:flex;flex-direction:column;align-items:center}
+.lap{flex:0 0 68%;min-width:0;display:flex;flex-direction:column;align-items:center}
 .lap-scr{width:100%;aspect-ratio:16/10;background:#1c1c22;border-radius:14px 14px 4px 4px;padding:9px}
 .lap-base{width:118%;height:12px;background:linear-gradient(#d9d9e1,#c4c4ce);border-radius:0 0 12px 12px}
-.ph{flex:0 0 22%;aspect-ratio:9/18.5;background:#1c1c22;border-radius:22px;padding:6px}
+.ph{flex:0 0 22%;min-width:0;aspect-ratio:9/18.5;background:#1c1c22;border-radius:22px;padding:6px}
 .scr{width:100%;height:100%;background:var(--bg);border-radius:8px;padding:10px 10px 0;overflow:hidden;display:flex;flex-direction:column;gap:6px}
 .ph .scr{border-radius:17px;padding:14px 7px 0}
 .scr-h{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:var(--tx);margin-bottom:2px}
@@ -341,10 +344,11 @@ html.motion .prog{display:flex}
   .clock{margin-top:10px}
   .clock .t{font-size:52px}
   .lap-base{width:104%}
-  .sync{left:50%;bottom:auto;top:-40px}
+  .sync{left:50%;bottom:auto;top:-40px}   /* 스크립트가 카드와 기기 사이에 44px 띠를 비워 둔다 */
   .fr{height:46px;top:-23px}
   .fbar{padding:8px}
   .fchip{height:28px;font-size:12px;padding:0 9px}
+  .fbar .fchip:nth-child(3),.fbar .fchip:nth-child(4){display:none}   /* 필터 바를 한 줄로 — 장면이 낮아져 덜 줄어든다 */
   .api-h b{font-size:28px}
   .app{grid-template-columns:minmax(0,1fr)}
   .rail,.app-sub{display:none}
@@ -376,6 +380,8 @@ html.motion .prog{display:flex}
 
     <div class="obj lanes" id="lanes" aria-hidden="true"></div>
 
+    <!-- 그림 층. 좁은 화면에서 글 아래 남는 공간에 맞춰 장면마다 줄인다 -->
+    <div class="art" id="art">
     <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--hn)"></i><span style="color:var(--hn)">Hacker News</span><span class="tg ex">예시</span></div><div class="ft" data-en></div></div></div>
     <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--gn)"></i><span style="color:var(--gn)">긱뉴스</span><span class="tg ex">예시</span></div><div class="ft" data-ko></div></div></div>
     <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--lob)"></i><span style="color:var(--lob)">Lobste.rs</span><span class="tg ex">예시</span></div><div class="ft" data-en></div></div></div>
@@ -436,6 +442,7 @@ html.motion .prog{display:flex}
     <div class="obj skills" id="skills" aria-hidden="true">
       <div class="sk-h">에이전트 스킬 순위<span>이번 주 설치 · 예시</span></div>
       <div class="sk-body"><div class="sk-rank"><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b></div><div class="sk-rows" id="skRows"></div></div>
+    </div>
     </div>
 
     <div class="mid end-win win" id="endWin" aria-hidden="true">
@@ -814,9 +821,45 @@ const physics = (() => {
 
 gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)' }, ctx => {
   const { narrow } = ctx.conditions;
-  const CX = narrow ? 0.5 : 0.66, CY = narrow ? 0.66 : 0.52; // CSS 의 --cx, --cy
-  const toMidX = () => stage.clientWidth * (0.5 - CX);
-  const toMidY = () => stage.clientHeight * (0.5 - CY);
+  const CX = narrow ? 0.5 : 0.66; // CSS 의 --cx
+  let CY = narrow ? 0.66 : 0.52; // 그림 중심 높이. 좁은 화면은 fit() 이 다시 정한다
+  // 뒤집히는 카드가 있는 동안 그림 층은 SCENE_S.same 배다. 화면에서 원하는 만큼 옮기려면 그 배율로 나눈다
+  const toMidX = () => stage.clientWidth * (0.5 - CX) / SCENE_S.same();
+  const toMidY = () => stage.clientHeight * (0.5 - CY) / SCENE_S.same();
+
+  /* 좁은 화면: 글은 위에 고정이고 그림은 그 아래 남는 공간의 가운데에 둔다.
+     예전에는 그림 중심을 화면 높이의 66% 에 박아 두어, 주소창 때문에 화면이 낮은 폰에서
+     글과 그림이 겹쳤다 (375×640 에서 스크롤 위치 40곳 중 16곳). 그림이 공간보다 크면
+     그 장면 동안만 그림 층을 줄인다 — 가장 큰 장면 하나에 맞추면 전부 절반 크기가 된다 */
+  const HUB_SAVE = 0.86, SYNC_BAND = 44, FR_GAP = 10, S_MIN = 0.62;
+  const saveLayout = () => { // 보관함 장면: 위에서부터 카드 · 동기화 표시 · 기기
+    const hs = $('#hub').offsetHeight * HUB_SAVE, d = $('#devices').offsetHeight, total = hs + SYNC_BAND + d;
+    return { hub: -total / 2 + hs / 2, dev: total / 2 - d / 2, total };
+  };
+  let AVAIL = Infinity;
+  const fit = () => {
+    if (!narrow) return;
+    const VH = stage.clientHeight;
+    const txtBottom = Math.max(...$$('.txt').map(t => t.offsetTop + t.offsetHeight));
+    const top = txtBottom + 14, bottom = VH - 14;
+    CY = (top + bottom) / 2 / VH;
+    AVAIL = bottom - top;
+    stage.style.setProperty('--cy', (CY * 100).toFixed(2) + '%');
+  };
+  // 장면 그림의 중심에서 위·아래로 가장 먼 거리 → 그 장면 배율
+  const fitS = half => () => narrow ? Math.max(S_MIN, Math.min(1, AVAIL / (2 * half()))) : 1;
+  const h = sel => $(sel).offsetHeight;
+  const SCENE_S = {
+    same: fitS(() => 120 + h('.scard') / 2),
+    detail: fitS(() => h('#detail') / 2),
+    search: fitS(() => h('#hub') / 2 + 16 + h('#srch')),
+    save: fitS(() => saveLayout().total / 2),
+    filter: fitS(() => h('#hub') / 2 + Math.max(2 * (FR_GAP + h('.fr')) + 14 + h('#fbar'), 3 * (FR_GAP + h('.fr')))),
+    api: fitS(() => h('#api') / 2),
+    skill: fitS(() => h('#skills') / 2),
+  };
+  fit();
+  ScrollTrigger.addEventListener('refreshInit', fit);
 
   gsap.set(['.obj', '.mid'], { xPercent: -50, yPercent: -50 });
   gsap.set('.txt', { yPercent: narrow ? 0 : -50, opacity: 0, y: 24 });
@@ -961,7 +1004,8 @@ gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)'
   [['08', 11.6, 1, '#1c1f31'], ['16', 12.6, 2, '#262033']].forEach(([g, at, k, bg]) => {
     T(ts[k - 1], at, { opacity: 0, y: -40, duration: 0.3 });
     T(ts[k], at + 0.1, { opacity: 1, y: 0, duration: 0.3 });
-    T(`.feed .grp[data-g="${g}"]`, at, { opacity: 1, duration: 0.35 });
+    // 새 회차 무리는 목록 위쪽(글 자리)에서 내려온다. 좁은 화면은 글과 붙어 있어서 다 내려온 뒤에 보인다
+    T(`.feed .grp[data-g="${g}"]`, narrow ? at + 0.45 : at, { opacity: 1, duration: narrow ? 0.2 : 0.35 });
     T('#feed', at, { y: feedTo(g), duration: 0.6, ease: 'power2.inOut' });
     T(stage, at, { backgroundColor: bg, duration: 0.6 });
   });
@@ -990,11 +1034,11 @@ gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)'
 
   /* ── 보관함: 체크하면 노트북과 휴대폰 보관함에 같이 들어간다 ── */
   showTxt('save', 15.3);
-  const hubUp = () => -(narrow ? 150 : 170);
-  T('#hub', 15.3, { y: hubUp, scale: 0.86, duration: 0.4, ease: 'power2.inOut' });
+  const hubUp = () => narrow ? saveLayout().hub : -170;
+  T('#hub', 15.3, { y: hubUp, scale: HUB_SAVE, duration: 0.4, ease: 'power2.inOut' });
   T('#hubCk', 15.5, { backgroundColor: '#7c6ee6', borderColor: '#7c6ee6', duration: 0.12 });
   T('#hubCk svg', 15.5, { opacity: 1, duration: 0.12 });
-  const devY = () => (narrow ? 120 : 130);
+  const devY = () => (narrow ? saveLayout().dev : 130);
   gsap.set('#devices', { transformPerspective: 1400 });
   tl.fromTo('#devices', { y: () => devY() + 80, rotationX: 24 }, { y: devY, rotationX: 0, opacity: 1, duration: 0.45, ease: 'power3.out' }, 15.55);
   gsap.set(['#msLap', '#msPh'], { opacity: 0 });
@@ -1013,7 +1057,6 @@ gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)'
 
   /* ── 거르기: 커서가 필터를 눌러 목록이 줄어든다 ── */
   // 가운데 카드를 목록의 한 줄로 두고 위아래로 다른 기사들을 쌓는다. 줄 위치는 늘 계산으로 잡는다
-  const FR_GAP = 10;
   const frH = () => $('.fr').offsetHeight;
   const rowsAbove = [0, 1], rowsBelow = [2, 3, 4];
   const layout = visible => {
@@ -1131,23 +1174,53 @@ gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)'
   tl.fromTo('#endCopy', { y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, 24.0);
   tl.to({}, { duration: 0.5 }, 24.3);
 
+  // 장면이 바뀌는 틈에 그림 층 배율을 바꾼다 (좁은 화면만 1 이 아니다)
+  [[3.4, SCENE_S.same], [7.3, SCENE_S.detail], [10.1, () => 1], [13.95, SCENE_S.search], [15.2, SCENE_S.save],
+   [16.9, SCENE_S.filter], [19.55, SCENE_S.api], [21.2, SCENE_S.skill], [22.9, () => 1]]
+    .forEach(([at, sc]) => T('#art', at, { scale: sc, duration: 0.2 }));
+
+  /* 스크롤 → 타임라인 시각. 예전에는 둘을 곧게 이어서 1단위 = 약 800px 였다. 그러면 아무것도
+     움직이지 않는 구간(글만 떠 있는 동안)은 한참 내려야 하고, 트윈이 몰린 구간(고르기 2.2~2.5 등)은
+     살짝만 내려도 확 지나갔다. 트윈이 도는 시간은 스크롤을 1 만큼, 쉬는 시간은 IDLE 만큼 쓰게 한다 */
+  const IDLE = 0.45, STEP = 0.01, DUR = tl.duration();
+  const busy = new Float32Array(Math.ceil(DUR / STEP) + 1);
+  tl.getChildren(false, true, false).forEach(tw => {
+    const a = Math.floor(tw.startTime() / STEP), b = Math.ceil(tw.endTime() / STEP);
+    for (let i = Math.max(0, a); i < Math.min(busy.length, b); i++) busy[i] = 1;
+  });
+  const cum = new Float32Array(busy.length + 1);
+  busy.forEach((v, i) => { cum[i + 1] = cum[i] + (v ? 1 : IDLE); });
+  const total = cum[cum.length - 1];
+  const timeAt = p => { // 스크롤 진행률 0~1 → 타임라인 시각
+    const want = p * total; let lo = 0, hi = cum.length - 1;
+    while (hi - lo > 1) { const m = (lo + hi) >> 1; if (cum[m] <= want) lo = m; else hi = m; }
+    const seg = cum[hi] - cum[lo] || 1;
+    return Math.min(DUR, (lo + (want - cum[lo]) / seg) * STEP);
+  };
+
   const dots = [...prog.children];
   const endCopy = $('#endCopy'), heroCopy = $('#heroCopy');
-  ScrollTrigger.create({
-    trigger: '#story', start: 'top top', end: 'bottom bottom', scrub: 0.8,
-    animation: tl, invalidateOnRefresh: true,
-    onUpdate: s => {
-      const t = s.progress * tl.duration();
-      let k = 0; MARKS.forEach((m, i) => { if (t >= m) k = i; });
-      dots.forEach((d, i) => d.classList.toggle('on', i === k));
-      prog.classList.toggle('dark', t > 10.3 && t < 13.8);
-      // 투명한 동안에는 버튼이 눌리지 않게 한다
-      endCopy.style.pointerEvents = t > 24.0 ? 'auto' : 'none';
-      heroCopy.style.pointerEvents = t < 0.8 ? 'auto' : 'none';
-      physics.setActive(t < 0.5, chipTweens);
-      derived(t);
-    },
+  tl.pause();
+  tl.eventCallback('onUpdate', () => {
+    const t = tl.time();
+    let k = 0; MARKS.forEach((m, i) => { if (t >= m) k = i; });
+    dots.forEach((d, i) => d.classList.toggle('on', i === k));
+    prog.classList.toggle('dark', t > 10.3 && t < 13.8);
+    // 투명한 동안에는 버튼이 눌리지 않게 한다
+    endCopy.style.pointerEvents = t > 24.0 ? 'auto' : 'none';
+    heroCopy.style.pointerEvents = t < 0.8 ? 'auto' : 'none';
+    physics.setActive(t < 0.5, chipTweens);
+    derived(t);
   });
+  // scrub 대신 직접 따라간다 — 스크롤이 멈춰도 1초 동안 부드럽게 따라붙는다
+  const st = ScrollTrigger.create({
+    trigger: '#story', start: 'top top', end: 'bottom bottom',
+    onUpdate: s => gsap.to(tl, { time: timeAt(s.progress), duration: 1, ease: 'power3.out', overwrite: true }),
+    // 크기가 바뀌면 함수로 준 값(자리 계산)을 다시 읽는다. 처음 상태로 되감은 뒤에 해야
+    // to 트윈이 중간 상태를 시작값으로 잡지 않는다
+    onRefresh: s => { gsap.killTweensOf(tl); tl.time(0); tl.invalidate(); tl.time(timeAt(s.progress)); },
+  });
+  return () => { ScrollTrigger.removeEventListener('refreshInit', fit); st.kill(); };
 });
 
 /* 상세·가운데 카드·뒤집히는 카드는 마우스를 따라 살짝 기운다 (하네스 기준 4도 미만) */
