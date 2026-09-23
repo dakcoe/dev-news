@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-14T02:55:14+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "github": 6
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-14T09:44:19+09:00",
    "total": 19,
    "counts": {
@@ -501,6 +492,59 @@
      "url": "https://news.hada.io/topic?id=34140",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-23T16:00:30+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 7,
+    "blocked": 6,
+    "empty": 1,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34163",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34162",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34161",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34160",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34159",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/837",
+     "source": "rss",
+     "reason": "short"
     }
    ]
   }
