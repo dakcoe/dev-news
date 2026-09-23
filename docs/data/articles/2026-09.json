@@ -1,5 +1,593 @@
 [
  {
+  "title": "Jev in 25 Lines of Python",
+  "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 417,
+  "comments": 132,
+  "published_at": 1790148383,
+  "discussion": "https://news.ycombinator.com/item?id=49812769",
+  "merged_sources": [
+   "hackernews",
+   "r/LocalLLaMA"
+  ],
+  "merged_urls": [
+   "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wo07r8/jev_in_25_lines_of_python/"
+  ],
+  "cross_source_count": 2,
+  "score": 2430.0,
+  "image": "https://www.nobodywho.ai/assets/images/blog/2026/jev-in-25-lines/jev.png",
+  "link_status": "ok",
+  "ko_title": "Jev를 25줄 파이썬으로 구현",
+  "summary": "25줄 파이썬 코드와 llama-cpp-python을 이용해 Qwen3-0.6B GGUF 모델을 로드하고, 이메일을 “Legitimate”, “Spam”, “Phishing” 중 하나로 분류하는 예시를 보여준다. 모델 로딩, 프롬프트 구성, 로짓을 확률로 변환하는 과정이 포함된다. 코드에 필요한 의존성은 huggingface-hub, llama-cpp-python, numpy이며 Python 3.12 이상을 요구한다.",
+  "why": "llama-cpp-python과 numpy만 있으면 로짓을 확률로 변환하는 분류 파이프라인을 직접 구현할 수 있다. 기존 라이브러리에 의존하지 않고 로짓 처리 로직을 커스터마이즈해야 하는 상황에서 참고 코드로 쓸 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "language"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "The darker side of being a doctor",
+  "url": "https://drericlevi.pages.dev/the-darker-side-of-being-a-doctor/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 222,
+  "comments": 223,
+  "published_at": 1790160895,
+  "discussion": "https://news.ycombinator.com/item?id=49814159",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://drericlevi.pages.dev/the-darker-side-of-being-a-doctor/"
+  ],
+  "cross_source_count": 1,
+  "score": 1713.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "의사의 어두운 면",
+  "summary": "외과 의사가 13년간 겪은 업무 과중과 통제 상실이 정신적 고통을 초래한다는 개인적 경험을 공유한다. 그는 장시간 당직, 과도한 이동 거리, 가족과의 제한된 시간 등으로 인해 우울·불안·번아웃을 겪었다고 밝힌다.",
+  "why": "백엔드와 AI 개발 업무와 직접적인 연관성이 없어 기술적 조치나 방법론 변화가 없다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Claude Code reads AGENTS.md only when telemetry is on",
+  "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 134,
+  "published_at": 1790165733,
+  "discussion": "https://news.ycombinator.com/item?id=49814947",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/"
+  ],
+  "cross_source_count": 1,
+  "score": 1596.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Claude Code는 텔레메트리가 켜져 있을 때만 AGENTS.md를 읽는다",
+  "summary": "Claude Code 2.1.277 버전에서 AGENTS.md 지원을 추가했지만, 로더는 원격 기능 플래그 뒤에 숨겨져 있다. 텔레메트리나 비핵심 트래픽을 비활성화하면 로컬 AGENTS.md 파일이 경고 없이 무시된다. 측정 결과는 환경 변수 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 또는 DISABLE_TELEMETRY 설정에 따라 플래그가 차단된다는 것을 보여준다.",
+  "why": "텔레메트리나 비핵심 트래픽을 끄면 로컬 AGENTS.md가 경고 없이 무시된다. 해당 환경 변수를 설정한 개발자는 프로젝트 지침이 반영되지 않는 문제를 겪을 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "release"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "OpenAI is enlisting an influencer army to make it look 'good for the world'",
+  "url": "https://www.businessinsider.com/inside-open-ai-influencer-marketing-strategy-chatgpt-ads-sponsorships-instagram-2026-9",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 171,
+  "comments": 148,
+  "published_at": 1790166720,
+  "discussion": "https://news.ycombinator.com/item?id=49815127",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.businessinsider.com/inside-open-ai-influencer-marketing-strategy-chatgpt-ads-sponsorships-instagram-2026-9"
+  ],
+  "cross_source_count": 1,
+  "score": 1386.0,
+  "image": "https://i.insider.com/6ab26f10d15f8a572974903e?width=1200&format=jpeg",
+  "link_status": "ok",
+  "ko_title": "OpenAI, 인플루언서 군단을 동원해 ‘세상을 위한 좋은 일’처럼 보이게 하다",
+  "summary": "OpenAI는 인플루언서 마케팅을 확대해 ChatGPT 홍보를 강화하고 있다. 6월 61건에서 8월 141건으로 스폰서 게시물이 급증했으며, 육아·피트니스·기술 분야 인플루언서까지 폭넓게 참여시킨다. 기업용 도구 판매와 일반 사용자 유지 두 목표로 전략을 운영한다.",
+  "why": "인플루언서 마케팅 확대는 제품 기능이나 API 변경이 아니다. 백엔드 개발자의 코드나 인프라 설정에는 직접적인 영향을 주지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Samsung accidentally freezes its smart fridges with a software update",
+  "url": "https://www.androidauthority.com/samsung-accidentally-freezes-its-smart-fridges-with-a-software-update-3714472/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 127,
+  "comments": 117,
+  "published_at": 1790168279,
+  "discussion": "https://news.ycombinator.com/item?id=49815381",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.androidauthority.com/samsung-accidentally-freezes-its-smart-fridges-with-a-software-update-3714472/"
+  ],
+  "cross_source_count": 1,
+  "score": 1205.0,
+  "image": "https://www.androidauthority.com/wp-content/uploads/2025/09/samsung-family-hub-fridge-large.jpg",
+  "link_status": "ok",
+  "ko_title": "삼성, 스마트 냉장고 소프트웨어 업데이트로 작동 중단",
+  "summary": "삼성은 한국에서 스마트 냉장고에 대한 SmartThings 업데이트를 중단했다. 일부 사용자는 업데이트 후 냉장고 전원과 화면이 꺼지고 자동 문열기와 내부 조명이 작동하지 않아 식품이 상했다는 보고가 있었다. 삼성은 오류가 테스트 과정에서 발생했으며, 현재 서비스 센터를 통해 긴급 조치를 진행 중이라고 밝혔다.",
+  "why": "연결 가전 소프트웨어 업데이트가 테스트 단계 오류로 배포되어 하드웨어 작동을 멈추게 할 수 있다. 백엔드 서비스 배포 파이프라인의 테스트 격리 실패와 동일한 리스크가 임베디드 환경에도 적용된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Two years of OpenAI Academy",
+  "url": "https://openai.com/index/two-years-of-openai-academy",
+  "description": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790179200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/two-years-of-openai-academy"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI Academy 2년",
+  "summary": "OpenAI Academy가 설립 2주년을 맞았다. AI 기술 교육을 더 많은 커뮤니티에 확대한다.",
+  "why": "개발자는 확대된 교육 프로그램을 통해 무료 AI 스킬을 습득할 수 있다. 지역 커뮤니티 지원으로 다양한 지역에서 AI 인재를 키울 기회가 늘어난다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+  "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+  "description": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790168400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI, 민간 방어를 위해 우크라이나에 사이버 접근 권한 확대",
+  "summary": "OpenAI는 사이버 방어 프로그램 Daybreak에 대한 접근 권한을 우크라이나 정부에 제공한다. 이번 조치는 민간 인프라의 사이버 방어를 지원하기 위한 것이다.",
+  "why": "Daybreak 프로그램은 민간 인프라 사이버 방어에 특화되어 있어, 백엔드 인프라 보호 전략에 참고할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "**Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**",
+  "url": "https://huggingface.co/blog/nvidia/nemotron-diarization",
+  "description": "",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790169421.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/nemotron-diarization"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/688d4bdfdeb55432d90e546d/d_xBvPVTwTB_Rt9yxmp_0.png",
+  "link_status": "ok",
+  "ko_title": "누가 언제 말했는지 파악하라: NVIDIA Nemotron 3 다이어리제이션으로 실시간 다중 화자 AI 구축",
+  "summary": "NVIDIA Nemotron 3 Diarization은 1억 파라미터 오픈 웨이트 모델로, VoiceArena 다이어리제이션 리더보드에서 14.72% DER로 1위를 차지했다. 최대 8명의 화자를 지원하며 겹치는 대화와 다양한 길이의 녹음에 대해 스트리밍 지연 시간을 조정할 수 있다. 이전의 Streaming Sortformer 모델보다 화자 수와 정확도, 처리량이 모두 향상되었다.",
+  "why": "기존 4명 한정 모델에서 8명까지 화자 범위가 넓어졌다. 실시간 스트리밍 지연 시간을 직접 조정할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Nvidia-backed Nscale keeps its biggest customer, Bytedance, out of its IPO filing",
+  "url": "https://the-decoder.com/nvidia-backed-nscale-keeps-its-biggest-customer-bytedance-out-of-its-ipo-filing/",
+  "description": "Nscale, the Nvidia-backed AI cloud provider, leaves its most important customer, Bytedance, out of the main prospectus for its planned US IPO. The article Nvidia-backed Nscale keeps its biggest customer, Bytedance, out of its IPO filing appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790174662.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nvidia-backed-nscale-keeps-its-biggest-customer-bytedance-out-of-its-ipo-filing/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/03/Datacenter-Remote.png",
+  "link_status": "ok",
+  "ko_title": "Nvidia 지원 Nscale, 최대 고객인 Bytedance를 IPO 서류에서 제외",
+  "summary": "Nscale은 미국 IPO를 위한 S-1 서류 192페이지에 주요 고객인 Bytedance를 언급하지 않았다. Bytedance는 2025년 매출 3,300만 달러 중 73%를 차지했으며, 대신 싱가포르 자회사 Spring만 부록에 나타난다. Spring은 2025년 5월 노르웨이 Glomfjord에 Nvidia B200 칩 2,304개를 설치했으며, 이는 1억 5천만 달러 대출과 3천5백만 달러 자본으로 마련된 AI 하드웨어 비용을 충당한다. Nscale은 올해 최대 고객 비중을 20% 이하로 낮출 계획이며, Microsoft와 Anthropic과의 계약이 확대되고 있다.",
+  "why": "미국 수출규제 우회로 중국 기업에 Nvidia 칩을 공급하는 구조는 법적 리스크를 안고 있다. AI 인프라를 구축할 때 규제 공백을 이용한 계약은 향후 제재 강화 시 중단될 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Meta's AI agent Muse draws 500,000 users in a week along with claims it copied OpenClaw",
+  "url": "https://the-decoder.com/metas-ai-agent-muse-draws-500000-users-in-a-week-along-with-claims-it-copied-openclaw/",
+  "description": "Meta's AI agent Muse picked up more than 500,000 users in its first week and hit number one in Apple's App Store. But Meta admits the product is \"heavily inspired\" by the open-source project OpenClaw, and some of the file names and contents are nearly identical. OpenAI is already discussing a response of its own. The article Meta's AI agent Muse draws 500,000 users in a week along with claims it c",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790174558.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/metas-ai-agent-muse-draws-500000-users-in-a-week-along-with-claims-it-copied-openclaw/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/muse-01-hero.jpg",
+  "link_status": "ok",
+  "ko_title": "Meta AI 에이전트 Muse, 일주일 만에 50만 명 사용자 확보… OpenClaw 표절 논란",
+  "summary": "Muse는 미국에서 출시 일주일 만에 50만 명 이상의 사용자를 모았으며, 일일 활성 사용자는 25만 명에 달한다. 이 앱은 연구, 일정 관리, 여행 예약 등 일상 업무 자동화를 목표로 한다. Meta는 Muse가 오픈소스 프로젝트 OpenClaw에서 영감을 받았으며, 파일명과 내용이 거의 동일하다는 지적을 인정했다.",
+  "why": "Meta가 Muse가 OpenClaw에서 영감을 받았음을 인정하며 파일명이 거의 동일하다는 지적을 받아들였다. 오픈소스 기반 에이전트를 직접 구축하거나 벤치마킹할 때 저작권 경계가 모호하다는 점을 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "The GNOME LLM Policy That I Want",
+  "url": "https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 25,
+  "comments": 22,
+  "published_at": 1790159294.797,
+  "discussion": "https://lobste.rs/s/kras1h/gnome_llm_policy_i_want",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/"
+  ],
+  "cross_source_count": 1,
+  "score": 1002.4,
+  "image": "https://blogs.gnome.org/alatiera/files/2026/09/adwaita-l-scaled.jpg",
+  "link_status": "ok",
+  "ko_title": "내가 원하는 GNOME LLM 정책",
+  "summary": "GNOME 프로젝트는 LLM(인공지능)으로 만든 코드나 수정본을 GNOME에 제출하거나 GNOME 인프라에 올리는 것을 금지한다는 초안 정책을 제시한다. 정책 위반 시 증명 요구와 차단 조치가 있을 수 있다. 기여자는 변경 사항을 스스로 설명하고 문제 영역을 이해하며, 근본적인 해결을 해야 한다는 가이드라인을 제시한다.",
+  "why": "GNOME 인프라에 LLM 생성 코드를 올릴 경우 차단될 수 있다. 기여 시 변경 사항의 원리를 스스로 설명해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "Obscura - 사용자 활동을 기록할 수 없는 VPN",
+  "url": "https://news.hada.io/topic?id=34177",
+  "description": "Obscura 는 자체 중계 서버와 독립된 Mullvad 출구 서버를 분리해, 한 사업자가 사용자의 접속 IP와 인터넷 활동을 모두 볼 수 없도록 설계한 VPN임 WireGuard-over-QUIC 구조에서 Obscura는 암호화된 패킷을 복호화할 수 없고, Mullvad는 사용자의 원래 접속 IP를 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790171223.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34177"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Obscura - 사용자 활동을 기록할 수 없는 VPN",
+  "summary": "Obscura는 자체 중계 서버와 Mullvad 출구 서버를 분리해 한 사업자가 사용자의 접속 IP와 인터넷 활동을 모두 볼 수 없도록 설계된 VPN이다. WireGuard-over-QUIC 구조를 사용해 중계 서버가 암호화된 패킷을 복호화하지 못한다. Mullvad는 사용자의 원래 접속 IP만 알 수 있다.",
+  "why": "기존 VPN과 달리 중계 서버가 패킷을 복호화할 수 없어 활동 기록이 원천 차단된다. 접속 IP와 인터넷 활동을 분리 관리하는 구조로 프라이버시 보호 수준이 달라진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "이딴 짓거리는 이제 끝",
+  "url": "https://news.hada.io/topic?id=34176",
+  "description": "이딴 짓거리는 이제 끝",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790171042.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34176"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "이딴 짓거리는 이제 끝",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "obra / superpowers",
+  "url": "https://github.com/obra/superpowers",
+  "description": "An agentic skills framework & software development methodology that works.",
+  "source": "github",
+  "upvotes": 528,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/obra/superpowers"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 528,
+  "score": 289.79999999999995,
+  "resurfaced": "2026-08-06",
+  "image": "https://opengraph.githubassets.com/1/obra/superpowers",
+  "link_status": null,
+  "ko_title": "obra / 슈퍼파워스",
+  "summary": "Superpowers는 코딩 에이전트를 위한 개발 방법론으로, 여러 도구와 언어 모델에 대한 플러그인 형태의 스킬을 제공한다. 초기 명령어와 스킬 조합을 통해 에이전트가 요구사항을 추출하고 설계 검토 후 구현 계획을 생성한다. 사용자는 설계 승인을 하면 에이전트가 서브에이전트 기반 개발 과정을 자동으로 진행한다.",
+  "why": "코딩 에이전트 사용 시 요구사항 추출부터 구현 계획 생성까지의 흐름을 표준화한다. 설계 승인 후 서브에이전트 기반 개발이 자동 진행되어 수동 개입 구간이 줄어든다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "pbakaus / impeccable",
+  "url": "https://github.com/pbakaus/impeccable",
+  "description": "The design language that makes your AI harness better at design.",
+  "source": "github",
+  "upvotes": 287,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/pbakaus/impeccable"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 287,
+  "score": 205.45,
+  "image": "https://opengraph.githubassets.com/1/pbakaus/impeccable",
+  "link_status": null,
+  "ko_title": "pbakaus / impeccable — AI 코딩 에이전트를 위한 디자인 가이드",
+  "summary": "Impeccable은 AI 코딩 에이전트를 위한 프론트엔드 디자인 가이드 도구로, 1개의 스킬과 24개의 명령어, 61개의 결정론적 탐지 규칙을 제공한다. `npx impeccable install` 후 `/impeccable init` 로 프로젝트 초기 설정을 하면 제품 진실을 `PRODUCT.md`에 기록하고 이후 명령어가 이를 활용한다. CLI와 브라우저 확장 프로그램은 LLM 없이 탐지 규칙을 실행한다.",
+  "why": "AI 코딩 에이전트가 생성하는 프론트엔드 디자인의 반복적 패턴을 줄일 수 있다. LLM 없이 실행되는 61개의 결정론적 탐지 규칙으로 코드를 검증할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "DeusData / codebase-memory-mcp",
+  "url": "https://github.com/DeusData/codebase-memory-mcp",
+  "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+  "source": "github",
+  "upvotes": 201,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/DeusData/codebase-memory-mcp"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 201,
+  "score": 175.35,
+  "image": "https://opengraph.githubassets.com/1/DeusData/codebase-memory-mcp",
+  "link_status": null,
+  "ko_title": "DeusData / codebase-memory-mcp",
+  "summary": "이 저장소는 AI 코딩 에이전트를 위한 초고속 코드 인텔리전스 엔진을 제공한다. 평균 리포지터리를 밀리초 단위로 전체 인덱싱하며, Linux 커널(28M LOC, 75K 파일)을 3분 안에 처리한다. 구조적 질의에 1ms 이하로 응답하고, macOS·Linux·Windows에서 실행 가능한 네이티브 바이너리 형태로 배포된다.",
+  "why": "AI 코딩 에이전트가 대형 저장소를 다루는 작업에서 인덱싱 대기 시간을 줄여준다. 구조적 질의 응답 속도가 1ms 이하로 빠르므로 실시간 코드 탐색이 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "TNT-Likely / PanWatch",
+  "url": "https://github.com/TNT-Likely/PanWatch",
+  "description": "盯盘侠 PanWatch · 自托管 AI 盯盘助手，集成 TradingAgents 多 Agent 投资决策 | A股/港股/美股实时监控、持仓管理、智能分析、全渠道推送",
+  "source": "github",
+  "upvotes": 175,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/TNT-Likely/PanWatch"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 175,
+  "score": 166.25,
+  "image": "https://opengraph.githubassets.com/1/TNT-Likely/PanWatch",
+  "link_status": null,
+  "ko_title": "PanWatch",
+  "summary": "자가 호스팅 AI 투자 보조 도구인 PanWatch는 TradingAgents 프레임워크를 통합해 다중 에이전트 기반 투자 의사결정을 제공한다. A주·홍콩·미국 주식의 실시간 모니터링, 포트폴리오 관리, AI 점수 기반 종목 선정, 기술 지표와 가격 알림을 지원한다. Docker 이미지와 PWA 형태로 배포되어 웹·모바일에서 사용할 수 있다.",
+  "why": "자가 호스팅 환경에서 다중 에이전트 기반 투자 분석 파이프라인을 구축할 때 참고할 수 있다. Docker 배포와 PWA 지원으로 백엔드 개발자가 직접 인프라를 관리하며 웹과 모바일에서 동일한 기능을 사용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
+  "title": "strands-agents / harness-sdk",
+  "url": "https://github.com/strands-agents/harness-sdk",
+  "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+  "source": "github",
+  "upvotes": 96,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/strands-agents/harness-sdk"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 96,
+  "score": 138.6,
+  "image": "https://opengraph.githubassets.com/1/strands-agents/harness-sdk",
+  "link_status": null,
+  "ko_title": "Strands Agents",
+  "summary": "Strands Agents는 몇 줄의 코드만으로 AI 에이전트를 만들 수 있게 해주는 모델 기반 SDK이다. Python과 TypeScript용 하네스와 CLI를 제공하며 GitHub에서 오픈소스로 관리된다.",
+  "why": "Python과 TypeScript 환경에서 AI 에이전트를 구축할 때 활용할 수 있는 오픈소스 도구다. 기존 프레임워크 대신 모델 기반 접근 방식으로 에이전트 로직을 구현하려는 경우 검토 대상이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-24T00:00:07.092873+09:00",
+  "batch_label": "9월 24일 00:00"
+ },
+ {
   "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
   "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
   "description": "",

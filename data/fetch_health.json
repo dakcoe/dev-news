@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-14T09:44:19+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 15,
-    "github": 4
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-14T22:38:59+09:00",
    "total": 20,
    "counts": {
@@ -545,6 +536,47 @@
      "url": "https://tech.kakao.com/posts/837",
      "source": "rss",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-24T00:00:33+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 9,
+    "blocked": 6,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/two-years-of-openai-academy",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34179",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34177",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34176",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34175",
+     "source": "geeknews",
+     "reason": "blocked"
     }
    ]
   }
