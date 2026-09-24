@@ -1,5 +1,548 @@
 [
  {
+  "title": "미 연방정부, AI 비판자들을 ‘외국 대리인’으로 겨냥",
+  "url": "https://news.hada.io/topic?id=34213",
+  "description": "Trump 행정부 가 AI와 데이터센터 반대 여론을 중국의 영향력 행사와 연결하는 가운데, 법무부는 외국 세력의 목표를 돕는 공개 활동에 정부 신고 의무와 형사책임이 따를 수 있다고 경고함 의회 공화당 지도부 도 데이터센터 반대 활동에 대한 외국 개입 조사를 요구...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790228077.0,
+  "origin_url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34213",
+   "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34213?v=7308eb0f88f2e9f8121977754b02c3db",
+  "link_status": "ok",
+  "ko_title": "미 연방정부, AI 비판자들을 ‘외국 대리인’으로 겨냥",
+  "summary": "법무부는 AI·데이터센터 반대 활동을 외국 세력 선전에 해당하면 신고·형사책임을 물 수 있다고 경고했다. 트럼프 행정부와 공화당 지도부는 중국 영향력 의혹을 제기하며 FARA 수사를 요구했다. 관련 인물들은 증거 부재를 인정하거나 반대 시위가 지정되지 않았다고 밝혔다.",
+  "why": "AI·데이터센터 반대 활동이 외국 세력 선전으로 규정되면 형사책임이 따를 수 있다. 다만 특정 시위를 명시적으로 지정한 문서는 아니다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "VSCode의 SSH 에이전트는 제정신이 아니다 (2025)",
+  "url": "https://news.hada.io/topic?id=34212",
+  "description": "VSCode의 SSH 원격 편집 은 원격 환경의 기존 명령만 활용하는 대신, Bash 코드로 Node 바이너리를 포함한 에이전트 를 내려받아 실행함 원격 에이전트는 SSH 포트 포워딩 을 거쳐 로컬 VSCode 프런트엔드와 WebSocket으로 연결되며, 파일 탐색과 임...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790224371.0,
+  "origin_url": "https://fly.io/blog/vscode-ssh-wtf/",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://fly.io/blog/vscode-ssh-wtf/",
+   "https://news.hada.io/topic?id=34212"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34212?v=58f628eb9392a045cf034272f4e70b60",
+  "link_status": "ok",
+  "ko_title": "VSCode의 SSH 에이전트는 제정신이 아니다",
+  "summary": "VSCode 원격 SSH는 Bash 부트스트랩으로 Node 바이너리를 포함한 에이전트를 내려받아 실행하고, SSH 포트 포워딩과 WebSocket으로 로컬 프런트엔드와 연결한다. 이 에이전트는 파일 탐색·편집·셸 PTY 실행·지속 상주가 가능해 LLM과 연계해 코드 생성·실행·오류 피드백 루프를 만든다. Fly.io는 이러한 흐름을 조사해 VSCode 포크에 통합하려 하고 있다. 그러나 높은 권한을 가진 원격 에이전트는 개발 서버·운영 환경에서 사용 시 보안 우려가 있다.",
+  "why": "LLM 에이전트가 시스템 설정까지 수정할 수 있으므로 격리된 인스턴스에서 실행하는 것이 안전하다. 운영 환경 장애 대응 시 이 도구를 쓰면 강한 보안 경계가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Snapdragon X2 Series에 Linux 지원이 도입될 예정",
+  "url": "https://news.hada.io/topic?id=34210",
+  "description": "Qualcomm이 Snapdragon X2 Series의 Linux 지원 을 추진하며, Windows와 Googlebook에 이어 개발자와 기기 제조사가 활용할 운영체제 선택지를 넓힘 Hexagon NPU와 Adreno GPU 를 포함한 핵심 드라이버를 Linux 업스트림에 반영하고 있음 Debian은 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790217190.0,
+  "origin_url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34210",
+   "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34210?v=7a5bf1b4696ceea3babe70385422a522",
+  "link_status": "ok",
+  "ko_title": "Snapdragon X2 시리즈에 Linux 지원 도입 예정",
+  "summary": "Qualcomm은 Snapdragon X2 시리즈에 Linux 드라이버를 업스트림에 반영해 Debian과 Ubuntu 지원을 준비하고 있다. 초기 지원은 두 배포판으로 시작하며, 온디바이스 AI 에이전트 기능을 로컬에서 효율적으로 실행한다. Snapdragon PC 생태계는 Googlebook 등 신규 파트너와 함께 확대 중이다.",
+  "why": "Debian은 2026년 말, Ubuntu는 2027년 상반기에 지원을 시작한다. Hexagon NPU와 Adreno GPU 드라이버가 업스트림에 반영되어 로컬 AI 에이전트 개발 환경이 확장된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Meta VR 안경",
+  "url": "https://news.hada.io/topic?id=34208",
+  "description": "Meta VR Glasses 는 영상 감상, 업무, 게임을 지원하는 VR 안경으로, 2027년 봄 1,299달러 에 출시 예정임 마그네슘 합금 소재를 사용하며 무게는 100g 이고, 주머니에 들어가는 소형 퍽이 구동을 담당함 3D 영화...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790213540.0,
+  "origin_url": "https://www.meta.com/vr-glasses/",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34208",
+   "https://www.meta.com/vr-glasses/"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34208?v=a7b3b299f7444c95ff69b029700f48bd",
+  "link_status": "ok",
+  "ko_title": "Meta VR 안경",
+  "summary": "Meta가 2027년 봄에 1,299달러에 출시 예정인 VR 안경을 발표했다. 마그네슘 합금으로 제작돼 무게는 100 g이며, 주머니에 넣을 수 있는 소형 퍽이 구동을 담당한다. 3D 영화·스트리밍·스포츠 생중계와 75개 이상의 VR 게임을 손동작만으로 즐길 수 있고, 클라우드 게임 스트리밍 및 콘솔 연결도 지원한다.",
+  "why": "백엔드 개발 환경에 직접적인 도구 변경은 없으나, 클라우드 게임 스트리밍 지원으로 원격 근무 시 대형 화면 작업 공간 구성이 가능해진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Z80 REPL (2018)",
+  "url": "https://news.hada.io/topic?id=34207",
+  "description": "Z80 REPL (2018)",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790210395.0,
+  "origin_url": "https://abagames.github.io/z80-repl/index.html",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://abagames.github.io/z80-repl/index.html",
+   "https://news.hada.io/topic?id=34207"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34207?v=23196f1488493c9ac7841fef83297049",
+  "link_status": "ok",
+  "ko_title": "Z80 REPL (2018)",
+  "summary": "40KB 크기의 Z80 REPL이 GitHub 페이지에 공개되었다. 해당 프로젝트는 레트로 환경에서 인터랙티브하게 코드를 실행할 수 있게 설계되었다. 페이지에는 프로젝트 소개와 사용 예시가 포함되어 있다.",
+  "why": "Z80 아키텍처 기반 레트로 환경에서 인터랙티브 코딩을 시도할 때 참고할 도구다. 백엔드나 AI 개발과는 직접적인 연관성이 없어 실무 적용은 어렵다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+  "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 98,
+  "comments": 31,
+  "published_at": 1790174077.015,
+  "discussion": "https://lobste.rs/s/ad5vwg/radicle_disclosure_vulnerability",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
+   "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html"
+  ],
+  "cross_source_count": 2,
+  "score": 1042.3,
+  "image": "https://radicle.dev/assets/images/og-card.png",
+  "link_status": "ok",
+  "ko_title": "Radicle: 네트워크 프로토콜 취약점 공개",
+  "summary": "Radicle의 모든 버전에서 네트워크 프로토콜이 암호화되지 않아 노드 간 트래픽이 평문으로 노출되는 두 가지 심각한 보안 취약점이 보고되었습니다. 공개 저장소는 영향이 적지만, 비공개 저장소는 데이터 유출 위험이 있습니다. 현재 수정 버전은 주요 버전 업그레이드가 필요하며, 비공개 저장소 사용을 중단하라는 권고가 나왔습니다.",
+  "why": "비공개 저장소를 쓰는 경우 즉시 사용을 중단해야 한다. 수정 버전은 주요 버전 변경이 수반되므로 기존 환경과의 호환성이 깨진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "I don't want the details",
+  "url": "https://michaelheap.com/i-dont-want-the-details/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 398,
+  "comments": 209,
+  "published_at": 1790168684,
+  "discussion": "https://news.ycombinator.com/item?id=49815466",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://michaelheap.com/i-dont-want-the-details/"
+  ],
+  "cross_source_count": 1,
+  "score": 1011.5,
+  "image": "https://michaelheap.com/.netlify/functions/og/i-dont-want-the-details",
+  "link_status": "ok",
+  "ko_title": "세부 사항을 원하지 않는다",
+  "summary": "",
+  "why": "사건 원인 분석은 이해를 주지만 변화의 동력은 잃게 만든다. 재발 방지를 위해 원인 설명 대신 구조적 변경 사항을 먼저 제시하라.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+  "url": "https://advocacy.consumerreports.org/press_release/seattle-city-council-votes-to-ban-surveillance-pricing-in-sale-of-groceries/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 338,
+  "comments": 211,
+  "published_at": 1790172274,
+  "discussion": "https://news.ycombinator.com/item?id=49816374",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://advocacy.consumerreports.org/press_release/seattle-city-council-votes-to-ban-surveillance-pricing-in-sale-of-groceries/"
+  ],
+  "cross_source_count": 1,
+  "score": 954.5,
+  "image": "https://article.images.consumerreports.org/f_auto/prod/content/dam/special-graphics/CR-generic-lowres",
+  "link_status": "ok",
+  "ko_title": "시애틀 시의회, 식료품 판매 시 감시 가격 책정 금지 투표",
+  "summary": "시애틀 시의회가 개인 데이터 기반 가격 차별을 금지하는 ‘공정 가격 및 투명성 법안’을 통과시켰다. 이 법안은 소비자의 웹 검색 기록, 실시간 위치, 소득 추정 등 데이터를 이용한 가격 변동을 금지한다. 할인 정책은 허용하되 투명성을 강화하고 프로파일링 제한을 둔다. 현재 시장에 적용될 첫 지방 차원의 입법이다.",
+  "why": "백엔드 개발자가 식료품 서비스의 개인화 가격 로직을 구현할 때, 시애틀 지역에서는 웹 검색 기록이나 실시간 위치 데이터를 활용한 가격 차별이 법적으로 금지된다. 해당 지역에서 서비스를 운영한다면 기존에 사용하던 프로파일링 기반 가격 변동 코드를 제거하거나, 지역별 로직 분기를 추가해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "The Story of Mel",
+  "url": "https://users.cs.utah.edu/~elb/folklore/mel.html",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 12,
+  "comments": 6,
+  "published_at": 1790222980.357,
+  "discussion": "https://lobste.rs/s/wf4wid/story_mel",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://users.cs.utah.edu/~elb/folklore/mel.html"
+  ],
+  "cross_source_count": 1,
+  "score": 898.8,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "멜의 이야기",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Ideas on modernizing the open-source desktop",
+  "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 23,
+  "comments": 8,
+  "published_at": 1790192997.115,
+  "discussion": "https://lobste.rs/s/aaq59w/ideas_on_modernizing_open_source_desktop",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/"
+  ],
+  "cross_source_count": 2,
+  "score": 889.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "오픈소스 데스크톱 현대화 아이디어",
+  "summary": "Scott Jenson이 Akademy 2026에서 오픈소스 데스크톱의 UI·UX를 기존 WIMP 모델에서 탈피하도록 실험과 프로토타입을 제시했다. 그는 Apple·Google·Chrome 팀 등에서 쌓은 경험을 바탕으로 오픈소스 프로젝트가 인력 부족으로 UX 설계에 어려움을 겪는다고 지적했다. 이전 Ubuntu 컨퍼런스 강연이 큰 관심을 얻은 뒤, 이번 발표에서도 데스크톱 UX의 차별성을 강조했다.",
+  "why": "백엔드 개발자가 직접 데스크톱 UI를 설계할 일은 드물다. 다만 오픈소스 프로젝트의 UX 개선 논의가 활발해지면, 사용하는 데스크톱 환경의 인터페이스가 기존 WIMP 모델에서 벗어나 새로운 상호작용 방식으로 바뀔 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Tokens too cheap to meter",
+  "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 283,
+  "comments": 192,
+  "published_at": 1790155277,
+  "discussion": "https://news.ycombinator.com/item?id=49813482",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://jyn.dev/tokens-too-cheap-to-meter/"
+  ],
+  "cross_source_count": 1,
+  "score": 871.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "토큰이 너무 저렴해 측정이 어려워",
+  "summary": "머신러닝 사용 비용이 연간 수십 배씩 감소하고 있다. 향후 1~2년 안에 LLM이 인프라 수준으로 모든 컴퓨팅에 통합될 것으로 예상된다. 3~6년 내에 현재 최첨단 품질의 LLM이 일반 하드웨어에서도 로컬 실행이 가능해질 전망이다.",
+  "why": "LLM이 인프라로 통합되면 API 호출 비용보다 품질과 접근성이 병목이 된다. 3~6년 내 일반 하드웨어에서 최첨단 품질의 로컬 실행이 가능해진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Show HN: How long do I need to work at my salary before I can coast, or retire?",
+  "url": "https://github.com/karmanyaahm/budget-tools/tree/main/fire",
+  "description": "I made a financial planning tool in a couple hours that can model various stages of life and potentially guide job searching and work timelines.",
+  "source": "hackernews",
+  "upvotes": 45,
+  "comments": 53,
+  "published_at": 1790222034,
+  "discussion": "https://news.ycombinator.com/item?id=49826059",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/karmanyaahm/budget-tools/tree/main/fire"
+  ],
+  "cross_source_count": 1,
+  "score": 849.0,
+  "image": "https://opengraph.githubassets.com/f3ccddfbc87f4aeb043663eb1a20a2cffeb570c76c217af985d83351d271a306/karmanyaahm/budget-tools",
+  "link_status": "ok",
+  "ko_title": "내 급여로 얼마나 일해야 여유를 가질 수 있거나 은퇴할 수 있나요",
+  "summary": "고소득 직장에서 언제까지 일해야 은퇴나 여유 생활이 가능한지 계산해 주는 FIRE 도구가 공개됐다. 이 도구는 하루 단위로 현금 흐름을 시뮬레이션하고, 세금·지출·투자를 반영해 목표 연령을 찾는다. 세 가지 목표(전액 소진, 60세까지 여유, 100세 이후 자산 감소 없음)에 대해 필요한 근무 기간과 포트폴리오 현황을 제공한다.",
+  "why": "이 도구는 AI가 작성해 전문가 검토를 거치지 않았으므로 재무 판단에 직접 쓰면 안 된다. 중요한 수치는 반드시 실제 재무 전문가와 대조해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest",
+  "url": "https://github.com/nestrilabs/virtio-nvgpu",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 61,
+  "comments": 29,
+  "published_at": 1790211743,
+  "discussion": "https://news.ycombinator.com/item?id=49824864",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/nestrilabs/virtio-nvgpu"
+  ],
+  "cross_source_count": 1,
+  "score": 809.0,
+  "image": "https://opengraph.githubassets.com/1/nestrilabs/virtio-nvgpu",
+  "link_status": null,
+  "ko_title": "Virtio-nvgpu: KVM 게스트 내에서 거의 네이티브 수준의 Nvidia GPU 접근",
+  "summary": "virtio-nvgpu는 NVIDIA 커널 드라이버의 ioctl를 리눅스 게스트와 호스트 사이에 드라이버 ABI 수준에서 전달해 API 변환 없이 그대로 사용한다. 게스트는 수정되지 않은 NVIDIA 사용자 모드 드라이버와 Vulkan, NVENC 등을 그대로 사용하며, 헤드리스 스트리밍 환경에서 프레임 렌더링·인코딩 후 압축 비디오를 출력한다. RTX 3060 기준 테스트에서 2 ms 이상 프레임당 호스트 대비 2 % 이내의 성능 차이와 CPU 사용량이 거의 동일함이 측정되었다.",
+  "why": "KVM 게스트에서 수정되지 않은 NVIDIA 드라이버와 Vulkan을 그대로 사용할 수 있다. 프레임당 2ms 이상인 게임 렌더링에서는 베어메탈 대비 2% 이내의 성능만 손실된다. 헤드리스 스트리밍 환경에서 VM 내부에서 직접 인코딩해 압축 비디오를 출력할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Sam Altman’s remarks at the United Nations Security Council",
+  "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+  "description": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790164800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/sam-altman-un-security-council-remarks"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "샘 알트먼, 유엔 안보리 연설",
+  "summary": "OpenAI CEO 샘 알트먼이 유엔 안보리 앞에서 AI 안전, 인간 통제, 국제 협력을 강조했다. 그는 AI 거버넌스와 규제 필요성을 강조하며 전 세계 협력의 중요성을 역설했다.",
+  "why": "AI 거버넌스 강화가 국제 규제로 이어질 수 있다. 향후 모델 배포나 데이터 접근 정책 변경 시 대응이 필요해진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
+  "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+  "description": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790164800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/harvey-from-context-to-confidence-with-astra"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Harvey, GPT-6 Astra로 법적 문맥을 강화한 초안 작성",
+  "summary": "GPT-6 Astra는 보다 구조화되고 문맥을 인식한 법률 문서를 생성한다. 변호사는 초안 작성에서 벗어나 전략 수립에 집중할 수 있다.",
+  "why": "변호사의 업무 효율이 높아져 전략적 업무에 더 많은 시간을 할애할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "dream-num / univer-workspace",
+  "url": "https://github.com/dream-num/univer-workspace",
+  "description": "An open-source Office workspace where people and AI agents create, collaborate, and review together.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 410,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/dream-num/univer-workspace"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 410,
+  "score": 248.49999999999997,
+  "image": "https://opengraph.githubassets.com/1/dream-num/univer-workspace",
+  "link_status": null,
+  "ko_title": "dream-num / univer-workspace — 오픈소스 Office 워크스페이스",
+  "summary": "Univer Workspace는 Univer Office SDK 기반의 배포 가능한 협업 환경으로, Sheets, Docs, Slides, 관계형 테이블, 캔버스 등을 하나의 런타임에 통합한다. 사람, AI 에이전트, 운영자를 위한 브라우저, 에이전트, CLI 세 가지 인터페이스를 제공하며, 문서 저장·권한을 서버가 관리한다. 에이전트는 격리된 워크트리에서 변경을 검증하고, 검토 후 사람에게 결과를 전달한다.",
+  "why": "AI 에이전트가 격리된 워크트리에서 문서를 수정하고 사람이 검토하는 워크플로우를 제공한다. 백엔드 개발자는 에이전트 생성 산출물의 검증과 병합 권한을 서버 측에서 관리할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
+  "title": "deepopen-com / deepopen",
+  "url": "https://github.com/deepopen-com/deepopen",
+  "description": "非自回归System 1决策引擎，专为结构化类型决策场景设计  DeepOpen Multilingual, non-autoregressive System 1 decision engine.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 354,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/deepopen-com/deepopen"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 354,
+  "score": 228.89999999999998,
+  "image": "https://opengraph.githubassets.com/1/deepopen-com/deepopen",
+  "link_status": null,
+  "ko_title": "deepopen-com / deepopen",
+  "summary": "DeepOpen은 laya 기반의 완전 오픈소스 비자기회귀 System 1 결정 엔진으로, 100여 개 언어를 한 번의 전방 전달로 분류한다. 단일 요청 지연시간 33 ms, 배치 7.2 ms(T4 GPU 실측)이며, RLCD 강화학습으로 높은 확률 캘리브레이션을 제공한다. 영어·다국어·구조화형 세 가지 체크포인트와 스마트 라우터를 내장해 언어·스크립트 자동 감지·최적 모델 매칭을 수행한다.",
+  "why": "기존 LLM 기반 분류에서 발생하는 지연과 비용 문제를 해결한다. 출력이 사전 정의된 구조화 타입으로 고정되어 파싱 오류가 없다. 확률 값이 통계적으로 보정되어 자동 처리와 수동 검토를 분리할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-24T16:00:05.429561+09:00",
+  "batch_label": "9월 24일 16:00"
+ },
+ {
   "title": "Italian parliament votes for return to nuclear energy",
   "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
   "description": "",
