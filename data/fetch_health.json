@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-15T10:00:56+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 13,
-    "blocked": 1,
-    "unavailable": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://digiato.global/report/iran-banks-ssl-certificates-domain-changes/",
-     "source": "hackernews",
-     "reason": "unavailable"
-    }
-   ]
-  },
-  {
    "at": "2026-09-15T21:14:34+09:00",
    "total": 20,
    "counts": {
@@ -581,6 +559,22 @@
     {
      "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-25T00:00:31+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://nokiadesignarchive.aalto.fi/index.html",
+     "source": "hackernews",
      "reason": "blocked"
     }
    ]
