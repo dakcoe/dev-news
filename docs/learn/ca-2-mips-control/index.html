@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MIPS 제어 명령어와 J-type — 분기, 점프, if와 while · 학습 노트 · dev-news</title><meta name="description" content="PC를 바꾸는 제어 명령어를 본다. beq·bne·slt로 만드는 조건 분기, j·jr·jal과 J-type, 26비트로 32비트 주소를 만드는 법과 분기 범위, if·while을 어셈블리로 옮기는 문제를 푼다."><link rel="canonical" href="https://dev-news.net/learn/ca-2-mips-control/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="MIPS 제어 명령어와 J-type — 분기, 점프, if와 while · 학습 노트 · dev-news"><meta property="og:description" content="PC를 바꾸는 제어 명령어를 본다. beq·bne·slt로 만드는 조건 분기, j·jr·jal과 J-type, 26비트로 32비트 주소를 만드는 법과 분기 범위, if·while을 어셈블리로 옮기는 문제를 푼다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#ca">컴퓨터구조</a></nav>
+<div class="grid"><article>
+<div class="kicker">컴퓨터구조 2편</div>
+<h1>MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 9월 22일</span><span>·</span><span>읽는 데 약 8분</span></div>
+<div class="lead"><b>한 줄로:</b> 제어 명령어는 PC를 바꾸는 명령어다. beq와 bne는 PC에 거리를 더하고, j와 jal은 PC를 통째로 바꾼다.</div>
+  <h2 id="s1">1. PC를 바꾸는 명령어</h2>
+  <p>앞 글에서 본 명령어는 전부 위에서 아래로 한 줄씩 실행됐습니다. 다음 줄이 어디인지는 <b>PC</b>, 프로그램 카운터가 들고 있습니다. 명령어 하나가 4바이트이니 PC는 보통 4씩 늘어납니다. 그런데 if와 while은 다음 줄로 안 가고 다른 곳으로 뜁니다. 그러려면 PC에 다른 값을 넣어야 합니다. PC를 바꾸는 명령어가 <b>제어 명령어</b>입니다. 이 글에서는 조건 분기와 무조건 점프 두 종류를 보고, 문제 다섯 개를 풉니다.</p>
+
+  <h2 id="s2">2. 조건 분기 beq · bne</h2>
+  <p><code>beq $s1, $s2, label</code>. 두 레지스터가 같으면 label로 뜁니다. <code>bne</code>는 반대로, 다르면 뜁니다. 둘 다 I-type입니다. 뒤쪽 16비트가 통째로 상수 칸인 형식입니다. 맨 앞 6비트 op가 어떤 명령어인지 정하고, 뒤따르는 rs와 rt 칸이 레지스터를 가리킵니다.</p>
+  <p>beq의 op는 4, bne는 5입니다. rs와 rt에 비교할 레지스터 둘이 들어가고, 남은 16비트에 label까지의 거리가 들어갑니다. 거리는 바이트가 아니라 <b>명령어 개수</b>입니다. 명령어 하나가 4바이트이니, 목적지 주소는 PC에 거리 곱하기 4를 더한 값입니다. 거리가 25이면 PC에서 100바이트 뒤로 뜁니다.</p>
+
+  <h2 id="s3">3. 작다는 없다 — slt · slti</h2>
+  <p>같다, 다르다는 있는데 작으면 뛰는 명령어는 따로 없습니다. 대신 set less than, <code>slt</code>가 있습니다. <code>slt $s1, $s2, $s3</code>. <code>$s2</code>가 <code>$s3</code>보다 작으면 <code>$s1</code>에 1을, 아니면 0을 넣습니다. 뛰지 않고 값만 만듭니다.</p>
+  <p>그 값을 항상 0이 들어 있는 <code>$zero</code>와 beq나 bne로 비교하면 작을 때 뛰는 분기가 만들어집니다. 한 줄로 하던 일을 두 줄로 나눈 것입니다. <code>slti</code>는 레지스터 대신 상수와 비교하는 I-type 버전입니다.</p>
+
+  <h2 id="s4">4. 무조건 점프 j · jr · jal</h2>
+  <p>남은 것은 조건 없이 뛰는 쪽입니다. 그 명령어가 <code>j</code>, 무조건 점프입니다. 조건을 보지 않고 PC에 새 값을 넣습니다. 세 번째 형식 <b>J-type</b>이 여기서 나옵니다.</p>
+  <pre>J-type:  op (6비트) | 목적지 (26비트)</pre>
+  <p>레지스터 칸이 없으니 26비트가 통째로 주소입니다. <code>jr</code>은 명령어에 주소를 적는 대신 레지스터에 든 주소로 뜁니다. 주소가 레지스터에 있으니 형식은 R-type입니다.</p>
+  <p>짝이 되는 명령어가 <code>jal</code>, jump and link입니다. 뛰기 전에 돌아올 주소인 PC 더하기 4를 <code>$ra</code>에 남깁니다. <code>$ra</code>는 돌아올 주소를 담아 두는 레지스터입니다. 함수를 부를 때 jal로 가고, 끝나면 <code>jr $ra</code>로 돌아옵니다.</p>
+
+  <h2 id="s5">5. 문제 1 — if x &lt; y</h2>
+  <p>x가 y보다 작으면 z는 x 더하기 y, 아니면 x 빼기 y입니다. x, y, z는 <code>$s0</code>, <code>$s1</code>, <code>$s2</code>입니다.</p>
+  <pre>      slt $t0, $s0, $s1     # x &lt; y 이면 $t0 = 1
+      beq $t0, $zero, Less  # $t0가 0이면 Less로
+      add $s2, $s0, $s1
+      j   Exit              # 뺄셈을 건너뜀
+Less: sub $s2, $s0, $s1
+Exit:</pre>
+  <p>이름이 Less인데 0일 때 뜁니다. 여기서는 뛰는 쪽에 뺄셈을 두기로 했기 때문입니다. Exit에서 두 경로가 다시 만납니다. 경로가 둘이니 건너뛰는 점프가 하나 필요하고, 방금 본 j가 여기에 쓰입니다.</p>
+
+  <h2 id="s6">6. 문제 2 — 26비트로 32비트 주소 만들기</h2>
+  <p>j의 목적지 칸은 26비트뿐인데 주소는 32비트입니다. 모자란 6비트를 어디선가 채워야 합니다. 채워 오는 곳이 두 군데입니다.</p>
+  <ol><li><b>아래쪽 2비트</b> — 명령어는 4바이트 경계에 있으니 주소의 마지막 두 비트는 항상 0입니다. 늘 0인 자리를 명령어에 담을 이유가 없습니다. 26비트를 왼쪽으로 2칸 밀면 28비트가 됩니다.</li>
+  <li><b>위쪽 4비트</b> — PC 더하기 4에서 그대로 가져옵니다.</li></ol>
+  <p>숫자로 해 봅니다. PC는 <code>0xa7f8001c</code>, 26비트 칸의 값은 <code>0x1fe0004</code>입니다. 16진수는 네 비트를 한 글자로 묶어 적는 방법입니다. 26비트 칸의 값을 왼쪽으로 2칸 밀면 <code>0x7f80010</code>, 이것이 목적지의 아래 28비트입니다. 상위 4비트는 PC 더하기 4의 맨 앞 한 글자에서 가져옵니다. 그 글자는 16진수로 a, 2진수로 1010입니다. 앞에 붙이면 목적지는 <code>0xa7f80010</code>입니다.</p>
+  <p>두 가지를 확인합니다. 마지막 두 비트가 0이니 4바이트 경계가 맞습니다. 그리고 상위 4비트는 PC와 같은 a 그대로입니다. 점프는 이 4비트를 바꿀 수 없습니다.</p>
+
+  <h2 id="s7">7. 문제 3 — 뛸 수 있는 거리</h2>
+  <p>칸이 모자라 어딘가에서 채워 온다는 것은, 뛸 수 있는 거리에 한계가 있다는 뜻입니다.</p>
+  <ul><li><b>beq</b> — 16비트 거리는 부호가 있어 −2<sup>15</sup>부터 2<sup>15</sup>−1까지입니다. 명령어로 32768개, 바이트로는 앞뒤 128킬로바이트입니다. 어떤 PC에서 출발하든 앞뒤로 128킬로바이트 안입니다.</li>
+  <li><b>j</b> — 28비트를 채우고 상위 4비트는 PC에서 오니, PC와 상위 4비트가 같은 블록 안이면 어디든 갑니다. 그 블록의 크기는 2<sup>28</sup>, 256메가바이트입니다. 앞의 예라면 상위 4비트가 a인 <code>0xa0000000</code>부터 <code>0xafffffff</code>까지입니다.</li>
+  <li><b>jr</b> — 그보다 멀리 가야 하면 씁니다. 레지스터에는 32비트가 통째로 들어가니 제한이 없습니다.</li></ul>
+
+  <h2 id="s8">8. 문제 4 — goto가 섞인 if</h2>
+  <p>i와 j가 같으면 L0로 가고, 아니면 i가 j 이상일 때 F는 G 더하기 H, 작을 때 G 빼기 H입니다. i, j는 <code>$s3</code>, <code>$s4</code>, G, H, F는 <code>$s0</code>, <code>$s1</code>, <code>$s2</code>로 둡니다. 이상은 작지 않다는 뜻이니 slt로 작은지 먼저 만듭니다.</p>
+  <pre>      beq $s3, $s4, L0
+      slt $t0, $s3, $s4
+      bne $t0, $zero, Else  # 작을 때만 뺄셈으로
+      add $s2, $s0, $s1
+      j   Exit
+Else: sub $s2, $s0, $s1
+Exit:</pre>
+  <p>앞 문제와 뼈대가 같습니다. slt 한 줄, 분기 한 줄, 두 경로, 점프 하나입니다.</p>
+
+  <h2 id="s9">9. 문제 5 — while</h2>
+  <p>i는 0에서 시작하고, A[i]가 0인 동안 i를 1씩 올립니다. 반복은 위로 되돌아가는 점프입니다. i를 <code>$s3</code>, A의 시작 주소를 <code>$s6</code>에 둡니다. A[i]를 읽으려면 인덱스에 4를 곱해야 합니다. 왼쪽으로 2칸 밀면 4를 곱한 것입니다.</p>
+  <pre>Loop: sll  $t1, $s3, 2      # i × 4
+      add  $t1, $t1, $s6    # A[i]의 주소
+      lw   $t0, 0($t1)
+      bne  $t0, $zero, Exit # 0이 아니면 빠져나감
+      addi $s3, $s3, 1
+      j    Loop
+Exit:</pre>
+  <p>조건이 0이 아니라 다른 값과 비교하는 경우도 뼈대는 같습니다. <code>$zero</code> 자리에 그 값이 든 레지스터를 넣으면 끝입니다.</p>
+
+  <h2 id="s10">10. &amp;와 &amp;&amp;</h2>
+  <p>C의 <code>&amp;</code>와 <code>&amp;&amp;</code>는 명령어로 어떻게 다를까요. <code>&amp;</code>는 비트 연산이니 and 명령어 한 줄입니다. <code>&amp;&amp;</code>는 참과 거짓입니다. 앞이 거짓이면 뒤는 보지도 않습니다. 그래서 beq로 앞 조건을 검사해 거짓이면 뒤를 건너뛰는 분기가 됩니다. 하나는 산술 논리 명령어, 하나는 제어 명령어로 바뀝니다.</p>
+
+  <h2 id="s11">정리</h2>
+  <p>이것으로 형식 세 가지가 다 모였습니다. 레지스터끼리는 R, 상수와 오프셋과 분기 거리는 I, 멀리 뛰는 주소는 J입니다. beq와 bne는 PC에 거리를 더하고, j와 jal은 PC를 통째로 바꿉니다. if는 slt 더하기 분기, 반복은 위로 돌아가는 j입니다. 여기까지가 명령어를 읽는 법입니다. add 한 줄이 프로세서 안에서 실제로 어떻게 계산되는지는 다음 글에서 봅니다.</p>
+<div class="next"><a href="/learn/ca-1-mips-basics/"><small>← 이전 글</small><span>MIPS 명령어 형식과 데이터 전송 — R-type, I-type, lw·sw</span></a><a class="r" href="/learn/ca-3-arithmetic/"><small>다음 글 →</small><span>정수 덧셈의 오버플로와 곱셈 하드웨어 — 2의 보수에서 세 가지 곱셈 설계까지</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">PC를 바꾸는 명령어</a></li><li><a href="#s2">조건 분기 beq · bne</a></li><li><a href="#s3">작다는 없다 — slt · slti</a></li><li><a href="#s4">무조건 점프 j · jr · jal</a></li><li><a href="#s5">문제 1 — if x &lt; y</a></li><li><a href="#s6">문제 2 — 26비트로 32비트 주소 만들기</a></li><li><a href="#s7">문제 3 — 뛸 수 있는 거리</a></li><li><a href="#s8">문제 4 — goto가 섞인 if</a></li><li><a href="#s9">문제 5 — while</a></li><li><a href="#s10">&amp;와 &amp;&amp;</a></li><li><a href="#s11">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

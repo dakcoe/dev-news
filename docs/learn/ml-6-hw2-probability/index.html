@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>과제 2번 확률 연습문제 — 기댓값의 선형성 하나로 푸는 여섯 문제 · 학습 노트 · dev-news</title><meta name="description" content="분산의 두 표현, 독립과 공분산, 가우시안의 최빈값, 독립인 합의 평균과 분산, 최대우도 추정, 불편 추정까지 여섯 문제를 데이터 2·4·6 하나로 따라가며 채점에서 깎이는 근거 줄을 짚는다."><link rel="canonical" href="https://dev-news.net/learn/ml-6-hw2-probability/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="과제 2번 확률 연습문제 — 기댓값의 선형성 하나로 푸는 여섯 문제 · 학습 노트 · dev-news"><meta property="og:description" content="분산의 두 표현, 독립과 공분산, 가우시안의 최빈값, 독립인 합의 평균과 분산, 최대우도 추정, 불편 추정까지 여섯 문제를 데이터 2·4·6 하나로 따라가며 채점에서 깎이는 근거 줄을 짚는다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#ml">머신러닝</a></nav>
+<div class="grid"><article>
+<div class="kicker">머신러닝 6편</div>
+<h1>과제 2번 확률 연습문제 — 기댓값의 선형성 하나로 푸는 여섯 문제</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 9월 20일</span><span>·</span><span>읽는 데 약 11분</span></div>
+<div class="lead"><b>한 줄로:</b> 여섯 문제가 전부 기댓값의 선형성 하나에서 갈라져 나온다. 답을 외우는 것이 아니라, 채점자가 보는 자리를 알고 스스로 쓰는 것이 목표다.</div>
+  <h2 id="s1">1. 여섯 문제, 한 줄기</h2>
+  <p>풀 문제는 교재 1장 연습문제 1.5, 1.6, 1.9, 1.10, 1.11, 1.13 여섯 개입니다. 흩어져 보이지만 전부 기댓값이라는 도구 하나에서 갈라져 나옵니다. 먼저 그 도구를 손에 쥐고, 그다음 문제를 번호순으로 엽니다. 뒤 문제가 앞 문제의 결과를 그대로 가져다 쓰기 때문에 앞을 건너뛰면 뒤가 막힙니다. 숫자 예시는 하나로 갑니다. 데이터 세 개, <b>2와 4와 6</b>입니다. 이 세 숫자가 마지막 문제까지 따라옵니다.</p>
+
+  <h2 id="s2">2. 기댓값, 선형성, 분산</h2>
+  <p>관측되는 값 하나를 x라고 부릅니다. x는 확률에 따라 이 값이 되기도 하고 저 값이 되기도 하니 확률변수입니다. 기댓값 <code>E[x]</code>는 값마다 확률을 곱해서 더한 것입니다. x가 2, 4, 6 중 하나이고 확률이 각각 1/3이면 기댓값은 12를 3으로 나눈 4입니다. 확률이 모두 같으면 기댓값은 산술평균과 같습니다.</p>
+  <p>x에 어떤 계산을 씌운 것을 f라고 씁니다. 예를 들어 x를 제곱하는 계산입니다. x가 흔들리면 f도 흔들리니 f도 확률변수이고 기댓값을 가집니다. x가 2, 4, 6이면 f는 4, 16, 36이고 기댓값은 56/3입니다.</p>
+  <h3>선형성</h3>
+  <p>기댓값은 더하기와 상수 곱하기를 그냥 통과시킵니다. 이것이 <b>선형성</b>입니다.</p>
+  <ul><li>합의 기댓값은 기댓값의 합입니다.</li>
+  <li>상수는 기댓값 기호 밖으로 나옵니다. 상수 하나만 있으면 그 기댓값은 상수 자신입니다. 3은 확률 1로 나오니 3의 기댓값은 3입니다.</li></ul>
+  <p>여섯 문제에서 실제로 쓰는 도구는 거의 이것 하나이고, 나머지는 제곱을 펼치는 계산입니다.</p>
+  <h3>분산</h3>
+  <p>분산은 값들이 평균에서 얼마나 떨어져 있는지를 숫자 하나로 잰 것입니다. 값에서 평균을 뺀 다음 제곱하고, 그 제곱의 기댓값을 취합니다. 그냥 빼서 더하면 위아래로 상쇄되어 항상 0이 되니 제곱으로 부호를 없앱니다. 2, 4, 6이면 평균이 4이므로 차이는 −2, 0, 2, 제곱하면 4, 0, 4, 평균 내면 <b>8/3</b>입니다. 분산의 양의 제곱근이 표준편차입니다.</p>
+
+  <h2 id="s3">3. 문제 1.5 — 분산의 두 표현</h2>
+  <p>분산의 두 표현 <code>E[(x − E[x])²]</code>와 <code>E[x²] − E[x]²</code>가 같다는 것을 보이는 문제입니다. 순서만 다른 것처럼 보이지만 완전히 다른 계산입니다. 숫자로 먼저 확인하면, 제곱의 기댓값은 56/3, 기댓값의 제곱은 4² = 16이고, 56/3 − 16 = 8/3입니다. 정의로 구한 값과 같습니다.</p>
+  <p>기호로 증명할 때는 평균을 μ로 줄여 씁니다. 중요한 점은 <b>μ가 x에 따라 변하지 않는 상수</b>라는 것입니다. 괄호를 펼치면 세 항이 나오고, 여기에 기댓값을 씌워 선형성으로 항마다 떼어 냅니다. 가운데 항에서 2와 μ는 상수라서 밖으로 나오고, 마지막 항은 상수의 기댓값이라 그대로입니다. 남은 것을 정리하면 두 번째 표현이 됩니다.</p>
+  <h3>채점자가 보는 줄</h3>
+  <p>절반이 깎이는 자리는 상수를 밖으로 뺀 줄에 근거를 적지 않는 경우입니다. 근거는 두 문장입니다. <b>μ가 상수여서 기댓값 밖으로 나온다. 상수의 기댓값은 그 상수 자신이다.</b> 이 두 줄이 없으면 계산이 전부 맞아도 근거 없는 전개로 처리됩니다. 답안에서 가장 흔하게 비는 자리입니다.</p>
+
+  <h2 id="s4">4. 문제 1.6 — 독립이면 공분산은 0</h2>
+  <p>용어 세 개가 필요합니다.</p>
+  <ul><li><b>결합 확률</b> — 변수 두 개가 각각 어떤 값일 확률을 하나로 적은 것입니다.</li>
+  <li><b>독립</b> — 한쪽 값을 알아도 다른 쪽에 대해 아무것도 알 수 없는 상태입니다. 독립이면 결합 확률이 각각의 확률의 곱으로 쪼개집니다.</li>
+  <li><b>공분산</b> — 두 변수가 같이 움직이는 정도입니다. 각각에서 자기 평균을 뺀 다음 곱하고 기댓값을 취합니다. 같이 커지면 양수, 반대로 움직이면 음수입니다.</li></ul>
+  <p>정의의 괄호 두 개를 곱하면 네 항이 나오고, 기댓값을 씌워 선형성으로 정리하면 곱의 기댓값에서 기댓값의 곱을 뺀 형태 <code>E[xy] − E[x]E[y]</code>가 남습니다. 이제 독립을 씁니다. 값이 연속이면 기댓값은 적분으로 계산하는데, 결합 확률이 곱으로 쪼개지므로 이중적분이 적분 두 개의 곱으로 갈라집니다. 그러면 곱의 기댓값이 기댓값의 곱과 같아지고, 차이는 0입니다.</p>
+
+  <h2 id="s5">5. 문제 1.9 — 가우시안의 꼭대기</h2>
+  <p>다음 세 문제의 무대는 가우시안 분포입니다. 종 모양 곡선이고, 모양을 정하는 숫자는 중심인 평균과 퍼진 정도인 분산 두 개입니다. 식에는 지수함수가 있고 지수 자리에 제곱이 들어 있어서, 그대로 미분하면 계산이 지저분해집니다. 그래서 로그를 먼저 취합니다. 로그는 단조증가 함수라 최댓값의 위치가 바뀌지 않습니다. 위치만 궁금할 때는 로그를 취해도 손해가 없습니다.</p>
+  <p>가우시안이 가장 높아지는 지점, <b>최빈값</b>을 찾는 문제입니다. 로그를 취하면 항이 두 개입니다. 첫째 항에는 x가 없어 미분하면 사라집니다. 둘째 항은 x에서 평균을 뺀 것을 제곱하고 마이너스를 붙인 꼴입니다. x로 미분해서 0으로 두면 x는 평균과 같습니다. 종 모양의 꼭대기가 한가운데라는 예상과 맞습니다.</p>
+  <h3>최대인지 밝힌다</h3>
+  <p>미분해서 0이 되는 점은 꼭대기일 수도 골짜기일 수도 있습니다. 그래서 한 번 더 미분합니다. 결과는 −1/분산입니다. 분산은 항상 양수이므로 이 값은 어디서나 음수이고, 곡선이 위로 볼록하다는 뜻입니다. 위로 볼록한 곡선에서 기울기가 0인 점은 유일한 꼭대기입니다. 이 확인 줄을 빼면 왜 최대인지가 비어 채점에서 깎입니다.</p>
+  <h3>변수가 여러 개일 때</h3>
+  <p>뒷부분은 x가 숫자 여러 개를 묶은 벡터인 경우입니다. 분산 자리에는 변수끼리의 공분산을 표로 적은 공분산 행렬이, 나눗셈 자리에는 그 역행렬이 들어갑니다. 로그를 취하면 x가 들어 있는 항은 하나뿐이고, 그 항을 x로 미분합니다.</p>
+  <p>0으로 두면 역행렬 곱하기 (x − 평균)이 0이라는 식이 됩니다. 여기서 바로 x가 평균이라고 쓰면 깎입니다. 곱해서 0이 되는 경우는 둘 중 하나가 0인 경우이니, 역행렬이 0을 만들지 않는다는 근거가 필요합니다. <b>공분산 행렬은 양의 정부호이고, 따라서 역행렬이 정칙입니다.</b> 정칙이란 곱해서 0이 되게 만드는 상대가 0뿐이라는 뜻입니다. 이 한 줄이 있어야 결론이 유일해집니다. 마지막으로 헤시안이 음의 정부호임을 적어 최대임을 밝힙니다.</p>
+
+  <h2 id="s6">6. 문제 1.10 — 독립인 두 변수의 합</h2>
+  <p>평균은 합의 기댓값이 기댓값의 합이라는 선형성 그대로이고 한 줄로 끝납니다. 덧붙이면 좋은 것이 있습니다. <b>독립이라는 조건은 평균 쪽에서는 쓰이지 않았다</b>는 점입니다. 선형성은 독립이든 아니든 항상 성립합니다. 조건을 어디에 썼고 어디에 쓰지 않았는지 밝히는 것이 완결성 점수입니다.</p>
+  <p>분산에서는 1.5와 1.6이 동시에 쓰입니다. 1.5의 결과를 x + z라는 하나의 변수에 적용해 제곱의 기댓값에서 기댓값의 제곱을 뺍니다. 괄호를 펼치면 x의 분산, z의 분산, 그리고 두 배의 교차항이 나옵니다. 그 교차항이 정확히 공분산의 정의이고, 1.6에서 독립이면 공분산이 0이라고 이미 보였으니 교차항이 사라집니다. 독립 조건은 여기에서 쓰입니다.</p>
+
+  <h2 id="s7">7. 우도와 로그우도</h2>
+  <p>남은 두 문제는 방향이 반대입니다. 지금까지는 분포를 알고 값을 따졌는데, 이제는 값이 주어져 있고 분포를 모릅니다. 데이터 2, 4, 6을 보고 이 데이터를 만든 가우시안의 평균과 분산을 되찾아야 합니다.</p>
+  <p>도구는 <b>우도</b>입니다. 어떤 평균과 분산을 가정했을 때 이 데이터가 나올 확률이고, 데이터가 독립이면 각각의 확률을 전부 곱한 것입니다. 곱한 형태는 미분하기 어려우니 로그를 취해 합으로 바꿉니다. 로그우도는 항이 셋입니다.</p>
+  <ol><li>데이터에서 평균을 뺀 것의 제곱을 전부 더해 분산으로 나누고 마이너스를 붙인 항 — 평균과 분산이 둘 다 들어 있습니다.</li>
+  <li>분산에 로그를 씌운 것에 데이터 개수를 곱한 항 — 분산만 들어 있습니다.</li>
+  <li>상수 — 어느 쪽으로 미분하든 사라집니다.</li></ol>
+  <p>어느 항에 무엇이 들어 있는지 먼저 보면 미분이 훨씬 쉬워집니다.</p>
+
+  <h2 id="s8">8. 문제 1.11 — 최대우도로 평균과 분산 구하기</h2>
+  <h3>평균</h3>
+  <p>평균이 들어 있는 항은 첫째 항뿐입니다. 연쇄법칙으로 미분하면 제곱을 내려 2가 앞으로 나오고, 안쪽을 평균으로 미분하면 −1이 나옵니다. 두 부호가 만나 전체가 양수가 됩니다. 0으로 두고 양변에 분산을 곱합니다. 분산이 양수라서 곱해도 방향이 바뀌지 않습니다. 정리하면 추정값은 데이터의 산술평균, 2와 4와 6이면 4입니다.</p>
+  <h3>분산으로 미분할 때의 함정</h3>
+  <p>이 과제에서 가장 많이 틀리는 자리입니다. <b>표준편차로 미분하면 안 됩니다.</b> 분산을 통째로 하나의 변수로 두고 미분합니다. 헷갈리면 분산에 s라는 새 이름을 붙입니다. 그러면 첫째 항은 1/s 꼴, 둘째 항은 log s 꼴이 됩니다. 1/s를 미분하면 −1/s², log s를 미분하면 1/s입니다. 이 두 공식을 답안에 밝히면 전개가 끊기지 않습니다. 0으로 두고 정리하면 제곱합을 데이터 개수로 나눈 값이 나옵니다.</p>
+  <h3>완결성 한 문장</h3>
+  <p>방금 구한 식에는 평균이 들어 있습니다. 그런데 평균의 추정값은 분산과 상관없이 따로 구해졌습니다. 서로 얽혀 있지 않으니 평균을 먼저 구해서 대입할 수 있습니다. 이 문장이 없으면 왜 대입해도 되는지가 비어서 감점됩니다. 대입하면 분산의 추정값은 각 데이터에서 산술평균을 뺀 제곱의 평균, 2와 4와 6이면 8/3입니다.</p>
+
+  <h2 id="s9">9. 문제 1.13 — 불편 추정</h2>
+  <p><b>참값</b>은 데이터를 만들어 낸 진짜 평균과 진짜 분산입니다. 보통은 참값을 모르고 데이터로 추정하는데, 추정값은 데이터를 새로 뽑으면 다른 값이 나오며 흔들립니다. 그 흔들리는 값의 기댓값이 참값과 정확히 같으면 <b>불편 추정량</b>이라고 부릅니다. 한 번 맞힌다는 뜻이 아니라 평균적으로 맞는다는 뜻입니다.</p>
+  <p>마지막 문제는 앞의 분산 추정식에서 중심만 바꿉니다. 산술평균 대신 참평균을 안다고 치고 그것을 중심으로 제곱을 잽니다. 이 추정량의 기댓값이 참분산과 같음을 보이라는 것입니다. 기댓값을 취하고 선형성으로 합 안으로 넣으면 항 하나만 따지면 됩니다. 나머지는 같은 모양이기 때문입니다.</p>
+  <p>항 하나의 제곱을 펼치면 세 덩어리가 나옵니다. 가우시안에서 알려진 두 값을 씁니다. 데이터의 기댓값은 참평균이고, 데이터 제곱의 기댓값은 참평균의 제곱 더하기 참분산입니다. 대입하고 정리하면 참평균이 들어간 항들이 서로 지워지고 참분산만 남습니다. 이 계산에서 <b>중심이 참평균이라는 가정이 쓰인다</b>는 문장을 적어야 합니다. 이 값은 데이터 번호와 무관하므로 개수로 나누면 참분산이 그대로 남습니다.</p>
+  <h3>왜 이 문제를 내는가</h3>
+  <p>2, 4, 6의 산술평균 4를 중심으로 한 제곱합의 평균은 8/3입니다. 참평균이 3이었다고 해 봅시다. 3을 중심으로 재면 제곱은 1, 1, 9이고 평균은 11/3으로 더 큽니다. 우연이 아닙니다. 산술평균은 그 데이터에 대해 제곱합을 가장 작게 만드는 점이기 때문입니다. 그래서 데이터로 구한 중심을 쓰면 분산이 실제보다 작게 나오고, 참값을 중심으로 쓰면 그 치우침이 사라집니다. 이것이 이 문제의 요점입니다.</p>
+
+  <h2 id="s10">정리</h2>
+  <p>여섯 문제가 전부 한 줄기였습니다. 기댓값의 선형성으로 항을 떼어 내고, 제곱을 펼치고, 조건을 어디에 썼는지 밝히는 것입니다. 답을 외우지 말고 이 줄기를 따라가면 됩니다.</p>
+  <p>제출 전에 세 가지를 확인합니다. 답안은 손으로 써야 합니다. 타이핑은 0점입니다. 전부 영어로 써야 합니다. 한국어가 섞이면 0점입니다. 그리고 여기서 짚은 근거 줄들을 빼지 않아야 합니다. 점수가 갈리는 곳이 그 자리들입니다.</p>
+<div class="next"><a href="/learn/ml-5-hw1-solve/"><small>← 이전 글</small><span>과제 1번 풀이 — MNIST로 보는 평균·분산·고유값 분해</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">여섯 문제, 한 줄기</a></li><li><a href="#s2">기댓값, 선형성, 분산</a></li><li><a href="#s3">문제 1.5 — 분산의 두 표현</a></li><li><a href="#s4">문제 1.6 — 독립이면 공분산은 0</a></li><li><a href="#s5">문제 1.9 — 가우시안의 꼭대기</a></li><li><a href="#s6">문제 1.10 — 독립인 두 변수의 합</a></li><li><a href="#s7">우도와 로그우도</a></li><li><a href="#s8">문제 1.11 — 최대우도로 평균과 분산 구하기</a></li><li><a href="#s9">문제 1.13 — 불편 추정</a></li><li><a href="#s10">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

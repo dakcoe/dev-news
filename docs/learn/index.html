@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>학습 노트 · dev-news</title><meta name="description" content="머신러닝·딥러닝·컴퓨터구조·운영체제 강의 영상 대본을 옮긴 해설 글."><link rel="canonical" href="https://dev-news.net/learn/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="학습 노트 · dev-news"><meta property="og:description" content="머신러닝·딥러닝·컴퓨터구조·운영체제 강의 영상 대본을 옮긴 해설 글."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><span>학습 노트</span></nav>
+<div class="list"><h1>학습 노트</h1>
+<p>대학 전공 과목을 공부하며 만든 강의 영상의 대본을 글로 옮겼습니다. 처음 보는 사람도 따라올 수 있게 개념 하나씩 풀어 씁니다.</p>
+<h2 id="ml">머신러닝</h2>
+<a class="item" href="/learn/ml-1-intro/"><b>1. 인공지능이란 무엇인가 — 정의, 논쟁, 두 번의 겨울</b><span>인공지능은 인간 지능을 기준으로 삼는 도구다. 강한·약한 인공지능, 응용·범용 인공지능, 계산주의와 연결주의, 튜링 테스트와 커피 테스트, 두 번의 겨울과 실제 위험 다섯 가지를 정리한다.</span></a>
+<a class="item" href="/learn/ml-2-week2-review/"><b>2. 머신러닝의 뼈대 — 목적함수, 선형대수, 미적분</b><span>머신러닝은 규칙을 데이터에서 찾아내는 일이다. 학습의 정의와 목적함수, 학습의 종류, 벡터·거리·내적·기저·고유값 분해, 도함수·테일러 급수·편미분·라그랑주 승수법까지 첫 두 주 분량을 훑는다.</span></a>
+<a class="item" href="/learn/ml-3-week2-math/"><b>3. 거리·행렬·벡터 미분 — 고유값 분해로 줄어드는 계산</b><span>p 노름·맨해튼·그래프·편집 거리, 그람-슈미트 직교화, 행렬식·트레이스·랭크·양정부호, 고유값 분해로 쉬워지는 행렬 계산, 벡터 미분과 볼록함수·젠센 부등식까지 앞 편에서 건너뛴 수학을 채운다.</span></a>
+<a class="item" href="/learn/ml-4-week3-prob/"><b>4. 확률과 통계 — 베이즈 정리와 가우시안 분포</b><span>심프슨의 역설에서 출발해 확률변수와 분포, 기댓값·분산·공분산, 합 규칙과 곱 규칙, 베이즈 정리와 유방암 검사 예제, 가우시안 분포와 화이트닝, 혼합 가우시안과 정상성까지 확률의 기본기를 쌓는다.</span></a>
+<a class="item" href="/learn/ml-5-hw1-solve/"><b>5. 과제 1번 풀이 — MNIST로 보는 평균·분산·고유값 분해</b><span>손글씨 5만 장을 표 하나로 놓고 픽셀별 평균·분산, 공분산 행렬, 고유값 분해를 구하는 과제 풀이. numpy의 축·인덱싱·슬라이싱과, 에러 없이 조용히 틀리는 두 자리를 짚는다.</span></a>
+<a class="item" href="/learn/ml-6-hw2-probability/"><b>6. 과제 2번 확률 연습문제 — 기댓값의 선형성 하나로 푸는 여섯 문제</b><span>분산의 두 표현, 독립과 공분산, 가우시안의 최빈값, 독립인 합의 평균과 분산, 최대우도 추정, 불편 추정까지 여섯 문제를 데이터 2·4·6 하나로 따라가며 채점에서 깎이는 근거 줄을 짚는다.</span></a>
+<h2 id="dl">딥러닝</h2>
+<a class="item" href="/learn/dl-1-perceptron-loss-backprop/"><b>1. 퍼셉트론에서 역전파까지 — 손실, 경사하강법, 활성화 함수</b><span>알바 시급 예시 하나로 퍼셉트론과 가중치, MSE·MAE·Huber·교차 엔트로피 손실, 경사하강법과 학습률, XOR과 다층 퍼셉트론, 역전파 계산, 기울기 소실과 ReLU, 학습 요령까지 따라간다.</span></a>
+<h2 id="ca">컴퓨터구조</h2>
+<a class="item" href="/learn/ca-1-mips-basics/"><b>1. MIPS 명령어 형식과 데이터 전송 — R-type, I-type, lw·sw</b><span>MIPS 명령어 32비트를 어디서 자르는지 본다. 레지스터와 R-type·I-type 형식, 산술·논리 명령어, 메모리와 lw·sw를 문제 네 개로 직접 풀어 본다.</span></a>
+<a class="item" href="/learn/ca-2-mips-control/"><b>2. MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</b><span>PC를 바꾸는 제어 명령어를 본다. beq·bne·slt로 만드는 조건 분기, j·jr·jal과 J-type, 26비트로 32비트 주소를 만드는 법과 분기 범위, if·while을 어셈블리로 옮기는 문제를 푼다.</span></a>
+<a class="item" href="/learn/ca-3-arithmetic/"><b>3. 정수 덧셈의 오버플로와 곱셈 하드웨어 — 2의 보수에서 세 가지 곱셈 설계까지</b><span>2진 덧셈과 2의 보수, 오버플로가 나는 조건과 XOR 하나로 만드는 검출 회로, MIPS의 add와 addu를 본다. 곱셈 회로를 세 단계로 줄여 가며 mult 결과가 Hi와 Lo에 나뉘는 이유를 확인한다.</span></a>
+<a class="item" href="/learn/ca-4-div-float/"><b>4. 나눗셈 하드웨어와 부동소수점 — 복원 나눗셈, IEEE 754, 반올림</b><span>빼고 복원하는 나눗셈 회로를 곱셈 회로와 합치고, IEEE 754 단정밀도·배정밀도의 부호·지수·fraction, 정규수 범위와 특수값, G·R·S 비트로 하는 반올림, 부동소수점 덧셈과 곱셈을 문제로 푼다.</span></a>
+<h2 id="os">운영체제</h2>
+<a class="item" href="/learn/os-01-intro/"><b>1. 운영체제란 무엇인가 — 로딩, 인터럽트, 직접 메모리 접근</b><span>프로그램이 메모리에 올라가는 과정에서 출발해 운영체제의 정의, 자원의 가상화, 인터럽트와 트랩, 인터럽트 구동 입출력과 DMA, 저장 계층과 캐싱까지 정리한다.</span></a>
+<a class="item" href="/learn/os-02-structures/"><b>2. 시스템 콜과 이중 모드 — 여러 프로그램을 안전하게 돌리는 법</b><span>운영체제 서비스와 부팅, 커널 구조에서 출발해 멀티프로그래밍과 멀티태스킹, 특권 명령과 모드 비트, 시스템 콜의 동작과 여섯 갈래, 표준 라이브러리와의 관계까지 정리한다.</span></a>
+<a class="item" href="/learn/os-03-processes/"><b>3. 프로세스 — 상태, PCB, 문맥 교환, fork와 exec</b><span>프로그램·프로세서·프로세스의 차이에서 출발해 주소 공간의 네 구역, 다섯 상태, PCB와 두 가지 큐, 문맥 교환, fork·exec·exit·wait로 이어지는 프로세스의 생애를 정리한다.</span></a>
+<a class="item" href="/learn/os-04-ipc/"><b>4. 시그널과 프로세스 사이 통신 — 알림, 공유 메모리, 파이프</b><span>번호 하나짜리 알림인 시그널의 전달 경로와 처리기, 쌓이지 않는 대기 비트의 성질, 그리고 데이터를 주고받는 공유 메모리와 보통 파이프·이름 있는 파이프를 비교해 정리한다.</span></a>
+<a class="item" href="/learn/os-05-threads/"><b>5. 스레드 — 한 프로세스 안의 여러 실행 흐름</b><span>스레드는 한 프로세스 안의 실행 흐름 하나다. 무엇을 함께 쓰고 무엇을 따로 갖는지, 동시성과 병렬성, 암달의 법칙, 사용자·커널 스레드와 잇는 방식, pthread와 스레드 풀을 정리한다.</span></a>
+<a class="item" href="/learn/os-06-scheduling/"><b>6. CPU 스케줄링 — 누구에게 먼저, 얼마 동안 프로세서를 주나</b><span>준비 큐에서 다음 프로세스를 고르는 방법을 숫자로 비교한다. 선점과 비선점, 평가 기준, 선착순·최단 작업 우선·최단 잔여 시간·라운드 로빈·우선순위·다단계 큐, 실시간 스케줄링, 리눅스 완전 공정 스케줄러.</span></a>
+<a class="item" href="/learn/os-07-sync/"><b>7. 동기화 도구 — 경쟁 상태, 락, 조건 변수</b><span>한 줄짜리 더하기가 왜 어긋나는지 숫자로 확인하고, 경쟁 상태와 임계 구역, 락과 좋은 락의 조건, 테스트 앤 셋·스핀 락·티켓 락, 잠재우는 락과 조건 변수, 유한 버퍼 문제까지 정리한다.</span></a>
+<a class="item" href="/learn/os-08-semaphores/"><b>8. 세마포어와 고전 동기화 문제 — 유한 버퍼, 읽기와 쓰기, 식사하는 철학자</b><span>세마포어는 정수 하나와 원자적 동작 둘이다. 처음 값에 따라 락, 순서 신호, 자원 계수기가 되는 원리와 유한 버퍼·읽기와 쓰기·식사하는 철학자 문제, 락 위치가 부르는 교착 상태를 정리한다.</span></a>
+<a class="item" href="/learn/os-09-deadlocks/"><b>9. 교착 상태 — 네 조건, 예방·회피·탐지와 은행원 알고리즘</b><span>교착 상태가 생기는 네 조건, 자원 할당 그래프, 조건을 깨는 예방, 안전 상태와 은행원 알고리즘으로 하는 회피, 대기 그래프로 찾고 끊는 탐지와 복구를 예제 두 개로 정리한다.</span></a>
+<a class="item" href="/learn/os-10-memory/"><b>10. 메인 메모리와 페이징 — 주소 변환, 단편화, TLB</b><span>논리 주소와 물리 주소, 기준·한계 레지스터, 연속 할당과 외부 단편화, 페이징의 주소 변환, TLB와 유효 접근 시간, 큰 페이지 테이블을 다루는 법과 스와핑을 예제 두 개로 정리한다.</span></a>
+<a class="item" href="/learn/os-11-virtual-memory/"><b>11. 가상 메모리 — 요구 페이징, 페이지 교체, 스래싱</b><span>요구 페이징과 페이지 부재 처리, 부재율로 셈하는 유효 접근 시간, 쓰기 시 복사, FIFO·최적·LRU 교체와 벨레이디 이상, 프레임 할당과 스래싱, 작업 집합을 예제 두 개로 정리한다.</span></a>
+<a class="item" href="/learn/os-12-file-systems/"><b>12. 파일 시스템 — inode, 디렉터리, 디스크 배치와 캐시</b><span>파일과 inode, 속성과 연산, 열린 파일 표, 디렉터리와 하드·심볼릭 링크, 슈퍼블록·비트맵·inode 표로 짜는 디스크 배치, 직접·간접 포인터, 파일 읽기의 디스크 접근과 페이지 캐시를 정리한다.</span></a>
+</div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

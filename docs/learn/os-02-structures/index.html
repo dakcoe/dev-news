@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>시스템 콜과 이중 모드 — 여러 프로그램을 안전하게 돌리는 법 · 학습 노트 · dev-news</title><meta name="description" content="운영체제 서비스와 부팅, 커널 구조에서 출발해 멀티프로그래밍과 멀티태스킹, 특권 명령과 모드 비트, 시스템 콜의 동작과 여섯 갈래, 표준 라이브러리와의 관계까지 정리한다."><link rel="canonical" href="https://dev-news.net/learn/os-02-structures/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="시스템 콜과 이중 모드 — 여러 프로그램을 안전하게 돌리는 법 · 학습 노트 · dev-news"><meta property="og:description" content="운영체제 서비스와 부팅, 커널 구조에서 출발해 멀티프로그래밍과 멀티태스킹, 특권 명령과 모드 비트, 시스템 콜의 동작과 여섯 갈래, 표준 라이브러리와의 관계까지 정리한다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#os">운영체제</a></nav>
+<div class="grid"><article>
+<div class="kicker">운영체제 2편</div>
+<h1>시스템 콜과 이중 모드 — 여러 프로그램을 안전하게 돌리는 법</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 9월 23일</span><span>·</span><span>읽는 데 약 12분</span></div>
+<div class="lead"><b>한 줄로:</b> 여러 프로그램을 함께 돌리면 서로를 망칠 위험이 생기고, 그 위험을 막으려고 나눈 두 모드의 경계를 넘는 정식 통로가 시스템 콜입니다.</div>
+  <h2 id="s1">1. 남은 신호 하나</h2>
+  <p>1편에서 운영체제가 신호에 반응해 일한다는 것을 봤습니다. 신호는 셋이었습니다. 바깥 장치가 보내는 하드웨어 인터럽트, 잘못된 상황에서 일어나는 예외, 그리고 프로그램이 일부러 일으키는 시스템 콜입니다. 셋 중 시스템 콜만 이름을 확인하고 지나갔습니다. 이 글은 그 안쪽으로 들어갑니다. 운영체제가 무엇을 해 주는지에서 출발해서, 여러 프로그램을 한꺼번에 돌릴 때 생기는 위험을 지나, 그 위험을 막는 장치가 시스템 콜을 어떤 모양으로 만들었는지에 닿습니다.</p>
+
+  <h2 id="s2">2. 운영체제가 내놓는 서비스</h2>
+  <p>운영체제가 해 주는 일은 크게 두 갈래입니다.</p>
+  <ul><li><b>사용자를 위한 것</b> — 명령을 입력받는 통로, 프로그램 실행, 입출력, 파일과 디렉터리 다루기, 프로그램끼리 주고받기, 오류 검출.</li>
+  <li><b>시스템 자신이 효율적으로 돌기 위한 것</b> — 자원 할당, 기록, 보호와 보안.</li></ul>
+  <p>앞의 여섯 가지는 우리가 직접 쓰는 것이고 뒤의 세 가지는 눈에 띄지 않는 곳에서 돌아갑니다.</p>
+  <p>사용자가 운영체제에 말을 거는 통로부터 봅니다. 가장 오래된 방식이 <b>명령줄 인터페이스</b>입니다. 글자로 명령을 적어 넣으면 그것을 읽어 실행합니다. 이 일을 하는 프로그램을 <b>셸</b>이라고 합니다. 다음은 아이콘과 창과 마우스로 다루는 <b>그래픽 인터페이스</b>입니다. 터치스크린은 마우스가 없으니 손짓으로 고르고 화면 위 자판으로 글자를 넣습니다. 최근에는 일상적인 말로 시키면 그 뜻을 풀어 대신 명령을 실행해 주는 계층이 더 붙었습니다. 통로가 무엇이든 도착하는 곳은 운영체제입니다.</p>
+
+  <h2 id="s3">3. 부팅과 커널의 구조</h2>
+  <h3>전원을 켜면</h3>
+  <p>전원을 켜면 <b>부트스트랩 프로그램</b>이 먼저 돕니다. 시스템을 초기화하고 커널을 메모리에 올리는 짧은 코드입니다. 커널이 올라오면 그다음 시스템 <b>데몬</b>을 띄웁니다. 데몬은 사용자 눈에 띄지 않는 곳에서 계속 돌며 요청이 오기를 기다리는 프로그램입니다. 인쇄 요청을 받아 처리하는 프로그램이 그런 예입니다. 부팅이 끝나면 커널은 가만히 있습니다. 신호가 올 때만 움직이기 때문입니다.</p>
+  <h3>커널은 한 덩어리가 아니다</h3>
+  <ul><li><b>모놀리식 커널</b> — 모든 기능을 하나의 덩어리에 넣고 같은 메모리 영역 안에서 돌립니다. 기능끼리 곧장 연결되어 있어 빠릅니다. 대신 한 곳을 고치면 커널 전체를 다시 번역해 통째로 올려야 합니다.</li>
+  <li><b>모듈 방식</b> — 기능을 조각으로 나누고 필요할 때만 커널에 끼워 넣습니다.</li>
+  <li><b>마이크로커널</b> — 꼭 필요한 것만 커널에 남기고 파일 관리 같은 나머지는 바깥의 별도 프로그램으로 뺍니다. 한 조각이 망가져도 커널은 살아 있습니다. 대신 조각끼리 커널을 거쳐 메시지를 주고받아야 하고 그만큼 느려집니다.</li></ul>
+  <p>실제 운영체제는 대개 이들을 섞어 씁니다. 어떤 방식이든 커널이 맡는 일은 같습니다.</p>
+
+  <h2 id="s4">4. 멀티프로그래밍과 멀티태스킹</h2>
+  <h3>프로세서를 놀리지 않는다</h3>
+  <p>커널이 맡는 일 중 하나가 어느 프로그램에 프로세서를 줄지 정하는 것입니다. 프로그램 하나만 메모리에 올려 두면, 그 프로그램이 디스크에서 값을 읽어 오기를 기다리는 동안 프로세서는 아무 일도 하지 않습니다. 전체 시간 중 프로세서가 실제로 일한 비율을 <b>이용률</b>이라고 하는데, 멈춰 있는 구간이 길면 이용률이 떨어집니다. 그래서 여러 프로그램을 한꺼번에 메모리에 올려 두고, 하나가 디스크를 기다리느라 멈추면 다른 프로그램에 프로세서를 넘깁니다. 이것이 <b>멀티프로그래밍</b>입니다. 목적은 이용률을 끌어올리는 것입니다.</p>
+  <h3>넘기는 간격을 아주 짧게</h3>
+  <p>멀티프로그래밍은 지금 돌던 프로그램이 스스로 멈출 때만 프로세서를 넘깁니다. 한 프로그램이 계산만 오래 하면 그동안 다른 프로그램은 아무 반응이 없습니다. 그래서 스스로 멈추기를 기다리지 않고 아주 짧은 간격으로 계속 넘깁니다. 이것이 <b>멀티태스킹</b>이고 <b>시분할</b>이라고도 부릅니다. 간격이 충분히 짧으면 사람은 여러 프로그램이 동시에 도는 것처럼 느낍니다. 사용자가 무언가를 입력하고 첫 반응이 나올 때까지 걸리는 시간을 <b>반응 시간</b>이라고 하는데, 여기서 목표로 삼는 값은 일 초 미만입니다.</p>
+  <h3>문제 1</h3>
+  <p>프로그램 두 개가 메모리에 올라가 있습니다. 프로그램 가는 계산만 계속해서 20초 동안 한 번도 멈추지 않습니다. 프로그램 나는 사용자가 글자를 칠 때마다 화면에 바로 보여 줘야 합니다. 지금 프로그램 가가 프로세서를 잡고 있습니다. 첫째, 멀티프로그래밍만 하는 시스템에서 사용자가 글자를 치면 언제 화면에 나타납니까. 둘째, 멀티태스킹을 하는 시스템에서는 어떻게 달라집니까.</p>
+  <h3>풀이</h3>
+  <p>첫째, 멀티프로그래밍은 돌던 프로그램이 스스로 멈출 때만 프로세서를 넘기는데 프로그램 가는 20초 동안 멈추지 않습니다. 그래서 글자는 20초가 지난 뒤에야 화면에 나타납니다. 쓸 수 없는 상태입니다. 둘째, 멀티태스킹은 정해진 짧은 시간이 지나면 강제로 넘깁니다. 간격이 충분히 짧으면 프로그램 나는 거의 바로 차례를 받아 글자를 띄웁니다.</p>
+  <p>멀티프로그래밍이 노린 것은 이용률이고, 멀티태스킹이 노린 것은 반응 시간입니다. 프로그램 가만 놓고 보면 두 방식의 이용률은 같습니다. 달라진 것은 사용자가 겪는 시간입니다.</p>
+
+  <h2 id="s5">5. 프로그램 하나가 전체를 망칠 수 있다</h2>
+  <p>여러 프로그램을 같이 돌리면 메모리와 장치를 함께 쓰게 됩니다. 한 프로그램이 잘못된 명령을 실행해 다른 프로그램의 메모리를 건드리면 그 프로그램까지 망가집니다. 운영체제가 쓰는 영역을 건드리면 시스템 전체가 멈춥니다. 빠져나오지 못하는 반복, 흔히 무한 루프라고 부르는 상태에 걸려 프로세서를 영영 놓지 않으면 나머지 프로그램은 차례가 오지 않습니다. 그래서 여럿이 함께 쓰는 운영체제에는 한 프로그램의 잘못이 다른 프로그램에 번지지 않아야 한다는 조건이 반드시 필요합니다.</p>
+
+  <h2 id="s6">6. 특권 명령과 모드 비트</h2>
+  <p>막는 방법은 명령을 두 등급으로 나누는 것입니다. 입출력 장치를 직접 건드리거나 메모리 보호 설정을 바꾸는 것처럼, 잘못 쓰면 시스템 전체에 영향을 주는 명령을 <b>특권 명령</b>이라고 합니다. 이 등급은 커널만 쓸 수 있고 응용 프로그램에는 금지됩니다.</p>
+  <p>이를 위해 프로세서가 <b>사용자 모드</b>와 <b>커널 모드</b> 두 가지 모드를 갖습니다. 응용 프로그램은 사용자 모드에서 돌고 여기서는 위험한 등급이 막혀 있습니다. 운영체제 코드는 커널 모드에서 돌고 전부 허용됩니다. 지금 어느 모드인지는 프로세서 안의 비트 하나, <b>모드 비트</b>에 적혀 있습니다. 커널 모드일 때 0이고 사용자 모드일 때 1입니다. 응용 프로그램이 금지된 명령을 시도하면 이 비트를 본 하드웨어가 그 자리에서 막아 냅니다. 소프트웨어끼리의 약속이 아니라는 점이 중요합니다.</p>
+
+  <h2 id="s7">7. 시스템 콜의 동작</h2>
+  <p>응용 프로그램은 사용자 모드에 있어서 디스크를 직접 건드릴 수 없습니다. 그런데 파일은 읽어야 합니다. 그래서 커널에 대신 해 달라고 맡기는 통로가 필요하고, 그 통로가 <b>시스템 콜</b>입니다.</p>
+  <p>시스템 콜마다 번호가 붙어 있고, 커널 안에는 번호별로 어떤 코드를 실행할지 적어 둔 표인 <b>시스템 콜 테이블</b>이 있습니다. 프로그램이 번호를 넘기며 신호를 일으키면 하드웨어가 모드 비트를 0으로 바꿉니다. 커널 모드가 된 것입니다. 커널이 표에서 그 번호의 코드를 찾아 실행하고, 끝나면 결과를 돌려주고 모드 비트를 1로 되돌립니다. 1편의 용어로 말하면 이 신호가 트랩입니다. 프로그램이 그 자리에서 일부러 일으킨 것이기 때문입니다.</p>
+  <p>코드에서 다른 코드를 불러 쓰는 보통의 방식을 함수 호출이라고 하는데, 시스템 콜은 그 모양을 하고 있어도 속은 다릅니다. 모드를 바꾸는 일은 프로그램이 스스로 할 수 없고 하드웨어만 할 수 있기 때문입니다.</p>
+
+  <h2 id="s8">8. 시스템 콜의 여섯 갈래</h2>
+  <ol><li><b>프로세스 제어</b> — 실행 중인 프로그램 하나를 프로세스라고 하는데, 그것을 새로 만들고 강제로 끝내고 끝나기를 기다리는 일입니다. 리눅스에서는 이 셋을 각각 <code>fork</code>, <code>kill</code>, <code>wait</code>이라고 부릅니다.</li>
+  <li><b>파일 관리</b> — 파일을 열고 읽고 쓰는 일입니다. <code>open</code>, <code>read</code>, <code>write</code>가 여기 해당합니다.</li>
+  <li><b>장치 관리</b> — 장치를 요청하고 놓아주는 일입니다.</li>
+  <li><b>정보 관리</b> — 시각이나 시스템 설정을 읽고 바꾸는 일입니다.</li>
+  <li><b>통신</b> — 프로그램끼리 메시지를 보내거나 메모리를 함께 쓰는 일입니다.</li>
+  <li><b>보호</b> — 접근 권한을 정하는 일입니다.</li></ol>
+  <h3>파일 하나를 읽는 과정</h3>
+  <p>먼저 <code>open</code>입니다. 경로를 주면 그 파일을 열고 번호를 하나 돌려줍니다. 이 번호를 <b>파일 서술자</b>라고 합니다. 지금 열어 둔 파일에 붙은 이름표라고 보면 됩니다. 이후의 요청은 긴 경로 대신 이 번호로 합니다. 다음은 <code>read</code>입니다. 파일 서술자와 버퍼와 바이트 수를 넘깁니다. 버퍼는 읽어 온 내용을 담아 둘 메모리 공간입니다. 커널은 그만큼 읽어 버퍼에 담고, 실제로 읽어 낸 바이트 수를 알려 줍니다. 쓸 때는 <code>write</code>를 씁니다. 열린 파일마다 지금 몇 번째 바이트를 읽고 쓸 차례인지 표시가 따라다니는데, 그 표시를 다른 곳으로 옮기고 싶으면 <code>lseek</code>을 씁니다. 요청이 실패하면 네 가지 모두 -1을 돌려줍니다.</p>
+
+  <h2 id="s9">9. 같은 프로그램이 다른 운영체제에서 안 도는 이유</h2>
+  <p>시스템 콜의 이름과 번호는 운영체제마다 다릅니다. 같은 번호가 다른 일을 가리킵니다. 프로세서가 바로 실행할 수 있는 형태로 번역해 둔 실행 파일의 형식도 운영체제마다 다릅니다. 그래서 같은 기계어 명령을 담고 있어도 통하지 않습니다. 여러 운영체제에서 도는 프로그램을 만드는 방법은 세 가지입니다.</p>
+  <ol><li>운영체제마다 준비된 해석기가 원본 코드를 그때그때 읽어 대신 실행해 줍니다. 파이썬이 이 방식입니다.</li>
+  <li>가상 기계 위에서 돌립니다. 가상 기계는 운영체제 위에 올라가 진짜 컴퓨터인 척해 주는 프로그램이고, 자바가 이 방식입니다.</li>
+  <li>원본을 하나만 쓰고 운영체제마다 따로 번역해 둡니다. C로 쓴 프로그램이 이 방식입니다.</li></ol>
+
+  <h2 id="s10">10. 우리가 부르는 것은 표준 라이브러리다</h2>
+  <p>셋째 방식이 가능하려면 원본 코드에 운영체제마다 다른 이름이 적혀 있으면 안 됩니다. 그래서 언어마다 미리 만들어 둔 함수 묶음, <b>표준 라이브러리</b>가 따라옵니다. 파일을 읽는 <code>fread</code>가 그런 예입니다. <code>fread</code>는 C 언어의 표준 라이브러리에 들어 있고 운영체제가 만든 것이 아닙니다. 그런데 디스크를 실제로 읽는 일은 커널 모드에서만 됩니다. 그래서 <code>fread</code>는 안에서 <code>read</code>를 부릅니다. 우리는 어느 운영체제에서나 같은 이름을 쓰고, 그 아래에서 각 운영체제의 시스템 콜이 불립니다.</p>
+  <h3>문제 2</h3>
+  <p>화면에 글자를 찍는 <code>printf</code>는 C 언어의 표준 라이브러리에 들어 있습니다. 어떤 프로그램이 <code>printf</code>를 한 번 불렀습니다. 이때 운영체제 쪽에서 실제로 무슨 일이 벌어집니까. 모드 비트와 시스템 콜 테이블이라는 말을 써서 차례대로 답해 보십시오.</p>
+  <h3>풀이</h3>
+  <p><code>printf</code>가 하려는 것은 화면에 글자를 내보내는 것입니다. 화면은 장치이고 장치를 건드리는 명령은 커널 모드에서만 허용됩니다. 그래서 <code>printf</code>는 안에서 <code>write</code>라는 시스템 콜을 부릅니다. <code>write</code>의 번호를 들고 신호가 들어오면 하드웨어가 모드 비트를 0으로 바꿔 커널 모드로 들어갑니다. 커널이 시스템 콜 테이블에서 그 번호를 찾아 화면에 글자를 내보냅니다. 끝나면 모드 비트가 1로 돌아오고 프로그램이 이어서 실행됩니다. 트랩이 한 번 일어난 것입니다. 운영체제가 제공하는 쪽은 <code>write</code>이고 <code>printf</code>는 그 위에 덮인 껍데기입니다.</p>
+
+  <h2 id="s11">정리</h2>
+  <p>전원을 켜면 부트스트랩이 커널을 메모리에 올립니다. 그 커널은 한 덩어리일 수도 있고 조각으로 나뉘어 있을 수도 있습니다. 프로세서를 놀리지 않으려고 여러 프로그램을 함께 돌리기 시작했고, 사용자를 기다리게 하지 않으려고 넘기는 간격을 짧게 줄였습니다. 함께 돌리니 서로를 망칠 위험이 생겼고, 그래서 명령을 두 등급으로 나눠 위험한 쪽은 커널 모드에만 허락했습니다. 사용자 모드에 갇힌 프로그램이 그 경계를 넘어 일을 맡기는 정식 통로가 시스템 콜이고, 우리가 코드에 적는 <code>printf</code> 같은 이름은 그 위에 덮인 껍데기입니다.</p>
+  <p>프로세스는 아직 실행 중인 프로그램이라고만 하고 넘어갔습니다. 그것이 메모리에서 어떤 모습으로 있는지, 운영체제가 무엇을 적어 두고 관리하는지는 다음 글에서 봅니다.</p>
+<div class="next"><a href="/learn/os-01-intro/"><small>← 이전 글</small><span>운영체제란 무엇인가 — 로딩, 인터럽트, 직접 메모리 접근</span></a><a class="r" href="/learn/os-03-processes/"><small>다음 글 →</small><span>프로세스 — 상태, PCB, 문맥 교환, fork와 exec</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">남은 신호 하나</a></li><li><a href="#s2">운영체제가 내놓는 서비스</a></li><li><a href="#s3">부팅과 커널의 구조</a></li><li><a href="#s4">멀티프로그래밍과 멀티태스킹</a></li><li><a href="#s5">프로그램 하나가 전체를 망칠 수 있다</a></li><li><a href="#s6">특권 명령과 모드 비트</a></li><li><a href="#s7">시스템 콜의 동작</a></li><li><a href="#s8">시스템 콜의 여섯 갈래</a></li><li><a href="#s9">같은 프로그램이 다른 운영체제에서 안 도는 이유</a></li><li><a href="#s10">우리가 부르는 것은 표준 라이브러리다</a></li><li><a href="#s11">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

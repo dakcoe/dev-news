@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>과제 1번 풀이 — MNIST로 보는 평균·분산·고유값 분해 · 학습 노트 · dev-news</title><meta name="description" content="손글씨 5만 장을 표 하나로 놓고 픽셀별 평균·분산, 공분산 행렬, 고유값 분해를 구하는 과제 풀이. numpy의 축·인덱싱·슬라이싱과, 에러 없이 조용히 틀리는 두 자리를 짚는다."><link rel="canonical" href="https://dev-news.net/learn/ml-5-hw1-solve/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="과제 1번 풀이 — MNIST로 보는 평균·분산·고유값 분해 · 학습 노트 · dev-news"><meta property="og:description" content="손글씨 5만 장을 표 하나로 놓고 픽셀별 평균·분산, 공분산 행렬, 고유값 분해를 구하는 과제 풀이. numpy의 축·인덱싱·슬라이싱과, 에러 없이 조용히 틀리는 두 자리를 짚는다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#ml">머신러닝</a></nav>
+<div class="grid"><article>
+<div class="kicker">머신러닝 5편</div>
+<h1>과제 1번 풀이 — MNIST로 보는 평균·분산·고유값 분해</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 9월 13일</span><span>·</span><span>읽는 데 약 12분</span></div>
+<div class="lead"><b>한 줄로:</b> 과제는 손글씨 5만 장이 어떻게 생겼는지를 평균·분산·고유값 분해로 들여다보는 일이다.</div>
+  <h2 id="s1">1. 과제가 요구하는 것</h2>
+  <p>과제 1번은 노트북 하나입니다. 점 세 개로 비워 둔 칸이 6개 있고, 그 칸을 채우면 코드가 돌아갑니다. 그다음 리포트 질문 4개에 답하면 제출입니다. 채워야 할 것은 픽셀별 평균, 픽셀별 분산, 공분산 행렬, 그 행렬의 고유값과 고유벡터, 고유벡터 그림 10장, 고유값 그래프입니다. 정답 코드를 통째로 주기보다 각 빈칸에서 무엇을 계산해야 하는지와 그 코드가 왜 그렇게 생겼는지를 봅니다.</p>
+
+  <h2 id="s2">2. 데이터의 모양</h2>
+  <p>데이터는 MNIST입니다. 0부터 9까지 손으로 쓴 숫자를 모아 놓은 것으로, 학습용 5만 장, 검증용 1만 장, 시험용 1만 장입니다. 여기서 쓰는 것은 학습용 5만 장입니다. 한 장이 가로 28, 세로 28 픽셀이고, 흑백이라 픽셀 하나가 밝기 숫자 하나입니다.</p>
+  <p>28 × 28 = 784이니 이미지 한 장이 숫자 784개입니다. 노트북의 데이터는 28×28 모양이 아니라 한 줄로 펴져 있습니다. 왼쪽 위 픽셀부터 오른쪽으로 읽다가 줄이 끝나면 다음 줄로 내려가 또 오른쪽으로 읽어, 784개를 한 줄에 늘어놓은 것입니다.</p>
+  <p>5만 장 전체는 가로 784칸, 세로 5만 줄짜리 표입니다. <code>train_x.shape</code>을 찍으면 <code>(50000, 784)</code>가 나옵니다. 앞 숫자가 줄 수, 뒤 숫자가 한 줄의 길이입니다.</p>
+  <p>이 방향을 잡아 두는 것이 이 과제의 절반입니다. <b>행 하나가 이미지 한 장</b>이고, <b>열 하나는 모든 이미지의 같은 자리 픽셀</b>입니다. 첫 번째 열은 5만 장 전부의 왼쪽 맨 위 픽셀만 모아 놓은 것입니다. 이걸 헷갈리면 뒤의 계산이 전부 어긋납니다.</p>
+
+  <h2 id="s3">3. numpy 기초 — 배열, shape, 축</h2>
+  <p>이 과제는 numpy를 씁니다. 파이썬 기본 문법만 안다면 축이 무엇인지, 대괄호 안의 쉼표와 콜론이 무엇인지 이 두 가지만 알면 풀립니다.</p>
+  <p>파이썬 리스트는 편하지만 느리고 숫자 계산 기능이 없습니다. numpy는 <b>배열</b>이라는 자료형을 줍니다. 겉보기는 리스트와 비슷한데 같은 종류의 숫자만 들어가고 크기가 정해져 있습니다. 대신 계산이 아주 빠르고, 줄 단위 열 단위 계산이 한 줄로 됩니다.</p>
+  <p>배열에는 <b>shape</b>이 붙어 있습니다. 숫자가 하나면 한 줄짜리입니다. <code>(784,)</code>는 숫자 784개가 한 줄로 있다는 뜻입니다. 숫자가 두 개면 표입니다. <code>(50000, 784)</code>는 5만 줄짜리 표이고 한 줄이 784칸입니다. 왼쪽부터 바깥 방향입니다.</p>
+  <p>shape의 두 자리에는 번호가 붙습니다. 첫 번째 자리가 <b>축 0</b>, 두 번째 자리가 <b>축 1</b>입니다(axis). <code>(50000, 784)</code>에서 축 0은 이미지 방향이고 축 1은 픽셀 방향입니다.</p>
+  <h3>축으로 누른다는 것</h3>
+  <p>평균을 낼 때 축을 준다는 것은 그 방향으로 눌러 없앤다는 뜻입니다. 표를 종이라고 생각하면, 축 0으로 누르면 5만 줄이 한 줄로 합쳐져 784칸짜리 한 줄이 남습니다. 축 1로 누르면 784칸이 한 칸으로 합쳐지고 5만 줄이 남습니다.</p>
+  <p>과제가 원하는 것은 픽셀별 평균, 즉 784칸짜리 한 줄이니 축 0으로 누른 결과입니다. 코드는 <code>np.mean(train_x, axis=0)</code>입니다. <code>axis=0</code>처럼 이름을 붙여 넘기는 방식을 키워드 인자라고 합니다. 어느 자리인지 헷갈릴 일이 없고 읽는 사람도 뜻을 바로 압니다.</p>
+  <p>축을 1로 주면 shape이 50000으로 나옵니다. <b>에러는 안 납니다. 그게 함정입니다.</b> 이미지 한 장마다 밝기 평균을 낸 값 5만 개로, 의미는 있지만 과제가 요구한 것이 아닙니다. 그래서 노트북이 shape을 찍어 보라고 시킵니다. 784가 나오면 맞고 50000이 나오면 축을 잘못 준 것입니다.</p>
+
+  <h2 id="s4">4. 빈칸 1·2 — 픽셀별 평균과 분산</h2>
+  <p>첫 번째 빈칸은 <code>np.mean</code>에 <code>train_x</code>와 <code>axis=0</code>을 넣는 것입니다. 두 번째 빈칸인 분산은 함수 이름만 바뀝니다. <code>np.var</code>에 똑같이 <code>train_x</code>와 <code>axis=0</code>을 넣습니다. 픽셀별로 구하는 것이니 축은 그대로 0입니다.</p>
+
+  <h2 id="s5">5. 인덱싱, 슬라이싱, 전치</h2>
+  <p>다음 빈칸 전에 문법을 더 봐야 합니다. numpy 표에서는 대괄호 안에 숫자를 쉼표로 나눠 두 개 넣을 수 있습니다. 앞이 축 0, 뒤가 축 1입니다. <b>대괄호 안의 쉼표는 축을 나누는 구분자입니다.</b> 이 과제에서 가장 많이 틀리는 자리입니다.</p>
+  <ul><li><b>콜론은 그 축 전부</b>라는 뜻입니다. <code>[:, 3]</code>은 축 0 전부와 축 1의 3번, 즉 세 번째 열 전체입니다. <code>[3, :]</code>은 세 번째 행 전체입니다.</li>
+  <li><b>슬라이싱</b> — 콜론 앞뒤에 숫자를 쓰면 범위가 됩니다. <code>[:100]</code>은 처음부터 100개, <code>[100:]</code>은 100번째부터 끝까지입니다. 파이썬 리스트와 같은 문법입니다.</li>
+  <li><b>전치</b> — 배열 뒤에 <code>.T</code>를 붙이면 행과 열이 바뀝니다. 5만×784 표가 784×5만이 되어, 행이 픽셀이 되고 열이 이미지가 됩니다.</li></ul>
+
+  <h2 id="s6">6. 빈칸 3 — 공분산 행렬과 메모리 함정</h2>
+  <p>이 과제에서 가장 위험한 자리입니다. 노트북에는 <code>np.cov(...)</code>로 적혀 있고, 결과의 shape이 784×784여야 한다고 적혀 있습니다. 픽셀 하나와 다른 픽셀 하나가 같이 밝아지는 정도를 전부 적은 표입니다.</p>
+  <p>문제는 <code>np.cov</code>가 데이터를 읽는 방향입니다. 이 함수는 기본적으로 <b>행을 변수로</b> 봅니다. 한 행이 하나의 픽셀이라고 가정합니다. 우리 데이터는 반대로 한 행이 이미지 한 장입니다. 그대로 넣으면 변수가 5만 개라고 보고 5만×5만짜리 행렬을 만들려고 합니다.</p>
+  <p>5만×5만이면 값이 25억 개, 하나에 8바이트씩만 잡아도 20기가바이트입니다. 코랩에서는 메모리 부족으로 세션이 끊깁니다. 노트북 힌트에 차원을 조심하라고 적힌 것이 이 얘기입니다. 피하는 방법은 두 가지이고, 결과는 둘 다 784×784입니다.</p>
+  <ol><li>데이터를 전치해서 <code>train_x.T</code>를 넣습니다. 행이 픽셀이 되니 함수의 가정과 맞습니다.</li>
+  <li><code>rowvar=False</code>를 줍니다. 행이 변수냐고 묻는 옵션인데, 거짓으로 주면 열을 변수로 봅니다.</li></ol>
+
+  <h2 id="s7">7. 빈칸 4·5·6 — 고유값 분해와 그림</h2>
+  <h3>빈칸 4 — shape 찍기</h3>
+  <p>앞줄에서 <code>np.linalg.eig</code>에 공분산 행렬을 넣으면 두 개가 한꺼번에 나옵니다. 왼쪽이 고유값, 오른쪽이 고유벡터입니다. 각각 <code>.shape</code>을 붙여 <code>print</code>에 넣으면 고유값은 784개짜리 한 줄, 고유벡터는 784×784 표로 나옵니다.</p>
+  <p>공분산 행렬은 픽셀들이 서로 어떻게 같이 움직이는지를 적은 표였습니다. 이걸 고유값 분해하면 데이터가 가장 많이 퍼진 방향들이 나옵니다. 그 방향이 고유벡터이고, 얼마나 퍼졌는지가 고유값입니다. 손글씨 데이터를 설명하는 새로운 축을 찾아낸 것입니다.</p>
+  <h3>빈칸 5 — 고유벡터는 열이다</h3>
+  <p>고유벡터 10개를 그림으로 그리는 자리이고, 가장 많이 틀리는 곳입니다. <code>np.linalg.eig</code>가 돌려주는 행렬은 <b>열이 고유벡터</b>입니다. i번째 고유벡터를 꺼내려면 i번째 열을 통째로 가져와야 하니 <code>eigvec[:, i]</code>입니다.</p>
+  <p><code>eigvec[i]</code>라고만 쓰면 i번째 행입니다. 에러는 안 나고, 길이가 784라 28×28로 모양을 바꾸는 것도, 그림을 그리는 것도 됩니다. 그런데 그 그림은 서로 다른 고유벡터들에서 같은 자리 성분만 뽑아 모은, 아무 뜻 없는 값들입니다. 그림이 나왔다고 맞은 게 아닙니다.</p>
+  <p>그림을 그리려면 784개짜리 한 줄을 28×28로 되돌려야 합니다. <code>.reshape(28, 28)</code>은 값의 순서는 그대로 두고 모양만 바꿉니다. 앞에서 한 줄로 편 것을 되감는 것입니다. 노트북의 <code>for i in range(10)</code>은 i가 0부터 9까지 열 번 도는 반복문이고, 그 안에서 매번 i번째 고유벡터를 꺼내 reshape하고 그림을 그리면 열 장이 나옵니다.</p>
+  <h3>빈칸 6 — 고유값 그래프</h3>
+  <p><code>eigval[:100]</code>으로 처음부터 100개를 잘라 <code>plt.plot</code>에 넣으면 그래프가 나옵니다. 함정이 하나 더 있습니다. <code>np.linalg.eig</code>는 고유값을 큰 순서로 정렬해 주지 않습니다. 우연히 정렬돼 나오기도 하지만 보장은 없습니다. 큰 것부터 보려면 직접 정렬해야 하고, 고유벡터도 같은 순서로 함께 옮겨야 짝이 맞습니다. 놓치면 그래프가 들쭉날쭉하게 나옵니다.</p>
+  <p>노트북 앞부분의 <code>train_x, train_y = train_set</code>은 오른쪽에 짝으로 들어 있는 이미지 뭉치와 정답 라벨 뭉치를 한 줄에 나눠 받는 문법으로, 튜플 언패킹이라고 부릅니다.</p>
+
+  <h2 id="s8">8. 나온 그림 읽기</h2>
+  <p><b>평균 이미지</b>는 0부터 9까지를 전부 겹쳐 놓은 흐릿한 덩어리입니다. 가운데가 밝고 가장자리가 검습니다. 손글씨가 대체로 가운데에 쓰였고, 가장자리 픽셀은 거의 항상 0이라는 뜻입니다.</p>
+  <p><b>분산 이미지</b>는 한가운데가 아니라 조금 벗어난 고리 모양이 밝습니다. 한가운데는 거의 모든 숫자가 지나가는 자리라 늘 밝아서 덜 변하고, 가장자리는 늘 검어서 안 변합니다. 많이 변하는 곳은 그 사이입니다.</p>
+  <p><b>고유벡터 열 장</b>은 숫자처럼 보이지 않고, 밝은 곳과 어두운 곳이 위아래나 좌우로 번갈아 나타나는 무늬입니다. 이 무늬들을 적당한 비율로 섞으면 어떤 숫자든 만들 수 있습니다. 기저가 바로 이것입니다. 고유값이 큰 순서로 보면 첫 번째가 데이터가 가장 많이 퍼진 방향이고, 앞쪽은 굵직한 무늬, 뒤로 갈수록 잘게 쪼개진 무늬입니다.</p>
+  <p><b>고유값 그래프</b>는 처음 몇 개가 크게 솟았다가 급격히 떨어집니다. 앞쪽 수십 개가 거의 모든 값을 차지하고 나머지는 바닥에 깔립니다. 앞쪽 수십 개 방향만으로 이 데이터의 변화를 거의 다 설명할 수 있다는 뜻입니다. 784차원 중 나머지 700개 넘는 방향은 거의 안 움직이니, 784개 숫자 대신 수십 개 숫자로 이미지를 적어도 거의 같습니다. 이것이 나중에 배울 주성분 분석의 출발점입니다.</p>
+
+  <h2 id="s9">9. 리포트 질문 네 개</h2>
+  <h3>1. 왜 공분산 행렬을 계산하나</h3>
+  <p>고유값 분해는 정사각 행렬에만 할 수 있는데, 원본 데이터는 5만×784라 정사각이 아닙니다. 공분산 행렬은 784×784로 정사각이고 대칭입니다. 더 중요한 이유도 있습니다. 알고 싶은 것은 데이터가 어느 방향으로 퍼져 있느냐이고, 그 정보는 픽셀들이 서로 어떻게 같이 움직이는지에 들어 있습니다. 그걸 모아 놓은 것이 공분산 행렬이니, 공분산 행렬을 분해하는 것은 퍼짐의 방향을 찾는 일입니다. 원본 데이터를 분해하는 것과는 다른 일입니다.</p>
+  <h3>2. 고유벡터와 고유값이 잡는 것</h3>
+  <p>고유벡터는 손글씨가 변하는 방향의 패턴입니다. 획이 굵어지는 변화, 기울어지는 변화, 고리가 커지는 변화 같은 것들이 무늬로 나타납니다. 고유값은 그 방향으로 얼마나 크게 변하는지를 나타냅니다.</p>
+  <h3>3. 픽셀별 평균과 분산에 뜻이 있나, 다른 방식은</h3>
+  <p>뜻은 있습니다. 평균 이미지는 글씨가 가운데 쓰였다는 것을, 분산 이미지는 어느 자리가 숫자마다 달라지는지를 알려 줍니다. 다만 픽셀별 계산은 픽셀 하나하나를 따로 보고 픽셀끼리의 관계는 버립니다.</p>
+  <p>다른 방식 하나는 라벨을 써서 숫자별로 나눠 계산하는 것입니다. 0인 이미지들끼리, 1인 이미지들끼리 평균을 내 열 장을 만들면 각 숫자가 평균적으로 어떻게 생겼는지가 보입니다. 또 하나는 이미 한 것입니다. 공분산 행렬이 픽셀끼리의 관계를 담은 요약이고, <b>픽셀별 분산은 공분산 행렬의 대각선만 떼어 낸 것</b>입니다. 대각선 밖의 값들, 즉 서로 다른 픽셀 사이의 관계를 버린 것이 픽셀별 분산입니다. 이 답을 쓰면 질문이 원하는 지점에 정확히 닿습니다.</p>
+  <h3>4. 배운 것 정리</h3>
+  <p>앞의 셋을 엮으면 나옵니다. 데이터를 벡터로 놓으면 통계와 선형대수를 그대로 쓸 수 있다는 것, 축을 잘못 잡으면 에러 없이 틀린 답이 나온다는 것, 784차원이 사실은 훨씬 낮은 차원이라는 것. 이 셋이면 충분합니다.</p>
+
+  <h2 id="s10">10. 제출 전 확인</h2>
+  <ol><li>평균과 분산의 shape이 784인가</li>
+  <li>공분산 행렬의 shape이 784×784인가</li>
+  <li>고유벡터를 열로 꺼냈는가</li>
+  <li>그림이 10장 나왔는가</li>
+  <li>고유값 그래프가 처음에 크게 솟았다가 떨어지는 모양인가</li></ol>
+  <p>이 다섯 개가 맞으면 코드 부분은 끝입니다.</p>
+
+  <h2 id="s11">정리</h2>
+  <p>이 과제는 손글씨 5만 장을 표 하나로 놓고, 그 표가 어떤 모양인지를 평균과 분산으로 보고, 어느 방향으로 퍼져 있는지를 고유값 분해로 찾는 일이었습니다. 코드에서 조심할 것은 두 가지뿐입니다. 축을 0으로 줄 것, 그리고 고유벡터를 열로 꺼낼 것. 둘 다 에러가 나지 않고 조용히 틀리는 자리라 직접 확인해야 합니다.</p>
+<div class="next"><a href="/learn/ml-4-week3-prob/"><small>← 이전 글</small><span>확률과 통계 — 베이즈 정리와 가우시안 분포</span></a><a class="r" href="/learn/ml-6-hw2-probability/"><small>다음 글 →</small><span>과제 2번 확률 연습문제 — 기댓값의 선형성 하나로 푸는 여섯 문제</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">과제가 요구하는 것</a></li><li><a href="#s2">데이터의 모양</a></li><li><a href="#s3">numpy 기초 — 배열, shape, 축</a></li><li><a href="#s4">빈칸 1·2 — 픽셀별 평균과 분산</a></li><li><a href="#s5">인덱싱, 슬라이싱, 전치</a></li><li><a href="#s6">빈칸 3 — 공분산 행렬과 메모리 함정</a></li><li><a href="#s7">빈칸 4·5·6 — 고유값 분해와 그림</a></li><li><a href="#s8">나온 그림 읽기</a></li><li><a href="#s9">리포트 질문 네 개</a></li><li><a href="#s10">제출 전 확인</a></li><li><a href="#s11">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>
