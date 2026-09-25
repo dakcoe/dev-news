@@ -1,5 +1,584 @@
 [
  {
+  "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+  "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 342,
+  "comments": 622,
+  "published_at": 1790350165,
+  "discussion": "https://news.ycombinator.com/item?id=49845977",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html"
+  ],
+  "cross_source_count": 1,
+  "score": 3150.0,
+  "image": "https://image.cnbcfm.com/api/v1/image/108285631-1774986195722-gettyimages-2268688342-raa-anthropi260331_npMR4.jpeg?v=1774986237&w=1920&h=1080",
+  "link_status": "ok",
+  "ko_title": "미 연방 항소법원, Anthropic을 공급망 위험으로 지정 유지",
+  "summary": "워싱턴 D.C. 연방 항소법원은 2대 1로 펜타곤의 Anthropic 블랙리스트 지정을 유지했다. 판결은 국방부가 Claude 모델을 군사 정보 시스템에 통합하는 것이 국가 안보 위험이라고 판단한 데 근거한다. 이 결정으로 미국 군과 방산업체는 Anthropic의 AI 모델 사용이 금지된다.",
+  "why": "Claude 모델이 미국 국방부 시스템에서 공식적으로 배제되었으므로, 해당 기관과의 계약이나 프로젝트에서 이 모델을 사용할 수 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Ollaya - 오픈소스 Jev 스타일 의사결정 모델을 위한 Ollama",
+  "url": "https://news.hada.io/topic?id=34288",
+  "description": "Ollaya 는 텍스트나 JSON에 타입이 지정된 질문을 하고, 보정된 답을 로컬 하드웨어에서 얻는 오픈소스 의사결정 모델 실행 도구임 토큰을 순차 생성하지 않고 한 번의 순전파 로 답하며, RTX 4090에서 Laya로 질문 5개를 처리하는 HTTP API 요청의 전체 소요 시간은...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790371974.0,
+  "origin_url": "https://ollaya.dev/",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34288",
+   "https://ollaya.dev/"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34288?v=733b8864b809ddbf1ed4c779b72f014e",
+  "link_status": "ok",
+  "ko_title": "Ollaya - 오픈소스 Jev 스타일 의사결정 모델을 위한 Ollama",
+  "summary": "Ollaya는 텍스트·JSON 질문에 타입을 지정해 로컬 하드웨어에서 보정된 답을 제공하는 오픈소스 의사결정 모델 실행 도구다. 한 번의 순전파로 답을 산출해 RTX 4090에서 5개 질문을 8~10 ms에 처리하며, TypeSafe API와 호환되는 엔드포인트를 제공한다. ONNX Runtime 기반으로 CPU·GPU 모두에서 실행 가능하고, 공개 가중치 모델(Laya, decider, nli, gliclass 등)을 지원한다. 데스크톱 앱·CLI·Docker 이미지 등 다양한 배포 형태를 제공한다.",
+  "why": "기존 TypeSafe Python SDK 0.7.1을 수정 없이 로컬 서버에 연결해 쓸 수 있다. 호스팅 API 대비 응답 시간이 크게 줄어 실시간 분류 파이프라인에 적합하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "제1원리 사고",
+  "url": "https://news.hada.io/topic?id=34285",
+  "description": "축적한 경험은 변화한 환경에서 다른 접근을 어렵게 만들 수 있으며, 제1원리 사고 는 기존 답보다 지금 해결하려는 문제와 목적에서 출발함 막혔을 때는 결과에만 집중하기보다 실행 가능한 가장 작은 일 을 끝내며 추진력을 얻는 것이 다음 행동을 찾는 데 도움이 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790368647.0,
+  "origin_url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34285",
+   "https://sunilsadasivan.com/writing/first-principles-thinking/"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34285?v=52309ca69b12617b968edc6c4acc6cdb",
+  "link_status": "ok",
+  "ko_title": "제1원리 사고",
+  "summary": "기존 경험이 새로운 환경에서 접근을 방해할 수 있다는 점을 지적하고, 문제를 해결하려면 가장 작은 실행 가능한 작업부터 시작해 추진력을 얻어야 한다고 제안한다. 뛰어난 시니어 엔지니어들은 왜 만드는지와 사용자에게 주는 가치를 질문하며 코드와 외부 상황을 연결해 단순함을 유지한다. 에이전트 기반 개발에 적응하는 엔지니어들은 과거 지식을 잠시 내려놓고 직접 시도함으로써 빠른 학습과 실행 반복을 가능하게 한다.",
+  "why": "에이전트 기반 개발 환경에서는 과거의 기술적 제약이 더 이상 유효하지 않을 수 있다. 익숙한 답을 먼저 적용하기 전에 직접 시도하며 실행과 학습의 반복을 빠르게 돌리는 것이 핵심이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Too AI; Didn't Read",
+  "url": "https://www.tai-dr.com/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 95,
+  "comments": 93,
+  "published_at": 1790368676,
+  "discussion": "https://news.ycombinator.com/item?id=49849625",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.tai-dr.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 1069.0,
+  "image": "https://www.tai-dr.com/og.png",
+  "link_status": "ok",
+  "ko_title": "Too AI; Didn't Read",
+  "summary": "",
+  "why": "AI 관련 콘텐츠가 과잉 생산되는 현상을 비판하는 용어다. 기술 문서나 발표 자료를 읽지 않고 AI로만 요약하는 관행에 대한 경계심을 일깨운다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Gravity seems holographic. What does that mean for reality?",
+  "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 93,
+  "comments": 87,
+  "published_at": 1790350262,
+  "discussion": "https://news.ycombinator.com/item?id=49845998",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/"
+  ],
+  "cross_source_count": 1,
+  "score": 1047.0,
+  "image": "https://www.quantamagazine.org/wp-content/uploads/2026/09/Qualia-Holography-cr.Ada-Zejun-Shen-Default.webp",
+  "link_status": "ok",
+  "ko_title": "중력이 홀로그래픽인 듯하다. 이것이 현실에 의미하는 바는?",
+  "summary": "이 글은 중력과 양자역학을 연결하는 AdS/CFT 대응과 그로부터 파생된 홀로그래픽 원리를 소개한다. 홀로그래픽 원리는 중력이 부피와 면적 구분을 없애며, 블랙홀 정보 역설에 대한 새로운 해답을 제공한다. 저자는 이 원리가 실제 우주에 어떤 함의를 갖는지 탐구한다.",
+  "why": "백엔드 개발자의 실무 코드나 인프라 설정에는 직접적인 영향을 주지 않는다. 이론물리학의 추상적 개념이라 현재 서비스 운영이나 AI 모델 학습 파이프라인에서 확인하거나 조치할 대상이 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+  "url": "https://openai.com/index/proaction",
+  "description": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790362800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/proaction"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Proaction, Codex로 매출 60% 상승·75시간 이상 절감",
+  "summary": "Proaction가 Codex와 GPT-Live-1, GPT-6 Astra를 활용해 현대적인 차량 관리 시스템을 빠르게 구축·운영·판매하고 있다. 이를 통해 매출이 60% 증가하고 작업 시간이 75시간 이상 절감되었다.",
+  "why": "Codex 기반 자동화로 차량 관리 시스템 구축·운영·판매 전 과정의 작업 시간이 75시간 이상 줄었다. 백엔드 개발자가 유사한 도메인에서 반복 작업을 줄이고자 할 때 참고할 수 있는 사례다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "industry"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
+  "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/",
+  "description": "Google Deepmind researcher Robert O'Callahan has quit, saying AI's \"current rate of change is far too high.\" He worked on chip design tools that helped make AI cheaper and faster, a contribution he can no longer justify. Many colleagues share his concerns but rarely speak out, he says. The article Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irres",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790358951.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/google_deepmind-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "구글 딥마인드 연구원 또 사퇴, 초지능 AI 조기 개발은 본질적으로 무책임하다고 주장",
+  "summary": "구글 딥마인드 뉴질랜드 연구원 로버트 오칼라한이 AI 위험을 이유로 사퇴했다. 그는 AI 변화 속도가 지나치게 빠르며, 초지능 AI 개발 목표가 책임감 없다고 판단했다. 오칼라한은 칩 설계 도구 개발 경험이 있지만, 이제는 인간 중심 작업을 원한다.",
+  "why": "칩 설계 도구 개발 경험이 있는 개발자라면, AI 인프라 최적화 작업의 윤리적 부담을 직접 체감하게 된다. 초지능 AI 개발을 향한 가속이 본질적으로 무책임하다는 주장이 제기되어, 관련 프로젝트 참여 시 위험 인지 기준이 달라진다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "시험",
+  "url": "https://news.hada.io/topic?id=34286",
+  "description": "기술 업계 거물들의 터무니없는 발언은, 의도적으로 설계하지 않았더라도 주변 사람이 어디까지 받아들이는지 가르는 복종의 시험 으로 작동함 Jensen Huang 은 아이들이 기초 수학을 잊는 것이 중요하지 않다고 답하고, 자신의 주소와 전화번호를 몰라도 생활할 수 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790368827.0,
+  "origin_url": "https://tante.cc/2026/09/24/the-test/",
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34286",
+   "https://tante.cc/2026/09/24/the-test/"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34286?v=7dc89fc8ad56abc902ef7496ca508e13",
+  "link_status": "ok",
+  "ko_title": "시험",
+  "summary": "NVIDIA CEO Jensen Huang이 기초 수학 능력과 개인 정보 기억의 필요성을 낮추는 발언을 했으며, 이와 유사한 의견을 다른 기술 업계 인사들도 제시했다. 이러한 발언은 부유층과 기술 리더들의 현실 인식 차이를 드러내며, 복종을 시험하는 사회적 메커니즘으로 작용한다.",
+  "why": "백엔드 개발자의 업무와 직접적인 연관성이 없어 확인이나 조치 대상이 없다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+  "url": "https://mouse.dev/blog/muse-special/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 89,
+  "comments": 41,
+  "published_at": 1790360286,
+  "discussion": "https://news.ycombinator.com/item?id=49848095",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mouse.dev/blog/muse-special/"
+  ],
+  "cross_source_count": 1,
+  "score": 901.0,
+  "image": "https://mouse.dev/og/muse-special.png",
+  "link_status": "ok",
+  "ko_title": "Meta의 Muse가 muse-special이라는 OpenAI 모델을 사용하는 것으로 보인다",
+  "summary": "작성자는 Muse 로그에서 azure/muse-special 모델을 발견하고, 서명 형식과 호출 ID가 OpenAI와 일치한다는 점을 들어 해당 모델이 OpenAI 기반일 가능성을 제시한다. 또한 Muse 에이전트가 내부 Avocado 모델 외에 Claude, Sonnet, Haiku, GPT-5.5/5.6, Kimi 등 다양한 외부 모델을 지원한다는 사실을 확인했다.",
+  "why": "Meta Muse가 내부 모델 외에 OpenAI 및 Anthropic 모델을 호출하는 구조가 확인됐다. AI 에이전트 기반 개발 도구를 사용할 때 특정 모델에 대한 의존도가 낮아진다. 다만 어떤 상황에서 muse-special이 선택되는지 기준은 아직 불분명하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Amiga screens: a primer",
+  "url": "https://www.datagubbe.se/amscr/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 25,
+  "comments": 12,
+  "published_at": 1790341302.474,
+  "discussion": "https://lobste.rs/s/dsungs/amiga_screens_primer",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.datagubbe.se/amscr/"
+  ],
+  "cross_source_count": 2,
+  "score": 900.1999999999999,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Amiga 화면 입문",
+  "summary": "이 글은 원래 Amiga 그래픽 하드웨어인 OCS와 그 후속인 ECS·AGA에서 화면이 어떻게 정의되고 동작하는지 설명한다. 화면은 그래픽이 그려지는 영역이며 해상도와 색 깊이를 자유롭게 지정할 수 있다. 여러 해상도의 화면을 동시에 열어 사용할 수 있다는 점을 강조한다.",
+  "why": "현대 OS와 평판 모니터 환경에서는 고정 해상도의 단일 디스플레이가 표준이다. Amiga의 다중 해상도 화면 개념은 CRT 시절의 유연한 디스플레이 구성을 이해하는 데 도움이 된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Commodified Intelligence",
+  "url": "https://herecomesthemoon.net/2026/09/commodified-intelligence/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 12,
+  "comments": 4,
+  "published_at": 1790360669.215,
+  "discussion": "https://lobste.rs/s/nidcls/commodified_intelligence",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://herecomesthemoon.net/2026/09/commodified-intelligence/"
+  ],
+  "cross_source_count": 1,
+  "score": 890.4,
+  "image": "https://herecomesthemoon.net/2026/09/commodified-intelligence/images/dithers/grain-elevator-valier_dithered.png",
+  "link_status": "ok",
+  "ko_title": "지능의 상품화",
+  "summary": "",
+  "why": "지능의 상품화는 백엔드 개발자의 대체 가능성을 높여 임금 하락을 초래한다. 대형 자본은 AI 보조 인력을 선호해 인력 감축을 단행할 수 있다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Alan Kay: Shannon gave us a way of dealing with noisy channels [video]",
+  "url": "https://www.youtube.com/watch?v=Cjntrqhn8pk",
+  "description": "The following explanation is taken from  https://news.ycombinator.com/item?id=49622607 : Alan Kay performs an improvisational avant garde layered audio feedback loop about Claude Shannon, live online during Kristen Nygaard's 100-year birthday celebration. Alan was scheduled to talk about how encountering Simula sparked his early thoughts about objects. During setup, somebody had the live stream playing out loud near an open Zoom mic, so his own voice kept arriving back in his ears about 21 seconds late, over and over. What he said was not random: \"Shannon gave us a way of dealing with noisy channels.\" And: \"I think about that almost every day. I realize what the fuck is going on and it's just so amazing.\" Shannon's noisy channel coding theorem is the math for exactly the kind of channel that was garbling him as he praised it. Alan joked it was \"being rerouted to Mars and back.\" At the speed of light, a 21 second round trip is about 3 million km one way -- eight trips to the Moon and back, but only about a seventeenth of the way to Mars at closest approach. This is an accidental Zoom performance of Alvin Lucier's \"I Am Sitting in a Room\" (1969), where Lucier re-recorded his own voice in a room until only the room's resonance remained. Here what remains is the network: delay, compression, dropouts. Bonus noise: YouTube's auto-transcript bleeps Alan's enthusiasm into [ __ ]. So the full chain is: Alan's voice, Zoom, stream, room, Zoom again times three, my screen recording, YouTube's speech recognizer, a censored transcript. The fix: \"Just turn off the audio at your end on Zoom.\" I Am Sitting in a Room:  https://en.wikipedia.org/wiki/I_Am_Sitting_in_a_Room Alvin Lucier on \"I am sitting in a room\":  https://www.youtube.com/watch?v=v9XJWBZBzq4",
+  "source": "hackernews",
+  "upvotes": 106,
+  "comments": 22,
+  "published_at": 1790361425,
+  "discussion": "https://news.ycombinator.com/item?id=49848295",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.youtube.com/watch?v=Cjntrqhn8pk"
+  ],
+  "cross_source_count": 1,
+  "score": 878.0,
+  "image": "https://i.ytimg.com/vi/Cjntrqhn8pk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHYCIAC0AWKAgwIABABGD8gUShyMA8=&rs=AOn4CLBrS4vyfrrpEHaiEHI2fxcZsi9u8w",
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "앨런 케이: 섀넌이 잡음이 있는 채널을 다루는 방법을 제시했다 [영상]",
+  "summary": "댓글에서는 섀넌이 잡음 채널을 다루는 방법을 제시한 것이 아니라 한계만 정량화했다는 지적이 있다. 또 영상이 시간 트리거 통신 시스템에서 babbling-idiot 오류를 회피하는 내용과 연결된다고 언급된다.",
+  "why": "섀넌의 정리로 잡음 채널의 전송 한계는 계산이 쉽지만, 실제 구현에서 그 한계에 근접하는 것은 어렵다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "Northern Gannet, Great Blue Heron, California Brown Pelican",
+  "url": "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
+  "description": "Northern Gannet, Great Blue Heron, California Brown Pelican, in Monterey Bay National Marine Sanctuary, CA, US, CA New 200-800mm Canon EF lens got me my best photo of Morris yet. They really like hanging out under that sign in the harbor! Tags: photography , wildlife",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790302024.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/25/sighting-403293902/"
+  ],
+  "cross_source_count": 1,
+  "score": 720.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "북방뱃새, 큰청색왜가리, 캘리포니아갈색펠리컨",
+  "summary": "사진가가 캘리포니아 몬터레이 베이 국립해양보호구역에서 200-800mm 캐논 EF 렌즈를 사용해 새들을 촬영했다.",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "git-bug / git-bug",
+  "url": "https://github.com/git-bug/git-bug",
+  "description": "Distributed, offline-first bug tracker embedded in git",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 344,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/git-bug/git-bug"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 344,
+  "score": 330.4,
+  "image": "https://opengraph.githubassets.com/1/git-bug/git-bug",
+  "link_status": null,
+  "ko_title": "git-bug — Git에 통합된 분산 버그 트래커",
+  "summary": "git-bug은 Git 저장소만으로 버그를 관리할 수 있는 트래커다. 원격 저장소를 이용해 버그를 푸시·풀하며, 오프라인에서도 사용 가능하고 프로젝트 파일을 남기지 않는다. CLI·웹·GraphQL API 등 다양한 인터페이스를 제공하고, 다른 트래커와의 브리지 기능도 지원한다.",
+  "why": "기존 외부 버그 트래커 의존을 줄이고 Git 원격 저장소만으로 버그를 동기화할 수 있다. 오프라인 환경에서도 버그 기록이 가능하고 프로젝트 파일이 추가되지 않는다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "kelseyhightower / kubernetes-the-hard-way",
+  "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+  "description": "Bootstrap Kubernetes the hard way. No scripts.",
+  "source": "github",
+  "upvotes": 105,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/kelseyhightower/kubernetes-the-hard-way"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 105,
+  "score": 141.75,
+  "image": "https://opengraph.githubassets.com/1/kelseyhightower/kubernetes-the-hard-way",
+  "link_status": null,
+  "ko_title": "kelseyhightower / kubernetes-the-hard-way — Kubernetes 클러스터를 직접 부트스트랩하는 학습용 튜토리얼",
+  "summary": "이 튜토리얼은 자동화 도구 없이 Kubernetes를 직접 부트스트랩하는 과정을 제공한다. 컨트롤 플레인과 워커 노드를 단일 노드와 두 워커 노드로 구성한다. Kubernetes v1.32·containerd v2.1·CNI v1.6·etcd v3.6 버전을 사용한다. ARM64·AMD64 가상·물리 머신 4대를 동일 네트워크에 연결해 실습한다.",
+  "why": "자동화 도구 없이 수동으로 부트스트랩하는 과정이라 학습용이며 프로덕션 배포에는 적합하지 않다. 컨트롤 플레인과 워커 노드 구성을 직접 다루며 Kubernetes v1.32와 containerd v2.1 환경을 실습할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "anthropics / claude-plugins-official",
+  "url": "https://github.com/anthropics/claude-plugins-official",
+  "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+  "source": "github",
+  "upvotes": 62,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/anthropics/claude-plugins-official"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 62,
+  "score": 126.69999999999999,
+  "resurfaced": "2026-08-26",
+  "image": "https://opengraph.githubassets.com/1/anthropics/claude-plugins-official",
+  "link_status": null,
+  "ko_title": "anthropics / claude-plugins-official — Claude Code용 플러그인 디렉터리",
+  "summary": "Anthropic이 제공하는 Claude Code 전용 플러그인 저장소가 공개됐다. 내부 플러그인과 외부 파트너·커뮤니티 플러그인을 구분해 제공하며, `/plugin install {plugin-name}@claude-plugins-official` 명령으로 설치한다. 플러그인 구조와 메타데이터 형식이 명시되어 있고, 플러그인 이름은 한 번 공개하면 변경할 수 없다.",
+  "why": "외부 플러그인은 Anthropic이 내용을 통제하지 못하므로 설치 전 신뢰성을 직접 확인해야 한다. 플러그인 이름은 공개 후 변경이 불가하므로 배포 시 슬러그를 신중하게 정해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "shy3130 / tick-stock-panel",
+  "url": "https://github.com/shy3130/tick-stock-panel",
+  "description": "TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+  "source": "github",
+  "upvotes": 31,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/shy3130/tick-stock-panel"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 31,
+  "score": 115.85,
+  "image": "https://opengraph.githubassets.com/1/shy3130/tick-stock-panel",
+  "link_status": null,
+  "ko_title": "shy3130 / tick-stock-panel — A주 스마트 양적 작업대",
+  "summary": "이 프로젝트는 A주 시장을 대상으로 한 자동화된 선택, 모니터링, 백테스트 기능을 제공한다. 다중 데이터 소스 라우팅과 분 단위 전략 실행을 지원하며, Docker 기반으로 자체 호스팅이 가능하다. AI 대화형 어시스턴트와 전시간대 이상 감시 기능이 포함되어 있다.",
+  "why": "Docker로 배포해 A주 분 단위 전략을 실행할 수 있다. 다중 데이터 소스 라우팅 구조를 참고해 자체 백엔드 데이터 계층을 설계하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
+  "title": "openbao / openbao",
+  "url": "https://github.com/openbao/openbao",
+  "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+  "source": "github",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/openbao/openbao"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 16,
+  "score": 110.6,
+  "image": "https://opengraph.githubassets.com/1/openbao/openbao",
+  "link_status": null,
+  "ko_title": "오픈바오",
+  "summary": "",
+  "why": "기사는 오픈바오의 보안 취약점 신고 채널과 커뮤니티 링크만 나열한다. 실제 기능 변경이나 버전 업데이트 내용이 없다. 따라서 지금 확인하거나 조치해야 할 사항은 없다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-26T08:00:03.313621+09:00",
+  "batch_label": "9월 26일 08:00"
+ },
+ {
   "title": "Dutch governments builds alternative for Microsoft based on NixOS",
   "url": "https://www.dawo.community/en/",
   "description": "",
