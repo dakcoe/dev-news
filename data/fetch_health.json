@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-16T03:31:45+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-16T09:51:20+09:00",
    "total": 17,
    "counts": {
@@ -574,6 +565,22 @@
    "failures": [
     {
      "url": "https://www.cell.com/iscience/fulltext/S2589-0042(26)00811-4",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-25T16:00:48+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/introducing-mentalhealthbench/",
      "source": "hackernews",
      "reason": "blocked"
     }
