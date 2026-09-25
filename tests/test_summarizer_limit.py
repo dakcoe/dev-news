@@ -145,3 +145,11 @@ def test_no_new_info_becomes_empty_summary(monkeypatch):
     assert out[0]["llm_done"] is True
     assert out[0]["summary"] == ""
     assert out[0]["why"] == ""
+
+
+def test_악센트_붙은_로마자는_외국_문자가_아니다():
+    """사람 이름이 치환 단계로 넘어가 'J유rgen' 이 된 적이 있다."""
+    for ok in ("Jürgen Schmidhuber", "Café", "Łukasz", "Señor", "Ångström"):
+        assert not summarizer.FOREIGN_RE.search(ok), ok
+    for bad in ("прогресс", "タイプ", "超越", "÷"):
+        assert summarizer.FOREIGN_RE.search(bad), bad
