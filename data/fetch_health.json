@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-16T09:51:20+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-16T21:12:40+09:00",
    "total": 20,
    "counts": {
@@ -581,6 +572,27 @@
    "failures": [
     {
      "url": "https://openai.com/index/introducing-mentalhealthbench/",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-26T00:00:41+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 13,
+    "blocked": 2,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://economist.com/europe/2026/09/24/the-mafia-may-be-keeping-fentanyl-out-of-italy",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.ft.com/content/a96bf05a-a299-4d6a-a753-b298dd0f4016",
      "source": "hackernews",
      "reason": "blocked"
     }
