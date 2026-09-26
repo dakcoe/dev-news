@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-17T08:00:30+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 12,
-    "short": 1,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://mimo.xiaomi.com/rl/",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/model-misalignment-reporting-framework",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-17T16:00:32+09:00",
    "total": 17,
    "counts": {
@@ -610,6 +583,22 @@
     "github": 5
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-27T08:00:33+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://www.economist.com/leaders/2026/09/10/plunging-test-scores-are-a-slow-moving-catastrophe",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
