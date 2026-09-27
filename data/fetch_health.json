@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-18T00:00:31+09:00",
-   "total": 20,
-   "counts": {
-    "short": 1,
-    "ok": 13,
-    "empty": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=49738879",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-09-18T08:00:32+09:00",
    "total": 17,
    "counts": {
@@ -590,6 +568,15 @@
    "counts": {
     "ok": 15,
     "github": 2
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-28T00:00:38+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
    },
    "failures": []
   }
