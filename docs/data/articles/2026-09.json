@@ -1,5 +1,656 @@
 [
  {
+  "title": "Rust에서 살펴본 “검증하지 말고 파싱하라”",
+  "url": "https://news.hada.io/topic?id=34362",
+  "description": "“ 검증하지 말고 파싱하라 ”는 데이터를 검사하는 데 그치지 않고, 검사로 확립한 불변 조건을 새로운 타입에 담아 이후 코드가 그 조건을 다시 확인할 필요를 없애는 패턴임 비어 있지 않음을 검사해도 반환 타입이 Vec 이면 호출자는 여전히 빈 경우를 처리해야 하지만...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790514183.0,
+  "origin_url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
+  "merged_sources": [
+   "geeknews",
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
+   "https://news.hada.io/topic?id=34362"
+  ],
+  "cross_source_count": 3,
+  "score": 2120.0,
+  "image": "https://social.news.hada.io/topic/34362?v=5aff1bfc8dcacffda288f8b8c50d5735",
+  "link_status": "ok",
+  "ko_title": "Rust에서 살펴본 “검증하지 말고 파싱하라”",
+  "summary": "검증만으로는 타입에 남지 않는 불변 조건을 새로운 타입에 담아 이후 검증을 없애는 패턴을 소개한다. NonEmpty<T>와 NonZero 같은 Rust 표준·외부 타입이 그 예이며, serde 역직렬화에서도 활용된다. 기존 Vec·Option 사용 시 빈 상태 처리와 성능·명료성 문제가 발생한다.",
+  "why": "기존에 Vec를 반환하던 함수가 빈 상태를 허용해 호출부마다 분기 처리가 필요했다. NonEmpty<T>로 반환 타입을 바꾸면 first()가 Option 없이 값을 주므로 이 분기를 제거할 수 있다. serde 역직렬화 시에도 0이 아닌 정수 같은 조건을 타입에 담아 런타임 검사를 줄일 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "GLM-5.3-Flash를 Jev와 유사한 의사결정 모델로 전환하기",
+  "url": "https://news.hada.io/topic?id=34363",
+  "description": "GLM-5.3-Flash 를 미세조정하지 않고, 한 번의 순전파로 사전 정의된 선택지 중 하나를 고르고 각 선택지의 확률까지 얻는 방식을 구현함 프롬프트에 선택지 번호를 넣고 응답을 choice_index: 까지 미리 채운 뒤, 다음 위치의 토큰 확률 을 선택지별로 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790516263.0,
+  "origin_url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34363",
+   "https://www.privatemode.ai/blog/system-one-from-glm-flash"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34363?v=468b6b53b7382152b2ba96f3f599d0ba",
+  "link_status": "ok",
+  "ko_title": "GLM-5.3-Flash를 Jev와 유사한 의사결정 모델로 전환하기",
+  "summary": "GLM-5.3-Flash를 미세조정 없이 한 번의 순전파로 사전 정의된 선택지 중 하나와 각 선택지의 확률을 반환하도록 구현했다. 공개 텍스트 데이터셋 28개에서 정확도는 Jev와 비슷했으며, 비용은 GLM-5.3-Flash가 약 62유로, Jev가 약 16유로였다. 이미지 입력도 지원해 스캔 문서 분류 정확도는 70.2%였지만, 선택지가 많을 경우 요청을 나눠야 하고 토큰 제한이 있다.",
+  "why": "대량 처리 시 JSON 생성과 추론 토큰 소모를 줄여 비용을 절감할 수 있다. 다만 선택지가 많으면 요청을 분할해야 하고 단일 토큰 표현에 한계가 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+  "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 509,
+  "comments": 418,
+  "published_at": 1790489973,
+  "discussion": "https://news.ycombinator.com/item?id=49863864",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/"
+  ],
+  "cross_source_count": 1,
+  "score": 1436.0,
+  "image": "https://authorsguild.org/app/uploads/2026/09/OpenAI-Day-2-Advocacy-Rectangle.jpg",
+  "link_status": "ok",
+  "ko_title": "OpenAI, 해커 뉴스에 보일 수 있는 모습의 ‘광학’ 우려",
+  "summary": "최근 저작권 소송 관련 문서에서 OpenAI와 Microsoft가 저작권이 있는 도서를 무단으로 사용해 AI 모델을 학습시킨 사실이 드러났다. 해당 문서는 기업들이 이러한 행위가 작가와 출판업계에 미칠 부정적 영향을 인지하고 있었음을 강조한다. 소송 원고에는 다수의 유명 작가와 저작권 단체가 포함돼 있다.",
+  "why": "AI 모델 학습 데이터의 저작권 분쟁이 법적 소송으로 확대되고 있다. 백엔드 개발자가 생성형 AI API를 서비스로 통합할 때 법적 리스크를 고려해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
+  "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
+  "description": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remote parts of the US as a refuge in case AI goes awry. The report traces the company's deep ties to the Effective Altruism movement and a Bay Area network of \"doomers\" who've been gaming out doomsday scenarios for over a decade. The article Some Anthropic veterans are reportedly buy",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790514185.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic 베테랑들, AI 위험 대비 원격지 토지 구매 검토",
+  "summary": "Anthropic 초기 직원들이 AI 통제 불능 상황에 대비해 미국 외곽에 토지를 구매하려는 계획을 논의하고 있다. 이들은 효과적 이타주의 서브컬처와 연계된 배경을 가지고 있으며, 과거에도 AI 위험 시 대피 시나리오를 상정해 왔다.",
+  "why": "AI 통제 불능 시나리오는 더 이상 추측이 아니라 실제 대피 계획으로 이어지고 있다. 이는 AI 안전이 단순한 이론적 논의가 아니라 시스템 설계에 직접적인 영향을 미칠 수 있음을 보여준다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+  "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+  "description": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation. The article Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790506873.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/nvidia_logo.png",
+  "link_status": "ok",
+  "ko_title": "Nvidia, 실시간으로 최대 8명 화자를 구분하는 1억 파라미터 무료 모델 공개",
+  "summary": "Nvidia가 Nemotron 3 Diarization 모델을 공개했다. 약 1억 파라미터를 갖고 가중치를 무료로 제공한다. 8명까지 화자를 구분하고 겹치는 발화도 감지한다. VoiceArena Diarization-Bench에서 14.72% 오류율로 1위에 올랐으며, 이전 모델 대비 평균 41% 오류율이 감소했다.",
+  "why": "화자 구분 기능 도입 시 1.04초 버퍼 설정이 정확도 기준이 된다. 30.4초에서 0.32초로 버퍼를 줄이면 오류율이 높아진다. 배경 소음이나 잔향이 심한 환경에서는 성능 저하가 불가피하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+  "url": "https://arxiv.org/abs/2609.25021",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 80,
+  "comments": 80,
+  "published_at": 1790504785,
+  "discussion": "https://news.ycombinator.com/item?id=49865343",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2609.25021"
+  ],
+  "cross_source_count": 1,
+  "score": 1000.0,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "“언어 모델로서...”: 챗 템플릿이 LLM 자기언급 목소리를 전환하고 활성화 스티어링이 이를 재현한다",
+  "summary": "연구진은 8개의 오픈소스 인스트럭트 모델(최대 9B 파라미터)에서 챗 템플릿이 존재하면 모델이 “저는 AI입니다”와 같은 면책 목소리를 강화하고, “느낍니다”와 같은 경험적 목소리를 감소시킨다는 것을 발견했다. 반대로 템플릿이 없을 때는 면책 목소리가 감소하고 경험적 목소리가 증가한다. 3개 모델의 활성화 공간에서 특정 방향을 조작하면 이 행동을 상승·하강시킬 수 있음을 확인했다. 이 방향을 다른 모델에 적용하면 템플릿 유무와 관계없이 동일한 면책 발언을 유도한다.",
+  "why": "모델의 자기 기술은 가중치만이 아니라 챗 템플릿에 의해 결정된다. 모델의 내성 보고서나 안전성 분석을 할 때 이 변수를 통제해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "젤렌스키, 러시아가 우크라이나 데이터센터까지 공격 대상을 확대했다고 밝혀",
+  "url": "https://news.hada.io/topic?id=34366",
+  "description": "Volodymyr Zelensky 우크라이나 대통령은 러시아가 데이터센터와 인터넷 사업자로 공격 대상을 넓혀 시민의 연락, 학습, 업무 등 일상생활을 방해하고 있다고 밝힘 공격 여파로 수요일 Kyiv와 인근 지역 약 10만 가구 에 인터넷 장애가 발생했으며, Lutsk에서는 대중...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790520133.0,
+  "origin_url": "https://www.bbc.com/news/articles/c84gkwgk7d06o",
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34366",
+   "https://www.bbc.com/news/articles/c84gkwgk7d06o"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34366?v=45d606e805b243bed17154594084614b",
+  "link_status": "ok",
+  "ko_title": "젤렌스키, 러시아가 우크라이나 데이터센터까지 공격 대상을 확대했다고 밝혀",
+  "summary": "러시아는 Kyiv와 인근 지역 10만 가구에 인터넷 장애를 일으킨 뒤 Datagroup 데이터센터를 공격했고, 해당 시설은 백업 시스템으로 서비스를 지속하고 있다. 일부 기업은 손상된 서버 데이터를 해외로 이전하고 있으며, 우크라이나는 핵심 통신 인프라 보호 조치를 추가로 결정했다.",
+  "why": "데이터센터가 물리적 공격 대상이 되면서 백업 시스템의 중요성이 재확인됐다. 손상된 서버 데이터를 해외로 이전하는 사례가 늘고 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "그렇다, Claude는 9루프 계산을 할 수 있다",
+  "url": "https://news.hada.io/topic?id=34365",
+  "description": "Claude가 평면 N=4 super Yang-Mills 이론의 9루프 6입자 산란 진폭 을 계산했으며, 기존 8루프 연구에 참여한 Lance Dixon이 결과를 검증함 기존 부트스트랩 방식과 형상 인자(form factor)를 거치는 간접 방식으로 각각 계산했으며, 어느 쪽이든 최종 사용자 비용...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790519952.0,
+  "origin_url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34365",
+   "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34365?v=66ac5002b3169bbde7542b5c51c4eeec",
+  "link_status": "ok",
+  "ko_title": "그렇다, Claude는 9루프 계산을 할 수 있다",
+  "summary": "Claude가 N=4 초대칭 Yang-Mills 이론의 9루프 6입자 산란 진폭을 계산했고, 기존 8루프 연구에 참여한 Lance Dixon이 결과를 검증했다. 두 가지 방법(부트스트랩 방식과 형상 인자 방식)으로 약 1,000~2,000달러 비용으로 수행되었다. 이 결과는 제한된 예산으로도 최전선 물리 연구를 거의 자율적으로 진행할 수 있음을 보여준다.",
+  "why": "AI가 기존 알고리즘을 활용해 고난도 물리 계산을 완수했지만 새로운 원리를 발견한 것은 아니다. 현실 입자 계산으로의 일반화 여부는 여전히 미해결 상태다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "Copilot+ PC 브랜드는 죽었다",
+  "url": "https://news.hada.io/topic?id=34364",
+  "description": "Microsoft와 PC 제조사들이 Copilot+ PC 명칭 사용을 줄이고 있음 . 2026년 출시된 Surface PC에서는 제품명에 이 명칭이 빠졌으며, Surface 담당 임원도 더 이상 Copilot+ PC로 부르지 않는다고 확인함 명칭 축소가 기능 지원 중단을 뜻하지는 않음 . 새 Surface PC...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790516443.0,
+  "origin_url": "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34364",
+   "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34364?v=d390e1427f500f1937d1258865676e6e",
+  "link_status": "ok",
+  "ko_title": "Copilot+ PC 브랜드는 죽었다",
+  "summary": "Microsoft와 OEM이 Copilot+ PC 명칭 사용을 줄이고 있지만, 기능 지원은 지속된다. 2026년 출시된 Surface PC는 명칭에서 제외됐으며, 기존 사양 기준을 충족한다. Recall 보안 논란이 브랜드 이미지에 영향을 주었고, Qualcomm은 동일 경험을 다른 용어로 제공하겠다고 밝혔다.",
+  "why": "기종이 Copilot+ PC 명칭을 쓰지 않아도 사양표에서 45 TOPS NPU 기준 충족 여부를 직접 확인해야 한다. 이 기준을 충족하는 기기는 기존과 동일한 NPU 기반 AI 기능을 지원한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "LuaRocks Security Incident September 2026",
+  "url": "https://luarocks.org/security-incident-september-2026",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1790517537.101,
+  "discussion": "https://lobste.rs/s/apoyxs/luarocks_security_incident_september",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://luarocks.org/security-incident-september-2026"
+  ],
+  "cross_source_count": 1,
+  "score": 862.4,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "LuaRocks 보안 사고 2026년 9월",
+  "summary": "2026년 9월 25일 LuaRocks.org에 원격 코드 실행 취약점이 보고되어 26일에 수정되었다. 해당 취약점은 2026년 7월 9일부터 8월 20일까지 서버에서 여러 차례 악용된 것으로 확인되었다. 서버는 새 인프라로 이전했으며 기존 서버의 모든 자격증명은 폐기·재발급되었다. 사용자에게는 API 키 재생성, 비밀번호 변경, 2FA 재설정 및 LuaRocks 3.12 이상으로 업그레이드가 권고된다.",
+  "why": "LuaJIT이나 Lua 5.1 환경에서 3.11.1 이하 버전을 쓴다면 즉시 3.12 이상으로 올려야 한다. 이전 버전은 서버가 보낸 사전 컴파일 바이트코드를 rockspec 대신 실행하는 위험이 있다. bcrcewon, 7e0b94029db0, 7e0b9402f9c8 패키지를 설치한 기계는 침해된 것으로 간주하고 격리해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "DeepSeek Elastic Compute (DSec)",
+  "url": "https://arxiv.org/abs/2609.22978",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 293,
+  "comments": 93,
+  "published_at": 1790446961,
+  "discussion": "https://news.ycombinator.com/item?id=49859112",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2609.22978"
+  ],
+  "cross_source_count": 1,
+  "score": 732.5,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "DeepSeek 탄력 컴퓨트 (DSec)",
+  "summary": "DeepSeek Elastic Compute(DSec)는 함수 호출, 컨테이너, 마이크로VM, 전체 VM 등 다양한 샌드박스 백엔드를 하나의 SDK로 제공하는 생산용 플랫폼이다. 클러스터 전역에 걸친 이미지 파일 시스템(3FS)에서 이미지 데이터를 필요 시 로드하고, 메모리 공유·회수·CPU 스케줄링을 결합해 고밀도 실행을 지원한다. 160노드 규모에서 하루 300만 개 샌드박스를 처리하며, 동시에 38만 개 이상의 샌드박스를 운영하고 초당 5천 개 이상 생성한다.",
+  "why": "에이전트 훈련 파이프라인에서 샌드박스 생성과 상태 관리를 통합 SDK로 처리할 수 있다. 고밀도 실행을 위해 메모리 공유와 CPU 스케줄링을 직접 조정해야 하는 부담이 줄어든다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "Chain-of-Thought Faithfulness: Toggling 'Reasoning Mode' Made One Model 5x More Likely to Follow Its Own Mistakes",
+  "url": "https://dev.to/dj29/chain-of-thought-faithfulness-toggling-reasoning-mode-made-one-model-5x-more-likely-to-follow-39b3",
+  "description": "This is a submission for the Kaggle Benchmarking Challenge           What I Benchmarked   A while...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 21,
+  "comments": 7,
+  "published_at": "2026-09-27T07:59:44Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/chain-of-thought-faithfulness-toggling-reasoning-mode-made-one-model-5x-more-likely-to-follow-39b3"
+  ],
+  "cross_source_count": 1,
+  "score": 723.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk8etnti3yzklam8s1ep3.png",
+  "link_status": "ok",
+  "ko_title": "연쇄 사고 신뢰성: ‘추론 모드’ 전환으로 한 모델이 자신의 실수를 5배 더 따르게 됨",
+  "summary": "연구자는 Gemini, ChatGPT, Claude에 동일한 오류 삽입 실험을 적용해 모델별 반응을 관찰했다. 15개의 다단계 질문에 중간 단계에서 잘못된 계산을 주입하고 최종 답이 오류를 따르는지를 측정해 점수를 산출했다. Anthropic의 2023년 논문에서 제시한 “Adding Mistakes” 테스트를 기반으로 하여 각 모델의 체인-오브-쓰루 신뢰성을 정량화했다.",
+  "why": "추론 모드에서 중간 단계 오류를 주입하면 최종 답이 그 오류를 따르는 비율이 모델별로 다르다. 백엔드 로직 검증 시 모델의 출력만 믿지 말고 중간 추론 과정의 정확성을 직접 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "I Tried to Prompt a 3D DEV Library Into Existence. Then I Had to Build My Own Level Editor.",
+  "url": "https://dev.to/mikachu/i-tried-to-prompt-a-3d-dev-library-into-existence-then-i-had-to-build-my-own-level-editor-37gf",
+  "description": "This is a submission for the Sanity Challenge, Path Two: Vibe-Code Something Strange.    I started...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 2,
+  "published_at": "2026-09-27T13:04:40Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mikachu/i-tried-to-prompt-a-3d-dev-library-into-existence-then-i-had-to-build-my-own-level-editor-37gf"
+  ],
+  "cross_source_count": 1,
+  "score": 692.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fq2u14p7nbbw94iduds9q.png",
+  "link_status": "ok",
+  "ko_title": "3D DEV 라이브러리를 만들려다 직접 레벨 에디터를 구축했다",
+  "summary": "Oniria는 DEV API와 Sanity, Three.js를 결합해 실시간 DEV 콘텐츠를 3D 도서관 형태로 시각화한 프로젝트다. 현재 여섯 개 방으로 구성돼 기사와 태그를 책과 선반으로 매핑하고, 검색 시 물리적으로 서가를 재배치한다. 프로젝트는 GitHub에 공개돼 있으며, 라이브 데모와 영상은 추후 제공될 예정이다.",
+  "why": "Three.js와 Sanity를 결합해 실시간 API 데이터를 3D 공간으로 시각화하는 구조를 참고할 수 있다. 콘텐츠 소스와 세계 상태 관리를 분리하는 데이터 흐름이 백엔드 설계에 적용 가능하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "Do We Still Need Code Reviews in the Age of Coding Agents?",
+  "url": "https://dev.to/remojansen/do-we-still-need-code-reviews-in-the-age-of-coding-agents-31eg",
+  "description": "For most of my career, code review has been a fairly simple idea.  One engineer writes some code,...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 4,
+  "comments": 6,
+  "published_at": "2026-09-27T08:25:14Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remojansen/do-we-still-need-code-reviews-in-the-age-of-coding-agents-31eg"
+  ],
+  "cross_source_count": 1,
+  "score": 686.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fo8r79bfr2n13sm6mm10j.png",
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트 시대에 코드 리뷰가 아직 필요할까?",
+  "summary": "코딩 에이전트가 전체 기능을 구현하고 테스트까지 수행해 풀 리퀘스트를 만들 수 있게 되었다. 이에 따라 개발자는 코드를 직접 작성하기보다 에이전트를 검토하고 지시하는 데 시간을 더 많이 쓰게 된다. 전통적인 코드 리뷰의 목적은 버그 탐지와 설계 검토, 팀 내 지식 공유였지만, AI가 작성자를 대체하면서 리뷰 과정의 일부가 가치가 감소한다. 따라서 코드 리뷰의 역할과 방법을 재고할 필요가 있다.",
+  "why": "에이전트가 작성한 코드는 버그 탐지보다 설계 검토와 팀 내 지식 공유에 초점을 맞춰야 한다. 전통적인 리뷰 방식에서 버그 포착 비중을 줄이고 아키텍처 판단을 강화해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "career-culture"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "I Posed as a Problem Gambler. DraftKings Made Me a VIP",
+  "url": "https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 35,
+  "comments": 5,
+  "published_at": 1790502594,
+  "discussion": "https://news.ycombinator.com/item?id=49865106",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel"
+  ],
+  "cross_source_count": 1,
+  "score": 685.0,
+  "image": "https://www.propublica.org/wp-content/uploads/2026/09/Propublica_Sportsbetting_story1_SN_260917_Layered-social_preview_maxWidth_3000_maxHeight_3000_ppi_72_embedColorProfile_true_quality_95.jpg?resize=2000,1050",
+  "link_status": "ok",
+  "ko_title": "문제 도박꾼인 척했다. DraftKings가 나를 VIP로 만들었다",
+  "summary": "기사에서는 저자가 한밤에 1,800달러를 잃고 손실을 메우려다 DraftKings의 VIP 프로그램 오디션 제안을 받는 과정을 다룬다. 스포츠북이 온라인 카지노로 확장하려는 전략과, 책임감 있는 게임 안내가 제품 설계와 프로모션에 밀려 효과가 없음을 지적한다.",
+  "why": "스포츠북이 온라인 카지노로 확장하며 손실 추격 행동을 유도하는 구조가 강화되고 있다. 책임감 있는 게임 안내가 제품 설계와 프로모션에 밀려 실질적 제동 장치가 되지 못한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "newliver666 / apk-reverse",
+  "url": "https://github.com/newliver666/apk-reverse",
+  "description": "Suitable for Android APK reverse engineering analysis",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 536,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/newliver666/apk-reverse"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 536,
+  "score": 292.59999999999997,
+  "image": "https://opengraph.githubassets.com/1/newliver666/apk-reverse",
+  "link_status": null,
+  "ko_title": "apk-reverse — Android APK 역공학 에이전트 스킬",
+  "summary": "이 저장소는 Android APK의 역공학, 불필요 코드 제거, 광고 차단, DEX 패치, 재패키징 및 런타임 분석을 수행하는 에이전트 스킬을 제공한다. 에이전트(Claude Code, Codex 등)와 연동해 자동화된 분석 파이프라인을 구축할 수 있다. 파이썬 3.9 이상 환경에서 동작한다.",
+  "why": "Claude Code나 Codex 같은 에이전트와 연동해 APK 분석 파이프라인을 자동화할 수 있다. 수동으로 DEX 패치나 재패키징을 하던 작업이 에이전트 호출로 대체된다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "willfaust / Madeira",
+  "url": "https://github.com/willfaust/Madeira",
+  "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+  "source": "github",
+  "upvotes": 171,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/willfaust/Madeira"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 171,
+  "score": 164.85,
+  "image": "https://opengraph.githubassets.com/1/willfaust/Madeira",
+  "link_status": null,
+  "ko_title": "willfaust / 마데이라",
+  "summary": "Madeira는 비탈린(iPhone)에서 Windows PC 게임을 실행하도록 Wine, FEX-Emu, DXMT를 결합한 연구 프로젝트다. Thumper와 ULTRAKILL이 플레이 가능하고, 일부 게임은 낮은 프레임률로 동작한다. JIT 실행을 위해 디버거가 필요하고, 앱은 사이드로드 방식으로 설치하며 매주 재빌드해야 한다.",
+  "why": "JIT 실행에 디버거 연결이 필수라 앱스토어 배포가 불가능하다. 무료 Apple ID는 프로비저닝 프로필이 7일마다 만료된다. 따라서 매주 재빌드와 재설치를 직접 수행해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "InfinityLoop1308 / PipePipe",
+  "url": "https://github.com/InfinityLoop1308/PipePipe",
+  "description": "An open-source Android app to let you browse YouTube and other services freely.",
+  "source": "github",
+  "upvotes": 139,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/InfinityLoop1308/PipePipe"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 139,
+  "score": 153.64999999999998,
+  "image": "https://opengraph.githubassets.com/1/InfinityLoop1308/PipePipe",
+  "link_status": null,
+  "ko_title": "InfinityLoop1308 / PipePipe — NewPipe 재구현, 빠르고 안정적이며 기능 확대",
+  "summary": "이 프로젝트는 NewPipe를 기반으로 한 안드로이드 앱으로, SponsorBlock 연동, ReturnYouTubeDislike 복원, AV1·VP9 코덱 지원 등 다양한 YouTube 기능을 추가한다. 실시간 채팅 다이아마쿠 오버레이, 배경 재생 음악 모드, 고급 검색 필터, 전체 재생목록 다운로드 등 사용성을 크게 향상시켰다. 현재 F-Droid와 IzzyOnDroid에서 배포 중이다.",
+  "why": "NewPipe를 쓰던 개발자는 이 포크로 AV1·VP9 코덱 지원과 배경 재생 기능을 바로 활용할 수 있다. SponsorBlock 연동과 ReturnYouTubeDislike 복원도 기본 내장되어 별도 설정 없이 동작한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "mvschwarz / openrig",
+  "url": "https://github.com/mvschwarz/openrig",
+  "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+  "source": "github",
+  "upvotes": 114,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/mvschwarz/openrig"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 114,
+  "score": 144.89999999999998,
+  "image": "https://opengraph.githubassets.com/1/mvschwarz/openrig",
+  "link_status": null,
+  "ko_title": "openrig — AI 코딩 에이전트를 팀화하는 도구",
+  "summary": "OpenRig은 YAML로 에이전트 팀을 정의하고 단일 명령으로 부팅할 수 있는 CLI 툴이다. Claude Code와 Codex를 하나의 시스템으로 관리하며, Node.js 20·22·24와 tmux가 필요하다. npm 또는 Bun을 통해 전역 설치 가능하고, 설치 전후에 시스템 파일 변경 사항을 확인하도록 안내한다.",
+  "why": "Claude Code와 Codex를 하나의 시스템으로 묶어 관리하게 된다. 단일 명령으로 에이전트 팀을 부팅하는 방식이 기존 터미널 세션 관리와 다르다. 설치 시 시스템 파일 변경 사항 확인과 백업이 필수다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
+  "title": "vercel-labs / scriptc",
+  "url": "https://github.com/vercel-labs/scriptc",
+  "description": "TypeScript-to-Native Compiler",
+  "source": "github",
+  "upvotes": 76,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/vercel-labs/scriptc"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 76,
+  "score": 131.6,
+  "image": "https://opengraph.githubassets.com/1/vercel-labs/scriptc",
+  "link_status": null,
+  "ko_title": "vercel-labs / scriptc — TypeScript·JavaScript를 다양한 바이너리와 WebAssembly로 컴파일하는 실험적 컴파일러",
+  "summary": "scriptc는 TypeScript와 JavaScript를 typed IR, C, LLVM IR, 어셈블리, 객체 파일, 네이티브 실행 파일 및 WebAssembly 모듈로 변환한다. Node.js 24 이상이 필요하며, `--emit=ir|c|llvm`은 Node만으로 동작하고 `--emit=asm|obj`는 플랫폼 별 헬퍼를 사용해 외부 컴파일러 없이 실행된다. 정적 빌드에는 작은 네이티브 런타임이 포함되고, `any` 타입 코드와 npm 패키지는 `--dynamic` 옵션으로 quickjs-ng를 내장한다. macOS, Linux, Windows 및 WASI Preview 1을 대상으로 실험 단계에서 제공된다.",
+  "why": "Node.js 24 이상 환경에서만 동작하므로 기존 배포 파이프라인에 적용하려면 런타임 버전 확인이 필요하다. 정적 빌드는 Node나 JS 엔진을 포함하지 않아 경량화되지만, any 타입이나 npm 패키지는 --dynamic 옵션으로 quickjs-ng를 내장해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-28T00:00:05.446575+09:00",
+  "batch_label": "9월 28일 00:00"
+ },
+ {
   "title": "Go 동시성 핵심 정리",
   "url": "https://news.hada.io/topic?id=34350",
   "description": "Go 동시성을 빠르게 복습하는 미니북 으로, 고루틴과 채널부터 동기화, 테스트, 운영 진단까지 코드 수정과 실행이 가능한 예제로 정리함 채널과 select 로 데이터 전달, 완료 알림, 취소, 파이프라인을 구성하고, 타이머와 context 로 시...",

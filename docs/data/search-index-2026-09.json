@@ -1,5 +1,280 @@
 [
  {
+  "t": "Rust에서 살펴본 “검증하지 말고 파싱하라”",
+  "u": "https://news.hada.io/topic?id=34362",
+  "m": "2026-09",
+  "s": "geeknews",
+  "g": [
+   "language"
+  ],
+  "d": "2026-09-28",
+  "x": "검증만으로는 타입에 남지 않는 불변 조건을 새로운 타입에 담아 이후 검증을 없애는 패턴을 소개한다. NonEmpty<T>와 NonZero 같은 "
+ },
+ {
+  "t": "GLM-5.3-Flash를 Jev와 유사한 의사결정 모델로 전환하기",
+  "u": "https://news.hada.io/topic?id=34363",
+  "m": "2026-09",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-09-28",
+  "x": "GLM-5.3-Flash를 미세조정 없이 한 번의 순전파로 사전 정의된 선택지 중 하나와 각 선택지의 확률을 반환하도록 구현했다. 공개 텍스트 "
+ },
+ {
+  "t": "OpenAI, 해커 뉴스에 보일 수 있는 모습의 ‘광학’ 우려",
+  "u": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+  "m": "2026-09",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "security"
+  ],
+  "d": "2026-09-28",
+  "o": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+  "x": "최근 저작권 소송 관련 문서에서 OpenAI와 Microsoft가 저작권이 있는 도서를 무단으로 사용해 AI 모델을 학습시킨 사실이 드러났다. "
+ },
+ {
+  "t": "Anthropic 베테랑들, AI 위험 대비 원격지 토지 구매 검토",
+  "u": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
+  "m": "2026-09",
+  "s": "rss",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-09-28",
+  "o": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
+  "x": "Anthropic 초기 직원들이 AI 통제 불능 상황에 대비해 미국 외곽에 토지를 구매하려는 계획을 논의하고 있다. 이들은 효과적 이타주의 서브"
+ },
+ {
+  "t": "Nvidia, 실시간으로 최대 8명 화자를 구분하는 1억 파라미터 무료 모델 공개",
+  "u": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+  "m": "2026-09",
+  "s": "rss",
+  "g": [
+   "ai",
+   "hardware",
+   "release"
+  ],
+  "d": "2026-09-28",
+  "o": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+  "x": "Nvidia가 Nemotron 3 Diarization 모델을 공개했다. 약 1억 파라미터를 갖고 가중치를 무료로 제공한다. 8명까지 화자를 구"
+ },
+ {
+  "t": "“언어 모델로서...”: 챗 템플릿이 LLM 자기언급 목소리를 전환하고 활성화 스티어링이 이를 재현한다",
+  "u": "https://arxiv.org/abs/2609.25021",
+  "m": "2026-09",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+  "x": "연구진은 8개의 오픈소스 인스트럭트 모델(최대 9B 파라미터)에서 챗 템플릿이 존재하면 모델이 “저는 AI입니다”와 같은 면책 목소리를 강화하고"
+ },
+ {
+  "t": "젤렌스키, 러시아가 우크라이나 데이터센터까지 공격 대상을 확대했다고 밝혀",
+  "u": "https://news.hada.io/topic?id=34366",
+  "m": "2026-09",
+  "s": "geeknews",
+  "g": [
+   "devops-infra"
+  ],
+  "d": "2026-09-28",
+  "x": "러시아는 Kyiv와 인근 지역 10만 가구에 인터넷 장애를 일으킨 뒤 Datagroup 데이터센터를 공격했고, 해당 시설은 백업 시스템으로 서비"
+ },
+ {
+  "t": "그렇다, Claude는 9루프 계산을 할 수 있다",
+  "u": "https://news.hada.io/topic?id=34365",
+  "m": "2026-09",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-09-28",
+  "x": "Claude가 N=4 초대칭 Yang-Mills 이론의 9루프 6입자 산란 진폭을 계산했고, 기존 8루프 연구에 참여한 Lance Dixon이 "
+ },
+ {
+  "t": "Copilot+ PC 브랜드는 죽었다",
+  "u": "https://news.hada.io/topic?id=34364",
+  "m": "2026-09",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "ai-coding"
+  ],
+  "d": "2026-09-28",
+  "x": "Microsoft와 OEM이 Copilot+ PC 명칭 사용을 줄이고 있지만, 기능 지원은 지속된다. 2026년 출시된 Surface PC는 명"
+ },
+ {
+  "t": "LuaRocks 보안 사고 2026년 9월",
+  "u": "https://luarocks.org/security-incident-september-2026",
+  "m": "2026-09",
+  "s": "lobsters",
+  "g": [
+   "security",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-09-28",
+  "o": "LuaRocks Security Incident September 2026",
+  "x": "2026년 9월 25일 LuaRocks.org에 원격 코드 실행 취약점이 보고되어 26일에 수정되었다. 해당 취약점은 2026년 7월 9일부터 "
+ },
+ {
+  "t": "DeepSeek 탄력 컴퓨트 (DSec)",
+  "u": "https://arxiv.org/abs/2609.22978",
+  "m": "2026-09",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-09-28",
+  "o": "DeepSeek Elastic Compute (DSec)",
+  "x": "DeepSeek Elastic Compute(DSec)는 함수 호출, 컨테이너, 마이크로VM, 전체 VM 등 다양한 샌드박스 백엔드를 하나의 S"
+ },
+ {
+  "t": "연쇄 사고 신뢰성: ‘추론 모드’ 전환으로 한 모델이 자신의 실수를 5배 더 따르게 됨",
+  "u": "https://dev.to/dj29/chain-of-thought-faithfulness-toggling-reasoning-mode-made-one-model-5x-more-likely-to-follow-39b3",
+  "m": "2026-09",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "d": "2026-09-28",
+  "o": "Chain-of-Thought Faithfulness: Toggling 'Reasoning Mode' Made One Model 5x More Likely to Follow Its Own Mistakes",
+  "x": "연구자는 Gemini, ChatGPT, Claude에 동일한 오류 삽입 실험을 적용해 모델별 반응을 관찰했다. 15개의 다단계 질문에 중간 단계"
+ },
+ {
+  "t": "3D DEV 라이브러리를 만들려다 직접 레벨 에디터를 구축했다",
+  "u": "https://dev.to/mikachu/i-tried-to-prompt-a-3d-dev-library-into-existence-then-i-had-to-build-my-own-level-editor-37gf",
+  "m": "2026-09",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "backend-data"
+  ],
+  "d": "2026-09-28",
+  "o": "I Tried to Prompt a 3D DEV Library Into Existence. Then I Had to Build My Own Level Editor.",
+  "x": "Oniria는 DEV API와 Sanity, Three.js를 결합해 실시간 DEV 콘텐츠를 3D 도서관 형태로 시각화한 프로젝트다. 현재 여섯"
+ },
+ {
+  "t": "코딩 에이전트 시대에 코드 리뷰가 아직 필요할까?",
+  "u": "https://dev.to/remojansen/do-we-still-need-code-reviews-in-the-age-of-coding-agents-31eg",
+  "m": "2026-09",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "career-culture"
+  ],
+  "d": "2026-09-28",
+  "o": "Do We Still Need Code Reviews in the Age of Coding Agents?",
+  "x": "코딩 에이전트가 전체 기능을 구현하고 테스트까지 수행해 풀 리퀘스트를 만들 수 있게 되었다. 이에 따라 개발자는 코드를 직접 작성하기보다 에이전"
+ },
+ {
+  "t": "문제 도박꾼인 척했다. DraftKings가 나를 VIP로 만들었다",
+  "u": "https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel",
+  "m": "2026-09",
+  "s": "hackernews",
+  "g": [
+   "showcase"
+  ],
+  "d": "2026-09-28",
+  "o": "I Posed as a Problem Gambler. DraftKings Made Me a VIP",
+  "x": "기사에서는 저자가 한밤에 1,800달러를 잃고 손실을 메우려다 DraftKings의 VIP 프로그램 오디션 제안을 받는 과정을 다룬다. 스포츠북"
+ },
+ {
+  "t": "apk-reverse — Android APK 역공학 에이전트 스킬",
+  "u": "https://github.com/newliver666/apk-reverse",
+  "m": "2026-09",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "newliver666 / apk-reverse",
+  "x": "이 저장소는 Android APK의 역공학, 불필요 코드 제거, 광고 차단, DEX 패치, 재패키징 및 런타임 분석을 수행하는 에이전트 스킬을 "
+ },
+ {
+  "t": "willfaust / 마데이라",
+  "u": "https://github.com/willfaust/Madeira",
+  "m": "2026-09",
+  "s": "github",
+  "g": [
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "willfaust / Madeira",
+  "x": "Madeira는 비탈린(iPhone)에서 Windows PC 게임을 실행하도록 Wine, FEX-Emu, DXMT를 결합한 연구 프로젝트다. T"
+ },
+ {
+  "t": "InfinityLoop1308 / PipePipe — NewPipe 재구현, 빠르고 안정적이며 기능 확대",
+  "u": "https://github.com/InfinityLoop1308/PipePipe",
+  "m": "2026-09",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "InfinityLoop1308 / PipePipe",
+  "x": "이 프로젝트는 NewPipe를 기반으로 한 안드로이드 앱으로, SponsorBlock 연동, ReturnYouTubeDislike 복원, AV1"
+ },
+ {
+  "t": "openrig — AI 코딩 에이전트를 팀화하는 도구",
+  "u": "https://github.com/mvschwarz/openrig",
+  "m": "2026-09",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "mvschwarz / openrig",
+  "x": "OpenRig은 YAML로 에이전트 팀을 정의하고 단일 명령으로 부팅할 수 있는 CLI 툴이다. Claude Code와 Codex를 하나의 시스"
+ },
+ {
+  "t": "vercel-labs / scriptc — TypeScript·JavaScript를 다양한 바이너리와 WebAssembly로 컴파일하는 실험적 컴파일러",
+  "u": "https://github.com/vercel-labs/scriptc",
+  "m": "2026-09",
+  "s": "github",
+  "g": [
+   "web",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-09-28",
+  "o": "vercel-labs / scriptc",
+  "x": "scriptc는 TypeScript와 JavaScript를 typed IR, C, LLVM IR, 어셈블리, 객체 파일, 네이티브 실행 파일 및"
+ },
+ {
   "t": "Go 동시성 핵심 정리",
   "u": "https://news.hada.io/topic?id=34350",
   "m": "2026-09",
