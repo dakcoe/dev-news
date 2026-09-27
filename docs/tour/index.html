@@ -10,538 +10,541 @@
 <meta property="og:title" content="dev-news — 개발 뉴스를 하루 세 번 한국어로">
 <meta property="og:description" content="일곱 곳의 개발·AI 소식을 모아 두세 문장으로 요약하고, 왜 중요한지 덧붙입니다.">
 <meta property="og:image" content="https://dev-news.net/og.png">
+<meta name="theme-color" content="#08080d">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <script>
-/* 움직임을 허용하는 환경이면 스크롤 무대를 쓰고, 아니면 아래의 정적 본문을 보여 준다.
-   GSAP 가 못 뜨면 스크립트 끝에서 이 표시를 다시 뗀다. */
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+/* 움직임을 허용하면 3D 무대를, 아니면 아래 정적 본문을 보여 준다. 스크립트가 8초 안에 못 뜨면 정적 본문으로 돌아간다. */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('motion', 'loading');
+  if (matchMedia('(pointer: fine)').matches) document.documentElement.classList.add('fine');
+  setTimeout(() => { if (!window.__dn) document.documentElement.classList.remove('motion', 'loading', 'fine'); }, 8000);
+}
 </script>
 <style>
-/* 색·그림자·카드 치수는 dev-news 본 화면(news/template.html)의 값을 그대로 쓴다 */
+/* ── 바깥 무대(어두움) ── */
 :root{
-  --bg:#f4f4f6;--panel:#fff;--rail:#fafafb;--line:#e7e7ec;--line2:#f0f0f4;
-  --tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;
-  --pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+  --bg:#08080d;--ink:#f2f2f7;--ink2:#a9a9b8;--ink3:#71717f;
+  --pri:#7c6ee6;--pri2:#b3a6ff;--pri-dk:#5b4fd0;--pri-bg:#efedfd;
   --hn:#ff6600;--gh:#1f2328;--lob:#ac130d;--devto:#3b49df;--gn:#2f7de0;--rss:#6b5bd2;--anth:#c96442;
-  --shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03);
-  --shadow-lift:0 0 0 1px rgba(25,28,33,.07),0 2px 2px -1px rgba(0,0,0,.05),0 8px 8px -4px rgba(0,0,0,.05),0 24px 32px -12px rgba(0,0,0,.10);
   --ease:cubic-bezier(.16,1,.3,1);
-  --head-h:60px;
-  /* 그림 쪽 중심. 넓은 화면은 오른쪽, 좁은 화면은 아래쪽. 스크립트의 CX·CY 와 같은 값이어야 한다 */
-  --cx:66%;--cy:52%;
-  --card-w:min(560px,50vw);
+  --head-h:64px;--cx:63%;--cy:53%;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  font-size:17px;line-height:1.7;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+  font-size:17px;line-height:1.7;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere;overflow-x:hidden}
 a{color:inherit}
 h1,h2,h3,p{margin:0}
+::selection{background:rgba(124,110,230,.45);color:#fff}
+html.fine.motion,html.fine.motion a{cursor:none}
 
-/* ── 상단 바 ── */
-.head{position:fixed;inset:0 0 auto 0;height:var(--head-h);z-index:50;display:flex;align-items:center;justify-content:space-between;
-  padding:0 28px;background:rgba(244,244,246,.8);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
-  border-bottom:1px solid var(--line)}
+#gl{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block;opacity:0;transition:opacity 1.4s ease}
+html.ready #gl{opacity:1}
+html:not(.motion) #gl{display:none}
+.grain{position:fixed;inset:-60%;z-index:70;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain .9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-6%,-2%)}80%{transform:translate(5%,4%)}100%{transform:translate(0,0)}}
+
+.loader{position:fixed;inset:0;z-index:90;background:var(--bg);display:none;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .8s ease,visibility .8s}
+html.motion .loader{display:flex}
+html.ready .loader{opacity:0;visibility:hidden}
+.loader b{font-size:14px;font-weight:800;color:var(--ink2)}
+.loader i{width:140px;height:2px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
+.loader i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--pri2),transparent);animation:ld 1.1s var(--ease) infinite}
+@keyframes ld{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+
+.head{position:fixed;inset:0 0 auto 0;height:var(--head-h);z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 32px;
+  background:linear-gradient(180deg,rgba(8,8,13,.85),rgba(8,8,13,0))}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.03em;text-decoration:none}
 .hmark{width:26px;height:26px;display:block;flex:none}
-.cta{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border-radius:11px;background:var(--tx);color:#fff;
-  font-weight:700;font-size:14.5px;text-decoration:none;transition:transform .2s var(--ease),background-color .2s}
-.cta:hover{background:#000}
-.cta:active{transform:scale(.97)}
-.cta svg{width:15px;height:15px}
-.cta.big{height:54px;padding:0 26px;border-radius:14px;font-size:17px}
-.cta.pri{background:var(--pri)}
-.cta.pri:hover{background:var(--pri-dk)}
+.cta{position:relative;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:12px;color:#fff;overflow:hidden;
+  font-weight:700;font-size:14.5px;text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background-color .3s,border-color .3s}
+.cta:hover{background:rgba(255,255,255,.13)}
+.cta svg{width:15px;height:15px;transition:transform .4s var(--ease)}
+.cta:hover svg{transform:translateX(3px)}
+.cta.big{height:58px;padding:0 28px;border-radius:16px;font-size:17px;border:0;
+  background:linear-gradient(135deg,#8f80ff 0%,#6a5ae0 60%,#5b4fd0 100%);box-shadow:0 18px 50px -14px rgba(124,110,230,.85),inset 0 1px 0 rgba(255,255,255,.3)}
+.cta.big::after{content:"";position:absolute;top:0;bottom:0;width:60%;left:-80%;transform:skewX(-20deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-80%}85%,100%{left:130%}}
 
-.kicker{font-size:15px;font-weight:700;color:var(--pri-dk);margin-bottom:14px}
-.h2{font-size:clamp(30px,4vw,52px);font-weight:800;line-height:1.28;letter-spacing:-.045em;text-wrap:balance}
-.lede{font-size:clamp(16px,1.3vw,19px);color:var(--tx2);line-height:1.75;margin-top:18px;max-width:30ch;text-wrap:pretty}
+.pbar{position:fixed;left:0;right:0;top:0;height:2px;z-index:60;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,#7c6ee6,#ff7ab6,#ffb35c);display:none}
+.nav{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:45;display:none;flex-direction:column;align-items:flex-end;gap:4px}
+.nav button{all:unset;display:flex;align-items:center;gap:12px;height:22px;padding-left:12px}
+.nav button span{font-size:12px;font-weight:700;color:var(--ink2);opacity:0;transform:translateX(8px);transition:opacity .35s,transform .45s var(--ease);white-space:nowrap}
+.nav button i{width:14px;height:2px;border-radius:2px;background:rgba(255,255,255,.22);transition:width .45s var(--ease),background-color .3s}
+.nav:hover button span{opacity:.75;transform:none}
+.nav button.on span{opacity:1;transform:none;color:#fff}
+.nav button.on i{width:34px;background:#fff}
+.cind{position:fixed;left:32px;bottom:26px;z-index:45;display:none;align-items:baseline;gap:10px;font-size:12.5px;font-weight:700;color:var(--ink3);transition:opacity .5s}
+.cind .num{display:inline-block;height:1.2em;overflow:hidden;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#fff;vertical-align:bottom}
+.cind .num span{display:block;line-height:1.2em;transition:transform .6s var(--ease)}
+.cind .lb{color:var(--ink2)}
+html.motion .pbar{display:block}
+html.motion .nav,html.motion .cind{display:flex}
 
-/* ── dev-news 카드 (본 화면 .row 와 같은 치수) ── */
-.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 16px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
-  padding:18px 20px;align-items:start;text-align:left}
-.row.has-ck{grid-template-columns:auto minmax(0,1fr) auto}
-.rt{font-size:18px;font-weight:750;line-height:1.5;letter-spacing:-.026em}
+.cur,.cur-dot{position:fixed;left:0;top:0;z-index:95;pointer-events:none;display:none;border-radius:50%;opacity:0;transition:opacity .4s}
+html.fine.motion .cur,html.fine.motion .cur-dot{display:block}
+html.fine.motion.moved .cur,html.fine.motion.moved .cur-dot{opacity:1}
+.cur{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid rgba(255,255,255,.55);transition:opacity .4s,width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background-color .35s,border-color .35s}
+.cur.big{width:74px;height:74px;margin:-37px 0 0 -37px;background:rgba(124,110,230,.16);border-color:rgba(179,166,255,.8)}
+.cur-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#fff}
+
+/* ── 스크롤 무대 ── */
+.story{display:none}
+html.motion .story{display:block;position:relative;height:2700vh}
+html.motion .plain{display:none}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;z-index:2}
+.s3d{position:absolute;inset:0;perspective:1800px;perspective-origin:var(--cx) 45%;z-index:2}
+
+.hero{position:absolute;left:6vw;top:50%;width:min(620px,40vw);z-index:4}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 12px;border-radius:999px;font-size:13px;font-weight:700;color:#d9d4ff;
+  background:rgba(124,110,230,.12);border:1px solid rgba(179,166,255,.25)}
+.eyebrow i{position:relative;width:8px;height:8px;border-radius:50%;background:#5ee39a}
+.eyebrow i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid #5ee39a;animation:ping 1.8s ease-out infinite}
+@keyframes ping{from{transform:scale(.6);opacity:1}to{transform:scale(2.1);opacity:0}}
+.hero h1{font-size:clamp(44px,5.6vw,96px);font-weight:850;line-height:1.05;letter-spacing:-.058em;margin:24px 0 0}
+.hero h1 em{font-style:normal}
+.hero h1 em .c{color:transparent;background-image:linear-gradient(100deg,#c3b8ff 0%,#ff8fc0 55%,#ffc27a 100%);-webkit-background-clip:text;background-clip:text;background-repeat:no-repeat}
+.hero .sub{font-size:clamp(16px,1.3vw,19px);color:var(--ink2);line-height:1.7;margin:26px 0 34px;max-width:32ch}
+.hero .acts{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.hint{display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:600;color:var(--ink3)}
+.mouse{width:22px;height:34px;border-radius:12px;border:1.5px solid rgba(255,255,255,.3);position:relative}
+.mouse::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:wheel 1.8s var(--ease) infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:0}100%{opacity:0}}
+
+.ch{position:absolute;left:6vw;top:50%;width:min(440px,31vw);visibility:hidden;z-index:4}
+.kick{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:750;letter-spacing:.06em;color:var(--pri2);margin-bottom:20px}
+.kick b{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:600;color:var(--ink3);letter-spacing:0}
+.kick i{width:30px;height:1px;background:currentColor;opacity:.55}
+.h2{font-size:clamp(32px,3.9vw,58px);font-weight:830;line-height:1.15;letter-spacing:-.052em}
+.ln{display:block;overflow:hidden;padding:.08em 0 .12em;margin:-.08em 0 -.12em;perspective:700px}
+.w{display:inline-block;white-space:nowrap}
+.c{display:inline-block;transform-origin:50% 100%;will-change:transform}
+.h2 em{font-style:normal;color:var(--pri2)}
+.lede{font-size:clamp(15.5px,1.2vw,18px);color:var(--ink2);line-height:1.78;margin-top:22px;max-width:33ch;text-wrap:pretty}
+.odo{display:flex;align-items:flex-end;gap:14px;margin-top:22px}
+.odo-n{display:flex;font-size:clamp(84px,9vw,150px);font-weight:860;letter-spacing:-.07em;line-height:1;height:1em;overflow:hidden;color:#fff}
+.odo-n .col{display:flex;flex-direction:column}
+.odo-n .col span{display:block;height:1em;line-height:1}
+.odo-u{font-size:22px;font-weight:800;padding-bottom:.55em;line-height:1.3}
+.odo-u small{display:block;font-size:13px;color:var(--ink3);font-weight:650}
+.clk{display:flex;align-items:baseline;gap:14px;margin-top:22px}
+.clk .t{display:grid;font-size:clamp(62px,7vw,116px);font-weight:860;letter-spacing:-.055em;line-height:1.05;font-variant-numeric:tabular-nums;overflow:hidden}
+.clk .t span{grid-area:1/1}
+.clk small{font-size:18px;font-weight:700;color:var(--ink3)}
+.apiN{font-size:clamp(62px,7vw,116px);font-weight:860;letter-spacing:-.055em;line-height:1;margin-top:22px;font-variant-numeric:tabular-nums;
+  background:linear-gradient(180deg,#fff 30%,#9fb6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.langs{display:flex;align-items:center;gap:10px;margin-top:24px;font-size:13px;font-weight:800}
+.langs span{padding:4px 11px;border-radius:8px;background:rgba(255,255,255,.07);color:var(--ink3)}
+.langs span.on{background:rgba(124,110,230,.3);color:#e0daff}
+.langs i{font-style:normal;color:var(--ink3)}
+
+/* ───────── 진짜 dev-news 화면 (본 화면 CSS 값을 그대로 쓴다) ───────── */
+.win{position:absolute;left:var(--cx);top:var(--cy);transform-style:preserve-3d;will-change:transform}
+.wtilt{transform-style:preserve-3d;will-change:transform}
+.winz{--bg:#f4f4f6;--panel:#fff;--rail:#fafafb;--line:#e7e7ec;--line2:#f0f0f4;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;
+  --gh:#1f2328;--lob:#ac130d;--devto:#3b49df;
+  --shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03);
+  position:relative;transform-origin:0 0;border-radius:22px;overflow:hidden;background:var(--bg);color:var(--tx);font-size:16px;letter-spacing:-.008em;
+  box-shadow:0 0 0 1px rgba(255,255,255,.08),0 80px 160px -40px rgba(0,0,0,.85),0 40px 80px -30px rgba(40,30,120,.55)}
+.winz::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:30;border-radius:inherit;
+  background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--sh,40%) - 18%),rgba(255,255,255,.22) var(--sh,40%),rgba(255,255,255,0) calc(var(--sh,40%) + 18%));mix-blend-mode:soft-light}
+.wbar{height:40px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#ececf1;border-bottom:1px solid #e1e1e8}
+.wbar i{width:12px;height:12px;border-radius:50%;background:#ff5f57}
+.wbar i:nth-child(2){background:#febc2e}.wbar i:nth-child(3){background:#28c840}
+.url{margin:0 auto;display:flex;align-items:center;gap:6px;font-size:13px;color:#6b6b78;background:#fff;border-radius:8px;padding:4px 70px;font-weight:600}
+.url svg{width:12px;height:12px}
+.scr{position:relative;display:flex;height:calc(100% - 40px)}
+.rail{width:90px;flex:none;background:var(--rail);border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:8px}
+.rb{width:66px;height:66px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#9a9aa8;position:relative;background:rgba(239,237,253,0)}
+.rb.on{background:#efedfd;color:#5b4fd0}
+.rb svg{width:24px;height:24px;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.rb .lb{font-size:11px;font-weight:600;line-height:1}
+.rb .dot{position:absolute;top:8px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--pri);transform:scale(0)}
+.rb.gh{margin-top:auto}
+.main{position:relative;flex:1;min-width:0;overflow:hidden}
+.view{position:absolute;inset:0;padding:30px 34px 0;overflow:hidden}
+.vh1{font-size:27px;font-weight:800;letter-spacing:-.035em;margin-bottom:6px;display:flex;align-items:center;gap:9px;line-height:1.3}
+.vh1 .hmark{width:28px;height:28px}
+.vsub{font-size:15px;color:var(--tx3);margin-bottom:22px;line-height:1.6}
+.status{display:flex;align-items:center;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:22px}
+.stmeta{font-size:14.5px;color:var(--tx2);line-height:1.65}
+.stmeta b{color:var(--tx);font-weight:700}
+.stmeta .l2{color:var(--tx3);font-size:13.5px}
+.stlive{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#1f7a44;background:#e6f6ec;border-radius:999px;padding:5px 12px;white-space:nowrap}
+.stlive i{width:7px;height:7px;border-radius:50%;background:#28b463}
+.bar{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.search{position:relative;flex:1;max-width:320px;height:44px;border:1px solid var(--line);background:var(--panel);border-radius:10px;display:flex;align-items:center;padding:0 12px 0 36px;font-size:14.5px}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--tx3);stroke-width:2}
+.search .ph{color:#a3a3b0;position:absolute;left:36px}
+.search .qt{font-weight:600}
+.search .qc{width:1.5px;height:18px;background:var(--pri);margin-left:1px;opacity:0}
+.dd{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px 13px;font-size:14px;font-weight:600}
+.dd svg{width:12px;height:12px;stroke-width:2.4;color:var(--tx3)}
+.cp{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--panel);color:var(--tx2);padding:7px 12px;border-radius:9px;font-size:14px;font-weight:600;white-space:nowrap}
+.tglb{width:40px;height:23px;border-radius:99px;background:#d9d9e2;position:relative;flex:none}
+.tglb::after{content:"";position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:#fff;transform:translateX(var(--k,0px))}
+.layout{position:relative;display:flex;gap:16px;align-items:flex-start}
+.facet{flex:0 0 200px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:0 8px 12px}
+.fhead{display:flex;align-items:center;justify-content:space-between;padding:14px 8px 8px}
+.fhead .ft{font-size:12.5px;font-weight:800}
+.fhead .fr{font-size:11.5px;color:var(--tx3)}
+.fgh{font-size:10.5px;font-weight:800;color:var(--tx3);letter-spacing:.09em;margin:8px 8px 3px}
+.fitem{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px;font-size:12.5px;color:var(--tx);position:relative}
+.fitem .ckm{width:14px;height:14px;border:1.6px solid var(--pri);border-radius:4px;background:var(--pri);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.fitem .ckm svg{width:9px;height:9px;color:#fff;stroke-width:3.4}
+.fitem .sq{width:8px;height:8px;border-radius:2.5px;flex:none}
+.fitem .fn{margin-left:auto;color:var(--tx3);font-size:11px;font-variant-numeric:tabular-nums}
+.feed{flex:1;min-width:0;position:relative}
+.gh3{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;color:#9d9daf;margin:2px 0 10px}
+.gh3 .nw{font-size:10.5px;font-weight:800;color:#fff;background:#e0507a;border-radius:6px;padding:1px 7px}
+.grp{overflow:hidden}
+.row{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:0 14px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);
+  padding:18px 18px 18px 16px;margin-bottom:12px;align-items:start;text-align:left;color:var(--tx);overflow:hidden}
+.row.act{box-shadow:0 0 0 2px var(--pri),var(--shadow-card)}
+.ck{width:19px;height:19px;border:1.8px solid #c9c9d4;border-radius:6px;background:#fff;margin-top:4px;flex:none;display:flex;align-items:center;justify-content:center}
+.ck svg{width:12px;height:12px;color:#fff;stroke-width:3;opacity:0}
+.rt{font-size:18px;font-weight:750;line-height:1.5;letter-spacing:-.026em;text-wrap:pretty}
 .rm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;color:var(--tx3);margin:8px 0}
 .rm .s{font-weight:700}
 .rm .sep{color:#c9c9d4}
-.tg{background:#f0f0f5;color:var(--tx3);font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px}
+.tg{background:#f0f0f5;color:var(--tx3);font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;display:inline-block}
 .tg.ex{background:#fff4e5;color:#b36b00}
+.tg.hit{background:#e9e5fb;color:#6a5cd8}
 .snip{font-size:14.8px;color:#66666f;line-height:1.72;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .rwhy{font-size:12.5px;line-height:1.5;color:var(--tx3);margin-top:5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .rwhy b{font-size:11px;font-weight:800;color:var(--pri-dk);margin-right:5px}
-.acts{display:flex;flex-direction:column;gap:6px;padding-top:2px}
-.ib{width:30px;height:30px;border-radius:9px;color:#a8a8b5;display:flex;align-items:center;justify-content:center}
+.thumb{width:100px;height:75px;border-radius:9px;overflow:hidden;border:1px solid var(--line2);flex:none;position:relative;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:850;font-size:20px;letter-spacing:-.04em}
+.thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 20% 10%,rgba(255,255,255,.35),transparent 55%)}
+.row .acts{display:flex;flex-direction:column;gap:6px;padding-top:2px}
+.ib{width:32px;height:32px;border-radius:9px;color:#a8a8b5;display:flex;align-items:center;justify-content:center}
 .ib svg{width:16px;height:16px;stroke-width:2}
-.ck{width:20px;height:20px;border-radius:6px;border:1.8px solid #c9c9d4;background:#fff;display:flex;align-items:center;justify-content:center;margin-top:4px}
-.ck svg{width:12px;height:12px;color:#fff;stroke-width:3;opacity:0}
-.skel{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 20px}
-.skel i{display:block;height:9px;border-radius:5px;background:#ececf1}
-.skel i:first-child{width:62%;height:12px;margin-bottom:12px;background:#e2e2e9}
-.skel i+i{margin-top:8px}
-.skel i:last-child{width:78%}
+.row.rd{background:#fbfbfc}
+.row.rd .rt{color:#9b9ba7;font-weight:600}
+.row.rd .snip{color:#a9a9b4}
+.row.rd .thumb{opacity:.45}
+.merged{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--pri-dk);background:var(--pri-bg);border-radius:8px;padding:5px 10px;width:max-content}
+.merged i{width:8px;height:8px;border-radius:50%;margin-right:-4px;box-shadow:0 0 0 2px var(--pri-bg)}
+.merged span{margin-left:6px}
+/* 고르기용 촘촘한 목록 */
+.dense{position:absolute;left:216px;right:0;top:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;opacity:0;visibility:hidden}
+.mrow{height:44px;background:var(--panel);border-radius:10px;box-shadow:var(--shadow-card);display:flex;align-items:center;gap:9px;padding:0 12px;will-change:transform}
+.mrow b{font-size:11px;font-weight:800;white-space:nowrap;width:78px;flex:none;overflow:hidden;text-overflow:ellipsis}
+.mrow span{flex:1;display:flex;flex-direction:column;gap:5px}
+.mrow span i{display:block;height:6px;border-radius:3px;background:#e4e4ea}
+.mrow span i+i{width:60%;background:#eeeef2}
+/* API · 스킬 화면 */
+.cathead{font-size:24px;font-weight:800;letter-spacing:-.03em;margin-bottom:2px;display:flex;align-items:center;gap:10px}
+.catsub{font-size:13.5px;color:var(--tx3);margin-bottom:18px}
+.alist{position:relative;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);overflow:hidden}
+.aitem{border-bottom:1px solid var(--line2);overflow:hidden}
+.aihead{display:flex;align-items:center;gap:12px;padding:0 18px;height:56px}
+.aihead .st{width:9px;height:9px;border-radius:50%;background:#c9c9d4;flex:none}
+.aihead .an{font-size:15px;font-weight:700;white-space:nowrap}
+.aihead .ap{font-size:13px;color:var(--tx3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.aihead .ok{font-size:11.5px;font-weight:700;color:#1f7a44;background:#e6f6ec;border-radius:6px;padding:2px 8px;opacity:0}
+.aihead .bad{font-size:11.5px;font-weight:800;color:#c2415e;background:#fdeef2;border-radius:6px;padding:2px 8px;opacity:0;margin-left:-60px}
+.scanl{position:absolute;left:0;right:0;top:0;height:56px;background:linear-gradient(90deg,rgba(124,110,230,0),rgba(124,110,230,.14),rgba(124,110,230,0));border-top:1.5px solid rgba(124,110,230,.5);opacity:0;pointer-events:none}
+.sklist{position:relative;height:340px}
+.sk{position:absolute;left:0;right:0;top:0;display:grid;grid-template-columns:44px 34px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--panel);border-radius:12px;box-shadow:var(--shadow-card);padding:11px 16px;height:62px;will-change:transform}
+.skr{font-size:15px;font-weight:750;color:var(--tx3);font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1.2}
+.skd{font-size:10.5px;font-weight:800;padding:1px 5px;border-radius:5px;background:#f0f0f5;color:var(--tx3);line-height:1.4}
+.skd.up{background:#e6f6ec;color:#1f7a44}
+.skav{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px}
+.skm{min-width:0;display:flex;flex-direction:column;line-height:1.35}
+.skn{font-size:15.5px;font-weight:700;white-space:nowrap}
+.sko{font-size:12.5px;color:var(--tx3);white-space:nowrap}
+.skv{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--tx2)}
+.fcur{position:absolute;left:0;top:0;width:34px;height:34px;z-index:25;filter:drop-shadow(0 3px 5px rgba(0,0,0,.3));opacity:0;will-change:transform;pointer-events:none;margin:-4px 0 0 -6px}
+.ripple{position:absolute;left:0;top:0;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;border:2.5px solid var(--pri);z-index:24;opacity:0;pointer-events:none}
 
-/* ── 브라우저 창 ── */
-.win{background:var(--panel);border-radius:18px;box-shadow:var(--shadow-lift);overflow:hidden;display:flex;flex-direction:column}
-.win-bar{height:40px;flex:none;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line2);background:#fbfbfc}
-.win-bar i{width:11px;height:11px;border-radius:50%;background:#e2e2e8}
-.win-url{margin:0 auto;font-size:12.5px;color:var(--tx3);background:var(--bg);border-radius:7px;padding:3px 40px;font-weight:600}
-.app{flex:1;display:grid;grid-template-columns:74px minmax(0,1fr);min-height:0;background:var(--bg)}
-.rail{background:var(--rail);border-right:1px solid var(--line2);display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px 0}
-.rail span{width:52px;padding:8px 0 6px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--tx3)}
-.rail span.on{background:var(--pri-bg);color:var(--pri-dk)}
-.rail svg{width:19px;height:19px}
-.app-main{padding:26px 30px 0;overflow:hidden;min-width:0}
-.app-h{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:800;letter-spacing:-.035em}
-.app-h .hmark{width:24px;height:24px}
-.app-sub{font-size:13px;color:var(--tx3);margin:6px 0 18px}
-.app-list{display:flex;flex-direction:column;gap:12px}
+/* 화면 밖으로 튀어나오는 것들 */
+.fly{position:absolute;left:var(--cx);top:var(--cy);width:min(600px,44vw);z-index:6;visibility:hidden;will-change:transform;
+  --panel:#fff;--line:#e7e7ec;--line2:#f0f0f4;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98}
+.fly .row{margin:0;box-shadow:0 0 0 1px rgba(25,28,33,.06),0 30px 60px -20px rgba(0,0,0,.55),0 12px 24px -12px rgba(0,0,0,.3)}
+.lang{display:inline-flex;font-size:11px;font-weight:800;border-radius:6px;padding:2px 8px;background:#f0f0f5;color:var(--tx3);margin-right:8px;vertical-align:3px}
+.lang.ko{background:var(--pri-bg);color:var(--pri-dk)}
+/* 번역 카드 제목: 영어와 한국어를 같은 칸에 겹쳐 둔다. 칸 높이는 긴 쪽으로 고정돼 카드 크기가 변하지 않는다 */
+.rt.xrt{display:flex;align-items:flex-start;gap:8px}
+.lgs{display:inline-grid;flex:none;margin-top:5px}
+.lgs .lang{grid-area:1/1;margin:0;justify-self:start}
+.xt{display:grid;flex:1;min-width:0}
+.xt>span{grid-area:1/1}
+.xt .c{display:inline-block;will-change:transform,opacity,filter}
+.drawer{position:absolute;left:var(--cx);top:var(--cy);width:min(600px,44vw);z-index:6;visibility:hidden;background:#fff;color:#1c1c22;border-radius:18px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(25,28,33,.06),0 50px 100px -30px rgba(0,0,0,.7)}
+.dh{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid #e7e7ec}
+.dh .x{width:34px;height:34px;border-radius:9px;background:#f2f2f6;color:#54545f;font-size:17px;display:flex;align-items:center;justify-content:center}
+.dh .t{font-size:14px;font-weight:700;color:#8b8b98}
+.dh .ck{margin:0 0 0 auto;width:26px;height:26px}
+.dbody{padding:24px 28px 28px}
+.dtitle{font-size:24px;font-weight:800;letter-spacing:-.035em;line-height:1.4}
+.dmeta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:14px;color:#8b8b98;padding:12px 0 16px;margin-bottom:18px;border-bottom:1px solid #e7e7ec}
+.dmeta .s{color:#5b4fd0;font-weight:700}
+.dsum{font-size:16px;line-height:1.85;color:#2a2a33}
+.dsum span{opacity:.18;background-image:linear-gradient(90deg,rgba(124,110,230,.25),rgba(255,122,182,.2));background-repeat:no-repeat;background-position:0 88%;background-size:0% 34%}
+.why{background:#f7f6fe;border:1px solid #e6e2fb;border-radius:11px;padding:17px 19px;margin-top:22px;font-size:15.5px;color:#3a3a44;line-height:1.8;opacity:0}
+.why b{display:block;font-size:12.5px;font-weight:800;color:#5b4fd0;letter-spacing:.06em;margin-bottom:6px}
+.phone{position:absolute;left:var(--cx);top:var(--cy);width:230px;height:470px;z-index:6;visibility:hidden;background:#111;border-radius:40px;padding:10px;
+  box-shadow:0 0 0 1.5px #2a2a33,0 50px 100px -30px rgba(0,0,0,.85)}
+.phone .ps{width:100%;height:100%;border-radius:31px;background:#f4f4f6;overflow:hidden;padding:44px 12px 0;position:relative;color:#1c1c22}
+.phone .ps::before{content:"";position:absolute;left:50%;top:10px;width:80px;height:22px;margin-left:-40px;border-radius:12px;background:#111}
+.ph-h{display:flex;align-items:center;gap:6px;font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:12px}
+.ph-h svg{width:16px;height:16px;color:#5b4fd0}
+.ph-row{background:#fff;border-radius:11px;padding:11px 12px;box-shadow:0 0 0 1px rgba(25,28,33,.06),0 3px 6px -3px rgba(0,0,0,.08);margin-bottom:8px}
+.ph-row b{display:block;font-size:12.5px;font-weight:750;line-height:1.45;letter-spacing:-.02em}
+.ph-row span{font-size:10.5px;color:#8b8b98;font-weight:600}
+.ph-row.new{box-shadow:0 0 0 1.5px #7c6ee6,0 8px 16px -8px rgba(124,110,230,.5)}
+.ph-sk{height:52px;background:#fff;border-radius:11px;margin-bottom:8px;box-shadow:0 0 0 1px rgba(25,28,33,.05)}
+.syncp{position:absolute;left:var(--cx);top:var(--cy);z-index:7;visibility:hidden;display:flex;align-items:center;gap:8px;white-space:nowrap;background:#1c1c22;color:#fff;border-radius:999px;padding:7px 14px 7px 10px;
+  font-size:13px;font-weight:700;box-shadow:0 14px 30px -10px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.1)}
+.syncp svg{width:16px;height:16px}
+.sdots{position:absolute;left:var(--cx);top:var(--cy);z-index:7;width:0;height:0}
+.sdots i{position:absolute;left:0;top:0;width:9px;height:9px;margin:-4.5px;border-radius:50%;background:#b3a6ff;box-shadow:0 0 12px 3px rgba(179,166,255,.8);opacity:0}
+.schip{position:absolute;left:var(--cx);top:var(--cy);z-index:7;visibility:hidden;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  background:#fff;color:#1c1c22;border-radius:999px;padding:8px 15px 8px 12px;font-size:14px;font-weight:700;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.05)}
+.schip i{width:9px;height:9px;border-radius:3px}
+.veil{position:absolute;inset:0;z-index:8;background:radial-gradient(80% 70% at 50% 55%,rgba(8,8,13,.78),rgba(8,8,13,.96));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;pointer-events:none}
+.end{position:absolute;left:50%;top:50%;width:min(840px,92vw);text-align:center;z-index:9;visibility:hidden}
+.end .h2{font-size:clamp(38px,5.2vw,78px)}
+.end p{font-size:clamp(16px,1.35vw,19px);color:var(--ink2);margin:20px auto 34px;max-width:36ch}
+.end .acts{display:flex;justify-content:center}
 
-/* ───────── 스크롤 무대 ───────── */
-.story{display:none}
-html.motion .story{display:block;height:2500vh;position:relative}
-html.motion .plain{display:none}
-.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
-
-/* 그림 쪽 물체: 중심점에 두고 GSAP 가 xPercent/yPercent -50 으로 가운데를 맞춘다.
-   CSS translate 를 섞으면 GSAP 의 y 트윈이 그 값을 덮어쓴다 */
-.obj{position:absolute;left:var(--cx);top:var(--cy);will-change:transform,opacity}
-.mid{position:absolute;left:50%;top:50%;will-change:transform,opacity}
-
-/* 그림 층: 넓은 화면은 그대로(배율 1). 좁은 화면은 스크립트가 --cy 와 장면별 배율을 정한다 */
-.art{position:absolute;inset:0;pointer-events:none;transform-origin:var(--cx) var(--cy)}
-
-/* 글 층 */
-.txt{position:absolute;left:6vw;top:50%;width:min(420px,32vw);opacity:0;will-change:transform,opacity}
-.txt.light{color:#f4f4f6}
-.txt.light .kicker{color:#b3a9ff}
-.txt.light .lede{color:#b9b9c6}
-
-/* 1. 첫 화면 */
-.chips{position:absolute;inset:0;pointer-events:none}
-.hero-copy{width:min(900px,92vw);text-align:center;z-index:3}
-.hero-copy h1{font-size:clamp(38px,6vw,82px);font-weight:850;line-height:1.16;letter-spacing:-.05em;text-wrap:balance}
-.hero-copy h1 em{font-style:normal;color:var(--pri-dk)}
-.hero-copy p{font-size:clamp(16px,1.5vw,20px);color:var(--tx2);line-height:1.7;margin:24px auto 34px;max-width:36ch;text-wrap:pretty}
-.hero-scroll{margin-top:22px;font-size:13px;color:var(--tx3);font-weight:600}
-.chip{position:absolute;display:flex;align-items:center;gap:8px;white-space:nowrap;background:var(--panel);border-radius:999px;box-shadow:var(--shadow-card);
-  padding:8px 15px 8px 12px;font-size:14px;font-weight:650;color:var(--tx2);letter-spacing:-.02em;will-change:transform,opacity}
-.chip i{width:8px;height:8px;border-radius:50%;flex:none}
-html.motion .chip{visibility:hidden}
-html.motion .chip.on{visibility:visible}
-.chip.me{background:var(--pri);color:#fff;box-shadow:var(--shadow-lift)}
-.chip.me i{background:#fff}
-
-/* 2. 출처 레인 */
-.lanes{width:min(640px,52vw);height:76vh;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 84%,transparent 100%);
-  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%}
-.lane{position:relative;min-width:0}
-.lane-h{position:absolute;z-index:2;top:11%;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--tx2);text-align:center;line-height:1.3}
-.lane-h i{width:10px;height:10px;border-radius:50%}
-.lane-h span{background:rgba(255,255,255,.94);padding:2px 6px;border-radius:6px}
-.stream{position:absolute;left:0;right:0;top:22%;display:flex;flex-direction:column;gap:9px;will-change:transform}
-.bar{height:46px;border-radius:10px;background:#e9e9ef;flex:none;position:relative;overflow:hidden}
-.bar::before,.bar::after{content:"";position:absolute;left:10px;height:6px;border-radius:3px;background:#d8d8e1}
-.bar::before{top:13px;right:14px}
-.bar::after{top:26px;right:38%}
-.bar.pick{background:var(--pri-bg)}
-.bar.pick::before,.bar.pick::after{background:#c9c1f6}
-/* 내 기사: 가운데 레인의 한 칸. 레인 격자 안에 있어야 화면 크기가 달라도 칸이 어긋나지 않는다 */
-.bar.me{background:var(--pri);box-shadow:var(--shadow-lift);opacity:0}
-.bar.me::before,.bar.me::after{background:rgba(255,255,255,.55)}
-.counter{margin-top:30px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.counter .big{font-size:clamp(34px,4vw,56px);font-weight:850;letter-spacing:-.05em;line-height:1.1;display:inline-grid}
-.counter .big span{grid-area:1/1;white-space:nowrap}
-.counter .big .b{color:var(--pri-dk);opacity:0}
-.counter small{font-size:16px;color:var(--tx3);font-weight:700;display:inline-grid}
-.counter small span{grid-area:1/1;white-space:nowrap}
-.counter small .b{opacity:0}
-
-/* 3. 출처 카드 */
-/* .sc 는 장면이 옮기는 자리, 안쪽 .scard 는 마우스를 따라 조금 더 움직이는 카드 본체다 */
-.scard{will-change:transform;width:min(440px,44vw);background:var(--panel);border-radius:14px;box-shadow:var(--shadow-lift);padding:18px 20px}
-.scard .src{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800}
-.scard .src i{width:9px;height:9px;border-radius:50%}
-.scard .src .tg{margin-left:auto}
-.scard .ft{font-size:17px;font-weight:700;letter-spacing:-.02em;margin-top:10px;line-height:1.45}
-
-/* 4. 뒤집히는 카드 */
-.flip{width:min(380px,80vw)}
-.flip .face{background:var(--panel);border-radius:18px;box-shadow:var(--shadow-lift);padding:22px 22px 24px;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.flip .face.ko{position:absolute;inset:0}
-.flip .lang{display:inline-block;font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 8px;background:#f0f0f5;color:var(--tx3)}
-.flip .face.ko .lang{background:var(--pri-bg);color:var(--pri-dk)}
-.flip .tt{font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.4;margin:14px 0 10px;min-height:2.8em}
-.flip .face.en .tt{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.02em}
-.flip .tm{font-size:13px;color:var(--tx3);font-weight:600}
-.split{position:absolute;top:50%;font-size:clamp(28px,4vw,58px);font-weight:850;letter-spacing:-.05em;line-height:1.2;white-space:nowrap}
-.split small{position:absolute;top:100%;left:0;right:0;display:block;font-size:clamp(14px,1.1vw,16px);font-weight:600;color:var(--tx3);letter-spacing:-.01em;margin-top:10px}
-.split.l{right:calc(50% + 225px);text-align:right}
-.split.r{left:calc(50% + 225px)}
-
-/* 5. 상세 */
-.detail{width:var(--card-w);background:var(--panel);border-radius:18px;box-shadow:var(--shadow-lift);padding:28px 30px 30px}
-.detail .dh{font-size:23px;font-weight:800;letter-spacing:-.035em;line-height:1.4}
-.detail .rm{margin:10px 0 16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.detail .sum{font-size:16px;line-height:1.85}
-.why{margin-top:18px;background:var(--pri-bg);border:1px solid #ddd8fb;border-radius:14px;padding:16px 18px}
-.why b{display:block;font-size:12.5px;font-weight:800;color:var(--pri-dk);margin-bottom:6px}
-.why p{font-size:15px;line-height:1.75;color:#3d3a5c}
-
-/* 6. 회차 목록 */
-.feed{width:var(--card-w)}
-.feed .grp{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
-.feed .gh{font-size:12.5px;font-weight:700;color:#9d9daf}
-.clock{display:flex;align-items:baseline;gap:16px;margin-top:26px}
-.clock .t{font-size:clamp(60px,7.4vw,112px);font-weight:850;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;display:inline-grid}
-.clock .t span{grid-area:1/1}
-.clock small{font-size:18px;font-weight:700;color:#8e8ea0}
-
-/* 7. 기능 */
-.hub{width:var(--card-w)}
-.srch{display:flex;align-items:center;gap:10px;height:48px;border-radius:12px;background:var(--panel);box-shadow:var(--shadow-card),0 0 0 1px var(--line);padding:0 14px;font-size:15.5px;width:var(--card-w)}
-.srch svg{width:17px;height:17px;color:var(--tx3);flex:none}
-.srch .q span{opacity:0}
-.srch .caret{width:1.5px;height:18px;background:var(--pri);margin-left:-8px}
-/* 보관함: 노트북과 휴대폰 */
-.devices{width:var(--card-w);display:flex;align-items:flex-end;justify-content:center;gap:clamp(18px,3vw,34px)}
-.lap{flex:0 0 68%;min-width:0;display:flex;flex-direction:column;align-items:center}
-.lap-scr{width:100%;aspect-ratio:16/10;background:#1c1c22;border-radius:14px 14px 4px 4px;padding:9px}
-.lap-base{width:118%;height:12px;background:linear-gradient(#d9d9e1,#c4c4ce);border-radius:0 0 12px 12px}
-.ph{flex:0 0 22%;min-width:0;aspect-ratio:9/18.5;background:#1c1c22;border-radius:22px;padding:6px}
-.scr{width:100%;height:100%;background:var(--bg);border-radius:8px;padding:10px 10px 0;overflow:hidden;display:flex;flex-direction:column;gap:6px}
-.ph .scr{border-radius:17px;padding:14px 7px 0}
-.scr-h{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:var(--tx);margin-bottom:2px}
-.scr-h svg{width:12px;height:12px;color:var(--pri-dk)}
-.ms{background:var(--panel);border-radius:7px;box-shadow:0 0 0 1.5px var(--pri);padding:6px 8px;font-size:10.5px;font-weight:700;line-height:1.35;color:var(--tx);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;will-change:transform,opacity}
-.ph .ms{font-size:9px;padding:5px 6px}
-.mk{background:var(--panel);border-radius:7px;height:26px;box-shadow:var(--shadow-card)}
-.sync{position:absolute;left:68%;bottom:42%;translate:-50% 0;display:flex;flex-direction:column;align-items:center;gap:6px;width:0}
-.sync .pill{display:flex;align-items:center;gap:6px;white-space:nowrap;background:var(--tx);color:#fff;border-radius:999px;padding:5px 11px 5px 8px;font-size:11.5px;font-weight:700}
-.sync .pill svg{width:14px;height:14px}
-.sync .dots{position:relative;width:90px;height:6px}
-.sync .dots i{position:absolute;left:0;top:0;width:6px;height:6px;border-radius:50%;background:var(--pri)}
-
-/* 거르기: 필터 바 + 목록 */
-.flist{width:var(--card-w);height:0}
-.fbar{position:absolute;left:0;right:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card)}
-.fchip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 11px;border-radius:9px;font-size:13px;font-weight:650;
-  background:var(--pri-bg);color:var(--pri-dk);box-shadow:0 0 0 1.5px var(--pri)}
-.fchip i{width:7px;height:7px;border-radius:50%}
-.fchip.off{background:var(--panel);color:#a3a3b0;box-shadow:0 0 0 1px var(--line);text-decoration:line-through}
-.ftog{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tx2)}
-.ftog b{position:relative;width:34px;height:20px;border-radius:999px;background:#d9d9e1}
-.ftog b::after{content:"";position:absolute;left:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transform:translateX(var(--k,0px));transition:none}
-/* top 을 반 높이만큼 올려 두면 y 값이 곧 줄의 중심이 된다 */
-.fr{position:absolute;left:0;right:0;top:-28px;height:56px;background:var(--panel);border-radius:12px;box-shadow:var(--shadow-card);display:flex;align-items:center;gap:12px;padding:0 16px;will-change:transform,opacity}
-.fr .s{font-size:12.5px;font-weight:800;white-space:nowrap}
-.fr .l{flex:1;display:flex;flex-direction:column;gap:6px}
-.fr .l i{display:block;height:8px;border-radius:4px;background:#e2e2e9}
-.fr .l i+i{width:60%;background:#ececf1}
-.fr.read{background:#fbfbfc}
-.fr.read .s,.fr.read .l{opacity:.45}
-.fr .rd{font-size:11px;font-weight:700;color:#a3a3b0}
-.cur{position:absolute;left:0;top:0;width:22px;height:22px;z-index:5;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));will-change:transform}
-
-/* 무료 API */
-.api{width:var(--card-w)}
-.api-h{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
-.api-h b{font-size:34px;font-weight:850;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-.api-h span{font-size:14px;font-weight:700;color:var(--tx3)}
-/* 연결망: 가운데 '내 앱'과 바깥 서비스들이 선으로 이어지고 데이터 점이 오간다 */
-.net{display:block;width:100%;height:auto;overflow:visible}
-.net .ln{fill:none;stroke:#cfc8f7;stroke-width:2;stroke-linecap:round}
-.net .ln.cut{stroke:#e0505a;stroke-dasharray:5 7;opacity:0}
-.net .pk.out{fill:var(--pri)}
-.net .pk.in{fill:var(--gn)}
-.net .nd circle{fill:#fff;stroke:#e7e7ec;stroke-width:1}
-.net .nd{filter:drop-shadow(0 4px 8px rgba(0,0,0,.08))}
-.net .ic{fill:none;stroke:#3d3d48;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.net .lb{font-size:15px;font-weight:700;fill:#54545f;text-anchor:middle;font-family:inherit}
-.net .core rect{fill:#1c1c22}
-.net .core .t1{font-size:17px;font-weight:800;fill:#fff;text-anchor:middle;font-family:inherit}
-.net .core .t2{font-size:13px;font-weight:600;fill:#b3a9ff;text-anchor:middle;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.net .badge rect{fill:#fdecee;stroke:#e0505a;stroke-width:1.2}
-.net .badge text{font-size:12.5px;font-weight:800;fill:#d0404a;text-anchor:middle;font-family:inherit}
-
-/* 스킬 순위 */
-.skills{width:var(--card-w);background:var(--panel);border-radius:16px;box-shadow:var(--shadow-lift);padding:18px 18px 12px}
-.sk-h{display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:800;margin-bottom:12px}
-.sk-h span{font-size:12px;font-weight:700;color:var(--tx3)}
-.sk-body{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px}
-.sk-rank{display:flex;flex-direction:column}
-.sk-rank b,.sk-row{height:48px;margin-bottom:8px}
-.sk-rank b{display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:850;color:var(--tx3);font-variant-numeric:tabular-nums}
-.sk-rows{position:relative}
-.sk-row{position:absolute;left:0;right:0;display:grid;grid-template-columns:minmax(0,1fr) 56px;align-items:center;gap:10px;background:var(--bg);border-radius:10px;padding:0 12px;will-change:transform}
-.sk-row .nm{font-size:13.5px;font-weight:750;display:flex;align-items:center;gap:8px;white-space:nowrap}
-.sk-row .bar2{height:6px;border-radius:3px;background:var(--pri);transform-origin:left;margin-top:6px}
-.sk-row .n{font-size:12.5px;font-weight:700;color:var(--tx2);text-align:right;font-variant-numeric:tabular-nums}
-.sk-row .up{font-size:11px;font-weight:800;color:#1f8a4c;background:#e7f6ed;border-radius:6px;padding:1px 6px;opacity:0}
-
-/* 8. 마지막 */
-.end-win{width:min(1120px,92vw);height:min(700px,78vh)}
-.end-veil{position:absolute;inset:0;background:rgba(244,244,246,.9);opacity:0}
-.end-copy{text-align:center;width:min(760px,92vw)}
-.end-copy h2{font-size:clamp(34px,5vw,68px);font-weight:850;letter-spacing:-.05em;line-height:1.2;text-wrap:balance}
-.end-copy p{font-size:clamp(16px,1.4vw,19px);color:var(--tx2);margin:18px auto 32px;max-width:34ch}
-
-/* 진행 눈금 */
-.prog{position:fixed;left:22px;top:50%;translate:0 -50%;z-index:40;display:none;flex-direction:column;gap:7px}
-html.motion .prog{display:flex}
-.prog i{width:14px;height:2px;border-radius:1px;background:#c9c9d4;transform-origin:left;transition:transform .35s var(--ease),background-color .35s}
-.prog i.on{transform:scaleX(1.86);background:var(--tx)}
-.prog.dark i{background:#4a4a58}.prog.dark i.on{background:#fff}
-
-/* ───────── 정적 본문 (움직임 줄이기 · 스크립트 없음) ───────── */
+/* ── 정적 본문 ── */
 .plain{max-width:760px;margin:0 auto;padding:calc(var(--head-h) + 8vh) 20px 10vh}
-.plain section{padding:6vh 0;border-bottom:1px solid var(--line)}
+.plain section{padding:6vh 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .plain section:last-child{border-bottom:0;text-align:center}
 .plain h1{font-size:clamp(36px,6vw,64px);font-weight:850;line-height:1.18;letter-spacing:-.05em}
-.plain h1 em{font-style:normal;color:var(--pri-dk)}
+.plain h1 em{font-style:normal;color:var(--pri2)}
 .plain .lede{max-width:none}
-.plain .detail{width:auto;margin-top:26px}
-.plain ul{margin:14px 0 0;padding-left:20px;color:var(--tx2)}
-.plain li{margin:4px 0}
+.plain ul{margin:14px 0 0;padding-left:20px;color:var(--ink2)}
+.plain .kick{margin-bottom:12px}
+.foot{position:relative;z-index:5;border-top:1px solid rgba(255,255,255,.08);padding:26px 6vw 34px;font-size:13.5px;color:var(--ink3);display:flex;gap:18px;flex-wrap:wrap;background:var(--bg)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri2)}
 
-.foot{border-top:1px solid var(--line);padding:26px 6vw 34px;font-size:13.5px;color:var(--tx3);display:flex;gap:18px;flex-wrap:wrap;background:var(--bg)}
-.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
-
-/* ── 좁은 화면: 글은 위, 그림은 아래 ── */
+/* ── 좁은 화면: 글은 위, 화면은 아래. 안쪽은 본 화면의 모바일 배치(아래 탭 막대) ── */
 @media (max-width:860px){
-  :root{--cx:50%;--cy:66%;--card-w:calc(100vw - 32px)}
+  :root{--cx:50%;--cy:100%}
   .head{padding:0 16px}
-  .cta{height:36px;padding:0 14px;font-size:13.5px}
-  .cta.big{height:50px;font-size:16px}
-  .prog{display:none!important}
-  .txt{left:16px;right:16px;width:auto;top:calc(var(--head-h) + 3vh)}
-  .txt .h2{font-size:30px}
-  .txt .lede{font-size:15px;margin-top:10px;max-width:none}
-  .chip{font-size:12.5px;padding:6px 12px 6px 10px;max-width:45vw;overflow:hidden}
-  .chip.me{max-width:calc(100vw - 32px)}
-  .lanes{width:calc(100vw - 32px);height:44vh;gap:6px}
-  .lane-h span{display:none}
-  .bar{height:32px}
-  .counter{margin-top:14px}
-  .counter .big{font-size:30px}
-  .scard{width:calc(100vw - 48px)}
-  .row,.row.has-ck{padding:15px 15px;grid-template-columns:auto minmax(0,1fr)}
-  .row:not(.has-ck){grid-template-columns:minmax(0,1fr)}
-  .rt{font-size:16px}
-  .snip{font-size:14px}
-  .acts{display:none}
-  .detail{padding:18px 18px 20px}
-  .detail .dh{font-size:19px}
-  .detail .sum{font-size:13.5px;line-height:1.7}
-  .why{padding:12px 14px;margin-top:12px}
-  .why p{font-size:13px}
-  .split{left:0!important;right:0!important;text-align:center!important;font-size:32px;white-space:normal}
-  .split.l{top:calc(var(--head-h) + 7vh)}
-  .split.r{top:auto;bottom:14vh}
-  .clock{margin-top:10px}
-  .clock .t{font-size:52px}
-  .lap-base{width:104%}
-  .sync{left:50%;bottom:auto;top:-40px}   /* 스크립트가 카드와 기기 사이에 44px 띠를 비워 둔다 */
-  .fr{height:46px;top:-23px}
-  .fbar{padding:8px}
-  .fchip{height:28px;font-size:12px;padding:0 9px}
-  .fbar .fchip:nth-child(3),.fbar .fchip:nth-child(4){display:none}   /* 필터 바를 한 줄로 — 장면이 낮아져 덜 줄어든다 */
-  .api-h b{font-size:28px}
-  .app{grid-template-columns:minmax(0,1fr)}
-  .rail,.app-sub{display:none}
-  .app-main{padding:18px 14px 0}
-  .end-win{height:70vh}
+  .cta{height:38px;padding:0 14px;font-size:13.5px}
+  .cta.big{height:52px;font-size:16px}
+  html.motion .nav,html.motion .cind{display:none}
+  .hero{left:20px;right:20px;width:auto;top:calc(var(--head-h) + 2vh)}
+  .hero h1{font-size:clamp(38px,11vw,60px);margin-top:14px}
+  .hero .sub{font-size:15px;margin:14px 0 18px}
+  .hint{display:none}
+  .ch{left:20px;right:20px;width:auto;top:calc(var(--head-h) + 1.5vh)}
+  .kick{margin-bottom:10px}
+  .h2{font-size:29px}
+  .lede{font-size:14.5px;margin-top:8px;max-width:none}
+  .lede.nh{display:none}
+  .odo{margin-top:6px}.odo-n{font-size:64px}.odo-u{font-size:18px}
+  .clk{margin-top:6px}.clk .t{font-size:48px}
+  .apiN{font-size:48px;margin-top:6px}
+  .langs{margin-top:10px}
+  .fly,.drawer{width:calc(100vw - 32px)}
+  .drawer .dbody{padding:16px 18px 18px}.dtitle{font-size:18px}.dsum{font-size:13.5px;line-height:1.7}.why{font-size:13px;padding:12px 14px;margin-top:12px}
+  .dmeta{font-size:12px;padding:8px 0 10px;margin-bottom:10px}
+  .fly .row{padding:13px 14px;grid-template-columns:auto minmax(0,1fr)}
+  .fly .thumb,.fly .row .acts{display:none}
+  .fly .rt{font-size:15px}.fly .snip{font-size:13px}
+  .end .h2{font-size:34px}
   .foot{padding:22px 16px 30px}
+  .winz.m .rail{position:absolute;left:0;right:0;bottom:0;top:auto;width:auto;height:64px;flex-direction:row;justify-content:space-around;padding:0;gap:0;border-right:0;border-top:1px solid var(--line);z-index:5}
+  .winz.m .rb{width:auto;flex:1;height:52px}
+  .winz.m .rb.gh{margin-top:0}
+  .winz.m .view{padding:22px 16px 0}
+  .winz.m .facet,.winz.m .dd,.winz.m .stlive{display:none}
+  .winz.m .row{grid-template-columns:auto minmax(0,1fr) auto;padding:15px;gap:0 12px}
+  .winz.m .row .acts{display:none}
+  .winz.m .thumb{width:80px;height:62px;align-self:center}
+  .winz.m .rt{font-size:16.5px}
+  .winz.m .dense{left:0;grid-template-columns:1fr}
+  .winz.m .search{max-width:none}
+  .winz.m .url{padding:4px 30px}
 }
 </style>
 </head>
 <body>
+
+<div class="loader" aria-hidden="true"><b>dev-news</b><i></i></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="pbar" id="pbar" aria-hidden="true"></div>
+<div class="cur" id="cur" aria-hidden="true"></div><div class="cur-dot" id="curDot" aria-hidden="true"></div>
 
 <header class="head" id="head">
   <a class="brand" href="/" aria-label="dev-news 홈">
     <svg class="hmark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7.5" fill="#7c6ee6"/><path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     dev-news
   </a>
-  <a class="cta" href="/">dev-news 열기
+  <a class="cta mag" href="/">dev-news 열기
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </a>
 </header>
 
-<nav class="prog" id="prog" aria-hidden="true"></nav>
+<nav class="nav" id="nav" aria-label="장면 이동"></nav>
+<div class="cind" id="cind" aria-hidden="true"><span class="num" id="cindN"></span><span>/ 11</span><span class="lb" id="cindL">시작</span></div>
 
-<!-- ───────── 스크롤 무대: 카드 한 장이 처음부터 끝까지 따라간다 ───────── -->
 <div class="story" id="story">
   <div class="stage" id="stage">
 
-    <div class="chips" id="chips" aria-hidden="true"></div>
-
-    <div class="obj lanes" id="lanes" aria-hidden="true"></div>
-
-    <!-- 그림 층. 좁은 화면에서 글 아래 남는 공간에 맞춰 장면마다 줄인다 -->
-    <div class="art" id="art">
-    <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--hn)"></i><span style="color:var(--hn)">Hacker News</span><span class="tg ex">예시</span></div><div class="ft" data-en></div></div></div>
-    <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--gn)"></i><span style="color:var(--gn)">긱뉴스</span><span class="tg ex">예시</span></div><div class="ft" data-ko></div></div></div>
-    <div class="obj sc" aria-hidden="true"><div class="scard"><div class="src"><i style="background:var(--lob)"></i><span style="color:var(--lob)">Lobste.rs</span><span class="tg ex">예시</span></div><div class="ft" data-en></div></div></div>
-
-    <div class="split l" id="splitL">원문은 영어로<small>Hacker News · Lobste.rs · dev.to</small></div>
-    <div class="split r" id="splitR">읽기는 한국어로<small>제목과 요약을 모두 옮깁니다</small></div>
-    <div class="obj flip" id="flip" aria-hidden="true">
-      <div class="face en" id="flipEn"><span class="lang">EN</span><div class="tt" data-en></div><div class="tm">원문 제목</div></div>
-      <div class="face ko" id="flipKo"><span class="lang">한국어</span><div class="tt" data-ko></div><div class="tm">dev-news 제목</div></div>
-    </div>
-
-    <div class="obj detail" id="detail" aria-hidden="true">
-      <div class="dh" data-ko></div>
-      <div class="rm"><span class="s" style="color:var(--pri-dk)">dev-news</span><span class="sep">·</span><span class="tg">개발 도구</span><span class="tg">한국어 요약</span></div>
-      <p class="sum" id="sum"></p>
-      <div class="why" id="why"><b>왜 중요한가</b><p data-why></p></div>
-    </div>
-
-    <div class="obj feed" id="feed" aria-hidden="true">
-      <div class="grp" data-g="16"><div class="gh">16시 회차</div><div class="skel"><i></i><i></i><i></i></div><div class="skel"><i></i><i></i><i></i></div></div>
-      <div class="grp" data-g="08"><div class="gh">08시 회차</div><div class="skel"><i></i><i></i><i></i></div><div class="skel"><i></i><i></i><i></i></div></div>
-      <div class="grp" data-g="00"><div class="gh">00시 회차</div><div class="row me-row"></div><div class="skel"><i></i><i></i><i></i></div></div>
-    </div>
-
-    <div class="obj srch" id="srch" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg><span class="q" id="q"></span><span class="caret"></span></div>
-    <div class="obj hub" id="hub" aria-hidden="true"><div class="row me-row has-ck" id="hubRow"></div></div>
-    <!-- 보관함: 체크하면 노트북과 휴대폰 보관함에 같이 들어간다 -->
-    <div class="obj devices" id="devices" aria-hidden="true">
-      <div class="lap"><div class="lap-scr"><div class="scr"><div class="scr-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 4h12v17l-6-4-6 4z"/></svg>보관함</div><div class="ms" id="msLap" data-ko></div><div class="mk"></div><div class="mk"></div></div></div><div class="lap-base"></div></div>
-      <div class="ph"><div class="scr"><div class="scr-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 4h12v17l-6-4-6 4z"/></svg>보관함</div><div class="ms" id="msPh" data-ko></div><div class="mk"></div></div></div>
-      <div class="sync" id="sync"><span class="pill"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub로 동기화</span><span class="dots"><i></i><i></i><i></i></span></div>
-    </div>
-
-    <!-- 거르기: 필터 바를 누르면 목록이 줄어든다 -->
-    <div class="obj flist" id="flist" aria-hidden="true">
-      <div class="fbar" id="fbar">
-        <span class="fchip" id="fHN"><i style="background:var(--hn)"></i>Hacker News</span>
-        <span class="fchip"><i style="background:var(--gn)"></i>긱뉴스</span>
-        <span class="fchip"><i style="background:var(--gh)"></i>GitHub</span>
-        <span class="fchip"><i style="background:var(--lob)"></i>Lobste.rs</span>
-        <span class="ftog" id="fTog">안 읽은 것만<b id="fTogSw"></b></span>
-        <svg class="cur" id="cur" viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L10 19z" fill="#1c1c22" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <div class="hero" id="hero">
+      <div class="eyebrow"><i></i>매일 00시 · 08시 · 16시 업데이트</div>
+      <h1 class="split" id="heroH">개발 뉴스를<br><em>하루 세 번,</em><br>한국어로</h1>
+      <p class="sub">Hacker News, GitHub Trending, 긱뉴스까지 일곱 곳에 올라온 개발·AI 소식을 모아 두세 문장으로 요약합니다.</p>
+      <div class="acts">
+        <a class="cta big mag" href="/">dev-news 열기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="hint"><span class="mouse"></span>스크롤해서 둘러보기</div>
       </div>
-      <div class="fr" data-r="0"><span class="s" style="color:var(--gh)">GitHub</span><span class="l"><i></i><i></i></span></div>
-      <div class="fr" data-r="1" data-src="hn"><span class="s" style="color:var(--hn)">Hacker News</span><span class="l"><i></i><i></i></span></div>
-      <div class="fr read" data-r="2" data-src="hn" data-read><span class="s" style="color:var(--hn)">Hacker News</span><span class="l"><i></i><i></i></span><span class="rd">읽음</span></div>
-      <div class="fr read" data-r="3" data-read><span class="s" style="color:var(--gn)">긱뉴스</span><span class="l"><i></i><i></i></span><span class="rd">읽음</span></div>
-      <div class="fr" data-r="4"><span class="s" style="color:var(--lob)">Lobste.rs</span><span class="l"><i></i><i></i></span></div>
     </div>
 
-    <!-- 무료 API: 링크를 훑어 살아 있는지 확인한다 -->
-    <div class="obj api" id="api" aria-hidden="true">
-      <div class="api-h"><b id="apiN">0</b><span>개 무료 API · 회차마다 연결 확인</span></div>
-      <svg class="net" id="net" viewBox="0 0 560 440"></svg>
-    </div>
+    <section class="ch" id="c1">
+      <div class="kick"><b>01</b><i></i>모으기</div>
+      <h2 class="h2 split">일곱 곳을<br>한 번에 봅니다</h2>
+      <p class="lede">Hacker News, GitHub Trending, Lobste.rs, dev.to, 긱뉴스, 기술 블로그, Anthropic 소식을 회차마다 모두 훑습니다.</p>
+    </section>
+    <section class="ch" id="c2">
+      <div class="kick"><b>02</b><i></i>고르기</div>
+      <h2 class="h2 split">수백 건 중에서<br><em>스무 건만</em> 남깁니다</h2>
+      <div class="odo x">
+        <div class="odo-n" aria-label="20"><span class="col" id="odoT"></span><span class="col" id="odoO"></span></div>
+        <div class="odo-u">건<small>회차당 최대</small></div>
+      </div>
+    </section>
+    <section class="ch" id="c3">
+      <div class="kick"><b>03</b><i></i>합치기</div>
+      <h2 class="h2 split">같은 소식이<br>여러 곳에 올라와도</h2>
+      <p class="lede">같은 원문을 가리키는 글은 하나로 묶습니다. 같은 소식을 여러 번 읽지 않아도 됩니다.</p>
+    </section>
+    <section class="ch" id="c4">
+      <div class="kick"><b>04</b><i></i>번역</div>
+      <h2 class="h2 split">원문은 영어로,<br>읽기는 <em>한국어로</em></h2>
+      <p class="lede nh">Hacker News · Lobste.rs · dev.to의 제목과 요약을 모두 옮깁니다.</p>
+      <div class="langs x"><span id="lgEN" class="on">EN 원문</span><i>→</i><span id="lgKO">한국어</span></div>
+    </section>
+    <section class="ch" id="c5">
+      <div class="kick"><b>05</b><i></i>요약</div>
+      <h2 class="h2 split">원문을 읽고<br>두세 문장으로</h2>
+      <p class="lede nh">기사 본문을 가져와 무엇이 바뀌는지만 추립니다.</p>
+    </section>
+    <section class="ch" id="c6">
+      <div class="kick"><b>06</b><i></i>왜 중요한가</div>
+      <h2 class="h2 split">나한테 무슨 일인지<br>한 단락 더</h2>
+      <p class="lede nh">요약 아래에 이 소식이 개발하는 사람에게 어떤 영향을 주는지 따로 적습니다.</p>
+    </section>
+    <section class="ch" id="c7">
+      <div class="kick"><b>07</b><i></i>매일 같은 시각</div>
+      <h2 class="h2 split">하루 세 번,<br>여덟 시간마다</h2>
+      <p class="lede nh">밤사이 올라온 소식은 아침에, 낮에 나온 소식은 저녁에 읽을 수 있습니다.</p>
+      <div class="clk x"><div class="t" id="clkT"><span>00:00</span><span>08:00</span><span>16:00</span></div><small>KST</small></div>
+    </section>
+    <section class="ch" id="c8">
+      <div class="kick"><b>08</b><i></i>읽고 나서도</div>
+      <h2 class="h2 split">찾고, 모으고,<br>거릅니다</h2>
+      <p class="lede nh">30일 지난 기사는 검색으로 아카이브에서 찾고, 체크한 기사는 GitHub 로그인으로 기기끼리 맞추고, 출처와 읽음 여부로 목록을 줄입니다.</p>
+    </section>
+    <section class="ch" id="c9">
+      <div class="kick"><b>09</b><i></i>뉴스 말고도</div>
+      <h2 class="h2 split">무료 API도<br>한곳에</h2>
+      <p class="lede nh">바깥 서비스와 데이터를 주고받는 공개 API를 모읍니다. 회차마다 연결을 확인해 끊긴 것은 뺍니다.</p>
+      <div class="apiN x" id="apiN">0</div>
+    </section>
+    <section class="ch" id="c10">
+      <div class="kick"><b>10</b><i></i>에이전트 스킬</div>
+      <h2 class="h2 split">요즘 많이 쓰는<br>스킬 순위</h2>
+      <p class="lede nh">skills.sh 설치 수로 순위를 매기고, 지난 회차보다 오르거나 내린 것을 표시합니다.</p>
+    </section>
 
-    <!-- 스킬 순위 -->
-    <div class="obj skills" id="skills" aria-hidden="true">
-      <div class="sk-h">에이전트 스킬 순위<span>이번 주 설치 · 예시</span></div>
-      <div class="sk-body"><div class="sk-rank"><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b></div><div class="sk-rows" id="skRows"></div></div>
-    </div>
-    </div>
+    <div class="s3d" id="s3d" aria-hidden="true">
+      <!-- 진짜 dev-news 화면 -->
+      <div class="win" id="win"><div class="wtilt" id="wtilt"><div class="winz" id="winz">
+        <div class="wbar"><i></i><i></i><i></i><span class="url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>dev-news.net</span></div>
+        <div class="scr" id="scr">
+          <nav class="rail" id="rail"></nav>
+          <div class="main">
+            <div class="view" id="vNews">
+              <div class="vh1"><svg class="hmark" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.5" fill="#7c6ee6"/><path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>오늘의 뉴스</div>
+              <div class="vsub">매일 00시·08시·16시에 수집합니다. 30일 지난 기사는 검색으로 찾을 수 있습니다 · 하루 수백 건 중 회차당 최대 20건을 고릅니다</div>
+              <div class="status"><div class="stmeta"><b>최근 30일</b> · <span id="stR">16:00 회차</span><br><span class="l2">Hacker News·GitHub 트렌딩·Lobsters·dev.to·긱뉴스·기술 블로그·Anthropic에서 모읍니다</span></div><div class="stlive"><i></i><span id="stL">수집 완료</span></div></div>
+              <div class="bar">
+                <div class="search" id="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg><span class="ph" id="qph">검색 (아카이브 포함)…</span><span class="qt" id="qt"></span><i class="qc" id="qc"></i></div>
+                <span class="dd">최신순<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></span>
+                <span class="cp" id="unread">안 읽은 것만<span class="tglb" id="tglb"></span></span>
+              </div>
+              <div class="layout" id="layout">
+                <div class="facet" id="facet"></div>
+                <div class="feed" id="feed"></div>
+                <div class="dense" id="dense"></div>
+              </div>
+            </div>
+            <div class="view" id="vApi" style="opacity:0;visibility:hidden">
+              <div class="cathead">무료 API</div>
+              <div class="catsub">공개 API 2,000여 개 · 회차마다 연결을 확인합니다 · 아래 목록은 예시</div>
+              <div class="alist" id="alist"><div class="scanl" id="scanl"></div></div>
+            </div>
+            <div class="view" id="vSk" style="opacity:0;visibility:hidden">
+              <div class="cathead">에이전트 스킬 순위</div>
+              <div class="catsub">skills.sh 이번 주 설치 수 · 아래 목록은 예시</div>
+              <div class="sklist" id="sklist"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ripple" id="ripple"></div>
+        <svg class="fcur" id="fcur" viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L10 19z" fill="#1c1c22" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div></div></div>
 
-    <div class="mid end-win win" id="endWin" aria-hidden="true">
-      <div class="win-bar"><i></i><i></i><i></i><span class="win-url">dev-news.net</span></div>
-      <div class="app">
-        <div class="rail" id="rail"></div>
-        <div class="app-main">
-          <div class="app-h" id="appH"></div>
-          <div class="app-sub">매일 00시·08시·16시에 수집합니다 · 하루 수백 건 중 회차당 최대 20건을 고릅니다</div>
-          <div class="app-list"><div class="row me-row"></div><div class="skel"><i></i><i></i><i></i></div><div class="skel"><i></i><i></i><i></i></div></div>
+      <!-- 화면에서 나온 카드들 -->
+      <div class="fly" id="fly0"></div>
+      <div class="fly" id="fly1"></div>
+      <div class="fly" id="fly2"></div>
+      <div class="fly" id="flyM"></div>
+      <div class="drawer" id="drawer">
+        <div class="dh"><span class="x">×</span><span class="t">요약</span><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l5 5L20 6"/></svg></span></div>
+        <div class="dbody">
+          <h2 class="dtitle" data-ko></h2>
+          <div class="dmeta"><span class="s">dev-news</span><span>·</span><span class="tg">개발 도구</span><span class="tg">한국어 요약</span><span class="tg ex">예시</span></div>
+          <p class="dsum" id="sum"></p>
+          <div class="why" id="why"><b>왜 중요한가</b><span data-why></span></div>
         </div>
       </div>
+      <div class="phone" id="phone"><div class="ps">
+        <div class="ph-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/></svg>보관함</div>
+        <div class="ph-row new" id="phNew"><b data-ko></b><span>dev-news · 방금 동기화</span></div>
+        <div class="ph-sk"></div><div class="ph-sk"></div><div class="ph-sk"></div>
+      </div></div>
+      <div class="syncp" id="syncp"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub로 동기화</div>
+      <div class="sdots" id="sdots"><i></i><i></i><i></i><i></i></div>
     </div>
-    <div class="end-veil" id="endVeil"></div>
 
-    <div class="mid hero-copy" id="heroCopy">
-      <h1>개발 뉴스를<br><em>하루 세 번</em>, 한국어로</h1>
-      <p>Hacker News, GitHub Trending, 긱뉴스까지 일곱 곳에 올라온 개발·AI 소식을 모아 두세 문장으로 요약합니다.</p>
-      <a class="cta big pri" href="/">dev-news 열기
+    <div class="veil" id="veil"></div>
+    <div class="end" id="end">
+      <h2 class="h2 split">오늘 올라온 소식부터<br><em>읽어 보세요</em></h2>
+      <p class="x">가입 없이 바로 읽을 수 있습니다. 보관함을 기기끼리 맞출 때만 GitHub 로그인을 씁니다.</p>
+      <div class="acts x"><a class="cta big mag" href="/">dev-news 열기
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <div class="hero-scroll">아래로 내려 보세요</div>
-    </div>
-
-    <div class="txt" data-t="collect">
-      <div class="kicker">모으기</div>
-      <h2 class="h2">일곱 곳을<br>한 번에 봅니다</h2>
-      <p class="lede">Hacker News, GitHub Trending, Lobste.rs, dev.to, 긱뉴스, 기술 블로그, Anthropic 소식을 회차마다 모두 훑습니다.</p>
-      <div class="counter">
-        <div class="big"><span id="cntA">하루 수백 건</span><span class="b" id="cntB">회차당 20건</span></div>
-        <small><span id="noteA">이 올라옵니다</span><span class="b" id="noteB">만 고릅니다</span></small>
-      </div>
-    </div>
-    <div class="txt" data-t="same">
-      <div class="kicker">합치기</div>
-      <h2 class="h2">같은 소식이<br>여러 곳에 올라와도</h2>
-      <p class="lede">같은 원문을 가리키는 글은 하나로 묶습니다. 같은 소식을 여러 번 읽지 않아도 됩니다.</p>
-    </div>
-    <div class="txt" data-t="sum">
-      <div class="kicker">요약</div>
-      <h2 class="h2">원문을 읽고<br>두세 문장으로</h2>
-      <p class="lede">기사 본문을 가져와 무엇이 바뀌는지만 추립니다.</p>
-    </div>
-    <div class="txt" data-t="why">
-      <div class="kicker">왜 중요한가</div>
-      <h2 class="h2">나한테 무슨 일인지<br>한 단락 더</h2>
-      <p class="lede">요약 아래에 이 소식이 개발하는 사람에게 어떤 영향을 주는지 따로 적습니다.</p>
-    </div>
-    <div class="txt light" data-t="clock">
-      <div class="kicker">매일 같은 시각</div>
-      <h2 class="h2">하루 세 번,<br>여덟 시간마다</h2>
-      <p class="lede">밤사이 올라온 소식은 아침에, 낮에 나온 소식은 저녁에 읽을 수 있습니다.</p>
-      <div class="clock"><div class="t" id="clockT"><span>00:00</span><span>08:00</span><span>16:00</span></div><small>KST</small></div>
-    </div>
-    <div class="txt" data-t="search">
-      <div class="kicker">검색</div>
-      <h2 class="h2">30일이 지나도<br>찾아 읽습니다</h2>
-      <p class="lede">목록은 최근 30일치를 보여 주고, 그보다 오래된 기사는 검색하면 아카이브에서 찾아옵니다.</p>
-    </div>
-    <div class="txt" data-t="save">
-      <div class="kicker">보관함</div>
-      <h2 class="h2">체크한 기사는<br>다른 기기에서도</h2>
-      <p class="lede">GitHub로 로그인하면 휴대폰과 컴퓨터에서 같은 보관함을 봅니다. 로그인하지 않아도 이 브라우저에는 남습니다.</p>
-    </div>
-    <div class="txt" data-t="filter">
-      <div class="kicker">거르기</div>
-      <h2 class="h2">보고 싶은 출처만,<br>안 읽은 것만</h2>
-      <p class="lede">출처와 태그를 끄고 켜서 목록을 줄입니다. 읽은 기사는 흐리게 표시되고, 스위치 하나로 안 읽은 것만 남길 수 있습니다.</p>
-    </div>
-    <div class="txt" data-t="api">
-      <div class="kicker">뉴스 말고도</div>
-      <h2 class="h2">무료 API<br>2,000여 개</h2>
-      <p class="lede">날씨, 지도, 공공기관, 교통처럼 바깥 서비스와 데이터를 주고받는 공개 API를 모읍니다. 회차마다 연결을 확인해 끊긴 것은 뺍니다.</p>
-    </div>
-    <div class="txt" data-t="skill">
-      <div class="kicker">에이전트 스킬</div>
-      <h2 class="h2">요즘 많이 쓰는<br>스킬 순위</h2>
-      <p class="lede">skills.sh 설치 수로 순위를 매기고, 지난 회차보다 오르거나 내린 것을 표시합니다.</p>
-    </div>
-
-    <div class="mid end-copy" id="endCopy">
-      <h2>오늘 올라온 소식부터<br>읽어 보세요</h2>
-      <p>가입 없이 바로 읽을 수 있습니다. 보관함을 기기끼리 맞출 때만 GitHub 로그인을 씁니다.</p>
-      <a class="cta big pri" href="/">dev-news 열기
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      </a></div>
     </div>
   </div>
 </div>
 
-<!-- ───────── 정적 본문: 움직임 줄이기를 켰거나 스크립트가 못 뜬 경우 ───────── -->
 <main class="plain">
   <section>
     <h1>개발 뉴스를<br><em>하루 세 번</em>, 한국어로</h1>
     <p class="lede">Hacker News, GitHub Trending, 긱뉴스까지 일곱 곳에 올라온 개발·AI 소식을 모아 두세 문장으로 요약합니다.</p>
-    <p style="margin-top:26px"><a class="cta big pri" href="/">dev-news 열기</a></p>
+    <p style="margin-top:26px"><a class="cta big" href="/">dev-news 열기</a></p>
   </section>
   <section>
-    <div class="kicker">어떻게 만드나</div>
+    <div class="kick">어떻게 만드나</div>
     <h2 class="h2">모으고, 묶고, 요약합니다</h2>
     <ul>
       <li>Hacker News, GitHub Trending, Lobste.rs, dev.to, 긱뉴스, 기술 블로그, Anthropic 소식을 매일 00시·08시·16시에 훑습니다.</li>
@@ -549,10 +552,9 @@ html.motion .prog{display:flex}
       <li>같은 원문을 가리키는 글은 하나로 묶습니다.</li>
       <li>원문을 읽고 두세 문장으로 요약한 뒤, 왜 중요한지 한 단락을 붙입니다.</li>
     </ul>
-    <div class="detail" id="plainDetail"></div>
   </section>
   <section>
-    <div class="kicker">읽고 나서도</div>
+    <div class="kick">읽고 나서도</div>
     <h2 class="h2">찾고, 모으고, 거릅니다</h2>
     <ul>
       <li>30일이 지난 기사는 검색으로 아카이브에서 찾습니다.</li>
@@ -563,7 +565,7 @@ html.motion .prog{display:flex}
   </section>
   <section>
     <h2 class="h2">오늘 올라온 소식부터 읽어 보세요</h2>
-    <p style="margin-top:26px"><a class="cta big pri" href="/">dev-news 열기</a></p>
+    <p style="margin-top:26px"><a class="cta big" href="/">dev-news 열기</a></p>
   </section>
 </main>
 
@@ -576,11 +578,27 @@ html.motion .prog{display:flex}
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
-<script>
-(() => {
-/* 대표 기사는 dev-news 자신을 소개하는 예시 기사다. 실제로 수집된 기사는 이 페이지에 쓰지 않는다
-   — 남의 글을 홍보 페이지에 박아 두면 그 글이 틀렸거나 문제가 됐을 때 따라 고칠 수가 없다. */
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+window.__dn = true;
+const root = document.documentElement;
+if (!root.classList.contains('motion') || !window.gsap || !window.ScrollTrigger) {
+  root.classList.remove('motion', 'loading', 'fine');
+  throw new Error('static');
+}
+const { gsap, ScrollTrigger } = window;
+gsap.registerPlugin(ScrollTrigger);
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const clamp01 = x => Math.max(0, Math.min(1, x));
+const TAU = Math.PI * 2;
+const narrow = matchMedia('(max-width: 860px)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+
+/* ───────── 글 ─────────
+   대표 기사는 dev-news 자신을 소개하는 예시다. 실제로 수집된 남의 기사는 이 페이지에 박지 않는다.
+   목록의 다른 카드도 dev-news 기능을 설명하는 예시이고, 모두 '예시' 표시를 단다. */
 const ME = {
   ko: 'dev-news, 개발 관련 뉴스기사 수집 페이지',
   en: 'dev-news: developer news from seven sources, summarized in Korean',
@@ -591,671 +609,666 @@ const ME = {
   ],
   why: '영어 원문을 하나하나 열지 않아도 그날 개발 커뮤니티에서 오간 소식을 한국어로 훑을 수 있다. 요약마다 개발하는 사람에게 어떤 영향이 있는지 한 단락이 붙는다.',
 };
-
-const SRC = [
-  ['Hacker News', 'var(--hn)'], ['GitHub Trending', 'var(--gh)'], ['Lobste.rs', 'var(--lob)'], ['dev.to', 'var(--devto)'],
-  ['긱뉴스', 'var(--gn)'], ['블로그 · RSS', 'var(--rss)'], ['Anthropic', 'var(--anth)'],
+const SRC = {
+  dn: ['dev-news', '#5b4fd0', 'linear-gradient(135deg,#8f80ff,#5b4fd0)', 'dn'],
+  hn: ['Hacker News', '#ff6600', 'linear-gradient(135deg,#ff9a3c,#ff6600)', 'Y'],
+  gh: ['GitHub Trending', '#1f2328', 'linear-gradient(135deg,#3a3f47,#1f2328)', 'GH'],
+  lob: ['Lobste.rs', '#ac130d', 'linear-gradient(135deg,#d8453c,#ac130d)', 'L'],
+  devto: ['dev.to', '#3b49df', 'linear-gradient(135deg,#6b77ff,#3b49df)', 'DEV'],
+  gn: ['긱뉴스', '#2f7de0', 'linear-gradient(135deg,#5aa0ff,#2f7de0)', 'G'],
+  rss: ['기술 블로그', '#6b5bd2', 'linear-gradient(135deg,#9a8cf0,#6b5bd2)', 'RSS'],
+  anth: ['Anthropic', '#c96442', 'linear-gradient(135deg,#e39a78,#c96442)', 'A'],
+};
+const FEED = [
+  { g: '16', k: 'dn', me: 1, t: ME.ko, snip: ME.sum[0], why: ME.why, tags: ['개발 도구'] },
+  { g: '16', k: 'hn', t: '같은 원문을 가리키는 글은 하나로 묶는다', snip: 'Hacker News, 긱뉴스, Lobste.rs에 같은 글이 올라와도 목록에는 한 번만 보인다. 묶인 출처는 카드에 함께 표시된다.', why: '같은 소식을 여러 번 읽지 않아도 된다.' },
+  { g: '16', k: 'gh', t: '체크한 기사는 보관함에, 로그인하면 기기끼리', snip: 'GitHub로 로그인하면 휴대폰과 컴퓨터에서 같은 보관함을 본다. 로그인하지 않아도 이 브라우저에는 남는다.', why: '출퇴근길에 체크하고 자리에서 이어 읽을 수 있다.' },
+  { g: '08', k: 'devto', rd: 1, t: '30일 지난 기사도 검색으로 찾는다', snip: '목록은 최근 30일치를 보여 주고, 그보다 오래된 기사는 검색하면 아카이브에서 찾아온다.', why: '지난달에 본 그 글을 다시 찾을 수 있다.' },
+  { g: '08', k: 'lob', t: '무료 API 2,000여 개, 회차마다 연결 확인', snip: '날씨·지도·공공기관·교통 등 공개 API를 모으고, 끊긴 것은 목록에서 뺀다.', why: '토이 프로젝트에 붙일 API를 한곳에서 고를 수 있다.' },
+  { g: '00', k: 'rss', rd: 1, t: '에이전트 스킬 순위, 설치 수로 갱신', snip: 'skills.sh 설치 수로 순위를 매기고 지난 회차보다 오르거나 내린 것을 표시한다.', why: '요즘 많이 쓰는 스킬을 빠르게 확인할 수 있다.' },
+  { g: '00', k: 'anth', t: '하루 세 번, 00시·08시·16시에 수집', snip: '밤사이 올라온 소식은 아침에, 낮에 나온 소식은 저녁에 읽을 수 있다.', why: '정해진 시각에 들어와 한 번에 훑으면 된다.' },
 ];
-const TAGS = ['AI 코딩', '오픈소스', '언어 · 런타임', '개발 도구', '웹 · 프론트엔드', '백엔드 · 데이터', '에이전트', '릴리스'];
+const APIS = [['날씨', '기상 관측·예보 데이터'], ['지도', '주소 검색과 좌표 변환'], ['공공데이터', '정부·지자체 공개 데이터'], ['환율', '실시간 환율과 과거 시세'],
+  ['실시간 교통', '버스·지하철 도착 정보'], ['번역', '문장 번역과 언어 감지'], ['공휴일', '국가별 공휴일 달력'], ['이미지 생성', '프롬프트로 이미지 만들기']];
+const API_DEAD = 4;
+const SKILLS = [['이미지 생성', 39.6, '#ff7ab6'], ['모바일 앱 디자인', 22.6, '#3b82f6'], ['영상 생성', 18.1, '#f59e0b'], ['코드 리뷰', 15.4, '#7c6ee6'], ['문서 요약', 9.8, '#10b981']];
+const CHAPTERS = [['시작', 0], ['모으기', 1.6], ['고르기', 3.8], ['합치기', 6.0], ['번역', 8.8], ['요약', 11.8], ['왜 중요한가', 13.9],
+  ['하루 세 번', 15.8], ['찾기 · 보관 · 거르기', 19.9], ['무료 API', 24.3], ['스킬 순위', 26.4], ['시작하기', 29.6]];
+const DUR = 31;
 
-const ICON_EXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>';
-const ICON_SUM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16M4 10h16M4 15h10"/></svg>';
-const ICON_CK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l5 5L20 6"/></svg>';
-const HMARK = '<svg class="hmark" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.5" fill="#7c6ee6"/><path d="M11.5 9.5 L20 16 L11.5 22.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ICON = {
+  ck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l5 5L20 6"/></svg>',
+  ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>',
+  sum: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16M4 10h16M4 15h10"/></svg>',
+};
 const RAIL = [
-  ['뉴스', '<rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 8h6M9 12h6M9 16h3"/>'],
-  ['API', '<path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 01-12 0zM12 17v4"/>'],
-  ['스킬', '<path d="M12 3l2.4 4.8 5.3.8-3.8 3.7.9 5.3L12 15l-4.8 2.6.9-5.3-3.8-3.7 5.3-.8z"/>'],
-  ['보관함', '<path d="M6 4h12v17l-6-4-6 4z"/>'],
+  ['news', '뉴스', '<path d="M4 6a2 2 0 012-2h9a2 2 0 012 2v12a2 2 0 002 2H6a2 2 0 01-2-2z"/><path d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2"/><path d="M7.5 8.5h6M7.5 12h6M7.5 15.5h4"/>'],
+  ['api', 'API', '<path d="M9 3v5M15 3v5"/><path d="M6.5 8h11v3a5.5 5.5 0 01-11 0z"/><path d="M12 16.5V21"/>'],
+  ['skills', '스킬', '<path d="M10 4.6a2 2 0 114 0V6h3a1 1 0 011 1v3h1.4a2 2 0 110 4H18v3a1 1 0 01-1 1h-3v-1.4a2 2 0 10-4 0V18H7a1 1 0 01-1-1v-3H4.6a2 2 0 110-4H6V7a1 1 0 011-1h3z"/>'],
+  ['saved', '보관함', '<path d="M6 4h12a1 1 0 011 1v15l-7-4-7 4V5a1 1 0 011-1z"/>'],
 ];
 
-const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
-function el(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
-
-/* ── 글 채우기 ── */
+/* ───────── 화면 채우기 ───────── */
 $$('[data-ko]').forEach(e => { e.textContent = ME.ko; });
-$$('[data-en]').forEach(e => { e.textContent = ME.en; });
 $$('[data-why]').forEach(e => { e.textContent = ME.why; });
 $('#sum').innerHTML = ME.sum.map(s => `<span>${s}</span>`).join(' ');
-const ROW_HTML = `<div><div class="rt">${ME.ko}</div>
-  <div class="rm"><span class="s" style="color:var(--pri-dk)">dev-news</span><span class="sep">·</span><span class="tg">개발 도구</span><span class="tg">한국어 요약</span></div>
-  <div class="snip">${ME.sum[0]}</div><div class="rwhy"><b>중요한 이유</b>${ME.why}</div></div>
-  <div class="acts"><span class="ib">${ICON_EXT}</span><span class="ib">${ICON_SUM}</span></div>`;
-$$('.me-row').forEach(r => { r.innerHTML = ROW_HTML; });
-$('#hubRow').insertAdjacentHTML('afterbegin', `<span class="ck" id="hubCk">${ICON_CK}</span>`);
-// id 를 지운 사본을 쓴다. 같은 id 가 둘이면 무대용 트윈(#sum span 등)이 정적 본문까지 흐리게 만든다
-$('#plainDetail').innerHTML = $('#detail').innerHTML.replace(/ id="[^"]*"/g, '');
-$('#rail').innerHTML = RAIL.map(([n, p], i) => `<span${i ? '' : ' class="on"'}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${p}</svg>${n}</span>`).join('');
-$('#appH').innerHTML = HMARK + '오늘의 뉴스';
-$('#q').innerHTML = [...'dev-news'].map(c => `<span>${c}</span>`).join('');
-
-/* 첫 화면 칩: 출처·태그 이름. 가운데 헤드라인을 피해 가장자리에 둔다 (좌·상 퍼센트).
-   마지막 자리가 보라색 "내 기사" 칩이다 */
-const CHIP_WIDE = [[5,14],[72,12],[8,82],[64,86],[3,32],[77,28],[6,66],[79,70],[36,8],[80,46],[2,48],[18,22],[56,17],[22,78],[42,91]];
-const CHIP_NARROW = [[3,10],[51,11],[3,16.5],[51,17.5],[3,80],[51,81],[3,86.5],[51,87.5],[24,23],[4,93]];
-const narrowAtLoad = matchMedia('(max-width: 860px)').matches;
-const posList = narrowAtLoad ? CHIP_NARROW : CHIP_WIDE;
-const chipDefs = [...SRC.map(([n, c]) => ({ n, c })), ...TAGS.map(n => ({ n }))];
-const chipsBox = $('#chips');
-chipDefs.slice(0, posList.length - 1).forEach((d, i) => {
-  const c = el('div', 'chip', (d.c ? `<i style="background:${d.c}"></i>` : '') + d.n);
-  c.style.left = posList[i][0] + '%'; c.style.top = posList[i][1] + '%';
-  chipsBox.appendChild(c);
-});
-const meChip = el('div', 'chip me', `<i></i>${ME.ko}`);
-const mp = posList[posList.length - 1];
-meChip.style.left = mp[0] + '%'; meChip.style.top = mp[1] + '%';
-chipsBox.appendChild(meChip);
-
-/* API 연결망: 가운데 '내 앱'과 바깥 서비스 여덟 곳. 한 곳(DEAD)은 연결이 끊겨 목록에서 빠지는 연출이다 */
-const NET_C = { x: 280, y: 222 };
-const NET_NODES = [
-  ['날씨', '<path d="M7 18h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.2 9.5 4.25 4.25 0 0 0 7 18z"/>'],
-  ['지도', '<path d="M12 21s-6-5.6-6-10.5a6 6 0 0 1 12 0C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/>'],
-  ['공공기관', '<path d="M3 21h18M5 21v-9M19 21v-9M9 21v-9M15 21v-9M3 12l9-7 9 7"/>'],
-  ['환율', '<path d="M4 8h13l-3-3M20 16H7l3 3"/>'],
-  ['교통', '<rect x="5" y="4" width="14" height="13" rx="2.5"/><path d="M5 11h14M8 20v-3M16 20v-3"/>'],
-  ['CCTV', '<path d="M3 9l12-4 2.2 5.5-12 4zM8.5 13.3l1.2 3.7H5M5 14.5v5"/>'],
-  ['번역', '<circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.2 2.5 13.8 0 16M12 4c-2.5 2.2-2.5 13.8 0 16"/>'],
-  ['AI 모델', '<rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/>'],
+$('#rail').innerHTML = RAIL.map(([v, n, p], i) => `<span class="rb${i ? '' : ' on'}" data-v="${v}">${v === 'saved' ? '<span class="dot" id="savedDot"></span>' : ''}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${p}</svg><span class="lb">${n}</span></span>`).join('')
+  + `<span class="rb gh"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:22px;height:22px"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.4 9.4 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg><span class="lb">소개</span></span>`;
+const rowHTML = (f, { lang, merged } = {}) => {
+  const [name, color, grad, mono] = SRC[f.k];
+  return `<span class="ck">${ICON.ck}</span><div class="mid">
+    <div class="rt">${lang ? `<span class="lang">${lang}</span>` : ''}<span class="rtt">${f.t}</span></div>
+    <div class="rm"><span class="s" style="color:${color}">${name}</span><span class="sep">·</span><span>16:00</span>${(f.tags || []).map(t => `<span class="tg">${t}</span>`).join('')}<span class="tg ex">예시</span></div>
+    <div class="snip">${f.snip}</div>${f.why ? `<div class="rwhy"><b>중요한 이유</b>${f.why}</div>` : ''}
+    ${merged ? `<div class="merged"><i style="background:#ff6600"></i><i style="background:#2f7de0"></i><i style="background:#ac130d"></i><span>출처 3곳을 한 건으로 묶음</span></div>` : ''}</div>
+    <div class="thumb" style="background:${grad}">${mono}</div>
+    <div class="acts"><span class="ib">${ICON.ext}</span><span class="ib">${ICON.sum}</span></div>`;
+};
+const GROUP_NAME = { '16': '16시 회차', '08': '08시 회차', '00': '00시 회차' };
+$('#feed').innerHTML = ['16', '08', '00'].map(g => `<div class="grp" data-g="${g}"><div class="gh3">${GROUP_NAME[g]}${g === '16' ? '<span class="nw">NEW</span>' : ''}</div>${
+  FEED.map((f, i) => [f, i]).filter(([f]) => f.g === g).map(([f, i]) => `<div class="row${f.rd ? ' rd' : ''}" data-i="${i}" data-src="${f.k}">${rowHTML(f)}</div>`).join('')}</div>`).join('');
+const FACET_SRC = [['hn', 64], ['gh', 41], ['lob', 22], ['devto', 38], ['gn', 57], ['rss', 29], ['anth', 6]];
+$('#facet').innerHTML = `<div class="fhead"><span class="ft">필터</span><span class="fr">예시</span></div><div class="fgh">출처</div>` +
+  FACET_SRC.map(([k, n]) => `<div class="fitem" data-f="${k}"><span class="ckm">${ICON.ck}</span><span class="sq" style="background:${SRC[k][1]}"></span>${SRC[k][0]}<span class="fn">${n}</span></div>`).join('') +
+  `<div class="fgh">태그</div>` + ['AI 코딩', '오픈소스', '개발 도구', '웹 · 프론트엔드'].map(t => `<div class="fitem"><span class="ckm">${ICON.ck}</span>${t}</div>`).join('');
+const DENSE_SRC = ['hn', 'gh', 'lob', 'devto', 'gn', 'rss', 'anth'];
+const PICK = [2, 5, 11, 14, 19, 22];
+$('#dense').innerHTML = [...Array(24)].map((_, i) => { const k = DENSE_SRC[(i * 3 + (i >> 2)) % 7]; return `<div class="mrow${PICK.includes(i) ? ' pk' : ''}"><b style="color:${SRC[k][1]}">${SRC[k][0]}</b><span><i></i><i></i></span></div>`; }).join('');
+$('#alist').insertAdjacentHTML('beforeend', APIS.map(([n, d], i) => `<div class="aitem" data-i="${i}"><div class="aihead"><span class="st"></span><span class="an">${n} API</span><span class="ap">${d}</span><span class="ok">연결됨</span>${i === API_DEAD ? '<span class="bad">접속 안 됨</span>' : ''}</div></div>`).join(''));
+$('#sklist').innerHTML = SKILLS.map(([n, v, c], i) => `<div class="sk" data-k="${i}"><div class="skr"><b class="rk">${i + 1}</b><span class="skd">${i === 3 ? '–' : '–'}</span></div><span class="skav" style="background:${c}">${n[0]}</span><div class="skm"><span class="skn">${n}</span><span class="sko">예시 스킬 · skills.sh</span></div><span class="skv">${v}K</span></div>`).join('');
+// 튀어나오는 카드: 같은 소식이 세 곳에
+const FLY = [
+  { k: 'hn', t: ME.en, snip: 'dev-news collects developer news from seven sources three times a day and summarizes each story in Korean.', lang: 'EN' },
+  { k: 'gn', t: ME.ko, snip: ME.sum[0], lang: '한국어' },
+  { k: 'lob', t: ME.en, snip: 'Seven sources, three rounds a day, each story summarized with a note on why it matters.', lang: 'EN' },
 ];
-const NET_DEAD = 4;
-(() => {
-  const NS = 'http://www.w3.org/2000/svg', net = $('#net');
-  const mk = (tag, attrs, parent = net) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
-  const lines = mk('g', {}), cuts = mk('g', {}), pks = mk('g', {}), nodes = mk('g', {});
-  NET_NODES.forEach(([label, icon], i) => {
-    const a = (-90 + i * 45) * Math.PI / 180;
-    const x = NET_C.x + Math.cos(a) * 222, y = NET_C.y + Math.sin(a) * 158;
-    // 살짝 휜 선: 가운데로 가는 직선의 중점을 옆으로 민다
-    const mx = (x + NET_C.x) / 2 - (y - NET_C.y) * 0.18, my = (y + NET_C.y) / 2 + (x - NET_C.x) * 0.18;
-    const d = `M${x.toFixed(1)} ${y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${NET_C.x} ${NET_C.y}`;
-    mk('path', { class: 'ln', d, 'data-i': i }, lines);
-    if (i === NET_DEAD) mk('path', { class: 'ln cut', d, id: 'netCut' }, cuts);
-    mk('circle', { class: 'pk out', 'data-i': i, cx: -50, cy: -50, r: 4.5 }, pks);
-    mk('circle', { class: 'pk in', 'data-i': i, cx: -50, cy: -50, r: 4.5 }, pks);
-    // 바깥 g 는 자리만 잡고 트윈하지 않는다. 커지는 것은 원과 아이콘(.body)뿐이라 중심이 원의 중심에 맞는다
-    const g = mk('g', { class: 'nd', 'data-i': i, transform: `translate(${x.toFixed(1)} ${y.toFixed(1)})` }, nodes);
-    const body = mk('g', { class: 'body' }, g);
-    mk('circle', { r: 28 }, body);
-    const ic = mk('g', { class: 'ic', transform: 'translate(-12 -12)' }, body); ic.innerHTML = icon;
-    mk('text', { class: 'lb', y: 50 }, g).textContent = label;
-    if (i === NET_DEAD) {
-      const b = mk('g', { class: 'badge', id: 'netBadge', transform: 'translate(0 -44)' }, g);
-      mk('rect', { x: -40, y: -13, width: 80, height: 26, rx: 13 }, b);
-      mk('text', { y: 4.5 }, b).textContent = '접속 안 됨';
-    }
+FLY.forEach((f, i) => { $('#fly' + i).innerHTML = `<div class="row">${rowHTML(f, { lang: f.lang })}</div>`; });
+$('#flyM').innerHTML = `<div class="row">${rowHTML({ k: 'dn', t: ME.en, snip: ME.sum[0], tags: ['개발 도구'] }, { lang: 'EN', merged: true })}</div>`;
+// 낱말은 줄바꿈하지 않고, 글자 하나하나가 움직인다
+const charsHTML = s => s.split(' ').map(w => `<span class="w">${[...w].map(c => `<span class="c">${c}</span>`).join('')}</span>`).join(' ');
+const flyRt = $('#flyM .rt');
+flyRt.classList.add('xrt');
+flyRt.innerHTML = `<span class="lgs"><span class="lang" id="xlEN">EN</span><span class="lang ko" id="xlKO">한국어</span></span><span class="xt"><span class="xen">${charsHTML(ME.en)}</span><span class="xko">${charsHTML(ME.ko)}</span></span>`;
+const digitCol = () => [...'01234567890'].map(d => `<span>${d}</span>`).join('');
+$('#odoT').innerHTML = digitCol(); $('#odoO').innerHTML = digitCol();
+$('#nav').innerHTML = CHAPTERS.map(([n], i) => `<button type="button" data-i="${i}"><span>${n}</span><i></i></button>`).join('');
+$('#cindN').innerHTML = CHAPTERS.map((_, i) => `<span>${String(i).padStart(2, '0')}</span>`).join('');
+if (narrow) $('#winz').classList.add('m');
+
+function split(el) {
+  el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+  const walk = node => [...node.childNodes].map(n => {
+    if (n.nodeType === 3) return n.textContent.split(/(\s+)/).map(w => /^\s+$/.test(w) ? ' ' : w ? `<span class="w">${[...w].map(ch => `<span class="c">${ch}</span>`).join('')}</span>` : '').join('');
+    return `<${n.tagName.toLowerCase()}>${walk(n)}</${n.tagName.toLowerCase()}>`;
+  }).join('');
+  el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map(line => { const d = document.createElement('div'); d.innerHTML = line.trim(); return `<span class="ln" aria-hidden="true">${walk(d)}</span>`; }).join('');
+}
+$$('.split').forEach(split);
+function gradChars() {
+  $$('.hero h1 em').forEach(em => {
+    const cs = [...em.querySelectorAll('.c')]; if (!cs.length) return;
+    const x0 = cs[0].offsetLeft, W = cs[cs.length - 1].offsetLeft + cs[cs.length - 1].offsetWidth - x0;
+    cs.forEach(c => { c.style.backgroundSize = `${W}px 100%`; c.style.backgroundPosition = `${-(c.offsetLeft - x0)}px 0`; });
   });
-  const core = mk('g', { class: 'core', id: 'netCore', transform: `translate(${NET_C.x} ${NET_C.y})` });
-  mk('rect', { x: -80, y: -36, width: 160, height: 72, rx: 18 }, core);
-  mk('text', { class: 't1', y: -4 }, core).textContent = '내 앱';
-  mk('text', { class: 't2', y: 18 }, core).textContent = 'fetch(api)';
-})();
-
-/* 스킬 순위: 예시 이름과 숫자 (머리글에 '예시'로 밝힌다). 4위가 이번 주에 2위로 오른다 */
-const SKILLS = [['이미지 생성', 39.6], ['모바일 앱 디자인', 22.6], ['영상 생성', 18.1], ['코드 리뷰', 15.4], ['문서 요약', 9.8]];
-$('#skRows').innerHTML = SKILLS.map(([n, v], i) =>
-  `<div class="sk-row" data-k="${i}"><div><div class="nm">${n}<span class="up">▲ 2</span></div><div class="bar2" style="width:${Math.round(v / 40 * 100)}%"></div></div><span class="n">${v}K</span></div>`).join('');
-
-/* 출처 레인: 기사 하나를 막대 하나로 그린다 */
-const lanes = $('#lanes');
-const LANE_COUNT = [22, 20, 16, 20, 22, 20, 10];
-SRC.forEach(([n, c], li) => {
-  const lane = el('div', 'lane');
-  lane.appendChild(el('div', 'lane-h', `<i style="background:${c}"></i><span>${n}</span>`));
-  const st = el('div', 'stream');
-  for (let i = 0; i < LANE_COUNT[li]; i++) {
-    const pick = (i * 7 + li * 3) % 9 === 4; // 레인마다 두세 개 — 일곱 곳을 합쳐 회차당 20건 안쪽
-    st.appendChild(el('div', 'bar' + (pick ? ' pick' : '')));
-  }
-  lane.appendChild(st);
-  lanes.appendChild(lane);
-});
-
-/* ── 진행 눈금: 장면 시작 시각(타임라인 단위) ── */
-const MARKS = [0, 1.2, 3.4, 5.3, 7.2, 10.0, 13.5, 15.3, 17.1, 19.7, 21.3, 23.0];
-const prog = $('#prog');
-MARKS.forEach(() => prog.appendChild(el('i')));
-
-if (!window.gsap || !window.ScrollTrigger || !document.documentElement.classList.contains('motion')) {
-  document.documentElement.classList.remove('motion');
-  return;
 }
 
-gsap.registerPlugin(ScrollTrigger);
+/* ───────── 화면 크기 ─────────
+   본 화면을 실제 크기(1180×840)로 그린 뒤 통째로 줄인다. 글자 크기·간격이 진짜 화면과 같은 비율로 보인다 */
+const DW = narrow ? 420 : 1180, DH = narrow ? 800 : 840;
+const win = $('#win'), winz = $('#winz'), wtilt = $('#wtilt');
+let K = 1;
+function fitWin() {
+  const aw = narrow ? innerWidth - 28 : Math.min(innerWidth * .55, 940);
+  const ah = narrow ? innerHeight * .5 : innerHeight * .76;
+  K = Math.min(aw / DW, ah / DH);
+  winz.style.width = DW + 'px'; winz.style.height = DH + 'px'; winz.style.transform = `scale(${K})`;
+  win.style.width = DW * K + 'px'; win.style.height = DH * K + 'px';
+}
+fitWin();
+// 화면 안 요소의 중심 (본 화면 좌표)
+const offIn = el => { let x = 0, y = 0, e = el; while (e && e !== winz) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; } return [x + el.offsetWidth / 2, y + el.offsetHeight / 2]; };
+// 화면을 확대해 그 요소가 화면 한가운데 오게 한다
+const focusOn = (sel, s) => ({
+  x: () => -(offIn($(sel))[0] - DW / 2) * K * s,
+  y: () => -(offIn($(sel))[1] - DH / 2) * K * s,
+  scale: s, rotationX: 0, rotationY: 0, z: 0,
+});
+
+/* ───────── 입자: 배경과 전환만 맡는다 ───────── */
+const TW = 256, ROWS = narrow ? 24 : 44, N = TW * ROWS;
+let seed = 7;
+const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const gauss = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(TAU * rnd()); };
+const Cc = h => new THREE.Color(h);
+const PUR2 = Cc('#b3a6ff'), BLUE = Cc('#5b8cff'), DUST = Cc('#8a84c4'), ICE = Cc('#9fb6ff'), PINK = Cc('#ff7ab6');
+const SRCC = ['#ff6600', '#e6edf3', '#e0463b', '#6d7bff', '#3d8bff', '#9d8cff', '#e08563'].map(Cc);
+const tc = new THREE.Color(); const mixC = (a, b, t) => tc.copy(a).lerp(b, t);
+const SHAPES = [];
+function shape(fn) {
+  const pos = new Float32Array(N * 4), col = new Float32Array(N * 4), o = {};
+  for (let i = 0; i < N; i++) {
+    o.x = o.y = o.z = 0; o.type = 0; o.ph = rnd(); o.c = DUST; o.a = 1; fn(i, o);
+    const j = i * 4; pos[j] = o.x; pos[j + 1] = o.y; pos[j + 2] = o.z; pos[j + 3] = o.type * 2 + Math.min(.999, Math.max(0, o.ph));
+    col[j] = o.c.r; col[j + 1] = o.c.g; col[j + 2] = o.c.b; col[j + 3] = o.a;
+  }
+  SHAPES.push({ pos, col });
+}
+function space(o, spin) {
+  const u = rnd() * 2 - 1, th = rnd() * TAU, r = 3 + Math.pow(rnd(), .6) * 8, s = Math.sqrt(1 - u * u);
+  o.x = Math.cos(th) * s * r * 1.3; o.y = u * r * .7; o.z = Math.sin(th) * s * r - 4;
+  o.c = mixC(DUST, rnd() < .5 ? BLUE : PUR2, rnd()); o.a = .08 + rnd() * .22; o.type = spin ? 3 : 0;
+}
+// 0. 우주 먼지  1. 일곱 줄기가 화면으로 빨려 든다  2. 먼지  3. 밤: 화면 뒤 큰 고리  4. 먼지
+shape((i, o) => space(o, 1));
+shape((i, o) => {
+  if (rnd() < .75) {
+    const lane = i % 7, a0 = -Math.PI * .95 + lane / 6 * Math.PI * 1.9, t = rnd();
+    const R = 9 * (1 - t) + .2, a = a0 + t * t * 1.4;
+    o.x = Math.cos(a) * R * 1.25; o.y = Math.sin(a) * R * .75; o.z = -1.5 - (1 - t) * 2 + gauss() * .15;
+    o.x += gauss() * .06 * (1 - t) * 4; o.y += gauss() * .06 * (1 - t) * 4;
+    o.ph = t; o.c = mixC(SRCC[lane], PUR2, t * t); o.a = .25 + t * .6;
+  } else space(o, 0);
+});
+shape((i, o) => space(o, 1));
+shape((i, o) => {
+  const r = rnd();
+  if (r < .5) { const a = rnd() * TAU, R = 4.6 + gauss() * .04; o.x = Math.sin(a) * R; o.y = Math.cos(a) * R; o.z = -2.5; o.ph = a / TAU; o.c = mixC(BLUE, PUR2, .5 + .5 * Math.sin(a * 3)); o.a = .5; }
+  else if (r < .62) { const k = Math.floor(rnd() * 3), a = k / 3 * TAU; o.x = Math.sin(a) * 4.6 + gauss() * .1; o.y = Math.cos(a) * 4.6 + gauss() * .1; o.z = -2.5; o.c = mixC(PINK, Cc('#ffffff'), .4); o.a = .9; }
+  else if (r < .7) { const k = Math.floor(rnd() * 24), a = k / 24 * TAU, rr = 4.35 - rnd() * (k % 8 ? .15 : .4); o.x = Math.sin(a) * rr; o.y = Math.cos(a) * rr; o.z = -2.5; o.c = ICE; o.a = k % 8 ? .35 : .8; }
+  else space(o, 0);
+});
+shape((i, o) => space(o, 1));
+
+const VERT = `
+uniform sampler2D uPos; uniform sampler2D uCol;
+uniform float uMorph, uShapes, uRows, uTexH, uTime, uSpinY, uVel, uIntro, uPR, uSize, uDim, uMouseOn;
+uniform vec3 uMouse;
+attribute float aIdx; attribute vec4 aRand;
+varying vec3 vCol; varying float vA;
+vec2 cellUV(float s){ return vec2((mod(aIdx,256.)+.5)/256., (s*uRows + floor(aIdx/256.) + .5)/uTexH); }
+mat2 rot(float a){ float c=cos(a), s=sin(a); return mat2(c,-s,s,c); }
+vec3 place(vec4 p){ vec3 q = p.xyz; if (floor(p.w*.5) == 3.) q.xz = rot(uSpinY)*q.xz; return q; }
+void main(){
+  float m = clamp(uMorph, 0., uShapes-1.);
+  float k = min(floor(m), uShapes-2.); float f = m - k;
+  vec4 pa = texture2D(uPos, cellUV(k)), pb = texture2D(uPos, cellUV(k+1.));
+  vec4 ca = texture2D(uCol, cellUV(k)), cb = texture2D(uCol, cellUV(k+1.));
+  float lp = clamp(f*1.7 - aRand.x*.7, 0., 1.); lp = lp*lp*(3.-2.*lp);
+  vec3 p = mix(place(pa), place(pb), lp);
+  float arc = sin(lp*3.14159265);
+  vec3 nz = vec3(sin(aRand.z*6.283 + uTime*.9 + p.y), cos(aRand.w*6.283 + uTime*.8 + p.x), sin((aRand.z+aRand.w)*6.283 + uTime*.7));
+  p += nz*(arc*(.4 + aRand.y) + min(uVel,1.5)*.08*(.3+aRand.y));
+  p += .03*vec3(sin(uTime*(.5+aRand.x)+aRand.y*6.283), cos(uTime*(.4+aRand.z)+aRand.w*6.283), 0.);
+  float ip = clamp(uIntro*1.4 - aRand.y*.4, 0., 1.); ip = 1. - pow(1.-ip, 3.);
+  p = mix(p*2.6 + vec3(0.,0.,6.), p, ip);
+  vec2 d = p.xy - uMouse.xy; float dl = length(d);
+  float push = (1. - smoothstep(0., 1.4, dl)) * uMouseOn;
+  p.xy += (d/(dl+.0001))*push*.5;
+  vec4 mv = modelViewMatrix*vec4(p,1.);
+  gl_Position = projectionMatrix*mv;
+  float ph = lp < .5 ? pa.w - floor(pa.w*.5)*2. : pb.w - floor(pb.w*.5)*2.;
+  float wave = .65 + .35*sin(ph*6.283*3. - uTime*2.6);
+  vec4 c = mix(ca, cb, lp);
+  vA = c.a * wave * uDim * ip;
+  vCol = c.rgb + push*.25;
+  gl_PointSize = uSize * (.5 + aRand.w) * uPR * (10. / -mv.z);
+}`;
+const FRAG = `varying vec3 vCol; varying float vA;
+void main(){ vec2 c = gl_PointCoord - .5; float d = dot(c,c)*4.; if (d > 1.) discard; gl_FragColor = vec4(vCol, exp(-d*3.2)*vA);
+  #include <colorspace_fragment>
+}`;
+const BG_FRAG = `uniform float uTime, uNight; uniform vec2 uRes, uC; uniform vec3 uA, uB, uN;
+varying vec2 vUv;
+float h(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+float n2(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f); return mix(mix(h(i),h(i+vec2(1,0)),f.x), mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x), f.y); }
+float fbm(vec2 p){ float v=0., a=.5; for(int i=0;i<5;i++){ v+=a*n2(p); p=p*2.03+vec2(1.7,9.2); a*=.5; } return v; }
+void main(){
+  vec2 uv = vUv, p = uv; p.x *= uRes.x/uRes.y;
+  float t = uTime*.04, n = fbm(p*1.3 + vec2(t, -t*.7)), m = fbm(p*2.1 - vec2(t*.6, t) + n*1.4);
+  vec3 c = vec3(.007,.007,.013);
+  float g1 = smoothstep(.75, 0., distance(uv, uC))*(.55+.45*m);
+  float g2 = smoothstep(.85, 0., distance(uv, vec2(.1,.12)))*n;
+  c += mix(uA, uN, uNight)*g1*.34 + mix(uB, uN, uNight*.6)*g2*.12;
+  c *= 1. - .6*pow(distance(uv, vec2(.5)), 2.)*1.4;
+  gl_FragColor = vec4(c, 1.);
+  #include <colorspace_fragment>
+}`;
+
+let renderer = null, composer = null, scene, camera, points, bgMat, U;
+const S = { morph: 0, dim: 1, night: 0 };
+const CX = narrow ? .5 : .63, CY = narrow ? .72 : .53;
+async function initGL() {
+  const canvas = $('#gl');
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' }); if (!renderer.capabilities.isWebGL2) throw 0; }
+  catch (e) { renderer = null; canvas.style.display = 'none'; return; }
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+  renderer.setSize(innerWidth, innerHeight, false);
+  renderer.setClearColor(0x08080d, 1);
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, .1, 100);
+  camera.position.z = 10;
+  const texH = ROWS * SHAPES.length, posAll = new Float32Array(TW * texH * 4), colAll = new Float32Array(TW * texH * 4);
+  SHAPES.forEach((sh, s) => { posAll.set(sh.pos, s * N * 4); colAll.set(sh.col, s * N * 4); });
+  const mkTex = d => { const t = new THREE.DataTexture(d, TW, texH, THREE.RGBAFormat, THREE.FloatType); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; };
+  const g = new THREE.BufferGeometry(), idx = new Float32Array(N), rr = new Float32Array(N * 4);
+  for (let i = 0; i < N; i++) { idx[i] = i; for (let j = 0; j < 4; j++) rr[i * 4 + j] = Math.random(); }
+  g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(N * 3), 3));
+  g.setAttribute('aIdx', new THREE.BufferAttribute(idx, 1));
+  g.setAttribute('aRand', new THREE.BufferAttribute(rr, 4));
+  U = { uPos: { value: mkTex(posAll) }, uCol: { value: mkTex(colAll) }, uMorph: { value: 0 }, uShapes: { value: SHAPES.length }, uRows: { value: ROWS }, uTexH: { value: texH },
+    uTime: { value: 0 }, uSpinY: { value: 0 }, uVel: { value: 0 }, uIntro: { value: 0 }, uPR: { value: renderer.getPixelRatio() }, uSize: { value: narrow ? 3 : 2.7 }, uDim: { value: 1 },
+    uMouse: { value: new THREE.Vector3(99, 99, 0) }, uMouseOn: { value: 0 } };
+  points = new THREE.Points(g, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VERT, fragmentShader: FRAG, transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending }));
+  points.frustumCulled = false; scene.add(points);
+  bgMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 }, uNight: { value: 0 }, uRes: { value: new THREE.Vector2(innerWidth, innerHeight) }, uC: { value: new THREE.Vector2(CX, 1 - CY) },
+      uA: { value: Cc('#6a4fd8') }, uB: { value: Cc('#2f5bd0') }, uN: { value: Cc('#1b3a9e') } },
+    vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, .999, 1.); }', fragmentShader: BG_FRAG, depthTest: false, depthWrite: false });
+  const bg = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), bgMat); bg.frustumCulled = false; bg.renderOrder = -1; scene.add(bg);
+  try {
+    const [{ EffectComposer }, { RenderPass }, { UnrealBloomPass }, { OutputPass }] = await Promise.all([
+      import('three/addons/postprocessing/EffectComposer.js'), import('three/addons/postprocessing/RenderPass.js'),
+      import('three/addons/postprocessing/UnrealBloomPass.js'), import('three/addons/postprocessing/OutputPass.js')]);
+    composer = new EffectComposer(renderer);
+    composer.addPass(new RenderPass(scene, camera));
+    composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth / 2, innerHeight / 2), .7, .5, .1));
+    composer.addPass(new OutputPass());
+    composer.setSize(innerWidth, innerHeight);
+  } catch (e) { composer = null; }
+}
+
+try { await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 2500))]); } catch (e) {}
+await initGL();
+gradChars();
+
+let lenis = null;
 if (window.Lenis) {
-  const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, wheelMultiplier: 0.95 });
+  lenis = new Lenis({ lerp: .085, smoothWheel: true, wheelMultiplier: .9 });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(t => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
 }
+const story = $('#story');
+story.style.height = (DUR * (narrow ? 80 : 90) + 100) + 'vh';
 
-const stage = $('#stage');
+/* ───────── 초기 상태 ───────── */
+const Wpos = (x, y) => ({ xPercent: -50, yPercent: narrow ? -100 : -50, x, y });
+gsap.set('#hero', { yPercent: narrow ? 0 : -50 });
+gsap.set('.ch', { yPercent: narrow ? 0 : -50 });
+gsap.set('.end', { xPercent: -50, yPercent: -50 });
+gsap.set(win, { ...Wpos(0, narrow ? -14 : 0), rotationY: narrow ? 0 : -22, rotationX: narrow ? 10 : 9, scale: narrow ? 1 : .94, transformOrigin: '50% 50%' });
+gsap.set(['.fly', '.drawer', '.phone', '.syncp', '.sdots'], { xPercent: -50, yPercent: narrow ? -100 : -50, y: narrow ? -14 : 0, transformPerspective: 1600 });
+gsap.set('.sdots', { xPercent: 0, yPercent: 0 });
+gsap.set('#clkT span:not(:first-child)', { yPercent: 100, opacity: 0 });
+const skRows = $$('.sk'), SKP = 70;
+gsap.set(skRows, { y: i => i * SKP });
 
-/* ── 첫 화면 칩: matter-js 로 떨어뜨리고, 마우스로 끌어서 던질 수 있게 한다 (dakcoe.github.io 와 같은 엔진).
-   물리는 되감을 수 없어서 스크롤 맨 위(타임라인 0.5 전)에서만 돌린다. 스크롤을 내리면 그 자리에서 멈추고,
-   칩 트윈이 멈춘 자리를 시작점으로 다시 읽어 레인으로 빨려 들어간다. 다시 올라오면 그 자리에서 이어서 돈다 */
-const physics = (() => {
-  const M = window.Matter;
-  const chips = $$('.chip');
-  if (!M) { chips.forEach(c => c.classList.add('on')); return { setActive() {} }; }
-  const { Engine, Bodies, Body, Composite, Mouse, MouseConstraint, Sleeping } = M;
-  const engine = Engine.create({ enableSleeping: true });
-  engine.gravity.y = 1.2;
-  let walls = [], active = true, ready = false;
-  const items = [];
+const tl = gsap.timeline({ paused: true, defaults: { ease: 'none' } });
+const Mo = (to, at, dur = 1) => tl.to(S, { morph: to, duration: dur }, at);
+function chIn(sel, at) {
+  const ch = $(sel);
+  tl.set(ch, { autoAlpha: 1 }, at);
+  tl.fromTo(ch.querySelectorAll('.kick'), { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: .35, ease: 'power2.out' }, at);
+  tl.fromTo(ch.querySelectorAll('.h2 .c'), { yPercent: 118, rotationX: -75, opacity: 0 }, { yPercent: 0, rotationX: 0, opacity: 1, duration: .5, stagger: .014, ease: 'power3.out' }, at + .04);
+  tl.fromTo(ch.querySelectorAll('.lede, .x'), { opacity: 0, y: 22, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .45, stagger: .09, ease: 'power2.out' }, at + .28);
+}
+function chOut(sel, at) {
+  const ch = $(sel);
+  tl.to(ch.querySelectorAll('.h2 .c'), { yPercent: -118, opacity: 0, duration: .32, stagger: .006, ease: 'power2.in' }, at);
+  tl.to(ch.querySelectorAll('.kick, .lede, .x'), { opacity: 0, y: -16, filter: 'blur(6px)', duration: .28, ease: 'power1.in' }, at);
+  tl.set(ch, { autoAlpha: 0 }, at + .5);
+}
+const W = (at, vars, dur = .8, ease = 'power3.inOut') => tl.to(win, { ...vars, duration: dur, ease }, at);
+const RB_ON = { backgroundColor: 'rgba(239,237,253,1)', color: '#5b4fd0', duration: .15 };
+const RB_OFF = { backgroundColor: 'rgba(239,237,253,0)', color: '#9a9aa8', duration: .15 };
+const rb = v => $(`.rb[data-v="${v}"]`);
+const fcur = $('#fcur'), ripple = $('#ripple');
+const curTo = (sel, at, dur = .35) => tl.to(fcur, { x: () => offIn($(sel))[0], y: () => offIn($(sel))[1], duration: dur, ease: 'power2.inOut' }, at);
+const click = (at, sel) => {
+  tl.to(fcur, { scale: .82, duration: .05 }, at); tl.to(fcur, { scale: 1, duration: .08 }, at + .05);
+  tl.fromTo(ripple, { x: () => offIn($(sel))[0], y: () => offIn($(sel))[1], scale: .2, opacity: .9 }, { scale: 1.2, opacity: 0, duration: .3, ease: 'power2.out' }, at);
+};
+const rows = $$('#feed .row'), meRow = $('#feed .row[data-i="0"]');
+const grp = g => $(`#feed .grp[data-g="${g}"]`);
+gsap.set(fcur, { x: DW * .7, y: DH * .8 });
 
-  // 바닥·양옆 벽·헤드라인 덩어리. 헤드라인 위에도 칩이 얹힌다
-  function buildWalls() {
-    Composite.remove(engine.world, walls);
-    const W = stage.clientWidth, H = stage.clientHeight, st = { isStatic: true, friction: 0.5 };
-    const sr = stage.getBoundingClientRect(), cr = $('#heroCopy').getBoundingClientRect();
-    walls = [
-      Bodies.rectangle(W / 2, H + 50, W * 3, 100, st),
-      Bodies.rectangle(-50, H / 2, 100, H * 4, st),
-      Bodies.rectangle(W + 50, H / 2, 100, H * 4, st),
-    ];
-    // 넓은 화면에서만 헤드라인 위에 칩이 얹힌다. 좁은 화면은 헤드라인이 폭을 거의 다 차지해서
-    // 칩이 제목에 걸려 멈춰 버린다 — 거기서는 글자 뒤로 지나 바닥까지 떨어지게 한다
-    if (W > 860) walls.push(Bodies.rectangle(cr.left - sr.left + cr.width / 2, cr.top - sr.top + cr.height / 2, cr.width * 0.86, cr.height, { ...st, chamfer: { radius: 28 } }));
-    Composite.add(engine.world, walls);
-  }
+/* 0 → 1. 첫 화면이 빠지고, 화면이 앞을 본다 */
+tl.to('#hero', { y: -80, autoAlpha: 0, filter: 'blur(12px)', duration: .6, ease: 'power2.in' }, .7);
+W(1.0, { rotationY: narrow ? 0 : -9, rotationX: narrow ? 6 : 5, scale: 1 }, 1);
+Mo(1, 1.0, 1.2);
 
-  function init() {
-    buildWalls();
-    const W = stage.clientWidth;
-    chips.forEach((c, i) => {
-      const w = c.offsetWidth, h = c.offsetHeight;
-      const lx = c.offsetLeft + w / 2, ly = c.offsetTop + h / 2; // transform 이 0 일 때의 중심
-      const r = Math.sin(i * 91.7) * 0.5 + 0.5;
-      const body = Bodies.rectangle(w / 2 + 12 + r * (W - w - 24), -80 - i * 60 - r * 160, w, h, {
-        chamfer: { radius: h / 2 }, restitution: 0.25, friction: 0.3, frictionAir: 0.012,
-        angle: (r - 0.5) * 0.8,
-      });
-      Composite.add(engine.world, body);
-      items.push({ c, body, lx, ly,
-        sx: gsap.quickSetter(c, 'x', 'px'), sy: gsap.quickSetter(c, 'y', 'px'), sr: gsap.quickSetter(c, 'rotation', 'deg') });
-    });
-    if (matchMedia('(pointer: fine)').matches) {
-      const mouse = Mouse.create(stage);
-      // matter 는 휠을 가로채 페이지 스크롤을 막는다. 휠은 스크롤에 돌려준다
-      ['wheel', 'mousewheel', 'DOMMouseScroll'].forEach(ev => mouse.element.removeEventListener(ev, mouse.mousewheel));
-      const mc = MouseConstraint.create(engine, { mouse, constraint: { stiffness: 0.2, render: { visible: false } } });
-      Composite.add(engine.world, mc);
-      stage.addEventListener('pointermove', () => {
-        stage.style.cursor = active && M.Query.point(items.map(it => it.body), mouse.position).length ? 'grab' : '';
-      });
-    }
-    draw();
-    chips.forEach(c => c.classList.add('on'));
-    ready = true;
-  }
-
-  function draw() {
-    for (const it of items) {
-      it.sx(it.body.position.x - it.lx); it.sy(it.body.position.y - it.ly); it.sr(it.body.angle * 180 / Math.PI);
-    }
-  }
-
-  gsap.ticker.add(() => { if (ready && active) { Engine.update(engine, 1000 / 60); draw(); } });
-  addEventListener('resize', () => { if (ready && active) buildWalls(); });
-  (document.fonts ? document.fonts.ready : Promise.resolve()).then(init);
-
-  return {
-    setActive(on, tweens) {
-      if (!ready || on === active) return;
-      active = on;
-      if (!on) { tweens.forEach(t => t.invalidate()); stage.style.cursor = ''; return; }
-      // 되돌아왔을 때: 트윈이 그려 둔 자리에서 물리를 이어 간다
-      buildWalls();
-      for (const it of items) {
-        Body.setPosition(it.body, { x: it.lx + gsap.getProperty(it.c, 'x'), y: it.ly + gsap.getProperty(it.c, 'y') });
-        Body.setAngle(it.body, gsap.getProperty(it.c, 'rotation') * Math.PI / 180);
-        Body.setVelocity(it.body, { x: 0, y: 0 });
-        Sleeping.set(it.body, false);
-      }
-    },
-  };
-})();
-
-gsap.matchMedia().add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)' }, ctx => {
-  const { narrow } = ctx.conditions;
-  const CX = narrow ? 0.5 : 0.66; // CSS 의 --cx
-  let CY = narrow ? 0.66 : 0.52; // 그림 중심 높이. 좁은 화면은 fit() 이 다시 정한다
-  // 뒤집히는 카드가 있는 동안 그림 층은 SCENE_S.same 배다. 화면에서 원하는 만큼 옮기려면 그 배율로 나눈다
-  const toMidX = () => stage.clientWidth * (0.5 - CX) / SCENE_S.same();
-  const toMidY = () => stage.clientHeight * (0.5 - CY) / SCENE_S.same();
-
-  /* 좁은 화면: 글은 위에 고정이고 그림은 그 아래 남는 공간의 가운데에 둔다.
-     예전에는 그림 중심을 화면 높이의 66% 에 박아 두어, 주소창 때문에 화면이 낮은 폰에서
-     글과 그림이 겹쳤다 (375×640 에서 스크롤 위치 40곳 중 16곳). 그림이 공간보다 크면
-     그 장면 동안만 그림 층을 줄인다 — 가장 큰 장면 하나에 맞추면 전부 절반 크기가 된다 */
-  const HUB_SAVE = 0.86, SYNC_BAND = 44, FR_GAP = 10, S_MIN = 0.62;
-  const saveLayout = () => { // 보관함 장면: 위에서부터 카드 · 동기화 표시 · 기기
-    const hs = $('#hub').offsetHeight * HUB_SAVE, d = $('#devices').offsetHeight, total = hs + SYNC_BAND + d;
-    return { hub: -total / 2 + hs / 2, dev: total / 2 - d / 2, total };
-  };
-  let AVAIL = Infinity;
-  const fit = () => {
-    if (!narrow) return;
-    const VH = stage.clientHeight;
-    const txtBottom = Math.max(...$$('.txt').map(t => t.offsetTop + t.offsetHeight));
-    const top = txtBottom + 14, bottom = VH - 14;
-    CY = (top + bottom) / 2 / VH;
-    AVAIL = bottom - top;
-    stage.style.setProperty('--cy', (CY * 100).toFixed(2) + '%');
-  };
-  // 장면 그림의 중심에서 위·아래로 가장 먼 거리 → 그 장면 배율
-  const fitS = half => () => narrow ? Math.max(S_MIN, Math.min(1, AVAIL / (2 * half()))) : 1;
-  const h = sel => $(sel).offsetHeight;
-  const SCENE_S = {
-    same: fitS(() => 120 + h('.scard') / 2),
-    detail: fitS(() => h('#detail') / 2),
-    search: fitS(() => h('#hub') / 2 + 16 + h('#srch')),
-    save: fitS(() => saveLayout().total / 2),
-    filter: fitS(() => h('#hub') / 2 + Math.max(2 * (FR_GAP + h('.fr')) + 14 + h('#fbar'), 3 * (FR_GAP + h('.fr')))),
-    api: fitS(() => h('#api') / 2),
-    skill: fitS(() => h('#skills') / 2),
-  };
-  fit();
-  ScrollTrigger.addEventListener('refreshInit', fit);
-
-  gsap.set(['.obj', '.mid'], { xPercent: -50, yPercent: -50 });
-  gsap.set('.txt', { yPercent: narrow ? 0 : -50, opacity: 0, y: 24 });
-  gsap.set('.split', { yPercent: narrow ? 0 : -50, opacity: 0 });
-  gsap.set(['#lanes', '.sc', '#flip', '#detail', '#feed', '#srch', '#hub', '#devices', '#flist', '#api', '#skills', '#endWin', '#endCopy'], { opacity: 0 });
-  gsap.set('#flip', { transformPerspective: 1200 });
-  gsap.set('#flipKo', { rotationY: -180 });
-  gsap.set('#sum span', { opacity: 0.12 });
-  gsap.set('#why', { opacity: 0, y: 16 });
-  gsap.set('.feed .grp[data-g="16"], .feed .grp[data-g="08"]', { opacity: 0 });
-  gsap.set('#clockT span:not(:first-child)', { opacity: 0, y: 40 });
-
-  const tl = gsap.timeline({ defaults: { ease: 'none' } });
-  const T = (sel, at, vars) => tl.to(sel, vars, at);
-  const T2 = (sel, at, vars) => { const tw = gsap.to(sel, vars); tl.add(tw, at); return tw; }; // 트윈을 돌려받는다
-  const chipTweens = [];
-  // 결정적 난수 — 화면을 다시 만들어도 같은 막대가 같은 각도로 떨어지게
-  const rnd = i => { const x = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
-  const showTxt = (key, at) => T(`[data-t="${key}"]`, at, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
-  const hideTxt = (key, at) => T(`[data-t="${key}"]`, at, { opacity: 0, y: -24, duration: 0.3, ease: 'power1.in' });
-
-  /* ── 1 → 2. 헤드라인이 빠지고, 칩이 레인으로 빨려 들어간다 ── */
-  T('#heroCopy', 0.5, { y: -90, opacity: 0, duration: 0.5, ease: 'power1.in' });
-  $$('.chip:not(.me)').forEach((c, i) => {
-    const dx = () => stage.clientWidth * CX - (c.offsetLeft + c.offsetWidth / 2);
-    const dy = () => stage.clientHeight * CY - (c.offsetTop + c.offsetHeight / 2);
-    // 시작 자리는 물리가 멈춘 그 순간의 자리다 (물리가 멈출 때 invalidate 해서 다시 읽힌다)
-    chipTweens.push(T2(c, 0.6 + (i % 6) * 0.05, { x: dx, y: dy, rotation: 0, scale: 0.4, opacity: 0, duration: 0.7, ease: 'power2.in' }));
-  });
-  /* 내 칩은 가운데 레인의 한 칸으로 들어가 보라색 막대가 된다.
-     칸은 레인 격자 안에 있으므로 레인과 함께 흐르고, 고르는 순간(PICK)부터 제자리에 선다.
-     어느 칸을 쓸지는 PICK 때 그림 중심에 가장 가까이 오는 칸으로 고른다 — 화면 크기마다 다르다 */
-  const RISE_TOTAL = narrow ? 330 : 620, FLOW_START = 0.9, FLOW_LEN = 2.6;
-  const RISE = RISE_TOTAL / FLOW_LEN;                       // 타임라인 1단위에 레인이 올라가는 거리
-  const PICK = 2.4, BAR_IN = 1.4;
-  const streamY = t => -RISE * (t - FLOW_START);
-  const midLane = $$('.lane')[3], midStream = midLane.querySelector('.stream');
-  const bars = [...midStream.children];
-  $$('.bar.me').forEach(b => b.classList.remove('me'));
-  const pitch = bars[1].offsetTop - bars[0].offsetTop;
-  const lanesTop = () => stage.clientHeight * CY - lanes.offsetHeight / 2;
-  const slotBase = i => lanesTop() + midStream.offsetTop + bars[i].offsetTop + bars[i].offsetHeight / 2; // 레인이 안 움직였을 때
-  // 흐름을 원래 속도로 PICK 까지 두면 그림 중심에 가장 가까이 오는 칸
-  let meIdx = Math.round((stage.clientHeight * CY - slotBase(0) - streamY(PICK)) / pitch);
-  meIdx = Math.max(0, Math.min(bars.length - 1, meIdx));
-  const meBar = bars[meIdx];
-  meBar.classList.remove('pick');
-  meBar.classList.add('me');
-  const slotX = () => stage.clientWidth * CX - lanes.offsetWidth / 2 + midLane.offsetLeft + midLane.offsetWidth / 2;
-
-  // t 시점의 레인 위치. 아래 흐름 트윈과 같은 sine.out 곡선이다
-  const streamAt = t => streamStop() * Math.sin(Math.min(1, Math.max(0, (t - FLOW_START) / (STOP - FLOW_START))) * Math.PI / 2);
-  chipTweens.push(T2(meChip, 0.7, {
-    rotation: 0,
-    x: () => slotX() - (meChip.offsetLeft + meChip.offsetWidth / 2),
-    y: () => slotBase(meIdx) + streamAt(BAR_IN) - (meChip.offsetTop + meChip.offsetHeight / 2),
-    scale: 0.5, duration: BAR_IN - 0.7, ease: 'power2.inOut',
-  }));
-  T(meChip, BAR_IN - 0.05, { opacity: 0, duration: 0.2 });
-  T(meBar, BAR_IN - 0.05, { opacity: 1, duration: 0.2 });
-  // 고르는 순간 세로로 살짝 튄다
-  tl.to(meBar, { scaleY: 1.14, duration: 0.12, ease: 'power2.out' }, PICK);
-  tl.to(meBar, { scaleY: 1, duration: 0.2, ease: 'power2.inOut' }, PICK + 0.12);
-  T('#lanes', 0.9, { opacity: 1, duration: 0.5 });
-  // 레인 전체가 흐르다가 고르는 순간 함께 멈춘다. 멈추는 자리는 내 칸의 중심이 정확히 그림 중심에 오는 곳이다.
-  // 레인이 같이 서야 격자가 어긋나 보이지 않는다
-  const STOP = PICK + 0.3;
-  const streamStop = () => stage.clientHeight * CY - slotBase(meIdx);
-  tl.fromTo('.stream', { y: 0 }, { y: streamStop, duration: STOP - FLOW_START, ease: 'sine.out' }, FLOW_START);
-  showTxt('collect', 1.2);
-
-  /* ── 2. 고르기 ── */
-  T('.lane-h', 2.2, { opacity: 0, y: -20, duration: 0.3 });
-  // 뽑히지 않은 막대는 제각각 기울며 떨어진다. 물리처럼 보이지만 트윈이라 스크롤을 올리면 되돌아온다
-  $$('.bar:not(.pick):not(.me)').forEach((b, i) => {
-    const r = rnd(i), r2 = rnd(i + 999);
-    T(b, 2.2 + r * 0.4, {
-      y: () => stage.clientHeight * (0.7 + r2 * 0.5), x: (r2 - 0.5) * 40,
-      rotation: (r - 0.5) * 70, opacity: 0, duration: 0.55, ease: 'power2.in',
-    });
-  });
-  T('#cntA', 2.4, { opacity: 0, y: -24, duration: 0.25 });
-  tl.fromTo('#cntB', { y: 24 }, { opacity: 1, y: 0, duration: 0.25 }, 2.45);
-  T('#noteA', 2.4, { opacity: 0, duration: 0.2 });
-  T('#noteB', 2.5, { opacity: 1, duration: 0.2 });
-  T('.bar:not(.me)', 3.1, { opacity: 0, duration: 0.35 }); // 내 막대만 남긴다
-  T('#lanes', 3.75, { opacity: 0, duration: 0.01 });
-
-  /* ── 3. 막대가 출처 카드 셋으로 갈라졌다가 하나로 합쳐진다 ── */
-  hideTxt('collect', 3.3);
-  showTxt('same', 3.5);
-  const spread = narrow ? [[0, -120], [0, 0], [0, 120]] : [[-40, -150], [30, 0], [-20, 150]];
-  const depth = narrow ? [[-60, 10, 4], [30, -8, -3], [-30, 8, 4]] : [[-160, 18, 6], [40, -12, -4], [-80, 14, 5]]; // z, rotationY, rotationX
-  gsap.set('.sc', { transformPerspective: 1100 });
-  T(meBar, 3.4, { opacity: 0, duration: 0.2 }); // 같은 자리에서 출처 카드 셋이 커져 나온다
-  $$('.sc').forEach((c, i) => {
-    tl.fromTo(c, { x: 0, y: 0, z: 0, scale: 0.3, rotation: 0, rotationY: 0, rotationX: 0 }, // 막대가 선 자리(그림 중심)에서 나온다
-      { x: spread[i][0], y: spread[i][1], z: depth[i][0], rotationY: depth[i][1], rotationX: depth[i][2], scale: 1, rotation: [-2, 1.5, -1][i], opacity: 1, duration: 0.45, ease: 'power3.out' }, 3.5 + i * 0.06);
-  });
-  T('.sc', 4.6, { x: 0, y: 0, z: 0, rotation: 0, rotationY: 0, rotationX: 0, scale: 0.9, duration: 0.45, ease: 'power2.inOut' });
-  T('.sc', 4.95, { opacity: 0, duration: 0.2 });
-  tl.fromTo('#flip', { scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' }, 4.95);
-
-  /* ── 4. 화면 한가운데로 와서 영어 → 한국어 ── */
-  hideTxt('same', 5.3);
-  T('#flip', 5.4, { x: toMidX, y: toMidY, duration: 0.55, ease: 'power2.inOut' });
-  if (narrow) {
-    tl.fromTo('#splitL', { y: 20 }, { opacity: 1, y: 0, duration: 0.35 }, 5.6);
-    tl.fromTo('#splitR', { y: 20 }, { opacity: 1, y: 0, duration: 0.35 }, 6.5);
-  } else {
-    tl.fromTo('#splitL', { x: 120 }, { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out' }, 5.6);
-    tl.fromTo('#splitR', { x: -120 }, { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out' }, 5.6);
-  }
-  T('#flipEn', 6.3, { rotationY: 180, duration: 0.45, ease: 'power2.inOut' });
-  T('#flipKo', 6.3, { rotationY: 0, duration: 0.45, ease: 'power2.inOut' });
-  T(['#splitL', '#splitR'], 7.0, { opacity: 0, duration: 0.3 });
-
-  /* ── 5. 제자리로 돌아가며 상세로 펼쳐진다 ── */
-  T('#flip', 7.1, { x: 0, y: 0, duration: 0.45, ease: 'power2.inOut' });
-  T('#flip', 7.45, { scale: 1.2, opacity: 0, duration: 0.25 });
-  tl.fromTo('#detail', { scale: 0.7, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 7.45);
-  showTxt('sum', 7.3);
-  T('#sum span', 7.9, { opacity: 1, stagger: 0.3, duration: 0.25 });
-  hideTxt('sum', 9.0);
-  showTxt('why', 9.2);
-  T('#why', 9.2, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
-
-  /* ── 6. 밤으로: 상세가 접히며 00시 회차 첫 줄이 된다 ── */
-  hideTxt('why', 10.0);
-  T(stage, 10.0, { backgroundColor: '#15151b', duration: 0.8 });
-  T('#head', 10.0, { backgroundColor: 'rgba(21,21,27,.78)', borderBottomColor: 'rgba(255,255,255,.06)', color: '#f4f4f6', duration: 0.8 });
-  T('#head .cta', 10.0, { backgroundColor: '#7c6ee6', duration: 0.8 }); // 어두운 바 위에서 검은 버튼이 묻히지 않게
-  T('#detail', 10.1, { scale: 0.85, y: 40, opacity: 0, duration: 0.45, ease: 'power2.in' });
-  // 지금 보여 줄 회차 무리가 그림 중심에 오도록 목록 전체를 옮긴다
-  const feedTo = g => () => {
-    const f = $('#feed'), grp = f.querySelector(`.grp[data-g="${g}"]`);
-    return f.offsetHeight / 2 - (grp.offsetTop + grp.offsetHeight / 2);
-  };
-  tl.fromTo('#feed', { y: feedTo('00') }, { y: feedTo('00'), opacity: 1, duration: 0.4 }, 10.4);
-  showTxt('clock', 10.6);
-  const ts = $$('#clockT span');
-  [['08', 11.6, 1, '#1c1f31'], ['16', 12.6, 2, '#262033']].forEach(([g, at, k, bg]) => {
-    T(ts[k - 1], at, { opacity: 0, y: -40, duration: 0.3 });
-    T(ts[k], at + 0.1, { opacity: 1, y: 0, duration: 0.3 });
-    // 새 회차 무리는 목록 위쪽(글 자리)에서 내려온다. 좁은 화면은 글과 붙어 있어서 다 내려온 뒤에 보인다
-    T(`.feed .grp[data-g="${g}"]`, narrow ? at + 0.45 : at, { opacity: 1, duration: narrow ? 0.2 : 0.35 });
-    T('#feed', at, { y: feedTo(g), duration: 0.6, ease: 'power2.inOut' });
-    T(stage, at, { backgroundColor: bg, duration: 0.6 });
-  });
-
-  /* ── 7. 다시 밝아지고, 카드 한 장을 가운데 두고 기능이 붙었다 떨어진다 ── */
-  hideTxt('clock', 13.4);
-  T(stage, 13.5, { backgroundColor: '#f4f4f6', duration: 0.8 });
-  T('#head', 13.5, { backgroundColor: 'rgba(244,244,246,.8)', borderBottomColor: 'rgba(231,231,236,1)', color: '#1c1c22', duration: 0.8 });
-  T('#head .cta', 13.5, { backgroundColor: '#1c1c22', duration: 0.8 });
-  /* 00시 회차 첫 카드가 가운데 카드가 된다. 나머지를 먼저 지우고 그 카드만 그림
-     중심으로 옮긴 뒤, 같은 자리에서 가운데 카드로 바꿔 끼운다. 예전에는 목록 전체가
-     움직이며 흐려지는 동안 가운데 카드가 아래에서 따로 떠올라 두 장면이 겹쳐 보였다. */
-  const feedToFirst = () => {
-    const f = $('#feed'), r = f.querySelector('.grp[data-g="00"] .row');
-    return f.offsetHeight / 2 - (r.offsetTop + r.offsetHeight / 2);
-  };
-  T(['.feed .grp[data-g="16"]', '.feed .grp[data-g="08"]', '.feed .grp[data-g="00"] .gh', '.feed .grp[data-g="00"] .skel'],
-    13.5, { opacity: 0, duration: 0.3 });
-  T('#feed', 13.5, { y: feedToFirst, duration: 0.6, ease: 'power2.inOut' });
-  // 한 번에 바꿔 낀다. 흐리게 겹치면 체크 칸 폭만큼 어긋난 글자가 두 겹으로 보인다
-  tl.fromTo('#hub', { y: 0 }, { opacity: 1, duration: 0.01 }, 14.1);
-  T('#feed', 14.1, { opacity: 0, duration: 0.01 });
-  // 카드 위·아래 자리. 고정 픽셀로 두면 필터 칩처럼 줄바꿈으로 키가 커지는 것이 카드를 덮는다.
-  // 카드 반 높이 + 간격 + 자기 반 높이로 잡아 어떤 폭에서도 카드 가장자리에 붙는다
-  const GAP = 16;
-  const hubHalf = () => $('#hub').offsetHeight / 2;
-  const above = sel => () => -(hubHalf() + GAP + $(sel).offsetHeight / 2);
-  const below = sel => () => hubHalf() + GAP + $(sel).offsetHeight / 2;
-  const away = (fn, d) => () => fn() + d; // 들어오기 전 자리: 카드에서 더 먼 쪽
-
-  showTxt('search', 14.1);
-  tl.fromTo('#srch', { y: away(above('#srch'), -24) }, { y: above('#srch'), opacity: 1, duration: 0.35 }, 14.2);
-  T('#q span', 14.5, { opacity: 1, stagger: 0.05, duration: 0.02 });
-  hideTxt('search', 15.1);
-  T('#srch', 15.1, { opacity: 0, y: away(above('#srch'), -24), duration: 0.3 });
-
-  /* ── 보관함: 체크하면 노트북과 휴대폰 보관함에 같이 들어간다 ── */
-  showTxt('save', 15.3);
-  const hubUp = () => narrow ? saveLayout().hub : -170;
-  T('#hub', 15.3, { y: hubUp, scale: HUB_SAVE, duration: 0.4, ease: 'power2.inOut' });
-  T('#hubCk', 15.5, { backgroundColor: '#7c6ee6', borderColor: '#7c6ee6', duration: 0.12 });
-  T('#hubCk svg', 15.5, { opacity: 1, duration: 0.12 });
-  const devY = () => (narrow ? saveLayout().dev : 130);
-  gsap.set('#devices', { transformPerspective: 1400 });
-  tl.fromTo('#devices', { y: () => devY() + 80, rotationX: 24 }, { y: devY, rotationX: 0, opacity: 1, duration: 0.45, ease: 'power3.out' }, 15.55);
-  gsap.set(['#msLap', '#msPh'], { opacity: 0 });
-  // 가운데 카드 쪽(위)에서 떨어지듯 들어온다
-  tl.fromTo('#msLap', { y: -120, x: 40, scale: 1.6, opacity: 0 }, { y: 0, x: 0, scale: 1, opacity: 1, duration: 0.35, ease: 'power3.out' }, 15.85);
-  gsap.set('#sync', { opacity: 0 });
-  T('#sync', 15.95, { opacity: 1, duration: 0.15 });
-  $$('#sync .dots i').forEach((d, i) => {
-    tl.fromTo(d, { x: 0, opacity: 0 }, { x: 84, opacity: 1, duration: 0.3, ease: 'power1.inOut' }, 16.0 + i * 0.07);
-    T(d, 16.3 + i * 0.07, { opacity: 0, duration: 0.08 });
-  });
-  tl.fromTo('#msPh', { x: -90, scale: 1.3, opacity: 0 }, { x: 0, scale: 1, opacity: 1, duration: 0.3, ease: 'power3.out' }, 16.3);
-  hideTxt('save', 16.85);
-  T('#devices', 16.85, { opacity: 0, y: () => devY() + 60, duration: 0.3, ease: 'power1.in' });
-  T('#hub', 16.85, { y: 0, scale: 1, duration: 0.35, ease: 'power2.inOut' });
-
-  /* ── 거르기: 커서가 필터를 눌러 목록이 줄어든다 ── */
-  // 가운데 카드를 목록의 한 줄로 두고 위아래로 다른 기사들을 쌓는다. 줄 위치는 늘 계산으로 잡는다
-  const frH = () => $('.fr').offsetHeight;
-  const rowsAbove = [0, 1], rowsBelow = [2, 3, 4];
-  const layout = visible => {
-    const pos = {}, H = $('#hubRow').offsetHeight, h = frH();
-    let y = -(H / 2 + FR_GAP + h / 2);
-    [...rowsAbove].reverse().forEach(r => { if (visible.includes(r)) { pos[r] = y; y -= h + FR_GAP; } });
-    y = H / 2 + FR_GAP + h / 2;
-    rowsBelow.forEach(r => { if (visible.includes(r)) { pos[r] = y; y += h + FR_GAP; } });
-    return pos;
-  };
-  const ALL = [0, 1, 2, 3, 4], AFTER_HN = [0, 3, 4], AFTER_READ = [0, 4];
-  const fr = r => $(`.fr[data-r="${r}"]`);
-  const barY = () => layout(ALL)[0] - frH() / 2 - 14 - $('#fbar').offsetHeight;
-  gsap.set('.fr', { opacity: 0 });
-  showTxt('filter', 17.1);
-  T('#flist', 17.1, { opacity: 1, duration: 0.01 });
-  tl.fromTo('#fbar', { y: () => barY() - 20, opacity: 0 }, { y: barY, opacity: 1, duration: 0.3, ease: 'power2.out' }, 17.15);
-  ALL.forEach((r, i) => tl.fromTo(fr(r), { y: () => layout(ALL)[r] + 16 }, { y: () => layout(ALL)[r], opacity: 1, duration: 0.25, ease: 'power2.out' }, 17.2 + i * 0.04));
-  // 커서: 필터 바 안 좌표로 움직인다
-  const curTo = sel => ({ x: () => { const e = $(sel); return e.offsetLeft + e.offsetWidth * 0.55; }, y: () => { const e = $(sel); return e.offsetTop + e.offsetHeight * 0.6; } });
-  tl.fromTo('#cur', { x: () => $('#fbar').offsetWidth + 30, y: () => $('#fbar').offsetHeight + 40, opacity: 0 }, { ...curTo('#fHN'), opacity: 1, duration: 0.35, ease: 'power2.inOut' }, 17.5);
-  T('#cur', 17.85, { scale: 0.8, duration: 0.05 }); T('#cur', 17.9, { scale: 1, duration: 0.08 });
-  T('#fHN', 17.88, { backgroundColor: '#ffffff', color: '#a3a3b0', boxShadow: '0 0 0 1px #e7e7ec', duration: 0.08 });
-  [1, 2].forEach(r => T(fr(r), 17.95, { opacity: 0, x: 40, scaleY: 0.7, duration: 0.2, ease: 'power2.in' }));
-  AFTER_HN.forEach(r => T(fr(r), 18.1, { y: () => layout(AFTER_HN)[r], duration: 0.3, ease: 'power3.inOut' }));
-  tl.to('#cur', { ...curTo('#fTogSw'), duration: 0.35, ease: 'power2.inOut' }, 18.4);
-  T('#cur', 18.78, { scale: 0.8, duration: 0.05 }); T('#cur', 18.83, { scale: 1, duration: 0.08 });
-  T('#fTogSw', 18.8, { backgroundColor: '#7c6ee6', '--k': '14px', duration: 0.12 });
-  T(fr(3), 18.9, { opacity: 0, x: 40, scaleY: 0.7, duration: 0.2, ease: 'power2.in' });
-  AFTER_READ.forEach(r => T(fr(r), 19.05, { y: () => layout(AFTER_READ)[r], duration: 0.3, ease: 'power3.inOut' }));
-  hideTxt('filter', 19.5);
-  T('#flist', 19.5, { opacity: 0, duration: 0.3 });
-
-  /* ── 무료 API: 가운데 앱과 바깥 서비스가 선으로 이어지고 데이터가 오간다. 한 곳은 끊겨 빠진다 ── */
-  T('#hub', 19.55, { y: -40, scale: 0.94, opacity: 0, duration: 0.3, ease: 'power1.in' });
-  showTxt('api', 19.7);
-  T('#api', 19.75, { opacity: 1, duration: 0.01 });
-  const apiN = $('#apiN');
-  tl.fromTo('#netCore rect, #netCore text', { opacity: 0 }, { opacity: 1, duration: 0.2 }, 19.8);
-  const lns = $$('#net .ln:not(.cut)'), nds = $$('#net .nd'), pkEls = $$('#net .pk');
-  // 선 i 가 다 그어진 뒤에만 그 선의 점을 보인다. 선은 19.98 + i*0.04 에서 0.25 동안 그어진다
-  const LINE_AT = i => 19.98 + i * 0.04, LINE_LEN = 0.25;
-  lns.forEach((l, i) => {
-    const len = l.getTotalLength();
-    gsap.set(l, { attr: { 'stroke-dasharray': len, 'stroke-dashoffset': len } });
-    // 바깥 노드가 먼저 뜨고, 선이 가운데로 그어진다
-    tl.fromTo(nds[i].querySelector('.body'), { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: 0.2, ease: 'power3.out' }, 19.9 + i * 0.04);
-    tl.fromTo(nds[i].querySelector('.lb'), { opacity: 0 }, { opacity: 1, duration: 0.15 }, 19.98 + i * 0.04);
-    tl.to(l, { attr: { 'stroke-dashoffset': 0 }, duration: LINE_LEN, ease: 'power2.inOut' }, LINE_AT(i));
-  });
-  // 데이터 점: 보라 = 요청(앱 → 서비스), 파랑 = 응답(서비스 → 앱). 스크롤 위치의 함수라 되감아도 같은 자리에 온다
-  const lens = lns.map(l => l.getTotalLength());
-  const flow = { t: 0 }, cutK = { k: 1 };
-  const ready = NET_NODES.map(() => 0);
-  const drawPk = () => {
-    pkEls.forEach((c, j) => {
-      const i = +c.dataset.i, out = c.classList.contains('out');
-      const f = (flow.t + i * 0.137 + (out ? 0 : 0.5)) % 1;
-      const pt = lns[i].getPointAtLength((out ? 1 - f : f) * lens[i]);
-      c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y);
-      const vis = flow.t > 0 ? Math.sin(Math.PI * f) : 0;
-      c.setAttribute('opacity', (vis * ready[i] * (i === NET_DEAD ? cutK.k : 1)).toFixed(3));
-    });
-  };
-  drawPk();
-  // 끊김: 선이 빨간 점선으로 바뀌고 점이 멈추고, 노드가 흐려졌다가 빠진다
-  gsap.set('#netBadge', { opacity: 0 });
-  T(lns[NET_DEAD], 20.55, { opacity: 0, duration: 0.1 });
-  T('#netCut', 20.55, { opacity: 1, duration: 0.1 });
-  tl.fromTo('#netBadge', { y: -38 }, { opacity: 1, y: -44, duration: 0.15, ease: 'power2.out' }, 20.6); // 노드 위 44px 자리
-  T(nds[NET_DEAD].querySelector('.body'), 20.85, { scale: 0.6, transformOrigin: '50% 50%', duration: 0.2, ease: 'power2.in' });
-  T(nds[NET_DEAD], 20.85, { opacity: 0, duration: 0.2 });
-  T('#netCut', 20.85, { opacity: 0, duration: 0.2 });
-  hideTxt('api', 21.1);
-  T('#api', 21.1, { opacity: 0, y: -30, duration: 0.3 });
-
-  /* 숫자와 데이터 점은 트윈 대신 스크롤 위치에서 바로 계산한다.
-     트윈의 onUpdate 는 스크롤이 한 번에 크게 뛰면 불리지 않아 숫자가 0 에 멈춰 있곤 했다 */
-  const clamp01 = x => Math.max(0, Math.min(1, x));
-  var derived = t => {
-    const a = clamp01((t - 19.9) / 0.6), n = Math.round(2000 * (1 - (1 - a) * (1 - a))); // power2.out
-    apiN.textContent = n.toLocaleString('ko-KR') + (n >= 2000 ? '+' : ''); // 실제 숫자는 회차마다 바뀌어 2,000+ 로 둥글린다
-    flow.t = 3 * clamp01((t - 20.05) / 1.05);
-    ready.forEach((_, i) => { ready[i] = clamp01((t - LINE_AT(i) - LINE_LEN) / 0.08); });
-    cutK.k = 1 - clamp01((t - 20.55) / 0.1);
-    if (t > 19.7 && t < 21.5) drawPk();
-    const v = 15.4 + (24.9 - 15.4) * clamp01((t - 22.05) / 0.35);
-    upN.textContent = v.toFixed(1) + 'K';
-  };
-
-  /* ── 스킬 순위: 막대가 자라고, 4위가 2위로 올라선다 ── */
-  showTxt('skill', 21.3);
-  const PITCH = 56;
-  const rows = $$('.sk-row');
-  rows.forEach((r, i) => gsap.set(r, { y: i * PITCH }));
-  gsap.set('.sk-row .bar2', { scaleX: 0 });
-  tl.fromTo('#skills', { y: 40, rotationX: 18, transformPerspective: 1400 }, { y: 0, rotationX: 0, opacity: 1, duration: 0.4, ease: 'power3.out' }, 21.35);
-  T('.sk-row .bar2', 21.55, { scaleX: 1, stagger: 0.05, duration: 0.35, ease: 'power2.out' });
-  const up = rows[3], upBar = up.querySelector('.bar2'), upN = up.querySelector('.n');
-
-  T(upBar, 22.05, { scaleX: 24.9 / 15.4, duration: 0.35, ease: 'power2.inOut' });
-  T(up, 22.35, { y: PITCH, zIndex: 2, duration: 0.35, ease: 'power3.inOut' });
-  T(rows[1], 22.35, { y: 2 * PITCH, duration: 0.35, ease: 'power3.inOut' });
-  T(rows[2], 22.35, { y: 3 * PITCH, duration: 0.35, ease: 'power3.inOut' });
-  T(up.querySelector('.up'), 22.55, { opacity: 1, duration: 0.15 });
-  hideTxt('skill', 22.9);
-  T('#skills', 22.9, { opacity: 0, y: -30, duration: 0.3 });
-
-  /* ── 끝: dev-news 창 하나가 누운 채 올라와 일어서고, 화면을 채운 뒤 마지막 문구가 뜬다.
-     첫 줄은 처음부터 따라온 그 카드다. 가운데 카드를 다시 띄우지 않는다 — 같은 화면이 두 번 나와 보였다 ── */
-  gsap.set('#endWin', { transformPerspective: 1600, transformOrigin: '50% 60%' });
-  tl.fromTo('#endWin', { scale: 0.5, rotationX: 38, y: 80 }, { opacity: 1, scale: narrow ? 0.94 : 0.86, rotationX: 0, y: 0, duration: 0.6, ease: 'power2.out' }, 23.0);
-  T('#endWin', 23.7, { scale: narrow ? 1.12 : 1.22, duration: 0.5, ease: 'power2.inOut' });
-  T('#endVeil', 23.9, { opacity: 1, duration: 0.3 });
-  tl.fromTo('#endCopy', { y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, 24.0);
-  tl.to({}, { duration: 0.5 }, 24.3);
-
-  // 장면이 바뀌는 틈에 그림 층 배율을 바꾼다 (좁은 화면만 1 이 아니다)
-  [[3.4, SCENE_S.same], [7.3, SCENE_S.detail], [10.1, () => 1], [14.25, SCENE_S.search], [15.2, SCENE_S.save],
-   [16.9, SCENE_S.filter], [19.55, SCENE_S.api], [21.2, SCENE_S.skill], [22.9, () => 1]]
-    .forEach(([at, sc]) => T('#art', at, { scale: sc, duration: 0.2 }));
-
-  /* 스크롤 → 타임라인 시각. 예전에는 둘을 곧게 이어서 1단위 = 약 800px 였다. 그러면 아무것도
-     움직이지 않는 구간(글만 떠 있는 동안)은 한참 내려야 하고, 트윈이 몰린 구간(고르기 2.2~2.5 등)은
-     살짝만 내려도 확 지나갔다. 트윈이 도는 시간은 스크롤을 1 만큼, 쉬는 시간은 IDLE 만큼 쓰게 한다 */
-  const IDLE = 0.45, STEP = 0.01, DUR = tl.duration();
-  const busy = new Float32Array(Math.ceil(DUR / STEP) + 1);
-  tl.getChildren(false, true, false).forEach(tw => {
-    const a = Math.floor(tw.startTime() / STEP), b = Math.ceil(tw.endTime() / STEP);
-    for (let i = Math.max(0, a); i < Math.min(busy.length, b); i++) busy[i] = 1;
-  });
-  const cum = new Float32Array(busy.length + 1);
-  busy.forEach((v, i) => { cum[i + 1] = cum[i] + (v ? 1 : IDLE); });
-  const total = cum[cum.length - 1];
-  const timeAt = p => { // 스크롤 진행률 0~1 → 타임라인 시각
-    const want = p * total; let lo = 0, hi = cum.length - 1;
-    while (hi - lo > 1) { const m = (lo + hi) >> 1; if (cum[m] <= want) lo = m; else hi = m; }
-    const seg = cum[hi] - cum[lo] || 1;
-    return Math.min(DUR, (lo + (want - cum[lo]) / seg) * STEP);
-  };
-
-  const dots = [...prog.children];
-  const endCopy = $('#endCopy'), heroCopy = $('#heroCopy');
-  tl.pause();
-  tl.eventCallback('onUpdate', () => {
-    const t = tl.time();
-    let k = 0; MARKS.forEach((m, i) => { if (t >= m) k = i; });
-    dots.forEach((d, i) => d.classList.toggle('on', i === k));
-    prog.classList.toggle('dark', t > 10.3 && t < 13.8);
-    // 투명한 동안에는 버튼이 눌리지 않게 한다
-    endCopy.style.pointerEvents = t > 24.0 ? 'auto' : 'none';
-    heroCopy.style.pointerEvents = t < 0.8 ? 'auto' : 'none';
-    physics.setActive(t < 0.5, chipTweens);
-    derived(t);
-  });
-  // scrub 대신 직접 따라간다 — 스크롤이 멈춰도 1초 동안 부드럽게 따라붙는다
-  const st = ScrollTrigger.create({
-    trigger: '#story', start: 'top top', end: 'bottom bottom',
-    onUpdate: s => gsap.to(tl, { time: timeAt(s.progress), duration: 1, ease: 'power3.out', overwrite: true }),
-    // 크기가 바뀌면 함수로 준 값(자리 계산)을 다시 읽는다. 처음 상태로 되감은 뒤에 해야
-    // to 트윈이 중간 상태를 시작값으로 잡지 않는다
-    onRefresh: s => { gsap.killTweensOf(tl); tl.time(0); tl.invalidate(); tl.time(timeAt(s.progress)); },
-  });
-  return () => { ScrollTrigger.removeEventListener('refreshInit', fit); st.kill(); };
+/* 1. 모으기: 일곱 출처 칩이 화면 둘레에 뜨고, 기사가 한 장씩 목록 위로 떨어진다 */
+chIn('#c1', 1.6);
+const CHIP_KEYS = ['hn', 'gh', 'lob', 'devto', 'gn', 'rss', 'anth'];
+const CHIP_POS = narrow ? [[-.3, -.42], [.28, -.32], [-.32, -.12], [.3, -.02], [-.28, .18], [.3, .28], [0, .4]]
+  : [[-.46, -.6], [0, -.68], [.4, -.62], [.46, -.18], [.44, .3], [.24, .64], [-.24, .66]];
+const chips = CHIP_KEYS.map((k, i) => {
+  const e = document.createElement('div'); e.className = 'schip';
+  e.innerHTML = `<i style="background:${SRC[k][1]}"></i>${SRC[k][0]}`; $('#s3d').appendChild(e);
+  gsap.set(e, { xPercent: -50, yPercent: -50, transformPerspective: 1000 });
+  return e;
 });
+const cpos = i => ({ x: () => CHIP_POS[i][0] * DW * K, y: () => CHIP_POS[i][1] * DH * K + (narrow ? -DH * K * .5 : 0) });
+chips.forEach((c, i) => tl.fromTo(c, { autoAlpha: 0, scale: .5, z: -200, ...cpos(i) }, { autoAlpha: 1, scale: 1, z: 60, duration: .4, ease: 'back.out(1.7)' }, 1.7 + i * .06));
+tl.to(rows, { opacity: 0, y: -24, duration: .25, stagger: .02 }, 1.6);
+tl.set('#stL', { textContent: '수집 중…' }, 1.9);
+const ORDER = [0, 1, 2, 3, 4, 5, 6];
+ORDER.forEach((ri, j) => {
+  const at = 2.1 + j * .14, k = FEED[ri].k, ci = Math.max(0, CHIP_KEYS.indexOf(k === 'dn' ? 'gn' : k));
+  tl.to(chips[ci], { scale: 1.18, duration: .07, yoyo: true, repeat: 1 }, at - .05);
+  tl.fromTo(rows[ri], { opacity: 0, y: -40, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .3, ease: 'power3.out', immediateRender: false }, at);
+});
+tl.set('#stL', { textContent: '수집 완료' }, 3.1);
+chips.forEach((c, i) => tl.to(c, { autoAlpha: 0, scale: .6, z: -150, x: 0, y: narrow ? -DH * K * .5 : 0, duration: .35, ease: 'power2.in' }, 3.25 + i * .03));
+chOut('#c1', 3.3);
+Mo(2, 3.4, 1);
 
-/* 상세·가운데 카드·뒤집히는 카드는 마우스를 따라 살짝 기운다 (하네스 기준 4도 미만) */
-if (matchMedia('(pointer: fine)').matches) {
-  const tiltEls = ['#detail', '#hub', '#flip'].map(s => $(s));
-  gsap.set(tiltEls, { transformPerspective: 1200 });
-  const setters = tiltEls.map(e => [
-    gsap.quickTo(e, 'rotationY', { duration: 0.6, ease: 'power3' }),
-    gsap.quickTo(e, 'rotationX', { duration: 0.6, ease: 'power3' }),
-  ]);
-  // 출처 카드 셋: 앞에 있는 카드일수록 더 많이 따라온다 (깊이 z 가 큰 순서 — 긱뉴스 > Lobste.rs > Hacker News)
-  const cards = $$('.scard');
-  gsap.set(cards, { transformPerspective: 1100 });
-  const DEPTH = [0.55, 1.25, 0.85];
-  const cardSetters = cards.map(e => ['x', 'y', 'rotationY', 'rotationX'].map(p => gsap.quickTo(e, p, { duration: 0.8, ease: 'power3' })));
-  stage.addEventListener('pointermove', ev => {
-    const nx = ev.clientX / innerWidth * 2 - 1, ny = ev.clientY / innerHeight * 2 - 1;
-    setters.forEach(([ry, rx]) => { ry(nx * 3.5); rx(-ny * 2.5); });
-    cardSetters.forEach(([sx, sy, ry, rx], i) => { const d = DEPTH[i]; sx(nx * 16 * d); sy(ny * 10 * d); ry(nx * 3.5 * d); rx(-ny * 2.5 * d); });
+/* 2. 고르기: 촘촘한 목록에서 뽑히지 않은 줄이 화면 밖으로 떨어진다 */
+chIn('#c2', 3.8);
+W(3.4, { rotationY: narrow ? 0 : -5, rotationX: 3 }, .8);
+tl.to('#feed', { autoAlpha: 0, duration: .25 }, 3.5);
+tl.set('#facet', { opacity: .35 }, 3.5);
+tl.to('#dense', { autoAlpha: 1, duration: .01 }, 3.6);
+const mrows = $$('.mrow');
+tl.fromTo(mrows, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .2, stagger: .012, ease: 'power2.out' }, 3.6);
+const rr = i => { const x = Math.sin(i * 91.7) * 43758.5; return x - Math.floor(x); };
+mrows.forEach((m, i) => {
+  if (PICK.includes(i)) return;
+  tl.to(m, { y: () => 420 + rr(i) * 300, z: 200 + rr(i + 3) * 300, x: (rr(i + 7) - .5) * 160, rotationX: -40 - rr(i) * 60, rotationZ: (rr(i + 1) - .5) * 50, opacity: 0, duration: .55, ease: 'power2.in' }, 4.15 + rr(i + 11) * .35);
+});
+// 남은 여섯 줄이 앞자리로 모이며 보라 테두리를 두른다
+PICK.forEach((pi, j) => {
+  const m = mrows[pi], tgt = mrows[j];
+  tl.to(m, { x: () => tgt.offsetLeft - m.offsetLeft, y: () => tgt.offsetTop - m.offsetTop, boxShadow: '0 0 0 2px #7c6ee6, 0 8px 20px -8px rgba(124,110,230,.6)', duration: .45, ease: 'power3.inOut' }, 4.8 + j * .03);
+});
+chOut('#c2', 5.5);
+
+/* 3. 합치기: 세 곳에 올라온 같은 소식이 화면에서 튀어나와 한 장으로 겹쳐진다 */
+tl.to('#dense', { autoAlpha: 0, duration: .3 }, 5.6);
+W(5.6, narrow ? { z: -300, opacity: .2 } : { z: -420, rotationY: 16, rotationX: 4, x: () => innerWidth * .06, opacity: .28 }, 1);
+W(11.2, { opacity: narrow ? .08 : .1, z: -560 }, .5);
+chIn('#c3', 6.0);
+const flys = ['#fly0', '#fly1', '#fly2'].map(s => $(s));
+const FAN = narrow ? [[0, -210, -60, 0, 0], [0, -110, 0, 0, 0], [0, -10, 60, 0, 0]] : [[-40, -190, -140, 10, -3], [50, 0, 0, -6, 2], [-10, 190, 140, 8, -2]];
+flys.forEach((f, i) => {
+  tl.fromTo(f, { autoAlpha: 0, x: 0, y: narrow ? -140 : 0, z: -500, rotationY: -30, rotationX: 20, scale: .7 },
+    { autoAlpha: 1, x: FAN[i][0], y: FAN[i][1] + (narrow ? -14 : 0), z: FAN[i][2], rotationY: FAN[i][3], rotationZ: FAN[i][4], rotationX: 0, scale: narrow ? .92 : .96, duration: .6, ease: 'power3.out' }, 6.1 + i * .1);
+});
+tl.to(flys, { x: 0, y: narrow ? -110 : 0, z: 0, rotationY: 0, rotationZ: 0, duration: .5, ease: 'power3.inOut' }, 7.0);
+tl.to(flys, { autoAlpha: 0, duration: .15 }, 7.45);
+tl.fromTo('#flyM', { autoAlpha: 0, y: narrow ? -110 : 0, scale: .96 }, { autoAlpha: 1, scale: narrow ? .92 : 1, duration: .15 }, 7.45);
+tl.fromTo('#flyM .merged', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 7.6);
+chOut('#c3', 8.3);
+
+/* 4. 번역: 제목이 그 자리에서 영어 → 한국어로 풀린다 */
+chIn('#c4', 8.8);
+tl.to('#flyM', { scale: narrow ? .96 : 1.14, y: narrow ? -110 : -20, duration: .6, ease: 'power3.inOut' }, 8.6);
+// 영어 글자가 왼쪽부터 흐려지며 위로 빠지고, 한국어 글자가 뒤따라 아래에서 떠오른다
+const enC = $$('#flyM .xen .c'), koC = $$('#flyM .xko .c');
+gsap.set(koC, { opacity: 0, yPercent: 70, filter: 'blur(6px)' });
+gsap.set('#xlKO', { opacity: 0 });
+tl.to(enC, { opacity: 0, yPercent: -70, filter: 'blur(6px)', duration: .28, stagger: { each: .55 / enC.length }, ease: 'power2.in' }, 9.4);
+tl.to(koC, { opacity: 1, yPercent: 0, filter: 'blur(0px)', duration: .34, stagger: { each: .55 / koC.length }, ease: 'power3.out' }, 9.62);
+tl.to('#xlEN', { opacity: 0, duration: .15 }, 9.8);
+tl.to('#xlKO', { opacity: 1, duration: .15 }, 9.85);
+chOut('#c4', 11.1);
+
+/* 5·6. 요약: 카드가 요약 창으로 펼쳐진다 */
+tl.to('#flyM', { autoAlpha: 0, scale: narrow ? 1 : 1.2, duration: .3 }, 11.3);
+tl.fromTo('#drawer', { autoAlpha: 0, scaleY: .35, scaleX: .96, y: narrow ? -14 : 0, transformOrigin: '50% 30%' }, { autoAlpha: 1, scaleY: narrow ? .92 : 1, scaleX: narrow ? .92 : 1, duration: .5, ease: 'power3.out' }, 11.35);
+chIn('#c5', 11.8);
+tl.to('#sum span', { opacity: 1, backgroundSize: '100% 34%', duration: .35, stagger: .35, ease: 'power1.inOut' }, 12.3);
+chOut('#c5', 13.5);
+chIn('#c6', 13.9);
+tl.fromTo('#why', { opacity: 0, y: 20, z: 0 }, { opacity: 1, y: 0, duration: .4, ease: 'power3.out' }, 13.95);
+tl.to('#why', { boxShadow: '0 0 0 2px #7c6ee6, 0 20px 50px -15px rgba(124,110,230,.6)', duration: .3 }, 14.3);
+tl.to('#sum span', { opacity: .45, duration: .3 }, 14.2);
+chOut('#c6', 15.1);
+tl.to('#drawer', { autoAlpha: 0, scale: .9, y: narrow ? 40 : 60, duration: .4, ease: 'power2.in' }, 15.1);
+
+/* 7. 밤: 회차가 하나씩 목록 위에 쌓인다 */
+tl.set('#feed', { autoAlpha: 1 }, 15.1);
+tl.set('#facet', { opacity: 1 }, 15.1);
+tl.set([grp('16'), grp('08')], { height: 0, opacity: 0 }, 15.1);
+W(15.2, { z: 0, x: 0, opacity: 1, rotationY: narrow ? 0 : -8, rotationX: 4, scale: 1 }, 1);
+tl.to(S, { night: 1, duration: .8 }, 15.2);
+Mo(3, 15.2, 1);
+chIn('#c7', 15.8);
+const clk = $$('#clkT span');
+[['08', 16.8, 1], ['16', 18.0, 2]].forEach(([g, at, k]) => {
+  tl.to(clk[k - 1], { yPercent: -100, opacity: 0, duration: .35, ease: 'power2.in' }, at);
+  tl.to(clk[k], { yPercent: 0, opacity: 1, duration: .35, ease: 'power2.out' }, at + .2);
+  tl.set('#stR', { textContent: `${g}:00 회차` }, at);
+  tl.set('#stL', { textContent: '새 회차 도착' }, at);
+  tl.to(grp(g), { height: () => grp(g).scrollHeight, opacity: 1, duration: .5, ease: 'power3.out' }, at + .1);
+  tl.fromTo(grp(g).querySelectorAll('.row'), { y: -30, rotationX: -25, opacity: 0 }, { y: 0, rotationX: 0, opacity: 1, duration: .4, stagger: .08, ease: 'power3.out', immediateRender: false }, at + .25);
+});
+tl.set('#stR', { textContent: '00:00 회차' }, 15.15);
+chOut('#c7', 19.3);
+tl.to(S, { night: 0, duration: .8 }, 19.4);
+tl.set('#stL', { textContent: '수집 완료' }, 19.4);
+tl.set([grp('16'), grp('08')], { height: 'auto' }, 19.35);
+
+/* 8. 찾기 · 보관 · 거르기: 카메라가 화면 속으로 들어가 직접 눌러 본다 */
+Mo(4, 19.4, 1);
+chIn('#c8', 19.9);
+const ZS = narrow ? 1.35 : 1.75;
+W(19.6, focusOn('#search', ZS), .6);
+tl.to(fcur, { opacity: 1, duration: .15 }, 19.9);
+curTo('#search', 19.95);
+click(20.3, '#search');
+tl.to('#qph', { opacity: 0, duration: .05 }, 20.35);
+tl.to('#qc', { opacity: 1, duration: .05 }, 20.35);
+tl.to(rows.filter(r => r !== meRow), { opacity: .25, duration: .25 }, 20.9);
+tl.to(meRow, { boxShadow: '0 0 0 2px #7c6ee6, 0 10px 30px -10px rgba(124,110,230,.5)', duration: .25 }, 20.9);
+// 체크 → 보관함 → 휴대폰
+W(21.2, focusOn('#feed .row[data-i="0"]', narrow ? 1.2 : 1.35), .5);
+curTo('#feed .row[data-i="0"] .ck', 21.35);
+click(21.65, '#feed .row[data-i="0"] .ck');
+tl.to(meRow.querySelector('.ck'), { backgroundColor: '#7c6ee6', borderColor: '#7c6ee6', duration: .08 }, 21.68);
+tl.to(meRow.querySelector('.ck svg'), { opacity: 1, duration: .08 }, 21.68);
+tl.to('#savedDot', { scale: 1, duration: .2, ease: 'back.out(3)' }, 21.75);
+W(21.8, { x: narrow ? 0 : () => -innerWidth * .08, y: narrow ? -14 : 0, scale: narrow ? .9 : .92, rotationY: narrow ? 0 : 10, rotationX: 2, z: -60 }, .55);
+tl.to(rows, { opacity: 1, duration: .2 }, 21.9);
+tl.to(meRow, { boxShadow: '0 0 0 1px rgba(25,28,33,.06),0 6px 6px -3px rgba(0,0,0,.03)', duration: .2 }, 21.9);
+const PHX = () => narrow ? innerWidth * .22 : Math.min(DW * K * .42, innerWidth * (1 - CX) - 120), PHY = () => narrow ? -60 : 30;
+tl.fromTo('#phone', { autoAlpha: 0, x: () => PHX() + 160, y: PHY, z: 120, rotationY: -35, scale: narrow ? .62 : .95 },
+  { autoAlpha: 1, x: PHX, y: PHY, z: 60, rotationY: -14, duration: .55, ease: 'power3.out' }, 21.95);
+tl.fromTo('#syncp', { autoAlpha: 0, x: () => PHX() * .45, y: () => (narrow ? -300 : -DH * K * .38), scale: .8 }, { autoAlpha: 1, scale: 1, duration: .3, ease: 'back.out(2)' }, 22.1);
+$$('#sdots i').forEach((d, i) => {
+  tl.fromTo(d, { x: () => narrow ? -60 : -DW * K * .15, y: () => narrow ? -260 : -40, opacity: 0 },
+    { x: () => PHX() - 20, y: () => PHY() - (narrow ? 90 : 60), opacity: 1, duration: .45, ease: 'power1.inOut' }, 22.2 + i * .07);
+  tl.to(d, { opacity: 0, duration: .06 }, 22.62 + i * .07);
+});
+tl.fromTo('#phNew', { opacity: 0, y: -16, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: .3, ease: 'back.out(2)' }, 22.55);
+tl.to(['#phone', '#syncp'], { autoAlpha: 0, x: () => PHX() + 120, duration: .35, ease: 'power2.in' }, 22.95);
+// 거르기
+const hnRows = rows.filter(r => r.dataset.src === 'hn'), rdRows = rows.filter(r => r.classList.contains('rd'));
+if (!narrow) {
+  W(23.0, focusOn('#facet', 1.3), .45);
+  curTo('.fitem[data-f="hn"]', 23.1, .3);
+  click(23.4, '.fitem[data-f="hn"]');
+  tl.to('.fitem[data-f="hn"] .ckm', { backgroundColor: '#fff', borderColor: '#c9c9d4', duration: .08 }, 23.42);
+  tl.to('.fitem[data-f="hn"] .ckm svg', { opacity: 0, duration: .08 }, 23.42);
+  tl.to('.fitem[data-f="hn"]', { opacity: .5, duration: .1 }, 23.42);
+} else {
+  W(23.0, { x: 0, y: -14, scale: 1, rotationY: 0, rotationX: 0, z: 0 }, .45);
+}
+tl.to(hnRows, { height: 0, paddingTop: 0, paddingBottom: 0, marginBottom: 0, opacity: 0, duration: .3, ease: 'power2.inOut' }, 23.5);
+curTo('#tglb', 23.5, .3);
+click(23.8, '#tglb');
+tl.to('#tglb', { backgroundColor: '#7c6ee6', '--k': '17px', duration: .1 }, 23.82);
+tl.to(rdRows, { height: 0, paddingTop: 0, paddingBottom: 0, marginBottom: 0, opacity: 0, duration: .3, ease: 'power2.inOut' }, 23.9);
+chOut('#c8', 23.7);
+
+/* 9. 무료 API: 옆 막대를 눌러 화면을 바꾸고, 연결을 한 줄씩 확인한다 */
+W(24.1, { x: 0, y: narrow ? -14 : 0, scale: 1, rotationY: narrow ? 0 : -7, rotationX: 4, z: 0 }, .6);
+curTo('.rb[data-v="api"]', 24.1, .35);
+click(24.45, '.rb[data-v="api"]');
+tl.to(rb('news'), RB_OFF, 24.47); tl.to(rb('api'), RB_ON, 24.47);
+tl.to('#vNews', { autoAlpha: 0, x: -30, duration: .25 }, 24.5);
+tl.fromTo('#vApi', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: .3, ease: 'power3.out' }, 24.55);
+tl.to(fcur, { opacity: 0, duration: .2 }, 24.6);
+chIn('#c9', 24.3);
+const aitems = $$('.aitem');
+tl.to('#scanl', { opacity: 1, duration: .05 }, 24.9);
+tl.fromTo('#scanl', { y: 0 }, { y: (aitems.length - 1) * 57, duration: .8, ease: 'none' }, 24.9);
+tl.to('#scanl', { opacity: 0, duration: .1 }, 25.7);
+aitems.forEach((a, i) => {
+  const at = 24.9 + i * .1;
+  if (i === API_DEAD) {
+    tl.to(a.querySelector('.st'), { backgroundColor: '#e0507a', boxShadow: '0 0 0 4px rgba(224,80,122,.2)', duration: .1 }, at);
+    tl.to(a.querySelector('.bad'), { opacity: 1, marginLeft: 0, duration: .15 }, at);
+    tl.to(a, { backgroundColor: '#fff6f8', duration: .1 }, at);
+  } else {
+    tl.to(a.querySelector('.st'), { backgroundColor: '#28b463', boxShadow: '0 0 0 4px rgba(40,180,99,.18)', duration: .1 }, at);
+    tl.to(a.querySelector('.ok'), { opacity: 1, duration: .1 }, at);
+  }
+});
+tl.to(aitems[API_DEAD], { height: 0, opacity: 0, duration: .35, ease: 'power2.inOut' }, 25.75);
+chOut('#c9', 25.9);
+
+/* 10. 스킬 순위: 4위가 2위로 올라선다 */
+tl.to(fcur, { opacity: 1, duration: .1 }, 26.0);
+curTo('.rb[data-v="skills"]', 26.0, .3);
+click(26.3, '.rb[data-v="skills"]');
+tl.to(rb('api'), RB_OFF, 26.32); tl.to(rb('skills'), RB_ON, 26.32);
+tl.to('#vApi', { autoAlpha: 0, x: -30, duration: .25 }, 26.35);
+tl.fromTo('#vSk', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: .3, ease: 'power3.out' }, 26.4);
+tl.fromTo(skRows, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: .3, stagger: .05, ease: 'power3.out' }, 26.45);
+tl.to(fcur, { opacity: 0, duration: .2 }, 26.5);
+W(26.4, { rotationY: narrow ? 0 : -4, rotationX: 2, scale: narrow ? 1 : 1.04 }, .8);
+chIn('#c10', 26.4);
+tl.to(skRows[3], { y: SKP, zIndex: 3, boxShadow: '0 0 0 2px #7c6ee6, 0 16px 34px -12px rgba(124,110,230,.55)', duration: .5, ease: 'power3.inOut' }, 27.4);
+tl.to(skRows[1], { y: 2 * SKP, duration: .5, ease: 'power3.inOut' }, 27.4);
+tl.to(skRows[2], { y: 3 * SKP, duration: .5, ease: 'power3.inOut' }, 27.4);
+tl.set(skRows[3].querySelector('.skd'), { textContent: '▲ 2', className: 'skd up' }, 27.6);
+tl.set(skRows[3].querySelector('.rk'), { textContent: '2' }, 27.6);
+tl.set(skRows[1].querySelector('.rk'), { textContent: '3' }, 27.6);
+tl.set(skRows[2].querySelector('.rk'), { textContent: '4' }, 27.6);
+tl.set(skRows[1].querySelector('.skd'), { textContent: '▼ 1' }, 27.6);
+tl.set(skRows[2].querySelector('.skd'), { textContent: '▼ 1' }, 27.6);
+chOut('#c10', 28.5);
+
+/* 끝: 뉴스 화면으로 돌아와 정면을 보고, 가운데로 와서 마지막 문구 */
+tl.to(rb('skills'), RB_OFF, 28.55); tl.to(rb('news'), RB_ON, 28.55);
+tl.to('#vSk', { autoAlpha: 0, duration: .25 }, 28.55);
+tl.to('#vNews', { autoAlpha: 1, x: 0, duration: .3 }, 28.6);
+tl.to([...hnRows, ...rdRows], { height: 'auto', paddingTop: 18, paddingBottom: 18, marginBottom: 12, opacity: 1, duration: .01 }, 28.6);
+W(28.6, { x: () => narrow ? 0 : (0.5 - CX) * innerWidth, y: narrow ? () => -(innerHeight * .5 - DH * K * .5) + 30 : 0, rotationY: 0, rotationX: 0, scale: narrow ? 1 : 1.12, z: 0 }, 1.1);
+tl.to('#veil', { opacity: 1, duration: .5 }, 29.4);
+tl.set('#end', { autoAlpha: 1 }, 29.6);
+tl.fromTo('#end .h2 .c', { yPercent: 118, rotationX: -75, opacity: 0 }, { yPercent: 0, rotationX: 0, opacity: 1, duration: .5, stagger: .014, ease: 'power3.out' }, 29.6);
+tl.fromTo('#end .x', { opacity: 0, y: 22, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .45, stagger: .1, ease: 'power2.out' }, 29.9);
+tl.to({}, { duration: .01 }, DUR - .01);
+
+ScrollTrigger.create({ trigger: story, start: 'top top', end: 'bottom bottom', scrub: 1.1, animation: tl });
+const jump = t => { const y = story.offsetTop + (t / DUR) * (story.offsetHeight - innerHeight); lenis ? lenis.scrollTo(y, { immediate: true }) : scrollTo(0, y); };
+window.__tour = { tl, jump };
+$$('#nav button').forEach(b => b.addEventListener('click', () => {
+  const t = CHAPTERS[+b.dataset.i][1] + .9, y = story.offsetTop + (t / DUR) * (story.offsetHeight - innerHeight);
+  lenis ? lenis.scrollTo(y, { duration: 1.8, easing: x => 1 - Math.pow(1 - x, 4) }) : scrollTo({ top: y, behavior: 'smooth' });
+}));
+
+/* ───────── 시작 연출 ───────── */
+root.classList.add('ready'); root.classList.remove('loading');
+const intro = { v: 0 };
+gsap.to(intro, { v: 1, duration: 3, ease: 'power2.out' });
+gsap.from(wtilt, { y: 260, rotationX: 50, opacity: 0, duration: 1.8, ease: 'expo.out', delay: .3 });
+gsap.from('#heroH .c', { yPercent: 118, rotationX: -80, opacity: 0, duration: 1.3, stagger: .035, ease: 'expo.out', delay: .35 });
+gsap.from('#hero .eyebrow, #hero .sub, #hero .acts', { y: 26, opacity: 0, filter: 'blur(8px)', duration: 1.1, stagger: .12, ease: 'power3.out', delay: .9 });
+gsap.from('#head', { y: -20, opacity: 0, duration: 1, ease: 'power3.out', delay: .6 });
+
+/* ───────── 포인터 ───────── */
+const ndc = new THREE.Vector2(0, 0); let lastMove = -1e9;
+const ray = new THREE.Raycaster(), plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0), hit = new THREE.Vector3();
+if (fine) {
+  const cur = $('#cur'), dot = $('#curDot');
+  const qx = gsap.quickTo(cur, 'x', { duration: .45, ease: 'power3' }), qy = gsap.quickTo(cur, 'y', { duration: .45, ease: 'power3' });
+  const dx = gsap.quickSetter(dot, 'x', 'px'), dy = gsap.quickSetter(dot, 'y', 'px');
+  const ty = gsap.quickTo(wtilt, 'rotationY', { duration: 1, ease: 'power3' }), tx = gsap.quickTo(wtilt, 'rotationX', { duration: 1, ease: 'power3' });
+  addEventListener('pointermove', e => {
+    ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); lastMove = performance.now();
+    qx(e.clientX); qy(e.clientY); dx(e.clientX); dy(e.clientY);
+    cur.classList.toggle('big', !!e.target.closest('a, button'));
+    ty(ndc.x * 5); tx(ndc.y * 3.5);
+  });
+  addEventListener('pointermove', () => root.classList.add('moved'), { once: true });
+  document.addEventListener('pointerleave', () => { lastMove = -1e9; });
+  $$('.mag').forEach(m => {
+    const mx = gsap.quickTo(m, 'x', { duration: .5, ease: 'power3' }), my = gsap.quickTo(m, 'y', { duration: .5, ease: 'power3' });
+    m.addEventListener('pointermove', e => { const r = m.getBoundingClientRect(); mx((e.clientX - r.left - r.width / 2) * .3); my((e.clientY - r.top - r.height / 2) * .35); });
+    m.addEventListener('pointerleave', () => { mx(0); my(0); });
   });
 }
 
+/* ───────── 프레임마다 ───────── */
+const odoT = $('#odoT'), odoO = $('#odoO'), apiN = $('#apiN'), qt = $('#qt');
+const lgEN = $('#lgEN'), lgKO = $('#lgKO'), navBtns = $$('#nav button'), cind = $('#cind'), cindN = $('#cindN'), cindL = $('#cindL'), pbar = $('#pbar');
+const heroEl = $('#hero'), endEl = $('#end');
+let lastT = -1, lastCh = -1, frame = 0, vel = 0, mouseOn = 0, spinY = 0, prev = performance.now();
+gsap.ticker.add(() => {
+  const now = performance.now(), dt = Math.min(.05, (now - prev) / 1000); prev = now; frame++;
+  const t = tl.time();
+  vel += (Math.min((lenis ? Math.abs(lenis.velocity) : 0) / 30, 1.5) - vel) * .08;
+  if (t !== lastT) {
+    lastT = t;
+    const a = clamp01((t - 4.8) / .6), n = 20 * (1 - Math.pow(1 - a, 3));
+    odoT.style.transform = `translateY(${-Math.min(n, 20) / 10}em)`;
+    odoO.style.transform = `translateY(${-(n >= 20 ? 0 : n % 10)}em)`;
+    const b = clamp01((t - 24.9) / .9), m = Math.round(2000 * (1 - Math.pow(1 - b, 3)));
+    apiN.textContent = m.toLocaleString('ko-KR') + (m >= 2000 ? '+' : '');
+    const sp = t >= 9.9;
+    lgEN.classList.toggle('on', !sp); lgKO.classList.toggle('on', sp);
+    const q = 'dev-news', k = Math.round(clamp01((t - 20.4) / .45) * q.length);
+    qt.textContent = q.slice(0, k);
+    const sv = clamp01((t - 27.4) / .5);
+    skRows[3].querySelector('.skv').textContent = (15.4 + (24.9 - 15.4) * sv * sv * (3 - 2 * sv)).toFixed(1) + 'K';
+    pbar.style.transform = `scaleX(${t / DUR})`;
+    let ci = 0; CHAPTERS.forEach(([, at], i) => { if (t >= at - .2) ci = i; });
+    if (ci !== lastCh) {
+      lastCh = ci;
+      navBtns.forEach((b, i) => b.classList.toggle('on', i === ci));
+      [...cindN.children].forEach(s => { s.style.transform = `translateY(${-ci * 100}%)`; });
+      cindL.textContent = CHAPTERS[ci][0];
+    }
+    heroEl.style.pointerEvents = t < .8 ? 'auto' : 'none';
+    endEl.style.pointerEvents = t > 29.8 ? 'auto' : 'none';
+    cind.style.opacity = t < .9 ? 0 : 1;
+  }
+  // 화면 유리에 비친 빛: 기울기를 따라 흐른다
+  const ry = gsap.getProperty(win, 'rotationY') + gsap.getProperty(wtilt, 'rotationY');
+  winz.style.setProperty('--sh', (50 - ry * 2.2).toFixed(1) + '%');
+
+  if (!renderer) return;
+  const time = now / 1000;
+  spinY += dt * .05;
+  U.uTime.value = time; U.uMorph.value = S.morph; U.uSpinY.value = spinY; U.uVel.value = vel; U.uIntro.value = intro.v; U.uDim.value = S.dim;
+  bgMat.uniforms.uTime.value = time; bgMat.uniforms.uNight.value = S.night;
+  const visH = 2 * 10 * Math.tan(THREE.MathUtils.degToRad(20)), visW = visH * innerWidth / innerHeight;
+  points.position.set((CX - .5) * visW, -(CY - .5) * visH, 0);
+  points.scale.setScalar(narrow ? .6 : 1);
+  camera.position.x += ((fine ? ndc.x * .5 : 0) - camera.position.x) * .04;
+  camera.position.y += ((fine ? ndc.y * .3 : 0) - camera.position.y) * .04;
+  const active = fine && now - lastMove < 2500;
+  mouseOn += ((active ? 1 : 0) - mouseOn) * .05; U.uMouseOn.value = mouseOn;
+  if (active) { ray.setFromCamera(ndc, camera); if (ray.ray.intersectPlane(plane, hit)) { points.updateMatrixWorld(); U.uMouse.value.copy(points.worldToLocal(hit.clone())); } }
+  composer ? composer.render() : renderer.render(scene, camera);
+});
+
+let wasW = innerWidth, rT;
+addEventListener('resize', () => {
+  clearTimeout(rT);
+  rT = setTimeout(() => {
+    if (Math.abs(innerWidth - wasW) > 80 || matchMedia('(max-width: 860px)').matches !== narrow) { location.reload(); return; }
+    fitWin(); gradChars();
+    if (!renderer) return;
+    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight, false); composer && composer.setSize(innerWidth, innerHeight);
+    bgMat.uniforms.uRes.value.set(innerWidth, innerHeight);
+  }, 200);
+});
 addEventListener('load', () => ScrollTrigger.refresh());
-if (document.fonts) document.fonts.ready.then(() => ScrollTrigger.refresh());
-})();
 </script>
 </body>
 </html>
