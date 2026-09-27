@@ -41,7 +41,7 @@ h1,h2,h3,p{margin:0}
 ::selection{background:rgba(124,110,230,.45);color:#fff}
 html.fine.motion,html.fine.motion a{cursor:none}
 
-#gl{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block;opacity:0;transition:opacity 1.4s ease}
+#gl{position:fixed;inset:0;width:100vw;height:100vh;height:100lvh;z-index:0;display:block;opacity:0;transition:opacity 1.4s ease}
 html.ready #gl{opacity:1}
 html:not(.motion) #gl{display:none}
 .grain{position:fixed;inset:-60%;z-index:70;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
@@ -99,7 +99,9 @@ html.fine.motion.moved .cur,html.fine.motion.moved .cur-dot{opacity:1}
 .story{display:none}
 html.motion .story{display:block;position:relative;height:2700vh}
 html.motion .plain{display:none}
-.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;z-index:2}
+/* 무대는 주소창이 숨었을 때의 큰 높이(lvh)로 깐다. 주소창이 들어가도 아래에 빈 띠가 생기지 않는다.
+   안에 놓는 것들의 자리는 주소창이 보일 때의 작은 높이(svh) 기준으로 스크립트가 잡는다 */
+.stage{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden;z-index:2}
 .s3d{position:absolute;inset:0;perspective:1800px;perspective-origin:var(--cx) 45%;z-index:2}
 
 .hero{position:absolute;left:6vw;top:50%;width:min(620px,40vw);z-index:4}
@@ -331,7 +333,9 @@ html.motion .plain{display:none}
 
 /* ── 좁은 화면: 글은 위, 화면은 아래. 안쪽은 본 화면의 모바일 배치(아래 탭 막대) ── */
 @media (max-width:860px){
-  :root{--cx:50%;--cy:100%}
+  :root{--cx:50%;--cy:70%}
+  .s3d{clip-path:inset(var(--rt,0px) 0 0 0)}
+  .end{top:var(--sc,50%)}
   .head{padding:0 16px}
   .cta{height:38px;padding:0 14px;font-size:13.5px}
   .cta.big{height:52px;font-size:16px}
@@ -715,11 +719,28 @@ function gradChars() {
 /* ───────── 화면 크기 ─────────
    본 화면을 실제 크기(1180×840)로 그린 뒤 통째로 줄인다. 글자 크기·간격이 진짜 화면과 같은 비율로 보인다 */
 const DW = narrow ? 420 : 1180, DH = narrow ? 800 : 840;
-const win = $('#win'), winz = $('#winz'), wtilt = $('#wtilt');
+const win = $('#win'), winz = $('#winz'), wtilt = $('#wtilt'), stageEl = $('#stage');
 let K = 1;
+// 모바일 주소창: 보일 때의 작은 높이(svh)와 숨었을 때의 큰 높이(lvh)를 따로 잰다
+const vhProbe = u => { const d = document.createElement('div'); d.style.cssText = `position:fixed;left:0;top:0;width:1px;height:${u};visibility:hidden;pointer-events:none`; document.body.appendChild(d); const h = d.offsetHeight; d.remove(); return h; };
+let SVH = innerHeight, LVH = innerHeight;
+const measureVH = () => { SVH = vhProbe('100svh') || innerHeight; LVH = Math.max(vhProbe('100lvh') || innerHeight, SVH); };
+measureVH();
+const glH = () => narrow ? LVH : innerHeight;
+/* 좁은 화면: 장마다 글이 끝나는 가장 낮은 자리를 재고, 그 아래 남는 칸(작은 높이 기준)에만 그림을 둔다.
+   그림 층은 그 칸 위쪽을 잘라 내서, 확대 장면에서도 글을 덮지 않는다 */
+let REG_TOP = 0, REG_H = 0, REG_C = 0, HERO_B = 0;
 function fitWin() {
+  if (narrow) {
+    const tb = Math.max(...$$('.ch').map(c => c.offsetTop + c.offsetHeight));
+    REG_TOP = tb + 16; REG_H = SVH - 14 - REG_TOP; REG_C = REG_TOP + REG_H / 2;
+    HERO_B = $('#hero').offsetTop + $('#hero').offsetHeight;
+    stageEl.style.setProperty('--cy', REG_C + 'px');
+    stageEl.style.setProperty('--rt', (REG_TOP - 10) + 'px');
+    stageEl.style.setProperty('--sc', SVH / 2 + 'px');
+  }
   const aw = narrow ? innerWidth - 28 : Math.min(innerWidth * .55, 940);
-  const ah = narrow ? innerHeight * .5 : innerHeight * .76;
+  const ah = narrow ? REG_H : innerHeight * .76;
   K = Math.min(aw / DW, ah / DH);
   winz.style.width = DW + 'px'; winz.style.height = DH + 'px'; winz.style.transform = `scale(${K})`;
   win.style.width = DW * K + 'px'; win.style.height = DH * K + 'px';
@@ -836,16 +857,17 @@ void main(){
 
 let renderer = null, composer = null, scene, camera, points, bgMat, U;
 const S = { morph: 0, dim: 1, night: 0 };
-const CX = narrow ? .5 : .63, CY = narrow ? .72 : .53;
+const CX = narrow ? .5 : .63;
+let CY = narrow ? .72 : .53;
 async function initGL() {
   const canvas = $('#gl');
   try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' }); if (!renderer.capabilities.isWebGL2) throw 0; }
   catch (e) { renderer = null; canvas.style.display = 'none'; return; }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-  renderer.setSize(innerWidth, innerHeight, false);
+  renderer.setSize(innerWidth, glH(), false);
   renderer.setClearColor(0x08080d, 1);
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, .1, 100);
+  camera = new THREE.PerspectiveCamera(40, innerWidth / glH(), .1, 100);
   camera.position.z = 10;
   const texH = ROWS * SHAPES.length, posAll = new Float32Array(TW * texH * 4), colAll = new Float32Array(TW * texH * 4);
   SHAPES.forEach((sh, s) => { posAll.set(sh.pos, s * N * 4); colAll.set(sh.col, s * N * 4); });
@@ -871,15 +893,19 @@ async function initGL() {
       import('three/addons/postprocessing/UnrealBloomPass.js'), import('three/addons/postprocessing/OutputPass.js')]);
     composer = new EffectComposer(renderer);
     composer.addPass(new RenderPass(scene, camera));
-    composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth / 2, innerHeight / 2), .7, .5, .1));
+    composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth / 2, glH() / 2), .7, .5, .1));
     composer.addPass(new OutputPass());
-    composer.setSize(innerWidth, innerHeight);
+    composer.setSize(innerWidth, glH());
   } catch (e) { composer = null; }
 }
 
 try { await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 2500))]); } catch (e) {}
 await initGL();
 gradChars();
+// 글꼴이 뜬 뒤 글 높이가 바뀌므로 칸을 다시 잰다
+fitWin();
+if (narrow) { CY = REG_C / LVH; if (bgMat) bgMat.uniforms.uC.value.set(CX, 1 - CY); }
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 let lenis = null;
 if (window.Lenis) {
@@ -892,12 +918,14 @@ const story = $('#story');
 story.style.height = (DUR * (narrow ? 80 : 90) + 100) + 'vh';
 
 /* ───────── 초기 상태 ───────── */
-const Wpos = (x, y) => ({ xPercent: -50, yPercent: narrow ? -100 : -50, x, y });
+const Wpos = (x, y) => ({ xPercent: -50, yPercent: -50, x, y });
 gsap.set('#hero', { yPercent: narrow ? 0 : -50 });
 gsap.set('.ch', { yPercent: narrow ? 0 : -50 });
 gsap.set('.end', { xPercent: -50, yPercent: -50 });
-gsap.set(win, { ...Wpos(0, narrow ? -14 : 0), rotationY: narrow ? 0 : -22, rotationX: narrow ? 10 : 9, scale: narrow ? 1 : .94, transformOrigin: '50% 50%' });
-gsap.set(['.fly', '.drawer', '.phone', '.syncp', '.sdots'], { xPercent: -50, yPercent: narrow ? -100 : -50, y: narrow ? -14 : 0, transformPerspective: 1600 });
+// 좁은 화면 첫 화면: 창은 버튼 아래에서 윗부분만 내밀고 있다가, 스크롤하면 제자리로 올라온다
+const heroPeek = () => Math.max(0, HERO_B + 28 + DH * K / 2 - REG_C);
+gsap.set(win, { ...Wpos(0, narrow ? heroPeek : 0), rotationY: narrow ? 0 : -22, rotationX: narrow ? 8 : 9, scale: narrow ? 1 : .94, transformOrigin: '50% 50%' });
+gsap.set(['.fly', '.drawer', '.phone', '.syncp', '.sdots'], { xPercent: -50, yPercent: -50, y: 0, transformPerspective: 1600 });
 gsap.set('.sdots', { xPercent: 0, yPercent: 0 });
 gsap.set('#clkT span:not(:first-child)', { yPercent: 100, opacity: 0 });
 const skRows = $$('.sk'), SKP = 70;
@@ -934,7 +962,7 @@ gsap.set(fcur, { x: DW * .7, y: DH * .8 });
 
 /* 0 → 1. 첫 화면이 빠지고, 화면이 앞을 본다 */
 tl.to('#hero', { y: -80, autoAlpha: 0, filter: 'blur(12px)', duration: .6, ease: 'power2.in' }, .7);
-W(1.0, { rotationY: narrow ? 0 : -9, rotationX: narrow ? 6 : 5, scale: 1 }, 1);
+W(1.0, { y: 0, rotationY: narrow ? 0 : -9, rotationX: narrow ? 4 : 5, scale: 1 }, 1);
 Mo(1, 1.0, 1.2);
 
 /* 1. 모으기: 일곱 출처 칩이 화면 둘레에 뜨고, 기사가 한 장씩 목록 위로 떨어진다 */
@@ -948,7 +976,7 @@ const chips = CHIP_KEYS.map((k, i) => {
   gsap.set(e, { xPercent: -50, yPercent: -50, transformPerspective: 1000 });
   return e;
 });
-const cpos = i => ({ x: () => CHIP_POS[i][0] * DW * K, y: () => CHIP_POS[i][1] * DH * K + (narrow ? -DH * K * .5 : 0) });
+const cpos = i => ({ x: () => CHIP_POS[i][0] * DW * K, y: () => CHIP_POS[i][1] * DH * K });
 chips.forEach((c, i) => tl.fromTo(c, { autoAlpha: 0, scale: .5, z: -200, ...cpos(i) }, { autoAlpha: 1, scale: 1, z: 60, duration: .4, ease: 'back.out(1.7)' }, 1.7 + i * .06));
 tl.to(rows, { opacity: 0, y: -24, duration: .25, stagger: .02 }, 1.6);
 tl.set('#stL', { textContent: '수집 중…' }, 1.9);
@@ -959,7 +987,7 @@ ORDER.forEach((ri, j) => {
   tl.fromTo(rows[ri], { opacity: 0, y: -40, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .3, ease: 'power3.out', immediateRender: false }, at);
 });
 tl.set('#stL', { textContent: '수집 완료' }, 3.1);
-chips.forEach((c, i) => tl.to(c, { autoAlpha: 0, scale: .6, z: -150, x: 0, y: narrow ? -DH * K * .5 : 0, duration: .35, ease: 'power2.in' }, 3.25 + i * .03));
+chips.forEach((c, i) => tl.to(c, { autoAlpha: 0, scale: .6, z: -150, x: 0, y: 0, duration: .35, ease: 'power2.in' }, 3.25 + i * .03));
 chOut('#c1', 3.3);
 Mo(2, 3.4, 1);
 
@@ -989,20 +1017,20 @@ W(5.6, narrow ? { z: -300, opacity: .2 } : { z: -420, rotationY: 16, rotationX: 
 W(11.2, { opacity: narrow ? .08 : .1, z: -560 }, .5);
 chIn('#c3', 6.0);
 const flys = ['#fly0', '#fly1', '#fly2'].map(s => $(s));
-const FAN = narrow ? [[0, -210, -60, 0, 0], [0, -110, 0, 0, 0], [0, -10, 60, 0, 0]] : [[-40, -190, -140, 10, -3], [50, 0, 0, -6, 2], [-10, 190, 140, 8, -2]];
+const FAN = narrow ? [[0, -95, -60, 0, 0], [0, 0, 0, 0, 0], [0, 95, 60, 0, 0]] : [[-40, -190, -140, 10, -3], [50, 0, 0, -6, 2], [-10, 190, 140, 8, -2]];
 flys.forEach((f, i) => {
-  tl.fromTo(f, { autoAlpha: 0, x: 0, y: narrow ? -140 : 0, z: -500, rotationY: -30, rotationX: 20, scale: .7 },
-    { autoAlpha: 1, x: FAN[i][0], y: FAN[i][1] + (narrow ? -14 : 0), z: FAN[i][2], rotationY: FAN[i][3], rotationZ: FAN[i][4], rotationX: 0, scale: narrow ? .92 : .96, duration: .6, ease: 'power3.out' }, 6.1 + i * .1);
+  tl.fromTo(f, { autoAlpha: 0, x: 0, y: 0, z: -500, rotationY: -30, rotationX: 20, scale: .7 },
+    { autoAlpha: 1, x: FAN[i][0], y: FAN[i][1], z: FAN[i][2], rotationY: FAN[i][3], rotationZ: FAN[i][4], rotationX: 0, scale: narrow ? .92 : .96, duration: .6, ease: 'power3.out' }, 6.1 + i * .1);
 });
-tl.to(flys, { x: 0, y: narrow ? -110 : 0, z: 0, rotationY: 0, rotationZ: 0, duration: .5, ease: 'power3.inOut' }, 7.0);
+tl.to(flys, { x: 0, y: 0, z: 0, rotationY: 0, rotationZ: 0, duration: .5, ease: 'power3.inOut' }, 7.0);
 tl.to(flys, { autoAlpha: 0, duration: .15 }, 7.45);
-tl.fromTo('#flyM', { autoAlpha: 0, y: narrow ? -110 : 0, scale: .96 }, { autoAlpha: 1, scale: narrow ? .92 : 1, duration: .15 }, 7.45);
+tl.fromTo('#flyM', { autoAlpha: 0, y: 0, scale: .96 }, { autoAlpha: 1, scale: narrow ? .92 : 1, duration: .15 }, 7.45);
 tl.fromTo('#flyM .merged', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 7.6);
 chOut('#c3', 8.3);
 
 /* 4. 번역: 제목이 그 자리에서 영어 → 한국어로 풀린다 */
 chIn('#c4', 8.8);
-tl.to('#flyM', { scale: narrow ? .96 : 1.14, y: narrow ? -110 : -20, duration: .6, ease: 'power3.inOut' }, 8.6);
+tl.to('#flyM', { scale: narrow ? .96 : 1.14, y: narrow ? 0 : -20, duration: .6, ease: 'power3.inOut' }, 8.6);
 // 영어 글자가 왼쪽부터 흐려지며 위로 빠지고, 한국어 글자가 뒤따라 아래에서 떠오른다
 const enC = $$('#flyM .xen .c'), koC = $$('#flyM .xko .c');
 gsap.set(koC, { opacity: 0, yPercent: 70, filter: 'blur(6px)' });
@@ -1015,7 +1043,9 @@ chOut('#c4', 11.1);
 
 /* 5·6. 요약: 카드가 요약 창으로 펼쳐진다 */
 tl.to('#flyM', { autoAlpha: 0, scale: narrow ? 1 : 1.2, duration: .3 }, 11.3);
-tl.fromTo('#drawer', { autoAlpha: 0, scaleY: .35, scaleX: .96, y: narrow ? -14 : 0, transformOrigin: '50% 30%' }, { autoAlpha: 1, scaleY: narrow ? .92 : 1, scaleX: narrow ? .92 : 1, duration: .5, ease: 'power3.out' }, 11.35);
+// 좁은 화면에서는 요약 창이 남는 칸보다 크면 칸에 맞게 줄인다
+const drawerS = () => narrow ? Math.min(.92, (REG_H - 8) / $('#drawer').offsetHeight) : 1;
+tl.fromTo('#drawer', { autoAlpha: 0, scaleY: .35, scaleX: .96, y: 0, transformOrigin: '50% 50%' }, { autoAlpha: 1, scaleY: drawerS, scaleX: drawerS, duration: .5, ease: 'power3.out' }, 11.35);
 chIn('#c5', 11.8);
 tl.to('#sum span', { opacity: 1, backgroundSize: '100% 34%', duration: .35, stagger: .35, ease: 'power1.inOut' }, 12.3);
 chOut('#c5', 13.5);
@@ -1030,7 +1060,7 @@ tl.to('#drawer', { autoAlpha: 0, scale: .9, y: narrow ? 40 : 60, duration: .4, e
 tl.set('#feed', { autoAlpha: 1 }, 15.1);
 tl.set('#facet', { opacity: 1 }, 15.1);
 tl.set([grp('16'), grp('08')], { height: 0, opacity: 0 }, 15.1);
-W(15.2, { z: 0, x: 0, opacity: 1, rotationY: narrow ? 0 : -8, rotationX: 4, scale: 1 }, 1);
+W(15.2, { z: 0, x: 0, y: 0, opacity: 1, rotationY: narrow ? 0 : -8, rotationX: 4, scale: 1 }, 1);
 tl.to(S, { night: 1, duration: .8 }, 15.2);
 Mo(3, 15.2, 1);
 chIn('#c7', 15.8);
@@ -1068,15 +1098,15 @@ click(21.65, '#feed .row[data-i="0"] .ck');
 tl.to(meRow.querySelector('.ck'), { backgroundColor: '#7c6ee6', borderColor: '#7c6ee6', duration: .08 }, 21.68);
 tl.to(meRow.querySelector('.ck svg'), { opacity: 1, duration: .08 }, 21.68);
 tl.to('#savedDot', { scale: 1, duration: .2, ease: 'back.out(3)' }, 21.75);
-W(21.8, { x: narrow ? 0 : () => -innerWidth * .08, y: narrow ? -14 : 0, scale: narrow ? .9 : .92, rotationY: narrow ? 0 : 10, rotationX: 2, z: -60 }, .55);
+W(21.8, { x: narrow ? 0 : () => -innerWidth * .08, y: 0, scale: narrow ? .9 : .92, rotationY: narrow ? 0 : 10, rotationX: 2, z: -60 }, .55);
 tl.to(rows, { opacity: 1, duration: .2 }, 21.9);
 tl.to(meRow, { boxShadow: '0 0 0 1px rgba(25,28,33,.06),0 6px 6px -3px rgba(0,0,0,.03)', duration: .2 }, 21.9);
-const PHX = () => narrow ? innerWidth * .22 : Math.min(DW * K * .42, innerWidth * (1 - CX) - 120), PHY = () => narrow ? -60 : 30;
+const PHX = () => narrow ? innerWidth * .22 : Math.min(DW * K * .42, innerWidth * (1 - CX) - 120), PHY = () => narrow ? DH * K * .08 : 30;
 tl.fromTo('#phone', { autoAlpha: 0, x: () => PHX() + 160, y: PHY, z: 120, rotationY: -35, scale: narrow ? .62 : .95 },
   { autoAlpha: 1, x: PHX, y: PHY, z: 60, rotationY: -14, duration: .55, ease: 'power3.out' }, 21.95);
-tl.fromTo('#syncp', { autoAlpha: 0, x: () => PHX() * .45, y: () => (narrow ? -300 : -DH * K * .38), scale: .8 }, { autoAlpha: 1, scale: 1, duration: .3, ease: 'back.out(2)' }, 22.1);
+tl.fromTo('#syncp', { autoAlpha: 0, x: () => PHX() * .45, y: () => -DH * K * .38, scale: .8 }, { autoAlpha: 1, scale: 1, duration: .3, ease: 'back.out(2)' }, 22.1);
 $$('#sdots i').forEach((d, i) => {
-  tl.fromTo(d, { x: () => narrow ? -60 : -DW * K * .15, y: () => narrow ? -260 : -40, opacity: 0 },
+  tl.fromTo(d, { x: () => narrow ? -60 : -DW * K * .15, y: () => narrow ? -DH * K * .25 : -40, opacity: 0 },
     { x: () => PHX() - 20, y: () => PHY() - (narrow ? 90 : 60), opacity: 1, duration: .45, ease: 'power1.inOut' }, 22.2 + i * .07);
   tl.to(d, { opacity: 0, duration: .06 }, 22.62 + i * .07);
 });
@@ -1092,7 +1122,7 @@ if (!narrow) {
   tl.to('.fitem[data-f="hn"] .ckm svg', { opacity: 0, duration: .08 }, 23.42);
   tl.to('.fitem[data-f="hn"]', { opacity: .5, duration: .1 }, 23.42);
 } else {
-  W(23.0, { x: 0, y: -14, scale: 1, rotationY: 0, rotationX: 0, z: 0 }, .45);
+  W(23.0, { x: 0, y: 0, scale: 1, rotationY: 0, rotationX: 0, z: 0 }, .45);
 }
 tl.to(hnRows, { height: 0, paddingTop: 0, paddingBottom: 0, marginBottom: 0, opacity: 0, duration: .3, ease: 'power2.inOut' }, 23.5);
 curTo('#tglb', 23.5, .3);
@@ -1102,7 +1132,7 @@ tl.to(rdRows, { height: 0, paddingTop: 0, paddingBottom: 0, marginBottom: 0, opa
 chOut('#c8', 23.7);
 
 /* 9. 무료 API: 옆 막대를 눌러 화면을 바꾸고, 연결을 한 줄씩 확인한다 */
-W(24.1, { x: 0, y: narrow ? -14 : 0, scale: 1, rotationY: narrow ? 0 : -7, rotationX: 4, z: 0 }, .6);
+W(24.1, { x: 0, y: 0, scale: 1, rotationY: narrow ? 0 : -7, rotationX: 4, z: 0 }, .6);
 curTo('.rb[data-v="api"]', 24.1, .35);
 click(24.45, '.rb[data-v="api"]');
 tl.to(rb('news'), RB_OFF, 24.47); tl.to(rb('api'), RB_ON, 24.47);
@@ -1155,7 +1185,7 @@ tl.to(rb('skills'), RB_OFF, 28.55); tl.to(rb('news'), RB_ON, 28.55);
 tl.to('#vSk', { autoAlpha: 0, duration: .25 }, 28.55);
 tl.to('#vNews', { autoAlpha: 1, x: 0, duration: .3 }, 28.6);
 tl.to([...hnRows, ...rdRows], { height: 'auto', paddingTop: 18, paddingBottom: 18, marginBottom: 12, opacity: 1, duration: .01 }, 28.6);
-W(28.6, { x: () => narrow ? 0 : (0.5 - CX) * innerWidth, y: narrow ? () => -(innerHeight * .5 - DH * K * .5) + 30 : 0, rotationY: 0, rotationX: 0, scale: narrow ? 1 : 1.12, z: 0 }, 1.1);
+W(28.6, { x: () => narrow ? 0 : (0.5 - CX) * innerWidth, y: 0, rotationY: 0, rotationX: 0, scale: narrow ? 1 : 1.12, z: 0 }, 1.1);
 tl.to('#veil', { opacity: 1, duration: .5 }, 29.4);
 tl.set('#end', { autoAlpha: 1 }, 29.6);
 tl.fromTo('#end .h2 .c', { yPercent: 118, rotationX: -75, opacity: 0 }, { yPercent: 0, rotationX: 0, opacity: 1, duration: .5, stagger: .014, ease: 'power3.out' }, 29.6);
@@ -1245,7 +1275,7 @@ gsap.ticker.add(() => {
   spinY += dt * .05;
   U.uTime.value = time; U.uMorph.value = S.morph; U.uSpinY.value = spinY; U.uVel.value = vel; U.uIntro.value = intro.v; U.uDim.value = S.dim;
   bgMat.uniforms.uTime.value = time; bgMat.uniforms.uNight.value = S.night;
-  const visH = 2 * 10 * Math.tan(THREE.MathUtils.degToRad(20)), visW = visH * innerWidth / innerHeight;
+  const visH = 2 * 10 * Math.tan(THREE.MathUtils.degToRad(20)), visW = visH * innerWidth / glH();
   points.position.set((CX - .5) * visW, -(CY - .5) * visH, 0);
   points.scale.setScalar(narrow ? .6 : 1);
   camera.position.x += ((fine ? ndc.x * .5 : 0) - camera.position.x) * .04;
@@ -1261,11 +1291,14 @@ addEventListener('resize', () => {
   clearTimeout(rT);
   rT = setTimeout(() => {
     if (Math.abs(innerWidth - wasW) > 80 || matchMedia('(max-width: 860px)').matches !== narrow) { location.reload(); return; }
-    fitWin(); gradChars();
+    // 모바일 주소창이 숨거나 나타나서 높이만 바뀐 경우는 아무것도 다시 잡지 않는다.
+    // 배치는 작은 높이, 무대와 캔버스는 큰 높이 기준이라 그대로 맞다
+    if (narrow && innerWidth === wasW) return;
+    measureVH(); fitWin(); gradChars();
     if (!renderer) return;
-    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
-    renderer.setSize(innerWidth, innerHeight, false); composer && composer.setSize(innerWidth, innerHeight);
-    bgMat.uniforms.uRes.value.set(innerWidth, innerHeight);
+    camera.aspect = innerWidth / glH(); camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, glH(), false); composer && composer.setSize(innerWidth, glH());
+    bgMat.uniforms.uRes.value.set(innerWidth, glH());
   }, 200);
 });
 addEventListener('load', () => ScrollTrigger.refresh());
