@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-18T08:00:32+09:00",
-   "total": 17,
-   "counts": {
-    "blocked": 2,
-    "ok": 12,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/astra-for-law/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.economist.com/science-and-technology/2026/09/16/artificial-intelligence-now-beats-some-of-the-best-human-forecasters",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.ycombinator.com/item?id=49742976",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-09-18T16:00:40+09:00",
    "total": 17,
    "counts": {
@@ -577,6 +550,15 @@
    "counts": {
     "ok": 15,
     "github": 5
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-28T08:00:30+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 15,
+    "github": 2
    },
    "failures": []
   }
