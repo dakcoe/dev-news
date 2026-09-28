@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-19T08:00:34+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 13,
-    "short": 1,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-19T16:00:30+09:00",
    "total": 17,
    "counts": {
@@ -546,6 +524,15 @@
    "counts": {
     "ok": 15,
     "github": 5
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-09-29T08:00:28+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 15,
+    "github": 2
    },
    "failures": []
   }
