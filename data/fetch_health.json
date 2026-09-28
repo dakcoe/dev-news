@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-18T16:00:40+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 13,
-    "empty": 1,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://openai.com/index/cooley-gopublic",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-19T00:00:27+09:00",
    "total": 20,
    "counts": {
@@ -561,6 +539,22 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-28T16:00:34+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 14,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.theatlantic.com/ideas/2026/01/great-crime-decline/685695/",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
