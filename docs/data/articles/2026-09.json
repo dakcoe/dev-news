@@ -1,5 +1,615 @@
 [
  {
+  "title": "AI companies in race to demonstrate their model most threatening to humanity",
+  "url": "https://thecivilian.co.nz/2026/09/27/ai-companies-in-fierce-arms-race-to-demonstrate-their-model-is-the-most-existentially-threatening-to-humanity/",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 391,
+  "comments": 312,
+  "published_at": 1790584540,
+  "discussion": "https://news.ycombinator.com/item?id=49875148",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://thecivilian.co.nz/2026/09/27/ai-companies-in-fierce-arms-race-to-demonstrate-their-model-is-the-most-existentially-threatening-to-humanity/"
+  ],
+  "cross_source_count": 1,
+  "score": 2318.0,
+  "image": "https://i0.wp.com/thecivilian.co.nz/wp-content/uploads/2026/09/aiendoftheworldstory.jpg?fit=872%2C591&ssl=1",
+  "link_status": "ok",
+  "ko_title": "AI 기업들, 인류에 가장 위협적인 모델 시연 경쟁",
+  "summary": "",
+  "why": "이 기사는 AI 모델의 안전성 평가 기준이 성능에서 위험성으로 이동했음을 보여준다. 모델 선택 시 단순 기능 비교보다 보안 리스크를 우선 검토해야 한다.",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Postgres의 &quot;AT TIME ZONE &#039;UTC&#039;&quot;에 숨은 함정",
+  "url": "https://news.hada.io/topic?id=34434",
+  "description": "timestamptz 에 AT TIME ZONE 'UTC' 를 적용하면 시간대만 바뀌는 것이 아니라, 시간대 정보가 없는 timestamp 로 타입이 바뀜 월 단위 덧셈은 시간대에 의존 하므로, UTC 기준으로 동작하는 제품에서는 한 ...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790605947.0,
+  "origin_url": "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
+   "https://news.hada.io/topic?id=34434"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34434?v=5913f946d6fd46b723ee7dd6b0cca3e0",
+  "link_status": "ok",
+  "ko_title": "Postgres의 “AT TIME ZONE 'UTC'”에 숨은 함정",
+  "summary": "AT TIME ZONE 'UTC'를 사용하면 timestamptz가 timestamp로 변환돼 타입이 바뀝니다. 월 단위 연산은 시간대에 의존해 UTC 기준 제품에서 오류가 발생할 수 있습니다. 이를 해결하려면 월 덧셈 후 다시 AT TIME ZONE 'UTC'를 적용해 timestamptz로 복원해야 합니다.",
+  "why": "Postgres에서 AT TIME ZONE 'UTC'를 쓰면 timestamptz가 timestamp로 타입이 바뀐다. 월 단위 연산 후 다시 AT TIME ZONE 'UTC'를 적용해 timestamptz로 복원해야 비교가 정상 동작한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Parley - 일반 IRC로 통신하는 연합형 탈중앙 채팅",
+  "url": "https://news.hada.io/topic?id=34432",
+  "description": "Parley 는 각 개인이나 팀이 자기 도메인에 인스턴스를 운영하고, 기존 IRC 클라이언트로 플러그인 없이 이용하는 탈중앙 채팅 네트워크임 인스턴스는 DNS와 well-known 신원 문서 로 서로를 발견하고, HTTPS로 서명된 메시지를 교환함. 처음 접하는 도메인의 사용자...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790602539.0,
+  "origin_url": "https://git.mills.io/prologic/parley",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://git.mills.io/prologic/parley",
+   "https://news.hada.io/topic?id=34432"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34432?v=7586d347a01515cf97da6b4c5035ed6e",
+  "link_status": "ok",
+  "ko_title": "Parley - 일반 IRC로 통신하는 연합형 탈중앙 채팅",
+  "summary": "Parley는 개인·팀이 자체 도메인에 인스턴스를 운영하고 DNS와 well-known 문서로 피어를 자동 발견해 HTTPS 서명 메시지를 교환하는 탈중앙 IRC 네트워크다. 전역 채널은 연결된 인스턴스에 복제되고 소유자가 없으며, 로컬 채널은 인스턴스 내부에만 존재한다. 기존 IRC 클라이언트를 플러그인 없이 사용할 수 있지만 현재는 인스턴스 키만 사용하고 종단 간 암호화가 구현되지 않은 프로토타입 단계이다.",
+  "why": "기존 IRC 클라이언트를 그대로 쓰되 인스턴스 키만 사용해 종단 간 암호화가 없다. 채널 기록 피드가 인증 없이 공개되므로 민감한 대화는 피해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "SpaceX의 Starship, 오늘 사상 첫 궤도 비행을 위해 발사 예정",
+  "url": "https://news.hada.io/topic?id=34430",
+  "description": "SpaceX가 9월 28일 월요일 Starship의 첫 궤도 비행 을 시도함. 이전 13차례 비행은 모두 준궤도 비행이었으며, 이번이 14번째 시험 비행임 Flight 14 는 상단 우주선 Ship을 지구 궤도로 보내 차세대 인터넷 위성 Starlink Version 3 26기 를 배치할...",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790599251.0,
+  "origin_url": "https://www.space.com/space-exploration/launches-spacecraft/spacexs-starship-megarocket-launching-to-orbit-for-1st-time-ever-on-sept-28-watch-it-live",
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34430",
+   "https://www.space.com/space-exploration/launches-spacecraft/spacexs-starship-megarocket-launching-to-orbit-for-1st-time-ever-on-sept-28-watch-it-live"
+  ],
+  "cross_source_count": 2,
+  "score": 1520.0,
+  "image": "https://social.news.hada.io/topic/34430?v=63a00d17d4718ab6241b85d566dfa54d",
+  "link_status": "ok",
+  "ko_title": "SpaceX의 Starship, 오늘 사상 첫 궤도 비행을 위해 발사 예정",
+  "summary": "SpaceX가 9월 28일 텍사스 Starbase에서 Starship의 14번째 시험 비행으로 첫 궤도 비행을 시도한다. 상단 우주선 Ship은 지구 궤도에 Starlink V3 위성 26기를 배치하고, 지구를 6바퀴 선회한 뒤 약 10시간 후 태평양에 착수한다. Super Heavy는 기존과 같이 7분 후 멕시코만에 착수하고, 이번 비행에서도 두 단 모두 발사대 회수를 목표로 한다.",
+  "why": "Starlink V3 위성 26기 배치와 10시간 궤도 비행은 통신 인프라의 물리적 한계를 바꾼다. 백엔드 개발자는 향후 저지연 글로벌 네트워크 환경 변화를 고려해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Prompting Claude Opus 5.5",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 176,
+  "comments": 189,
+  "published_at": 1790580809,
+  "discussion": "https://news.ycombinator.com/item?id=49874728",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5"
+  ],
+  "cross_source_count": 1,
+  "score": 1519.0,
+  "image": "https://platform.claude.com/web-api/og/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5?design-rev=2",
+  "link_status": "ok",
+  "ko_title": "Claude Opus 5.5 프롬프트 가이드",
+  "summary": "Claude Opus 5.5는 토큰 생성 속도가 30% 이상 빨라지고 동일 작업을 더 적은 토큰으로 완료한다. 기존 Claude Opus 5용 프롬프트는 대부분 그대로 사용할 수 있으며, 새로운 모델에 맞춘 프롬프트 패턴이 별도로 제공된다. 주요 패턴에는 노력 수준 보정, 생각 비활성화 프롬프트, 무인 에이전트 진행 상황 보고, 거부 응답 처리, 사용자 진행 업데이트, 다중 앱 워크플로우 컨텍스트 탐색, 다중 에이전트 시간 신호, 채팅 시스템에서의 생각 지시, 붙여넣은 텍스트 표시, 복잡한 시각 입력 도구 사용 등이 있다.",
+  "why": "기존 Claude Opus 5 프롬프트는 그대로 유지해도 된다. 하지만 무인 에이전트나 다중 앱 워크플로우를 돌리면 새로운 패턴 적용이 필요하다. 특히 진행 상황 보고나 시간 신호 처리를 놓치면 작업이 중단될 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Coding Is Not Solved – Alex Ewerlöf Notes",
+  "url": "https://blog.alexewerlof.com/p/coding-is-not-solved",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 100,
+  "comments": 90,
+  "published_at": 1790603577,
+  "discussion": "https://news.ycombinator.com/item?id=49877988",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.alexewerlof.com/p/coding-is-not-solved"
+  ],
+  "cross_source_count": 1,
+  "score": 1070.0,
+  "image": "https://substackcdn.com/image/fetch/$s_!-Pk4!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F409bf75a-d9ef-4adf-b242-bee9d2664a24_1280x1247.jpeg",
+  "link_status": "ok",
+  "ko_title": "코딩은 해결되지 않았다 – Alex Ewerlöf 의견",
+  "summary": "저자는 LLM 기반 코딩 도구가 기능 요구사항을 완전히 해결하지 못한다며, 유지보수·신뢰성·보안·확장성 등 비기능 요구사항이 비용의 대부분을 차지한다고 주장한다. 또한 코드 출력만 보고 신뢰하는 현상을 비판하고, 개인 소프트웨어·POC·무기화 AI 등 세 가지 사례를 들어 위험 수준을 구분한다.",
+  "why": "프로덕션 환경에서 유지보수와 신뢰성 등 비기능 요구사항이 비용의 대부분을 차지한다. 코드 출력을 그대로 신뢰하는 습관을 버리고 비기능 요구사항 검증을 강화해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Yes, no AI is now a feature",
+  "url": "https://blog.documentfoundation.org/blog/2026/09/03/yes-no-ai-is-now-a-feature/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 56,
+  "comments": 7,
+  "published_at": 1790589506.129,
+  "discussion": "https://lobste.rs/s/sxcz4v/yes_no_ai_is_now_feature",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.documentfoundation.org/blog/2026/09/03/yes-no-ai-is-now-a-feature/"
+  ],
+  "cross_source_count": 1,
+  "score": 1026.2,
+  "image": "https://blog.documentfoundation.org/wp-content/uploads/2026/09/LO-no-forced-AI-new.png",
+  "link_status": "ok",
+  "ko_title": "AI 없이도 이제 기능이다",
+  "summary": "LibreOffice는 AI 기능을 기본에 포함하지 않기로 했으며, 사용자가 직접 실행 위치와 서비스를 선택하도록 한다. 문서 내용은 사용자 승인 없이는 외부로 전송되지 않으며, 텔레메트리 수집도 금지한다. AI 통합은 오픈 인터페이스와 ODF 형식 지원을 전제로 하며, 완전 선택적으로 설치·제거가 가능하도록 설계됐다.",
+  "why": "백엔드 개발 시 AI 추론 위치를 로컬이나 자체 인프라로 지정할 수 있어 데이터 유출 리스크를 줄인다. 단일 프로바이더 API에 종속되지 않고 ODF 형식을 유지해 콘텐츠 잠금을 방지한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Meta wants to turn Muse into a moneymaker by selling AI services to businesses",
+  "url": "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/",
+  "description": "Meta is launching the Meta Enterprise Platform, a new business unit that sells AI tools to companies. The article Meta wants to turn Muse into a moneymaker by selling AI services to businesses appeared first on The Decoder .",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790606906.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/meta_muse.png",
+  "link_status": "ok",
+  "ko_title": "Meta, Muse를 기업에 AI 서비스 판매로 수익 모델로 전환 목표",
+  "summary": "Meta가 새로운 사업부인 Meta Enterprise Platform을 출범시켜 Muse 에이전트·API·코드 등 AI 도구를 기업에 판매한다. 전 MongoDB CEO인 Chirantan Desai가 이 부서를 이끌며 마크 저커버그에게 직접 보고한다. Meta는 올해만 1000억 달러 이상을 AI 인프라에 투자하고 있다.",
+  "why": "Muse API와 Muse Code가 기업용 코딩 도구 시장에 진입했다. Claude Code나 Cursor 등 기존 도구와 경쟁 구도가 생겼다. 구체적인 가격과 운영 방식이 아직 미정이다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "devops-infra",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Nvidia wants to keep AI agents on a short leash with a watchdog built into its chips",
+  "url": "https://the-decoder.com/nvidia-wants-to-keep-ai-agents-on-a-short-leash-with-a-watchdog-built-into-its-chips/",
+  "description": "Nvidia is combining its OpenShell agent software with Sentry, a new hardware watchdog, to create the Open Agent Safety Platform. Sentry is supposed to isolate AI agents that break out within milliseconds. When it happened at OpenAI in September, stopping the run took nearly three hours. Still, Nvidia's watchdog can't reliably stop agents that have been tricked or that hide their intentions on its ",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790605920.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nvidia-wants-to-keep-ai-agents-on-a-short-leash-with-a-watchdog-built-into-its-chips/"
+  ],
+  "cross_source_count": 1,
+  "score": 1020.0,
+  "image": "https://the-decoder.com/wp-content/uploads/2025/12/nvidia_logo_wall_cb-1.jpeg",
+  "link_status": "ok",
+  "ko_title": "Nvidia, AI 에이전트를 제어하기 위해 칩에 내장된 감시자를 도입",
+  "summary": "Nvidia는 OpenShell 에이전트 소프트웨어와 새로운 하드웨어 감시자 Sentry를 결합한 Open Agent Safety Platform을 발표했다. 이 플랫폼은 샌드박스 기반으로 에이전트의 파일·프로그램·네트워크·자격 증명 접근을 제한하고, Sentry가 에이전트와 모델 사이의 유일한 연결을 감시해 탈출 시 밀리초 단위로 차단한다. 기존의 소프트웨어 검증 도구와 함께 제공되며, 현재 다중 에이전트 협업에 대한 검증은 진행 중이다.",
+  "why": "에이전트와 모델 간 통신 경로를 하드웨어 레벨에서 감시해 탈출 시 밀리초 단위로 차단한다. 기존 소프트웨어 검증만으로는 대응이 늦었던 경우, 이 하드웨어 감시자가 즉각적인 격리를 제공한다. 다중 에이전트 협업 환경에 대한 검증 기능은 아직 개발 중이므로 해당 시나리오에서는 주의가 필요하다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "hardware"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Show GN: OVERFIT - 딥러닝 기반 2D 횡스크롤 소울라이크",
+  "url": "https://news.hada.io/topic?id=34433",
+  "description": "2D 소울라이크 게임입니다. 단, 1단계와 2단계로 구분된 보스전에서 1단계에서의 회피패턴을 학습해 맞을 확률이 높은 패턴을 선택하도록 구현되어있습니다. 프로젝트의 목적은 플레이어의 회피 습관에 맞춰 패턴을 바꾸는 보스전이 재미있는지 확인하는 것입니다. 관심 있으시다면 플레이 해보시고 피드",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790603998.0,
+  "origin_url": "https://github.com/Atralupus/OVERFIT",
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://github.com/Atralupus/OVERFIT",
+   "https://news.hada.io/topic?id=34433"
+  ],
+  "cross_source_count": 1,
+  "score": 920.0,
+  "image": "https://social.news.hada.io/topic/34433?v=20a3889f5a44600c079ea9fafbd41d97",
+  "link_status": "ok",
+  "ko_title": "Show GN: OVERFIT - 딥러닝 기반 2D 횡스크롤 소울라이크",
+  "summary": "2D 소울라이크 게임으로, 보스전이 1단계와 2단계로 나뉘며 1단계에서 플레이어의 회피 패턴을 학습해 2단계에서 맞출 확률이 높은 공격 패턴을 선택한다. 프로젝트 목표는 플레이어 회피 습관에 맞춰 패턴을 바꾸는 보스전이 재미있는지 검증하는 것이다.",
+  "why": "보스 AI가 플레이어의 회피 습관을 학습해 공격 패턴을 바꾸는 구조다. 딥러닝 기반 적응형 적 AI를 구현할 때 참고할 수 있는 사례다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Hijacking the PS5's RTMP Stream",
+  "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+  "description": "",
+  "source": "lobsters",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": 1790595916.525,
+  "discussion": "https://lobste.rs/s/8oyww7/hijacking_ps5_s_rtmp_stream",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/"
+  ],
+  "cross_source_count": 1,
+  "score": 884.8,
+  "image": "https://yashgarg.dev/_astro/cover.CH2lYHLC_OFBUo.webp",
+  "link_status": "ok",
+  "ko_title": "PS5 RTMP 스트림 가로채기",
+  "summary": "이 글은 PS5의 기본 방송 기능이 지원하지 않는 Discord 등 타 서비스로 스트리밍하기 위해, PS5가 사용하는 RTMP 스트림을 사용자가 직접 수신할 수 있는 장치를 만드는 방법을 설명한다. 기존에는 캡처 카드나 Remote Play를 이용해야 했지만, DNS 응답을 조작해 Twitch 대신 사용자 장치로 스트림을 전달한다. 구현 예시와 설정 과정이 포함돼 있다.",
+  "why": "PS5의 RTMP 스트림을 DNS 조작으로 타 서비스로 유도하는 방식은 캡처 카드나 Remote Play의 물리적 제약과 입력 지연을 피할 수 있다. 백엔드 개발자는 이 DNS 재지정 기법을 활용해 다른 하드웨어의 네트워크 트래픽을 우회 수신하는 데 적용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "37,500 border drawings: a map of the world as people remember it",
+  "url": "https://www.habibicode.org/thedrawnworld",
+  "description": "",
+  "source": "hackernews",
+  "upvotes": 97,
+  "comments": 25,
+  "published_at": 1790584510,
+  "discussion": "https://news.ycombinator.com/item?id=49875142",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.habibicode.org/thedrawnworld"
+  ],
+  "cross_source_count": 1,
+  "score": 869.0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "3만7500개의 국경 그림: 사람들이 기억하는 세계 지도",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "The 7 Walls JavaScript Hits — and How WebAssembly Gets Past Them",
+  "url": "https://dev.to/james_anderson_h/the-7-walls-javascript-hits-and-how-webassembly-gets-past-them-3khk",
+  "description": "Every time Figma renders a complex design instantly, or Google Sheets recalculates a huge spreadsheet...",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 24,
+  "comments": 13,
+  "published_at": "2026-09-28T09:15:48Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/james_anderson_h/the-7-walls-javascript-hits-and-how-webassembly-gets-past-them-3khk"
+  ],
+  "cross_source_count": 1,
+  "score": 747.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fca4frk0zhq5jbegyd0hc.png",
+  "link_status": "ok",
+  "ko_title": "JavaScript가 마주하는 7가지 한계와 WebAssembly가 이를 극복하는 방법",
+  "summary": "이 글은 웹 개발자가 흔히 겪는 7가지 성능·기능 한계를 제시하고, 각각을 WebAssembly가 어떻게 해결하는지 실제 사례와 함께 설명한다. Google Sheets와 Figma가 계산 엔진과 디자인 엔진을 Wasm으로 전환해 속도를 크게 향상시킨 구체적인 예를 들었다.",
+  "why": "백엔드 로직을 브라우저로 옮길 때 JS의 계산 한계를 Wasm으로 우회할 수 있다. Rust나 C++로 작성해 컴파일하면 핵심 경로에서 네이티브에 가까운 속도를 낸다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Creem.io for Pakistani Developers: A Practical Integration Guide (2026)",
+  "url": "https://dev.to/thebitforge/creemio-for-pakistani-developers-a-practical-integration-guide-2026-1dpc",
+  "description": "READ HERE                                                                                   ...",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 36,
+  "comments": 0,
+  "published_at": "2026-09-28T14:09:08Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/thebitforge/creemio-for-pakistani-developers-a-practical-integration-guide-2026-1dpc"
+  ],
+  "cross_source_count": 1,
+  "score": 732.0,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3gqg2ad5lj1n24565do8.png",
+  "link_status": "ok",
+  "ko_title": "파키스탄 개발자를 위한 Creem.io 실용 통합 가이드 (2026)",
+  "summary": "Creem.io는 파키스탄을 지원하는 Merchant of Record 서비스로, 결제, 부가세 처리, 청구서 발행 등을 대신해준다. 이 가이드는 파키스탄 개발자가 Creem API를 이용해 SaaS, 디지털 상품 등을 판매하는 방법을 실제 코드 예제로 보여준다. 문서는 2026년 9월 기준이며, 최신 결제 규정은 Creem 공식 문서를 확인해야 한다.",
+  "why": "파키스탄 개발자가 해외 결제 인프라를 직접 구축할 필요 없이 SaaS를 판매할 수 있는 통로가 열렸다. 다만 최신 결제 규정은 Creem 공식 문서에서 직접 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "dzhng / jevgrep",
+  "url": "https://github.com/dzhng/jevgrep",
+  "description": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 678,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/dzhng/jevgrep"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 678,
+  "score": 342.29999999999995,
+  "image": "https://opengraph.githubassets.com/1/dzhng/jevgrep",
+  "link_status": null,
+  "ko_title": "dzhng / jevgrep — 코드 검색 도구",
+  "summary": "jevgrep은 자연어 질문으로 레포지토리 내 관련 파일과 코드 조각을 반환하는 CLI 도구다. Vercel AI Gateway 등 모델을 활용해 동일 작업을 30% 정도 저렴하게 수행한다. Node.js 22 이상과 macOS·Linux 환경에서 동작하며 별도 Python·Bun·ripgrep 설치가 필요 없다. 기존 코딩 에이전트에 스킬을 추가하면 자동으로 사용 가능하다.",
+  "why": "코딩 에이전트가 새 작업에서 파일 탐색에 쓰는 비용을 줄여준다. Node.js 22 이상 환경에서 별도 도구 설치 없이 바로 쓸 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "byoungd / up",
+  "url": "https://github.com/byoungd/up",
+  "description": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
+  "source": "github",
+  "upvotes": 310,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/byoungd/up"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 310,
+  "score": 318.5,
+  "image": "https://opengraph.githubassets.com/1/byoungd/up",
+  "link_status": null,
+  "ko_title": "byoungd / up",
+  "summary": "이 저장소는 AI 시대에 맞춘 지속 학습 가이드를 제공한다. 영어와 중국어로 된 전자책을 EPUB·PDF 형식으로 다운로드할 수 있다. 가이드는 문제 발견, AI 협업, 실전 과제 수행, 증거 보관, 복습의 순환 과정을 제시한다.",
+  "why": "AI가 즉각적인 답변을 제공하지만, 문제의 가치 판단과 결과 검증은 여전히 개발자의 몫이다. 이 가이드는 AI 협업 시 증거를 남기고 복습하는 순환 과정을 제시한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "Niko1221 / Strata",
+  "url": "https://github.com/Niko1221/Strata",
+  "description": "Qwen3.8-Flash-Next (125B MoE) on a 12-24 GB NVIDIA GPU + 64 GB RAM: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 322,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Niko1221/Strata"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 322,
+  "score": 217.7,
+  "image": "https://opengraph.githubassets.com/1/Niko1221/Strata",
+  "link_status": null,
+  "ko_title": "Niko1221 / Strata — 일반 PC에서 1250억 파라미터 AI 모델 실행",
+  "summary": "Strata는 Qwen3.8-Flash-Next 125-billion 파라미터 모델을 12-24 GB GPU와 64 GB RAM이 장착된 일반 게이밍 PC에서 실행한다. Windows·Linux 지원이며 원클릭 설치가 가능하고, 토큰당 60-95 tokens/s 속도로 답변을 생성한다. 모델 압축 옵션(Q2_0, IQ2_XS 등)별 성능 표가 제공된다.",
+  "why": "12~24GB GPU와 64GB RAM이면 1250억 파라미터 모델을 돌릴 수 있다. 서버 없이 로컬에서 60~95 토큰/초 속도로 응답을 생성한다. Q2_0, IQ2_XS 등 압축 옵션별 성능 차이를 확인해야 한다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "cs341-illinois / coursebook",
+  "url": "https://github.com/cs341-illinois/coursebook",
+  "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+  "source": "github",
+  "upvotes": 265,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/cs341-illinois/coursebook"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 265,
+  "score": 197.75,
+  "image": "https://opengraph.githubassets.com/1/cs341-illinois/coursebook",
+  "link_status": null,
+  "ko_title": "cs341-illinois / coursebook — 시스템 프로그래밍 교재",
+  "summary": "이 저장소는 일리노이 대학교 UI버너-샴페인 CS 341 과목에서 사용하는 오픈소스 시스템 프로그래밍 교재를 제공한다. 원본 위키북을 개선해 인용·각주·용어집을 추가하고 PDF·HTML·EPUB 형태로 자동 빌드한다. C 언어와 어셈블리 기초를 전제로 한다.",
+  "why": "C와 어셈블리 기초를 전제로 하므로 해당 지식이 없으면 바로 읽기 어렵다. 시스템 프로그래밍 개념을 정리할 때 인용과 용어집이 포함된 교재로 활용할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
+  "title": "NawfalMotii79 / PLFM_RADAR",
+  "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+  "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+  "source": "github",
+  "upvotes": 145,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/NawfalMotii79/PLFM_RADAR"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 145,
+  "score": 155.75,
+  "resurfaced": "2026-08-19",
+  "image": "https://opengraph.githubassets.com/1/NawfalMotii79/PLFM_RADAR",
+  "link_status": null,
+  "ko_title": "AERIS-10: 오픈소스 펄스 선형 주파수 변조 위상 배열 레이더",
+  "summary": "AERIS-10은 10.5 GHz 주파수에서 동작하는 저비용 위상 배열 레이더로, 펄스 선형 주파수 변조 방식을 사용한다. 3 km와 20 km 두 가지 사정거리 버전을 제공하며, 연구자·드론 개발자·SDR 매니아를 대상으로 한다. 현재 알파 단계이며, 하드웨어는 CERN-OHL-P 라이선스, 소프트웨어는 MIT 라이선스로 공개돼 있다.",
+  "why": "알파 단계라 기능 완성도가 낮아 프로덕션 환경에 바로 쓰기는 어렵다. 소프트웨어가 MIT 라이선스라 기존 코드에 자유롭게 통합할 수 있다.",
+  "relevance": "게재",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-09-29T00:00:08.097197+09:00",
+  "batch_label": "9월 29일 00:00"
+ },
+ {
   "title": "Recurse Center에서 한 일들",
   "url": "https://news.hada.io/topic?id=34419",
   "description": "브루클린의 프로그래밍 리트리트 Recurse Center 에서 여름을 보내며, LLM과 에이전트를 익히는 스터디부터 언어 구현, 압축 해제기 개발, 페어 프로그래밍까지 다양한 활동을 진행함 LLM 학습과 실험 을 병행하며 에이전트 샌드박스, 소형 언어 모델, 협동 게임 등을...",
