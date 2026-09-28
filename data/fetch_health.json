@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-19T00:00:27+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-19T08:00:34+09:00",
    "total": 17,
    "counts": {
@@ -555,6 +539,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-09-29T00:00:30+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "github": 5
+   },
+   "failures": []
   }
  ]
 }
