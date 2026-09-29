@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-19T16:00:30+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/australian-youth-safety-blueprint",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-20T00:00:28+09:00",
    "total": 20,
    "counts": {
@@ -535,6 +519,27 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-09-29T16:00:29+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
