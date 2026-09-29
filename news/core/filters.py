@@ -197,6 +197,19 @@ def drop_dead_links(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     return kept, dropped
 
 
+# 판정과 상관없이 남기는 기사. LLM 판정이 틀려도 이 기사들은 잃지 않는다 —
+# 공식 발표(Anthropic), 트렌딩 저장소, 여러 곳에 동시에 올라온 소식, 해커뉴스에서
+# 크게 반응한 글. "Fable 5.1 월드 모델링" 같은 기사를 잘못 빼는 일이 실측에 있었다.
+PROTECT_SOURCES = {"anthropic", "github"}
+PROTECT_UPVOTES = 200
+
+
+def protected(a: dict) -> bool:
+    return (a.get("source") in PROTECT_SOURCES
+            or (a.get("cross_source_count") or 1) >= 2
+            or (a.get("source") == "hackernews" and (a.get("upvotes") or 0) >= PROTECT_UPVOTES))
+
+
 def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     """LLM이 `무관`으로 분류한 기사를 게재 대상에서 뺀다.
 
@@ -209,7 +222,7 @@ def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     """
     kept, dropped = [], []
     for a in articles:
-        if a.get("llm_done") and a.get("relevance") == IRRELEVANT:
+        if a.get("llm_done") and a.get("relevance") == IRRELEVANT and not protected(a):
             dropped.append(a)
         else:
             kept.append(a)
