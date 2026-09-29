@@ -82,7 +82,11 @@ def migrate_legacy(legacy_path: str = LEGACY_PATH, base_dir: str = DIR) -> None:
 # content(수집 원문 3000자)는 샤드 용량의 66%를 차지했고, 남의 API 토큰이
 # 섞여 들어와 push가 거부되는 사고의 통로이기도 했다 (fix-secret-push-block).
 # 요약 파이프라인은 enrich→summarizer 구간에서 이미 다 쓰고 넘어온다.
-DROP_FIELDS = ("content",)
+# 원문을 그대로 옮긴 필드는 저장하지 않는다. content 는 본문 전체, description 은
+# 피드·HN 이 준 원문 발췌(RSS 400자, HN 본문은 2천 자 넘게)다. 둘 다 요약의 입력일 뿐
+# 화면에는 우리 요약만 나가야 한다 — 샤드는 docs/ 아래라 누구나 받아 갈 수 있고,
+# 남의 글을 그대로 공개하는 것이 된다 (2026-09-30 저작권 점검).
+DROP_FIELDS = ("content", "description")
 
 
 def append(new_items: list[dict], batch: datetime, base_dir: str = DIR) -> list[dict]:

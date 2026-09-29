@@ -47,9 +47,11 @@ def test_displayed_fields_survive(tmp_path):
     base = str(tmp_path / "articles")
     archive.append([dict(FULL)], NOW, base_dir=base)
     stored = json.load(open(os.path.join(base, "2026-08.json"), encoding="utf-8"))[0]
-    for key in ("url", "title", "ko_title", "description", "summary", "why",
+    for key in ("url", "title", "ko_title", "summary", "why",
                 "tags", "image", "source", "upvotes", "comments", "published_at"):
         assert stored[key] == FULL[key], key
+    # 원문 발췌는 요약의 입력일 뿐이라 공개 샤드에 남기지 않는다
+    assert "description" not in stored
     assert stored["batch"].startswith("2026-08-13")
 
 

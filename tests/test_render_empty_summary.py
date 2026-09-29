@@ -30,6 +30,8 @@ def test_normal_summary_untouched():
     assert vm["paras"] == ["요약 문장이다."]
 
 
-def test_description_fallback_before_notice():
+def test_원문_발췌로_메우지_않는다():
+    """요약이 비면 원문 설명을 그대로 보여 주던 때가 있었다 — 남의 글을 옮겨 싣는 것이다."""
     vm = to_view_model([_article(description="피드 설명.")])[0]
-    assert vm["paras"] == ["피드 설명."]
+    assert "피드 설명." not in " ".join(vm["paras"]) + vm["snip"]
+    assert "본문이 공개되지 않은 기사" in " ".join(vm["paras"])
