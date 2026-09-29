@@ -56,10 +56,34 @@ def test_relevance_does_not_leak_into_other_fields():
 
 
 # --------------------------------------------------------------- 프롬프트
-def test_prompt_asks_for_relevance():
-    assert "분류:" in PROMPT
-    for value in ("게재", "제외"):
-        assert value in PROMPT
+def test_prompt_asks_for_kind_and_scores():
+    assert "종류:" in PROMPT and "점수:" in PROMPT
+
+
+def test_only_off_topic_kind_is_excluded():
+    """점수가 낮아도 기술 글이면 게재한다. 기술밖일 때만 제외 (score-relevance)."""
+    base = "번역제목: t\n요약: s\n왜중요: w\n"
+    off = _parse(base + "종류: 기술밖\n점수: 중요도=1 새로움=2 근거=1 반향=2 실행=0")
+    thin = _parse(base + "종류: 모델\n점수: 중요도=2 새로움=2 근거=1 반향=1 실행=0")
+    assert off["relevance"] == "제외"
+    assert thin["relevance"] == "게재" and thin["score"] < 40
+
+
+def test_protected_articles_survive_the_gate():
+    from news.core.filters import drop_irrelevant
+    arts = [{"url": u, "title": u, "relevance": "제외", "llm_done": True, **x} for u, x in [
+        ("a", {"source": "anthropic"}), ("g", {"source": "github"}),
+        ("m", {"source": "rss", "cross_source_count": 2}),
+        ("h", {"source": "hackernews", "upvotes": 350}),
+        ("x", {"source": "hackernews", "upvotes": 40})]]
+    kept, dropped = drop_irrelevant(arts)
+    assert [a["url"] for a in dropped] == ["x"]
+
+
+def test_broken_scores_fall_back_to_publish():
+    """형식이 깨지면 점수 없이 게재 — 판정이 망가졌을 때 페이지가 비면 안 된다."""
+    out = _parse("번역제목: t\n요약: s\n종류: 도구\n점수: 모름")
+    assert "score" not in out and out["relevance"] == "게재"
 
 
 # --------------------------------------------------------------- 게재 제외
@@ -143,9 +167,9 @@ def test_skipped_articles_are_not_published(monkeypatch):
 
 
 # --------------------------------------------------------------- 기본 꺼짐
-def test_gate_is_off_by_default():
-    """무료 gpt-oss-120b의 판정이 아직 안정적이지 않다 — 켜는 것은 사용자 결정."""
+def test_gate_is_on_with_protection():
+    """2026-10-01 사용자 결정으로 켰다. 기술밖만 빼고 보호 목록은 남긴다."""
     import yaml
     with open(os.path.join(ROOT, "config.yaml"), encoding="utf-8") as f:
         sc = yaml.safe_load(f)["scraper"]
-    assert sc.get("relevance_gate") is False
+    assert sc.get("relevance_gate") is True
