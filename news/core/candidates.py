@@ -113,7 +113,6 @@ def log(cands: list[dict], selected_urls: set[str], batch: datetime,
         row = {
             "url": a.get("url", ""),
             "title": a.get("title", ""),
-            "description": (a.get("description") or "")[:500],
             "source": a.get("source", ""),
             "native": _native(a, gh_meta_map.get(a.get("url", ""), {})),
             "selected": a.get("url") in selected_urls,

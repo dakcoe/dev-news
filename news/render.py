@@ -132,7 +132,8 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
     cutoff = (datetime.now(timezone.utc) - timedelta(days=inline_days)).timestamp() if inline_days else None
     out = []
     for a in articles:
-        summary = a.get("summary") or a.get("description") or ""
+        # 원문 발췌(description)로 메우지 않는다 — 우리 요약이 없으면 안내 문구가 나간다
+        summary = a.get("summary") or ""
         # 페이월·영상·JS 전용 페이지는 본문 추출이 안 돼 요약이 비는 게 정상 —
         # "생성 실패"가 아니라 본문 미공개 안내를 보여준다 (fix-empty-summary-label).
         body_paras = [p.strip() for p in summary.split("\n") if p.strip()] or ["(본문이 공개되지 않은 기사 — 원문을 확인하세요)"]
