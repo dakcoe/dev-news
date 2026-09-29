@@ -41,13 +41,13 @@ HEADERS = {"User-Agent": "dev-news/1.0 (personal feed aggregator)"}
 SOURCES = [
     {"id": "kr", "label": "한국판", "kind": "readme",
      "url": "https://raw.githubusercontent.com/yybmion/public-apis-4Kr/main/README.md",
-     "home": "https://github.com/yybmion/public-apis-4Kr"},
+     "home": "https://github.com/yybmion/public-apis-4Kr", "license": "MIT"},
     {"id": "global", "label": "Public APIs", "kind": "readme",
      "url": "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md",
-     "home": "https://github.com/public-apis/public-apis"},
+     "home": "https://github.com/public-apis/public-apis", "license": "MIT"},
     {"id": "llm", "label": "무료 LLM", "kind": "llm_json",
      "url": "https://raw.githubusercontent.com/mnfst/awesome-free-llm-apis/main/data.json",
-     "home": "https://github.com/mnfst/awesome-free-llm-apis"},
+     "home": "https://github.com/mnfst/awesome-free-llm-apis", "license": "CC0-1.0"},
 ]
 
 LLM_CAT = "AI · LLM"
@@ -188,8 +188,9 @@ def build_catalog(prev_counts: dict[str, int] | None = None) -> dict:
     sources = []
     for s in SOURCES:
         apis = by_source[s["id"]]
-        sources.append({"id": s["id"], "label": s["label"],
-                        "home": s["home"], "count": len(apis)})
+        # 라이선스는 화면에 출처와 함께 적는다 — MIT 는 원 저작권 표시를 요구한다
+        sources.append({"id": s["id"], "label": s["label"], "home": s["home"],
+                        "license": s["license"], "count": len(apis)})
         all_apis.extend(apis)
     # 카탈로그는 남의 README 원문(설명 셀)을 그대로 담는데, 커밋되는 파일 중
     # 유일하게 마스킹을 안 거치고 있었다. 토큰이 섞이면 GitHub push protection이
