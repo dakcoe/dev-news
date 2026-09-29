@@ -1970,6 +1970,10 @@ function apiHTML(){
   h+='<div class="sub">'+(APIS.sources||[]).map(s=>escA(s.label)+' '+s.count+'개').join(' · ')
     +' · 전체 '+APIS.apis.length+'개 · 매 수집 회차마다 갱신됩니다'
     +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>'
+    // 원 목록의 출처와 라이선스. MIT 는 저작권 표시를 요구한다
+    +'<div class="sub">출처: '+(APIS.sources||[]).map(s=>'<a href="'+safeU(s.home)+'" target="_blank" rel="noopener noreferrer">'
+      +escA((s.home||'').replace('https://github.com/',''))+'</a>'+(s.license?' ('+escA(s.license)+')':'')).join(' · ')
+      +'. 각 목록의 저작권은 원 저작자에게 있습니다.</div>'
     // 링크 생존 확인 (api-link-health) — 죽은 링크는 목록에서 이미 빠진 상태다.
     // 확인이 꺼져 있거나 실패한 회차에는 health가 없어 이 줄도 나오지 않는다.
     +(APIS.health?'<div class="sub">링크 생존 확인: 누적 '+APIS.health.known

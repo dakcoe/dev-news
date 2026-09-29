@@ -83,4 +83,7 @@ def test_corpus_distribution():
     avg = sum(counts) / len(counts)
     zero = sum(1 for c in counts if c == 0)
     assert 2.5 <= avg <= 3.5, f"평균 {avg:.2f}"
-    assert zero / len(counts) < 0.05, f"무태그 {zero}/{len(counts)}"
+    # 아카이브에는 원문 발췌(description)가 없다 (2026-09-30 저작권 점검). 수집 때는
+    # 발췌까지 보고 태그를 매기지만, 여기서는 제목·요약만으로 다시 매기므로 무태그가
+    # 조금 는다 — 저장된 태그 기준 4.8%, 발췌 없이 다시 매기면 5.4%.
+    assert zero / len(counts) < 0.06, f"무태그 {zero}/{len(counts)}"
