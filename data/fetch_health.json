@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-21T08:00:32+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-21T16:00:34+09:00",
    "total": 18,
    "counts": {
@@ -618,6 +609,57 @@
      "url": "https://dev.to/slabb/the-ai-act-went-live-two-months-ago-your-agents-logs-are-still-editable-46dn",
      "source": "devto",
      "reason": "dead"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-01T08:01:00+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 12,
+    "blocked": 8,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://america.gov/chat",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34571",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34570",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34569",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34568",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34567",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
