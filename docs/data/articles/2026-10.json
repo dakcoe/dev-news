@@ -1,0 +1,570 @@
+[
+ {
+  "title": "How to Moderate Live Chat in Real Time with Jev and Composio (Discord + Twitch)",
+  "url": "https://dev.to/composiodev/how-to-moderate-live-chat-in-real-time-with-jev-and-composio-discord-twitch-5ab0",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 3,
+  "published_at": "2026-09-30T13:05:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/composiodev/how-to-moderate-live-chat-in-real-time-with-jev-and-composio-discord-twitch-5ab0"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwvn2a89cre9aezzzs9wj.png",
+  "link_status": "ok",
+  "ko_title": "실시간 채팅을 Jev와 Composio로 중재하기 (Discord + Twitch)",
+  "summary": "이 글은 TypeSafe의 의사결정 모델 Jev를 Composio 툴킷과 연동해 Discord와 Twitch 채팅에서 메시지 삭제 여부를 판단하는 봇을 만드는 과정을 설명한다. 기존 LLM 기반 중재보다 빠르고 비용 효율적인 방법을 제시한다. 프로젝트 소스는 GitHub shricodev/jev-youtube-discord-moderator 에 있다.",
+  "why": "Jev를 Composio 툴킷으로 연결하면 Discord와 Twitch에서 메시지를 실시간으로 판단해 삭제할 수 있다. LLM보다 훨씬 빠르고 비용이 저렴해(입력 토큰당 $0.042) 대규모 채팅에서 사용 가능하다. 인간 모더레이터를 보완용으로 두고, 소스코드(shricodev/jev-youtube-discord-moderator)를 참고해 구현한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Show GN: 레몬캐스트, 해외 팟캐스트를 진행자 목소리 느낌 그대로 한국어로 듣는 앱",
+  "url": "https://news.hada.io/topic?id=34547",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790775826.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34547"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 레몬캐스트, 해외 팟캐스트를 진행자 목소리 느낌 그대로 한국어로 듣는 앱",
+  "summary": "레몬캐스트는 해외 팟캐스트를 AI 기반으로 한국어 더빙해 제공한다. 진행자의 억양과 감정을 유지하도록 음성 합성 기술을 적용했다. 현재 베타 버전으로 서비스 중이며, 개발자는 피드백을 받고 있다.",
+  "why": "해외 개발자 팟캐스트를 한국어 더빙으로 바로 들을 수 있다. 진행자 억양·감정까지 살려 청취 효율이 높아진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "1 in 5 Packages Your AI Suggests Don't Exist. Attackers Know Which Ones.",
+  "url": "https://dev.to/james_anderson_h/slopsquatting-your-ai-invented-a-package-and-an-attacker-was-waiting-1g67",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 22,
+  "comments": 4,
+  "published_at": "2026-09-30T08:37:59Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/james_anderson_h/slopsquatting-your-ai-invented-a-package-and-an-attacker-was-waiting-1g67"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu7bd54ck4883vtbzm8b2.png",
+  "link_status": "ok",
+  "ko_title": "AI가 제안하는 패키지 중 5개 중 1개는 존재하지 않는다. 공격자는 어떤 패키지인지 안다.",
+  "summary": "연구에 따르면 LLM이 추천한 패키지의 19.7%가 실제로 존재하지 않는다. 공격자는 이러한 허구의 이름을 미리 등록해 악성 코드를 삽입한다. 논문은 576 000개의 코드 샘플을 분석해 205 474개의 비존재 패키지를 확인했다.",
+  "why": "LLM이 제안한 패키지 중 19.7%가 존재하지 않는다. 따라서 설치 전 PyPI에서 실제 존재 여부를 확인해야 한다. 이미 등록된 가짜 패키지는 악성 코드가 포함될 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "China's AI industry closes ranks as Deepseek ships open-source software for Huawei's Ascend chips",
+  "url": "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790779044.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/deepseek_deepseek_logo.png",
+  "link_status": "ok",
+  "ko_title": "중국 AI 산업, Deepseek의 화웨이 Ascend 칩용 오픈소스 소프트웨어 출시로 결속",
+  "summary": "Deepseek가 화웨이 Ascend AI 칩용 오픈소스 프로그래밍 도구 모음과 TileLang 언어를 공개했다. TileLang은 베이징대 연구진이 개발했으며 CUDA보다 간단한 모델을 제공한다. 두 회사는 128개 Ascend 950 칩으로 구성된 슈퍼노드도 최적화했다.",
+  "why": "CUDA 생태계 의존도를 낮추고자 할 때 대안으로 검토할 수 있는 언어가 생겼다. TileLang은 CUDA보다 단순한 프로그래밍 모델을 제공한다. 화웨이 Ascend 칩 환경에서만 동작하므로 기존 NVIDIA 스택에는 영향이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "openclaw / openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "source": "github",
+  "upvotes": 136,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/openclaw/openclaw"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 136,
+  "score": 60,
+  "resurfaced": "2026-08-25",
+  "image": "https://opengraph.githubassets.com/1/openclaw/openclaw",
+  "link_status": null,
+  "ko_title": "OpenClaw — 당신의 기기와 채팅에서 사용하는 AI 비서",
+  "summary": "OpenClaw는 오픈소스 AI 비서로, 사용자의 컴퓨터에서 실행된다. Discord, iMessage, Slack, Teams, Telegram, WhatsApp 등 20개 이상의 채팅 채널과 macOS, iOS, Android, Windows, Linux용 네이티브 앱을 지원한다. 모델·에이전트(Claude, Codex, 로컬 모델 등)는 플러그인 형태로 교체 가능하며, 상태·메모리·자격증명은 모두 로컬에 보관된다.",
+  "why": "OpenClaw는 Discord, iMessage, Slack 등 20개 채널에 연결해 AI를 실행한다. 모델과 에이전트는 플러그인으로 교체 가능해 기존 코드에 영향 없이 업데이트할 수 있다. 상태·메모리·자격증명은 로컬에 저장돼 보안이 강화된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Upgrade your desktop: Ubuntu 26.04.1 LTS is now available",
+  "url": "https://ubuntu.com/blog/upgrade-your-desktop-ubuntu-26-04-lts",
+  "source": "hackernews",
+  "upvotes": 64,
+  "comments": 55,
+  "published_at": 1790775397,
+  "discussion": "https://news.ycombinator.com/item?id=49908757",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ubuntu.com/blog/upgrade-your-desktop-ubuntu-26-04-lts"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://ubuntu.com/wp-content/uploads/012f/Ubuntu-26.04-LTS-Launch-Video-Thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Ubuntu 26.04.1 LTS가 출시되었습니다",
+  "summary": "Ubuntu 26.04.1 LTS는 기존 26.04 LTS의 버그 수정과 개선을 포함한 업데이트이며, GNOME 50과 Wayland 전환으로 시각·성능이 향상되었습니다. 기본 앱이 교체되고 App Center에서 deb와 snap을 동시에 관리할 수 있습니다. 24.04 LTS 사용자는 데스크톱에서 직접 업그레이드 알림을 받게 됩니다.",
+  "why": "24.04 사용자는 데스크톱에서 바로 26.04 LTS 업그레이드 알림을 받는다. Wayland 전환과 GNOME 50으로 그래픽·터치 성능이 크게 향상된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "harry0703 / MoneyPrinterTurbo",
+  "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+  "source": "github",
+  "upvotes": 338,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/harry0703/MoneyPrinterTurbo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 338,
+  "score": 59,
+  "resurfaced": "2026-08-18",
+  "image": "https://opengraph.githubassets.com/1/harry0703/MoneyPrinterTurbo",
+  "link_status": null,
+  "ko_title": "MoneyPrinterTurbo — AI 단일 짧은 영상 생성 도구",
+  "summary": "이 오픈소스 도구는 주제나 키워드만 입력하면 스크립트 작성, 소재 매칭, 자막·배경음악 생성, 고화질 영상 합성을 자동으로 수행한다. Windows·macOS·Linux에서 Python 3.11 이상 환경으로 실행 가능하며, 웹 UI와 API를 모두 제공한다.",
+  "why": "Python 3.11 이상이 필요하므로 기존 3.10 환경에서는 실행이 안 됩니다. 이 도구는 주제만 입력하면 스크립트, 자막, 배경음악, 영상까지 자동 합성해 주므로, 영상 제작에 소요되는 수작업을 크게 줄일 수 있습니다. 웹 UI와 API를 동시에 제공하므로, 기존 백엔드 파이프라인에 바로 통합해 자동화할 수 있습니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "dev-tools",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Photo Scrubber — local face blur & metadata removal",
+  "url": "https://simonwillison.net/2026/Sep/29/photo-scrubber/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790700327.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Sep/29/photo-scrubber/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Photo Scrubber — 로컬 얼굴 흐림 및 메타데이터 제거",
+  "summary": "GPT-6 Astra가 만든 실험적 도구로, 사진 속 얼굴을 자동으로 인식해 흐리게 처리한다. Google MediaPipe C++ 라이브러리를 @mediapipe/tasks-vision을 통해 WebAssembly로 컴파일해 브라우저에서 실행한다. BlazeFace 얼굴 탐지 모델을 사용한다.",
+  "why": "@mediapipe/tasks-vision을 사용해 MediaPipe C++를 WebAssembly로 컴파일하면 브라우저에서 얼굴을 자동 인식해 흐리게 할 수 있다. BlazeFace 모델이 로드되지 않으면 얼굴이 흐려지지 않으므로, 빌드 시 모델 경로를 확인하고 WASM 모듈을 올바르게 포함해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Your AI guardrail is green. It's also catching nothing.",
+  "url": "https://dev.to/rudratosh/your-ai-guardrail-is-green-its-also-catching-nothing-5eel",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 5,
+  "comments": 10,
+  "published_at": "2026-09-30T07:55:25Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/rudratosh/your-ai-guardrail-is-green-its-also-catching-nothing-5eel"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fici7ovmznzak7nek67uh.png",
+  "link_status": "ok",
+  "ko_title": "당신의 AI 가드레일은 초록색이다. 하지만 아무것도 잡지 못한다.",
+  "summary": "프롬프트 인젝션 탐지기 10개를 629개의 실제 공격에 적용해 본 결과, 대부분은 약하거나 과잉 경보를 보였다. 메타의 Prompt Guard 2는 629건 중 6건(약 1%)만 탐지해 거의 무시되는 수준이었다. 탐지기가 정상 작동하고 건강 체크를 통과해도 실제 공격을 잡지 못하는 경우가 존재한다.",
+  "why": "Prompt Guard 2는 629건 중 6건만 탐지해 1%에 불과합니다. 따라서 가드레일이 초록색이라도 실제 공격을 잡지 못할 위험이 있으니, 탐지율을 직접 테스트하고 필요 시 다른 도구와 교체하거나 설정을 조정해야 합니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "research",
+   "security"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Pi.dev: You Said No MCP",
+  "url": "https://earendil.com/posts/you-said-no-mcp/",
+  "source": "hackernews",
+  "upvotes": 340,
+  "comments": 182,
+  "published_at": 1790762123,
+  "discussion": "https://news.ycombinator.com/item?id=49906637",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://earendil.com/posts/you-said-no-mcp/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://earendil.com/static/og/posts/you-said-no-mcp.png",
+  "link_status": "ok",
+  "ko_title": "Pi.dev: 당신은 MCP를 안 된다고 했었죠",
+  "summary": "Pi는 기존에 지원하지 않던 MCP를 코어에 통합했다. 이번 변경으로 MCP 관련 기능이 기본 제공되며, 동시에 Jev 사용이 더 쉬워졌다. MCP를 활용한 샌드박스 인터프리터가 핵심에 포함돼 확장 없이도 이용 가능하다.",
+  "why": "Pi를 사용하는 경우 MCP 기능이 이제 확장 설치 없이 코어에서 기본 제공된다. MCP 서버의 조합성이 여전히 제한적이므로 기존 방식과 동일한 한계가 존재한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+  "url": "https://huggingface.co/blog/open-tts-leaderboard",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790726400.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/open-tts-leaderboard"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://huggingface.co/blog/assets/open-tts-leaderboard/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "오픈 TTS 리더보드: 다국어 텍스트-투-스피치 및 음성 클로닝을 위한 확장 가능한 평가",
+  "summary": "기존 인간 선호 기반 평가가 규모와 일관성에서 한계가 있다는 점을 지적하고, 객관적 지표(WER·CER, 역실시간 팩터 등)로 모델을 비교하는 Open TTS Leaderboard를 공개했다. 이 리더보드는 Qwen3 ASR을 활용해 인식 정확도를 측정하고, H200 GPU에서 배치 추론 속도를 평가한다. 현재 오픈-소스 모델이 기존 아레나에 거의 포함되지 못하는 상황을 개선하려는 시도이다.",
+  "why": "인간 선호 평가가 확장하기 어려운 상황에서 객관적 지표 기반 평가를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Vermont replacing power plants with home batteries",
+  "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
+  "source": "hackernews",
+  "upvotes": 291,
+  "comments": 223,
+  "published_at": 1790705942,
+  "discussion": "https://news.ycombinator.com/item?id=49897993",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://ychef.files.bbci.co.uk/624x351/p0pczkzt.jpg",
+  "link_status": "ok",
+  "ko_title": "버몬트, 가정용 배터리로 발전소 대체",
+  "summary": "그린 마운틴 파워가 월 55달러에 10년 임대형 가정용 배터리를 설치해 전력 공급을 보장한다. 현재 5,500여 가구가 참여하고 있으며, 이 배터리들이 가상 발전소(VPP) 역할을 한다. 미국 전체 가상 발전소 용량은 40GW에 달하지만 2030년까지 160GW까지 확대될 전망이다.",
+  "why": "가정용 배터리가 가상 발전소로 묶여 전력망을 보완하는 구조가 현실화됐다. 전력망 안정성 관련 인프라를 다루는 개발자에게는 분산 에너지 리소스 통합의 실제 사례다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "DietrichGebert / ponytail",
+  "url": "https://github.com/DietrichGebert/ponytail",
+  "source": "github",
+  "upvotes": 675,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/DietrichGebert/ponytail"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 675,
+  "score": 42,
+  "resurfaced": "2026-08-26",
+  "image": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail",
+  "link_status": null,
+  "ko_title": "포니테일",
+  "summary": "이 저장소는 한 줄 코드로 동작하는 최소주의 라이브러리다. npm 패키지 @dietrichgebert/ponytail 로 배포되며 20개의 에이전트와 호환된다. MIT 라이선스로 자유롭게 사용할 수 있다. 별도 기능 설명은 본문에 없다.",
+  "why": "Ponytail은 한 줄 코드로 20개의 에이전트와 호환된다. npm 패키지 @dietrichgebert/ponytail 를 설치한 뒤 import 하면 바로 사용 가능하다. MIT 라이선스로 자유롭게 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Sam Altman은 왜 자유의 몸인가?",
+  "url": "https://news.hada.io/topic?id=34546",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790775227.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34546"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Sam Altman은 왜 자유의 몸인가?",
+  "summary": "OpenAI 모델이 웹사이트에 침입해 데이터를 수집한 사례가 기업의 사업 방식과 책임 문제로 비판받고 있다. 출판사들이 제기한 소송에서는 OpenAI가 유료벽을 우회하고 탐지를 회피한 점을 문제 삼았다. 이러한 행위에 기존 법률을 적용해야 한다는 주장도 제기되고 있다.",
+  "why": "OpenAI가 유료벽을 우회해 웹사이트 데이터를 수집했음으로, 기업은 데이터 수집 방식에 대한 법적 책임을 검토해야 한다. 출판사 소송이 제기된 상황에서 기존 법률 적용 여부가 논의되므로, 관련 규정 준수 여부를 즉시 확인할 필요가 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "September 2026: The world today, as seen by one Polish guy",
+  "url": "https://tomwojcik.com/posts/2026-09-21/september-2026-the-world-today/",
+  "source": "hackernews",
+  "upvotes": 416,
+  "comments": 297,
+  "published_at": 1790752351,
+  "discussion": "https://news.ycombinator.com/item?id=49905487",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://tomwojcik.com/posts/2026-09-21/september-2026-the-world-today/"
+  ],
+  "cross_source_count": 1,
+  "score": 36,
+  "image": "https://tomwojcik.com/og/september-2026-the-world-today.jpg",
+  "link_status": "ok",
+  "ko_title": "2026년 9월: 한 폴란드인의 시각으로 본 오늘 세계",
+  "summary": "폴란드 저자는 전쟁, 에너지 위기, 식량 부족이 동시에 발생한 2026년 상황을 서술한다. 호르무즈 해협 봉쇄가 석유 공급을 크게 감소시켜 연료·식량·난방 가격을 급등시켰다. 미국·이스라엘과 이란 간 군사 충돌이 지속되면서 지역적 휴전 제안이 거부되고 있다.",
+  "why": "백엔드 인프라의 에너지 비용이 급등해 운영 예산 재점검이 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "The Cuckoo's Egg",
+  "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)",
+  "source": "lobsters",
+  "upvotes": 15,
+  "comments": 13,
+  "published_at": 1790758123.805,
+  "discussion": "https://lobste.rs/s/nicozi/cuckoo_s_egg",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/28/The_Cuckoo%27s_Egg.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+  "link_status": "ok",
+  "ko_title": "뻐꾸기 알",
+  "summary": "1989년 출간된 클리포드 스톨의 책으로, 1986년 로스앤젤레스 베이커리 국립연구소(LBNL) 시스템에 침입한 해커 마커스 헤스를 추적한 과정을 첫인칭으로 기록한다. 저자는 75센트의 회계 오류를 조사하던 중 9초의 무단 사용을 발견하고, GNU Emacs의 movemail 취약점을 이용한 슈퍼유저 접근을 추적한다. 전화 회선을 물리적으로 연결해 해커의 통신 경로를 파악하고, 최종적으로 버지니아주 MITRE의 콜센터까지 추적한다.",
+  "why": "GNU Emacs의 movemail 취약점을 통한 슈퍼유저 탈취 사례를 확인해야 한다. 레거시 시스템에서 해당 함수의 접근 제어가 여전히 취약한지 점검할 근거가 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Differences between `foldl` and `foldr`",
+  "url": "https://blog.haskell.org/foldl-and-foldr/",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1790772422.869,
+  "discussion": "https://lobste.rs/s/irijoi/differences_between_foldl_foldr",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.haskell.org/foldl-and-foldr/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://blog.haskell.org/images/haskell-opengraph.png",
+  "link_status": "ok",
+  "ko_title": "foldl과 foldr의 차이",
+  "summary": "이 글은 foldl과 foldr의 연관성 차이를 시각적으로 설명한다. 리스트를 왼쪽에서 오른쪽으로 순회하지만 연산 결합 방식이 다름을 보여준다. 엄격 언어에서의 평가 순서가 결과에 미치는 영향을 예시와 함께 제시한다.",
+  "why": "foldl은 왼쪽 결합으로 평가되며, 큰 리스트에서 스택 오버플로우를 방지한다. 반면 foldr는 오른쪽 결합으로 깊은 중첩을 만들며, 엄격 언어에서 메모리 사용이 증가한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ },
+ {
+  "title": "Most data centers refusing to say how much water, electricity they use",
+  "url": "https://nltimes.nl/2026/09/30/data-centers-refusing-say-much-water-electricity-use",
+  "source": "hackernews",
+  "upvotes": 146,
+  "comments": 151,
+  "published_at": 1790765372,
+  "discussion": "https://news.ycombinator.com/item?id=49907057",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nltimes.nl/2026/09/30/data-centers-refusing-say-much-water-electricity-use"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "대부분의 데이터 센터, 물·전기 사용량 공개 거부",
+  "summary": "댓글에서는 유럽 에너지 효율 지침이 500 kW 이상 데이터 센터에 에너지·물 사용량 보고를 요구하지만 실제로는 거의 이행되지 않고 있다. 일부 의견은 법 집행 부재와 과도한 벌금이 필요하다고 주장한다. 또 다른 의견은 정보 공개가 감정적 논쟁을 부추길 뿐이라며 사적 기업에 공개 의무를 묻는 것이 부적절하다고 본다.",
+  "why": "유럽 에너지 효율 지침은 500 kW 이상 데이터 센터에 사용량 보고를 요구한다. 하지만 3년째 시행 중에도 실제 이행은 드물다. 법 집행 부재로 인해 이 지침은 현재 실질적 구속력이 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-01T00:00:07.683692+09:00",
+  "batch_label": "10월 1일 00:00"
+ }
+]

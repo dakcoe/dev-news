@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-21T00:00:31+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "empty": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://qwen.ai/blog?id=qwen-image-2.1",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-09-21T08:00:32+09:00",
    "total": 17,
    "counts": {
@@ -587,6 +571,53 @@
      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-01T00:00:49+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 13,
+    "blocked": 6,
+    "dead": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://nltimes.nl/2026/09/30/data-centers-refusing-say-much-water-electricity-use",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34547",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34546",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34545",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34542",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34541",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://dev.to/slabb/the-ai-act-went-live-two-months-ago-your-agents-logs-are-still-editable-46dn",
+     "source": "devto",
+     "reason": "dead"
     }
    ]
   }
