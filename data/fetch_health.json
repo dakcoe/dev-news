@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-21T16:00:34+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 15,
-    "github": 3
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-22T00:00:37+09:00",
    "total": 20,
    "counts": {
@@ -659,6 +650,42 @@
     {
      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-01T16:00:38+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 14,
+    "blocked": 5,
+    "github": 6
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34591",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34590",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34589",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34588",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34587",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
