@@ -1,5 +1,221 @@
 [
  {
+  "t": "SQLite 3.53의 SET NOT NULL, 전체 테이블 재구축 없이 6번 쓰기로 대체",
+  "u": "https://dev.to/alexgeorgiev17/sqlite-353s-set-not-null-replaces-a-full-table-rebuild-with-six-writes-110e",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-10-02",
+  "o": "SQLite 3.53's SET NOT NULL replaces a full table rebuild with six writes",
+  "x": "SQLite 3.53.0에 ALTER TABLE … ALTER COLUMN … SET NOT NULL과 DROP NOT NULL 구문이 추가돼 "
+ },
+ {
+  "t": "보안 스타트업, AI 에이전트가 공개적으로 업로드한 1만3천여 개 내부 기업 스크린샷 발견",
+  "u": "https://the-decoder.com/security-startup-finds-more-than-13000-internal-company-screenshots-that-ai-agents-uploaded-publicly/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "security",
+   "web",
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "d": "2026-10-02",
+  "o": "Security startup finds more than 13,000 internal company screenshots that AI agents uploaded publicly",
+  "x": "Glow Security는 343개 조직에서 13,000개 이상의 내부 소프트웨어 프로젝트 스크린샷이 공개 GitHub 저장소에 업로드된 사실을"
+ },
+ {
+  "t": "에이전트가 테스트를 통과시키기 위해 하는 일의 절반은 diff에 나타나지 않는다",
+  "u": "https://dev.to/remdore/it-patched-the-random-number-generator-so-the-list-would-already-be-sorted-317i",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "language"
+  ],
+  "d": "2026-10-02",
+  "o": "Half of what an agent does to make your tests pass never shows up in the diff",
+  "x": "코딩 에이전트에게 불가능한 테스트 과제를 주고 실행한 결과, 61%가 테스트를 통과한 것처럼 위조했으며 그 중 절반은 테스트 파일 자체에 아무 "
+ },
+ {
+  "t": "마이크론 CEO, 2027·2028년 메모리 공급 크게 긴축될 것이라고 언급",
+  "u": "https://www.techpowerup.com/353296/micron-ceo-says-memory-supply-will-be-much-tighter-in-2027-and-2028-than-in-2026",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-10-02",
+  "o": "Micron CEO Says Memory Supply Will Be Much Tighter in 2027 and 2028 Than in 2026",
+  "x": "마이크론은 2026 회계연도 4분기 실적 발표에서 2027·2028년 메모리·스토리지 공급이 2026년보다 크게 부족해질 것으로 전망했다. AI"
+ },
+ {
+  "t": "yoinks — 터미널에서 동영상 다운로드",
+  "u": "https://github.com/pablostanley/yoinks",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-10-02",
+  "o": "pablostanley / yoinks",
+  "x": "yoinks는 Node 18+ 환경에서 npm 전역 설치 혹은 npx 실행만으로 YouTube, X, Instagram, Threads, Tik"
+ },
+ {
+  "t": "OpenDLSS - NVIDIA의 DLSS 5 신경 렌더링 네트워크를 Vulkan으로 재구현",
+  "u": "https://news.hada.io/topic?id=34604",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "hardware",
+   "release"
+  ],
+  "d": "2026-10-02",
+  "x": "DLSS-NR 빌드 310.8.0의 71블록 네트워크를 Vulkan으로 재구현해 최종 이미지와 75개 블록 경계 중간값까지 원본과 바이트 단위로"
+ },
+ {
+  "t": "Barclays, 클로드 확대로 운영 업그레이드 및 고객 경험 개선",
+  "u": "https://www.anthropic.com/news/barclays-scales-claude",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-02",
+  "o": "Barclays scales Claude to upgrade operations and improve client experience",
+  "x": "Barclays가 Anthropic과 협업을 확대해 클로드 AI를 전사에 도입한다. 개발자 50%가 2026년 말까지 클로드 코드를 사용하도록 "
+ },
+ {
+  "t": "Anthropic, 펜타곤과의 갈등이 지속되는 가운데 클로드를 민간 기관에 제공",
+  "u": "https://the-decoder.com/anthropic-brings-claude-to-civilian-agencies-as-its-fight-with-the-pentagon-drags-on/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "d": "2026-10-02",
+  "o": "Anthropic brings Claude to civilian agencies as its fight with the Pentagon drags on",
+  "x": "Anthropic은 클로드를 미국 연방·주 정부 기관에 제공한다. 서비스는 7월부터 오픈 베타이며 FedRAMP High 보안 환경에서 운영된다"
+ },
+ {
+  "t": "iOS용 StreetComplete가 공개 베타로 전환",
+  "u": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-02",
+  "o": "StreetComplete on iOS is now in public beta",
+  "x": "StreetComplete의 iOS 포팅이 Kotlin Multiplatform과 Compose Multiplatform을 활용해 공개 베타 단"
+ },
+ {
+  "t": "내 보안 스위트를 깨보려 했더니 반격당했다 (불만족스러운 한 가지 발견)",
+  "u": "https://dev.to/akhourianmolkumar/i-tried-to-break-my-own-security-suite-it-fought-back-and-i-found-1-thing-im-not-happy-about-2092",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "language"
+  ],
+  "d": "2026-10-02",
+  "o": "I Tried to Break My Own Security Suite. It Fought Back (and I Found 1 Thing I'm Not Happy About)",
+  "x": "개발자는 아직 공개되지 않은 ATLOCK v5를 깨끗한 가상 환경에 설치하고 200번의 비트 플립, 460개의 퍼즈 입력 등 다양한 공격을 수행"
+ },
+ {
+  "t": "AI 변경의 인지 부하 감소",
+  "u": "https://amoffat.github.io/blog/cognitive-load.html",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-02",
+  "o": "Reducing the cognitive load of AI changes",
+  "x": "작성자는 AI가 생성한 코드에서 추상 객체·프로세스·개념에 사용된 비표준 용어를 추출하고 대체 용어를 제안하는 프롬프트를 사용한다. 이를 통해 "
+ },
+ {
+  "t": "Book of Shapes - 맞춤 설정 가능한 미니멀 생성형 SVG 패턴 모음",
+  "u": "https://news.hada.io/topic?id=34607",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-02",
+  "x": "Book of Shapes는 18개의 미니멀 생성형 SVG 패턴을 제공하고, 각 패턴을 개별 페이지에서 맞춤 설정할 수 있다. 패턴 종류에는 F"
+ },
+ {
+  "t": "GhostTrack — 위치·전화번호 추적 도구",
+  "u": "https://github.com/HunxByts/GhostTrack",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-02",
+  "o": "HunxByts / GhostTrack",
+  "x": "GhostTrack이 버전 2.2로 업데이트되었다. Linux와 Termux 환경에서 설치 방법과 Python 의존성 설치 후 실행하면 IP, "
+ },
+ {
+  "t": "3개 발표된 지하수 조사에서 발견된 10가지 내부 불일치",
+  "u": "https://dev.to/dannwaneri/10-internal-inconsistencies-in-3-published-groundwater-surveys-4634",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "research",
+   "showcase"
+  ],
+  "d": "2026-10-02",
+  "o": "10 Internal Inconsistencies in 3 Published Groundwater Surveys",
+  "x": "저자는 지하수 저항도 측정값을 질의하면 정상·이상·불확실을 영어로 답하는 에이전트를 만들었다. 해당 에이전트를 사용해 3개의 논문을 검증한 결과"
+ },
+ {
+  "t": "IANA가 example.com 변경 이유에 대해 보낸 이메일",
+  "u": "https://www.oliverdunk.com/2026/09/30/iana-reply",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "web",
+   "devops-infra"
+  ],
+  "d": "2026-10-02",
+  "o": "IANA's email about why example.com changed",
+  "x": "IANA는 example.com 페이지를 기본 HTML과 별도 JavaScript 파일로 분리해 자동 트래픽의 데이터 사용량을 줄였다고 설명한다"
+ },
+ {
+  "t": "휴가에서 돌아오면 정부가 영장 없이 휴대폰을 수색할 수 있다",
+  "u": "https://arstechnica.com/tech-policy/2026/09/immigration-advocate-sues-border-agents-for-demanding-his-cell-phone/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "hardware"
+  ],
+  "d": "2026-10-02",
+  "o": "Returning from vacation? The government can search your phone without a warrant"
+ },
+ {
   "t": "추천 후보는 많을수록 좋을까? TopK를 최적화해 전환율을 높인 방법",
   "u": "https://toss.tech/article/53545",
   "m": "2026-10",
