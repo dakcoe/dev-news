@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-22T00:00:37+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 14,
-    "github": 6
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-22T08:00:28+09:00",
    "total": 17,
    "counts": {
@@ -685,6 +676,47 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34587",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-02T00:00:34+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 14,
+    "blocked": 6,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34608",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34607",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34606",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34604",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34603",
      "source": "geeknews",
      "reason": "blocked"
     }
