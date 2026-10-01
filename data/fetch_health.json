@@ -1,38 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-22T08:00:28+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 10,
-    "blocked": 3,
-    "empty": 1,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://www.forbes.com/sites/jonmarkman/2026/09/21/amazon-blocks-metas-new-muse-ai-agent-from-shopping-on-amazoncom/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://mimo.xiaomi.com/mimo-v2-6",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-22T16:00:31+09:00",
    "total": 17,
    "counts": {
@@ -717,6 +685,58 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34603",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-02T08:00:32+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 12,
+    "short": 2,
+    "blocked": 6,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=49922568",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=49922569",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/the-eternal-complement",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34641",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34640",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34639",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34638",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34637",
      "source": "geeknews",
      "reason": "blocked"
     }
