@@ -15,12 +15,21 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from news.core import http
+from news.core.common import to_timestamp
 
 BASE = "https://www.anthropic.com"
+# (사이트, 목록 경로, 글 주소 접두사, 피드 이름, 제목을 담은 속성 — 없으면 앵커 글자)
+# Claude 제품 블로그(claude.com/blog)는 2026-10 기준 RSS 가 없고, 목록 카드에 글자 대신
+# data-cta-copy 속성으로 제목이 들어 있다. 날짜는 목록에 없다 — 첫 화면의 최신 글만 받고
+# 한 번 실린 글은 seen 이 막는다.
 PAGES = [
-    ("/news", "/news/"),
-    ("/engineering", "/engineering/"),
+    (BASE, "/news", "/news/", "Anthropic", None),
+    (BASE, "/engineering", "/engineering/", "Anthropic Engineering", None),
+    ("https://claude.com", "/blog", "/blog/", "Claude 블로그", "data-cta-copy"),
 ]
+# Claude 개발자 블로그는 RSS 가 있다. 개발자용 글(새 모델로 개발하기, Claude Code 사용법)이
+# 여기에만 올라와서, 빠뜨리면 HN 에 누가 올려야만 실렸다 (2026-10-02 사용자 지적).
+DEV_RSS = ("https://claude.dev/rss.xml", "Claude 개발자 블로그")
 
 # "Aug 4, 2026" / "August 4, 2026" / "2026-08-04"
 DATE_PATTERNS = [
@@ -66,13 +75,14 @@ def _parse_anchor(anchor) -> tuple[str, float | None]:
     return title, published
 
 
-def _fetch_page(path: str, prefix: str, limit: int) -> list[dict]:
-    url = BASE + path
+def _fetch_page(base: str, path: str, prefix: str, feed: str, title_attr: str | None,
+                limit: int) -> list[dict]:
+    url = base + path
     try:
         resp = http.get(url, timeout=15)
         resp.raise_for_status()
     except Exception as e:
-        print(f"[anthropic] {path} 실패: {e}")
+        print(f"[anthropic] {url} 실패: {e}")
         return []
 
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -81,10 +91,13 @@ def _fetch_page(path: str, prefix: str, limit: int) -> list[dict]:
 
     for anchor in soup.select(f'a[href^="{prefix}"]'):
         href = anchor.get("href", "")
-        link = urljoin(BASE, href)
-        if link in seen or link.rstrip("/") == BASE + path:
+        link = urljoin(base, href)
+        if link in seen or link.rstrip("/") == base + path.rstrip("/"):
             continue
-        title, published = _parse_anchor(anchor)
+        if title_attr:
+            title, published = (anchor.get(title_attr) or "").strip(), None
+        else:
+            title, published = _parse_anchor(anchor)
         if not title:
             continue
         seen.add(link)
@@ -93,7 +106,7 @@ def _fetch_page(path: str, prefix: str, limit: int) -> list[dict]:
             "url": link,
             "description": "",
             "source": "anthropic",
-            "feed": "Anthropic" + (" Engineering" if "engineering" in prefix else ""),
+            "feed": feed,
             "upvotes": 0,
             "comments": 0,
             "published_at": published,
@@ -101,14 +114,43 @@ def _fetch_page(path: str, prefix: str, limit: int) -> list[dict]:
         if len(out) >= limit:
             break
 
-    print(f"[anthropic] {path} {len(out)}개")
+    print(f"[anthropic] {url} {len(out)}개")
+    return out
+
+
+def _fetch_rss(url: str, feed: str, limit: int) -> list[dict]:
+    try:
+        resp = http.get(url, timeout=15)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[anthropic] {url} 실패: {e}")
+        return []
+    out = []
+    for item in BeautifulSoup(resp.text, "xml").find_all("item")[:limit]:
+        title = item.title.get_text(strip=True) if item.title else ""
+        link = item.link.get_text(strip=True) if item.link else ""
+        if not title or not link:
+            continue
+        desc = item.find("description")
+        out.append({
+            "title": title,
+            "url": link,
+            "description": BeautifulSoup(desc.get_text() if desc else "", "html.parser").get_text(" ").strip()[:500],
+            "source": "anthropic",
+            "feed": feed,
+            "upvotes": 0,
+            "comments": 0,
+            "published_at": to_timestamp(item.pubDate.get_text(strip=True) if item.pubDate else None),
+        })
+    print(f"[anthropic] {url} {len(out)}개")
     return out
 
 
 def fetch(limit: int = 10) -> list[dict]:
     articles: list[dict] = []
-    for path, prefix in PAGES:
-        articles.extend(_fetch_page(path, prefix, limit))
+    for base, path, prefix, feed, title_attr in PAGES:
+        articles.extend(_fetch_page(base, path, prefix, feed, title_attr, limit))
+    articles.extend(_fetch_rss(*DEV_RSS, limit))
     if not articles:
         print("[anthropic] 0건 — 페이지 구조가 바뀐 것 같습니다. "
               "news/scrapers/anthropic.py 를 확인하세요.")

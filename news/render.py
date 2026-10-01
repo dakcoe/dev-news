@@ -41,7 +41,7 @@ SOURCE_META = {
     "rss": {"name": "블로그 · RSS", "color": "#6b5bd2",
             "desc": "config.yaml의 feeds 목록 — 공식 블로그와 기술 매체"},
     "anthropic": {"name": "Anthropic", "color": "#c96442",
-                  "desc": "anthropic.com/news · /engineering 직접 파싱 (RSS 미제공)"},
+                  "desc": "anthropic.com/news · /engineering, claude.com/blog, claude.dev 블로그"},
 }
 
 
