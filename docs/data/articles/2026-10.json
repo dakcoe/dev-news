@@ -1,5 +1,494 @@
 [
  {
+  "title": "Building with Claude Sonnet 5.5",
+  "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790596800.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/building-with-claude-sonnet-5-5/"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://claude.dev/blog/building-with-claude-sonnet-5-5/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Sonnet 5.5로 빌드하기",
+  "summary": "Claude Sonnet 5.5는 기존 Sonnet 5 대비 30% 빠르고 토큰 사용량이 적어 비용이 최대 30% 절감된다. Opus 5.5보다 일상적인 버그 수정·기능 반복·문서·디자인 작업에 적합하며, 생각 블록을 포함한 응답 구조를 고려해야 한다. Epic Games는 대규모 코드베이스에서도 품질과 속도를 유지한다고 평가했다.",
+  "why": "Sonnet 5.5는 기본적으로 생각 블록을 포함해 응답하므로 기존처럼 첫 번째 블록 텍스트만 읽는 코드는 깨진다. 일상적인 버그 수정이나 기능 반복 작업은 Opus 대신 이 모델을 쓰면 속도와 비용을 동시에 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Ideogram says its new model can edit part of an image without messing up the rest",
+  "url": "https://the-decoder.com/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790875983.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ideogram-says-its-new-model-can-edit-part-of-an-image-without-messing-up-the-rest/"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/ideogram_45-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "Ideogram, 새로운 모델로 이미지 일부만 편집해도 나머지는 그대로 유지",
+  "summary": "Ideogram이 발표한 Ideogram 4.5는 이미지의 지정된 영역만 수정하고 나머지는 변형하지 않는다고 주장한다. 0.8 ~ 22 센트 가격대의 4가지 품질 옵션을 제공하며 2K 해상도를 기본으로 지원한다. 현재 Ideogram 플랫폼과 API를 통해 이용 가능하고, Picsart·Runway·Pika·Leonardo AI와 파트너십을 맺었다. 추후 오픈-웨이트 버전도 공개될 예정이다.",
+  "why": "API를 통해 이미지 편집 파이프라인을 구축 중이라면, 반복 수정 시 발생하는 아티팩트 문제를 해결할 대안이 생겼다. 오픈-웨이트 버전 공개 전까지는 Ideogram 플랫폼과 API를 통한 접근만 가능하다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "RIP, vector database",
+  "url": "https://turbopuffer.com/blog/rip-vector-database",
+  "source": "hackernews",
+  "upvotes": 254,
+  "comments": 72,
+  "published_at": 1790870516,
+  "discussion": "https://news.ycombinator.com/item?id=49923466",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://turbopuffer.com/blog/rip-vector-database"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://turbopuffer.com/og/turbopuffer.png",
+  "link_status": "ok",
+  "ko_title": "RIP, 벡터 데이터베이스",
+  "summary": "turbopuffer v3에서는 문서와 인덱스의 저장 방식·쓰기·압축·쿼리를 전면 개편해 텍스트·정규식·벡터 검색을 모두 빠르게 만든다. 기존에는 ANN 벡터 인덱스를 기본으로 삼아 다른 인덱스와 쿼리 플랜을 제한했지만, 새 버전에서는 ANN을 보조 인덱스로 전환하고 새로운 기본 인덱스를 도입한다. 이를 통해 GROUP BY·집계 등 기존에 어려웠던 SQL 쿼리도 고속 처리할 수 있다.",
+  "why": "turbopuffer v3에서 ANN이 기본 인덱스에서 보조 인덱스로 전환된다. 기존 벡터 데이터베이스로 처리가 어려웠던 GROUP BY와 집계 쿼리를 고속으로 실행할 수 있다. 벡터 검색과 텍스트 검색을 함께 다루는 백엔드 구조를 재설계할 때 참고할 변화다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Nearly half of test subjects mistook Tavus' AI video avatar for a real person on a one-minute call",
+  "url": "https://the-decoder.com/nearly-half-of-test-subjects-mistook-tavus-ai-video-avatar-for-a-real-person-on-a-one-minute-call/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790877820.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nearly-half-of-test-subjects-mistook-tavus-ai-video-avatar-for-a-real-person-on-a-one-minute-call/"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/griffin_demo-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "테스트 대상자의 거의 절반이 Tavus의 AI 비디오 아바타를 실제 사람으로 착각",
+  "summary": "Tavus가 실시간 얼굴 대화가 가능한 최초의 “Human Interaction Model”(HIM)인 Griffin을 발표했다. 1분 영상 통화에서 48%가 Griffin을 실제 사람으로 오인했으며, 인간과 거의 동일한 3.83점(인간 3.92점)을 기록했다. 현재 Griffin-Lite가 연구 미리보기 형태로 제한된 테스트에 제공되고 있다.",
+  "why": "실시간 영상 대화에서 AI가 인간과 구별 불가능해지면, 기존에 텍스트나 음성만 처리하던 백엔드 로직을 재설계해야 한다. Griffin-Lite는 연구 미리보기 단계라 지금 당장 프로덕션에 적용할 수는 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Getting started with Claude Code mods",
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790856000.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://claude.dev/blog/getting-started-with-claude-code-mods/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Code 모드 시작하기",
+  "summary": "이 가이드는 빈 폴더에서 첫 Claude Code 모드인 Token Weather를 만들고, API가 지원하는 다양한 기능을 소개한다. 모드는 JavaScript·TypeScript 모듈 형태의 플러그인으로, 훅을 통해 Claude Code의 동작을 재정의하거나 UI를 추가할 수 있다. Claude Code 2.1.287 이상에서 기본적으로 활성화되며, 모드 로드 시 타입 선언이 자동 생성된다.",
+  "why": "Claude Code 2.1.287 이상에서는 모드가 기본 활성화되어 별도 설정이 필요 없다. 모드 로드시 타입 선언이 자동 생성되므로 해당 파일을 기준으로 빌드해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "web",
+   "backend-data",
+   "release",
+   "science"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+  "url": "https://huggingface.co/blog/allenai/olmocore3",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790866903.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/olmocore3"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/uKnK93gjkKbmJmSx94WO2.png",
+  "link_status": "ok",
+  "ko_title": "Olmo-core 3 소개: 대규모 MoE를 위한 개방형·확장 가능한 학습 인프라",
+  "summary": "Olmo-core 3은 전문가 풀을 8개에서 128개로 확대하면서도 토큰당 선택 전문가 수를 4개로 유지해 활성 파라미터를 약 3.2 B로 고정한다. 전체 파라미터 용량은 4.6 B에서 47 B로 늘었으며, 학습 처리량은 5% 미만 감소했다. 동일 인프라가 1 조 파라미터 규모에서도 벤치마크된 점이 강조된다.",
+  "why": "MoE 학습 시 전문가 풀이 커져도 활성 파라미터가 고정되어 연산 비용이 크게 오르지 않는다. 1조 파라미터 규모까지 확장 가능한 개방형 인프라를 제공해 자체 모델 학습의 진입 장벽을 낮춘다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+  "url": "https://blog.cloudflare.com/clef-decision-models/",
+  "source": "hackernews",
+  "upvotes": 374,
+  "comments": 150,
+  "published_at": 1790871537,
+  "discussion": "https://news.ycombinator.com/item?id=49923692",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.cloudflare.com/clef-decision-models/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3TJV43SPQCPKJ6GBXFCDKNE.01M3TJV53VYDMVNCZDPH1FBFYN.png",
+  "link_status": "ok",
+  "ko_title": "Clef: 오픈소스 의사결정 모델 및 새로운 RL 파인튜닝 플랫폼",
+  "summary": "Cloudflare가 Workers AI에 호스팅된 두 개의 오픈소스 의사결정 모델(Clef, Clef-flash)을 공개하고, 이를 Hugging Face에 Apache 2.0 라이선스로 제공한다. 해당 모델은 기존 분류기와 달리 재학습 없이 다양한 입력에 대해 구조화된 출력을 제공한다. 또한 Clef를 사용자 요구에 맞게 미세조정할 수 있는 강화학습(RL) 파인튜닝 기능을 새롭게 선보였다.",
+  "why": "기존 분류기는 새로운 범주가 생기면 재학습이 필요하지만, Clef는 재학습 없이 다양한 입력에 구조화된 출력을 낸다. Workers AI에서 Jev-API 호환으로 바로 실험하거나, Apache 2.0 라이선스로 로컬 배포가 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "How Albertsons Companies is reimagining retail from the inside out",
+  "url": "https://openai.com/index/albertsons-reimagining-retail",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790870400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/albertsons-reimagining-retail"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6sZopZBu8aHeeYeb8H6IS1/945a5ed2fcd3a837554c8ac49a38cdf6/how-albertsons-companies-is-reimagining-retail-from-the-inside-out-seo.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Albertsons Companies가 내부에서 소매를 재구상한다",
+  "summary": "Albertsons는 OpenAI와 협업해 ChatGPT Enterprise와 맞춤형 AI 서비스를 도입하고 있다. Safeway는 ChatGPT를 통해 저녁 메뉴 제안부터 결제까지 지원하는 기능을 출시했다. 전체 2,200개 매장에서 AI를 활용해 프로모션, 추천, 운영 효율성을 높인다.",
+  "why": "OpenAI API로 추천과 프로모션 인사이트를 구성하는 방식이 실제 사례로 확인된다. 백엔드 개발자는 커머스 도메인에서 LLM을 추천 엔진에 결합하는 구조를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Claude in Chrome is generally available",
+  "url": "https://claude.com/blog/claude-in-chrome-generally-available",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-in-chrome-generally-available"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69050ff880f9a5c13932b7df_og_claude-for-chrome.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude가 Chrome에서 일반 제공",
+  "summary": "Claude가 모든 유료 플랜에서 Chrome 확장으로 정식 출시돼 브라우저 내에서 자동으로 페이지를 읽고 입력·클릭·양식 작성 등을 수행한다. 각 행동은 안전 분류기가 사전 검증해 프롬프트 인젝션 위험을 방지한다. 내부 대시보드·레거시 시스템·벤더 포털 등 기존에 연결되지 않았던 서비스에도 접근 가능하다.",
+  "why": "기존에 API 연동이 불가능했던 내부 대시보드나 레거시 시스템도 브라우저 로그인 세션을 그대로 활용해 자동화할 수 있다. 각 행동마다 안전 분류기가 사전 검증을 수행하므로 프롬프트 인젝션 위험을 고려해 업무에 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "release"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Pi 1.0",
+  "url": "https://earendil.com/posts/pi-1-0/",
+  "source": "hackernews",
+  "upvotes": 552,
+  "comments": 189,
+  "published_at": 1790883185,
+  "discussion": "https://news.ycombinator.com/item?id=49926069",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://earendil.com/posts/pi-1-0/"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://earendil.com/static/og/posts/pi-1-0.png",
+  "link_status": "ok",
+  "ko_title": "Pi 1.0",
+  "summary": "Pi 1.0이 출시되면서 보안이 강화되고 최소화된 설계가 유지되었다. 이번 버전에는 Codemode 지원, 가상 모델 확장, 지연된 도구 로딩, Anthropic 모델 캐시 워밍, 대화 중 시스템 메시지, 새로운 TUI 테마, 기본 전체 화면 모드가 추가되었다. 기존 주요 모델들을 모두 실행할 수 있으며, 에이전트 기반 애플리케이션을 구축하기 위한 유연한 기반을 제공한다.",
+  "why": "에이전트 기반 애플리케이션을 구축할 때 유연한 기반을 제공한다. Codemode와 지연된 도구 로딩으로 기존 방식과 다른 확장성을 확보했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Claude for Small Business launches new workflows, integrations, and training programs",
+  "url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aa96d1d8800d47f264507d6_og_claude-for-small-business-launches-new-workflows-integrations-and-training-programs.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude for Small Business, 새로운 워크플로와 통합, 교육 프로그램 출시",
+  "summary": "Claude for Small Business에 43개의 워크플로와 27개의 신규 통합이 추가돼 Shopify·Salesforce·Zoom 등 기존 도구와 연결된다. 무료 현장 워크숍과 파트너 웨비나가 10개 도시에서 진행돼 소기업 소유주가 AI 활용을 빠르게 시작하도록 돕는다. 출시 이후 설치 횟수는 90만 회를 넘어섰으며, 사용자 요구에 맞춰 영업·보고·제안서 작성 지원 기능이 강화되었다.",
+  "why": "Shopify와 Salesforce, Zoom 등 기존에 쓰던 도구와 바로 연결된다. 영업 리드 생성과 제안서 작성, 일일 보고를 자동화하는 워크플로가 추가됐다. 소규모 팀에서 백엔드 개발 외 업무 자동화를 구축할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "The eternal complement",
+  "url": "https://openai.com/index/the-eternal-complement",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790874000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/the-eternal-complement"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "영원한 보완",
+  "summary": "고도화된 AI가 혁신적인 아이디어 뒤의 일상적인 작업에 가장 큰 영향을 미칠 수 있다. 이러한 실행 능력이 다음 경제와 진보 속도를 좌우할 가능성을 탐구한다.",
+  "why": "루틴 작업 자동화가 실행 속도를 좌우해 다음 경제와 진보의 속도를 결정한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Ask HN: Who is hiring? (October 2026)",
+  "url": "https://news.ycombinator.com/item?id=49922569",
+  "source": "hackernews",
+  "upvotes": 130,
+  "comments": 134,
+  "published_at": 1790866927,
+  "discussion": "https://news.ycombinator.com/item?id=49922569",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=49922569"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Ask HN: 누가 채용 중인가? (2026년 10월)",
+  "summary": "댓글에서는 Sourcegraph가 AI 기반 개발 도구를 제공하며 여러 포지션을 원격으로 채용 중이라고 소개한다. Rinse는 미국·캐나다 전역 및 주요 도시에서 소프트웨어 엔지니어를 연봉 8만~20만 달러 범위로 모집한다. HRS Systems는 화재 보호 산업용 엔지니어링 소프트웨어를 개발하며 원격 SWE를 찾고 있다.",
+  "why": "Sourcegraph의 MCP와 에이전틱 배치 변경 기능이 수백 개 저장소의 코드 변경을 조정한다. 대규모 코드베이스를 다루는 백엔드 개발 시 저장소 간 컨텍스트를 확보하는 방식이 달라진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+  "url": "https://blog.gitbutler.com/git-3-sha-256",
+  "source": "lobsters",
+  "upvotes": 19,
+  "comments": 12,
+  "published_at": 1790879219.318,
+  "discussion": "https://lobste.rs/s/bytzgl/git_3_0_s_upcoming_sha_256_default_will_be",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.gitbutler.com/git-3-sha-256"
+  ],
+  "cross_source_count": 1,
+  "score": 29,
+  "image": "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/git-3-sha-256.webp",
+  "link_status": "ok",
+  "ko_title": "Git 3.0의 SHA-256 기본값 전환은 비용이 큰 실수",
+  "summary": "글쓴이는 Git 3.0에서 SHA-256을 기본 해시 알고리즘으로 바꾸는 것이 실질적인 이득 없이 개발자들에게 큰 시간과 불편을 초래할 것이라고 주장한다. 현재 Git은 20년간 SHA-1을 사용해 왔으며, 충돌 사례가 보고된 적이 없다고 언급한다. SHA-256 전환이 전역적인 호환성 문제와 성능 저하를 야기할 가능성을 강조한다.",
+  "why": "Git 3.0에서 SHA-256이 기본값이 되면 기존 저장소와의 호환성 문제가 생긴다. 전역적인 충돌 가능성과 성능 저하를 감수해야 하는 상황이 온다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
+  "title": "Ask HN: Who wants to be hired? (October 2026)",
+  "url": "https://news.ycombinator.com/item?id=49922568",
+  "source": "hackernews",
+  "upvotes": 82,
+  "comments": 257,
+  "published_at": 1790866927,
+  "discussion": "https://news.ycombinator.com/item?id=49922568",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=49922568"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Ask HN: 누가 채용을 원하나요?",
+  "summary": "댓글에서는 인도·미국·캐나다 등지의 개발자들이 자신이 보유한 Rust·Python·C++·AWS·Kubernetes·iOS 등 기술 스택과 경력, 이력서 링크를 공유하며 원격·현장·하이브리드 근무 형태와 재배치 의사를 밝았다.",
+  "why": "Rust와 PyTorch, AWS 인프라를 다루는 개발자의 최신 프로젝트 사례를 직접 확인할 수 있다. 커널 스케줄러 재설계나 AI 기반 오토스케일러 구축 같은 구체적 구현 접근법을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "language",
+   "career-culture"
+  ],
+  "batch": "2026-10-02T08:00:05.844195+09:00",
+  "batch_label": "10월 2일 08:00"
+ },
+ {
   "title": "SQLite 3.53's SET NOT NULL replaces a full table rebuild with six writes",
   "url": "https://dev.to/alexgeorgiev17/sqlite-353s-set-not-null-replaces-a-full-table-rebuild-with-six-writes-110e",
   "source": "devto",
