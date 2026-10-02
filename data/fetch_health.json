@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-22T16:00:31+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-23T00:00:34+09:00",
    "total": 20,
    "counts": {
@@ -739,6 +730,48 @@
      "url": "https://news.hada.io/topic?id=34637",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-02T16:00:34+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 14,
+    "blocked": 5,
+    "short": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34659",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34657",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34656",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34655",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34653",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/838",
+     "source": "rss",
+     "reason": "short"
     }
    ]
   }

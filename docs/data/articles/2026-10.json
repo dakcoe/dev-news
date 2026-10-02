@@ -1,5 +1,485 @@
 [
  {
+  "title": "AI beats Stratego's greatest player, ending one of the last human strongholds in board games",
+  "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790859482.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/Stratego-Ataraxos-title-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "AI, 전략보드 게임 마지막 인간 요새 중 하나인 스트라테고 최고 선수 격파",
+  "summary": "카네기멜론·NYU·스탠포드·MIT 연구팀이 Ataraxos라는 스트라테고 AI를 개발해 세계 최고 선수인 Pim Niemeijer을 20판 중 15승 1패 4무로 이겼다. 훈련 비용은 8,000달러 미만이며, 이는 불완전 정보 게임에서 포커 AI 기법을 확장한 최초의 초인간 성능이다. 기존 DeepMind 시스템이 인간 수준을 넘지 못했던 점을 대학 예산으로 극복했다.",
+  "why": "불완전 정보 게임에서 포커 AI 기법을 확장해 초인간 성능을 달성했다. 이 기법은 숨겨진 정보가 많은 환경에서 기존 방법론의 한계를 극복한다. 대학 예산 수준으로 구현된 점은 관련 연구 개발 비용 기준을 낮춘다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Several vulnerabilities have been discovered in the Linux kernel",
+  "url": "https://lwn.net/Articles/1097401/",
+  "source": "hackernews",
+  "upvotes": 233,
+  "comments": 158,
+  "published_at": 1790896244,
+  "discussion": "https://news.ycombinator.com/item?id=49928121",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://lwn.net/Articles/1097401/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Linux 커널에 여러 취약점이 발견됨",
+  "summary": "Debian이 2026년 9월 29일 발표한 보안 권고 DSA-6528-1에 Linux 패키지에 대해 80여 개 이상의 CVE가 보고되었다. 해당 CVE는 2024년부터 2026년까지의 다양한 취약점을 포함한다. 상세 내용은 Debian 보안 페이지에서 확인할 수 있다.",
+  "why": "Debian을 쓰는 백엔드 서버라면 커널 업데이트를 즉시 적용해야 한다. 2024년부터 2026년까지 축적된 80여 개 취약점이 한꺼번에 해결되기 때문이다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Claude Code now supports artifacts",
+  "url": "https://claude.com/blog/artifacts-in-claude-code",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/artifacts-in-claude-code"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69050ff880f9a5c13932b7df_og_claude-for-chrome.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude Code, 아티팩트 지원 시작",
+  "summary": "Claude Code가 세션 전체 컨텍스트를 활용해 작업 진행 상황을 실시간 웹 페이지 형태의 아티팩트로 생성한다. 아티팩트는 PR 검토, 대시보드, 릴리스 체크리스트 등으로 자동 업데이트되며 팀 공유가 가능하다. 내부 테스트에서는 디버깅 시 아티팩트를 활용해 로그와 커밋, 오류율 등을 한 페이지에 제공하는 사례가 많았다.",
+  "why": "PR 설명이나 대시보드 생성을 위해 별도 인프라를 세팅할 필요가 없다. 세션 컨텍스트만으로 페이지가 자동 생성되고 갱신된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "데이터 분석 에이전트를 만들며 배운 컨텍스트 설계",
+  "url": "https://tech.kakao.com/posts/838",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790866800.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/838"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Ffb0fb50d01a000001.png",
+  "link_status": "ok",
+  "ko_title": "데이터 분석 에이전트를 만들며 배운 컨텍스트 설계",
+  "summary": "Anthropic이 공개한 실험에서 Claude Sonnet 4.5를 이용해 Claude.ai를 재현했으며, Claude Opus 4.6 기반 에이전트가 Rust로 작성된 C 컴파일러를 사용해 Linux 6.9 커널을 빌드했다. 이 사례들은 LLM 에이전트가 목표에 따라 정보를 탐색하고 도구를 선택·실행해 복잡한 개발 작업을 자동화할 수 있음을 보여준다.",
+  "why": "에이전트가 도구를 선택해 복잡한 개발 작업을 자동화하는 패턴을 확인했다. 백엔드 개발 시 반복적인 빌드나 테스트 과정을 에이전트에 위임할 때 컨텍스트 설계를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "I Surveyed 123 People in India to Benchmark Frontier AI",
+  "url": "https://dev.to/kakeroth/i-surveyed-123-people-in-india-to-benchmark-frontier-ai-39jl",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 25,
+  "comments": 0,
+  "published_at": "2026-10-02T02:36:05Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kakeroth/i-surveyed-123-people-in-india-to-benchmark-frontier-ai-39jl"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdqirxly2trki3er70v2y.jpg",
+  "link_status": "ok",
+  "ko_title": "인도 123명을 조사해 최첨단 AI 벤치마크",
+  "summary": "연구자는 인도 고아 대학생 123명을 대상으로 24개의 실제 기관 분쟁을 수집해 4개 분야(교육·보건·법·금융)에서 6가지 딜레마씩을 구성한 벤치마크를 만들었다. 모델은 추상적 도덕 규칙 → 구체적 법적 상황 → 두 사용자 페르소나 압력 순으로 평가되며, 모호성 저항·인구통계 동등성·페르소나 아첨 변동·인간 일치도 네 가지 지표를 측정한다. 평가 결과 모든 모델에서 인구통계 동등성 문제가 해결되지 않은 것으로 드러났다.",
+  "why": "인도 현지 분쟁 데이터를 기반으로 한 이 벤치마크는 서구식 객관식 평가가 놓치는 인구통계학적 편향 문제를 드러낸다. AI 모델의 판단 공정성을 검증할 때 기존 서구 기준만으로는 한계가 있음을 보여준다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Claude gets its own browser in Cowork",
+  "url": "https://claude.com/blog/cowork-built-in-browser",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/cowork-built-in-browser"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69027547e3e5c830cb5d0a37_og_claude-is-now-available-in-microsoft-365-copilot.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude, Cowork에 자체 브라우저 제공",
+  "summary": "Claude 데스크톱 앱에 사이드 패널 브라우저가 내장돼 웹 페이지 탐색·폼 입력·데이터 추출을 직접 수행한다. 기존 Chrome 확장과 달리 사용자의 브라우저 데이터와는 분리돼 별도 로그인만 선택적으로 가져올 수 있다. Pro·Max·Team 플랜에 이번 주부터 제공되며, 엔터프라이즈 관리자는 즉시 조직에 활성화할 수 있다.",
+  "why": "기존 Chrome 확장 대신 내장 브라우저를 쓰면 개인 브라우저 데이터와 완전히 분리된다. 로그인 상태는 사이트별로 선택적으로 가져와야 하며, 금융과 SSO 사이트는 기본 제외된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Automating eval design and hillclimbing with Claude",
+  "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790596800.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude로 평가 설계와 힐클라이밍 자동화",
+  "summary": "Claude-api 스킬에 새로 추가된 /build-eval 명령은 코드베이스 안에서 평가를 만들고, /hillclimb 명령은 과적합을 방지하기 위해 보류된 예시 집합을 사용해 한 번에 하나씩 개선한다. 평가 설계 원칙은 인간이 어려움이라고 판단한 사례와 실제 운영 트래픽·버그 보고서에서 추출한 사례를 포함하도록 권장한다. Claude는 인터뷰 형식으로 입력을 샘플링하고, 특정 단계에서 승인 절차를 제공한다.",
+  "why": "claude-api 스킬의 /build-eval과 /hillclimb 명령으로 평가 설계와 개선 과정을 자동화할 수 있다. 보류된 예시 집합을 사용해 과적합을 방지하므로 기존 수동 개선 방식과 결과가 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+  "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790913691.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/68642da9885da181fde1ad70/8kSzlHLOdu5hchCtPnK8D.png",
+  "link_status": "ok",
+  "ko_title": "AutoSynthData: 기업 에이전트를 위한 학습 데이터 생성",
+  "summary": "ServiceNow CoreAI가 AutoSynthData를 발표했다. 대상 모델의 실패와 더 강력한 교사 모델의 성공을 활용해 부족한 능력을 학습하도록 새로운 작업을 자동 생성·검증한다. 모델이 개선됨에 따라 커리큘럼이 어려운 영역으로 이동한다.",
+  "why": "기업 내부 시스템과 규칙에 맞춰 에이전트 약점을 학습 데이터로 전환하는 방식이다. 자사 환경의 실패 사례를 기반으로 커리큘럼을 자동 조정하는 파이프라인을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Cops Can Bypass iPhone's Automatic Reboot to Get into Locked Phones",
+  "url": "https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/",
+  "source": "hackernews",
+  "upvotes": 256,
+  "comments": 205,
+  "published_at": 1790865515,
+  "discussion": "https://news.ycombinator.com/item?id=49922278",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/09/graykey-device.png",
+  "link_status": "ok",
+  "ko_title": "경찰, iPhone 자동 재부팅 우회해 잠금 해제",
+  "summary": "Magnet Forensics가 GrayKey Preserve 장치와 기존 GrayKey에 Evidence Preservation Mode 기능을 추가했다. 이 기술은 Apple이 iOS에 도입한 72시간 비활성 시 자동 재부팅을 회피해 iPhone을 고정 상태로 유지한다. 이를 통해 수사기관은 잠금 해제 대기 없이 데이터를 추출할 수 있다.",
+  "why": "iOS 72시간 비활성 재부팅은 이제 GrayKey Preserve로 우회된다. 수사기관이 장비를 확보하면 데이터 추출 대기 시간이 사라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "컨텍스트 언어 모델",
+  "url": "https://news.hada.io/topic?id=34653",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790915724.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34653"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "컨텍스트 언어 모델",
+  "summary": "CLM은 컨텍스트를 파일처럼 다루어 모델이 직접 편집하도록 설계되었다. 외부 하네스에 고정된 관리 전략을 대신해 모델이 스스로 정보를 유지·갱신한다. 추가 학습 없이 기존 모델에 적용할 수 있다. BrowseComp-Plus에서 가장 강력한 비교 방법으로 활용되고 있다.",
+  "why": "기존 모델에 추가 학습 없이 적용할 수 있어 기존 파이프라인을 유지하면서 바로 실험할 수 있다. 외부 하네스에 고정된 관리 전략 대신 모델이 컨텍스트를 직접 편집하므로 하네스 의존도를 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "DeepSeek Harness",
+  "url": "https://www.deepseek.com/en/harness/",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 64,
+  "published_at": 1790910680,
+  "discussion": "https://news.ycombinator.com/item?id=49929489",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.deepseek.com/en/harness/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://www.deepseek.com/harness/images/deepseek-harness-social.jpg",
+  "link_status": "ok",
+  "ko_title": "DeepSeek Harness",
+  "summary": "DeepSeek Harness는 DeepSeek가 공개한 오픈소스 하니스로, Cordis의 “모든 것이 플러그인” 아키텍처 위에 구축되었습니다. 데스크톱 앱으로 실행하거나 코드에서 웹 UI를 띄워 파일 정리, 데이터 분석, 문서 초안 작성, 슬라이드 제작 등 일상 업무를 지원합니다. 또한 레포 탐색, 버그 수정, 기능 구현, 테스트 실행 등 코딩 작업과 정보 검색·사실 검증·출처 인용 같은 연구 활동도 수행할 수 있습니다. 플러그인을 설치하거나 채팅 기반 “Creator mode”에서 직접 만들어 워크플로에 맞게 확장할 수 있습니다.",
+  "why": "Cordis의 플러그인 아키텍처를 기반으로 하므로 기존 워크플로에 맞춰 도구를 직접 만들 수 있다. 채팅으로 플러그인을 생성하는 Creator mode를 사용해 반복적인 코딩이나 데이터 분석 작업을 자동화할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "What a task costs on Opus 5.5",
+  "url": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790337600.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/og.png",
+  "link_status": "ok",
+  "ko_title": "Opus 5.5 작업 비용",
+  "summary": "Opus 5.5 모델은 토큰당 가격이 Opus 5보다 낮지만, 작업당 실제 비용은 사용된 턴 수와 캐시 읽기, 출력 토큰 종류 등에 따라 크게 달라진다. 동일한 토큰 가격이라도 코드를 한 번 읽는 모델과 여러 번 읽고 수정하는 모델은 비용 차이가 난다. 이 글은 네 가지 요소(턴, 캐시 읽기, 출력 토큰 유형, 모델 선택)를 기준으로 비용을 계산하는 방법을 예시와 함께 제시한다.",
+  "why": "토큰 단가가 낮아졌다고 해서 작업 총비용이 줄어드는 것은 아니다. 턴 수와 캐시 읽기 횟수에 따라 실제 지출이 크게 달라진다. 모델 선택과 출력 토큰 유형을 고려해 예산을 잡아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Meta's Muse is fantastic for web scraping",
+  "url": "https://sigh.dev/posts/metas-muse-is-fantastic-for-web-scraping/",
+  "source": "hackernews",
+  "upvotes": 38,
+  "comments": 51,
+  "published_at": 1790916962,
+  "discussion": "https://news.ycombinator.com/item?id=49929970",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://sigh.dev/posts/metas-muse-is-fantastic-for-web-scraping/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://sigh.dev/og-image/posts/metas-muse-is-fantastic-for-web-scraping.png",
+  "link_status": "ok",
+  "ko_title": "메타의 Muse, 웹 스크래핑에 뛰어남",
+  "summary": "사용자는 Muse를 이용해 Reddit과 YouTube에서 콘서트 영상을 대량으로 검색하고, Luna와 Gemini와 연계해 품질을 판단한다. 월 $80 비용으로 수십억 토큰을 사용해 자동 파이프라인을 운영한다.",
+  "why": "대규모 웹 데이터 수집과 AI 기반 품질 판별 파이프라인을 구축할 때 Muse를 활용할 수 있다. 월 80달러로 수십억 토큰을 소모하는 자동화 작업의 비용 효율성을 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Show GN: ascii-nature - 쉬다가세요",
+  "url": "https://news.hada.io/topic?id=34659",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790924349.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34659"
+  ],
+  "cross_source_count": 1,
+  "score": 25,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: ascii-nature - 쉬다가세요",
+  "summary": "로컬에서 소리 없이 ascii-nature를 감상할 수 있는 뷰어를 만들었다. 모바일에서는 스와이프 제스처로 화면을 전환하고, PC에서는 R 키를 눌러 전환한다. 개인은 PC 환경에서 보는 것을 선호한다.",
+  "why": "백엔드 개발 업무 중 짧은 휴식 시간을 위해 로컬에서 바로 실행 가능한 도구다. PC 환경에서는 R 키로 화면을 전환하는 입력 방식을 지원한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
+  "title": "Hacker News가 AI에 제시한 도전 과제 중 무엇이 달성됐는지 투표하기",
+  "url": "https://news.hada.io/topic?id=34657",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790923158.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34657"
+  ],
+  "cross_source_count": 1,
+  "score": 21,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Hacker News가 AI에 제시한 도전 과제 중 무엇이 달성됐는지 투표하기",
+  "summary": "",
+  "why": "AI의 코드 검색 능력과 학습 능력을 구분하는 검증 기준이 부재하다. 기존의 단순 암기 여부만으로는 지능 유무를 판별할 수 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-10-02T16:00:03.303892+09:00",
+  "batch_label": "10월 2일 16:00"
+ },
+ {
   "title": "Building with Claude Sonnet 5.5",
   "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
   "source": "anthropic",
