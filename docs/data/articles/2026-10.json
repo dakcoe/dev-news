@@ -1,38 +1,5 @@
 [
  {
-  "title": "New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
-  "url": "https://claude.com/blog/claude-managed-agents-updates",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/claude-managed-agents-updates"
-  ],
-  "cross_source_count": 1,
-  "score": 67,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0b59fe189cc1f0e01ad2d4_image%20(27).png",
-  "link_status": "ok",
-  "ko_title": "Claude Managed Agents의 새로운 기능: 자체 호스팅 샌드박스와 MCP 터널",
-  "summary": "오늘부터 Claude Managed Agents가 사용자가 제어하는 샌드박스에서 실행될 수 있고, 사설 MCP 서버와 연결할 수 있다. 자체 호스팅 샌드박스는 퍼블릭 베타로 제공되며, MCP 터널은 연구 미리보기 단계다. 샌드박스는 자체 인프라 또는 Cloudflare, Daytona, Modal, Vercel 같은 관리형 제공자를 통해 실행된다. 도구 실행은 기업 내부에 머무르며, Anthropic 인프라에서는 오케스트레이션만 담당한다.",
-  "why": "기존 방식과 달리 도구 실행이 기업 내부 인프라에서 이루어진다. 민감한 데이터가 외부로 유출되지 않도록 통제할 수 있다. 자체 샌드박스는 퍼블릭 베타, MCP 터널은 연구 미리보기 단계다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "ai-agent",
-   "devops-infra"
-  ],
-  "batch": "2026-10-03T00:00:05.521128+09:00",
-  "batch_label": "10월 3일 00:00"
- },
- {
   "title": "Generic Const Args and You",
   "url": "https://blog.rust-lang.org/inside-rust/2026/10/02/generic-const-args-and-you/",
   "source": "lobsters",
@@ -126,39 +93,6 @@
    "ai-coding",
    "dev-tools",
    "open-source"
-  ],
-  "batch": "2026-10-03T00:00:05.521128+09:00",
-  "batch_label": "10월 3일 00:00"
- },
- {
-  "title": "Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
-  "url": "https://claude.com/blog/claude-for-foundation-models",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/claude-for-foundation-models"
-  ],
-  "cross_source_count": 1,
-  "score": 60,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6905137f403a1564673d63ca_og_claude-code-remote-mcp.jpg",
-  "link_status": "ok",
-  "ko_title": "Apple 플랫폼용 지능형 앱을 Claude와 Foundation Models 프레임워크로 구축",
-  "summary": "Anthropic이 Swift 패키지를 공개해 Apple의 Foundation Models 프레임워크에서 Claude 모델을 호출할 수 있게 했다. 이를 통해 iOS 27·iPadOS 27·macOS 27·visionOS 27·watchOS 27 환경에서 로컬 모델과 Claude를 조합해 다단계 추론·코드 생성·웹 검색 등을 구현할 수 있다. Swift의 @Generable 어노테이션을 이용해 타입이 지정된 값을 주고받으며, 기존 온-디바이스 기능에 복합적인 AI 작업을 추가한다.",
-  "why": "기존 온디바이스 처리만으로는 한계가 있던 다단계 추론과 코드 생성을 Claude로 넘길 수 있다. @Generable 어노테이션 덕분에 타입이 지정된 값을 그대로 API 입력으로 전달할 수 있다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "hardware",
-   "language"
   ],
   "batch": "2026-10-03T00:00:05.521128+09:00",
   "batch_label": "10월 3일 00:00"
@@ -452,40 +386,6 @@
   "batch_label": "10월 3일 00:00"
  },
  {
-  "title": "Using Claude Code: Spending your effort",
-  "url": "https://claude.dev/blog/spending-your-effort/",
-  "source": "anthropic",
-  "feed": "Claude 개발자 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": 1790337600.0,
-  "merged_sources": [
-   "Claude 개발자 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.dev/blog/spending-your-effort/"
-  ],
-  "cross_source_count": 1,
-  "score": 51,
-  "image": "https://claude.dev/blog/spending-your-effort/og.png",
-  "link_status": "ok",
-  "ko_title": "Claude Code 사용법: 노력 조절하기",
-  "summary": "Claude 모델에서 노력 수준을 조절하면 검증과 엣지케이스 테스트 강도가 바뀐다. 높은 노력은 하드웨어, 코드 리뷰, 보안 등 검증이 중요한 분야에서 결과를 개선한다. 일반 소프트웨어 엔지니어링에서는 낮은 노력으로 구현하고, 높은 노력으로 검증하는 루프를 사용한다.",
-  "why": "Claude Code에서 노력 수준을 조절하면 검증과 엣지케이스 테스트 강도가 달라진다. 보안이나 코드 리뷰처럼 검증이 중요한 작업에는 높은 노력을 쓰는 것이 효과적이다. 일반 개발에서는 낮은 노력으로 구현하고, 높은 노력으로 검증하는 루프를 적용할 수 있다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "ai-coding",
-   "dev-tools",
-   "hardware"
-  ],
-  "batch": "2026-10-03T00:00:05.521128+09:00",
-  "batch_label": "10월 3일 00:00"
- },
- {
   "title": "arXiv의 개정된 제출 횟수 제한 정책",
   "url": "https://news.hada.io/topic?id=34665",
   "source": "geeknews",
@@ -640,40 +540,6 @@
   "batch_label": "10월 2일 16:00"
  },
  {
-  "title": "Claude Code now supports artifacts",
-  "url": "https://claude.com/blog/artifacts-in-claude-code",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/artifacts-in-claude-code"
-  ],
-  "cross_source_count": 1,
-  "score": 65,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69050ff880f9a5c13932b7df_og_claude-for-chrome.jpg",
-  "link_status": "ok",
-  "ko_title": "Claude Code, 아티팩트 지원 시작",
-  "summary": "Claude Code가 세션 전체 컨텍스트를 활용해 작업 진행 상황을 실시간 웹 페이지 형태의 아티팩트로 생성한다. 아티팩트는 PR 검토, 대시보드, 릴리스 체크리스트 등으로 자동 업데이트되며 팀 공유가 가능하다. 내부 테스트에서는 디버깅 시 아티팩트를 활용해 로그와 커밋, 오류율 등을 한 페이지에 제공하는 사례가 많았다.",
-  "why": "PR 설명이나 대시보드 생성을 위해 별도 인프라를 세팅할 필요가 없다. 세션 컨텍스트만으로 페이지가 자동 생성되고 갱신된다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "ai-coding",
-   "dev-tools",
-   "release"
-  ],
-  "batch": "2026-10-02T16:00:03.303892+09:00",
-  "batch_label": "10월 2일 16:00"
- },
- {
   "title": "데이터 분석 에이전트를 만들며 배운 컨텍스트 설계",
   "url": "https://tech.kakao.com/posts/838",
   "source": "rss",
@@ -736,38 +602,6 @@
    "research",
    "career-culture",
    "showcase"
-  ],
-  "batch": "2026-10-02T16:00:03.303892+09:00",
-  "batch_label": "10월 2일 16:00"
- },
- {
-  "title": "Claude gets its own browser in Cowork",
-  "url": "https://claude.com/blog/cowork-built-in-browser",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/cowork-built-in-browser"
-  ],
-  "cross_source_count": 1,
-  "score": 60,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69027547e3e5c830cb5d0a37_og_claude-is-now-available-in-microsoft-365-copilot.jpg",
-  "link_status": "ok",
-  "ko_title": "Claude, Cowork에 자체 브라우저 제공",
-  "summary": "Claude 데스크톱 앱에 사이드 패널 브라우저가 내장돼 웹 페이지 탐색·폼 입력·데이터 추출을 직접 수행한다. 기존 Chrome 확장과 달리 사용자의 브라우저 데이터와는 분리돼 별도 로그인만 선택적으로 가져올 수 있다. Pro·Max·Team 플랜에 이번 주부터 제공되며, 엔터프라이즈 관리자는 즉시 조직에 활성화할 수 있다.",
-  "why": "기존 Chrome 확장 대신 내장 브라우저를 쓰면 개인 브라우저 데이터와 완전히 분리된다. 로그인 상태는 사이트별로 선택적으로 가져와야 하며, 금융과 SSO 사이트는 기본 제외된다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "web"
   ],
   "batch": "2026-10-02T16:00:03.303892+09:00",
   "batch_label": "10월 2일 16:00"
@@ -1321,39 +1155,6 @@
   "batch_label": "10월 2일 08:00"
  },
  {
-  "title": "Claude in Chrome is generally available",
-  "url": "https://claude.com/blog/claude-in-chrome-generally-available",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/claude-in-chrome-generally-available"
-  ],
-  "cross_source_count": 1,
-  "score": 55,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69050ff880f9a5c13932b7df_og_claude-for-chrome.jpg",
-  "link_status": "ok",
-  "ko_title": "Claude가 Chrome에서 일반 제공",
-  "summary": "Claude가 모든 유료 플랜에서 Chrome 확장으로 정식 출시돼 브라우저 내에서 자동으로 페이지를 읽고 입력·클릭·양식 작성 등을 수행한다. 각 행동은 안전 분류기가 사전 검증해 프롬프트 인젝션 위험을 방지한다. 내부 대시보드·레거시 시스템·벤더 포털 등 기존에 연결되지 않았던 서비스에도 접근 가능하다.",
-  "why": "기존에 API 연동이 불가능했던 내부 대시보드나 레거시 시스템도 브라우저 로그인 세션을 그대로 활용해 자동화할 수 있다. 각 행동마다 안전 분류기가 사전 검증을 수행하므로 프롬프트 인젝션 위험을 고려해 업무에 적용할 수 있다.",
-  "relevance": "게재",
-  "kind": "도구",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "web",
-   "release"
-  ],
-  "batch": "2026-10-02T08:00:05.844195+09:00",
-  "batch_label": "10월 2일 08:00"
- },
- {
   "title": "Pi 1.0",
   "url": "https://earendil.com/posts/pi-1-0/",
   "source": "hackernews",
@@ -1380,40 +1181,6 @@
   "tags": [
    "ai",
    "ai-agent"
-  ],
-  "batch": "2026-10-02T08:00:05.844195+09:00",
-  "batch_label": "10월 2일 08:00"
- },
- {
-  "title": "Claude for Small Business launches new workflows, integrations, and training programs",
-  "url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
-  "source": "anthropic",
-  "feed": "Claude 블로그",
-  "upvotes": 0,
-  "comments": 0,
-  "published_at": null,
-  "merged_sources": [
-   "Claude 블로그"
-  ],
-  "merged_urls": [
-   "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
-  ],
-  "cross_source_count": 1,
-  "score": 52,
-  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aa96d1d8800d47f264507d6_og_claude-for-small-business-launches-new-workflows-integrations-and-training-programs.jpg",
-  "link_status": "ok",
-  "ko_title": "Claude for Small Business, 새로운 워크플로와 통합, 교육 프로그램 출시",
-  "summary": "Claude for Small Business에 43개의 워크플로와 27개의 신규 통합이 추가돼 Shopify·Salesforce·Zoom 등 기존 도구와 연결된다. 무료 현장 워크숍과 파트너 웨비나가 10개 도시에서 진행돼 소기업 소유주가 AI 활용을 빠르게 시작하도록 돕는다. 출시 이후 설치 횟수는 90만 회를 넘어섰으며, 사용자 요구에 맞춰 영업·보고·제안서 작성 지원 기능이 강화되었다.",
-  "why": "Shopify와 Salesforce, Zoom 등 기존에 쓰던 도구와 바로 연결된다. 영업 리드 생성과 제안서 작성, 일일 보고를 자동화하는 워크플로가 추가됐다. 소규모 팀에서 백엔드 개발 외 업무 자동화를 구축할 때 참고할 수 있다.",
-  "relevance": "게재",
-  "kind": "제품",
-  "llm_done": true,
-  "tags": [
-   "ai",
-   "llm",
-   "dev-tools",
-   "release",
-   "industry"
   ],
   "batch": "2026-10-02T08:00:05.844195+09:00",
   "batch_label": "10월 2일 08:00"
