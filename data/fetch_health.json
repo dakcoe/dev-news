@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-23T00:00:34+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-23T08:00:28+09:00",
    "total": 17,
    "counts": {
@@ -772,6 +763,54 @@
      "url": "https://tech.kakao.com/posts/838",
      "source": "rss",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-03T00:00:34+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 12,
+    "short": 1,
+    "blocked": 5,
+    "github": 6,
+    "empty": 1
+   },
+   "failures": [
+    {
+     "url": "https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend",
+     "source": "lobsters",
+     "reason": "short"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34670",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34669",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34668",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34667",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34665",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://gwern.net/doc/math/1973-halmos.pdf",
+     "source": "hackernews",
+     "reason": "empty"
     }
    ]
   }
