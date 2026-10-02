@@ -1,5 +1,553 @@
 [
  {
+  "title": "lexmount / moli",
+  "url": "https://github.com/lexmount/moli",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1328,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/lexmount/moli"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1328,
+  "score": 68,
+  "image": "https://opengraph.githubassets.com/1/lexmount/moli",
+  "link_status": null,
+  "ko_title": "lexmount / moli",
+  "summary": "Moli는 AI 에이전트를 위한 프로덕션 레디 헤드리스 브라우저다. 온-디맨드 레이아웃과 경량 런타임을 결합해 웹 페이지 가져오기·검색·자동화를 지원한다. CLI, CDP, WebDriver Classic·BiDi 인터페이스를 제공하며 Linux·macOS·Windows에서 동작한다. 설치 스크립트를 통해 최신 바이너리를 손쉽게 설치할 수 있다.",
+  "why": "AI 에이전트가 웹 페이지를 가져오거나 자동화할 때 기존 헤드리스 브라우저 대신 Moli를 선택지가 된다. CLI, CDP, WebDriver 인터페이스를 지원해 기존 백엔드 파이프라인에 바로 연결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+  "url": "https://www.anthropic.com/news/claude-frontier-academy",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790899200.0,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/claude-frontier-academy"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Build&backgroundColor=heather",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 1억 달러 투자해 1만 명 엔지니어 교육 및 기업 AI 인재 격차 해소",
+  "summary": "Anthropic이 Claude Frontier Academy를 시작해 2027년까지 1만 명의 Frontier Deployed Engineers를 양성한다. 이 프로그램은 $100 million 지원을 받아 Accenture·Bain·Capgemini·Deloitte·McKinsey·Morgan Stanley·Novo Nordisk 등 첫 코호트를 교육한다. 교육 방식은 Anthropic 자체 엔지니어와 동일한 기준으로 진행된다.",
+  "why": "Claude를 실제 업무에 적용할 때 필요한 엔지니어링 역량이 이제 외부 교육 프로그램으로 표준화된다. Anthropic 내부 엔지니어와 동일한 기준으로 훈련된 인력이 기업에 배치되면, 기존에 내부에서만 쌓던 노하우가 외부에서 공급되기 시작한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Zig 0.17.0 Release Notes",
+  "url": "https://ziglang.org/download/0.17.0/release-notes.html",
+  "source": "lobsters",
+  "upvotes": 25,
+  "comments": 3,
+  "published_at": 1790975441.271,
+  "discussion": "https://lobste.rs/s/wcmfft/zig_0_17_0_release_notes",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://ziglang.org/download/0.17.0/release-notes.html"
+  ],
+  "cross_source_count": 2,
+  "score": 63,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Zig 0.17.0 릴리스 노트",
+  "summary": "5개월간 206명의 기여자와 925개의 커밋으로 빌드 시스템이 재구성되고 Build Server Protocol이 도입되었다. ELF 링커가 개선돼 x86_64-linux에서 증분 컴파일이 가능해졌다. 여러 새로운 아키텍처(aarch64-openbsd, loongarch32-linux-gnu, sparc64-linux 등)와 플랫폼 지원이 추가되었다.",
+  "why": "빌드 시스템이 재구성되어 Build Server Protocol이 도입됐다. x86_64-linux 환경에서는 ELF 링커 개선으로 증분 컴파일이 가능해졌다. 기존 빌드 워크플로우를 검토해 새 프로토콜에 맞게 조정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+  "url": "https://allenai.org/blog/astabrief",
+  "source": "hackernews",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1790976325,
+  "discussion": "https://news.ycombinator.com/item?id=49938783",
+  "merged_sources": [
+   "Hugging Face",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://allenai.org/blog/astabrief",
+   "https://huggingface.co/blog/allenai/astabrief"
+  ],
+  "cross_source_count": 2,
+  "score": 63,
+  "image": "https://www.datocms-assets.com/64837/1790891256-asta-report-generation-model-blog-astabrief-google-docs-image-1.png",
+  "link_status": "ok",
+  "ko_title": "Asta의 빠른 보고서 생성 모델 AstaBrief 오픈소스화",
+  "summary": "AstaBrief 8B 모델을 공개하여 연구 질문과 문헌 발췌를 기반으로 인용 보고서를 자동 생성한다. Fast 모드에서는 전체 파이프라인 평균 51.1초로 기존 독점 모델 대비 약 3배 빠른 속도를 보인다. 모델과 학습 데이터가 오픈소스로 제공돼 다른 연구자들이 재현·확장할 수 있다.",
+  "why": "보고서 생성 파이프라인을 섹션별 처리가 아닌 단일 패스로 재설계했다. 기존 독점 모델 대비 생성 시간을 크게 줄여 실시간 응답이 필요한 환경에 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Anthropic co-founder reportedly told religious leaders he fears having created something that \"suffers perpetually\"",
+  "url": "https://the-decoder.com/anthropic-co-founder-reportedly-told-religious-leaders-he-fears-having-created-something-that-suffers-perpetually/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790970065.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropic-co-founder-reportedly-told-religious-leaders-he-fears-having-created-something-that-suffers-perpetually/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/anthropic_religious_meetings.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic 공동 창업자, 종교 지도자들에게 “영원히 고통받는” 무언가를 만들었다는 두려움 표명",
+  "summary": "Anthropic은 2025년 가을부터 수십 명의 신학자·철학자를 비밀리에 초청해 언어 모델 Claude가 의식이 있을지와 도덕적 성격을 어떻게 형성할지 논의했다. 공동 창업자 Christopher Olah가 이끄는 내부 연구 프로그램은 84페이지 분량의 “헌법”으로 Claude의 전반적 성격을 규정한다. 참여자는 NDA에 서명했으며, 최근에야 NDA가 해제돼 일부 인물이 공개적으로 발언했다.",
+  "why": "AI 모델의 의식 논쟁이 기술적 검토를 넘어 법적 책임 소재로 확장되고 있다. 모럴 엔티티로 규정할 경우 사고 발생 시 기업의 배상 의무가 희석될 수 있다. 클로드 기반 서비스의 리스크 관리 시 이 점을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Agents you can coach: how Asana builds human-agent teams with Claude",
+  "url": "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790640000.0,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6abbce678437b509bfe08237_og_agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.jpg",
+  "link_status": "ok",
+  "ko_title": "Asana가 Claude와 함께 인간-에이전트 팀을 구축하는 방법",
+  "summary": "Asana는 기존 Work Graph등록상표 모델에 AI 에이전트를 통합해 역할과 작업을 할당하고 활동 피드에 표시한다. 에이전트는 Claude 모델을 사용해 Google Drive, Slack, Zoom 등 다양한 도구와 연동한다. 직원들은 Claude를 기본 AI 도구로 활용해 비정형 데이터를 구조화하고 업무에 적용한다.",
+  "why": "에이전트가 기존 워크플로우 플랫폼의 권한 체계 안에서 작업하므로 별도 컨텍스트 구조를 만들 필요 없이 즉시 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "OffGridPete / Fieldwatch",
+  "url": "https://github.com/OffGridPete/Fieldwatch",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1050,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/OffGridPete/Fieldwatch"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1050,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/OffGridPete/Fieldwatch",
+  "link_status": null,
+  "ko_title": "Fieldwatch",
+  "summary": "오프그리드피트가 만든 Android 앱으로, 스마트폰이 수신하는 Wi-Fi 액세스 포인트와 BLE 광고를 오프라인에서 수동으로 스캔한다. 백엔드 서버 없이 전적으로 기기 내에서 동작하며, 현대적인 UI와 필터링, 확장 가능한 시그니처 라이브러리를 제공한다. APK와 매뉴얼이 GitHub 저장소에 공개돼 직접 설치·수정이 가능하다.",
+  "why": "백엔드 서버 없이 기기 내에서만 동작하므로, 오프라인 현장에서도 Wi-Fi와 BLE 신호를 직접 스캔할 수 있다. 확장 가능한 시그처 라이브러리를 활용해 특정 무선 소스를 식별하고 보고서를 생성하는 데 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "How Anthropic's sales team rebuilt inbound with Claude Managed Agents",
+  "url": "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790726400.0,
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6abd1625a34c79dbbb99b360_og_how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic 영업팀, Claude 관리형 에이전트로 인바운드 재구축",
+  "summary": "Anthropic은 Claude 관리형 에이전트(베타)를 활용해 구매 상담 에이전트를 구축했다. 이 에이전트는 일일 수천 건의 대화를 처리하며, 고객 문의를 즉시 답변하고 결제까지 안내한다. 기존 양식에서 유입된 리드 대비 기회 전환율이 두 배 이상 높아지고, 계약까지 소요 시간이 평균 5일 단축됐다.",
+  "why": "Claude 관리형 에이전트 베타가 도입되면 반복 문의 처리와 결제 안내가 자동화된다. 이는 영업 인력이 단순 질의응답 대신 고도화된 계약 협상에 집중할 수 있게 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "AI music generator Suno can now create spoken audio with matching background music",
+  "url": "https://the-decoder.com/ai-music-generator-suno-can-now-create-spoken-audio-with-matching-background-music/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790971656.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-music-generator-suno-can-now-create-spoken-audio-with-matching-background-music/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/03/suno_logo_walls-2.png",
+  "link_status": "ok",
+  "ko_title": "AI 음악 생성기 Suno, 배경 음악과 어울리는 음성 오디오 생성 가능",
+  "summary": "Suno가 “Speech”라는 새 기능을 공개했다. 사용자가 텍스트와 원하는 목소리·음악 스타일을 입력하면 모델이 음성 및 배경 음악을 하나의 트랙으로 동시에 생성한다. 현재 베타 단계이며 영국 억양이 호주 억양으로 변하는 등 버그가 존재한다. 이와 동시에 Suno는 저작권 침해 소송과 법원 판결 등 법적 논란에 휘말려 있다.",
+  "why": "베타 단계라 억양 오류가 발생해 프로덕션 배포 전 품질 검증이 필수다. 무인 재판소 판결로 저작권 리스크가 커져 상업적 활용 시 법적 검토가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "security"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Supabase is acquiring Turso",
+  "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+  "source": "hackernews",
+  "upvotes": 188,
+  "comments": 97,
+  "published_at": 1790955783,
+  "discussion": "https://news.ycombinator.com/item?id=49934784",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://supabase.com/blog/supabase-is-acquiring-turso"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://supabase.com/images/blog/2026-10-02-supabase-is-acquiring-turso/thumb.png",
+  "link_status": "ok",
+  "ko_title": "Supabase, Turso 인수",
+  "summary": "Supabase가 SQLite 기반 클라우드 데이터베이스 서비스 Tur Turso를 인수한다. 인수 후 기존 Supabase 사용자는 변화가 없으며, Supabase는 Postgres, Turso는 SQLite에 집중한다. Turso는 Rust로 재구축된 SQLite 엔진으로 수백만 개 데이터베이스를 온-디맨드로 제공한다.",
+  "why": "AI 에이전트가 프로토타입 단계에서 수백만 개의 데이터베이스를 생성하는 패턴이 늘고 있다. 이러한 소규모 워크로드에는 Postgres 대신 SQLite 기반 인프라가 적합하다. Supabase 생태계에서 Turso를 통해 온-디맨드 데이터베이스를 직접 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "language",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Apple Pass Designer",
+  "url": "https://developer.apple.com/pass-designer/",
+  "source": "hackernews",
+  "upvotes": 253,
+  "comments": 177,
+  "published_at": 1790968016,
+  "discussion": "https://news.ycombinator.com/item?id=49937276",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://developer.apple.com/pass-designer/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://developer.apple.com/news/images/og/pass-designer-og.png",
+  "link_status": "ok",
+  "ko_title": "Apple Pass Designer",
+  "summary": "Pass Designer는 Apple Wallet용 패스를 디자인하고 실시간 미리보기를 제공하는 macOS 전용 도구다. 템플릿과 디자인 파일을 활용해 배경·색상·필드 등을 편집하고, 의미론적 태그를 추가해 Siri 제안·캘린더·지도 연동을 지원한다. 현재 베타 버전이며 macOS 27 이상에서 다운로드할 수 있다.",
+  "why": "패스 디자인 시 iOS와 동일한 렌더링으로 실시간 미리보기를 제공해 디바이스별 차이 확인이 불필요하다. 시맨틱 태그를 UI에서 직접 편집하며 Siri 연동 등 구조화된 데이터 기능을 쉽게 적용할 수 있다. 베타 버전이므로 macOS 27 이상 환경에서만 사용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "One month coding with GLM 5.3 Flash",
+  "url": "https://wagtail.org/blog/one-month-on-glm-53-flash/",
+  "source": "hackernews",
+  "upvotes": 85,
+  "comments": 63,
+  "published_at": 1790954955,
+  "discussion": "https://news.ycombinator.com/item?id=49934620",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://wagtail.org/blog/one-month-on-glm-53-flash/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media.wagtail.org/images/agentsview_septembermodels_split.min-1200x630.png",
+  "link_status": "ok",
+  "ko_title": "GLM 5.3 Flash와 한 달 코딩",
+  "summary": "GLM 5.3 Flash 모델만 사용해 9월 한 달 동안 2 B 토큰을 소비한 실험 결과, 전반부는 예산 내(68 달러, 4 kWh)였지만 후반부에 다른 모델로 전환돼 1 B 토큰이 추가 사용됐다. 프로토타입 서버에 잘못된 모델을 선택해 450 M 토큰(150 달러, 5 kWh) 비용이 급증했으며, 인프라 용량 부족으로 성능 저하가 발생했다.",
+  "why": "프로토타입 개발 시 모델 선택을 잘못하면 비용이 급증할 수 있다. 에이전트 패턴 사용 시 예산 관리에 유의해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "A model guide for the GPT-6 family",
+  "url": "https://openai.com/index/practical-guide-building-gpt-6",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790957700.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/practical-guide-building-gpt-6"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6 패밀리를 위한 모델 가이드",
+  "summary": "스타트업이 GPT-6 모델을 선택하고 추론 노력과 프롬프트를 조정하는 방법을 제시한다. 도구와의 연계 및 프로덕션 워크플로우 준비에 대한 지침도 포함한다. 구체적인 적용 단계와 베스트 프랙티스를 제공한다.",
+  "why": "GPT-6 도입 시 추론 노력과 프롬프트 조정이 성능을 좌우한다. 도구 연계와 프로덕션 워크플로우 준비 지침을 참고해 적용 단계를 설계해야 한다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "industry"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Everyone's Packing Up",
+  "url": "https://widdershins.verja.net/everyones-packing-up/",
+  "source": "hackernews",
+  "upvotes": 89,
+  "comments": 74,
+  "published_at": 1790971984,
+  "discussion": "https://news.ycombinator.com/item?id=49938047",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://widdershins.verja.net/everyones-packing-up/"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://assets.verja.net/thoughtsofwiddershins.png",
+  "link_status": "ok",
+  "ko_title": "모두가 떠나고 있다",
+  "summary": "최근 사용자들이 Reddit, WordPress, Discord, GitHub 등 대형 플랫폼을 떠나 개인 사이트나 자체 호스팅 앱 같은 소규모 환경으로 이동하고 있다. 떠나는 이유는 가격 인상, AI 학습 활용, 소유주·정책 변화 등 다양하지만, 대체할 큰 서비스보다는 제어권을 중시하는 경향이 강하다. 이러한 흐름은 기존 플랫폼에 의존하던 개발자들에게 대안 검토를 촉구한다.",
+  "why": "플랫폼 의존도가 높았던 백엔드 서비스는 정책 변경 시 대응이 어려워진다. 제어권을 확보하기 위해 자체 호스팅 환경 검토가 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "세포 정체성 상실이 인간 노화를 이끈다: 새로운 논문 두 편",
+  "url": "https://news.hada.io/topic?id=34687",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790980813.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34687"
+  ],
+  "cross_source_count": 1,
+  "score": 26,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "세포 정체성 상실이 인간 노화를 이끈다: 새로운 논문 두 편",
+  "summary": "두 논문은 세포가 고유한 정체성을 잃는 과정이 노화의 주요 원인임을 제시한다. 이는 기존의 손상 축적 모델을 보완한다. 그러나 각 과정이 노화에 미치는 상대적 기여도와 상호 의존성은 아직 밝혀지지 않았다.",
+  "why": "백엔드와 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치 대상이 없다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Tiny Brutalism - 콘크리트 건축물을 자유롭게 만드는 작은 샌드박스 게임",
+  "url": "https://news.hada.io/topic?id=34684",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790977014.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34684"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Tiny Brutalism - 콘크리트 건축물을 자유롭게 만드는 작은 샌드박스 게임",
+  "summary": "차갑고 삭막한 브루탈리즘 건축 양식을 배경으로 한 샌드박스 게임이다. 목표나 정답 없이 기념물, 불가능한 구조물, 콘크리트 탑, 거대한 벽 등을 자유롭게 만들 수 있다. 클릭만으로 구조물을 배치하고 조합한다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 연관성이 없어 실무적 조치가 필요 없다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
+  "title": "Actual RFC1149 packet being auctioned",
+  "url": "https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216",
+  "source": "lobsters",
+  "upvotes": 54,
+  "comments": 10,
+  "published_at": 1790950620.98,
+  "discussion": "https://lobste.rs/s/wqqkws/actual_rfc1149_packet_being_auctioned",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216"
+  ],
+  "cross_source_count": 2,
+  "score": 20,
+  "image": "https://www.christies.com/img/LotImages/2026/NYR/2026_NYR_24550_0150_000(carrier_pigeon_internet_protocol_april_2001072322).jpg?mode=max",
+  "link_status": "ok",
+  "ko_title": "실제 RFC1149 패킷 경매 중",
+  "summary": "1990년 RFC 1149를 만든 데이비드 웨이츠만이 만든 첫 번째 캐리어 피전 인터넷 프로토콜 구현에서 전송된 실제 IP 패킷이 경매에 나온다. 2001년 노르웨이 BLUG가 3마일 거리에서 비둘기로 전송한 9개 패킷 중 하나이며, 현재 프레임에 넣어 보관된 상태다. 이 물리적 패킷은 인터넷 전통의 장난스러운 해킹 사례로 유명하다.",
+  "why": "백엔드 개발자의 업무 프로세스나 기술 스택에는 아무런 변화가 없다. 단순한 인터넷 유머의 역사적 유물 경매일 뿐이다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-03T08:00:06.332224+09:00",
+  "batch_label": "10월 3일 08:00"
+ },
+ {
   "title": "Generic Const Args and You",
   "url": "https://blog.rust-lang.org/inside-rust/2026/10/02/generic-const-args-and-you/",
   "source": "lobsters",
