@@ -8,6 +8,7 @@ Anthropic은 RSS를 제공하지 않는다(news/rss.xml, rss.xml 모두 404).
 """
 from __future__ import annotations
 
+import html
 import re
 from datetime import datetime, timezone
 from urllib.parse import urljoin
@@ -18,15 +19,17 @@ from news.core import http
 from news.core.common import to_timestamp
 
 BASE = "https://www.anthropic.com"
-# (사이트, 목록 경로, 글 주소 접두사, 피드 이름, 제목을 담은 속성 — 없으면 앵커 글자)
-# Claude 제품 블로그(claude.com/blog)는 2026-10 기준 RSS 가 없고, 목록 카드에 글자 대신
-# data-cta-copy 속성으로 제목이 들어 있다. 날짜는 목록에 없다 — 첫 화면의 최신 글만 받고
-# 한 번 실린 글은 seen 이 막는다.
+# (사이트, 목록 경로, 글 주소 접두사, 피드 이름)
 PAGES = [
-    (BASE, "/news", "/news/", "Anthropic", None),
-    (BASE, "/engineering", "/engineering/", "Anthropic Engineering", None),
-    ("https://claude.com", "/blog", "/blog/", "Claude 블로그", "data-cta-copy"),
+    (BASE, "/news", "/news/", "Anthropic"),
+    (BASE, "/engineering", "/engineering/", "Anthropic Engineering"),
 ]
+# Claude 제품 블로그(claude.com/blog)는 RSS 가 없고, 목록이 최신순도 아니다 — 첫 화면
+# 8건이 전부 5~9월 글이었다(2026-10-03). 사이트맵에서 최근에 갱신된 글을 추린 뒤
+# 글 페이지의 datePublished 와 og:title 을 읽는다. 사이트맵 lastmod 는 사이트 배포
+# 시각이라 발행일이 아니다.
+CLAUDE_SITEMAP = "https://claude.com/sitemap.xml"
+CLAUDE_RECENT_DAYS = 14
 # Claude 개발자 블로그는 RSS 가 있다. 개발자용 글(새 모델로 개발하기, Claude Code 사용법)이
 # 여기에만 올라와서, 빠뜨리면 HN 에 누가 올려야만 실렸다 (2026-10-02 사용자 지적).
 DEV_RSS = ("https://claude.dev/rss.xml", "Claude 개발자 블로그")
@@ -75,8 +78,7 @@ def _parse_anchor(anchor) -> tuple[str, float | None]:
     return title, published
 
 
-def _fetch_page(base: str, path: str, prefix: str, feed: str, title_attr: str | None,
-                limit: int) -> list[dict]:
+def _fetch_page(base: str, path: str, prefix: str, feed: str, limit: int) -> list[dict]:
     url = base + path
     try:
         resp = http.get(url, timeout=15)
@@ -94,10 +96,7 @@ def _fetch_page(base: str, path: str, prefix: str, feed: str, title_attr: str | 
         link = urljoin(base, href)
         if link in seen or link.rstrip("/") == base + path.rstrip("/"):
             continue
-        if title_attr:
-            title, published = (anchor.get(title_attr) or "").strip(), None
-        else:
-            title, published = _parse_anchor(anchor)
+        title, published = _parse_anchor(anchor)
         if not title:
             continue
         seen.add(link)
@@ -116,6 +115,43 @@ def _fetch_page(base: str, path: str, prefix: str, feed: str, title_attr: str | 
 
     print(f"[anthropic] {url} {len(out)}개")
     return out
+
+
+_DATE_PUBLISHED_RE = re.compile(r'"datePublished"\s*:\s*"([^"]+)"')
+# 속성 순서가 content 먼저다 (<meta content="…" property="og:title"/>)
+_OG_TITLE_RE = re.compile(r'<meta[^>]*?content="([^"]+)"[^>]*property="og:title"'
+                          r'|<meta[^>]*property="og:title"[^>]*content="([^"]+)"')
+
+
+def _fetch_claude_blog(limit: int) -> list[dict]:
+    from datetime import timedelta
+    try:
+        xml = http.get(CLAUDE_SITEMAP, timeout=15).text
+    except Exception as e:
+        print(f"[anthropic] {CLAUDE_SITEMAP} 실패: {e}")
+        return []
+    since = (datetime.now(timezone.utc) - timedelta(days=CLAUDE_RECENT_DAYS)).strftime("%Y-%m-%d")
+    urls = [u for u, mod in re.findall(
+        r"<loc>(https://claude\.com/blog/[^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", xml) if mod[:10] >= since]
+    out = []
+    for url in urls:
+        try:
+            page = http.get(url, timeout=15).text
+        except Exception:
+            continue
+        d, t = _DATE_PUBLISHED_RE.search(page), _OG_TITLE_RE.search(page)
+        # 날짜를 못 읽으면 받지 않는다 — 날짜 없는 글은 기간 필터를 그냥 통과한다
+        published = _parse_date(d.group(1).replace(" 0", " ")) if d else None
+        if published is None or not t:
+            continue
+        out.append({
+            "title": html.unescape(t.group(1) or t.group(2)).split(" | ")[0].strip(),
+            "url": url, "description": "", "source": "anthropic", "feed": "Claude 블로그",
+            "upvotes": 0, "comments": 0, "published_at": published,
+        })
+    out.sort(key=lambda a: a["published_at"], reverse=True)
+    print(f"[anthropic] claude.com/blog 최근 갱신 {len(urls)}건 중 {len(out[:limit])}개")
+    return out[:limit]
 
 
 def _fetch_rss(url: str, feed: str, limit: int) -> list[dict]:
@@ -148,8 +184,9 @@ def _fetch_rss(url: str, feed: str, limit: int) -> list[dict]:
 
 def fetch(limit: int = 10) -> list[dict]:
     articles: list[dict] = []
-    for base, path, prefix, feed, title_attr in PAGES:
-        articles.extend(_fetch_page(base, path, prefix, feed, title_attr, limit))
+    for base, path, prefix, feed in PAGES:
+        articles.extend(_fetch_page(base, path, prefix, feed, limit))
+    articles.extend(_fetch_claude_blog(limit))
     articles.extend(_fetch_rss(*DEV_RSS, limit))
     if not articles:
         print("[anthropic] 0건 — 페이지 구조가 바뀐 것 같습니다. "

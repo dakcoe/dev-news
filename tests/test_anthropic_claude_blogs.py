@@ -13,13 +13,24 @@ class _R:
         pass
 
 
-def test_제목이_속성에만_있는_카드를_읽는다(monkeypatch):
-    html = ('<a data-cta-copy="Claude Code now supports artifacts" href="/blog/artifacts-in-claude-code">'
-            '<span>Read more</span></a><a href="/blog">all</a>')
-    monkeypatch.setattr(A.http, "get", lambda *a, **k: _R(html))
-    got = A._fetch_page("https://claude.com", "/blog", "/blog/", "Claude 블로그", "data-cta-copy", 8)
+def test_제품_블로그는_사이트맵과_글의_발행일로_읽는다(monkeypatch):
+    """목록이 최신순이 아니라 5월 글이 10월에 실렸다. 발행일을 못 읽으면 받지 않는다."""
+    from datetime import datetime, timedelta, timezone
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    old = (datetime.now(timezone.utc) - timedelta(days=60)).strftime("%Y-%m-%d")
+    pages = {
+        A.CLAUDE_SITEMAP: f"<url><loc>https://claude.com/blog/new</loc><lastmod>{today}T00:00:00Z</lastmod></url>"
+                          f"<url><loc>https://claude.com/blog/nodate</loc><lastmod>{today}T00:00:00Z</lastmod></url>"
+                          f"<url><loc>https://claude.com/blog/stale</loc><lastmod>{old}T00:00:00Z</lastmod></url>",
+        "https://claude.com/blog/new": '<meta content="Claude Opus 5.5 | Claude by Anthropic" property="og:title"/>'
+                                       '"datePublished": "Sep 24, 2026"',
+        "https://claude.com/blog/nodate": '<meta content="No date | Claude by Anthropic" property="og:title"/>',
+    }
+    monkeypatch.setattr(A.http, "get", lambda url, **k: _R(pages[url]))
+    got = A._fetch_claude_blog(8)
     assert [(g["title"], g["url"], g["source"]) for g in got] == [
-        ("Claude Code now supports artifacts", "https://claude.com/blog/artifacts-in-claude-code", "anthropic")]
+        ("Claude Opus 5.5", "https://claude.com/blog/new", "anthropic")]
+    assert got[0]["published_at"]
 
 
 def test_개발자_블로그_RSS를_읽는다(monkeypatch):
