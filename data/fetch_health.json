@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-24T00:00:33+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 9,
-    "blocked": 6,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/two-years-of-openai-academy",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34179",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34177",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34176",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34175",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-24T08:00:31+09:00",
    "total": 19,
    "counts": {
@@ -799,6 +758,52 @@
     {
      "url": "https://news.hada.io/topic?id=34700",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-04T00:00:36+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 13,
+    "blocked": 7,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34714",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34713",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34712",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34709",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34708",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/chatham-financial",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
