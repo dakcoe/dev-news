@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-24T08:00:31+09:00",
-   "total": 19,
-   "counts": {
-    "blocked": 1,
-    "ok": 14,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-24T16:00:39+09:00",
    "total": 17,
    "counts": {
@@ -804,6 +788,42 @@
     {
      "url": "https://openai.com/index/chatham-financial",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-04T08:00:40+09:00",
+   "total": 25,
+   "counts": {
+    "ok": 15,
+    "blocked": 5,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34734",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34733",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34732",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34731",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34730",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
