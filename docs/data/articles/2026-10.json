@@ -1,5 +1,561 @@
 [
  {
+  "title": "FTL: A new operating system for clouds",
+  "url": "https://ftl-os.org/",
+  "source": "hackernews",
+  "upvotes": 138,
+  "comments": 57,
+  "published_at": 1791039756,
+  "discussion": "https://news.ycombinator.com/item?id=49944912",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ftl-os.org/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://ftl-os.org/og.png",
+  "link_status": "ok",
+  "ko_title": "FTL: 클라우드를 위한 새로운 운영 체제",
+  "summary": "FTL은 사용자 공간 라이브러리 형태의 OS로, 컨테이너를 마치 애플리케이션처럼 쉽게 추가·디버그·업그레이드할 수 있다. 경량 하드웨어 기반 격리를 이용해 기존 모놀리식 커널보다 컨테이너 격리를 강화하고, 베어메탈 없이도 동작한다. Linux 바이너리와 호환돼 기존 Linux 애플리케이션을 그대로 실행하거나 POSIX 추상화 없이 특화된 유니커널 형태 앱도 구동한다.",
+  "why": "기존 Linux 바이너리를 그대로 실행할 수 있어 마이그레이션 부담이 없다. 하드웨어 기반 격리로 컨테이너 보안이 기존 방식보다 강화된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "We want you to build the next Git platform on Cloudflare",
+  "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
+  "source": "hackernews",
+  "upvotes": 91,
+  "comments": 78,
+  "published_at": 1791055996,
+  "discussion": "https://news.ycombinator.com/item?id=49947051",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.cloudflare.com/next-git-platform-on-cloudflare/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3VGEQ8Q6FVNPPSWW71YRRKT.01M3VGER1EC7W9TEZXNR3GGMK7.png",
+  "link_status": "ok",
+  "ko_title": "다음 Git 플랫폼을 Cloudflare에 구축해 주세요",
+  "summary": "Cloudflare는 Git 작업을 지원하는 버전 관리 파일시스템인 Artifacts를 오픈 베타로 출시하고, 이를 활용해 수백·수천 개의 AI 에이전트가 동시에 작업할 수 있는 새로운 Git 플랫폼을 구축하는 대회를 개최한다. Artifacts는 저장소 생성·포크·버전 관리 등을 프로그래밍적으로 제공한다. 참가자는 Workers를 이용해 에이전트 협업, 변경 검토·병합 등 상위 레이어를 구현한다.",
+  "why": "수백 개의 AI 에이전트가 동시에 코드를 수정할 때 충돌을 처리하는 상위 레이어를 직접 구현해야 한다. 기존 Git 워크플로 대신 에이전트 간 협업과 병합 로직을 설계하는 개발 환경이 요구된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "I contribute to OpenTelemetry and still shipped two retired attribute names, so I built Attrition",
+  "url": "https://dev.to/apples_one_cd174284bffb/i-contribute-to-opentelemetry-and-still-shipped-two-retired-attribute-names-so-i-built-attrition-129i",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 2,
+  "published_at": "2026-10-03T17:04:46Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/apples_one_cd174284bffb/i-contribute-to-opentelemetry-and-still-shipped-two-retired-attribute-names-so-i-built-attrition-129i"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjzm707ku57k6s5y8pyzt.png",
+  "link_status": "ok",
+  "ko_title": "OpenTelemetry에 기여했지만 퇴역 속성 두 개를 배포해 Attrition을 만들다",
+  "summary": "Attrition은 OpenTelemetry 계측 코드에서 사용된 속성·메트릭·이벤트 이름을 26버전·1,563개 사양 항목과 비교해 퇴역된 이름을 찾아 교체안과 자동 패치를 제공한다. 기존 튜토리얼·코드에 남은 오래된 이름으로 대시보드·알림이 조용히 오작동하는 문제를 해결한다. 웹 데모를 통해 즉시 체험할 수 있다.",
+  "why": "OpenTelemetry 속성 이름 변경 시 대시보드와 알림이 조용히 오작동하는 문제를 방지할 수 있다. 코드에 남은 퇴역된 이름을 자동 패치로 교체해 수작업 검증을 생략할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "OpenCut-app / OpenCut",
+  "url": "https://github.com/OpenCut-app/OpenCut",
+  "source": "github",
+  "upvotes": 234,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/OpenCut-app/OpenCut"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 234,
+  "score": 55,
+  "resurfaced": "2026-08-15",
+  "image": "https://opengraph.githubassets.com/1/OpenCut-app/OpenCut",
+  "link_status": null,
+  "ko_title": "OpenCut",
+  "summary": "OpenCut이 처음부터 다시 작성 중이며, 새로운 에디터 API와 플러그인-우선 아키텍처를 도입한다. Rust 기반 코어로 웹·데스크톱·모바일를 하나의 코드베이스에서 지원하고, AI 에이전트를 위한 MCP 서버와 배치 렌더링을 위한 헤드리스 모드가 추가된다. 현재는 클래식 버전(opencut-classic)과 opencut.app이 운영 중이며, 새 버전은 new.opencut.app에서 확인할 수 있다.",
+  "why": "기존 클래식 버전은 opencut.app에서 계속 운영되므로 당장 작업에는 영향이 없다. 새 버전의 MCP 서버와 헤드리스 모드는 AI 에이전트 연동이나 배치 렌더링을 계획할 때 참고할 요소다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "Deepmind researchers propose \"Artificial Symbiotic Intelligence\" as an alternative to the singularity",
+  "url": "https://the-decoder.com/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-to-the-singularity/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791022883.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-to-the-singularity/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/symbiotic_intelligence.png",
+  "link_status": "ok",
+  "ko_title": "Deepmind 연구자들, 특이점 대안으로 ‘인공 공생 지능’ 제안",
+  "summary": "Deepmind 연구진이 인공 일반 지능(AGI)이 인간과 AI 에이전트가 협력하는 사회 시스템에서 등장한다는 관점을 제시했다. 기존의 단일 초지능 모델 대신 여러 모델이 팀으로 협업하는 구조를 강조한다. 이들은 “인공 공생 지능”이라는 개념을 내세워, 지능을 개인이 아닌 사회 현상으로 재정의한다.",
+  "why": "멀티 에이전트 협업 구조가 표준화되면 단일 모델 성능보다 에이전트 간 조정 로직이 핵심이 된다. 기존의 독립적 모델 배포 방식 대신 네트워크 거버넌스 설계를 백엔드 아키텍처에 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "Turn Your GitHub Contribution Graph Into an ASCII City",
+  "url": "https://dev.to/sizzlebop/turn-your-github-contribution-graph-into-an-ascii-city-ic5",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 13,
+  "comments": 2,
+  "published_at": "2026-10-03T18:26:18Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sizzlebop/turn-your-github-contribution-graph-into-an-ascii-city-ic5"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Feulsjeuse6wn9bho0g8d.gif",
+  "link_status": "ok",
+  "ko_title": "GitHub 기여 그래프를 ASCII 도시로 만들기",
+  "summary": "Skyline이라는 Go 기반 CLI 도구가 GitHub 기여 기록을 주별 건물, 일별 창으로 변환해 터미널에 ASCII 도시 형태로 출력한다. SVG 애니메이션을 생성해 프로필 README에 삽입할 수 있다. 현재 12가지 테마를 제공하며, 실행하려면 Go 1.25 이상이 필요하다.",
+  "why": "프로필 README에 기여 기록을 시각화할 때 SVG 애니메이션을 삽입할 수 있다. 실행 환경에 Go 1.25 이상이 설치되어 있어야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "The Agent Said It Was Done. The Database Disagreed.",
+  "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791068208.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/microsoft/thinkingbox"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/64b8491203124195cd795cad/NStwJm1AafDELVsU4KGwS.png",
+  "link_status": "ok",
+  "ko_title": "에이전트는 작업을 완료했다고 했지만 데이터베이스는 동의하지 않았다",
+  "summary": "Microsoft와 Hugging Face가 공동으로 발표한 ThinkingBox 벤치마크는 AI 에이전트가 수행한 툴 호출과 실제 데이터베이스 상태를 비교해 일관성을 측정한다. 507개의 비즈니스 워크플로를 20번씩 다양한 LLM 모델에 적용해 백엔드 상태와 부수 효과를 평가한다. 벤치마크 실행 방법과 OpenEnv를 통한 재현 절차가 제공된다.",
+  "why": "에이전트 응답이 정상이어도 데이터베이스 상태가 불일치할 수 있다. 백엔드 검증 로직에 종단 상태 체크를 추가해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "I Made Spider-Man Swing Without Animating a Single Frame",
+  "url": "https://dev.to/lovestaco/i-made-spider-man-swing-without-animating-a-single-frame-blender-rigging-and-mcp-14f7",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 17,
+  "comments": 0,
+  "published_at": "2026-10-03T18:05:25Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/lovestaco/i-made-spider-man-swing-without-animating-a-single-frame-blender-rigging-and-mcp-14f7"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F49dufu4f9a09v9pc8xu6.gif",
+  "link_status": "ok",
+  "ko_title": "스파이더맨을 손으로 애니메이션 없이 흔들어 만들었다",
+  "summary": "저자는 Blender와 LLM 클로드 코드를 연결하는 blender-mcp를 사용해 손으로 프레임을 그리지 않고 스파이더맨 캐릭터를 움직였다. 이 도구는 400여 개의 메뉴를 탐색할 필요 없이 텍스트 프롬프트만으로 모델 로드와 텍스처 재연결을 자동화한다. 저자는 Blender를 처음 사용했지만, 이 워크플로우로 간단한 3D 영상 제작이 가능함을 보여준다.",
+  "why": "Blender와 LLM을 연결하는 blender-mcp를 쓰면 메뉴 탐색 없이 텍스트로 3D 씬을 제어할 수 있다. 복잡한 UI를 익히지 않고도 프롬프트만으로 모델 로딩과 텍스처 연결을 자동화할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+  "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+  "source": "hackernews",
+  "upvotes": 123,
+  "comments": 84,
+  "published_at": 1791052170,
+  "discussion": "https://news.ycombinator.com/item?id=49946567",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude와 Claude Code에서 Opus 5.5를 최대 활용하기",
+  "summary": "Opus 5.5는 긴 멀티스텝 작업을 스스로 더 오래 진행하고, 결과를 명확히 보고하며, 각 응답 전에 스스로 생각합니다. 전체 작업을 한 번에 제시하고 완료 기준을 명시하면 모델이 언제 끝났는지 판단합니다. “think step by step” 같은 프롬프트는 제거해도 품질 저하가 없으며, 필요 시 중간에 추가 질문을 할 수 있습니다.",
+  "why": "Opus 5.5는 응답 전 자체적으로 사고하므로 프롬프트에서 단계별 사고 지시 문구를 제거해도 된다. 긴 작업의 완료 기준을 명시하면 모델이 스스로 종료 시점을 판단한다. 작업 중 추가 정보를 전달할 수 있어 재시작 비용이 줄어든다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "A service mesh costs 0.16ms at one connection and 86% of your throughput at 32",
+  "url": "https://dev.to/remdore/a-service-mesh-costs-016ms-at-one-connection-and-86-of-your-throughput-at-32-4akf",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": "2026-10-03T16:37:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remdore/a-service-mesh-costs-016ms-at-one-connection-and-86-of-your-throughput-at-32-4akf"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fq4110h3jhhf3mo0d59w0.png",
+  "link_status": "ok",
+  "ko_title": "서비스 메시는 연결 1개당 0.16ms, 32개 연결 시 처리량의 86% 감소",
+  "summary": "Linkerd를 단일 연결에서 측정하면 지연이 0.16 ms로 문서와 일치한다. 그러나 동시 연결을 32개로 늘리면 처리량이 86 % 감소한다. 테스트는 DigitalOcean Kubernetes 클러스터에서 nginx와 fortio를 사용해 동일한 매니페스트로 비교했다.",
+  "why": "동시 연결이 32개에 달하면 처리량이 86%까지 떨어진다. 단일 연결 지연 수치만 보고 메시 도입을 결정하면 실제 부하 환경에서 성능이 급감한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "jamwithai / production-agentic-rag-course",
+  "url": "https://github.com/jamwithai/production-agentic-rag-course",
+  "source": "github",
+  "upvotes": 192,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/jamwithai/production-agentic-rag-course"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 192,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/jamwithai/production-agentic-rag-course",
+  "link_status": null,
+  "ko_title": "jamwithai / production-agentic-rag-course — 생산용 에이전트형 RAG 코스",
+  "summary": "이 저장소는 학술 논문을 자동으로 수집·이해·응답하는 연구 보조 시스템을 구축하는 학습자 중심 코스이다. Python 3.12+, FastAPI, OpenSearch, Docker-Compose 기반의 인프라를 제공하고, 키워드 검색을 기반으로 하이브리드 벡터 검색을 적용하는 생산 단계 RAG 구현 과정을 단계별로 안내한다.",
+  "why": "키워드 검색 기반을 먼저 다지고 벡터 검색을 결합하는 하이브리드 RAG 구성을 배울 수 있다. 단순 벡터 검색만 쓰는 기존 방식과 달리 검색 정확도를 높이는 실무 경로를 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "devops-infra",
+   "language",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "EmbedCatalog is participating in Hacktoberfest 2026",
+  "url": "https://dev.to/anthonymax/embedcatalog-is-participating-in-hacktoberfest-2026-7f4",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 63,
+  "comments": 2,
+  "published_at": "2026-10-03T21:53:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/anthonymax/embedcatalog-is-participating-in-hacktoberfest-2026-7f4"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fag5veodb2yihpm364qbx.png",
+  "link_status": "ok",
+  "ko_title": "EmbedCatalog, Hacktoberfest 2026에 참여",
+  "summary": "EmbedCatalog는 웹사이트와 README 등에 삽입할 수 있는 embed를 제공하는 새 오픈소스 프로젝트다. 핵심 기능으로 사용자 등록, 프로젝트 통계, 맞춤 embed 등을 한 달 안에 구현했으며, 10개의 이슈와 기여자 아바타 목록을 제공한다. 프로젝트는 GitHub에 공개돼 있으며, Hacktoberfest 기간 동안 기여를 모집한다.",
+  "why": "EmbedCatalog의 embed를 README나 웹사이트에 넣을 수 있다. 10월 중 10개 이슈를 해결해 기여할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "Apparently, OpenAI isn't trying to build \"magic intelligence in the sky\" anymore",
+  "url": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791053790.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/holy_openai.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI는 더 이상 “하늘의 마법 인텔리전스”를 만들려 하지 않는다",
+  "summary": "OpenAI CEO 샘 알트먼이 AI 모델에 종교적 비유를 적용하는 것에 불편함을 표명했다. 그는 이를 “실제 안전 문제”라며 비판했다. 알트먼은 이전에 AI를 “하늘의 마법 인텔리전스”라 부른 바 있지만, 현재는 인간 판단을 대체하는 종교적 의미 부여를 거부한다.",
+  "why": "AI 모델에 종교적 의미를 부여하는 관행이 안전 문제로 인식되고 있다. 모델의 의식이나 신성함을 전제하는 프롬프트나 설계는 이제 피해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "How to Hack Time, With C2PA",
+  "url": "https://www.da.vidbuchanan.co.uk/blog/hacking-time.html",
+  "source": "lobsters",
+  "upvotes": 17,
+  "comments": 1,
+  "published_at": 1791028694.604,
+  "discussion": "https://lobste.rs/s/u8uvlr/how_hack_time_with_c2pa",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.da.vidbuchanan.co.uk/blog/hacking-time.html"
+  ],
+  "cross_source_count": 2,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "시간 해킹 방법, C2PA와 함께",
+  "summary": "이 글은 C2PA 메타데이터를 이용해 이미지에 임의의 타임스탬프를 삽입하고, 이를 통해 과거의 로또 번호를 미리 확인한 사례를 소개한다. C2PA의 클레임 서명은 자유롭게 조작 가능하지만, 타임스탬프 서명은 RFC 3161 기반 TSA 서버에 의존한다는 점을 설명한다.",
+  "why": "C2PA의 클레임 서명은 자유롭게 조작 가능하므로, 이 메타데이터만으로 콘텐츠의 진위를 단정할 수 없다. 타임스탬프 서명은 RFC 3161 기반 TSA 서버에 의존하므로, 해당 서버의 무결성을 전제로 한 검증만 유효하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "thedotmack / claude-mem",
+  "url": "https://github.com/thedotmack/claude-mem",
+  "source": "github",
+  "upvotes": 218,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/thedotmack/claude-mem"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 218,
+  "score": 20,
+  "resurfaced": "2026-08-28",
+  "image": "https://opengraph.githubassets.com/1/thedotmack/claude-mem",
+  "link_status": null,
+  "ko_title": "thedotmack / claude-mem",
+  "summary": "",
+  "why": "Claude Code 세션의 문맥을 저장해 주는 도구다. 긴 대화에서 이전 작업 내용을 재확인하는 시간을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "getsentry / sentry",
+  "url": "https://github.com/getsentry/sentry",
+  "source": "github",
+  "upvotes": 250,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/getsentry/sentry"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 250,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/getsentry/sentry",
+  "link_status": null,
+  "ko_title": "getsentry / sentry",
+  "summary": "",
+  "why": "이 기사는 Sentry의 기능 소개와 공식 SDK 목록만 담고 있다. 버전 변경이나 설정 업데이트 같은 즉시 조치할 내용은 없다. 따라서 지금 확인하거나 바꿀 것이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
+  "title": "City building games have a Soul Problem pt.2",
+  "url": "https://www.radical-elements.com/minor-epiphanies/city-building-games-have-a-soul-problem-pt2",
+  "source": "hackernews",
+  "upvotes": 126,
+  "comments": 120,
+  "published_at": 1791042727,
+  "discussion": "https://news.ycombinator.com/item?id=49945323",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.radical-elements.com/minor-epiphanies/city-building-games-have-a-soul-problem-pt2"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.radical-elements.com/storage/files/cities-article-cover-6ac0e0f77928c.png",
+  "link_status": "ok",
+  "ko_title": "도시 건설 게임에 영혼 문제가 있다 pt.2",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T08:00:02.455045+09:00",
+  "batch_label": "10월 4일 08:00"
+ },
+ {
   "title": "Your GitHub profile is wallpaper. Mine is a spaceship.",
   "url": "https://dev.to/rudratosh/readme-driven-development-except-the-readme-is-a-spacecraft-491h",
   "source": "devto",
