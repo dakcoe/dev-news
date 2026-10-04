@@ -60,6 +60,7 @@ def github_meta(url: str, token: str | None = None) -> dict:
             "language": j.get("language"),
             "license": (j.get("license") or {}).get("spdx_id"),
             "topics": j.get("topics", []),
+            "created": j.get("created_at"),     # 오래된 대형 저장소 거르기 (filters.drop_old_giants)
         }
     except Exception as e:
         print(f"[candidates] GitHub API 실패: {e}")

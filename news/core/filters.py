@@ -143,6 +143,30 @@ def keyword_filter(articles: list[dict], keywords: list[str],
     return kept
 
 
+def drop_old_giants(articles: list[dict], meta: dict[str, dict], min_age_days: int = 365,
+                    min_stars: int = 30000, now: datetime | None = None) -> list[dict]:
+    """오래전에 만들어진 대형 저장소를 GitHub 후보에서 뺀다.
+
+    트렌딩 상위에는 sentry·MCP servers 처럼 몇 년 된 유명 저장소가 자주 걸린다.
+    새 소식이 아니라 원래 큰 저장소라 독자에게는 '예전 것'으로 보인다(2026-10-04).
+    생성일을 못 받은 저장소는 그대로 둔다.
+    """
+    now = now or datetime.now(timezone.utc)
+    kept, dropped = [], []
+    for a in articles:
+        m = meta.get(a.get("url"), {}) if a.get("source") == "github" else {}
+        created, stars = m.get("created"), m.get("stars") or 0
+        try:
+            age = (now - datetime.fromisoformat(created.replace("Z", "+00:00"))).days if created else 0
+        except ValueError:
+            age = 0
+        (dropped if age >= min_age_days and stars >= min_stars else kept).append(a)
+    if dropped:
+        print(f"[필터] 오래된 대형 저장소 {len(dropped)}건 제외: "
+              + ", ".join(a.get("title", "")[:30] for a in dropped))
+    return kept
+
+
 def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] | None = None) -> list[dict]:
     """최근 N시간 내 발행분만 남긴다.
 

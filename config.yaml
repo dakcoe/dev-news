@@ -217,6 +217,8 @@ scraper:
   # 게이트가 `제외`를 빼므로 이만큼 더 뽑아 둔다. 요약은 top_n이 차는 즉시
   # 멈추므로, 제외가 0건인 회차의 호출 수는 여유분과 무관하게 top_n과 같다.
   overpick: 5
+  # 만든 지 오래된 대형 저장소는 트렌딩에 걸려도 싣지 않는다 (filters.drop_old_giants)
+  old_repo: {min_age_days: 365, min_stars: 30000}
   keep_days: 30      # [표시 계층] index.html에 굽는 기간. 저장은 월별 샤드에 무제한 누적 (SPEC 2.1)
   # max_items: 300   # [deprecated — SPEC 2.1] 저장 상한 제거. 샤딩이 용량을 통제한다
   per_source: 5      # 한 출처가 차지할 수 있는 최대 개수 (source 단위: rss 전체)
