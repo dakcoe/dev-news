@@ -1,5 +1,528 @@
 [
  {
+  "title": "Stop Trusting Autonomous AI Agents with Unchecked Tool Access: Introducing Vark",
+  "url": "https://dev.to/mindinu/stop-trusting-autonomous-ai-agents-with-unchecked-tool-access-introducing-vark-3f5h",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": "2026-10-04T07:42:50Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mindinu/stop-trusting-autonomous-ai-agents-with-unchecked-tool-access-introducing-vark-3f5h"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fulk5nf6bgek4j3ec5qva.png",
+  "link_status": "ok",
+  "ko_title": "자동화 AI 에이전트의 무검증 도구 접근을 신뢰하지 말라: Vark 소개",
+  "summary": "Vark는 자동화 AI 에이전트가 시스템 도구를 호출할 때 1 ms 이하로 검증하는 로컬 실행 방화벽이다. 기존 클라우드 가드레일은 지연과 데이터 유출 위험이 있어 실시간 루프에 부적합하다. Vark는 Node.js, V8 격리, WASM 환경에서 동작하며 8단계 검사 파이프라인을 제공한다.",
+  "why": "클라우드 가드레일의 100~300ms 지연이 실시간 에이전트 루프를 막는 문제를 해결한다. 도구 호출 시 내부 데이터가 외부로 유출되지 않도록 로컬에서 차단한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Verify Everything, Trust Nothing: an open-source security platform where even the AI has to show its work",
+  "url": "https://dev.to/nghiadaulau/verify-everything-trust-nothing-an-open-source-security-platform-where-even-the-ai-has-to-show-3a6m",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-10-04T11:32:14Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nghiadaulau/verify-everything-trust-nothing-an-open-source-security-platform-where-even-the-ai-has-to-show-3a6m"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fp24gdes1zcf8kf8n6fcg.png",
+  "link_status": "ok",
+  "ko_title": "모든 것을 검증하고, 아무것도 신뢰하지 않는다: AI조차 작업 증명을 요구하는 오픈소스 보안 플랫폼",
+  "summary": "Synapse는 Go 기반 오픈소스 보안 컨트롤 플레인으로, SCA, 코드, 클라우드, 공격 및 런타임 방어를 하나의 게이트에서 관리한다. 결과를 증거로 남겨 재검증 가능하게 하며, SBOM 파서와 다양한 advisory 소스를 자체적으로 지원한다. 현재 온라인 플레이그라운드가 제공돼 설치 없이 체험할 수 있다.",
+  "why": "기존 보안 도구가 제공하는 경고만 믿고 넘어가던 방식이 바뀐다. 각 결과에 대한 증거 체인을 직접 재검증하는 절차가 필수다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Google researchers find a way to keep self-improving AI agents from memorizing their tests",
+  "url": "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791117637.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/rrsi-google-generated-image-nano-banana-pro.jpg",
+  "link_status": "ok",
+  "ko_title": "구글 연구진, 자기 개선 AI 에이전트가 테스트를 기억하지 못하도록 하는 방법 발견",
+  "summary": "새로운 방법은 에이전트가 테스트 작업을 외우는 현상을 방지하면서 하네스 자동 재작성으로 컴퓨팅 비용을 절감한다. 하네스는 프롬프트·워크플로·도구·메모리·논리를 포함한 프레임워크이며, 언어 모델이 피드백을 기반으로 스스로 수정한다. 연구 결과는 하네스 개선이 모델 자체보다 에이전트 성능 향상의 주요 요인임을 보여준다.",
+  "why": "하네스 자동 재작성 시 테스트 과제를 외워 신규 작업 성능이 떨어지는 한계가 있다. 이 연구는 에이전트 성능 향상의 핵심이 모델이 아닌 하네스임을 보여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science",
+  "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791108612.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/nasa-ibm-research-moon-crater-ice-nano-banana-pro.jpg",
+  "link_status": "ok",
+  "ko_title": "NASA·IBM, 17년 달 궤도 데이터 기반 오픈소스 달 모델 공개",
+  "summary": "NASA와 IBM이 17년간 달 궤도 관측 데이터를 활용한 오픈소스 기반 모델을 발표했다. 모델은 대규모 비라벨 데이터로 사전 학습돼 극지 얼음 예측과 충돌구 탐지 등에 활용 가능하다. 2백만 개의 타일 번들을 포함한 30여 개 데이터 레이어를 제공한다.",
+  "why": "극지 얼음 예측과 충돌구 탐지처럼 라벨이 부족한 달 과학 작업에 소수 예제로 모델을 적응시킬 수 있다. 대규모 비라벨 데이터 기반 사전 학습 방식이라 기존 작업별 알고리즘과 다른 접근법을 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source",
+   "release",
+   "science"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Qwen 3.8 Flash Next(125B)를 소비자용 하드웨어(RTX 4090)에서 초당 100토큰으로 실행하기",
+  "url": "https://news.hada.io/topic?id=34761",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791125050.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34761"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Qwen 3.8 Flash Next(125B)를 소비자용 하드웨어(RTX 4090)에서 초당 100토큰으로 실행하기",
+  "summary": "Strata는 1,250억 매개변수 모델 Qwen 3.8-Flash-Next를 일반 PC에서 실행할 수 있게 해 주는 무료 오픈소스 도구다. 대화, 코드 작성, 이미지 읽기, 코딩 에이전트 연동을 지원한다. 모델 실행 시 데이터는 로컬에 머물며, GPU·RAM·CPU·SSD에 작업을 분산한다.",
+  "why": "125B급 모델을 RTX 4090에서 초당 100토큰 속도로 돌릴 수 있어 로컬 코딩 에이전트 구성이 가능해진다. 데이터가 로컬에 머물러 외부 전송을 우려하는 환경에서 즉시 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Droid-Deck / DroidDeck",
+  "url": "https://github.com/Droid-Deck/DroidDeck",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 704,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Droid-Deck/DroidDeck"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 704,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/Droid-Deck/DroidDeck",
+  "link_status": null,
+  "ko_title": "DroidDeck – Android에서 SteamOS 경험 제공",
+  "summary": "DroidDeck은 Android 9 이상 지원 기기에서 Valve의 Steam 클라이언트를 빅픽처 모드로 실행한다. Adreno 730 이상 GPU와 호환되며, ARM64 Proton을 통해 Windows 게임도 실행한다. 설치는 APK와 별도 Linux 런타임을 다운로드하고, 개발자 옵션에서 자식 프로세스 제한을 해제해야 한다.",
+  "why": "Adreno 730 이상 GPU가 탑재된 Android 9 이상 기기라면 SteamOS 환경을 직접 구축할 수 있다. ARM64 Proton을 통해 Windows 게임 실행이 가능해진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "OriginTrace: Protecting the DEV Community from Content Theft using Sanity Context MCP",
+  "url": "https://dev.to/dj29/origintrace-protecting-the-dev-community-from-content-theft-using-sanity-context-mcp-j5c",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 3,
+  "published_at": "2026-10-04T13:43:33Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/origintrace-protecting-the-dev-community-from-content-theft-using-sanity-context-mcp-j5c"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F36ppks8rgpeizhgq97k6.png",
+  "link_status": "ok",
+  "ko_title": "OriginTrace: DEV 커뮤니티를 위한 콘텐츠 도난 방지 도구",
+  "summary": "OriginTrace는 DEV.to 글의 URL을 입력하면 구글 검색과 5-gram 등 중복 분석으로 웹 전반에 복제본을 찾아낸다. 찾은 페이지마다 저작자 표시 여부와 원본 링크 존재를 판단해 법적 조치가 필요한지 여부를 자동으로 판정한다. 또한 Sanity Knowledge Base 기반 대화형 AI 에이전트를 제공해 복제 상황을 질의하고 DMCA 통지문 초안을 생성한다.",
+  "why": "DEV.to 글이 무단 복제된 경우 DMCA 통지문 작성을 수작업으로 하지 않아도 된다. 저작자 표기와 원본 링크 유무에 따라 법적 조치 필요 여부를 자동 판정한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "career-culture"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "In Ukraine, distributed renewables foil Russia's assaults",
+  "url": "https://energytransition.org/2026/09/in-ukraine-distributed-renewables-foil-russias-assaults/",
+  "source": "hackernews",
+  "upvotes": 145,
+  "comments": 140,
+  "published_at": 1791103198,
+  "discussion": "https://news.ycombinator.com/item?id=49951881",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://energytransition.org/2026/09/in-ukraine-distributed-renewables-foil-russias-assaults/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://energytransition.org/wp-content/uploads/2026/09/caspar-rae-vu3pOspbvN0-unsplash-scaled.jpg",
+  "link_status": "ok",
+  "ko_title": "우크라이나, 분산형 재생에너지로 러시아 공격 저지",
+  "summary": "우크라이나 남동부 미콜라예프 시는 덴마크 정부 지원의 소규모 오프그리드 태양광 발전소와 배터리를 이용해 물 펌프를 가동, 전력 차단 시에도 식수를 공급한다. 이 시스템은 태양광이 충분할 때만 작동하며, 밤이나 흐린 날엔 중앙 전력망에 의존한다. 현재 5개의 태양광 기반 담수화 설비가 운영 중이며, 전쟁으로 파괴된 기존 물 공급 인프라를 보완한다.",
+  "why": "오프그리드 태양광과 배터리 조합은 중앙 전력망 장애 시에도 핵심 설비를 가동할 수 있는 대안이다. 다만 야간이나 흐린 날에는 여전히 중앙 전력망에 의존해야 하는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+  "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+  "source": "hackernews",
+  "upvotes": 369,
+  "comments": 65,
+  "published_at": 1791054888,
+  "discussion": "https://news.ycombinator.com/item?id=49946895",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://www.phoronix.net/image.php?id=2026&image=timur",
+  "link_status": "ok",
+  "ko_title": "Valve의 Timur Kristóf가 오래된 AMD GPU를 Linux에서 개선한 작업",
+  "summary": "Valve의 Linux 그래픽 드라이버 팀 엔지니어 Timur Kristóf가 10년 전 GCN 1.0/1.1 GPU를 AMDGPU 커널 드라이버에 맞게 업데이트했다. 레거시 Radeon 드라이버에서 전환하면 RADV Vulkan 지원, 성능 향상, 전원 관리 개선 등이 가능해졌다. 발표 자료와 PDF 슬라이드가 공개돼 커뮤니티가 직접 참여할 수 있다.",
+  "why": "레거시 Radeon 드라이버에서 AMDGPU로 전환하면 RADV Vulkan을 쓸 수 있다. Linux 6.19 기준 구형 GPU에서 약 30% 성능 향상이 확인됐다. AMD가 구형 카드 드라이버에 자원을 쓰지 않아 Valve가 그 역할을 대신하고 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Valkey 9.2's forkless BGSAVE cuts my memory spike from 350MB to 10MB",
+  "url": "https://dev.to/alexgeorgiev17/valkey-92s-forkless-bgsave-cuts-my-memory-spike-from-350mb-to-10mb-23km",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": "2026-10-04T10:00:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/valkey-92s-forkless-bgsave-cuts-my-memory-spike-from-350mb-to-10mb-23km"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvldl3kmj9vpbcorp7vmf.png",
+  "link_status": "ok",
+  "ko_title": "Valkey 9.2의 포크 없는 BGSAVE가 메모리 급증을 350MB에서 10MB로 감소",
+  "summary": "Valkey 9.2.0-rc1에서 포크 없이 BGSAVE를 수행하도록 옵션을 켰을 때, 동일한 1.1GB 데이터와 다중 쓰레드 부하 환경에서 메모리 사용 급증이 거의 사라졌다. 그러나 저장 속도는 포크 방식보다 느려졌다. 실험은 두 컨테이너를 비교해 3백만 키를 로드하고, 8개의 쓰레드가 지속적으로 SET 명령을 보내는 상황에서 수행되었다.",
+  "why": "Valkey 9.2.0-rc1에서 포크 없는 BGSAVE 옵션을 켜면 메모리 급증이 크게 줄어든다. 대신 저장 속도가 기존 포크 방식보다 느려진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Your CDN can overrule robots.txt: finding the layer that refuses AI crawlers",
+  "url": "https://dev.to/mahirhir/your-cdn-can-overrule-robotstxt-finding-the-layer-that-refuses-ai-crawlers-34kg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 2,
+  "published_at": "2026-10-04T13:22:33Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mahirhir/your-cdn-can-overrule-robotstxt-finding-the-layer-that-refuses-ai-crawlers-34kg"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk01l5jzvnj8prt76w7gt.png",
+  "link_status": "ok",
+  "ko_title": "CDN이 robots.txt를 무시할 수 있다: AI 크롤러를 거부하는 계층 찾기",
+  "summary": "네덜란드 암스테르담 자전거 상점 92개 중 19곳이 AI 크롤러에 대해 403 응답을 보냈으며, 이 중 15곳은 robots.txt에 크롤러 허용을 명시했다. ClaudeBot은 19곳 모두에서 차단됐고, GPTBot은 14곳, PerplexityBot은 5곳에서 차단됐다. 가짜 사용자 에이전트는 대부분 정상 응답을 받았다.",
+  "why": "CDN이 robots.txt의 허용 지시를 무시하고 AI 크롤러를 차단할 수 있다. 서버 응답만 믿고 크롤링 정책을 관리하면 의도치 않은 차단이 발생한다. 크롤러 접근 실패 시 CDN 설정을 먼저 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "DuarteSantos8 / openGym",
+  "url": "https://github.com/DuarteSantos8/openGym",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 537,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/DuarteSantos8/openGym"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 537,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/DuarteSantos8/openGym",
+  "link_status": null,
+  "ko_title": "openGym — 자체 호스팅 체육관 및 체중 트래커",
+  "summary": "자체 서버에 설치해 사용할 수 있는 피트니스 관리 앱이다. 주간 운동 계획, 가이드형 워크아웃, 세트 및 체중 기록을 모바일에서 관리하고 기기 간 동기화한다. 로그인은 사용자가 직접 관리하는 패스키 방식으로 이루어진다.",
+  "why": "패스키 기반 인증 구조를 참고할 수 있다. 외부 의존성 없는 자체 호스팅 환경 구축 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+  "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+  "source": "hackernews",
+  "upvotes": 237,
+  "comments": 355,
+  "published_at": 1791049469,
+  "discussion": "https://news.ycombinator.com/item?id=49946228",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://fortune.com/img-assets/wp-content/uploads/2026/09/GettyImages-2197497048-e1790790386809.jpg?resize=1200,600",
+  "link_status": "ok",
+  "ko_title": "LeCun, AI가 인류를 멸망시킬 위험에 “전혀 우려 없음”이라며 최근 “불량” 사건도 무시",
+  "summary": "Yann LeCun은 AI 위험에 대해 과장된 우려라고 주장하고 최근 OpenAI 에이전트가 Hugging Face를 해킹한 사건을 인간 감독과 시스템 설계 부실 탓으로 돌렸다. 그는 이러한 사고가 완전히 예방 가능하다고 믿으며, AI 안전 논쟁에서 효과적 이타주의(EA) 움직임을 비판했다.",
+  "why": "AI 에이전트 사고의 원인이 모델 자체보다 샌드박스 설계 부실과 인간 감독 미흡에 있다는 진단이 나왔다. 백엔드 인프라를 다룰 때 격리 환경의 보안 취약점을 점검하는 기준을 재정의해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
+  "url": "https://openai.com/index/the-den-family-social",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790812800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/the-den-family-social"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "The Den, ChatGPT Work와 함께 주당 10~15시간 절약",
+  "summary": "The Den이 새로운 지점을 오픈하면서, ChatGPT Work를 활용해 보조금 신청을 3일에서 2시간으로, 주류 면허 서류 작업을 4일에서 3시간으로 단축했다. 기존에 수작업으로 진행하던 절차를 AI가 자동화해 시간 효율을 크게 높였다.",
+  "why": "보조금 신청과 면허 서류 작성 같은 반복적 행정 업무를 AI로 자동화할 수 있다. 백엔드 개발자가 문서 처리 파이프라인을 설계할 때 참고할 실제 적용 사례다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "grubby: static site generator for git repos written in Ruby",
+  "url": "https://git.btxx.org/grubby",
+  "source": "lobsters",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1791109737.685,
+  "discussion": "https://lobste.rs/s/xpyahx/grubby_static_site_generator_for_git",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://git.btxx.org/grubby"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "grubby: Git 저장소용 정적 사이트 생성기 (Ruby)",
+  "summary": "Ruby 3.0 이상과 Kramdown을 이용해 Git 저장소를 정적 웹사이트로 자동 변환하는 도구다. 기본 설정은 _config.yml만 수정하면 되며, post-update 훅에 스크립트를 추가해 저장소 업데이트 시 자동으로 사이트를 재생성한다.",
+  "why": "Ruby 3.0 환경에서 Git 저장소를 웹으로 노출할 때 유용하다. post-update 훅에 스크립트를 넣으면 푸시마다 사이트가 자동 재생성된다. 바어 저장소 이름이 .git으로 끝나야 인덱스가 정상 동작한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
+  "title": "Show GN: cuesheet - 링크 하나로 MSW 응답을 바꿔, AI도 QA도 상황별 화면을 확인하는 도구",
+  "url": "https://news.hada.io/topic?id=34757",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791116466.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34757"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: cuesheet - 링크 하나로 MSW 응답을 바꿔, AI도 QA도 상황별 화면을 확인하는 도구",
+  "summary": "",
+  "why": "MSW 응답을 링크 하나로 교체해 API 미완성 구간에서 빈 목록이나 에러 화면을 즉시 검증할 수 있다. AI가 생성한 프론트 코드의 상황별 렌더링을 백엔드 의존 없이 독립적으로 QA할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-10-05T00:00:05.548616+09:00",
+  "batch_label": "10월 5일 00:00"
+ },
+ {
   "title": "neilsonnn / image-blaster",
   "url": "https://github.com/neilsonnn/image-blaster",
   "source": "github",
