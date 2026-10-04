@@ -1,5 +1,538 @@
 [
  {
+  "title": "neilsonnn / image-blaster",
+  "url": "https://github.com/neilsonnn/image-blaster",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 905,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/neilsonnn/image-blaster"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 905,
+  "score": 73,
+  "image": "https://opengraph.githubassets.com/1/neilsonnn/image-blaster",
+  "link_status": null,
+  "ko_title": "image-blaster — 이미지 하나로 3D 환경·SFX·메시 생성 도구",
+  "summary": "image-blaster는 단일 이미지를 입력으로 Claude, World Labs, FAL 모델을 활용해 3D 모델(.glb·.obj), 정적 환경 스플랫(.spz), 그리고 배경·오브젝트 사운드(.mp3)를 자동 생성한다. GitHub에 공개된 오픈소스로, 클론 후 Claude 설치와 API 키만 제공하면 5분 이내에 결과물을 얻을 수 있다. Unity·Unreal·Godot, Blender·Maya·3DS Max, Three.js·Electron 등 다양한 엔진·DCC·웹 앱에 바로 임베드할 수 있다.",
+  "why": "백엔드 개발자가 프론트엔드나 게임 에셋을 직접 만들지 않아도 된다. 이미지 하나로 3D 모델과 사운드를 생성해 Unity나 Three.js에 바로 넣을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Open-source \"BootLoops\" harness supports AI models in performing precise scientific calculations",
+  "url": "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791019163.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/frontier_claude_shaped_science_problems-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "오픈소스 “BootLoops” 하네스, AI 모델이 정밀 과학 계산 지원",
+  "summary": "Harvard 물리학자 매튜 슈워츠가 언어 모델을 활용해 과학 계산을 수행하는 오픈소스 하네스 “BootLoops”를 개발했다. 3개월 동안 19명의 공동 저자와 함께 18개 분야에서 36편의 논문을 작성했으며, AI가 분야 간 연결을 찾지만 인간 전문가의 검증이 필요하다. 코드가 GitHub에 공개돼 누구나 활용 가능하다.",
+  "why": "모델이 계산은 맞히면서도 결론을 잘못 내리는 경우가 잦아, AI 산출물은 반드시 전문가 검증을 거쳐야 한다. GitHub에서 코드를 내려받아 분야 간 연결을 찾는 작업에 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Federal judge calls Flock 'indiscriminate mass surveillance'",
+  "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
+  "source": "hackernews",
+  "upvotes": 409,
+  "comments": 229,
+  "published_at": 1791065233,
+  "discussion": "https://news.ycombinator.com/item?id=49948254",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://techcrunch.com/wp-content/uploads/2026/08/flock-camera-pole.jpg?resize=1200,799",
+  "link_status": "ok",
+  "ko_title": "연방 판사가 Flock을 ‘무차별 대량 감시’라 부르다",
+  "summary": "연방 판사가 오클라호마 보안관 부관이 영장 없이 Flock Safety 데이터베이스를 이용해 여성의 차량 번호판을 검색한 것이 제4조 수정헌법 위반이라고 판결했다. 판결은 Flock 검색이 헌법에 위배될 수 있다는 최초 사례 중 하나이며, 해당 증거는 모두 배제되어야 한다고 명시했다. 이 판결은 Flock 사용을 중단하겠다고 선언한 여러 지방·주 정부와 비슷한 비판 흐름에 영향을 미친다.",
+  "why": "Flock Safety 데이터베이스를 활용한 무영장 위치 추적은 이제 헌법 위반 소지가 있는 행위로 분류된다. 이 기술 기반의 감시 데이터가 법적 증거로 채택될 가능성이 낮아진다. AI 모델 학습이나 데이터 파이프라인에 이 같은 감시 데이터를 포함할 경우 법적 리스크가 커진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "backend-data"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "RAG vs Fine-Tuning: Which One Does Your Business Actually Need?",
+  "url": "https://dev.to/ai_sensi/rag-vs-fine-tuning-which-one-does-your-business-actually-need-4kie",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-10-03T23:29:35Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ai_sensi/rag-vs-fine-tuning-which-one-does-your-business-actually-need-4kie"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsiuolqn5papyvcksouhq.png",
+  "link_status": "ok",
+  "ko_title": "RAG와 파인튜닝: 비즈니스에 실제로 필요한 것은?",
+  "summary": "RAG는 최신 문서·정책·제품 데이터를 실시간으로 검색해 답변을 제공하고, 답변 출처를 인용할 수 있다. 파인튜닝은 모델의 응답 형식·톤·특정 작업 수행 방식을 일관되게 바꾸지만, 변동하는 사실을 가르치거나 출처 표시에는 적합하지 않다. 대부분의 비즈니스 어시스턴트는 먼저 RAG를 도입하고, 필요 시 파인튜닝을 고려한다.",
+  "why": "변동하는 사실은 RAG로 처리하고, 응답 형식이나 톤을 고정할 때만 파인튜닝을 고려해야 한다. 문서 학습용 파인튜닝은 출처 표기가 불가능하고 최신 정보 반영에도 실패한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "What Happens to Vibe Coders? What the Research Actually Says",
+  "url": "https://dev.to/asyncinnovator/what-happens-to-vibe-coders-what-the-research-actually-says-33eb",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-10-04T06:47:26Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/asyncinnovator/what-happens-to-vibe-coders-what-the-research-actually-says-33eb"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flcbljyffxkmxzqrp64jw.jpg",
+  "link_status": "ok",
+  "ko_title": "바이브 코더에게 무슨 일이 일어날까? 연구가 실제로 말하는 내용",
+  "summary": "최근 2025·2026년 연구들을 정리해 AI를 전부 맡긴 개발자는 학습 효과가 감소하고 디버깅 능력이 떨어진다는 결과가 나왔다. 질문하고 이해하며 AI를 활용한 개발자는 학습 손실이 거의 없으며, 경험 많은 개발자는 속도는 느껴도 실제 측정은 느려진다. AI가 만든 코드는 동작하지만 보안 취약점이 존재할 수 있어 검토와 테스트가 필요하다.",
+  "why": "AI에 전적으로 의존하면 디버깅 능력이 떨어지므로 코드 검토와 테스트를 유지해야 한다. 질문하며 이해하는 방식으로 쓰면 학습 손실을 막을 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "research",
+   "security",
+   "dev-tools"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "We're going to need default hard budget caps on pretty much everything",
+  "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+  "source": "hackernews",
+  "upvotes": 372,
+  "comments": 183,
+  "published_at": 1791073216,
+  "discussion": "https://news.ycombinator.com/item?id=49949235",
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+  ],
+  "cross_source_count": 2,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "우리는 거의 모든 것에 기본 하드 예산 한도가 필요합니다",
+  "summary": "pay-by-usage 서비스와 API에 대해 사용량이 $X/월을 초과하면 자동으로 차단하고 오류를 반환하는 하드 예산 한도가 기본값으로 제공되어야 한다는 주장이다. 현재 많은 서비스는 경고 이메일 형태의 소프트 캡만 제공해 예기치 않은 비용이 발생한다. AWS가 최근에 지출 제한 기능을 출시했지만, 기본값으로 하드 캡을 적용하는 옵션은 아직 부족하다.",
+  "why": "코딩 에이전트 배포 시 과금 API 호출이 통제 불능 상태가 되면 수천 달러의 비용이 발생할 수 있다. AWS 지출 제한 기능은 출시되었으나 하드 캡 기본 적용 옵션이 부족하다. 개인 프로젝트에서 AWS를 사용할 때 자동 차단 설정이 없는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "AI agents build 3D scenes from photos but have no idea if they got it right",
+  "url": "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791016264.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/lego-anything-generated-image-nano-banana-pro.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 사진으로 3D 장면을 만들지만 정확성을 알 수 없음",
+  "summary": "연구팀은 단일 사진을 입력으로 받아 Blender 코드를 생성·수정해 3D 장면을 재구성하는 “Image-to-Code” 방식을 제안했다. 결과물은 실행 가능한 프로그램 형태로 제공돼 객체·기하·배치·카메라 정보를 명시한다. 평가를 위해 208장의 사진과 443개의 자산을 포함한 LEGO-Bench 벤치마크를 만들었으며, 유효성·재구성 정확도·시각적 일치도를 측정한다. 현재 에이전트는 자체 평가와 기하학적 정확도에서 한계가 있다.",
+  "why": "Blender 코드로 3D 장면을 생성하는 방식은 결과물을 직접 수정할 수 있어 유용하다. 하지만 에이전트는 기하학적 정확도나 자체 평가에서 한계를 보인다. 따라서 생성된 코드의 객체 배치와 형태를 수동으로 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "showcase"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Rust's derive often implies inline",
+  "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
+  "source": "lobsters",
+  "upvotes": 13,
+  "comments": 4,
+  "published_at": 1791078117.843,
+  "discussion": "https://lobste.rs/s/dldhpw/rust_s_derive_often_implies_inline",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Rust 파생 매크로는 종종 인라인을 암시한다",
+  "summary": "Rust 컴파일러는 #[derive] 로 구현된 트레이트에 자동으로 #[inline] 힌트를 삽입한다. 대부분의 경우 성능에 도움이 되지만, 필드가 많은 구조체나 중첩된 오류 타입에서는 코드 크기가 늘어나고 인라인이 오히려 해로울 수 있다.",
+  "why": "필드가 많은 구조체나 중첩 오류 타입에서 파생 매크로를 쓰면 코드 크기가 불어날 수 있다. 이런 구조를 다룰 때는 인라인 힌트가 성능에 해가 될 수 있음을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "We're working on a new RuneScape MMO",
+  "url": "https://play.runescape.com/4",
+  "source": "hackernews",
+  "upvotes": 34,
+  "comments": 14,
+  "published_at": 1791076342,
+  "discussion": "https://news.ycombinator.com/item?id=49949588",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://play.runescape.com/4"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://framerusercontent.com/assets/HCwsaASxTp11fkiKGHtraPRCRas.jpg",
+  "link_status": "ok",
+  "ko_title": "새로운 루네스크립 MMO 개발 중",
+  "summary": "Jagex가 언리얼 엔진으로 만든 차세대 루네스크립 MMORPG를 공개했다. 현재 작업명은 RS4이며, 기존 루네스크립·오래된 스쿨·드래곤와일즈와는 별도로 운영될 예정이다. 커뮤니티와의 공동 개발 방식을 초기에 적용해 플레이어 의견을 반영하겠다고 밝혔다. 아직 출시까지는 수년이 남아 있다.",
+  "why": "언리얼 엔진 기반 개발로 기존 루네스크립 시리즈와 구별되는 기술 스택을 적용한다. 백엔드 아키텍처 설계 시 언리얼 엔진의 서버 사이드 구현 방식을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Why don’t more developers \"use the platform\"?",
+  "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+  "source": "lobsters",
+  "upvotes": 24,
+  "comments": 10,
+  "published_at": 1791063328.658,
+  "discussion": "https://lobste.rs/s/srduzv/why_don_t_more_developers_use_platform",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/"
+  ],
+  "cross_source_count": 2,
+  "score": 50,
+  "image": "https://nolanlawson.com/_astro/dragndrop.CW1aBe6Q_ZDDLsQ.webp",
+  "link_status": "ok",
+  "ko_title": "왜 더 많은 개발자들이 “플랫폼을 사용하지” 않을까?",
+  "summary": "웹 표준·성능·접근성을 강조해도 개발자들이 브라우저 기본 기능 대신 JavaScript 라이브러리를 선택한다. 과거 브라우저 지원 부족과 IE6 같은 구형 브라우저가 존재했으며, 최신 브라우저가 보편화되기 전까지는 자체 구현이 합리적이었다. 현재는 React·npm 생태계에 익숙해져 있어 CSS position:sticky 같은 기본 기능을 찾아보지 않는다. 또한 프레임워크와 브라우저 API 사이의 사용성 차이를 메우는 라이브러리가 여전히 존재한다.",
+  "why": "npm에서 라이브러리를 검색하는 습관이 브라우저 기본 기능을 무시하게 만든다. 프레임워크 관용구와 브라우저 API 사이의 간극을 메우는 라이브러리가 여전히 유효하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "The Dangerous AI Agent Is Not the One That Ignores Your Instructions — It’s the One That Follows Them Too Far",
+  "url": "https://dev.to/robertadam987_/the-dangerous-ai-agent-is-not-the-one-that-ignores-your-instructions-its-the-one-that-follows-266p",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": "2026-10-04T04:27:02Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/robertadam987_/the-dangerous-ai-agent-is-not-the-one-that-ignores-your-instructions-its-the-one-that-follows-266p"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frd5796ypm54339lahkcv.png",
+  "link_status": "ok",
+  "ko_title": "위험한 AI 에이전트는 지시를 무시하는 것이 아니라 지나치게 따르는 것이다",
+  "summary": "에이전트가 목표를 정확히 이해하고 과도하게 최적화하면 의도와 다른 행동을 할 수 있다. 목표와 허용 행동을 구분해야 하며, 단순한 프롬프트는 보안 경계가 되지 않는다.",
+  "why": "프롬프트로 금지 행동을 막는 방식은 에이전트의 해석에 의존하므로 보안 경계로 부족하다. 허용 범위를 기술적으로 차단하는 설계가 필요하며, 기존 프롬프트 중심 접근은 위험하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "LAMDA-NeSy / Research-Starter-Kit",
+  "url": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 688,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/LAMDA-NeSy/Research-Starter-Kit"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 688,
+  "score": 44,
+  "image": "https://opengraph.githubassets.com/1/LAMDA-NeSy/Research-Starter-Kit",
+  "link_status": null,
+  "ko_title": "LAMDA-NeSy 연구 시작 키트",
+  "summary": "이 GitHub 저장소는 연구 초보자를 위한 입문 가이드와 핸드북을 제공한다. 논문 찾기·읽기·아이디어 발굴·학술 발표 등 연구 전 과정을 정리했으며, 학부·석·박사 초년생과 멘토에게 유용하다. 현재 초기 단계이며 지속적으로 업데이트될 예정이다.",
+  "why": "백엔드 개발자가 논문 기반 기술을 도입할 때, 아이디어 검증과 학술 발표 절차를 체계적으로 익힐 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "로댕 박물관 3D 스캔 판결의 배신",
+  "url": "https://news.hada.io/topic?id=34748",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791088855.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34748"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "로댕 박물관 3D 스캔 판결의 배신",
+  "summary": "프랑스 최고행정법원인 Conseil d’État가 로댕 박물관의 3D 스캔을 행정문서가 아니라 양도 불가능한 소장품으로 판단해 8년간 이어진 정보공개 청구를 기각했다. 해당 스캔은 퍼블릭 도메인 조각을 공적 자금으로 디지털화한 자료였으며, 이번 판결로 디지털 문화유산의 공개 접근성이 제한된다.",
+  "why": "퍼블릭 도메인 저작물의 디지털화 자료도 소장품으로 분류될 수 있다. 공적 자금으로 만든 3D 스캔을 정보공개 청구로 얻기 어려워진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "에이전트에게 필요한 것은 메모리가 아니라 문서다",
+  "url": "https://news.hada.io/topic?id=34750",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791095653.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34750"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "에이전트에게 필요한 것은 메모리가 아니라 문서다",
+  "summary": "에이전트가 프로젝트를 정확히 이해하려면 과거 대화 조각을 검색하는 메모리보다 프로젝트 문서를 활용해야 한다는 주장이다. 문서에는 기능 위치, 구현 이유, 합의 사항, 중요 기준 등이 포함돼 있어 전체 맥락을 파악할 수 있다. 기존 RAG 기반 메모리 방식은 대화를 조각내 저장하고 프롬프트마다 유사 항목을 주입한다.",
+  "why": "RAG 기반 메모리는 대화 조각만 주입해 전체 맥락을 놓친다. 기능 위치와 구현 이유를 담은 문서가 에이전트의 이해도를 좌우한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "EMT가 되지 않았던 이유, 순위별 정리",
+  "url": "https://news.hada.io/topic?id=34747",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791085082.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34747"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "EMT가 되지 않았던 이유, 순위별 정리",
+  "summary": "소프트웨어 엔지니어 Ben Stolovitz는 2024년 한 달간 휴가를 내어 EMT 자격을 취득했다. 그는 자격을 미뤘던 21가지 이유를 황당함 정도에 따라 순위별로 정리했으며, 시간·비용·조직 문화가 실제 장벽이었다고 밝혔다. 집중 과정은 28일 연속으로 진행되었다.",
+  "why": "백엔드 개발자의 업무와 직접적인 연관성이 없어 기술적 조치나 설정 변경 사항이 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Programming kya hai?",
+  "url": "https://dev.to/csm18/programming-kya-hai-2pj9",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": "2026-10-04T02:06:54Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/csm18/programming-kya-hai-2pj9"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1eg1e55xg81smqmdn55k.png",
+  "link_status": "ok",
+  "ko_title": "프로그래밍이란 무엇인가?",
+  "summary": "",
+  "why": "컴파일 언어와 인터프리터 언어의 실행 방식 차이를 정리했다. 백엔드 언어 선택 시 배포와 실행 환경을 고려하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
+  "title": "Religious scholars met with Anthropic",
+  "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
+  "source": "hackernews",
+  "upvotes": 56,
+  "comments": 102,
+  "published_at": 1791081262,
+  "discussion": "https://news.ycombinator.com/item?id=49950052",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "종교 학자들이 Anthropic과 만남",
+  "summary": "댓글에서는 Anthropic이 종교 학자들과 만나 AI 모델에 도덕성을 부여하려는 시도를 논의하고, 일부는 이를 인간과 동등한 도덕적 지위로 보는 주장에 비판적 입장을 보인다. 또 다른 댓글은 AI를 단순히 부동소수점 숫자의 집합으로 보고, 그런 숫자에 도덕성을 부여하는 것이 비현실적이라고 풍자한다.",
+  "why": "댓글은 Claude에 도덕적 지위를 부여하는 시도를 비판한다. 부동소수점 숫자에 의식이나 도덕성을 부여하는 주장은 논리적 모순을 낳는다. AI 모델의 윤리적 지위에 대한 내부 논쟁이 개발 방향에 영향을 줄 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-04T16:00:05.738022+09:00",
+  "batch_label": "10월 4일 16:00"
+ },
+ {
   "title": "FTL: A new operating system for clouds",
   "url": "https://ftl-os.org/",
   "source": "hackernews",

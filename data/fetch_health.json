@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-24T16:00:39+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 12,
-    "github": 3,
-    "blocked": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-25T00:00:31+09:00",
    "total": 20,
    "counts": {
@@ -824,6 +803,57 @@
     {
      "url": "https://news.hada.io/topic?id=34730",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-04T16:00:39+09:00",
+   "total": 24,
+   "counts": {
+    "ok": 12,
+    "blocked": 8,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34750",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34749",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34748",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34747",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34746",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/the-den-family-social",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
