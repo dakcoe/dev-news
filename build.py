@@ -38,6 +38,7 @@ from news.core import seen as seen_db
 from news.core.dedup import merge_duplicates
 from news.core.filters import (
     drop_dead_links,
+    drop_old_giants,
     drop_irrelevant,
     drop_self_declared_irrelevant,
     keyword_filter,
@@ -250,6 +251,9 @@ def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[di
     top_n, _, overpick, per_feed_page = _gate_settings(cfg)
 
     gh_meta_map = apply_star_delta(articles, today)
+    old = sc.get("old_repo") or {}
+    articles = drop_old_giants(articles, gh_meta_map, old.get("min_age_days", 365),
+                               old.get("min_stars", 30000))
     articles = score_and_categorize(articles, top_n=len(articles))
     articles = adjust_scores(articles, cfg)
 
