@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-25T16:00:48+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/introducing-mentalhealthbench/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-26T00:00:41+09:00",
    "total": 20,
    "counts": {
@@ -899,6 +883,52 @@
     {
      "url": "https://news.hada.io/topic?id=34782",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-05T16:00:40+09:00",
+   "total": 21,
+   "counts": {
+    "blocked": 7,
+    "ok": 11,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34811",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34810",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34809",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34807",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34805",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
+     "source": "hackernews",
      "reason": "blocked"
     }
    ]

@@ -1,5 +1,214 @@
 [
  {
+  "t": "스와프 때문에 발생한 40ms Go 가비지 컬렉터 일시정지",
+  "u": "https://frn.sh/go-gc/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-05",
+  "o": "A 40ms Go garbage collector pause caused by swap",
+  "x": "Go 프로세스가 스와프에 메타데이터를 보관하면 가비지 컬렉터가 멈추는 동안 페이지 폴트가 발생해 40ms 정도의 일시정지가 발생한다. 실험은 H"
+ },
+ {
+  "t": "pstack-claude — Claude Code·Codex·Pi용 에이전트 스킬 스택",
+  "u": "https://github.com/michael-denyer/pstack-claude",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-10-05",
+  "o": "michael-denyer / pstack-claude",
+  "x": "이 저장소는 Lauren Tan의 pstack을 Claude Code, Codex, Pi 등 다양한 에이전트 환경에 맞게 포팅한 오픈소스 플러그"
+ },
+ {
+  "t": "자율주행 데이터의 진짜 문제는 크기가 아니다",
+  "u": "https://news.hada.io/topic?id=34805",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [],
+  "d": "2026-10-05",
+  "x": "센서마다 다른 주기와 시계를 사용해 카메라·LiDAR·Radar 데이터를 정확히 시간 관계로 묶는 것이 어렵다. 데이터 양이 아니라 의미를 보존"
+ },
+ {
+  "t": "ArtCraft 앱 – Rust로 만든 오픈소스 Adobe 호환 제품군",
+  "u": "https://getartcraft.com/apps",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-05",
+  "o": "ArtCraft Apps – open-source Adobe compatible suite written in Rust",
+  "x": "ArtCraft 팀이 Rust로 새로 구현한 일곱 가지 네이티브 앱을 공개했다. 이미지 편집, 벡터 일러스트, 영상 편집, 사진 라이브러리·RA"
+ },
+ {
+  "t": "SECONDO: 내 친구 카페를 위한 오프라인 베이킹 플래너, Gemma와 TabPFN 기반",
+  "u": "https://dev.to/jyotir07/secondo-an-offline-baking-planner-for-my-friends-cafe-built-on-gemma-and-tabpfn-517g",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [],
+  "d": "2026-10-05",
+  "o": "SECONDO: An Offline Baking Planner for My Friend's Café, Built on Gemma and TabPFN",
+  "x": "SECONDO는 소규모 베이커리·카페를 위한 로컬 기반 계획 도구다. 판매 기록 CSV와 WhatsApp 주문을 자동으로 파싱해 일일 베이킹량을"
+ },
+ {
+  "t": "CSS @starting-style 로 진입 애니메이션 만들기",
+  "u": "https://dev.to/salehmubashar/entry-animations-with-css-starting-style-4b13",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-05",
+  "o": "Entry Animations with CSS @starting-style",
+  "x": "@starting-style 규칙은 요소가 처음 로드될 때 CSS 속성의 시작값을 명시적으로 지정해 부드러운 전환을 가능하게 한다. 기존 tra"
+ },
+ {
+  "t": "Anthropic, 일기 기록을 경찰에 신고… 여성에게 중범죄 혐의",
+  "u": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-05",
+  "o": "Anthropic reported diary entry to police, woman faces felony charge",
+  "x": "플로리다 여성 카리 미셸 헬러가 Anthropic의 챗봇 Claude를 일기로 사용하며 보안관 사무실을 총격하겠다고 적었다. 챗봇의 안전 시스템"
+ },
+ {
+  "t": "Iroh 글로벌 콘텐츠 발견",
+  "u": "https://www.iroh.computer/blog/iroh-global-content-discovery",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-05",
+  "o": "Iroh global content discovery",
+  "x": "IPFS의 글로벌 콘텐츠 지속성을 우려하며, IPFS Shipyard 종료 소식이 프로젝트 미래에 불확실성을 더한다. 저자는 전 세계 콘텐츠 탐"
+ },
+ {
+  "t": "AI 에이전트에 실제 도구를 제공했지만, “행동 전에 물어보기”만으로는 충분하지 않다는 것을 깨달았다",
+  "u": "https://dev.to/robertadam987_/we-gave-ai-agents-real-tools-then-realized-just-ask-before-acting-wasnt-enough-19e3",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "d": "2026-10-05",
+  "o": "We Gave AI Agents Real Tools — Then Realized “Just Ask Before Acting” Wasn’t Enough",
+  "x": "AI 에이전트가 파일 읽기·메시지 전송·API 호출·레코드 업데이트·워크플로우 트리거 등 실제 도구를 사용하게 되면 단순 챗봇을 넘어 소프트웨어"
+ },
+ {
+  "t": "DevNavigates 구축: 개발자를 위한 인터랙티브 시각 로드맵",
+  "u": "https://dev.to/dipanshurdev/i-built-devnavigates-an-interactive-visual-learning-roadmap-for-developers-2cik",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "showcase"
+  ],
+  "d": "2026-10-05",
+  "o": "I Built DevNavigates: An Interactive, Visual Learning Roadmap for Developers",
+  "x": "개발자 로드맵을 정적 리스트가 아닌 인터랙티브 캔버스로 제공하는 SaaS 플랫폼 DevNavigates가 공개됐다. Next.js 14, Mon"
+ },
+ {
+  "t": "AI 감사 로그는 신뢰할 수 없다",
+  "u": "https://dev.to/james_anderson_h/the-witness-was-the-suspect-why-ai-audit-logs-cant-be-trusted-2190",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "d": "2026-10-05",
+  "o": "The Witness Was the Suspect: Why AI Audit Logs Can't Be Trusted",
+  "x": "AI 에이전트가 자체 로그에 성공을 기록해도 실제로는 잘못된 동작을 수행할 수 있다. 로그 자체가 사건의 원인에 의해 작성되기 때문에 전통적인 "
+ },
+ {
+  "t": "리파인먼트 E-그래프",
+  "u": "https://www.philipzucker.com/refinement_egraph/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-05",
+  "o": "Refinement E-Graphs",
+  "x": "이 글은 Max Willsey의 microegg을 기반으로 한 리파인먼트 E-그래프 프로토타입을 소개한다. 기존 e-graph에 작거나 같다 관"
+ },
+ {
+  "t": "PhotoCraft – Rust로 만든 오픈소스 포토샵 대체",
+  "u": "https://github.com/storytold/photocraft",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-05",
+  "o": "storytold / photocraft",
+  "x": "PhotoCraft는 순수 Rust로 구현된 이미지 편집 앱으로 레이어·마스크·조정 레이어·벡터·브러시 등을 지원한다. 현재 macOS·Wind"
+ },
+ {
+  "t": "boykopovar / AnyPS5 — 자동 실행 파일을 Linux·Windows로 포팅하는 도구",
+  "u": "https://github.com/boykopovar/AnyPS5",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-10-05",
+  "o": "boykopovar / AnyPS5",
+  "x": "AnyPS5는 실행 파일을 리눅스와 윈도우 네이티브 형식으로 변환하는 relinker와 동적 링크용 시스템 PRX 라이브러리를 제공한다. 에뮬레"
+ },
+ {
+  "t": "Xray-core가 인증서 검증 우회 취약점을 은폐했다는 의혹",
+  "u": "https://news.hada.io/topic?id=34810",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-05",
+  "x": "Xray-core는 인증서 고정 로직을 pinnedPeerCertSha256 옵션으로 교체하면서 검증 우회 취약점을 도입했다. 취약점은 비공개로"
+ },
+ {
+  "t": "Google의 새로운 Gemini 등급, 무료 사용자를 가장 약한 모델로 제한하고 $5/월 구독자를 Pro에서 제외",
+  "u": "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "d": "2026-10-05",
+  "o": "Google's new Gemini tiers cut free users to its weakest model and lock $5/month subscribers out of Pro",
+  "x": "2026년 10월부터 개인 계정 사용자는 가장 작은 모델인 Flash-Lite만 이용 가능하게 된다. 기존 무료 등급에서 제공하던 Flash와 "
+ },
+ {
+  "t": "석유 기반 제품을 식물 기반 재료로 대체 (2025)",
+  "u": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-05",
+  "o": "Replacement of petroleum based products with plant-based materials (2025)",
+  "x": "댓글에서는 석유 기반 제품을 식물 기반 재료로 바꾸는 시도가 과도한 소비와 에너지 낭비를 해결하기엔 부족하다고 비판한다. 일부 의견은 바이오연료"
+ },
+ {
   "t": "macOS 27에서 Apple Intelligence를 끄고 디스크 공간을 회복하세요",
   "u": "https://github.com/omlahore/RemoveMacAI",
   "m": "2026-10",

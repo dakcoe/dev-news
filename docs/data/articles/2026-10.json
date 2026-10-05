@@ -1,5 +1,524 @@
 [
  {
+  "title": "A 40ms Go garbage collector pause caused by swap",
+  "url": "https://frn.sh/go-gc/",
+  "source": "hackernews",
+  "upvotes": 63,
+  "comments": 28,
+  "published_at": 1791162716,
+  "discussion": "https://news.ycombinator.com/item?id=49959654",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://frn.sh/go-gc/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://frn.sh/gogc/hz-strip-pauses-og.png",
+  "link_status": "ok",
+  "ko_title": "스와프 때문에 발생한 40ms Go 가비지 컬렉터 일시정지",
+  "summary": "Go 프로세스가 스와프에 메타데이터를 보관하면 가비지 컬렉터가 멈추는 동안 페이지 폴트가 발생해 40ms 정도의 일시정지가 발생한다. 실험은 Hetzner 서버와 커널 6.8, MGLRU 환경에서 수행했으며, 메타데이터를 NVMe에 두면 최악 40ms 지연이 관찰되었다. 관련 코드와 스크립트는 GitHub 저장소에 공개돼 있다.",
+  "why": "프로덕션에서 스와프를 활성화하면 Go 가비지 컬렉터의 일시정지가 최대 40ms까지 늘어날 수 있다. 메모리 압박 시 컬렉터 메타데이터가 스와프로 밀려나면 페이지 폴트가 집중되어 지연이 발생한다. 고부하 환경에서 스와프를 도입할 때 이 지연이 허용 범위를 초과하는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "michael-denyer / pstack-claude",
+  "url": "https://github.com/michael-denyer/pstack-claude",
+  "source": "github",
+  "upvotes": 232,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/michael-denyer/pstack-claude"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 232,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/michael-denyer/pstack-claude",
+  "link_status": null,
+  "ko_title": "pstack-claude — Claude Code·Codex·Pi용 에이전트 스킬 스택",
+  "summary": "이 저장소는 Lauren Tan의 pstack을 Claude Code, Codex, Pi 등 다양한 에이전트 환경에 맞게 포팅한 오픈소스 플러그인이다. 각 환경별 설치 명령을 제공하고, `/skill:<name>` 형태로 스킬을 호출할 수 있다. `poteto-mode` 로 목표를 전달하면 적절한 워크플로를 자동 선택하며, 라우팅 훅과 모델 기본값 설정 기능을 포함한다. 추가로, 동시성 버그 검증을 위한 별도 플러그인(agent-formal-verify)도 연결된다.",
+  "why": "Claude Code와 Codex, Pi 환경에서 에이전트 워크플로를 자동 선택하는 스택을 설치할 수 있다. 동시성 버그 검증이 필요한 경우 TLA+ 모델 체킹과 Lean 증명을 지원하는 별도 플러그인을 연결해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "자율주행 데이터의 진짜 문제는 크기가 아니다",
+  "url": "https://news.hada.io/topic?id=34805",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791175868.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34805"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "자율주행 데이터의 진짜 문제는 크기가 아니다",
+  "summary": "센서마다 다른 주기와 시계를 사용해 카메라·LiDAR·Radar 데이터를 정확히 시간 관계로 묶는 것이 어렵다. 데이터 양이 아니라 의미를 보존하는 것이 핵심 과제로 떠오른다. 대부분의 주행 데이터가 반복적이라 효율적인 동기화 방안이 요구된다.",
+  "why": "센서별 주기와 시계 차이로 인한 시간 동기화 실패가 데이터 품질을 떨어뜨린다. 단순 저장 용량 확장이 아닌, 의미 보존을 위한 동기화 로직 개선에 초점을 맞춰야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "ArtCraft Apps – open-source Adobe compatible suite written in Rust",
+  "url": "https://getartcraft.com/apps",
+  "source": "hackernews",
+  "upvotes": 98,
+  "comments": 99,
+  "published_at": 1791154963,
+  "discussion": "https://news.ycombinator.com/item?id=49958850",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://getartcraft.com/apps"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://getartcraft.com/images/apps/og.jpg",
+  "link_status": "ok",
+  "ko_title": "ArtCraft 앱 – Rust로 만든 오픈소스 Adobe 호환 제품군",
+  "summary": "ArtCraft 팀이 Rust로 새로 구현한 일곱 가지 네이티브 앱을 공개했다. 이미지 편집, 벡터 일러스트, 영상 편집, 사진 라이브러리·RAW 현상, PDF 작업, 모션 그래픽·VFX, 페이지 레이아웃을 각각 담당한다. 모든 앱은 GitHub에 퍼미시브 라이선스로 공개돼 직접 빌드·포크가 가능하고, 데스크톱과 WebAssembly 모두 지원한다.",
+  "why": "각 앱은 CLI와 JSON 제어 채널, MCP 서버로 구동되므로 AI 에이전트 자동화 파이프라인에 바로 연결할 수 있다. Electron이나 웹뷰 없이 순수 Rust로 네이티브 컴파일되어 데스크톱과 WebAssembly 환경 모두에서 로컬 파일만 처리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "SECONDO: An Offline Baking Planner for My Friend's Café, Built on Gemma and TabPFN",
+  "url": "https://dev.to/jyotir07/secondo-an-offline-baking-planner-for-my-friends-cafe-built-on-gemma-and-tabpfn-517g",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-10-05T00:02:52Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jyotir07/secondo-an-offline-baking-planner-for-my-friends-cafe-built-on-gemma-and-tabpfn-517g"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwgaqym5k6otqxx6qxnc2.png",
+  "link_status": "ok",
+  "ko_title": "SECONDO: 내 친구 카페를 위한 오프라인 베이킹 플래너, Gemma와 TabPFN 기반",
+  "summary": "SECONDO는 소규모 베이커리·카페를 위한 로컬 기반 계획 도구다. 판매 기록 CSV와 WhatsApp 주문을 자동으로 파싱해 일일 베이킹량을 예측하고, 각 수치의 근거를 표시한다. 예측 엔진은 TabPFN을 사용해 80% 신뢰 구간을 제공한다.",
+  "why": "로컬에서 Gemma와 TabPFN를 실행해 데이터가 외부로 나가지 않는 구조다. 소규모 매장 운영자가 복잡한 분석 도구를 쓰지 않고도 예측 근거를 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Entry Animations with CSS @starting-style",
+  "url": "https://dev.to/salehmubashar/entry-animations-with-css-starting-style-4b13",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-10-05T05:36:21Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/salehmubashar/entry-animations-with-css-starting-style-4b13"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqyrwsgei6sk0wb9dpdev.png",
+  "link_status": "ok",
+  "ko_title": "CSS @starting-style 로 진입 애니메이션 만들기",
+  "summary": "@starting-style 규칙은 요소가 처음 로드될 때 CSS 속성의 시작값을 명시적으로 지정해 부드러운 전환을 가능하게 한다. 기존 transition과 함께 사용해 display:none에서 보이는 상태로 전환할 때도 적용된다. 규칙은 요소 내부에 중첩하거나 별도 선언 방식으로 사용할 수 있으며, 가상 요소에는 적용되지 않는다. 시작 규칙은 원본 규칙과 동일한 특이성을 가지므로 원본 뒤에 배치해야 한다.",
+  "why": "display: none에서 보이는 상태로 전환할 때에도 진입 애니메이션이 적용된다. 기존에 자바스크립트로 처리하던 토글 요소의 전환 로직을 CSS만으로 대체할 수 있다. 가상 요소에는 적용되지 않으므로 해당 케이스는 기존 방식을 유지해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Anthropic reported diary entry to police, woman faces felony charge",
+  "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+  "source": "hackernews",
+  "upvotes": 43,
+  "comments": 36,
+  "published_at": 1791178660,
+  "discussion": "https://news.ycombinator.com/item?id=49961057",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://www.techspot.com/images2/news/bigimage/2026/10/2026-10-04-image-9.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 일기 기록을 경찰에 신고… 여성에게 중범죄 혐의",
+  "summary": "플로리다 여성 카리 미셸 헬러가 Anthropic의 챗봇 Claude를 일기로 사용하며 보안관 사무실을 총격하겠다고 적었다. 챗봇의 안전 시스템이 이를 감지해 인간 검토자가 위협으로 판단, 경찰에 신고했다. 헬러는 플로리다 주법에 따라 중범죄 혐의를 받고 있다.",
+  "why": "Claude를 일기처럼 자유로운 표현에 쓰면 안 된다. 안전 시스템이 위협으로 판단하면 경찰에 신고될 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Iroh global content discovery",
+  "url": "https://www.iroh.computer/blog/iroh-global-content-discovery",
+  "source": "lobsters",
+  "upvotes": 28,
+  "comments": 6,
+  "published_at": 1791141582.619,
+  "discussion": "https://lobste.rs/s/eoibah/iroh_global_content_discovery",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.iroh.computer/blog/iroh-global-content-discovery"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://www.iroh.computer/api/og?title=Blog&subtitle=Iroh%20global%20content%20discovery&image=%2Fblog%2Firoh-global-content-discovery%2Fcontent-discovery-workflow.png",
+  "link_status": "ok",
+  "ko_title": "Iroh 글로벌 콘텐츠 발견",
+  "summary": "IPFS의 글로벌 콘텐츠 지속성을 우려하며, IPFS Shipyard 종료 소식이 프로젝트 미래에 불확실성을 더한다. 저자는 전 세계 콘텐츠 탐색을 위해 기존 시스템을 검토했고, 20년 넘게 안정적으로 동작하는 BitTorrent와 그 Mainline DHT를 가장 유망한 대안으로 제시한다. BitTorrent는 .torrent 파일과 bencode 형식으로 데이터를 정의하고, 전송 프로토콜과 콘텐츠 탐색을 분리한다.",
+  "why": "Iroh 프로젝트가 BitTorrent의 Mainline DHT를 글로벌 콘텐츠 발견의 대안으로 채택했다. IPFS Shipyard 종료로 인한 불확실성 속에서 검증된 프로토콜 기반의 안정적 대안이 제시됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "We Gave AI Agents Real Tools — Then Realized “Just Ask Before Acting” Wasn’t Enough",
+  "url": "https://dev.to/robertadam987_/we-gave-ai-agents-real-tools-then-realized-just-ask-before-acting-wasnt-enough-19e3",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 9,
+  "comments": 2,
+  "published_at": "2026-10-05T04:50:38Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/robertadam987_/we-gave-ai-agents-real-tools-then-realized-just-ask-before-acting-wasnt-enough-19e3"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fc9qk3ksu0b752smhrcpr.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트에 실제 도구를 제공했지만, “행동 전에 물어보기”만으로는 충분하지 않다는 것을 깨달았다",
+  "summary": "AI 에이전트가 파일 읽기·메시지 전송·API 호출·레코드 업데이트·워크플로우 트리거 등 실제 도구를 사용하게 되면 단순 챗봇을 넘어 소프트웨어가 된다. 그러나 “중요한 작업 전에 사용자에게 물어보기”라는 단일 규칙은 에이전트가 어떤 행동이 중요한지 스스로 판단해야 하므로 위험이 커진다. 안전을 위해 행동 권한 판단을 에이전트와 분리하는 설계가 필요하다.",
+  "why": "에이전트가 도구 호출과 승인 판단을 동시에 수행하면 권한 경계가 흐려진다. 행동 실행 로직과 승인 권한을 분리하는 구조로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "I Built DevNavigates: An Interactive, Visual Learning Roadmap for Developers",
+  "url": "https://dev.to/dipanshurdev/i-built-devnavigates-an-interactive-visual-learning-roadmap-for-developers-2cik",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": "2026-10-05T04:43:11Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dipanshurdev/i-built-devnavigates-an-interactive-visual-learning-roadmap-for-developers-2cik"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdkj7wycffer1vpcil0y6.png",
+  "link_status": "ok",
+  "ko_title": "DevNavigates 구축: 개발자를 위한 인터랙티브 시각 로드맵",
+  "summary": "개발자 로드맵을 정적 리스트가 아닌 인터랙티브 캔버스로 제공하는 SaaS 플랫폼 DevNavigates가 공개됐다. Next.js 14, MongoDB, Prisma, React Flow 등으로 구현됐으며, GitHub에 전체 코드와 설치 가이드가 있다. 사용자는 노드를 클릭해 단계별 자료(문서·영상·글)를 바로 확인하고 진행 상황을 추적할 수 있다.",
+  "why": "React Flow로 노드 그래프를 구성해 기술 간 의존도를 시각적으로 파악하는 구조를 참고할 수 있다. GitHub 저장소에 전체 코드와 설치 가이드가 있어 백엔드 개발 로드맵을 직접 구축할 때 재사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "The Witness Was the Suspect: Why AI Audit Logs Can't Be Trusted",
+  "url": "https://dev.to/james_anderson_h/the-witness-was-the-suspect-why-ai-audit-logs-cant-be-trusted-2190",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": "2026-10-05T06:02:25Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/james_anderson_h/the-witness-was-the-suspect-why-ai-audit-logs-cant-be-trusted-2190"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5aibwiwgmqb47aub1gmd.png",
+  "link_status": "ok",
+  "ko_title": "AI 감사 로그는 신뢰할 수 없다",
+  "summary": "AI 에이전트가 자체 로그에 성공을 기록해도 실제로는 잘못된 동작을 수행할 수 있다. 로그 자체가 사건의 원인에 의해 작성되기 때문에 전통적인 감사 방식이 무효화된다. AI 시스템에서는 오류가 눈에 띄게 나타나지 않아 정상적인 테스트나 모니터링으로는 감지하기 어렵다.",
+  "why": "AI 에이전트 로그는 행위자가 직접 작성하므로 오류를 숨길 수 있다. 기존의 성공 여부 확인 방식으로는 은밀한 실패를 잡을 수 없다. 독립적인 검증 계층 없이는 감사 로그를 신뢰할 수 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Refinement E-Graphs",
+  "url": "https://www.philipzucker.com/refinement_egraph/",
+  "source": "lobsters",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1791167010.392,
+  "discussion": "https://lobste.rs/s/9bufek/refinement_e_graphs",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.philipzucker.com/refinement_egraph/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://www.philipzucker.com/assets/logo.png",
+  "link_status": "ok",
+  "ko_title": "리파인먼트 E-그래프",
+  "summary": "이 글은 Max Willsey의 microegg을 기반으로 한 리파인먼트 E-그래프 프로토타입을 소개한다. 기존 e-graph에 작거나 같다 관계를 내장해 단방향 정제(rewrite) 규칙을 표현한다. GitHub 저장소와 WASM 데모가 제공되어 직접 체험할 수 있다.",
+  "why": "기존 e-graph의 양방향 등가 관계 대신, 추상적 스펙에서 구체적 구현으로의 단방향 정제를 표현할 수 있다. 디지털 회로의 '무관심 조건'처럼 결과가 불확실한 입력을 최적화할 때 이 구조가 유효하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "storytold / photocraft",
+  "url": "https://github.com/storytold/photocraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 681,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/photocraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 681,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/storytold/photocraft",
+  "link_status": null,
+  "ko_title": "PhotoCraft – Rust로 만든 오픈소스 포토샵 대체",
+  "summary": "PhotoCraft는 순수 Rust로 구현된 이미지 편집 앱으로 레이어·마스크·조정 레이어·벡터·브러시 등을 지원한다. 현재 macOS·Windows·Linux·Web에서 동작하며 MIT·Apache-2.0 이중 라이선스를 갖는다. 초기 알파 단계이며 오프라인 사용이 가능하다.",
+  "why": "PSD 파일을 오픈소스 도구로 처리하는 워크플로우를 검토할 수 있다. 초기 알파 단계라 프로덕션 환경에 바로 쓰기엔 불안정하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "boykopovar / AnyPS5",
+  "url": "https://github.com/boykopovar/AnyPS5",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 398,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/boykopovar/AnyPS5"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 398,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/boykopovar/AnyPS5",
+  "link_status": null,
+  "ko_title": "boykopovar / AnyPS5 — 자동 실행 파일을 Linux·Windows로 포팅하는 도구",
+  "summary": "AnyPS5는 실행 파일을 리눅스와 윈도우 네이티브 형식으로 변환하는 relinker와 동적 링크용 시스템 PRX 라이브러리를 제공한다. 에뮬레이션 없이 직접 실행되며, SDL 기반 컨트롤러와 키보드·마우스 입력을 설정 파일로 지정할 수 있다. 현재 일부 게임(예: Dreaming Sarah)에서 60 fps 안정적인 실행이 확인되었다.",
+  "why": "PS5 실행 파일을 에뮬레이션 없이 리눅스나 윈도우 네이티브 형식으로 변환한다. 지원 범위가 일부 게임에 한정되어 있어 범용 배포에는 사용할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Xray-core가 인증서 검증 우회 취약점을 은폐했다는 의혹",
+  "url": "https://news.hada.io/topic?id=34810",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791182403.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34810"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Xray-core가 인증서 검증 우회 취약점을 은폐했다는 의혹",
+  "summary": "Xray-core는 인증서 고정 로직을 pinnedPeerCertSha256 옵션으로 교체하면서 검증 우회 취약점을 도입했다. 취약점은 비공개로 신고받아 수정됐지만, 사용자에게는 공개되지 않았다. 기존 옵션과 비교해 어떤 부분이 취약했는지는 본문에 상세히 언급되지 않는다.",
+  "why": "Xray-core를 쓰는 백엔드 서비스라면 인증서 검증 우회로 인한 보안 리스크가 남아 있다. pinnedPeerCertSha256 옵션을 사용하는 경우 해당 취약점 수정 여부를 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Google's new Gemini tiers cut free users to its weakest model and lock $5/month subscribers out of Pro",
+  "url": "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791098934.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/google_logo_wall-2.png",
+  "link_status": "ok",
+  "ko_title": "Google의 새로운 Gemini 등급, 무료 사용자를 가장 약한 모델로 제한하고 $5/월 구독자를 Pro에서 제외",
+  "summary": "2026년 10월부터 개인 계정 사용자는 가장 작은 모델인 Flash-Lite만 이용 가능하게 된다. 기존 무료 등급에서 제공하던 Flash와 Pro 모델은 구독자 전용으로 전환된다. AI Plus($4.99/월) 구독자는 Pro 접근 권한을 잃고 Flash-Lite와 Flash만 사용할 수 있다. 모든 모델은 AI Pro($19.99/월) 혹은 AI Ultra($99.99·$199.99/월) 구독이 필요하다.",
+  "why": "2026년 10월부터 무료 계정은 Flash-Lite만 사용할 수 있다. AI Plus 구독자는 Pro 모델 접근 권한을 잃는다. Pro 모델을 계속 쓰려면 AI Pro 이상 구독이 필요하다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
+  "title": "Replacement of petroleum based products with plant-based materials (2025)",
+  "url": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
+  "source": "hackernews",
+  "upvotes": 35,
+  "comments": 4,
+  "published_at": 1791176983,
+  "discussion": "https://news.ycombinator.com/item?id=49960901",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "석유 기반 제품을 식물 기반 재료로 대체 (2025)",
+  "summary": "댓글에서는 석유 기반 제품을 식물 기반 재료로 바꾸는 시도가 과도한 소비와 에너지 낭비를 해결하기엔 부족하다고 비판한다. 일부 의견은 바이오연료가 효율이 낮고 식량 생산에 부정적 영향을 미친다고 지적한다. 또 다른 의견은 해당 주제가 메타분석 수준이라 주요 뉴스에 오를 이유가 없다고 주장한다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-05T16:00:06.831784+09:00",
+  "batch_label": "10월 5일 16:00"
+ },
+ {
   "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
   "url": "https://github.com/omlahore/RemoveMacAI",
   "source": "hackernews",
