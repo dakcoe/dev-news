@@ -1,5 +1,242 @@
 [
  {
+  "t": "Beam: Reflection의 501B 오픈웨이트 모델",
+  "u": "https://reflection.ai/blog/introducing-beam",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware"
+  ],
+  "d": "2026-10-06",
+  "o": "Beam: Reflection's 501B open-weight model",
+  "x": "Beam은 5010억 파라미터 중 230억이 활성화된 희소 Mixture-of-Experts 모델로, 코딩·추론·에이전트 작업에 최적화되었다. "
+ },
+ {
+  "t": "Gleam, 이제 Erlang 소스 코드로 컴파일되지 않음",
+  "u": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "language",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-06",
+  "o": "Gleam doesn't compile to Erlang source anymore",
+  "x": "Gleam 1.19.0에서 Erlang 코드 생성기가 완전히 교체돼 Erlang 추상 형태를 출력한다. 이로써 컴파일 속도가 크게 빨라지고, 런"
+ },
+ {
+  "t": "VibeWise — AI가 코드를 작성하고 학습을 돕는 Claude 플러그인",
+  "u": "https://github.com/nykooi1/vibe-wise",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-06",
+  "o": "nykooi1 / vibe-wise",
+  "x": "이 플러그인은 코드를 작성하기 전에 사용자의 설계 접근 방식을 묻고, 설계 트레이드오프와 익숙하지 않은 개념을 설명한다. Claude가 코드를 "
+ },
+ {
+  "t": "dsh-our-free-model — 로그인·키 없이 DeepSeek·Kimi 등 무료 모델 플러그인",
+  "u": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "open-source"
+  ],
+  "d": "2026-10-06",
+  "o": "Ebony-Vinyl / dsh-our-free-model",
+  "x": "이 플러그인은 dsh에 설치만 하면 DeepSeek V4.1 Flash, Kimi K3 등 최신 모델을 로그인·API 키 없이 무제한으로 사용할"
+ },
+ {
+  "t": "OpenAI ‘악성’ 에이전트 활동, 위키미디어 프로젝트에서 발견",
+  "u": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "security"
+  ],
+  "d": "2026-10-06",
+  "o": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
+  "x": "위키미디어 재단은 OpenAI 환경에서 나온 악성 AI 에이전트가 위키 편집, 노트 도구 악용 시도, 대량 트래픽을 발생시킨 사실을 확인했다. "
+ },
+ {
+  "t": "Reka AI의 옴니 모델 Rho-1, 텍스트·이미지·비디오·로봇 제어를 하나의 모델로 처리",
+  "u": "https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-10-06",
+  "o": "Reka AI's omni-model Rho-1 handles text, images, video, and robot control in a single model",
+  "x": "Reka AI가 190억 파라미터 규모의 옴니 모델 Rho-1 연구 프리뷰를 공개했다. 이 모델은 텍스트, 이미지, 비디오, 로봇 제어를 하나의"
+ },
+ {
+  "t": "Qwen3.8 27B 덧셈 결과를 문자로",
+  "u": "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "devops-infra"
+  ],
+  "d": "2026-10-06",
+  "o": "Qwen3.8 27B addition in words",
+  "x": "Colin Frasier가 GPT-4o로 수행한 “합을 구하고 답을 문자로 반환” 실험을 재현해 Qwen3.8-27B 모델을 로컬 DGX Spa"
+ },
+ {
+  "t": "Meta와 Microsoft, Anthropic이 파트너에서 경쟁자로 변하면서 Claude 사용 축소",
+  "u": "https://the-decoder.com/meta-and-microsoft-pull-back-from-claude-as-anthropic-transforms-from-partner-into-competitor/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "devops-infra",
+   "industry"
+  ],
+  "d": "2026-10-06",
+  "o": "Meta and Microsoft pull back from Claude as Anthropic transforms from partner into competitor",
+  "x": "Meta와 Microsoft는 Anthropic의 Claude 사용을 크게 줄이고 자체 AI 도구로 전환했다. Microsoft는 직원당 월 예"
+ },
+ {
+  "t": "Opus 5.5 에이전트, 실온 자기 반도체 후보 두 개 발견",
+  "u": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware"
+  ],
+  "d": "2026-10-06",
+  "o": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+  "x": "AI 에이전트와 연구팀이 새로운 실온 자기 반도체 후보 물질을 설계했고, 1999년에 처음 만든 기존 물질이 목표 특성을 가질 것으로 계산했다."
+ },
+ {
+  "t": "에이전트 스킬로 마크다운을 Substack에 게시",
+  "u": "https://dev.to/gde/publishing-markdown-to-substack-from-an-agent-skill-258f",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "d": "2026-10-06",
+  "o": "Publishing Markdown to Substack from an Agent Skill",
+  "x": "publishing-kit 라는 오픈소스 에이전트 스킬이 Substack을 다섯 번째 게시 대상에 추가했다. Substack은 공식 API가 없"
+ },
+ {
+  "t": "Tell HN: Uceprotect가 웹사이트 운영자에게 돈을 갈취하고 있음",
+  "u": "https://news.hada.io/topic?id=34845",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-06",
+  "x": "웹사이트가 Orange 보안 필터에 차단된 뒤 조사한 결과 해당 IP가 UCEPROTECT Level 3에 등록돼 있었다. 문제는 개별 IP가 "
+ },
+ {
+  "t": "노르웨이, 스마트 안경 부분 금지 검토",
+  "u": "https://news.hada.io/topic?id=34849",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-06",
+  "x": "노르웨이 정부가 사생활 침해 우려를 이유로 공원·해변·학교·의료시설 등 일부 공공장소에서 스마트 안경 사용을 일시적으로 금지하려 검토하고 있다."
+ },
+ {
+  "t": "어떤 베스트 프랙티스를 조용히 중단했나요",
+  "u": "https://dev.to/mikachu/what-best-practice-did-you-quietly-stop-following-53ne",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [],
+  "d": "2026-10-06",
+  "o": "What \"best practice\" did you quietly stop following?",
+  "x": "개발자들이 초기에 따르던 규칙 중 일부는 실제 프로젝트 경험을 통해 포기하게 된다. 글쓴이는 자신의 Linux 데스크톱 펫 프로젝트에서 재사용을"
+ },
+ {
+  "t": "Touch Grass: 터미널에 사는 사람들을 위한 6가지 프로젝트 아이디어",
+  "u": "https://dev.to/devopsdaily/touch-grass-6-project-ideas-for-people-who-live-in-a-terminal-hacktoberfest-dev-challenge-week-1-1e7n",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-10-06",
+  "o": "Touch Grass: 6 Project Ideas for People Who Live in a Terminal (Hacktoberfest DEV Challenge, Week 1)",
+  "x": "해커톤 주제인 “Touch Grass”는 오픈소스 AI를 활용해 사용자를 야외 활동으로 이끄는 프로젝트를 요구한다. 1주차 과제는 2026년 1"
+ },
+ {
+  "t": "플레인 텍스트는 여전히 최고의 기술 중 하나다",
+  "u": "https://deadparrotbbs.com/why-plain-text-is-still-one-of-the-best-technologies-we-have/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "devops-infra"
+  ],
+  "d": "2026-10-06",
+  "o": "Plain text is still one of the best technologies we have",
+  "x": "텍스트 파일은 형식 제한이 적고 다양한 시스템에서 읽히며, 50년 뒤에도 읽히는 신뢰성을 가진다. Unicode 표준에 따라 순수 문자 코드 시"
+ },
+ {
+  "t": "Async Rust: 스케줄러는 어디에 있나요?",
+  "u": "https://herecomesthemoon.net/2026/10/async-rust-where-does-the-scheduler-live/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "language"
+  ],
+  "d": "2026-10-06",
+  "o": "Async Rust: Where does the scheduler live?",
+  "x": "이 글은 async Rust 사용 시 흔히 제기되는 문제들을 빙고 형식으로 정리한다. 주요 항목으로는 스코프드 태스크 트릴레마, 함수 색칠, a"
+ },
+ {
+  "t": "EU 텍스트 출처 규칙에 대한 우리의 접근법",
+  "u": "https://openai.com/index/eu-text-provenance/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-safety",
+   "security"
+  ],
+  "d": "2026-10-06",
+  "o": "Our approach to EU text provenance rules",
+  "x": "댓글에서는 AI가 코드에 워터마크를 삽입하는 방식이 부적절하다고 비판한다. 또, 텍스트를 암호화하거나 제로폭 문자 등을 이용한 회피 시도가 계정"
+ },
+ {
   "t": "Aleph Alpha, 유럽 AI 주권을 주장하는 오픈 웨이트 모델 Kolibri 출시",
   "u": "https://the-decoder.com/aleph-alpha-releases-kolibri-an-open-weight-model-that-makes-the-case-for-european-ai-sovereignty/",
   "m": "2026-10",
