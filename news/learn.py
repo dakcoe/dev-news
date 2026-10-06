@@ -1,4 +1,4 @@
-"""학습 노트 (/learn/) — 강의 영상 대본을 옮긴 글을 정적 페이지로 낸다.
+"""학습 노트 (/learn/) — 전공 과목 해설 글을 정적 페이지로 낸다.
 
 뉴스 목록은 전부 자동 요약이라 애드센스가 '가치가 별로 없는 콘텐츠'로 거절했다
 (2026-09-25). 직접 쓴 해설이 사이트 안에 있어야 한다. 뉴스 화면에는 섞지 않고,
@@ -15,12 +15,19 @@ import html
 import json
 import os
 import re
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "learn", "articles")
-CATS = ["머신러닝", "딥러닝", "컴퓨터구조", "운영체제"]   # 목록에 나오는 순서
-CAT_ID = {"머신러닝": "ml", "딥러닝": "dl", "컴퓨터구조": "ca", "운영체제": "os"}
+CATS = ["머신러닝", "딥러닝", "컴퓨터구조", "운영체제", "컴퓨터 네트워크", "확률변수론"]   # 목록에 나오는 순서
+CAT_ID = {"머신러닝": "ml", "딥러닝": "dl", "컴퓨터구조": "ca", "운영체제": "os",
+          "컴퓨터 네트워크": "net", "확률변수론": "prob"}
 AUTHOR = "suhyun"
+KST = ZoneInfo("Asia/Seoul")
+# 사이트 첫 페이지와 같은 애드센스 코드. 심사 크롤러가 학습 노트도 사이트의 일부로 보게 한다
+ADS = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+       '?client=ca-pub-9719970909376058" crossorigin="anonymous"></script>')
 
 CSS = """:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
 --shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
@@ -91,10 +98,13 @@ def _page(title: str, desc: str, path: str, base: str, body: str) -> str:
             f'<meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
             f'<meta property="og:image" content="{base}/og.png">'
             '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">'
-            f'<style>{CSS}</style></head><body><div class="page">\n{body}\n{FOOT}\n</div></body></html>\n')
+            f'<style>{CSS}</style>{ADS}</head><body><div class="page">\n{body}\n{FOOT}\n</div></body></html>\n')
 
 
-def load(src: str = SRC) -> list[dict]:
+def load(src: str = SRC, today: str | None = None) -> list[dict]:
+    """META 날짜가 오늘(KST)보다 뒤인 원고는 뺀다. 미리 써 둔 글을 날짜에 맞춰 하나씩
+    내보내려는 것이다 — 하루 세 번 도는 수집 회차가 다시 렌더할 때 그날 글이 붙는다."""
+    today = today or datetime.now(KST).strftime("%Y-%m-%d")
     out = []
     for path in sorted(glob.glob(os.path.join(src, "*.html"))):
         text = open(path, encoding="utf-8").read()
@@ -103,6 +113,8 @@ def load(src: str = SRC) -> list[dict]:
             print(f"[learn] META 없음 — 건너뜀: {os.path.basename(path)}")
             continue
         meta = json.loads(m.group(1))
+        if meta["date"] > today:
+            continue
         meta["body"] = text[m.end():]
         meta["toc"] = re.findall(r'<h2 id="(s\d+)">(.*?)</h2>', meta["body"])
         out.append(meta)
@@ -114,7 +126,7 @@ def _minutes(body: str) -> int:
     return max(1, round(len(re.sub(r"<[^>]+>", "", body)) / 500))
 
 
-def _article(a: dict, prev: dict | None, nxt: dict | None, base: str) -> str:
+def _article(a: dict, num: int, prev: dict | None, nxt: dict | None, base: str) -> str:
     cat = E(a["cat"])
     toc = "".join(f'<li><a href="#{i}">{re.sub(r"^\d+\.\s*", "", t)}</a></li>' for i, t in a["toc"])
     body = re.sub(r"(<table>.*?</table>)", r'<div class="tw">\1</div>', a["body"], flags=re.S)
@@ -127,7 +139,7 @@ def _article(a: dict, prev: dict | None, nxt: dict | None, base: str) -> str:
     html_body = (
         f'<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a>'
         f'<span>›</span><a href="/learn/#{CAT_ID.get(a["cat"], "etc")}">{cat}</a></nav>\n'
-        f'<div class="grid"><article>\n<div class="kicker">{cat} {a["order"]}편</div>\n'
+        f'<div class="grid"><article>\n<div class="kicker">{cat} {num}편</div>\n'
         f'<h1>{E(a["title"])}</h1>\n'
         f'<div class="meta"><span>{AUTHOR}</span><span>·</span><span>{int(y)}년 {int(mo)}월 {int(d)}일</span>'
         f'<span>·</span><span>읽는 데 약 {_minutes(a["body"])}분</span></div>\n'
@@ -140,23 +152,24 @@ def _article(a: dict, prev: dict | None, nxt: dict | None, base: str) -> str:
 def _index(arts: list[dict], base: str) -> str:
     parts = ['<nav class="crumb"><a href="/">dev-news</a><span>›</span><span>학습 노트</span></nav>',
              '<div class="list"><h1>학습 노트</h1>',
-             '<p>대학 전공 과목을 공부하며 만든 강의 영상의 대본을 글로 옮겼습니다. '
+             '<p>대학 전공 과목을 공부하며 정리한 글입니다. '
              '처음 보는 사람도 따라올 수 있게 개념 하나씩 풀어 씁니다.</p>']
     for cat in CATS:
         items = [a for a in arts if a["cat"] == cat]
         if not items:
             continue
         parts.append(f'<h2 id="{CAT_ID[cat]}">{E(cat)}</h2>')
-        parts += [f'<a class="item" href="/learn/{a["slug"]}/"><b>{a["order"]}. {E(a["title"])}</b>'
-                  f'<span>{E(a["desc"])}</span></a>' for a in items]
+        parts += [f'<a class="item" href="/learn/{a["slug"]}/"><b>{n}. {E(a["title"])}</b>'
+                  f'<span>{E(a["desc"])}</span></a>' for n, a in enumerate(items, 1)]
     parts.append('</div>')
-    return _page("학습 노트 · dev-news", "머신러닝·딥러닝·컴퓨터구조·운영체제 강의 영상 대본을 옮긴 해설 글.",
+    cats = "·".join(c for c in CATS if any(a["cat"] == c for a in arts))
+    return _page("학습 노트 · dev-news", f"{cats} 전공 과목을 공부하며 정리한 해설 글.",
                  "/learn/", base, "\n".join(parts))
 
 
-def build(docs_dir: str, base: str, src: str = SRC) -> list[str]:
+def build(docs_dir: str, base: str, src: str = SRC, today: str | None = None) -> list[str]:
     """페이지를 쓰고 사이트맵에 넣을 경로 목록을 돌려준다. 원고가 없으면 빈 목록."""
-    arts = load(src)
+    arts = load(src, today)
     if not arts:
         return []
     out = os.path.join(docs_dir, "learn")
@@ -164,7 +177,7 @@ def build(docs_dir: str, base: str, src: str = SRC) -> list[str]:
     for a in arts:
         same = [b for b in arts if b["cat"] == a["cat"]]
         i = same.index(a)
-        page = _article(a, same[i - 1] if i else None, same[i + 1] if i + 1 < len(same) else None, base)
+        page = _article(a, i + 1, same[i - 1] if i else None, same[i + 1] if i + 1 < len(same) else None, base)
         os.makedirs(os.path.join(out, a["slug"]), exist_ok=True)
         with open(os.path.join(out, a["slug"], "index.html"), "w", encoding="utf-8") as f:
             f.write(page)
