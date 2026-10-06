@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-26T16:00:30+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-27T00:00:35+09:00",
    "total": 20,
    "counts": {
@@ -967,6 +951,48 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34844",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-06T16:00:34+09:00",
+   "total": 24,
+   "counts": {
+    "ok": 14,
+    "dead": 1,
+    "blocked": 5,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://github.com/eolix/photosuite/issues/77",
+     "source": "hackernews",
+     "reason": "dead"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34876",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34875",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34874",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34872",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34870",
      "source": "geeknews",
      "reason": "blocked"
     }

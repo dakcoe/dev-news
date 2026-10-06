@@ -1,5 +1,597 @@
 [
  {
+  "title": "M-Abozaid / esp32-c3-adblock",
+  "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+  "source": "github",
+  "upvotes": 196,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/M-Abozaid/esp32-c3-adblock"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 196,
+  "score": 75,
+  "image": "https://opengraph.githubassets.com/1/M-Abozaid/esp32-c3-adblock",
+  "link_status": null,
+  "ko_title": "M-Abozaid / esp32-c3-adblock — Pi-hole 스타일 DNS 광고 차단기",
+  "summary": "이 프로젝트는 $2 ESP32-C3에 140 000개 이상의 도메인 해시를 플래시 저장해 약 50 KB RAM만 사용해 DNS 광고 차단을 구현한다. 40-비트 해시와 이진 탐색으로 0.7 MB 플래시와 10 ms 응답 시간을 제공한다. 기존 ESP32 기반 차단기와 달리 PSRAM이 필요 없어 비용과 전력 소모를 크게 낮춘다.",
+  "why": "PSRAM이 없는 저가 ESP32-C3로 DNS 차단을 구현할 수 있어 하드웨어 비용이 크게 줄어든다. 기존 방식과 달리 도메인 문자열 대신 해시를 플래시에 저장하므로 RAM 부담이 거의 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "hardware",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "OpenAI will watermark ChatGPT text in the EU but makes it optional for API users worldwide",
+  "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791221562.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/openai_chatgpt_text_detection-2-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "EU에서 ChatGPT 텍스트에 워터마크 적용, API 사용자에게는 선택적 제공",
+  "summary": "OpenAI가 EU 규제 준수를 위해 ChatGPT와 Codex 출력에 눈에 보이지 않는 워터마크인 textGrain을 도입한다. 유럽에서는 자동 적용되지만 전 세계 API 고객은 옵션으로 켤 수 있다. 이 기술은 모델의 단어 선택에 통계적 신호를 삽입하며, 내부 테스트에서 기존 방법보다 높은 탐지율을 보였다. OpenAI는 향후 오픈소스로 공개할 계획이다.",
+  "why": "EU 내 ChatGPT와 Codex 사용자는 수 주 내 워터마크가 자동 적용된다. API 사용자는 전 세계적으로 선택적으로 켤 수 있다. 텍스트 수정 시 탐지율이 크게 떨어지는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "ai-safety",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance",
+  "url": "https://huggingface.co/blog/tiiuae/falcon-emirati",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791269079.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/tiiuae/falcon-emirati"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/659bc8a7b0f43ed69f0b2300/MJHJMYW3O4CkLvXvn7DOp.png",
+  "link_status": "ok",
+  "ko_title": "Falcon-Emirati: LLM이 방언·문화·뉘앙스를 학습할 때",
+  "summary": "Falcon-Emirati-7B는 기존 Falcon-H1-Arabic 모델을 기반으로 아랍에미리트 방언인 Emirati Arabic을 이해하고 생성하도록 특화된 7 B 파라미터 모델이다. 이 모델은 Mamba와 Transformer를 결합한 하이브리드 아키텍처를 사용해 긴 문맥을 효율적으로 처리한다. 기존에 MSA와 여러 방언을 학습한 Falcon-H1-Arabic을 출발점으로 하여 방언 특유의 어휘·톤·문화적 맥락을 포착한다.",
+  "why": "MSA만 학습한 기존 모델은 Emirati 방언의 문화적 뉘앙스를 놓치기 쉽다. 이 모델은 Mamba와 Transformer 하이브리드 구조로 긴 문맥 처리 효율을 높였다. UAE 방언 관련 AI 개발 시 방언 특유의 어휘와 톤을 반영하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Quoting Felix Rieseberg",
+  "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791244607.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/5/felix-rieseberg/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Felix Rieseberg 인용",
+  "summary": "기존 Cowork는 모델 추론과 도구 호출을 로컬 VM에서 실행했지만, 새 버전은 추론과 VM을 모두 클라우드에서 수행한다. 각 세션은 별도 샌드박스를 사용하고, 파일 접근 등 사용자 장치가 필요한 작업은 데스크톱 앱이 담당한다. 이를 통해 모바일 사용, 작업 지속성, 배터리 소모 문제를 해결한다.",
+  "why": "로컬 VM 실행으로 인한 배터리 소모와 성능 저하가 사라진다. 노트북을 닫아도 클라우드에서 작업이 계속 진행된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "career-culture"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "odysseus-dev / odysseus",
+  "url": "https://github.com/odysseus-dev/odysseus",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 421,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/odysseus-dev/odysseus"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 421,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/odysseus-dev/odysseus",
+  "link_status": null,
+  "ko_title": "odysseus-dev / odysseus — 자체 호스팅 AI 워크스페이스",
+  "summary": "odysseus는 채팅, 에이전트, 문서, 이메일, 캘린더 등 다양한 로컬 AI 작업을 한 곳에서 관리할 수 있는 오픈소스 워크스페이스다. Docker Compose를 이용해 간단히 설치할 수 있으며, 멀티-아키텍처 이미지가 기본 제공된다. 프로덕션 환경에서는 불변 태그를 사용해 특정 빌드를 고정할 수 있다.",
+  "why": "채팅과 에이전트, 문서, 이메일을 하나의 로컬 워크스페이스로 통합해 관리한다. 프로덕션 배포 시 불변 태그를 사용해 특정 빌드를 고정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "nealbridges / VulnHunter",
+  "url": "https://github.com/nealbridges/VulnHunter",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 201,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/nealbridges/VulnHunter"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 201,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/nealbridges/VulnHunter",
+  "link_status": null,
+  "ko_title": "VulnHunter",
+  "summary": "Capital One이 만든 오픈소스 AI 보안 도구 VulnHunter의 유지 관리 포크가 공개됐다. 이 버전은 Claude Code 전용이던 기존 구현을 넘어 모든 에이전트 하네스에서 동작하도록 설계됐으며, 컨테이너 기반 샌드박스에서 익스플로잇을 검증하고 영향 측정이 가능한 PoC를 제공한다. 기존 패턴 기반 SAST와 달리 공격자 관점에서 실제 exploitable 결함을 식별한다.",
+  "why": "기존 패턴 매칭 방식의 SAST와 달리 실제 익스플로이팅 가능한 결함만 식별한다. 컨테이너 샌드박스에서 검증된 PoC를 제공해 보안 조치의 우선순위를 정할 때 근거가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "The map was blank. Every test was green.",
+  "url": "https://dev.to/rakno/the-map-was-blank-every-test-was-green-4e44",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 0,
+  "comments": 1,
+  "published_at": "2026-10-06T03:30:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/rakno/the-map-was-blank-every-test-was-green-4e44"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcftxgle9cxwdk3dwjhr9.jpg",
+  "link_status": "ok",
+  "ko_title": "지도는 비어 있었다. 모든 테스트는 초록색이다.",
+  "summary": "ParkEase 웹 버전에서 지도 렌더링에 사용되는 MapLibre가 웹 워커 파일 경로를 찾지 못해 HTML을 받아 워커가 중단되었습니다. 이를 해결하기 위해 워커 URL을 명시하고, 포스트인스톨 스크립트로 워커 파일과 의존 청크를 복사하도록 수정했습니다. 또한 CSS에서 캔버스 컨테이너에 overflow:hidden 규칙이 적용돼 높이가 0이 되어 지도가 보이지 않았던 문제를 해결했습니다.",
+  "why": "MapLibre 6를 웹 번들러 환경에서 쓰면 워커 경로 오류가 생길 수 있다. 워커 URL을 명시하고 파일 복사를 자동화하는 스크립트를 적용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "pwasm 0.2a0",
+  "url": "https://simonwillison.net/2026/Oct/1/pwasm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1790874631.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/1/pwasm/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "pwasm 0.2a0",
+  "summary": "pwasm이 알파 버전 0.2a0으로 업데이트되어 WASM 사양 대부분을 지원한다. PyPI 휠에 MicroPython, QuickJS, Micro QuickJS 빌드가 포함돼 배포된다. 42개의 커밋이 AI Claude Opus 5.5의 자동 개선으로 이루어졌다.",
+  "why": "프로덕션 환경에서 신뢰할 수 없어 알파 버전으로 배포된다. PyPI 휠에 포함된 빌드로 WASM 실행 환경을 테스트할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "AI tutoring with Khanmigo in a two-year school experiment",
+  "url": "https://edworkingpapers.com/ai26-1551",
+  "source": "hackernews",
+  "upvotes": 61,
+  "comments": 51,
+  "published_at": 1791244845,
+  "discussion": "https://news.ycombinator.com/item?id=49972419",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://edworkingpapers.com/ai26-1551"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://edworkingpapers.com/sites/default/files/edworkingpaper-cover-25-1551.jpg",
+  "link_status": "ok",
+  "ko_title": "두 해 동안 진행된 학교 실험에서 Khanmigo AI 튜터링",
+  "summary": "18개 테네시 중학교에서 2년간 무작위 대조군 실험을 진행해 Khanmigo를 코칭용 AI 튜터로 사용했다. 학생들은 학기당 평균 1.3 퍼센타일 포인트(연간 0.14 표준편차) 상승했으며, 이는 AI 없이 Khan Academy만 사용했을 때와 비슷했다. 대부분의 학생이 가끔만 이용했고, 오류가 있는 문제에서만 17% 정도 사용했다.",
+  "why": "코칭형 AI 튜터의 학습 효과는 기존 플랫폼 사용과 비슷했다. 학생 참여 빈도가 낮아 AI 활용도가 제한됐다. AI 튜터 도입 시 접근성보다 실제 사용 유도가 핵심 변수다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Ontological Shock at Altitude",
+  "url": "https://dev.to/cseeman/ontological-shock-at-altitude-2jp2",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-10-06T03:39:41Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cseeman/ontological-shock-at-altitude-2jp2"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm2j6k099s8dv706bevkn.jpg",
+  "link_status": "ok",
+  "ko_title": "고도에서의 존재론적 충격",
+  "summary": "Rocky Mountain Ruby 2024 컨퍼런스에서 ‘존재론적 충격’이라는 용어가 소개돼 개발자들의 직무와 도구에 대한 불안감을 설명했다. 주요 발표는 AI와 Ruby를 결합한 에이전트 구축에 초점을 맞추었으며, RubyLLM을 이용한 RAG 에이전트 구현 예제가 Gemfile 하나로 구성돼 공개됐다. 발표 자료와 코드가 GitHub에 공개돼 직접 따라 해볼 수 있다.",
+  "why": "RubyLLM을 활용한 RAG 에이전트 구현 예제가 Gemfile 하나로 제공된다. AI 스택을 기존 Ruby 프로젝트에 통합할 때 참고할 수 있는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+  "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
+  "source": "hackernews",
+  "upvotes": 388,
+  "comments": 277,
+  "published_at": 1791240405,
+  "discussion": "https://news.ycombinator.com/item?id=49971846",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://www.niemanlab.org/images/Brendan-Loper-cartoon-700x394.jpg",
+  "link_status": "ok",
+  "ko_title": "ChatGPT, 가짜 뉴요커 만화에 실제 만화가 서명 추가",
+  "summary": "ChatGPT가 뉴요커 스타일 만화를 생성하면서 실제 만화가 Brendan Loper의 서명을 무단으로 삽입했다. 해당 이미지가 소셜 미디어에 퍼지며 Loper는 자신이 만든 것이 아니라는 사실에 혼란을 겪었다. 이는 AI가 기존 작가의 서명을 학습 데이터에 포함시켜 재현할 수 있음을 보여준다.",
+  "why": "AI 생성 이미지에 실제 작가의 서명이 무단으로 재현되는 사례가 확인됐다. AI 기반 이미지 생성 도구를 사용할 때 출력물의 출처와 서명 정합성을 반드시 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "What Is Jump-Oriented Programming? How Can Attackers Hijack Control Flow Without RET?",
+  "url": "https://dev.to/aditya_d_sharma/what-is-jump-oriented-programming-how-can-attackers-hijack-control-flow-without-ret-15mg",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": "2026-10-06T06:05:41Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aditya_d_sharma/what-is-jump-oriented-programming-how-can-attackers-hijack-control-flow-without-ret-15mg"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fehpvaw8q03lox6s4df8x.png",
+  "link_status": "ok",
+  "ko_title": "점프 지향 프로그래밍이란? 공격자는 RET 없이 제어 흐름을 어떻게 장악할까?",
+  "summary": "점프 지향 프로그래밍(JOP)은 반환 주소 보호가 강화된 상황에서 공격자가 간접 점프와 호출을 이용해 제어 흐름을 탈취하는 기법이다. 직접 전송은 명령어에 목적지가 고정돼 있지만, 간접 전송은 레지스터나 메모리 값을 읽어 목적지를 결정한다. JOP는 이러한 간접 전송을 악용해 악성 연산을 구성한다.",
+  "why": "반환 주소 보호만으로는 제어 흐름 탈취를 막을 수 없다. 간접 점프와 호출이 공격 벡터로 남으므로 백엔드 서비스의 공격 표면이 넓어진다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Most Americans want AI development to slow down or stop entirely, new poll finds",
+  "url": "https://the-decoder.com/most-americans-want-ai-development-to-slow-down-or-stop-entirely-new-poll-finds/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791218228.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/most-americans-want-ai-development-to-slow-down-or-stop-entirely-new-poll-finds/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/03/us_flag_wireframe-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "대다수 미국인, AI 개발 속도 늦추거나 완전 중단 원한다",
+  "summary": "퀸니피악 대학 여론조사에 따르면 미국 성인 47%는 AI 개발 속도 감소를, 30%는 안전 검증 전까지 완전 중단을 원한다. AI 기업에 대한 독립적인 안전 기준에 86%가 찬성하지만, 74%는 기업 리더를 신뢰하지 않는다.",
+  "why": "독자의 개발 일정에 직접적인 변경 사항은 없다. 다만 규제 강화 가능성이 높아지는 점을 고려해 장기 로드맵에 여유를 두는 것이 좋다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "7/7 PASS: The Bugs My Acceptance Checker Could Never See",
+  "url": "https://dev.to/ashutosh_mishra/77-pass-the-bugs-my-acceptance-checker-could-never-see-1hcl",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": "2026-10-06T06:11:51Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ashutosh_mishra/77-pass-the-bugs-my-acceptance-checker-could-never-see-1hcl"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Favt8qh7r963lrq6x836z.png",
+  "link_status": "ok",
+  "ko_title": "7/7 PASS: 내 수락 검사기가 절대 볼 수 없었던 버그",
+  "summary": "Rubric은 Django와 PostgreSQL 기반의 자체 호스팅 해커톤 제출·채점 포털이며, 7개의 수락 검사 질문을 통과한다. 작성자는 과거 버그를 복원해 체크러와 자체 테스트로 각각 2/5·5/5를 발견했고, 격리 누수, 필드 오타, 디버그 라우트 누수, 정적 파일 부재 등 네 가지 주요 버그를 보고했다. 이 버그들은 실제 운영 환경에서만 드러났으며, 문서와 비밀번호 설정이 누락돼 초기 접근이 어려웠다.",
+  "why": "수락 검사기의 전수 통과가 실제 운영 환경의 버그를 걸러내지 못함을 보여준다. 격리 누수나 정적 파일 부재처럼 런타임에서만 드러나는 결함은 별도 검증이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "I Planted 3 Sneaky Security Flaws in a Web App. Could AI Catch Them?",
+  "url": "https://dev.to/prema_jyothi/i-planted-3-sneaky-security-flaws-in-a-web-app-could-ai-catch-them-20b6",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 0,
+  "comments": 1,
+  "published_at": "2026-10-06T05:01:30Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/prema_jyothi/i-planted-3-sneaky-security-flaws-in-a-web-app-could-ai-catch-them-20b6"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fket0nu37k5s1n77yn7sd.png",
+  "link_status": "ok",
+  "ko_title": "웹 앱에 3개의 보안 결함을 심어봤다 — AI가 찾아낼 수 있을까?",
+  "summary": "인턴이 Python 웹 앱에 하드코드된 자격증명, SQL 인젝션, 명령어 인젝션을 의도적으로 삽입하고, MIT 라이선스 오픈소스 CLI 도구 SecFoo를 이용해 AI 기반 보안 리뷰를 수행했다. 실험 결과 AI가 각 결함을 식별하고 위험성을 설명했는지 확인했다.",
+  "why": "AI가 단순 키워드 매칭을 넘어 결함의 위험성을 설명하는지 검증할 수 있다. SecFoo를 활용해 기존 코드 리뷰 워크플로우에 AI 보안 검사를 추가하는 방안을 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "수학의 미래",
+  "url": "https://news.hada.io/topic?id=34870",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791254800.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34870"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "수학의 미래",
+  "summary": "AI가 출판 가능한 수준의 수학 결과를 쉽게 만들어낸다. 이로 인해 문제 해결과 수학적 이해가 분리되고 있다. 중요한 질문은 AI 시대에 어떻게 수학적 이해를 추구하느냐이다. 여전히 더 어려운 문제에 도전할 여지는 크다.",
+  "why": "수학 연구의 초점이 결과 산출에서 이해 과정으로 이동하고 있다. 백엔드 개발자에게는 AI가 생성한 수학적 논리의 검증 책임을 요구한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Why Common Lisp is now the best programming language",
+  "url": "https://www.vivienhenz.com/common-lisp",
+  "source": "hackernews",
+  "upvotes": 120,
+  "comments": 165,
+  "published_at": 1791255111,
+  "discussion": "https://news.ycombinator.com/item?id=49973598",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.vivienhenz.com/common-lisp"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "왜 지금 Common Lisp가 최고의 프로그래밍 언어인가",
+  "summary": "LLM이 코드를 빠르게 생성하면서 컴파일·실행 대기 시간이 병목이 된다. Common Lisp는 이미지 기반으로 함수 교체가 즉시 이루어지고, 오류 시 디버거가 전체 스택과 변수 정보를 제공한다. 이 덕분에 LLM이 디버거를 활용해 바로 수정하고 실행을 재개할 수 있다. 현재 다른 주류 언어는 이러한 즉시 피드백을 제공하지 않는다.",
+  "why": "LLM이 코드 생성 속도를 높였지만 컴파일과 재실행 대기 시간이 병목이 된다. Common Lisp는 이미지 기반이라 함수 교체 즉시 적용되고 오류 시 디버거가 전체 스택을 보여준다. 이로써 LLM이 디버거를 통해 즉시 수정하고 실행을 재개할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
+  "title": "Example.com, 수십 년 만에 최대 규모의 리디자인 공개",
+  "url": "https://news.hada.io/topic?id=34872",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791259696.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34872"
+  ],
+  "cross_source_count": 1,
+  "score": 24,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Example.com, 수십 년 만에 최대 규모의 리디자인 공개",
+  "summary": "example.com이 정적 영어 페이지에서 6개 언어를 5초마다 전환하는 동적 페이지로 바뀌었다. 언어 전환은 JavaScript와 개별 span 요소의 transition-delay를 활용한다.",
+  "why": "문서 예시용 도메인에서 동적 전환을 구현하는 방식은 프론트엔드 학습에 참고할 수 있다. 글자 단위 스팬과 전환 지연을 조합한 기법을 직접 확인해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "release"
+  ],
+  "batch": "2026-10-06T16:00:05.975530+09:00",
+  "batch_label": "10월 6일 16:00"
+ },
+ {
   "title": "Beam: Reflection's 501B open-weight model",
   "url": "https://reflection.ai/blog/introducing-beam",
   "source": "hackernews",
