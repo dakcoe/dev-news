@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-27T00:00:35+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-27T08:00:33+09:00",
    "total": 18,
    "counts": {
@@ -993,6 +984,53 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34870",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-07T00:00:36+09:00",
+   "total": 23,
+   "counts": {
+    "ok": 12,
+    "blocked": 6,
+    "short": 1,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34892",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34890",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
+     "source": "lobsters",
+     "reason": "short"
+    },
+    {
+     "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34895",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34894",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34893",
      "source": "geeknews",
      "reason": "blocked"
     }
