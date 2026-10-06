@@ -1,5 +1,538 @@
 [
  {
+  "title": "Mistral Large 4",
+  "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+  "source": "hackernews",
+  "upvotes": 543,
+  "comments": 295,
+  "published_at": 1791292549,
+  "discussion": "https://news.ycombinator.com/item?id=49977979",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://docs.mistral.ai/models/mistral-large-4-0"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://docs.mistral.ai//api/og?title=Mistral+Large+4&description=Mistral+Large+4+is+a+state-of-the-art%2C+open-weight%2C+general-purpose+multimodal+model+with+a+granular+Mixture-of-Experts+architecture.+It+features+49B+active+parameters+and+1.05T+total+parameters%2C+and+a+1.6B+vision+encoder.&eyebraw=v26.10&image=&type=model&v=e0d89c9b781cb2af518d8490dced2076fd8deffd&modelIcon=mistral-large-4",
+  "link_status": "ok",
+  "ko_title": "Mistral Large 4",
+  "summary": "Mistral Large 4는 49 B 활성 파라미터와 1.05 T 전체 파라미터, 1.6 B 비전 인코더를 갖춘 최신 오픈-weight 멀티모달 모델이다. Mixture-of-Experts 구조를 사용해 텍스트와 이미지 입력을 동시에 처리한다. 공개 프리뷰 단계에서 토큰당 $0.68 ~ $0.14의 가격이 제시되었다.",
+  "why": "오픈 웨이트 멀티모달 모델이 1M 컨텍스트를 지원해 기존보다 긴 문서나 이미지 분석 파이프라인을 구축할 수 있다. 토큰당 비용이 낮아져 대용량 데이터 처리 시 인프라 예산을 절감할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "crmne / spotifast",
+  "url": "https://github.com/crmne/spotifast",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 368,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/crmne/spotifast"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 368,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/crmne/spotifast",
+  "link_status": null,
+  "ko_title": "스포티패스트",
+  "summary": "Rust와 egui로 만든 Spotify 클라이언트로, librespot을 이용해 음악을 재생한다. 메모리 사용량은 100–250 MB 수준이며, 시작 시간이 1초 미만이다. Linux, macOS, Windows에서 동작하고, macOS는 Homebrew, Arch는 AUR, 기타 플랫폼은 다운로드 페이지를 통해 설치할 수 있다.",
+  "why": "브라우저 엔진이 없어 메모리가 100~250MB로 적고 시작이 1초 미만이다. 프리미엄 계정이 없으면 탐색과 검색만 가능하고 재생은 막혀 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "omnirush-ai / omnirush-gui",
+  "url": "https://github.com/omnirush-ai/omnirush-gui",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 448,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/omnirush-ai/omnirush-gui"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 448,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/omnirush-ai/omnirush-gui",
+  "link_status": null,
+  "ko_title": "omnirush.ai — 프론티어 모델에 무료로 접근 가능한 데스크톱 코딩 에이전트",
+  "summary": "omnirush.ai는 최신 대형 언어 모델을 무료로 사용할 수 있는 데스크톱 코딩 도우미 애플리케이션이다. macOS와 Linux용 바이너리를 제공하며 GitHub에서 최신 릴리즈와 다운로드 통계를 확인할 수 있다. 현재 사용자 수와 다운로드 수가 배지 형태로 공개돼 있다.",
+  "why": "프롬프트 비용 부담 없이 최신 모델을 코딩 작업에 바로 투입할 수 있다. macOS와 Linux 환경에서 바이너리를 내려받아 기존 워크플로우에 바로 붙일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "South Korea bets $3.49 billion on building a homegrown frontier AI model to rival China's best",
+  "url": "https://the-decoder.com/south-korea-bets-3-49-billion-on-building-a-homegrown-frontier-ai-model-to-rival-chinas-best/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791291271.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/south-korea-bets-3-49-billion-on-building-a-homegrown-frontier-ai-model-to-rival-chinas-best/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/01/south_korea_flag_wall.png",
+  "link_status": "ok",
+  "ko_title": "한국, 34억 달러 투자해 자국 프론티어 AI 모델 개발 목표",
+  "summary": "한국 정부가 4조 7천억 원(약 34억 달러) 규모의 자금으로 국내 프론티어 AI 모델을 구축한다는 계획을 발표했다. 기존 경쟁에 참여한 LG AI Research, SK Telecom, Upstage 외에도 스타트업이 참여할 수 있는 공개 경쟁을 열어 추가 지원을 검토한다. 이번 투자 규모는 2025년 기존 5300억 원 지원액의 약 9배에 해당한다.",
+  "why": "2027년 예산안 통과 여부가 아직 미확정 상태다. 스타트업도 참여 가능한 공개 경쟁이 열려 기존 3개사 외 지원 가능성이 생겼다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Polars 2.0 출시",
+  "url": "https://news.hada.io/topic?id=34894",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791297722.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34894"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Polars 2.0 출시",
+  "summary": "기본 실행 엔진이 스트리밍 엔진으로 바뀌어 메모리 사용량과 성능이 크게 개선됐다. 행 순서를 보장하려면 maintain_order=True 옵션을 지정해야 한다. 메모리가 부족하면 데이터를 디스크로 스필한다.",
+  "why": "기존에 쓰던 LazyFrame.collect() 호출은 그대로 유지해도 된다. 다만 행 순서가 중요한 연산이라면 maintain_order=True 옵션을 추가해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Your GitHub README Isn't a Profile. It's a Storefront. (Here Are the 5 Rules I Used",
+  "url": "https://dev.to/akhourianmolkumar/your-github-readme-isnt-a-profile-its-a-storefront-here-are-the-5-rules-i-used-57jm",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 18,
+  "comments": 3,
+  "published_at": "2026-10-06T10:25:07Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/your-github-readme-isnt-a-profile-its-a-storefront-here-are-the-5-rules-i-used-57jm"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fahrdiqr0nwlhli9dplku.png",
+  "link_status": "ok",
+  "ko_title": "GitHub README는 프로필이 아니라 스토어프런트다",
+  "summary": "작성자는 GitHub 프로필을 이력서처럼 꾸미는 대신 제품 페이지처럼 바꾸어 네 개의 앱을 바로 다운로드할 수 있게 했다. 3초 다운로드 테스트와 일관된 색상 사용 등 5가지 규칙을 제시한다.",
+  "why": "프로필 README를 이력서 대신 제품 페이지로 꾸미면 방문자가 3초 안에 앱을 내려받을 수 있다. 깃허브에 데스크톱 앱을 올린 개발자는 다운로드 버튼 구조를 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "My OSS Projects: Netpack",
+  "url": "https://dev.to/florianrappl/my-oss-projects-netpack-3274",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 11,
+  "comments": 2,
+  "published_at": "2026-10-06T08:06:29Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/florianrappl/my-oss-projects-netpack-3274"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fngsc8aqhhe38x3l21226.png",
+  "link_status": "ok",
+  "ko_title": "Netpack – C#/.NET 기반 웹 번들러",
+  "summary": "Netpack은 C#/.NET으로 만든 웹 번들러로, index.html이나 .js/.ts 파일을 입력하면 종속성을 추적해 번들링하고 최적화해 디스크에 저장한다. CLI는 .NET 런타임 없이 단일 네이티브 바이너리로 제공되며, TypeScript, JSX, CSS 모듈, Sass/LESS/PostCSS, Tailwind, Vue, Astro, Svelte, Solid 등을 기본 지원한다. 또한 .NET 라이브러리나 MSBuild 작업으로도 사용할 수 있다. 개발자는 C# 친화적인 환경에서 웹 툴링을 구현하고자 하는 실험적 프로젝트다.",
+  "why": ".NET 프로젝트에서 웹 번들링을 MSBuild 작업으로 직접 호출할 수 있다. 기존 Node.js 기반 툴체인을 C# 생태계로 대체하려는 시도에만 해당된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Your AI Agent Will Do Something Terrible. Here's How to Survive It.",
+  "url": "https://dev.to/james_anderson_h/your-ai-agent-will-do-something-terrible-heres-how-to-survive-it-4lc8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 6,
+  "published_at": "2026-10-06T08:29:10Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/james_anderson_h/your-ai-agent-will-do-something-terrible-heres-how-to-survive-it-4lc8"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fomiwsgiliwit3ghbzaey.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 끔찍한 일을 할 때 대처 방법",
+  "summary": "AI 에이전트를 실제 업무에 연결하면 권한 설정 실수로 잘못된 이메일 발송, 잘못된 환경에서 명령 실행 등 사고가 발생한다. 저자는 최소 권한 원칙을 적용해 에이전트가 필요한 작업만 수행하도록 제한하는 체크리스트를 제시한다.",
+  "why": "에이전트를 실업무에 연결할 때 최소 권한 원칙 적용이 사고 방지의 핵심이다. 권한 설정 실수로 인한 파괴적 명령 실행이나 잘못된 데이터 수정을 원천 차단할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "종 손실 후 자연의 회복 능력은 크게 과대평가돼 있음",
+  "url": "https://news.hada.io/topic?id=34895",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791297903.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34895"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "종 손실 후 자연의 회복 능력은 크게 과대평가돼 있음",
+  "summary": "전 세계 423개 연구와 222,829개 데이터 포인트를 분석한 결과, 생물다양성이 높을수록 생태계 서비스와 기능이 지속적으로 증가한다는 것이 밝혀졌다. 종 손실이 발생해도 남은 종이 서로를 완전히 대체하지 못한다는 점이 강조된다.",
+  "why": "생태계 서비스의 회복력을 과신하고 있는 설계나 운영 전략을 재점검해야 한다. 종 손실 시 남은 종이 기능을 완전히 대체하지 못한다는 점이 확인됐다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "science"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Aborting a Fetch Doesn't Stop Your Node.js Server. Here's What Does.",
+  "url": "https://dev.to/shubhradev/aborting-a-fetch-doesnt-stop-your-nodejs-server-heres-what-does-2fek",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 11,
+  "comments": 3,
+  "published_at": "2026-10-06T08:47:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/shubhradev/aborting-a-fetch-doesnt-stop-your-nodejs-server-heres-what-does-2fek"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7604gywswtwvhhq3rgmn.png",
+  "link_status": "ok",
+  "ko_title": "Fetch 중단이 Node.js 서버를 멈추게 하지 않는다. 실제 중단되는 부분",
+  "summary": "Node.js 핸들러가 클라이언트가 abort() 호출 후에도 작업을 계속 수행한다는 실험 결과를 제시한다. fetch abort는 클라이언트와 소켓 종료만 발생시키고, 서버 내부 로직은 별도 구현이 필요하다. node-postgres는 signal 옵션을 무시하고, Node 24에서는 req.signal이 존재하지만 Node 22에서는 undefined이다. 풀을 통한 PostgreSQL 취소 요청은 서버를 hangs 시킬 수 있다.",
+  "why": "핸들러가 클라이언트 이탈을 감지하려면 req.signal을 직접 확인해야 한다. Node 22에서는 이 속성이 없어 별도 로직이 필요하다. node-postgres의 signal 옵션은 무시되므로 DB 작업 중단을 위해 별도 코드를 작성해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Show GN: agent-gc – AI 코딩 에이전트가 남긴 worktree 쓰레기를 치워주는 TUI",
+  "url": "https://news.hada.io/topic?id=34893",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791297681.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34893"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: agent-gc – AI 코딩 에이전트가 남긴 worktree 쓰레기를 치워주는 TUI",
+  "summary": "agent-gc는 Codex·Claude Code 등 AI 코딩 에이전트가 생성한 worktree와 그 안의 node_modules·.next·target·.venv 등을 정리해 주는 터미널 UI 도구다. 디스크 용량이 부족해질 때 자동으로 정리할 수 있다.",
+  "why": "AI 에이전트로 병렬 작업을 하면 worktree와 의존성 폴더가 쌓여 디스크가 차오른다. agent-gc로 이 잔여물을 정리해 저장 공간 부족 문제를 해결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Montray - a tray icon for systemd service health",
+  "url": "https://github.com/dimonomid/montray/",
+  "source": "lobsters",
+  "upvotes": 15,
+  "comments": 0,
+  "published_at": 1791277659.717,
+  "discussion": "https://lobste.rs/s/gveu0c/montray_tray_icon_for_systemd_service",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://github.com/dimonomid/montray/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://opengraph.githubassets.com/1/dimonomid/montray",
+  "link_status": null,
+  "ko_title": "Montray - systemd 서비스 상태를 트레이 아이콘으로 표시",
+  "summary": "Montray는 systemd 서비스와 명령줄 체크 결과를 트레이 아이콘으로 실시간 표시하는 경량 유틸리티다. Go로 구현된 백그라운드 서버(montray-server)와 Rust+Slint 기반 데스크톱 클라이언트(montray-ui)로 구성된다. 로컬·원격 모두에서 동작하며, 디스크 용량·RAID 상태 등 임의의 체크도 지원한다.",
+  "why": "원격 서버의 systemd 장애를 로컬 트레이 아이콘으로 즉시 확인한다. 기업용 모니터링 스택 없이 간단한 상태 알림만 필요한 환경에 적합하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Meta's Muse Is an Adorable Privacy and Security Dumpster Fire",
+  "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
+  "source": "hackernews",
+  "upvotes": 138,
+  "comments": 46,
+  "published_at": 1791290749,
+  "discussion": "https://news.ycombinator.com/item?id=49977588",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/"
+  ],
+  "cross_source_count": 1,
+  "score": 25,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "메타의 Muse, 사생활·보안 재앙",
+  "summary": "댓글에서는 사용자가 은행 계좌 접근, 가격 비교, 이메일·채팅 기록 등 AI 에이전트에 대한 신뢰 부족을 표명한다. 또 광고 기업이 개인 대화를 이용해 판매에 활용할 가능성을 우려한다. 일부 사용자는 높은 비용과 엄격한 보안 조건 없이는 사용 의사가 없다고 답한다.",
+  "why": "AI 에이전트에 은행 계좌나 이메일 접근을 허용할 때 데이터 유출 위험이 상존한다. 광고 기업이 대화 기록을 마케팅에 활용할 가능성이 배제되지 않는다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Nobel Prize in Physics goes to Francis Halzen",
+  "url": "https://www.nobelprize.org/prizes/physics/2026/",
+  "source": "hackernews",
+  "upvotes": 285,
+  "comments": 83,
+  "published_at": 1791280126,
+  "discussion": "https://news.ycombinator.com/item?id=49976265",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nobelprize.org/prizes/physics/2026/"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": "https://www.nobelprize.org/uploads/2026/10/1-2_3-6ac4a172d1e22-scaled.jpg",
+  "link_status": "ok",
+  "ko_title": "노벨 물리학상, 프란시스 할젠에게 수여",
+  "summary": "노벨 물리학상 2026년 수상자가 프란시스 할젠으로 발표되었으며, 그는 IceCube 중성미자 관측소와 천체 기원 고에너지 중성미자 발견에 기여한 공로를 인정받았다.",
+  "why": "백엔드와 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Email Self Hosters - what are you using?",
+  "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
+  "source": "lobsters",
+  "upvotes": 44,
+  "comments": 45,
+  "published_at": 1791274193.07,
+  "discussion": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": "https://lobste.rs/touch-icon-144.png",
+  "link_status": "ok",
+  "ko_title": "이메일 자체 호스팅하는 사람들 - 무엇을 사용하고 있나요?",
+  "summary": "현재 작성자는 maddy를 이용해 여러 도메인의 메일박스와 캐치올을 운영하고 있다. iOS 기본 메일 클라이언트가 연결 및 메시지 다운로드에 오래 걸려 OTP 메일 수신에 문제가 발생한다. 다른 자체 호스팅 사용자들에게 사용 중인 메일 서버와 개선하고 싶은 점을 묻고 있다.",
+  "why": "iOS 기본 메일 앱의 느린 연결이 OTP 수신 지연을 유발한다. 자체 호스팅 환경에서 이 문제를 겪는다면 클라이언트 교체나 서버 설정 점검이 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "JetBrains reported a net financial loss first time in its tracked history",
+  "url": "https://www.helgilibrary.com/companies/jetbrains",
+  "source": "hackernews",
+  "upvotes": 305,
+  "comments": 302,
+  "published_at": 1791287155,
+  "discussion": "https://news.ycombinator.com/item?id=49977072",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.helgilibrary.com/companies/jetbrains"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.helgilibrary.com/opengraph-image",
+  "link_status": "ok",
+  "ko_title": "JetBrains, 사상 최초 순손실 기록",
+  "summary": "2025년 JetBrains는 매출 160억 800만 CZK로 전년 대비 6.3% 증가했지만 순손실 3억 1500만 CZK를 기록했다. ROE는 -11.1%로 전년 대비 107포인트 하락했다. EBITDA는 9억 1800만 CZK, 순마진은 -1.97%였다.",
+  "why": "JetBrains의 사상 첫 순손실은 개발자 도구 구독료 인상이나 기능 축소로 직결되지 않는다. 단기적으로 개발 환경이나 라이선스 정책 변화가 없으므로 기존 워크플로우를 유지하면 된다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
+  "title": "Data Types Across Programming Languages: What You Actually Need to Know",
+  "url": "https://dev.to/kenwalger/data-types-across-programming-languages-what-you-actually-need-to-know-39eo",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 14,
+  "comments": 0,
+  "published_at": "2026-10-06T13:11:00Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kenwalger/data-types-across-programming-languages-what-you-actually-need-to-know-39eo"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fag9yrb7jo12sr23nu1pq.png",
+  "link_status": "ok",
+  "ko_title": "프로그래밍 언어별 데이터 타입: 실제로 알아야 할 것",
+  "summary": "",
+  "why": "파이썬의 동적 타이핑은 런타임에 타입을 결정하지만, 다른 언어는 컴파일 시점에 타입을 고정한다. 이 차이는 언어 간 코드 이식 시 타입 오류가 발생하는 지점을 예측하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-07T00:00:05.719559+09:00",
+  "batch_label": "10월 7일 00:00"
+ },
+ {
   "title": "M-Abozaid / esp32-c3-adblock",
   "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
   "source": "github",
