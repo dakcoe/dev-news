@@ -1,0 +1,150 @@
+<!--META {"slug": "ml-8-decision-theory-sklearn", "cat": "머신러닝", "order": 8, "title": "결정이론과 scikit-learn — 오분류율, 손실, 가우시안 경계", "desc": "사후확률로 결정을 내리는 원리에서 출발해 세 가지 접근, 최소 오분류율, 혼동 행렬과 정밀도·재현율·F1·ROC, 손실 행렬과 베이즈 위험, 가우시안 판별 함수의 경계를 계산하고 scikit-learn의 기본 흐름을 직접 돌려 본다.", "lead": "분류는 결정이다. 오분류율만 따지면 사후확률이 가장 큰 클래스를 고르고, 틀림마다 비용이 다르면 기대 손실이 가장 작은 쪽을 고른다.", "date": "2026-10-23"} -->
+  <h2 id="s1">1. 확률을 결정으로 바꾸기</h2>
+  <p>앞 글까지 확률과 분포를 구하는 법을 봤습니다. 모델을 학습시키는 목적은 예측과 분류이고, 예측과 분류는 모두 결정입니다. <b>결정이론</b>(decision theory)은 입력 x가 주어졌을 때 목표값(target) t를 어떤 기준으로 고를지 정하는 틀입니다. 불확실성은 확률로 나타내고, 그 위에서 가장 나은 결정을 찾습니다.</p>
+  <p>기본 형태는 클래스별 확률의 비교입니다. 흉부 X선 영상 x를 보고 폐렴인지 판정한다면 p(폐렴 | x)와 p(정상 | x)를 비교해 큰 쪽을 고릅니다. 이 사후확률은 앞에서 본 베이즈 정리로 구합니다.</p>
+  <p>p(t | x) = p(x | t) p(t) / p(x)</p>
+
+  <h2 id="s2">2. 결정을 내리는 세 가지 접근</h2>
+  <ul><li><b>생성 모델</b>(generative model) — p(x | t)와 p(t)를 모델링해 결합분포 p(x, t)를 얻습니다. 분포를 알면 거기서 새 표본을 뽑을 수 있어 생성 모델이라고 부릅니다. 드문 입력을 찾아내는 이상치(outlier) 탐지도 됩니다. 대신 모델링할 것이 가장 많아 어렵습니다.</li>
+  <li><b>판별 모델</b>(discriminative model) — p(t | x)를 바로 모델링합니다. 분류만 하면 될 때는 이것으로 충분합니다.</li>
+  <li><b>판별 함수</b>(discriminant function) — 확률을 쓰지 않고 입력을 레이블로 보내는 함수 f(x)만 찾습니다.</li></ul>
+  <p>생성 모델의 사전확률 p(t)는 학습 데이터에서 클래스별 개수를 세어 정하고, 아무 정보가 없으면 균등분포로 둡니다. 분모 p(x)는 모든 클래스에 똑같이 들어가니 비교할 때 지워집니다.</p>
+  <p>판별 모델은 신경망 같은 모델이 클래스마다 숫자 하나씩을 내고, 이를 확률로 바꾸는 방식으로 만듭니다. 확률은 양수여야 하니 지수 함수를 씌우고, 합이 1이어야 하니 전체 합으로 나눕니다. 이를 <b>소프트맥스</b>(softmax)라고 합니다.</p>
+  <p>p(t = k | x) = e<sup>v<sub>k</sub></sup> / (e<sup>v<sub>1</sub></sup> + e<sup>v<sub>2</sub></sup> + e<sup>v<sub>3</sub></sup>)</p>
+  <p>출력이 v = (2, 1, 0)이면 e<sup>2</sup> ≈ 7.389, e<sup>1</sup> ≈ 2.718, e<sup>0</sup> = 1이고 합이 약 11.107이라 확률은 (0.665, 0.245, 0.090)입니다. 이 분포와 원-핫 정답 사이의 교차 엔트로피를 줄이는 것이 앞 글에서 본 학습입니다.</p>
+
+  <h2 id="s3">3. 오분류율을 최소로</h2>
+  <p>클래스가 둘이면 결정은 입력 공간을 두 영역 R<sub>1</sub>, R<sub>2</sub>로 나누는 일입니다. R<sub>1</sub>에 떨어지면 클래스 1이라고 답합니다. 틀리는 경우는 참은 클래스 2인데 R<sub>1</sub>에 떨어졌을 때와, 참은 클래스 1인데 R<sub>2</sub>에 떨어졌을 때입니다.</p>
+  <p>p(오류) = ∫<sub>R<sub>1</sub></sub> p(x, ω<sub>2</sub>) dx + ∫<sub>R<sub>2</sub></sub> p(x, ω<sub>1</sub>) dx</p>
+  <p>ω<sub>k</sub>는 클래스를 나타냅니다. x가 1차원이고 두 곡선 p(x, ω<sub>1</sub>), p(x, ω<sub>2</sub>)를 안다고 합시다. 각 x에서 곡선이 높은 쪽 클래스를 고르면 낮은 쪽 넓이만 오류로 남습니다. 그래서 두 곡선이 만나는 점이 <b>최적 결정 경계</b>입니다. 경계를 거기서 옮기면 오류가 늘고, 늘어난 넓이는 경계를 제자리로 돌리면 없앨 수 있는 오류입니다.</p>
+  <p>최적 경계에서도 남는 오류가 있습니다. 두 곡선이 겹치는 부분입니다. 사과와 오렌지를 무게, 부피, 색만으로 나타냈는데 세 값이 똑같은 사과와 오렌지가 있다면, 어떤 모델도 둘을 구별할 수 없습니다. 이 오류는 구별에 쓸 특징을 더 모아야 줄어듭니다.</p>
+  <p>클래스가 K개여도 결론은 같습니다. 맞힐 확률 ∑<sub>k</sub> ∫<sub>R<sub>k</sub></sub> p(x, ω<sub>k</sub>) dx를 최대로 하려면 각 x를 p(x, ω<sub>k</sub>)가 가장 큰 클래스, 곧 사후확률 p(ω<sub>k</sub> | x)가 가장 큰 클래스로 보냅니다. 측정값이 아예 없다면 사전확률만 남으니 가장 흔한 클래스로 답하는 것이 최선입니다.</p>
+
+  <h2 id="s4">4. 틀림의 종류와 평가지표</h2>
+  <p>이진 분류의 결과는 네 칸으로 나뉩니다. 참(True)과 거짓(False)은 맞았는지를, 양성(Positive)과 음성(Negative)은 모델이 무엇이라고 답했는지를 뜻합니다.</p>
+  <table><thead><tr><th></th><th>예측 양성</th><th>예측 음성</th></tr></thead><tbody>
+    <tr><td>실제 양성</td><td>TP (참 양성)</td><td>FN (거짓 음성) — 2종 오류</td></tr>
+    <tr><td>실제 음성</td><td>FP (거짓 양성) — 1종 오류</td><td>TN (참 음성)</td></tr>
+  </tbody></table>
+  <p><b>1종 오류</b>(type I error)는 음성인데 양성이라고 한 경우로, 거짓 경보(false alarm)라고도 합니다. <b>2종 오류</b>(type II error)는 양성인데 음성이라고 한 경우입니다. 이 네 칸으로 지표를 만듭니다.</p>
+  <ul><li><b>정확도</b>(accuracy) = (TP + TN) / 전체 — 전체 중 맞힌 비율</li>
+  <li><b>정밀도</b>(precision) = TP / (TP + FP) — 양성이라고 답한 것 중 실제 양성의 비율</li>
+  <li><b>재현율</b>(recall) = TP / (TP + FN) — 실제 양성 중 모델이 잡아낸 비율. 민감도(sensitivity)라고도 합니다.</li>
+  <li><b>F1 점수</b> = 2PR / (P + R) — 정밀도와 재현율의 조화평균</li></ul>
+  <h3>문제 1</h3>
+  <p>200건 중 실제 양성이 40건입니다. 모델은 그중 30건을 양성으로 잡았고, 실제 음성 160건 중 20건을 양성이라고 잘못 답했습니다. 정확도, 정밀도, 재현율, F1을 구해 보십시오.</p>
+  <p>TP = 30, FN = 10, FP = 20, TN = 140입니다. 정확도는 (30 + 140)/200 = <b>0.85</b>, 정밀도는 30/(30 + 20) = <b>0.6</b>, 재현율은 30/(30 + 10) = <b>0.75</b>입니다. F1은 2 × 0.6 × 0.75 / (0.6 + 0.75) = 0.9/1.35 ≈ <b>0.667</b>입니다. 정확도는 높아 보여도 양성이라고 답한 것의 40%가 틀렸습니다.</p>
+  <h3>클래스 불균형</h3>
+  <p>양성과 음성이 비슷한 수라면 정확도로 충분합니다. 200건 중 양성이 2건뿐이면 사정이 다릅니다. 언제나 음성이라고 답하는 모델도 정확도 0.99를 냅니다. 그러나 재현율은 0/2 = 0이고 F1도 0입니다. 이렇게 클래스가 불균형하면 정확도는 쓸모가 없고 재현율, 정밀도, F1을 봐야 합니다. F1은 양성 클래스를 기준으로 계산하므로, 드물고 관심 있는 쪽을 양성으로 두어야 이 효과가 납니다.</p>
+  <h3>ROC 곡선과 AUC</h3>
+  <p>모델이 점수를 내고 임계값보다 크면 양성이라고 답한다고 합시다. 임계값을 낮추면 양성 판정이 늘어 재현율이 오르지만 거짓 경보도 함께 늘어납니다. 임계값을 처음부터 끝까지 바꾸며 가로축에 거짓 양성률(FPR = FP / 실제 음성 수), 세로축에 참 양성률(TPR, 재현율)을 찍은 곡선이 <b>ROC 곡선</b>(receiver operating characteristic)입니다. 점 (0, 0)은 언제나 음성이라고 하는 모델, (1, 1)은 언제나 양성이라고 하는 모델, (0, 1)은 완벽한 분류기입니다. 대각선은 무작위로 찍는 경우입니다.</p>
+  <p>곡선 아래 넓이 <b>AUC</b>(area under the curve)로 성능을 숫자 하나로 나타냅니다. 무작위 추측이면 0.5, 완벽하면 1입니다. AUC는 양성 하나와 음성 하나를 무작위로 골랐을 때 양성의 점수가 더 높을 확률과 같습니다. 음성 셋의 점수가 0.1, 0.3, 0.6이고 양성 셋이 0.35, 0.7, 0.9라면 아홉 쌍 가운데 양성이 이기는 쌍이 2 + 3 + 3 = 8개라 AUC = 8/9 ≈ 0.889입니다.</p>
+
+  <h2 id="s5">5. 틀림마다 비용이 다를 때 — 손실 행렬</h2>
+  <p>오분류율은 모든 틀림을 똑같이 셉니다. 실제로는 그렇지 않은 경우가 많습니다. 공장에서 부품을 검사한다고 합시다. 불량품을 정상으로 통과시키면 제품이 고장 나 비용 50이 듭니다. 정상품을 불량으로 버리면 부품값 1만 잃습니다. 이를 <b>손실 행렬</b>(loss matrix) L로 씁니다. 행은 실제, 열은 결정입니다.</p>
+  <table><thead><tr><th>실제 \ 결정</th><th>불량이라고 함</th><th>정상이라고 함</th></tr></thead><tbody>
+    <tr><td>불량</td><td>0</td><td>50</td></tr>
+    <tr><td>정상</td><td>1</td><td>0</td></tr>
+  </tbody></table>
+  <p>두 틀림의 비용이 모두 1이고 맞히면 0인 행렬을 <b>0-1 손실</b>이라고 합니다. 이때 손실을 줄이는 것은 오분류율을 줄이는 것과 같습니다. 어느 틀림이 더 비싼지는 데이터만으로 알 수 없고 그 분야의 전문가가 정합니다.</p>
+  <p>목표는 <b>기대 손실</b>(expected loss), 다른 말로 위험(risk)을 최소로 하는 것입니다.</p>
+  <p>E[L] = ∑<sub>k</sub> ∑<sub>j</sub> ∫<sub>R<sub>j</sub></sub> L<sub>kj</sub> p(x, ω<sub>k</sub>) dx</p>
+  <p>k는 실제 클래스, j는 결정한 클래스입니다. 각 x마다 j를 따로 고를 수 있으니 x마다 ∑<sub>k</sub> L<sub>kj</sub> p(ω<sub>k</sub> | x)가 가장 작은 j를 고르면 됩니다. 이 값을 <b>조건부 위험</b>(conditional risk) R(α<sub>j</sub> | x)라고 하고, 이렇게 고르는 규칙을 <b>베이즈 결정 규칙</b>, 그때의 최소 위험을 <b>베이즈 위험</b>(Bayes risk)이라고 합니다. 같은 확률 모델로 얻을 수 있는 가장 작은 위험입니다.</p>
+  <h3>문제 2</h3>
+  <p>어떤 부품의 사후확률이 p(불량 | x) = 0.03입니다. 오분류율 기준과 위의 손실 행렬 기준에서 각각 어떤 결정을 내립니까. 손실 행렬 기준에서 불량이라고 답하기 시작하는 사후확률의 문턱은 얼마입니까.</p>
+  <p>오분류율 기준이면 사후확률이 큰 쪽, 곧 <b>정상</b>입니다. 손실 행렬로 조건부 위험을 계산하면 정상이라고 할 때 50 × 0.03 + 0 × 0.97 = 1.5, 불량이라고 할 때 0 × 0.03 + 1 × 0.97 = 0.97입니다. 위험이 작은 <b>불량</b>을 고릅니다. 일반적으로 50p &gt; 1 − p, 곧 p(불량 | x) &gt; 1/51 ≈ 0.0196이면 불량이라고 답합니다. 비싼 틀림을 피하려고 경계가 크게 옮겨 갔습니다.</p>
+
+  <h2 id="s6">6. 여러 가지 손실 함수와 세 가지 결정 규칙</h2>
+  <p>손실 함수는 결과를 비용으로 바꾸는 함수이고, 학습에서 줄이려는 목적함수입니다. t는 목표값, y는 모델의 출력입니다.</p>
+  <ul><li><b>제곱 손실</b>: (t − y)<sup>2</sup>. N개 평균을 내면 평균 제곱 오차(MSE) (1/N) ∑ (t<sub>i</sub> − y<sub>i</sub>)<sup>2</sup>입니다.</li>
+  <li><b>0-1 손실</b>: t ≠ y이면 1, 같으면 0입니다.</li>
+  <li><b>힌지 손실</b>(hinge loss): max(0, 1 − t·y). t는 +1 또는 −1입니다. t = 1일 때 y = 0.3이면 손실 0.7이고, y가 1 이상이면 얼마나 크든 0입니다.</li>
+  <li><b>교차 엔트로피</b>(log loss): −t log y. t와 y는 확률입니다.</li></ul>
+  <p>확률을 써서 결정하는 규칙도 세 가지로 정리됩니다. <b>최대가능도</b>(ML) 규칙은 p(x | ω<sub>i</sub>)가 가장 큰 클래스를 고르고, 사전확률을 무시합니다. <b>최대 사후확률</b>(maximum a posteriori, MAP) 규칙은 p(ω<sub>i</sub> | x)가 가장 큰 클래스를 고르며, 오분류율을 최소로 합니다. <b>베이즈 위험</b> 규칙은 조건부 위험이 가장 작은 결정을 고릅니다. 사전확률이 모두 같으면 ML과 MAP가 같고, 0-1 손실이면 MAP와 베이즈 위험이 같습니다. MAP로 나눈 결정 영역은 한 덩어리일 필요가 없습니다. 같은 클래스의 영역이 여러 조각으로 떨어져 나타날 수 있습니다.</p>
+
+  <h2 id="s7">7. 판별 함수와 결정 경계</h2>
+  <p>분류만 하면 된다면 확률을 정확히 구할 필요가 없습니다. 클래스마다 함수 g<sub>i</sub>(x)를 두고 값이 가장 큰 클래스를 고르면 됩니다. g<sub>i</sub>(x) = p(ω<sub>i</sub> | x)로 두면 MAP 규칙입니다. 여기에 단조 증가 함수 f를 씌워 f(g<sub>i</sub>(x))로 바꿔도 크기 순서가 그대로라 결정은 같습니다. 그래서 공통 분모 p(x)를 지우고 로그를 씌울 수 있습니다.</p>
+  <p>g<sub>i</sub>(x) = ln p(x | ω<sub>i</sub>) + ln p(ω<sub>i</sub>)</p>
+  <p>클래스가 둘이면 g(x) = g<sub>1</sub>(x) − g<sub>2</sub>(x)로 합쳐 g(x) &gt; 0이면 ω<sub>1</sub>, 아니면 ω<sub>2</sub>로 정합니다. g(x) = 0인 곳이 <b>결정 경계</b>입니다.</p>
+  <p>g(x) = ln [p(x | ω<sub>1</sub>) / p(x | ω<sub>2</sub>)] + ln [p(ω<sub>1</sub>) / p(ω<sub>2</sub>)]</p>
+  <p>둘째 항은 x와 무관한 상수입니다. 한 클래스가 더 흔하다는 사전 정보가 있으면 경계를 그만큼 옮기고, 두 사전확률이 같으면 0이 되어 사라집니다.</p>
+
+  <h2 id="s8">8. 가우시안일 때의 경계</h2>
+  <p>클래스 조건부 밀도가 가우시안 N(x | μ<sub>i</sub>, Σ<sub>i</sub>)이고 평균과 공분산은 이미 추정했다고 합시다. 로그를 씌우면 지수가 풀립니다.</p>
+  <p>g<sub>i</sub>(x) = −½ (x − μ<sub>i</sub>)<sup>T</sup> Σ<sub>i</sub><sup>−1</sup> (x − μ<sub>i</sub>) − (d/2) ln 2π − ½ ln |Σ<sub>i</sub>| + ln p(ω<sub>i</sub>)</p>
+  <p>(d/2) ln 2π는 모든 클래스에 같으니 지웁니다. 남은 항 중 무엇을 더 지울 수 있는지는 공분산에 따라 달라집니다.</p>
+  <h3>경우 1 — Σ<sub>i</sub> = σ<sup>2</sup>I</h3>
+  <p>특징끼리 상관이 없고 분산이 모두 σ<sup>2</sup>으로 같은 경우입니다. |Σ<sub>i</sub>|가 클래스와 무관해지고 g<sub>i</sub>(x) = −‖x − μ<sub>i</sub>‖<sup>2</sup> / (2σ<sup>2</sup>) + ln p(ω<sub>i</sub>)가 됩니다. 제곱을 풀면 x<sup>T</sup>x 항은 모든 클래스에 같으니 지웁니다.</p>
+  <p>g<sub>i</sub>(x) = (μ<sub>i</sub> / σ<sup>2</sup>)<sup>T</sup> x − μ<sub>i</sub><sup>T</sup>μ<sub>i</sub> / (2σ<sup>2</sup>) + ln p(ω<sub>i</sub>) = w<sub>i</sub><sup>T</sup>x + w<sub>i0</sub></p>
+  <p>x에 대해 선형입니다. 두 클래스의 경계 g<sub>i</sub>(x) = g<sub>j</sub>(x)는 w<sup>T</sup>(x − x<sub>0</sub>) = 0 꼴로, 두 평균을 잇는 방향 w = μ<sub>i</sub> − μ<sub>j</sub>에 수직이고 점 x<sub>0</sub>를 지나는 초평면입니다.</p>
+  <p>x<sub>0</sub> = ½(μ<sub>i</sub> + μ<sub>j</sub>) − [σ<sup>2</sup> / ‖μ<sub>i</sub> − μ<sub>j</sub>‖<sup>2</sup>] ln [p(ω<sub>i</sub>) / p(ω<sub>j</sub>)] (μ<sub>i</sub> − μ<sub>j</sub>)</p>
+  <p>사전확률이 같으면 로그가 0이라 경계는 두 평균의 정가운데입니다. p(ω<sub>i</sub>)가 더 크면 x<sub>0</sub>가 μ<sub>j</sub> 쪽으로 밀려가 ω<sub>i</sub>로 판정하는 영역이 넓어집니다.</p>
+  <h3>문제 3</h3>
+  <p>1차원에서 μ<sub>i</sub> = 1, μ<sub>j</sub> = 5, σ<sup>2</sup> = 2, p(ω<sub>i</sub>) = 0.8, p(ω<sub>j</sub>) = 0.2입니다. 경계 x<sub>0</sub>를 구하고 두 판별 함수가 거기서 같은지 확인해 보십시오.</p>
+  <p>가운데는 3입니다. 보정 항은 −[2/16] × ln 4 × (1 − 5) = 0.5 × ln 4 = ln 2 ≈ 0.693입니다. 그래서 x<sub>0</sub> = 3 + ln 2 ≈ <b>3.693</b>으로, 가운데에서 μ<sub>j</sub> = 5 쪽으로 옮겨 갔습니다. 확인합니다. g<sub>i</sub>(x<sub>0</sub>) = −(2.693)<sup>2</sup>/4 + ln 0.8 ≈ −1.813 − 0.223 = −2.036이고, g<sub>j</sub>(x<sub>0</sub>) = −(1.307)<sup>2</sup>/4 + ln 0.2 ≈ −0.427 − 1.609 = −2.036입니다. 같습니다.</p>
+  <h3>경우 2 — 모든 클래스의 공분산이 같은 Σ</h3>
+  <p>Σ는 대각 행렬이 아니어도 되지만 모든 클래스가 같은 것을 씁니다. 공분산 행렬은 언제나 대칭입니다. 첫 항 (x − μ<sub>i</sub>)<sup>T</sup> Σ<sup>−1</sup> (x − μ<sub>i</sub>)는 <b>마할라노비스 거리</b>(Mahalanobis distance)의 제곱으로, 특징 사이의 상관과 퍼짐을 반영한 거리입니다. 이차항 x<sup>T</sup>Σ<sup>−1</sup>x가 클래스와 무관해 지워지므로 경계는 여전히 선형입니다.</p>
+  <h3>경우 3 — 클래스마다 공분산이 다름</h3>
+  <p>가장 일반적인 경우입니다. 이차항과 ln |Σ<sub>i</sub>|가 클래스마다 달라 지울 수 없고, 경계는 이차 곡면이 됩니다. 2차원에서는 원, 타원, 포물선, 쌍곡선 같은 곡선입니다. 1차원 예로 클래스 1은 N(0, 1), 클래스 2는 N(0, 4)이고 사전확률이 같다고 합시다. −x<sup>2</sup>/2 = −x<sup>2</sup>/8 − ½ ln 4를 풀면 (3/8)x<sup>2</sup> = ln 2, 곧 x ≈ ±1.36입니다. 경계가 두 개 생겨 −1.36과 1.36 사이는 좁은 클래스 1, 바깥 양쪽은 넓은 클래스 2입니다.</p>
+
+  <h2 id="s9">9. scikit-learn으로 해 보기</h2>
+  <p>scikit-learn(sklearn)은 NumPy, SciPy, matplotlib 위에 만든 파이썬 머신러닝 패키지입니다. BSD 라이선스의 오픈 소스이고, 분류, 회귀, 군집화, 차원 축소, 모델 선택, 전처리 알고리즘이 검증된 구현으로 들어 있습니다. 쓸 일이 많은 부분은 넷입니다. sklearn.datasets의 내장 데이터, sklearn.tree나 sklearn.svm 같은 모델, sklearn.metrics의 평가지표, sklearn.model_selection의 데이터 분할과 교차 검증입니다. 아래 출력은 scikit-learn 1.9에서 돌린 결과입니다.</p>
+  <h3>데이터</h3>
+<pre><code>from sklearn.datasets import load_wine
+import numpy as np
+
+X, y = load_wine(return_X_y=True)
+print(X.shape, y.shape)   # (178, 13) (178,)
+print(np.bincount(y))     # [59 71 48]</code></pre>
+  <p>와인 178병, 특징 13개, 클래스 3개입니다. 데이터를 처음 받으면 어느 축이 표본이고 어느 축이 특징인지부터 확인합니다. sklearn은 행이 표본, 열이 특징인 N × D 배열을 기대하지만 다른 곳에서 받은 데이터는 반대일 수 있습니다.</p>
+  <h3>모델 — 만들고, 학습하고, 예측한다</h3>
+<pre><code>from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+X_tr, X_ts, y_tr, y_ts = train_test_split(
+    X, y, test_size=0.25, random_state=0, stratify=y)
+
+model = KNeighborsClassifier(n_neighbors=5)   # 만들기
+model.fit(X_tr, y_tr)                         # 학습
+y_pred = model.predict(X_ts)                  # 예측
+print(accuracy_score(y_ts, y_pred))           # 0.6666...</code></pre>
+  <p>train_test_split은 X와 y를 쌍으로 묶은 채 섞어서 나눕니다. 둘을 따로 섞으면 표본과 레이블이 어긋나 데이터가 망가집니다. stratify=y는 학습용과 테스트용의 클래스 비율을 같게 맞춥니다. 모델은 종류가 무엇이든 생성자에 하이퍼파라미터를 넘겨 만들고, fit으로 학습하고, predict로 예측합니다. 결정 트리, SVM, 로지스틱 회귀도 이 세 줄이 그대로입니다. 인자의 뜻과 기본값은 각 모델의 문서에 정리되어 있습니다. 이 분할에서 kNN의 정확도가 0.67로 낮은 이유는 특징의 단위가 제각각이기 때문입니다. kNN은 거리로 이웃을 찾는데, 값이 수백에서 1,680까지 가는 특징 하나가 0.1 남짓인 다른 특징들보다 훨씬 커서 거리를 거의 혼자 결정합니다.</p>
+  <h3>평가지표</h3>
+<pre><code>from sklearn.metrics import precision_score, recall_score, f1_score
+
+y_true = [1]*40 + [0]*160
+y_hat  = [1]*30 + [0]*10 + [1]*20 + [0]*140
+print(accuracy_score(y_true, y_hat))    # 0.85
+print(precision_score(y_true, y_hat))   # 0.6
+print(recall_score(y_true, y_hat))      # 0.75
+print(f1_score(y_true, y_hat))          # 0.666...</code></pre>
+  <p>문제 1의 혼동 행렬을 그대로 넣었고, 손으로 구한 값과 같습니다. 회귀에는 mean_squared_error, mean_absolute_error, r2_score가 있고, AUC는 roc_auc_score로 구합니다. 지표를 직접 짜면 버그가 섞이기 쉬우니 검증된 함수를 쓰는 편이 안전합니다.</p>
+  <h3>교차 검증과 격자 탐색</h3>
+<pre><code>from sklearn.model_selection import cross_validate
+from sklearn.tree import DecisionTreeClassifier
+
+clf = DecisionTreeClassifier(max_depth=2, random_state=0)
+scores = cross_validate(clf, X_tr, y_tr, scoring='accuracy',
+                        cv=5, return_train_score=True)
+print(scores['test_score'].round(3))    # [0.815 0.778 0.741 0.846 0.808]
+print(scores['train_score'].mean())     # 약 0.927</code></pre>
+  <p>5겹 교차 검증(5-fold cross validation)은 학습 데이터를 다섯 조각으로 나눠, 한 조각으로 검증하고 나머지 넷으로 학습하기를 다섯 번 합니다. 검증 정확도 평균은 약 0.797이고 학습 정확도는 0.927입니다. 하이퍼파라미터 후보가 여럿이면 조합마다 이 일을 되풀이하는 격자 탐색(grid search)을 씁니다.</p>
+<pre><code>from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
+
+params = {'n_estimators': [50, 100],      # 2가지
+          'max_depth': [2, 4, None]}      # × 3가지 = 6개 조합
+gs = GridSearchCV(RandomForestClassifier(random_state=0), params,
+                  scoring='accuracy', cv=5)
+gs.fit(X_tr, y_tr)
+print(gs.best_params_)                   # {'max_depth': 2, 'n_estimators': 50}
+y_pred = gs.best_estimator_.predict(X_ts)
+print(accuracy_score(y_ts, y_pred))      # 1.0
+
+final = RandomForestClassifier(random_state=0, **gs.best_params_)
+final.fit(X, y)                          # 전체 데이터로 다시 학습</code></pre>
+  <p>흐름은 네 단계입니다. 데이터를 학습용과 테스트용으로 나눕니다. 학습용 안에서 여섯 조합을 5겹 교차 검증으로 비교합니다. best_params_는 가장 좋았던 하이퍼파라미터이고, best_estimator_는 그 설정으로 학습용 데이터 전체에 다시 학습한 모델입니다. 이 모델로 한 번도 보지 않은 테스트 데이터를 예측해 성능을 냅니다. 마지막으로 고른 설정으로 전체 데이터를 써서 다시 학습합니다. 표본을 하나라도 더 쓰기 위해서입니다. 이 분할에서는 테스트 정확도가 1.0이 나왔지만 테스트 표본이 45개뿐이라 분할을 바꾸면 달라질 수 있습니다.</p>
+
+  <h2 id="s10">정리</h2>
+  <p>분류는 결정입니다. 오분류율만 따지면 사후확률이 가장 큰 클래스를 고르고, 틀림마다 비용이 다르면 손실 행렬로 조건부 위험을 계산해 가장 작은 쪽을 고릅니다. 최적 경계로도 남는 오류는 특징이 두 클래스를 가르지 못해서 생깁니다. 성능은 혼동 행렬의 네 칸에서 나온 정확도, 정밀도, 재현율, F1과 ROC 곡선으로 재고, 클래스가 불균형하면 정확도를 믿지 않습니다. 클래스 조건부 밀도가 가우시안이면 판별 함수가 공분산이 같을 때 선형, 다를 때 이차가 됩니다. scikit-learn에서는 어떤 모델이든 만들고, fit하고, predict하는 같은 흐름을 씁니다. 다음 글부터 이 흐름 위에서 구체적인 알고리즘을 하나씩 봅니다.</p>

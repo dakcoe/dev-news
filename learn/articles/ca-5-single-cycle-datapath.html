@@ -1,0 +1,168 @@
+<!--META {"slug": "ca-5-single-cycle-datapath", "cat": "컴퓨터구조", "order": 5, "title": "단일 사이클 데이터패스 — 래치와 플립플롭에서 MUX로 합친 MIPS 데이터패스까지", "desc": "조합 소자와 상태 소자, D 래치와 D 플립플롭, 에지 트리거 방식을 복습하고, add·sub·lw·sw·beq의 RTL과 레지스터 파일, ALU 제어선과 Zero 출력을 거쳐 MUX 셋으로 합친 단일 사이클 MIPS 데이터패스를 만든다.", "lead": "단일 사이클 데이터패스는 한 클럭 사이클 동안 상태 소자를 읽고, 조합 회로로 계산하고, 사이클 끝 에지에서 결과를 쓰는 회로입니다.", "date": "2026-10-29"} -->
+  <h2 id="s1">1. 명령어에서 회로로</h2>
+  <p>앞의 네 글에서는 MIPS 명령어가 무엇을 하는지, 덧셈·곱셈·나눗셈과 부동소수점 연산을 어떤 회로로 하는지를 봤습니다. 이 글부터는 명령어를 실제로 실행하는 프로세서를 만듭니다. 프로세서는 두 부분으로 나눠 생각합니다. 값이 흘러가는 길과 그 길 위의 부품을 <b>데이터패스</b>(datapath)라고 하고, 명령어에 맞춰 그 길의 스위치를 켜고 끄는 부분을 <b>제어</b>(control)라고 합니다. 이 글은 데이터패스를 다룹니다.</p>
+  <p>만들 것은 <b>단일 사이클 데이터패스</b>(single clock cycle datapath)입니다. 명령어 하나를 클럭 한 사이클 안에 처음부터 끝까지 실행합니다. MIPS 전체를 한 번에 다루지 않고 대표 명령어만으로 시작합니다.</p>
+  <table><thead><tr><th>종류</th><th>명령어</th></tr></thead><tbody>
+    <tr><td>메모리 참조</td><td>lw, sw</td></tr>
+    <tr><td>산술·논리</td><td>add, sub, and, or, slt</td></tr>
+    <tr><td>제어 흐름</td><td>beq</td></tr>
+  </tbody></table>
+  <p>어떤 명령어든 처음 두 단계는 같습니다. PC가 가리키는 주소에서 명령어를 가져오고, 명령어가 지정한 레지스터를 읽습니다. 그다음 할 일이 명령어마다 갈립니다. 부품을 쌓기 전에 논리설계에서 배운 부품 두 종류를 먼저 정리합니다.</p>
+
+  <h2 id="s2">2. 조합 소자와 상태 소자</h2>
+  <table><thead><tr><th></th><th>조합 소자 (combinational element)</th><th>상태 소자 (state element)</th></tr></thead><tbody>
+    <tr><td>하는 일</td><td>값을 계산합니다</td><td>값을 기억합니다</td></tr>
+    <tr><td>출력을 정하는 것</td><td>지금 입력</td><td>지금 입력과 기억하고 있는 값</td></tr>
+    <tr><td>같은 입력을 다시 넣으면</td><td>항상 같은 출력</td><td>다른 출력이 나올 수 있음</td></tr>
+    <tr><td>예</td><td>ALU, 덧셈기, MUX</td><td>레지스터, 메모리</td></tr>
+  </tbody></table>
+  <p>ALU에 3과 4를 넣고 덧셈을 시키면 언제 해도 7이 나옵니다. 레지스터 2번을 읽으라는 같은 요청을 두 번 보내도, 그 사이에 누가 2번에 값을 썼다면 다른 값이 나옵니다. 상태 소자가 기억하는 값을 <b>상태</b>(state)라고 하고, 상태 소자가 들어간 회로를 <b>순차 회로</b>(sequential circuit)라고 합니다.</p>
+  <p>데이터패스에 쓰는 조합 소자는 셋입니다. <b>덧셈기</b>(adder)는 32비트 두 값을 더합니다. <b>ALU</b>는 두 값에 대해 연산 선택 신호가 고른 연산을 하고, 결과와 함께 결과가 0인지를 알리는 Zero 출력을 냅니다. <b>멀티플렉서</b>(MUX, multiplexor)는 계산을 하지 않습니다. 입력 여러 개 중 선택 신호가 고른 하나를 그대로 내보냅니다. 마지막에 데이터패스 조각들을 하나로 합칠 때 MUX를 씁니다. 그림에서 선 위에 사선과 32를 적으면 그 선이 32비트 묶음이라는 뜻입니다.</p>
+
+  <h2 id="s3">3. 클럭과 D 래치</h2>
+  <p>상태 소자는 언제 값을 바꾸느냐로 둘로 나뉩니다. 클럭 없이 입력이 바뀌는 즉시 상태가 바뀌는 회로를 <b>비동기식</b>(asynchronous)이라고 합니다. 모든 부품이 같은 클럭을 받아 정해진 순간에만 상태를 바꾸는 회로를 <b>동기식</b>(synchronous)이라고 합니다. 비동기식은 동작 시점이 게이트 지연에 따라 달라집니다. 프로세서는 동기식으로 만듭니다.</p>
+  <p><b>클럭</b>(clock)은 0과 1을 일정한 간격으로 오가는 신호입니다. 0에서 1로 오르는 순간을 <b>상승 에지</b>(rising edge), 1에서 0으로 내리는 순간을 <b>하강 에지</b>(falling edge)라고 합니다. 한 번 오르내려 제자리로 오는 시간이 <b>사이클 시간</b>(cycle time)이고, 1초에 도는 사이클 수가 클럭 속도입니다.</p>
+  <p>클럭 속도 = 1 / 사이클 시간</p>
+  <p>사이클 시간이 0.5 ns면 클럭 속도는 1 / (0.5 × 10<sup>−9</sup> s) = 2 × 10<sup>9</sup> Hz, 2 GHz입니다.</p>
+  <h3>D 래치</h3>
+  <p>가장 단순한 상태 소자가 <b>D 래치</b>(D latch)입니다. 입력은 저장할 값 D와 클럭 CLK, 출력은 저장된 값 Q와 그 반대값 Q̄입니다. CLK = 1인 동안 Q는 D를 그대로 따라갑니다. 이 상태를 래치가 열려 있다(transparent)고 합니다. CLK가 0이 되면 Q는 그 직전 값을 붙들고 D가 바뀌어도 움직이지 않습니다.</p>
+  <p>안쪽은 두 부분입니다. NOR 게이트 두 개가 서로의 출력을 입력으로 받는 고리가 1비트를 기억합니다. 이 고리를 SR 래치라고 하며, S(set)가 1이면 Q가 1이 되고 R(reset)이 1이면 Q가 0이 됩니다. 그 앞의 AND 게이트 두 개가 S = CLK · D, R = CLK · D̄를 만듭니다.</p>
+  <table><thead><tr><th>CLK</th><th>D</th><th>S</th><th>R</th><th>Q</th></tr></thead><tbody>
+    <tr><td>0</td><td>0 또는 1</td><td>0</td><td>0</td><td>그대로</td></tr>
+    <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+  </tbody></table>
+  <p>S는 D를, R은 D̄를 받으니 둘이 동시에 1이 될 수 없습니다. SR 래치에서 쓰면 안 되는 입력 S = R = 1이 구조상 나오지 않습니다.</p>
+
+  <h2 id="s4">4. D 플립플롭과 에지 트리거 방식</h2>
+  <p><b>D 플립플롭</b>(D flip-flop)은 클럭 에지에서만 출력이 바뀌는 상태 소자입니다. 에지 순간의 D를 받아 다음 에지까지 붙듭니다. CLK가 1로 머무는 동안 D가 흔들려도 Q는 그대로입니다.</p>
+  <p>D 래치 두 개를 이어 만들 수 있습니다. 이것을 <b>마스터-슬레이브 플립플롭</b>(master-slave flip-flop)이라고 합니다. 앞 래치(master)는 CLK를 그대로 받고, 뒤 래치(slave)는 CLK를 뒤집어 받습니다.</p>
+  <table><thead><tr><th>CLK</th><th>앞 래치</th><th>뒤 래치</th><th>Q</th></tr></thead><tbody>
+    <tr><td>1</td><td>열림. D를 따라감</td><td>닫힘</td><td>그대로</td></tr>
+    <tr><td>0</td><td>닫힘. CLK가 내려간 순간의 D를 붙듦</td><td>열림. 앞 래치 값을 내보냄</td><td>앞 래치 값</td></tr>
+  </tbody></table>
+  <p>두 래치가 동시에 열리는 때가 없으니 D가 Q까지 한 번에 넘어가지 못합니다. Q가 바뀌는 순간은 CLK가 1에서 0으로 내려갈 때 하나뿐입니다. 이 회로는 하강 에지에서 동작합니다. 인버터를 앞 래치 쪽으로 옮기면 상승 에지에서 동작합니다.</p>
+  <h3>문제 1</h3>
+  <p>Q의 처음 값은 0입니다. 시간 순서대로 CLK와 D가 아래처럼 바뀝니다. 각 구간에서 D 래치의 Q와 위의 하강 에지 D 플립플롭의 Q를 구하십시오.</p>
+  <table><thead><tr><th>구간</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+    <tr><td>CLK</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>D</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+  </tbody></table>
+  <p>래치는 CLK = 1인 구간 2, 3, 6에서 D를 따라가고 나머지 구간에서는 앞 값을 붙듭니다. 구간 1은 0, 2는 1, 3은 0, 4와 5는 0, 6은 1, 7은 1입니다. 구간 1과 5에서 D가 1이어도 CLK가 0이라 들어가지 않습니다. 구간 2에서 1이 됐다가 3에서 0으로 돌아가는 것처럼, 래치는 CLK가 1인 동안의 흔들림이 Q에 그대로 나옵니다.</p>
+  <p>플립플롭은 하강 에지에서만 바뀝니다. 하강 에지는 구간 3→4와 6→7 두 번입니다. 3→4에서는 그 직전 D가 0이라 Q는 0을 유지합니다. 6→7에서는 D가 1이라 Q가 1이 됩니다. 답은 구간 1~6이 0, 구간 7이 1입니다.</p>
+  <h3>에지 트리거 방식</h3>
+  <p>이 시리즈의 프로세서는 모든 상태 소자를 클럭 에지에서만 갱신합니다. 이것을 <b>에지 트리거 방식</b>(edge triggered methodology)이라고 합니다. 한 사이클에 일어나는 일은 셋입니다.</p>
+  <ol><li>상태 소자(PC, 레지스터, 메모리)의 값을 읽습니다.</li>
+  <li>그 값을 조합 소자(ALU, 덧셈기, MUX)에 통과시킵니다.</li>
+  <li>결과를 다음 에지에서 상태 소자에 씁니다.</li></ol>
+  <p>이 방식에서는 한 사이클 안에 같은 상태 소자를 읽고 쓸 수 있습니다. PC ← PC + 4가 그 예입니다. PC를 읽어 덧셈기에 넣고, 결과를 다시 PC에 씁니다. 쓰기가 에지 한 순간에만 일어나니 새 PC 값이 같은 사이클에 덧셈기를 다시 지나가는 일이 없습니다.</p>
+  <p>PC를 래치로 만들면 어떻게 될지 생각해 봅니다. CLK = 1인 동안 래치가 열려 있으니 PC + 4가 PC에 들어가고, 그 값이 곧바로 덧셈기를 다시 지나 PC + 8이 되어 또 들어갑니다. CLK가 1인 동안 몇 번 더해질지는 덧셈기 지연에 따라 달라집니다. 그래서 PC와 레지스터는 플립플롭으로 만듭니다.</p>
+  <p>에지 트리거 방식에도 조건이 하나 있습니다. 상태 소자에서 나온 값이 가장 느린 조합 경로를 지나 다음 상태 소자에 닿기 전에 다음 에지가 오면, 쓰기가 덜 계산된 값을 잡습니다. 그래서 사이클 시간은 가장 느린 조합 경로의 지연보다 길어야 합니다.</p>
+
+  <h2 id="s5">5. 명령어가 하는 일을 RTL로</h2>
+  <p>부품을 정하려면 명령어마다 무엇을 읽고 무엇을 쓰는지 정확히 적어 둬야 합니다. 이를 위해 <b>레지스터 전송 수준</b>(RTL, Register Transfer Level) 표기를 씁니다. ←는 오른쪽 값을 왼쪽에 쓴다는 뜻이고, R[rs]는 rs번 레지스터의 값, Mem[x]는 x번지 메모리의 값입니다. IR은 가져온 명령어를 담는 명령어 레지스터입니다. 명령어 필드 이름(op, rs, rt, rd, funct, imm16)은 앞 글에서 본 R-type과 I-type 형식을 따릅니다.</p>
+  <pre>add rd, rs, rt       (op = 000000, funct = 100000)
+  IR ← Mem[PC]
+  R[rd] ← R[rs] + R[rt]
+  PC ← PC + 4
+
+sub rd, rs, rt       (op = 000000, funct = 100010)
+  IR ← Mem[PC]
+  R[rd] ← R[rs] + ~R[rt] + 1
+  PC ← PC + 4</pre>
+  <p>sub는 뺄셈기를 따로 쓰지 않습니다. ~R[rt] + 1은 R[rt]의 2의 보수, 곧 −R[rt]입니다. R[rs] = 10, R[rt] = 6이면 ~6 + 1 = 0xFFFFFFFA이고, 10 + 0xFFFFFFFA = 0x00000004로 4가 나옵니다. add와 sub는 op가 같고 funct만 다르니, 하드웨어는 funct를 보고 ALU에 더하기인지 빼기인지 알려 줍니다.</p>
+  <pre>lw rt, imm16(rs)     (op = 100011)
+  IR ← Mem[PC]
+  Addr ← R[rs] + SignExt(imm16)
+  R[rt] ← Mem[Addr]
+  PC ← PC + 4
+
+sw rt, imm16(rs)     (op = 101011)
+  IR ← Mem[PC]
+  Addr ← R[rs] + SignExt(imm16)
+  Mem[Addr] ← R[rt]
+  PC ← PC + 4</pre>
+  <p>두 명령어 모두 주소를 베이스 레지스터 + 16비트 오프셋으로 만듭니다. 오프셋은 음수일 수 있으니 32비트로 늘릴 때 부호 비트를 위쪽 16자리에 복사합니다. 이것이 <b>부호 확장</b>(sign extension, SignExt)입니다. lw $t1, −12($s2)에서 R[$s2] = 0x10008040이면 SignExt(0xFFF4) = 0xFFFFFFF4이고, 주소는 0x10008040 + 0xFFFFFFF4 = 0x10008034입니다. lw와 sw는 주소 계산이 같고 데이터가 흐르는 방향만 반대입니다.</p>
+  <pre>beq rs, rt, imm16    (op = 000100)
+  IR ← Mem[PC]
+  Cond ← R[rs] + ~R[rt] + 1
+  PC ← (Cond = 0) ? PC + 4 + (SignExt(imm16) &lt;&lt; 2)
+                  : PC + 4</pre>
+  <p>beq는 두 값이 같은지를 뺄셈으로 판단합니다. 차가 0이면 같습니다. 분기 목표 주소(branch target)는 PC + 4를 기준으로 하고, 오프셋은 명령어 개수 단위라 4를 곱합니다. 부호 확장을 먼저 하고 2칸 밉니다. 순서를 바꿔 16비트 안에서 먼저 밀면 위쪽 두 비트가 잘려 나가고 부호도 바뀔 수 있습니다. PC = 0x00400020에서 imm16 = 0xFFFE(−2)인 beq가 분기하면, 목표는 0x00400024 − 8 = 0x0040001C입니다.</p>
+
+  <h2 id="s6">6. 레지스터 파일</h2>
+  <p>RTL을 보면 필요한 부품이 정해집니다. 명령어를 담은 메모리, 다음 주소를 계산할 덧셈기, 레지스터 32개, ALU, 데이터 메모리입니다. 큰 흐름은 다음과 같습니다.</p>
+  <pre>PC → 명령어 메모리 → 레지스터 파일 → ALU → 데이터 메모리
+                          ↑                        │
+                          └──── 결과 되돌려 쓰기 ────┘</pre>
+  <p>명령어 메모리와 데이터 메모리를 따로 둡니다. lw는 한 사이클 안에 명령어도 읽고 데이터도 읽어야 하는데, 메모리가 하나면 한 사이클에 두 번 접근해야 하기 때문입니다.</p>
+  <p><b>레지스터 파일</b>(register file)은 레지스터 32개를 묶어 번호로 골라 읽고 쓰게 만든 부품입니다. 레지스터 하나는 D 플립플롭 32개입니다.</p>
+  <table><thead><tr><th>포트</th><th>폭</th><th>뜻</th></tr></thead><tbody>
+    <tr><td>Read register 1, 2</td><td>5비트씩</td><td>읽을 레지스터 번호 둘. 2<sup>5</sup> = 32개 중 하나</td></tr>
+    <tr><td>Read data 1, 2</td><td>32비트씩</td><td>읽은 값 둘</td></tr>
+    <tr><td>Write register</td><td>5비트</td><td>쓸 레지스터 번호</td></tr>
+    <tr><td>Write data</td><td>32비트</td><td>쓸 값</td></tr>
+    <tr><td>RegWrite</td><td>1비트</td><td>이번 사이클에 쓸지 말지</td></tr>
+  </tbody></table>
+  <p>add처럼 피연산자 둘을 한 사이클에 읽어야 하니 읽기 포트가 둘입니다. MIPS 명령어는 레지스터를 많아야 하나만 쓰니 쓰기 포트는 하나입니다.</p>
+  <h3>읽기는 MUX로</h3>
+  <p>레지스터 32개의 출력이 모두 32-to-1 MUX 두 개에 들어가고, Read register 번호가 각 MUX의 선택 신호가 됩니다. MUX는 조합 소자라 번호를 바꾸면 클럭을 기다리지 않고 바로 다른 값이 나옵니다. 두 MUX는 서로 독립이라 두 번호가 같으면 같은 값이 두 번 나옵니다.</p>
+  <h3>쓰기는 디코더와 RegWrite로</h3>
+  <p>5-to-32 <b>디코더</b>(decoder)가 Write register 번호를 받아 32개 출력 중 그 번호 하나만 1로 만듭니다. 디코더 출력마다 RegWrite와 AND를 해서 각 레지스터의 쓰기 허용 신호(enable)를 만듭니다. Write data는 32개 레지스터 모두에 연결되지만 enable이 1인 레지스터 하나만 값을 받아들입니다. RegWrite가 0이면 enable이 전부 0이라 아무 레지스터도 바뀌지 않습니다.</p>
+  <p>enable이 1이어도 값은 클럭 에지에서만 들어갑니다. 그래서 add $s1, $s1, $s2처럼 읽는 레지스터와 쓰는 레지스터가 같아도 문제가 없습니다. 사이클 동안 읽기 MUX는 옛 $s1을 내보내고, 계산 결과는 사이클 끝 에지에서 $s1에 들어갑니다.</p>
+
+  <h2 id="s7">7. ALU와 Zero</h2>
+  <h3>1비트 ALU</h3>
+  <p>1비트 ALU는 a와 b 한 비트씩을 받습니다. 먼저 MUX 두 개가 a와 ā 중 하나(Ainvert), b와 b̄ 중 하나(Bnegate)를 고릅니다. 고른 두 비트로 AND, OR, 덧셈을 한꺼번에 계산하고, 마지막 MUX(Operation)가 그중 하나를 결과로 내보냅니다. ALU 제어선 4비트는 Ainvert, Bnegate, Operation 2비트를 차례로 붙인 값입니다.</p>
+  <table><thead><tr><th>제어선</th><th>Ainvert</th><th>Bnegate</th><th>Operation</th><th>계산</th><th>기능</th></tr></thead><tbody>
+    <tr><td>0000</td><td>0</td><td>0</td><td>00 (AND)</td><td>a AND b</td><td>AND</td></tr>
+    <tr><td>0001</td><td>0</td><td>0</td><td>01 (OR)</td><td>a OR b</td><td>OR</td></tr>
+    <tr><td>0010</td><td>0</td><td>0</td><td>10 (덧셈)</td><td>a + b</td><td>add</td></tr>
+    <tr><td>0110</td><td>0</td><td>1</td><td>10 (덧셈)</td><td>a + b̄ + 1</td><td>sub</td></tr>
+    <tr><td>0111</td><td>0</td><td>1</td><td>11 (Less)</td><td>a − b의 부호</td><td>slt</td></tr>
+    <tr><td>1100</td><td>1</td><td>1</td><td>00 (AND)</td><td>ā AND b̄</td><td>NOR</td></tr>
+  </tbody></table>
+  <p>NOR 게이트를 따로 두지 않았는데 NOR가 됩니다. 드모르간 법칙(De Morgan's law)에 따라 ā · b̄ = NOT(a + b)이기 때문입니다.</p>
+  <h3>32비트 ALU</h3>
+  <p>1비트 ALU 32개를 이어 32비트 ALU를 만듭니다. i번째 비트의 자리올림 출력이 i+1번째 비트의 자리올림 입력으로 가고, 자리올림은 아래 비트부터 위로 차례로 전달됩니다. 이런 덧셈기를 <b>리플 캐리</b>(ripple carry) 덧셈기라고 합니다.</p>
+  <p>Bnegate 선 하나는 모든 비트의 b 반전 MUX와 맨 아래 비트의 자리올림 입력에 함께 연결됩니다. Bnegate = 1이면 b가 전부 뒤집히고 자리올림 입력으로 1이 들어가니 a + b̄ + 1 = a − b가 한 번에 계산됩니다.</p>
+  <p>slt를 위해 맨 위 비트 ALU는 덧셈 결과의 부호 비트를 Set 출력으로 내보내고, 이 선이 맨 아래 비트의 Less 입력으로 돌아옵니다. 나머지 비트의 Less 입력은 0입니다. Operation = 11이면 결과는 a &lt; b일 때 1, 아닐 때 0인 32비트 값이 됩니다. a − b가 오버플로하면 부호 비트가 틀려 slt 결과도 틀릴 수 있습니다. 오버플로 판단도 맨 위 비트에서 합니다.</p>
+  <p><b>Zero</b> 출력은 결과가 0일 때 1입니다. 결과 32비트를 모두 OR하고 뒤집으면 됩니다. 이름과 반대로 외우기 쉬우니 주의합니다.</p>
+  <p>Zero = NOT(Result<sub>31</sub> OR Result<sub>30</sub> OR … OR Result<sub>0</sub>)</p>
+  <p>beq가 이 선을 씁니다. ALU에 sub를 시키고 Zero가 1이면 두 값이 같습니다.</p>
+  <h3>상태 비트</h3>
+  <p>ALU 결과의 성질을 1비트씩 알리는 플래그를 <b>상태 비트</b>(status bit) 또는 조건 코드(condition code)라고 합니다. Z(zero)는 결과가 0일 때, S(sign)는 결과의 맨 위 비트가 1일 때, V(overflow)는 부호 있는 수로 오버플로가 났을 때, C(carry)는 맨 위 자리에서 자리올림이 나갈 때 1입니다. 4비트로 1111 + 0001 = 1 0000은 C = 1이지만, 부호 있는 수로는 −1 + 1 = 0이라 V = 0입니다. 앞 글에서 본 대로 C는 부호 없는 수, V는 부호 있는 수의 넘침입니다. MIPS에는 이 비트들을 저장하는 상태 레지스터가 없습니다. 데이터패스는 ALU의 Zero 출력만 beq에 씁니다.</p>
+  <h3>문제 2</h3>
+  <p>위 구조를 4비트로 줄인 ALU에 a = 0101(5), b = 0111(7)을 넣습니다. 제어선이 0110, 0111, 1100일 때 각각 결과와 Zero를 구하십시오.</p>
+  <p>0110은 sub입니다. b̄ = 1000이고 맨 아래 자리올림 입력이 1이니 0101 + 1000 + 1 = 1110입니다. 부호 있는 수로 −2이고, 5 − 7과 맞습니다. 결과가 0이 아니니 Zero = 0입니다. 0111은 slt입니다. 같은 뺄셈의 부호 비트가 1이니 Set = 1이 맨 아래 비트로 가서 결과는 0001, Zero = 0입니다. 5 &lt; 7이 참이라는 뜻입니다. 1100은 NOR입니다. ā = 1010, b̄ = 1000이고 둘을 AND하면 1000입니다. a OR b = 0111을 뒤집은 값과 같습니다. Zero = 0입니다. Zero가 1이 되려면 결과 네 비트가 모두 0이어야 하니, a와 b가 같을 때 sub를 시키면 됩니다.</p>
+
+  <h2 id="s8">8. 데이터패스 조립</h2>
+  <h3>명령어 인출</h3>
+  <p>모든 명령어가 함께 쓰는 부분입니다. PC는 32비트 레지스터이고, 명령어 메모리는 PC 값을 주소로 받아 명령어를 내보냅니다. 덧셈기 하나가 PC + 4를 계산합니다. 명령어가 4바이트라 다음 명령어는 4만큼 뒤에 있습니다. PC에는 쓰기 허용 신호가 없어 매 사이클 끝 에지마다 새 값이 들어갑니다.</p>
+  <h3>R-type</h3>
+  <p>add, sub, and, or, slt는 레지스터 파일과 ALU로 충분합니다. 명령어의 rs, rt 필드를 Read register 1, 2에 넣고, 읽은 두 값을 ALU에 넣습니다. ALU 제어선이 연산을 고르고, 결과를 Write data로, rd 필드를 Write register로 보내며 RegWrite = 1로 둡니다. Zero 출력은 쓰지 않습니다.</p>
+  <h3>lw와 sw</h3>
+  <p>R-type 부품에 부호 확장기와 데이터 메모리를 더합니다. ALU는 R[rs] + SignExt(imm16)을 계산하는 주소 계산기로 쓰이고, 그 결과가 데이터 메모리의 Address로 갑니다. lw는 MemRead = 1로 메모리를 읽어 그 값을 레지스터에 씁니다. sw는 Read data 2, 곧 R[rt]를 메모리의 Write data로 보내고 MemWrite = 1로 둡니다. 레지스터는 쓰지 않습니다. 데이터 메모리에는 읽기에도 MemRead 신호가 있습니다. 메모리를 읽지 않는 명령어에서도 ALU 결과가 주소 입력에 걸리는데, 그 값이 유효한 주소가 아닐 수 있어서입니다.</p>
+  <h3>beq</h3>
+  <p>beq는 두 계산을 같은 사이클에 해야 합니다. ALU는 R[rs] − R[rt]를 계산해 Zero를 냅니다. 이와 별도로 덧셈기 하나가 PC + 4 + (SignExt(imm16) &lt;&lt; 2)로 분기 목표 주소를 계산합니다. ALU가 하나뿐이면 두 계산을 동시에 할 수 없으니 덧셈기를 하나 더 둡니다. 2칸 밀기(shift left 2)는 게이트 없이 배선만으로 됩니다. 입력 비트 i를 출력 비트 i+2에 연결하고 아래 두 자리에 0을 넣습니다. 부호 확장도 배선입니다. 비트 15의 선을 갈라 위쪽 16자리에 연결합니다. 둘 다 지연이 거의 없습니다.</p>
+  <h3>MUX로 합치기</h3>
+  <p>조각을 한 그림으로 합치면, 어떤 입력에는 명령어에 따라 다른 값이 들어와야 합니다. 그런 입력 앞에 MUX를 둡니다.</p>
+  <table><thead><tr><th>MUX</th><th>0일 때</th><th>1일 때</th><th>필요한 이유</th></tr></thead><tbody>
+    <tr><td>ALUSrc</td><td>Read data 2</td><td>부호 확장된 imm16</td><td>ALU의 둘째 입력이 R-type은 레지스터, lw·sw는 오프셋</td></tr>
+    <tr><td>MemtoReg</td><td>ALU 결과</td><td>메모리 Read data</td><td>레지스터에 쓸 값이 R-type은 ALU 결과, lw는 메모리 값</td></tr>
+    <tr><td>PCSrc</td><td>PC + 4</td><td>분기 목표 주소</td><td>beq가 분기할 때만 목표 주소를 PC에 넣음</td></tr>
+  </tbody></table>
+  <p>명령어별 신호 값은 다음과 같습니다. X는 어느 값이든 결과가 같다는 뜻(don't care)입니다.</p>
+  <table><thead><tr><th>명령어</th><th>ALUSrc</th><th>MemtoReg</th><th>RegWrite</th><th>MemRead</th><th>MemWrite</th><th>다음 PC</th></tr></thead><tbody>
+    <tr><td>R-type</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>PC + 4</td></tr>
+    <tr><td>lw</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>PC + 4</td></tr>
+    <tr><td>sw</td><td>1</td><td>X</td><td>0</td><td>0</td><td>1</td><td>PC + 4</td></tr>
+    <tr><td>beq</td><td>0</td><td>X</td><td>0</td><td>0</td><td>0</td><td>Zero = 1이면 목표 주소</td></tr>
+  </tbody></table>
+  <p>sw와 beq는 RegWrite = 0이라 레지스터 파일이 Write data를 받아들이지 않습니다. 그래서 MemtoReg가 무엇을 고르든 상관없습니다.</p>
+  <h3>문제 3</h3>
+  <p>sw $s1, 12($s2)를 실행합니다. R[$s2] = 0x10000100, R[$s1] = 42입니다. 레지스터 파일의 두 읽기 번호, ALU 제어선과 ALU 결과, 위 표의 신호 값, 사이클 끝에 바뀌는 상태 소자를 모두 구하십시오.</p>
+  <p>sw는 I-type이라 rs = $s2, rt = $s1입니다. Read register 1에 $s2, Read register 2에 $s1이 들어가 Read data 1 = 0x10000100, Read data 2 = 42가 나옵니다. ALUSrc = 1이라 ALU의 둘째 입력은 SignExt(12) = 0x0000000C입니다. 주소를 만드는 덧셈이니 ALU 제어선은 0010이고, 결과는 0x1000010C입니다. 이 값이 데이터 메모리의 Address로 가고, Read data 2의 42가 Write data로 갑니다. 신호는 ALUSrc = 1, MemtoReg = X, RegWrite = 0, MemRead = 0, MemWrite = 1입니다. 사이클 끝 에지에서 바뀌는 상태 소자는 둘입니다. 메모리 0x1000010C번지에 42가 쓰이고, PC가 PC + 4가 됩니다. 레지스터 파일은 바뀌지 않습니다.</p>
+
+  <h2 id="s9">정리</h2>
+  <p>데이터패스는 조합 소자와 상태 소자로 만듭니다. 상태 소자를 플립플롭으로 만들고 클럭 에지에서만 갱신하면, 한 사이클 안에 같은 레지스터를 읽고 쓸 수 있습니다. 레지스터 파일은 읽기에 MUX를, 쓰기에 디코더와 RegWrite를 쓰고, ALU는 4비트 제어선으로 연산을 고르며 Zero 출력으로 beq를 돕습니다. 명령어 인출, R-type, lw·sw, beq 조각을 MUX 셋으로 합치면 단일 사이클 데이터패스가 됩니다. 아직 남은 일이 있습니다. 쓸 레지스터 번호가 R-type은 rd, lw는 rt라 Write register 앞에도 MUX(RegDst)가 하나 더 필요합니다. 그리고 이 MUX들의 선택 신호와 RegWrite, MemRead, MemWrite, ALU 제어선을 명령어의 op와 funct에서 만들어 낼 제어 장치가 있어야 합니다. 다음 글에서 그 제어 장치를 만듭니다.</p>
