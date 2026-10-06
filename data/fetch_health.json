@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-27T08:00:33+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://www.economist.com/leaders/2026/09/10/plunging-test-scores-are-a-slow-moving-catastrophe",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-27T16:00:46+09:00",
    "total": 17,
    "counts": {
@@ -1031,6 +1015,58 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34893",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-07T08:00:40+09:00",
+   "total": 23,
+   "counts": {
+    "dead": 1,
+    "github": 4,
+    "blocked": 7,
+    "ok": 11
+   },
+   "failures": [
+    {
+     "url": "https://mistral.ai/news/mistral-large-4/\\",
+     "source": "hackernews",
+     "reason": "dead"
+    },
+    {
+     "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/atlassian-partnership",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34909",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34908",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34907",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34906",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34905",
      "source": "geeknews",
      "reason": "blocked"
     }
