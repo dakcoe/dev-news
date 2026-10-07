@@ -47,3 +47,14 @@ def test_학습_노트에도_애드센스_코드가_있다(tmp_path):
     learn.build(str(docs), "https://x", str(src), today="2026-10-01")
     for p in [docs / "learn" / "index.html", docs / "learn" / "a" / "index.html"]:
         assert "ca-pub-9719970909376058" in p.read_text(encoding="utf-8")
+
+
+def test_원고를_지운_글의_페이지는_남지_않는다(tmp_path):
+    src = tmp_path / "src"; src.mkdir()
+    _write(src, "a", 1, "2026-10-01")
+    _write(src, "b", 2, "2026-10-01")
+    docs = tmp_path / "docs"
+    learn.build(str(docs), "https://x", str(src), today="2026-10-01")
+    (src / "b.html").unlink()
+    learn.build(str(docs), "https://x", str(src), today="2026-10-01")
+    assert (docs / "learn" / "a").exists() and not (docs / "learn" / "b").exists()

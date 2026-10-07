@@ -15,6 +15,7 @@ import html
 import json
 import os
 import re
+import shutil
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -183,5 +184,10 @@ def build(docs_dir: str, base: str, src: str = SRC, today: str | None = None) ->
             f.write(page)
     with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as f:
         f.write(_index(arts, base))
+    # 원고를 지운 글의 페이지도 지운다 — 남겨 두면 사이트맵에서만 빠지고 주소는 계속 열린다
+    live = {a["slug"] for a in arts}
+    for d in os.listdir(out):
+        if os.path.isdir(os.path.join(out, d)) and d not in live:
+            shutil.rmtree(os.path.join(out, d))
     print(f"[learn] 학습 노트 {len(arts)}편")
     return ["/learn/"] + [f'/learn/{a["slug"]}/' for a in arts]
