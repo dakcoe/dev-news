@@ -5,7 +5,7 @@
 한 쪽 제목이 두 단어뿐인 글. 2026-09 게재분에서 이런 쌍이 회차당 2~3개였다.
 
 두 단계다.
-  1. bge-m3 임베딩 코사인 유사도로 후보를 추린다 (제목·원제·요약 앞부분).
+  1. EmbeddingGemma 2 임베딩 코사인 유사도로 후보를 추린다 (제목·원제·요약 앞부분).
      ≥ AUTO 는 판정 없이 같은 기사로 본다.
   2. JUDGE ~ AUTO 구간만 Groq 의 qwen 에게 "같음/다름" 을 묻는다.
 
@@ -15,7 +15,21 @@
 벤치마크 의견")을 묶는 쪽이 더 나쁘다고 보고 오탐을 줄이는 쪽으로 맞췄다
 (gpt-oss-120b 는 이런 쌍을 묶어서 정밀도 0.63 이었다).
 
-임베딩 모델은 이 단계에서만 올리고 끝나면 내린다 (약 2GB).
+2026-10-07 임베딩 모델을 bge-m3 에서 EmbeddingGemma 2 로 바꿨다. 필터가 켜지기 전
+게재분(8/1~9/22)의 48시간 내 쌍 24만 개 중 485쌍을 판정해 비교했더니, 순위 품질(AP)이
+0.961 → 0.983 이었다. 이 모델은 유사도가 전체적으로 높게 나와서(무관한 쌍의 중앙값
+0.77, bge-m3 는 0.41) 기준값을 새로 정했다. AUTO 0.935 이상 155쌍은 전부 같은
+기사였다(0.926 으로 내리면 211쌍 중 3쌍이 틀렸다 — 여기서 빠진 기사는 seen 에 들어가
+다시 오지 않으므로 오탐 없는 쪽을 골랐다). JUDGE 0.88 아래로 내려간 같은 기사는
+판정분 297쌍 중 3쌍이다. 8월 판정분으로 정한 기준을 9월 판정분에 그대로 대도 들어맞았다.
+자료와 스크립트는 _workspace/embeddinggemma-2-eval/.
+
+프롬프트는 SentenceSimilarity 를 쓴다. 안 붙이거나 Clustering 을 붙이면 더 나빴다.
+float16 으로 돌리면 값이 넘쳐 NaN 이 되고, 설정 파일 기본값이 bfloat16 이라 float32 를
+직접 지정한다. 그림·소리 인코더는 쓰지 않으므로 올리지 않는다 (텍스트 부분 271M).
+transformers 5.18 이상, torchvision·pillow 가 있어야 불러올 수 있다.
+
+임베딩 모델은 이 단계에서만 올리고 끝나면 내린다 (float32 로 약 1.1GB).
 실패하면 아무것도 빼지 않는다. 여기서 빠진 기사는 seen 에 넣는다 (build.py).
 """
 from __future__ import annotations
@@ -23,10 +37,11 @@ from __future__ import annotations
 import gc
 from datetime import timedelta
 
-EMBED_MODEL = "BAAI/bge-m3"
+EMBED_MODEL = "google/embeddinggemma-2"
+EMBED_PROMPT = "SentenceSimilarity"
 JUDGE_MODEL = "qwen/qwen3.8-27b"   # Groq
-AUTO = 0.85
-JUDGE = 0.65
+AUTO = 0.935
+JUDGE = 0.88
 WINDOW_HOURS = 48
 # 기사 하나에 판정을 몇 번까지 묻나. 큰 발표가 있는 날은 비슷한 글이 열 건 넘게
 # 몰려서, 제한이 없으면 한 기사에 판정이 줄줄이 붙는다. 유사도 높은 순으로 묻는다.
@@ -65,11 +80,17 @@ def _text(a: dict) -> str:
 
 
 def _embed(texts: list[str]):
+    import torch
     from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBED_MODEL)
+    model = SentenceTransformer(EMBED_MODEL,
+                                config_kwargs={"vision_config": None, "audio_config": None},
+                                model_kwargs={"torch_dtype": torch.float32})
+    # 불러온 값에는 길이 상한이 비어 있어서, 넘치는 글도 자르지 않고 모델에 넘긴다.
+    # 지금 입력은 300토큰을 안 넘지만 모델 한도(8192)를 적어 둔다.
+    model.max_seq_length = 8192
     try:
-        return model.encode(texts, batch_size=32, normalize_embeddings=True,
-                            show_progress_bar=False).tolist()
+        return model.encode(texts, prompt_name=EMBED_PROMPT, batch_size=32,
+                            normalize_embeddings=True, show_progress_bar=False).tolist()
     finally:
         del model
         _free()
