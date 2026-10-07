@@ -69,3 +69,52 @@ def test_저장소_첫_화면의_브랜치_주소는_저장소_주소와_같다(
     assert normalize_url("https://github.com/o/kev/tree/main") == normalize_url("https://github.com/o/kev")
     # 하위 경로가 붙으면 다른 내용이다
     assert normalize_url("https://github.com/o/kev/tree/main/docs") != normalize_url("https://github.com/o/kev")
+
+
+_FEED = ("<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom'>"
+         + "".join(f"<entry><title>글 {i}</title><link rel='alternate' href='https://news.hada.io/topic?id={i}'/>"
+                   "<published>2026-10-07T22:42:53+09:00</published><content>c</content></entry>"
+                   for i in range(5))
+         + "</feed>")
+
+
+class _Status:
+    def __init__(self, code, text=""):
+        self.status_code, self.text = code, text
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            import requests
+            raise requests.HTTPError(f"{self.status_code} Client Error", response=self)
+
+
+def test_글_페이지가_막히면_나머지는_묻지_않고_건수를_남긴다(monkeypatch, capsys):
+    """2026-09-30부터 news.hada.io 글 페이지가 브라우저가 아닌 요청에 전부 403이다
+    (피드와 robots.txt 는 200). 그대로 두면 회차마다 30번 403을 받고 원문 주소는
+    조용히 사라진다. 첫 요청이 막히면 그만 묻고, 찾은 원문 수를 출처 건수로 남겨
+    연속 0건이면 출처 침묵 알림으로 드러나게 한다."""
+    calls = []
+
+    def get(url, **k):
+        calls.append(url)
+        return _Status(200, _FEED) if "/rss/" in url else _Status(403, "Forbidden")
+    monkeypatch.setattr(geeknews.http, "get", get)
+    counts: dict = {}
+    got = geeknews.fetch(limit=30, counts=counts)
+    assert len(got) == 5
+    assert counts == {"geeknews:원문": 0}
+    assert len([u for u in calls if "topic?id=" in u]) == 1
+    out = capsys.readouterr().out
+    assert "403" in out and "4건" in out
+
+
+def test_원문을_찾은_수를_센다(monkeypatch):
+    page = '<a class="topic-title-link" href="https://brand.io/a">t</a>'
+
+    def get(url, **k):
+        return _Status(200, _FEED if "/rss/" in url else page)
+    monkeypatch.setattr(geeknews.http, "get", get)
+    counts: dict = {}
+    got = geeknews.fetch(limit=30, counts=counts)
+    assert counts == {"geeknews:원문": 5}
+    assert all(a["origin_url"] == "https://brand.io/a" for a in got)

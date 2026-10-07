@@ -1,5 +1,5 @@
 from news.core import http
-from news.core.common import to_timestamp
+from news.core.common import published
 
 URL = "https://lobste.rs/hottest.json"
 
@@ -13,13 +13,12 @@ def fetch(limit: int = 25) -> list[dict]:
 
     articles = []
     for item in resp.json()[:limit]:
-        published_at = to_timestamp(item.get("created_at"))
         articles.append({
             "title": item.get("title", ""),
             "url": item.get("url") or item.get("comments_url", ""),
             "description": item.get("description_plain", "")[:500],
             "source": "lobsters", "upvotes": item.get("score", 0),
-            "comments": item.get("comment_count", 0), "published_at": published_at,
+            "comments": item.get("comment_count", 0), **published(item.get("created_at")),
             "discussion": item.get("comments_url", ""),   # 본문 대신 댓글을 넣을 때 쓴다
         })
     return articles

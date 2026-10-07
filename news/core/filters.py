@@ -175,10 +175,15 @@ def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] |
     """
     long_sources = long_sources or {}
     now = datetime.now(timezone.utc).timestamp()
-    kept = []
+    kept, unreadable = [], 0
     for a in articles:
         ts = a.get("published_at")
-        if ts is None:                      # 게시 시각을 모르는 출처(GitHub 트렌딩 등)는 통과
+        # 날짜 필드가 있었는데 못 읽은 것(common.published 가 표시)은 버린다.
+        # 통과시키면 날짜 형식이 바뀐 피드의 옛 글이 매 회차 새 글로 들어온다.
+        if ts is None and a.get("date_unparsed"):
+            unreadable += 1
+            continue
+        if ts is None:                      # 게시 시각이 원래 없는 출처(GitHub 트렌딩 등)는 통과
             kept.append(a)
             continue
         window = long_sources.get(a.get("source"), hours)
@@ -188,7 +193,9 @@ def recent_only(articles: list[dict], hours: int, long_sources: dict[str, int] |
             if float(ts) >= now - window * 3600:
                 kept.append(a)
         except Exception:
-            kept.append(a)
+            unreadable += 1
+    if unreadable:
+        print(f"[필터] 날짜를 못 읽은 {unreadable}건 제외")
     print(f"[필터] 최근 {hours}시간 내 {len(kept)}건")
     return kept
 

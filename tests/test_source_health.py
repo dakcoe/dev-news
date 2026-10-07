@@ -162,3 +162,67 @@ def test_휴재_정보가_없으면_예전처럼_판정한다():
     from news.core.source_health import silent
     hist = [_h(d, 0, name="rss:x", skip=None) for d in (22, 23, 24)]
     assert silent(hist) == ["rss:x"]
+
+
+# ── 기간 필터 뒤 건수 (옛 글만 돌려주는 피드) ──────────────────
+
+def test_기간_필터_뒤_건수를_같이_남긴다(tmp_path):
+    """수집 건수만 보면, 갱신이 멈춰 옛 글 8건만 계속 돌려주는 피드도 매 회차
+    8건이라 침묵으로 안 잡힌다. 기간 필터를 지난 건수를 따로 적는다."""
+    p = str(tmp_path / "h.json")
+    hist = record({"rss:x": 8}, "t0", path=p, recent={"rss:x": 0})
+    assert hist[-1] == {"at": "t0", "counts": {"rss:x": 8}, "recent": {"rss:x": 0}}
+    # recent 를 안 주면 예전 모양 그대로다 — 이 파일을 읽는 다른 코드가 counts 만 본다
+    assert record({"rss:x": 8}, "t1", path=p)[-1] == {"at": "t1", "counts": {"rss:x": 8}}
+
+
+def test_옛_글만_돌려주는_피드를_recent로_잡는다():
+    hist = [{"at": f"t{i}", "counts": {"rss:x": 8, "rss:y": 8},
+             "recent": {"rss:x": 0, "rss:y": 2}} for i in range(4)]
+    assert silent(hist, streak=3) == []                      # 수집 건수로는 멀쩡하다
+    assert silent(hist, streak=3, key="recent") == ["rss:x"]
+
+
+def test_recent가_없는_옛_회차는_판정에_넣지_않는다():
+    """기능이 생기기 전 회차에는 recent 가 없다. 그걸 0건으로 세면 배포 직후
+    모든 출처가 한꺼번에 침묵으로 잡힌다."""
+    old = [{"at": f"t{i}", "counts": {"rss:x": 8}} for i in range(5)]
+    new = [{"at": f"n{i}", "counts": {"rss:x": 8}, "recent": {"rss:x": 0}} for i in range(2)]
+    assert silent(old + new, streak=3, key="recent") == []
+    assert silent(old + new + new[:1], streak=3, key="recent") == ["rss:x"]
+
+
+def test_출처별_건수_키는_수집_건수와_같은_이름이다():
+    from news.core.source_health import count_by_source
+    arts = [{"source": "rss", "feed": "OpenAI"}, {"source": "rss", "feed": "OpenAI"},
+            {"source": "anthropic", "feed": "Claude 블로그"},
+            {"source": "github"}, {"source": "github", "feed": "Trendshift"},
+            {"source": "devto", "tag": "go"}, {"source": "hackernews"}]
+    assert count_by_source(arts) == {
+        "rss": 2, "rss:OpenAI": 2, "anthropic": 1, "anthropic:Claude 블로그": 1,
+        "github": 1, "trendshift": 1, "devto": 1, "devto:go": 1, "hackernews": 1}
+
+
+def test_recent에는_기사_수가_아닌_건수를_넣지_않는다():
+    """geeknews:원문 은 원문 주소를 찾은 수라 기간 필터 뒤 값이 없다. 0으로 적으면
+    매번 '옛 글만 온다'로 잡힌다. devto:태그 는 태그 사이 중복 제거 때문에 앞 태그
+    몫으로만 세여 뒤 태그가 거짓으로 0이 될 수 있다."""
+    from news.core.source_health import recent_counts
+    counts = {"geeknews": 30, "geeknews:원문": 0, "rss": 8, "rss:x": 8, "devto": 10, "devto:go": 10}
+    assert recent_counts([{"source": "rss", "feed": "x"}], counts) == {
+        "geeknews": 0, "rss": 1, "rss:x": 1, "devto": 0}
+
+
+def test_check_source_silence가_옛_글만_주는_피드를_알린다(tmp_path, monkeypatch):
+    import build
+    from news.core import source_health as SH
+    p = str(tmp_path / "h.json")
+    monkeypatch.setattr(SH, "DEFAULT_PATH", p)
+    real = SH.record
+    monkeypatch.setattr(SH, "record", lambda *a, **k: real(*a, **{**k, "path": p}))
+    cfg = {"alert": {"silent_streak": 3, "stale_streak": 2}}
+    for i in range(2):
+        quiet = build.check_source_silence({"rss:x": 8, "rss:y": 0}, cfg, f"t{i}",
+                                           recent={"rss:x": 0, "rss:y": 0})
+    # rss:y 는 수집 자체가 0건이라 아직 3회차가 안 됐다. rss:x 만 옛 글 판정
+    assert quiet == ["rss:x(기간 내 0건)"]

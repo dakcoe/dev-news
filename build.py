@@ -105,21 +105,25 @@ def run_scrapers(cfg: dict, counts: dict[str, int] | None = None,
         tasks["github"] = lambda: github.fetch()
     if src.get("trendshift", True):
         tasks["trendshift"] = lambda: trendshift.fetch()   # source=github, feed=Trendshift
+    # per_source 는 선별 상한(한 출처 최대 5건)이다. 수집 개수로 읽으면 후보가 5건뿐이라
+    # 선별이 고를 게 없다 — lobsters·geeknews 가 그렇게 5건씩만 받고 있었다.
+    fetch_n = s.get("per_source_fetch", 30)
     if src.get("lobsters", True):
-        tasks["lobsters"] = lambda: lobsters.fetch(limit=s.get("per_source", 30))
+        tasks["lobsters"] = lambda: lobsters.fetch(limit=fetch_n)
     if src.get("devto", True):
-        tasks["devto"] = lambda: devto.fetch(tags=s.get("devto_tags"))
+        tasks["devto"] = lambda: devto.fetch(tags=s.get("devto_tags"), counts=counts)
     if src.get("reddit", False):
         tasks["reddit"] = lambda: reddit.fetch(subreddits=s.get("subreddits"))
     if src.get("geeknews", True):
-        tasks["geeknews"] = lambda: geeknews.fetch(limit=s.get("per_source", 30))
+        tasks["geeknews"] = lambda: geeknews.fetch(limit=fetch_n, counts=counts)
     if src.get("rss", True):
         # counts를 넘겨 피드별 건수를 남긴다. 합계만 기록하면 피드 하나가 죽어도
         # rss 총계가 0이 아니라 출처 침묵 경고가 영영 안 뛴다.
         tasks["rss"] = lambda: rss.fetch(cfg.get("feeds"), per_feed=s.get("per_feed", 8),
                                          counts=counts, skip_days=skip_days)
     if src.get("anthropic", True):
-        tasks["anthropic"] = lambda: anthropic.fetch(limit=s.get("per_feed", 8))
+        # rss 와 같은 이유로 하위 수집원(뉴스·엔지니어링·Claude 블로그·개발자 블로그)별로 센다
+        tasks["anthropic"] = lambda: anthropic.fetch(limit=s.get("per_feed", 8), counts=counts)
 
     articles: list[dict] = []
     with ThreadPoolExecutor(max_workers=6) as pool:
@@ -213,18 +217,27 @@ def _gate_settings(cfg: dict) -> tuple[int, bool, int, int | None]:
 
 
 def check_source_silence(counts: dict[str, int], cfg: dict, when: str,
-                         skip_days: dict[str, list[int]] | None = None) -> list[str]:
+                         skip_days: dict[str, list[int]] | None = None,
+                         recent: dict[str, int] | None = None) -> list[str]:
     """출처별 건수를 기록하고 연속 0건인 출처를 돌려준다 (add-source-silence-alert).
 
     휴재 요일을 밝힌 출처는 그 요일 회차를 세지 않는다 — arXiv는 주말에 항목이
     없는 껍데기를 주므로, 그걸 모르면 매주 토·일에 죽은 출처로 잡힌다.
+
+    recent(기간 필터 뒤 건수)를 주면 옛 글만 계속 돌려주는 출처도 함께 돌려준다.
+    알림 문구가 '연속 0건인 출처'라 이름 뒤에 '(기간 내 0건)'을 붙여 구분한다.
     """
-    streak = cfg.get("alert", {}).get("silent_streak", source_health.DEFAULT_STREAK)
-    history = source_health.record(counts, when, skip_days=skip_days)
+    alert = cfg.get("alert", {})
+    streak = alert.get("silent_streak", source_health.DEFAULT_STREAK)
+    history = source_health.record(counts, when, skip_days=skip_days, recent=recent)
     quiet = source_health.silent(history, streak)
     if quiet:
         print(f"[알림] {streak}회차 연속 0건 출처: {', '.join(quiet)}")
-    return quiet
+    stale_streak = alert.get("stale_streak", source_health.DEFAULT_STALE_STREAK)
+    old_only = [n for n in source_health.stale(history, stale_streak) if n not in quiet]
+    if old_only:
+        print(f"[알림] {stale_streak}회차 연속 기간 내 0건 출처(옛 글만 옴): {', '.join(old_only)}")
+    return quiet + [f"{n}(기간 내 0건)" for n in old_only]
 
 
 # 수집·선별·요약·출력의 실패 지점을 따로 확인하려고 main의 단계를 나눴다 (split-main).
@@ -237,9 +250,12 @@ def collect_candidates(cfg: dict, when: str = "") -> tuple[list[dict], list[str]
     counts: dict[str, int] = {}
     skip_days: dict[str, list[int]] = {}
     raw = run_scrapers(cfg, counts, skip_days)
-    quiet = check_source_silence(counts, cfg, when, skip_days)
     articles = keyword_filter(raw, cfg.get("keywords", []), cfg.get("block_keywords"))
     articles = recent_only(articles, sc.get("window_hours", 48), cfg.get("long_window", {}))
+    # 수집 건수만 기록하면 옛 글만 계속 돌려주는 피드가 매 회차 8건으로 보인다.
+    # 기간 필터 뒤 건수도 같이 남긴다. 중복 제거 전에 세야 출처별 몫이 그대로다.
+    quiet = check_source_silence(counts, cfg, when, skip_days,
+                                 recent=source_health.recent_counts(articles, counts))
     articles = merge_duplicates(articles)
     # 남의 글에 박힌 토큰이 candidates 로그·아카이브에 실려 push되면 GitHub Push
     # Protection이 push를 거부해 회차 전체가 죽는다 (run 31510062957)
