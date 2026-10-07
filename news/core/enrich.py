@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 from news.api_health import _error_kind, classify
 from news.core import http
-from news.core.fetch_health import reason_of, record
+from news.core.fetch_health import BLOCKED_CODES, reason_of, record
 
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
@@ -105,6 +105,12 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None
 
     status = classify(resp.status_code, None)
     if status != "ok":
+        return None, None, status, resp.status_code
+    # 링크 판정으로는 403·429도 살아 있는 기사지만, 그때 받은 HTML은 기사가 아니라
+    # 차단·로그인·쿠키 동의 화면이다. 그 글자를 본문으로 넘기면 요약이 차단 문구를
+    # 요약하고, 게재 기준이 '기술 밖'으로 판정하면 seen 에 들어가 영영 안 돌아온다.
+    # 본문은 비워 두고 댓글 보충(fill_from_discussion)이나 설명에 맡긴다.
+    if resp.status_code in BLOCKED_CODES:
         return None, None, status, resp.status_code
 
     # HTML이 아니면 본문 추출 대상이 아니다. 전에는 PDF·이미지도 그대로

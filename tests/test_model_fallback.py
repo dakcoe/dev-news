@@ -247,3 +247,56 @@ def test_모델을_바꾸면_재생성_기회도_새로_준다(monkeypatch):
     body = src[src.index("def summarize_all("):]
     for m in re.finditer(r"model = chain\.pop\(0\)(.{0,200})", body, re.S):
         assert "attempt = 0" in m.group(1), "모델 교체 후 attempt를 되돌리지 않는다"
+
+
+# ---------------- 429 가 아닌 장애 (2026-10-07 리뷰) ----------------
+
+def stub_errors(monkeypatch, broken: set[str], exc=RuntimeError("HTTP 503: 서버 장애")):
+    """broken 에 든 모델은 늘 exc 를 낸다. 호출된 모델을 순서대로 모은다."""
+    seen = []
+
+    def fake_call(prompt, provider, model, api_key):
+        seen.append(model)
+        if model in broken:
+            raise exc
+        return "번역제목: 한국어 제목\n요약: 요약 문장이다.\n왜중요: 중요한 이유다."
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setattr(S.time, "sleep", lambda *a: None)
+    return seen
+
+
+def test_서버_장애가_이어지면_예비_모델로_간다(monkeypatch):
+    seen = stub_errors(monkeypatch, broken={"주-모델"})
+    out = S.summarize_all(ARTICLES, model="주-모델", pause=0, max_calls=50,
+                          fallback_models=["예비-1"])
+    # 앞의 두 건은 장애를 확인하는 데 쓰이고, 나머지는 예비 모델이 요약한다
+    assert [a["llm_done"] for a in out] == [False, False, True, True]
+    assert seen.count("주-모델") == 6 and "예비-1" in seen
+
+
+def test_예비도_없으면_장애로_멈추고_더_부르지_않는다(monkeypatch, capsys):
+    seen = stub_errors(monkeypatch, broken={"주-모델"})
+    out = S.summarize_all(ARTICLES, model="주-모델", pause=0, max_calls=50,
+                          fallback_models=[])
+    assert not any(a["llm_done"] for a in out)
+    assert len(seen) == 6, "장애를 확인한 뒤에는 남은 기사에 호출을 쓰지 않는다"
+    assert "[장애]" in capsys.readouterr().out
+
+
+def test_인증이_실패하면_첫_호출에서_멈춘다(monkeypatch, capsys):
+    seen = stub_errors(monkeypatch, broken={"주-모델", "예비-1"},
+                       exc=S.AuthFailed("HTTP 401: invalid api key"))
+    out = S.summarize_all(ARTICLES, model="주-모델", pause=0, max_calls=50,
+                          fallback_models=["예비-1"])
+    assert not any(a["llm_done"] for a in out)
+    assert seen == ["주-모델"]
+    assert "[인증 실패]" in capsys.readouterr().out
+
+
+def test_호출_수를_stats_에_적는다(monkeypatch):
+    stub_errors(monkeypatch, broken=set())
+    stats = {}
+    S.summarize_all(ARTICLES[:2], model="주-모델", pause=0, max_calls=50,
+                    fallback_models=[], stats=stats)
+    assert stats["calls"] >= 2

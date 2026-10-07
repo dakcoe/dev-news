@@ -280,7 +280,10 @@ def drop_self_declared_irrelevant(articles: list[dict]) -> tuple[list[dict], lis
     kept, dropped = [], []
     for a in articles:
         why = re.sub(r"\s+", " ", a.get("why") or "")
-        (dropped if why and _SELF_IRRELEVANT.search(why) else kept).append(a)
+        # 보호 목록(교차 출처·HN 고득표·지정 출처)은 drop_irrelevant 와 같이 건드리지
+        # 않는다. 여기서 빠지면 seen 에 들어가 다시 오지 않는다.
+        hit = why and _SELF_IRRELEVANT.search(why) and not protected(a)
+        (dropped if hit else kept).append(a)
     if dropped:
         print(f"[요약자평] 무관 선언 {len(dropped)}건 게재 제외")
         for a in dropped:

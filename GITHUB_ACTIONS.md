@@ -120,16 +120,20 @@ Re-run은 그 실행 시점의 커밋을 체크아웃해 돈다. 그 사이 다�
 
 ## 4. 커밋 방식
 
-워크플로는 `docs/`와 `data/`만 스테이징한다.
+`scripts/publish.sh`는 `docs/`와 `data/`만 스테이징한다.
 
 ```
 git add -A docs data
-git commit -m "뉴스 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+git commit -m "뉴스 갱신 YYYY-MM-DD HH:MM"
+git fetch origin main
+# 원격이 앞서 있으면: scripts/merge_remote_data.py 로 seen·기사 샤드를 합집합으로 합쳐 커밋
 git pull --rebase -X theirs origin main
 git push origin main
 ```
 
-- 변경이 없으면 커밋을 건너뛴다.
+- 변경이 없으면 커밋을 건너뛴다. 커밋 자체가 실패하면(.git/index.lock 등) 🔴 알림을 열고 멈춘다.
+- push 가 거부되면 그 커밋을 `push-failed/날짜-시각` 브랜치에 남기고 로컬을 `origin/main`으로 되돌린다. 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
+- 회차가 도는 동안 `~/.cache/dev-news-publish.lock`에 잠금을 건다. `scripts/rerender.sh`는 잠금이 있으면 멈춘다 — 회차 도중 푸시하면 회차의 마지막 rebase 가 옛 템플릿 렌더로 덮는다.
 - `pull --rebase -X theirs`는 충돌 시 방금 만든 데이터를 남긴다. 그래서 `fetch-depth: 0`으로 전체 이력을 받는다. 얕은 체크아웃이면 공통 조상을 못 찾아 rebase가 실패한다.
 - 커밋 작성자는 수집 기계의 git 설정을 따른다(`git config user.name / user.email`). 자기 계정 이메일이면 기여 그래프에 찍힌다. 비상용 `daily.yml`은 `github-actions[bot]`으로 남긴다.
 
@@ -137,7 +141,7 @@ git push origin main
 
 ## 5. 알림
 
-워크플로는 GitHub 이슈로 알린다. 같은 제목의 열린 이슈가 있으면 댓글로 붙이고, 없으면 새로 연다.
+`scripts/publish.sh`가 `scripts/notify.sh`로 GitHub 이슈를 연다. 같은 제목의 열린 이슈가 있으면 댓글로 붙이고, 없으면 새로 연다.
 연속 실패가 이슈 하나의 타임라인이 되고, 고쳐서 닫으면 다음 실패에 새로 열린다.
 
 | 이슈 | 조건 | 뜻 |
@@ -145,6 +149,9 @@ git push origin main
 | 🔴 뉴스 수집 실패 | 어느 스텝이든 exit 1 | 수집·요약·커밋 중 하나가 깨졌다 |
 | 🟡 게시 건수 급감 | 성공했지만 게시가 `alert.min_published`(기본 10건) 미만 | 요약 한도, 후보 고갈, 필터 과잉 등 조용한 열화 |
 | 🟡 출처 침묵 | 켜진 출처가 `alert.silent_streak`(기본 3회차) 연속 0건 | HTML 파싱 출처의 화면 변경, 차단, 피드 주소 변경 |
+| 🟡 같은 사건 거르기 이상 | 임베딩 모델을 못 올렸거나 판정 모델이 실패 | 그 회차는 중복이 덜 걸러진 채 실린다 |
+
+알림 자체가 실패하면(gh 인증 만료 등) `logs/publish.log`에 `[알림 실패]` 줄이 남는다.
 
 임계값은 `config.yaml`의 `alert` 항목으로 바꾼다. 출처별 건수 이력은 `data/source_health.json`에 남는다.
 
@@ -159,7 +166,7 @@ remote: error: GH013: Repository rule violations found for refs/heads/main.
 remote: - Push cannot contain secrets
 ```
 
-기사 본문에 남의 API 토큰(Hugging Face `hf_…`, OpenAI `sk-…` 등)이 섞여 GitHub Push Protection에 걸린 것이다. 그 회차 수집분은 통째로 유실된다.
+기사 본문에 남의 API 토큰(Hugging Face `hf_…`, OpenAI `sk-…` 등)이 섞여 GitHub Push Protection에 걸린 것이다. 거부된 커밋은 수집 기계의 `push-failed/…` 브랜치에 남고 로컬은 원격 상태로 돌아간다. 그 회차 기사는 seen 에 안 남았으므로 다음 회차가 다시 수집한다.
 
 **unblock URL로 허용하지 않는다.** `news/core/redact.py`에 해당 토큰 형식의 패턴을 추가해 마스킹한다.
 테스트나 문서에 토큰처럼 보이는 문자열을 직접 쓰면 그 파일도 차단되므로 `"hf_" + "K" * 37`처럼 런타임에 조합한다.
@@ -174,7 +181,8 @@ Workflow permissions가 Read only다. 1-4를 확인한다.
 
 | 오류 | 원인 | 조치 |
 |---|---|---|
-| `HTTP 401` | 키가 없거나 폐기됨 | 시크릿을 다시 등록한다 |
+| `인증 실패` · `HTTP 401` | 키가 없거나 폐기됨. 첫 호출에서 회차의 요약을 멈춘다(`[인증 실패]`) | `.env`의 키를 바꾼다 |
+| `HTTP 5xx` · 타임아웃 | Groq 장애. 두 건 연속이면 예비 모델로 바꾸고, 예비도 없으면 멈춘다(`[장애]`) | 다음 회차에 자동 회수된다 |
 | `HTTP 429` | 무료 한도 초과 | 다음 회차에 자동 회수된다. 계속되면 `llm.pause_seconds`를 늘리거나 `max_calls_per_run`을 줄인다 |
 | `model_decommissioned` | Groq가 모델을 폐기 | https://console.groq.com/docs/models 에서 현재 ID를 찾아 `LLM_MODEL` 변수에 넣는다 |
 
@@ -219,4 +227,4 @@ curl -L -H "Authorization: Bearer <토큰>" \
 - `daily.yml`에 `schedule:`을 다시 넣지 않는다. 기계 쪽과 겹쳐 회차가 두 배가 된다.
 - 새 시크릿을 쓰면 `수집 · 요약 · 페이지 생성` 스텝의 `env`에 추가해야 `build.py`가 읽는다.
 - `git add -A docs data` 범위를 넓히면 `.env`나 캐시가 커밋될 수 있다. `.gitignore`를 같이 확인한다.
-- 알림 문구는 `scripts/notify.sh`가 아니라 워크플로의 `실패 알림` · `열화 알림` 스텝에 있다.
+- 운영 알림 문구는 `scripts/publish.sh`에 있다. `scripts/notify.sh`는 이슈를 열고 댓글을 다는 일만 한다. 비상용 `daily.yml`은 같은 내용을 자기 스텝에 따로 갖고 있다.

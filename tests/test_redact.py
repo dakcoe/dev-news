@@ -143,13 +143,9 @@ def test_pipeline_wiring():
     assert src.count("redact_articles(") == 3
 
     collect = src.index('redact_articles(articles, "수집")')
-    # 댓글로 메운 본문도 마스킹을 거쳐야 한다 — enrich 와 redact 사이에 들어간다
-    body = src.index('redact_articles(fill_from_discussion(enrich(picked)), "본문")')
-    summary = src.index('redact_articles(picked, "요약")')
-
     assert collect < src.index("candidates.log(")      # 후보 로그 전에 마스킹
-    assert body < src.index("summarize_all(")          # LLM 전송 전에 마스킹
-    assert summary < src.index("archive.append(")      # 아카이브 기록 전에 마스킹
+    # 본문(LLM 전송 전)·요약(저장 전) 마스킹은 문자열 위치가 아니라 실제로 돌려서
+    # 본다 — tests/test_build_flow.py 의 마스킹 테스트
 
 
 # ---------------- 2026-09-15 보강분 ----------------

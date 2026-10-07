@@ -87,3 +87,20 @@ def test_empty_rows(tmp_path):
     path = str(tmp_path / "fetch_health.json")
     record([], path=path)
     assert load(path)["runs"][-1]["counts"] == {}
+
+
+def test_차단_응답의_HTML은_본문으로_쓰지_않는다(monkeypatch):
+    """403 쿠키·차단 화면 글자가 usable_content 를 통과해 요약되던 문제 (2026-10-07 리뷰)."""
+    from news.core import enrich, http
+
+    class Resp:
+        status_code = 403
+        url = "https://example.com/a"
+        headers = {"content-type": "text/html"}
+        content = ("<html><body><p>" + "Please enable cookies to continue. " * 20
+                   + "</p></body></html>").encode()
+
+    monkeypatch.setattr(http, "get_capped", lambda url, timeout=15: Resp())
+    content, image, status, code = enrich._fetch_one("https://example.com/a")
+    assert content is None and status == "ok" and code == 403
+    assert reason_of(status, code, content) == "blocked"

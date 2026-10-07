@@ -23,7 +23,7 @@ DEFAULT_PATH = os.path.join(ROOT, "data", "fetch_health.json")
 MAX_RUNS = 30
 
 # 봇 차단으로 보는 응답 코드. 게재 판단에는 ok지만 진단할 때는 구분돼야 한다.
-_BLOCKED_CODES = {401, 403, 429}
+BLOCKED_CODES = {401, 403, 429}
 
 
 def reason_of(status: str | None, code: int | None,
@@ -39,7 +39,7 @@ def reason_of(status: str | None, code: int | None,
         return "dead"
     if status == "unknown":
         return "unavailable"
-    if code in _BLOCKED_CODES:
+    if code in BLOCKED_CODES:
         return "blocked"
     if not content:
         return "empty"           # 200인데 추출 실패 (SPA·페이월)

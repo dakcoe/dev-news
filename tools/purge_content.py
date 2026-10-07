@@ -4,8 +4,8 @@
 archive.append()가 앞으로는 content를 저장하지 않지만, 이미 쌓인 것은 남아 있다.
 이번 달 샤드는 가변이라 "지난 달 샤드 불변" 원칙에 걸리지 않는다.
 
-  python scripts/purge_content.py           # 미리보기
-  python scripts/purge_content.py --apply   # 실제 적용
+  python tools/purge_content.py           # 미리보기
+  python tools/purge_content.py --apply   # 실제 적용
 """
 from __future__ import annotations
 

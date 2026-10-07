@@ -9,8 +9,8 @@
 (data-fd)이나 문서 안 표 조각(ag-ai-n)까지 기능으로 잡힌다. 목록은 폴더에서
 가져오고, 코드에서는 그 슬러그만 찾는다.
 
-    python scripts/graph.py          기능별 구성 파일
-    python scripts/graph.py --gaps   끊긴 자리만
+    python tools/graph.py          기능별 구성 파일
+    python tools/graph.py --gaps   끊긴 자리만
 
 끊긴 자리:
   코드 없음   — 폴더는 있는데 코드 어디에도 슬러그가 없다. 지운 기능이거나,

@@ -7,7 +7,7 @@
 않으므로 성공 = 외국 문자 없음 보장),
 실패한 기사는 원문 유지 후 로그로 보고한다.
 
-  python scripts/fix_hanja.py
+  python tools/fix_hanja.py
 
 교체 후에는 태그·인덱스·docs를 retag 플로우로 재생성한다
 (ko_title/summary가 바뀌면 태그 매칭 결과도 달라질 수 있다).
@@ -53,7 +53,7 @@ def main() -> int:
 
     print(f"[fix-hanja] {total_dirty}건 중 {total_fixed}건 정화")
     if total_fixed:
-        import retag                                   # 같은 scripts/ 디렉터리
+        import retag                                   # 같은 tools/ 디렉터리
         retag.main()                                   # 재태깅 + 인덱스 + 렌더 + docs 동기화
     return 0
 

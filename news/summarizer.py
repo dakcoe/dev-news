@@ -298,6 +298,10 @@ class ModelGone(Exception):
     """
 
 
+class AuthFailed(Exception):
+    """401·403. 키가 만료됐거나 권한이 없다 — 같은 공급자의 어느 모델로 바꿔도 같다."""
+
+
 class RateLimited(Exception):
     """429. 서버가 알려준 대기 시간을 담는다."""
 
@@ -349,6 +353,8 @@ def _call_openai_compatible(prompt: str, model: str, api_key: str, url: str) -> 
         raise RateLimited(_retry_after(resp))
     if resp.status_code == 404 and "model_not_found" in resp.text:
         raise ModelGone(model)
+    if resp.status_code in (401, 403):
+        raise AuthFailed(f"HTTP {resp.status_code}: {resp.text[:200]}")
     if resp.status_code >= 400:
         raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:300]}")
     data = resp.json()
@@ -420,6 +426,10 @@ def _call_why(candidate: dict, article: dict, body: str, provider: str,
 # ---------------------------------------------------------------- public
 MAX_429_RETRIES = 2     # 429 재시도 상한 — 넘으면 다음 모델로, 다 떨어지면 서킷 브레이커
 MAX_RETRY_WAIT = 90     # Retry-After가 이보다 길면 기다리지 않고 바로 포기
+# 429 가 아닌 오류(5xx·타임아웃)로만 실패한 기사가 이만큼 이어지면 그 모델이 장애다.
+# 예비 모델로 바꾸고, 예비가 없으면 서킷 브레이커를 연다. 전에는 장애 중에도 기사마다
+# 3번씩 부르고(타임아웃 90초) 로그에는 '한도 도달'로 남았다.
+OUTAGE_STREAK = 2
 
 # 모델 사다리. 하나의 계층이고, 용도마다 들어가는 칸이 다를 뿐이다.
 #
@@ -495,8 +505,12 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                   max_calls: int = 50, stop_after: int | None = None,
                   why_model: str | None = None,
                   fallback_models: list[str] | None = None,
-                  why_fallback_models: list[str] | None = None) -> list[dict]:
+                  why_fallback_models: list[str] | None = None,
+                  stats: dict | None = None) -> list[dict]:
     """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
+
+    stats에 dict를 넘기면 실제로 보낸 호출 수를 `calls`에 적어 준다. 실패한 호출도
+    센다 — 한 회차에 요약을 두 번 나눠 부를 때 예산을 이어 쓰는 데 쓴다.
 
     stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
     무관 판정 때문에 후보를 여유 있게 받았을 때, 무관이 없는 회차의 호출 수가
@@ -534,6 +548,8 @@ def summarize_all(articles: list[dict], provider: str | None = None,
 
     calls = 0
     exhausted = False        # 서킷 브레이커 — 열리면 이후 호출을 시도조차 하지 않는다
+    stop_reason = "한도"     # 서킷 브레이커가 열린 이유 — 로그에 그대로 쓴다
+    fail_streak = 0          # 429 외 오류로만 실패한 기사가 연달아 몇 건인가
     why_off = False          # 왜중요 모델이 한도에 걸리면 이번 회차는 더 부르지 않는다
     limited: set[str] = set()   # 이번 회차에 한도(429)로 버린 모델. 다른 쪽도 여기로는 안 간다
     out = []
@@ -553,6 +569,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
         parsed = None
         retries_429 = 0
         attempt = 0
+        errors = 0               # 이 기사에서 429 외 오류로 끝난 시도 수
         while attempt < 3:
             if calls >= max_calls:
                 exhausted = True
@@ -676,17 +693,37 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                     break
                 print(f"  · 한도(429) — {e.wait:.0f}초 대기 후 재시도 {retries_429}/{MAX_429_RETRIES}")
                 time.sleep(e.wait + 1)
+            except AuthFailed as e:
+                print(f"  · 인증 실패 — 키를 확인해야 한다: {e}")
+                exhausted, stop_reason = True, "인증 실패"
+                break
             except Exception as e:
                 print(f"  · 오류({attempt + 1}/3): {e}")
                 attempt += 1
+                errors += 1
                 time.sleep(4 * attempt)
+
+        if parsed is not None:
+            fail_streak = 0
+        elif not exhausted and errors >= 3:
+            fail_streak += 1
+            if fail_streak >= OUTAGE_STREAK:
+                limited.add(model)
+                nxt = _next_free(chain, limited)
+                if nxt:
+                    print(f"  · {model} 연속 오류 {fail_streak}건 — 예비 모델 {nxt}로 교체")
+                    model, fail_streak = nxt, 0
+                    why_model, why_off = _dodge_collision(model, why_model, why_chain,
+                                                          why_off, limited)
+                else:
+                    exhausted, stop_reason = True, "장애"
 
         if parsed is None:
             out.append({**article, "llm_done": False})
             if exhausted:
                 done = sum(1 for a in out if a.get("llm_done"))
                 remain = len(articles) - i + 1
-                print(f"[한도] 요약 {done}/{len(articles)}건 완료 후 한도 도달 — "
+                print(f"[{stop_reason}] 요약 {done}/{len(articles)}건 완료 후 {stop_reason}로 중단 — "
                       f"나머지 {remain}건은 이번 회차 미게시, 다음 실행에서 재탐지")
             else:
                 print(f"[{i}/{len(articles)}] 실패 · {article['title'][:45]}")
@@ -708,6 +745,8 @@ def summarize_all(articles: list[dict], provider: str | None = None,
         time.sleep(pause)          # 분당 토큰 제한(TPM) 여유를 둔다
 
     ok = sum(1 for a in out if a.get("llm_done"))
+    if stats is not None:
+        stats["calls"] = calls
     print(f"[summarizer] 성공 {ok}/{len(out)} · 호출 {calls}회")
     for m, t in sorted(TOKENS.items()):
         print(f"[토큰] {m} · 호출 {t['calls']}회 · 입력 {t['in']:,} + 출력 {t['out']:,}"

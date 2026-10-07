@@ -12,7 +12,8 @@
 ## 파이프라인
 
 ```
-수집 → 필터 → 점수화 → 중복 제거 → 본문 추출 → LLM 요약 → 태그 → 월별 저장 → docs/index.html
+수집 → 필터 → 점수화 → 중복 제거 → 선별(본선 20 + 예비 5) → 본문 추출 → LLM 요약
+    → 게재 기준 · 같은 사건 거르기 → (모자라면 예비 요약) → 태그 → 월별 저장 → docs/index.html
 ```
 
 | 단계 | 하는 일 | 코드 |
@@ -20,10 +21,13 @@
 | 수집 | HN · GitHub Trending · Lobste.rs · dev.to · 긱뉴스 · RSS · Anthropic | `news/scrapers/` |
 | 필터 | 닫힌 차단 목록(제목만 판정) · 발행 시간 창. 선별된 출처는 화이트리스트를 거치지 않는다 | `news/core/filters.py` |
 | 점수화 | 업보트·댓글·교차 출처·시간 감쇠. 화면에는 안 보이고 선별에만 쓴다 | `news/core/scorer.py` |
-| 중복 제거 | URL 정규화 + 제목 유사도, 한 번 실린 URL은 `seen.json`으로 영구 차단 | `news/core/dedup.py` · `seen.py` |
-| 선별 | 출처별 상한 · 예약석(quota) · 회차당 `top_n`건 | `news/core/select.py` |
-| 본문 추출 | trafilatura로 본문·OG 메타 추출 | `news/core/enrich.py` |
-| 요약 | Groq(기본) · OpenRouter · Gemini. 실행당 호출 예산 있음 | `news/summarizer.py` |
+| 중복 제거 | URL 정규화 + 제목 유사도. 실린 기사와 게재 기준·같은 사건·죽은 링크로 뺀 기사는 `seen.json`에 남아 다시 오지 않는다(요약 실패분은 남기지 않아 다음 회차에 재시도) | `news/core/dedup.py` · `seen.py` |
+| 선별 | 출처별 상한 · 예약석(quota)으로 `top_n`건(본선)과 여유 `overpick`건(예비)을 뽑는다 | `news/core/select.py` |
+| 본문 추출 | trafilatura로 본문·OG 메타 추출. 401·403·429 응답의 HTML은 본문으로 쓰지 않고 댓글로 메운다 | `news/core/enrich.py` · `discussion.py` |
+| 요약 | Groq(기본). 본선부터 요약한다. 429·장애·없는 모델이면 예비 모델로, 다 막히면 멈춘다. 실행당 호출 예산 있음 | `news/summarizer.py` |
+| 게재 기준 | 요약과 같이 받은 분류가 '기술 밖'이거나 요약이 스스로 무관하다고 쓴 기사를 뺀다. 보호 목록(교차 출처·HN 고득표)은 건드리지 않는다 | `news/core/filters.py` |
+| 같은 사건 | 다른 매체가 같은 소식을 쓴 기사를 최근 48시간 게재분과 비교해 뺀다. EmbeddingGemma 2 유사도 0.935 이상은 바로, 0.88~0.935는 Groq가 판정 | `news/core/similar.py` |
+| 보충 | 위 두 단계로 빠져 `top_n`에 모자라면 예비에서 그만큼 더 요약한다 | `build.py` `prepare_published` |
 | 태그 | 닫힌 어휘 20개, 규칙 매칭. LLM 자유 태그 없음 | `news/core/tags.py` |
 | 저장 | 월별 샤드 + 월별 검색 색인 + 후보 로그 | `news/core/archive.py` · `candidates.py` |
 | 렌더 | 템플릿 하나에 최근 30일 기사를 구워 넣는다. SEO 파일(sitemap·robots·llms.txt)도 여기서 | `news/render.py` · `template.html` |
@@ -50,8 +54,10 @@ data/
   seen.json             # 한 번 실린 URL. 기사를 지우면 여기서도 빼야 다시 올라온다
   candidates/YYYY-MM.json
   *_health.json         # 출처·본문 추출·API 링크 상태
-scripts/                # publish(수집·커밋·푸시) · 소급 태깅 · 요약 채점 · 회차 합치기 · 이슈 알림
-tests/                  # pytest
+scripts/                # 운영: publish(수집·커밋·푸시) · rerender(화면만) · notify(이슈 알림) · merge_remote_data(회차 합치기)
+tools/                  # 손으로 돌리는 일회성 도구: retag(소급 태깅) · fix_hanja · purge_content · graph
+eval/                   # 품질 평가: eval_summary(요약 채점) · same_story/(같은 사건 기준값의 판정 자료)
+tests/                  # pytest. test_build_flow·test_publish_flow 가 단계 연결과 배포 스크립트를 실제로 돌린다
 .github/workflows/
   daily.yml             # 수집 파이프라인 — 수동 실행 전용 (비상용)
   watchdog.yml          # 10시간 넘게 갱신 커밋이 없으면 이슈를 연다
@@ -90,7 +96,7 @@ Actions에서 수집을 돌리지 않는 이유는 둘이다. 러너의 IP를 �
 ## 개발
 
 ```bash
-python -m pytest -q      # 500여 건. 1초 안에 끝난다
+python -m pytest -q      # 750여 건. 몇 초 안에 끝난다
 ```
 
 수집·요약을 건드렸으면 `python build.py --no-ai`로 실제 출처까지 한 번 돌려 본다.

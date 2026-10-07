@@ -175,7 +175,8 @@ def apply_star_delta(articles: list[dict], today: str) -> dict[str, dict]:
 
 
 def emit_actions_output(published: int, min_published: int,
-                        silent: list[str] | None = None) -> bool:
+                        silent: list[str] | None = None,
+                        warnings: list[str] | None = None) -> bool:
     """게시 결과를 Actions 출력으로 내보낸다. 반환값은 '열화'로 판정했는지 여부.
 
     실패 알림(`if: failure()`)은 exit 1일 때만 뛴다. 그런데 이 파이프라인엔 성공으로
@@ -194,6 +195,8 @@ def emit_actions_output(published: int, min_published: int,
             f.write(f"published={published}\n")
             f.write(f"degraded={'true' if degraded else 'false'}\n")
             f.write(f"silent={','.join(silent or [])}\n")
+            # 한 줄에 담아야 셸의 val() 이 읽는다
+            f.write(f"warn={' / '.join(warnings or [])}\n")
     if degraded:
         print(f"[알림] 게시 {published}건 — 임계 {min_published}건 미만이라 열화로 보고합니다")
     return degraded
@@ -270,11 +273,47 @@ def select_articles(articles: list[dict], cfg: dict, now, today: str) -> list[di
     return picked
 
 
+def _filter_summarized(arts: list[dict], gate_on: bool, recent: list[dict],
+                       same_story: bool = True) -> tuple[list[dict], list[dict]]:
+    """요약을 받은 뒤의 제외 단계를 한꺼번에 태운다. (남길 것, 뺀 것)을 돌려준다.
+
+    요약을 못 받은 기사(llm_done=False)는 남길 것에도 뺀 것에도 넣지 않는다 —
+    seen 에 안 들어가야 다음 회차에 다시 후보가 된다 (SPEC 1.6).
+    """
+    arts = redact_articles(arts, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
+    arts, irrelevant = drop_irrelevant(arts) if gate_on else (arts, [])
+    # 요약이 스스로 '개발자 업무와 무관'이라고 말한 기사. 추가 호출이 없어
+    # 분류 게이트와 별개로 항상 켠다.
+    arts, self_irrelevant = drop_self_declared_irrelevant(arts)
+    ready = [a for a in arts if a.get("llm_done")]
+    # 주소·제목으로 못 잡은 같은 사건을 요약까지 본 뒤 거른다. 빠진 것은 seen 에
+    # 넣는다 — 안 넣으면 회차마다 다시 뽑혀 요약을 또 받고, 원본이 48시간 창을
+    # 벗어나면 그대로 실린다.
+    same: list[dict] = []
+    if same_story:
+        from news.core.similar import drop_same_story
+        ready, same = drop_same_story(ready, recent)
+    return ready, irrelevant + self_irrelevant + same
+
+
 def prepare_published(picked: list[dict], cfg: dict,
                       no_ai: bool) -> tuple[list[dict], list[dict], list[dict]]:
-    """본문·요약·태깅. (게재분, 무관 제외분, 죽은 링크 제외분)을 돌려준다."""
+    """본문·요약·태깅. (게재분, 무관 제외분, 죽은 링크 제외분)을 돌려준다.
+
+    게재 기준이 켜져 있으면 후보를 top_n + overpick 만큼 받아 온다. 요약은 그중
+    예약석 규칙으로 고른 top_n 건(본선)부터 받고, 제외 단계를 다 거친 뒤 모자란
+    만큼만 나머지(예비)에서 더 요약한다.
+
+    전에는 점수순으로 요약하다 게재 가능분이 top_n 에 닿으면 멈추고, 같은 사건·
+    무관 선언 제외는 그 뒤에 했다. 그러면 뺀 자리를 메울 요약분이 없어서 9/17~10/7
+    62회차가 한 번도 20건을 채우지 못했다(평균 17.1건). 점수가 낮은 github 는
+    요약 순서 맨 뒤라 먼저 잘려 예약석 5칸이 59회차에서 비었다.
+    """
     sc = cfg.get("scraper", {})
     top_n, gate_on, _, per_feed_page = _gate_settings(cfg)
+    pick_rules = dict(quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page,
+                      quota_backfill=cfg.get("quota_backfill", {}),
+                      quota_backfill_max=cfg.get("quota_backfill_max", {}))
 
     # 본문은 여기서 처음 들어온다. 요약 요청 전에 지워야 남의 토큰이 LLM
     # 공급자에게 전송되는 것까지 막힌다.
@@ -285,46 +324,56 @@ def prepare_published(picked: list[dict], cfg: dict,
     # 죽은 링크는 요약 전에 뺀다 — LLM 호출을 쓰지 않게 된다
     picked, dead_links = drop_dead_links(picked)
 
+    from news.core.similar import recent_published
+    recent = recent_published(archive.load_all(), datetime.now(KST))
+
     if no_ai:
         for a in picked:
             a.setdefault("summary", a.get("description", ""))
             a["llm_done"] = True
+        # 같은 사건 판정은 Groq 를 부르고 1GB 모델을 올린다. 요약 없이 돌려 보는
+        # 실행에서 그럴 이유가 없다.
+        ready, removed = _filter_summarized(picked, gate_on, recent, same_story=False)
     else:
-        from news.summarizer import summarize_all
+        from news import summarizer
         llm_cfg = cfg.get("llm", {})
-        picked = summarize_all(picked, model=llm_cfg.get("model") or None,
-                               pause=float(llm_cfg.get("pause_seconds", 4.0)),
-                               max_calls=llm_cfg.get("max_calls_per_run", 50),
-                               stop_after=top_n if gate_on else None,
-                               why_model=llm_cfg.get("why_model") or None,
-                               fallback_models=llm_cfg.get("fallback_models"),
-                               why_fallback_models=llm_cfg.get("why_fallback_models"))
+        budget = llm_cfg.get("max_calls_per_run", 50)
 
-    picked = redact_articles(picked, "요약")   # LLM이 본문의 토큰을 요약문에 되뱉는 경우
-    picked, irrelevant = drop_irrelevant(picked) if gate_on else (picked, [])
-    # 요약이 스스로 '개발자 업무와 무관'이라고 말한 기사. 추가 호출이 없어
-    # 분류 게이트와 별개로 항상 켠다.
-    picked, self_irrelevant = drop_self_declared_irrelevant(picked)
-    irrelevant = irrelevant + self_irrelevant
+        def summarize(arts, stop_after=None):
+            # 본선과 예비가 호출 예산 하나를 나눠 쓴다
+            nonlocal budget
+            stats: dict = {}
+            out = summarizer.summarize_all(
+                arts, model=llm_cfg.get("model") or None,
+                pause=float(llm_cfg.get("pause_seconds", 4.0)),
+                max_calls=budget, stop_after=stop_after,
+                why_model=llm_cfg.get("why_model") or None,
+                fallback_models=llm_cfg.get("fallback_models"),
+                why_fallback_models=llm_cfg.get("why_fallback_models"), stats=stats)
+            budget -= stats.get("calls", 0)
+            return out
 
-    # 한도 등으로 요약을 못 받은 기사는 게시하지 않는다 — seen에도 안 넣으므로
-    # 다음 실행에서 다시 후보로 탐지된다 (SPEC 1.6)
-    ready = [a for a in picked if a.get("llm_done")]
-    # 주소·제목으로 못 잡은 같은 사건을 요약까지 본 뒤 거른다. 아래 pick 앞에서
-    # 해야 여유분이 빈자리를 채운다. 빠진 것은 seen 에 넣는다 — 안 넣으면 회차마다
-    # 다시 뽑혀 요약을 또 받고, 원본이 48시간 창을 벗어나면 그대로 실린다.
-    from news.core.similar import drop_same_story, recent_published
-    ready, same = drop_same_story(ready, recent_published(archive.load_all(), datetime.now(KST)))
-    irrelevant = irrelevant + same
+        if gate_on:
+            main = pick(picked, top_n, sc.get("per_source", 5), **pick_rules)
+            main_urls = {a["url"] for a in main}
+            reserve = [a for a in picked if a["url"] not in main_urls]
+        else:
+            main, reserve = picked, []
+        ready, removed = _filter_summarized(summarize(main), gate_on, recent)
+        short = top_n - len(ready)
+        if gate_on and short > 0 and reserve and budget > 0:
+            print(f"[깔때기] 게재 가능 {len(ready)}건 — 예비 {len(reserve)}건에서 {short}건 보충")
+            more = summarize(reserve, stop_after=short)
+            # 예비분끼리만이 아니라 이미 남긴 본선과도 같은 사건인지 본다
+            more_ready, more_removed = _filter_summarized(more, gate_on, recent + ready)
+            ready, removed = ready + more_ready, removed + more_removed
+
     # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 앞에서 그냥 자르면
     # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.
     if gate_on:
-        ready = pick(ready, top_n, sc.get("per_source", 5),
-                     quota=cfg.get("source_quota", {}), per_feed_page=per_feed_page,
-                     quota_backfill=cfg.get("quota_backfill", {}),
-                  quota_backfill_max=cfg.get("quota_backfill_max", {}))
+        ready = pick(ready, top_n, sc.get("per_source", 5), **pick_rules)
     # 닫힌 어휘 태깅 (SPEC 1B) — 규칙 기반이라 LLM 예산을 쓰지 않는다
-    return tag_all(ready), irrelevant, dead_links
+    return tag_all(ready), removed, dead_links
 
 
 def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
@@ -383,7 +432,8 @@ def main() -> int:
     # 무관·죽은 링크 판정분도 기억한다 — 안 그러면 다음 회차에 다시 후보로
     # 올라와 같은 기사에 LLM 호출을 반복한다.
     seen_db.mark_seen(published + irrelevant + dead_links)
-    emit_actions_output(len(published), min_published, silent)
+    from news.core import similar
+    emit_actions_output(len(published), min_published, silent, list(similar.WARNINGS))
     return 0
 
 

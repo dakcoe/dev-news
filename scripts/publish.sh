@@ -22,8 +22,26 @@ export TZ=Asia/Seoul
 STAMP="$(date '+%Y-%m-%d %H:%M')"
 echo "===== $STAMP 시작"
 
+# 알림이 실패해도(gh 인증 만료 등) 로그에는 남긴다. 전에는 notify.sh 의 종료 코드를
+# 보지 않아 알림이 조용히 사라지고, watchdog 이 10시간 뒤에야 잡았다.
+alert() {
+  bash scripts/notify.sh "$1" "$2" || echo "[알림 실패] $1 — gh 인증을 확인하세요"
+}
+
+# rerender.sh 가 회차 도중에 푸시하면 아래 rebase -X theirs 가 이 회차의 옛 템플릿
+# 렌더로 덮어 화면 변경이 다음 회차까지 사라진다 (10-07 00:03 실제로 겹쳤다).
+# 회차가 도는 동안 잠금을 걸고 rerender.sh 가 그걸 본다.
+LOCK="${DEV_NEWS_LOCK:-$HOME/.cache/dev-news-publish.lock}"
+mkdir -p "$(dirname "$LOCK")"
+echo $$ > "$LOCK"
+trap 'rm -f "$LOCK"' EXIT
+
 PY="venv/bin/python"
-[ -x "$PY" ] || { echo "venv 가 없다 — python3.12 -m venv venv && venv/bin/pip install -r requirements.txt"; exit 1; }
+if [ ! -x "$PY" ]; then
+  echo "venv 가 없다 — python3.12 -m venv venv && venv/bin/pip install -r requirements.txt"
+  alert "🔴 뉴스 수집 실패" "$STAMP 회차: 수집 기계에 venv 가 없어 시작하지 못했습니다."
+  exit 1
+fi
 
 # GitHub API 한도(시간당 60 → 1,000+)와 알림 이슈에 쓴다. 토큰 값은 로그에 안 남긴다.
 export GITHUB_TOKEN GH_TOKEN
@@ -41,7 +59,7 @@ fi
 OUT="$(mktemp)"; export GITHUB_OUTPUT="$OUT"
 if ! "$PY" build.py; then
   echo "build.py 실패"
-  bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+  alert "🔴 뉴스 수집 실패" \
     "$STAMP 회차가 실패했습니다. 수집 기계의 logs/publish.log 를 보세요."
   exit 1
 fi
@@ -51,7 +69,12 @@ git add -A docs data
 if git diff --staged --quiet; then
   echo "변경 없음 — 커밋 생략"
 else
-  git commit -q -m "뉴스 갱신 $STAMP"
+  if ! git commit -q -m "뉴스 갱신 $STAMP"; then
+    # index.lock 등으로 커밋이 안 되면 아래 push 는 아무것도 안 올리고 성공한다
+    echo "커밋 실패"
+    alert "🔴 뉴스 수집 실패" "$STAMP 회차: 수집은 됐지만 커밋에 실패했습니다. 수집 기계의 .git/index.lock 을 확인하세요."
+    exit 1
+  fi
   # 원격이 그 사이 앞섰으면 데이터를 합친다 (seen·아카이브는 합집합이 맞다)
   git fetch -q origin main
   if ! git merge-base --is-ancestor origin/main HEAD; then
@@ -61,7 +84,7 @@ else
     # (scripts/merge_remote_data.py 머리말). 멈추는 쪽이 맞다.
     if ! "$PY" scripts/merge_remote_data.py origin/main; then
       echo "원격 데이터 병합 실패"
-      bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+      alert "🔴 뉴스 수집 실패" \
         "$STAMP 회차: 원격 데이터 병합이 실패해 발행을 멈췄습니다. 그대로 rebase 하면 원격 기사와 seen 기록을 잃습니다."
       exit 1
     fi
@@ -70,25 +93,36 @@ else
   fi
   if ! git pull --rebase -X theirs -q origin main; then
     echo "최종 rebase 실패"
-    bash scripts/notify.sh "🔴 뉴스 수집 실패" \
+    alert "🔴 뉴스 수집 실패" \
       "$STAMP 회차: 발행 직전 rebase 가 실패했습니다. 수집 기계에서 rebase 상태를 풀어야 다음 회차가 돕니다."
     exit 1
   fi
   if ! git push -q origin main; then
-    echo "push 실패"
-    bash scripts/notify.sh "🔴 뉴스 수집 실패" \
-      "$STAMP 회차: 수집은 됐지만 push 가 거부됐습니다. 수집물에 섞인 시크릿(GH013)이면 news/core/redact.py 에 패턴을 추가하세요."
+    # 거부된 커밋을 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
+    # redact.py 에 패턴을 더해도 이미 만들어진 커밋은 그대로라 풀리지 않는다.
+    # 커밋은 확인용 브랜치에 남기고 원격 상태로 되돌린다 — 이 회차 기사는 seen 에도
+    # 안 남으므로 다음 회차가 다시 수집하면서 새 패턴으로 마스킹한다.
+    FAILED="push-failed/$(date '+%Y%m%d-%H%M')"
+    git branch -f "$FAILED" HEAD
+    git reset -q --hard origin/main
+    echo "push 실패 — 커밋을 $FAILED 에 두고 origin/main 으로 되돌림"
+    alert "🔴 뉴스 수집 실패" \
+      "$STAMP 회차: push 가 거부됐습니다. 거부된 커밋은 수집 기계의 \`$FAILED\` 브랜치에 있습니다. 시크릿(GH013)이면 news/core/redact.py 에 패턴을 추가하세요 — 다음 회차가 같은 기사를 다시 수집해 마스킹합니다."
     exit 1
   fi
   echo "push 완료 $(git rev-parse --short HEAD)"
 fi
 
 if [ "$(val degraded)" = "true" ]; then
-  bash scripts/notify.sh "🟡 게시 건수 급감" \
+  alert "🟡 게시 건수 급감" \
     "$STAMP 회차는 성공했지만 **$(val published)건**만 게시됐습니다. 임계값은 config.yaml 의 alert.min_published 입니다."
 fi
+if [ -n "$(val warn)" ]; then
+  alert "🟡 같은 사건 거르기 이상" \
+    "$STAMP 회차: $(val warn). 수집 기계의 logs/publish.log 에서 [같은 사건] 줄을 보세요."
+fi
 if [ -n "$(val silent)" ]; then
-  bash scripts/notify.sh "🟡 출처 침묵" \
+  alert "🟡 출처 침묵" \
     "$STAMP 회차 기준 연속 0건인 출처: **$(val silent)**. news/scrapers/ 의 해당 파일을 확인하세요."
 fi
 rm -f "$OUT"
@@ -100,7 +134,7 @@ if [ -n "$COFFEE" ]; then
   code="$(curl -s -o /dev/null -m 15 -w '%{http_code}' -A 'Mozilla/5.0' "$COFFEE" || echo 000)"
   if [ "$code" != "200" ]; then
     echo "후원 링크 응답 $code"
-    bash scripts/notify.sh "🟡 후원 링크 응답 이상" \
+    alert "🟡 후원 링크 응답 이상" \
       "$STAMP 회차: 소개 화면의 후원 링크가 HTTP $code 를 돌려줍니다. 링크가 만료됐으면 config.yaml 의 about.coffee 를 새 주소로 바꾸거나 비우세요."
   fi
 fi

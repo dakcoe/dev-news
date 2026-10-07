@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """요약 품질 채점 — 모델·프롬프트를 바꿀 때 회귀를 잡는다 (add-summary-quality-eval).
 
-  python scripts/eval_summary.py                    # 현재 설정으로 채점
-  python scripts/eval_summary.py --model <모델명>    # 다른 모델로 채점
-  python scripts/eval_summary.py --save-baseline    # 결과를 기준선으로 저장
+  python eval/eval_summary.py                    # 현재 설정으로 채점
+  python eval/eval_summary.py --model <모델명>    # 다른 모델로 채점
+  python eval/eval_summary.py --save-baseline    # 결과를 기준선으로 저장
 
 LLM을 실제로 호출하므로 CI가 아니라 사람이 돌린다. 채점기 자체(news/core/quality.py)는
 LLM 없이 CI에서 항상 검증된다.
