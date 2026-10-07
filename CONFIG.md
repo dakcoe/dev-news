@@ -10,10 +10,10 @@
 | GitHub Trending | `github.com/trending` 일간. 지표는 스타 총수가 아니라 전일 대비 증가량 |
 | Trendshift | `trendshift.io` 홈페이지의 일간 순위 25건. GitHub 트렌딩과 같은 저장소는 중복 제거에서 한 건으로 합쳐지고 교차 출처 가산을 받는다. 화면 라벨은 Trendshift |
 | Lobste.rs | `hottest.json` |
-| dev.to | `devto_tags`별 rising 글 |
-| 긱뉴스 | `news.hada.io` RSS |
+| dev.to | `devto_tags`별 rising 글. 동시 2개, 429면 `Retry-After`(최대 30초)만큼 쉬고 한 번 더 묻는다 |
+| 긱뉴스 | `news.hada.io` RSS. 원문 주소는 글 페이지에서 읽는데, 2026-09-30부터 글 페이지가 403이라 못 찾는다(아래 알림 참고) |
 | RSS 피드 | `feeds`에 적은 주소 전부 |
-| Anthropic | `anthropic.com/news` · `/engineering` HTML 직접 파싱 (RSS 미제공) |
+| Anthropic | `anthropic.com/news` · `/engineering` · `claude.com/resources/articles`(Claude 블로그) 목록 HTML 직접 파싱 (RSS 미제공) + `claude.dev/rss.xml` |
 | Reddit | 서브레딧 API (기본 꺼짐 — 아래 참고) |
 
 `sources`에서 개별로 끄고 켠다.
@@ -70,9 +70,13 @@ scraper:
   top_n: 20          # 한 회차에 새로 추가할 기사 수
   per_source: 5      # 한 출처가 차지할 최대 개수 (rss 전체가 하나)
   per_feed_page: 2   # RSS 피드 하나가 차지할 최대 개수
+  per_source_fetch: 30   # lobsters·긱뉴스에서 받아 올 후보 수
   window_hours: 48   # 최근 몇 시간 내 발행분만
   keep_days: 30      # index.html에 굽는 기간. 저장은 무제한
 ```
+
+`per_source`는 페이지에 싣는 상한이고 `per_source_fetch`는 수집하는 개수다. 예전에는 lobsters·긱뉴스가 `per_source`를 수집 개수로 읽어 후보를 5건씩만 받았다. 비우면 30이다.
+날짜 필드가 있는데 읽지 못한 기사는 기간 필터에서 버리고 로그에 `[필터] 날짜를 못 읽은 N건 제외`로 남긴다. GitHub 트렌딩·Trendshift처럼 게시 시각이 원래 없는 출처는 그대로 통과한다.
 
 점수는 화면에 표시하지 않고 `top_n` 선별의 정렬 기준으로만 쓴다.
 
@@ -220,10 +224,17 @@ docs/data/                    # 위 파일들의 Pages 서빙 사본 + apis.json
 alert:
   min_published: 10   # 이보다 적게 게시되면 publish.sh 가 🟡 이슈를 연다
   silent_streak: 3    # 켜진 출처가 이 회차 수만큼 연속 0건이면 🟡 출처 침묵 이슈를 연다
+  stale_streak: 27    # 수집은 되는데 기간 필터를 지난 글이 이 회차 수만큼 연속 0건이어도 알린다
 ```
 
 출처별 수집 건수는 회차마다 `data/source_health.json`에 남는다(최근 30회차). 한 회차 0건은 타임아웃일 수 있어 기본 3회차(하루)를 본다.
 GitHub 트렌딩·Trendshift·Anthropic은 HTML을 파싱하므로 상대 사이트가 화면을 바꾸면 에러 없이 0건이 된다. 그럴 때 이 알림이 잡는다.
+
+건수는 하위 수집원별로도 센다. `rss:피드이름`, `anthropic:Claude 블로그`, `devto:태그`처럼 적히고, 합계가 멀쩡해도 하나가 죽으면 그 이름으로 알림이 뜬다.
+`geeknews:원문`은 긱뉴스 글의 원문 주소를 찾은 수다. 글 페이지가 막히면 0이 된다.
+
+각 회차 기록의 `recent`는 기간 필터(`window_hours`·`long_window`)를 지난 건수다. 갱신이 멈춰 옛 글만 돌려주는 피드는 수집 건수가 매번 같아 위 알림에 안 잡히므로 이 값으로 따로 본다.
+글이 드문 출처는 기간 안 글이 7일 동안 없던 적이 있어(카카오 기술블로그·Anthropic 뉴스, 2026-09 후보 로그) `stale_streak`은 9일(27회차)로 길게 잡았다. 알림에는 이름 뒤에 `(기간 내 0건)`이 붙는다.
 
 ## 광고
 

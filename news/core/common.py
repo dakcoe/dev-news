@@ -84,3 +84,17 @@ def to_timestamp(value) -> float | None:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt.timestamp()
     return None
+
+
+def published(value) -> dict:
+    """기사 dict 에 펼쳐 넣을 게시 시각 필드. `{**published(raw)}` 로 쓴다.
+
+    to_timestamp 는 날짜가 아예 없을 때와 있는데 못 읽었을 때 둘 다 None 을
+    준다. 기간 필터(filters.recent_only)는 None 을 '게시 시각이 없는 출처'로 보고
+    통과시키므로, 형식이 바뀐 피드의 옛 글이 새 글처럼 실린다. 못 읽은 원문을
+    date_unparsed 로 남겨 필터가 둘을 가르게 한다.
+    """
+    ts = to_timestamp(value)
+    if ts is None and value is not None and str(value).strip():
+        return {"published_at": None, "date_unparsed": str(value).strip()[:80]}
+    return {"published_at": ts}

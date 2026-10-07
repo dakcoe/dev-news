@@ -10,7 +10,7 @@ def _fetch_item(item_id: int) -> dict | None:
     try:
         resp = http.get(f"{HN_BASE}/item/{item_id}.json", timeout=10)
         resp.raise_for_status()
-        return resp.json()
+        return resp.json() or {}      # 지워진 글은 null 이다 — 실패와 구분한다
     except Exception:
         return None
 
@@ -25,11 +25,17 @@ def fetch(limit: int = 30) -> list[dict]:
         return []
 
     articles = []
+    failed = 0
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(_fetch_item, id_): id_ for id_ in top_ids}
         for future in as_completed(futures):
             item = future.result()
-            if not item or item.get("type") != "story":
+            # None 은 요청 실패다. 하나씩은 흔하지만 몇 건이 빠졌는지 남겨 둬야
+            # 해커뉴스 몫이 줄어든 회차의 원인을 알 수 있다.
+            if item is None:
+                failed += 1
+                continue
+            if item.get("type") != "story":
                 continue
             url = item.get("url") or f"https://news.ycombinator.com/item?id={item['id']}"
             text_html = item.get("text") or ""
@@ -41,4 +47,6 @@ def fetch(limit: int = 30) -> list[dict]:
                 # 본문을 못 가져왔을 때 댓글을 대신 넣으려고 남긴다 (core/discussion.py)
                 "discussion": f"https://news.ycombinator.com/item?id={item['id']}",
             })
+    if failed:
+        print(f"[hackernews] 글 {len(top_ids)}건 중 {failed}건 요청 실패")
     return articles

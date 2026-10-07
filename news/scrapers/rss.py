@@ -20,7 +20,7 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 from news.core import http
-from news.core.common import to_timestamp
+from news.core.common import published
 
 
 def _text(html: str, limit: int = 400) -> str:
@@ -87,7 +87,7 @@ def _one(feed: dict, limit: int) -> list[dict]:
 
             "upvotes": 0,
             "comments": 0,
-            "published_at": to_timestamp(pub_tag.get_text(strip=True) if pub_tag else None),
+            **published(pub_tag.get_text(strip=True) if pub_tag else None),
         })
     print(f"[rss] {name} {len(out)}개")
     return out
