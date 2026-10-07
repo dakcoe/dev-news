@@ -1,5 +1,519 @@
 [
  {
+  "title": "Claude Haiku 5.5",
+  "url": "https://www.anthropic.com/claude-haiku-5-5",
+  "source": "hackernews",
+  "upvotes": 590,
+  "comments": 283,
+  "published_at": 1791396092,
+  "discussion": "https://news.ycombinator.com/item?id=49996437",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/claude-haiku-5-5"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude Haiku 5.5 — 가장 저렴하고 빠른 소형 모델",
+  "summary": "Claude Haiku 5.5는 비용에 민감한 대량 작업에 최적화된 소형 모델로, 요약·압축·데이터베이스 질의·분류 등 반복 작업을 빠르게 처리한다. Opus 5.5·Sonnet 5.5와 함께 코딩 서브에이전트로 활용 가능하며, 실시간 고객 지원·브라우저 사용 등 속도가 중요한 상황에 적합하다. 기존 Haiku 4.5 대비 실행 비용이 평균 75 % 감소했으며, 조정 가능한 effort 설정으로 비용·성능을 선택적으로 조절한다.",
+  "why": "Haiku 4.5를 쓰던 대량 반복 작업은 이제 75% 싼 비용으로 처리할 수 있다. effort 설정을 조절해 비용과 성능 중 우선순위를 직접 정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "storytold / effectcraft",
+  "url": "https://github.com/storytold/effectcraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 781,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/effectcraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 781,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/storytold/effectcraft",
+  "link_status": null,
+  "ko_title": "EffectCraft — 모션 그래픽·시각 효과 오픈소스 툴",
+  "summary": "Rust로 새로 만든 Adobe After Effects 클론으로, 306가지 효과와 레이어 스타일, 3D 카메라·조명 등을 지원한다. macOS·Windows·Linux·브라우저에서 네이티브로 동작한다. 현재 초기 단계지만 빠르게 발전 중이다.",
+  "why": "Rust 기반이라 브라우저에서 네이티브로 동작해 로컬 설치 없이 시뮬레이션을 돌릴 수 있다. AI 생성 콘텐츠에 모션 그래픽을 입히는 파이프라인을 로컬에서 구축할 때 대안 도구로 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+  "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+  "source": "hackernews",
+  "upvotes": 224,
+  "comments": 221,
+  "published_at": 1791398980,
+  "discussion": "https://news.ycombinator.com/item?id=49997161",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn.rswebsols.com/wp-content/uploads/2025/10/otr1by4mkru.jpg",
+  "link_status": "ok",
+  "ko_title": "Meta와 Microsoft, 직원들의 Claude AI 사용 제한",
+  "summary": "Meta와 Microsoft가 자체 코딩 도구로 전환하면서 Anthropic의 Claude AI 사용을 크게 줄였다. Microsoft는 직원당 AI 지출 한도를 월 10,000달러 수준으로 낮추었으며, 이는 연간 예상 지출이 10억 달러 이상에서 3분의 1 이상 감소한 결과다. 두 기업은 여전히 Anthropic의 주요 고객이지만, 내부 비용 절감과 자체 도구 활용을 강조한다.",
+  "why": "자체 코딩 도구로 전환하며 Claude AI 사용이 줄어드는 추세다. 내부 AI 지출 한도가 대폭 낮아진 점은 참고할 만하다. 고객용 제품에서 Claude 접근성은 유지된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Claude Haiku 5.5",
+  "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791406581.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://static.simonwillison.net/static/2026/claude-haiku-5-5-card.webp",
+  "link_status": "ok",
+  "ko_title": "Claude Haiku 5.5",
+  "summary": "Anthropic이 새 모델 Claude Haiku 5.5를 공개했다. 100,000 토큰 이하에서는 GPT-6 Luna와 동일한 $0.10/$0.50 가격을 제공하고, 그 이상에서는 5배 인상된다. 새 토크나이저가 기존보다 1.25배 토큰을 사용해 숨은 비용 상승이 있다. 모델은 Reasoning 레벨을 지원하지만 비활성화는 불가능하다.",
+  "why": "10만 토큰 초과 시 비용이 5배로 뛰므로 장문 처리는 GPT-6 Luna가 유리하다. 새 토크나이저가 토큰 수를 1.25배 늘려 실제 비용이 인상된다. 추론 레벨을 비활성화할 수 없어 최소 비용 실행이 불가능하다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+  "url": "https://bigwords.page/",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 98,
+  "published_at": 1791387861,
+  "discussion": "https://news.ycombinator.com/item?id=49994443",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://bigwords.page/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://bigwords.page/og.png",
+  "link_status": "ok",
+  "ko_title": "Bigwords.page – 화면을 표지판으로 바꾸다",
+  "summary": "링크만으로 전체 화면에 텍스트, 타이머, 슬라이드 등을 표시할 수 있는 웹 기반 도구다. URL 조각에 메시지와 설정을 넣어 서버 없이 바로 표시하며, 마크다운과 QR 코드 등 다양한 포맷을 지원한다. 브라우저만 있으면 스마트폰부터 대형 스크린까지 어디서든 사용할 수 있다.",
+  "why": "URL 조각에 설정을 담아 서버 없이 표시하므로 백엔드 인프라가 불필요하다. 브라우저만 있으면 대형 스크린까지 대응되어 임시 안내 화면을 즉시 배포할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Docker Agent",
+  "url": "https://news.hada.io/topic?id=34968",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791412812.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34968"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Docker 에이전트",
+  "summary": "Docker CLI 플러그인인 Docker Agent는 YAML 파일만으로 AI 에이전트를 정의하고 실행한다. 별도 코드를 작성하지 않아도 도구 기반 에이전트를 만들 수 있다. 멀티 에이전트 아키텍처를 지원해 전문화된 에이전트 팀을 구성하고 작업을 자동으로 위임한다.",
+  "why": "기존에 코드 작성으로만 만들던 도구를 쓰는 에이전트를 이제 YAML 설정만으로 정의할 수 있다. 복잡한 작업을 여러 에이전트가 나눠 처리하는 멀티 에이전트 구조를 구축할 때 코드를 덜 써야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "GPT-6 and Intelligent UI for everyone",
+  "url": "https://openai.com/index/gpt-6-for-everyone",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791331200.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/gpt-6-for-everyone",
+   "https://openai.com/index/gpt-6-for-everyone/"
+  ],
+  "cross_source_count": 2,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6와 모두를 위한 인텔리전트 UI",
+  "summary": "GPT-6가 전 세계 ChatGPT에 적용돼 인텔리전트 UI를 제공한다. 응답 속도가 빨라지고 시각·대화형 경험을 바로 사용할 수 있다.",
+  "why": "GPT-6의 인텔리전트 UI가 적용되면 응답 속도가 빨라진다. 시각 자료와 대화형 요소를 즉시 탐색하고 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "The Mathocalypse",
+  "url": "https://scottaaronson.blog/?p=10169",
+  "source": "hackernews",
+  "upvotes": 163,
+  "comments": 189,
+  "published_at": 1791401620,
+  "discussion": "https://news.ycombinator.com/item?id=49997718",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://scottaaronson.blog/?p=10169"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvc2NvdHRhYXJvbnNvbi5ibG9nXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMFwvY3JvcHBlZC1KYWNrZXQuZ2lmIiwidHh0IjoiU2h0ZXRsLU9wdGltaXplZCIsInRlbXBsYXRlIjoiZWRnZSIsImZvbnQiOiIiLCJibG9nX2lkIjoxMjk1MjA1ODB9.siOtN7gHw4tefA_rZickBw4GfI6tPxGgOQ1AXr2ZoOQMQ",
+  "link_status": "ok",
+  "ko_title": "수학 종말",
+  "summary": "OpenAI가 발표한 372개의 수학 결과 중 하나로, 서브해시 코트의 유니크 게임 추측(UGC) 증명을 Lean 형식으로 인증했다. 인간 연구자들은 아직 증명을 완전히 이해하지 못했으며, 검증과 해석에 AI 지원이 필요하다. 해당 증명은 최대 절단(Max Cut) 등 주요 최적화 문제의 NP-난이도 근사 한계를 직접 제시한다.",
+  "why": "Lean 인증서가 있어 기계 검증은 끝났지만 인간이 아직 이해 못 해 AI 보조 해석이 필수다. 최대 절단 등 최적화 문제의 NP-난이도 근사 한계가 직접 제시되어 기존 도구 활용에 변화가 온다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "How Cresta turned CX expertise into an agent builder on the Claude Agent SDK",
+  "url": "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791158400.0,
+  "origin_url": "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
+   "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://claude.com/ko/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Cresta가 CX 전문성을 Claude Agent SDK 기반 에이전트 빌더로 전환",
+  "summary": "Cresta는 Claude Agent SDK를 활용해 Conductor라는 자연어 기반 에이전트 빌더를 출시했다. Conductor는 사용자가 원하는 비즈니스 컨텍스트를 입력하면 설계·구현·평가·최적화까지 안내한다. 새로운 Claude 모델이 나올 때마다 자동으로 평가가 이루어진다. 기존 CX 에이전트 구축에 필요한 복잡한 설정을 팀 전체가 재사용할 수 있게 한다.",
+  "why": "Claude Agent SDK 기반 에이전트 빌더를 직접 구축하는 사례로, 복잡한 비즈니스 로직을 자연어로 처리하는 구조를 참고할 수 있다. 새 모델 배포 시 자동 평가가 이루어지므로, 에이전트 운영 시 모델 변경에 따른 품질 저하를 관리하는 방식에 적용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "We’re expanding the Claude Startups program to help founders build",
+  "url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791244800.0,
+  "origin_url": "https://claude.com/blog/were-expanding-the-claude-startups-program-to-help-founders-build",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/were-expanding-the-claude-startups-program-to-help-founders-build",
+   "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://claude.com/ko/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude 스타트업 프로그램을 확대해 창업자를 지원",
+  "summary": "Anthropic이 Claude 스타트업 프로그램을 확대한다. 참여 기업은 Claude Team 플랜 1년 무료, API 크레딧 $1,000, 최대 $7,000 상당의 제품 및 크레딧을 제공받는다. 프로그램은 AI-네이티브 기업을 위한 도구와 Anthropic 적용 AI 팀과의 오피스 아워 등 추가 혜택을 포함한다.",
+  "why": "Claude 기반 서비스를 개발 중이라면 API 크레딧과 팀 플랜 혜택이 초기 개발 비용을 줄여준다. Anthropic 적용 AI 팀과의 오피스 아워를 통해 모델 방향성을 미리 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "KingKongRobotics / jumper",
+  "url": "https://github.com/KingKongRobotics/jumper",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 842,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/KingKongRobotics/jumper"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 842,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/KingKongRobotics/jumper",
+  "link_status": null,
+  "ko_title": "KingKongRobotics / jumper",
+  "summary": "이 저장소는 22자유도 게 로봇 Jumper의 외형, 동작, 장면을 AI 프롬프트로 설계·학습·패키징할 수 있는 툴킷이다. 스킨 파일(.skin)과 동작 파일(.app)을 생성해 로봇에 바로 적용할 수 있다. 무료 로봇 제공 이벤트 링크도 포함한다.",
+  "why": "AI 코딩 어시스턴트에 프롬프트를 입력해 로봇 외형과 동작 파일을 생성하는 방식이다. 기존에 수작업으로 작성하던 로봇 제어 코드를 자연어 지시로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Show HN: Wikipedia를 바탕으로 만든, 걸어 다니며 관람하는 3D 미술사 박물관",
+  "url": "https://news.hada.io/topic?id=34969",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791412992.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34969"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: Wikipedia를 바탕으로 만든, 걸어 다니며 관람하는 3D 미술사 박물관",
+  "summary": "Wikipedia 데이터를 활용해 시대와 작가를 선택하면 3D 갤러리로 입장해 작품을 걸어 다니며 감상할 수 있는 웹 기반 미술사 박물관이다.",
+  "why": "백엔드나 AI 개발과 직접적인 연관성이 없어 실무에 반영할 조치가 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Visa, Mastercard, major banks facing new litigation over 'anticompetitive' fees",
+  "url": "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees",
+  "source": "hackernews",
+  "upvotes": 444,
+  "comments": 305,
+  "published_at": 1791385799,
+  "discussion": "https://news.ycombinator.com/item?id=49993914",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.classaction.org/media/twitter-newswire-default.png",
+  "link_status": "ok",
+  "ko_title": "Visa·마스터카드·대형 은행, 반경쟁 수수료 소송 직면",
+  "summary": "피자 가게가 제기한 집단소송이 Visa, 마스터카드와 미국 주요 은행들이 상점 신용카드 거래 수수료를 인위적으로 높였다고 주장한다. 원고는 이들이 수십 년간 교차 협의해 수수료 표준을 고정하고, 상점이 이를 회피할 수 없게 하는 규칙을 만들었다고 주장한다. 기존에 50억 달러 규모의 합의가 있었지만, 이번 소송은 새로운 항소를 목표로 한다.",
+  "why": "백엔드 개발자의 결제 연동 로직에는 직접적인 변경 사항이 없다. 상점 측 수수료 구조가 법적 쟁점이 되지만, 개발 환경의 API나 프로토콜은 그대로 유지된다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Software developers are not okay",
+  "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
+  "source": "lobsters",
+  "upvotes": 39,
+  "comments": 11,
+  "published_at": 1791401708.637,
+  "discussion": "https://lobste.rs/s/0gvyif/software_developers_are_not_okay",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://v1.screenshot.11ty.dev/https%3A%2F%2Fwww.baldurbjarnason.com%2F2026%2F05-software-developers-are-not-okay%2F/opengraph/",
+  "link_status": "ok",
+  "ko_title": "소프트웨어 개발자들은 괜찮지 않다",
+  "summary": "",
+  "why": "AI 도입으로 인한 개발자 번아웃과 이탈이 업계 전반의 구조적 문제로 확산되고 있다. 단순한 기술 트렌드가 아니라 현재 업무 환경의 지속 가능성을 점검해야 하는 시점이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Margaret Hamilton, computing pioneer who led software development for the Apollo program, dies at 90",
+  "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+  "source": "lobsters",
+  "upvotes": 24,
+  "comments": 0,
+  "published_at": 1791409089.574,
+  "discussion": "https://lobste.rs/s/9qtgrm/margaret_hamilton_computing_pioneer_who",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007"
+  ],
+  "cross_source_count": 2,
+  "score": 19,
+  "image": "https://news.mit.edu/sites/default/files/images/202610/margaret-hamilton-portrait-toan-trinh-mit-technology-review-A1_1.png",
+  "link_status": "ok",
+  "ko_title": "마가렛 해밀턴, 아폴로 프로그램 소프트웨어 개발을 이끈 컴퓨팅 선구자, 90세로 별세",
+  "summary": "마가렛 해밀턴은 MIT 계측 연구소에서 아폴로 프로그램 소프트웨어 팀을 이끌며 소프트웨어 공학 분야를 확립했다. 1959년부터 1970년대 중반까지 MIT에서 근무한 뒤 기업가로 전향해 시스템 소프트웨어 분야에서 활동했다. 2016년 대통령 자유 메달을 수상했으며, 130편 이상의 논문을 남겼다. 그녀의 사망은 9월 30일에 발표되었다.",
+  "why": "소프트웨어 공학이 독립된 학문으로 자리 잡는 데 기여한 인물의 별세 소식이다. 백엔드 개발자가 설계 원칙을 세울 때 참고할 역사적 사례를 제공한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "research"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
+  "title": "Reasons to dislike AI coding",
+  "url": "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/",
+  "source": "lobsters",
+  "upvotes": 23,
+  "comments": 26,
+  "published_at": 1791351290.412,
+  "discussion": "https://lobste.rs/s/9fjar3/reasons_dislike_ai_coding",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/"
+  ],
+  "cross_source_count": 2,
+  "score": 19,
+  "image": "https://www.sicpers.info/wp-content/uploads/2026/08/cropped-sicpers_logo_precision.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 코딩을 싫어해야 하는 이유",
+  "summary": "기사에서는 AI가 생성한 소프트웨어가 예술적 가치를 갖지 못한다는 주장, AI가 코딩 작업을 자동화함으로써 일자리를 위협한다는 우려, 그리고 인간이 소프트웨어 개발 과정에서 비인간화된 역할을 수행하게 된다는 비판을 제시한다. 각각의 논점은 기존의 작업 방식과 가치관에 대한 재고를 요구한다.",
+  "why": "AI가 생성한 코드의 품질은 제작 방식과 무관하게 동일하므로 결과물 기준의 평가가 유효하다. 코드를 직접 타이핑하는 것이 아니라 가치 있는 소프트웨어를 납품하는 것이 본업이므로 역할 정의가 바뀐다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-10-08T08:00:06.905135+09:00",
+  "batch_label": "10월 8일 08:00"
+ },
+ {
   "title": "storytold / vectorcraft",
   "url": "https://github.com/storytold/vectorcraft",
   "source": "github",
