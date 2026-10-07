@@ -516,6 +516,8 @@ __ADS_HEAD__
   .dh .x{width:34px;height:34px;border-radius:9px;border:none;background:#f2f2f6;color:var(--tx2);
          cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center}
   .dh .x:hover{background:#e9e9ef}
+  .dh .nav{font-size:22px;line-height:1;padding-bottom:3px}
+  .dh .nav:disabled{opacity:.35;cursor:default;background:#f2f2f6}
   .dh .t{font-size:14px;font-weight:700;color:var(--tx3)}
   .db{flex:1;overflow-y:auto;overscroll-behavior:contain}
   .hero{width:100%;height:200px;object-fit:cover;display:block;background:#f0f0f4}
@@ -783,7 +785,9 @@ __ADS_HEAD__
 
 <aside class="dt" id="dt">
   <div class="dh">
-    <button class="x" onclick="closeDetail()">✕</button>
+    <button class="x" onclick="closeDetail()" aria-label="닫기" title="닫기 (Esc)">✕</button>
+    <button class="x nav" id="dprev" onclick="navDetail(-1)" aria-label="이전 기사" title="이전 기사 (←)">‹</button>
+    <button class="x nav" id="dnext" onclick="navDetail(1)" aria-label="다음 기사" title="다음 기사 (→)">›</button>
     <span class="t">기사 상세</span>
   </div>
   <div class="db" id="db"></div>
@@ -2302,7 +2306,60 @@ function showDetail(d){
   document.getElementById('db').scrollTop=0;
   document.getElementById('dt').classList.add('open');
   pushOverlay();
+  /* 목록에서의 자리는 지금 잡는다. 바로 뒤의 render() 가 '안 읽은 것만' 목록에서
+     이 기사를 빼 버리면 그때는 자리를 알 길이 없다. */
+  const p=navItems().findIndex(x=>x.u===d.url);
+  if(p>=0) navPos=p;
+  setTimeout(syncNav, 0);
 }
+
+/* ---------------- 이전·다음 기사 ----------------
+   지금 화면에 그려진 목록 순서를 그대로 따른다. 피드·검색 결과·아카이브
+   검색·보관함이 각자 다른 배열을 쓰지만 카드는 전부 data-open 이나 data-au 를
+   달고 있어서, 화면의 카드 순서를 읽으면 한 규칙으로 된다. '더 보기' 로 아직
+   안 그린 기사는 넘어가지 않는다. */
+let navPos=-1;           // 상세에 떠 있는 기사가 목록에서 몇 번째였나
+function navItems(){
+  const seen=new Set(), out=[];
+  viewEl.querySelectorAll('[data-open],[data-au]').forEach(b=>{
+    const open=b.dataset.open, u=open!==undefined ? (DATA[+open]||{}).url : b.dataset.au;
+    if(!u || seen.has(u)) return;
+    seen.add(u);
+    out.push({u, open, au:b.dataset.au, am:b.dataset.am, el:b});
+  });
+  return out;
+}
+/* 갈 곳의 목록 번호. 떠 있는 기사가 목록에서 빠졌으면(안 읽은 것만 보기)
+   뒤의 기사가 그 자리로 당겨져 있다. */
+function navTarget(items, step){
+  const p=curDetail ? items.findIndex(x=>x.u===curDetail.url) : -1;
+  if(p>=0) return p+step;
+  if(navPos<0) return -1;
+  return step>0 ? navPos : navPos-1;
+}
+function syncNav(){
+  const items=navItems(), ok=step=>{ const t=navTarget(items, step); return t>=0 && t<items.length; };
+  document.getElementById('dprev').disabled=!ok(-1);
+  document.getElementById('dnext').disabled=!ok(1);
+}
+function navDetail(step){
+  if(!document.getElementById('dt').classList.contains('open')) return;
+  const items=navItems(), t=navTarget(items, step), it=items[t];
+  if(!it) return;
+  navPos=t;
+  it.el.scrollIntoView({block:'nearest'});
+  if(it.open!==undefined) openDetail(+it.open);
+  else openArchived(it.au, it.am);
+}
+document.addEventListener('keydown', e=>{
+  if(e.key!=='ArrowLeft' && e.key!=='ArrowRight') return;
+  if(e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  // 검색창에서 커서를 옮기는 화살표는 건드리지 않는다
+  if(e.target.closest && e.target.closest('input,textarea,select,[contenteditable]')) return;
+  if(!document.getElementById('dt').classList.contains('open')) return;
+  e.preventDefault();
+  navDetail(e.key==='ArrowLeft' ? -1 : 1);
+});
 
 function openDetail(i){
   cur=i; const d=DATA[i], s=SRC[d.src]||{name:d.src,color:'#999'};
