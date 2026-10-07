@@ -132,7 +132,10 @@ git push origin main
 ```
 
 - 변경이 없으면 커밋을 건너뛴다. 커밋 자체가 실패하면(.git/index.lock 등) 🔴 알림을 열고 멈춘다.
-- push 가 거부되면 그 커밋을 `push-failed/날짜-시각` 브랜치에 남기고 로컬을 `origin/main`으로 되돌린다. 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
+- push 가 실패하면 30초 뒤 한 번 더 민다. 그래도 실패하면 이유에 따라 다르게 처리한다.
+  - 시크릿(GH013)으로 거부: 그 커밋을 `push-failed/날짜-시각` 브랜치에 남기고 로컬을 `origin/main`으로 되돌린다. 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
+  - 그 밖(GitHub 5xx·네트워크): 커밋을 그대로 두고 🔴 이슈를 연다. 다음 회차의 push 가 같이 올린다(10-08 00:00 회차가 500 으로 실패했다).
+- `publish.sh`를 고치면 그 동작은 다음 회차부터 적용된다. 회차 첫 pull 이 파일을 새로 받아도 실행 중인 bash 는 이미 연 옛 파일로 끝까지 돈다.
 - 회차가 도는 동안 `~/.cache/dev-news-publish.lock`에 잠금을 건다. `scripts/rerender.sh`는 잠금이 있으면 멈춘다 — 회차 도중 푸시하면 회차의 마지막 rebase 가 옛 템플릿 렌더로 덮는다.
 - `pull --rebase -X theirs`는 충돌 시 방금 만든 데이터를 남긴다. 그래서 `fetch-depth: 0`으로 전체 이력을 받는다. 얕은 체크아웃이면 공통 조상을 못 찾아 rebase가 실패한다.
 - 커밋 작성자는 수집 기계의 git 설정을 따른다(`git config user.name / user.email`). 자기 계정 이메일이면 기여 그래프에 찍힌다. 비상용 `daily.yml`은 `github-actions[bot]`으로 남긴다.
