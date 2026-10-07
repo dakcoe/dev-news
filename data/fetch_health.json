@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-27T16:00:46+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-28T00:00:38+09:00",
    "total": 20,
    "counts": {
@@ -1068,6 +1059,52 @@
     {
      "url": "https://news.hada.io/topic?id=34905",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-07T16:00:36+09:00",
+   "total": 23,
+   "counts": {
+    "ok": 13,
+    "blocked": 7,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34931",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34930",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34929",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34928",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34927",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/jump-trading",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+     "source": "rss",
      "reason": "blocked"
     }
    ]

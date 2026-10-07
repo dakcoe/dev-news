@@ -1,5 +1,512 @@
 [
  {
+  "title": "storytold / artcraft",
+  "url": "https://github.com/storytold/artcraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 355,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/artcraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 355,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/storytold/artcraft",
+  "link_status": null,
+  "ko_title": "ArtCraft — 예술가를 위한 IDE",
+  "summary": "ArtCraft는 인터랙티브 AI 이미지·비디오 제작을 위한 IDE로, 2D 구성과 3D 씬 스테이징을 지원한다. 사용자는 시각적 도구로 프롬프트를 조작해 정확하고 재현 가능한 결과를 얻을 수 있다. GitHub에서 소스 빌드와 바이너리 다운로드가 제공된다.",
+  "why": "프롬프트 텍스트 작성 대신 시각적 도구로 씬을 구성해 재현 가능한 생성 결과를 얻는 방식이다. AI 이미지나 비디오 생성 파이프라인에서 출력의 일관성을 높여야 하는 작업에 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Strands Decider 2B: a small, open-source, decision model",
+  "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+  "source": "hackernews",
+  "upvotes": 127,
+  "comments": 25,
+  "published_at": 1791338531,
+  "discussion": "https://news.ycombinator.com/item?id=49987076",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://strandsagents.com/blog/introducing-strands-decider/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://strandsagents.com/blog/og/introducing-strands-decider.png",
+  "link_status": "ok",
+  "ko_title": "Strands Decider 2B: 작은 오픈소스 의사결정 모델",
+  "summary": "Strands Decider 2B는 빠른 실험과 로컬 개발에 최적화된 소형 의사결정 모델이다. 옵션 선택과 간단한 점수 부여에 특화돼 LLM보다 낮은 지연시간을 제공한다. 텍스트 생성이 불가능해 코딩·챗봇 등 일반 LLM 작업에는 부적합하지만, 신뢰도 점수와 동일 프롬프트에 대한 다중 질문 효율이 높다.",
+  "why": "에이전트 워크플로우에서 LLM 추론 대신 이 모델을 쓰면 지연시간이 줄고 신뢰도 점수를 얻을 수 있다. 다만 텍스트 생성이 불가능해 코딩이나 챗봇 작업에는 쓸 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "How I scrape any website in under 5 minutes (Python + Playwright)",
+  "url": "https://dev.to/prantomomo/how-i-scrape-any-website-in-under-5-minutes-python-playwright-25d3",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 6,
+  "published_at": "2026-10-07T04:48:09Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/prantomomo/how-i-scrape-any-website-in-under-5-minutes-python-playwright-25d3"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqwrg8rhkq491tcygwig6.png",
+  "link_status": "ok",
+  "ko_title": "5분 안에 모든 웹사이트 스크래핑하기 (Python + Playwright)",
+  "summary": "새 도구 tendem-audit 로 사이트를 자동 감시하고, robots.txt·CMS·반복 요소 등을 판단한다. 감시 결과에 따라 스크래핑 가능 여부를 색상으로 표시한다. 이후 tendem-scrape 명령으로 Shopify 등에서 데이터를 CSV·JSON·SQLite 로 추출한다.",
+  "why": "기존 스크래퍼가 JS 렌더링이나 봇 차단 앞에서 실패하는 문제를 해결한다. 감사 도구가 robots.txt와 CMS를 자동 판별해 작업 착수 여부를 즉시 알려준다. 이로써 실제 클라이언트 작업에서 수동으로 사이트를 확인하던 시간을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Integer multiplication below n log n",
+  "url": "https://github.com/openai/math/tree/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026",
+  "source": "hackernews",
+  "upvotes": 95,
+  "comments": 63,
+  "published_at": 1791328492,
+  "discussion": "https://news.ycombinator.com/item?id=49985524",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/openai/math/tree/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/aec9ddcb579dee03cd6c654e992e933652e29aa7c9e1d355d0804b3091a24a36/openai/math",
+  "link_status": "ok",
+  "ko_title": "n log n 이하 정수 곱셈",
+  "summary": "OpenAI가 n log n보다 낮은 시간 복잡도를 갖는 정수 곱셈 알고리즘을 제시한 논문을 공개했다. 기존 최선 알고리즘보다 이론적 한계에 더 가까워졌다.",
+  "why": "기존 최선 알고리즘보다 이론적 한계에 가까워진 정수 곱셈 알고리즘이 공개됐다. 대형 정수 연산이 병목인 백엔드 코드를 다룰 때 성능 상한을 재평가할 근거가 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "State of Devs 2026",
+  "url": "https://2026.stateofdevs.com/en-US/",
+  "source": "hackernews",
+  "upvotes": 125,
+  "comments": 60,
+  "published_at": 1791329190,
+  "discussion": "https://news.ycombinator.com/item?id=49985643",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://2026.stateofdevs.com/en-US/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://assets.devographics.com/surveys/devs2026-og.png",
+  "link_status": "ok",
+  "ko_title": "2026년 개발자 현황",
+  "summary": "이번 Devographics 설문은 5,463명의 개발자를 대상으로 2026년 7월~9월에 진행됐으며, 절반 가량이 직업 불안과 낮은 임금을 경험했다고 답했다. 약 1/4은 경력 중 해고를 겪었고, 최근 9개월 내 해고 경험자는 10%에 달한다. 설문은 개발자들의 정신 상태와 AI에 대한 의견도 처음으로 조사했다.",
+  "why": "AI 도입에 대한 개발자 의견이 49% 대 42%로 극단적으로 갈라졌다. 백엔드와 AI를 다루는 독자는 팀 내 AI 활용 관행이 이분법적으로 나뉘어 있음을 인지해야 한다. 이러한 인식 격차는 향후 AI 도구 도입 시 팀 내 저항이나 혼선을 유발할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry",
+   "career-culture"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Penguin Mail - AI를 탑재한 Linux용 오픈소스 Rust 이메일 클라이언트",
+  "url": "https://news.hada.io/topic?id=34931",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791354745.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34931"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Penguin Mail - AI를 탑재한 Linux용 오픈소스 Rust 이메일 클라이언트",
+  "summary": "Penguin Mail은 Linux에서 Gmail, Microsoft, IMAP/POP3 계정을 지원하며 이메일, 캘린더, 연락처를 한 앱에서 관리한다. 통합 받은편지함과 계정별 보기를 제공하고 시스템 트레이에서 동기화를 유지한다. AI 기능이 탑재되어 메일 분류·추천 등을 지원한다.",
+  "why": "Linux 환경에서 별도 브라우저 없이 이메일과 캘린더를 통합 관리할 수 있다. Rust 기반이라 리소스 사용량이 적고 오픈소스라 소스 코드를 직접 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "How Jump Trading is scaling quant research with ChatGPT",
+  "url": "https://openai.com/index/jump-trading",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791288000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/jump-trading"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Jump Trading이 ChatGPT로 퀀트 연구를 확장",
+  "summary": "Jump Trading이 OpenAI의 ChatGPT를 활용해 퀀트 연구를 확대한다. AI 기반 워크플로우가 여러 데이터 소스를 결합하고 인간 검토를 거친다.",
+  "why": "AI 워크플로우가 여러 데이터 소스를 결합하고 인간 검토를 거친다. 이 구조는 자동화 과정에서 발생하는 오류를 사람이 최종 검증하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Show GN: 이메일 피싱 모의훈련을 전화로 옮겼습니다. 예고 없는 전화",
+  "url": "https://news.hada.io/topic?id=34930",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791351777.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34930"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 이메일 피싱 모의훈련을 전화로 옮겼습니다. 예고 없는 전화",
+  "summary": "가족이 보이스피싱을 당한 뒤 실전 감각을 주기 위해 전화 기반 피싱 모의훈련 도구를 만들었다. 기존 이메일 훈련과 달리 사용자는 훈련인지 모른 채 전화를 받게 된다.",
+  "why": "전화 기반 피싱 훈련은 사용자가 훈련임을 인지하지 못하게 설계되어 있다. 기존 이메일 모의훈련과 달리 실전 감각을 부여하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "showcase"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Can Claude Generate Images? What Actually Works in 2026",
+  "url": "https://dev.to/tariqhassan/can-claude-generate-images-what-actually-works-in-2026-2mlg",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": "2026-10-07T03:10:28Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tariqhassan/can-claude-generate-images-what-actually-works-in-2026-2mlg"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fke1r90ha2wrxlqw2hcg7.png",
+  "link_status": "ok",
+  "ko_title": "Claude가 이미지를 생성할 수 있나요? 2026년에 실제로 작동하는 방법",
+  "summary": "Claude는 이미지 픽셀을 직접 출력하지 못하지만 텍스트 기반 명령을 통해 이미지 생성 파이프라인을 연결할 수 있다. 글에서는 Claude가 이미지 입력을 분석하고 SVG·HTML·Python 스크립트 등 텍스트 형태로 이미지 생성 지시를 내리는 네 가지 신뢰 가능한 방법을 제시한다. 또한 사진 같은 실제 이미지가 필요할 때는 Claude를 거치지 않고 Supavisual을 사용하는 사례도 설명한다.",
+  "why": "Claude는 픽셀을 직접 출력하지 못하므로 SVG나 HTML, Python 스크립트 같은 텍스트 형식으로만 생성 지시를 내려야 한다. 사진 같은 래스터 이미지가 필요할 때는 Claude를 거치지 않고 Supavisual 같은 외부 도구를 직접 호출하는 방식이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "gen-media",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Your AI Agent Has a Context Budget: Treat It Like a CPU Budget",
+  "url": "https://dev.to/karthidec/your-ai-agent-has-a-context-budget-treat-it-like-a-cpu-budget-hif",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 5,
+  "published_at": "2026-10-07T01:12:42Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/karthidec/your-ai-agent-has-a-context-budget-treat-it-like-a-cpu-budget-hif"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flprasmomcbz0hjei6coo.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트에도 컨텍스트 예산이 있다: CPU 예산처럼 다루라",
+  "summary": "AI 에이전트에 과도한 문서와 도구를 제공하면 토큰 사용량이 늘고 응답이 느려진다. 저자는 컨텍스트를 자원으로 보고 예산을 설정해 필요한 만큼만 사용하도록 권장한다. 컨텍스트 예산을 관리하는 방법으로 시스템 지시, 사용자 요청, 대화 기록 등 각 요소가 차지하는 토큰을 고려한다.",
+  "why": "시스템 지시와 도구 정의가 토큰을 소모하므로 예산을 설정해야 한다. 필요 없는 문서를 제거하면 응답 속도와 정확도가 개선된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "토론토 기반 VPN 업체, 적법 접근 법안으로 캐나다 떠날 계획",
+  "url": "https://news.hada.io/topic?id=34929",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791351083.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34929"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "토론토 기반 VPN 업체, 적법 접근 법안으로 캐나다 떠날 계획",
+  "summary": "Psiphon 은 캐나다 연방정부의 Bill C-22가 현행안대로 통과될 경우, 전자 서비스 제공업체가 경찰과 CSIS에 감시·모니터링 기능을 제공하도록 시스템을 비밀리에 변경해야 하는 규정에 따라 운영을 해외로 이전할 계획이다. 현재는 법안 통과 여부가 관건이며, 이전 시점과 구체적인 대상 국가는 밝혀지지 않았다.",
+  "why": "Bill C-22가 통과되면 Psiphon이 캐나다를 떠날 수 있다. 이로써 해당 VPN 서비스의 관할권과 데이터 보호 기준이 불확실해진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "I let my AI agents merge to production. Once.",
+  "url": "https://dev.to/infoinlet1/i-let-my-ai-agents-merge-to-production-once-35ji",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 2,
+  "published_at": "2026-10-07T04:38:27Z",
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/i-let-my-ai-agents-merge-to-production-once-35ji"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frxvqus1u32aaz3yaa9xs.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 프로덕션에 병합하도록 했습니다. 한 번.",
+  "summary": "저자는 전체 파이프라인을 자동화하고 마지막 병합 단계까지 에이전트에 맡겼다. 9일간은 순조롭게 진행됐지만, 한 번의 병합이 결제 고객을 잠금 상태로 만들었다. 문제는 변경 사항이 데이터베이스에 실제로 저장되기 전에 클라이언트에 성공 응답을 보내는 로직이었다. 자동화된 리뷰와 테스트를 통과했음에도 불구하고, 이 미묘한 순서 오류가 실서비스 장애를 일으킨 사례이다.",
+  "why": "자동화 파이프라인이 순서 오류를 잡아내지 못해 실서비스 장애가 발생했다. 클라이언트 응답과 데이터 저장의 순서를 수동으로 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Advancing computer use with Ironclad",
+  "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791280800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/advancing-computer-use-with-ironclad"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ironclad와 함께 컴퓨터 활용 확대",
+  "summary": "OpenAI와 Ironclad가 복잡한 계약 업무에 AI 에이전트를 교육하고 평가한다. 이를 통해 전문 업무에서 컴퓨터 활용을 향상시키는 것이 목표다.",
+  "why": "계약 업무 자동화 시나리오를 설계할 때 참고할 수 있는 사례다. 전문 업무용 AI 에이전트의 학습 및 평가 방식을 파악하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "AnyPS5 - 에뮬레이션 없이 PS5 바이너리를 PC로 포팅하는 도구(시스템 라이브러리 87% 매핑)",
+  "url": "https://news.hada.io/topic?id=34927",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791343962.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34927"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AnyPS5 - 에뮬레이션 없이 PS5 바이너리를 PC로 포팅하는 도구",
+  "summary": "AnyPS5는 실행 파일을 Linux와 Windows로 자동 포팅한다. 에뮬레이션이나 별도 런타임 없이 리링커가 바이너리를 네이티브 형식으로 변환하고, 동적 링크용 시스템 PRX 라이브러리를 제공한다.",
+  "why": "기존 PS5 게임 개발 시 에뮬레이터나 별도 런타임 의존을 줄일 수 있다. 시스템 라이브러리 매핑률이 87%로 제한되어 일부 기능은 여전히 미지원이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Claude Code의 가장 영리한 기능은 사용자를 위한 것이 아니다",
+  "url": "https://news.hada.io/topic?id=34928",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791347557.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34928"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Claude Code의 가장 영리한 기능은 사용자를 위한 것이 아니다",
+  "summary": "Claude Code가 제안하는 다음 메시지는 단순히 타이핑을 줄이는 편의성을 넘어 모델 학습에 활용될 피드백을 수집하는 수단으로 활용될 수 있다. 사용자가 제안을 그대로 사용하거나 수정하는 행동을 통해 개발자의 선호를 파악할 수 있다. 기존의 좋아요·싫어요 피드백은 참여율이 낮고 불만 사용자에게 편중되는 경향이 있다.",
+  "why": "Claude Code의 다음 메시지 제안은 단순 편의 기능이 아니라 모델 학습용 피드백 수집 장치다. 제안을 그대로 쓰거나 수정하는 행동이 개발자 선호를 학습 데이터로 만든다. 좋아요·싫어요보다 참여율이 높아 기존 피드백 체계의 한계를 보완한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
+  "title": "Account bans on Reddit",
+  "url": "https://orchidfiles.com/account-bans-on-reddit/",
+  "source": "hackernews",
+  "upvotes": 60,
+  "comments": 52,
+  "published_at": 1791332909,
+  "discussion": "https://news.ycombinator.com/item?id=49986223",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://orchidfiles.com/account-bans-on-reddit/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://orchidfiles.com/content/images/2026/03/avatar-1.png",
+  "link_status": "ok",
+  "ko_title": "Reddit 계정 차단 사례",
+  "summary": "",
+  "why": "Reddit에서 링크를 올리려면 카르마 1,000을 채워야 한다. 이 조건을 충족하기 전에는 계정 차단 위험이 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-07T16:00:08.659691+09:00",
+  "batch_label": "10월 7일 16:00"
+ },
+ {
   "title": "Sharing AI Progress in Mathematics",
   "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
   "source": "hackernews",
