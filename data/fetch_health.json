@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-28T08:00:30+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 15,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-28T16:00:34+09:00",
    "total": 17,
    "counts": {
@@ -1147,6 +1138,47 @@
     },
     {
      "url": "https://news.hada.io/topic?id=34944",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-08T08:00:29+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 14,
+    "blocked": 6,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/gpt-6-for-everyone",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34969",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34968",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34967",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34966",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34964",
      "source": "geeknews",
      "reason": "blocked"
     }
