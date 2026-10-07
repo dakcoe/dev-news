@@ -96,7 +96,7 @@ Actions에서 수집을 돌리지 않는 이유는 둘이다. 러너의 IP를 �
 ## 개발
 
 ```bash
-python -m pytest -q      # 750여 건. 몇 초 안에 끝난다
+python -m pytest -q      # 780여 건. 몇 초 안에 끝난다
 ```
 
 수집·요약을 건드렸으면 `python build.py --no-ai`로 실제 출처까지 한 번 돌려 본다.
