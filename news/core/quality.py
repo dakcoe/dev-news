@@ -4,7 +4,7 @@
 전부였다. `LLM_MODEL`은 Actions Variables로 코드 수정 없이 바뀌므로, 누가 바꿔서
 나빠져도 알 방법이 없었다.
 
-LLM을 부르지 않는 순수 함수만 둔다. 실제 모델을 태우는 건 scripts/eval_summary.py다.
+LLM을 부르지 않는 순수 함수만 둔다. 실제 모델을 태우는 건 eval/eval_summary.py다.
 덕분에 채점기 자체는 API 키 없이 CI에서 항상 검증된다.
 
 지표는 전부 **실측된 결함**에서 나왔다. 추측으로 만든 규칙은 넣지 않는다 —

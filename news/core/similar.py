@@ -22,7 +22,8 @@
 기사였다(0.926 으로 내리면 211쌍 중 3쌍이 틀렸다 — 여기서 빠진 기사는 seen 에 들어가
 다시 오지 않으므로 오탐 없는 쪽을 골랐다). JUDGE 0.88 아래로 내려간 같은 기사는
 판정분 297쌍 중 3쌍이다. 8월 판정분으로 정한 기준을 9월 판정분에 그대로 대도 들어맞았다.
-자료와 스크립트는 _workspace/embeddinggemma-2-eval/.
+판정 자료와 다시 채점하는 스크립트는 eval/same_story/ 에 있고,
+tests/test_same_story_thresholds.py 가 이 기준값을 그 자료로 지킨다.
 
 프롬프트는 SentenceSimilarity 를 쓴다. 안 붙이거나 Clustering 을 붙이면 더 나빴다.
 float16 으로 돌리면 값이 넘쳐 NaN 이 되고, 설정 파일 기본값이 bfloat16 이라 float32 를
@@ -46,6 +47,9 @@ WINDOW_HOURS = 48
 # 기사 하나에 판정을 몇 번까지 묻나. 큰 발표가 있는 날은 비슷한 글이 열 건 넘게
 # 몰려서, 제한이 없으면 한 기사에 판정이 줄줄이 붙는다. 유사도 높은 순으로 묻는다.
 MAX_JUDGE_PER_ARTICLE = 3
+# 이번 회차에 이 단계가 제 일을 다 못 한 이유. build.py 가 회차 결과로 내보내고
+# publish.sh 가 알림을 연다 — 전에는 실패해도 로그 한 줄뿐이었다.
+WARNINGS: list[str] = []
 
 PROMPT = """두 기사가 같은 사건을 다루는지 판정해라. 독자에게 둘 다 보여주면 같은 소식을 두 번 읽는 셈인지가 기준이다.
 
@@ -142,14 +146,20 @@ class _Judge:
 
 def recent_published(archive_articles: list[dict], now, hours: int = WINDOW_HOURS) -> list[dict]:
     from datetime import datetime
+    from news.core.common import KST
     cutoff = now - timedelta(hours=hours)
     out = []
     for a in archive_articles:
         try:
-            if datetime.fromisoformat(a.get("batch") or "") >= cutoff:
-                out.append(a)
+            t = datetime.fromisoformat(a.get("batch") or "")
         except ValueError:
             continue
+        # 시간대 없는 값과 있는 값을 비교하면 TypeError 로 회차가 죽는다. 회차 시각은
+        # 늘 KST 로 찍으므로 빠진 시간대는 KST 로 본다.
+        if t.tzinfo is None:
+            t = t.replace(tzinfo=KST)
+        if t >= cutoff:
+            out.append(a)
     return out
 
 
@@ -160,6 +170,7 @@ def drop_same_story(new: list[dict], recent: list[dict], judge=None, embed=None
     new 는 선별 순서(위가 우선)다. 같은 회차 안에서 겹치면 뒤의 것을 뺀다.
     반환: (남길 것, 뺀 것). 뺀 기사에는 same_as(겹친 기사 주소)를 붙인다.
     """
+    WARNINGS.clear()
     if not new:
         return new, []
     own_judge = judge is None
@@ -190,11 +201,14 @@ def drop_same_story(new: list[dict], recent: list[dict], judge=None, embed=None
                 except Exception as e:
                     # 판정기가 안 뜨면 이 회차는 유사도로만 거른다
                     print(f"[같은 사건] 판정 모델 실패 ({type(e).__name__}: {e}) — 유사도 {AUTO} 이상만 거른다")
+                    WARNINGS.append(f"판정 모델 실패({type(e).__name__}) — 유사도 {AUTO} 이상만 걸렀다")
                     judge_off = True
                     break
                 if same:
                     hit = (b, sim, "판정")
                     break
+                # '다름' 판정도 남긴다. 안 남기면 놓친 중복이 왜 실렸는지 추적할 수 없다
+                print(f"[같은 사건] 판정 다름 {sim:.2f} · {_title(a)[:40]} ⇄ {_title(b)[:40]}")
             if hit:
                 b, sim, why = hit
                 print(f"[같은 사건] {why} {sim:.2f} · {_title(a)[:40]} ⇄ {_title(b)[:40]}")
@@ -206,6 +220,7 @@ def drop_same_story(new: list[dict], recent: list[dict], judge=None, embed=None
         return kept, dropped
     except Exception as e:
         print(f"[같은 사건] 건너뜀 ({type(e).__name__}: {e}) — 이번 회차는 거르지 않는다")
+        WARNINGS.append(f"건너뜀({type(e).__name__}: {str(e)[:80]}) — 이번 회차는 거르지 않았다")
         return new, []
     finally:
         if own_judge:

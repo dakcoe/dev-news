@@ -11,6 +11,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 PY="venv/bin/python"; [ -x "$PY" ] || PY=python3
 
+# 수집 회차가 도는 중이면 멈춘다. 지금 푸시하면 그 회차의 마지막 rebase 가 옛 템플릿
+# 렌더로 덮어 다음 회차까지 화면 변경이 사라진다 (publish.sh 의 잠금)
+LOCK="${DEV_NEWS_LOCK:-$HOME/.cache/dev-news-publish.lock}"
+if [ -f "$LOCK" ] && kill -0 "$(cat "$LOCK")" 2>/dev/null; then
+  echo "수집 회차가 도는 중이다(pid $(cat "$LOCK")) — 끝난 뒤 다시 실행하세요"; exit 1
+fi
+
 git pull --rebase -q origin main
 "$PY" - <<'PY'
 import sys

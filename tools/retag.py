@@ -4,7 +4,7 @@
 기존 아카이브 전 기사에 닫힌 어휘 태그를 다시 부여하고, 검색 인덱스와
 docs/(Pages 서빙 사본, index.html)를 재생성한다. 수집·LLM 호출 없음.
 
-  python scripts/retag.py
+  python tools/retag.py
 
 태거는 규칙 기반이라 결정적이다 — news/core/tags.py의 어휘를 고친 뒤
 이 스크립트를 재실행하면 전체 코퍼스가 새 어휘로 재태깅된다.
