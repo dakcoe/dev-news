@@ -376,7 +376,10 @@ def prepare_published(picked: list[dict], cfg: dict,
         else:
             main, reserve = picked, []
         ready, removed = _filter_summarized(summarize(main), gate_on, recent)
-        short = top_n - len(ready)
+        # 본선에서 빠진 만큼만 채운다. top_n 과의 차이로 잡으면 pick 이 일부러 비워 둔
+        # 예약석(github 후보 부족)까지 메우려다, 요약만 받고 마지막 pick 에서 잘리는
+        # 기사가 생긴다 — 9/17~10/7 62회차 중 59회차가 그런 회차였다.
+        short = len(main) - len(ready)
         if gate_on and short > 0 and reserve and budget > 0:
             print(f"[깔때기] 게재 가능 {len(ready)}건 — 예비 {len(reserve)}건에서 {short}건 보충")
             more = summarize(reserve, stop_after=short)

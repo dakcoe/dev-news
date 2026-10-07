@@ -180,3 +180,18 @@ def test_main_은_게재·제외·죽은_링크를_seen_에_넣고_요약_실패
     assert build.main() == 0
     assert _urls(written) == ["h1"]
     assert sorted(_urls(seen)) == ["h1", "h2-DUP", "h3-DEAD"]
+
+
+def test_비워_둔_예약석은_보충하지_않는다(fake):
+    """github 후보가 예약석(5)보다 적으면 pick 은 그 자리를 일부러 비운다(일반 기사로
+    채우지 않는다). 보충이 그 빈자리를 top_n 까지 채우려 하면 요약만 받고 마지막
+    pick 에서 잘리는 기사가 생긴다 — 호출을 쓰고, seen 에도 안 들어가 다음 회차에
+    또 요약된다."""
+    picked = ([_art(f"h{i}", score=10 - i) for i in range(6)]
+              + [_art(f"g{i}", "github", 0.1 - i / 100) for i in range(3)])
+    published, removed, _ = build.prepare_published(
+        picked, _cfg(top_n=8, quota={"github": 5}), no_ai=False)
+    assert len(fake.calls_per_run) == 1, "제외가 없으면 보충을 부르지 않는다"
+    assert len(published) == 6 and removed == []
+    # 요약을 받은 기사는 전부 게재되거나 제외로 기록돼야 한다
+    assert set(fake.order) == set(_urls(published))
