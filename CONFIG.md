@@ -38,7 +38,7 @@ feeds:
 - `name`을 생략하면 도메인이 출처 이름이 된다.
 - 피드 하나가 죽어도 나머지는 계속 수집한다.
 - `page: false`는 태그 어휘 도출용 코퍼스만 모을 때 쓴다. 후보 로그에는 남고 페이지에는 안 실린다.
-- 글이 드문 공식 블로그는 `long_window`로 수집 창을 따로 늘린다 (기본 48시간, anthropic은 240시간).
+- 글이 드문 공식 블로그는 `long_window`로 수집 창을 따로 늘린다 (기본 48시간, anthropic은 168시간, rss는 120시간).
 
 ### Reddit이 기본으로 꺼져 있는 이유
 
@@ -58,7 +58,7 @@ block_keywords:
 ```
 
 - 개발 전용 소스는 `keywords` 화이트리스트를 건너뛴다. 목록은 `news/core/filters.py` 의 `TRUSTED` 하나뿐이다 — 여기에 다시 적어 두었더니 출처를 늘릴 때마다 값이 갈렸다. `block_keywords`는 이들에게도 적용된다.
-- 지금 켜진 출처 중 화이트리스트를 타는 것은 `trendshift` 뿐이고, 그 기사는 `source`가 `github`으로 기록된다. **`keywords` 를 고쳐도 게재 여부는 거의 안 바뀐다** — 통과 여부를 정하는 것은 차단 목록이다 (`tests/test_keyword_filter.py` 에 그대로 박아 두었다).
+- 지금 켜진 출처는 전부 `TRUSTED`라 화이트리스트를 타지 않는다. Trendshift 기사도 `source`가 `github`으로 기록돼 면제된다. **`keywords` 를 고쳐도 게재 여부는 바뀌지 않는다** — 통과 여부를 정하는 것은 차단 목록이다 (`tests/test_keyword_filter.py` 에 그대로 박아 두었다).
 - 차단어가 있어도 `keywords`가 하나라도 같이 걸리면 남긴다.
 - 짧고 흔한 영어 단어(rest, data, set)는 `keywords`에 넣지 않는다. 단어 경계로도 못 막는다.
 - 한국어 차단어는 다른 말에 파묻히는 모호어를 피한다. `배우`는 `배우다`에 걸린다.
@@ -149,11 +149,11 @@ quota_backfill_max:
 
 모델은 하나의 사다리다(`summarizer.MODEL_LADDER`). 용도마다 들어가는 칸이 다를 뿐이고, 한도에 걸리면 아래 칸으로 내려간다.
 
-    사다리   gpt-oss-120b → qwen3.8-27b → qwen3.6-27b
+    사다리   gpt-oss-120b → qwen3.8-27b → gpt-oss-20b
     요약     맨 위부터 내려간다
     왜중요   qwen3.8-27b부터 내려간다
 
-**체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. 2026-09-14 기준 Groq 목록은 `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b` 넷이다. 확인은 이렇게 한다.
+**체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. 2026-09-14 기준 Groq 목록은 `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b` 넷이었고, `qwen3.6-27b`는 09-18에 내려가 사다리에서 뺐다. 확인은 이렇게 한다.
 
 ```
 curl -s -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/models
@@ -165,7 +165,7 @@ curl -s -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/
 llm:
   max_calls_per_run: 90   # 실행당 호출 상한. why_model을 쓰면 기사당 2회다
   model:                  # 비우면 공급자 기본 모델
-  pause_seconds: 6.0      # 호출 간격. gpt-oss는 2초면 절반이 429였다
+  pause_seconds: 12.0     # 호출 간격. gpt-oss는 2초면 절반이 429였다
   why_model: qwen/qwen3.8-27b   # '왜 중요한가'만 다른 모델로. 비우면 model이 다 쓴다
   fallback_models:        # 요약이 한도(429)면 갈아탈 모델. 비우면 기본 체인
   why_fallback_models:    # 왜중요가 한도면 갈아탈 모델. 비우면 기본 체인
@@ -224,7 +224,8 @@ docs/data/                    # 위 파일들의 Pages 서빙 사본 + apis.json
 alert:
   min_published: 10   # 이보다 적게 게시되면 publish.sh 가 🟡 이슈를 연다
   silent_streak: 3    # 켜진 출처가 이 회차 수만큼 연속 0건이면 🟡 출처 침묵 이슈를 연다
-  stale_streak: 27    # 수집은 되는데 기간 필터를 지난 글이 이 회차 수만큼 연속 0건이어도 알린다
+  # stale_streak: 27  # 수집은 되는데 기간 필터를 지난 글이 이 회차 수만큼 연속 0건이어도 알린다.
+                      # config.yaml 에는 없고 코드 기본값(source_health.DEFAULT_STALE_STREAK)을 쓴다
 ```
 
 출처별 수집 건수는 회차마다 `data/source_health.json`에 남는다(최근 30회차). 한 회차 0건은 타임아웃일 수 있어 기본 3회차(하루)를 본다.
