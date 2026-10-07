@@ -13,6 +13,10 @@
 #
 # 실패·열화·출처 침묵은 워크플로 때와 같이 scripts/notify.sh 로 이슈를 연다.
 set -uo pipefail
+
+# 아래 pull 이 이 파일을 새로 받아도 지금 회차는 이미 연 옛 파일로 끝까지 돈다(git 은
+# 파일을 새로 써서 바꾸고, bash 는 열어 둔 옛 파일을 계속 읽는다). 이 파일을 고치면
+# 그 동작은 다음 회차부터 적용된다 — 10-08 00:00 회차가 옛 push 실패 처리를 탔다.
 cd "$(dirname "$0")/.."
 mkdir -p logs
 LOG="logs/publish.log"
@@ -97,19 +101,32 @@ else
       "$STAMP 회차: 발행 직전 rebase 가 실패했습니다. 수집 기계에서 rebase 상태를 풀어야 다음 회차가 돕니다."
     exit 1
   fi
-  if ! git push -q origin main; then
-    # 거부된 커밋을 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
-    # redact.py 에 패턴을 더해도 이미 만들어진 커밋은 그대로라 풀리지 않는다.
-    # 커밋은 확인용 브랜치에 남기고 원격 상태로 되돌린다 — 이 회차 기사는 seen 에도
-    # 안 남으므로 다음 회차가 다시 수집하면서 새 패턴으로 마스킹한다.
-    FAILED="push-failed/$(date '+%Y%m%d-%H%M')"
-    git branch -f "$FAILED" HEAD
-    git reset -q --hard origin/main
-    echo "push 실패 — 커밋을 $FAILED 에 두고 origin/main 으로 되돌림"
-    alert "🔴 뉴스 수집 실패" \
-      "$STAMP 회차: push 가 거부됐습니다. 거부된 커밋은 수집 기계의 \`$FAILED\` 브랜치에 있습니다. 시크릿(GH013)이면 news/core/redact.py 에 패턴을 추가하세요 — 다음 회차가 같은 기사를 다시 수집해 마스킹합니다."
+  # 일시 장애(GitHub 5xx·네트워크)면 30초 뒤 한 번 더 민다. 10-08 00:00 회차가
+  # 500 으로 거부됐다가 한 시간 뒤 그대로 올라갔다.
+  PUSH_ERR="$(git push -q origin main 2>&1)" || {
+    echo "$PUSH_ERR"; sleep "${DEV_NEWS_PUSH_RETRY_WAIT:-30}"
+    PUSH_ERR="$(git push -q origin main 2>&1)"
+  } || {
+    echo "$PUSH_ERR"
+    if echo "$PUSH_ERR" | grep -qiE "GH013|secret|push protection"; then
+      # 시크릿이 섞여 거부된 커밋을 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가
+      # 계속 거부된다. redact.py 에 패턴을 더해도 이미 만들어진 커밋은 그대로다.
+      # 커밋은 확인용 브랜치에 남기고 원격 상태로 되돌린다 — 이 회차 기사는 seen 에도
+      # 안 남으므로 다음 회차가 다시 수집하면서 새 패턴으로 마스킹한다.
+      FAILED="push-failed/$(date '+%Y%m%d-%H%M')"
+      git branch -f "$FAILED" HEAD
+      git reset -q --hard origin/main
+      echo "push 거부(시크릿) — 커밋을 $FAILED 에 두고 origin/main 으로 되돌림"
+      alert "🔴 뉴스 수집 실패" \
+        "$STAMP 회차: 수집물에 섞인 시크릿(GH013)으로 push 가 거부됐습니다. 거부된 커밋은 수집 기계의 \`$FAILED\` 브랜치에 있습니다. news/core/redact.py 에 패턴을 추가하세요 — 다음 회차가 같은 기사를 다시 수집해 마스킹합니다."
+    else
+      # 일시 장애로 보고 커밋은 그대로 둔다. 다음 회차의 push 가 같이 올린다.
+      echo "push 실패(일시 장애로 보고 커밋을 남긴다)"
+      alert "🔴 뉴스 수집 실패" \
+        "$STAMP 회차: push 가 두 번 실패했습니다(시크릿 거부는 아님). 커밋은 수집 기계에 남아 있고 다음 회차가 같이 올립니다. 계속되면 GitHub 상태와 인증을 확인하세요."
+    fi
     exit 1
-  fi
+  }
   echo "push 완료 $(git rev-parse --short HEAD)"
 fi
 

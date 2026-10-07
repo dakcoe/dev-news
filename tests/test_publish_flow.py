@@ -61,7 +61,7 @@ def repo(tmp_path):
 
 def _run(repo, **env):
     e = {**os.environ, "NOTIFY_LOG": str(repo["tmp"] / "notify.log"),
-         "DEV_NEWS_LOCK": str(repo["tmp"] / "publish.lock"), **env}
+         "DEV_NEWS_LOCK": str(repo["tmp"] / "publish.lock"), "DEV_NEWS_PUSH_RETRY_WAIT": "0", **env}
     e.pop("GITHUB_OUTPUT", None)
     return subprocess.run(["bash", "scripts/publish.sh"], cwd=repo["work"], env=e,
                           capture_output=True, text=True)
@@ -101,6 +101,26 @@ def test_push_가_거부되면_커밋을_브랜치에_두고_원격으로_되돌
     # 원인이 풀리면 다음 회차는 정상으로 올라간다
     hook.unlink()
     assert _run(repo).returncode == 0
+
+
+def test_일시_장애로_push_가_실패하면_커밋을_남겨_다음_회차가_올린다(repo):
+    # 10-08 00:00 회차: GitHub 500 으로 거부됐다. 시크릿 거부처럼 되돌리면 멀쩡한
+    # 회차 데이터를 버리게 된다.
+    hook = repo["remote"] / "hooks" / "pre-receive"
+    hook.write_text("#!/bin/sh\necho 'Internal Server Error' >&2\nexit 1\n")
+    hook.chmod(0o755)
+    assert _run(repo).returncode == 1
+    work = repo["work"]
+    assert "push-failed/" not in _git(work, "branch", "--list", "push-failed/*").stdout
+    ahead = _git(work, "rev-list", "--count", "origin/main..HEAD").stdout.strip()
+    assert ahead == "1"
+    assert "시크릿 거부는 아님" in _alerts(repo)
+
+    hook.unlink()
+    assert _run(repo).returncode == 0
+    assert _git(work, "rev-list", "--count", "origin/main..HEAD").stdout.strip() == "0"
+    subjects = _git(repo["remote"], "log", "--format=%s", "-3").stdout
+    assert subjects.count("뉴스 갱신") == 2, "남겨 둔 회차도 같이 올라가야 한다"
 
 
 def test_알림이_실패해도_로그에_남는다(repo):
