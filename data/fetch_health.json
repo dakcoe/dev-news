@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-28T00:00:38+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-28T08:00:30+09:00",
    "total": 17,
    "counts": {
@@ -1105,6 +1096,58 @@
     {
      "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-08T00:00:45+09:00",
+   "total": 24,
+   "counts": {
+    "ok": 10,
+    "blocked": 7,
+    "github": 6,
+    "short": 1
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34947",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34945",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34939",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=49982498",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://www.pushsquare.com/news/2026/10/ps5-jailbreaks-are-escalating-at-an-unprecedented-pace-and-sony-must-be-sweating",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34946",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34944",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
