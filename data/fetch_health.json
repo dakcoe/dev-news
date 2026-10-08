@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-29T00:00:30+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-29T08:00:28+09:00",
    "total": 17,
    "counts": {
@@ -1211,6 +1202,42 @@
     {
      "url": "https://openai.com/index/teens-learn-and-plan",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-09T00:00:30+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 15,
+    "blocked": 5,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35015",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35014",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35013",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35010",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35009",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
