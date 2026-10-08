@@ -509,8 +509,10 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                   stats: dict | None = None) -> list[dict]:
     """랭킹 순서대로 요약. 반환 기사의 llm_done이 False면 게시·seen 등록 금지.
 
-    stats에 dict를 넘기면 실제로 보낸 호출 수를 `calls`에 적어 준다. 실패한 호출도
-    센다 — 한 회차에 요약을 두 번 나눠 부를 때 예산을 이어 쓰는 데 쓴다.
+    stats에 dict를 넘기면 실제로 보낸 호출 수를 `calls`에(실패한 호출도 센다),
+    앞에서부터 몇 건까지 손댔는지를 `consumed`에, 한도·장애로 멈췄는지를
+    `exhausted`에 적어 준다. 한 회차에 요약을 여러 번 나눠 부를 때(예비 보충)
+    예산을 이어 쓰고 다음에 어디서부터 부를지 정하는 데 쓴다.
 
     stop_after를 주면 게재 가능분(무관이 아닌 성공분)이 그 수에 닿는 즉시 멈춘다.
     무관 판정 때문에 후보를 여유 있게 받았을 때, 무관이 없는 회차의 호출 수가
@@ -553,6 +555,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     why_off = False          # 왜중요 모델이 한도에 걸리면 이번 회차는 더 부르지 않는다
     limited: set[str] = set()   # 이번 회차에 한도(429)로 버린 모델. 다른 쪽도 여기로는 안 간다
     out = []
+    consumed = len(articles)   # stop_after 로 멈추면 그 자리까지만 손댄 것이다
 
     for i, article in enumerate(articles, 1):
         if exhausted or calls >= max_calls:
@@ -740,6 +743,7 @@ def summarize_all(articles: list[dict], provider: str | None = None,
                 if remain:
                     print(f"[분류] 게재 가능 {publishable}건 확보 — 남은 {remain}건은 호출하지 않음")
                     out.extend({**a, "llm_done": False} for a in articles[i:])
+                consumed = i
                 break
 
         time.sleep(pause)          # 분당 토큰 제한(TPM) 여유를 둔다
@@ -747,6 +751,8 @@ def summarize_all(articles: list[dict], provider: str | None = None,
     ok = sum(1 for a in out if a.get("llm_done"))
     if stats is not None:
         stats["calls"] = calls
+        stats["consumed"] = consumed
+        stats["exhausted"] = exhausted or calls >= max_calls
     print(f"[summarizer] 성공 {ok}/{len(out)} · 호출 {calls}회")
     for m, t in sorted(TOKENS.items()):
         print(f"[토큰] {m} · 호출 {t['calls']}회 · 입력 {t['in']:,} + 출력 {t['out']:,}"

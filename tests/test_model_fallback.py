@@ -300,3 +300,13 @@ def test_호출_수를_stats_에_적는다(monkeypatch):
     S.summarize_all(ARTICLES[:2], model="주-모델", pause=0, max_calls=50,
                     fallback_models=[], stats=stats)
     assert stats["calls"] >= 2
+
+
+def test_stop_after_로_멈추면_어디까지_손댔는지_적는다(monkeypatch):
+    # 예비 보충을 되풀이할 때 다음 보충은 손대지 않은 기사부터 부른다 (build.prepare_published)
+    stub_errors(monkeypatch, broken=set())
+    stats = {}
+    out = S.summarize_all(ARTICLES, model="주-모델", pause=0, max_calls=50,
+                          fallback_models=[], stop_after=2, stats=stats)
+    assert stats["consumed"] == 2 and not stats["exhausted"]
+    assert [a["llm_done"] for a in out] == [True, True, False, False]

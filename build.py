@@ -355,10 +355,10 @@ def prepare_published(picked: list[dict], cfg: dict,
         llm_cfg = cfg.get("llm", {})
         budget = llm_cfg.get("max_calls_per_run", 50)
 
-        def summarize(arts, stop_after=None):
+        def summarize(arts, stop_after=None, stats=None):
             # 본선과 예비가 호출 예산 하나를 나눠 쓴다
             nonlocal budget
-            stats: dict = {}
+            stats = {} if stats is None else stats
             out = summarizer.summarize_all(
                 arts, model=llm_cfg.get("model") or None,
                 pause=float(llm_cfg.get("pause_seconds", 4.0)),
@@ -379,13 +379,23 @@ def prepare_published(picked: list[dict], cfg: dict,
         # 본선에서 빠진 만큼만 채운다. top_n 과의 차이로 잡으면 pick 이 일부러 비워 둔
         # 예약석(github 후보 부족)까지 메우려다, 요약만 받고 마지막 pick 에서 잘리는
         # 기사가 생긴다 — 9/17~10/7 62회차 중 59회차가 그런 회차였다.
-        short = len(main) - len(ready)
-        if gate_on and short > 0 and reserve and budget > 0:
+        # 보충한 기사도 같은 사건 등으로 다시 빠질 수 있으니 예비·예산이 남는 동안
+        # 되풀이한다 (10-08 08:00 회차가 보충 3건 중 1건을 다시 잃고 16건으로 끝났다).
+        while gate_on and reserve and budget > 0:
+            short = len(main) - len(ready)
+            if short <= 0:
+                break
             print(f"[깔때기] 게재 가능 {len(ready)}건 — 예비 {len(reserve)}건에서 {short}건 보충")
-            more = summarize(reserve, stop_after=short)
-            # 예비분끼리만이 아니라 이미 남긴 본선과도 같은 사건인지 본다
+            stats: dict = {}
+            more = summarize(reserve, stop_after=short, stats=stats)
+            # 예비분끼리만이 아니라 이미 남긴 기사와도 같은 사건인지 본다
             more_ready, more_removed = _filter_summarized(more, gate_on, recent + ready)
             ready, removed = ready + more_ready, removed + more_removed
+            # 손대지 않은 예비만 다음 보충에 쓴다. 손댔는데 요약에 실패한 기사는
+            # 이번 회차에 다시 부르지 않는다 — seen 에 안 들어가 다음 회차에 재시도된다
+            reserve = reserve[stats.get("consumed", len(reserve)):]
+            if stats.get("exhausted"):
+                break
 
     # 여유분(overpick)을 뽑았으므로 다시 top_n으로 줄인다. 앞에서 그냥 자르면
     # 예약석(source_quota) 비율이 깨지므로 같은 선별 규칙을 한 번 더 태운다.

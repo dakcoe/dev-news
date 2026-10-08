@@ -53,9 +53,14 @@ class FakeSummarizer:
                 ok = sum(1 for x in out if x.get("llm_done"))
                 if ok >= stop_after:
                     out.extend({**x, "llm_done": False} for x in articles[i + 1:])
+                    consumed = i + 1
                     break
+        else:
+            consumed = len(articles)
         if stats is not None:
             stats["calls"] = calls
+            stats["consumed"] = consumed
+            stats["exhausted"] = calls >= max_calls
         self.calls_per_run.append(calls)
         return out
 
@@ -195,3 +200,23 @@ def test_비워_둔_예약석은_보충하지_않는다(fake):
     assert len(published) == 6 and removed == []
     # 요약을 받은 기사는 전부 게재되거나 제외로 기록돼야 한다
     assert set(fake.order) == set(_urls(published))
+
+
+def test_보충한_기사가_또_빠지면_예비가_남는_한_다시_채운다(fake):
+    """10-08 08:00 회차: 보충한 3건 중 1건이 같은 사건으로 다시 빠져 17칸 중 16건으로
+    끝났다. 예비가 2건 남아 있었다."""
+    picked = [_art("h1", score=9), _art("h2-DUP", score=8), _art("h3", score=7),
+              _art("r1-DUP", score=6), _art("r2", score=5), _art("r3", score=4)]
+    published, removed, _ = build.prepare_published(picked, _cfg(top_n=3, quota={}),
+                                                    no_ai=False)
+    assert sorted(_urls(published)) == ["h1", "h3", "r2"]
+    assert sorted(_urls(removed)) == ["h2-DUP", "r1-DUP"]
+    # 본선 → 보충(r1, 빠짐) → 다시 보충(r2). r3 는 부르지 않는다
+    assert fake.order == ["h1", "h2-DUP", "h3", "r1-DUP", "r2"]
+
+
+def test_예비가_다_떨어지면_보충을_멈춘다(fake):
+    picked = [_art("h1", score=9), _art("h2-DUP", score=8), _art("r1-DUP", score=6)]
+    published, _, _ = build.prepare_published(picked, _cfg(top_n=2, quota={}), no_ai=False)
+    assert _urls(published) == ["h1"]
+    assert len(fake.calls_per_run) == 2
