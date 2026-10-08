@@ -27,7 +27,7 @@
 | 요약 | Groq(기본). 본선부터 요약한다. 429·장애·없는 모델이면 예비 모델로, 다 막히면 멈춘다. 실행당 호출 예산 있음 | `news/summarizer.py` |
 | 게재 기준 | 요약과 같이 받은 분류가 '기술 밖'이거나 요약이 스스로 무관하다고 쓴 기사를 뺀다. 보호 목록(교차 출처·HN 고득표)은 건드리지 않는다 | `news/core/filters.py` |
 | 같은 사건 | 다른 매체가 같은 소식을 쓴 기사를 최근 48시간 게재분과 비교해 뺀다. EmbeddingGemma 2 유사도 0.935 이상은 바로, 0.88~0.935는 Groq가 판정 | `news/core/similar.py` |
-| 보충 | 위 두 단계로 빠져 `top_n`에 모자라면 예비에서 그만큼 더 요약한다 | `build.py` `prepare_published` |
+| 보충 | 위 두 단계로 본선에서 빠진 만큼 예비에서 더 요약한다. 보충한 기사가 또 빠지면 예비·호출 예산이 남는 동안 되풀이한다. 비워 둔 github 예약석은 채우지 않는다 | `build.py` `prepare_published` |
 | 태그 | 닫힌 어휘 20개, 규칙 매칭. LLM 자유 태그 없음 | `news/core/tags.py` |
 | 저장 | 월별 샤드 + 월별 검색 색인 + 후보 로그 | `news/core/archive.py` · `candidates.py` |
 | 렌더 | 템플릿 하나에 최근 30일 기사를 구워 넣는다. SEO 파일(sitemap·robots·llms.txt)도 여기서 | `news/render.py` · `template.html` |
