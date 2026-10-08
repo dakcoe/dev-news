@@ -1,5 +1,548 @@
 [
  {
+  "title": "Build live dashboards and animate explainers with Claude",
+  "url": "https://claude.com/resources/articles/dashboards-and-motion",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791417600.0,
+  "origin_url": "https://claude.com/blog/dashboards-and-motion",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/dashboards-and-motion",
+   "https://claude.com/resources/articles/dashboards-and-motion"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://claude.com/ko/resources/articles/dashboards-and-motion/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude로 실시간 대시보드 만들고 애니메이션 설명서 생성",
+  "summary": "Claude가 데이터 플랫폼과 CRM에 연결해 자연어 질문만으로 최신 대시보드를 자동 생성한다. 베타 단계인 Claude Dashboards와 Claude Motion은 유료 플랜에서 제공되며, 무료 플랜에도 Docs, Slides, Design 기능이 포함된다. 각 차트와 애니메이션은 생성된 SQL·코드와 함께 제공돼 사용자가 직접 수정·확인할 수 있다.",
+  "why": "Claude Dashboards는 베타 단계이며 유료 플랜에서만 사용할 수 있다. 생성된 차트마다 SQL 쿼리가 함께 제공되므로 로직을 직접 수정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Building effective agent automations",
+  "url": "https://claude.dev/blog/building-effective-agent-automations/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791460800.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/building-effective-agent-automations/"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://claude.dev/blog/building-effective-agent-automations/og.png",
+  "link_status": "ok",
+  "ko_title": "효과적인 에이전트 자동화 구축",
+  "summary": "Anthropic이 Claude Managed Agents 베타를 활용해 Slack과 GitHub 저장소를 주기적으로 읽고 변경 사항을 추적해 요약을 Slack에 게시하는 레퍼런스 구현을 공개했다. 구현에는 에이전트, 배포, 환경, 메모리 저장소, 자격 증명 보관소 설정 파일이 포함된다. 실행하려면 Slack 앱과 GitHub 토큰이 필요하며, Claude Code에서 제공 명령으로 자동 설정이 가능하다.",
+  "why": "Claude Managed Agents 베타를 활용해 주기적 컨텍스트 수집과 요약 배포를 자동화할 수 있다. Slack 앱과 GitHub 토큰만 준비하면 Claude Code 명령어로 에이전트 설정을 자동 생성할 수 있다. 소스 접근 권한 상실이나 사용자 선호도 무시 같은 실패 모드를 사전에 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "storytold / designcraft",
+  "url": "https://github.com/storytold/designcraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 621,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/designcraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 621,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/storytold/designcraft",
+  "link_status": null,
+  "ko_title": "DesignCraft — 페이지 레이아웃 및 출판용 오픈소스 인디자인 재구현",
+  "summary": "DesignCraft는 Rust로 새로 구현한 오픈소스 페이지 레이아웃 및 출판 도구다. macOS·Windows·Linux는 물론 WebAssembly를 통해 브라우저에서도 실행된다. 현재 MIT·Apache-2.0 듀얼 라이선스로 제공되며, ArtCraft 팀이 관리한다.",
+  "why": "MCP 인터페이스를 지원해 에이전트가 레이아웃 작업을 직접 수행할 수 있다. 브라우저에서 WebAssembly로 실행되어 로컬 설치 없이 웹 환경에서 출판 워크플로를 처리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Building on our commitment to American scientific discovery",
+  "url": "https://www.anthropic.com/news/genesis-mission-commitment",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791417600.0,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/genesis-mission-commitment"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://www.anthropic.com/api/opengraph-illustration?name=Object%20DoubleHelix&backgroundColor=heather",
+  "link_status": "ok",
+  "ko_title": "미국 과학 발견에 대한 우리의 약속을 기반으로",
+  "summary": "Anthropic가 3년간 1억 5천만 달러를 투자해 연방 Genesis Mission에 Claude와 Claude Code, API 크레딧을 제공한다. NASA·NIH·NSF 등 15개 이상 기관이 AI 도구를 활용해 과학 연구를 가속화한다. 이번 지원은 기존 DOE 협력에 이어 융합 에너지·양자 컴퓨팅 등 핵심 과제에 집중한다.",
+  "why": "Claude Code와 API 크레딧이 연방 연구 기관에 제공되면서 공공 부문의 AI 활용 사례가 늘어난다. 융합 에너지나 양자 컴퓨팅 같은 난제 해결에 AI 도구가 본격 투입되는 흐름을 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "backend-data",
+   "science"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Whistle - 16.9 MB로 구현한 음성 텍스트 변환",
+  "url": "https://news.hada.io/topic?id=35027",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791488144.0,
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://cactuscompute.com/blog/whistle",
+   "https://news.hada.io/topic?id=35027"
+  ],
+  "cross_source_count": 2,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Whistle - 16.9 MB로 구현한 음성 텍스트 변환",
+  "summary": "Whistle은 16.9 MB 단일 파일로 배포되는 공개 음성 인식 모델이다. 별도 의존성 없이 CPU만으로 7개 언어의 음성을 텍스트로 전사하고, 단어별 타임스탬프와 음성 임베딩을 제공한다. 16 kHz 모노 오디오를 한 번에 최대 30초까지 처리한다.",
+  "why": "서버 GPU 없이 CPU만으로 음성 전사를 돌릴 수 있어 경량 백엔드 구성이 가능하다. 단, 16kHz 모노 입력과 30초 처리 제한이 있으므로 장시간 녹음 파일은 분할 처리가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "OpenAI annualised revenues $20B less than previously signalled",
+  "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
+  "source": "hackernews",
+  "upvotes": 342,
+  "comments": 237,
+  "published_at": 1791477958,
+  "discussion": "https://news.ycombinator.com/item?id=50008187",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://image.cnbcfm.com/api/v1/image/108369813-1790712609527-gettyimages-2297765616-_q3a2873_m5g8wtsy.jpeg?v=1790712953&w=1920&h=1080",
+  "link_status": "ok",
+  "ko_title": "OpenAI 연간 매출, 이전 발표보다 200억 달러 적게 나타나",
+  "summary": "OpenAI는 9월 말 기준 연간 매출이 약 500억 달러라고 발표했으며, 이는 이전에 알려진 680억 달러보다 180억 달러 낮다. 발표는 파트너 매출을 제외한 수치이며, 3분기 전체 매출 성장률은 77%, 기업 부문은 107%였다. 이 소식에 Nvidia, Oracle, CoreWeave 등 AI 관련 주식이 하락했다.",
+  "why": "AI 인프라 투자 판단 시 파트너 매출 포함 여부를 확인해야 한다. 이전 수치와 비교 시 직접 매출 기준이 달라진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "일러스트레이터에게 우리 집 그림을 의뢰했다. 이제 그 그림이 Home Assistant 대시보드다",
+  "url": "https://news.hada.io/topic?id=35031",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791495333.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35031"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "일러스트레이터에게 우리 집 그림을 의뢰했다. 이제 그 그림이 Home Assistant 대시보드다",
+  "summary": "실제 집을 그린 인터랙티브 대시보드를 만들어 Home Assistant 앱 대신 가족이 그림을 통해 기기를 직접 제어한다. 벽난로, 정원 조명, 에어컨 등 기기 상태에 따라 정지 이미지와 애니메이션 WebP가 바뀐다.",
+  "why": "Home Assistant 대시보드를 커스텀 인터랙티브 이미지로 교체하면 가족이 기존 앱 없이 기기를 제어할 수 있다. 기기 상태에 따라 정지 이미지와 애니메이션 WebP가 전환되는 구조를 참고해 대시보드 UX를 개선할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "How Block orchestrates Claude Fable across thousands of pull requests",
+  "url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791417600.0,
+  "origin_url": "https://claude.com/blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
+   "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://claude.com/ko/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Block이 수천 개 풀 리퀘스트에 걸쳐 Claude Fable을 오케스트레이션하는 방법",
+  "summary": "Block의 AI 역량 팀은 Claude Fable 5를 활용해 전사적인 코드 마이그레이션을 자동화하고, 엔지니어링 작업을 설계 중심으로 전환하고 있다. 이 과정에서 에이전트 행동 검토와 안전장치 적용이 핵심 요소로 강조된다. 또한, Block은 이 기술을 Square와 Cash App에 적용해 고객용 AI 기능을 확대하려는 계획을 밝혔다.",
+  "why": "에이전트 오케스트레이션 시 설계 단계에서 마이그레이션 구조를 짜고 에이전트 행동을 검토하는 작업이 핵심으로 이동한다. 프런티어 모델에 대한 전사적 접근 권한이 부여된 환경에서는 안전장치 적용이 필수적이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Being mean to Claude can now get your account suspended under Anthropic's new TOS",
+  "url": "https://the-decoder.com/being-mean-to-claude-can-now-get-your-account-suspended-under-anthropics-new-tos/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791486194.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/being-mean-to-claude-can-now-get-your-account-suspended-under-anthropics-new-tos/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/claude_sad.png",
+  "link_status": "ok",
+  "ko_title": "클로드에게 악의적 행동 시 계정 정지…Anthropic 새 이용약관 적용",
+  "summary": "Anthropic이 1년 만에 Claude 사용 정책을 업데이트해 지속적이고 불필요한 학대 행위를 금지한다. 위반 시 경고·제한·정지·계정 종료가 가능하며, 실시간 보호 기능이 해당 출력도 차단한다. 일반적인 불만이나 연구 목적의 사용은 예외로 둔다.",
+  "why": "Claude API를 백엔드에서 호출할 때 반복적인 악의적 프롬프트를 보내면 계정 정지 위험이 생긴다. 단순 불만이나 모델 테스트는 예외이므로 정상적인 개발 워크플로에는 영향이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "2026 Usage Policy update",
+  "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791417600.0,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/2026-usage-policy-update"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "2026 사용 정책 업데이트",
+  "summary": "Anthropic가 최신 모델 Claude의 능력 확대와 고객 피드백을 반영해 사용 정책을 개정했다. 새 정책은 기만적 활동, 선거 관련 제한, 고위험 분야(보건·금융) 사용 요구사항, 물리적 행동 자동화 등에 대한 구체적 예시와 규정을 추가한다. 업데이트는 11월 12일부터 시행된다.",
+  "why": "Claude가 자율적으로 더 긴 작업을 수행하면서 기존 규칙의 적용 범위가 모호해졌다. 11월 12일 시행되는 새 정책은 기만적 활동과 고위험 분야 규정을 명확히 했다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "왜 AI 업계는 DeepSeek 4.1 Flash에 긴장하지 않는가?",
+  "url": "https://news.hada.io/topic?id=35032",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791495513.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35032"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "왜 AI 업계는 DeepSeek 4.1 Flash에 긴장하지 않는가?",
+  "summary": "DeepSeek 4.1 Flash를 12개 프로젝트에 한 달간 적용해 본 결과, 응답 속도와 결과 품질 면에서 Opus와 큰 차이를 느끼지 못했다. 그러나 비용은 현저히 낮아 일상적인 개발 작업에 충분히 활용할 수 있다. 최신 최고급 모델을 추구하기보다 동일 작업을 저렴하게 수행할 수 있다는 점이 주목된다.",
+  "why": "일상적인 백엔드 개발 작업에서 최고급 모델 대신 DeepSeek 4.1 Flash를 쓰면 비용을 크게 줄일 수 있다. 응답 속도와 결과 품질에서 체감 차이가 없으므로 기존 워크플로우를 유지하면서 비용만 절감할 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+  "url": "https://openai.com/index/oracle",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791475200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/oracle"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Oracle, ChatGPT와 Codex로 며칠 작업을 몇 분으로 단축",
+  "summary": "Oracle은 ChatGPT Work와 Codex를 활용해 채용·엔지니어링·운영 분야의 전문 지식을 자동화한다. 이를 통해 며칠 걸리던 작업을 몇 분 안에 처리할 수 있는 반복 가능한 워크플로우로 전환한다.",
+  "why": "Oracle이 채용과 엔지니어링, 운영 영역에서 전문 지식을 자동화 워크플로우로 전환했다. 반복적인 업무 처리 시간이 며칠에서 몇 분으로 줄어든 사례다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "career-culture"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "shadany7824 / playgta5",
+  "url": "https://github.com/shadany7824/playgta5",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 626,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/shadany7824/playgta5"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 626,
+  "score": 41,
+  "image": "https://opengraph.githubassets.com/1/shadany7824/playgta5",
+  "link_status": null,
+  "ko_title": "shadany7824 / playgta5",
+  "summary": "이 저장소는 playgta5.com에서 사라진 소스 코드를 복구해 로컬에서 실행할 수 있게 제공한다. Python 3.11 이상 환경에서 실행 스크립트를 사용해 로컬 서버를 띄우며, 실제 게임 파일은 별도로 확보해야 한다.",
+  "why": "Python 3.11 이상 환경이 필요하므로 기존 3.10 이하를 쓰는 경우 업그레이드가 필수다. 19.7GB 용량의 게임 파일은 저장소에 없으므로 별도로 확보해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Quoting Carson Gross",
+  "url": "https://simonwillison.net/2026/Oct/8/carson-gross/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791493544.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/8/carson-gross/"
+  ],
+  "cross_source_count": 1,
+  "score": 32,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Carson Gross 인용",
+  "summary": "저자는 컴퓨터 프로그래밍이 문제 해결과 복잡도 관리라는 두 핵심 요소에 기반한다며, AI 도구가 등장해도 이러한 능력의 가치는 감소하지 않을 것이라고 주장한다. 최근 관련 기사들을 나열하면서 현재 기술 흐름을 언급한다.",
+  "why": "AI 도구 도입에도 문제 해결과 복잡도 관리 능력의 가치는 유지된다. 백엔드 개발자의 핵심 역량에 대한 재평가가 필요한 시점이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Theranos.world",
+  "url": "https://news.hada.io/topic?id=35033",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791498688.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35033"
+  ],
+  "cross_source_count": 1,
+  "score": 31,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Theranos.world",
+  "summary": "Elizabeth Holmes의 책상을 재현한 인터랙티브 시뮬레이션으로 MacBook, iPhone, Edison 기기를 조작할 수 있다. 문자와 이메일은 실제 재판 자료에서 가져와 Extend로 파싱했다. 의자를 클릭하거나 탭해 앉고, 드래그로 주변을 이동할 수 있다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "Trump administration is suspending Microsoft from a green card program",
+  "url": "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea",
+  "source": "hackernews",
+  "upvotes": 778,
+  "comments": 1352,
+  "published_at": 1791472500,
+  "discussion": "https://news.ycombinator.com/item?id=50006832",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "트럼프 행정부, 마이크로소프트를 영주권 프로그램에서 정지",
+  "summary": "댓글에서는 마이크로소프트가 영주권 프로그램을 이용해 외국인 노동자를 고용하고, 미국 내 고용주들이 비자 제도와 현지 채용 시도를 비판하는 내용이 논의된다.",
+  "why": "영주권 프로그램 정지로 외국인 인력 확보 경로가 막히면 팀 내 AI·백엔드 인력 구성에 직접적 영향이 생긴다. 기존에 의존하던 비자 기반 채용 전략을 재검토해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "career-culture"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
+  "title": "4-hour battery storage is cheaper to install than gas turbines all across globe",
+  "url": "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/",
+  "source": "hackernews",
+  "upvotes": 208,
+  "comments": 124,
+  "published_at": 1791475413,
+  "discussion": "https://news.ycombinator.com/item?id=50007519",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.solarpowerworldonline.com/wp-content/uploads/2026/06/stock-Holy-Cross-Energy-High-Mesa-Solar-Storage-site-in-Parachute-Colorado.jpg",
+  "link_status": "ok",
+  "ko_title": "4시간 배터리 저장이 전 세계에서 가스 터빈보다 설치 비용이 저렴",
+  "summary": "Wood Mackenzie 보고서에 따르면 43개 시장에서 4시간 배터리 저장이 개방형 가스 터빈보다 비용이 낮다. 중동·아프리카에서는 2035년까지 저장 비용이 33% 감소해 MWh당 $80 수준이 될 전망이다. 중국의 저장 비용은 아시아 태평양 평균보다 55% 저렴해 전 세계 비용 지도를 재편하고 있다.",
+  "why": "데이터센터 전력 공급 계획 시 가스 터빈 대비 배터리 저장 비용 비교가 필수 검토 항목이 된다. 43개 시장 모두에서 배터리가 가스 터빈보다 저렴해 기존 전력 구성 기준이 바뀐다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-09T08:00:05.439057+09:00",
+  "batch_label": "10월 9일 08:00"
+ },
+ {
   "title": "A single prompt was enough to hijack every AI agent in an AWS account, Zenity researchers found",
   "url": "https://the-decoder.com/a-single-prompt-was-enough-to-hijack-every-ai-agent-in-an-aws-account-zenity-researchers-found/",
   "source": "rss",
