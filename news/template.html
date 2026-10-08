@@ -211,6 +211,11 @@ __ADS_HEAD__
   .qbox p{font-size:14.5px;line-height:1.7;color:var(--tx2);margin:0}
   .qacts{display:flex;gap:8px;margin-top:18px}
   .qacts .go{flex:1 1 0;width:auto;justify-content:center}
+  /* 뉴스카드 미리보기. 카드가 세로로 길 수 있어 그림 칸만 스크롤한다. */
+  .qbox.card{max-width:560px}
+  .qbox.card #qtext{max-height:min(62vh,640px);overflow:auto;border-radius:10px;
+                    box-shadow:inset 0 0 0 1px var(--line);background:var(--line2)}
+  .qbox.card #qtext img{display:block;width:100%;height:auto}
   .rb .lb-n{display:none}   /* 좁은 화면 전용 짧은 라벨 */
 
   /* ---------------- main ---------------- */
@@ -1187,7 +1192,15 @@ function qbox(title, text, actsHTML){
   document.getElementById('qacts').innerHTML = actsHTML;
   document.getElementById('qmask').hidden = false;
 }
-function qboxClose(){ document.getElementById('qmask').hidden = true; }
+function qboxClose(){
+  const box=document.querySelector('.qbox');
+  if(box.classList.contains('card')){
+    box.classList.remove('card');
+    const img=document.querySelector('#qtext img');
+    if(img) URL.revokeObjectURL(img.src);
+  }
+  document.getElementById('qmask').hidden = true;
+}
 addEventListener('keydown', e=>{ if(e.key === 'Escape') qboxClose(); });
 
 function acctQuitAsk(){
@@ -2574,26 +2587,44 @@ function shareText(d){
   return parts.join('\n');
 }
 
-function copyCard(d){
-  /* Safari는 클립보드 쓰기를 클릭 직후에만 허용해서, 그림을 싣고 toBlob 까지
-     기다린 뒤에 write 를 부르면 거절당한다. ClipboardItem 에 Promise 를 그대로
-     넘기면 기다리는 일은 브라우저가 대신 해 준다. */
-  const blob=loadCardImage(d.img)
-    .then(img=>new Promise(res=>drawCard(d, img).toBlob(res,'image/png')));
-  if(!(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write))
-    return blob.then(saveCard);
-  return navigator.clipboard.write([new ClipboardItem({'image/png':blob})])
-    .then(()=>alert('뉴스카드를 클립보드에 복사했습니다.'))
-    .catch(()=>blob.then(saveCard));   // 권한이 없으면 파일로 내려준다
+/* 뉴스카드를 바로 복사하지 않고 먼저 보여 준다. 어떤 그림이 나갈지 모른 채
+   붙여 넣게 되면 썸네일이 빠졌는지, 글이 잘렸는지를 받는 쪽에서야 안다. */
+function previewCard(d){
+  const box=document.querySelector('.qbox');
+  box.classList.add('card');
+  qbox('뉴스카드 미리보기', '이미지를 만드는 중입니다.',
+       '<button type="button" class="go" id="cardcopy" disabled>이미지 복사</button>'
+     + '<button type="button" class="go alt" id="cardsave" disabled>이미지 저장</button>'
+     + '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
+  loadCardImage(d.img)
+    .then(img=>new Promise(res=>drawCard(d, img).toBlob(res,'image/png')))
+    .then(blob=>{
+      if(!box.classList.contains('card')) return;     // 다 그리기 전에 닫았다
+      const im=new Image();
+      im.alt='뉴스카드: '+(d.title||'');
+      im.src=URL.createObjectURL(blob);
+      const t=document.getElementById('qtext'); t.textContent=''; t.appendChild(im);
+      const copy=document.getElementById('cardcopy'), save=document.getElementById('cardsave');
+      save.disabled=false;
+      save.onclick=()=>saveCard(blob, save);
+      /* 클립보드에 그림을 못 쓰는 브라우저에서는 저장만 남긴다 */
+      if(!(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write)){ copy.remove(); return; }
+      copy.disabled=false;
+      /* 그림이 이미 만들어져 있어서 누른 순간 바로 쓴다 — Safari 는 클릭 직후의
+         쓰기만 허용한다. */
+      copy.onclick=()=>navigator.clipboard.write([new ClipboardItem({'image/png':blob})])
+        .then(()=>{ copy.textContent='복사했습니다'; })
+        .catch(()=>{ copy.textContent='복사할 수 없습니다'; copy.disabled=true; });
+    });
 }
 
-function saveCard(b){
+function saveCard(b, btn){
   const a=document.createElement('a');
   a.href=URL.createObjectURL(b);
   a.download='dev-news.png';
   a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
-  alert('클립보드를 쓸 수 없어 이미지 파일로 저장했습니다.');
+  if(btn) btn.textContent='저장했습니다';
 }
 
 document.getElementById('db').addEventListener('click', e=>{
@@ -2603,7 +2634,7 @@ document.getElementById('db').addEventListener('click', e=>{
   const item=e.target.closest('[data-share]');
   if(!item || !curDetail) return;
   if(menu) menu.hidden=true;
-  if(item.dataset.share==='card'){ copyCard(curDetail); return; }
+  if(item.dataset.share==='card'){ previewCard(curDetail); return; }
   navigator.clipboard.writeText(shareText(curDetail))
     .then(()=>alert('링크와 내용을 복사했습니다.'))
     .catch(()=>alert('복사에 실패했습니다. 직접 선택해 복사해 주세요.'));
