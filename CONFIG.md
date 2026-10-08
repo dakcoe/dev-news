@@ -11,7 +11,7 @@
 | Trendshift | `trendshift.io` 홈페이지의 일간 순위 25건. GitHub 트렌딩과 같은 저장소는 중복 제거에서 한 건으로 합쳐지고 교차 출처 가산을 받는다. 화면 라벨은 Trendshift |
 | Lobste.rs | `hottest.json` |
 | dev.to | `devto_tags`별 rising 글. 동시 2개, 429면 `Retry-After`(최대 30초)만큼 쉬고 한 번 더 묻는다 |
-| 긱뉴스 | `news.hada.io` RSS. 원문 주소는 글 페이지에서 읽는데, 2026-09-30부터 글 페이지가 403이라 못 찾는다(아래 알림 참고) |
+| 긱뉴스 | `news.hada.io` RSS. 원문 주소는 글 페이지에서 읽는데, 글 페이지가 403을 돌려줘 못 찾는다(아래 알림 참고) |
 | RSS 피드 | `feeds`에 적은 주소 전부 |
 | Anthropic | `anthropic.com/news` · `/engineering` · `claude.com/resources/articles`(Claude 블로그) 목록 HTML 직접 파싱 (RSS 미제공) + `claude.dev/rss.xml` |
 | Reddit | 서브레딧 API (기본 꺼짐 — 아래 참고) |
@@ -124,7 +124,7 @@ quota_backfill_max:
 후순위로 메우는 개수의 상한이다. 트렌딩은 며칠씩 같은 목록이라 전부 이미 소개한 저장소인 날이 흔한데, 그러면 5칸이 통째로 Trendshift가 된다.
 `github: 2`면 트렌딩이 0건일 때 Trendshift 2건만 싣고 나머지 칸은 비워 회차가 17건으로 끝난다. 트렌딩 4건이면 Trendshift 1건이 메워 5건이다.
 
-**LLM 분류 게이트** (`relevance_gate`, 코드 기본값은 꺼짐, `config.yaml`에서 2026-10-01부터 켬)
+**LLM 분류 게이트** (`relevance_gate`, 코드 기본값은 꺼짐, `config.yaml`에서 켬)
 
 요약 호출에 게재/제외 판정을 하나 더 받아 기술 밖 사건을 뺀다. 추가 호출은 없다.
 켜면 `overpick`(기본 5)만큼 후보를 더 뽑아 예비로 둔다. 요약은 예약석 규칙으로 고른
@@ -153,13 +153,11 @@ quota_backfill_max:
     요약     맨 위부터 내려간다
     왜중요   qwen3.8-27b부터 내려간다
 
-**체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. 2026-09-14 기준 Groq 목록은 `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b` 넷이었고, `qwen3.6-27b`는 09-18에 내려가 사다리에서 뺐다. 확인은 이렇게 한다.
+**체인에는 계정에서 실제로 쓸 수 있는 모델만 적는다.** 없는 이름을 적으면 폴백이 404로 죽는다. Groq 모델은 예고 없이 내려가니 체인을 고칠 때마다 목록을 확인한다.
 
 ```
 curl -s -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/models
 ```
-
-폴백이 생기기 전에는 한 모델이 막히면 남은 기사가 통째로 미게시됐다. 2026-09-14 회차에서 19건 중 15건만 올라갔다.
 
 ```yaml
 llm:
