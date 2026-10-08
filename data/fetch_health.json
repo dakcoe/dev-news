@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-28T16:00:34+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 14,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.theatlantic.com/ideas/2026/01/great-crime-decline/685695/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-29T00:00:30+09:00",
    "total": 20,
    "counts": {
@@ -1180,6 +1164,53 @@
     {
      "url": "https://news.hada.io/topic?id=34964",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-08T16:00:32+09:00",
+   "total": 22,
+   "counts": {
+    "blocked": 6,
+    "short": 1,
+    "ok": 11,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=34975",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://mathstodon.xyz/@tao/117395269325940185",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35000",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34999",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34998",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=34996",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/teens-learn-and-plan",
+     "source": "rss",
      "reason": "blocked"
     }
    ]

@@ -1,5 +1,509 @@
 [
  {
+  "title": "A 100x faster* alternative to homebrew",
+  "url": "https://github.com/zerobrewhq/zerobrew",
+  "source": "hackernews",
+  "upvotes": 58,
+  "comments": 31,
+  "published_at": 1791429788,
+  "discussion": "https://news.ycombinator.com/item?id=50001580",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/zerobrewhq/zerobrew"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://opengraph.githubassets.com/1/zerobrewhq/zerobrew",
+  "link_status": null,
+  "ko_title": "Homebrew보다 100배 빠른 대안",
+  "summary": "zerobrew는 macOS와 Linux에서 Homebrew 패키지를 uv 스타일 아키텍처로 재구현한 도구다. curl 스크립트나 Homebrew tap을 통해 설치·업데이트가 가능하며, 기존 zerobrew tap은 더 이상 지원되지 않는다. 패키지 설치, 번들 설치 등 기본 Homebrew 명령을 대체한다.",
+  "why": "기존 Homebrew를 쓰던 환경이라면 패키지 설치 속도가 체감 수준으로 빨라진다. 기존 lucasgelfond/zerobrew 탭을 쓰고 있다면 더 이상 업데이트가 안 되므로 새 탭으로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "1,000 downloads. I'm 13. I made you a promise. 🔓",
+  "url": "https://dev.to/akhourianmolkumar/1000-downloads-im-13-i-made-you-a-promise-5e7g",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 18,
+  "comments": 12,
+  "published_at": 1791433000.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/1000-downloads-im-13-i-made-you-a-promise-5e7g"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Faeke05yrgp12s3h6k1xl.png",
+  "link_status": "ok",
+  "ko_title": "1,000 다운로드. 나는 13살. 약속을 지켰다.",
+  "summary": "13세 개발자 Anmol이 만든 Windows 보안 툴 ATLOCK이 5개월 만에 1,000회를 다운로드했다. 이번 v5 업데이트에서는 AES-256-GCM 암호화, Argon2id KDF, TPM 지원 등 새로운 암호 코어와 TOTP·FIDO2 2단계 인증, Windows Defender 연동 등 보안 기능이 대폭 강화되었다.",
+  "why": "ATLOCK v5는 AES-256-GCM과 Argon2id를 도입해 기존 방식보다 강력한 암호화를 제공한다. TPM 연동과 FIDO2 하드웨어 키 지원으로 키 관리의 신뢰성을 높였다. v1부터 v4까지의 데이터는 자동 마이그레이션되어 이전 버전 사용자의 이식이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "showcase"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Google says 180 billion images and videos now carry SynthID watermarks as detector goes public",
+  "url": "https://the-decoder.com/google-says-180-billion-images-and-videos-now-carry-synthid-watermarks-as-detector-goes-public/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791395417.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/google-says-180-billion-images-and-videos-now-carry-synthid-watermarks-as-detector-goes-public/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/google_synthid.png",
+  "link_status": "ok",
+  "ko_title": "Google, 1800억 이미지·영상에 SynthID 워터마크 적용·탐지기 공개",
+  "summary": "Google이 SynthID Detector를 공개해 JPG, PNG, MP4, MP3 파일의 보이지 않는 워터마크를 검사할 수 있다. 이 탐지기는 Gemini, Veo, Lyria 등 Google 및 파트너 모델이 만든 콘텐츠에만 표시되는 SynthID 워터마크를 식별한다. OpenAI, Nvidia, Kakao도 SynthID를 사용하고 있으며, Apple이 곧 참여할 것으로 예상된다. 탐지 기능은 Google 검색, Gemini 앱, Chrome에 내장돼 일일 100만 건 이상의 검증 요청을 처리한다.",
+  "why": "SynthID 탐지기는 자사 워터마크만 식별하므로 타사 생성 콘텐츠 검증에는 한계가 있다. JPG, PNG, MP4, MP3 파일 형식만 지원한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Navier–Stokes Lost in Translation",
+  "url": "https://arxiv.org/abs/2610.08144",
+  "source": "hackernews",
+  "upvotes": 292,
+  "comments": 179,
+  "published_at": 1791386678,
+  "discussion": "https://news.ycombinator.com/item?id=49994145",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2610.08144"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "Navier–Stokes 번역 오류",
+  "summary": "AI가 자연어 수학 텍스트를 Lean 같은 형식 언어로 자동 변환하는 과정은 형식 검증을 가능하게 하지만, 원래 자연어 논증의 신뢰성을 보장하지 않는다. 논문은 수학 자연어의 모호성을 해결하는 문제가 SCI 계층에서 무한대에 해당해 계산적으로 불가능에 가깝다고 주장한다. 실제 사례로 OpenAI가 발표한 Navier–Stokes 폭발 증명 등에서 자동 변환된 Lean 증명이 원본 자연어 증명과 일치하지 않음을 보여준다.",
+  "why": "AI가 생성한 자연어 증명을 Lean으로 변환해 검증해도 원본 논증의 오류를 잡아내지 못한다. 수학 자연어의 모호성을 해결하는 작업은 계산적으로 불가능에 가까우므로 자동 변환의 신뢰성은 제한적이다. OpenAI의 Navier-Stokes 증명 사례처럼 형식 검증 통과가 원본 논리의 정확성을 보장하지 않는 점을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "alchaincyf / huashu-art-motion",
+  "url": "https://github.com/alchaincyf/huashu-art-motion",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1090,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/alchaincyf/huashu-art-motion"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1090,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/alchaincyf/huashu-art-motion",
+  "link_status": null,
+  "ko_title": "huashu-art-motion — 예술 스타일을 움직이는 애니메이션 도구",
+  "summary": "이 GitHub 저장소는 35가지 예술 스타일과 9가지 해설 문법을 지원하는 애니메이션 생성 도구다. npx 명령으로 설치해 코딩 에이전트가 스타일을 코드로 구현하고, 파라미터화된 클립을 조합해 영상으로 출력한다. 샘플 영상과 전체 스타일 MP4를 다운로드할 수 있다.",
+  "why": "코딩 에이전트가 예술 스타일을 코드로 구현해 영상으로 출력하는 방식이다. 백엔드 개발자가 프론트엔드 애니메이션이나 영상 생성 파이프라인을 직접 다루지 않아도 된다. npx 명령으로 설치해 코딩 에이전트에 스타일 구현을 위임할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Are Frontend Developers Wasting Tokens? 5 Ways to Cut AI Coding Costs",
+  "url": "https://dev.to/erikch/are-frontend-developers-wasting-tokens-5-ways-to-cut-ai-coding-costs-2eoa",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 22,
+  "comments": 2,
+  "published_at": 1791430061.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/erikch/are-frontend-developers-wasting-tokens-5-ways-to-cut-ai-coding-costs-2eoa"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpohbztnod9jqsy6wzy0u.png",
+  "link_status": "ok",
+  "ko_title": "프론트엔드 개발자는 토큰을 낭비하고 있나요? AI 코딩 비용을 절감하는 5가지 방법",
+  "summary": "이 글은 AI 코딩 에이전트를 사용할 때 토큰(또는 크레딧) 비용이 급증하는 문제를 지적하고, 비용을 낮추는 다섯 가지 방법을 제시한다. 주요 방법은 간단한 작업에 저렴한 모델을 선택하고, 모델의 추론 노력 수준을 낮추는 등 모델 선택과 설정을 최적화하는 것이다. 예시로 AWS 소유의 Kiro 플랫폼을 사용하지만 다른 서비스에도 적용 가능하다.",
+  "why": "단순한 버그 수정이나 속성 이름 변경에는 저가 모델을 선택해 비용을 크게 줄일 수 있다. 모델별 크레딧 배율은 새 모델 추가 시 변동하므로 설정 전에 최신 목록을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "devops-infra"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Zuckerberg's Biohub leads a $1.8 billion push to build AI models that predict cell behavior",
+  "url": "https://the-decoder.com/zuckerbergs-biohub-leads-a-1-8-billion-push-to-build-ai-models-that-predict-cell-behavior/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791395900.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/zuckerbergs-biohub-leads-a-1-8-billion-push-to-build-ai-models-that-predict-cell-behavior/"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/biohub_investment.png",
+  "link_status": "ok",
+  "ko_title": "Zuckerberg의 Biohub, 세포 행동 예측 AI 모델 구축에 18억 달러 추진",
+  "summary": "Biohub은 마크·프리실라 챈이 지원하는 비영리 단체로, 데이터·실험 장비·컴퓨팅을 아우르는 18억 달러 규모의 프로젝트를 주도한다. 메타·Google DeepMind·Isomorphic Labs 등 민간 기업이 3억 달러를, 미국 에너지부가 5억 달러 이상을 투자한다. 첫 데이터셋은 약 1년 내에 공개될 예정이며, 상업 투자자는 1년간 독점 접근 권한을 갖는다.",
+  "why": "첫 데이터셋은 약 1년 후 공개되며 상업 투자자는 1년간 독점 접근 권한을 가진다. 정부 자금으로 생성된 데이터는 이러한 독점 제한 없이 즉시 사용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Show GN: aside-remote - 데스크톱 Aside를 폰에서 쓰기",
+  "url": "https://news.hada.io/topic?id=34998",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791440551.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34998"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: aside-remote - 데스크톱 Aside를 폰에서 쓰기",
+  "summary": "aside-remote는 맥에 설치된 Aside CLI를 감싸서 웹 브라우저에서 동작하는 웹 앱이다. 이를 통해 폰이나 다른 컴퓨터의 브라우저에서 Aside에 작업을 지시하고 진행 상황을 실시간으로 확인할 수 있다. 외부에 있을 때도 모바일 기기로 Aside 작업을 맡길 수 있다.",
+  "why": "Aside를 쓰는 맥이 항상 곁에 있을 때만 유용했던 기존 방식이 바뀐다. 외출 중에도 폰 브라우저로 작업 지시와 진행 상황을 실시간으로 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "COSMIC DE가 KDE Plasma를 압도하고 있나?",
+  "url": "https://news.hada.io/topic?id=34975",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791418233.0,
+  "merged_sources": [
+   "geeknews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34975",
+   "https://thelibre.news/is-cosmic-de-mogging-kde-plasma/"
+  ],
+  "cross_source_count": 2,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "COSMIC DE가 KDE Plasma를 압도하고 있나?",
+  "summary": "COSMIC은 KDE Plasma만큼 방대한 맞춤 설정을 제공하지 않지만 외형 설정을 간단히 구성하고 변경 결과를 즉시 반영한다. 모서리 곡률·인터페이스 밀도·색상·반투명 효과 등을 직접 조절할 수 있다. 반면 Plasma에서는 일부 변경에 적용까지 시간이 걸린다.",
+  "why": "Plasma에서 일부 변경 시 적용 지연이 있었던 것과 달리 COSMIC은 즉시 반영된다. 외형 설정을 빠르게 바꾸며 테스트하는 작업 환경에 유리하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Day 6 of Building Crowdwide — I Think I’m Finally Done Adding Features",
+  "url": "https://dev.to/puneetkumar2010/day-6-of-building-crowdwide-i-think-im-finally-done-adding-features-1dpb",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 15,
+  "comments": 5,
+  "published_at": 1791433597.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-6-of-building-crowdwide-i-think-im-finally-done-adding-features-1dpb"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Figmheg0273ypjs67t6y0.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 6일 차 — 기능 추가를 이제 끝낸 것 같다",
+  "summary": "Crowdwide에 플랫폼 화폐인 Waves를 도입했다. Waves는 좋아요, 댓글, 커뮤니티 생성 등 활동으로 적립된다. 적립한 Waves로 개발자·크리에이터는 실제 돈 없이 광고를 게재할 수 있다. 광고 승인 절차는 최대 48시간 이내에 완료된다.",
+  "why": "Waves를 활용해 실비 없이 광고를 집행할 수 있어 초기 자금 부족인 개발자에게 적합하다. 광고 승인 절차는 최대 48시간 안에 끝난다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Monte-Carlo simulations",
+  "url": "https://eli.thegreenplace.net/2026/monte-carlo-simulations/",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1791429395.853,
+  "discussion": "https://lobste.rs/s/pift8w/monte_carlo_simulations",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://eli.thegreenplace.net/2026/monte-carlo-simulations/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "몬테카를로 시뮬레이션",
+  "summary": "본문은 몬테카를로 방법을 이용해 원주율 파이를 추정하는 간단한 예시 코드를 제공한다. 자바스크립트 코드로 무작위 점을 생성하고 원 내부 여부를 판단해 4배 비율로 파이를 계산한다. 샘플 수가 늘어날수록 오차가 감소하지만, 실용적인 4자리 정확도에는 수십억 샘플이 필요하다.",
+  "why": "몬테카를로 시뮬레이션의 오차 감소 속도가 느려서 실용적 정확도를 얻기 어렵다. 4자리 소수점 정확도를 위해 수십억 샘플이 필요하므로 계산 비용이 크다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "“Math 2.0” will need to value mathematical progress more holistically",
+  "url": "https://mathstodon.xyz/@tao/117395269325940185",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 102,
+  "published_at": 1791436454,
+  "discussion": "https://news.ycombinator.com/item?id=50002008",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mathstodon.xyz/@tao/117395269325940185"
+  ],
+  "cross_source_count": 1,
+  "score": 27,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "“Math 2.0”은 수학적 진보를 보다 전체적으로 평가해야 한다",
+  "summary": "댓글에서는 AI가 수학 분야에 증명을 무작정 제공하고 검증을 커뮤니티에 떠넘기는 방식이 생산적이지 않다고 비판한다. 또한 AI 적용을 게임·소프트웨어 전반에 확대하면서 단순 성과보다 전체적 가치와 창의성을 중시해야 한다는 의견이 제시된다.",
+  "why": "AI가 생성한 산출물을 검증하는 부담이 개발자에게 넘어온다. 단순 기능 구현보다 창의적 설계에 집중해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Terence Tao, OpenAI의 수학 성과 공개에 응답하다",
+  "url": "https://news.hada.io/topic?id=34999",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791441357.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=34999"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "테런스 타오, OpenAI의 수학 성과 공개에 응답하다",
+  "summary": "",
+  "why": "AI가 미해결 문제의 답만 대량으로 내놓는 방식은 증명의 이해와 후속 연구 성장을 동반하지 못한다. 전통적 수학 연구에서 획기적 증명이 강연과 협업으로 이어지며 다음 세대를 키우는 과정이 생략된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release",
+   "career-culture",
+   "science"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "On using AI as a writing assistant",
+  "url": "https://ninashamsi.com/writing/i-am-a-bad-writer.html",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 2,
+  "published_at": 1791428861.552,
+  "discussion": "https://lobste.rs/s/jfxvvk/on_using_ai_as_writing_assistant",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://ninashamsi.com/writing/i-am-a-bad-writer.html"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AI를 글쓰기 도우미로 활용하기",
+  "summary": "",
+  "why": "AI가 산만하게 흐르는 사고를 단문으로 압축하는 데 유용하지만, 결과물은 어색하고 일관성이 떨어진다. 수정 과정에서 원문의 뉘앙스가 손상될 수 있어 최종 검수가 필수적이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "Quoting Ben Affleck",
+  "url": "https://simonwillison.net/2026/Oct/7/ben-affleck/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791414898.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/7/ben-affleck/"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "벤 앤플렉 인용",
+  "summary": "",
+  "why": "벤 애플렉이 CNN과 텐서를 활용한 시각 효과 워크플로우를 설명하며, 트랜스포머가 CNN보다 더 많은 연산을 동시에 수행한다고 밝혔다. 이는 생성형 AI 모델의 계산 규모가 기존 이미지 처리 기법과 어떻게 다른지 직관적으로 이해하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "dev-tools",
+   "language",
+   "career-culture"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
+  "title": "A rant about APIs",
+  "url": "https://dev.clintonblackburn.com/2026/10/08/a-rant-about-apis.html",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1791439634.732,
+  "discussion": "https://lobste.rs/s/jiphkt/rant_about_apis",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://dev.clintonblackburn.com/2026/10/08/a-rant-about-apis.html"
+  ],
+  "cross_source_count": 1,
+  "score": 12,
+  "image": "https://dev.clintonblackburn.com/",
+  "link_status": "ok",
+  "ko_title": "API에 대한 불만",
+  "summary": "",
+  "why": "게이트된 문서로 인해 에이전트가 스키마를 탐색해 클라이언트를 자동 생성하는 흐름이 끊긴다. 마크다운 내보내기 옵션이 없는 API는 에이전트 통합 시 수작업으로 모든 엔드포인트를 처리해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-08T16:00:05.109496+09:00",
+  "batch_label": "10월 8일 16:00"
+ },
+ {
   "title": "Claude Haiku 5.5",
   "url": "https://www.anthropic.com/claude-haiku-5-5",
   "source": "hackernews",
