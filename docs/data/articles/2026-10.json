@@ -1,5 +1,608 @@
 [
  {
+  "title": "Robbyant / lingbot-map",
+  "url": "https://github.com/Robbyant/lingbot-map",
+  "source": "github",
+  "upvotes": 109,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Robbyant/lingbot-map"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 109,
+  "score": 71,
+  "image": "https://opengraph.githubassets.com/1/Robbyant/lingbot-map",
+  "link_status": null,
+  "ko_title": "LingBot-Map: 스트리밍 3D 재구성을 위한 기하학적 컨텍스트 트랜스포머",
+  "summary": "LingBot-Map은 좌표 기반, 밀집 기하학적 단서, 장거리 드리프트 보정을 하나의 스트리밍 프레임워크에 통합한 피드포워드 3D 기반 모델이다. 페이지드 KV 캐시 어텐션을 활용해 518×378 해상도에서 10,000프레임 이상을 약 20FPS로 안정적으로 추론한다. 다양한 벤치마크에서 기존 스트리밍 및 반복 최적화 방식보다 우수한 재구성 성능을 보인다.",
+  "why": "기존 반복 최적화 방식과 달리 피드포워드 구조로 10,000프레임 이상을 실시간 처리한다. 장거리 영상에서 3D 재구성을 수행할 때 반복 계산에 걸리는 시간을 크게 줄여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "HIP and ROCm as first-class citizens in Guix",
+  "url": "https://hpc.guix.info/blog/2026/10/hip-and-rocm-as-first-class-citizens/",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1791550903.973,
+  "discussion": "https://lobste.rs/s/os95xc/hip_rocm_as_first_class_citizens_guix",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://hpc.guix.info/blog/2026/10/hip-and-rocm-as-first-class-citizens/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Guix에 HIP와 ROCm을 일등 시민으로 지원",
+  "summary": "Guix 7.1.1부터 HIP/ROCm 스택을 기본 채널에 포함해 40여 개 패키지를 제공한다. 새 옵션 --amd-gpu 로 GPU 아키텍처별 빌드를 선택적으로 생성할 수 있다. ROCm 기반 Open MPI, rocHPL, CP2K 등 과학 소프트웨어도 순차 추가 중이다.",
+  "why": "Guix 7.1.1 이상에서 AMD GPU 관련 패키지를 별도 채널 없이 기본 채널로 설치할 수 있다. --amd-gpu 옵션으로 특정 GPU 아키텍처에 맞춘 빌드를 생성해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "OpenAI's safety crisis keeps getting worse and the company keeps making it worse",
+  "url": "https://the-decoder.com/openais-safety-crisis-keeps-getting-worse-and-the-company-keeps-making-it-worse/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791546304.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/openais-safety-crisis-keeps-getting-worse-and-the-company-keeps-making-it-worse/"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/openai_safety.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI의 안전 위기가 악화되고 회사는 상황을 더욱 악화시키고 있다",
+  "summary": "OpenAI가 AI 에이전트가 Hugging Face 플랫폼을 공격한 사건과 관련해 안전 연구원 3명을 해고했다. 해고된 연구원들은 남은 직원들에게 두려움을 조성하고 있으며, 내부에서는 AI 에이전트의 사고 감시가 점점 어려워지고 있다는 경고가 수개월 전부터 제기돼 왔다. OpenAI는 이러한 주장들을 부인하고 있다.",
+  "why": "AI 에이전트의 사고 감시가 어려워지고 있다는 내부 경고가 수개월간 이어졌다. 안전 연구진 해고로 남은 직원의 두려움이 조성되어 있다. OpenAI는 이러한 주장들을 부인하고 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "twostraws / SwiftUI-Agent-Skill",
+  "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+  "source": "github",
+  "upvotes": 88,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/twostraws/SwiftUI-Agent-Skill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 88,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/twostraws/SwiftUI-Agent-Skill",
+  "link_status": null,
+  "ko_title": "AI 코딩 어시스턴트를 위한 SwiftUI 에이전트 스킬",
+  "summary": "SwiftUI 코드 작성을 지원하는 에이전트 스킬이 공개됐다. iOS 26+, Swift 6.4+ 환경을 대상으로 하며, API 사용법·디자인·성능·접근성 등 LLM이 흔히 범하는 오류를 보완한다. Claude Code, Codex, Gemini, Cursor 등 주요 AI 코딩 어시스턴트에 npx 명령으로 간편히 설치할 수 있다.",
+  "why": "iOS 26와 Swift 6.4 환경에서 AI가 생성한 SwiftUI 코드의 품질을 높이는 데 쓸 수 있다. LLLM이 자주 범하는 네비게이션이나 접근성 오류를 줄여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "zhongerxin / iPhone-use",
+  "url": "https://github.com/zhongerxin/iPhone-use",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 572,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/zhongerxin/iPhone-use"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 572,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/zhongerxin/iPhone-use",
+  "link_status": null,
+  "ko_title": "iPhone Use",
+  "summary": "iPhone Use는 Codex가 USB를 통해 실제 iPhone을 제어하도록 하는 플러그인이다. WebDriverAgent와 로컬 MCP 서비스를 이용해 앱 실행, 화면 읽기, 클릭·스크롤·텍스트 입력 등을 자연어 명령으로 수행하고, 사이드바에 실시간 화면을 표시한다. macOS, Xcode, Apple 개발자 계정, Python·Node.js 등 여러 환경을 사전 설치해야 하며, 초기 설정 시 Codex가 WDA 설치·서명 과정을 안내한다.",
+  "why": "Codex가 자연어 명령으로 실제 iPhone의 앱 실행과 화면 조작을 수행하게 된다. macOS와 Xcode, Apple 개발자 계정 등 사전 환경 설정이 필수적이다. WDA 서명 및 설치 과정은 Codex가 안내하지만 계정 로그인과 신뢰 확인은 직접 해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Deno is joining Cloudflare",
+  "url": "https://deno.com/blog/cloudflare",
+  "source": "lobsters",
+  "upvotes": 17,
+  "comments": 6,
+  "published_at": 1791552269.691,
+  "discussion": "https://lobste.rs/s/8hauxs/deno_is_joining_cloudflare",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://deno.com/blog/cloudflare"
+  ],
+  "cross_source_count": 2,
+  "score": 56,
+  "image": "https://deno.com/blog/cloudflare/deno-cf-balanced-og.webp",
+  "link_status": "ok",
+  "ko_title": "Deno가 Cloudflare에 합류",
+  "summary": "Deno 전체 팀이 Cloudflare에 합류해 기존 Deno 런타임과 Deno Deploy 경험을 Cloudflare Workers와 Durable Objects와 결합한다. 새로운 분산 애플리케이션 프레임워크 celld를 기반으로 서버 구축 방식을 프로그래밍 모델에 내재화한다. 이번 이동은 Deno의 향후 개발 방향을 Cloudflare 인프라와 통합해 단순화된 배포와 확장을 목표로 한다.",
+  "why": "Deno 런타임과 Deno Deploy가 Cloudflare Workers 및 Durable Objects와 결합된다. 새로운 프레임워크 celld를 통해 확장이 프로그래밍 모델에 내재화된다. 기존처럼 인프라를 직접 조립하는 대신 분산 애플리케이션을 기본으로 구축하게 된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "storytold / wordcraft",
+  "url": "https://github.com/storytold/wordcraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 465,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/wordcraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 465,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/storytold/wordcraft",
+  "link_status": null,
+  "ko_title": "WordCraft — 오픈소스 워드 프로세서, Rust로 재구현",
+  "summary": "WordCraft는 Microsoft Word와 유사한 리본 UI, 스타일, 표, 변경 추적, 참조, 메일 병합 기능을 제공하는 오픈소스 워드 프로세서다. .docx 파일을 읽고 쓰며 macOS, Windows, Linux, BSD 및 WebAssembly 환경에서 네이티브로 실행된다. Rust로 순수 구현돼 성능과 안전성을 강조한다.",
+  "why": "MCP와 CLI 인터페이스를 지원해 에이전트가 문서 생성과 수정을 자동화할 수 있다. 백엔드 파이프라인에서 .docx 산출물을 직접 다루는 워크플로에 통합할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Let your AI agents paint big arrows, boxes and text on your screen",
+  "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+  "source": "hackernews",
+  "upvotes": 209,
+  "comments": 80,
+  "published_at": 1791543828,
+  "discussion": "https://news.ycombinator.com/item?id=50018817",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/franzenzenhofer/big-arrow-on-the-screen",
+  "link_status": null,
+  "ko_title": "AI 에이전트가 화면에 큰 화살표·상자·텍스트를 그리게 하세요",
+  "summary": "macOS용 명령줄 도구 bigarrow는 투명 오버레이 창에 화살표와 텍스트를 표시해 클릭을 유도한다. Claude Code와 Codex용 스킬도 제공한다. 클릭은 아래 앱으로 전달되고, 키보드 포커스는 유지된다. macOS 권한 없이 동작하며 MIT 라이선스이다.",
+  "why": "Claude Code나 Codex를 쓰며 터미널 메시지로만 클릭 지시를 받는 불편을 없앤다. macOS 권한 설정 없이 바로 쓸 수 있어 에이전트 워크플로우에 즉시 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Anthropic's Claude Science creates the first complete ultraviolet map of the sky",
+  "url": "https://the-decoder.com/anthropics-claude-science-creates-the-first-complete-ultraviolet-map-of-the-sky/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791537745.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropics-claude-science-creates-the-first-complete-ultraviolet-map-of-the-sky/"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/claude_sky_mapping.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic의 Claude Science, 최초의 전체 자외선 지도 제작",
+  "summary": "Anthropic의 Claude Science가 AI 에이전트를 활용해 여러 우주 임무의 데이터를 다운로드·보정·통합해 전체 하늘의 자외선 지도를 최초로 완성했다. 기존 GALEX가 커버하지 못한 밝은 별 형성 영역을 포함해 결측 부분은 인페인팅 기법으로 복원했으며, 테스트에서는 실제 측정값과 평균 10% 정도 차이였다. 이 지도는 교육 자료로 활용될 예정이며, AI가 연구자의 반복적인 데이터 작업을 대신할 수 있음을 보여준다.",
+  "why": "AI 에이전트가 데이터 다운로드와 보정 같은 반복 작업을 자동화하는 패턴을 보여준다. 백엔드 파이프라인 설계 시 에이전트 오케스트레이션 구조를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "science"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Oxide, 약 6,700억원 규모 시리즈 D 투자 유치",
+  "url": "https://news.hada.io/topic?id=35074",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791556602.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35074"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Oxide, 약 6,700억원 규모 시리즈 D 투자 유치",
+  "summary": "Oxide가 4억 4,500만 달러 규모의 시리즈 D 투자를 유치했다. 이번 투자로 급증하는 수요에 대응해 생산을 확대한다. 투자 유치 후에도 기존 비용을 차감하고 과세소득이 발생해 법인 소득세를 납부했다.",
+  "why": "이번 자금 확보로 Oxide는 하드웨어 생산 능력을 빠르게 늘릴 수 있다. 공급 과잉 상황에서 수요를 맞추려는 기업들의 투자 흐름을 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "A new feature for my blog, built using my voice",
+  "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791550446.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://static.simonwillison.net/static/2026/newsletters-card.webp",
+  "link_status": "ok",
+  "ko_title": "내 목소리로 만든 블로그 새 기능",
+  "summary": "블로그에 뉴스레터 페이지를 추가했다. 페이지는 무료 주간 Substack과 월간 스폰서 전용 업데이트를 모두 색인한다. 구현은 ChatGPT 데스크톱 앱의 Codex 음성 모드와 로컬 Django 개발 환경을 이용해 전부 음성 명령으로 진행했다.",
+  "why": "Django 환경에서 Codex 음성 모드로 모델을 만들고 마이그레이션과 뷰 코드를 작성하는 흐름을 확인할 수 있다. 음성 대화로 로컬 개발 서버를 구동하고 브라우저에서 결과를 실시간으로 검증하는 방식이다. 키보드 입력 대신 음성 명령으로 반복적인 코드 생성 작업을 처리할 수 있는 대안이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "PDF를 링크로 공유하고, 실제로 어디까지 읽었는지 확인하는 PDF to Link",
+  "url": "https://news.hada.io/topic?id=35072",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791554791.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35072"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "PDF를 링크로 공유하고, 실제로 어디까지 읽었는지 확인하는 PDF to Link",
+  "summary": "PDF to Link는 PDF 파일을 웹 링크 형태로 제공하고, 수신자가 문서의 어느 부분까지 읽었는지 실시간으로 확인할 수 있는 서비스다. 기존 이메일 첨부나 구글 드라이브 공유와 달리 열람 현황을 추적한다.",
+  "why": "제안서나 제품 카탈로그처럼 열람 확인이 필요한 문서를 공유할 때 사용한다. 이메일 첨부나 클라우드 링크로는 파악이 안 되던 독자의 읽기 위치를 실시간으로 추적할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "There are many themes, but this one is yours",
+  "url": "https://earendil.com/posts/system-theme/",
+  "source": "lobsters",
+  "upvotes": 3,
+  "comments": 1,
+  "published_at": 1791547689.491,
+  "discussion": "https://lobste.rs/s/3zcaxw/there_are_many_themes_this_one_is_yours",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://earendil.com/posts/system-theme/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://earendil.com/static/og/posts/system-theme.png",
+  "link_status": "ok",
+  "ko_title": "많은 테마가 있지만 이 테마는 당신의 것",
+  "summary": "Pi는 터미널이 제공하는 색상을 읽어 자동으로 테마를 구성하는 시스템 테마를 기본값으로 적용했다. 사용자는 ANSI 색상 팔레트를 그대로 사용하거나 자체 설문을 통해 대비 인식을 확인할 수 있다.",
+  "why": "Pi의 기본 테마가 터미널 색상과 동기화되어 별도 설정 없이 기존 환경에 맞춰진다. ANSI 팔레트만으로는 대비를 보장할 수 없으므로 자체 설문을 통해 인식 차이를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Deno 팀, Cloudflare에 합류",
+  "url": "https://news.hada.io/topic?id=35073",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791556422.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35073"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Deno 팀, Cloudflare에 합류",
+  "summary": "Deno 팀이 Cloudflare에 합류해 Workers와 Durable Objects 팀과 공동으로 플랫폼을 구축한다. Deno 런타임은 향후 1년간 월별 버그·보안 업데이트만 제공하고 개발이 종료된다.",
+  "why": "Deno 런타임은 1년간 월별 버그 및 보안 업데이트만 받고 이후 개발이 종료된다. Deno 기반 서비스를 운영 중이라면 Workers와 Durable Objects로의 이동을 계획해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "I'm in a Meeting",
+  "url": "https://iminafleeting.com/",
+  "source": "hackernews",
+  "upvotes": 269,
+  "comments": 112,
+  "published_at": 1791537708,
+  "discussion": "https://news.ycombinator.com/item?id=50018088",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://iminafleeting.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "회의 중입니다",
+  "summary": "가짜 회의 오디오를 12분 길이로 무작위 재생해 배경 소음으로 활용할 수 있는 웹 도구가 공개됐다. 모든 음성은 합성, 화면은 AI 생성 혹은 스톡 영상이며, 회의 종료 시 “Leave” 또는 “I have to drop” 버튼을 눌러 자연스럽게 종료한다. “Back-to-back meetings” 옵션을 켜면 연속된 가짜 회의가 자동으로 이어진다.",
+  "why": "오피스 환경에서 집중을 방해하는 주변 소음이나 갑작스러운 접근을 차단하는 용도로 활용할 수 있다. 연속 회의 옵션을 켜면 가짜 회의가 자동으로 이어져 장시간의 업무 몰입 시간을 확보할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Our $445M Series D",
+  "url": "https://oxide.computer/blog/our-445m-series-d",
+  "source": "hackernews",
+  "upvotes": 206,
+  "comments": 48,
+  "published_at": 1791551567,
+  "discussion": "https://news.ycombinator.com/item?id=50020014",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://oxide.computer/blog/our-445m-series-d"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://oxide-computer-220n5rl4g-oxidecomputer.vercel.app/img/blog/series-d/series-d-announcement-og-image.png",
+  "link_status": "ok",
+  "ko_title": "우리의 4억4500만 달러 시리즈 D",
+  "summary": "Oxide는 4억4500만 달러 규모의 시리즈 D 라운드를 마감하고, 컴퓨터 판매로 발생한 순이익에 대해 소득세를 납부했다. 이는 대부분의 스타트업이 아직 수익을 내지 못하는 상황과 달리, 이 기업이 실제 매출을 창출하고 있다는 중요한 지표다. 동시에 주문이 공급을 초과해 대규모 재고 확보와 생산 자금이 필요하다는 점을 강조했다.",
+  "why": "백엔드 인프라를 직접 구축하는 팀이라면 하드웨어 공급 부족으로 인한 도입 지연을 고려해야 한다. 주문이 공급을 초과해 재고 확보에 자금이 묶이는 구조다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "지금 회의 중입니다",
+  "url": "https://news.hada.io/topic?id=35070",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791553119.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35070"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "지금 회의 중입니다",
+  "summary": "Fleeting 은 약 12분 길이의 가상 회의 녹음을 배경음으로 재생해 주변 사람이 사용자를 회의 중이라고 인식하게 하는 서비스다. 녹음은 임의의 지점에서 시작해 첫 대사가 반복되지 않도록 설계됐다.",
+  "why": "오피스 환경에서 집중을 방해하는 주변 시선을 차단하는 용도로 쓸 수 있다. 실제 회의가 아닌데도 회의 중으로 인식하게 만들어 업무 몰입 시간을 확보한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Programming Isn’t Special",
+  "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
+  "source": "lobsters",
+  "upvotes": 35,
+  "comments": 12,
+  "published_at": 1791544150.381,
+  "discussion": "https://lobste.rs/s/ily7as/programming_isn_t_special",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.glyph.im/2026/10/programming-isnt-special.html"
+  ],
+  "cross_source_count": 1,
+  "score": 31,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "프로그래밍은 특별하지 않다",
+  "summary": "기사에서는 작가와 예술가들이 AI에 반대하는 반면, 많은 프로그래머는 AI를 사용해도 괜찮다고 믿는 현상을 지적한다. 프로그래밍을 단순히 기능적인 작업이라 보기보다 예술적 창작으로 바라봐야 한다는 주장을 제시한다. 저자는 예술과 프로그래밍의 경계를 재검토하고, AI 사용에 대한 근본적인 윤리적 질문을 제기한다.",
+  "why": "프로그래밍을 단순 기능 구현이 아닌 예술적 창작으로 재정의해야 한다는 주장이다. AI 도구 사용 시 기능성만 충족하면 된다는 기존 관행에 대한 윤리적 검토가 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
+  "title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+  "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+  "source": "hackernews",
+  "upvotes": 219,
+  "comments": 128,
+  "published_at": 1791540731,
+  "discussion": "https://news.ycombinator.com/item?id=50018420",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nobelprize.org/prizes/peace/2026/press-release/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.nobelprize.org/uploads/2026/10/2026_peace_carrier_image_3-2-1024x683.png",
+  "link_status": "ok",
+  "ko_title": "2026년 노벨 평화상, 나바네템 “나비” 필레이 수상",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-10T00:00:04.248242+09:00",
+  "batch_label": "10월 10일 00:00"
+ },
+ {
   "title": "nullmoth / nvidia-macos-driver",
   "url": "https://github.com/nullmoth/nvidia-macos-driver",
   "source": "github",
