@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-29T16:00:29+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 13,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-30T00:00:31+09:00",
    "total": 19,
    "counts": {
@@ -1275,6 +1254,64 @@
     {
      "url": "https://news.hada.io/topic?id=35030",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-09T16:00:32+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 11,
+    "short": 1,
+    "blocked": 7,
+    "empty": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50006366",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35050",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35048",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35047",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35046",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35045",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.cs.cit.tum.de/fileadmin/w00cfj/dis/papers/btrees-are-back.pdf",
+     "source": "lobsters",
+     "reason": "empty"
+    },
+    {
+     "url": "https://openai.com/index/pollo-ai",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/legalon-halves-codex-costs",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
