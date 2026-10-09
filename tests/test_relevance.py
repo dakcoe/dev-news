@@ -71,7 +71,7 @@ def test_only_off_topic_kind_is_excluded():
 
 def test_protected_articles_survive_the_gate():
     from news.core.filters import drop_irrelevant
-    arts = [{"url": u, "title": u, "relevance": "제외", "llm_done": True, **x} for u, x in [
+    arts = [{"url": u, "title": u, "ko_title": u, "relevance": "제외", "llm_done": True, **x} for u, x in [
         ("a", {"source": "anthropic"}), ("g", {"source": "github"}),
         ("m", {"source": "rss", "cross_source_count": 2}),
         ("h", {"source": "hackernews", "upvotes": 350}),
@@ -114,6 +114,40 @@ def test_unsummarized_articles_are_not_dropped():
 
 def test_empty_input():
     assert drop_irrelevant([]) == ([], [])
+
+
+# --------------------------------------------------------------- 제목 "없음"
+# 기술밖으로 본 기사에 모델이 번역제목까지 "없음"으로 쓰는 경우가 있다.
+# 해커뉴스 고득표라 보호 목록에 들면 제목이 "없음"인 채로 실렸다.
+def test_noinfo_title_parses_as_missing():
+    parsed = _parse(_reply("제외", title="없음", summary="없음", why="없음"))
+    assert parsed["ko_title"] is None
+    assert parsed["summary"] == ""
+
+
+def test_protected_irrelevant_without_title_is_dropped():
+    hn = {"url": "https://news.ycombinator.com/item?id=1", "source": "hackernews",
+          "upvotes": 694, "title": "Tell HN: t", "relevance": "제외", "llm_done": True}
+    kept, dropped = drop_irrelevant([{**hn, "ko_title": None},
+                                     {**hn, "url": "https://e.com/2", "ko_title": "제목"}])
+    assert [a["url"] for a in dropped] == ["https://news.ycombinator.com/item?id=1"]
+    assert [a["url"] for a in kept] == ["https://e.com/2"]
+
+
+def test_empty_irrelevant_reply_is_not_retried(monkeypatch):
+    """제목·요약을 비운 기술밖 답은 분류 결과로 받는다. 다시 물어도 같은 답이다."""
+    import news.summarizer as S
+    calls = {"n": 0}
+
+    def fake_call(prompt, provider, model, api_key):
+        calls["n"] += 1
+        return "번역제목: 없음\n요약: 없음\n왜중요: 없음\n종류: 기술밖"
+
+    monkeypatch.setattr(S, "_call", fake_call)
+    monkeypatch.setenv("GROQ_API_KEY", "test-key")
+    out = S.summarize_all([{"title": "t", "url": "https://e.com/1"}], provider="groq", pause=0)
+    assert calls["n"] == 1
+    assert out[0]["llm_done"] and out[0]["relevance"] == "제외" and not out[0]["ko_title"]
 
 
 # --------------------------------------------------------------- 조기 중단
