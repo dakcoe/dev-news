@@ -165,10 +165,11 @@ def test_사이트맵이_유효한_XML이고_주소가_맞다(seo_dir):
     ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
     locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
     # 소개·개인정보 처리 페이지가 정적으로 있어야 크롤러와 광고 심사 봇이 찾는다
-    assert locs[:4] == [site_url() + "/", site_url() + "/about/", site_url() + "/tour/", site_url() + "/privacy/"]
+    assert locs[:5] == [site_url() + "/", site_url() + "/about/", site_url() + "/tour/", site_url() + "/privacy/",
+                        site_url() + "/terms/"]
     # 학습 노트: 목록과 원고마다 한 줄 (learn/articles)
     from news import learn
-    assert locs[4:] == [site_url() + "/learn/"] + [f'{site_url()}/learn/{a["slug"]}/' for a in learn.load()]
+    assert locs[5:] == [site_url() + "/learn/"] + [f'{site_url()}/learn/{a["slug"]}/' for a in learn.load()]
     assert (seo_dir / "learn" / "index.html").exists()
 
 
@@ -271,7 +272,11 @@ def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
     assert "https://github.com/x.png?size=208" in a and "커피" in a and "/issues" in a
     # 본문이 실렸는지만 본다. 예전에는 localStorage 라는 단어를 찾았는데,
     # 그 말을 빼는 것이 개인정보 문단을 다시 쓴 이유였다.
-    assert "개인정보 처리" in p and "수집되는 정보" in p and "커피" not in p
+    assert "개인정보 처리" in p and "저장합니다" in p and "커피" not in p
+    # 광고 쿠키 고지와 끄는 방법은 애드센스 프로그램 정책이 요구한다
+    assert "adssettings.google.com" in p and "/issues" in p
+    t = (tmp_path / "terms" / "index.html").read_text(encoding="utf-8")
+    assert "이용약관" in t and "커피" not in t and 'href="/terms/"' in a
     assert 'rel="canonical" href="' in a
 
 

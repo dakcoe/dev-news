@@ -245,7 +245,15 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  "<p>" + _esc(names) + "에서 글을 모아 하루 세 번(00시, 08시, 16시) "
                  "갱신합니다.</p>"
                  "<p>원글이 궁금할 때 바로 확인하실 수 있도록 모든 글에 원문 링크를 "
-                 "달아 두었습니다.</p>"},
+                 "달아 두었습니다.</p>"
+                 '<p><a href="/learn/">학습 노트</a>에는 운영자가 대학 전공 과목을 공부하며 '
+                 "직접 정리한 글을 올립니다.</p>"},
+        {"id": "operator", "title": "운영자",
+         "html": "<p>dev-news는 개인이 혼자 만들고 운영하는 사이트입니다. 뉴스를 모으고 "
+                 "요약하는 프로그램도 직접 만들어 운영하고 있습니다.</p>"
+                 "<p>운영자는 대학에서 컴퓨터 관련 전공 과목을 공부하고 있습니다. 머신러닝, "
+                 "운영체제, 컴퓨터구조, 컴퓨터 네트워크, 확률변수론을 공부하며 정리한 "
+                 "글을 학습 노트에 올립니다.</p>"},
         {"id": "method", "title": "수집 및 요약 방식",
          "html": "<p>수집, 요약, 게시는 자동으로 이루어집니다.</p>"
                  "<p>요약과 제목 번역은 AI가 작성하며, 기사마다 중요한 이유를 한 문장으로 "
@@ -262,14 +270,57 @@ def about_copy(enabled: dict | None) -> list[dict]:
         {"id": "support", "title": "문의",
          "html": "<p>출처 추가·제외 요청, 오류 제보, 제안은 GitHub Issues로 보내 주세요.</p>"},
         {"id": "privacy", "title": "개인정보 처리",
-         "html": "<p>이 사이트에서 로그인 시 수집되는 정보</p>"
-                 "<ul><li>보관한 기사</li><li>읽은 기사</li><li>GitHub 계정</li></ul>"
-                 "<p>그 외 이름이나 이메일 주소, 비밀번호는 저장되지 않습니다.</p>"
-                 "<p>저장된 기록은 소개 화면에서 탈퇴하면 모두 지워집니다.</p>"
-                 "<p>로그인하지 않는다면 읽은 기사와 보관함은 해당 기기에서만 기록되고 별도로 "
-                 "수집되지 않습니다.</p>"
-                 "<p>광고가 게재되는 경우 광고 사업자가 쿠키로 정보를 수집할 수 있습니다.</p>"},
+         "html": "<p>GitHub로 로그인하면 아래 정보를 저장합니다.</p>"
+                 "<ul><li>GitHub 계정의 숫자 ID</li><li>보관한 기사의 주소와 제목</li>"
+                 "<li>읽은 기사의 주소(최근 1,000건)</li><li>로그인 상태를 유지하는 세션 정보</li></ul>"
+                 "<p>GitHub 계정의 이름, 이메일 주소, 프로필 사진, 비밀번호와 GitHub 접근 "
+                 "토큰은 저장하지 않습니다. 이 정보는 Cloudflare의 데이터베이스에 저장되며, "
+                 "탈퇴하면 바로 모두 지워집니다.</p>"
+                 "<p>로그인하지 않으면 읽은 기사와 보관함은 사용하는 브라우저에만 기록되고 "
+                 "서버로 보내지 않습니다.</p>"},
+        {"id": "ads", "title": "광고와 쿠키",
+         "html": "<p>이 사이트에는 Google AdSense 광고가 게재됩니다. Google을 비롯한 제3자 "
+                 "광고 사업자는 쿠키를 사용해 이 사이트와 다른 사이트를 방문한 기록을 바탕으로 "
+                 "광고를 보여 줍니다.</p>"
+                 "<p>Google은 광고 쿠키를 사용해 방문 기록에 맞춘 광고를 게재합니다. "
+                 '<a href="https://adssettings.google.com" rel="noopener">Google 광고 설정</a>에서 '
+                 "맞춤 광고를 끌 수 있고, "
+                 '<a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>에서 '
+                 "다른 광고 사업자의 맞춤 광고 쿠키를 끌 수 있습니다. Google이 수집한 정보를 "
+                 "사용하는 방식은 "
+                 '<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">'
+                 "Google 정책</a>에서 확인하실 수 있습니다.</p>"
+                 "<p>이 사이트는 별도의 방문 통계 도구를 쓰지 않습니다.</p>"},
     ]
+
+
+# 개인정보 처리·이용약관 페이지 끝의 문의. 소개 화면의 문의와 달리 후원 버튼을 두지 않는다.
+CONTACT = {"id": "contact", "title": "문의",
+           "html": "<p>개인정보, 저작권, 게시 중단 요청과 그 밖의 문의는 GitHub Issues로 "
+                   "보내 주세요.</p>"}
+
+# 이용약관(/terms/). 소개 화면에는 넣지 않고 정적 페이지로만 둔다.
+TERMS_COPY = [
+    {"id": "service", "title": "제공하는 내용",
+     "html": "<p>dev-news는 개발과 AI 관련 기사를 모아 한국어 제목과 요약을 붙여 보여 주고, "
+             "운영자가 쓴 학습 노트를 게시합니다. 누구나 가입 없이 이용할 수 있습니다.</p>"},
+    {"id": "accuracy", "title": "요약의 정확성",
+     "html": "<p>기사 제목 번역과 요약은 AI가 자동으로 작성하므로 원문과 다르거나 틀린 "
+             "내용이 있을 수 있습니다. 중요한 판단을 하실 때는 원문 링크로 내용을 "
+             "확인해 주세요. 운영자는 요약 내용을 근거로 한 결과에 책임지지 않습니다.</p>"},
+    {"id": "copyright", "title": "저작권",
+     "html": "<p>기사 원문의 저작권은 각 출처에 있습니다. dev-news는 원문을 옮겨 싣지 않고 "
+             "요약과 원문 링크만 제공합니다.</p>"
+             "<p>학습 노트의 저작권은 운영자에게 있습니다. 출처를 밝히면 일부를 인용할 수 "
+             "있습니다.</p>"
+             "<p>원문 저작권자가 게시 중단을 요청하시면 확인 후 해당 요약을 내립니다.</p>"},
+    {"id": "account", "title": "로그인과 탈퇴",
+     "html": "<p>GitHub 로그인은 보관함과 읽음 표시를 여러 기기에서 쓰기 위한 선택 기능입니다. "
+             "저장하는 정보는 "
+             '<a href="/privacy/">개인정보 처리</a>에 적혀 있고, 탈퇴하면 모두 지워집니다.</p>'},
+    {"id": "change", "title": "약관 변경",
+     "html": "<p>약관을 바꾸면 이 페이지에 반영합니다.</p><p>시행일: 2026년 10월 9일</p>"},
+]
 
 
 _ICON = {
@@ -335,25 +386,28 @@ HMARK_SVG = ('<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
 def footer_html() -> str:
     """목록 아래와 정적 페이지 아래에 같은 링크 묶음. 크롤러가 소개·개인정보 페이지를
     찾는 길이다 — 레일 아이콘은 스크립트가 있어야 눌린다."""
-    return ('<footer class="foot"><a href="/about/">소개</a><a href="/tour/">둘러보기</a><a href="/learn/">학습 노트</a><a href="/privacy/">개인정보 처리</a>'
+    return ('<footer class="foot"><a href="/about/">소개</a><a href="/tour/">둘러보기</a><a href="/learn/">학습 노트</a><a href="/privacy/">개인정보 처리</a><a href="/terms/">이용약관</a>'
             '<a href="https://github.com/dakcoe/dev-news" rel="noopener">GitHub 저장소</a>'
             '<span>© dev-news · 기사의 저작권은 각 원문 출처에 있습니다</span></footer>')
 
 
 def _section_html(sec: dict, about: dict) -> str:
     inner = sec["html"]
-    if sec["id"] == "support":
+    if sec["id"] in ("support", "contact"):
         repo = _safe_url(about.get("github") or "")
         coffee = _safe_url(about.get("coffee") or "")
+        email = about.get("email") or ""
+        if re.fullmatch(r"[^@\s<>\"]+@[^@\s<>\"]+\.[A-Za-z]{2,}", email):
+            inner += f'<p>이메일: <a href="mailto:{_esc(email)}">{_esc(email)}</a></p>'
         btns = ""
-        if coffee:
+        if coffee and sec["id"] == "support":
             btns += (f'<a class="go coffee" href="{_esc(coffee)}" target="_blank" rel="noopener noreferrer">'
                      f'{_ICON["cup"]}{_esc(about.get("coffee_label") or "후원하기")}</a>')
         if repo:
             btns += (f'<a class="go alt" href="{_esc(repo)}/issues" target="_blank" rel="noopener noreferrer">'
                      f'{_ICON["issue"]}Issues 열기</a>')
         inner += f'<div class="acts">{btns}</div>'
-    cls = ' class="small"' if sec["id"] == "privacy" else ""
+    cls = ' class="small"' if sec["id"] in ("privacy", "ads") else ""
     return f'<section id="{sec["id"]}"{cls}><h2>{_esc(sec["title"])}</h2>{inner}</section>'
 
 
@@ -400,11 +454,17 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                   + "".join(_section_html(x, about) for x in secs) + "</div></div>")
     privacy_body = (f"<h1>{HMARK_SVG}<span>개인정보 처리</span></h1><div class=\"sub\">dev-news 가 다루는 정보</div>"
                     '<div class="doc" style="max-width:760px">'
-                    + "".join(_section_html(x, about) for x in secs if x["id"] == "privacy")
+                    + "".join(_section_html(x, about) for x in secs if x["id"] in ("privacy", "ads"))
+                    + _section_html(CONTACT, about)
                     + '<section><p><a href="/about/">사이트 소개 전체 보기 →</a></p></section></div>')
+    terms_body = (f"<h1>{HMARK_SVG}<span>이용약관</span></h1><div class=\"sub\">dev-news 이용 조건</div>"
+                  '<div class="doc" style="max-width:760px">'
+                  + "".join(_section_html(x, about) for x in TERMS_COPY)
+                  + _section_html(CONTACT, about) + "</div>")
     for path, title, desc, body in (
         ("/about/", "소개", "dev-news 를 만든 사람, 수집·요약 방식, 기사 선별 기준, 문의.", about_body),
-        ("/privacy/", "개인정보 처리", "dev-news 는 서버와 회원 기능이 없으며 보관함·읽음 표시는 브라우저에만 저장됩니다.", privacy_body),
+        ("/privacy/", "개인정보 처리", "dev-news 가 로그인 때 저장하는 정보와 광고 쿠키 안내.", privacy_body),
+        ("/terms/", "이용약관", "dev-news 의 요약 정확성, 저작권, 로그인과 탈퇴에 관한 이용 조건.", terms_body),
     ):
         d = os.path.join(out_dir, path.strip("/"))
         os.makedirs(d, exist_ok=True)
@@ -565,6 +625,7 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
                 f'  <url><loc>{base}/about/</loc><changefreq>monthly</changefreq></url>\n'
                 f'  <url><loc>{base}/tour/</loc><changefreq>monthly</changefreq></url>\n'
                 f'  <url><loc>{base}/privacy/</loc><changefreq>monthly</changefreq></url>\n'
+                f'  <url><loc>{base}/terms/</loc><changefreq>monthly</changefreq></url>\n'
                 + "".join(f'  <url><loc>{base}{p}</loc><changefreq>monthly</changefreq></url>\n'
                           for p in learn_paths)
                 + '</urlset>\n')
