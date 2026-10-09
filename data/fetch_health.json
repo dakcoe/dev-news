@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-30T00:00:31+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 14,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-09-30T08:00:30+09:00",
    "total": 22,
    "counts": {
@@ -1312,6 +1303,42 @@
     {
      "url": "https://openai.com/index/legalon-halves-codex-costs",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-10T00:00:32+09:00",
+   "total": 24,
+   "counts": {
+    "ok": 14,
+    "github": 5,
+    "blocked": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35074",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35073",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35072",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35071",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35070",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
