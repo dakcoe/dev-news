@@ -1,5 +1,231 @@
 [
  {
+  "t": "Python 3.15.0",
+  "u": "https://www.python.org/downloads/release/python-3150/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "language",
+   "release"
+  ],
+  "d": "2026-10-10",
+  "x": "Python 3.15.0이 2026년 10월 9일 정식 출시되었다. 주요 변경 사항으로는 기본 인코딩이 UTF-8로 바뀐 점, frozendic"
+ },
+ {
+  "t": "Typesafe AI, 870억 달러 투자 유치, 기업가치 7조 5천억 달러",
+  "u": "https://typesafe.ai/blog/series-ai",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "industry"
+  ],
+  "d": "2026-10-10",
+  "o": "Typesafe AI raises $870M at $7.5B",
+  "x": "Typesafe AI가 Andreessen Horowitz 주도 Series A 라운드에서 870억 달러를 투자받았다. 투자자에는 Sequoia"
+ },
+ {
+  "t": "Let’s Encrypt, 2027년 2월부터 기본 인증서 유효기간을 64일로 단축",
+  "u": "https://news.hada.io/topic?id=35079",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-10",
+  "x": "Let’s Encrypt는 2027년 2월 10일부터 기본 인증서 유효기간을 기존 90일에서 64일로 줄인다. 이미 발급된 인증서는 그대로 유지"
+ },
+ {
+  "t": "Unison Cloud가 오픈 소스가 되었습니다",
+  "u": "https://www.unison-lang.org/blog/unison-cloud-open-source/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-10-10",
+  "o": "Unison Cloud is now open source",
+  "x": "Unison Cloud가 MIT 라이선스로 오픈 소스화되었으며, 클라이언트, Nimbus 워커, API 서버, UI 네 개의 프로젝트가 공개됐다"
+ },
+ {
+  "t": "Aurelio — AI 어드바이저가 있는 개인 재무 관리 앱",
+  "u": "https://github.com/LosaLosSantos/aurelio-finance",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-10-10",
+  "o": "LosaLosSantos / aurelio-finance",
+  "x": "로컬에서 실행되는 재무 관리 및 재무 계획 앱으로, 선택적으로 OpenRouter 기반 AI 어드바이저와 대화할 수 있다. Git, Node 2"
+ },
+ {
+  "t": "Anthropic의 Claude가 동적 워크플로를 통해 최대 1,000개의 AI 에이전트를 병렬로 조정할 수 있게 됨",
+  "u": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "d": "2026-10-10",
+  "o": "Anthropic's Claude can now orchestrate up to 1,000 AI agents in parallel through dynamic workflows",
+  "x": "Claude Managed Agents에 동적 워크플로가 추가돼 리드 에이전트가 계획을 세우고 하위 에이전트에 작업을 분배해 결과를 병합한다. "
+ },
+ {
+  "t": "분기 없는 코드에서의 분기",
+  "u": "https://00f.net/2026/10/09/llvm-compiles-branch-free-code-into-branches-on-risc-v/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "hardware"
+  ],
+  "d": "2026-10-10",
+  "o": "Branches in branch-free code",
+  "x": "이 글은 128비트 무부호 정수 덧셈 함수를 32비트 RISC-V용으로 컴파일한 결과를 보여준다. LLVM은 128비트를 32비트 조각으로 나누"
+ },
+ {
+  "t": "invisible_selenium — Selenium을 안티봇 Firefox에서 구동",
+  "u": "https://github.com/feder-cr/invisible_selenium",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-10",
+  "o": "feder-cr / invisible_selenium",
+  "x": "기존 Selenium 코드를 그대로 사용하면서 안티봇 탐지를 피하도록 C++ 수준에서 패치된 Firefox를 제공한다. 브라우저 지문을 엔진 내"
+ },
+ {
+  "t": "Anthropic, 오픈소스 프로젝트용 무료 AI 스캐너 출시",
+  "u": "https://the-decoder.com/anthropic-launches-a-free-ai-scanner-for-open-source-projects/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "devops-infra",
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "d": "2026-10-10",
+  "o": "Anthropic launches a free AI scanner for open-source projects",
+  "x": "Anthropic은 오픈소스 프로젝트를 정기적으로 검사하고 취약점을 자동으로 표시·설명·패치 제안하는 무료 AI 스캐너를 공개했다. 정확도는 9"
+ },
+ {
+  "t": "유튜버, 경찰 추적용 플록식 카메라 제작 후 경찰 방문받아",
+  "u": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-10",
+  "o": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+  "x": "캐나다 소프트웨어 엔지니어가 플록 스타일의 자동 번호판 인식 카메라를 직접 제작해 경찰 차량을 추적했다. 그는 제작 과정을 틱톡에 공개했으며, "
+ },
+ {
+  "t": "GPU 클러스터를 위한 효과적인 스케줄링",
+  "u": "https://huggingface.co/blog/allenai/impactful-scheduling",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-10-10",
+  "o": "Impactful scheduling for GPU clusters",
+  "x": "AI2 인프라팀은 수천 대의 NVIDIA H100·B200·B300 GPU를 88~1024대 규모 클러스터로 운영한다. 기존 우선순위 기반 스케"
+ },
+ {
+  "t": "인간은 섬이 아니다",
+  "u": "https://borretti.me/article/no-man-is-an-island",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "language"
+  ],
+  "d": "2026-10-10",
+  "o": "No Man Is an Island",
+  "x": "AI 에이전트가 소프트웨어 개발을 대체하면서 생산성은 높아졌지만 코드베이스는 복잡해졌다. 동시에 개발자들 사이의 기술적 논의가 얕아지고, 컴파일"
+ },
+ {
+  "t": "Vectorized CLZ와 CTZ",
+  "u": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "hardware",
+   "language"
+  ],
+  "d": "2026-10-10",
+  "o": "Vectorized CLZ and CTZ",
+  "x": "기존 CPU 명령인 clz와 ctz를 부동소수점 연산과 SIMD 명령을 활용해 벡터화한 구현을 제시한다. Rust 코드와 x86-64 AVX2 "
+ },
+ {
+  "t": "Tor 프로젝트와 Mullvad와의 관계에 대한 성명",
+  "u": "https://blog.torproject.org/on-tor-relationship-with-mullvad/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "web",
+   "open-source"
+  ],
+  "d": "2026-10-10",
+  "o": "A statement on the Tor Project's relationship with Mullvad",
+  "x": "최근 Mullvad 공동창업자의 정치 기부 논란으로 Tor 프로젝트와의 자금 관계가 의문시되었다. Tor는 관계를 종료하지 않고 명확한 경계만 "
+ },
+ {
+  "t": "매튜 그린 인용",
+  "u": "https://simonwillison.net/2026/Oct/9/matthew-green/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "career-culture"
+  ],
+  "d": "2026-10-10",
+  "o": "Quoting Matthew Green",
+  "x": "매튜 그린은 현재 공개키 암호에 대한 신뢰가 15% 수준으로 떨어질 가능성이 있다고 경고한다. 그는 공개키 암호가 불가능한 가상의 세계인 Min"
+ },
+ {
+  "t": "Show GN: 한글날을 맞아 한글 퍼즐게임 바이브코딩 했습니다.",
+  "u": "https://news.hada.io/topic?id=35077",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "ai-coding",
+   "showcase"
+  ],
+  "d": "2026-10-10",
+  "x": "한글 자모 규칙을 이용한 단어 맞추기 퍼즐 웹게임을 공개했다. 네가지 소원 ‘한글 숨바꼭질’ 에피소드를 웹으로 재현한 것이 특징이다. 개인이 직"
+ },
+ {
+  "t": "Triple-A Minesweeper",
+  "u": "https://minesweeper.mikelacher.com/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-10",
+  "x": "댓글에서는 게임에 메탈 기어 솔리드 대화 스타일을 적용하거나 마리오와 비교하는 영상이 언급되었다. 로고가 건너뛰어지는 점이 비현실적이라는 의견도"
+ },
+ {
   "t": "LingBot-Map: 스트리밍 3D 재구성을 위한 기하학적 컨텍스트 트랜스포머",
   "u": "https://github.com/Robbyant/lingbot-map",
   "m": "2026-10",

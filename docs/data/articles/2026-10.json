@@ -1,5 +1,547 @@
 [
  {
+  "title": "Python 3.15.0",
+  "url": "https://www.python.org/downloads/release/python-3150/",
+  "source": "lobsters",
+  "upvotes": 22,
+  "comments": 1,
+  "published_at": 1791565622.641,
+  "discussion": "https://lobste.rs/s/rpiwtb/python_3_15_0",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.python.org/downloads/release/python-3150/"
+  ],
+  "cross_source_count": 2,
+  "score": 65,
+  "image": "https://www.python.org/static/opengraph-icon-200x200.png",
+  "link_status": "ok",
+  "ko_title": "Python 3.15.0",
+  "summary": "Python 3.15.0이 2026년 10월 9일 정식 출시되었다. 주요 변경 사항으로는 기본 인코딩이 UTF-8로 바뀐 점, frozendict 내장 타입 추가, 실험적 JIT 컴파일러 성능 7-12% 향상, 새로운 프로파일링 패키지와 타이핑 기능이 포함된다. Windows 64-bit와 macOS 공식 바이너리는 각각 tail-calling 인터프리터와 free-threading 지원을 기본으로 제공한다.",
+  "why": "기본 인코딩이 UTF-8로 바뀌어 인코딩 오류가 줄어든다. macOS 공식 바이너리는 이제 free-threading을 기본으로 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Typesafe AI raises $870M at $7.5B",
+  "url": "https://typesafe.ai/blog/series-ai",
+  "source": "hackernews",
+  "upvotes": 215,
+  "comments": 181,
+  "published_at": 1791565351,
+  "discussion": "https://news.ycombinator.com/item?id=50023450",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://typesafe.ai/blog/series-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://framerusercontent.com/images/RtIGTDwO43jR4ZDilesXiR5znc.jpg",
+  "link_status": "ok",
+  "ko_title": "Typesafe AI, 870억 달러 투자 유치, 기업가치 7조 5천억 달러",
+  "summary": "Typesafe AI가 Andreessen Horowitz 주도 Series A 라운드에서 870억 달러를 투자받았다. 투자자에는 Sequoia Capital, 기존 투자사 DCVC, 다수 엔젤 투자자가 포함된다. 회사는 기존 제품 Jev의 기능을 극대화하고 머신 네이티브 모델을 확대하며 기업용 기능을 추가할 계획이다.",
+  "why": "Jev의 머신 네이티브 모델이 확대되어 기존 워크플로에 더 많은 자동화 옵션이 생긴다. 기업용 기능이 추가되어 대규모 배포 시 필요한 관리 도구와 연동성이 개선된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Let’s Encrypt, 2027년 2월부터 기본 인증서 유효기간을 64일로 단축",
+  "url": "https://news.hada.io/topic?id=35079",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791561673.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35079"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Let’s Encrypt, 2027년 2월부터 기본 인증서 유효기간을 64일로 단축",
+  "summary": "Let’s Encrypt는 2027년 2월 10일부터 기본 인증서 유효기간을 기존 90일에서 64일로 줄인다. 이미 발급된 인증서는 그대로 유지된다. 자동 갱신 및 ACME Renewal Info(ARI)를 지원하는 클라이언트만 사용하면 별도 준비 없이 전환할 수 있다.",
+  "why": "자동 갱신과 ARI를 지원하지 않는 클라이언트는 2027년 2월 10일 이후 수동 갱신 주기를 64일로 맞춰야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Unison Cloud is now open source",
+  "url": "https://www.unison-lang.org/blog/unison-cloud-open-source/",
+  "source": "lobsters",
+  "upvotes": 30,
+  "comments": 2,
+  "published_at": 1791559971.176,
+  "discussion": "https://lobste.rs/s/zubabn/unison_cloud_is_now_open_source",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.unison-lang.org/blog/unison-cloud-open-source/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://unison-lang.org//assets/unison-services-preview.svg",
+  "link_status": "ok",
+  "ko_title": "Unison Cloud가 오픈 소스가 되었습니다",
+  "summary": "Unison Cloud가 MIT 라이선스로 오픈 소스화되었으며, 클라이언트, Nimbus 워커, API 서버, UI 네 개의 프로젝트가 공개됐다. 서비스 배포가 200 KB 이하로 빠르고, 타입 기반 인터-서비스 통신과 분산 배치 작업 모델을 제공한다. 저장소는 DynamoDB와 S3를 백엔드로 사용하고, 비밀 관리와 장기 작업도 지원한다.",
+  "why": "기존 멀티 GB 컨테이너 빌드 대신 200 KB 이하 경량 서비스 배포가 가능해졌다. DynamoDB와 S3를 백엔드로 쓰는 분산 배치 작업 모델을 직접 구축할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "LosaLosSantos / aurelio-finance",
+  "url": "https://github.com/LosaLosSantos/aurelio-finance",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 759,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/LosaLosSantos/aurelio-finance"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 759,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/LosaLosSantos/aurelio-finance",
+  "link_status": null,
+  "ko_title": "Aurelio — AI 어드바이저가 있는 개인 재무 관리 앱",
+  "summary": "로컬에서 실행되는 재무 관리 및 재무 계획 앱으로, 선택적으로 OpenRouter 기반 AI 어드바이저와 대화할 수 있다. Git, Node 22 이상, uv가 필요하며, 데모 모드와 실제 데이터 모드용 시작 스크립트를 제공한다.",
+  "why": "로컬 실행이라 재무 데이터가 외부 서버로 나가지 않는다. AI 어드바이저는 선택적이라 OpenRouter 키 없이도 기본 기능 사용이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Anthropic's Claude can now orchestrate up to 1,000 AI agents in parallel through dynamic workflows",
+  "url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791570505.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/anthropic_claude.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic의 Claude가 동적 워크플로를 통해 최대 1,000개의 AI 에이전트를 병렬로 조정할 수 있게 됨",
+  "summary": "Claude Managed Agents에 동적 워크플로가 추가돼 리드 에이전트가 계획을 세우고 하위 에이전트에 작업을 분배해 결과를 병합한다. 한 번 실행당 최대 1,000개의 에이전트를 동시에 실행할 수 있다. 테스트에서는 116,000줄 코드베이스에서 70개의 버그를 찾았을 때 단일 에이전트가 14~27개를 잡는 반면, 동적 워크플로는 평균 66개를 잡았다. 활성화는 “multiagent_20261001” 타입 선택 후 문서 또는 “/claude-api managed-agents-onboard” 명령으로 진행한다.",
+  "why": "동적 워크플로가 병렬 실행으로 단일 에이전트보다 버그 탐지율을 크게 높였다. 토큰 소모가 많으므로 기존 단일 에이전트 방식 대비 비용 효율성을 자체 워크로드에서 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Branches in branch-free code",
+  "url": "https://00f.net/2026/10/09/llvm-compiles-branch-free-code-into-branches-on-risc-v/",
+  "source": "lobsters",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1791574277.25,
+  "discussion": "https://lobste.rs/s/dsbt5a/branches_branch_free_code",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://00f.net/2026/10/09/llvm-compiles-branch-free-code-into-branches-on-risc-v/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://00f.net/favicon.ico",
+  "link_status": "ok",
+  "ko_title": "분기 없는 코드에서의 분기",
+  "summary": "이 글은 128비트 무부호 정수 덧셈 함수를 32비트 RISC-V용으로 컴파일한 결과를 보여준다. LLVM은 128비트를 32비트 조각으로 나누어 캐리를 전달하면서 조건 분기(beq)를 삽입한다. x86·AArch64와 달리 RV32은 조건 이동 명령이 없어 캐리 전파에 분기가 필요하다. 또한 상수 시간 코드를 위한 비트 마스크 선택 함수 예시를 제시한다.",
+  "why": "RV32 타겟에서 128비트 정수 연산 시 캐리 전파에 조건 분기가 삽입된다. 상수 시간 코드를 작성할 때 비트 마스크 선택 패턴을 적용해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "feder-cr / invisible_selenium",
+  "url": "https://github.com/feder-cr/invisible_selenium",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 753,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/feder-cr/invisible_selenium"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 753,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/feder-cr/invisible_selenium",
+  "link_status": null,
+  "ko_title": "invisible_selenium — Selenium을 안티봇 Firefox에서 구동",
+  "summary": "기존 Selenium 코드를 그대로 사용하면서 안티봇 탐지를 피하도록 C++ 수준에서 패치된 Firefox를 제공한다. 브라우저 지문을 엔진 내부에서 설정하고 navigator.webdriver를 비활성화한다.",
+  "why": "기존 Selenium 코드를 유지하면서 안티봇 탐지를 우회할 수 있다. 지문 설정이 엔진 내부에서 처리되어 페이지 주입 방식의 한계를 없앤다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Anthropic launches a free AI scanner for open-source projects",
+  "url": "https://the-decoder.com/anthropic-launches-a-free-ai-scanner-for-open-source-projects/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791568484.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropic-launches-a-free-ai-scanner-for-open-source-projects/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://the-decoder.com/wp-content/uploads/2025/11/Anthropic-Cybersecurity.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 오픈소스 프로젝트용 무료 AI 스캐너 출시",
+  "summary": "Anthropic은 오픈소스 프로젝트를 정기적으로 검사하고 취약점을 자동으로 표시·설명·패치 제안하는 무료 AI 스캐너를 공개했다. 정확도는 90% 이상이며, 인프라·안전 핵심 프로젝트 유지자는 GitHub을 통해 참여할 수 있다. 이 스캐너는 사이버 미션의 일환으로, 공격자는 이미 강력한 AI 모델을 보유한 반면 방어자는 부족한 상황을 해소한다.",
+  "why": "보안 취약점 보고서는 인간 검토 없이 생성되므로 오보가 섞여 있을 수 있다. 패치 제안 적용 전에는 반드시 코드 변경 사항을 직접 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "devops-infra",
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+  "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
+  "source": "hackernews",
+  "upvotes": 281,
+  "comments": 146,
+  "published_at": 1791580019,
+  "discussion": "https://news.ycombinator.com/item?id=50026555",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://gizmodo.com/app/uploads/2026/10/sistilli-police-officers-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "유튜버, 경찰 추적용 플록식 카메라 제작 후 경찰 방문받아",
+  "summary": "캐나다 소프트웨어 엔지니어가 플록 스타일의 자동 번호판 인식 카메라를 직접 제작해 경찰 차량을 추적했다. 그는 제작 과정을 틱톡에 공개했으며, 이에 펠 지역 경찰이 그의 집을 방문해 데이터 사용 의도를 물었다. 해당 카메라는 개인용으로 경찰 차량만을 대상으로 하며, 기존 플록 카메라와 동일한 ALPR 기술을 사용한다.",
+  "why": "ALPR 기술은 기존에 경찰이 시민을 추적하는 데 쓰였으나, 이번 사례로 시민이 경찰을 역추적하는 용도로도 활용 가능해졌다. 이는 데이터 수집 주체가 바뀌면서 감시 대상과 주체가 뒤집히는 구조적 변화를 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Impactful scheduling for GPU clusters",
+  "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791559229.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/impactful-scheduling"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/Kj0n5ea3ItoNIc2ha2SVL.png",
+  "link_status": "ok",
+  "ko_title": "GPU 클러스터를 위한 효과적인 스케줄링",
+  "summary": "AI2 인프라팀은 수천 대의 NVIDIA H100·B200·B300 GPU를 88~1024대 규모 클러스터로 운영한다. 기존 우선순위 기반 스케줄러를 GPU 시간 예산·계층형 공정 공유·시간 슬라이스 계약을 포함하는 시스템으로 교체해, 연구 프로젝트별 GPU 시간 할당을 투명한 예산 프로세스로 전환했다. 이 변화로 동일 GPU 시간당 경쟁 워크로드 수가 2~3배인 상황에서도 중요한 작업에 더 많은 자원을 배정할 수 있게 되었다.",
+  "why": "GPU 시간 수요가 공급의 2~3배에 달하는 환경에서 자원 배분 방식이 바뀐다. 우선순위 기반 스케줄링 대신 시간 예산과 공정 공유 계약이 적용된다. 중요 작업에 자원이 집중되도록 할당 논리가 재설계되었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "No Man Is an Island",
+  "url": "https://borretti.me/article/no-man-is-an-island",
+  "source": "hackernews",
+  "upvotes": 222,
+  "comments": 122,
+  "published_at": 1791576240,
+  "discussion": "https://news.ycombinator.com/item?id=50025935",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://borretti.me/article/no-man-is-an-island"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://borretti.me/assets/card/no-man-is-an-island.webp",
+  "link_status": "ok",
+  "ko_title": "인간은 섬이 아니다",
+  "summary": "AI 에이전트가 소프트웨어 개발을 대체하면서 생산성은 높아졌지만 코드베이스는 복잡해졌다. 동시에 개발자들 사이의 기술적 논의가 얕아지고, 컴파일러·타입 시스템 같은 깊이 있는 주제가 사라졌다. 프롬프트 작성은 기존 소프트웨어 엔지니어링보다 학습 가치가 낮아 인간 자본 형성이 위축되고 있다.",
+  "why": "프롬프트 작성은 기존 소프트웨어 엔지니어링보다 학습 가치가 낮다. 깊이 있는 기술 논의가 사라지므로 인간 자본 형성이 위축된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Vectorized CLZ and CTZ",
+  "url": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1791567944.713,
+  "discussion": "https://lobste.rs/s/9xcc2g/vectorized_clz_ctz",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/og.png",
+  "link_status": "ok",
+  "ko_title": "Vectorized CLZ와 CTZ",
+  "summary": "기존 CPU 명령인 clz와 ctz를 부동소수점 연산과 SIMD 명령을 활용해 벡터화한 구현을 제시한다. Rust 코드와 x86-64 AVX2 어셈블리를 예시로 보여주며, Haswell에서는 scalar ctz와 비슷한 성능을, AMD Zen에서는 AVX-512 vplzcntd 사용이 가능함을 언급한다.",
+  "why": "AMD Zen 계열 CPU에서는 AVX-512 명령어 vplzcntd를 직접 사용할 수 있다. Haswell에서는 스칼라 ctz와 유사한 성능을 내지만 Zen에서는 스칼라 방식이 더 빠를 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "A statement on the Tor Project's relationship with Mullvad",
+  "url": "https://blog.torproject.org/on-tor-relationship-with-mullvad/",
+  "source": "hackernews",
+  "upvotes": 91,
+  "comments": 212,
+  "published_at": 1791560971,
+  "discussion": "https://news.ycombinator.com/item?id=50022266",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.torproject.org/on-tor-relationship-with-mullvad/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://blog.torproject.org/static/images/lead.png",
+  "link_status": "ok",
+  "ko_title": "Tor 프로젝트와 Mullvad와의 관계에 대한 성명",
+  "summary": "최근 Mullvad 공동창업자의 정치 기부 논란으로 Tor 프로젝트와의 자금 관계가 의문시되었다. Tor는 관계를 종료하지 않고 명확한 경계만 설정하며 기술 협력을 지속한다. 협력 지속은 Tor 브라우저 코드 구조·유지보수·감사성을 개선하기 위한 것으로, 광범위한 내부·외부 검토와 재무 분석을 거쳤다.",
+  "why": "Tor 브라우저 코드 구조와 유지보수성 개선에 기여한 기술 협력은 계속된다. 정치적 논란과 무관하게 브라우저 유지보수 작업은 중단되지 않는다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Quoting Matthew Green",
+  "url": "https://simonwillison.net/2026/Oct/9/matthew-green/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791558149.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/9/matthew-green/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "매튜 그린 인용",
+  "summary": "매튜 그린은 현재 공개키 암호에 대한 신뢰가 15% 수준으로 떨어질 가능성이 있다고 경고한다. 그는 공개키 암호가 불가능한 가상의 세계인 Minicrypt이 1% 확률로 존재할 수 있다고 언급한다. 이러한 위험에 대비하려면 사전 준비가 필요하다고 강조한다.",
+  "why": "공개키 암호에 의존하는 서비스는 대체 암호 체계나 사전 대비 방안을 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "career-culture"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Show GN: 한글날을 맞아 한글 퍼즐게임 바이브코딩 했습니다.",
+  "url": "https://news.hada.io/topic?id=35077",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791559370.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35077"
+  ],
+  "cross_source_count": 1,
+  "score": 21,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 한글날을 맞아 한글 퍼즐게임 바이브코딩 했습니다.",
+  "summary": "한글 자모 규칙을 이용한 단어 맞추기 퍼즐 웹게임을 공개했다. 네가지 소원 ‘한글 숨바꼭질’ 에피소드를 웹으로 재현한 것이 특징이다. 개인이 직접 코딩해 만든 프로젝트이며, 별도 배포 링크는 제공되지 않는다.",
+  "why": "백엔드나 AI 개발과 직접적인 연관이 없는 퍼즐 게임 프로젝트다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
+  "title": "Triple-A Minesweeper",
+  "url": "https://minesweeper.mikelacher.com/",
+  "source": "hackernews",
+  "upvotes": 452,
+  "comments": 96,
+  "published_at": 1791561065,
+  "discussion": "https://news.ycombinator.com/item?id=50022292",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://minesweeper.mikelacher.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://minesweeper.mikelacher.com/images/share.png",
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Triple-A Minesweeper",
+  "summary": "댓글에서는 게임에 메탈 기어 솔리드 대화 스타일을 적용하거나 마리오와 비교하는 영상이 언급되었다. 로고가 건너뛰어지는 점이 비현실적이라는 의견도 있다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-10T08:00:04.521297+09:00",
+  "batch_label": "10월 10일 08:00"
+ },
+ {
   "title": "Robbyant / lingbot-map",
   "url": "https://github.com/Robbyant/lingbot-map",
   "source": "github",
