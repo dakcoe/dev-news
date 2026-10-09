@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-30T08:00:30+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/introducing-dots/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34511",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34510",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34509",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34508",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34507",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-09-30T16:00:36+09:00",
    "total": 22,
    "counts": {
@@ -1340,6 +1299,44 @@
      "url": "https://news.hada.io/topic?id=35070",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-10T08:00:32+09:00",
+   "total": 22,
+   "counts": {
+    "empty": 1,
+    "ok": 15,
+    "blocked": 3,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://minesweeper.mikelacher.com/",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35079",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35078",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35077",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://lobste.rs/s/8rrtma/cloudflare_shutting_down_deno_is_news_not",
+     "source": "lobsters",
+     "reason": "short"
     }
    ]
   }
