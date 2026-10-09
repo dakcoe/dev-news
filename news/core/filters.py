@@ -253,10 +253,7 @@ def drop_irrelevant(articles: list[dict]) -> tuple[list[dict], list[dict]]:
     """
     kept, dropped = [], []
     for a in articles:
-        # 보호 대상이라도 모델이 제목·요약을 모두 비웠으면 실을 내용이 없다.
-        empty = not a.get("ko_title") and not a.get("summary")
-        if (a.get("llm_done") and a.get("relevance") == IRRELEVANT
-                and (not protected(a) or empty)):
+        if a.get("llm_done") and a.get("relevance") == IRRELEVANT and not protected(a):
             dropped.append(a)
         else:
             kept.append(a)

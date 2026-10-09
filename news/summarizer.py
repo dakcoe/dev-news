@@ -280,10 +280,6 @@ def _parse(text: str) -> dict:
     if out.get("kind"):
         out["relevance"] = IRRELEVANT if "기술밖" in out["kind"] else DEFAULT_RELEVANCE
 
-    # 모델이 기사를 기술밖으로 보면 번역제목까지 "없음"으로 비우기도 한다.
-    # 제목으로 실리지 않게 빈 값으로 둔다.
-    if re.fullmatch(r"[\s\"'()\[\]]*없음[\s.\"'()\[\]]*", out.get("ko_title") or ""):
-        out["ko_title"] = ""
     # "없음" = 덧붙일 정보가 없다는 답 → 빈 문자열 (UI가 요약 줄을 생략한다)
     for k in ("summary", "why"):
         text = _strip_no_info_tail(out[k] or "")
@@ -584,12 +580,6 @@ def summarize_all(articles: list[dict], provider: str | None = None,
             try:
                 calls += 1
                 candidate = _parse(_call(prompt, provider, model, api_key))
-                # 기술밖으로 분류하고 제목·요약을 비운 답은 분류 결과로 받는다.
-                # 다시 물어도 같은 답이고, 게재 제외는 drop_irrelevant가 맡는다.
-                if (not candidate["ko_title"] and not candidate["summary"]
-                        and candidate["relevance"] == IRRELEVANT):
-                    parsed = candidate
-                    break
                 if candidate["ko_title"] or candidate["summary"]:
                     base_why = candidate["why"]      # 왜중요 모델이 실패하면 돌아올 자리
                     while why_model and not why_off and calls < max_calls:
