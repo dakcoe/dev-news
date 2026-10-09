@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>조합과 확률변수 — 이항확률에서 분포함수까지 · 학습 노트 · dev-news</title><meta name="description" content="조합과 분할로 세기를 마무리하고 베르누이 시행의 이항확률과 다항확률을 구한 뒤, 확률변수를 표본공간에서 실수로 가는 함수로 정의합니다. 확률질량함수, 확률밀도함수, 누적분포함수와 그 성질, 확률변수의 세 유형까지 계산 예로 정리합니다."><link rel="canonical" href="https://dev-news.net/learn/prob-3-counting-random-variable/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="조합과 확률변수 — 이항확률에서 분포함수까지 · 학습 노트 · dev-news"><meta property="og:description" content="조합과 분할로 세기를 마무리하고 베르누이 시행의 이항확률과 다항확률을 구한 뒤, 확률변수를 표본공간에서 실수로 가는 함수로 정의합니다. 확률질량함수, 확률밀도함수, 누적분포함수와 그 성질, 확률변수의 세 유형까지 계산 예로 정리합니다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9719970909376058" crossorigin="anonymous"></script></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#prob">확률변수론</a></nav>
+<div class="grid"><article>
+<div class="kicker">확률변수론 3편</div>
+<h1>조합과 확률변수 — 이항확률에서 분포함수까지</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 10월 10일</span><span>·</span><span>읽는 데 약 16분</span></div>
+<div class="lead"><b>한 줄로:</b> 확률변수는 실험의 결과마다 실수 하나를 붙이는 함수이고, 분포함수 하나만 알면 그 확률변수에 대한 확률을 모두 계산할 수 있습니다.</div>
+  <h2 id="s1">1. 조합 — 순서 없이 고르기</h2>
+  <p>앞 글의 k-순열은 n개 가운데 k개를 골라 순서대로 늘어놓는 방법의 수였습니다. 위원회를 뽑을 때처럼 고른 사람들 사이에 순서가 없으면 다르게 셉니다. 원소 n개인 집합에서 원소 k개짜리 부분집합을 고르는 방법의 수를 <b>조합</b>(combination)이라 하고, 이 글에서는 C(n, k)로 씁니다. 영어로는 "n choose k"라고 읽습니다.</p>
+  <p>조합은 k-순열을 두 단계로 쪼개 보면 나옵니다. k-순열은 "k개를 고른다"와 "고른 k개를 줄 세운다"를 차례로 하는 일입니다. 첫 단계가 C(n, k)가지, 둘째 단계가 k!가지이므로 계수 원리에 따라 다음이 성립합니다.</p>
+  <p>C(n, k) · k! = <sub>n</sub>P<sub>k</sub> = n! / (n − k)!</p>
+  <p>C(n, k) = n! / (k! (n − k)!)</p>
+  <p>10명 가운데 4명으로 위원회를 꾸리는 방법은 C(10, 4) = 10 · 9 · 8 · 7 / 4! = 5040 / 24 = 210가지입니다. 위원장, 부위원장처럼 역할을 정해 뽑는다면 순서가 생기므로 <sub>10</sub>P<sub>4</sub> = 5040가지가 됩니다.</p>
+  <p>C(n, k)는 <b>이항계수</b>(binomial coefficient)라고도 부릅니다. k = 0부터 n까지 모두 더하면 원소 0개, 1개, …, n개짜리 부분집합을 전부 센 셈이므로 앞 글의 전체 부분집합 수 2<sup>n</sup>과 같습니다.</p>
+  <div class="tw"><table><thead><tr><th>k</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>합</th></tr></thead><tbody>
+    <tr><td>C(4, k)</td><td>1</td><td>4</td><td>6</td><td>4</td><td>1</td><td>16 = 2<sup>4</sup></td></tr>
+  </tbody></table></div>
+  <p>k개를 고르는 일은 남길 n − k개를 고르는 일과 같으므로 C(n, k) = C(n, n − k)입니다. 표가 좌우 대칭인 이유입니다.</p>
+
+  <h2 id="s2">2. 분할 — 여러 묶음으로 나누기</h2>
+  <p>k개짜리 부분집합을 고르면 나머지 n − k개짜리 집합이 저절로 정해집니다. 조합은 집합을 크기 k와 n − k인 두 묶음으로 나누는 방법의 수로 볼 수 있습니다. 이것을 여러 묶음으로 넓힌 것이 분할(partition)입니다.</p>
+  <p>학생 9명을 1조, 2조, 3조에 3명씩 나눠 넣는다고 합시다. 1조에 들어갈 3명을 C(9, 3)가지로 고르고, 남은 6명에서 2조를 C(6, 3)가지로, 남은 3명이 3조입니다.</p>
+  <p>C(9, 3) · C(6, 3) · C(3, 3) = (9! / (3! 6!)) · (6! / (3! 3!)) · 1 = 9! / (3! 3! 3!) = 1680</p>
+  <p>중간의 6!이 위아래에서 지워집니다. 일반적으로 n개를 r개 묶음으로 나누고 i번째 묶음에 n<sub>i</sub>개를 넣는 방법의 수는 다음과 같습니다(n<sub>1</sub> + ⋯ + n<sub>r</sub> = n). 이 값을 <b>다항계수</b>(multinomial coefficient)라고 합니다. r = 2이면 조합으로 돌아옵니다.</p>
+  <p>n! / (n<sub>1</sub>! n<sub>2</sub>! ⋯ n<sub>r</sub>!)</p>
+  <h3>묶음에 이름표가 있는가</h3>
+  <p>위 계산은 1조, 2조, 3조라는 이름표가 붙은 묶음을 셌습니다. 같은 세 사람이 1조로 가는 것과 2조로 가는 것을 다른 경우로 센 것입니다. 이름표 없이 "세 명씩 세 묶음으로 나누기"만 묻는다면, 같은 묶음 셋에 이름표를 붙이는 3! = 6가지 방법이 모두 하나로 합쳐집니다. 그래서 1680 / 6 = 280가지입니다. 크기가 같은 묶음이 r개면 r!로 나눕니다. 문제에서 묶음이 사람, 조 번호, 상자처럼 서로 구별되는지 먼저 읽어야 합니다.</p>
+
+  <h2 id="s3">3. 베르누이 시행과 이항확률</h2>
+  <p>같은 실험을 서로 독립으로 되풀이하는 것을 <b>베르누이 시행</b>(Bernoulli trials)이라고 합니다. 한 번의 실험에서 관심 있는 사건 A의 확률이 p, 아닐 확률이 1 − p라고 합시다.</p>
+  <p>농구 선수가 자유투를 4번 던지고 한 번 성공 확률이 0.7이라고 합시다. 성공을 S, 실패를 F로 적으면 SSSF처럼 정해진 순서의 확률은 독립이므로 곱입니다.</p>
+  <p>P(SSSF) = 0.7 · 0.7 · 0.7 · 0.3 = 0.7<sup>3</sup> · 0.3</p>
+  <p>순서와 상관없이 "4번 중 정확히 3번 성공"할 확률을 물으면, SSFS, SFSS, FSSS도 같은 확률 0.7<sup>3</sup> · 0.3을 가집니다. 그래서 순서의 개수만 세어 곱하면 됩니다. 순서의 개수는 4자리 가운데 성공이 들어갈 3자리를 고르는 수 C(4, 3) = 4입니다.</p>
+  <p>P(4번 중 3번 성공) = C(4, 3) · 0.7<sup>3</sup> · 0.3 = 4 · 0.343 · 0.3 = 0.4116</p>
+  <p>일반적으로 n번 독립 시행에서 A가 순서와 상관없이 k번 일어날 확률을 <b>이항확률</b>(binomial probability)이라고 합니다.</p>
+  <p>P<sub>n</sub>(k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup>, k = 0, 1, …, n</p>
+  <h3>문제 1</h3>
+  <p>공정한 동전을 6번 던질 때 앞면이 5번 이상 나올 확률을 구하십시오.</p>
+  <p>"5번 이상"은 5번과 6번이 배반인 두 사건의 합입니다. p = 1/2이면 모든 순서의 확률이 (1/2)<sup>6</sup> = 1/64로 같습니다.</p>
+  <p>P<sub>6</sub>(5) + P<sub>6</sub>(6) = C(6, 5) / 64 + C(6, 6) / 64 = (6 + 1) / 64 = 7/64 ≈ 0.109</p>
+
+  <h2 id="s4">4. 다항확률</h2>
+  <p>한 번의 실험 결과가 세 가지 이상으로 나뉘는 경우도 같은 방식으로 셉니다. 원판을 돌리면 빨강이 1/2, 파랑이 1/3, 초록이 1/6의 확률로 나온다고 합시다. 6번 돌려서 빨강 3번, 파랑 2번, 초록 1번이 나올 확률을 구합니다.</p>
+  <p>정해진 한 순서의 확률은 독립이므로 (1/2)<sup>3</sup> (1/3)<sup>2</sup> (1/6)<sup>1</sup>입니다. 순서의 개수는 여섯 자리를 3, 2, 1개짜리 묶음으로 나누는 분할의 수 6! / (3! 2! 1!) = 60입니다.</p>
+  <p>60 · (1/8) · (1/9) · (1/6) = 60 / 432 = 5/36 ≈ 0.139</p>
+  <p>일반식으로 쓰면, A<sub>1</sub>, …, A<sub>r</sub>이 표본공간의 분할이고 P(A<sub>i</sub>) = p<sub>i</sub>일 때 n번 반복해서 A<sub>i</sub>가 k<sub>i</sub>번씩 일어날 확률은 다음과 같습니다(k<sub>1</sub> + ⋯ + k<sub>r</sub> = n). r = 2이면 이항확률입니다.</p>
+  <p>P<sub>n</sub>(k<sub>1</sub>, …, k<sub>r</sub>) = n! / (k<sub>1</sub>! ⋯ k<sub>r</sub>!) · p<sub>1</sub><sup>k<sub>1</sub></sup> ⋯ p<sub>r</sub><sup>k<sub>r</sub></sup></p>
+
+  <h2 id="s5">5. 확률변수 — 결과마다 숫자를 붙이는 함수</h2>
+  <p>지금까지는 사건이라는 집합에 확률을 매겼습니다. 이제 결과를 숫자로 바꿔서 다룹니다. <b>확률변수</b>(random variable) X는 표본공간 U의 각 표본점 u에 실수 하나를 대응시키는 함수입니다.</p>
+  <p>X(u) : U → ℝ</p>
+  <p>정의역은 표본공간, 공역은 실수 전체입니다. 이름에 "변수"가 들어 있지만 수학적으로는 함수입니다. 동전을 두 번 던지는 실험에서 X를 앞면의 개수로 정하면 다음과 같습니다.</p>
+  <div class="tw"><table><thead><tr><th>표본점 u</th><th>HH</th><th>HT</th><th>TH</th><th>TT</th></tr></thead><tbody>
+    <tr><td>X(u)</td><td>2</td><td>1</td><td>1</td><td>0</td></tr>
+  </tbody></table></div>
+  <p>함수이므로 지킬 규칙이 있습니다.</p>
+  <ul><li>서로 다른 표본점에 같은 숫자를 붙여도 됩니다. 위에서 HT와 TH는 둘 다 1입니다.</li>
+  <li>한 표본점에 숫자 두 개를 붙일 수는 없습니다. HT에 1과 2를 동시에 붙이면 함수가 아닙니다.</li>
+  <li>같은 표본공간 위에 여러 확률변수를 정의할 수 있습니다. 같은 실험에서 Y를 "첫 번째가 앞면이면 1, 아니면 0"으로 정해도 됩니다.</li></ul>
+  <p>표본공간이 연속이어도 됩니다. 0과 10 사이를 연속으로 도는 원판 바늘이 가리키는 값을 u라 하고 X(u) = u<sup>2</sup>으로 두면 X는 0과 100 사이의 값을 가집니다. 값이 셀 수 있는 몇 개뿐이면 <b>이산형</b>(discrete) 확률변수, 구간 전체를 채우면 <b>연속형</b>(continuous) 확률변수라고 합니다. 표기로는 확률변수를 대문자 X, 아무 실수를 가리키는 보통 변수를 소문자 x로 구별합니다.</p>
+
+  <h2 id="s6">6. 확률질량함수 — 이항과 기하</h2>
+  <p>확률변수를 정의하고 나면 어떤 실험에서 왔는지는 더 이상 중요하지 않습니다. 어떤 값이 어떤 확률로 나오는지만 알면 됩니다. 이산형에서 그 정보를 담은 함수가 <b>확률질량함수</b>(probability mass function, PMF)입니다.</p>
+  <p>P<sub>X</sub>(x) = P[X = x], P<sub>X</sub>(x) ≥ 0, ∑<sub>x</sub> P<sub>X</sub>(x) = 1</p>
+  <p>P[X = x]는 X가 x가 되게 하는 표본점들의 집합 {u : X(u) = x}의 확률입니다. 동전 두 번 예에서 P<sub>X</sub>(0) = 1/4, P<sub>X</sub>(1) = 1/2, P<sub>X</sub>(2) = 1/4입니다. X = 1이 되는 표본점이 HT, TH 두 개이기 때문입니다.</p>
+  <h3>이항 확률변수</h3>
+  <p>독립 시행 n번에서 성공 횟수를 X라 하면 X는 <b>이항 확률변수</b>(binomial random variable)이고 PMF는 3절의 이항확률 그대로입니다.</p>
+  <p>P<sub>X</sub>(x) = C(n, x) p<sup>x</sup> (1 − p)<sup>n − x</sup>, x = 0, 1, …, n</p>
+  <h3>기하 확률변수</h3>
+  <p>앞면 확률이 p인 동전을 첫 앞면이 나올 때까지 던지고, 던진 횟수를 X라 합니다. H이면 1, TH이면 2, TTH이면 3입니다. x번째에 처음 앞면이 나오려면 앞의 x − 1번이 모두 뒷면이어야 합니다. 이런 X를 <b>기하 확률변수</b>(geometric random variable)라고 합니다.</p>
+  <p>P<sub>X</sub>(x) = (1 − p)<sup>x − 1</sup> p, x = 1, 2, 3, …</p>
+  <p>p = 0.2라면 P<sub>X</sub>(1) = 0.2, P<sub>X</sub>(2) = 0.16, P<sub>X</sub>(3) = 0.8<sup>2</sup> · 0.2 = 0.128입니다. 값이 매번 1 − p = 0.8배씩 줄어듭니다. 모두 더하면 첫째 항이 p, 공비가 1 − p인 등비급수라서 p / (1 − (1 − p)) = 1이 됩니다.</p>
+
+  <h2 id="s7">7. 확률밀도함수와 한 점의 확률</h2>
+  <p>연속형 확률변수는 <b>확률밀도함수</b>(probability density function, PDF) f<sub>X</sub>(x)로 기술합니다. 밀도함수를 적분하면 확률이 됩니다. 곡선 아래 넓이가 확률입니다.</p>
+  <p>P[a ≤ X ≤ b] = ∫<sub>a</sub><sup>b</sup> f<sub>X</sub>(x) dx, ∫<sub>−∞</sub><sup>∞</sup> f<sub>X</sub>(x) dx = 1</p>
+  <p>값의 집합 B가 여러 구간을 합친 것이면 각 구간의 넓이를 더합니다. 일반적으로 P[X ∈ B]는 B 위에서 f<sub>X</sub>를 적분한 값입니다. 밀도함수가 만족해야 할 조건은 둘입니다. 어디서나 f<sub>X</sub>(x) ≥ 0이어야 합니다. 음수인 구간이 있으면 그 구간의 확률이 음수가 되기 때문입니다. 그리고 전체 넓이가 1이어야 합니다. 밀도의 값 자체는 확률이 아니므로 1보다 커도 됩니다.</p>
+  <p>폭 δ가 아주 작은 구간을 보면 곡선 아래 넓이는 높이 f<sub>X</sub>(x), 폭 δ인 직사각형과 거의 같습니다.</p>
+  <p>P[x ≤ X ≤ x + δ] ≈ f<sub>X</sub>(x) δ</p>
+  <p>δ를 0으로 보내면 오른쪽은 0이 됩니다. 연속형 확률변수가 정확히 한 값을 가질 확률은 0입니다. 앞 글에서 본 "확률 0이지만 일어날 수 있는 결과"가 이것입니다. 그래서 연속형에서는 구간 끝에 등호가 있든 없든 확률이 같습니다.</p>
+
+  <h2 id="s8">8. 누적분포함수</h2>
+  <p>이산형과 연속형을 한 가지 함수로 다룰 수 있는 것이 <b>누적분포함수</b>(cumulative distribution function, CDF)입니다. 확률분포함수라고도 부릅니다.</p>
+  <p>F<sub>X</sub>(x) = P[X ≤ x]</p>
+  <p>연속형이면 밀도를 −∞부터 x까지 적분한 값이고, 거꾸로 F<sub>X</sub>를 미분하면 밀도가 나옵니다. 밀도는 소문자 f, 분포는 대문자 F로 씁니다.</p>
+  <p>F<sub>X</sub>(x) = ∫<sub>−∞</sub><sup>x</sup> f<sub>X</sub>(t) dt, f<sub>X</sub>(x) = dF<sub>X</sub>(x) / dx</p>
+  <p>적분 변수 t는 위끝의 x와 헷갈리지 않게 따로 쓰는 문자이고 적분이 끝나면 사라집니다.</p>
+  <h3>이산형 — 계단</h3>
+  <p>동전 두 번에서 앞면 개수 X의 CDF를 구간별로 적으면 다음과 같습니다.</p>
+  <div class="tw"><table><thead><tr><th>x의 범위</th><th>F<sub>X</sub>(x)</th><th>포함되는 값</th></tr></thead><tbody>
+    <tr><td>x &lt; 0</td><td>0</td><td>없음</td></tr>
+    <tr><td>0 ≤ x &lt; 1</td><td>1/4</td><td>X = 0</td></tr>
+    <tr><td>1 ≤ x &lt; 2</td><td>3/4</td><td>X = 0, 1</td></tr>
+    <tr><td>x ≥ 2</td><td>1</td><td>X = 0, 1, 2</td></tr>
+  </tbody></table></div>
+  <p>평평하다가 X가 가질 수 있는 값 0, 1, 2에서만 뛰어오르는 계단 모양입니다. 뛰어오른 높이 1/4, 1/2, 1/4가 그 값의 확률입니다. 경계 x = 1에서는 등호가 "≤"에 포함되므로 위쪽 값 3/4를 가집니다.</p>
+  <h3>연속형 — 이어진 곡선</h3>
+  <p>버스가 0분과 30분 사이에 균등하게 도착하고, 도착 시각을 X라 합시다. 0 ≤ x ≤ 30에서 F<sub>X</sub>(x)는 전체 길이 30 가운데 [0, x]가 차지하는 비율 x / 30이고, x &lt; 0에서 0, x &gt; 30에서 1입니다. 그래프는 (0, 0)과 (30, 1)을 잇는 직선이고 뛰는 곳이 없습니다. 10분과 18분 사이에 올 확률은 F<sub>X</sub>(18) − F<sub>X</sub>(10) = 18/30 − 10/30 = 4/15입니다.</p>
+
+  <h2 id="s9">9. 분포함수의 성질</h2>
+  <div class="tw"><table><thead><tr><th>성질</th><th>이유</th></tr></thead><tbody>
+    <tr><td>F<sub>X</sub>(∞) = 1, F<sub>X</sub>(−∞) = 0</td><td>X는 언제나 ∞ 이하이고, −∞ 이하일 수는 없음</td></tr>
+    <tr><td>x<sub>1</sub> &lt; x<sub>2</sub>이면 F<sub>X</sub>(x<sub>1</sub>) ≤ F<sub>X</sub>(x<sub>2</sub>) (비감소)</td><td>{X ≤ x<sub>1</sub>} ⊂ {X ≤ x<sub>2</sub>}</td></tr>
+    <tr><td>P[X &gt; x] = 1 − F<sub>X</sub>(x)</td><td>{X ≤ x}의 여사건</td></tr>
+    <tr><td>P[x<sub>1</sub> &lt; X ≤ x<sub>2</sub>] = F<sub>X</sub>(x<sub>2</sub>) − F<sub>X</sub>(x<sub>1</sub>)</td><td>{X ≤ x<sub>2</sub>}를 배반인 {X ≤ x<sub>1</sub>}과 {x<sub>1</sub> &lt; X ≤ x<sub>2</sub>}로 나눔</td></tr>
+    <tr><td>오른쪽 연속(right-continuous): F<sub>X</sub>(x<sub>0</sub>) = F<sub>X</sub>(x<sub>0</sub><sup>+</sup>)</td><td>"≤ x<sub>0</sub>"는 x<sub>0</sub> 자신을 포함함</td></tr>
+    <tr><td>P[X = x<sub>0</sub>] = F<sub>X</sub>(x<sub>0</sub>) − F<sub>X</sub>(x<sub>0</sub><sup>−</sup>)</td><td>위 성질에서 x<sub>1</sub>을 x<sub>0</sub>의 왼쪽 바로 옆으로 보냄</td></tr>
+  </tbody></table></div>
+  <p>마지막 성질이 계단의 높이와 확률을 잇습니다. F<sub>X</sub>가 x<sub>0</sub>에서 연속이면 왼쪽 극한과 값이 같으므로 P[X = x<sub>0</sub>] = 0입니다. x<sub>0</sub>에서 뛰어오르면 뛴 높이가 그 값의 확률입니다. 뛰는 점에서 함숫값이 위쪽에 붙는 것이 오른쪽 연속의 뜻입니다.</p>
+  <p>분포함수 하나만 알면 어떤 구간에 들어갈 확률, 어떤 값보다 클 확률, 한 값과 같을 확률을 모두 계산할 수 있습니다. 다음 글에서 볼 평균과 분산도 여기서 나옵니다. 그래서 PMF, PDF, CDF 가운데 하나를 주는 것을 확률변수의 <b>완전한 통계적 기술</b>(complete statistical description)이라고 부릅니다.</p>
+
+  <h2 id="s10">10. 확률변수의 세 유형</h2>
+  <p>CDF의 모양으로 확률변수를 셋으로 나눕니다.</p>
+  <div class="tw"><table><thead><tr><th>유형</th><th>CDF의 모양</th></tr></thead><tbody>
+    <tr><td>연속형(continuous type)</td><td>어디서나 연속, 뛰는 곳이 없음</td></tr>
+    <tr><td>이산형(discrete type)</td><td>계단, 몇 점에서만 뛰고 나머지는 평평함</td></tr>
+    <tr><td>혼합형(mixed type)</td><td>평평하지 않게 오르는 구간도 있고, 어떤 점에서는 뜀</td></tr>
+  </tbody></table></div>
+  <p>혼합형의 예로 신호등 앞 대기 시간을 생각합니다. 도착했을 때 초록불일 확률이 0.4이면 그때는 기다리지 않아 X = 0입니다. 빨간불이면 대기 시간이 0초와 60초 사이에 균등하다고 합시다. 그러면 F<sub>X</sub>(0) = 0.4로 0에서 0.4만큼 뛰고, 0 ≤ x ≤ 60에서 F<sub>X</sub>(x) = 0.4 + 0.6 · x / 60으로 직선을 따라 오르다가 60에서 1이 됩니다. 30초 넘게 기다릴 확률은 1 − F<sub>X</sub>(30) = 1 − 0.7 = 0.3입니다.</p>
+  <h3>문제 2</h3>
+  <p>밀도함수가 0 ≤ x ≤ 2에서 f<sub>X</sub>(x) = c x이고 그 밖에서 0입니다. (가) c를 구하고, (나) CDF를 구한 뒤, (다) P[1 &lt; X ≤ 2]를 구하십시오.</p>
+  <p>(가) 전체 넓이가 1이어야 합니다. 밑변 2, 높이 2c인 삼각형이므로 넓이는 (1/2) · 2 · 2c = 2c = 1이므로 <b>c = 1/2</b>입니다. 어디서나 0 이상이라는 조건도 만족합니다.</p>
+  <p>(나) 0 ≤ x ≤ 2에서 F<sub>X</sub>(x) = ∫<sub>0</sub><sup>x</sup> (t / 2) dt = x<sup>2</sup> / 4입니다. x &lt; 0에서 0, x &gt; 2에서 1입니다. x = 2를 넣으면 1이 되어 이어집니다.</p>
+  <p>(다) P[1 &lt; X ≤ 2] = F<sub>X</sub>(2) − F<sub>X</sub>(1) = 1 − 1/4 = <b>3/4</b>입니다. 구간 [0, 2]의 오른쪽 절반이 확률의 3/4을 차지합니다. 밀도가 오른쪽으로 갈수록 높기 때문입니다.</p>
+
+  <h2 id="s11">정리</h2>
+  <p>순서 없이 고르는 수는 조합 C(n, k), 여러 묶음으로 나누는 수는 다항계수이고, 묶음에 이름표가 있는지에 따라 개수가 달라집니다. 독립 시행에서 정해진 순서의 확률에 순서의 개수를 곱하면 이항확률과 다항확률이 나옵니다. 확률변수는 결과마다 실수를 붙이는 함수이고, 이산형은 PMF, 연속형은 PDF로 기술합니다. CDF는 두 경우를 함께 다루며, 뛰어오른 높이가 그 값의 확률입니다. 다음 글에서는 공학에서 자주 쓰는 대표 분포들을 보고, 분포를 몇 개의 숫자로 줄이는 기댓값과 분산을 계산합니다.</p>
+<div class="next"><a href="/learn/prob-2-independence-counting/"><small>← 이전 글</small><span>독립과 세기 — 확률 0의 의미에서 순열까지</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">조합 — 순서 없이 고르기</a></li><li><a href="#s2">분할 — 여러 묶음으로 나누기</a></li><li><a href="#s3">베르누이 시행과 이항확률</a></li><li><a href="#s4">다항확률</a></li><li><a href="#s5">확률변수 — 결과마다 숫자를 붙이는 함수</a></li><li><a href="#s6">확률질량함수 — 이항과 기하</a></li><li><a href="#s7">확률밀도함수와 한 점의 확률</a></li><li><a href="#s8">누적분포함수</a></li><li><a href="#s9">분포함수의 성질</a></li><li><a href="#s10">확률변수의 세 유형</a></li><li><a href="#s11">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

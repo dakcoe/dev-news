@@ -62,13 +62,15 @@ th{background:#fafafb;font-weight:700}
 <a class="item" href="/learn/ml-2-week2-review/"><b>2. 머신러닝의 뼈대 — 목적함수, 선형대수, 미적분</b><span>머신러닝은 규칙을 데이터에서 찾아내는 일이다. 학습의 정의와 목적함수, 학습의 종류, 벡터·거리·내적·기저·고유값 분해, 도함수·테일러 급수·편미분·라그랑주 승수법까지 첫 두 주 분량을 훑는다.</span></a>
 <a class="item" href="/learn/ml-3-week2-math/"><b>3. 거리·행렬·벡터 미분 — 고유값 분해로 줄어드는 계산</b><span>p 노름·맨해튼·그래프·편집 거리, 그람-슈미트 직교화, 행렬식·트레이스·랭크·양정부호, 고유값 분해로 쉬워지는 행렬 계산, 벡터 미분과 볼록함수·젠센 부등식까지 앞 편에서 건너뛴 수학을 채운다.</span></a>
 <a class="item" href="/learn/ml-4-week3-prob/"><b>4. 확률과 통계 — 베이즈 정리와 가우시안 분포</b><span>심프슨의 역설에서 출발해 확률변수와 분포, 기댓값·분산·공분산, 합 규칙과 곱 규칙, 베이즈 정리와 유방암 검사 예제, 가우시안 분포와 화이트닝, 혼합 가우시안과 정상성까지 확률의 기본기를 쌓는다.</span></a>
+<a class="item" href="/learn/ml-7-information-density/"><b>5. 정보이론과 밀도추정 — 엔트로피, KL 발산, 최대가능도</b><span>정보량과 엔트로피, 결합·조건부 엔트로피와 상호정보량, KL 발산과 교차 엔트로피를 새 숫자로 계산하고, 밀도추정의 세 갈래, 가우시안 최대가능도와 분산 추정의 편향, 히스토그램·파젠 창·KDE·kNN, 가우시안 혼합까지 정리한다.</span></a>
 <h2 id="dl">딥러닝</h2>
 <a class="item" href="/learn/dl-1-perceptron-loss-backprop/"><b>1. 퍼셉트론에서 역전파까지 — 손실, 경사하강법, 활성화 함수</b><span>알바 시급 예시 하나로 퍼셉트론과 가중치, MSE·MAE·Huber·교차 엔트로피 손실, 경사하강법과 학습률, XOR과 다층 퍼셉트론, 역전파 계산, 기울기 소실과 ReLU, 학습 요령까지 따라간다.</span></a>
 <h2 id="ca">컴퓨터구조</h2>
-<a class="item" href="/learn/ca-1-mips-basics/"><b>1. MIPS 명령어 형식과 데이터 전송 — R-type, I-type, lw·sw</b><span>MIPS 명령어 32비트를 어디서 자르는지 본다. 레지스터와 R-type·I-type 형식, 산술·논리 명령어, 메모리와 lw·sw를 문제 네 개로 직접 풀어 본다.</span></a>
-<a class="item" href="/learn/ca-2-mips-control/"><b>2. MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</b><span>PC를 바꾸는 제어 명령어를 본다. beq·bne·slt로 만드는 조건 분기, j·jr·jal과 J-type, 26비트로 32비트 주소를 만드는 법과 분기 범위, if·while을 어셈블리로 옮기는 문제를 푼다.</span></a>
-<a class="item" href="/learn/ca-3-arithmetic/"><b>3. 정수 덧셈의 오버플로와 곱셈 하드웨어 — 2의 보수에서 세 가지 곱셈 설계까지</b><span>2진 덧셈과 2의 보수, 오버플로가 나는 조건과 XOR 하나로 만드는 검출 회로, MIPS의 add와 addu를 본다. 곱셈 회로를 세 단계로 줄여 가며 mult 결과가 Hi와 Lo에 나뉘는 이유를 확인한다.</span></a>
-<a class="item" href="/learn/ca-4-div-float/"><b>4. 나눗셈 하드웨어와 부동소수점 — 복원 나눗셈, IEEE 754, 반올림</b><span>빼고 복원하는 나눗셈 회로를 곱셈 회로와 합치고, IEEE 754 단정밀도·배정밀도의 부호·지수·fraction, 정규수 범위와 특수값, G·R·S 비트로 하는 반올림, 부동소수점 덧셈과 곱셈을 문제로 푼다.</span></a>
+<a class="item" href="/learn/ca-0-organization-addressing/"><b>1. 컴퓨터의 구성과 어드레싱 모드 — 다섯 구성 요소에서 명령어 형식까지</b><span>A + B = C 한 줄로 컴퓨터의 다섯 구성 요소를 끌어내고, 추상화 계층과 ISA, 레지스터와 명령어 사이클, opcode와 오퍼랜드 개수, 일곱 가지 어드레싱 모드, 명령어의 종류와 CISC·RISC를 정리한다.</span></a>
+<a class="item" href="/learn/ca-1-mips-basics/"><b>2. MIPS 명령어 형식과 데이터 전송 — R-type, I-type, lw·sw</b><span>MIPS 명령어 32비트를 어디서 자르는지 본다. 레지스터와 R-type·I-type 형식, 산술·논리 명령어, 메모리와 lw·sw를 문제 네 개로 직접 풀어 본다.</span></a>
+<a class="item" href="/learn/ca-2-mips-control/"><b>3. MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</b><span>PC를 바꾸는 제어 명령어를 본다. beq·bne·slt로 만드는 조건 분기, j·jr·jal과 J-type, 26비트로 32비트 주소를 만드는 법과 분기 범위, if·while을 어셈블리로 옮기는 문제를 푼다.</span></a>
+<a class="item" href="/learn/ca-3-arithmetic/"><b>4. 정수 덧셈의 오버플로와 곱셈 하드웨어 — 2의 보수에서 세 가지 곱셈 설계까지</b><span>2진 덧셈과 2의 보수, 오버플로가 나는 조건과 XOR 하나로 만드는 검출 회로, MIPS의 add와 addu를 본다. 곱셈 회로를 세 단계로 줄여 가며 mult 결과가 Hi와 Lo에 나뉘는 이유를 확인한다.</span></a>
+<a class="item" href="/learn/ca-4-div-float/"><b>5. 나눗셈 하드웨어와 부동소수점 — 복원 나눗셈, IEEE 754, 반올림</b><span>빼고 복원하는 나눗셈 회로를 곱셈 회로와 합치고, IEEE 754 단정밀도·배정밀도의 부호·지수·fraction, 정규수 범위와 특수값, G·R·S 비트로 하는 반올림, 부동소수점 덧셈과 곱셈을 문제로 푼다.</span></a>
 <h2 id="os">운영체제</h2>
 <a class="item" href="/learn/os-01-intro/"><b>1. 운영체제란 무엇인가 — 로딩, 인터럽트, 직접 메모리 접근</b><span>프로그램이 메모리에 올라가는 과정에서 출발해 운영체제의 정의, 자원의 가상화, 인터럽트와 트랩, 인터럽트 구동 입출력과 DMA, 저장 계층과 캐싱까지 정리한다.</span></a>
 <a class="item" href="/learn/os-02-structures/"><b>2. 시스템 콜과 이중 모드 — 여러 프로그램을 안전하게 돌리는 법</b><span>운영체제 서비스와 부팅, 커널 구조에서 출발해 멀티프로그래밍과 멀티태스킹, 특권 명령과 모드 비트, 시스템 콜의 동작과 여섯 갈래, 표준 라이브러리와의 관계까지 정리한다.</span></a>
@@ -84,8 +86,12 @@ th{background:#fafafb;font-weight:700}
 <a class="item" href="/learn/os-12-file-systems/"><b>12. 파일 시스템 — inode, 디렉터리, 디스크 배치와 캐시</b><span>파일과 inode, 속성과 연산, 열린 파일 표, 디렉터리와 하드·심볼릭 링크, 슈퍼블록·비트맵·inode 표로 짜는 디스크 배치, 직접·간접 포인터, 파일 읽기의 디스크 접근과 페이지 캐시를 정리한다.</span></a>
 <h2 id="net">컴퓨터 네트워크</h2>
 <a class="item" href="/learn/net-1-internet-edge/"><b>1. 인터넷과 네트워크 엣지 — 호스트, 접속망, 물리 매체</b><span>인터넷을 부품과 서비스 두 관점으로 정의하고, 프로토콜이 정하는 세 가지를 짚은 뒤, 호스트가 첫 라우터에 닿기까지의 접속망(케이블, DSL, FTTH, 무선)과 물리 매체, 패킷 전송 지연 L/R을 계산 예와 함께 정리합니다.</span></a>
+<a class="item" href="/learn/net-2-core-delay/"><b>2. 네트워크 코어와 지연 — 패킷 교환, 인터넷 구조, 네 가지 지연</b><span>라우터의 저장 후 전달과 큐잉·손실, 포워딩과 라우팅, 회선 교환과 패킷 교환의 비교를 이항분포 계산으로 확인하고, ISP들이 엮인 인터넷 구조와 처리·큐잉·전송·전파 지연, 트래픽 강도, traceroute까지 정리합니다.</span></a>
+<a class="item" href="/learn/net-3-layers-application/"><b>3. 계층과 응용 계층의 원리 — 처리량, 캡슐화, 소켓, TCP와 UDP</b><span>종단 간 처리량과 병목 링크를 계산하고, 인터넷 5계층과 캡슐화, 기본 보안 위협을 정리한 뒤, 응용 계층의 두 구조와 프로세스·소켓·포트 번호, 응용이 전송 계층에 바라는 네 가지와 TCP·UDP, 웹과 HTTP의 기본까지 다룹니다.</span></a>
 <h2 id="prob">확률변수론</h2>
 <a class="item" href="/learn/prob-1-axioms-bayes/"><b>1. 확률의 공리와 베이즈 정리 — 집합에서 조건부확률까지</b><span>무작위 실험과 결정론의 차이에서 출발해 집합 연산과 배반·분할, 표본공간과 사건, 확률의 세 공리와 거기서 나오는 성질, 조건부확률과 연쇄법칙, 전확률정리와 베이즈 정리를 레이더 경보와 공장 불량품 계산으로 차례로 정리합니다.</span></a>
+<a class="item" href="/learn/prob-2-independence-counting/"><b>2. 독립과 세기 — 확률 0의 의미에서 순열까지</b><span>확률 0인 사건과 불가능한 사건의 차이, 독립의 정의와 배반과의 차이, 조건부 독립, 쌍별 독립과 여러 사건의 독립, 넓이로 구하는 확률, 같은 확률일 때의 세기와 계수 원리, 순열을 주사위·엘리베이터·약속 시간 같은 새 계산 예로 정리합니다.</span></a>
+<a class="item" href="/learn/prob-3-counting-random-variable/"><b>3. 조합과 확률변수 — 이항확률에서 분포함수까지</b><span>조합과 분할로 세기를 마무리하고 베르누이 시행의 이항확률과 다항확률을 구한 뒤, 확률변수를 표본공간에서 실수로 가는 함수로 정의합니다. 확률질량함수, 확률밀도함수, 누적분포함수와 그 성질, 확률변수의 세 유형까지 계산 예로 정리합니다.</span></a>
 </div>
 <div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
 </div></body></html>

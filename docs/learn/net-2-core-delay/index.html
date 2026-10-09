@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>네트워크 코어와 지연 — 패킷 교환, 인터넷 구조, 네 가지 지연 · 학습 노트 · dev-news</title><meta name="description" content="라우터의 저장 후 전달과 큐잉·손실, 포워딩과 라우팅, 회선 교환과 패킷 교환의 비교를 이항분포 계산으로 확인하고, ISP들이 엮인 인터넷 구조와 처리·큐잉·전송·전파 지연, 트래픽 강도, traceroute까지 정리합니다."><link rel="canonical" href="https://dev-news.net/learn/net-2-core-delay/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="네트워크 코어와 지연 — 패킷 교환, 인터넷 구조, 네 가지 지연 · 학습 노트 · dev-news"><meta property="og:description" content="라우터의 저장 후 전달과 큐잉·손실, 포워딩과 라우팅, 회선 교환과 패킷 교환의 비교를 이항분포 계산으로 확인하고, ISP들이 엮인 인터넷 구조와 처리·큐잉·전송·전파 지연, 트래픽 강도, traceroute까지 정리합니다."><meta property="og:image" content="https://dev-news.net/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"><style>:root{--bg:#f4f4f6;--panel:#fff;--line:#e7e7ec;--tx:#1c1c22;--tx2:#54545f;--tx3:#8b8b98;--pri:#7c6ee6;--pri-bg:#efedfd;--pri-dk:#5b4fd0;
+--shadow-card:0 0 0 1px rgba(25,28,33,.06),0 1px 1px -.5px rgba(0,0,0,.05),0 3px 3px -1.5px rgba(0,0,0,.04),0 6px 6px -3px rgba(0,0,0,.03)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:34px 34px 70px}
+.crumb{font-size:14px;color:var(--tx3);margin-bottom:22px;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--tx2);text-decoration:none}.crumb a:hover{color:var(--pri-dk)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:start}
+article,.list{background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:36px 44px 40px}
+.kicker{font-size:13.5px;font-weight:700;color:var(--pri-dk)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.3;margin:6px 0 10px}
+.meta{font-size:13.5px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap}
+.lead{margin:26px 0 8px;background:var(--pri-bg);border-radius:12px;padding:16px 20px;font-size:15.5px;line-height:1.75;color:#3d3480}
+.lead b{color:var(--pri-dk)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.025em;margin:38px 0 12px;scroll-margin-top:20px}
+h3{font-size:16px;font-weight:700;margin:22px 0 6px}
+p{font-size:16px;line-height:1.85;color:#3a3a44;margin:0}
+p+p{margin-top:14px}
+ol,ul{font-size:16px;line-height:1.85;color:#3a3a44;margin:10px 0 0;padding-left:22px}
+li+li{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f4f4f6;border-radius:5px;padding:1px 5px}
+pre{background:#f4f4f6;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.6;margin:14px 0}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:16px 0 4px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:normal}
+th{white-space:nowrap}
+th{background:#fafafb;font-weight:700}
+.note{font-size:14px;color:var(--tx3);margin-top:8px}
+.toc{position:sticky;top:20px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow-card);padding:18px 18px 16px}
+.toc b{font-size:13px;color:var(--tx3);display:block;margin-bottom:8px}
+.toc ol{font-size:13.5px;line-height:1.6;padding-left:18px;margin:0;color:var(--tx2)}
+.toc a{text-decoration:none}.toc a:hover{color:var(--pri-dk)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.next a{display:block;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:14px 16px;text-decoration:none}
+.next a:hover{box-shadow:inset 0 0 0 1.5px var(--pri)}
+.next small{display:block;font-size:12.5px;color:var(--tx3)}
+.next span{font-size:15px;font-weight:700}
+.next .r{text-align:right;grid-column:2}
+.list h2{margin-top:30px}.list h2:first-of-type{margin-top:18px}
+.item{display:block;text-decoration:none;padding:14px 0;border-top:1px solid #f0f0f4}
+.item b{display:block;font-size:16px}.item b:hover{color:var(--pri-dk)}
+.item span{display:block;font-size:14px;color:var(--tx3);margin-top:2px}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--tx3);display:flex;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pri-dk)}
+@media (max-width:900px){
+  .page{padding:18px 14px 50px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  article,.list{padding:24px 20px 28px}
+  h1{font-size:24px}
+  p,ol,ul{font-size:15.5px}
+  .next{grid-template-columns:1fr}.next .r{grid-column:auto}
+}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9719970909376058" crossorigin="anonymous"></script></head><body><div class="page">
+<nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#net">컴퓨터 네트워크</a></nav>
+<div class="grid"><article>
+<div class="kicker">컴퓨터 네트워크 2편</div>
+<h1>네트워크 코어와 지연 — 패킷 교환, 인터넷 구조, 네 가지 지연</h1>
+<div class="meta"><span>suhyun</span><span>·</span><span>2026년 10월 10일</span><span>·</span><span>읽는 데 약 19분</span></div>
+<div class="lead"><b>한 줄로:</b> 패킷은 라우터마다 처리, 큐잉, 전송, 전파 네 가지 지연을 겪고, 그중 큐잉 지연은 트래픽 강도 La/R이 1에 다가갈수록 급격히 커집니다.</div>
+  <h2 id="s1">1. 코어는 라우터의 그물이고, 라우터는 패킷을 다 받은 뒤 보냅니다</h2>
+  <p>앞 글에서 호스트가 접속망을 거쳐 엣지 라우터에 닿는 데까지 보았습니다. 그 안쪽이 <b>네트워크 코어</b>(network core)입니다. 코어는 서로 연결된 라우터들의 그물(mesh)입니다. 호스트가 메시지를 패킷으로 자르면, 라우터들이 패킷을 출발지에서 목적지까지 한 라우터에서 다음 라우터로 넘깁니다. 이렇게 넘기는 일을 전달(forward)이라고 합니다.</p>
+  <p>라우터를 한 줄로 이으면 선이 덜 듭니다. 그래도 그물로 짜는 이유는 둘입니다. 한 줄 구조에서는 라우터 하나가 고장 나면 그 뒤가 모두 끊기지만, 그물에서는 다른 경로로 돌아갈 수 있습니다. 또 목적지가 다른 트래픽이 서로 다른 경로를 타므로 부하가 여러 링크로 흩어집니다. 라우터가 갈 방향을 알 수 있는 이유는 패킷마다 목적지 주소가 들어 있기 때문입니다.</p>
+  <h3>저장 후 전달</h3>
+  <p>라우터는 패킷의 첫 비트가 도착했다고 바로 다음 링크로 내보내지 않습니다. 패킷 전체가 도착할 때까지 기다렸다가 내보냅니다. 이 방식을 <b>저장 후 전달</b>(store-and-forward)이라고 합니다. 목적지 주소 같은 정보는 패킷 앞쪽의 헤더에 한 번만 들어 있고, 오류가 없는지도 패킷을 다 받아야 확인할 수 있습니다. 앞부분만 먼저 보내면 뒷부분은 갈 곳을 모르는 조각이 됩니다.</p>
+  <p>그래서 전송 지연이 링크마다 더해집니다. 출발지와 목적지 사이에 링크가 <i>N</i>개 있고, 신호가 선을 따라 이동하는 시간을 0으로 두면 패킷 하나가 도착하는 데 이만큼 걸립니다.</p>
+  <p><i>d</i><sub>end-end</sub> = <i>N</i> × <i>L</i> / <i>R</i></p>
+  <p>예를 들어 8,000비트 패킷을 40 Mbps 링크로 보내면 한 링크에서 8,000 / (40 × 10<sup>6</sup>) = 0.2 ms가 걸립니다. 출발지에서 라우터 둘을 거쳐 목적지까지 가면 링크가 3개이므로 0.6 ms입니다.</p>
+  <h3>문제 1</h3>
+  <p>위와 같은 조건(<i>L</i> = 8,000비트, <i>R</i> = 40 Mbps, 링크 3개)에서 출발지가 패킷 3개를 연달아 보냅니다. 마지막 패킷이 목적지에 다 도착하는 시각은 언제입니까. 전파 지연과 큐잉 지연은 0으로 둡니다.</p>
+  <p><i>L</i> / <i>R</i> = 0.2 ms를 한 칸으로 셉니다. 1번 패킷은 1칸째에 첫 링크를 마치고, 2칸째에 둘째 링크, 3칸째에 셋째 링크를 마칩니다. 출발지는 1번을 다 내보낸 직후 2번을 내보내기 시작하므로, 2번은 2칸째에 첫 링크를 마치고 한 칸씩 뒤따라 4칸째에 도착합니다. 3번은 5칸째에 도착합니다. 답은 5 × 0.2 = <b>1.0 ms</b>입니다. 패킷들이 서로 다른 링크를 동시에 쓰기 때문에 3 × 0.6 = 1.8 ms까지 걸리지 않습니다. 일반적으로 링크 <i>N</i>개에 패킷 <i>P</i>개를 보내면 (<i>N</i> + <i>P</i> − 1) × <i>L</i> / <i>R</i>입니다. 여기서는 (3 + 3 − 1) × 0.2 = 1.0 ms로 같습니다.</p>
+
+  <h2 id="s2">2. 큐잉과 패킷 손실</h2>
+  <p>라우터 하나에 여러 링크로 패킷이 들어와서 같은 출력 링크로 나가야 하는 상황을 생각합니다. 들어오는 쪽 링크가 각각 100 Mbps이고 나가는 링크가 10 Mbps라면, 들어오는 속도가 나가는 속도를 쉽게 넘습니다.</p>
+  <p>링크로 도착하는 비트의 속도가 한동안 링크의 전송률을 넘으면 두 가지 일이 일어납니다.</p>
+  <ul><li>패킷이 출력 링크 앞에서 줄을 서서 차례를 기다립니다. 줄을 <b>큐</b>(queue)라고 하고, 기다리는 시간을 <b>큐잉 지연</b>(queueing delay)이라고 합니다.</li>
+  <li>라우터가 패킷을 쌓아 두는 메모리인 <b>버퍼</b>(buffer)는 크기가 정해져 있습니다. 버퍼가 가득 찬 뒤에 도착한 패킷은 버려집니다(dropped). 이것이 <b>패킷 손실</b>(packet loss)입니다.</li></ul>
+  <p>전송 지연은 패킷 크기와 링크가 정해지면 정해지는 값입니다. 큐잉 지연과 손실은 그때그때 트래픽에 따라 달라집니다. 버려진 패킷은 바로 앞 라우터나 출발지 호스트가 다시 보낼 수도 있고, 아무도 다시 보내지 않을 수도 있습니다. 파일처럼 빠짐없이 와야 하는 데이터는 다시 보내고, 실시간 통화처럼 늦게 오면 쓸모없는 데이터는 손실을 감수하고 넘어갑니다.</p>
+
+  <h2 id="s3">3. 포워딩과 라우팅</h2>
+  <p>라우터가 받은 패킷을 내보낼 출력 링크를 정하는 일은 두 기능으로 나뉩니다.</p>
+  <div class="tw"><table><thead><tr><th></th><th>포워딩 (forwarding)</th><th>라우팅 (routing)</th></tr></thead><tbody>
+    <tr><td>범위</td><td>라우터 하나 안의 지역 동작</td><td>네트워크 전체에 걸친 전역 동작</td></tr>
+    <tr><td>하는 일</td><td>입력 링크로 들어온 패킷을 알맞은 출력 링크로 옮긴다</td><td>패킷이 따라갈 출발지–목적지 경로를 정한다</td></tr>
+    <tr><td>도구</td><td>포워딩 테이블 (forwarding table)</td><td>라우팅 알고리즘 (routing algorithm)</td></tr>
+  </tbody></table></div>
+  <p>포워딩은 패킷 헤더에 적힌 목적지 주소 일부를 보고 표를 찾는 일입니다. 어떤 라우터의 포워딩 테이블이 다음과 같다고 합시다.</p>
+  <div class="tw"><table><thead><tr><th>헤더 값</th><th>출력 링크</th></tr></thead><tbody>
+    <tr><td>0010</td><td>1</td></tr>
+    <tr><td>0110</td><td>3</td></tr>
+    <tr><td>1011</td><td>2</td></tr>
+    <tr><td>1100</td><td>3</td></tr>
+  </tbody></table></div>
+  <p>헤더 값이 1011인 패킷이 들어오면 라우터는 표를 찾아 출력 링크 2로 내보냅니다. 실제 인터넷에서 이 값은 IP 주소입니다.</p>
+  <p>이 표를 채우는 일이 라우팅입니다. 한 ISP가 자기 라우터들을 모두 관리한다면, 라우터 사이 링크마다 비용을 매기고 그래프의 최단 경로 알고리즘으로 각 목적지까지 가장 좋은 경로를 계산할 수 있습니다. 그 결과로 라우터마다 "이 목적지는 이 링크로"라는 표가 만들어집니다. 서로 다른 회사의 망을 건널 때는 비용 말고도 회사 사이의 계약과 정책이 경로를 정하는 데 끼어들어 훨씬 복잡해집니다. 자세한 알고리즘은 네트워크 계층에서 다룹니다.</p>
+  <p>자동차 여행에 빗대면, 출발 전에 지도를 펴고 전체 경로를 짜는 일이 라우팅이고, 가는 길에 갈림길을 만날 때마다 표지판을 보고 나갈 길을 고르는 일이 포워딩입니다.</p>
+
+  <h2 id="s4">4. 다른 방식 — 회선 교환</h2>
+  <p>패킷 교환의 반대편에 <b>회선 교환</b>(circuit switching)이 있습니다. 데이터를 보내기 전에 출발지에서 목적지까지 경로 위의 자원을 그 통화 전용으로 예약하는 방식입니다. 전통적인 전화망이 이렇게 동작합니다. 전화가 연결되면 그 통화를 위한 몫이 링크마다 잡히고, 통화가 끝날 때까지 다른 사람은 그 몫을 쓰지 못합니다.</p>
+  <ul><li>자원을 나눠 쓰지 않으므로 큐잉이 없고 성능이 보장됩니다.</li>
+  <li>통화 중에 아무 말도 하지 않아도 예약된 몫은 비어 있는 채로 남습니다(idle). 다른 사용자가 그 몫을 쓸 수 없으니 낭비입니다.</li></ul>
+  <p>한 링크를 여러 통화에 나눠 주는 방법은 두 가지입니다.</p>
+  <div class="tw"><table><thead><tr><th></th><th>FDM (주파수 분할 다중화)</th><th>TDM (시간 분할 다중화)</th></tr></thead><tbody>
+    <tr><td>나누는 대상</td><td>주파수. 좁은 대역을 통화마다 하나씩 준다</td><td>시간. 시간을 슬롯(slot)으로 나눠 통화마다 주기적으로 슬롯을 준다</td></tr>
+    <tr><td>보내는 방식</td><td>자기 대역 안에서 쉬지 않고 계속 보낸다</td><td>자기 슬롯이 올 때만 링크 전체 대역으로 보낸다</td></tr>
+    <tr><td>특징</td><td>옆 대역과 섞이지 않게 사이에 빈 보호 대역(guard band)을 두어 일부 대역이 버려진다</td><td>슬롯 사이에는 보내지 못하므로 데이터가 띄엄띄엄 나간다</td></tr>
+  </tbody></table></div>
+
+  <h2 id="s5">5. 두 방식을 숫자로 비교하기</h2>
+  <p>60 Mbps 링크 하나를 여러 사용자가 씁니다. 사용자는 활동할 때 10 Mbps를 쓰고, 전체 시간의 10%만 활동합니다. 나머지 90%는 아무것도 보내지 않습니다.</p>
+  <p><b>회선 교환</b>이라면 사용자마다 10 Mbps를 예약해야 하므로 60 / 10 = 6명까지만 받을 수 있습니다. 그 6명은 시간의 90% 동안 예약한 몫을 쓰지 않습니다.</p>
+  <p><b>패킷 교환</b>에는 예약이 없으니 정해진 한도가 없습니다. 20명을 받았다고 합시다. 링크가 모자라는 때는 동시에 활동하는 사람이 6명을 넘을 때뿐입니다. 사용자들이 서로 독립적으로 각자 확률 0.1로 활동한다면, 동시 활동자 수 <i>X</i>는 이항분포(binomial distribution)를 따릅니다.</p>
+  <p>P(<i>X</i> = <i>k</i>) = C(20, <i>k</i>) × 0.1<sup><i>k</i></sup> × 0.9<sup>20−<i>k</i></sup></p>
+  <p>P(<i>X</i> &gt; 6) = ∑<sub><i>k</i>=7</sub><sup>20</sup> C(20, <i>k</i>) × 0.1<sup><i>k</i></sup> × 0.9<sup>20−<i>k</i></sup> ≈ 0.0024</p>
+  <p>링크가 모자라는 시간은 약 0.24%입니다. 나머지 99.76%의 시간에는 20명이 아무 문제 없이 씁니다. 같은 링크로 회선 교환보다 3배 넘게 많은 사람을 받습니다.</p>
+  <div class="tw"><table><thead><tr><th>사용자 수</th><th>활동 확률</th><th>P(<i>X</i> &gt; 6)</th></tr></thead><tbody>
+    <tr><td>15</td><td>0.1</td><td>약 0.0003</td></tr>
+    <tr><td>20</td><td>0.1</td><td>약 0.0024</td></tr>
+    <tr><td>30</td><td>0.1</td><td>약 0.026</td></tr>
+    <tr><td>20</td><td>0.2</td><td>약 0.087</td></tr>
+  </tbody></table></div>
+  <p>사용자 수나 활동 확률이 커지면 모자랄 확률이 빠르게 커집니다. 활동 확률이 0.2만 되어도 20명 중 7명 이상이 겹치는 시간이 9% 가까이 됩니다. 패킷 교환이 유리한 이유는 사람들이 링크를 늘 쓰지 않고 가끔 몰아서 쓰기 때문입니다. 이런 데이터를 <b>버스티</b>(bursty)하다고 합니다.</p>
+  <p>패킷 교환에도 대가가 있습니다. 많은 사람이 한꺼번에 보내면 혼잡(congestion)이 생기고, 버퍼가 넘쳐 지연과 손실이 생깁니다. 그래서 잃은 데이터를 다시 보내는 신뢰적 전송과, 망이 붐빌 때 보내는 속도를 줄이는 혼잡 제어가 따로 필요합니다. 영상 통화처럼 일정한 대역폭이 꼭 필요한 응용은 패킷 교환 위에서 대역폭을 보장하는 방법을 따로 찾아야 합니다.</p>
+
+  <h2 id="s6">6. 인터넷 구조 — 네트워크들의 네트워크</h2>
+  <p>호스트는 <b>접속 ISP</b>(access ISP)를 통해 인터넷에 붙습니다. 어느 두 호스트든 서로 패킷을 주고받으려면 접속 ISP들끼리도 연결되어야 합니다. 실제 구조는 수십 년 동안 경제 사정과 국가 정책에 따라 자라 왔기 때문에 복잡합니다. 그래서 단계별로 쌓아 가며 이해합니다. 아래 단계는 이해를 돕기 위해 나눈 것이고 실제 역사의 순서와는 다릅니다.</p>
+  <ol><li><b>모두 직접 잇기</b> — 접속 ISP가 <i>N</i>개일 때 모든 쌍을 직접 이으면 연결이 <i>N</i>(<i>N</i> − 1) / 2개 필요합니다. <i>N</i>이 1,000만 되어도 499,500개입니다. 접속 ISP는 수백만 개이므로 불가능합니다.</li>
+  <li><b>글로벌 중계 ISP 하나</b> — 가운데에 세계를 잇는 ISP 하나를 두고 모든 접속 ISP를 거기에 연결합니다. 연결은 <i>N</i>개로 줄어듭니다. 접속 ISP는 고객(customer)으로서 돈을 내고, 글로벌 ISP는 제공자(provider)로서 연결을 팝니다.</li>
+  <li><b>경쟁하는 글로벌 ISP 여럿</b> — 돈이 되는 사업이면 경쟁자가 생깁니다. 이런 최상위 ISP를 <b>티어 1 ISP</b>(tier-1 ISP)라고 합니다. 이제 글로벌 ISP끼리도 이어져야 서로의 고객이 통신할 수 있습니다.</li>
+  <li><b>IXP와 피어링</b> — ISP들은 여러 ISP가 선을 끌어와 한곳에서 연결하는 시설인 <b>IXP</b>(Internet Exchange Point)에서 만나거나, 두 회사의 라우터를 직접 잇는 <b>피어링 링크</b>(peering link)로 트래픽을 주고받습니다.</li>
+  <li><b>지역 ISP</b> — 티어 1 ISP가 전 세계의 접속 ISP에 일일이 선을 대기는 어렵습니다. 그래서 중간의 <b>지역 ISP</b>(regional ISP)가 한 지역의 접속 ISP들을 모아 위로 잇습니다.</li>
+  <li><b>콘텐츠 제공자 네트워크</b> — 구글, 마이크로소프트 같은 회사는 자기 사설망을 깔고 데이터센터를 지역 ISP나 접속 ISP에 직접 잇습니다. 트래픽이 늘수록 티어 1 ISP에 내는 돈도 늘어나므로, 상위 ISP를 거치지 않는 길을 직접 만드는 쪽이 싸다고 판단한 것입니다.</li></ol>
+  <p>이렇게 쌓으면 오늘날 인터넷의 모습이 됩니다. 가운데에 소수의 잘 연결된 티어 1 ISP가 있고, 그 아래에 지역 ISP와 접속 ISP가 계층을 이루며, 옆에 콘텐츠 제공자의 사설망이 나란히 붙어 있습니다. 티어를 정하는 중앙 기관은 없습니다. 회사들 사이의 거래 관계에 따라 느슨하게 나눈 분류입니다.</p>
+
+  <h2 id="s7">7. 패킷 지연의 네 가지 원인</h2>
+  <p>패킷이 라우터 하나를 지날 때마다 네 가지 지연이 더해집니다.</p>
+  <p><i>d</i><sub>nodal</sub> = <i>d</i><sub>proc</sub> + <i>d</i><sub>queue</sub> + <i>d</i><sub>trans</sub> + <i>d</i><sub>prop</sub></p>
+  <div class="tw"><table><thead><tr><th>지연</th><th>무엇인가</th><th>특징</th></tr></thead><tbody>
+    <tr><td>처리 지연 <i>d</i><sub>proc</sub></td><td>비트 오류를 검사하고 나갈 링크를 정하는 시간</td><td>헤더 일부만 읽으므로 패킷 크기와 거의 상관없다. 보통 1 ms보다 훨씬 작아 무시한다</td></tr>
+    <tr><td>큐잉 지연 <i>d</i><sub>queue</sub></td><td>출력 링크에서 차례를 기다리는 시간</td><td>라우터가 얼마나 붐비는지에 따라 0부터 매우 큰 값까지 변한다</td></tr>
+    <tr><td>전송 지연 <i>d</i><sub>trans</sub></td><td>패킷의 모든 비트를 링크에 밀어 넣는 시간</td><td><i>L</i> / <i>R</i></td></tr>
+    <tr><td>전파 지연 <i>d</i><sub>prop</sub></td><td>비트 하나가 링크를 따라 끝까지 이동하는 시간</td><td><i>d</i> / <i>s</i></td></tr>
+  </tbody></table></div>
+  <p>전파 지연의 <i>d</i>는 링크의 물리적 길이이고, <i>s</i>는 매체 안에서 신호가 이동하는 속도로 약 2 × 10<sup>8</sup> m/s입니다. 전송 지연과 전파 지연은 이름이 비슷해 자주 헷갈립니다. 전송 지연은 패킷 크기와 링크 전송률로 정해지고 거리와 상관없습니다. 전파 지연은 거리와 매체로 정해지고 패킷 크기와 상관없습니다. 전파 속도는 빛의 속도를 넘을 수 없으므로 기술이 발전해도 줄일 수 없습니다.</p>
+  <p>두 지연의 크기를 비교해 봅니다. 12,000비트 패킷을 10 Mbps 링크로 보내면 전송 지연은 12,000 / 10<sup>7</sup> = 1.2 ms입니다. 이 링크가 대략 9,600 km 떨어진 서울과 로스앤젤레스를 잇는다면 전파 지연은 9.6 × 10<sup>6</sup> / (2 × 10<sup>8</sup>) = 48 ms로 전송 지연의 40배입니다. 같은 링크가 건물 안 50 m 구간이라면 전파 지연은 50 / (2 × 10<sup>8</sup>) = 0.25 μs로, 이번에는 전송 지연이 훨씬 큽니다. 어느 쪽이 큰지는 거리와 전송률이 정합니다. 중간에 중계국을 세워 구간을 나눠도 전체 거리는 그대로이므로 전파 지연은 줄지 않습니다. 중계국은 약해진 신호를 되살리려고 세웁니다.</p>
+
+  <h2 id="s8">8. 톨게이트 행렬로 두 지연 가르기</h2>
+  <p>자동차 행렬이 톨게이트를 차례로 지나는 상황으로 두 지연을 나눠 볼 수 있습니다. 차 한 대가 비트 하나, 차 여러 대의 행렬이 패킷 하나, 톨게이트가 라우터입니다. 톨게이트가 차 한 대를 내보내는 데 드는 시간이 비트 하나의 전송 시간이고, 톨게이트 사이 도로를 달리는 시간이 전파 지연입니다. 차는 한 대씩 따로 달리지만, 다음 톨게이트는 행렬이 모두 모인 뒤에야 처리를 시작한다고 보면 저장 후 전달과 같습니다.</p>
+  <h3>문제 2</h3>
+  <p>차 6대가 행렬을 이룹니다. 두 톨게이트 사이는 60 km입니다. (가) 톨게이트가 차 한 대를 20초에 내보내고 차는 시속 120 km로 달립니다. 행렬 전체가 둘째 톨게이트 앞에 모이기까지 몇 분이 걸립니까. (나) 톨게이트가 차 한 대를 2분에 내보내고 차는 시속 600 km로 달립니다. 첫 차가 둘째 톨게이트에 닿는 순간, 첫 톨게이트에는 아직 몇 대가 남아 있습니까.</p>
+  <p>(가) 6대를 모두 내보내는 데 6 × 20초 = 120초, 곧 2분이 걸립니다. 이것이 전송 지연입니다. 마지막 차가 60 km를 시속 120 km로 달리는 데 30분이 걸립니다. 이것이 전파 지연입니다. 합하면 <b>32분</b>입니다.</p>
+  <p>(나) <i>k</i>번 차는 2<i>k</i>분에 첫 톨게이트를 떠나고, 60 km를 시속 600 km로 달리는 데 6분이 걸리므로 2<i>k</i> + 6분에 둘째 톨게이트에 닿습니다. 1번 차는 8분에 닿습니다. 그 순간 4번 차가 막 첫 톨게이트를 떠나고 있습니다(2 × 4 = 8). 5번은 처리 중이고 6번은 기다리는 중이므로 <b>2대</b>가 남아 있습니다. 첫 비트가 목적지에 닿았는데 마지막 비트는 아직 출발지를 떠나지 못한 상황입니다. 이번에는 전송 지연(12분)이 전파 지연(6분)보다 큽니다. 행렬 전체가 둘째 톨게이트에 모이는 시각은 12 + 6 = 18분입니다.</p>
+
+  <h2 id="s9">9. 큐잉 지연과 트래픽 강도, 그리고 traceroute</h2>
+  <p>큐잉 지연은 패킷이 언제 몰려오느냐에 따라 달라지므로 식 하나로 정해지지 않습니다. 대신 평균적인 경향을 세 값으로 가늠합니다. <i>R</i>은 링크 전송률(bps), <i>L</i>은 패킷 길이(bits), <i>a</i>는 평균 패킷 도착률(packets/sec)입니다. <i>La</i>는 초당 들어오는 비트 수이고 <i>R</i>은 초당 내보낼 수 있는 비트 수입니다. 둘의 비를 <b>트래픽 강도</b>(traffic intensity)라고 합니다.</p>
+  <p>트래픽 강도 = <i>La</i> / <i>R</i></p>
+  <div class="tw"><table><thead><tr><th><i>La</i> / <i>R</i></th><th>평균 큐잉 지연</th></tr></thead><tbody>
+    <tr><td>0에 가깝다</td><td>작다. 도착보다 내보내기가 훨씬 빠르다</td></tr>
+    <tr><td>1에 다가간다</td><td>급격히 커진다</td></tr>
+    <tr><td>1보다 크다</td><td>내보낼 수 있는 양보다 많이 들어온다. 큐가 끝없이 길어지고 버퍼가 넘쳐 손실이 커진다</td></tr>
+  </tbody></table></div>
+  <p>예를 들어 1 Mbps 링크에 10,000비트 패킷이 들어옵니다. 초당 20개가 오면 10,000 × 20 / 10<sup>6</sup> = 0.2이고 큐는 거의 비어 있습니다. 초당 95개가 오면 0.95입니다. 평균으로는 아직 처리할 수 있는 양이지만 지연은 크게 늘어납니다. 패킷이 고른 간격으로 오지 않고 몰려서 오기 때문입니다. 몰리는 순간에 쌓인 줄이 한가한 순간에 다 줄어들기 전에 다음 무리가 옵니다. 초당 120개가 오면 1.2가 되어 줄이 계속 늘어납니다. 그래서 시스템은 트래픽 강도가 1을 넘지 않게, 되도록 1에서 멀게 설계합니다. 지연을 줄이려면 <i>R</i>을 키우거나(더 빠른 링크) <i>a</i>를 줄입니다(트래픽을 다른 경로로 나누기). 버퍼를 키우면 손실은 줄지만 줄이 길어져 큐잉 지연은 늘어납니다.</p>
+  <h3>traceroute로 실제 지연 재기</h3>
+  <p><b>traceroute</b>는 출발지에서 목적지까지 경로 위의 라우터마다 지연을 재는 프로그램입니다. 패킷 헤더에는 라우터를 하나 지날 때마다 1씩 줄고 0이 되면 버려지는 TTL(time to live) 값이 있습니다. traceroute는 이 값을 <i>i</i>로 둔 패킷을 3개 보냅니다. 패킷은 <i>i</i>번째 라우터에서 멈추고, 그 라우터가 출발지로 응답을 돌려줍니다. 보낸 시각과 응답을 받은 시각의 차가 <b>왕복 시간</b>(RTT, round trip time)입니다. <i>i</i>를 1부터 하나씩 늘려 목적지까지 반복하므로, 출력의 한 줄이 라우터 하나입니다.</p>
+  <p>서울에서 미국 서버로 traceroute를 돌리면 처음 몇 줄은 수 ms이다가, 태평양을 건너는 링크를 지나는 줄에서 갑자기 100 ms 넘게 뜁니다. 해저 케이블이 길어 전파 지연이 크기 때문입니다. 더 먼 라우터의 RTT가 바로 앞 라우터보다 작게 찍히기도 합니다. 두 줄의 측정은 서로 다른 시각에 보낸 패킷으로 하므로, 그사이 망이 한가해져 큐잉 지연이 줄었을 수 있습니다. 별표(*)가 찍힌 줄은 응답이 오지 않은 경우입니다. 패킷이 손실되었거나 라우터가 응답하지 않도록 설정되어 있습니다.</p>
+
+  <h2 id="s10">정리</h2>
+  <p>네트워크 코어는 라우터의 그물이고, 라우터는 패킷 전체를 받은 뒤 포워딩 테이블을 보고 다음 링크로 넘깁니다. 표를 채우는 일은 라우팅 알고리즘이 합니다. 회선 교환은 자원을 미리 예약해 성능을 보장하고, 쓰지 않는 동안 그 자원은 놀게 됩니다. 패킷 교환은 링크를 그때그때 나눠 쓰므로 버스티한 사용자를 같은 링크에 훨씬 많이 받을 수 있고, 대신 큐잉과 손실을 감수해야 합니다. 인터넷은 티어 1 ISP, 지역 ISP, 접속 ISP가 계층을 이루고 IXP와 피어링, 콘텐츠 제공자 망이 그 사이를 잇는 구조입니다. 패킷은 라우터마다 처리, 큐잉, 전송(<i>L</i> / <i>R</i>), 전파(<i>d</i> / <i>s</i>) 지연을 겪고, 큐잉 지연은 <i>La</i> / <i>R</i>이 1에 다가갈수록 급격히 커집니다. 다음 글에서는 성능의 마지막 지표인 처리량을 보고, 복잡한 네트워크를 계층으로 나누는 방법과 응용 계층의 원리로 넘어갑니다.</p>
+<div class="next"><a href="/learn/net-1-internet-edge/"><small>← 이전 글</small><span>인터넷과 네트워크 엣지 — 호스트, 접속망, 물리 매체</span></a><a class="r" href="/learn/net-3-layers-application/"><small>다음 글 →</small><span>계층과 응용 계층의 원리 — 처리량, 캡슐화, 소켓, TCP와 UDP</span></a></div>
+</article>
+<aside class="toc"><b>목차</b><ol><li><a href="#s1">코어는 라우터의 그물이고, 라우터는 패킷을 다 받은 뒤 보냅니다</a></li><li><a href="#s2">큐잉과 패킷 손실</a></li><li><a href="#s3">포워딩과 라우팅</a></li><li><a href="#s4">다른 방식 — 회선 교환</a></li><li><a href="#s5">두 방식을 숫자로 비교하기</a></li><li><a href="#s6">인터넷 구조 — 네트워크들의 네트워크</a></li><li><a href="#s7">패킷 지연의 네 가지 원인</a></li><li><a href="#s8">톨게이트 행렬로 두 지연 가르기</a></li><li><a href="#s9">큐잉 지연과 트래픽 강도, 그리고 traceroute</a></li><li><a href="#s10">정리</a></li></ol></aside></div>
+<div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
+</div></body></html>

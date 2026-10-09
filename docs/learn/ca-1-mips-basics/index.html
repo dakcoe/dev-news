@@ -56,7 +56,7 @@ th{background:#fafafb;font-weight:700}
 }</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9719970909376058" crossorigin="anonymous"></script></head><body><div class="page">
 <nav class="crumb"><a href="/">dev-news</a><span>›</span><a href="/learn/">학습 노트</a><span>›</span><a href="/learn/#ca">컴퓨터구조</a></nav>
 <div class="grid"><article>
-<div class="kicker">컴퓨터구조 1편</div>
+<div class="kicker">컴퓨터구조 2편</div>
 <h1>MIPS 명령어 형식과 데이터 전송 — R-type, I-type, lw·sw</h1>
 <div class="meta"><span>suhyun</span><span>·</span><span>2026년 9월 22일</span><span>·</span><span>읽는 데 약 9분</span></div>
 <div class="lead"><b>한 줄로:</b> MIPS 명령어는 전부 32비트 한 줄이다. 그 32비트를 어디서 자르는지만 알면 명령어를 전부 읽을 수 있다.</div>
@@ -131,7 +131,7 @@ sw   $t0, 4($s0)</pre>
 
   <h2 id="s11">정리</h2>
   <p>형식 두 가지를 봤습니다. 레지스터 사이의 계산은 R-type, 명령어 안에 상수나 오프셋이 들어가면 I-type입니다. 산술, 논리, 그리고 lw와 sw까지 이 둘로 전부 읽었습니다. 남은 형식 하나, J-type은 프로그램의 흐름을 바꾸는 제어 명령어에서 나옵니다. 분기와 점프는 다음 글에서 다룹니다. 개념 자체는 어렵지 않습니다. 문법이 낯설 뿐입니다.</p>
-<div class="next"><a class="r" href="/learn/ca-2-mips-control/"><small>다음 글 →</small><span>MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</span></a></div>
+<div class="next"><a href="/learn/ca-0-organization-addressing/"><small>← 이전 글</small><span>컴퓨터의 구성과 어드레싱 모드 — 다섯 구성 요소에서 명령어 형식까지</span></a><a class="r" href="/learn/ca-2-mips-control/"><small>다음 글 →</small><span>MIPS 제어 명령어와 J-type — 분기, 점프, if와 while</span></a></div>
 </article>
 <aside class="toc"><b>목차</b><ol><li><a href="#s1">32비트 한 줄</a></li><li><a href="#s2">ISA와 레지스터</a></li><li><a href="#s3">R-type — 레지스터 사이의 연산</a></li><li><a href="#s4">문제 1 — add를 32비트로</a></li><li><a href="#s5">I-type — 명령어 안에 상수를</a></li><li><a href="#s6">산술과 논리 명령어</a></li><li><a href="#s7">문제 2·3 — 레지스터 아끼기와 NOT</a></li><li><a href="#s8">메모리 — 바이트와 워드</a></li><li><a href="#s9">lw와 sw</a></li><li><a href="#s10">문제 4 — 배열 원소 다루기</a></li><li><a href="#s11">정리</a></li></ol></aside></div>
 <div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
