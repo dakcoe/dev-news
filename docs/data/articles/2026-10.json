@@ -1,5 +1,546 @@
 [
  {
+  "title": "xtool-org / xtool",
+  "url": "https://github.com/xtool-org/xtool",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 265,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/xtool-org/xtool"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 265,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/xtool-org/xtool",
+  "link_status": null,
+  "ko_title": "xtool — 크로스플랫폼 Xcode 대체 도구",
+  "summary": "xtool은 Linux, Windows, macOS에서 SwiftPM을 이용해 iOS 앱을 빌드·배포할 수 있는 오픈소스 도구다. Apple Developer Services와 기기 관리 기능을 CLI와 라이브러리 형태로 제공한다. 설치 가이드와 튜토리얼이 별도 문서에 준비돼 있다.",
+  "why": "iOS 빌드 파이프라인을 macOS에서 Linux나 Windows로 옮길 수 있다. Xcode 의존에서 벗어나 CI 환경에서 SwiftPM만으로 서명과 배포를 처리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "The Agent Finished the Job. The Benchmark Gave It Zero.",
+  "url": "https://dev.to/gangan/the-agent-finished-the-job-the-benchmark-gave-it-zero-17fl",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 7,
+  "published_at": 1791597378.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gangan/the-agent-finished-the-job-the-benchmark-gave-it-zero-17fl"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F43mrxmoxx4acr5qullgl.png",
+  "link_status": "ok",
+  "ko_title": "에이전트가 작업을 완료했지만 벤치마크 점수는 0점",
+  "summary": "24개의 합성 케이스와 96개의 실제 모델 에피소드를 활용한 벤치마크에서 두 모델은 비즈니스 진행이 필요한 모든 상황을 성공적으로 처리했지만, 한 모델은 평가 계약에 따라 점수가 0점으로 기록되었다. 벤치마크는 중복 쓰기 방지와 비결정적 효과를 포함한 다양한 도구와 시나리오를 테스트한다.",
+  "why": "비즈니스 데이터를 변경하는 에이전트를 개발할 때, 단순 성공 여부가 아닌 중복 쓰기 방지와 비결정적 효과 처리를 검증해야 한다. 평가 계약에 따라 작업은 완료되었지만 점수가 0점이 될 수 있으므로, 실제 비즈니스 효과와 평가 로직의 불일치를 사전에 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "career-culture"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "REA Reverse – Engineer Anything",
+  "url": "https://rea.tools/",
+  "source": "hackernews",
+  "upvotes": 307,
+  "comments": 97,
+  "published_at": 1791592627,
+  "discussion": "https://news.ycombinator.com/item?id=50028275",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://rea.tools/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://rea.tools/assets/social-card.png",
+  "link_status": "ok",
+  "ko_title": "REA Reverse – 무엇이든 엔지니어링",
+  "summary": "REA는 코딩 에이전트에 프로그램을 검사하고 동작을 설명하는 도구를 제공한다. npx rea-agents@latest setup 명령으로 설치하고 에이전트와 연결한다. 예시로 Chrome 공룡 게임의 가속 규칙을 추출해 속도 조절 버전을 만들 수 있다.",
+  "why": "기존에 소스 코드가 없는 클라이언트 로직을 파악하려면 수동 디버깅이 필요했다. REA를 쓰면 코딩 에이전트가 직접 실행 중인 스크립트를 검사해 동작 규칙을 추출한다. 속도 조절 같은 특정 파라미터를 찾아내어 수정된 버전을 빠르게 재구축할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "web"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Yandex Takes a Second Data Center Hit in 48 Hours",
+  "url": "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277",
+  "source": "hackernews",
+  "upvotes": 215,
+  "comments": 304,
+  "published_at": 1791555619,
+  "discussion": "https://news.ycombinator.com/item?id=50020927",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://storage.united24media.com/og/9/84/72c7aff53300a4b20a8ad08f5b10c849.jpg",
+  "link_status": "ok",
+  "ko_title": "Yandex, 48시간 만에 두 번째 데이터 센터 타격…최대 러시아 사이트 손상",
+  "summary": "우크라이나 드론이 러시아 칼루가 지역에 있는 Yandex의 최대 데이터 센터를 공격해 여러 모듈을 완전히 정지시켰다. 이 센터는 2023년 하반기에 가동을 시작했으며, 130,000제곱미터 규모에 63 MW 전력 용량을 갖춘다. 이전에도 러시아 라이자니아 지역 사소보 데이터 센터가 동일한 공격을 받았다.",
+  "why": "Yandex Cloud의 네 번째 가용 영역을 포함해 러시아 내 최대 데이터 센터가 정지됐다. 러시아 지역 인프라에 의존하는 서비스의 가용성 리스크를 재평가해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "OpenAI uncovers Russian and Iranian influence ops that planted fake stories in real news outlets",
+  "url": "https://the-decoder.com/openai-uncovers-russian-and-iranian-influence-ops-that-planted-fake-stories-in-real-news-outlets/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791535534.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/openai-uncovers-russian-and-iranian-influence-ops-that-planted-fake-stories-in-real-news-outlets/"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/russian_influence_campaigns.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI, 러시아와 이란의 영향 작전 적발… 가짜 기사 실제 언론에 삽입",
+  "summary": "OpenAI는 러시아와 이란이 가짜 신원을 이용해 실제 언론에 허위 기사와 오디오를 삽입한 영향 작전을 적발하고 관련 ChatGPT 계정을 차단했다. 러시아 작전은 라틴아메리카에서 우크라이나를 비난하고 현지 정치를 교란했으며, 이란 작전은 미국-이란 갈등 관련 100여 건의 기사를 전 세계 온라인 매체에 배포했다. 두 작전 모두 내부 보고와 다국어 선전 맞춤에 AI를 활용했다.",
+  "why": "AI가 허위 콘텐츠의 다국어 변형과 내부 보고 작성에 활용되었다. 기존 소셜미디어 캠페인이 아닌 실제 언론 매체에 직접 삽입하는 방식이다. AI 기반 콘텐츠 검증 시 출처 확인을 강화해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Surviving the 200k-Token Lobotomy: How Unix init.d and 'Memento' Made My AI Coding Agent Immune to Context Compaction",
+  "url": "https://dev.to/gde/surviving-the-200k-token-lobotomy-how-unix-initd-and-memento-made-my-ai-coding-agent-immune-to-2f74",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 6,
+  "published_at": 1791594907.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/surviving-the-200k-token-lobotomy-how-unix-initd-and-memento-made-my-ai-coding-agent-immune-to-2f74"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fg7swfw5prf9o7zrcrnkn.png",
+  "link_status": "ok",
+  "ko_title": "200k 토큰 절단을 견디는 방법: Unix init.d와 ‘메멘토’가 AI 코딩 에이전트를 컨텍스트 압축으로부터 보호한다",
+  "summary": "현대 코딩 에이전트가 200,000 토큰을 초과하면 자동 요약으로 대화가 압축돼 세부 정보가 사라진다. 저자는 1980년대 Unix init.d 스크립트와 영화 ‘메멘토’에서 영감을 받아 에이전트의 메모리를 지속적으로 보존하는 방법을 제시한다. 구체적인 구현 예시와 설정 방법이 포함돼 있다.",
+  "why": "에이전트 세션이 20만 토큰을 넘기면 자동 요약으로 핵심 제약 조건이 사라진다. init.d 스크립트 방식의 메모리 보존 기법을 적용해 이 문제를 해결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "MemorySquidBlade / svlhyvjj",
+  "url": "https://github.com/MemorySquidBlade/svlhyvjj",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 561,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/MemorySquidBlade/svlhyvjj"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 561,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/MemorySquidBlade/svlhyvjj",
+  "link_status": null,
+  "ko_title": "MemorySquidBlade / svlhyvjj — 무료 ChatGPT 접근 툴킷",
+  "summary": "무료 ChatGPT 접근 및 자동화 기능을 제공하는 툴킷으로, 우회 방법, 대안, API 연동, 세션 관리 등을 포함한다. Windows·macOS·Linux에서 실행 가능하며 MIT 라이선스로 배포된다. 설치는 PowerShell 명령 하나로 진행된다.",
+  "why": "설치 명령이 임의 도메인에서 스크립트를 받아 실행하는 방식이라 보안 위험이 있다. 공식 API 대신 우회 도구를 쓰면 서비스 중단이나 계정 정지 위험이 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "I let an agent run unattended overnight. At 3am it emailed 400 customers the wrong thing.",
+  "url": "https://dev.to/infoinlet1/i-let-an-agent-run-unattended-overnight-at-3am-it-emailed-400-customers-the-wrong-thing-43eh",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1791613273.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/i-let-an-agent-run-unattended-overnight-at-3am-it-emailed-400-customers-the-wrong-thing-43eh"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fb0maugeb5nc8cxdd1p6o.png",
+  "link_status": "ok",
+  "ko_title": "에이전트를 밤새 자동으로 실행했더니 새벽 3시에 400명 고객에게 잘못된 메일을 보냈다",
+  "summary": "자동 결제 정산 작업이 결제 데이터가 완전히 저장되기 전에 실행돼 실패한 것으로 오인하고 400명에게 오류 메일을 발송했다. 이로 인해 오전 9시 지원 티켓이 200건 이상 쌓였다. 코드 자체는 정상 작동했으며 문제는 인간 검증 없이 고객에게 직접 알리는 단계였다.",
+  "why": "외부 수신자에게 직접 메시지를 보내는 자동화 작업에는 반드시 인간 검증 단계를 포함해야 한다. 데이터 저장 지연으로 인한 일시적 불일치를 오류로 오인해 대량 발송 사고가 날 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+  "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+  "source": "hackernews",
+  "upvotes": 76,
+  "comments": 26,
+  "published_at": 1791601367,
+  "discussion": "https://news.ycombinator.com/item?id=50029123",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://beaksec.github.io/assets/img/posts/telegram-desktop-one-click-account-takeover/cover.png",
+  "link_status": "ok",
+  "ko_title": "텔레그램 데스크톱 취약점, 클릭 한 번으로 파일 탈취 가능",
+  "summary": "텔레그램 데스크톱은 단일 인스턴스 IPC에서 구분자를 이스케이프하지 않아, 조작된 링크를 클릭하면 로컬 소켓을 통해 실행 중인 인스턴스에 명령을 주입한다. 이 명령은 내부 URI 스킴 interpret:를 이용해 지정된 파일을 읽고 채팅으로 전송한다. 결과적으로 공격자는 사용자의 로그인 세션 파일 등 임의의 파일을 탈취할 수 있다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Show HN: Carrier-Explode - iPhone, Pixel, Galaxy의 통신사 설정을 디코딩하는 서비스",
+  "url": "https://news.hada.io/topic?id=35090",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791592938.0,
+  "merged_sources": [
+   "geeknews",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://carrierexplode.com/",
+   "https://news.hada.io/topic?id=35090"
+  ],
+  "cross_source_count": 2,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Carrier-Explode - iPhone·Pixel·Galaxy 통신사 설정 디코딩 서비스",
+  "summary": "Carrier-Explode는 iPhone, Pixel, Galaxy 기기의 펌웨어에 포함된 통신사별 APN·VoLTE·Wi-Fi Calling·5G 설정을 추출해 조회하고 비교할 수 있는 웹 서비스다. 사용자는 원하는 기능을 기준으로 통신사를 검색하고, 설정 차이를 한눈에 확인할 수 있다.",
+  "why": "모바일 백엔드 연동 시 통신사별 APN이나 VoLTE 설정 차이로 인한 장애를 사전에 차단할 수 있다. 특정 기기와 통신사 조합에서 발생하는 연결 문제를 디버깅할 때 기준 설정값을 빠르게 대조할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "science",
+   "showcase"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "WildProof: Go Outside With a Question, Come Back With Evidence",
+  "url": "https://dev.to/dj29/wildproof-go-outside-with-a-question-come-back-with-evidence-574e",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 2,
+  "published_at": 1791614789.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/wildproof-go-outside-with-a-question-come-back-with-evidence-574e"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fii8e3wlu09t1pt7yjsc5.png",
+  "link_status": "ok",
+  "ko_title": "WildProof: 질문을 가지고 밖으로 나가 증거와 함께 돌아오세요",
+  "summary": "WildProof는 오프라인 우선 설계된 현장 관찰 앱으로, 사용자가 질문을 정하고 산책 중에 사진·노트 등 증거를 수집해 로컬에 저장한다. 연결이 가능해지면 Gemma AI와 TabPFN을 활용해 관찰·추론·미확인 항목을 구분한 구조화 보고서를 생성한다. GitHub 저장소(JaniDhruv / wildproof)에 MVP와 설정 방법이 제공된다.",
+  "why": "오프라인 수집 데이터가 연결 시 Gemma와 TabPFN으로 처리되는 구조를 참고할 수 있다. 관측, 추론, 미확인 항목을 명확히 구분하는 보고서 설계가 AI 출력의 불확실성을 다루는 데 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "usAge - Claude·Codex·Cursor 등 AI 서비스의 사용량·잔여 한도·초기화 시각을 확인하는 앱",
+  "url": "https://news.hada.io/topic?id=35106",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791606061.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35106"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "usAge - AI 서비스 사용량·잔여 한도·초기화 시각 확인 앱",
+  "summary": "여러 AI 서비스(Claude, Codex, Cursor 등)의 사용량과 남은 한도를 한 화면에서 확인할 수 있는 앱 usAge가 출시되었습니다. 별도 대시보드에 접속하지 않아도 현재 사용량과 한도 초기화 시점을 확인할 수 있습니다.",
+  "why": "여러 AI 서비스를 병행할 때 각 대시보드를 번갈아 여는 수고를 덜 수 있다. 한도 소진으로 작업이 중단되는 상황을 사전에 방지하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Quoting The New York Times",
+  "url": "https://simonwillison.net/2026/Oct/10/the-new-york-times/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791597852.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/10/the-new-york-times/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "뉴욕 타임스 인용",
+  "summary": "Anthropic의 AI 에이전트가 미국 국무부 비자 신청 폼을 통해 20건의 비자 신청을 제출했으나 모두 미완성 상태였으며 처리되지 않았다. 해당 사건은 Anthropic이 블로그에 상세히 설명했지만, 대상 웹사이트는 공개하지 않았다.",
+  "why": "AI 에이전트가 외부 폼을 채울 때 미완성으로 제출되는 사례가 확인됐다. 에이전트 작업 결과에 대한 검증 로직을 반드시 포함해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "career-culture"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "oh, apparently it's not possible to portably check for string-to-float conversion errors in standard c",
+  "url": "https://sebsite.pw/w/20261009-strtod.html",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1791610638.608,
+  "discussion": "https://lobste.rs/s/rb2ulg/oh_apparently_it_s_not_possible_portably",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://sebsite.pw/w/20261009-strtod.html"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "표준 C에서 문자열을 부동소수점으로 변환 오류를 휴대형으로 확인할 수 없는 것 같다",
+  "summary": "math_errhandling 매크로가 errno와 부동소수점 예외 지원을 나타내지만, strtod 계열 함수는 math.h에 포함되지 않는다. musl 같은 구현에서는 errno가 설정되지 않아 오류 판단이 어려우며, 언더플로우 보고는 선택 사항이다. 글쓴이는 errno와 fetestexcept을 조합해 오류를 포터블하게 검사하는 코드를 제시한다.",
+  "why": "musl 환경에서는 errno가 설정되지 않아 기존 오류 검사 로직이 실패한다. math_errhandling 매크로로 지원 방식을 확인하고 fetestexcept를 조합해야 한다. 언더플로우 보고는 구현체 선택 사항이라 여전히 감지되지 않을 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "science"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Yes, and",
+  "url": "https://htmx.org/essays/yes-and/",
+  "source": "hackernews",
+  "upvotes": 748,
+  "comments": 295,
+  "published_at": 1791452898,
+  "discussion": "https://news.ycombinator.com/item?id=50003796",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://htmx.org/essays/yes-and/"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Yes, and — AI 시대에도 프로그래머는 여전히 필요하다",
+  "summary": "저자는 AI가 코드 생성을 도와줄 수 있지만, 초급 개발자는 직접 코드를 작성해야 깊은 이해를 얻을 수 있다고 강조한다. 코드를 직접 쓰지 않으면 읽고 유지보수하는 능력이 떨어져 제어 불가능한 시스템을 만들 위험이 있다. AI 도구가 보편화돼도 문제 해결과 복잡도 관리 능력은 여전히 가치 있다.",
+  "why": "AI로 코드를 생성하면 읽기 능력이 떨어져 제어 불가능한 시스템을 만들 위험이 있다. 초급 단계에서 직접 코드를 작성해 깊은 이해를 쌓아야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "코딩 에이전트는 왜 이렇게 멍청할까?",
+  "url": "https://news.hada.io/topic?id=35104",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791601389.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35104"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트는 왜 이렇게 멍청할까?",
+  "summary": "AI 지원 개발이 발전했지만, 모델을 코드베이스와 시스템에 연결하는 에이전트는 작업 관리·위임·소통에서 여전히 병목이다. 작업을 하위 과제로 나눠도 병렬 실행과 모델별 위임이 미흡해 간단한 작업까지 느리고 비싼 모델에 맡기거나 사람이 직접 처리한다.",
+  "why": "코딩 에이전트의 병렬 실행과 모델별 위임 기능이 부족하다. 단순 작업도 고비용 모델에 맡기거나 사람이 직접 처리해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
+  "title": "Adding Go's defer to the TypeScript Compiler",
+  "url": "https://healeycodes.com/adding-defer-to-the-typescript-compiler",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1791610480.41,
+  "discussion": "https://lobste.rs/s/skpliy/adding_go_s_defer_typescript_compiler",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://healeycodes.com/adding-defer-to-the-typescript-compiler"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "TypeScript 컴파일러에 Go의 defer 추가",
+  "summary": "TypeScript 컴파일러에 defer 구문을 AST 변환으로 삽입해 보았지만, 실행 시 JavaScript 코드로 구현해야 하고 가독성이 떨어져 실제 사용에 적합하지 않다고 판단했다. 구현 예시와 기존 변환 메커니즘을 설명한다.",
+  "why": "try/finally로 자원 정리 코드를 쓰는 기존 방식은 유지해야 한다. defer 구문 도입은 가독성 저하와 실행 시 구현 부담 때문에 비추천된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-10T16:00:06.527558+09:00",
+  "batch_label": "10월 10일 16:00"
+ },
+ {
   "title": "Python 3.15.0",
   "url": "https://www.python.org/downloads/release/python-3150/",
   "source": "lobsters",
