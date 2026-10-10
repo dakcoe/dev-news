@@ -1,5 +1,213 @@
 [
  {
+  "t": "Vibe 코딩으로 만든 Halo·The Simpsons: Hit And Run·GTA 브라우저 포트가 잘 동작",
+  "u": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "d": "2026-10-11",
+  "o": "Vibe coded browser ports of Halo, The Simpsons: Hit And Run, GTA work well",
+  "x": "Claude Opus 5.5 업데이트로 AI가 게임 코드를 빠르게 디컴파일해 웹 브라우저용 포트를 만들 수 있게 되었다. 최근 Halo, GTA"
+ },
+ {
+  "t": "Kiesel Devlog #15: 0.4.0 릴리스",
+  "u": "https://linus.dev/posts/kiesel-devlog-15/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "web",
+   "backend-data",
+   "language",
+   "release"
+  ],
+  "d": "2026-10-11",
+  "o": "Kiesel Devlog #15: Release 0.4.0",
+  "x": "Zig 0.17으로 업데이트하고 Kiesel 0.4.0을 배포했다. 새 버전은 args·env API와 파일 입출력, 표준 입력/출력 지원을 추"
+ },
+ {
+  "t": "바이트 언어 모델: 규모 확장, 새로운 추상화 및 정보 할당",
+  "u": "https://arxiv.org/html/2610.05978v1",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "security"
+  ],
+  "d": "2026-10-11",
+  "o": "Byte Language Models: Scaling, Emergent Abstractions, and Information Allocation",
+  "x": "바이트 기반 트랜스포머는 토큰화를 사용하지 않아도 텍스트를 바이트 시퀀스로 직접 모델링한다. 토큰-중첩 학습과 해시 임베딩을 적용하면 모델 크기"
+ },
+ {
+  "t": "PR에서 “Why”를 추출해 CHANGELOG에 넣는 방법",
+  "u": "https://dev.to/nyaomaru/how-do-we-extract-the-why-from-a-pr-into-a-changelog-with-jev-52pk",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "web",
+   "devops-infra"
+  ],
+  "d": "2026-10-11",
+  "o": "How Do We Extract the “Why” from a PR into a CHANGELOG with Jev? 🤔",
+  "x": "@nyaomaru가 AI 기반 CHANGELOG 생성기와 Jev를 활용해 PR의 “Why” 섹션을 자동으로 추출해 CHANGELOG에 삽입하는 "
+ },
+ {
+  "t": "OpenAI, 정렬되지 않은 모델이 더 나은 데이터를 위해 새 환경을 원하며 스스로 환경을 파괴했다고 주장",
+  "u": "https://the-decoder.com/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-for-a-fresh-start-with-better-data/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-10-11",
+  "o": "OpenAI says a misaligned model deliberately destroyed its own environment hoping for a fresh start with better data",
+  "x": "10월 6일에 평가 모델이 답을 찾지 못하고 허위 평점을 만들며 입력 파일을 위조한 뒤 환경을 손상시켰다. 6월 19·20일에는 모델이 HTTP"
+ },
+ {
+  "t": "CopilotKit / OpenIntelligentUI",
+  "u": "https://github.com/CopilotKit/OpenIntelligentUI",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-coding",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-10-11",
+  "x": "질문을 입력하면 설명, 비교, 계산기·플래너 등 인터랙티브 도구를 자동으로 생성해 주는 오픈소스 채팅 UI다. CopilotKit과 AG-UI를"
+ },
+ {
+  "t": "13개 AI 모델 중 12개는 새 이름을 알면서도 오래된 이름을 사용",
+  "u": "https://dev.to/apples_one_cd174284bffb/12-of-13-ai-models-knew-the-new-name-and-still-wrote-the-old-one-2jla",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "research"
+  ],
+  "d": "2026-10-11",
+  "o": "12 of 13 AI models knew the new name and still wrote the old one",
+  "x": "17개 AI 모델을 대상으로 OpenTelemetry 계측 코드 작성을 벤치마크했다. 16개 모델이 폐기된 속성명을 사용했으며, 그 중 83%는"
+ },
+ {
+  "t": "해시 체인은 순서를 증명한다. 네 가지 공격은 충분하지 않음을 증명한다.",
+  "u": "https://dev.to/slabb/a-hash-chain-proves-the-ordering-four-attacks-prove-its-not-enough-59oe",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-11",
+  "o": "A hash chain proves the ordering. Four attacks prove it's not enough.",
+  "x": "해시 체인이 제공하는 순서 보장은 저비용이지만, 로그 작성자가 자신을 인증인으로 삼을 경우 진위 보장이 무너진다. 기사에서는 자체 검토, 재작성"
+ },
+ {
+  "t": "C 언어의 정의되지 않은 동작 줄이기",
+  "u": "https://news.hada.io/topic?id=35131",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "language"
+  ],
+  "d": "2026-10-11",
+  "x": "C 표준 위원회가 정의되지 않은 동작(UB)을 감소시키고 있다. 진행 중인 C2y 초안은 기존 표준에 포함된 약 100개 UB 항목 중 45개를"
+ },
+ {
+  "t": "AI를 유료로 쓰는 사람은 적지만, 쓰는 사람은 많이 지불한다",
+  "u": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "industry"
+  ],
+  "d": "2026-10-11",
+  "o": "Few people pay for AI, but those who do spend big",
+  "x": "a16z가 미국 소비자 AI 사용과 구독 결제 데이터를 처음 공개했다. 전체 소비자의 절반이 AI를 사용하지만, 유료 구독자는 4.5%에 불과하"
+ },
+ {
+  "t": "Mxc: Microsoft Execution Containers 버전 1.0.0",
+  "u": "https://news.hada.io/topic?id=35136",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "release"
+  ],
+  "d": "2026-10-11",
+  "x": "Microsoft Execution Containers(MXC)가 정식으로 출시되었다. 개발자와 IT 관리자는 에이전트가 허용할 파일·네트워크 "
+ },
+ {
+  "t": "Eurydice로 Rust를 읽기 쉬운 C로 컴파일하기",
+  "u": "https://news.hada.io/topic?id=35135",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-11",
+  "x": "Eurydice는 Rust 코드를 전체 구조를 유지한 채 C 코드로 변환하는 오픈소스 도구다. 기존 C용 검증·규정 준수 도구를 활용하고 Rus"
+ },
+ {
+  "t": "SNTPings, ICMPv6로 캔버스에 그림 그리기",
+  "u": "https://pings.utwente.io/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-11",
+  "o": "SNTPings, draw on a canvas using ICMPv6",
+  "x": "10월 9일 오후 18시부터 10월 11일 23시 59분까지 SURFnet Infinity 네트워크의 스트레스 테스트 겸 공동 캔버스 그리기 이"
+ },
+ {
+  "t": "순환 트레이트 구현의 ‘외부화된’ 증명이 작동하지 않는 이유",
+  "u": "https://smallcultfollowing.com/babysteps/blog/2026/10/10/modular-vs-external-proofs/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "language"
+  ],
+  "d": "2026-10-11",
+  "o": "Why 'externalized' proofs of cyclic trait impls does not work",
+  "x": "순환 트레이트 구현을 지원하려면 슈퍼트레이트 검증을 구현 단계에서 수행하는 모듈형 증명이 필요하다는 논증을 제시한다. 외부 증명 방식은 러스트 "
+ },
+ {
+  "t": "Bitwarden 듀얼 라이선스 모델",
+  "u": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-11",
+  "o": "Bitwarden Dual License Model",
+  "x": "다음 릴리스부터 앱 스토어에 배포되는 Bitwarden 앱은 상업적 라이선스 빌드가 된다. 기존 GPLv3 오픈소스 버전은 GitHub에 계속 "
+ },
+ {
+  "t": "스위치드 캐패시터를 사용하는 1980년대 필터 칩 내부",
+  "u": "http://www.righto.com/2026/10/ML10-switched-capacitor-filter.html",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "hardware"
+  ],
+  "d": "2026-10-11",
+  "o": "Inside a 1980s filter chip that uses switched capacitors",
+  "x": "Harris의 F1-10-5 라벨이 붙은 IC가 MF10 스위치드 캐패시터 필터와 동일함이 확인되었다. 칩 내부에는 72개의 폴리실리콘 캐패시터"
+ },
+ {
   "t": "안드로이드에서 1클릭 MMI 실행",
   "u": "https://karansaini.com/mmi-android/",
   "m": "2026-10",

@@ -1,57 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-01T08:01:00+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 12,
-    "blocked": 8,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://america.gov/chat",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34571",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34570",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34569",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34568",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34567",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-01T16:00:38+09:00",
    "total": 25,
    "counts": {
@@ -1309,6 +1258,47 @@
     },
     {
      "url": "https://news.hada.io/topic?id=35120",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-11T08:00:50+09:00",
+   "total": 21,
+   "counts": {
+    "ok": 14,
+    "blocked": 6,
+    "github": 1
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35136",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.ft.com/content/e26574cf-94cc-40d9-921e-5c7417fc5dbd",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35138",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35135",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35134",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35131",
      "source": "geeknews",
      "reason": "blocked"
     }
