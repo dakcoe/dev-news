@@ -1,57 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-09-30T16:00:36+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 8,
-    "github": 4,
-    "ok": 10
-   },
-   "failures": [
-    {
-     "url": "https://america.gov/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34535",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34534",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34533",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34532",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34531",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/devday-2026-recap",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-01T00:00:49+09:00",
    "total": 25,
    "counts": {
@@ -1337,6 +1286,42 @@
      "url": "https://lobste.rs/s/8rrtma/cloudflare_shutting_down_deno_is_news_not",
      "source": "lobsters",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-10T16:00:30+09:00",
+   "total": 22,
+   "counts": {
+    "blocked": 5,
+    "ok": 15,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35090",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35108",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35106",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35105",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35104",
+     "source": "geeknews",
+     "reason": "blocked"
     }
    ]
   }
