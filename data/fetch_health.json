@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-02T00:00:34+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34608",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34607",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34606",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34604",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34603",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-02T08:00:32+09:00",
    "total": 25,
    "counts": {
@@ -1313,6 +1272,48 @@
      "url": "https://db.cit.tum.de/~durner/papers/json-tiles-sigmod21.pdf",
      "source": "lobsters",
      "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-12T00:01:30+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 14,
+    "blocked": 5,
+    "unavailable": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35175",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35174",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35173",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35171",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35170",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://rachelbythebay.com/w/2026/10/08/idle/",
+     "source": "lobsters",
+     "reason": "unavailable"
     }
    ]
   }
