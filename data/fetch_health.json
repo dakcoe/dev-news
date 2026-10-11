@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-01T16:00:38+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 14,
-    "blocked": 5,
-    "github": 6
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=34591",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34590",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34589",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34588",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34587",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-02T00:00:34+09:00",
    "total": 25,
    "counts": {
@@ -1301,6 +1265,54 @@
      "url": "https://news.hada.io/topic?id=35131",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-11T16:00:35+09:00",
+   "total": 22,
+   "counts": {
+    "short": 1,
+    "ok": 12,
+    "blocked": 5,
+    "empty": 1,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://wallhop.io/",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35151",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35150",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35149",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35146",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35145",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://db.cit.tum.de/~durner/papers/json-tiles-sigmod21.pdf",
+     "source": "lobsters",
+     "reason": "empty"
     }
    ]
   }
