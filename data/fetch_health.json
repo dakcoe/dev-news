@@ -1,58 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-02T08:00:32+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 12,
-    "short": 2,
-    "blocked": 6,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=49922568",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://news.ycombinator.com/item?id=49922569",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/the-eternal-complement",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34641",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34640",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34639",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34638",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34637",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-02T16:00:34+09:00",
    "total": 25,
    "counts": {
@@ -1314,6 +1262,52 @@
      "url": "https://rachelbythebay.com/w/2026/10/08/idle/",
      "source": "lobsters",
      "reason": "unavailable"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-12T08:00:26+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 13,
+    "blocked": 7,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.nyc.gov/main/click-to-cancel",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35185",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35200",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35199",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35198",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35197",
+     "source": "geeknews",
+     "reason": "blocked"
     }
    ]
   }
