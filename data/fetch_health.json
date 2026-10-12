@@ -1,54 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-03T00:00:34+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 12,
-    "short": 1,
-    "blocked": 5,
-    "github": 6,
-    "empty": 1
-   },
-   "failures": [
-    {
-     "url": "https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend",
-     "source": "lobsters",
-     "reason": "short"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34670",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34669",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34668",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34667",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34665",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://gwern.net/doc/math/1973-halmos.pdf",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-10-03T08:00:34+09:00",
    "total": 24,
    "counts": {
@@ -1311,6 +1263,47 @@
     },
     {
      "url": "https://news.hada.io/topic?id=35223",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-13T00:01:26+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 14,
+    "unavailable": 1,
+    "blocked": 5
+   },
+   "failures": [
+    {
+     "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+     "source": "lobsters",
+     "reason": "unavailable"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35245",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35244",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35243",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35242",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35241",
      "source": "geeknews",
      "reason": "blocked"
     }
