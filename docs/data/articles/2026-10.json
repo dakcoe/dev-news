@@ -1,5 +1,508 @@
 [
  {
+  "title": "Doory – Open-Source Canva",
+  "url": "https://github.com/shaongitbd/doory",
+  "source": "hackernews",
+  "upvotes": 83,
+  "comments": 18,
+  "published_at": 1791766107,
+  "discussion": "https://news.ycombinator.com/item?id=50049872",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/shaongitbd/doory"
+  ],
+  "cross_source_count": 2,
+  "score": 68,
+  "image": "https://opengraph.githubassets.com/1/shaongitbd/doory",
+  "link_status": null,
+  "ko_title": "Doory – 오픈소스 Canva",
+  "summary": "Doory는 브라우저에서 동작하는 전체 디자인 편집기로, 포스터·소셜 포스트·슬라이드·이력서·명함 등 다양한 디자인을 템플릿이나 빈 페이지에서 만들고 PNG·JPG·SVG·PDF·MP4·GIF 등으로 내보낼 수 있다. 모든 기능이 무료이며 계정 없이 바로 사용 가능하고, Docker 기반으로 자체 서버에 호스팅할 수 있다.",
+  "why": "Docker로 자체 서버에 호스팅할 수 있어 디자인 자산의 외부 의존성을 제거할 수 있다. React 19와 Django 5 스택을 사용해 프론트엔드와 백엔드를 통합 관리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Clean Architecture in Python with FastAPI, FastStream, and Dishka",
+  "url": "https://dev.to/sehat1137/clean-architecture-in-python-with-fastapi-faststream-and-dishka-340k",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": 1791767885.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sehat1137/clean-architecture-in-python-with-fastapi-faststream-and-dishka-340k"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fhabrastorage.org%2Fgetpro%2Fhabr%2Fupload_files%2F93b%2F16f%2Fba3%2F93b16fba3874fc3126e236cb0c7dadcb.jpg",
+  "link_status": "ok",
+  "ko_title": "FastAPI·FastStream·Dishka로 구현한 파이썬 클린 아키텍처",
+  "summary": "이 글은 FastAPI, FastStream, Dishka를 사용해 비즈니스 로직을 HTTP와 RabbitMQ 진입점에서 분리한 백엔드 템플릿을 소개한다. 템플릿은 PostgreSQL 연동을 위한 의존성 주입 방식을 보여주며, 기존 Tornado·Django·Flask·AIOHTTP 사용자에게 최신 스택으로 전환할 길을 제시한다. 추가로 Pydantic·SQLAlchemy를 활용하지만 상세 가이드는 제공하지 않는다.",
+  "why": "HTTP와 RabbitMQ 두 진입점을 하나의 비즈니스 로직 계층으로 묶는 구조를 보여준다. 기존 Tornado나 Django에서 최신 스택으로 전환할 때 의존성 주입 방식을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "darrenprx / lolPing",
+  "url": "https://github.com/darrenprx/lolPing",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 174,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/darrenprx/lolPing"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 174,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/darrenprx/lolPing",
+  "link_status": null,
+  "ko_title": "lolPing — 리그오브레전드 핑과 이모트를 전체 데스크톱에 표시",
+  "summary": "이 오픈소스 데스크톱 애플리케이션은 Windows와 macOS에서 Alt키를 누른 채 드래그하면 핑이, Ctrl키를 누른 채 드래그하면 이모트 휠이 화면에 표시된다. 화면 전체 캡처에 포함돼 Discord나 OBS 스트림에서도 시청자가 볼 수 있다. 설치 파일은 GitHub 최신 릴리스에서 다운로드 가능하며, 설치 시 Windows SmartScreen 경고를 무시해야 한다.",
+  "why": "OBS나 Discord로 스트리밍할 때 핑과 이모트가 화면 캡처에 함께 잡혀 시청자에게 전달된다. 설치 파일에 코드 서명이 없어 Windows SmartScreen 경고를 직접 무시해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "When LLM Decompilers Recompile More and Preserve Less",
+  "url": "https://arxiv.org/abs/2609.05370",
+  "source": "lobsters",
+  "upvotes": 3,
+  "comments": 0,
+  "published_at": 1791773095.698,
+  "discussion": "https://lobste.rs/s/uzfa4k/when_llm_decompilers_recompile_more",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2609.05370"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "LLM 디컴파일러가 재컴파일은 늘리고 보존은 줄인다",
+  "summary": "기존 LLM 기반 디컴파일러는 재컴파일 가능성과 테스트 통과 여부만으로 품질을 평가한다. 그러나 이 기준만으로는 실제 동작이 원본과 달라지는 경우를 놓칠 수 있다. 연구팀은 고정 테스트에 의존하지 않는 행동 비교 오라클인 Decompile-Diverge를 제안해, 함수별 드라이버와 퍼징 코퍼스를 생성해 행동 차이를 탐지한다. 실험 결과, 테스트를 모두 통과한 디컴파일 결과 중 4.9%가 원본과 행동이 달랐으며, 특정 시스템에서는 13%에 달했다.",
+  "why": "LLM 디컴파일러로 생성한 코드가 테스트를 통과해도 실제 동작이 원본과 다를 수 있다. 취약점 분석 시 재컴파일 성공만으로 신뢰하면 누락된 버그를 놓칠 위험이 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "language"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "CPU 뼛속까지 써먹고, Milvus 사이징 기준을 만들기까지",
+  "url": "https://toss.tech/article/53795",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791766800.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/53795"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.toss.im/disposables/contents/milvus-sizing.png",
+  "link_status": "ok",
+  "ko_title": "CPU를 최대한 활용하고 Milvus 사이징 기준을 만들다",
+  "summary": "토스증권 Data Infra 팀은 Milvus 기반 벡터 검색 환경을 구축하면서, 검색 품질과 응답 속도를 만족시키기 위한 물리 서버(CPU·메모리) 규모를 직접 측정했다. 워크로드별 임베딩 차원, 검색 결과 수, 데이터 갱신 빈도 등을 고려해 인덱스와 검색 설정을 조정했으며, CPU·메모리 배치를 최적화해 동일 서버에서 처리량을 41% 향상시켰다. 실험 결과를 바탕으로 서버 대수 산정용 사이징 기준을 제시한다.",
+  "why": "온프레미스 환경에서 Milvus를 도입할 때 서버 대수를 산정하는 기준을 얻을 수 있다. CPU와 메모리 배치 최적화로 처리량을 41% 높인 실측 데이터를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "CSS for underlines",
+  "url": "https://www.rubenerd.au/css-for-underlines/",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1791769388.545,
+  "discussion": "https://lobste.rs/s/ezucf0/css_for_underlines",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.rubenerd.au/css-for-underlines/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://www.rubenerd.au/preview.png",
+  "link_status": "ok",
+  "ko_title": "언더라인을 위한 CSS",
+  "summary": "기존 HTML·CSS에서 언더라인 색상과 두께를 제어할 수 없었다. 2019년부터 text-decoration-color·style·thickness 속성이 도입돼 주요 브라우저가 구현했다. 이제 a 요소에 직접 언더라인 색상·두께·스타일을 지정할 수 있다.",
+  "why": "border-bottom으로 가짜 언더라인을 만들던 방식을 버릴 수 있다. g나 y 같은 아래로 내려가는 글자까지 자연스럽게 가로지르는 진짜 언더라인을 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Odyssey-3 is a new generative world model that you can try for free",
+  "url": "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791704881.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/Odyssey-3.jpg",
+  "link_status": "ok",
+  "ko_title": "Odyssey-3, 무료 체험 가능한 새로운 생성형 세계 모델",
+  "summary": "Odyssey는 캘리포니아에 본사를 둔 AI 기업으로, 텍스트 프롬프트를 입력하면 실시간으로 인터랙티브한 환경을 생성하는 세계 모델 Odyssey-3의 공개 연구 프리뷰를 제공한다. 모델은 물리 시뮬레이션을 기반으로 로봇 팔, 드론, 비디오 게임 캐릭터 등 다양한 시스템 제어에 활용될 수 있다. 현재 API 접근 신청이 가능하며, 무료 온라인 데모에서 1인칭·3인칭 시점으로 환경을 탐색하고 행동에 따른 반응을 실시간으로 확인할 수 있다.",
+  "why": "물리 시뮬레이션 기반 환경 생성 모델이므로 로봇이나 게임 AI 시뮬레이션 파이프라인에 대안으로 검토할 수 있다. 현재는 공개 연구 프리뷰 단계라 API 접근을 신청해야 하며, 무료 데모로만 확인 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data",
+   "industry",
+   "science"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Show GN: 이음 (ieum) - 한국어 문장으로 쓰는 프로그래밍 언어",
+  "url": "https://news.hada.io/topic?id=35224",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791781504.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35224"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 이음 (ieum) - 한국어 문장으로 쓰는 프로그래밍 언어",
+  "summary": "한국어 문장으로 코드를 작성할 수 있는 프로그래밍 언어와 IDE 확장 프로그램을 공개했다. AI 도움을 받아 자연스러운 한국어 코드를 생성하도록 설계되었다. 기존 한국어 기반 언어와 달리 기능 부족을 보완하기 위해 Python 호환성을 추가했다.",
+  "why": "Python 호환성을 지원해 기존 한국어 기반 언어의 기능 부족을 보완했다. Python 생태계의 라이브러리를 그대로 활용할 수 있어 프로토타입 제작에 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Microsoft's Nadella bows to Trump's language diktat on \"Super Intelligence\" and uses it to attack OpenAI and Anthropic",
+  "url": "https://the-decoder.com/microsofts-nadella-bows-to-trumps-language-diktat-on-super-intelligence-and-uses-it-to-attack-openai-and-anthropic/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791709715.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/microsofts-nadella-bows-to-trumps-language-diktat-on-super-intelligence-and-uses-it-to-attack-openai-and-anthropic/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/microsoft_trump.png",
+  "link_status": "ok",
+  "ko_title": "마이크로소프트 나델라, 트럼프 언어 지시 따르고 “초지능” 용어로 오픈AI·앤트로픽 공격",
+  "summary": "나델라가 블로그에 “초지능”이라는 용어를 사용해 오픈AI와 앤트로픽을 비판했다. 그는 AI 모델을 내부 보안 위협으로 보고 다중 모델 도입·전체 로그·감사·인간 차단 기능을 제안한다. 제안은 모델 통제와 독립성을 강화해 위험을 줄이는 것이 목적이다.",
+  "why": "AI 모델을 내부 보안 위협으로 취급하는 프레임이 제시됐다. 다중 모델 도입과 전체 로그 기록, 독립 감사, 인간 차단 기능을 검토해야 한다. 단일 모델 의존에서 벗어나 통제 구조를 강화하는 방향으로 설계가 바뀐다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Highlights from \"I spent 6 years developing a game in Rust and it just shipped, AMA\" (2024)",
+  "url": "https://gamesbymason.com/blog/2024/6-years-in-rust-ama/#what-made-you-decide-to-use-rust",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1791761316.977,
+  "discussion": "https://lobste.rs/s/dodzdb/highlights_from_i_spent_6_years",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://gamesbymason.com/blog/2024/6-years-in-rust-ama/#what-made-you-decide-to-use-rust"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://gamesbymason.com/blog/2024/6-years-in-rust-ama/magfest-2020-booth.jpg",
+  "link_status": "ok",
+  "ko_title": "Rust로 6년 개발한 게임이 출시되었습니다 — AMA 요약",
+  "summary": "2018년부터 Rust로 개발한 퍼즐 게임 Way of Rhea가 출시되었으며, 출시 후 r/rust_gamedev에서 AMA를 진행했다. 개발자는 C++ 엔진에서 전환한 이유로 Rust의 내장 빌드 시스템·테스트·문서 생성·알제브라 데이터 타입·예외 없는 오류 처리 등을 꼽았다. 또한 C/C++ 대체 노력과 Zig 커뮤니티 활동도 언급했다.",
+  "why": "C++ 엔진에서 Rust로 전환한 핵심 동기는 빌드 시스템과 테스트, 문서 생성이 내장된 점이다. 알제브라 데이터 타입과 예외 없는 오류 처리 방식도 전환 이유에 포함된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "AI를 단 10분만 사용해도 어려운 일을 끈기 있게 해내는 능력이 약해짐",
+  "url": "https://news.hada.io/topic?id=35230",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791787012.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35230"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AI를 단 10분만 사용해도 어려운 일을 끈기 있게 해내는 능력이 약해짐",
+  "summary": "온라인 참가자 1,222명을 대상으로 한 무작위 대조 실험에서 약 10분간 AI에 의존한 집단은 도구가 제거된 뒤 어려운 과제를 지속하는 능력과 정답률이 떨어졌다. 분수 문제 실험에서 ChatGPT 사용 집단은 초기에는 정확했지만 지원이 중단되자 오답을 내는 경향을 보였다.",
+  "why": "AI 의존이 짧아도 문제 해결의 끈기와 정확도를 떨어뜨린다는 점이 확인됐다. 도구 없이 작업해야 하는 구간에서 실수가 늘 수 있으니 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Refurb weekend II: Alpha Micro Eagle 300 and friends",
+  "url": "https://oldvcr.blogspot.com/2026/10/refurb-weekend-ii-alpha-micro-eagle-300.html",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1791769790.513,
+  "discussion": "https://lobste.rs/s/cthze7/refurb_weekend_ii_alpha_micro_eagle_300",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://oldvcr.blogspot.com/2026/10/refurb-weekend-ii-alpha-micro-eagle-300.html"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtxXh6ipOCrGK54Zsl5U0tbOrL7jLHeBbGPf766eyl_M2XO_OdG7O_oqStkg8TBzXiW-towqKCGHfvAFiQT-9wVV2jkYw8TIEXZ24qJ4vR8lcy23R-v3Ma6idK4ObQRthAfID7v9JeUsfxa1k-OJNI8JkRhs4UQqzJOGOE47N7rDTEQP9nDuP5VoVyX5Y/w1200-h630-p-k-no-nu/PXL_20261004_143856069.jpg",
+  "link_status": "ok",
+  "ko_title": "리퍼브 주말 II: Alpha Micro Eagle 300 및 친구들",
+  "summary": "6년 전 고장 난 전원 공급 장치와 팬을 수리한 Alpha Micro Eagle 300을 최근 SCSI2SD로 교체해 디스크를 없앴다. 이 모델은 40 MHz 68EC030 CPU와 온보드 이더넷을 갖추고 있어 네트워크 연결이 가능하다. 교체 후 ZuluSCSI를 사용하려 했지만 부팅이 되지 않아 문제를 겪었다.",
+  "why": "68000 계열 프로세서의 리틀엔디안 동작 방식은 데이터 파일 호환성 때문에 특이한 사례다. ZuluSCSI 교체 후 부팅이 실패하는 현상은 해당 하드웨어 조합의 호환성 한계를 보여준다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Will Linux phones become a viable alternative to the Android/iOS duopoly?",
+  "url": "https://amosbbatto.wordpress.com/2026/10/05/linux-phones-alternative/",
+  "source": "hackernews",
+  "upvotes": 73,
+  "comments": 52,
+  "published_at": 1791780840,
+  "discussion": "https://news.ycombinator.com/item?id=50051530",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://amosbbatto.wordpress.com/2026/10/05/linux-phones-alternative/"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://i0.wp.com/amosbbatto.wordpress.com/wp-content/uploads/2026/10/pinephoneandlibrem5-1.jpg?fit=1196%2C1200&ssl=1",
+  "link_status": "ok",
+  "ko_title": "리눅스 폰이 안드로이드·iOS 듀오폴리를 대체할 수 있을까?",
+  "summary": "2020년 퍼시즘 Librem 5와 파인64 PinePhone 출시 이후 리눅스 폰 시장은 하드웨어 성능과 드라이버 부족으로 정체됐지만, 최근 SoC 성능 향상과 오픈소스 드라이버 지원이 개선되고 있다. 새로운 모바일 인터페이스와 배포 옵션이 늘어나면서 소규모 기업들이 리눅스 기반 스마트폰을 제공할 가능성이 높아졌다. 아직 대형 제조사의 진입은 확정되지 않았다.",
+  "why": "백엔드 개발 환경에 영향은 없으나, 모바일 기기 선택지가 제한적이었다면 이제 소규모 제조사의 리눅스 폰을 검토할 시점이다. 대형 제조사 진입은 미확정이라 당장 기존 안드로이드·iOS 워크플로우를 대체할 수준은 아니다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "Passkeys are a trap",
+  "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+  "source": "hackernews",
+  "upvotes": 503,
+  "comments": 279,
+  "published_at": 1791755988,
+  "discussion": "https://news.ycombinator.com/item?id=50048312",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://substackcdn.com/image/fetch/$s_!IKJv!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fnonfunctional.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1433430813%26version%3D9",
+  "link_status": "ok",
+  "ko_title": "Passkeys는 함정이다",
+  "summary": "Passkeys가 비밀번호보다 보안·편의성이 높다고 홍보되지만, 사용자는 키에 대한 완전한 통제권을 잃는다. FIDO Alliance가 주도하는 이 기술은 대기업·정부·정보기관·은행·비영리 단체 등 다양한 이해관계자가 참여해 만든다.",
+  "why": "기존 비밀번호나 물리적 보안키와 달리 패스키는 사이트가 사용자의 통제권을 점진적으로 제한하는 숨겨진 설정을 가질 수 있다. 이로 인해 사용자는 자신의 인증 정보를 완전히 관리할 수 없게 되며, 사이트 정책 변화에 따라 접근이 차단될 위험이 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "F/OSS Comics #12: BSD 유닉스 2화 – vi 에디터의 탄생",
+  "url": "https://news.hada.io/topic?id=35223",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791780857.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35223"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "F/OSS Comics #12: BSD 유닉스 2화 – vi 에디터의 탄생",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
+  "title": "'AI' is Not a Tool",
+  "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+  "source": "lobsters",
+  "upvotes": 16,
+  "comments": 4,
+  "published_at": 1791767889.541,
+  "discussion": "https://lobste.rs/s/ikk8ie/ai_is_not_tool",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://static.licdn.com/scds/common/u/images/email/artdeco/logos/96/linkedin-bug-color.png",
+  "link_status": "ok",
+  "ko_title": "AI는 도구가 아니다",
+  "summary": "",
+  "why": "LLM은 예측 불가능하고 결정론적이지 않아 기존 도구의 신뢰성 기준과 다릅니다. 코드를 직접 작성하는 대신 LLM에 위임하는 자동화 방식임을 인지해야 합니다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-10-12T16:00:06.641235+09:00",
+  "batch_label": "10월 12일 16:00"
+ },
+ {
   "title": "Total Annihilation, rebuilt for modern computers",
   "url": "https://nanolathe.gg",
   "source": "hackernews",
