@@ -1,5 +1,188 @@
 [
  {
+  "t": "Google에서 9만 달러 가치 원격 코드 실행 취약점 발견",
+  "u": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "security",
+   "industry"
+  ],
+  "d": "2026-10-13",
+  "o": "Finding a $90,000 Remote Code Execution Vulnerability in Google",
+  "x": "개발자 문서 사이트의 Flask 세션 쿠키에 비밀키가 포함돼 있었으며, 이를 추출해 위조 세션을 만들면 일곱 개 Google 도메인에서 코드 실"
+ },
+ {
+  "t": "Postgres가 느린 게 아니라 스토리지가 느린 것이다",
+  "u": "https://news.hada.io/topic?id=35244",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "d": "2026-10-13",
+  "x": "동일한 33억 행 PostgreSQL 무작위 UPDATE 부하에서 로컬 NVMe가 기본 gp3 EBS보다 9.24배 높은 처리량을 보였다. 이 "
+ },
+ {
+  "t": "백악관, 영국 AI 안전 연구소의 최첨단 모델 접근 권한 복원",
+  "u": "https://the-decoder.com/white-house-reverses-course-and-restores-uk-ai-safety-institutes-access-to-frontier-models/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-safety",
+   "security",
+   "career-culture"
+  ],
+  "d": "2026-10-13",
+  "o": "White House reverses course and restores UK AI Safety Institute's access to frontier models",
+  "x": "백악관이 영국 AI 안전 연구소(AISI)의 새로운 AI 모델 접근 차단을 해제했다. AISI는 Anthropic, Google DeepMind"
+ },
+ {
+  "t": "Zig에서 타입 안전한 HTML 템플릿",
+  "u": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "web",
+   "language",
+   "showcase"
+  ],
+  "d": "2026-10-13",
+  "o": "Type-safe HTML templating in Zig",
+  "x": "Zig 언어와 arena 할당자를 활용해 런타임 할당 없이 HTML을 출력하는 템플릿 라이브러리를 만들었다. 컴파일 타임에 타입 검사를 수행하고"
+ },
+ {
+  "t": "프랑스 슈퍼마켓 체인, 사이버공격으로 냉장고 가동 중단",
+  "u": "https://www.afp.com/en/french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "security",
+   "industry"
+  ],
+  "d": "2026-10-13",
+  "o": "French supermarket chains say cyberattack forced refrigerator shutdown",
+  "x": "프랑스의 Intermarché와 Cooperative U 등 주요 슈퍼마켓 체인 250여 매장이 사이버공격을 받아 냉장고가 해동됐으며, 일부 매"
+ },
+ {
+  "t": "Zod 4.6.6 악성코드에 감염?",
+  "u": "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "release"
+  ],
+  "d": "2026-10-13",
+  "o": "Zod 4.6.6 compromised by malware?",
+  "x": "Zod 4.6.6 패키지에 포함된 코드가 원격 서버에서 악성 로더를 다운로드하고 실행하도록 설계된 것으로 확인됐다. 해당 로더는 base64 인"
+ },
+ {
+  "t": "13살이 만든 Windows용 10,000줄 보안 스위트 ATLOCK v5",
+  "u": "https://dev.to/akhourianmolkumar/im-13-i-built-a-10000-line-security-suite-for-windows-meet-atlock-v5-eh8",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "language",
+   "showcase"
+  ],
+  "d": "2026-10-13",
+  "o": "I'm 13. I built a 10,000-line security suite for Windows. Meet ATLOCK v5.",
+  "x": "ATLOCK v5가 출시됐으며 순수 파이썬으로 .exe 형태 제공한다. Argon2id 기반 키 파생, AES-256-GCM 컨테이너, FIDO"
+ },
+ {
+  "t": "액션, 풀 리퀘스트 및 이슈 사고",
+  "u": "https://www.githubstatus.com/incidents/93njd414rpbx",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-13",
+  "o": "Incident with Actions, Pull Requests and Issues",
+  "x": "GitHub은 액션, 이슈, 프로젝트의 성능 저하와 알림 지연 문제를 완화했으며 현재 안정성을 모니터링 중이다. 초기 완화 조치가 완전하지 않아"
+ },
+ {
+  "t": "Anthropic의 Andrej Karpathy, “외부 세계가 AI 실제 능력의 프리뷰를 보았다”라고 말함",
+  "u": "https://the-decoder.com/anthropics-andrej-karpathy-says-the-external-world-has-seen-the-preview-of-what-ai-can-actually-do/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-10-13",
+  "o": "Anthropic's Andrej Karpathy says \"the external world has seen the preview\" of what AI can actually do",
+  "x": "Karpathy는 대중이 AI를 검색 엔진이나 글쓰기 도구 수준으로만 인식하고 있다고 지적한다. 그는 전 세계 인구의 약 75%가 LLM을 거의"
+ },
+ {
+  "t": "QGIS, AI 지원 기여 금지",
+  "u": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "open-source"
+  ],
+  "d": "2026-10-13",
+  "o": "QGIS bans AI assisted contributions",
+  "x": "QGIS 프로젝트에 AI가 만든 기여를 허용하지 않는 QEP428이 채택돼 공식 정책으로 확정됐다. 해당 정책은 QGIS 저장소에 AI 기반 코"
+ },
+ {
+  "t": "시트로엥, 전기 시대를 위한 2CV 부활",
+  "u": "https://www.bbc.co.uk/news/articles/c620r33plgppo",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-13",
+  "o": "Citroen revives the 2CV for an electric age",
+  "x": "시트로엥이 파리 모터쇼에서 전기 소형 도시차량 컨셉인 2CV를 공개했다. 기존 2CV의 레트로 디자인을 유지하면서 2028년까지 전시용 모델을 "
+ },
+ {
+  "t": "Ruby의 바이마르 시대 살아가기",
+  "u": "https://blog.julik.nl/2026/10/the-weimar-of-ruby",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-13",
+  "o": "Living in the Weimar era of Ruby",
+  "x": "DHH가 RailsWorld에서 발표한 내용이 Ruby와 Rails에 대한 무관심을 드러냈다. 발표자는 Rails를 더 이상 필요로 하지 않는다"
+ },
+ {
+  "t": "지문은 새로운 쿠키다",
+  "u": "https://royfish.dev/fingerprints-are-the-new-cookies",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-13",
+  "o": "Fingerprints are the new cookies"
+ },
+ {
+  "t": "리서치 업체, Anthropic IPO가 “올해 가장 터무니없는 상장”이 될거라 경고",
+  "u": "https://news.hada.io/topic?id=35243",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-10-13",
+  "x": "New Constructs는 Anthropic의 목표 기업가치를 2조 달러로 제시했지만 자체 추산은 1,500억 달러에 불과하다고 평가했다. 이"
+ },
+ {
+  "t": "Deloitte, 아브라모비치 부동산 세금 회피 위해 문서 위조",
+  "u": "https://www.bbc.com/news/articles/c64g1l5389kvo",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-13",
+  "o": "Deloitte falsified documents to evade tax on Abramovich's wealth"
+ },
+ {
   "t": "Doory – 오픈소스 Canva",
   "u": "https://github.com/shaongitbd/doory",
   "m": "2026-10",

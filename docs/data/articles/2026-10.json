@@ -1,5 +1,468 @@
 [
  {
+  "title": "Finding a $90,000 Remote Code Execution Vulnerability in Google",
+  "url": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": 1791816035.395,
+  "discussion": "https://lobste.rs/s/mldt0o/finding_90_000_remote_code_execution",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce"
+  ],
+  "cross_source_count": 2,
+  "score": 64,
+  "image": "https://simonkoeck.com/og/google-devsite-flask-session-pickle-rce.png",
+  "link_status": "ok",
+  "ko_title": "Google에서 9만 달러 가치 원격 코드 실행 취약점 발견",
+  "summary": "개발자 문서 사이트의 Flask 세션 쿠키에 비밀키가 포함돼 있었으며, 이를 추출해 위조 세션을 만들면 일곱 개 Google 도메인에서 코드 실행이 가능했다. 쿠키는 압축된 JSON과 pickle 직렬화를 사용했으며, OAuth 클라이언트 ID와 비밀키가 평문으로 노출돼 있었다.",
+  "why": "Flask 세션 쿠키가 서명 키를 포함하는 구조라면, 쿠키를 복호화해 키를 추출할 수 있다. 이로써 평문으로 노출된 OAuth 비밀키를 이용해 세션을 위조하고 코드 실행까지 이어질 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Postgres가 느린 게 아니라 스토리지가 느린 것이다",
+  "url": "https://news.hada.io/topic?id=35244",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791808740.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35244"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Postgres가 느린 게 아니라 스토리지가 느린 것이다",
+  "summary": "동일한 33억 행 PostgreSQL 무작위 UPDATE 부하에서 로컬 NVMe가 기본 gp3 EBS보다 9.24배 높은 처리량을 보였다. 이 차이는 워크로드가 메모리와 OS 페이지 캐시를 초과해 물리 I/O가 증가할 때 나타난다. 결과는 해당 워크로드와 스토리지 구성에만 적용된다.",
+  "why": "데이터가 메모리와 OS 페이지 캐시를 초과하면 물리 I/O가 급증한다. 이때 기본 gp3 EBS는 로컬 NVMe보다 9.24배 느리다. 대용량 무작위 업데이트 워크로드에서 스토리지 선택이 성능을 좌우한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "White House reverses course and restores UK AI Safety Institute's access to frontier models",
+  "url": "https://the-decoder.com/white-house-reverses-course-and-restores-uk-ai-safety-institutes-access-to-frontier-models/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791810894.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/white-house-reverses-course-and-restores-uk-ai-safety-institutes-access-to-frontier-models/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/aisi_us_access.png",
+  "link_status": "ok",
+  "ko_title": "백악관, 영국 AI 안전 연구소의 최첨단 모델 접근 권한 복원",
+  "summary": "백악관이 영국 AI 안전 연구소(AISI)의 새로운 AI 모델 접근 차단을 해제했다. AISI는 Anthropic, Google DeepMind, OpenAI의 모델을 조기에 시험할 수 있다. 이전 차단은 트럼프 행정부 시절에 시작됐으며, 영국 AI 장관의 외교적 압력으로 풀렸다.",
+  "why": "AISI의 조기 모델 시험 결과가 공개되면, Claude Mythos 5.1 등 최신 모델의 안전성 한계를 사전에 파악할 수 있다. 이는 백엔드 배포 전 위험 요소를 점검하는 기준을 마련해 준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "security",
+   "career-culture"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Type-safe HTML templating in Zig",
+  "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1791801550.262,
+  "discussion": "https://lobste.rs/s/dujxbl/type_safe_html_templating_zig",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html"
+  ],
+  "cross_source_count": 2,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Zig에서 타입 안전한 HTML 템플릿",
+  "summary": "Zig 언어와 arena 할당자를 활용해 런타임 할당 없이 HTML을 출력하는 템플릿 라이브러리를 만들었다. 컴파일 타임에 타입 검사를 수행하고, 모든 입력을 기본적으로 이스케이프해 XSS 위험을 방지한다. 기존에 Zig용으로는 이러한 요구를 모두 만족하는 템플릿 솔루션이 없었다.",
+  "why": "Zig 백엔드에서 HTML을 생성할 때 런타임 할당과 XSS 이스케이프를 수동으로 처리하던 방식을 대체한다. 컴파일 타임에 타입 오류를 잡아내고 모든 입력이 기본적으로 이스케이프되므로 안전성을 유지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "French supermarket chains say cyberattack forced refrigerator shutdown",
+  "url": "https://www.afp.com/en/french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1791807832.273,
+  "discussion": "https://lobste.rs/s/u4vlin/french_supermarket_chains_say",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.afp.com/en/french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+   "https://www.france24.com/en/live-news/20261012-french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown"
+  ],
+  "cross_source_count": 2,
+  "score": 58,
+  "image": "https://www.afp.com/sites/default/files/afp-stories/7c20d3e6cc43ae9598fec7dbe162d544-0-hi.jpg",
+  "link_status": "ok",
+  "ko_title": "프랑스 슈퍼마켓 체인, 사이버공격으로 냉장고 가동 중단",
+  "summary": "프랑스의 Intermarché와 Cooperative U 등 주요 슈퍼마켓 체인 250여 매장이 사이버공격을 받아 냉장고가 해동됐으며, 일부 매장에서 화재까지 발생했다. 공격으로 신선·냉동 식품을 폐기해야 하는 상황이며, E. Leclerc·Carrefour Market·Monoprix 등도 영향을 받았을 가능성이 제기됐다. 파리 검찰이 대규모 사이버공격 조사에 착수했다.",
+  "why": "냉장고 제어 시스템이 원격으로 조작되어 해동되는 사례가 확인됐다. 물리적 설비의 원격 제어 취약점을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Zod 4.6.6 compromised by malware?",
+  "url": "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
+  "source": "hackernews",
+  "upvotes": 167,
+  "comments": 47,
+  "published_at": 1791791249,
+  "discussion": "https://news.ycombinator.com/item?id=50052814",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/f8ad7d63c7a1406cfc8e44744b4c47f2cbdbfec14911579af6e780edb3baf0d5/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
+  "link_status": "ok",
+  "ko_title": "Zod 4.6.6 악성코드에 감염?",
+  "summary": "Zod 4.6.6 패키지에 포함된 코드가 원격 서버에서 악성 로더를 다운로드하고 실행하도록 설계된 것으로 확인됐다. 해당 로더는 base64 인코딩된 페이로드를 파일로 저장한 뒤 동적으로 실행한다. 악성 로더가 성공하면 임시 디렉터리를 정리하고 프로세스를 종료한다. 이 스크립트는 비동기 IIFE 형태로 배포돼 오류 발생 시 프로세스를 종료한다.",
+  "why": "프로젝트에서 Zod 4.6.6을 사용 중이라면 즉시 해당 버전으로의 의존성을 제거해야 한다. 정상적인 검증 로직이 아닌 원격 서버 통신과 동적 실행 코드가 포함되어 있어 시스템이 탈취될 위험이 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "I'm 13. I built a 10,000-line security suite for Windows. Meet ATLOCK v5.",
+  "url": "https://dev.to/akhourianmolkumar/im-13-i-built-a-10000-line-security-suite-for-windows-meet-atlock-v5-eh8",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 22,
+  "comments": 64,
+  "published_at": 1791799406.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/im-13-i-built-a-10000-line-security-suite-for-windows-meet-atlock-v5-eh8"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fay923oguoi7sip694ocx.png",
+  "link_status": "ok",
+  "ko_title": "13살이 만든 Windows용 10,000줄 보안 스위트 ATLOCK v5",
+  "summary": "ATLOCK v5가 출시됐으며 순수 파이썬으로 .exe 형태 제공한다. Argon2id 기반 키 파생, AES-256-GCM 컨테이너, FIDO2·TOTP·Windows Hello 2FA, 가짜 금고·랜섬웨어 캐너리·샤미어 복구 등 다양한 기능을 포함한다. 파일·폴더·퀵락은 자체 v3.1 컨테이너 형식으로 암호화돼 손상된 청크가 전체 파일 손실을 초래하지 않는다.",
+  "why": "ATLOCK v5는 순수 파이썬으로 작성된 Windows용 보안 도구다. 단일 청크 손상 시 전체 파일 손실을 막는 v3.1 컨테이너 형식을 제공한다. 파일 암호화나 2FA가 필요한 로컬 환경에서 기존 도구 대안으로 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Incident with Actions, Pull Requests and Issues",
+  "url": "https://www.githubstatus.com/incidents/93njd414rpbx",
+  "source": "hackernews",
+  "upvotes": 71,
+  "comments": 48,
+  "published_at": 1791807831,
+  "discussion": "https://news.ycombinator.com/item?id=50055375",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.githubstatus.com/incidents/93njd414rpbx"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://dka575ofm4ao0.cloudfront.net/pages-twitter_logos/original/36420/GitHub-Mark-120px-plus.png",
+  "link_status": "ok",
+  "ko_title": "액션, 풀 리퀘스트 및 이슈 사고",
+  "summary": "GitHub은 액션, 이슈, 프로젝트의 성능 저하와 알림 지연 문제를 완화했으며 현재 안정성을 모니터링 중이다. 초기 완화 조치가 완전하지 않아 일부 사용자에게 여전히 지연과 오류가 발생할 수 있다. 풀 리퀘스트는 현재 정상 운영 중이다.",
+  "why": "초기 완화 조치가 불완전해 액션과 이슈에서 지연과 오류가 지속될 수 있다. 풀 리퀘스트는 정상 운영 중이므로 해당 작업은 진행해도 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Anthropic's Andrej Karpathy says \"the external world has seen the preview\" of what AI can actually do",
+  "url": "https://the-decoder.com/anthropics-andrej-karpathy-says-the-external-world-has-seen-the-preview-of-what-ai-can-actually-do/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791809481.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropics-andrej-karpathy-says-the-external-world-has-seen-the-preview-of-what-ai-can-actually-do/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/expo_growth.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic의 Andrej Karpathy, “외부 세계가 AI 실제 능력의 프리뷰를 보았다”라고 말함",
+  "summary": "Karpathy는 대중이 AI를 검색 엔진이나 글쓰기 도구 수준으로만 인식하고 있다고 지적한다. 그는 전 세계 인구의 약 75%가 LLM을 거의 사용하지 않으며, 20 백만 명 정도의 전문가만이 최첨단 모델을 업무에 활용하고 있다고 추정한다. 내부 최첨단 시스템에 접근할 수 있는 사람은 전 세계 약 5 천 명에 불과하다.",
+  "why": "백엔드 개발자는 프롬프트 하나로 기존에 수주에서 수개월이 걸리던 대규모 프로젝트 완성을 경험할 수 있다. 이는 단순 검색이나 글쓰기 도구를 넘어 에이전트 기반 자동화가 업무 방식을 바꾸는 지점이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "QGIS bans AI assisted contributions",
+  "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+  "source": "hackernews",
+  "upvotes": 257,
+  "comments": 261,
+  "published_at": 1791804144,
+  "discussion": "https://news.ycombinator.com/item?id=50054751",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/ecd8d0f901eee0f806d831e96afb55ccec8a03b57832f9afe745d5fb8238f56c/qgis/QGIS-Enhancement-Proposals/pull/387",
+  "link_status": "ok",
+  "ko_title": "QGIS, AI 지원 기여 금지",
+  "summary": "QGIS 프로젝트에 AI가 만든 기여를 허용하지 않는 QEP428이 채택돼 공식 정책으로 확정됐다. 해당 정책은 QGIS 저장소에 AI 기반 코드나 문서 제출을 차단한다.",
+  "why": "QGIS 저장소에 AI 기반 코드나 문서를 제출하면 정책 위반이 된다. QGIS에 기여하는 개발자는 AI 도구를 통한 산출물을 직접 검토하거나 수정해 인간이 작성한 형태로 제출해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Citroen revives the 2CV for an electric age",
+  "url": "https://www.bbc.co.uk/news/articles/c620r33plgppo",
+  "source": "hackernews",
+  "upvotes": 91,
+  "comments": 98,
+  "published_at": 1791806949,
+  "discussion": "https://news.ycombinator.com/item?id=50055220",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.co.uk/news/articles/c620r33plgppo"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b9db/live/c47fea70-c3f4-11f1-97a9-2d4b5e26e282.jpg",
+  "link_status": "ok",
+  "ko_title": "시트로엥, 전기 시대를 위한 2CV 부활",
+  "summary": "시트로엥이 파리 모터쇼에서 전기 소형 도시차량 컨셉인 2CV를 공개했다. 기존 2CV의 레트로 디자인을 유지하면서 2028년까지 전시용 모델을 매장에 선보일 계획이다. 목표 가격은 약 13,000파운드이며, 유럽 시장에서 전기차 판매를 촉진하려는 전략이다.",
+  "why": "전통 디자인을 활용한 전기차 출시로 유럽 브랜드의 전기차 경쟁력 강화에 기여한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Living in the Weimar era of Ruby",
+  "url": "https://blog.julik.nl/2026/10/the-weimar-of-ruby",
+  "source": "lobsters",
+  "upvotes": 9,
+  "comments": 1,
+  "published_at": 1791802766.773,
+  "discussion": "https://lobste.rs/s/lfen2h/living_weimar_era_ruby",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.julik.nl/2026/10/the-weimar-of-ruby"
+  ],
+  "cross_source_count": 2,
+  "score": 29,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ruby의 바이마르 시대 살아가기",
+  "summary": "DHH가 RailsWorld에서 발표한 내용이 Ruby와 Rails에 대한 무관심을 드러냈다. 발표자는 Rails를 더 이상 필요로 하지 않는다며 기존 커뮤니티를 비판했다. 필자는 이러한 흐름에도 불구하고 Ruby 생태계가 새로운 기회를 맞이할 수 있다고 주장한다.",
+  "why": "DHH의 발표로 Rails 생태계의 중심축이 흔들리고 있다. 기존 Rails 애플리케이션 유지보수나 신규 프로젝트 도입 시 커뮤니티 지원 감소 가능성을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Fingerprints are the new cookies",
+  "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 5,
+  "published_at": 1791795944.794,
+  "discussion": "https://lobste.rs/s/ml9xrb/fingerprints_are_new_cookies",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://royfish.dev/fingerprints-are-the-new-cookies"
+  ],
+  "cross_source_count": 2,
+  "score": 22,
+  "image": null,
+  "link_status": "unknown",
+  "ko_title": "지문은 새로운 쿠키다",
+  "summary": "",
+  "why": "지문 기반 식별이 기존 쿠키를 대체하는 추세를 보여준다. 브라우저 추적 방지 강화 시 사용자 식별 방식의 변화에 대비해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "리서치 업체, Anthropic IPO가 “올해 가장 터무니없는 상장”이 될거라 경고",
+  "url": "https://news.hada.io/topic?id=35243",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791808560.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35243"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "리서치 업체, Anthropic IPO가 “올해 가장 터무니없는 상장”이 될거라 경고",
+  "summary": "New Constructs는 Anthropic의 목표 기업가치를 2조 달러로 제시했지만 자체 추산은 1,500억 달러에 불과하다고 평가했다. 이 차이를 정당화하려면 Nvidia의 최근 1년 이익의 두 배가 필요하다고 비판했다.",
+  "why": "Anthropic의 기업가치 평가가 과대하다는 분석이 나왔다. AI 인프라 투자 판단 시 이 격차를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
+  "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
+  "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
+  "source": "hackernews",
+  "upvotes": 477,
+  "comments": 160,
+  "published_at": 1791800487,
+  "discussion": "https://news.ycombinator.com/item?id=50054207",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.com/news/articles/c64g1l5389kvo"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://ichef.bbci.co.uk/news/1024/branded_news/abc3/live/b06f9880-c621-11f1-bc2e-018d645d8d21.jpg",
+  "link_status": "ok",
+  "ko_title": "Deloitte, 아브라모비치 부동산 세금 회피 위해 문서 위조",
+  "summary": "",
+  "why": "백엔드 개발자의 업무와 무관한 회계·세무 관련 기사이므로 기술적 조치나 설정 변경 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T00:00:05.145551+09:00",
+  "batch_label": "10월 13일 00:00"
+ },
+ {
   "title": "Doory – Open-Source Canva",
   "url": "https://github.com/shaongitbd/doory",
   "source": "hackernews",
