@@ -1,53 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-03T16:00:33+09:00",
-   "total": 24,
-   "counts": {
-    "ok": 12,
-    "blocked": 6,
-    "empty": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.newgrounds.com/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.extrabigassintelligence.com/",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34704",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34703",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34702",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34701",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34700",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-04T00:00:36+09:00",
    "total": 25,
    "counts": {
@@ -1307,6 +1260,58 @@
      "url": "https://news.hada.io/topic?id=35257",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-13T16:00:35+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 12,
+    "blocked": 7,
+    "empty": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.patreon.com/vihart/posts/vi-harts-big-171939430",
+     "source": "lobsters",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://doi.org/10.1111/acel.70751",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35285",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35284",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35280",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35279",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35278",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://arxiv.org/pdf/cs/0701155",
+     "source": "lobsters",
+     "reason": "empty"
     }
    ]
   }
