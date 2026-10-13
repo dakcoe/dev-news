@@ -55,15 +55,18 @@ def _status(e: Exception) -> int | None:
     return getattr(getattr(e, "response", None), "status_code", None)
 
 
-def _attach_origins(articles: list[dict]) -> int:
-    """원문 주소를 달고 찾은 수를 돌려준다.
+def _attach_origins(articles: list[dict]) -> int | None:
+    """원문 주소를 달고 찾은 수를 돌려준다. 글 페이지가 403으로 막혔으면 None.
 
     2026-09-30부터 글 페이지가 브라우저가 아닌 요청에 전부 403이다. 피드·robots.txt
     는 200이고, 응답이 CloudFront 함수가 만든 "Forbidden" 이라 사이트가 일부러 막은
     것이다(robots.txt 는 허용). 피드에는 원문 링크가 없고, 브라우저 위장은 하지
     않는다(core/http.py). 그래서 첫 요청이 403이면 나머지는 묻지 않는다 — 회차마다
-    30번 막히는 요청을 보낼 이유가 없다. 찾은 수는 fetch 가 출처 건수로 남겨,
-    연속 0건이면 출처 침묵 알림으로 드러난다.
+    30번 막히는 요청을 보낼 이유가 없다.
+
+    막힌 것은 알려진 상태라 0건이 아니라 None 으로 돌려준다. 0건으로 남기면 출처
+    침묵 알림이 차단이 풀릴 때까지 회차마다 같은 댓글을 단다(#7, 10-08부터 16번).
+    차단이 풀리면 다시 건수가 남고, 페이지 화면이 바뀌어 0건이 되면 그때 알림이 뜬다.
     """
     if not articles:
         return 0
@@ -75,7 +78,7 @@ def _attach_origins(articles: list[dict]) -> int:
         if _status(e) == 403:
             print(f"[geeknews] 글 페이지가 403으로 막혀 원문 주소를 못 찾음 — "
                   f"나머지 {len(rest)}건은 묻지 않는다")
-            return 0
+            return None
         print(f"[geeknews] 원문 주소 못 읽음 {first['url']}: {e}")
         origin, failed = None, 1
     if origin:
@@ -99,7 +102,8 @@ def _attach_origins(articles: list[dict]) -> int:
 
 
 def fetch(limit: int = 25, counts: dict[str, int] | None = None) -> list[dict]:
-    """counts를 주면 원문 주소를 찾은 기사 수를 `geeknews:원문`으로 남긴다."""
+    """counts를 주면 원문 주소를 찾은 기사 수를 `geeknews:원문`으로 남긴다.
+    글 페이지가 403으로 막힌 회차는 남기지 않는다(_attach_origins)."""
     body = None
     for url in FEED_CANDIDATES:
         try:
@@ -142,6 +146,6 @@ def fetch(limit: int = 25, counts: dict[str, int] | None = None) -> list[dict]:
     # 기사 주소는 긱뉴스 글 그대로 둔다 — 한국어 소개글이 요약·원문 열기의 대상이다.
     # 원문 주소는 중복 판정과 seen 에만 쓴다 (core/dedup.py·core/seen.py).
     found = _attach_origins(articles)
-    if counts is not None:
+    if counts is not None and found is not None:
         counts["geeknews:원문"] = found
     return articles

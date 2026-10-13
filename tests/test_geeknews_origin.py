@@ -88,11 +88,11 @@ class _Status:
             raise requests.HTTPError(f"{self.status_code} Client Error", response=self)
 
 
-def test_글_페이지가_막히면_나머지는_묻지_않고_건수를_남긴다(monkeypatch, capsys):
+def test_글_페이지가_막히면_나머지는_묻지_않고_건수를_남기지_않는다(monkeypatch, capsys):
     """2026-09-30부터 news.hada.io 글 페이지가 브라우저가 아닌 요청에 전부 403이다
-    (피드와 robots.txt 는 200). 그대로 두면 회차마다 30번 403을 받고 원문 주소는
-    조용히 사라진다. 첫 요청이 막히면 그만 묻고, 찾은 원문 수를 출처 건수로 남겨
-    연속 0건이면 출처 침묵 알림으로 드러나게 한다."""
+    (피드와 robots.txt 는 200). 그대로 두면 회차마다 30번 403을 받는다. 첫 요청이
+    막히면 그만 묻는다. 막힌 건 알려진 상태라 0건으로 남기지 않는다 — 남기면 출처
+    침묵 이슈(#7)에 차단이 풀릴 때까지 회차마다 같은 댓글이 붙는다."""
     calls = []
 
     def get(url, **k):
@@ -102,7 +102,7 @@ def test_글_페이지가_막히면_나머지는_묻지_않고_건수를_남긴�
     counts: dict = {}
     got = geeknews.fetch(limit=30, counts=counts)
     assert len(got) == 5
-    assert counts == {"geeknews:원문": 0}
+    assert counts == {}
     assert len([u for u in calls if "topic?id=" in u]) == 1
     out = capsys.readouterr().out
     assert "403" in out and "4건" in out
