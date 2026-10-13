@@ -226,3 +226,11 @@ def test_check_source_silence가_옛_글만_주는_피드를_알린다(tmp_path,
                                            recent={"rss:x": 0, "rss:y": 0})
     # rss:y 는 수집 자체가 0건이라 아직 3회차가 안 됐다. rss:x 만 옛 글 판정
     assert quiet == ["rss:x(기간 내 0건)"]
+
+
+def test_긱뉴스_원문이_막혀_빠진_회차는_침묵이_아니다():
+    """글 페이지가 403이면 geeknews 는 geeknews:원문 을 적지 않는다(scrapers/geeknews.py).
+    0건이 쌓여 있어도 최근 회차에 키가 없으면 알림이 끝난다 (#7)."""
+    blocked = {"geeknews": 30}
+    hist = _runs(*([{"geeknews": 30, "geeknews:원문": 0}] * 3), blocked)
+    assert silent(hist, 3) == []
