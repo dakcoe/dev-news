@@ -1,5 +1,560 @@
 [
  {
+  "title": "Clearing chat history helps AI agents find better solutions",
+  "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791821400.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/fork_flush-1200x670.png",
+  "link_status": "ok",
+  "ko_title": "채팅 기록 삭제가 AI 에이전트의 솔루션 탐색을 개선한다",
+  "summary": "연구진은 장기 실행 AI 연구 에이전트가 대화 기록이 누적되면 동일한 아이디어 영역에 머물러 성능이 정체되는 현상을 발견했다. “Fork-and-Flush” 기법은 에이전트를 여러 분기로 나누고 각 분기의 채팅 기록을 삭제해 새로운 탐색을 가능하게 한다. 실험 결과, 이 방법을 적용한 경우 성능이 최대 66 %까지 향상되었다.",
+  "why": "장기 실행 AI 에이전트 개발 시 대화 기록이 쌓이면 탐색 범위가 좁아진다. 채팅 기록만 지우고 워크스페이스를 유지하는 분기 전략을 적용해 성능을 끌어올릴 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "devops-infra"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "onehumanbeing / esp32-iphone-agent",
+  "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 375,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/onehumanbeing/esp32-iphone-agent"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 375,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/onehumanbeing/esp32-iphone-agent",
+  "link_status": null,
+  "ko_title": "ESP32 iPhone 에이전트",
+  "summary": "ESP32-S3 보드를 iPhone USB에 마우스·키보드로 연결해 화면을 AirPlay로 미러링하고, OpenAI 호환 비전 모델을 이용해 iPhone을 원격 제어한다. 데모에서는 화이트보드에 그림을 그리고 알람을 설정하는 과정을 보여준다. GitHub 저장소에 Python 3.10+ 코드와 CI·MIT 라이선스가 포함돼 있다.",
+  "why": "기존 XCTest 기반 자동화는 Mac과 Xcode가 필수였지만 이 방식은 ESP32-S3 보드만으로 구동이 가능하다. 개발자 계정이나 탈옥 없이 iPhone을 원격 제어할 수 있어 하드웨어 제약이 크게 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "hardware",
+   "language",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "A slightly faster slimmer curl",
+  "url": "https://daniel.haxx.se/blog/2026/10/13/a-slightly-faster-slimmer-curl/",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1791872780.077,
+  "discussion": "https://lobste.rs/s/d9rpcl/slightly_faster_slimmer_curl",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://daniel.haxx.se/blog/2026/10/13/a-slightly-faster-slimmer-curl/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://daniel.haxx.se/blog/wp-content/uploads/2021/06/trimming-hedge.jpg",
+  "link_status": "ok",
+  "ko_title": "약간 더 빠르고 가벼운 curl",
+  "summary": "curl 8.23.0에 베이스64 인코딩·디코딩, URL 인코딩·디코딩, 날짜 파싱, URL 파싱, printf 호출 속도가 크게 개선되었다. 인코딩·디코딩은 최대 4배, 파싱은 2배 이상 빨라졌다. 이번 업데이트는 10월 14일에 배포될 예정이다.",
+  "why": "libcurl을 직접 호출하는 백엔드 코드에서 URL 파싱과 인코딩 처리가 빨라진다. 특히 URL 인코딩은 4배, 디코딩은 2배 이상 속도 향상이 확인되었다. 10월 14일 배포되는 8.23.0 버전으로 업데이트 시 효과를 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Microsoft plans to scale its own Maia AI chips to gigawatt levels by 2027",
+  "url": "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791818643.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/microsoft_mai_300-1200x770.png",
+  "link_status": "ok",
+  "ko_title": "Microsoft, 2027년까지 자체 Maia AI 칩을 기가와트 규모로 확장 계획",
+  "summary": "Microsoft는 2027년부터 Azure Maia AI 칩을 다중 기가와트 규모로 배치해 주요 추론 시스템으로 전환한다. 현재 Maia 200은 미국·유럽·호주에서 Copilot을 구동 중이며, 연말까지 GitHub Copilot과 Foundry에 적용될 예정이다. 차세대 Maia 300은 2027년에 출시돼 긴 입력과 빠른 채팅, 에이전트 작업에 최적화된다.",
+  "why": "GitHub Copilot과 Foundry가 연말까지 Maia 200으로 전환된다. Maia 300은 2027년 긴 입력과 에이전트 작업에 최적화된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "서비스 개발에 집중할 수 있는 AI 플랫폼 만들기",
+  "url": "https://toss.tech/article/ai-platform-foundation",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791855240.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/ai-platform-foundation"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://static.toss.im/disposables/contents/genai_portal.png",
+  "link_status": "ok",
+  "ko_title": "서비스 개발에 집중할 수 있는 AI 플랫폼 만들기",
+  "summary": "토스 AI Platform 팀은 서비스 팀이 모델 사용 신청과 설정을 관리하도록 하는 GenAI Portal과 실제 호출을 담당하는 GenAI Gateway를 도입했다. 이 플랫폼은 모델 선택, 비용·용량 검토, 권한·예산 관리 등을 통합해 중복 작업을 줄인다. 가격·성능 비교와 프로젝트 기반 승인 흐름을 제공해 금융 서비스에서도 정책에 맞는 사용을 지원한다.",
+  "why": "GenAI Gateway가 모델 지정과 실제 배포 환경을 분리해 호출을 처리한다. 공급자나 배포 환경이 바뀌어도 서비스 코드를 수정하지 않고 Gateway 설정만 변경하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Can a local LLM replace Claude Code? The benchmark everyone quotes is the wrong one.",
+  "url": "https://dev.to/rudratosh/can-a-local-llm-replace-claude-code-the-benchmark-everyone-quotes-is-the-wrong-one-2kna",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 3,
+  "published_at": 1791848624.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/rudratosh/can-a-local-llm-replace-claude-code-the-benchmark-everyone-quotes-is-the-wrong-one-2kna"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Frudratoshs%2Fdevto-assets%2Fmain%2Flocal-llm%2Fswe-bench.png",
+  "link_status": "ok",
+  "ko_title": "로컬 LLM이 Claude Code를 대체할 수 있을까? 모두가 인용하는 벤치마크는 잘못됐다",
+  "summary": "기존 가이드들은 SWE-bench 점수와 GPU 사양만 강조했지만, 실제 작업에서 로컬 LLM이 Claude Code와 같은 수준의 신뢰성 있는 에이전트 역할을 수행하는지는 별도 평가가 필요하다. 2026년에는 MoE 모델이 하드웨어 장벽을 낮추고, Ollama 등에서 Anthropic Messages API를 직접 지원하면서 로컬 환경에서도 Claude Code와 동일한 인터페이스를 사용할 수 있게 되었다. 글은 최신 모델군, 설정 방법, 실패 사례 및 비용 모델을 60초 안에 구현하는 방법을 제시한다.",
+  "why": "로컬 LLM은 함수 생성이 아니라 반복적인 도구 호출과 스키마 유지가 핵심이다. Ollama가 Anthropic Messages API를 지원해 프록시 없이 바로 연결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "LibreSpark / LibreTV",
+  "url": "https://github.com/LibreSpark/LibreTV",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 727,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/LibreSpark/LibreTV"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 727,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/LibreSpark/LibreTV",
+  "link_status": null,
+  "ko_title": "LibreSpark / LibreTV",
+  "summary": "LibreTV는 Next.js 15(App Router)와 TypeScript, Tailwind CSS 기반의 무료 온라인 동영상 검색·시청 플랫폼이다. ArtPlayer와 hls.js를 이용한 HLS 재생, 다중 소스 검색·통합, 라이브 IPTV 지원 등 다양한 기능을 제공한다. 프로젝트는 GitHub에 공개돼 문서·데모·배포 가이드가 함께 제공된다.",
+  "why": "Next.js 15와 TypeScript 기반이라 기존 백엔드 스택과 호환성이 높다. 다중 소스 병렬 검색과 HLS 재생 로직을 참고해 유사한 검색 기능을 구현할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "A modern web app in c",
+  "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+  "source": "lobsters",
+  "upvotes": 3,
+  "comments": 5,
+  "published_at": 1791838328.86,
+  "discussion": "https://lobste.rs/s/cjdy6d/modern_web_app_c",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://prophitt.me/writing/a-modern-web-app-in-c"
+  ],
+  "cross_source_count": 2,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "C로 만든 현대 웹 앱",
+  "summary": "1994년 방식인 CGI와 C 프로그램을 이용해 2026년에 사용자 계정·검색·결제·이메일 기능을 갖춘 상업용 웹 제품을 출시했다. OpenBSD·SQLite·정적 링크 바이너리 등 최소한의 스택으로 구현했으며, 배포는 파일 교체만으로 다운타임 없이 가능하다.",
+  "why": "C와 CGI 기반 스택은 프레임워크나 템플릿 엔진이 없어 HTML을 직접 출력해야 한다. 배포 시 바이너리 파일만 교체하면 되므로 서버 재시작 없이 다운타임 없이 업데이트할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "web-edit 0.1a0",
+  "url": "https://simonwillison.net/2026/Oct/12/web-edit/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791820476.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/12/web-edit/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static.simonwillison.net/static/2026/web-edit-card.jpg",
+  "link_status": "ok",
+  "ko_title": "web-edit 0.1a0 — 파일 편집 웹 UI",
+  "summary": "Python으로 만든 웹 앱이 폴더 내 파일을 웹 UI로 조회·편집할 수 있다. Tailscale을 통해 모바일 기기에서 직접 접근하도록 설계되었다. 편집기는 CodeMirror 6을 사용했으며, Codex와 GPT-6 Astra Extra High가 빌드에 활용됐다.",
+  "why": "자격 증명 파일을 LLM 경유 없이 직접 수정해야 할 때 유용하다. 모바일 환경에서 코드를 다룰 때 CodeMirror 6 기반 편집기가 최적화되어 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "web",
+   "hardware",
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "I turned my unused Kindle into a photo frame with GPT-6 Astra",
+  "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
+  "source": "hackernews",
+  "upvotes": 141,
+  "comments": 92,
+  "published_at": 1791846445,
+  "discussion": "https://news.ycombinator.com/item?id=50064318",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://nirajrajgor.com/blog/kindle-photo-frame/cover.jpg",
+  "link_status": "ok",
+  "ko_title": "사용하지 않은 Kindle을 GPT-6 Astra로 사진 액자 만들기",
+  "summary": "사용되지 않던 Kindle을 AI 코딩 에이전트를 활용해 사진 슬라이드쇼 앱으로 전환했다. GPT-6 Astra를 이용해 Kindle을 탈옥하고, 자체 도구로 슬라이드쇼를 구현해 10장의 사진을 4분씩 순환한다. 개발 과정에서 Wi-Fi 기반 연결, 자동화 테스트 통과, 화면 잔상 문제 등을 다루었다.",
+  "why": "자동화 테스트가 통과해도 실제 화면 잔상 문제는 잡히지 않았다. 물리적 디스플레이 리프레시 특성은 코드 검증 단계에서 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Show GN: 트립파파야(TripPapaya) - 무한 캔버스에서 자유롭게 여행 일정을 계획하는 도구",
+  "url": "https://news.hada.io/topic?id=35285",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791874572.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35285"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 트립파파야(TripPapaya) - 무한 캔버스에서 자유롭게 여행 일정을 계획하는 도구",
+  "summary": "개인 프로젝트로 개발 중인 트립파파야는 여행 일정 관리 서비스이다. 기존 서비스와 달리 날짜별로만 장소를 추가하는 것이 아니라 무한 캔버스 위에 사진, 메모, 링크 등을 자유롭게 배치할 수 있다. 사용자는 여러 장소를 비교하고 시각적으로 정리하면서 일정을 설계한다.",
+  "why": "여행 일정 계획 시 날짜별 순서 정렬이 아닌 시각적 비교가 필요한 경우 이 도구를 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Kevin Kelly의 2016년 AI 예측, 10년 후",
+  "url": "https://news.hada.io/topic?id=35280",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791870235.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35280"
+  ],
+  "cross_source_count": 1,
+  "score": 34,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Kevin Kelly의 2016년 AI 예측, 10년 후",
+  "summary": "Kevin Kelly는 2016년 저서 The Inevitable에서 AI가 검색을 넘어 핵심 제품이 되고 저렴한 기반 서비스로 일상에 스며들 것이라고 예측했다. 그는 구글이 검색을 AI로 개선하기보다 AI를 검색으로 개선하고 있다고 해석했다. 2026년에는 검색 자체보다 AI가 주력 기술이 될 것으로 전망한다.",
+  "why": "AI가 검색 기능을 대체하는 주력 기술로 자리 잡는 흐름을 확인해야 한다. 백엔드 서비스 설계 시 검색 API 의존도를 낮추고 AI 추론 계층을 직접 통합하는 구조를 검토할 시점이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Who is vfmaddrnd231pd??",
+  "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+  "source": "lobsters",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1791866614.162,
+  "discussion": "https://lobste.rs/s/2h9opx/who_is_vfmaddrnd231pd",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/"
+  ],
+  "cross_source_count": 2,
+  "score": 26,
+  "image": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/og.png",
+  "link_status": "ok",
+  "ko_title": "vfmaddrnd231pd는 무엇인가요?",
+  "summary": "이 명령은 FMA 명령어 집합에 존재한다고 문서에 적혀 있으나 실제 CPU에서는 #UD 예외를 발생시켜 존재하지 않는다. Intel 매뉴얼에만 언급되고 GNU 어셈블러·컴파일러에서도 지원되지 않는다.",
+  "why": "FMA 명령어 집합에서 명령어별 반올림 제어가 가능해 보이나 실제 CPU에서는 #UD 예외가 발생한다. 따라서 해당 명령어를 활용한 알고리즘 최적화는 현재 불가능하며, 문서와 실체 간 불일치에 유의해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Show GN: Bohm - AI로 만든 웹앱을 데이터와 함께 내 PC에서 계속 쓰게 해주는 AI 브라우저",
+  "url": "https://news.hada.io/topic?id=35284",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791873018.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35284"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: Bohm - AI로 만든 웹앱을 데이터와 함께 내 PC에서 계속 쓰게 해주는 AI 브라우저",
+  "summary": "",
+  "why": "AI 생성 웹앱의 데이터 손실과 API 키 노출 문제를 해결한다. 브라우저 데이터 삭제 시에도 앱과 기록을 유지할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Show GN: false-green-detector: 무의미한 테스트를 잡아내는 에이전트 스킬",
+  "url": "https://news.hada.io/topic?id=35278",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791868798.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35278"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: false-green-detector — 무의미한 테스트를 잡아내는 에이전트 스킬",
+  "summary": "",
+  "why": "AI 코딩 에이전트가 생성한 테스트 코드가 형식적으로만 작성되었는지 검증할 수 있다. 코드 검증의 신뢰도를 높이고 싶을 때 이 스킬을 활용해 무의미한 테스트를 걸러내야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "DataCube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Totals (1997)",
+  "url": "https://arxiv.org/pdf/cs/0701155",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": 1791867475.349,
+  "discussion": "https://lobste.rs/s/rji3qe/datacube_relational_aggregation",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/pdf/cs/0701155"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "DataCube: 관계형 집계 연산자 일반화 — 그룹-바이·크로스-탭·소계",
+  "summary": "",
+  "why": "SQL의 GROUP BY가 1차원 집계만 처리하는 한계를 넘어 N차원 집계 연산자를 정의한 논문이다. 다차원 데이터 분석 시 기존 연산자 조합으로 구현하던 로직을 단일 연산자로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
+  "title": "Vi Hart's Big Navier-Stokes Post",
+  "url": "https://www.patreon.com/vihart/posts/vi-harts-big-171939430",
+  "source": "lobsters",
+  "upvotes": 15,
+  "comments": 1,
+  "published_at": 1791854989.487,
+  "discussion": "https://lobste.rs/s/j30pg4/vi_hart_s_big_navier_stokes_post",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.patreon.com/vihart/posts/vi-harts-big-171939430"
+  ],
+  "cross_source_count": 2,
+  "score": 0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Vi Hart의 대규모 Navier-Stokes 게시물",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-13T16:00:04.790841+09:00",
+  "batch_label": "10월 13일 16:00"
+ },
+ {
   "title": "Parsing JSON at tens of gigabytes per second… in Python",
   "url": "https://lemire.me/blog/2026/10/12/parsing-json-at-tens-of-gigabytes-per-second-in-python/",
   "source": "lobsters",
