@@ -1,52 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-04T00:00:36+09:00",
-   "total": 25,
-   "counts": {
-    "ok": 13,
-    "blocked": 7,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34714",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34713",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34712",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34709",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34708",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/chatham-financial",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-04T08:00:40+09:00",
    "total": 25,
    "counts": {
@@ -1312,6 +1266,47 @@
      "url": "https://arxiv.org/pdf/cs/0701155",
      "source": "lobsters",
      "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-14T00:00:31+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 14,
+    "blocked": 6,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.bloomberg.com/news/features/2026-10-13/cftc-staff-told-to-retract-analysis-of-suspicious-oil-trades-on-iran",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35302",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35301",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35300",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35299",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35298",
+     "source": "geeknews",
+     "reason": "blocked"
     }
    ]
   }
