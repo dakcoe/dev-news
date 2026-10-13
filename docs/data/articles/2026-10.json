@@ -1,5 +1,540 @@
 [
  {
+  "title": "Janas - SSD를 활용해 RAM보다 큰 MoE 언어 모델을 실행하는 추론 엔진",
+  "url": "https://news.hada.io/topic?id=35298",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791898862.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35298"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Janas - SSD를 활용해 RAM보다 큰 MoE 언어 모델을 실행하는 추론 엔진",
+  "summary": "일반 PC에서 GPU 없이 MoE 언어 모델을 실행할 수 있는 로컬 추론 엔진을 발표했다. 토큰별로 필요한 가중치를 NVMe SSD에서 읽어오고, 자주 사용하는 전문가 파라미터는 메모리에 캐시한다. 기존에는 전체 모델을 RAM에 올려야 했던 제약을 완화한다.",
+  "why": "GPU 없이 MoE 모델을 돌리려면 전체 가중치를 RAM에 올리는 기존 방식을 버려야 한다. 토큰마다 필요한 전문가만 SSD에서 읽어오므로 메모리 용량 제약이 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Anthropic says it cut Claude reasoning token theft by up to 99% in fight against industrial-scale distillation",
+  "url": "https://the-decoder.com/anthropic-says-it-cut-claude-reasoning-token-theft-by-up-to-99-in-fight-against-industrial-scale-distillation/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791889606.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/anthropic-says-it-cut-claude-reasoning-token-theft-by-up-to-99-in-fight-against-industrial-scale-distillation/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/anthropic_distillation_defense.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 클로드 추론 토큰 도난을 최대 99% 감소시켰다고 발표",
+  "summary": "Anthropic은 새로운 방어 체계로 클로드 모델의 내부 추론 단계(토큰) 추출을 90~99% 줄였다고 밝혔다. 가짜 계정 네트워크를 이용한 대규모 증류 공격을 차단하기 위해 접근을 제한하고, 추출 시도를 탐지하는 분류기를 도입해 수만 개 계정을 자동 차단했다. 중국 기업 Zhipu와 Moonshot이 해당 공격에 관여한 것으로 지목되었다.",
+  "why": "클로드 API를 통해 내부 추론 토큰을 직접 추출하던 기존 방식은 이제 차단된다. 탐지 분류기 오작동으로 합법적 사용 계정도 자동 차단될 수 있으니 주의해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "MacBook Air에서 1시간 분량 오디오를 약 13초 만에 전사",
+  "url": "https://news.hada.io/topic?id=35302",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791902270.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35302"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "MacBook Air에서 1시간 오디오를 13초 만에 전사",
+  "summary": "Embedding Gemma Transcribe가 Google EmbeddingGemma 2 모델을 활용해 기본 MacBook Air에서 1시간 분량 오디오를 약 13초에 기기 내에서 전사한다. 오디오 인코더는 기존을 유지하고 짧은 구간을 텍스트 공간으로 변환한다.",
+  "why": "기기 내에서 전사되므로 오디오 데이터를 외부 서버로 전송하지 않는다. 개인정보 보호가 필요한 로컬 환경에서 음성 처리 파이프라인을 구성할 때 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Western mathematicians fear AI makes them dumber while China builds an entire alliance for it",
+  "url": "https://the-decoder.com/western-mathematicians-fear-ai-makes-them-dumber-while-china-builds-an-entire-alliance-for-it/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791902273.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/western-mathematicians-fear-ai-makes-them-dumber-while-china-builds-an-entire-alliance-for-it/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/chinese_math_ai_alliance.png",
+  "link_status": "ok",
+  "ko_title": "서구 수학자들, AI가 자신들을 더 둔하게 만든다 우려… 중국은 전체 연합 구축",
+  "summary": "서구 수학자들은 AI가 증명을 자동화해 이해력을 약화시킨다고 우려하고 일부는 AI 생성 증명에 대한 보이콧을 제안한다. 반면 중국의 유명 수학자 야우 싱퉁을 중심으로 8개 기관이 참여하는 ‘Yau Laboratory Alliance for Mathematics and Artificial Intelligence’가 설립돼 1,000명 이상의 연구자를 연결하고 특화 모델·기계 검증 증명·투명한 AI 추론을 목표로 한다. 양측의 입장은 AI가 진정한 수학적 통찰을 제공하는지에 대한 합의가 없으며, 이는 현재 수학 연구와 AI 활용에 대한 논쟁을 촉발한다.",
+  "why": "AI 생성 증명의 신뢰성 검증 기준이 아직 정립되지 않았다. 기계 검증 증명과 투명한 추론 과정이 제공될 때까지는 AI 산출물을 그대로 신뢰하기 어렵다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "hardware",
+   "release",
+   "science"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Mozilla Introduces Firefox Enterprise",
+  "url": "https://www.firefox.com/en-US/enterprise/",
+  "source": "hackernews",
+  "upvotes": 252,
+  "comments": 117,
+  "published_at": 1791892842,
+  "discussion": "https://news.ycombinator.com/item?id=50070302",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.firefox.com/en-US/enterprise/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://www.firefox.com/media/img/firefox/flare/og.4d50d9b1674b.png",
+  "link_status": "ok",
+  "ko_title": "Mozilla, Firefox Enterprise 도입",
+  "summary": "Firefox Enterprise는 온프레미스 환경에 배포해 데이터와 정책을 자체 인프라에서 관리하도록 설계됐다. 브라우저 수준에서 민감 데이터 유출을 방지하고, 아이덴티티 기반 접근을 제공한다. 기존 보안 스택과 통합되며, 엔진 독립성을 통해 벤더 락인과 공유 실패 위험을 감소시킨다. 향후 Thunderbird 관리 기능이 콘솔에 추가될 예정이다.",
+  "why": "온프레미스 배포로 데이터와 정책 관리를 자체 인프라에서 수행할 수 있다. 브라우저 수준에서 민감 데이터 유출을 차단하고 아이덴티티 기반 접근을 제공한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Quoting Geoffrey Huntley",
+  "url": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791898320.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Geoffrey Huntley 인용",
+  "summary": "그는 에이전트가 진단 라이브러리를 우회해 직접 관측 모듈을 호출하는지를 git diff에서 검사하는 pre-commit 훅을 만들었다. 커밋을 차단하고 진단 라이브러리를 사용하라는 프롬프트를 삽입한다. 이 방법으로 코드 품질과 관측 일관성을 자동으로 강제한다.",
+  "why": "에이전트가 진단 라이브러리를 우회하는 코드를 커밋 단계에서 차단한다. 수동으로 AGENTS.md를 수정해도 발생하는 규칙 이탈을 자동으로 막는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "release",
+   "career-culture",
+   "showcase"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
+  "url": "https://devlog.creusot.rs/v0-14-0/",
+  "source": "lobsters",
+  "upvotes": 10,
+  "comments": 3,
+  "published_at": 1791878236.122,
+  "discussion": "https://lobste.rs/s/6tbd2o/creusot_0_14_0_release_contracts_for_rust",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://devlog.creusot.rs/v0-14-0/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://devlog.creusot.rs/creusot-logo-center.jpg",
+  "link_status": "ok",
+  "ko_title": "Creusot 0.14.0 릴리스 — Rust용 계약, 형식적으로 증명됨",
+  "summary": "Creusot 0.14.0에서는 부분 순서를 지원하도록 PartialOrd 사양이 전체 순서에서 완화되었습니다. 새로운 논리 함수 lt_log와 관련 법칙이 도입되었으며, 전체 순서는 별도 법칙으로 정의됩니다. 또한 스냅샷에 대한 검증 조건(VC) 생성 기능이 추가되었습니다.",
+  "why": "Rust의 PartialOrd 사양이 부분 순서로 완화되어 기존 전체 순서만 검증하던 방식과 달라진다. 스냅샷에 대한 검증 조건 생성 기능이 추가되어 논리 표현식 검증 범위가 넓어졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "FelipePrado0 / gow3_pc",
+  "url": "https://github.com/FelipePrado0/gow3_pc",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 220,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/FelipePrado0/gow3_pc"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 220,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/FelipePrado0/gow3_pc",
+  "link_status": null,
+  "ko_title": "PC용 God of War III Remastered",
+  "summary": "이 프로젝트는 Windows 10·11에서 PlayStation 4용 God of War III Remastered를 실행할 수 있게 하는 PC 포트이다. CPU 측은 네이티브 코드가 직접 실행되며, 그래픽은 shadPS4 비디오 코어가 Vulkan으로 변환한다. 게임 파일은 포함되지 않아 사용자가 직접 PS4에서 덤프해야 하고, 테스트 환경에서는 1080p 144 FPS, 4K 108 FPS를 기록했다.",
+  "why": "CPU는 x86-64 네이티브 코드로 직접 실행되어 에뮬레이션 오버헤드가 없다. 그래픽은 shadPS4 비디오 코어가 Vulkan으로 변환한다. 게임 파일은 PS4에서 직접 덤프해야 하며, 1080p 외 해상도에서는 텍스처 깨짐 현상이 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "NVIDIA-Omniverse / usd-brep",
+  "url": "https://github.com/NVIDIA-Omniverse/usd-brep",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 261,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/NVIDIA-Omniverse/usd-brep"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 261,
+  "score": 52,
+  "image": "https://opengraph.githubassets.com/1/NVIDIA-Omniverse/usd-brep",
+  "link_status": null,
+  "ko_title": "NVIDIA-Omniverse / usd-brep 저장소",
+  "summary": "이 저장소는 Omniverse용 USD BRep(경계표현 NURBS 솔리드 모델링) 라이브러리를 제공한다. Windows에서는 Visual Studio C++ 도구와 Windows SDK가 필요하고, Linux에서는 build-essential만 있으면 된다. OpenUSD, Python 3.12, pybind11 등 빌드 시 필요한 다른 의존성은 Packman을 통해 자동으로 가져온다. 현재 바이너리와 샘플 모델은 Git LFS로 관리된다.",
+  "why": "Windows에서 빌드하려면 VS 2022를 쓰더라도 MSVC v142 빌드 도구가 필수다. 빌드 환경과 실행 환경이 분리된 경우 VC redistributable을 별도로 설치해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Faster Fourier Transforms",
+  "url": "https://www.argmin.net/p/faster-fourier-transforms",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1791885691.157,
+  "discussion": "https://lobste.rs/s/xz6sst/faster_fourier_transforms",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.argmin.net/p/faster-fourier-transforms"
+  ],
+  "cross_source_count": 2,
+  "score": 51,
+  "image": "https://substackcdn.com/image/fetch/$s_!1mN7!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f0c6088-ce61-4802-ac3f-c8bc4060a05a_840x599.jpeg",
+  "link_status": "ok",
+  "ko_title": "Faster Fourier Transforms",
+  "summary": "OpenAI 수학 저장소에 FFT를 더 빠르게 계산한다는 구현이 추가되었다. 기존 O(n제곱) 복잡도에서 n·log n 수준으로 연산량을 줄이는 방법을 재귀적 알고리즘으로 설명한다. 구현 예제와 신호 처리·복잡도 복습 자료가 포함돼 있다.",
+  "why": "기존 FFT 구현을 대체하거나 학습 자료로 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "11 year old unsoundness bugs found in Rust borrow checker",
+  "url": "https://github.com/rust-lang/rust/issues/164250",
+  "source": "hackernews",
+  "upvotes": 426,
+  "comments": 225,
+  "published_at": 1791887220,
+  "discussion": "https://news.ycombinator.com/item?id=50069499",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/rust-lang/rust/issues/164250"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/89703d80e09dcc38fd360c6ba6623aa18765d11a5b90fb0f906939487cfbf637/rust-lang/rust/issues/164250",
+  "link_status": "ok",
+  "ko_title": "11년 된 Rust 빌림 검사기 불안정성 버그 발견",
+  "summary": "Rust 타입 시스템의 메모리 안전성을 위협하는 구조체 수명 요구를 회피할 수 있는 버그가 11년 전부터 존재함이 밝혀졌다. 해당 버그는 의도적인 악의적 Drop 구현이 필요해 실제 메모리 손상을 일으키기 어렵지만, 타입 시스템의 불안정성을 보여준다. Rust 팀은 이 문제를 프로젝트 제로와 차세대 트레이트 솔버 작업의 일환으로 해결 중이다.",
+  "why": "의도적으로 악의적인 Drop 구현이 없다면 실제 메모리 손상은 일어나지 않는다. 따라서 기존 코드에 대한 즉각적인 수정 조치는 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Where is all the new, good software?",
+  "url": "https://www.natemeyvis.com/where-is-all-the-new-good-software/",
+  "source": "lobsters",
+  "upvotes": 16,
+  "comments": 24,
+  "published_at": 1791882849.562,
+  "discussion": "https://lobste.rs/s/hjhufj/where_is_all_new_good_software",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.natemeyvis.com/where-is-all-the-new-good-software/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://www.natemeyvis.com/static/og-image.png",
+  "link_status": "ok",
+  "ko_title": "새롭고 좋은 소프트웨어는 어디에 있나요",
+  "summary": "AI 코딩이 발전했음에도 새로운 좋은 소프트웨어가 눈에 띄지 않는 이유를 여러 가설로 제시한다. 기존 제품의 버그 감소·성능 향상, 기능 추가는 이루어지고 있지만, 사용자들의 새로운 소프트웨어 채택이 적고 기업 내부에서 AI가 적용되지 않은 정치적 절차가 존재한다. 또한 AI가 공개 소프트웨어 대신 사내 맞춤형 도구를 만들게 하여 외부에 보이지 않는 경우도 있다.",
+  "why": "AI가 사내 맞춤형 도구 제작으로 이어져 외부에 공개되지 않는 소프트웨어가 늘고 있다. 공개 생태계에서 새로운 도구 발견이 어려워질 수 있어 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "Apple HomeView",
+  "url": "https://www.apple.com/apple-homeview/",
+  "source": "hackernews",
+  "upvotes": 210,
+  "comments": 244,
+  "published_at": 1791896532,
+  "discussion": "https://news.ycombinator.com/item?id=50071017",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.apple.com/apple-homeview/"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://www.apple.com/v/apple-homeview/a/images/meta/apple-homeview__lk7n65hb6bm2_og.png?202610121723",
+  "link_status": "ok",
+  "ko_title": "Apple HomeView",
+  "summary": "Apple HomeView는 7인치 Liquid Retina 디스플레이와 12MP Center Stage 카메라, 4개의 빔포밍 마이크, 공간 오디오 스피커를 갖춘 스마트 디스플레이이다. 화면 밝기는 500니트에서 0.3니트까지 조절 가능하며, 근접에 따라 정보 표시가 변한다. 벽걸이 옵션도 제공돼 거실·현관 등 다양한 공간에 설치할 수 있다.",
+  "why": "백엔드 개발자의 업무 환경과 직접적인 연관이 없어 확인이나 조치 대상이 아니다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "The reverts will continue until morale improves",
+  "url": "http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves",
+  "source": "lobsters",
+  "upvotes": 13,
+  "comments": 0,
+  "published_at": 1791891426.816,
+  "discussion": "https://lobste.rs/s/aasanp/reverts_will_continue_until_morale",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "되돌리기는 사기가 회복될 때까지 계속됩니다",
+  "summary": "PostgreSQL 19 베타 단계에서 8~10개의 주요 기능이 예상보다 많이 되돌려졌으며, 이는 코드 품질, 일정 압박, 구조적 결함 등 여러 요인이 복합적으로 작용한 결과이다. 일부 결함은 LLM 기반 코드 리뷰로 빠르게 발견돼 대량의 결함 보고서가 생성되었다.",
+  "why": "LLM 기반 코드 리뷰가 베타 단계에서 잠재적 결함을 대량으로 노출시킨다. 기존처럼 출시 후 수년에 걸쳐 점진적으로 수정하던 방식이 더 이상 유효하지 않다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "AI is a tool and using it well takes skill",
+  "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+  "source": "hackernews",
+  "upvotes": 516,
+  "comments": 414,
+  "published_at": 1791841218,
+  "discussion": "https://news.ycombinator.com/item?id=50063427",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://yyhh.org/blog/2026/10/ai-is-a-tool/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AI는 도구이며 잘 활용하려면 기술이 필요하다",
+  "summary": "Rich Hickey는 LLM을 자동화라며 도구가 아니라고 주장한다. 필자는 LLM도 인간이 조작하는 도구가 될 수 있으며, 사용에 기술이 필요하다고 반박한다. 도구와 자동화의 경계가 모호함을 강조하고, LLM 사용 시 판단과 피드백이 중요하다고 설명한다.",
+  "why": "LLM은 예측 불가능성이 한계지만, 이는 도구가 아님을 의미하지 않는다. 도구 사용에 필요한 판단과 피드백 능력이 LLM 활용에도 동일하게 적용된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "디자이너의 아이디어가 금융상품이 되기까지",
+  "url": "https://toss.tech/article/rpg-savings",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791896400.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/rpg-savings"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": "https://static.toss.im/disposables/static/squirrel-acorn-techblog-thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "디자이너의 아이디어가 금융상품이 되기까지",
+  "summary": "토스뱅크 디자인 챕터에서 OOTB 시간을 활용해 ‘키워봐요 31일적금’의 재구성을 시도했다. 기존 적금에 게임-스토리와 멀티엔딩을 도입해 매일 앱 방문을 유도하고, 캐릭터 성장과 저축을 연결했다. 디자인 시안에서 금융상품으로 구현하기 위한 규칙과 사용자 경험을 고민한 과정이 소개된다.",
+  "why": "백엔드 개발자가 금융상품의 게임화 로직을 구현할 때, 저축액과 캐릭터 성장의 매핑 규칙을 설계해야 한다. 멀티엔딩 분기 조건과 일일 스토리 트리거는 단순 출석체크가 아닌 사용자 선택에 기반해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
+  "title": "CFTC Staff Were Told to Retract Analysis of Suspicious Oil Trades",
+  "url": "https://www.bloomberg.com/news/features/2026-10-13/cftc-staff-told-to-retract-analysis-of-suspicious-oil-trades-on-iran",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 127,
+  "published_at": 1791886080,
+  "discussion": "https://news.ycombinator.com/item?id=50069329",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bloomberg.com/news/features/2026-10-13/cftc-staff-told-to-retract-analysis-of-suspicious-oil-trades-on-iran"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "CFTC 직원, 의심스러운 석유 거래 분석 철회 지시",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T00:00:05.177447+09:00",
+  "batch_label": "10월 14일 00:00"
+ },
+ {
   "title": "Clearing chat history helps AI agents find better solutions",
   "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/",
   "source": "rss",
