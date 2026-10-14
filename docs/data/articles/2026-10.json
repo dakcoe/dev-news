@@ -1,5 +1,539 @@
 [
  {
+  "title": "Is 'Attention' the Essence of Intelligence?",
+  "url": "https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/",
+  "source": "hackernews",
+  "upvotes": 61,
+  "comments": 58,
+  "published_at": 1791947425,
+  "discussion": "https://news.ycombinator.com/item?id=50081930",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/Qualia-Attention-cr.Lisett-Ledon-Social.jpg",
+  "link_status": "ok",
+  "ko_title": "‘Attention’이 지능의 핵심인가?",
+  "summary": "2014년 몬트리올 대학 연구실 인턴이 번역 모델에 ‘Attention’ 메커니즘을 도입해 기존 신경망의 한계를 극복했다는 내용이다. 이 접근법은 문장 길이에 따른 성능 저하 문제를 완화하고, 이후 대규모 언어 모델의 발전에 영향을 주었다. 현재 ‘Attention’은 트랜스포머 기반 모델의 핵심 구성 요소로 널리 사용된다.",
+  "why": "트랜스포머 기반 모델의 핵심인 어텐션 메커니즘의 기원을 이해하는 데 도움이 된다. 장문 처리 시 성능 저하 원인을 파악해 백엔드 로직 설계 시 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Saffsanity / sill",
+  "url": "https://github.com/Saffsanity/sill",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 219,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Saffsanity/sill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 219,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/Saffsanity/sill",
+  "link_status": null,
+  "ko_title": "Sill — Mac 창을 iPhone·iPad에 표시",
+  "summary": "Sill은 Mac의 창이나 전체 화면을 iPhone·iPad로 스트리밍해 터치·키보드·Apple Pencil으로 제어할 수 있게 한다. HEVC 영상으로 인코딩해 동일 네트워크, USB, Direct Wireless, 또는 Tailscale 같은 VPN을 통해 연결한다. 계정이나 중간 서버가 필요하지 않으며, macOS와 iOS용 앱은 무료로 제공된다.",
+  "why": "중간 서버 없이 Mac 창을 iOS 기기에 띄워 원격으로 제어할 수 있다. 네트워크가 다르면 Tailscale 같은 VPN으로 연결해 사용한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Spark Connect on Kubernetes #2: Operator로 만드는 Control Plane",
+  "url": "https://toss.tech/article/spark-connect-on-kubernetes-2",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791954360.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/spark-connect-on-kubernetes-2"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "Spark Connect on Kubernetes #2: Operator로 만드는 Control Plane",
+  "summary": "Spark Connect 서버의 생명주기를 관리하기 위해 Apache Spark Operator와 Spark Tenant Operator 두 계층을 도입했다. Tenant Operator는 여러 SparkApplication을 선언·교체하고, Spark Operator는 개별 Driver의 기동·복구를 담당한다. 설정 변경 시 새로운 서버를 준비하고 기존 세션을 마무리하는 절차를 설명한다.",
+  "why": "Spark Connect 서버를 Kubernetes에서 운영할 때 두 Operator로 생명주기를 관리하는 구조를 보여준다. 설정 변경 시 새 서버를 준비하고 기존 세션을 마무리하는 절차를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+  "url": "https://pulseos.finance",
+  "source": "hackernews",
+  "upvotes": 100,
+  "comments": 54,
+  "published_at": 1791933203,
+  "discussion": "https://news.ycombinator.com/item?id=50080275",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://pulseos.finance"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://pulseos.finance/images/pulse-local/og.jpg",
+  "link_status": "ok",
+  "ko_title": "맥용 예산 관리 앱 Pulse Local, AI 모델이 내 컴퓨터에서 실행",
+  "summary": "Pulse Local은 사용자의 거래 데이터를 로컬에 보관하고, AI 모델도 같은 기기에서 동작해 질문에 답한다. 질문 내용과 데이터가 외부 서버로 전송되지 않아 완전한 프라이버시를 제공한다. 앱은 거래 내역을 기반으로 지출 분석, 월별 비교 등을 실시간으로 보여준다.",
+  "why": "로컬 AI 모델 실행 패턴을 참고할 수 있다. 프라이버시 요구가 높은 백엔드 서비스 설계에 활용 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "hardware",
+   "release",
+   "industry",
+   "science",
+   "showcase"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "로보틱스를 위한 Gemini 4 Argon",
+  "url": "https://news.hada.io/topic?id=35326",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791941647.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35326"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "로보틱스를 위한 Gemini 4 Argon",
+  "summary": "Gemini 4 Argon은 물리 추론, 코드 생성, 시각적 의미 추론을 결합한 모델이다. 로봇 제어, 시뮬레이션 구축, 데이터 주석, 연구 및 자기 개선에 활용할 수 있다. 3D 환경 물리 문제 해결 능력을 평가하는 ERQA 벤치마크에서 순수 추론만으로 87%의 성능을 기록했다.",
+  "why": "로봇 시뮬레이션 구축이나 제어 코드 생성 시 물리 추론과 코드 생성을 단일 모델로 처리할 수 있다. ERQA 벤치마크 87%라는 수치는 3D 환경의 물리 문제 해결 신뢰도를 가늠하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Higgsfield takes AI video from 1 minute to over 10",
+  "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791892800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/higgsfield-longer-videos-voice"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Higgsfield, AI 영상 길이를 1분에서 10분 이상으로 확대",
+  "summary": "Higgsfield가 GPT-6 Astra를 도입해 AI 영상의 최대 길이를 10분 이상으로 늘렸다. GPT-Image-2.5를 통해 시각적 디테일을 강화했다. GPT-Live를 활용해 음성 기반 영화 제작 경로를 제공한다.",
+  "why": "AI 영상 생성 시나리오에서 1분 이내의 짧은 클립만 만들던 제약이 사라졌다. 10분 이상의 긴 형식 콘텐츠를 직접 생성할 수 있게 되어 편집 작업이 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "MIT 수업 프로젝트, FDA 허가를 받은 떨림 치료 기기로 발전",
+  "url": "https://news.hada.io/topic?id=35333",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791959547.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35333"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "MIT 수업 프로젝트, FDA 허가를 받은 떨림 치료 기기로 발전",
+  "summary": "Encora Therapeutics가 손목 착용형 기기를 FDA 510(k) 허가받았다. 이 기기는 기계적 진동으로 감각 수용체를 자극해 신경계를 조절한다. 2017년 MIT 수업에서 시작해 약 9년 동안 개발된 결과이다.",
+  "why": "신경계 조절을 위한 기계적 진동 접근법이 임상 단계로 넘어섰다. AI 기반 신호 처리나 하드웨어 제어 로직을 다루는 개발자는 이 기술의 실제 적용 사례를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Apple, 새 ‘Switch to Safari’ 캠페인으로 Chrome을 떠나야 할 이유 소개",
+  "url": "https://news.hada.io/topic?id=35327",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791945176.0,
+  "merged_sources": [
+   "geeknews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35327",
+   "https://www.apple.com/safari/switch/"
+  ],
+  "cross_source_count": 2,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Apple, 새 ‘Switch to Safari’ 캠페인으로 Chrome을 떠나야 할 이유 소개",
+  "summary": "Apple이 ‘Switch to Safari’ 웹페이지와 두 개의 YouTube 영상을 공개했다. Safari를 Chrome보다 강력하고 개인정보 보호에 유리한 브라우저로 홍보한다. Apple에 따르면 Mac에서 동영상 스트리밍 시 Safari가 Chrome보다 최대 5시간 더 오래 배터리를 유지한다.",
+  "why": "Apple이 제시한 배터리 수명 차이는 Mac에서 장시간 동영상을 보는 작업 환경에 직접적인 영향을 미친다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Show GN: 싱글 겟앰프드 웹버전",
+  "url": "https://news.hada.io/topic?id=35331",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791954756.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35331"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 싱글 겟앰프드 웹버전",
+  "summary": "고전 게임 ‘싱글 겟앰프드’를 WebAssembly와 CheerpJ를 이용해 브라우저에서 바로 실행할 수 있게 포팅했다. Java 코드를 설치 없이 웹에서 구동하도록 변환했으며, 별도의 다운로드 없이 플레이가 가능하다.",
+  "why": "CheerpJ를 활용해 Java 코드를 설치 없이 브라우저에서 구동하는 방식이다. 기존 Java 애플리케이션을 웹 환경에 배포할 때 설치 절차를 생략할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Conquering Recursion",
+  "url": "https://nsl.com/misc/Conquering_Recursion.html",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": 1791954430.073,
+  "discussion": "https://lobste.rs/s/glfn7i/conquering_recursion",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://nsl.com/misc/Conquering_Recursion.html"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "재귀 정복",
+  "summary": "재귀 절차를 작은 재사용 가능한 컴포넌트로 분해하는 조합자 패턴을 소개한다. 기존 방식과 비교해 새로운 프로그래밍 스타일을 제시하고, 조합자를 사용해 얻는 의미 정보가 성능 향상에 기여할 수 있음을 보인다. Joy 언어의 고차 조합자를 활용해 조건문과 재귀 호출 없이도 재귀 문제를 해결하는 방법을 설명한다.",
+  "why": "재귀 로직을 조합자로 분해하면 명시적 조건문이 줄어든다. 이 구조가 해석기나 최적화 단계에서 성능 향상의 단서가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "llm-gemini 0.35",
+  "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791930534.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/13/llm-gemini/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static.simonwillison.net/static/2026/gemini-4-argon-artificial-analysis.webp",
+  "link_status": "ok",
+  "ko_title": "llm-gemini 0.35",
+  "summary": "llm-gemini에 Gemini 4 Argon 모델 지원이 추가되었으며, 현재 구독 플랜 고객에게 제공된다. 입력당 $2, 출력당 $10의 가격으로 기존 경쟁 모델보다 저렴하고, 벤치마크 비용이 $2,407로 경쟁 모델보다 크게 낮다. 12월 1일부터 가격이 두 배로 인상될 예정이다.",
+  "why": "12월 1일부터 Gemini 4 Argon 가격이 두 배로 오릅니다. 인상 전까지 벤치마크 비용을 고려해 이 모델을 호출하는 로직을 점검해야 합니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "web",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Compiler bootstrapping depends on more than you might think",
+  "url": "https://utcc.utoronto.ca/~cks/space/blog/programming/CompilerBootstrappingVsOSChanges",
+  "source": "lobsters",
+  "upvotes": 3,
+  "comments": 0,
+  "published_at": 1791956062.699,
+  "discussion": "https://lobste.rs/s/6vs8a0/compiler_bootstrapping_depends_on_more",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://utcc.utoronto.ca/~cks/space/blog/programming/CompilerBootstrappingVsOSChanges"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "컴파일러 부트스트래핑은 생각보다 복잡하다",
+  "summary": "Go 컴파일러는 자체 언어로 작성돼 신뢰할 수 없는 바이너리 없이 빌리기 어렵다. 초기 버전은 C로 구현돼 현재 버전을 C 기반 바이너리에서 부트스트랩할 수 있다. 그러나 최신 OS와 C 표준 라이브러리에 맞춰 만든 Go 1.4 바이너리는 과거 ABI에 고정돼 이후 버전(1.19, 1.21 등) 빌드 시 호환성 문제가 발생한다. Linux는 오래된 바이너리 호환성을 유지하지만 OpenBSD 등은 보장하지 않는다.",
+  "why": "Go 1.4 기반 바이너리는 과거 ABI에 고정되어 최신 OS에서 호환성 문제가 생길 수 있다. Linux는 오래된 바이너리 호환성을 유지하지만 OpenBSD 등은 이를 보장하지 않는다. 비 Linux 환경에서 소스로 빌드할 때 이 ABI 단절을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Bru: Send and read SMS from the browser",
+  "url": "https://sverre.me/projects/bru/",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1791940457.47,
+  "discussion": "https://lobste.rs/s/a0jmkh/bru_send_read_sms_from_browser",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://sverre.me/projects/bru/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://sverre.me/processed_images/image.256b51449204168d.jpg",
+  "link_status": "ok",
+  "ko_title": "Bru: 브라우저에서 SMS 보내고 읽기",
+  "summary": "Bru는 안드로이드 폰과 연동해 브라우저에서 SMS를 송수신할 수 있게 해 주는 앱·웹 클라이언트다. Rust와 Iroh-WASM, Kotlin 바인딩을 활용했으며 현재 IzzyOnDroid 저장소에서 배포 중이다. 곧 F-Droid와 Google Play에서도 제공될 예정이다.",
+  "why": "브라우저에서 SMS를 처리하려면 폰을 꺼내야 하는 단절이 사라진다. 긴 메시지를 작성하거나 대화에 집중할 때 키보드 입력 환경이 개선된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Felix Rieseberg Homepage",
+  "url": "https://felixrieseberg.com/",
+  "source": "hackernews",
+  "upvotes": 127,
+  "comments": 42,
+  "published_at": 1791952953,
+  "discussion": "https://news.ycombinator.com/item?id=50082470",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://felixrieseberg.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 33,
+  "image": "https://storage.ghost.io/c/89/e0/89e08557-681a-40be-8264-278bf46d6b25/content/images/2026/10/facebook-card.jpg",
+  "link_status": "ok",
+  "ko_title": "Felix Rieseberg 홈페이지",
+  "summary": "Felix Rieseberg는 Anthropic에서 Claude 엔지니어링을 이끌며 Electron 공동 유지보수와 다수의 오픈소스 프로젝트를 관리한다. 이전에는 Notion, Stripe, Slack, Microsoft에서 팀을 이끌며 데스크톱 및 결제 인프라를 담당했다.",
+  "why": "Electron 공동 유지보수자가 Anthropic의 Claude 엔지니어링을 이끌고 있다. Electron 기반 데스크톱 앱을 개발 중이라면 해당 프로젝트의 유지보수 주체가 바뀌었다는 점을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "HeyPuter / everything",
+  "url": "https://github.com/HeyPuter/everything",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 225,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/HeyPuter/everything"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 225,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/HeyPuter/everything",
+  "link_status": null,
+  "ko_title": "HeyPuter / everything",
+  "summary": "",
+  "why": "오픈소스 대안 개발 시 MIT 라이선스 코드를 직접 참조하거나 재사용할 수 있다. 기존 상용 소프트웨어 의존도를 줄이고 자체 구축 비용을 낮추는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Show GN: 자신이 독서를 기록하고 공유하는 사이트",
+  "url": "https://news.hada.io/topic?id=35324",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791940919.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35324"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 자신이 독서를 기록하고 공유하는 사이트",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
+  "title": "Fancy Curl Sites",
+  "url": "https://nytpu.com/gemlog/2026-03-18",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1791959081.078,
+  "discussion": "https://lobste.rs/s/zitobg/fancy_curl_sites",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://nytpu.com/gemlog/2026-03-18"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://nytpu.com/furry/tamun_icon_roxy.png",
+  "link_status": "ok",
+  "ko_title": "Fancy Curl Sites",
+  "summary": "",
+  "why": "터미널에서 블로그 전체를 ANSI 색상으로 렌더링하는 구현 방식을 공유한다. ratatui 같은 라이브러리 대신 손으로 escape code를 작성해 페이지를 구성했다. 단일 페이지가 아닌 전체 아카이브를 curl로 서빙하는 구조를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-14T16:00:03.277775+09:00",
+  "batch_label": "10월 14일 16:00"
+ },
+ {
   "title": "Gemini 4 Argon is now available worldwide as Google's most capable frontier model",
   "url": "https://the-decoder.com/gemini-4-argon-is-now-available-worldwide-as-googles-most-capable-frontier-model/",
   "source": "rss",
