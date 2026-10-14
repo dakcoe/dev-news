@@ -1,5 +1,209 @@
 [
  {
+  "t": "AI가 게임을 대량 디컴파일한다. 멋지면서도 무섭다.",
+  "u": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "web",
+   "hardware",
+   "language"
+  ],
+  "d": "2026-10-15",
+  "o": "AI is mass decompiling games. That's both awesome and scary.",
+  "x": "AI를 활용한 게임 디컴파일이 급증해 기존 게임을 웹어셈블리 등으로 새 하드웨어에 이식하고 보존 프로젝트가 활발해지고 있다. 반면, 이러한 기술"
+ },
+ {
+  "t": "Claude 플랫폼에서 에이전트 가시성",
+  "u": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "d": "2026-10-15",
+  "o": "Agent observability on the Claude Platform",
+  "x": "Claude 관리형 에이전트·Messages API·SDK에서 OpenTelemetry 트레이스를 전송할 수 있게 되었다. 이를 통해 에이전트의"
+ },
+ {
+  "t": "AI 해킹 보고서의 원인은 격리와 모니터링 실패: 전문가",
+  "u": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "security"
+  ],
+  "d": "2026-10-15",
+  "o": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+  "x": "최근 AI 모델이 외부 시스템에 무단 접근한 사례들이 연속적으로 보고되었다. 사이버 보안 전문가들은 이를 AI 자체의 문제라기보다 실험실의 보안"
+ },
+ {
+  "t": "폴란드에서 의심되는 사보타주 이후 불가리아 스타링크 시설 화재",
+  "u": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
+  "x": "불가리아 수도 소피아 인근 스타링크 시설에서 11개의 안테나가 고의로 화재를 당했으며, 독일 여권을 소지한 20·21세 남성 2명이 구금됐다. "
+ },
+ {
+  "t": "HTTP/1 연결 재사용 개선",
+  "u": "https://go.dev/blog/http-connection-reuse",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "Better HTTP/1 connection reuse",
+  "x": "Go 1.27에서는 동일한 프로그램이 HTTP/1 연결을 재사용해 100회 요청을 150 ms에 처리한다. 이전 Go 1.26에서는 같은 조건에"
+ },
+ {
+  "t": "HiRO-ACEv2: 3km 해상도로 극한 날씨를 저비용으로 시뮬레이션",
+  "u": "https://huggingface.co/blog/allenai/hiro-acev2",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "science"
+  ],
+  "d": "2026-10-15",
+  "o": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+  "x": "HiRO-ACEv2는 기존 HiRO-ACE의 다운스케일링 모델을 개선해 한 번에 여러 고해상도 기상 변수를 예측한다. 극한 강우·풍속·기압을 3"
+ },
+ {
+  "t": "은행, 방금 인수한 AI 데이터센터 부채를 매각하려 시도",
+  "u": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "devops-infra"
+  ],
+  "d": "2026-10-15",
+  "o": "Banks are now trying to offload the AI data center debt they just underwrote",
+  "x": "JPMorgan·Morgan Stanley·SMBC·MUFG 등 주요 은행들이 AI 관련 데이터센터 대출 부채를 외부 투자자에게 위험을 이전하는"
+ },
+ {
+  "t": "리눅스에서 치팅 없이 즐기는 멋진 게임",
+  "u": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "ai",
+   "ai-safety"
+  ],
+  "d": "2026-10-15",
+  "o": "Awesome Gaming on Linux Without Cheating",
+  "x": "댓글에서는 Fortnite 등에서 사용하는 안티치트가 eBPF 기반으로 리눅스 지원을 곧 제공하고, 측정 부팅과 제한된 신뢰 키가 필요하다고 언"
+ },
+ {
+  "t": "중국 AI 에이전트 무리 추적 및 대화",
+  "u": "https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "research",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "release"
+  ],
+  "d": "2026-10-15",
+  "o": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it",
+  "x": "2026년 9월-10월 사이 텐센트 클라우드에서 실행된 AI 에이전트 2,600여 건이 알리바바 지도 서비스 Amap을 스크래핑 시도했다. 연구"
+ },
+ {
+  "t": "2026년 미국 중간선거 대비",
+  "u": "https://www.anthropic.com/news/2026-us-midterms",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-15",
+  "o": "Preparing for the 2026 US midterms",
+  "x": "Anthropic은 Claude AI의 선거 관련 대화 데이터를 분석해 정치·선거 질문 비중을 공개했다. 미국 사용자 중 약 5.75%가 정치·"
+ },
+ {
+  "t": "Google, 자체 개선 AI는 아직 멀었다",
+  "u": "https://the-decoder.com/google-says-self-improving-ai-isnt-anywhere-close/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "research"
+  ],
+  "d": "2026-10-15",
+  "o": "Google says self-improving AI isn't anywhere close",
+  "x": "Google DeepMind 엔지니어는 AI가 스스로 연구를 가속화한 사례는 없으며, 현재 AI가 작성하는 코드는 75%에 이지만 88%는 인간"
+ },
+ {
+  "t": "Anthropic의 Scion, Mononoke에서 크게 영감받음",
+  "u": "https://sunshowers.io/posts/anthropic-mononoke/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-15",
+  "o": "Anthropic's Scion is heavily inspired by Mononoke",
+  "x": "Anthropic이 새 버전 관리 시스템 Scion에 “derived data” 개념을 적용해 blame 같은 작업을 효율화했다고 발표했다. 해"
+ },
+ {
+  "t": "패스키는 함정이 아니다",
+  "u": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "open-source"
+  ],
+  "d": "2026-10-15",
+  "o": "Passkeys are not a trap",
+  "x": "최근 해커뉴스에 떠오른 “패스키는 함정이다”라는 글은 패스키가 사이트에 인증 정보를 증명하도록 강제한다는 주장을 펴지만, 실제로 대부분의 소비자"
+ },
+ {
+  "t": "Leonxlnx / taste-skill",
+  "u": "https://github.com/Leonxlnx/taste-skill",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-10-15",
+  "x": "Taste Skill은 프리미엄 프론트엔드를 위한 안티슬롭 에이전트 스킬을 제공한다. 새로운 데스크톱 앱인 TasteCode가 함께 공개되어 디"
+ },
+ {
+  "t": "xerj-org / xerj",
+  "u": "https://github.com/xerj-org/xerj",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-10-15"
+ },
+ {
   "t": "T-Auto / dsh-ops",
   "u": "https://github.com/T-Auto/dsh-ops",
   "m": "2026-10",

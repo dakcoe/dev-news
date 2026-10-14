@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-05T08:00:30+09:00",
-   "total": 23,
-   "counts": {
-    "ok": 11,
-    "github": 7,
-    "blocked": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=34786",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34785",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34784",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34783",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34782",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-05T16:00:40+09:00",
    "total": 21,
    "counts": {
@@ -1289,6 +1253,48 @@
     },
     {
      "url": "https://news.hada.io/topic?id=35347",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-15T08:00:31+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 14,
+    "unavailable": 1,
+    "blocked": 5,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
+     "source": "lobsters",
+     "reason": "unavailable"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35370",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35369",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35368",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35367",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35366",
      "source": "geeknews",
      "reason": "blocked"
     }
