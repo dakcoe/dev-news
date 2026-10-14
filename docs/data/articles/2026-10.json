@@ -1,5 +1,536 @@
 [
  {
+  "title": "T-Auto / dsh-ops",
+  "url": "https://github.com/T-Auto/dsh-ops",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 413,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/T-Auto/dsh-ops"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 413,
+  "score": 70,
+  "image": "https://opengraph.githubassets.com/1/T-Auto/dsh-ops",
+  "link_status": null,
+  "ko_title": "T-Auto / dsh-ops",
+  "summary": "dsh-ops 플러그인은 Rust로 구현돼 AI 작업 시 토큰 사용량을 최대 97%까지 줄이고 오류 발생률을 낮춘다. Windows 전용으로 독립적인 Bash 5.3.15와 PowerShell 7.6.6을 제공해 시스템 PATH를 변경하지 않고도 AI와 충돌을 방지한다. npm을 통한 일괄 설치·업데이트·제거 명령을 지원한다.",
+  "why": "Windows에서 DSH를 쓰는 경우 PowerShell 충돌로 인한 토큰 낭비를 막을 수 있다. 0.3.0부터 추가된 Rust PTC 컴포넌트는 기본 비활성화 상태다. 활용하려면 설정에서 명시적으로 켜야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "ntdevlabs / tiny11builder",
+  "url": "https://github.com/ntdevlabs/tiny11builder",
+  "source": "github",
+  "upvotes": 132,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/ntdevlabs/tiny11builder"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 132,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/ntdevlabs/tiny11builder",
+  "link_status": null,
+  "ko_title": "ntdevlabs / tiny11builder — Windows 11 ISO 경량화 도구",
+  "summary": "Tiny11 Builder는 공식 Windows 11 이미지 또는 사용자가 제공한 이미지를 기반으로 불필요한 앱·기능을 제거해 경량화된 ISO를 생성한다. Tiny11, Tiny11 Core, Custom 모드로 각각 제거 범위를 조절할 수 있으며, Turbo 모드로 처리 속도를 높인다. Core 모드는 업데이트·복구 기능을 제거해 더 작게 만들지만, 업데이트가 불가능하다.",
+  "why": "Core 모드는 업데이트와 복구 기능이 없어 장기 운영 환경에서는 사용할 수 없다. 커스텀 모드에서 보호된 구성 요소를 제거하면 Windows가 손상될 수 있다. 설치 전 가상 머신에서 ISO를 반드시 테스트해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "AI guardrails designed to stop hackers are now blocking defenders, and Orion-1 aims to fill the gap",
+  "url": "https://the-decoder.com/ai-guardrails-designed-to-stop-hackers-are-now-blocking-defenders-and-orion-1-aims-to-fill-the-gap/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791984262.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/ai-guardrails-designed-to-stop-hackers-are-now-blocking-defenders-and-orion-1-aims-to-fill-the-gap/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/cybersecurity_illu-1.png",
+  "link_status": "ok",
+  "ko_title": "AI 방어 가드레일이 방어자를 차단하고, Orion-1이 그 격차를 메운다",
+  "summary": "Artemis Security가 기업 네트워크 공격을 자동으로 조사·대응하는 AI 모델 Orion-1을 출시했다. 로그 데이터를 통합해 공격자를 추적하고 대응을 시작한다. 자체 벤치마크에서 Claude Opus 5.5·GPT-6 Sol보다 높은 점수를 기록했다.",
+  "why": "보안 대응 시 범용 AI가 방대한 로그에서 맥락을 잃거나 정상 활동을 공격으로 오인하는 문제를 겪을 수 있다. Orion-1은 특정 보안 작업에 미세 조정되어 이 오인율을 줄이고 공격 재구성 정확도를 높인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "research",
+   "security"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "jhaizhou-ops / d2r-mobile",
+  "url": "https://github.com/jhaizhou-ops/d2r-mobile",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 478,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/jhaizhou-ops/d2r-mobile"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 478,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/jhaizhou-ops/d2r-mobile",
+  "link_status": null,
+  "ko_title": "D2R 모바일 — Diablo II: Resurrected iOS·macOS 호환 레이어",
+  "summary": "오픈소스 레이어가 Nintendo Switch용 Diablo II: Resurrected와 Reign of the Warlock 확장팩을 iPhone·iPad·Apple silicon Mac에서 네이티브로 실행한다. 터치용 컨트롤을 새로 구현하고 60 fps를 유지하며 메인 메뉴에서 1 초 만에 게임을 시작한다. macOS 전용 버전도 제공돼 키보드·마우스·게임패드 입력을 지원한다. 사용자는 본인 소유의 게임 파일을 직접 제공해야 한다.",
+  "why": "백엔드 개발자에게는 직접 관련이 적지만, Apple silicon Mac에서 키보드·마우스 입력으로 60fps를 유지하며 실행된다. 본인 소유의 Switch용 게임 파일을 직접 제공해야 하는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Amazon pushes up prices across the Internet",
+  "url": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
+  "source": "hackernews",
+  "upvotes": 338,
+  "comments": 316,
+  "published_at": 1791970097,
+  "discussion": "https://news.ycombinator.com/item?id=50084757",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://storage.ghost.io/c/f0/60/f060ef3f-d4e0-4af4-9255-1373fbf0a44f/content/images/size/w1200/2026/10/featured_02.png",
+  "link_status": "ok",
+  "ko_title": "Amazon, 인터넷 전반에 가격 인상",
+  "summary": "Amazon이 판매자에게 부과하는 수수료와 광고 비용이 증가하면서 전체 온라인 소매 가격이 상승하고 있다. FTC가 진행 중인 반독점 소송의 핵심 증거로 이 구조가 제시된다. 판매자는 필수 수수료 외에도 물류·광고 비용을 선택하기 어려워 실질적으로 높은 비용을 부담한다.",
+  "why": "백엔드 개발자에게는 직접적 영향이 없지만, FTC 소송의 핵심 증거로 제시되는 구조를 이해하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Switzerland proposes banning profiling-based ads to minors",
+  "url": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
+  "source": "hackernews",
+  "upvotes": 204,
+  "comments": 118,
+  "published_at": 1791984002,
+  "discussion": "https://news.ycombinator.com/item?id=50087328",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "스위스, 아동 대상 프로파일링 광고 금지 제안",
+  "summary": "스위스 연방회의는 청소년 보호 강화를 위해 새로운 통신 플랫폼·검색 엔진 법안을 검토 중이며, 아동을 대상으로 한 프로파일링 광고를 금지하는 조치를 포함한다. 초안은 2027년 말까지 마련될 예정이며, 불법 의심 콘텐츠 전반에 대한 신고 절차도 확대한다.",
+  "why": "스위스 법안은 2027년 말까지 초안이 마련될 예정이다. 아동 대상 프로파일링 광고 금지 조치가 포함된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Plasma 6.8 released (KDE's 30th birthday)",
+  "url": "https://kde.org/announcements/plasma/6/6.8.0/",
+  "source": "lobsters",
+  "upvotes": 15,
+  "comments": 0,
+  "published_at": 1791977391.369,
+  "discussion": "https://lobste.rs/s/d1c8zn/plasma_6_8_released_kde_s_30th_birthday",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://kde.org/announcements/plasma/6/6.8.0/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://kde.org/announcements/plasma/6/6.8.0/fullscreen_with_apps.png",
+  "link_status": "ok",
+  "ko_title": "Plasma 6.8 출시 (KDE 30주년)",
+  "summary": "KDE 커뮤니티가 30주년을 맞아 Plasma 6.8을 발표했다. 새 “dwell clicker” 기능이 내장돼 마우스 포인터가 멈출 때 클릭을 자동으로 전송한다. 디지털 시계에 Bikram Sambat 달력이 추가되고, 화면 키보드에 Amharic 언어가 지원된다. 시스템 모니터에서 CPU 선택 할당 및 VRAM 사용량을 퍼센트로 확인할 수 있다.",
+  "why": "시스템 모니터에서 특정 CPU 코어만 지정해 작업 할당이 가능해졌다. VRAM 사용량이 퍼센트로 표시되어 부하 확인이 쉬워졌다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Nvidia's Jensen Huang pledges $2 billion for Europe, $250 million in compute for UK safety labs",
+  "url": "https://the-decoder.com/nvidias-jensen-huang-pledges-2-billion-for-europe-250-million-in-compute-for-uk-safety-labs/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791987874.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nvidias-jensen-huang-pledges-2-billion-for-europe-250-million-in-compute-for-uk-safety-labs/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/nvidia_logo.png",
+  "link_status": "ok",
+  "ko_title": "엔비디아 젠슨 황, 유럽에 20억 달러·영국 AI 안전 연구에 2억5천만 달러 투자 약속",
+  "summary": "엔비디아가 유럽 전역에 20억 달러 규모의 신규 투자를 발표했다. 프랑스 스타트업에 대한 투자와 함께 오픈-웨이트 모델을 강조했다. 영국에서는 5년간 2억5천만 달러 규모의 컴퓨팅 자원을 AI 에이전트 안전 연구에 제공한다. 주요 수혜 기관은 옥스퍼드·UCL·임페리얼 대학이다.",
+  "why": "오픈-웨이트 모델이 유럽의 AI 격차 해법으로 제시됐다. 영국 대학들이 AI 에이전트 안전 연구에 집중한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "research",
+   "security",
+   "devops-infra",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Your Browser Can Do WHAT?! 5 AI Features That Actually Work",
+  "url": "https://dev.to/sylwia-lask/your-browser-can-do-what-5-ai-features-that-actually-work-1blb",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 72,
+  "comments": 26,
+  "published_at": 1791961548.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sylwia-lask/your-browser-can-do-what-5-ai-features-that-actually-work-1blb"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F90o18t6tkw38pe11snwy.png",
+  "link_status": "ok",
+  "ko_title": "브라우저가 할 수 있는 5가지 실제 AI 기능",
+  "summary": "브라우저에서 직접 실행되는 AI 모델들의 현재 성능과 활용 사례를 소개한다. WebAssembly와 WebGPU를 이용해 추론 속도를 높이고, 네트워크 호출 없이 로컬에서 모델을 실행할 수 있다. 오프라인 사용과 개인정보 보호 장점도 강조한다.",
+  "why": "백엔드 API 호출 없이 브라우저에서 로컬 추론이 가능해졌다. 오프라인 환경에서도 모델이 동작하며 사용자 데이터가 외부로 전송되지 않는다. 모델 다운로드 시간과 로컬 추론 지연은 여전히 남아 있는 제약이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+  "url": "https://www.anthropic.com/news/singapore-office-opening",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791936000.0,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/singapore-office-opening"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Globe&backgroundColor=olive",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 싱가포르 사무소 개설 및 정부와 양해각서 체결",
+  "summary": "Anthropic이 싱가포르에 다섯 번째 아시아-태평양 사무소를 열고 디지털 개발부와 AI 안전·보안·모델 평가 등에 관한 양해각서를 체결했다. 현지 팀은 GovTech, Grab, DBS 등 싱가포르 기업·기관에 적용 중인 Claude의 신뢰성과 보안을 강화한다.",
+  "why": "싱가포르 기반 서비스나 기관과 연동하는 백엔드 개발 시 Claude의 보안 및 신뢰성 기준이 강화된다. 현지 팀의 직접적인 지원으로 모델 평가 및 안전성 관련 이슈 대응 속도가 빨라질 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+  "url": "https://typeof.net/Iosevka/",
+  "source": "hackernews",
+  "upvotes": 404,
+  "comments": 146,
+  "published_at": 1791966479,
+  "discussion": "https://news.ycombinator.com/item?id=50084240",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://typeof.net/Iosevka/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Iosevka는 오픈소스 산세리프·슬랩세리프 모노스페이스 글꼴",
+  "summary": "Iosevka는 코드 작성·터미널·기술 문서용으로 설계된 오픈소스 글꼴 패밀리다. 기본은 1/2em 너비의 슬림한 모노스페이스이며, 일반·확장 두 가지 폭을 제공한다. 산세리프·슬랩세리프·쿼시 프로포셔널 등 다양한 스타일과 가중치를 포함한다.",
+  "why": "기본 글리프 폭이 1/2em이라 같은 화면 폭에서 더 많은 열을 배치할 수 있다. 글리프 간격이 넓어야 한다면 확장 폭을 선택하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "I gave my 10,000-line security app to 5 AIs. They scored it 8 to 10. Here's what I learned.",
+  "url": "https://dev.to/akhourianmolkumar/i-gave-my-10000-line-security-app-to-5-ais-they-scored-it-8-to-10-heres-what-i-learned-17ei",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 18,
+  "comments": 23,
+  "published_at": 1791972770.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/i-gave-my-10000-line-security-app-to-5-ais-they-scored-it-8-to-10-heres-what-i-learned-17ei"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F055jakmxd7lpe14s64j5.png",
+  "link_status": "ok",
+  "ko_title": "10,000줄 보안 앱을 5개의 AI에 맡겼더니 8~10점. 내가 배운 점",
+  "summary": "ATLOCK v5는 단일 .exe 파일로 제공되는 파이썬 기반 Windows 전용 보안 스위트이다. 저자는 10,011줄 코드 전체를 다섯 AI 모델에 평가받아 평균 9점을 얻었지만, 모델 간 점수 차이가 크다는 점을 강조한다. 도구는 파일·폴더 잠금, Argon2id 기반 비밀번호 금고, TOTP·FIDO2 지원, 샤미어 비밀 분할 등 다양한 기능을 제공한다. 개발자는 동일 사용자 공격자에 대한 제한점을 명시하며, 보안 도구의 한계를 투명하게 공개한다.",
+  "why": "AI 평가 점수는 감사 결과를 대체하지 않으므로 보안 도구 도입 시 참고 자료로만 삼아야 한다. 동일 사용자 권한 공격자는 스크립트 수정과 메모리 읽기가 가능해 이 도구의 보호 범위를 벗어난다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "language"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "yet another place where a linux man page is inaccurate",
+  "url": "https://sebsite.pw/w/20261014-initstate.html",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1791976689.977,
+  "discussion": "https://lobste.rs/s/tsjuje/yet_another_place_where_linux_man_page_is",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://sebsite.pw/w/20261014-initstate.html"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "리눅스 매뉴얼 페이지가 부정확한 또 다른 사례",
+  "summary": "글쓴이는 initstate() 함수가 POSIX 규격에 맞게 오류 시 NULL을 반환하지 않는다고 주장했지만, 실제 glibc는 2013년에 해당 버그가 수정되어 POSIX와 일치한다. 기존 매뉴얼 페이지는 여전히 잘못된 정보를 담고 있어 혼란을 야기한다.",
+  "why": "glibc는 2013년부터 POSIX 규격대로 오류 시 NULL을 반환한다. 하지만 매뉴얼 페이지는 여전히 구버전 동작을 설명하고 있다. 문서와 실제 동작이 달라 코드 작성 시 혼란이 생길 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+  "url": "https://guitoro.com/",
+  "source": "hackernews",
+  "upvotes": 515,
+  "comments": 141,
+  "published_at": 1791918708,
+  "discussion": "https://news.ycombinator.com/item?id=50077020",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://guitoro.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://guitoro.com/brand/guitoro-social.png?v=gold-cutout-medium",
+  "link_status": "ok",
+  "ko_title": "Guitoro, 키보드로 스트럼하는 가상 기타",
+  "summary": "웹 브라우저에서 키보드나 터치로 연주할 수 있는 가상 기타 서비스다. 실제 악기의 소리를 녹음해 사용하며, 다양한 기타·베이스 모델과 51곡을 제공한다. 별도의 다운로드나 계정 없이 바로 이용 가능하고, 코드와 스트럼 연습에 활용할 수 있다.",
+  "why": "코드 진행과 스트럼 패턴을 시각적으로 확인하며 연습할 수 있다. 실제 악기 녹음음을 사용해 키보드 매핑으로 연주하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "프론트엔드 ai티를 많이 줄이는 법",
+  "url": "https://news.hada.io/topic?id=35347",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791980862.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35347"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "프론트엔드 AI 티를 많이 줄이는 법",
+  "summary": "디자인 시스템을 구축해 색상·버튼·표와 같은 컴포넌트를 정의하고, 새로운 UI 요소는 먼저 시스템에 추가한 뒤 화면에 적용한다. 이렇게 하면 모든 화면의 일관성이 유지되어 AI 티(디자인 불일치)가 발생하지 않는다.",
+  "why": "새 UI 요소를 만들 때 화면에 바로 코드를 넣지 말고 디자인 시스템에 먼저 등록해야 한다. 이 절차를 지키면 화면 간 디자인 불일치로 인한 AI 티를 원천적으로 막을 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "NeXT에서 돌아가는 Lotus Improv",
+  "url": "https://news.hada.io/topic?id=35348",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791983146.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35348"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "NeXT에서 돌아가는 Lotus Improv",
+  "summary": "Lotus Improv는 셀 좌표 대신 의미 있는 범주와 항목으로 데이터를 모델링하는 스프레드시트이다. 데이터, 수식, 화면 구성을 분리해 설계했으며, 하나의 공유 수식을 전체 범주에 적용할 수 있다. 이름 충돌과 수식 중복을 사용자에게 드러내어 직접 해결하도록 설계되었다.",
+  "why": "범주 기반 데이터 모델링 방식은 백엔드 스키마 설계 시 참조 무결성 문제를 구조적으로 해결하는 참고 사례가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
+  "title": "Show HN: 당신은 얼마나 무작위로 숫자를 고를 수 있나요?",
+  "url": "https://news.hada.io/topic?id=35350",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791988486.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35350"
+  ],
+  "cross_source_count": 1,
+  "score": 24,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: 당신은 얼마나 무작위로 숫자를 고를 수 있나요?",
+  "summary": "1부터 9까지 숫자를 무작위로 말하면 브라우저에 내장된 예측기가 사용자가 말하기 전에 다음 숫자를 추측한다. 사용자가 숫자를 말하면 예측값이 공개돼 예측 정확도를 확인할 수 있다. 작은 예측기 10개가 함께 동작한다.",
+  "why": "인간이 무작위 수를 고를 때 보이는 패턴을 기계가 얼마나 잘 예측하는지 보여준다. 백엔드에서 난수 생성 품질을 검증할 때 인간 입력의 비무작위성을 가정한 테스트 케이스를 설계하는 데 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-15T00:00:02.946682+09:00",
+  "batch_label": "10월 15일 00:00"
+ },
+ {
   "title": "Is 'Attention' the Essence of Intelligence?",
   "url": "https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/",
   "source": "hackernews",

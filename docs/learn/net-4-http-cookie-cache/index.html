@@ -186,7 +186,7 @@ Content-Type: text/html; charset=UTF-8\r\n
 
   <h2 id="s7">정리</h2>
   <p>비지속 HTTP는 객체마다 RTT 2번이 들고, 지속 HTTP와 파이프라이닝은 연결을 다시 쓰고 요청을 몰아 보내 RTT를 아낍니다. HTTP 메시지는 사람이 읽을 수 있는 ASCII 텍스트로, 요청은 요청 줄과 헤더 줄과 본문, 응답은 상태 줄과 헤더 줄과 객체로 이루어집니다. 무상태인 HTTP 위에서 사용자를 기억할 때는 Set-Cookie와 Cookie 헤더로 번호를 주고받는 쿠키를 쓰고, 그 대가로 추적의 위험이 따릅니다. 웹 캐시는 요청 일부를 기관 안에서 끝내 접속 회선의 트래픽 강도를 낮춥니다. 평균 접속 지연 <i>t</i> / (1 − <i>ta</i>)로 계산하면, 캐시가 더 빠른 회선보다 싸면서도 평균 응답 시간을 더 줄일 수 있습니다. 다음 글에서는 캐시가 가진 사본이 낡았는지 확인하는 조건부 GET과 HTTP/2, HTTP/3를 보고 전자우편과 DNS로 넘어갑니다.</p>
-<div class="next"><a href="/learn/net-3-layers-application/"><small>← 이전 글</small><span>계층과 응용 계층의 원리 — 처리량, 캡슐화, 소켓, TCP와 UDP</span></a></div>
+<div class="next"><a href="/learn/net-3-layers-application/"><small>← 이전 글</small><span>계층과 응용 계층의 원리 — 처리량, 캡슐화, 소켓, TCP와 UDP</span></a><a class="r" href="/learn/net-5-email-dns/"><small>다음 글 →</small><span>HTTP의 진화, 전자우편, DNS — 조건부 GET부터 이름 풀이까지</span></a></div>
 </article>
 <aside class="toc"><b>목차</b><ol><li><a href="#s1">비지속 연결과 지속 연결</a></li><li><a href="#s2">HTTP 요청 메시지</a></li><li><a href="#s3">HTTP 응답 메시지와 상태 코드</a></li><li><a href="#s4">무상태 HTTP와 쿠키</a></li><li><a href="#s5">웹 캐시 — 프록시 서버</a></li><li><a href="#s6">캐싱 계산 — 회선을 바꿀까, 캐시를 둘까</a></li><li><a href="#s7">정리</a></li></ol></aside></div>
 <div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
