@@ -1,5 +1,231 @@
 [
  {
+  "t": "OpenCode 2.0",
+  "u": "https://anoma.ly/notes/opencode-2-0/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-10-15",
+  "x": "OpenCode 2.0은 클라이언트·서버 구조를 자동으로 백그라운드 프로세스로 실행해 TUI, 웹, 데스크톱이 동일한 서비스에 연결한다. 프로그"
+ },
+ {
+  "t": "yakuikai / tokentab",
+  "u": "https://github.com/yakuikai/tokentab",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "d": "2026-10-15",
+  "x": "tokentab은 Claude Code, Codex, Cursor, Gemini CLI가 남긴 세션 로그를 로컬에서 읽어 모델·프로젝트·일자·작"
+ },
+ {
+  "t": "Claude 도구 사용 시 발생하는 6가지 실패 유형과 해결 방법",
+  "u": "https://dev.to/dariustran/claude-tool-use-in-production-6-failure-modes-and-how-i-handle-them-28h5",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools"
+  ],
+  "d": "2026-10-15",
+  "o": "Claude Tool Use in Production: 6 Failure Modes and How I Handle Them",
+  "x": "실제 서비스 환경에서 Claude 모델이 도구를 호출할 때 인수 형식 오류, 과도한 호출, 지연 등 여섯 가지 주요 문제를 겪는다. 각 문제에 "
+ },
+ {
+  "t": "Arekejoker / qwen21-nsfw-pose-skill – 로컬 NSFW 포즈 생성 레시피",
+  "u": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "gen-media",
+   "open-source"
+  ],
+  "d": "2026-10-15",
+  "o": "Arekejoker / qwen21-nsfw-pose-skill",
+  "x": "Qwen-Image 2.1 모델을 기반으로 ComfyUI와 LoRA, 136개의 3D 포즈 라이브러리를 결합한 완전한 NSFW 이미지 생성 레시"
+ },
+ {
+  "t": "Show GN: hone - 에이전트 평가 사이클을 자동으로 돌리고, 처음 보는 케이스로 판정하는 CLI",
+  "u": "https://news.hada.io/topic?id=35391",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "showcase"
+  ],
+  "d": "2026-10-15",
+  "x": "hone은 에이전트 프롬프트와 코드를 읽어 테스트 케이스를 자동 생성하고, 평가·보고·수정을 한 번에 수행하는 4개의 명령어를 제공한다. 이를 "
+ },
+ {
+  "t": "SentinelOne, 악성코드 분석 시간을 주에서 시간으로 단축",
+  "u": "https://openai.com/index/sentinelone",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "industry"
+  ],
+  "d": "2026-10-15",
+  "o": "SentinelOne cuts malware analysis from weeks to hours",
+  "x": "SentinelOne은 OpenAI Daybreak를 도입해 악성코드 분석 기간을 기존 몇 주에서 몇 시간으로 줄였다. 이로써 보안팀이 더 많은"
+ },
+ {
+  "t": "트리 감상가",
+  "u": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "d": "2026-10-15",
+  "o": "Tree Appreciator",
+  "x": "Claude Opus 5.5 Max를 프롬프트해 three.js 기반의 스팟-더-디퍼런스 게임을 3시간 7분 만에 생성했다. 두 개의 알고리즘 "
+ },
+ {
+  "t": "OpenAI, 올해 최소 하나의 모델 출시 예정…주력 모델은 정렬 작업 필요",
+  "u": "https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra",
+   "science"
+  ],
+  "d": "2026-10-15",
+  "o": "OpenAI will reportedly ship at least one model this year but its flagship still needs alignment work",
+  "x": "OpenAI는 현재 Astra와 동일한 루프형 트랜스포머 방식을 사용하는 차세대 주력 모델을 개발 중이며, 연말까지 한두 개의 새로운 모델을 출"
+ },
+ {
+  "t": "Show GN: 맥 os용 의미론적 검색 인덱스, Weft",
+  "u": "https://news.hada.io/topic?id=35397",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "open-source",
+   "showcase"
+  ],
+  "d": "2026-10-15",
+  "x": "이 오픈소스 프로젝트는 gemma2 임베딩을 기반으로 파일명을 통한 일반 검색과 파일 내용 의미를 이용한 의미론적 검색을 동시에 제공한다. 파일"
+ },
+ {
+  "t": "정적 바이너리 번역을 위한 에뮬레이터 작성 가이드",
+  "u": "https://www.gtoal.com/sbt/",
+  "m": "2026-10",
+  "s": "lobsters",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "An Emulator Writer's HOWTO for Static Binary Translation",
+  "x": "이 HOWTO는 기존 에뮬레이터를 기반으로 특정 프로그램을 다른 아키텍처용 바이너리로 변환하는 정적 바이너리 번역기를 만드는 실용적인 방법을 제"
+ },
+ {
+  "t": "Amp, OpenAI 모델로 코드 외 작업을 수행하는 AI 에이전트 제공",
+  "u": "https://openai.com/index/amp-beyond-coding",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-10-15",
+  "o": "Amp puts AI agents to work beyond code with OpenAI models",
+  "x": "Amp가 GPT-6 Astra, Ultrafast, GPT-Live-1 모델과 ChatGPT 로그인 기능을 활용해 AI 에이전트가 코드 작성 외"
+ },
+ {
+  "t": "Starlink 속도 제한, 우크라이나 드론 운용에 타격",
+  "u": "https://news.hada.io/topic?id=35394",
+  "m": "2026-10",
+  "s": "geeknews",
+  "g": [],
+  "d": "2026-10-15",
+  "x": "SpaceX가 우크라이나에서 쓰는 StarShield 단말기에 이동 중 속도 160km/h 초과 시 연결이 끊기도록 제한을 적용했다. 이로 인해"
+ },
+ {
+  "t": "검은 사각형은 가림 처리(레다크션)가 아니다",
+  "u": "https://dev.to/angelbot_ai/a-black-rectangle-is-not-a-redaction-was-published-1933",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "A Black Rectangle Is Not a Redaction was published.",
+  "x": "PDF 파일에서 검은 사각형을 그려 가려도 텍스트는 실제로 삭제되지 않는다. 텍스트는 PDF 내부 명령어로 남아 있어 복사·검색·추출 도구가 그"
+ },
+ {
+  "t": "Google이 로그인한 모든 계정에 전화번호를 은밀히 연결",
+  "u": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "hardware"
+  ],
+  "d": "2026-10-15",
+  "o": "Google is silently linking your phone number across all signed-in accounts",
+  "x": "댓글에서는 구글이 계정 생성 시 QR 코드 스캔·SMS 인증 등 전화번호를 요구해 사용자를 식별하고, 이는 프라이버시 침해와 서비스 이용 제한을"
+ },
+ {
+  "t": "사과",
+  "u": "https://www.elevationlab.com/blogs/news/an-apology",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "An Apology",
+  "x": "AirTag 소리를 차단하는 도구를 출시했지만, 악용 가능성을 인지해 제품을 철회하고 특허를 이용해 향후 제작을 방지하겠다고 발표했다."
+ },
+ {
+  "t": "미국인의 사회 활동이 지난 30년간 급감",
+  "u": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-15",
+  "o": "Americans' social activity has steeply declined in the past 30 years",
+  "x": "최근 미국에서 사회적 고립이 심각해졌다는 논의가 늘고 있다. 1990년대부터 2021년까지 친한 친구가 5명 이상인 비율이 63%에서 38%로 "
+ },
+ {
+  "t": "공유 링크는 만든 사람이 접근 권한을 잃으면 작동을 멈춰야 함",
+  "u": "https://dev.to/authbyexample1/a-share-link-should-stop-working-when-the-person-who-made-it-loses-access-4p91",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-15",
+  "o": "A share link should stop working when the person who made it loses access"
+ },
+ {
   "t": "AI가 게임을 대량 디컴파일한다. 멋지면서도 무섭다.",
   "u": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
   "m": "2026-10",

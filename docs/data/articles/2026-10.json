@@ -1,5 +1,547 @@
 [
  {
+  "title": "OpenCode 2.0",
+  "url": "https://anoma.ly/notes/opencode-2-0/",
+  "source": "hackernews",
+  "upvotes": 517,
+  "comments": 205,
+  "published_at": 1792010904,
+  "discussion": "https://news.ycombinator.com/item?id=50094994",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://anoma.ly/notes/opencode-2-0/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://anoma.ly/notes/og/opencode-2-0.png",
+  "link_status": "ok",
+  "ko_title": "OpenCode 2.0",
+  "summary": "OpenCode 2.0은 클라이언트·서버 구조를 자동으로 백그라운드 프로세스로 실행해 TUI, 웹, 데스크톱이 동일한 서비스에 연결한다. 프로그램matic 클라이언트와 CLI가 로컬 서비스를 자동 탐지해 스케줄 작업 등에 바로 사용할 수 있다. 새 API와 @opencode/client 패키지가 추가돼 JavaScript·Effect용 클라이언트를 제공하고, @opencode/codemode 패키지에 최소 JavaScript 인터프리터가 포함돼 OpenAPI·MCP 서버를 함수로 변환한다.",
+  "why": "로컬 백그라운드 프로세스 자동 실행으로 TUI와 웹, 데스크톱이 동일한 서비스에 연결된다. @opencode/client 패키지로 JavaScript와 Effect 기반 스크립트를 작성할 수 있다. MCP 서버와 OpenAPI 엔드포인트를 함수로 변환해 에이전트가 스크립트에서 호출한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "yakuikai / tokentab",
+  "url": "https://github.com/yakuikai/tokentab",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 240,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/yakuikai/tokentab"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 240,
+  "score": 68,
+  "image": "https://opengraph.githubassets.com/1/yakuikai/tokentab",
+  "link_status": null,
+  "ko_title": "yakuikai / tokentab",
+  "summary": "tokentab은 Claude Code, Codex, Cursor, Gemini CLI가 남긴 세션 로그를 로컬에서 읽어 모델·프로젝트·일자·작업 유형별 토큰 사용량과 비용을 집계한다. 설치는 git clone 후 pip install 로 간단히 할 수 있으며, 명령줄 옵션으로 기간·툴·프로젝트별 필터링과 웹 대시보드 제공이 가능하다. 현재 Cursor 로그 지원은 스텁 상태이다.",
+  "why": "Claude Code, Codex, Gemini CLI 세션 로그를 로컬에서 집계해 토큰 비용을 확인한다. Cursor 로그 지원은 아직 스텁 상태이므로 이 도구의 비용은 집계되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Claude Tool Use in Production: 6 Failure Modes and How I Handle Them",
+  "url": "https://dev.to/dariustran/claude-tool-use-in-production-6-failure-modes-and-how-i-handle-them-28h5",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1792031540.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dariustran/claude-tool-use-in-production-6-failure-modes-and-how-i-handle-them-28h5"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu2lnvgwucryow13lroqp.png",
+  "link_status": "ok",
+  "ko_title": "Claude 도구 사용 시 발생하는 6가지 실패 유형과 해결 방법",
+  "summary": "실제 서비스 환경에서 Claude 모델이 도구를 호출할 때 인수 형식 오류, 과도한 호출, 지연 등 여섯 가지 주요 문제를 겪는다. 각 문제에 대해 입력 검증, 호출 제한, 타임아웃 처리 등 구체적인 방어 코드를 제시한다.",
+  "why": "도구 호출 실패 시 에러를 반환해 모델이 다음 턴에 스스로 수정하게 해야 한다. 특정 도구의 반복 호출을 제한하는 예산 로직을 적용해 토큰 소모를 막아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Arekejoker / qwen21-nsfw-pose-skill",
+  "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 476,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Arekejoker/qwen21-nsfw-pose-skill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 476,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/Arekejoker/qwen21-nsfw-pose-skill",
+  "link_status": null,
+  "ko_title": "Arekejoker / qwen21-nsfw-pose-skill – 로컬 NSFW 포즈 생성 레시피",
+  "summary": "Qwen-Image 2.1 모델을 기반으로 ComfyUI와 LoRA, 136개의 3D 포즈 라이브러리를 결합한 완전한 NSFW 이미지 생성 레시피를 제공한다. Claude Code·Codex·Cursor·OpenClaw 같은 에이전트 스킬 및 인간 사용자를 모두 지원한다. 설치 가이드와 의존성 목록이 포함돼 바로 실행할 수 있다.",
+  "why": "로컬 환경에서 NSFW 이미지 생성 시 136개의 3D 포즈 라이브러리를 활용해 정밀한 자세 제어가 가능하다. 기존 텍스트 프롬프트 중심 방식과 달리 뼈대 회전 JSON으로 포즈를 지정해 일관된 구도를 확보할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "gen-media",
+   "open-source"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Show GN: hone - 에이전트 평가 사이클을 자동으로 돌리고, 처음 보는 케이스로 판정하는 CLI",
+  "url": "https://news.hada.io/topic?id=35391",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792035339.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35391"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: hone - 에이전트 평가 사이클을 자동으로 돌리고, 처음 보는 케이스로 판정하는 CLI",
+  "summary": "hone은 에이전트 프롬프트와 코드를 읽어 테스트 케이스를 자동 생성하고, 평가·보고·수정을 한 번에 수행하는 4개의 명령어를 제공한다. 이를 통해 에이전트 프롬프트 수정 시 반복적인 평가 작업을 자동화한다.",
+  "why": "에이전트 프롬프트 수정 시 매번 수동으로 돌리던 평가 사이클을 자동화할 수 있다. 반복적인 테스트 케이스 작성과 결과 검토에 들이던 시간을 줄여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "SentinelOne cuts malware analysis from weeks to hours",
+  "url": "https://openai.com/index/sentinelone",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791979200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/sentinelone"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "SentinelOne, 악성코드 분석 시간을 주에서 시간으로 단축",
+  "summary": "SentinelOne은 OpenAI Daybreak를 도입해 악성코드 분석 기간을 기존 몇 주에서 몇 시간으로 줄였다. 이로써 보안팀이 더 많은 위협을 신속히 조사할 수 있게 된다.",
+  "why": "백엔드 인프라의 보안 대응 속도가 달라진다. 악성코드 분석 지연으로 인한 서비스 장애 복구 시간이 단축된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Tree Appreciator",
+  "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792012981.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/14/tree-appreciator/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://static.simonwillison.net/static/2026-10-14/IMG_9084.jpeg",
+  "link_status": "ok",
+  "ko_title": "트리 감상가",
+  "summary": "Claude Opus 5.5 Max를 프롬프트해 three.js 기반의 스팟-더-디퍼런스 게임을 3시간 7분 만에 생성했다. 두 개의 알고리즘 트리를 보여주고 차이를 감상하도록 설계했으며, 음악·애니메이션·업적 시스템을 포함한다.",
+  "why": "\"재미있게 만들어라\"라는 단순한 지시만으로 완성도 높은 게임을 생성하는 능력이 확인됐다. 프롬프트 작성 시 기능 나열보다 경험 목표를 명확히 전달하는 방식이 유효하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "OpenAI will reportedly ship at least one model this year but its flagship still needs alignment work",
+  "url": "https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791994456.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/10/openai_misalign-2.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI, 올해 최소 하나의 모델 출시 예정…주력 모델은 정렬 작업 필요",
+  "summary": "OpenAI는 현재 Astra와 동일한 루프형 트랜스포머 방식을 사용하는 차세대 주력 모델을 개발 중이며, 연말까지 한두 개의 새로운 모델을 출시할 가능성이 있다. 새 모델은 수학·코딩 성능을 높이지만 안전성 검증이 어려워 정렬 작업과 테스트 인프라 보강이 필요하다. 또한, 미국 정부에 사전 접근 권한을 제공해야 하는 행정명령 조건도 있다.",
+  "why": "루프형 트랜스포머 방식은 코딩 성능을 높이지만 사고 과정이 가독성 없는 수치로 이동해 안전 검증이 어려워진다. 주력 모델 출시 전 정렬 작업과 테스트 인프라 보강이 필수 조건이다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra",
+   "science"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Show GN: 맥 os용 의미론적 검색 인덱스, Weft",
+  "url": "https://news.hada.io/topic?id=35397",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792046900.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35397"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 맥 os용 의미론적 검색 인덱스, Weft",
+  "summary": "이 오픈소스 프로젝트는 gemma2 임베딩을 기반으로 파일명을 통한 일반 검색과 파일 내용 의미를 이용한 의미론적 검색을 동시에 제공한다. 파일을 파싱해 청크로 나눈 뒤 임베딩을 수행해 청크·파일·폴더 단위로 검색할 수 있다. 에이전트를 위한 CLI와 스킬이 포함돼 사용자가 손쉽게 검색 기능을 확장할 수 있다.",
+  "why": "에이전트 워크플로에 파일 검색 단계를 넣을 때 기존 키워드 매칭의 한계를 넘어 의미 기반 조회를 적용할 수 있다. CLI와 스킬이 제공되므로 에이전트 자동화 파이프라인에 즉시 통합해 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "An Emulator Writer's HOWTO for Static Binary Translation",
+  "url": "https://www.gtoal.com/sbt/",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 1,
+  "published_at": 1792042128.255,
+  "discussion": "https://lobste.rs/s/yista4/emulator_writer_s_howto_for_static_binary",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.gtoal.com/sbt/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "정적 바이너리 번역을 위한 에뮬레이터 작성 가이드",
+  "summary": "이 HOWTO는 기존 에뮬레이터를 기반으로 특정 프로그램을 다른 아키텍처용 바이너리로 변환하는 정적 바이너리 번역기를 만드는 실용적인 방법을 제시한다. 번역된 바이너리는 원래 에뮬레이터보다 훨씬 빠르게 실행될 수 있다. 예시와 단계별 설명이 풍부하게 포함되어 있다.",
+  "why": "기존 에뮬레이터 개발 경험이 있다면 특정 프로그램을 타 아키텍처 바이너리로 변환하는 번역기를 만들 수 있다. 이 방식은 에뮬레이터보다 실행 속도가 훨씬 빠르다. 저사양 하드웨어에서 프레임 레이트를 크게 끌어올릴 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Amp puts AI agents to work beyond code with OpenAI models",
+  "url": "https://openai.com/index/amp-beyond-coding",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1791979200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/amp-beyond-coding"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Amp, OpenAI 모델로 코드 외 작업을 수행하는 AI 에이전트 제공",
+  "summary": "Amp가 GPT-6 Astra, Ultrafast, GPT-Live-1 모델과 ChatGPT 로그인 기능을 활용해 AI 에이전트가 코드 작성 외의 작업을 수행하도록 확장했다. 이를 통해 에이전트가 다양한 업무 자동화에 활용될 수 있다.",
+  "why": "백엔드 개발 워크플로에서 코드 작성 외의 업무 자동화 범위가 넓어진다. 기존 에이전트 사용 방식과 달리 ChatGPT 로그인 연동으로 모델 접근이 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Starlink 속도 제한, 우크라이나 드론 운용에 타격",
+  "url": "https://news.hada.io/topic?id=35394",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792039147.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35394"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Starlink 속도 제한, 우크라이나 드론 운용에 타격",
+  "summary": "SpaceX가 우크라이나에서 쓰는 StarShield 단말기에 이동 중 속도 160km/h 초과 시 연결이 끊기도록 제한을 적용했다. 이로 인해 드론 등 이동 중 임무 수행에 차질이 발생한다. 제한은 전체 Starlink을 차단한 것이 아니라 이동 중 단말기에만 적용된다.",
+  "why": "이동 중 임무 수행 시 160km/h를 넘으면 연결이 끊긴다. 드론 운용 등 고속 이동 환경에서 통신 단절 위험이 생긴다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "A Black Rectangle Is Not a Redaction was published.",
+  "url": "https://dev.to/angelbot_ai/a-black-rectangle-is-not-a-redaction-was-published-1933",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 1,
+  "published_at": 1792038290.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/angelbot_ai/a-black-rectangle-is-not-a-redaction-was-published-1933"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F218vuxl4x1ggrhttjpal.png",
+  "link_status": "ok",
+  "ko_title": "검은 사각형은 가림 처리(레다크션)가 아니다",
+  "summary": "PDF 파일에서 검은 사각형을 그려 가려도 텍스트는 실제로 삭제되지 않는다. 텍스트는 PDF 내부 명령어로 남아 있어 복사·검색·추출 도구가 그대로 읽을 수 있다. 대부분의 편집 도구가 사각형을 그리는 기능을 기본으로 제공해 몇 초 만에 가짜 가림 처리를 만들 수 있다.",
+  "why": "PDF 내 텍스트를 검은 사각형으로 가리면 복사나 검색이 그대로 된다. 문서 공유 전 실제 텍스트 삭제 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Google is silently linking your phone number across all signed-in accounts",
+  "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+  "source": "hackernews",
+  "upvotes": 447,
+  "comments": 119,
+  "published_at": 1791995331,
+  "discussion": "https://news.ycombinator.com/item?id=50090349",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "Google이 로그인한 모든 계정에 전화번호를 은밀히 연결",
+  "summary": "댓글에서는 구글이 계정 생성 시 QR 코드 스캔·SMS 인증 등 전화번호를 요구해 사용자를 식별하고, 이는 프라이버시 침해와 서비스 이용 제한을 초래한다는 비판이 제시된다. 또한 전화번호가 인터넷상의 사회보장번호처럼 사용된다는 우려와, 구글 서비스 이용 시 계정 잠금 위험이 언급된다.",
+  "why": "전화번호가 계정 식별 기준으로 쓰이므로 한 계정에 문제가 생기면 다른 계정까지 잠길 수 있다. 이로 인해 서비스 이용 중 계정 접근이 차단되는 위험이 커진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "An Apology",
+  "url": "https://www.elevationlab.com/blogs/news/an-apology",
+  "source": "hackernews",
+  "upvotes": 51,
+  "comments": 57,
+  "published_at": 1792038207,
+  "discussion": "https://news.ycombinator.com/item?id=50099121",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.elevationlab.com/blogs/news/an-apology"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://cdn.shopify.com/s/files/1/0131/4552/files/socialmedia_sharing.jpg?v=1745447896",
+  "link_status": "ok",
+  "ko_title": "사과",
+  "summary": "AirTag 소리를 차단하는 도구를 출시했지만, 악용 가능성을 인지해 제품을 철회하고 특허를 이용해 향후 제작을 방지하겠다고 발표했다.",
+  "why": "에어태그 음소거 도구가 악용 시 위치 추적 위험이 있어 철회됐다. 해당 도구를 개발하거나 배포할 계획이라면 특허 분쟁 가능성을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "Americans' social activity has steeply declined in the past 30 years",
+  "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
+  "source": "hackernews",
+  "upvotes": 345,
+  "comments": 333,
+  "published_at": 1791994140,
+  "discussion": "https://news.ycombinator.com/item?id=50089921",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "http://static1.squarespace.com/static/5aa9be92f8370a24714de593/t/6aba933e8ee596665cfd1976/1790612286756/Copy+of+Poll_+Personally+Knowing+a+Transgender+Person+Correlates+With+Increased+Sympathy+for+Transgender+People+and+Support+for+LGBTQ%2B+Issues.png?format=1500w",
+  "link_status": "ok",
+  "ko_title": "미국인의 사회 활동이 지난 30년간 급감",
+  "summary": "최근 미국에서 사회적 고립이 심각해졌다는 논의가 늘고 있다. 1990년대부터 2021년까지 친한 친구가 5명 이상인 비율이 63%에서 38%로 25포인트 감소했다. Data for Progress가 2026년 조사에서 1995년 조사와 비교해 주요 사회 활동 참여가 두 자릿수 감소한 것으로 나타났다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 연관성이 없어 기술적 조치나 설정 변경 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
+  "title": "A share link should stop working when the person who made it loses access",
+  "url": "https://dev.to/authbyexample1/a-share-link-should-stop-working-when-the-person-who-made-it-loses-access-4p91",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 0,
+  "comments": 2,
+  "published_at": 1792041267.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/authbyexample1/a-share-link-should-stop-working-when-the-person-who-made-it-loses-access-4p91"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffislyg9vp379uynkmnoh.png",
+  "link_status": "ok",
+  "ko_title": "공유 링크는 만든 사람이 접근 권한을 잃으면 작동을 멈춰야 함",
+  "summary": "",
+  "why": "공유 링크 생성자의 현재 권한을 실시간으로 검증하는 로직이 없으면 권한 박탈 후에도 링크가 유효하다. 링크 접근 시 생성자의 최신 읽기 권한과 링크 레벨을 재확인하는 코드를 추가해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-15T16:00:03.134289+09:00",
+  "batch_label": "10월 15일 16:00"
+ },
+ {
   "title": "AI is mass decompiling games. That's both awesome and scary.",
   "url": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
   "source": "rss",
