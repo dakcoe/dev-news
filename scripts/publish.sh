@@ -61,7 +61,9 @@ fi
 
 # build.py 는 GITHUB_OUTPUT 파일에 published/degraded/silent 를 적는다.
 OUT="$(mktemp)"; export GITHUB_OUTPUT="$OUT"
-if ! "$PY" build.py; then
+# -u: 프로세스가 abort로 죽어도 그때까지의 출력이 로그에 남는다. faulthandler는
+# 죽은 자리의 파이썬 스택을 찍는다.
+if ! "$PY" -u -X faulthandler build.py; then
   echo "build.py 실패"
   alert "🔴 뉴스 수집 실패" \
     "$STAMP 회차가 실패했습니다. 수집 기계의 logs/publish.log 를 보세요."
