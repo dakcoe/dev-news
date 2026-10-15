@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import re
+import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urljoin
 
@@ -17,6 +18,11 @@ from news.core.fetch_health import BLOCKED_CODES, reason_of, record
 
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
+
+# trafilatura는 모듈 전역 lxml HTMLParser 하나를 모든 호출에 같이 쓴다. lxml 파서는
+# 스레드 사이에 공유하면 안 되고, 여러 스레드가 동시에 파싱하면 libxml2 메모리가
+# 꼬여 프로세스가 abort로 죽는다. 다운로드는 병렬로 두고 추출만 하나씩 돌린다.
+_EXTRACT_LOCK = threading.Lock()
 
 # 저장소 루트만 README 로 우회한다. 예전 정규식은 (?:[/?#].*)?$ 로 뒤를 다 삼켜서
 # /issues/6235 · /releases/tag/v2.0 · /commit/… · /pull/… 까지 걸렸다. 그러면
@@ -125,7 +131,8 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None
 
     content = None
     try:
-        content = trafilatura.extract(html, include_comments=False, include_tables=False)
+        with _EXTRACT_LOCK:
+            content = trafilatura.extract(html, include_comments=False, include_tables=False)
     except Exception:
         pass
 
