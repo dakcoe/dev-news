@@ -1,5 +1,505 @@
 [
  {
+  "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+  "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+  "source": "hackernews",
+  "upvotes": 348,
+  "comments": 506,
+  "published_at": 1792061016,
+  "discussion": "https://news.ycombinator.com/item?id=50101813",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
+  ],
+  "cross_source_count": 1,
+  "score": 74,
+  "image": "https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984.png",
+  "link_status": "ok",
+  "ko_title": "AdFection: 타깃 광고가 제로클릭 용병 스파이웨어 파이프라인으로 변신",
+  "summary": "제로클릭 용병 스파이웨어가 타깃 광고를 통해 배포된 사례가 처음으로 공개 확인되었다. 이 공격 기법을 ‘AdFection’이라 명명하고, 이스라엘 기업 Discover-Tech가 운영하는 광고 플랫폼을 통해 알자지라 기자들의 기기가 Candiru(Integrity Labs) 스파이웨어에 감염된 과정을 상세히 분석했다. Discover-Tech는 광고를 구매하고, 광고가 렌더링되는 순간 자동으로 기기를 감염시키는 Controlium 플랫폼을 제공한다. 또한 동일 인프라를 이용해 수백만 기기의 광고 ID와 전화번호를 연결해 대규모 익명 해제 작업을 수행하는 DARK CARTOGRAPHER라는 별도 위협 행위자도 확인되었다.",
+  "why": "광고가 렌더링되는 순간 기기가 감염되는 제로클릭 공격 벡터가 확인되었다. 백엔드 서비스의 광고 인벤토리 연동 시 이 플랫폼의 트래픽을 신뢰하면 안 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Code Review is now generally available",
+  "url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792022400.0,
+  "origin_url": "https://claude.com/blog/code-review-is-now-generally-available",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/code-review-is-now-generally-available",
+   "https://claude.com/resources/articles/code-review-is-now-generally-available"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://claude.com/ko/resources/articles/code-review-is-now-generally-available/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "코드 리뷰가 이제 일반 제공됩니다",
+  "summary": "코드 리뷰가 연구 미리보기 단계에서 벗어나 Claude 팀 및 엔터프라이즈 조직에 정식 출시되었습니다. 리뷰 속도가 3배 빨라져 20분에서 6~10분으로 단축됐으며, 버그 탐지 품질이 향상되었습니다. 관리자는 저장소별로 Quick·Standard·Deep 옵션을 선택해 리뷰 깊이를 조정할 수 있습니다.",
+  "why": "Claude 엔터프라이즈 조직이라면 2027년 1월 15일까지 1만 달러 크레딧을 청구해야 한다. 크레딧은 청구 후 30일 뒤 만료되므로 기한 내 사용 계획을 세워야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Muse Spark Open",
+  "url": "https://research.meta.ai/blog/muse-spark-open",
+  "source": "hackernews",
+  "upvotes": 543,
+  "comments": 306,
+  "published_at": 1792086459,
+  "discussion": "https://news.ycombinator.com/item?id=50107379",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://research.meta.ai/blog/muse-spark-open"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://research.meta.ai/articles/muse-spark-open/social/muse-spark-1-2-open-weights-social-v2.webp",
+  "link_status": "ok",
+  "ko_title": "Muse Spark Open",
+  "summary": "Muse Spark Open은 816 B 파라미터(활성 42 B)와 1 M 토큰 컨텍스트를 갖춘 멀티모달 오픈-weight 모델이다. Apple M5 Ultra Mac Studio 두 대에서 로컬 실행이 가능하도록 MLX 프레임워크로 최적화되었다. 모델 가중치는 Amazon SageMaker AI·Google Cloud Model Garden·Hugging Face·Microsoft Foundry Models에서 다운로드할 수 있고, Baseten·Fireworks AI·Groq·Modal·Nebius·OpenRouter·Together AI 등 API 플랫폼에서도 제공된다.",
+  "why": "816B 파라미터 모델을 로컬에서 돌리려면 Apple M5 Ultra Mac Studio 두 대가 필수다. MLX 프레임워크 최신 버전으로 최적화되어 있어 해당 하드웨어 환경에서만 실행 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Krea 3 – An image model built for editing at scale",
+  "url": "https://www.krea.ai/krea-3",
+  "source": "hackernews",
+  "upvotes": 225,
+  "comments": 73,
+  "published_at": 1792080245,
+  "discussion": "https://news.ycombinator.com/item?id=50105648",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.krea.ai/krea-3"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://s.krea.ai/krea-3-og-boxes-3.webp",
+  "link_status": "ok",
+  "ko_title": "Krea 3 – 대규모 편집을 위한 이미지 모델",
+  "summary": "Krea 3은 생산 환경에 맞춘 이미지 편집 모델로, 지정한 영역만 변경하고 2K 해상도를 네이티브로 지원한다. 편집당 소요 시간은 8초 정도이며, 이미지당 비용이 명시돼 있다. 여러 조직에 배포되어 다양한 산업에서 활용되고 있다.",
+  "why": "지정 영역만 수정하는 방식이라 전체 재생성 시 발생하는 불필요한 픽셀 변동이 줄어든다. 2K 해상도 네이티브 지원으로 업스케일링 과정 없이 최종 산출물을 바로 얻는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+  "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792096441.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-granite/granite-switch-4-1"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/662836b742709fe826510597/gltB0o--PV_Jh0D3aDm8-.png",
+  "link_status": "ok",
+  "ko_title": "Granite Switch 4.1: 하나의 엔드포인트에서 채팅·결정·음성",
+  "summary": "Granite Switch 4.1은 8B와 30B 모델에 Decision aLoRA, Guardian aLoRA, 그리고 가장 빠른 ASR 모델인 Granite-Speech-5.0-Turbo-CTC를 통합한다. 이 세 기술을 하나의 모델에 합쳐 VRAM 사용량은 기본 모델과 동일하지만 기능이 확대된다. KV 캐시 재사용과 vLLM 최적화 덕분에 채팅, 결정, 음성 요청을 실시간으로 전환한다.",
+  "why": "VRAM 사용량이 기본 모델과 동일해 추가 GPU 없이도 기능을 확장할 수 있다. KV 캐시 재사용 덕분에 채팅과 결정, 음성 요청 간 전환 속도가 빨라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop",
+  "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792080584.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/08/nvidia_logo.png",
+  "link_status": "ok",
+  "ko_title": "Nvidia Nemotron 3.5 Super VL, 기업 AI 에이전트용 오픈 멀티모달 모델 출시",
+  "summary": "Nvidia가 1200억 파라미터 규모의 멀티모달 모델 Nemotron 3.5 Super VL을 공개했다. 에이전트 작업과 문서 분석에 최적화됐으며, 12 b 파라미터만 토큰당 활성화하는 Mixture-of-Experts 구조를 사용한다. 로컬 PC용 24 GB 메모리 지원 Bolt 74B와 4 GB 음성 비서용 Bolt E4B 두 가지 소형 모델도 동시에 제공한다. 모델 가중치와 학습 레시피, 데이터셋을 함께 공개하지만 Nvidia 하드웨어에 최적화돼 있다.",
+  "why": "모든 Nemotron 모델이 Nvidia 하드웨어에 최적화되어 있어 비 Nvidia 환경에서는 성능 저하가 불가피하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Bringing GPT-Rosalind to academic research labs",
+  "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792090800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-the-rosalind-academic-plan"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-Rosalind를 학술 연구실에 도입",
+  "summary": "학술 연구실을 대상으로 GPT-Rosalind와 관련 도구를 무료로 제공하는 Rosalind Academic Plan이 발표되었습니다. 해당 플랜은 자격을 갖춘 연구실에 스폰서십 형태로 접근 권한을 부여합니다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치가 필요하지 않다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "release"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Neural networks are clean",
+  "url": "https://already-clean.goodfire.com/",
+  "source": "hackernews",
+  "upvotes": 441,
+  "comments": 163,
+  "published_at": 1792080241,
+  "discussion": "https://news.ycombinator.com/item?id=50105647",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://already-clean.goodfire.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://already-clean.goodfire.com/assets/social/city-and-knot-20261015.png",
+  "link_status": "ok",
+  "ko_title": "Neural networks는 깨끗하다",
+  "summary": "저자는 이미지·언어 모델의 뉴런과 회로를 오랜 기간 연구한 결과, 네트워크 내부 메커니즘이 해석 가능한 구성 요소이며, 기존에 ‘다중 의미성·중첩’이라 여겨졌던 현상이 실제로는 ‘재귀 일반화’라는 패턴에 불과하다고 주장한다. 이는 네트워크를 별도 해체 없이 직접 연구할 수 있음을 의미한다. 두 가지 해석 접근법 중 첫 번째인 네트워크 자체를 관찰·실험하는 방법이 다시 주목받고 있다.",
+  "why": "기존에 다중 의미성으로 여겨졌던 현상이 재귀 일반화 패턴임을 확인했다. 네트워크를 별도 해체 없이 직접 관찰하고 실험하는 접근법이 다시 유효해진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Forgejo v17.0 is available",
+  "url": "https://forgejo.org/2026-10-release-v17-0/",
+  "source": "lobsters",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1792093399.853,
+  "discussion": "https://lobste.rs/s/vemho2/forgejo_v17_0_is_available",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://forgejo.org/2026-10-release-v17-0/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://forgejo.org/_astro/og-preview.Uy75QWb0_6Lpd2.webp",
+  "link_status": "ok",
+  "ko_title": "Forgejo v17.0 사용 가능",
+  "summary": "Forgejo 17.0이 2026-10-15에 출시되었으며, 절대 경로 링크 처리 방식이 변경돼 마이그레이션 호환성이 높아졌다. 액션 실행 웹훅 이벤트가 워크플로우 실행 이벤트로 대체돼 기존 웹훅을 수동으로 이전해야 한다. FUNDING.yml 파일이 있으면 “Donate” 버튼이 표시된다.",
+  "why": "기존 액션 실행 웹훅은 헤더와 키가 바뀌어 자동 이전이 불가능하다. 수신기가 새 워크플로우 실행 이벤트를 처리하는지 확인 후 수동으로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "My C23 Conventions",
+  "url": "https://abner.page/post/c23-conventions-1/",
+  "source": "lobsters",
+  "upvotes": 32,
+  "comments": 5,
+  "published_at": 1792078335.83,
+  "discussion": "https://lobste.rs/s/umdbht/my_c23_conventions",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://abner.page/post/c23-conventions-1/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "My C23 관례",
+  "summary": "이 글은 현대 C23 표준을 사용하면서 도입한 세 가지 관례 중 첫 번째인 [[nodiscard]]와 [[maybe_unused]] 활용법을 설명한다. 기존에 사용하던 UNUSED 매크로를 제거하고 C23의 속성을 적용해 컴파일러 경고를 효율적으로 처리한다. 예시 코드를 통해 반환값을 의도적으로 무시하거나 사용하지 않을 때의 패턴을 제시한다.",
+  "why": "C23 표준을 적용하면 기존 UNUSED 매크로를 [[maybe_unused]] 속성으로 대체할 수 있다. 반환값을 의도적으로 무시하는 예외 케이스에서 컴파일러 오류를 깔끔하게 해결한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Jev meets the Trolley Problem",
+  "url": "https://zachlandes.com/trolley-problem/",
+  "source": "hackernews",
+  "upvotes": 235,
+  "comments": 109,
+  "published_at": 1792081492,
+  "discussion": "https://news.ycombinator.com/item?id=50106023",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://zachlandes.com/trolley-problem/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://zachlandes.com/assets/og/trolley-problem.jpg",
+  "link_status": "ok",
+  "ko_title": "Jev와 트롤리 문제",
+  "summary": "Jev와 유사한 ‘결정 모델’들이 트롤리 문제에 대해 어떻게 답하는지 비교 실험을 진행했다. 실험에는 Jev, OpenAI Decisions API(Luna), 인기 있는 11개의 로컬 모델과 미조정 베이스라인 Laya가 포함됐다. 각 모델에 동일 질문을 여러 차례 제시해 선택 확률을 수집했다.",
+  "why": "결정 모델이 텍스트가 아닌 선택지와 확률을 출력한다. 이 구조는 신뢰도를 수치로 확인하는 백엔드 로직에 직접 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "ahwootech / BRUTAL",
+  "url": "https://github.com/ahwootech/BRUTAL",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 782,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ahwootech/BRUTAL"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 782,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/ahwootech/BRUTAL",
+  "link_status": null,
+  "ko_title": "BRUTAL 프레임워크",
+  "summary": "BRUTAL은 C# 기반의 무료 오픈소스 프레임워크로, 게임을 직접 만들거나 자체 엔진의 기반으로 사용할 수 있다. Vulkan·GLFW·Dear ImGui·FMOD·RakNet·Jolt·Box2D 등 다양한 네이티브 라이브러리 바인딩을 제공한다. MIT-계열 라이선스로 상업 게임에도 로열티 없이 사용할 수 있다.",
+  "why": "C#으로 네이티브 API에 직접 접근하는 인터옵 레이어를 제공해 자체 엔진 구축 시 기초 작업 시간을 줄여준다. Unity나 Unreal처럼 아키텍처를 강제하지 않아 비정형 프로젝트에서 유연한 스택 구성이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "About time",
+  "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1792095734.682,
+  "discussion": "https://lobste.rs/s/ipyrkv/about_time",
+  "merged_sources": [
+   "hackernews",
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.bipm.org/en/cgpm-2026/resolution-5"
+  ],
+  "cross_source_count": 2,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "시간에 관한 결정",
+  "summary": "28차 CGPM 회의에서 UTC 연속성을 보장하기 위해 UT1-UTC 차이의 최대값을 2035년 이전에 확대하기로 결정했다. 이는 산업 사용자와 국가 핵심 인프라의 동기화 요구를 충족시키기 위한 조치다.",
+  "why": "시간 동기화 로직을 설계할 때 UT1-UTC 차이의 상한값을 고정해야 한다. 2035년 이전 이 상한값이 확대되므로 기존 코드에 하드코딩된 한계값을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Chirp Pong",
+  "url": "https://simonwillison.net/2026/Oct/15/chirp-pong/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792093672.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/15/chirp-pong/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Chirp Pong",
+  "summary": "두 휴대폰의 마이크를 이용해 음파로 게임 상태를 주고받는 정적 HTML 기반 2인용 Pong 실험 게임이 구현되었다. 웹 마이크 API가 음향 신호를 해석해 실시간으로 동기화한다.",
+  "why": "웹 마이크 API로 음파를 주고받아 네트워크 코드 없이 두 기기 간 상태를 동기화하는 방식이다. 서버나 웹소켓 없이도 저대역폭 환경에서 실시간 상호작용을 구현할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Anthropic의 Scion이 Mononoke를 베꼈다는 비판에 대한 추가 설명",
+  "url": "https://news.hada.io/topic?id=35434",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792093386.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35434"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Anthropic의 Scion이 Mononoke를 베꼈다는 비판에 대한 추가 설명",
+  "summary": "Mononoke의 Bonsai 데이터 모델을 설계한 엔지니어가 Scion이 의도적으로 모방하고 출처를 누락했다고 비판했다. 엔지니어는 비공개 확인과 인력 중첩을 근거로 제시했지만, 해당 확인 내용은 공개되지 않았다. 비판은 유사성이 파생 데이터를 넘어 전체 데이터 모델과 주변 구조까지 확장된다고 주장한다.",
+  "why": "Scion을 도입하거나 Mononoke와 비교하는 작업 시 출처 표기 누락 논란을 고려해야 한다. 비공개 확인 내용과 인력 중첩 주장이 공개되지 않아 사실관계 검증이 어렵다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
+  "title": "Fortran 70주년을 기념하며",
+  "url": "https://news.hada.io/topic?id=35436",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792096687.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35436"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Fortran 70주년을 기념하며",
+  "summary": "2026년 10월 15일은 첫 Fortran 매뉴얼이 발행된 지 70주년이다. 원자력 공학·기상·재료과학 등에서 여전히 주요 언어로 쓰이고 있다. 케임브리지대 기후과학 컴퓨팅 연구소는 12월 1일 영국 맨체스터 과학산업박물관에서 기념 워크숍을 개최한다.",
+  "why": "백엔드·AI 개발자가 Fortran을 직접 다룰 일은 드물다. 기상·기후 예측 모델의 핵심 코드가 Fortran으로 유지되는 한, 해당 도메인 연산 시 인터페이스를 알아야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-16T08:00:03.232558+09:00",
+  "batch_label": "10월 16일 08:00"
+ },
+ {
   "title": "chenglou / handwired",
   "url": "https://github.com/chenglou/handwired",
   "source": "github",
