@@ -1,53 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-07T00:00:36+09:00",
-   "total": 23,
-   "counts": {
-    "ok": 12,
-    "blocked": 6,
-    "short": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=34892",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34890",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
-     "source": "lobsters",
-     "reason": "short"
-    },
-    {
-     "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34895",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34894",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34893",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-07T08:00:40+09:00",
    "total": 23,
    "counts": {
@@ -1286,6 +1239,53 @@
      "url": "https://news.hada.io/topic?id=35459",
      "source": "geeknews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-17T00:00:49+09:00",
+   "total": 24,
+   "counts": {
+    "ok": 12,
+    "blocked": 6,
+    "short": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35473",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35477",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35476",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35475",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35474",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
+     "source": "lobsters",
+     "reason": "short"
     }
    ]
   }

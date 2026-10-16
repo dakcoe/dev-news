@@ -211,7 +211,7 @@ S: 221 Bye</code></pre>
 
   <h2 id="s10">정리</h2>
   <p>캐시는 If-Modified-Since 헤더를 붙인 조건부 GET으로 사본이 최신인지 확인하고, 바뀌지 않았으면 304 응답만 받습니다. HTTP/2는 객체를 프레임으로 나눠 섞어 보내 응용 계층의 HOL 블로킹을 줄였고, HTTP/3는 UDP 위의 QUIC으로 옮겨 전송 계층의 HOL 블로킹까지 피합니다. 전자우편은 사용자 에이전트, 메일 서버, SMTP로 이루어지고, SMTP는 메일 서버까지 메일을 밀어 넣으며, 받는 사람은 POP3, IMAP, HTTP로 메일을 끌어옵니다. DNS는 루트, TLD, 책임 서버가 계층을 이룬 분산 데이터베이스이고, 로컬 DNS 서버가 대개 반복 질의로 이름을 풀며 TTL 동안 결과를 캐시합니다. 데이터베이스에는 A, NS, CNAME, MX 같은 자원 레코드가 들어 있습니다.</p>
-<div class="next"><a href="/learn/net-4-http-cookie-cache/"><small>← 이전 글</small><span>HTTP 메시지, 쿠키, 웹 캐시 — 연결 방식부터 캐싱 계산까지</span></a></div>
+<div class="next"><a href="/learn/net-4-http-cookie-cache/"><small>← 이전 글</small><span>HTTP 메시지, 쿠키, 웹 캐시 — 연결 방식부터 캐싱 계산까지</span></a><a class="r" href="/learn/net-6-p2p-bittorrent/"><small>다음 글 →</small><span>P2P 파일 분배와 BitTorrent — 분배 시간에서 tit-for-tat까지</span></a></div>
 </article>
 <aside class="toc"><b>목차</b><ol><li><a href="#s1">조건부 GET — 캐시의 사본이 아직 맞는가</a></li><li><a href="#s2">HTTP/2와 HTTP/3</a></li><li><a href="#s3">전자우편의 세 구성 요소</a></li><li><a href="#s4">SMTP의 대화와 메일 메시지 형식</a></li><li><a href="#s5">메일을 가져오는 프로토콜</a></li><li><a href="#s6">DNS — 이름을 주소로 바꾸는 시스템</a></li><li><a href="#s7">루트, TLD, 책임 서버, 그리고 로컬 DNS</a></li><li><a href="#s8">반복 질의와 재귀 질의, 그리고 DNS 캐싱</a></li><li><a href="#s9">DNS 레코드와 도메인 등록</a></li><li><a href="#s10">정리</a></li></ol></aside></div>
 <div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>
