@@ -1,58 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-07T08:00:40+09:00",
-   "total": 23,
-   "counts": {
-    "dead": 1,
-    "github": 4,
-    "blocked": 7,
-    "ok": 11
-   },
-   "failures": [
-    {
-     "url": "https://mistral.ai/news/mistral-large-4/\\",
-     "source": "hackernews",
-     "reason": "dead"
-    },
-    {
-     "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/atlassian-partnership",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34909",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34908",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34907",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34906",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34905",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-07T16:00:36+09:00",
    "total": 23,
    "counts": {
@@ -1286,6 +1234,52 @@
      "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
      "source": "lobsters",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-17T08:00:36+09:00",
+   "total": 22,
+   "counts": {
+    "blocked": 7,
+    "ok": 13,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.tesla.com/roadster",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35487",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35483",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35497",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35496",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35495",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
