@@ -1,5 +1,541 @@
 [
  {
+  "title": "Self-Evolving Agent Harness - 모델은 그대로, 하네스(프롬프트·기억·도구)를 스스로 고치는 에이전트",
+  "url": "https://news.hada.io/topic?id=35463",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792127050.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35463"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Self-Evolving Agent Harness - 모델은 그대로, 하네스(프롬프트·기억·도구)를 스스로 고치는 에이전트",
+  "summary": "논문에서는 모델 가중치를 고정한 채 에이전트의 프롬프트·기억·워크플로·도구 코드를 실행 피드백으로 자동 수정하는 “하네스 자기 진화” 방식을 제안한다. 수정 제안과 적용 기준을 구분해 검증하고, 승인된 수정은 이후 실행에 지속된다. 적용 여부는 새로운 독립 검증 데이터로 판단한다.",
+  "why": "모델을 재학습하지 않고 프롬프트와 도구 코드를 자동 수정하는 방식이다. 에이전트 성능 개선 시 가중치 업데이트 없이 하네스만 조정할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "feder-cr / open_scion",
+  "url": "https://github.com/feder-cr/open_scion",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 318,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/feder-cr/open_scion"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 318,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/feder-cr/open_scion",
+  "link_status": null,
+  "ko_title": "feder-cr / 오픈 스키온",
+  "summary": "Anthropic이 내부에서 사용 중인 Scion 설계를 오픈소스로 구현한 open_scion이 공개되었습니다. MIT 라이선스로 제공되며 서버가 모든 AI 기능을 담당하고 언어 모델 제공자를 제한하지 않습니다. 기존 Git 저장소 위에 구축돼 클라이언트는 필요한 객체만 가져와 수천 개의 에이전트 작업을 초당 처리할 수 있습니다.",
+  "why": "서버가 AI 기능을 전담하고 모델 제공자를 제한하지 않아 기존 Git 워크플로와 호환된다. 수천 개의 에이전트가 동시에 코드를 수정하는 환경에서 병목 해소에 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+  "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792115087.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/68d2fec8856b85d927e44d32/x0aObe_0mduBjWFuKBGoV.png",
+  "link_status": "ok",
+  "ko_title": "인도어 사전학습 확장: 2.8조 토큰과 오픈 데이터 생성 파이프라인",
+  "summary": "AI4Bharat와 NVIDIA가 22개 인도어에 걸친 2.8조 토큰 규모의 Nemotron-pretraining-Indic-v1 모델 데이터를 공개한다. 동시에 GPU 가속 오픈 데이터 생성 파이프라인을 제공해 사용자가 자체 데이터로 확장 가능하도록 했다. 이 데이터는 영어 수학·코드·Q&A 등 다양한 분야를 인도어로 번역·검증한 합성 텍스트다.",
+  "why": "인도어 기술 문서나 코드를 다루는 모델 개발 시 기존 영어 데이터 의존도를 낮출 수 있다. 공개된 파이프라인을 활용해 자체 소스 데이터로 합성 텍스트를 생성할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Meta’s new commercial terms will allow the scraping of news sites: experts",
+  "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
+  "source": "hackernews",
+  "upvotes": 189,
+  "comments": 75,
+  "published_at": 1792107462,
+  "discussion": "https://news.ycombinator.com/item?id=50111852",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://www.niemanlab.org/images/Meta-stock-image-700x467.jpg",
+  "link_status": "ok",
+  "ko_title": "Meta의 새로운 상업 약관, 뉴스 사이트 스크래핑 허용",
+  "summary": "Meta는 비즈니스 계정과 연결된 웹사이트를 자동화 도구로 크롤링해 콘텐츠를 수집하도록 약관을 변경한다. 10월 30일부터 적용되며, 뉴스 출판사도 비즈니스 계정이 있으면 대상이 된다. 수집된 콘텐츠는 Meta의 AI 제품 학습에 활용될 수 있다.",
+  "why": "뉴스 사이트가 Meta 비즈니스 계정과 연결되어 있으면 10월 30일부터 자동화 도구로 크롤링당할 수 있다. 수집된 콘텐츠는 Meta의 AI 제품 학습에 쓰이므로, 해당 약관에 동의한 출판사는 콘텐츠 무단 활용 위험을 감수하게 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "How the Claude Code team does code review",
+  "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792065600.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/solving-code-review-at-anthropic/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://claude.dev/blog/solving-code-review-at-anthropic/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Code 팀의 코드 리뷰 방식",
+  "summary": "Claude Code 팀은 코드량이 급증함에 따라 인간 리뷰 시간을 최소화하고, 대부분의 검토를 머신에 맡겨 효율을 높였다. 6월부터 9월까지 병합된 PR 수는 두 배 이상 증가했으며, 되돌림 비율은 40% 이상 감소했다. 리뷰는 이제 지속적으로 진행되며, 인간이 검토하기 전에 Claude가 대부분의 오류를 잡는다.",
+  "why": "에이전트가 작성한 코드 리뷰를 사전에 자동화하면 인간이 고수준 판단에만 집중할 수 있다. 이는 코드 생성 속도가 빨라질수록 수동 리뷰 병목을 줄이는 실질적 대안이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "실행은 도메인별로, 문맥은 한 레포에",
+  "url": "https://toss.tech/article/dw-airflow-migration",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792131300.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/dw-airflow-migration"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "실행은 도메인별로, 문맥은 한 레포에",
+  "summary": "토스 Data Warehouse 팀이 중앙 DW Airflow를 유지하면서 도메인별 DW Airflow와 dbt 기반 파이프라인으로 마이그레이션한 과정을 소개한다. 기존 DAG 파일 수를 2,794줄에서 100줄로 축소하고 파이프라인 실행 시간을 4시간에서 2시간 30분으로 단축했다. 마이그레이션은 Strangler Fig 방식으로 진행했으며, 도메인별로 단계적으로 옮겨 기존 시스템과 병행 운영했다.",
+  "why": "도메인별 Airflow 분리 시 도메인 간 배치 경쟁이 사라져 실행 시간이 단축된다. 코딩 에이전트가 테이블 생성 주체를 코드에서 직접 확인하도록 구조가 바뀐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Linus Torvalds on AI-assisted kernel contributions",
+  "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
+  "source": "lobsters",
+  "upvotes": 12,
+  "comments": 16,
+  "published_at": 1792119033.788,
+  "discussion": "https://lobste.rs/s/xiq59t/linus_torvalds_on_ai_assisted_kernel",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Linus Torvalds, AI 지원 커널 기여에 대한 입장",
+  "summary": "Linus Torvalds는 커널 패치에 AI 도구 사용을 반대한다. 그는 코드 이해를 어셈블리 수준에서 증명하지 못하면 기여를 받아들이지 않겠다고 밝혔다. 이 메일은 AI 활용에 대한 새로운 규칙을 제시한다.",
+  "why": "커널 기여 시 AI 도구 사용이 사실상 배제되는 새로운 기준이 생겼다. AI로 작성한 코드는 어셈블리 수준 이해를 증명하지 못하면 반려된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "deeplethe / solid-glass",
+  "url": "https://github.com/deeplethe/solid-glass",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 350,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/deeplethe/solid-glass"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 350,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/deeplethe/solid-glass",
+  "link_status": null,
+  "ko_title": "솔리드 글래스",
+  "summary": "이 저장소는 AI 애플리케이션용 UI 컴포넌트 라이브러리다. shadcn/ui와 Tailwind CSS, React 기반이며 13개의 컴포넌트를 제공한다. MIT 라이선스로 공개돼 자유롭게 사용할 수 있다.",
+  "why": "shadcn/ui와 Tailwind CSS를 쓰는 백엔드 개발자가 AI 서비스 프론트엔드를 만들 때 바로 쓸 수 있다. 13개 컴포넌트만 제공하므로 전체 UI를 대체하지는 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "RPKI now protects 70% of internet routes",
+  "url": "https://ipinfo.io/blog/rpki-protects-70-internet-routes",
+  "source": "hackernews",
+  "upvotes": 113,
+  "comments": 34,
+  "published_at": 1792111955,
+  "discussion": "https://news.ycombinator.com/item?id=50112330",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ipinfo.io/blog/rpki-protects-70-internet-routes"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://storage.ghost.io/c/b1/57/b157bf7f-0fe2-447f-a945-12d7951755b3/content/images/2026/10/ipinfo-rpki-social-share-2400x1256-1.png",
+  "link_status": "ok",
+  "ko_title": "RPKI 이제 인터넷 경로의 70% 보호",
+  "summary": "RPKI 유효 경로 비중이 2025년 9월 54.0%에서 2026년 9월 70.3%로 16.4포인트 상승했다. 특히 중국이 IPv4 주소의 3.7%에서 83.0%로 급증하면서 전 세계 증가분의 대부분을 차지했다.",
+  "why": "RPKI 검증 비중이 70%를 넘어서며 BGP 경로 오류 차단 범위가 확대됐다. 라우팅 설정 시 RPKI 검증 상태를 확인해 잘못된 경로 수신 위험을 줄여야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Show GN: livero: 48KiB RAM에서 도는 인덱스 없는 온디바이스 벡터 DB",
+  "url": "https://news.hada.io/topic?id=35465",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792129673.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35465"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: livero: 48KiB RAM에서 도는 인덱스 없는 온디바이스 벡터 DB",
+  "summary": "livero는 모바일·MCU 등 온디바이스 환경을 위한 초소형 벡터 데이터베이스다. 고정 48KiB 메모리만 사용하고 추가 할당이 없으며, 삼진 양자화 벡터만을 저장한다. ANN 인덱스를 두지 않고 전수조사 방식으로 검색한다.",
+  "why": "기존 벡터 DB가 요구하는 ANN 인덱스 구축과 동적 메모리 할당 절차가 사라진다. MCU나 모바일 환경에서 48KiB 고정 메모리만으로 벡터 검색을 수행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "science",
+   "showcase"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "My self-hosted infrastructure with Incus OS",
+  "url": "https://dataswamp.org/~solene/2026-10-15-selfhosting-infrastructure-incus-os.html",
+  "source": "lobsters",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": 1792121149.491,
+  "discussion": "https://lobste.rs/s/q0wobg/my_self_hosted_infrastructure_with_incus",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://dataswamp.org/~solene/2026-10-15-selfhosting-infrastructure-incus-os.html"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://dataswamp.org/~solene/static/og-logo.png",
+  "link_status": "ok",
+  "ko_title": "Incus OS로 구축한 개인 셀프 호스팅 인프라",
+  "summary": "저자는 7개월간 집에 있는 노트북 하나에 Incus OS와 약 20개의 Ubuntu 시스템 컨테이너, 2개의 가상 머신을 배치해 자동 업데이트와 복구가 가능한 보안 인프라를 만들었다. 이 인프라는 프랑스 보안 표준 SecNumCloud와 ISO 27001 원칙을 적용했으며, 컨테이너와 cloud-init 사용 경험을 강조한다.",
+  "why": "Incus OS 기반 시스템 컨테이너 아키텍처는 자동 복구와 보안 표준 적용을 위한 설계 참고자료로 활용 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Show GN: 여울게임터 - 가입 없이 브라우저에서 바로 하는 1인 개발 게임 공유 사이트",
+  "url": "https://news.hada.io/topic?id=35461",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792121281.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35461"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: 여울게임터 - 가입 없이 브라우저에서 바로 하는 1인 개발 게임 공유 사이트",
+  "summary": "혼자 만든 게임을 회원가입 없이 바로 브라우저에서 플레이하고 평가할 수 있는 플랫폼을 제공한다. 운영 첫 달에 총 24개의 게임이 올라왔으며, 그 중 9개는 작성자가 직접 만든 것이다.",
+  "why": "1인 개발 게임의 즉각적인 플레이와 피드백 루프를 검증할 수 있는 테스트베드다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "원격 증명을 용인해서는 안 된다",
+  "url": "https://news.hada.io/topic?id=35459",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792119768.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35459"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "원격 증명을 용인해서는 안 된다",
+  "summary": "원격 증명은 다른 기기에서 실행 중인 소프트웨어를 검증해 제3자가 사용자 소유 기기에서 실행되는 내용을 통제할 수 있게 하는 기술이다. Google Play Integrity는 Android 시스템이 Google이 승인한 것인지 판단하며, 이를 요구하는 앱에서는 해당 검증을 필수로 한다.",
+  "why": "백엔드 서버에서 클라이언트 무결성을 검증할 때 이 방식을 도입하면 제3자가 사용자 기기 실행 환경을 통제하게 된다. 신뢰 경계가 서버 내부로 넘어오므로 기존 로컬 검증 로직과 권한 범위를 재설계해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Show GN: Typescript – 한/영 키 누르기 귀찮아서 직접 만든 한·영·일 자동 판별 입력기",
+  "url": "https://news.hada.io/topic?id=35462",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792121288.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35462"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show GN: Typescript – 한/영 키 누르기 귀찮아서 직접 만든 한·영·일 자동 판별 입력기",
+  "summary": "개발자가 슬랙·노션 등으로 전환할 때 한/영 키를 누르지 않아 발생하는 오타를 방지하고자, TypeScript로 한·영·일 자동 판별 입력기를 직접 구현했다. 입력기는 사용자가 입력한 문자열을 실시간으로 분석해 언어를 자동 전환한다. 현재 GitHub에 공개되어 직접 설치·사용할 수 있다.",
+  "why": "슬랙·노션 등 외부 도구로 전환할 때 한/영 키 누락으로 인한 오타를 줄일 수 있다. GitHub에서 직접 설치해 사용해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "토스뱅크가 패키지를 관리하는 방식 #2: 토스뱅크 패키지의 세 가지 기준",
+  "url": "https://toss.tech/article/package-management-2",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792112400.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/package-management-2"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://static.toss.im/disposables/contents/code-tags-restyle.png",
+  "link_status": "ok",
+  "ko_title": "토스뱅크가 패키지를 관리하는 방식 #2: 토스뱅크 패키지의 세 가지 기준",
+  "summary": "토스뱅크는 패키지 호스트 환경에서 안정적 동작을 보장하기 위해 문법 변환 지원 여부와 API 폴리필 가능성을 기준으로 삼는다. 패키지 빌드에서는 원본 문법과 모듈 구조를 유지하고, 실제 변환은 호스트에 맡긴다. 또한 배포 후에도 원본 의도가 유지되도록 모듈 경계를 보존한다.",
+  "why": "패키지 빌드에서 문법 변환을 하지 않고 원본 구조를 유지해야 한다. 호스트가 자신의 실행 환경에 맞춰 변환을 수행하기 때문이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Announcing Rust 1.99.1",
+  "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+  "source": "lobsters",
+  "upvotes": 12,
+  "comments": 5,
+  "published_at": 1792105380.345,
+  "discussion": "https://lobste.rs/s/ttcx5k/announcing_rust_1_99_1",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+  "link_status": "ok",
+  "ko_title": "Rust 1.99.1 발표",
+  "summary": "Rust 1.99.1은 이전 릴리즈에서 발생한 회귀 버그들을 수정한 새로운 패치 릴리즈이다. 주요 수정 사항은 wcslen 심볼 누락, x86_64에서 FFI bool 반환값의 잘못된 컴파일, macOS에서 rust-lld가 libLLVM을 로드하지 못하던 문제이다. rustup을 통해 stable 채널을 업데이트하면 바로 적용할 수 있다.",
+  "why": "x86_64에서 FFI로 bool을 반환하던 코드는 이전 버전에서 0이나 1이 아닌 값을 받을 수 있었다. 이 패치로 ABI 규정에 맞게 값이 제로 확장되어 다시 안전해진다. rustup으로 stable 채널을 갱신하면 즉시 적용된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
+  "title": "Where did WIN32_LEAN_AND_MEAN come from? (2009)",
+  "url": "https://devblogs.microsoft.com/oldnewthing/20091130-00/?p=15863/",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1792117693.828,
+  "discussion": "https://lobste.rs/s/eqoieo/where_did_win32_lean_mean_come_from_2009",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://devblogs.microsoft.com/oldnewthing/20091130-00/?p=15863/"
+  ],
+  "cross_source_count": 1,
+  "score": 34,
+  "image": "https://devblogs.microsoft.com/oldnewthing/wp-content/uploads/sites/38/2025/10/banner-oldnewthing-blue.webp",
+  "link_status": "ok",
+  "ko_title": "WIN32_LEAN_AND_MEAN은 어디서 왔나요?",
+  "summary": "WIN32_LEAN_AND_MEAN 매크로는 Windows 95 시기에 16비트에서 32비트로 전환하면서 포함되는 헤더 파일을 최소화하기 위해 도입되었다. 당시 느린 CPU와 메모리 환경에서 컴파일 시간을 크게 단축시켰지만, 오늘날에는 프리컴파일 헤더와 모어의 법칙으로 그 효과가 거의 사라졌다.",
+  "why": "프리컴파일 헤더가 보편화되어 컴파일 시간 단축 효과가 사실상 사라졌다. 따라서 이 매크로를 정의하든 아니든 빌드 속도에 미치는 영향은 미미하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-16T16:00:03.129994+09:00",
+  "batch_label": "10월 16일 16:00"
+ },
+ {
   "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
   "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
   "source": "hackernews",
