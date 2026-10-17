@@ -1,52 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-07T16:00:36+09:00",
-   "total": 23,
-   "counts": {
-    "ok": 13,
-    "blocked": 7,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=34931",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34930",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34929",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34928",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34927",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/jump-trading",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-08T00:00:45+09:00",
    "total": 24,
    "counts": {
@@ -1278,6 +1232,58 @@
     },
     {
      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-17T16:00:41+09:00",
+   "total": 22,
+   "counts": {
+    "blocked": 7,
+    "ok": 11,
+    "short": 1,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35517",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35506",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35519",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35518",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35516",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+     "source": "lobsters",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/itau-generative-ai",
      "source": "rss",
      "reason": "blocked"
     }
