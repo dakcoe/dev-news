@@ -1,5 +1,546 @@
 [
  {
+  "title": "Interactive refactoring in gopls",
+  "url": "https://go.dev/blog/interactive-refactoring",
+  "source": "lobsters",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1792199529.772,
+  "discussion": "https://lobste.rs/s/wn293o/interactive_refactoring_gopls",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://go.dev/blog/interactive-refactoring"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://go.dev/doc/gopher/gopher5logo.jpg",
+  "link_status": "ok",
+  "ko_title": "gopls의 인터랙티브 리팩터링",
+  "summary": "gopls에 인터랙티브 리팩터링 기능이 추가되어 LSP를 통해 다단계 대화형 변환을 지원한다. 이 기능은 Go용 VS Code 확장(v0.56.0)과 gopls v0.24.0에서 사용할 수 있다.",
+  "why": "기존 LSP 리팩터링은 파라미터 없이 즉시 실행되는 방식이었으나, 이제 다단계 대화형 변환이 가능해졌다. gopls v0.24.0와 VS Code Go 확장 v0.56.0 이상 버전에서만 이 기능을 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "I Built a Photorealistic AI Virtual Try-On App Entirely on a $150 Phone (And How We Pivoted When It Failed)",
+  "url": "https://dev.to/koda2026/i-built-a-photorealistic-ai-virtual-try-on-app-entirely-on-a-150-phone-and-how-we-pivoted-when-it-3n4l",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1792219647.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/koda2026/i-built-a-photorealistic-ai-virtual-try-on-app-entirely-on-a-150-phone-and-how-we-pivoted-when-it-3n4l"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F65bw739ry3y2fgvtn4e0.png",
+  "link_status": "ok",
+  "ko_title": "$150 안드로이드 폰으로 만든 포토리얼리스틱 AI 가상 피팅 앱과 실패 후 전환 이야기",
+  "summary": "12세와 13세 공동 창업자가 $150 안드로이드 폰과 Termux만으로 프라이버시 중심 가상 피팅 앱 ACA를 개발했다. 초기 브라우저 기반 시도는 옷감 변형과 그림자 처리에 실패했으며, 이후 로컬 TEE 구축 과정에서 여러 기술적 장애를 겪었다. 최종적으로 UI는 폰에서, 인증은 Supabase에서, 무거운 확산 모델은 클라우드에서 실행하는 분할 추론 구조로 전환했다.",
+  "why": "브라우저 내 2D 변형 방식은 옷감 물리 표현 한계로 실패했으므로, 무거운 확산 모델은 반드시 클라우드에 위임해야 한다. 로컬 TEE 구축 시 Termux 환경의 패키지 충돌과 인증 장벽을 피하려면, 초기 단계부터 분할 추론 구조를 설계해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "web",
+   "devops-infra",
+   "hardware",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "STAC-M3 Benchmark: L tick database 1.0 on Oxide OxVM w/ 128 vCPUs & 1.25 TiB of RAM",
+  "url": "https://docs.stacresearch.com/M3-20261005a",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1792213730.98,
+  "discussion": "https://lobste.rs/s/oh4yfc/stac_m3_benchmark_l_tick_database_1_0_on",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://docs.stacresearch.com/M3-20261005a"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "STAC-M3 벤치마크: L tick 데이터베이스 1.0 on Oxide OxVM with 128 vCPU와 1.25 TiB RAM",
+  "summary": "L Labs의 L tick 데이터베이스 1.0을 128 vCPU와 1.25 TiB RAM을 갖춘 Oxide OxVM 가상 머신에 배치해 STAC-M3 벤치마크를 수행했다. 5개의 3.44 TB 로컬 NVMe 디스크를 사용해 저장 효율이 기존 최고 기록보다 1.86배, 처리 속도가 1.81배, 평균 응답 시간이 1.58배 빨라졌다. 전체 17개 평균 응답 시간 테스트 중 11개에서 기존 클라우드 배포 결과를 앞섰다.",
+  "why": "금융 시계열 데이터베이스를 백엔드 인프라로 검토 중이라면, 이 벤치마크는 가상 머신 환경에서도 물리적 하드웨어에 준하는 처리 속도와 저장 효율을 확인해 주는 기준점이 된다. 기존 클라우드 배포 결과보다 11개 항목에서 응답 시간이 짧아졌으므로, 대규모 마켓 데이터 분석 파이프라인의 성능 상한선을 재설정할 근거가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "RUC-NLPIR / Agent-Reflex",
+  "url": "https://github.com/RUC-NLPIR/Agent-Reflex",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 145,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/RUC-NLPIR/Agent-Reflex"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 145,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/RUC-NLPIR/Agent-Reflex",
+  "link_status": null,
+  "ko_title": "Agent-Reflex: 언어 에이전트를 반사적으로 행동하도록 교육",
+  "summary": "2026-10에 ReSFT 데이터(54,663 트래젝터리)와 ORPO 과제(2,550개 스킬)가 Hugging Face에 공개되었습니다. 이 데이터는 도구 사용 LLM 에이전트가 잡음이 있는 피드백과 사용자 수정에 주목하고 복구하도록 훈련하는 프레임워크와 함께 제공됩니다.",
+  "why": "도구 호출 실패나 사용자 수정 시 에이전트가 스스로 복구하는 훈련 데이터셋이다. LLM 에이전트 파인튜닝 시 노이즈 피드백 처리 능력을 강화하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Ultramarine 1 Flash - 금융, 법률, 컨설팅, 운영 실무용 오픈 모델",
+  "url": "https://news.hada.io/topic?id=35519",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792218695.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35519"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ultramarine 1 Flash - 금융, 법률, 컨설팅, 운영 실무용 오픈 모델",
+  "summary": "Ultramarine 1 Flash는 금융·법률·컨설팅·운영 분야의 전문 업무를 위한 오픈 모델이다. 작업당 0.13 달러의 비용으로 문서와 결과물을 생성한다. 모델은 Claude Fable 5(max)와 GPT-5.6 Sol(max)을 활용한다.",
+  "why": "금융·법률·컨설팅 문서 생성 작업에 비용 효율적인 대안이 생겼다. 기존에 쓰던 고비용 모델 대신 이 오픈 모델을 검토해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "orib: Bringing back the old Reddit interface, with a few new enhancements",
+  "url": "https://github.com/rajtilakjee/orib",
+  "source": "lobsters",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": 1792210970.54,
+  "discussion": "https://lobste.rs/s/pllfoa/orib_bringing_back_old_reddit_interface",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://github.com/rajtilakjee/orib"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/rajtilakjee/orib",
+  "link_status": null,
+  "ko_title": "orib: 레딧 옛 인터페이스 복원 및 몇 가지 새 개선",
+  "summary": "ORIB는 Manifest V3 기반 브라우저 확장으로, reddit.com에서 클래식 레이아웃을 제공한다. 기존 세션을 이용해 투표·저장·숨기기·댓글·게시물을 처리한다. 키보드 단축키와 확장 미리보기 기능을 포함한다.",
+  "why": "레딧에서 기존 세션으로 투표와 댓글 등 상호작용이 그대로 유지된다. 새 UI에 적응이 부담스러운 경우에만 설치하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "How Itaú is building generative AI for its entire customer base",
+  "url": "https://openai.com/index/itau-generative-ai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792177200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/itau-generative-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Itaú가 전체 고객을 위해 생성형 AI를 구축하는 방법",
+  "summary": "Itaú는 ia.i 대화형 인터페이스와 IARA 거버넌스 플랫폼을 도입해 AI First 전략을 고객과 직원 모두에 적용하고 있다. 이는 브라질처럼 규제가 강한 금융 분야에서 진행된다.",
+  "why": "금융권 규제 환경에서 거버넌스 플랫폼을 결합해 생성형 AI를 전면 적용한 사례다. 백엔드 개발자는 IARA 플랫폼이 데이터 통제와 정책 집행에 어떻게 쓰이는지 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "10 Prompting Techniques My Deep Learning Exam Taught Me (That I Actually Use Now)",
+  "url": "https://dev.to/dj29/10-prompting-techniques-my-deep-learning-exam-taught-me-that-i-actually-use-now-43h0",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 3,
+  "published_at": 1792208360.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/10-prompting-techniques-my-deep-learning-exam-taught-me-that-i-actually-use-now-43h0"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9jlghfmkd6eo2usgc88g.png",
+  "link_status": "ok",
+  "ko_title": "내 딥러닝 시험에서 배운 10가지 프롬프트 기법 (실제로 지금 쓰는)",
+  "summary": "프롬프트 기법을 일상적으로 사용하고 있지만 이름을 모른다. 저자는 딥러닝 시험 공부를 통해 10가지 구체적인 기법을 정리하고, 개발자가 실제로 활용할 수 있는 예시와 사용 시점을 제시한다. 각 기법은 제로샷, 퓨샷 등으로 구분되며, 언제 효과적인지와 한계도 설명한다.",
+  "why": "자신의 코드베이스나 특수한 아키텍처를 다루는 순간 제로샷은 실패한다. 이때는 퓨샷으로 전환해 2~5개의 예시를 제공해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "rohit267 / net-merge",
+  "url": "https://github.com/rohit267/net-merge",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 138,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/rohit267/net-merge"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 138,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/rohit267/net-merge",
+  "link_status": null,
+  "ko_title": "net-merge — 모든 인터넷 연결을 동시에 사용",
+  "summary": "net-merge는 Wi-Fi, Ethernet, 휴대폰 핫스팟 등 여러 네트워크를 동시에 결합해 다운로드·게임·브라우징 속도를 합산한다. Windows·macOS·Linux를 지원하며 최신 릴리스가 GitHub에 공개돼 바로 다운로드·설치할 수 있다. 프로젝트는 CI 테스트와 MIT 라이선스로 관리되고 있다.",
+  "why": "Wi-Fi와 유선, 핫스팟을 병합해 대역폭을 합산하는 방식이다. 단일 연결에 묶여 있던 다운로드나 스트리밍 속도를 끌어올릴 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Google's Gemini 4 Argon is closer to the AI frontier than any Google model in months",
+  "url": "https://the-decoder.com/googles-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-months/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792163026.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/googles-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-months/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/09/gemini_4_argon.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 4 Argon, 수개월 만에 구글 모델 중 가장 AI 최전선에 근접",
+  "summary": "Gemini 4 Argon이 ARC-AGI-3 벤치마크에서 97.5% 점수를 기록했고, 테스트 비용은 $4,800이다. 동일 모델은 표준 환경에서는 49.8%로 급락한다. 이 결과는 테스트 설정에 크게 좌우되며, 기존 모델 대비 행동 수가 62% 감소했다.",
+  "why": "Provider Adapter Harness를 쓰면 97.5%를 기록하지만, 표준 환경에서는 49.8%로 떨어진다. 벤치마크 점수를 비교할 때 테스트 설정의 차이를 반드시 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "industry",
+   "science"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "I never authorized an integration that scans my secrets",
+  "url": "https://github.com/home-assistant/home-assistant.io/issues/49314",
+  "source": "hackernews",
+  "upvotes": 211,
+  "comments": 176,
+  "published_at": 1792182821,
+  "discussion": "https://news.ycombinator.com/item?id=50124251",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/home-assistant/home-assistant.io/issues/49314"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://opengraph.githubassets.com/9977c9b9ba61ac411f0c19dc08b23b5e3b04db4e846964b8f8dc42142f1e1f70/home-assistant/home-assistant.io/issues/49314",
+  "link_status": "ok",
+  "ko_title": "나는 비밀을 스캔하는 통합을 허가하지 않았다",
+  "summary": "최근 Home Assistant 업데이트에서 비밀번호 스캔 경고가 표시되었지만, 해당 기능은 기존부터 Supervisor에 포함돼 있었다. `ha security options --pwned=false` 명령으로 이 검사를 비활성화할 수 있다. 비밀은 로컬에서 해시 처리되어 외부로 전송되지 않는다.",
+  "why": "Home Assistant를 쓰는 백엔드 개발자는 `ha security options --pwned=false` 명령으로 비밀번호 스캔을 끌 수 있다. 비밀은 로컬에서 해시 처리되어 외부로 전송되지 않으므로 프라이버시 위험은 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "메모리 벤치마크 점수 믿어도 되나",
+  "url": "https://news.hada.io/topic?id=35516",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792214158.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35516"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "메모리 벤치마크 점수 믿어도 되나",
+  "summary": "에이전트 기억 벤치마크인 LoCoMo와 LongMemEval 등은 점수가 측정자에 따라 크게 달라진다. LoCoMo는 동일 정답지 1,540개를 사용해도 점수가 58.44점에서 94.7점까지 변동한다. 점수 변동은 채점 프롬프트 변경에도 영향을 받는다.",
+  "why": "에이전트 기억 벤치마크 점수를 비교할 때 측정자 차이를 무시하면 성능 판단이 틀릴 수 있다. 채점 프롬프트 변경만으로 점수가 크게 흔들리므로 단일 수치에 의존하지 말아야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Butlerian Jihad",
+  "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+  "source": "hackernews",
+  "upvotes": 178,
+  "comments": 97,
+  "published_at": 1792203668,
+  "discussion": "https://news.ycombinator.com/item?id=50127274",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://dune.fandom.com/wiki/Butlerian_Jihad"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "body_from": "comments",
+  "ko_title": "버틀러리안 지하드",
+  "summary": "댓글에서는 듄에서 인간 기술관료가 인공지능보다 인류 파멸에 더 가까운 역할을 했다고 해석한다. 또 현재 AI를 스카이넷에 비유하는 유머와 달리, 인간이 기술에 휘둘리는 위험을 강조한다. 마지막 댓글은 하이데거의 기술 비판을 인용해 LLM이 인간 사고에 미칠 영향을 질문한다.",
+  "why": "AI가 인류를 파괴한다는 공포보다, 기술에 의존하는 인간 관리층의 실수가 더 큰 위협이 될 수 있다는 점이 강조된다. 확률 기반 LLM이 인간 사고를 기계적으로 훈련시킨다는 하이데거의 비판이 여전히 유효한지 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Do you let LLMs write both your tests and your code?",
+  "url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+  "source": "lobsters",
+  "upvotes": 4,
+  "comments": 2,
+  "published_at": 1792194785.634,
+  "discussion": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": "https://lobste.rs/touch-icon-144.png",
+  "link_status": "ok",
+  "ko_title": "LLM이 테스트와 코드를 모두 작성하도록 허용하시나요?",
+  "summary": "작성자는 LLM이 테스트와 코드를 동시에 생성하는 것에 대한 커뮤니티 의견을 묻고 있다. 현재 진행 중인 머지 요청에서는 LLM이 양쪽을 모두 생성해 중복되고 과도하게 설계된 코드가 나타났다. 이에 따라 LLM이 하나만 생성하도록 가치 규칙을 추가하려는 고민을 하고 있다.",
+  "why": "LLM이 코드와 테스트를 동시에 만들면 중복된 구조가 생기고 과잉 설계가 나타난다. 검토 시 이 패턴을 확인해 둘 중 하나만 생성하도록 규칙을 제한해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Waymo in Toronto",
+  "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+  "source": "hackernews",
+  "upvotes": 308,
+  "comments": 411,
+  "published_at": 1792161857,
+  "discussion": "https://news.ycombinator.com/item?id=50118981",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://waymo.com/blog/2026/10/waymo-in-toronto/"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": "https://lh3.googleusercontent.com/oT69lnzKavWqyUu7BiCQCRwO5_quNkMhToRgNG_txw-llzetBvuR1663he58eSjZiEfPPVIzga1NGPvOJSlF-PbJfiAQVSboho1oVbK3Q6phCM2t",
+  "link_status": "ok",
+  "ko_title": "Waymo, 토론토 진출",
+  "summary": "Waymo가 캐나다 토론토에서 완전 자율 라이드헤일링 서비스를 위해 현지 시설과 일자리 투자 계획을 발표했다. 초기 단계에서는 고정밀 지도 제작과 운전 전문가가 탑승한 수동 주행 테스트를 진행한다. 파트너로는 토론토 기반 Element Fleet Management와 협력해 차량 관리와 운영 인력을 확보한다.",
+  "why": "자율주행 시스템이 새로운 도로 환경에 적응하려면 고정밀 지도와 수동 검증 단계를 거쳐야 한다. 이는 특정 지역으로의 서비스 확장이 기술적 검증과 현지 인프라 구축을 전제로 한다는 점을 보여준다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "Some quick thoughts on Unit Testing ActivityPub",
+  "url": "https://shkspr.mobi/blog/2026/10/some-thoughts-on-unit-testing-activitypub/",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1792217566.936,
+  "discussion": "https://lobste.rs/s/gwuebx/some_quick_thoughts_on_unit_testing",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://shkspr.mobi/blog/2026/10/some-thoughts-on-unit-testing-activitypub/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://shkspr.mobi/blog/wp-content/uploads/2012/09/709ae69b.png",
+  "link_status": "ok",
+  "ko_title": "Unit Testing ActivityPub에 대한 간단한 생각",
+  "summary": "",
+  "why": "ActivityPub 스펙이 분산되어 있어 유효성 검사 로직을 검증하기 어렵다. 웹핑거 응답이나 서명 검증 시 JSON 스키마만으로는 부족할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
+  "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+  "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
+  "source": "hackernews",
+  "upvotes": 210,
+  "comments": 164,
+  "published_at": 1792173977,
+  "discussion": "https://news.ycombinator.com/item?id=50122034",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.arrl.org/files/image/About_ARRL/ARRL_logo_with_title.jpg",
+  "link_status": "ok",
+  "ko_title": "eBay, 라디오 장비 목록 제한하지만 아마추어 밴드 전용 장비는 제외",
+  "summary": "",
+  "why": "백엔드·AI 개발 업무와 직접적인 연관성이 없어 확인이나 조치 대상이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-10-17T16:00:04.111742+09:00",
+  "batch_label": "10월 17일 16:00"
+ },
+ {
   "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
   "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
   "source": "rss",
