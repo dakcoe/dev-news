@@ -178,7 +178,7 @@ th{background:#fafafb;font-weight:700}
 
   <h2 id="s10">정리</h2>
   <p>P2P 구조에는 항상 켜진 서버가 없고, 피어가 클라이언트이면서 서버로 동작합니다. 크기 F인 파일을 N명에게 나눠 줄 때 클라이언트-서버의 최소 분배 시간은 max{NF / u<sub>s</sub>, F / d<sub>min</sub>}이라 N에 비례해 늘어납니다. P2P는 max{F / u<sub>s</sub>, F / d<sub>min</sub>, NF / (u<sub>s</sub> + ∑u<sub>i</sub>)}이고, 피어가 늘면 분모의 업로드 용량도 함께 늘어 분배 시간이 F / u 근처에서 멈춥니다. BitTorrent는 파일을 256 KB 청크로 나누고, 트래커가 토렌트의 피어 목록을 알려 주며, 피어는 이웃 일부와 청크를 주고받습니다. 없는 청크는 가장 드문 것부터 요청하고, 청크는 tit-for-tat으로 자기에게 가장 빨리 보내 주는 4명에게 보내며, 30초마다 낙관적 언초크로 새 상대를 시험합니다.</p>
-<div class="next"><a href="/learn/net-5-email-dns/"><small>← 이전 글</small><span>HTTP의 진화, 전자우편, DNS — 조건부 GET부터 이름 풀이까지</span></a></div>
+<div class="next"><a href="/learn/net-5-email-dns/"><small>← 이전 글</small><span>HTTP의 진화, 전자우편, DNS — 조건부 GET부터 이름 풀이까지</span></a><a class="r" href="/learn/net-7-video-cdn/"><small>다음 글 →</small><span>비디오 스트리밍과 CDN — 부호화에서 가까운 서버 찾기까지</span></a></div>
 </article>
 <aside class="toc"><b>목차</b><ol><li><a href="#s1">P2P 구조 — 항상 켜진 서버가 없는 응용</a></li><li><a href="#s2">파일 분배 문제를 세웁니다</a></li><li><a href="#s3">클라이언트-서버의 분배 시간</a></li><li><a href="#s4">P2P의 분배 시간</a></li><li><a href="#s5">피어 수가 늘 때 두 구조 비교</a></li><li><a href="#s6">BitTorrent — 청크, 토렌트, 트래커</a></li><li><a href="#s7">피어의 합류와 이탈</a></li><li><a href="#s8">어떤 청크를 요청하나 — 가장 드문 청크 먼저</a></li><li><a href="#s9">누구에게 보내나 — tit-for-tat과 낙관적 언초크</a></li><li><a href="#s10">정리</a></li></ol></aside></div>
 <div class="foot"><a href="/">dev-news</a><a href="/learn/">학습 노트</a><a href="/about/">소개</a><a href="/privacy/">개인정보 처리</a></div>

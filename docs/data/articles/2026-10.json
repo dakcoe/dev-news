@@ -1,5 +1,551 @@
 [
  {
+  "title": "DeepSeek V4.1 Flash 1017 - CED 아키텍처와 네이티브 이미지 이해를 도입한 MoE 모델",
+  "url": "https://news.hada.io/topic?id=35525",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792236739.0,
+  "merged_sources": [
+   "geeknews",
+   "hackernews",
+   "r/LocalLLaMA"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "https://news.hada.io/topic?id=35525",
+   "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1x84po4/deepseekaideepseekv41flash1017_hugging_face/"
+  ],
+  "cross_source_count": 3,
+  "score": 70,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "DeepSeek V4.1 Flash 1017 - CED 아키텍처와 네이티브 이미지 이해를 도입한 MoE 모델",
+  "summary": "DeepSeek가 최초로 Causal Encoder-Decoder(CED) 아키텍처를 적용한 희소 MoE 모델을 발표했다. 사전 학습 단계부터 시각과 텍스트 임베딩을 동시에 학습하며, 5,520억 파라미터 중 입력 처리에 80억, 출력 생성에 160억만 활성화하는 비대칭 구조를 채택한다.",
+  "why": "기존 단일 LLM 파이프라인 대신 CED 구조로 입력과 출력을 분리해 처리한다. 이미지 이해를 위해 별도 비전 인코더를 붙이는 대신 단일 모델로 다룬다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Solar surpasses nuclear power globally for first time – pv magazine Global",
+  "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+  "source": "hackernews",
+  "upvotes": 89,
+  "comments": 31,
+  "published_at": 1792245661,
+  "discussion": "https://news.ycombinator.com/item?id=50131256",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://www.pv-magazine.com/wp-content/uploads/2026/09/hans-ott-4e4ZKnPbZAI-unsplash-scaled.jpg",
+  "link_status": "ok",
+  "ko_title": "태양광, 전 세계에서 처음으로 원자력 발전량 초과",
+  "summary": "2025년 4월부터 태양광 발전량이 원자력보다 많아졌으며, 2025년 3월부터 2026년 6월까지 매달 태양광 또는 풍력이 원자력을 앞섰다. 2025년 태양광 설비 용량은 27% 증가한 2,383 GW로, 원자력 설비는 1.5 GW 증가한 399.5 GW에 머물렀다. IEA PVPS 자료에 따르면 실제 태양광 신규 설비는 약 690 GW로, 보고서보다 더 큰 격차가 존재한다.",
+  "why": "태양광 발전량이 원자력을 추월했다는 사실은 백엔드 인프라의 전력 공급 안정성 평가 기준을 재검토해야 함을 의미한다. 신규 데이터센터나 AI 워크로드의 전력 계약 시 재생에너지 비중을 고려한 전력 확보 전략이 필요해진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
+  "url": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/",
+  "source": "rss",
+  "feed": "The Decoder",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792233208.0,
+  "merged_sources": [
+   "The Decoder"
+  ],
+  "merged_urls": [
+   "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://the-decoder.com/wp-content/uploads/2026/06/deepseek_red_whale.png",
+  "link_status": "ok",
+  "ko_title": "Deepseek V4.1 Flash 1017, 에이전트 작업에서 대형 경쟁 모델 제압 및 비용 대폭 절감",
+  "summary": "Deepseek가 자체 강화학습(RLSF) 기반 모델 Deepseek-V4.1-Flash-1017을 공개했다. 모델은 코딩·에이전트 벤치마크에서 Claude Opus 5·GPT 5.6-Sol 등 대형 모델을 앞섰으며, 작업 속도가 빨라지고 출력 길이가 짧아졌다. 가중치는 Hugging Face·ModelScope에 오픈돼 있으며, 신규 Search·Fetch API를 통해 사내 검색 엔진을 외부 개발자에게 제공한다.",
+  "why": "에이전트 작업에서 대형 모델 대비 비용 절감과 속도 향상이 확인됐다. RLSF 학습 방식은 외부 보상 모델 없이 자체 피드백으로 훈련된다. Hugging Face에서 가중치를 내려받아 로컬 환경에 배포할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Ship Your Interpreter",
+  "url": "https://www.basis.ai/blog/ship-your-interpreters/",
+  "source": "lobsters",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1792246593.586,
+  "discussion": "https://lobste.rs/s/rtd5gq/ship_your_interpreter",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.basis.ai/blog/ship-your-interpreters/"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://www.basis.ai/ship-your-interpreters/pipeline_v1.png",
+  "link_status": "ok",
+  "ko_title": "인터프리터 배포",
+  "summary": "LLM이 버그를 찾아내는 능력이 급증하는 가운데, 검증된 소프트웨어 작성 능력도 빠르게 향상되고 있다. Basis 팀은 JavaScript-to-WebAssembly 컴파일러와 Linux nftables 컴파일러, MIT 연구진은 xv6 커널을 AI 에이전트로 검증했다. 검증 방법을 모든 소프트웨어에 확장하려는 목표와, 정리 작업이 정리 증명보다 사양 정의에 집중되고 있다는 점을 강조한다.",
+  "why": "검증의 병목이 정리 증명에서 사양 정의 문제로 이동하고 있다. 수학적으로 검증 가능한 소프트웨어 작성 능력이 빠르게 향상되고 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "deepseek-ai / deepseek-harness",
+  "url": "https://github.com/deepseek-ai/deepseek-harness",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 636,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/deepseek-ai/deepseek-harness"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 636,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/deepseek-ai/deepseek-harness",
+  "link_status": null,
+  "ko_title": "deepseek-ai / deepseek-harness",
+  "summary": "DeepSeek Harness는 플러그인 기반 에이전트 프레임워크로, Cordis 엔진 위에 구축돼 있다. 현재 개발자 프리뷰 단계이며 호환성 파괴 변경이 예정돼 있다. npm 명령이나 소스 빌드로 로컬 웹 UI를 즉시 실행할 수 있다.",
+  "why": "개발자 프리뷰 단계라 호환성 파괴 변경이 예정돼 있다. 프로덕션 환경에 바로 적용하지 말고 실험용으로만 써야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Intuitive concurrent programming in any language",
+  "url": "https://www.lf-lang.org/",
+  "source": "lobsters",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1792239440.307,
+  "discussion": "https://lobste.rs/s/srao9u/intuitive_concurrent_programming_any",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.lf-lang.org/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://www.lf-lang.org/img/lf-social-card.png",
+  "link_status": "ok",
+  "ko_title": "모든 언어에서 직관적인 동시성 프로그래밍",
+  "summary": "Lingua Franca는 기존 언어를 그대로 사용하면서도 결정론적 다중 스레드와 분산 애플리케이션을 쉽게 작성하도록 설계된 코디네이션 언어이다. 스레드 관리·동기화·경쟁 상태를 자동으로 제거하고, 핵심에 타이밍 의미론을 내장해 시간 민감 작업을 정밀하게 다룰 수 있다. 단일 시스템에서 분산 아키텍처로 전환할 때 최소한의 수정만으로 구현이 가능하다.",
+  "why": "기존 스레드나 액터 모델 대신 결정론적 동시성을 원할 때 대안이 된다. 단일 시스템에서 분산 아키텍처로 전환할 때 수정 범위가 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "How I built a SaaS in a weekend with Claude + Next.js — the honest breakdown",
+  "url": "https://dev.to/infoinlet1/how-i-built-a-saas-in-a-weekend-with-claude-nextjs-the-honest-breakdown-2le6",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 3,
+  "published_at": 1792222373.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/how-i-built-a-saas-in-a-weekend-with-claude-nextjs-the-honest-breakdown-2le6"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3rw1pnb7x0cvgt55ooqn.png",
+  "link_status": "ok",
+  "ko_title": "Claude와 Next.js로 주말에 SaaS 만들기 — 솔직한 분석",
+  "summary": "개발자는 Claude AI와 Next.js를 활용해 주말 동안 SaaS 초기 버전을 완성했다. AI가 코드 생성과 설정 작업을 대부분 담당했으며, 개발자는 결과물을 검토하고 방향을 제시했다. 실제 제품 기능 구현 단계에서도 AI가 구조화된 코드를 제공해 개발자의 작업 시간을 크게 단축했다.",
+  "why": "AI가 생성한 코드는 구조가 깔끔해도 실제 고객 데이터를 훼손할 수 있는 결함이 숨어 있다. 단순 코드 생성이 아닌, 결과물 검증을 핵심 업무로 삼아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Claude로 더 효율적인 양자 회로 설계하기",
+  "url": "https://news.hada.io/topic?id=35530",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792247927.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35530"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Claude로 더 효율적인 양자 회로 설계하기",
+  "summary": "Claude Mythos 5는 자연어 명세와 자동 평가기를 이용해 8가지 양자 기본 연산의 회로를 설계한다. 설계 과정에서 코드 생성과 정확도·큐비트·게이트 수 평가를 반복한다. 기존 최고 설계 대비 큐비트와 게이트 사용량을 모두 감소시킨 결과를 보였다.",
+  "why": "양자 회로 설계 시 큐비트와 게이트 수를 줄이는 반복 평가 프로세스를 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "JPEG XL vs. AVIF for web use-cases",
+  "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+  "source": "hackernews",
+  "upvotes": 293,
+  "comments": 193,
+  "published_at": 1792167122,
+  "discussion": "https://news.ycombinator.com/item?id=50120224",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://jakearchibald.com/2026/jpeg-xl-vs-avif/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://jakearchibald.com/c/img-B1T1kkPz.jpg",
+  "link_status": "ok",
+  "ko_title": "JPEG XL vs. AVIF 웹 사용 사례 비교",
+  "summary": "JPEG XL이 모든 주요 브라우저에 지원되면서 AVIF와 파일 크기·인코딩·디코딩 성능을 비교했다. 손실 사진에서는 AVIF가 보통 15–25% 더 작으며, 최적 설정에서도 차이가 6–20% 정도 남는다. 스크린샷·일러스트와 투명 이미지에서는 AVIF가 JPEG XL보다 20–90% 크게 효율적이다. 인코더에 따라 차이가 크며, jixel은 libjxl보다 작지만 투명도에서는 파일이 크게 늘어난다.",
+  "why": "손실 사진에서는 AVIF가 JPEG XL보다 파일이 작으므로 웹 이미지 최적화 시 AVIF를 우선 검토해야 한다. 투명도가 포함된 이미지나 스크린샷은 AVIF가 압도적으로 효율적이므로 JPEG XL을 쓰지 않는 편이 낫다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "DecisionDebt: a company brain where every edge has a receipt (built on FalkorDB)",
+  "url": "https://dev.to/himanshu_748/decisiondebt-know-what-a-decision-breaks-before-you-make-it-built-on-falkordb-dcj",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1792225996.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/himanshu_748/decisiondebt-know-what-a-decision-breaks-before-you-make-it-built-on-falkordb-dcj"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fhimanshu748%2Fdecisiondebt%2Fmain%2Fdocs%2Fblog-cover.jpg",
+  "link_status": "ok",
+  "ko_title": "DecisionDebt: 모든 연결에 영수증이 있는 기업 두뇌 (FalkorDB 기반)",
+  "summary": "DecisionDebt는 FalkorDB 위에 구축된 그래프 기반 시스템으로, 제안된 변경 사항이 어떤 서비스에 영향을 미치는지, 소유자는 누구인지, 관련 문서는 어떤 것이 오래됐는지 등을 자동으로 분석해준다. 각 그래프 엣지는 해당 소스 코드 리비전의 정확한 문자로 증명되며, 모호한 경우는 LLM 에이전트가 처리한다. 데모와 코드가 공개돼 있다.",
+  "why": "백엔드 서비스 변경 시 영향 범위를 그래프 엣지 단위로 추적할 수 있다. 소스 코드 리비전 문자열로 근거를 검증하므로 추측성 분석을 피할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Show GN: tidoly stow - Docker없이 간단하게 설치하여 사진을 보관하는 Immich 호환 개인 사진 서버",
+  "url": "https://news.hada.io/topic?id=35527",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792244572.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35527"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "tidoly stow - Docker 없이 간단히 설치해 사진을 보관하는 Immich 호환 개인 사진 서버",
+  "summary": "Stow는 Go로 구현된 개인 사진·동영상 서버이며 Immich 모바일 앱과 호환되는 API를 제공한다. macOS와 Windows에서는 단일 실행 파일만으로 실행하고, Linux에서는 systemd 서비스로 운영할 수 있다. 설치와 실행이 매우 간편해 Docker 환경 없이도 바로 사용할 수 있다.",
+  "why": "Immich 모바일 앱을 그대로 쓰되 백엔드를 단일 실행 파일로 교체할 수 있다. Docker 컨테이너 오버헤드를 제거하고 싶을 때 대안이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Show HN: Llmspeed - 하드웨어 구매 전에 로컬 LLM 실행 속도를 체감하기",
+  "url": "https://news.hada.io/topic?id=35529",
+  "source": "geeknews",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792247747.0,
+  "merged_sources": [
+   "geeknews"
+  ],
+  "merged_urls": [
+   "https://news.hada.io/topic?id=35529"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: Llmspeed - 하드웨어 구매 전에 로컬 LLM 실행 속도를 체감하기",
+  "summary": "Llmspeed는 로컬 LLM을 실행할 때 하드웨어별 및 모델별 성능을 체험할 수 있는 웹 서비스다. 사용자는 NVIDIA, AMD, Intel GPU 등 다양한 장비와 원하는 모델을 선택해 예상 속도를 확인한다. 이를 통해 실제 구매 전에 성능을 비교·판단할 수 있다.",
+  "why": "로컬 LLM 도입을 계획 중이라면 GPU 구매 전 예상 속도를 미리 검증할 수 있다. 실제 하드웨어를 사기 전에 모델별 성능 차이를 비교해 예산을 배분하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "We Searched eBay for 237 Recalled Products. Only 45 of 12,562 Listings Named the Model.",
+  "url": "https://dev.to/dronzer2code/we-searched-ebay-for-237-recalled-products-only-45-of-12562-listings-named-the-model-2efi",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 0,
+  "published_at": 1792221980.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dronzer2code/we-searched-ebay-for-237-recalled-products-only-45-of-12562-listings-named-the-model-2efi"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FSoumyaEXE%2Frecalldesk%2Fmain%2Fdocs%2Fimages%2Fcover.png",
+  "link_status": "ok",
+  "ko_title": "eBay에서 12,562개 중 45개만 모델명을 표시한 237개 리콜 제품 조사",
+  "summary": "개발자들이 만든 RecallDesk는 매주 CPSC 리콜 정보를 읽어 매장 재고와 eBay 판매 목록을 비교해 위험 제품을 식별한다. 조사 결과, 12,562개 eBay 리스트 중 45개만이 모델명을 명시했으며, 237개의 리콜 제품이 포함돼 있었다. eBay는 AI 모델·키워드 규칙·수동 검토로 2025년에 2,100만 건의 위험 리스트를 차단했다고 발표했다.",
+  "why": "리콜 제품 식별 시 모델명 부재로 인한 매칭 실패가 빈번하다. eBay 판매 목록 관리 시 모델명 명시 여부를 직접 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "tangency-labs / solidcraft",
+  "url": "https://github.com/tangency-labs/solidcraft",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 584,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/tangency-labs/solidcraft"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 584,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/tangency-labs/solidcraft",
+  "link_status": null,
+  "ko_title": "SolidCraft 파라메트릭 3D CAD",
+  "summary": "순수 Rust로 만든 오픈소스 파라메트릭 3D CAD 애플리케이션이다. 데스크톱, 웹 브라우저, 그리고 내장 MCP 서버를 통한 AI 에이전트와 함께 사용할 수 있다. Windows, macOS, Linux용 패키지와 Snap, AppImage 등 다양한 배포 형태를 제공한다.",
+  "why": "내장 MCP 서버 덕분에 AI 에이전트가 SolidCraft로 3D 모델을 직접 만들 수 있다. Rust 기반이라 백엔드 개발자가 코드를 읽고 확장하는 데 유리하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "You could have invented transformers from memory",
+  "url": "https://alexwang.ai/posts/associative-memory/",
+  "source": "hackernews",
+  "upvotes": 379,
+  "comments": 87,
+  "published_at": 1792177277,
+  "discussion": "https://news.ycombinator.com/item?id=50122878",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://alexwang.ai/posts/associative-memory/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://alexwang.ai/images/share-card_hu_ba29a66ace5a286c.jpg",
+  "link_status": "ok",
+  "ko_title": "기억만으로도 트랜스포머를 만들 수 있었다",
+  "summary": "이 글은 선형 레이어, MLP, 셀프-어텐션을 각각 다른 형태의 기억 저장소로 바라보고, 각 레이어가 저장할 수 있는 기억의 양을 간섭-신호 비율을 기준으로 추정한다. 64차원 키를 사용할 경우 선형 레이어는 약 64개, MLP는 약 2,700개, 셀프-어텐션은 백만 개 이상의 기억을 저장할 수 있다는 결과를 제시한다.",
+  "why": "셀프-어텐션 구조가 선형 레이어보다 기억 용량이 훨씬 크다는 점을 수치로 확인했다. 모델 설계 시 각 레이어의 기억 한계를 간섭-신호 비율로 추정할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "/dev/null: social network for developers",
+  "url": "https://dev-null.sh",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 153,
+  "published_at": 1792169869,
+  "discussion": "https://news.ycombinator.com/item?id=50121004",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://dev-null.sh"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://dev-null.sh/og.png",
+  "link_status": "ok",
+  "ko_title": "/dev/null: 개발자를 위한 소셜 네트워크",
+  "summary": "48시간 전엔 존재하지 않았던 /dev/null 모바일 앱이 공개되었다. 라이브 스트리밍 코딩을 통해 PHP와 AI 활용 사례를 공유했으며, phpgraph를 이용해 코드베이스를 정적 분석했다.",
+  "why": "phpgraph는 LLM 없이 정적 분석으로 PHP 코드베이스의 지식 그래프를 생성한다. Claude Code나 Cursor 같은 AI 에이전트에 MCP로 연결해 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
+  "title": "Developing for Debugging (2025)",
+  "url": "https://www.davepacheco.net/blog/2025/developing-for-debugging-dns-propagation/",
+  "source": "lobsters",
+  "upvotes": 3,
+  "comments": 2,
+  "published_at": 1792221674.456,
+  "discussion": "https://lobste.rs/s/a0og2j/developing_for_debugging_2025",
+  "merged_sources": [
+   "lobsters"
+  ],
+  "merged_urls": [
+   "https://www.davepacheco.net/blog/2025/developing-for-debugging-dns-propagation/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "디버깅을 위한 개발 (2025)",
+  "summary": "Oxide 제어 평면은 외부 DNS와 내부 DNS 두 서비스를 별도 배포로 운영한다. DNS 데이터의 진실 원본은 CockroachDB 기반 제어 평면 데이터베이스이며, Nexus 컴포넌트가 변경을 감지해 데이터베이스를 업데이트하고 백그라운드 작업으로 서버에 전파한다. 전파는 비동기적으로 진행되지만 보통 몇 초 내에 완료된다. 고객이 외부 DNS 레코드가 없다고 보고하면 데이터베이스 오류, 전파 과정 오류, Nexus가 변경을 놓쳤거나 서버 목록이 잘못된 경우 등을 점검해야 한다.",
+  "why": "CockroachDB 기반 제어 평면에서 DNS 전파가 비동기로 진행되므로, 고객 보고 시 데이터베이스 오류와 전파 과정 오류를 구분해야 한다. Nexus가 변경을 놓쳤거나 서버 목록이 잘못된 경우도 점검 대상에 포함된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-10-18T00:00:03.024983+09:00",
+  "batch_label": "10월 18일 00:00"
+ },
+ {
   "title": "Interactive refactoring in gopls",
   "url": "https://go.dev/blog/interactive-refactoring",
   "source": "lobsters",
