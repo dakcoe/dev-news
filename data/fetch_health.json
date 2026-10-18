@@ -1,53 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-08T16:00:32+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 6,
-    "short": 1,
-    "ok": 11,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=34975",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://mathstodon.xyz/@tao/117395269325940185",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35000",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34999",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34998",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=34996",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/teens-learn-and-plan",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-09T00:00:30+09:00",
    "total": 22,
    "counts": {
@@ -1264,6 +1217,47 @@
     {
      "url": "https://news.hada.io/topic?id=35550",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-18T16:00:32+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 14,
+    "blocked": 6,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35565",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35564",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35563",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35562",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35561",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://webmasters.stackexchange.com/questions/88659/how-can-cloudflare-offer-a-free-cdn-with-unlimited-bandwidth/88685#88685",
+     "source": "hackernews",
      "reason": "blocked"
     }
    ]
