@@ -1,52 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-09T08:00:30+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 7,
-    "ok": 13,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35027",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/oracle",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35033",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35032",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35031",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35030",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-09T16:00:32+09:00",
    "total": 22,
    "counts": {
@@ -1257,6 +1211,48 @@
     },
     {
      "url": "https://news.hada.io/topic?id=35572",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-19T08:00:34+09:00",
+   "total": 22,
+   "counts": {
+    "empty": 1,
+    "ok": 14,
+    "blocked": 5,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35585",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35600",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35599",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35598",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35597",
      "source": "geeknews",
      "reason": "blocked"
     }
