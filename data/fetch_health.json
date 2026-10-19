@@ -1,64 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-09T16:00:32+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 11,
-    "short": 1,
-    "blocked": 7,
-    "empty": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=50006366",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35050",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35048",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35047",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35046",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35045",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.cs.cit.tum.de/fileadmin/w00cfj/dis/papers/btrees-are-back.pdf",
-     "source": "lobsters",
-     "reason": "empty"
-    },
-    {
-     "url": "https://openai.com/index/pollo-ai",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/legalon-halves-codex-costs",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-10T00:00:32+09:00",
    "total": 24,
    "counts": {
@@ -1253,6 +1195,42 @@
     },
     {
      "url": "https://news.hada.io/topic?id=35597",
+     "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-19T16:00:53+09:00",
+   "total": 22,
+   "counts": {
+    "ok": 15,
+    "blocked": 5,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35628",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35627",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35626",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35625",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35624",
      "source": "geeknews",
      "reason": "blocked"
     }
