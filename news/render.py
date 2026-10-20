@@ -486,7 +486,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         meta = ['<span class="s">' + _esc(d.get("from") or d.get("src") or "") + "</span>"]
         if d.get("batchLabel"):
             meta.append('<span class="sep">·</span><span>' + _esc(d["batchLabel"]) + "</span>")
-        if d.get("snip"):
+        if d.get("snip") or d.get("why"):
             meta.append('<span class="sep">·</span><span class="ai">AI 요약</span>')
         rows.append(
             '<div class="row"><div></div><div class="mid">'

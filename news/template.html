@@ -1435,7 +1435,7 @@ function rowHTML(d){
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.again) meta+='<span class="tg hit" title="지난 게시 '+escA(d.again)+'">다시 트렌딩</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
-  if(d.snip) meta+='<span class="sep">·</span><span class="ai">AI 요약</span>';
+  if(d.snip||d.why) meta+='<span class="sep">·</span><span class="ai">AI 요약</span>';
   (d.tags||[]).forEach(t=>{
     meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+escA(tagLabel(t))+'</span>';
   });
@@ -2229,7 +2229,7 @@ function showDetail(d){
     + '<div class="dc"><h2>'+escA(d.title)+'</h2><div class="dmeta">'+meta+'</div>'
     + paras.map(t=>'<p>'+escA(t)+'</p>').join('')
     + (d.why?'<div class="why"><b>왜 중요한가</b>'+escA(d.why)+'</div>':'')
-    + ((d.paras&&d.paras.length)||d.snip?'<div class="ainote">AI가 원문을 읽고 쓴 요약입니다. 틀린 내용이 있을 수 있으니 원문을 확인해 주세요.</div>':'')
+    + ((d.paras&&d.paras.length)||d.snip||d.why?'<div class="ainote">AI가 원문을 읽고 쓴 요약입니다. 틀린 내용이 있을 수 있으니 원문을 확인해 주세요.</div>':'')
     + '<div class="dacts">'
     +   (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
     +   '<button class="go alt" id="sharebtn">공유하기</button>'
