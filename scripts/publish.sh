@@ -8,10 +8,10 @@
 #
 # 쓰는 법:  scripts/publish.sh            (저장소 어디서 불러도 된다)
 #   - .env 에 GROQ_API_KEY 가 있어야 한다 (.env.example 참고)
-#   - gh 가 로그인돼 있어야 한다 — GitHub API 한도와 알림 이슈에 쓴다
+#   - gh 가 로그인돼 있어야 한다 — GitHub API 한도에 쓴다
 #   - 로그는 logs/publish.log 에 쌓인다 (gitignore)
 #
-# 실패·열화·출처 침묵은 워크플로 때와 같이 scripts/notify.sh 로 이슈를 연다.
+# 실패·열화·출처 침묵은 scripts/notify.sh 가 이 로그에 "[알림]" 줄로 남긴다.
 set -uo pipefail
 
 # 아래 pull 이 이 파일을 새로 받아도 지금 회차는 이미 연 옛 파일로 끝까지 돈다(git 은
@@ -26,10 +26,9 @@ export TZ=Asia/Seoul
 STAMP="$(date '+%Y-%m-%d %H:%M')"
 echo "===== $STAMP 시작"
 
-# 알림이 실패해도(gh 인증 만료 등) 로그에는 남긴다. 전에는 notify.sh 의 종료 코드를
-# 보지 않아 알림이 조용히 사라지고, watchdog 이 10시간 뒤에야 잡았다.
+# 알림 스크립트가 실패해도 로그에는 남긴다.
 alert() {
-  bash scripts/notify.sh "$1" "$2" || echo "[알림 실패] $1 — gh 인증을 확인하세요"
+  bash scripts/notify.sh "$1" "$2" || echo "[알림 실패] $1"
 }
 
 # rerender.sh 가 회차 도중에 푸시하면 아래 rebase -X theirs 가 이 회차의 옛 템플릿
@@ -47,7 +46,7 @@ if [ ! -x "$PY" ]; then
   exit 1
 fi
 
-# GitHub API 한도(시간당 60 → 1,000+)와 알림 이슈에 쓴다. 토큰 값은 로그에 안 남긴다.
+# GitHub API 한도(시간당 60 → 1,000+)에 쓴다. 토큰 값은 로그에 안 남긴다.
 export GITHUB_TOKEN GH_TOKEN
 GITHUB_TOKEN="$(gh auth token 2>/dev/null || true)"; GH_TOKEN="$GITHUB_TOKEN"
 

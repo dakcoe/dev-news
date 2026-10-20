@@ -105,17 +105,9 @@ def test_수집_워크플로는_수동_실행_전용이다():
     assert "guard" not in d["jobs"]
 
 
-def test_감시_워크플로는_키_없이_돈다():
-    """수집 기계가 죽은 것을 알 길이 이것뿐이다. 시크릿을 쓰면 안 된다 — 감시가
-    수집으로 변질되는 것을 막는다."""
-    import yaml
-    p = os.path.join(ROOT, ".github", "workflows", "watchdog.yml")
-    src = open(p, encoding="utf-8").read()
-    d = yaml.safe_load(src)
-    on = d.get(True) or d.get("on")
-    assert "schedule" in on
-    assert "secrets." not in src
-    assert "notify.sh" in src and "36000" in src   # 10시간
+def test_이슈를_여는_감시_워크플로가_없다():
+    """알림은 이슈로 보내지 않는다. 감시 워크플로는 이슈를 여는 일만 했다."""
+    assert not os.path.exists(os.path.join(ROOT, ".github", "workflows", "watchdog.yml"))
 
 
 def test_로컬_실행_스크립트가_알림_세_가지를_그대로_낸다():

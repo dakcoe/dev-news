@@ -220,8 +220,8 @@ docs/data/                    # 위 파일들의 Pages 서빙 사본 + apis.json
 
 ```yaml
 alert:
-  min_published: 10   # 이보다 적게 게시되면 publish.sh 가 🟡 이슈를 연다
-  silent_streak: 3    # 켜진 출처가 이 회차 수만큼 연속 0건이면 🟡 출처 침묵 이슈를 연다
+  min_published: 10   # 이보다 적게 게시되면 publish.sh 가 로그에 🟡 알림을 남긴다
+  silent_streak: 3    # 켜진 출처가 이 회차 수만큼 연속 0건이면 로그에 🟡 출처 침묵 알림을 남긴다
   # stale_streak: 27  # 수집은 되는데 기간 필터를 지난 글이 이 회차 수만큼 연속 0건이어도 알린다.
                       # config.yaml 에는 없고 코드 기본값(source_health.DEFAULT_STALE_STREAK)을 쓴다
 ```

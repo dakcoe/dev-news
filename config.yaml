@@ -137,11 +137,11 @@ llm:
   why_fallback_models:
 
 # 조용한 열화 감지 (add-failure-alert). 회차가 exit 0으로 끝나도 게시 건수가
-# 이보다 적으면 Actions가 이슈로 알린다 — 요약 한도(429)나 후보 고갈로 몇 건만
+# 이보다 적으면 publish.sh 가 로그에 알림을 남긴다 — 요약 한도(429)나 후보 고갈로 몇 건만
 # 올라오는 상태는 "실패"로 잡히지 않기 때문이다. top_n(20)의 절반을 기준으로 둔다.
 alert:
   min_published: 10
-  # 켜진 출처가 이 회차 수만큼 연속 0건이면 이슈로 알린다 (add-source-silence-alert).
+  # 켜진 출처가 이 회차 수만큼 연속 0건이면 로그에 알림을 남긴다 (add-source-silence-alert).
   # 한 회차 0건은 타임아웃일 수 있어 하루(3회차)를 본다. 이력: data/source_health.json
   silent_streak: 3
 

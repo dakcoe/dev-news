@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: write
-  issues: write      # 실패·열화 알림을 이슈로 남긴다 (add-failure-alert)
 
 concurrency:
   group: daily-news

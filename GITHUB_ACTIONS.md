@@ -2,7 +2,7 @@
 
 dev-news는 서버 없이 돈다. 수집은 **자기 기계**가 `scripts/publish.sh`로 하루 세 번 돌려
 저장소에 커밋하고, GitHub Pages가 `docs/` 폴더를 그대로 서빙한다. GitHub Actions는
-감시(`watchdog.yml`)와 비상용 수동 실행(`daily.yml`)만 맡는다.
+테스트(`test.yml`)와 비상용 수동 실행(`daily.yml`)만 맡는다.
 
 ```
 자기 기계 스케줄러 (KST 00:00 / 08:00 / 16:00)
@@ -11,10 +11,9 @@ dev-news는 서버 없이 돈다. 수집은 **자기 기계**가 `scripts/publis
        ├─ python build.py          ← 수집·요약·렌더
        ├─ 원격이 앞서 있으면 merge_remote_data.py 로 합친다
        ├─ git commit "뉴스 갱신 …" + pull --rebase + push   (docs/ · data/)
-       └─ 실패 시 🔴 이슈 / 게시 급감·출처 침묵 시 🟡 이슈   (notify.sh)
+       └─ 실패 시 🔴 / 게시 급감·출처 침묵 시 🟡 알림을 로그에 남긴다   (notify.sh)
 
 GitHub Actions
-  ├─ watchdog.yml   세 시간마다 — 10시간 넘게 갱신 커밋이 없으면 🔴 이슈
   └─ daily.yml      workflow_dispatch 전용 — 기계가 오래 멈췄을 때 손으로 한 번
 ```
 
@@ -60,7 +59,7 @@ git push -u origin main
 
 **Settings → Actions → General → Workflow permissions** 에서 **Read and write permissions** 를 고른다.
 
-워크플로가 결과를 커밋하고 알림 이슈를 만들어야 하므로 `contents: write`와 `issues: write`가 필요하다.
+워크플로가 결과를 커밋해야 하므로 `contents: write`가 필요하다.
 이 설정이 Read only면 마지막 커밋 스텝에서 403으로 실패한다.
 
 ### 1-5. Pages 켜기
@@ -92,7 +91,7 @@ launchd, 리눅스면 cron)가 KST 00:00 / 08:00 / 16:00에 부른다. 이 저�
        ├─ python build.py          ← 수집·요약·렌더
        ├─ 원격이 앞서 있으면 merge_remote_data.py 로 합친다
        ├─ git commit "뉴스 갱신 …" + push
-       └─ 실패·열화·출처 침묵 → notify.sh 가 이슈를 연다
+       └─ 실패·열화·출처 침묵 → notify.sh 가 로그에 [알림] 줄을 남긴다
 ```
 
 Actions에서 돌리지 않는 이유 둘:
@@ -104,8 +103,6 @@ Actions에서 돌리지 않는 이유 둘:
 
 Actions에 남는 것:
 
-- `watchdog.yml` — 세 시간마다 마지막 "뉴스 갱신" 커밋 나이를 보고 10시간을 넘으면
-  이슈를 연다. 시크릿 없음. 수집 기계가 죽은 것을 알 길이 이것뿐이다.
 - `daily.yml` — `workflow_dispatch` 전용. 수집 기계가 오래 멈췄을 때 손으로 한 번 돌리는
   비상용이다. 시크릿 `GROQ_API_KEY`가 있어야 돈다.
 
@@ -134,7 +131,7 @@ git push origin main
 - 변경이 없으면 커밋을 건너뛴다. 커밋 자체가 실패하면(.git/index.lock 등) 🔴 알림을 열고 멈춘다.
 - push 가 실패하면 30초 뒤 한 번 더 민다. 그래도 실패하면 이유에 따라 다르게 처리한다.
   - 시크릿(GH013)으로 거부: 그 커밋을 `push-failed/날짜-시각` 브랜치에 남기고 로컬을 `origin/main`으로 되돌린다. 그대로 두면 다음 회차 커밋이 그 위에 쌓여 push 가 계속 거부된다.
-  - 그 밖(GitHub 5xx·네트워크): 커밋을 그대로 두고 🔴 이슈를 연다. 다음 회차의 push 가 같이 올린다(10-08 00:00 회차가 500 으로 실패했다).
+  - 그 밖(GitHub 5xx·네트워크): 커밋을 그대로 두고 🔴 알림을 로그에 남긴다. 다음 회차의 push 가 같이 올린다(10-08 00:00 회차가 500 으로 실패했다).
 - `publish.sh`를 고치면 그 동작은 다음 회차부터 적용된다. 회차 첫 pull 이 파일을 새로 받아도 실행 중인 bash 는 이미 연 옛 파일로 끝까지 돈다.
 - 회차가 도는 동안 `~/.cache/dev-news-publish.lock`에 잠금을 건다. `scripts/rerender.sh`는 잠금이 있으면 멈춘다 — 회차 도중 푸시하면 회차의 마지막 rebase 가 옛 템플릿 렌더로 덮는다.
 - `pull --rebase -X theirs`는 충돌 시 방금 만든 데이터를 남긴다. 그래서 `fetch-depth: 0`으로 전체 이력을 받는다. 얕은 체크아웃이면 공통 조상을 못 찾아 rebase가 실패한다.
@@ -144,17 +141,16 @@ git push origin main
 
 ## 5. 알림
 
-`scripts/publish.sh`가 `scripts/notify.sh`로 GitHub 이슈를 연다. 같은 제목의 열린 이슈가 있으면 댓글로 붙이고, 없으면 새로 연다.
-연속 실패가 이슈 하나의 타임라인이 되고, 고쳐서 닫으면 다음 실패에 새로 열린다.
+`scripts/publish.sh`가 `scripts/notify.sh`로 `logs/publish.log`에 `[알림] 제목 — 본문` 줄을 남긴다. GitHub 이슈로는 보내지 않는다.
+수집 기계가 꺼져 회차가 돌지 않은 것은 로그에 "시작"이 없는 것으로 안다.
 
-| 이슈 | 조건 | 뜻 |
+| 알림 | 조건 | 뜻 |
 |---|---|---|
 | 🔴 뉴스 수집 실패 | 어느 스텝이든 exit 1 | 수집·요약·커밋 중 하나가 깨졌다 |
 | 🟡 게시 건수 급감 | 성공했지만 게시가 `alert.min_published`(기본 10건) 미만 | 요약 한도, 후보 고갈, 필터 과잉 등 조용한 열화 |
 | 🟡 출처 침묵 | 켜진 출처가 `alert.silent_streak`(기본 3회차) 연속 0건 | HTML 파싱 출처의 화면 변경, 차단, 피드 주소 변경 |
 | 🟡 같은 사건 거르기 이상 | 임베딩 모델을 못 올렸거나 판정 모델이 실패 | 그 회차는 중복이 덜 걸러진 채 실린다 |
 
-알림 자체가 실패하면(gh 인증 만료 등) `logs/publish.log`에 `[알림 실패]` 줄이 남는다.
 
 임계값은 `config.yaml`의 `alert` 항목으로 바꾼다. 출처별 건수 이력은 `data/source_health.json`에 남는다.
 
@@ -195,7 +191,7 @@ Workflow permissions가 Read only다. 1-4를 확인한다.
 
 ### 게시 0건인데 성공으로 끝남
 
-🟡 이슈가 열린다. 로그에서 순서대로 확인한다.
+로그에 🟡 알림이 남는다. 로그에서 순서대로 확인한다.
 
 1. `[summarizer]` 성공 건수 — 요약이 전부 실패하면 게시도 0이다
 2. `[깔때기]` 후보 수 — 키워드·차단어 필터가 과하게 자르는지
@@ -203,7 +199,7 @@ Workflow permissions가 Read only다. 1-4를 확인한다.
 
 ### 특정 출처가 0건
 
-3회차 연속이면 🟡 출처 침묵 이슈가 열린다. 로그에서 `[<출처>] 실패`(요청 자체가 실패)인지 `[<출처>] 0개 수집`(응답은 왔는데 파싱 0건)인지 먼저 가른다. 후자면 상대 사이트 화면이 바뀐 것이라 `news/scrapers/`의 해당 파일 셀렉터를 손본다.
+3회차 연속이면 로그에 🟡 출처 침묵 알림이 남는다. 로그에서 `[<출처>] 실패`(요청 자체가 실패)인지 `[<출처>] 0개 수집`(응답은 왔는데 파싱 0건)인지 먼저 가른다. 후자면 상대 사이트 화면이 바뀐 것이라 `news/scrapers/`의 해당 파일 셀렉터를 손본다.
 
 - **긱뉴스** — RSS 주소가 바뀐 것이다. `news/scrapers/geeknews.py`의 `FEED_CANDIDATES`에 새 주소를 추가한다.
 - **Reddit** — 러너 IP가 403으로 막힌다. `config.yaml`에서 `reddit: false`로 둔다. 공개 RSS 경로(`feeds`의 `r/LocalLLaMA/.rss`)는 별개다.
@@ -226,8 +222,8 @@ curl -L -H "Authorization: Bearer <토큰>" \
 
 ## 7. 워크플로 수정할 때
 
-- 실행 시각은 자기 기계의 스케줄러에 있다. `watchdog.yml`의 10시간 임계는 회차 간격(8시간)보다 커야 한다.
+- 실행 시각은 자기 기계의 스케줄러에 있다.
 - `daily.yml`에 `schedule:`을 다시 넣지 않는다. 기계 쪽과 겹쳐 회차가 두 배가 된다.
 - 새 시크릿을 쓰면 `수집 · 요약 · 페이지 생성` 스텝의 `env`에 추가해야 `build.py`가 읽는다.
 - `git add -A docs data` 범위를 넓히면 `.env`나 캐시가 커밋될 수 있다. `.gitignore`를 같이 확인한다.
-- 운영 알림 문구는 `scripts/publish.sh`에 있다. `scripts/notify.sh`는 이슈를 열고 댓글을 다는 일만 한다. 비상용 `daily.yml`은 같은 내용을 자기 스텝에 따로 갖고 있다.
+- 운영 알림 문구는 `scripts/publish.sh`에 있다. `scripts/notify.sh`는 받은 알림을 로그 한 줄로 찍는 일만 한다. 비상용 `daily.yml`은 같은 내용을 자기 스텝에 따로 갖고 있다.

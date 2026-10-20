@@ -72,9 +72,9 @@ def test_appends_not_overwrites(tmp_path, monkeypatch):
 
 
 # ------------------------------------------------------- 워크플로 배선
-def test_issues_write_permission():
-    """없으면 gh가 403으로 조용히 실패해 알림이 안 간다."""
-    assert _wf()["permissions"]["issues"] == "write"
+def test_이슈_권한을_쓰지_않는다():
+    """알림은 로그에만 남긴다. 이슈를 쓰지 않으니 권한도 필요 없다."""
+    assert "issues" not in _wf()["permissions"]
 
 
 def test_failure_step_exists():
@@ -134,11 +134,10 @@ def test_config_has_threshold():
     assert cfg["alert"]["min_published"] > 0
 
 
-# ------------------------------------------------------- 중복 방지
-def test_notify_script_dedupes_by_title():
-    """매번 새로 만들면 연속 실패에 이슈가 쌓여서 그것도 묻힌다."""
+# ------------------------------------------------------- 로그 알림
+def test_notify_는_이슈를_만들지_않고_로그에_남긴다():
+    """회차마다 같은 이슈에 댓글이 쌓여 알림만 늘었다. 로그에서 [알림] 으로 찾는다."""
     src = open(NOTIFY, encoding="utf-8").read()
-    assert "gh issue list --state open" in src
-    assert "select(.title == env.TITLE)" in src   # 따옴표 섞인 제목도 안전
-    assert "gh issue comment" in src and "gh issue create" in src
+    assert "gh issue" not in src
+    assert 'echo "[알림] $1 — $2"' in src
     assert "set -euo pipefail" in src
