@@ -8,6 +8,8 @@ import json
 import os
 import sys
 
+import pytest
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
@@ -111,6 +113,11 @@ def test_echo_ratio():
 
 
 # ------------------------------------------------------ 골든 코퍼스
+# 코퍼스는 남의 기사 본문이라 저장소에 올리지 않는다(.gitignore). 평가하는 기계에만 있다.
+needs_corpus = pytest.mark.skipif(not os.path.exists(CORPUS), reason="평가용 코퍼스는 로컬에만 있다")
+
+
+@needs_corpus
 def test_golden_corpus_shape():
     rows = json.load(open(CORPUS, encoding="utf-8"))
     assert len(rows) >= 10
@@ -119,8 +126,9 @@ def test_golden_corpus_shape():
         assert r["title"] and r["content"]
 
 
+@needs_corpus
 def test_golden_corpus_has_no_secrets():
-    """커밋되는 픽스처다 — 시크릿이 남으면 이 파일 자체가 push protection에 걸린다."""
+    """평가 때 LLM 에 보내는 본문이다 — 시크릿이 섞이면 공급자에게 그대로 전송된다."""
     raw = open(CORPUS, encoding="utf-8").read()
     for name, pattern in PATTERNS:
         assert not pattern.search(raw), name
