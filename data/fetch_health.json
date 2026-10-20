@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-11T08:00:50+09:00",
-   "total": 21,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 1
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35136",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.ft.com/content/e26574cf-94cc-40d9-921e-5c7417fc5dbd",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35138",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35135",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35134",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35131",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-11T16:00:35+09:00",
    "total": 22,
    "counts": {
@@ -1256,6 +1215,33 @@
     {
      "url": "https://news.hada.io/topic?id=35711",
      "source": "geeknews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-21T08:00:26+09:00",
+   "total": 19,
+   "counts": {
+    "short": 2,
+    "ok": 14,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/840",
+     "source": "rss",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/ted-taylor-restaurant",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
