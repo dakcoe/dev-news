@@ -416,8 +416,7 @@ def write_outputs(published: list[dict], cfg: dict, now, out: str) -> None:
 
     archive.write_search_index(all_articles)
     display = archive.recent(all_articles, sc.get("keep_days", 30))
-    render(display, out, collected=now, enabled=cfg.get("sources", {}), about=cfg.get("about"),
-           ads=cfg.get("ads"))
+    render(display, out, collected=now, enabled=cfg.get("sources", {}), about=cfg.get("about"))
     write_seo_files(os.path.dirname(out), now)
     # API 카탈로그 (add-public-apis-feeds) — 실패해도 회차를 죽이지 않는다
     apis_catalog.sync(os.path.join(ROOT, "docs", "data", "apis.json"),
@@ -439,8 +438,7 @@ def main() -> int:
 
     if args.demo:
         with open(os.path.join(ROOT, "sample.json"), encoding="utf-8") as f:
-            render(json.load(f), args.out, enabled=cfg.get("sources", {}), about=cfg.get("about"),
-                   ads=cfg.get("ads"))
+            render(json.load(f), args.out, enabled=cfg.get("sources", {}), about=cfg.get("about"))
         return 0
 
     now = datetime.now(KST)

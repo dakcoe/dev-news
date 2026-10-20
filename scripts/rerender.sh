@@ -31,7 +31,7 @@ cfg = load_config(); all_a = archive.load_all()
 now = datetime.fromisoformat(max(a["batch"] for a in all_a if a.get("batch")))
 if now.tzinfo is None: now = now.replace(tzinfo=KST)
 render(archive.recent(all_a, cfg.get("scraper", {}).get("keep_days", 30)), "docs/index.html",
-       collected=now, enabled=cfg.get("sources", {}), ads=cfg.get("ads"), about=cfg.get("about"))
+       collected=now, enabled=cfg.get("sources", {}), about=cfg.get("about"))
 write_seo_files("docs", now)
 PY
 [ "${1:-}" = "--no-push" ] && { echo "렌더만 했다 — docs/ 를 보고 git checkout -- docs 로 되돌려도 된다"; exit 0; }

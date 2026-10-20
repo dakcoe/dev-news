@@ -235,19 +235,6 @@ GitHub 트렌딩·Trendshift·Anthropic은 HTML을 파싱하므로 상대 사이
 각 회차 기록의 `recent`는 기간 필터(`window_hours`·`long_window`)를 지난 건수다. 갱신이 멈춰 옛 글만 돌려주는 피드는 수집 건수가 매번 같아 위 알림에 안 잡히므로 이 값으로 따로 본다.
 글이 드문 출처는 기간 안 글이 7일 동안 없던 적이 있어(카카오 기술블로그·Anthropic 뉴스, 2026-09 후보 로그) `stale_streak`은 9일(27회차)로 길게 잡았다. 알림에는 이름 뒤에 `(기간 내 0건)`이 붙는다.
 
-## 광고
-
-```yaml
-ads:
-  enabled: false
-  provider: placeholder   # placeholder = 자리만 표시, adsense = 실제 광고
-  client: ""              # ca-pub-숫자
-  slot: ""                # 광고 단위 ID
-  count: 1                # 오른쪽 레일에 쌓을 개수 (최대 3)
-```
-
-광고는 기사 사이가 아니라 오른쪽 레일에 붙고, 1200px 미만 화면에서는 그리지 않는다.
-
 ## 무료 API 목록
 
 ```yaml

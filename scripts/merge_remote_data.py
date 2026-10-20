@@ -167,8 +167,7 @@ def rebuild_derived() -> None:
 
     display = archive.recent(all_articles, cfg.get("scraper", {}).get("keep_days", 30))
     out = os.path.join(ROOT, "docs", "index.html")
-    render(display, out, collected=now, enabled=cfg.get("sources", {}), about=cfg.get("about"),
-           ads=cfg.get("ads"))
+    render(display, out, collected=now, enabled=cfg.get("sources", {}), about=cfg.get("about"))
     write_seo_files(os.path.join(ROOT, "docs"), now)
 
 

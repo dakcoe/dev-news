@@ -45,62 +45,6 @@ SOURCE_META = {
 }
 
 
-# 광고 설정 검증 (add-ad-slot).
-# 형식이 조금이라도 어긋나면 광고를 끈다 — 검증 없이 head에 심으면 config 한 줄로
-# 남의 스크립트를 페이지에 주입하는 통로가 된다.
-_CLIENT_RE = re.compile(r"^ca-pub-\d{10,20}$")
-_SLOT_RE = re.compile(r"^\d{6,20}$")
-_ADS_MAX = 3                        # 사이드 레일에 쌓을 수 있는 광고 개수 상한
-
-ADSENSE_SRC = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-
-
-def _ads_config(ads: object) -> dict | None:
-    """config.yaml의 ads 블록을 검증해 템플릿에 넘길 형태로 줄인다.
-
-    쓸 수 없는 설정이면 None — 광고 없이 페이지가 정상적으로 나가는 쪽이
-    깨진 광고 코드가 실리는 것보다 낫다.
-    """
-    if not isinstance(ads, dict) or not ads.get("enabled"):
-        return None
-    try:
-        count = min(_ADS_MAX, int(ads.get("count", 1)))
-    except (TypeError, ValueError):
-        print("[ads] count가 숫자가 아닙니다 — 광고를 끕니다")
-        return None
-    if count < 1:
-        return None
-
-    provider = str(ads.get("provider") or "placeholder").strip()
-    if provider == "placeholder":
-        return {"provider": "placeholder", "count": count}
-    if provider != "adsense":
-        print(f"[ads] 모르는 provider '{provider}' — 광고를 끕니다")
-        return None
-
-    client = str(ads.get("client") or "").strip()
-    slot = str(ads.get("slot") or "").strip()
-    if not _CLIENT_RE.match(client):
-        print("[ads] client는 ca-pub-숫자여야 합니다 — 광고를 끕니다")
-        return None
-    # 심사 단계에서는 slot이 없다. 광고 단위는 승인 뒤에 만들기 때문이다.
-    # 그런데 구글은 로더 스크립트가 head에 있어야 사이트를 확인해 준다. 그래서
-    # slot이 비면 로더만 넣고 광고 자리는 그리지 않는다(빈 ins는 오류가 된다).
-    # 값이 있는데 형식이 틀린 경우는 오타이므로 예전처럼 전부 끈다.
-    if slot and not _SLOT_RE.match(slot):
-        print("[ads] slot은 숫자여야 합니다 — 광고를 끕니다")
-        return None
-    return {"provider": "adsense", "client": client, "slot": slot, "count": count}
-
-
-def _ads_head(cfg: dict | None) -> str:
-    """애드센스 로더는 head에 한 번만 넣는다. client는 정규식을 통과한 값뿐이다."""
-    if not cfg or cfg["provider"] != "adsense":
-        return ""
-    return (f'<script async src="{ADSENSE_SRC}?client={cfg["client"]}" '
-            f'crossorigin="anonymous"></script>')
-
-
 def _pub_iso(article: dict) -> str:
     ts = article.get("published_at")
     if ts is None:
@@ -245,15 +189,11 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  "<p>" + _esc(names) + "에서 글을 모아 하루 세 번(00시, 08시, 16시) "
                  "갱신합니다.</p>"
                  "<p>원글이 궁금할 때 바로 확인하실 수 있도록 모든 글에 원문 링크를 "
-                 "달아 두었습니다.</p>"
-                 '<p><a href="/learn/">학습 노트</a>에는 운영자가 대학 전공 과목을 공부하며 '
-                 "직접 정리한 글을 올립니다.</p>"},
+                 "달아 두었습니다.</p>"},
         {"id": "operator", "title": "운영자",
          "html": "<p>dev-news는 개인이 혼자 만들고 운영하는 사이트입니다. 뉴스를 모으고 "
                  "요약하는 프로그램도 직접 만들어 운영하고 있습니다.</p>"
-                 "<p>운영자는 대학에서 컴퓨터 관련 전공 과목을 공부하고 있습니다. 머신러닝, "
-                 "운영체제, 컴퓨터구조, 컴퓨터 네트워크, 확률변수론을 공부하며 정리한 "
-                 "글을 학습 노트에 올립니다.</p>"},
+                 "<p>운영자는 대학에서 컴퓨터 관련 전공 과목을 공부하고 있습니다.</p>"},
         {"id": "method", "title": "수집 및 요약 방식",
          "html": "<p>수집, 요약, 게시는 자동으로 이루어집니다.</p>"
                  "<p>요약과 제목 번역은 AI가 작성하며, 기사마다 중요한 이유를 한 문장으로 "
@@ -277,20 +217,8 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  "토큰은 저장하지 않습니다. 이 정보는 Cloudflare의 데이터베이스에 저장되며, "
                  "탈퇴하면 바로 모두 지워집니다.</p>"
                  "<p>로그인하지 않으면 읽은 기사와 보관함은 사용하는 브라우저에만 기록되고 "
-                 "서버로 보내지 않습니다.</p>"},
-        {"id": "ads", "title": "광고와 쿠키",
-         "html": "<p>이 사이트에는 Google AdSense 광고가 게재됩니다. Google을 비롯한 제3자 "
-                 "광고 사업자는 쿠키를 사용해 이 사이트와 다른 사이트를 방문한 기록을 바탕으로 "
-                 "광고를 보여 줍니다.</p>"
-                 "<p>Google은 광고 쿠키를 사용해 방문 기록에 맞춘 광고를 게재합니다. "
-                 '<a href="https://adssettings.google.com" rel="noopener">Google 광고 설정</a>에서 '
-                 "맞춤 광고를 끌 수 있고, "
-                 '<a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>에서 '
-                 "다른 광고 사업자의 맞춤 광고 쿠키를 끌 수 있습니다. Google이 수집한 정보를 "
-                 "사용하는 방식은 "
-                 '<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">'
-                 "Google 정책</a>에서 확인하실 수 있습니다.</p>"
-                 "<p>이 사이트는 별도의 방문 통계 도구를 쓰지 않습니다.</p>"},
+                 "서버로 보내지 않습니다.</p>"
+                 "<p>이 사이트는 광고와 방문 통계 도구를 쓰지 않습니다.</p>"},
     ]
 
 
@@ -302,8 +230,8 @@ CONTACT = {"id": "contact", "title": "문의",
 # 이용약관(/terms/). 소개 화면에는 넣지 않고 정적 페이지로만 둔다.
 TERMS_COPY = [
     {"id": "service", "title": "제공하는 내용",
-     "html": "<p>dev-news는 개발과 AI 관련 기사를 모아 한국어 제목과 요약을 붙여 보여 주고, "
-             "운영자가 쓴 학습 노트를 게시합니다. 누구나 가입 없이 이용할 수 있습니다.</p>"},
+     "html": "<p>dev-news는 개발과 AI 관련 기사를 모아 한국어 제목과 요약을 붙여 보여 줍니다. "
+             "누구나 가입 없이 이용할 수 있습니다.</p>"},
     {"id": "accuracy", "title": "요약의 정확성",
      "html": "<p>기사 제목 번역과 요약은 AI가 자동으로 작성하므로 원문과 다르거나 틀린 "
              "내용이 있을 수 있습니다. 중요한 판단을 하실 때는 원문 링크로 내용을 "
@@ -316,8 +244,6 @@ TERMS_COPY = [
              "<p>요약을 만들 때 원문 본문 일부를 외부 AI 서비스(Groq)에 보냅니다. 보낸 본문은 요약 "
              "작성에만 쓰고 dev-news에 저장하거나 게시하지 않습니다.</p>"
              "<p>원문 사이트가 robots.txt로 수집을 막은 페이지와 피드는 받지 않습니다.</p>"
-             "<p>학습 노트의 저작권은 운영자에게 있습니다. 출처를 밝히면 일부를 인용할 수 "
-             "있습니다.</p>"
              "<p>원문 저작권자가 게시 중단을 요청하시면 확인 후 해당 요약을 내립니다.</p>"},
     {"id": "account", "title": "로그인과 탈퇴",
      "html": "<p>GitHub 로그인은 보관함과 읽음 표시를 여러 기기에서 쓰기 위한 선택 기능입니다. "
@@ -391,7 +317,7 @@ HMARK_SVG = ('<svg class="hmark" viewBox="0 0 32 32" aria-hidden="true">'
 def footer_html() -> str:
     """목록 아래와 정적 페이지 아래에 같은 링크 묶음. 크롤러가 소개·개인정보 페이지를
     찾는 길이다 — 레일 아이콘은 스크립트가 있어야 눌린다."""
-    return ('<footer class="foot"><a href="/about/">소개</a><a href="/tour/">둘러보기</a><a href="/learn/">학습 노트</a><a href="/privacy/">개인정보 처리</a><a href="/terms/">이용약관</a>'
+    return ('<footer class="foot"><a href="/about/">소개</a><a href="/tour/">둘러보기</a><a href="/privacy/">개인정보 처리</a><a href="/terms/">이용약관</a>'
             '<a href="https://github.com/dakcoe/dev-news" rel="noopener">GitHub 저장소</a>'
             '<span>© dev-news · 기사의 저작권은 각 원문 출처에 있습니다</span></footer>')
 
@@ -412,14 +338,14 @@ def _section_html(sec: dict, about: dict) -> str:
             btns += (f'<a class="go alt" href="{_esc(repo)}/issues" target="_blank" rel="noopener noreferrer">'
                      f'{_ICON["issue"]}Issues 열기</a>')
         inner += f'<div class="acts">{btns}</div>'
-    cls = ' class="small"' if sec["id"] in ("privacy", "ads") else ""
+    cls = ' class="small"' if sec["id"] == "privacy" else ""
     return f'<section id="{sec["id"]}"{cls}><h2>{_esc(sec["title"])}</h2>{inner}</section>'
 
 
 def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -> None:
     """/about/ 와 /privacy/ 를 정적 페이지로 둔다.
 
-    앱 안의 소개 화면은 스크립트가 그려서 크롤러와 광고 심사 봇에게는 빈
+    앱 안의 소개 화면은 스크립트가 그려서 크롤러에게는 빈
     화면이다. 같은 글을 정적 HTML 로도 내보내 두면 소개·개인정보 처리 방침을
     링크 하나로 찾을 수 있다. 글은 about_copy() 한 곳에서 온다.
     """
@@ -459,7 +385,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                   + "".join(_section_html(x, about) for x in secs) + "</div></div>")
     privacy_body = (f"<h1>{HMARK_SVG}<span>개인정보 처리</span></h1><div class=\"sub\">dev-news 가 다루는 정보</div>"
                     '<div class="doc" style="max-width:760px">'
-                    + "".join(_section_html(x, about) for x in secs if x["id"] in ("privacy", "ads"))
+                    + "".join(_section_html(x, about) for x in secs if x["id"] == "privacy")
                     + _section_html(CONTACT, about)
                     + '<section><p><a href="/about/">사이트 소개 전체 보기 →</a></p></section></div>')
     terms_body = (f"<h1>{HMARK_SVG}<span>이용약관</span></h1><div class=\"sub\">dev-news 이용 조건</div>"
@@ -468,7 +394,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                   + _section_html(CONTACT, about) + "</div>")
     for path, title, desc, body in (
         ("/about/", "소개", "dev-news 를 만든 사람, 수집·요약 방식, 기사 선별 기준, 문의.", about_body),
-        ("/privacy/", "개인정보 처리", "dev-news 가 로그인 때 저장하는 정보와 광고 쿠키 안내.", privacy_body),
+        ("/privacy/", "개인정보 처리", "dev-news 가 로그인 때 저장하는 정보 안내.", privacy_body),
         ("/terms/", "이용약관", "dev-news 의 요약 정확성, 저작권, 로그인과 탈퇴에 관한 이용 조건.", terms_body),
     ):
         d = os.path.join(out_dir, path.strip("/"))
@@ -576,13 +502,6 @@ def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS)
 # Applebot-Extended) 운영자가 막았는지를 이름 단위로 확인한다. 명시해 두면
 # AI 답변의 출처로 인용될 길이 열린다 — 이게 GEO의 기술적 절반이다.
 AI_AGENTS = [
-    # ⚠️ 광고 크롤러를 맨 앞에 둔다. 애드센스 크롤러는 `User-agent: *` 무리를
-    # 무시하므로 이름이 없으면 자기에게 적용할 규칙이 없다고 본다. robots.txt가
-    # 아예 없던 2026-09-07에는 ads.txt가 확인됐는데, 08일에 이 파일을 만들면서
-    # 광고 쪽 이름을 빠뜨리자 "ads.txt를 찾을 수 없음"으로 바뀌었다.
-    "Mediapartners-Google",        # 애드센스 콘텐츠 크롤러
-    "AdsBot-Google",               # ads.txt·방문 페이지 확인
-    "AdsBot-Google-Mobile",
     "Googlebot", "Google-Extended", "Bingbot", "Yeti",          # 검색 + 네이버
     "GPTBot", "OAI-SearchBot", "ChatGPT-User",                  # OpenAI
     "ClaudeBot", "Claude-User", "Claude-SearchBot",             # Anthropic
@@ -598,8 +517,6 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
     읽어가는 안내문으로, 표준은 아니지만 파일 하나 값이면 손해 볼 게 없다.
     """
     base = site_url()
-    from news import learn
-    learn_paths = learn.build(out_dir, base)   # 학습 노트 페이지도 여기서 같이 쓴다
     with open(os.path.join(out_dir, "robots.txt"), "w", encoding="utf-8") as f:
         f.write("User-agent: *\nAllow: /\n\n")
         for ua in AI_AGENTS:
@@ -631,9 +548,7 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
                 f'  <url><loc>{base}/tour/</loc><changefreq>monthly</changefreq></url>\n'
                 f'  <url><loc>{base}/privacy/</loc><changefreq>monthly</changefreq></url>\n'
                 f'  <url><loc>{base}/terms/</loc><changefreq>monthly</changefreq></url>\n'
-                + "".join(f'  <url><loc>{base}{p}</loc><changefreq>monthly</changefreq></url>\n'
-                          for p in learn_paths)
-                + '</urlset>\n')
+                '</urlset>\n')
 
 
 def _fill_slots(html: str, slots: dict[str, str]) -> str:
@@ -652,7 +567,7 @@ def _fill_slots(html: str, slots: dict[str, str]) -> str:
 
 
 def render(articles: list[dict], out_path: str, collected: datetime | None = None,
-           enabled: dict[str, bool] | None = None, ads: dict | None = None,
+           enabled: dict[str, bool] | None = None,
            about: dict | None = None) -> str:
     """enabled: config.yaml의 sources. 토글은 '설정에서 켜졌는지'를 나타낸다.
 
@@ -661,7 +576,6 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
     """
     collected = collected or datetime.now(KST)
     enabled = enabled or {}
-    ads_cfg = _ads_config(ads)
 
     sources = {k: {"name": v["name"], "color": v["color"], "desc": v["desc"],
                    "on": bool(enabled.get(k, True))}
@@ -685,8 +599,6 @@ def render(articles: list[dict], out_path: str, collected: datetime | None = Non
         "__JSONLD__": _jsonld(view_model, collected),
         "__META_DESC__": _meta_desc(view_model),
         "__SITE_URL__": site_url(),
-        "__ADS_HEAD__": _ads_head(ads_cfg),
-        "__ADS_JSON__": _json_for_script(ads_cfg),
         "__ABOUT_JSON__": _json_for_script({**(about or {}), "copy": about_copy(enabled)}),
     }
     html = _fill_slots(html, slots)

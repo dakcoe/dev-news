@@ -164,13 +164,9 @@ def test_사이트맵이_유효한_XML이고_주소가_맞다(seo_dir):
     root = ET.parse(seo_dir / "sitemap.xml").getroot()
     ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
     locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
-    # 소개·개인정보 처리 페이지가 정적으로 있어야 크롤러와 광고 심사 봇이 찾는다
-    assert locs[:5] == [site_url() + "/", site_url() + "/about/", site_url() + "/tour/", site_url() + "/privacy/",
-                        site_url() + "/terms/"]
-    # 학습 노트: 목록과 원고마다 한 줄 (learn/articles)
-    from news import learn
-    assert locs[5:] == [site_url() + "/learn/"] + [f'{site_url()}/learn/{a["slug"]}/' for a in learn.load()]
-    assert (seo_dir / "learn" / "index.html").exists()
+    # 소개·개인정보 처리 페이지가 정적으로 있어야 크롤러가 찾는다
+    assert locs == [site_url() + "/", site_url() + "/about/", site_url() + "/tour/", site_url() + "/privacy/",
+                    site_url() + "/terms/"]
 
 
 # ---------------- llms.txt ----------------
@@ -213,27 +209,6 @@ def test_head가_favicon_ico를_가리킨다(html):
     assert '<link rel="icon" href="/favicon.ico"' in html
 
 
-def test_광고_크롤러가_robots에_이름으로_있다(seo_dir):
-    """애드센스 크롤러는 `User-agent: *` 무리를 무시한다. 이름이 없으면 자기에게
-    적용할 규칙이 없다고 본다.
-
-    robots.txt가 아예 없던 2026-09-07에는 ads.txt가 확인됐는데, 08일에 이 파일을
-    만들면서 광고 쪽 이름을 빠뜨리자 "ads.txt를 찾을 수 없음"으로 바뀌었다.
-    """
-    txt = (seo_dir / "robots.txt").read_text(encoding="utf-8")
-    for agent in ("Mediapartners-Google", "AdsBot-Google", "AdsBot-Google-Mobile"):
-        assert re.search(rf"^User-agent: {re.escape(agent)}\nAllow: /$", txt, re.M), agent
-
-
-def test_ads_txt가_그대로_있다():
-    """수익 연결이 걸린 파일이다. 지우거나 옮기면 광고가 끊긴다."""
-    path = os.path.join(ROOT, "docs", "ads.txt")
-    assert os.path.exists(path)
-    body = open(path, encoding="utf-8").read().strip()
-    assert body.startswith("google.com,"), body
-    assert "DIRECT" in body
-
-
 # ---------------- 봇이 읽는 것 ----------------
 
 def test_프리렌더에_우리_문장이_보인다(tmp_path):
@@ -273,8 +248,7 @@ def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
     # 본문이 실렸는지만 본다. 예전에는 localStorage 라는 단어를 찾았는데,
     # 그 말을 빼는 것이 개인정보 문단을 다시 쓴 이유였다.
     assert "개인정보 처리" in p and "저장합니다" in p and "커피" not in p
-    # 광고 쿠키 고지와 끄는 방법은 애드센스 프로그램 정책이 요구한다
-    assert "adssettings.google.com" in p and "/issues" in p
+    assert "광고와 방문 통계 도구를 쓰지 않습니다" in p and "/issues" in p
     t = (tmp_path / "terms" / "index.html").read_text(encoding="utf-8")
     assert "이용약관" in t and "커피" not in t and 'href="/terms/"' in a
     assert 'rel="canonical" href="' in a
