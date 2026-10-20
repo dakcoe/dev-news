@@ -23,3 +23,6 @@ worker/.wrangler/
 # 지운 것이 아니라 공개만 안 한다 — tools/graph.py 가 내 기계에서는 그대로 읽는다.
 _workspace/
 .claude/
+
+# 요약 품질 평가용 원문 묶음. 남의 기사 본문이라 저장소에 올리지 않는다 (eval/eval_summary.py 가 읽는다)
+tests/golden/corpus.json

@@ -12,7 +12,7 @@ import pytest
 
 import build
 from news import summarizer
-from news.core import discussion, similar
+from news.core import similar
 
 TOKEN = "ghp_" + "r" * 36          # tests/test_redact.py 와 같은 GitHub 토큰 형태
 SELF_IRRELEVANT_WHY = "백엔드 개발자의 업무와 무관한 영화 이야기다."
@@ -70,7 +70,6 @@ def fake(monkeypatch):
     s = FakeSummarizer()
     monkeypatch.setattr(summarizer, "summarize_all", s)
     monkeypatch.setattr(build, "enrich", lambda arts: arts)
-    monkeypatch.setattr(discussion, "fill_from_discussion", lambda arts: arts)
     monkeypatch.setattr(build, "drop_dead_links",
                         lambda arts: ([a for a in arts if "DEAD" not in a["url"]],
                                       [a for a in arts if "DEAD" in a["url"]]))

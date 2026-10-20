@@ -33,7 +33,7 @@ from news.core.common import KST  # noqa: E402  (상수 재노출)
 
 # 브라우저를 흉내 내지 않으면 봇 차단(403)이 늘어 오탐 판정 부담만 커진다.
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; dev-news link checker; "
-                         "+https://github.com/public-apis/public-apis)",
+                         "+https://github.com/dakcoe/dev-news)",
            "Accept": "*/*"}
 
 DEFAULTS = {"enabled": True, "per_run": 600, "workers": 24, "timeout": 8,

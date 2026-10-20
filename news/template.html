@@ -468,6 +468,8 @@ else{sessionStorage.setItem("i","1")}}catch(e){}</script>
   .rm .s{font-weight:700}
   .rm .sep{color:#c9c9d4}
   .rm .num{font-variant-numeric:tabular-nums;font-weight:600;color:var(--tx2)}
+  /* AI 가 쓴 요약임을 목록에서 바로 알 수 있게 한다 (AI 기본법 제31조, EU AI Act 제50조 제4항) */
+  .rm .ai{font-size:12px;color:var(--tx3)}
   .snip{font-size:14.8px;color:#66666f;line-height:1.72;max-width:70ch;
         display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .thumb{width:88px;height:66px;border-radius:9px;overflow:hidden;border:1px solid var(--line2);
@@ -514,6 +516,7 @@ else{sessionStorage.setItem("i","1")}}catch(e){}</script>
   .dc p{font-size:16.5px;color:#2c2c33;margin-bottom:20px;line-height:1.95;letter-spacing:-.01em}
   /* 에디토리얼 리드: 첫 문단만 살짝 키워 진입 위계를 만든다 (RF Typeset) */
   .dc p:first-of-type{font-size:17.5px;color:var(--tx);line-height:1.9}
+  .ainote{font-size:13px;color:var(--tx3);line-height:1.6;margin:-4px 0 20px}
   .why{background:#f7f6fe;border:1px solid #e6e2fb;border-radius:11px;padding:17px 19px;
        margin:26px 0;font-size:15.5px;color:#3a3a44;line-height:1.82}
   .why b{display:block;font-size:12.5px;font-weight:800;color:var(--pri-dk);
@@ -618,7 +621,6 @@ else{sessionStorage.setItem("i","1")}}catch(e){}</script>
     .about p{font-size:14px}
   }
   .about .go.coffee:hover{background:#f5d000}
-  .dnote{font-size:13px;color:var(--tx2);margin:-6px 0 18px}
   /* 공유 — 원문 열기 옆에 나란히. 원문이 주가 되도록 공유는 테두리만 준다. */
   .dacts{position:relative;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   /* 원문 열기(<a>)와 높이를 정확히 맞춘다. button 은 line-height 를 물려받지
@@ -863,7 +865,7 @@ function aboutHTML(){
                + '<button type="button" class="go danger" onclick="acctQuitAsk()">탈퇴하기</button>'
              + '</div>'
            : '<button type="button" class="go" onclick="syncLogin()">'+AB_ICON.gh+'GitHub 로그인</button>'
-             + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
+             + '<p class="anote">로그인하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다. 만 14세 미만은 로그인할 수 없습니다.</p>')
     + '</div>'
     + '<div class="about">'
     + '<div class="profile">'
@@ -878,7 +880,7 @@ function aboutHTML(){
     +   '</div>'
     +   (syncUser
            ? '<p class="pnote">GitHub 계정으로 로그인되어 있습니다. 보관함과 읽음 표시가 기기 사이에서 유지됩니다.</p>'
-           : '<p class="pnote">GitHub 로그인을 하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다.</p>')
+           : '<p class="pnote">GitHub 로그인을 하면 보관함과 읽음 표시를 다른 기기에서도 그대로 볼 수 있습니다. 로그인하지 않아도 이 브라우저에서는 그대로 쓸 수 있습니다. 만 14세 미만은 로그인할 수 없습니다.</p>')
     + '</div>'
     + '<div class="doc">'+secs+'</div></div>'+FOOT_HTML;
 }
@@ -1433,6 +1435,7 @@ function rowHTML(d){
   meta+='<span class="sep">·</span><span>'+ago(d.pub)+'</span>';
   if(d.again) meta+='<span class="tg hit" title="지난 게시 '+escA(d.again)+'">다시 트렌딩</span>';
   if(d.cm) meta+='<span class="sep">·</span><span class="num">'+d.cm+'댓글</span>';
+  if(d.snip) meta+='<span class="sep">·</span><span class="ai">AI 요약</span>';
   (d.tags||[]).forEach(t=>{
     meta+='<span class="tg'+(tagSel.has(t)?' hit':'')+'">'+escA(tagLabel(t))+'</span>';
   });
@@ -1660,7 +1663,7 @@ function openArchived(url, month, extra){
       title:a.ko_title||a.title, from:(SRC[a.source]||{}).name||a.source,
       color:(SRC[a.source]||{}).color||'#999', pub:null, dateLabel:(a.batch||'').slice(0,10),
       img:a.image, paras:paras,
-      why:a.why||'', url:a.url, month:month, bodyFrom:a.body_from
+      why:a.why||'', url:a.url, month:month
     }, extra||{}));
     markRead(url);
   };
@@ -1952,10 +1955,10 @@ function apiHTML(){
   h+='<div class="sub">'+(APIS.sources||[]).map(s=>escA(s.label)+' '+s.count+'개').join(' · ')
     +' · 전체 '+APIS.apis.length+'개 · 매 수집 회차마다 갱신됩니다'
     +(APIS.updated?' (갱신 '+APIS.updated.slice(0,10)+')':'')+'.</div>'
-    // 원 목록의 출처와 라이선스. MIT 는 저작권 표시를 요구한다
+    // 원 목록의 출처와 라이선스. MIT 는 저작권 표시와 허가 문구 전문을 요구한다 — 전문은 THIRD-PARTY-LICENSES.txt
     +'<div class="sub">출처: '+(APIS.sources||[]).map(s=>'<a href="'+safeU(s.home)+'" target="_blank" rel="noopener noreferrer">'
       +escA((s.home||'').replace('https://github.com/',''))+'</a>'+(s.license?' ('+escA(s.license)+')':'')).join(' · ')
-      +'. 각 목록의 저작권은 원 저작자에게 있습니다.</div>'
+      +'. 각 목록의 저작권은 원 저작자에게 있습니다. <a href="THIRD-PARTY-LICENSES.txt" target="_blank" rel="noopener">라이선스 전문</a></div>'
     // 링크 생존 확인 (api-link-health) — 죽은 링크는 목록에서 이미 빠진 상태다.
     // 확인이 꺼져 있거나 실패한 회차에는 health가 없어 이 줄도 나오지 않는다.
     +(APIS.health?'<div class="sub">링크 생존 확인: 누적 '+APIS.health.known
@@ -2226,7 +2229,7 @@ function showDetail(d){
     + '<div class="dc"><h2>'+escA(d.title)+'</h2><div class="dmeta">'+meta+'</div>'
     + paras.map(t=>'<p>'+escA(t)+'</p>').join('')
     + (d.why?'<div class="why"><b>왜 중요한가</b>'+escA(d.why)+'</div>':'')
-    + (d.bodyFrom==='comments'?'<p class="dnote">원문 본문을 가져오지 못해 이 글에 달린 댓글을 바탕으로 썼습니다.</p>':'')
+    + ((d.paras&&d.paras.length)||d.snip?'<div class="ainote">AI가 원문을 읽고 쓴 요약입니다. 틀린 내용이 있을 수 있으니 원문을 확인해 주세요.</div>':'')
     + '<div class="dacts">'
     +   (link?'<a class="go" href="'+link+'" target="_blank" rel="noopener">원문 열기 ↗</a>':'')
     +   '<button class="go alt" id="sharebtn">공유하기</button>'
@@ -2308,7 +2311,7 @@ function openDetail(i){
     title:d.title, from:d.from, color:s.color, pub:d.pub, cm:d.cm,
     delta:(d.src==='github'?d.delta:0), img:d.img,
     paras:d.paras, snip:d.snip,
-    why:d.why||'', url:d.url, month:d.month, bodyFrom:d.bodyFrom, again:d.again
+    why:d.why||'', url:d.url, month:d.month, again:d.again
   });
   render();
 }
@@ -2380,27 +2383,6 @@ function closePanels(){
 const CARD_W=880, CARD_PAD=56, CARD_IMG_H=290;
 /* 카드와 글 복사가 같은 본문을 쓴다. 문단이 없으면 목록의 한 줄 요약이다. */
 const bodyText = d => (d.paras && d.paras.length) ? d.paras.join('\n') : (d.snip || '');
-
-/* 뉴스카드에 쓸 그림을 싣는다. 못 실으면 null 을 돌려 글자만 그린다.
-
-   crossOrigin 을 'anonymous' 로 두는 것이 핵심이다. 이러면 상대 서버가
-   허용 헤더(Access-Control-Allow-Origin)를 줄 때만 실린다. 안 주면 그냥
-   실패해서 null 이 된다 — 그 상태로 캔버스에 그렸다면 캔버스가 잠겨서
-   복사가 통째로 실패했을 것이다.
-
-   실측(2026-09-17, 최근 341건): 깃허브·dev.to·Contentful 등 133건(39%)이
-   실린다. 긱뉴스와 the-decoder 는 헤더를 안 줘서 글자만 그린다. */
-function loadCardImage(url){
-  return new Promise(res=>{
-    if(!url || !/^https?:\/\//i.test(url)) return res(null);
-    const img=new Image();
-    img.crossOrigin='anonymous';
-    img.onload=()=>res(img.naturalWidth>=200 ? img : null);   // 로고처럼 작은 그림은 뺀다
-    img.onerror=()=>res(null);
-    setTimeout(()=>res(null), 4000);                           // 느린 서버에 붙잡히지 않는다
-    img.src=url;
-  });
-}
 
 function wrapLines(ctx, text, maxW){
   /* 한국어는 단어 사이 공백이 드물어 낱말 단위로는 줄이 안 나뉜다.
@@ -2516,8 +2498,8 @@ function previewCard(d){
        '<button type="button" class="go" id="cardcopy" disabled>이미지 복사</button>'
      + '<button type="button" class="go alt" id="cardsave" disabled>이미지 저장</button>'
      + '<button type="button" class="go alt" onclick="qboxClose()">닫기</button>');
-  loadCardImage(d.img)
-    .then(img=>new Promise(res=>drawCard(d, img).toBlob(res,'image/png')))
+  /* 원문 사이트의 그림은 카드에 넣지 않는다. 받는 사람에게 남의 이미지를 복제해 건네게 된다. */
+  new Promise(res=>drawCard(d, null).toBlob(res,'image/png'))
     .then(blob=>{
       if(!box.classList.contains('card')) return;     // 다 그리기 전에 닫았다
       const im=new Image();

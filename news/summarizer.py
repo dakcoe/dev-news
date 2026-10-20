@@ -200,21 +200,15 @@ def looks_like_identifier_title(title: str) -> bool:
 
 
 NO_BODY = "(본문 없음 — 제목만으로 작성하되 추측하지 마라)"
-COMMENTS_BODY = ("(기사 본문을 가져오지 못했다. 아래는 이 글에 달린 독자 댓글이다. "
-                 "댓글에 근거가 있는 것만 쓰고, 댓글의 주장을 기사 내용으로 단정하지 마라. "
-                 "요약은 '댓글에서는 …'처럼 논의되는 것을 전하고, 알 수 없으면 \"없음\"이라고 써라)\n")
 
 
 def _body_for_prompt(article: dict, body: str) -> str:
     """프롬프트에 넣을 본문. 분당 토큰 제한에 걸리지 않게 2천 자로 자른다.
-    댓글로 메운 본문이면 그 사실을 앞에 밝힌다.
 
     한도 값은 여기 적지 않는다 — config.yaml 의 pause_seconds 주석에 실측과
     함께 있고, 두 곳에 적었더니 8K 와 12K 로 갈렸다."""
     if not body:
         return NO_BODY
-    if article.get("body_from") == "comments":
-        return COMMENTS_BODY + body[:2000]
     return body[:2000]
 
 

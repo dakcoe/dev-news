@@ -105,7 +105,6 @@ def to_view_model(articles: list[dict], inline_days: int = INLINE_DAYS) -> list[
             "pub": _pub_iso(a),
             "tags": a.get("tags") or [],
             "snip": _first_sentences(summary),
-            "bodyFrom": a.get("body_from") or "",   # 'comments' 면 댓글로 쓴 요약
             "again": a.get("resurfaced") or "",     # 지난 게시일. 있으면 "다시 트렌딩" 표시
         })
         # 원제. 번역 제목과 다를 때만 싣는다 — 영어로 검색해도 찾게 한다.
@@ -218,7 +217,8 @@ def about_copy(enabled: dict | None) -> list[dict]:
                  "탈퇴하면 바로 모두 지워집니다.</p>"
                  "<p>로그인하지 않으면 읽은 기사와 보관함은 사용하는 브라우저에만 기록되고 "
                  "서버로 보내지 않습니다.</p>"
-                 "<p>이 사이트는 광고와 방문 통계 도구를 쓰지 않습니다.</p>"},
+                 "<p>이 사이트는 광고와 방문 통계 도구를 쓰지 않습니다. 만 14세 미만은 로그인할 수 없습니다.</p>"
+                 '<p><a href="/privacy/">개인정보 처리방침 전문 보기 →</a></p>'},
     ]
 
 
@@ -226,6 +226,69 @@ def about_copy(enabled: dict | None) -> list[dict]:
 CONTACT = {"id": "contact", "title": "문의",
            "html": "<p>개인정보, 저작권, 게시 중단 요청과 그 밖의 문의는 GitHub Issues로 "
                    "보내 주세요.</p>"}
+
+# 개인정보 처리방침(/privacy/). 개인정보 보호법 제30조·시행령 제31조의 항목을 순서대로 적는다.
+# 소개 화면에는 짧은 안내(about_copy 의 privacy)만 두고 전문은 정적 페이지로만 둔다.
+PRIVACY_COPY = [
+    {"id": "purpose", "title": "처리 목적",
+     "html": "<p>dev-news는 GitHub 로그인을 한 이용자에게 보관함과 읽음 표시를 여러 기기에서 똑같이 "
+             "보여 주고 로그인 상태를 유지하기 위해서만 개인정보를 처리합니다. 로그인은 선택 기능이며, "
+             "로그인하지 않으면 읽은 기사와 보관함은 사용하는 브라우저에만 기록되고 서버로 보내지 않습니다.</p>"},
+    {"id": "items", "title": "처리하는 항목과 수집 방법",
+     "html": "<ul><li>GitHub 계정의 숫자 ID: 로그인할 때 GitHub에서 받습니다.</li>"
+             "<li>보관한 기사의 주소, 제목, 게시 달, 종류, 짧은 설명과 보관한 시각: 보관 버튼을 누를 때 저장합니다.</li>"
+             "<li>읽은 기사의 주소와 읽은 시각(최근 1,000건): 기사를 열 때 저장합니다.</li>"
+             "<li>로그인 상태를 유지하는 세션 식별자와 만료 시각</li></ul>"
+             "<p>GitHub 계정의 이름, 이메일 주소, 프로필 사진, 비밀번호와 GitHub 접근 토큰은 저장하지 않습니다. "
+             "로그인할 때 GitHub에 요청하는 권한은 공개 프로필 읽기(read:user) 하나입니다.</p>"},
+    {"id": "period", "title": "보유 기간과 파기",
+     "html": "<p>세션은 30일 동안 보관하고, 만료되면 다음 요청 때 지웁니다. 계정, 보관함(최대 2,000건), "
+             "읽음 표시(최근 1,000건)는 탈퇴할 때까지 보관합니다.</p>"
+             "<p>탈퇴하면 데이터베이스에서 그 계정의 모든 기록을 바로 지우며, 지운 기록은 되살릴 수 없습니다.</p>"},
+    {"id": "third", "title": "제3자 제공",
+     "html": "<p>개인정보를 다른 사람이나 회사에 제공하지 않습니다.</p>"},
+    {"id": "transfer", "title": "처리 위탁과 국외 보관",
+     "html": "<p>서버와 데이터베이스는 Cloudflare가 운영하며, 위 항목을 다음과 같이 국외에 보관합니다.</p>"
+             "<ul><li>받는 자: Cloudflare, Inc.(미국, 101 Townsend St, San Francisco, CA 94107, "
+             "privacyquestions@cloudflare.com)</li>"
+             "<li>위탁하는 일: 로그인 처리 서버(Workers)와 데이터베이스(D1) 운영</li>"
+             "<li>보관 국가: 아시아·태평양 지역의 Cloudflare 데이터센터. 정확한 국가는 Cloudflare가 정하며 "
+             "공개하지 않습니다. 요청은 이용자와 가까운 Cloudflare 데이터센터에서 처리됩니다.</li>"
+             "<li>시기와 방법: 로그인, 보관, 읽음 표시를 할 때마다 암호화된 연결(HTTPS)로 전송합니다.</li>"
+             "<li>보유 기간: 위 「보유 기간과 파기」와 같습니다.</li>"
+             "<li>거부 방법: 로그인하지 않으면 전송되지 않습니다. 이 경우 보관함과 읽음 표시는 "
+             "사용하는 브라우저에서만 유지됩니다.</li></ul>"
+             "<p>이 보관은 이용자가 요청한 동기화 기능을 제공하는 데 필요하여 처리방침 공개로 갈음합니다"
+             "(개인정보 보호법 제28조의8 제1항 제3호 가목).</p>"},
+    {"id": "rights", "title": "이용자의 권리와 행사 방법",
+     "html": "<p>보관함과 읽음 표시는 사이트에서 직접 보고 지울 수 있습니다. 소개 화면의 탈퇴를 누르면 "
+             "모든 기록이 지워지고 GitHub 앱 승인도 취소됩니다. 열람, 정정, 삭제, 처리 정지 요청은 "
+             "아래 연락처로 보내 주시면 지체 없이 처리합니다.</p>"},
+    {"id": "safety", "title": "안전성 확보 조치",
+     "html": "<p>GitHub 접근 토큰은 로그인 순간에만 쓰고 저장하지 않습니다. 세션 쿠키는 스크립트가 읽을 수 없고"
+             "(HttpOnly) 암호화된 연결에서만 전송되며(Secure), 로그인 서버 주소에만 보냅니다. "
+             "데이터베이스에는 운영자만 접근합니다.</p>"},
+    {"id": "cookies", "title": "쿠키",
+     "html": "<p>로그인한 경우에만 다음 쿠키를 씁니다: 로그인 상태를 유지하는 세션 쿠키(30일), 로그인 과정에서만 "
+             "쓰는 확인용 쿠키(30분), 탈퇴 확인용 쿠키(10분). 브라우저 설정에서 쿠키를 막을 수 있지만 그러면 "
+             "로그인할 수 없습니다.</p>"
+             "<p>광고와 방문 통계 도구는 쓰지 않습니다.</p>"},
+    {"id": "auto", "title": "자동으로 전송되는 정보",
+     "html": "<p>페이지가 글꼴(jsDelivr), 기사 썸네일(각 원문 사이트), GitHub 프로필 이미지를 그 서버에서 "
+             "직접 불러오므로, 접속한 기기의 IP 주소 같은 접속 정보가 그 서버에 전달됩니다. "
+             "dev-news는 이 정보를 받거나 저장하지 않습니다.</p>"},
+    {"id": "children", "title": "만 14세 미만",
+     "html": "<p>만 14세 미만은 로그인 기능을 쓸 수 없습니다. 만 14세 미만의 기록이 확인되면 지웁니다. "
+             "로그인 없이 기사를 읽는 데에는 제한이 없습니다.</p>"},
+    {"id": "officer", "title": "개인정보 보호책임자",
+     "html": "<p>운영자 suhyun이 개인정보 보호책임자입니다. 연락처는 아래 「문의」의 이메일입니다.</p>"},
+    {"id": "remedy", "title": "권익침해 구제 방법",
+     "html": "<ul><li>개인정보분쟁조정위원회: 1833-6972, www.kopico.go.kr</li>"
+             "<li>개인정보침해신고센터: 118, privacy.kisa.or.kr</li></ul>"},
+    {"id": "pchange", "title": "처리방침 변경",
+     "html": "<p>처리방침을 바꾸면 이 페이지에 반영합니다.</p><p>시행일: 2026년 10월 21일</p>"},
+]
+
 
 # 이용약관(/terms/). 소개 화면에는 넣지 않고 정적 페이지로만 둔다.
 TERMS_COPY = [
@@ -243,12 +306,17 @@ TERMS_COPY = [
              "원문 사이트에서 바로 불러와 표시합니다. dev-news 서버에는 이미지를 저장하지 않습니다.</p>"
              "<p>요약을 만들 때 원문 본문 일부를 외부 AI 서비스(Groq)에 보냅니다. 보낸 본문은 요약 "
              "작성에만 쓰고 dev-news에 저장하거나 게시하지 않습니다.</p>"
-             "<p>원문 사이트가 robots.txt로 수집을 막은 페이지와 피드는 받지 않습니다.</p>"
-             "<p>원문 저작권자가 게시 중단을 요청하시면 확인 후 해당 요약을 내립니다.</p>"},
+             "<p>원문 사이트가 robots.txt로 수집을 막은 페이지와 피드는 받지 않습니다.</p>"},
+    {"id": "takedown", "title": "정정과 게시 중단",
+     "html": "<p>요약이 사실과 다르거나 권리를 침해한다고 알려 주시면, 확인하기 전이라도 접수한 때부터 "
+             "48시간 안에 해당 요약을 내립니다. 확인한 뒤 고쳐 다시 올리거나 지우고, 결과를 회신합니다.</p>"
+             "<p>요청은 GitHub Issues나 아래 이메일로 보내 주세요. 기사 주소와 문제가 되는 부분을 "
+             "적어 주시면 빠르게 처리할 수 있습니다.</p>"},
     {"id": "account", "title": "로그인과 탈퇴",
      "html": "<p>GitHub 로그인은 보관함과 읽음 표시를 여러 기기에서 쓰기 위한 선택 기능입니다. "
              "저장하는 정보는 "
-             '<a href="/privacy/">개인정보 처리</a>에 적혀 있고, 탈퇴하면 모두 지워집니다.</p>'},
+             '<a href="/privacy/">개인정보 처리</a>에 적혀 있고, 탈퇴하면 모두 지워집니다. '
+             "만 14세 미만은 로그인할 수 없습니다.</p>"},
     {"id": "change", "title": "약관 변경",
      "html": "<p>약관을 바꾸면 이 페이지에 반영합니다.</p><p>시행일: 2026년 10월 21일</p>"},
 ]
@@ -385,7 +453,7 @@ def write_static_pages(out_dir: str, about: dict | None, enabled: dict | None) -
                   + "".join(_section_html(x, about) for x in secs) + "</div></div>")
     privacy_body = (f"<h1>{HMARK_SVG}<span>개인정보 처리</span></h1><div class=\"sub\">dev-news 가 다루는 정보</div>"
                     '<div class="doc" style="max-width:760px">'
-                    + "".join(_section_html(x, about) for x in secs if x["id"] == "privacy")
+                    + "".join(_section_html(x, about) for x in PRIVACY_COPY)
                     + _section_html(CONTACT, about)
                     + '<section><p><a href="/about/">사이트 소개 전체 보기 →</a></p></section></div>')
     terms_body = (f"<h1>{HMARK_SVG}<span>이용약관</span></h1><div class=\"sub\">dev-news 이용 조건</div>"
@@ -418,6 +486,8 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         meta = ['<span class="s">' + _esc(d.get("from") or d.get("src") or "") + "</span>"]
         if d.get("batchLabel"):
             meta.append('<span class="sep">·</span><span>' + _esc(d["batchLabel"]) + "</span>")
+        if d.get("snip"):
+            meta.append('<span class="sep">·</span><span class="ai">AI 요약</span>')
         rows.append(
             '<div class="row"><div></div><div class="mid">'
             f'<h2 class="rt"><a href="{_esc(_safe_url(d.get("url") or ""))}" rel="noopener">'
@@ -441,7 +511,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         '<div class="status"><div class="stmeta">'
         f'<b>최근 30일 {len(view_model)}건</b> · 수집 {collected.strftime("%Y년 %m월 %d일")}<br>'
         f'<span class="l2">회차 {batches}개 · 해커뉴스·GitHub 트렌딩·'
-        "dev.to·긱뉴스에서 모읍니다</span></div></div>"
+        "dev.to·기술 블로그에서 모읍니다</span></div></div>"
         # 검색·필터 바 자리. 높이를 잡아두지 않으면 스크립트가 뜰 때 목록이 밀린다.
         '<div class="bar"><div class="search">'
         '<input placeholder="검색 (아카이브 포함)…" disabled></div></div>'
@@ -454,7 +524,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
 # 한때 오늘 실린 기사 제목을 붙여 매일 달라지게 했는데, 남의 기사 제목이
 # 사이트 설명 자리를 차지해 이 사이트가 무엇인지 알 수 없게 됐다. 설명은
 # 사이트를 설명해야 한다.
-META_DESC = ("해커뉴스·GitHub 트렌딩·dev.to·긱뉴스의 개발·AI 소식을 "
+META_DESC = ("해커뉴스·GitHub 트렌딩·dev.to·기술 블로그의 개발·AI 소식을 "
              "매일 세 번 한국어로 요약합니다.")
 
 
@@ -497,16 +567,23 @@ def _jsonld(view_model: list[dict], collected: datetime, limit: int = SEO_ITEMS)
             + "</script>")
 
 
-# 이름을 적어 두는 크롤러들. `User-agent: *`가 이미 전체를 허용하지만,
-# 이 봇들은 "이름이 안 적혀 있으면 안 긁는다"는 정책을 쓰거나(Google-Extended,
-# Applebot-Extended) 운영자가 막았는지를 이름 단위로 확인한다. 명시해 두면
-# AI 답변의 출처로 인용될 길이 열린다 — 이게 GEO의 기술적 절반이다.
+# 이름을 적어 허용하는 크롤러들. 검색과 AI 답변의 출처 인용에 쓰는 봇이다.
+# `User-agent: *`가 이미 전체를 허용하지만, 운영자가 막았는지를 이름 단위로
+# 확인하는 봇이 있어 명시해 둔다.
 AI_AGENTS = [
-    "Googlebot", "Google-Extended", "Bingbot", "Yeti",          # 검색 + 네이버
-    "GPTBot", "OAI-SearchBot", "ChatGPT-User",                  # OpenAI
-    "ClaudeBot", "Claude-User", "Claude-SearchBot",             # Anthropic
+    "Googlebot", "Bingbot", "Yeti",                             # 검색 + 네이버
+    "OAI-SearchBot", "ChatGPT-User",                            # OpenAI 검색·답변
+    "Claude-SearchBot", "Claude-User",                          # Anthropic 검색·답변
     "PerplexityBot", "Perplexity-User",                         # Perplexity
-    "Applebot", "Applebot-Extended", "CCBot", "Amazonbot",
+    "Applebot",
+]
+
+# 이름을 적어 막는 학습용 크롤러들. 요약은 원문에서 나왔고, 원문 사이트의 상당수가
+# 학습을 거부한다 — 2026-10 게시 기사 3,523건 중 1,629건이 `ai-train=no` 를 밝히거나
+# GPTBot·CCBot·Google-Extended 를 막는 사이트의 글이었다. 그 의사를 요약에도 따른다.
+TRAINING_AGENTS = [
+    "GPTBot", "ClaudeBot", "Google-Extended", "Applebot-Extended",
+    "CCBot", "Amazonbot", "Bytespider", "meta-externalagent",
 ]
 
 
@@ -518,14 +595,16 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
     """
     base = site_url()
     with open(os.path.join(out_dir, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write("User-agent: *\nAllow: /\n\n")
+        f.write("User-agent: *\nAllow: /\nContent-Signal: search=yes, ai-input=yes, ai-train=no\n\n")
         for ua in AI_AGENTS:
             f.write(f"User-agent: {ua}\nAllow: /\n\n")
+        for ua in TRAINING_AGENTS:
+            f.write(f"User-agent: {ua}\nDisallow: /\n\n")
         f.write(f"Sitemap: {base}/sitemap.xml\n")
     with open(os.path.join(out_dir, "llms.txt"), "w", encoding="utf-8") as f:
         f.write(
             "# dev-news\n\n"
-            "> 해커뉴스·GitHub 트렌딩·dev.to·긱뉴스에서 개발과 AI 소식을 "
+            "> 해커뉴스·GitHub 트렌딩·dev.to·기술 블로그에서 개발과 AI 소식을 "
             "매일 세 번(00시·08시·16시 KST) 모아 한국어로 요약하는 사이트다.\n\n"
             "기사마다 두세 문장 요약과 '왜 중요한가' 한 단락을 붙인다. 원문은 각 "
             "출처로 연결되며, 이 사이트가 기사를 직접 쓰지는 않는다.\n\n"

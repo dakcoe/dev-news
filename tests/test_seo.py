@@ -17,7 +17,7 @@ import pytest
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from news.render import AI_AGENTS, render, site_url, write_seo_files  # noqa: E402
+from news.render import AI_AGENTS, TRAINING_AGENTS, render, site_url, write_seo_files  # noqa: E402
 
 
 @pytest.fixture(scope="module")
@@ -145,16 +145,23 @@ def test_전체_허용이_맨_앞에_있다(seo_dir):
 
 
 @pytest.mark.parametrize("agent", AI_AGENTS)
-def test_AI_크롤러가_이름으로_허용된다(seo_dir, agent):
-    """Google-Extended, Applebot-Extended처럼 이름이 없으면 안 긁는 봇들이 있다.
-    AI 답변의 출처로 인용되려면 이름을 적어 둬야 한다."""
+def test_검색_답변_크롤러가_이름으로_허용된다(seo_dir, agent):
+    """AI 답변의 출처로 인용되려면 검색·답변 봇은 이름으로 허용해 둔다."""
     txt = (seo_dir / "robots.txt").read_text(encoding="utf-8")
     assert re.search(rf"^User-agent: {re.escape(agent)}\nAllow: /$", txt, re.M)
 
 
-def test_아무것도_막지_않는다(seo_dir):
+@pytest.mark.parametrize("agent", TRAINING_AGENTS)
+def test_학습_크롤러는_막는다(seo_dir, agent):
+    """요약은 원문에서 나왔고, 원문 사이트의 상당수가 AI 학습을 거부한다."""
     txt = (seo_dir / "robots.txt").read_text(encoding="utf-8")
-    assert "Disallow" not in txt
+    assert re.search(rf"^User-agent: {re.escape(agent)}\nDisallow: /$", txt, re.M)
+
+
+def test_학습_거부를_신호로도_밝힌다(seo_dir):
+    txt = (seo_dir / "robots.txt").read_text(encoding="utf-8")
+    assert "Content-Signal: search=yes, ai-input=yes, ai-train=no" in txt
+    assert not set(AI_AGENTS) & set(TRAINING_AGENTS)
 
 
 # ---------------- sitemap.xml ----------------
@@ -248,7 +255,10 @@ def test_정적_소개_페이지가_같은_글을_담는다(tmp_path):
     # 본문이 실렸는지만 본다. 예전에는 localStorage 라는 단어를 찾았는데,
     # 그 말을 빼는 것이 개인정보 문단을 다시 쓴 이유였다.
     assert "개인정보 처리" in p and "저장합니다" in p and "커피" not in p
-    assert "광고와 방문 통계 도구를 쓰지 않습니다" in p and "/issues" in p
+    assert "광고와 방문 통계 도구는 쓰지 않습니다" in p and "/issues" in p
+    # 개인정보 보호법 제30조 항목: 국외 보관(제28조의8), 아동, 보호책임자
+    for need in ("Cloudflare, Inc.", "보유 기간과 파기", "만 14세 미만", "개인정보 보호책임자"):
+        assert need in p, need
     t = (tmp_path / "terms" / "index.html").read_text(encoding="utf-8")
     assert "이용약관" in t and "커피" not in t and 'href="/terms/"' in a
     assert 'rel="canonical" href="' in a

@@ -8,7 +8,9 @@ sources:
   # hottest.json·RSS 모두). 운영자 허락을 받으면 켠다.
   lobsters: false
   devto: true
-  geeknews: true
+  # 긱뉴스는 글 페이지가 봇을 막아(403) 원문 주소를 못 얻고, 피드 설명은 긱뉴스가 쓴 요약이다.
+  # 그 요약을 다시 줄여 싣지 않는다. robots.txt 도 ai-train=no 다.
+  geeknews: false
   rss: true
   anthropic: true    # RSS가 없어 news/engineering 페이지를 직접 파싱
   # 비인증 접근은 403으로 막히고, OAuth 키 발급도 막혀 있다 (2026-08-31 실측):

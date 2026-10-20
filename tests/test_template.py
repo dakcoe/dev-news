@@ -333,13 +333,10 @@ def test_공유_주소에_달을_같이_담는다(html):
     assert "addEventListener('hashchange', openFromHash)" in html
 
 
-def test_뉴스카드는_실린_그림만_그린다(html):
-    """썸네일을 그냥 그리면 캔버스를 읽을 수 없게 되어(tainted) 복사가 통째로
-    실패한다. loadCardImage 가 허용 헤더를 준 그림만 돌려주고, 못 실었으면
-    null 이라 drawCard 가 그 자리를 건너뛴다."""
-    card = html[html.index("function drawCard("):html.index("function shareText(")]
-    assert "if(img){" in card, "그림이 없을 때를 가리지 않는다"
-    assert card.index("if(img){") < card.index("drawImage"), "가리기 전에 그린다"
+def test_뉴스카드에_원문_그림을_넣지_않는다(html):
+    """카드를 받은 사람에게 원문 사이트의 그림을 복제해 건네지 않는다."""
+    assert "drawCard(d, null)" in html
+    assert "loadCardImage" not in html
 
 
 def test_클립보드_이미지는_Promise_를_그대로_넘긴다(html):
@@ -347,17 +344,6 @@ def test_클립보드_이미지는_Promise_를_그대로_넘긴다(html):
     assert "new ClipboardItem({'image/png':blob})" in html
 
 
-def test_뉴스카드_그림은_허용_헤더가_있을_때만_싣는다(html):
-    """상대 서버가 Access-Control-Allow-Origin 을 안 주는데 그린 그림은
-    캔버스를 잠가서 복사가 통째로 실패한다. crossOrigin='anonymous' 로 두면
-    그런 그림은 실리지 않고 실패해서 글자만 그린다."""
-    assert "img.crossOrigin='anonymous'" in html
-    assert "img.onerror=()=>res(null)" in html
-
-
-def test_뉴스카드_그림은_기다리다_포기한다(html):
-    """느린 서버 하나에 붙잡히면 복사 버튼이 영영 응답하지 않는다."""
-    assert "setTimeout(()=>res(null), 4000)" in html
 
 
 def test_공유_버튼이_원문_열기와_같은_높이다(html):
