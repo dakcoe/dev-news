@@ -311,6 +311,11 @@ TERMS_COPY = [
     {"id": "copyright", "title": "저작권",
      "html": "<p>기사 원문의 저작권은 각 출처에 있습니다. dev-news는 원문을 옮겨 싣지 않고 "
              "요약과 원문 링크만 제공합니다.</p>"
+             "<p>기사 목록의 썸네일은 원문 사이트가 공유용으로 지정한 대표 이미지(og:image)이며, "
+             "원문 사이트에서 바로 불러와 표시합니다. dev-news 서버에는 이미지를 저장하지 않습니다.</p>"
+             "<p>요약을 만들 때 원문 본문 일부를 외부 AI 서비스(Groq)에 보냅니다. 보낸 본문은 요약 "
+             "작성에만 쓰고 dev-news에 저장하거나 게시하지 않습니다.</p>"
+             "<p>원문 사이트가 robots.txt로 수집을 막은 페이지와 피드는 받지 않습니다.</p>"
              "<p>학습 노트의 저작권은 운영자에게 있습니다. 출처를 밝히면 일부를 인용할 수 "
              "있습니다.</p>"
              "<p>원문 저작권자가 게시 중단을 요청하시면 확인 후 해당 요약을 내립니다.</p>"},
@@ -319,7 +324,7 @@ TERMS_COPY = [
              "저장하는 정보는 "
              '<a href="/privacy/">개인정보 처리</a>에 적혀 있고, 탈퇴하면 모두 지워집니다.</p>'},
     {"id": "change", "title": "약관 변경",
-     "html": "<p>약관을 바꾸면 이 페이지에 반영합니다.</p><p>시행일: 2026년 10월 9일</p>"},
+     "html": "<p>약관을 바꾸면 이 페이지에 반영합니다.</p><p>시행일: 2026년 10월 21일</p>"},
 ]
 
 
@@ -509,7 +514,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
         f"(최근 {batches}회차) · 하루 수백 건 중 회차당 최대 20건을 고릅니다</div>"
         '<div class="status"><div class="stmeta">'
         f'<b>최근 30일 {len(view_model)}건</b> · 수집 {collected.strftime("%Y년 %m월 %d일")}<br>'
-        f'<span class="l2">회차 {batches}개 · 해커뉴스·GitHub 트렌딩·Lobsters·'
+        f'<span class="l2">회차 {batches}개 · 해커뉴스·GitHub 트렌딩·'
         "dev.to·긱뉴스에서 모읍니다</span></div></div>"
         # 검색·필터 바 자리. 높이를 잡아두지 않으면 스크립트가 뜰 때 목록이 밀린다.
         '<div class="bar"><div class="search">'
@@ -523,7 +528,7 @@ def _seo_html(view_model: list[dict], collected: datetime, limit: int = SEO_ITEM
 # 한때 오늘 실린 기사 제목을 붙여 매일 달라지게 했는데, 남의 기사 제목이
 # 사이트 설명 자리를 차지해 이 사이트가 무엇인지 알 수 없게 됐다. 설명은
 # 사이트를 설명해야 한다.
-META_DESC = ("해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스의 개발·AI 소식을 "
+META_DESC = ("해커뉴스·GitHub 트렌딩·dev.to·긱뉴스의 개발·AI 소식을 "
              "매일 세 번 한국어로 요약합니다.")
 
 
@@ -603,7 +608,7 @@ def write_seo_files(out_dir: str, collected: datetime) -> None:
     with open(os.path.join(out_dir, "llms.txt"), "w", encoding="utf-8") as f:
         f.write(
             "# dev-news\n\n"
-            "> 해커뉴스·GitHub 트렌딩·Lobsters·dev.to·긱뉴스에서 개발과 AI 소식을 "
+            "> 해커뉴스·GitHub 트렌딩·dev.to·긱뉴스에서 개발과 AI 소식을 "
             "매일 세 번(00시·08시·16시 KST) 모아 한국어로 요약하는 사이트다.\n\n"
             "기사마다 두세 문장 요약과 '왜 중요한가' 한 단락을 붙인다. 원문은 각 "
             "출처로 연결되며, 이 사이트가 기사를 직접 쓰지는 않는다.\n\n"

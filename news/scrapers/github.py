@@ -6,10 +6,10 @@ from news.core import http
 TRENDING_URL = "https://github.com/trending"
 
 
-def fetch(language: str = "", since: str = "daily") -> list[dict]:
-    params = {"since": since}
-    if language:
-        params["l"] = language
+def fetch(language: str = "") -> list[dict]:
+    # since 는 붙이지 않는다. github.com robots.txt 가 `/*?since=*` 를 막고,
+    # /trending 은 붙이지 않아도 일간 순위를 보여 준다.
+    params = {"l": language} if language else {}
     # 공용 http를 쓴다. 직접 requests를 부르면 5xx 재시도가 없어서, 순간 502 한
     # 번에 그 회차 GitHub 몫이 통째로 빈다. 예약석을 5개 잡고 있는 출처라 그
     # 자리가 비면 다른 출처로 메워지지도 않는다. 게다가 예외가 아니라 0건으로

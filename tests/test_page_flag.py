@@ -33,16 +33,17 @@ def _fake_response():
     return resp
 
 
-def test_rss_page_false_propagates():
+def test_rss_page_false_propagates(open_robots):
     with patch.object(rss.http, "get", return_value=_fake_response()):
         items = rss._one({"name": "r/Test", "url": "https://example.test/.rss",
-                          "page": False}, limit=8)
+                          "page": False}, limit=8, robots=open_robots)
     assert items and all(a["page"] is False for a in items)
 
 
-def test_rss_page_defaults_true():
+def test_rss_page_defaults_true(open_robots):
     with patch.object(rss.http, "get", return_value=_fake_response()):
-        items = rss._one({"name": "Blog", "url": "https://example.test/feed"}, limit=8)
+        items = rss._one({"name": "Blog", "url": "https://example.test/feed"}, limit=8,
+                         robots=open_robots)
     assert items and all(a["page"] is True for a in items)
 
 
@@ -60,5 +61,5 @@ def test_config_corpus_feeds_marked():
     with open(os.path.join(ROOT, "config.yaml"), encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
     feeds = {f["name"]: f for f in cfg["feeds"]}
-    for name in ("arXiv cs.AI", "arXiv cs.CL", "r/LocalLLaMA"):
+    for name in ("arXiv cs.AI", "arXiv cs.CL"):
         assert feeds[name].get("page") is False, f"{name}는 코퍼스 전용이어야 한다"

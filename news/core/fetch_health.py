@@ -35,6 +35,8 @@ def reason_of(status: str | None, code: int | None,
     """
     if status is None:
         return "github"          # raw README 경로 — 판정 대상이 아니다
+    if status == "robots":
+        return "robots"          # robots.txt 가 막아 요청하지 않았다
     if status == "dead":
         return "dead"
     if status == "unknown":

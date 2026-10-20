@@ -92,12 +92,13 @@ def test_토론_주소가_없으면_주소로_검색한다(monkeypatch):
     assert any("algolia" in c and "blocked.example" in c for c in calls)
 
 
-def test_로브스터스는_json_한_번으로(monkeypatch):
+def test_로브스터스_댓글은_받지_않는다(monkeypatch):
+    """lobste.rs 는 robots.txt 로 봇을 막고 `Content-Signal: ai-input=no` 를 밝힌다."""
     a = {"title": "t", "url": "https://x/y", "source": "lobsters",
          "discussion": "https://lobste.rs/s/abc/title", "content": ""}
-    monkeypatch.setattr(http, "get", lambda url, **k: Resp({"comments": [{"comment_plain": "ㄱ"}, {"comment_plain": "ㄴ"}]}) if url.endswith("/s/abc/title.json") else (_ for _ in ()).throw(AssertionError(url)))
+    monkeypatch.setattr(http, "get", lambda url, **k: (_ for _ in ()).throw(AssertionError(url)))
     out = D.fill_from_discussion([a])[0]
-    assert "[댓글 1] ㄱ" in out["content"] and "[댓글 2] ㄴ" in out["content"]
+    assert out.get("body_from") is None and out["content"] == ""
 
 
 # ---------------- 프롬프트 ----------------

@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from news.api_health import _error_kind, classify
 from news.core import http
 from news.core.fetch_health import BLOCKED_CODES, reason_of, record
+from news.core.robots import Checker
 
 MAX_CONTENT_CHARS = 3000
 MIN_CONTENT_CHARS = 80
@@ -53,9 +54,11 @@ def usable_content(text, description=None):
     return text[:MAX_CONTENT_CHARS]
 
 
-def _github_readme(owner: str, repo: str) -> str | None:
+def _github_readme(owner: str, repo: str, robots: Checker) -> str | None:
     for filename in ("README.md", "readme.md", "README.rst", "README"):
         url = f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{filename}"
+        if not robots.allowed(url):
+            continue
         try:
             # README도 상한을 건다. 저장소에 따라 수 MB짜리가 있다.
             # content-type이 text/plain이라 형식 검사로는 안 걸린다.
@@ -87,20 +90,26 @@ def _og_image(soup: BeautifulSoup, base_url: str) -> str | None:
     return None
 
 
-def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None]:
+def _fetch_one(url: str, robots: Checker) -> tuple[str | None, str | None, str | None, int | None]:
     """(본문, 썸네일 URL, 링크 판정, 응답 코드)
 
     판정은 api_health.classify()를 그대로 쓴다 — 같은 문제를 이미 실측으로
     다듬어 놨다. 404·410은 dead, 5xx·타임아웃은 unknown, 403·429는 ok다.
     403을 죽음으로 세면 봇 차단된 멀쩡한 기사를 잃는다(실측 4건).
+
+    robots.txt 가 막은 페이지는 요청하지 않고 판정을 "robots" 로 둔다. 403과 같이
+    기사는 남기고 본문만 비운다 — 받지 않았으니 죽은 링크인지도 모른다.
     """
     m = GITHUB_REPO_RE.match(url)
     if m:
         # 저장소 링크는 raw README로 우회한다. README가 없어 404가 나도 저장소는
         # 멀쩡하므로 판정 대상이 아니다.
         owner, repo = m.group(1), m.group(2)
-        readme = _github_readme(owner, repo)
+        readme = _github_readme(owner, repo, robots)
         return readme, f"https://opengraph.githubassets.com/1/{owner}/{repo}", None, None
+
+    if not robots.allowed(url):
+        return None, None, "robots", None
 
     try:
         # 본문 상한을 건다. 상한이 없으면 링크된 대용량 파일이 통째로 내려와
@@ -147,8 +156,9 @@ def _fetch_one(url: str) -> tuple[str | None, str | None, str | None, int | None
 
 def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
     results: dict[str, tuple] = {}
+    robots = Checker()          # 회차마다 새로 받는다
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futures = {pool.submit(_fetch_one, a["url"]): a["url"] for a in articles}
+        futures = {pool.submit(_fetch_one, a["url"], robots): a["url"] for a in articles}
         for future in as_completed(futures):
             url = futures[future]
             try:
@@ -160,6 +170,7 @@ def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
     got_text = 0
     got_img = sum(1 for _, i, _, _ in results.values() if i)
     dead = sum(1 for _, _, s, _ in results.values() if s == "dead")
+    denied = sum(1 for _, _, s, _ in results.values() if s == "robots")
 
     out = []
     rows: list[dict] = []
@@ -173,6 +184,7 @@ def enrich(articles: list[dict], max_workers: int = 5) -> list[dict]:
         out.append({**a, "content": content, "image": image, "link_status": status})
 
     print(f"[enrich] 본문 {got_text}/{len(articles)} · 썸네일 {got_img}/{len(articles)}"
-          + (f" · 죽은 링크 {dead}" if dead else ""))
+          + (f" · 죽은 링크 {dead}" if dead else "")
+          + (f" · robots.txt 금지 {denied}" if denied else ""))
     record(rows)
     return out

@@ -10,6 +10,7 @@ config.yaml의 feeds 목록을 그대로 읽는다. 주소만 추가하면 소�
 
 name을 생략하면 도메인이 출처 이름이 된다.
 피드 하나가 죽어도 나머지는 계속 수집한다.
+robots.txt 가 막은 피드는 받지 않는다 — 0건으로 세지므로 출처 침묵 경고로 드러난다.
 """
 from __future__ import annotations
 
@@ -21,6 +22,7 @@ from bs4 import BeautifulSoup
 
 from news.core import http
 from news.core.common import published
+from news.core.robots import Checker
 
 
 def _text(html: str, limit: int = 400) -> str:
@@ -44,9 +46,12 @@ def _skip_days(soup) -> list[int]:
     return sorted({d for d in days if d is not None})
 
 
-def _one(feed: dict, limit: int) -> list[dict]:
+def _one(feed: dict, limit: int, robots: Checker) -> list[dict]:
     url = feed["url"]
     name = feed.get("name") or urlparse(url).netloc.replace("www.", "")
+    if not robots.allowed(url):
+        print(f"[rss] {name} 건너뜀: robots.txt 가 이 피드를 막는다")
+        return []
     # 피드가 UA를 지정하면 그 값을 쓴다. 레딧은 처음 보는 UA에 즉시 429를 주고
     # 오래 써 온 문자열만 통과시킨다 — 실측: 옛 UA 200, 새 UA·무작위 UA 429.
     headers = {"User-Agent": feed["user_agent"]} if feed.get("user_agent") else None
@@ -114,8 +119,9 @@ def fetch(feeds: list[dict] | None = None, per_feed: int = 8,
     if not feeds:
         return []
     articles: list[dict] = []
+    robots = Checker()
     with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(_one, f, per_feed): f for f in feeds if f.get("url")}
+        futures = {pool.submit(_one, f, per_feed, robots): f for f in feeds if f.get("url")}
         for future in as_completed(futures):
             name = feed_name(futures[future])
             try:

@@ -4,7 +4,9 @@ sources:
   hackernews: true
   github: true
   trendshift: true   # trendshift.io 일간 순위. github 항목으로 합쳐진다 (feed=Trendshift)
-  lobsters: true
+  # lobste.rs robots.txt 가 검색엔진 밖의 봇을 전부 막는다(`User-agent: *` → `Disallow: /`,
+  # hottest.json·RSS 모두). 운영자 허락을 받으면 켠다.
+  lobsters: false
   devto: true
   geeknews: true
   rss: true
@@ -26,8 +28,7 @@ feeds:
     url: https://huggingface.co/blog/feed.xml
   - name: Simon Willison
     url: https://simonwillison.net/atom/everything/
-  - name: The Decoder
-    url: https://the-decoder.com/feed/
+  # The Decoder 피드는 뺐다. the-decoder.com robots.txt 가 `Disallow: */feed/` 로 피드를 막는다.
   - name: 카카오 기술블로그
     url: https://tech.kakao.com/feed/
   - name: 토스 기술블로그
@@ -41,14 +42,7 @@ feeds:
   - name: arXiv cs.CL
     url: https://rss.arxiv.org/rss/cs.CL
     page: false
-  - name: r/LocalLLaMA
-    url: https://www.reddit.com/r/LocalLLaMA/.rss
-    page: false
-    # 레딧은 처음 보는 UA에 즉시 429를 준다 — 실측으로 무작위 UA도 429였다.
-    # 오래 써 온 이 문자열만 통과하므로 공용 UA(consolidate-http)를 덮어쓴다.
-    # sources.reddit(OAuth 스크래퍼)과는 다른 경로다. 그쪽은 API 승인이 필요해
-    # 꺼져 있고, 이건 인증 없이 받는 공개 RSS다.
-    user_agent: "dev-news/1.0 (personal feed aggregator)"
+  # r/LocalLLaMA RSS 는 뺐다. reddit.com robots.txt 가 `User-agent: *` 에 `Disallow: /` 다.
 
 # 글이 드문 공식 블로그는 48시간으로 자르면 놓친다. 이 출처들만 창을 늘린다.
 # (한 번 실린 글은 seen.json이 막으므로 같은 글이 반복되지는 않는다)

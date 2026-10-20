@@ -7,10 +7,13 @@ digiato 3,931자) 깃허브 러너의 IP 는 여러 사이트가 막는다(403·
 본문이 비면 요약 프롬프트가 "제목만으로 쓰되 추측하지 마라"가 되고, 모델은
 지시대로 "없음"을 내놓는다. 그 결과가 빈 요약이다.
 
-해커뉴스·Lobsters 글에는 독자 댓글이 있고, 그 API 는 러너에서도 막히지 않는다.
+해커뉴스 글에는 독자 댓글이 있고, 그 API 는 러너에서도 막히지 않는다.
 댓글은 기사가 아니지만, 무엇이 논의되는지는 알려 준다. 그래서 본문 대신
 댓글을 넣고, 프롬프트와 화면에 "댓글을 바탕으로 썼다"고 밝힌다. 기사 내용을
 단정하지 않게 하는 것은 프롬프트 쪽(summarizer._body_for_prompt)이 맡는다.
+
+Lobsters 댓글은 쓰지 않는다. lobste.rs robots.txt 가 검색엔진 밖의 봇을 전부 막고
+`Content-Signal: ai-input=no` 로 AI 입력을 거부한다.
 
 댓글도 없으면 그대로 둔다 — 그 경우는 지금처럼 자리표시가 뜬다.
 """
@@ -25,7 +28,7 @@ from news.core import http
 
 HN_ITEM = "https://hacker-news.firebaseio.com/v0/item/{}.json"
 HN_SEARCH = "https://hn.algolia.com/api/v1/search?query={}&restrictSearchableAttributes=url&hitsPerPage=1"
-MAX_COMMENTS = 3          # 위에서부터 — 해커뉴스·Lobsters 둘 다 순위순으로 준다
+MAX_COMMENTS = 3          # 위에서부터 — 해커뉴스는 순위순으로 준다
 MAX_EACH = 600            # 댓글 하나 글자 수
 MAX_TOTAL = 1800          # 프롬프트가 본문을 2,000자에서 자르므로 그 안쪽
 
@@ -68,27 +71,7 @@ def _hn_comments(item_id: str) -> list[str]:
     return out
 
 
-def _lobsters_comments(article: dict) -> list[str]:
-    disc = article.get("discussion") or ""
-    if "lobste.rs/s/" not in disc:
-        return []
-    try:
-        data = http.get(disc.rstrip("/") + ".json", timeout=10).json() or {}
-    except Exception:
-        return []
-    out = []
-    for c in data.get("comments") or []:
-        text = _plain(c.get("comment_plain") or c.get("comment") or "")
-        if text:
-            out.append(text)
-        if len(out) >= MAX_COMMENTS:
-            break
-    return out
-
-
 def comments_for(article: dict) -> list[str]:
-    if article.get("source") == "lobsters":
-        return _lobsters_comments(article)
     item_id = _hn_id(article)
     return _hn_comments(item_id) if item_id else []
 

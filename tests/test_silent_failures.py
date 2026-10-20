@@ -153,7 +153,7 @@ class _Text:
         return json.loads(self.text)
 
 
-def test_수집기별_날짜_필드(monkeypatch):
+def test_수집기별_날짜_필드(monkeypatch, open_robots):
     """어떤 수집기가 날짜를 비우고 어떤 수집기가 못 읽은 날짜를 표시하는지 고정한다."""
     # GitHub 트렌딩: 날짜 없음, 표시 없음
     gh = ('<article class="Box-row"><h2><a href="/o/r">o / r</a></h2><p>d</p>'
@@ -167,7 +167,7 @@ def test_수집기별_날짜_필드(monkeypatch):
             '<pubDate>어제 오후</pubDate></item><item><title>U</title><link>https://x/2</link>'
             '</item></channel></rss>')
     monkeypatch.setattr(rss.http, "get", lambda *a, **k: _Text(feed))
-    bad, missing = rss._one({"url": "https://x/feed", "name": "x"}, 8)
+    bad, missing = rss._one({"url": "https://x/feed", "name": "x"}, 8, open_robots)
     assert bad["date_unparsed"] == "어제 오후"
     assert missing["published_at"] is None and "date_unparsed" not in missing
 

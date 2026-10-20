@@ -89,7 +89,7 @@ def test_empty_rows(tmp_path):
     assert load(path)["runs"][-1]["counts"] == {}
 
 
-def test_차단_응답의_HTML은_본문으로_쓰지_않는다(monkeypatch):
+def test_차단_응답의_HTML은_본문으로_쓰지_않는다(monkeypatch, open_robots):
     """403 쿠키·차단 화면 글자가 usable_content 를 통과해 요약되던 문제 (2026-10-07 리뷰)."""
     from news.core import enrich, http
 
@@ -101,6 +101,6 @@ def test_차단_응답의_HTML은_본문으로_쓰지_않는다(monkeypatch):
                    + "</p></body></html>").encode()
 
     monkeypatch.setattr(http, "get_capped", lambda url, timeout=15: Resp())
-    content, image, status, code = enrich._fetch_one("https://example.com/a")
+    content, image, status, code = enrich._fetch_one("https://example.com/a", open_robots)
     assert content is None and status == "ok" and code == 403
     assert reason_of(status, code, content) == "blocked"
