@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-11T00:01:55+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "github": 3,
-    "blocked": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35124",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35123",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35122",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35121",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35120",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-11T08:00:50+09:00",
    "total": 21,
    "counts": {
@@ -1246,6 +1210,52 @@
     {
      "url": "https://openai.com/index/low-resource-programming-languages",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-21T00:00:51+09:00",
+   "total": 24,
+   "counts": {
+    "github": 4,
+    "ok": 13,
+    "blocked": 7
+   },
+   "failures": [
+    {
+     "url": "https://news.hada.io/topic?id=35701",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.neowin.net/news/google-cloud-outage-takes-down-hsbc-revolut-bank-of-scotland-llyods-equifax-more/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35714",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35713",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35712",
+     "source": "geeknews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.hada.io/topic?id=35711",
+     "source": "geeknews",
      "reason": "blocked"
     }
    ]
