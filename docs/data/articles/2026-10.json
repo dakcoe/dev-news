@@ -1,5 +1,564 @@
 [
  {
+  "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+  "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792607190.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/kumo-relational"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6ad8e88370f69967fafc8703/i-Flass3NMPRmc6lVfwO_.png",
+  "link_status": "ok",
+  "ko_title": "NVIDIA Kumo Relational, 관계형 데이터에서 감독 학습을 능가, 학습 필요 없음",
+  "summary": "NVIDIA Kumo Relational은 사전 학습된 관계형 기반 모델로, 엔터프라이즈 데이터베이스에서 직접 예측을 수행한다. 예측 질의에 대해 최대 10,000개의 과거 사례를 컨텍스트로 사용해 한 번의 추론으로 이탈, 수요, 사기 등을 예측한다. 41개의 작업과 15개 데이터베이스에서 감독 학습 기반 모델과 전문가가 설계한 그래디언트 부스팅 파이프라인을 능가했으며, SAP SALT 벤치마크에서는 AutoGluon 앙상블보다 MRR이 8% 높다.",
+  "why": "기존에 수주씩 들이던 특징 공학이나 모델 학습 단계를 건너뛸 수 있다. 엔터프라이즈 데이터베이스에서 이탈이나 사기 예측을 할 때 별도 파이프라인 구축 없이 바로 적용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "nuglifeleoji / Sentry",
+  "url": "https://github.com/nuglifeleoji/Sentry",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 846,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/nuglifeleoji/Sentry"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 846,
+  "score": 72,
+  "image": "https://opengraph.githubassets.com/1/nuglifeleoji/Sentry",
+  "link_status": null,
+  "ko_title": "Sentry — LLM 에이전트를 위한 외부 런타임 실패 관리 레이어",
+  "summary": "Sentry는 LLM 에이전트의 실행 중 오류를 감지하고 복구를 안내하며, 복구 경험을 학습해 재사용 가능한 교훈을 만든다. 기존 런타임 모니터와 달리 컨텍스트를 차지하지 않으면서 에이전트의 신뢰성을 높인다. 실험에서는 WebShop·AppWorld·SWE-bench Lite·Mind2Web 등에서 평균 37%~39% 성능 향상을 보였으며, 토큰 사용량은 기존 방법보다 낮고 복구 성공률은 81.7%다.",
+  "why": "에이전트 실행 중 오류를 감지하고 복구 경험을 학습해 재사용하는 외부 레이어다. 기존 런타임 모니터보다 컨텍스트를 적게 차지하며 복구 성공률이 81.7%다. SWE-bench Lite와 AppWorld에서 각각 31.7초, 45.6초의 처리 시간을 단축했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "omnimind-ai / OmniInfer",
+  "url": "https://github.com/omnimind-ai/OmniInfer",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 838,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/omnimind-ai/OmniInfer"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 838,
+  "score": 70,
+  "image": "https://opengraph.githubassets.com/1/omnimind-ai/OmniInfer",
+  "link_status": null,
+  "ko_title": "OmniInfer — 모든 장치에서 쉽고 빠르며 프라이버시를 보장하는 LLM·VLM 추론",
+  "summary": "OmniInfer는 Linux, macOS, Windows용 CLI 전용 릴리스를 제공하는 오픈소스 추론 도구다. 설치 스크립트가 최신 릴리스를 다운로드하고 SHA-256 검증 후 현재 사용자에게 설치한다. LLM과 VLM을 로컬에서 실행하도록 설계돼 다양한 하드웨어에서 프라이버시를 유지한다.",
+  "why": "로컬에서 LLM과 VLM 추론을 수행해 데이터가 외부로 나가지 않는 프라이버시 환경을 구축할 수 있다. CLI 전용 도구이므로 백엔드 파이프라인에 명령줄 스크립트로 바로 통합해 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "dev-tools",
+   "devops-infra",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+  "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792604136.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6a725daa5ca641a21ab61956/OWGtXjnbBov-7SI_04o4z.png",
+  "link_status": "ok",
+  "ko_title": "특화된 어휘로 SLM 추론 비용 77% 절감",
+  "summary": "일반 모델의 방대한 어휘를 도메인에 맞게 재구성해 토큰당 비용을 기준으로 최적화한 VocabX 방법을 적용했다. 포르투갈어 에세이 자동 채점 시스템에 적용해 토큰 수와 어휘 크기를 줄여 추론 비용을 77% 낮췄다. 기존 토크나이저를 그대로 두는 것이 일반적이지만, 단일 도메인 모델에서는 어휘가 큰 비용 요인이다.",
+  "why": "단일 도메인 SLM을 운영 중이라면 기존 토크나이저를 그대로 두는 것이 비용의 주된 원인이 될 수 있다. 어휘를 도메인에 맞게 재구성하면 기반 모델 변경 없이 추론 비용을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+  "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+  "source": "hackernews",
+  "upvotes": 276,
+  "comments": 168,
+  "published_at": 1792604713,
+  "discussion": "https://news.ycombinator.com/item?id=50184820",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://image.cnbcfm.com/api/v1/image/108437802-1792509531499-gettyimages-2297798363-1r5_3613_q0uw9oaf.jpeg?v=1792603420&w=1920&h=1080",
+  "link_status": "ok",
+  "ko_title": "메타, 뉴멕시코 케임브리지 애널리티카 사건에서 250억 달러 벌금 명령",
+  "summary": "뉴멕시코 법원이 메타에게 250억 달러 벌금을 명령했다. 배심원은 메타가 4,300만 건 이상의 주 불공정 관행 위반을 인정했으며, 각 위반당 최대 5,000달러의 벌금이 부과됐다. 최종 벌금은 원래 2,195억 달러에서 250억 달러로 감액되었다. 메타는 항소를 자신한다.",
+  "why": "메타의 항소로 최종 판결은 미정이며, 현재 개발 환경에 즉각적인 변경 사항은 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "EA is shutting down BioWare",
+  "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+  "source": "hackernews",
+  "upvotes": 451,
+  "comments": 275,
+  "published_at": 1792603773,
+  "discussion": "https://news.ycombinator.com/item?id=50184586",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/gsh636en2u1g1.jpg?quality=90&strip=all&crop=0%2C15.095986038394%2C100%2C69.808027923211&w=1200",
+  "link_status": "ok",
+  "ko_title": "EA, BioWare 스튜디오 폐쇄",
+  "summary": "EA가 전설적인 RPG 스튜디오 BioWare를 폐쇄하고 차기 Mass Effect 개발을 중단한다는 사실을 발표했다. 약 400명의 직원이 해고되며, BioWare는 30년 넘게 만든 게임들을 뒤로하고 문을 닫는다. 이번 조치는 사우디 투자펀드 주도의 550억 달러 규모 인수 이후 진행된 대규모 구조조정의 일환이다.",
+  "why": "Mass Effect 차기작 개발 중단으로 해당 IP의 신규 콘텐츠 공급이 끊긴다. BioWare 출신 개발자 약 400명이 이직 시장에 풀려 인력 구성에 변동이 생길 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Claude Duet",
+  "url": "https://claude.com/product/claude-duet",
+  "source": "hackernews",
+  "upvotes": 270,
+  "comments": 218,
+  "published_at": 1792610041,
+  "discussion": "https://news.ycombinator.com/item?id=50186037",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://claude.com/product/claude-duet"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/static/claude-duet/og.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude Duet",
+  "summary": "Claude Duet은 사용자의 주의를 요하는 작업을 파악해 자동으로 처리하고, 완료되거나 승인이 필요할 때 알림을 보낸다. 매일 아침 업무 요약을 제공하고, 메시지 기반으로 회의 일정 잡기·대시보드 생성·문서 초안 작성 등을 수행한다. Pro와 Max 플랜에서 Opus 5.5 엔진으로 미국에서 제공된다.",
+  "why": "Pro와 Max 플랜 가입자만 미국에서 Opus 5.5 엔진으로 이용할 수 있다. 민감한 작업 전 승인 절차가 필수이므로 자동화 흐름에 이 단계를 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "is-kit Reached 100 Stars ⭐🎉 Here’s What Changed Since 50",
+  "url": "https://dev.to/nyaomaru/is-kit-reached-100-stars-heres-what-changed-since-50-49pf",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 56,
+  "comments": 10,
+  "published_at": 1792595305.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nyaomaru/is-kit-reached-100-stars-heres-what-changed-since-50-49pf"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdl5sbp292yypl6esr2xw.gif",
+  "link_status": "ok",
+  "ko_title": "is-kit 100 스타 달성 — 50 스타 이후 변화",
+  "summary": "is-kit 라이브러리가 100 스타를 넘어섰으며, 50 스타 이후 새 API 추가와 기존 API 강화가 이루어졌다. 타입 가드 재사용성을 높이는 프로퍼티 리파인먼트가 주요 기능으로 도입되었다. 저자는 최근 자체 OSS 프로젝트와 Effect.catchIf 버그 사례 등 다양한 실사용 예를 공유한다.",
+  "why": "프로퍼티 리파인먼트 도입으로 기존 타입 가드를 개별 속성에 재사용할 수 있게 됐다. Effect.catchIf에서 타입 추론 엣지 케이스가 확인됐으므로 해당 함수를 쓰는 코드를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "I Fixed WebGPU on Linux. Then Forgot How I Did It.",
+  "url": "https://dev.to/sizzlebop/i-fixed-webgpu-on-linux-then-forgot-how-i-did-it-5hjd",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1792617194.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sizzlebop/i-fixed-webgpu-on-linux-then-forgot-how-i-did-it-5hjd"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fehoi37syd7mb9iulywed.png",
+  "link_status": "ok",
+  "ko_title": "Linux에서 WebGPU를 고쳤지만 방법을 잊음",
+  "summary": "작성자는 Arch 기반 Linux와 Wayland 환경에서 Chrome을 WebGPU와 Vulkan, NVIDIA 드라이버와 함께 동작하도록 설정하는 스크립트를 만든 뒤, 이를 AI 에이전트로 검색해 복구했다. 스크립트와 문서는 두 개의 리소스 디렉터리에 백업돼 있다. 로컬 브라우저 기반 AI 모델 실행을 목표로 한 설정 과정이다.",
+  "why": "Arch 기반 Linux와 Wayland 환경에서 Chrome의 WebGPU를 NVIDIA 드라이버와 함께 동작시키려면 여러 플래그 설정이 필요하다. 이 스크립트를 활용하면 브라우저 기반 로컬 AI 모델 실행 시 서버 유지보수나 API 비용이 들지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "hardware"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Idempotency keys for AI agents: why hashing the arguments doesn't work",
+  "url": "https://dev.to/anis_meziani_52aab42304a8/idempotency-keys-for-ai-agents-why-hashing-the-arguments-doesnt-work-cap",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 22,
+  "comments": 14,
+  "published_at": 1792594845.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/anis_meziani_52aab42304a8/idempotency-keys-for-ai-agents-why-hashing-the-arguments-doesnt-work-cap"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fb1uoj9mmmwdil6z6a19a.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트를 위한 멱등성 키: 인수 해싱이 안 되는 이유",
+  "summary": "현재 ApowerB는 도구를 호출한 실행을 자동 재실행하지 않으며 409 오류를 반환한다. 도구별 멱등성 키를 도입해 재실행 시 중복을 방지하려 하지만, LLM이 생성한 인수를 해싱하면 내용이 미세하게 달라져 해시가 변한다. 따라서 키는 생성된 내용이 아니라 안정적인 의도에서 만들어야 한다.",
+  "why": "LLM이 생성한 인수를 해싱하면 미세한 차이로 키가 달라져 중복 실행 방지가 실패한다. 멱등성 키는 생성된 내용이 아닌 안정적인 의도에서 만들어야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "How AT&T is rethinking in-house legal work with OpenAI",
+  "url": "https://openai.com/index/att-legal",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792602000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/att-legal"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AT&T, OpenAI와 함께 사내 법무 업무를 재구상",
+  "summary": "AT&T는 OpenAI와 협력해 법률 지식 접근성을 높이고 있다. LegalEdge 팀이 법무 업무 접수 방식을 새롭게 설계하고 판단 과정을 확장한다. 이 시도는 기업 내부에서 AI 기반 법률 지원을 실험하는 사례다.",
+  "why": "AT&T의 사례는 백엔드 개발자가 AI 기반 법률 지원 시스템을 구축할 때 참고할 수 있는 실무 예시다. 법무 업무 접수 방식 재설계와 판단 과정 확장은 기존 수동 프로세스와 다른 접근법을 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "AI Made Coding Cheaper. So Why Is Building Software Still So Expensive?",
+  "url": "https://dev.to/harsh2644/ai-made-coding-cheaper-so-why-is-building-software-still-so-expensive-59m",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 3,
+  "published_at": 1792611775.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/harsh2644/ai-made-coding-cheaper-so-why-is-building-software-still-so-expensive-59m"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9oofpl3pmjs6z6obwdy3.png",
+  "link_status": "ok",
+  "ko_title": "AI가 코딩 비용을 낮추었지만 소프트웨어 구축 비용은 여전히 높은 이유",
+  "summary": "AI 도구로 인증 흐름, 리액트 훅, 정규식 설명 등을 30초 내에 생성할 수 있다. 그러나 AI가 만든 코드에 숨은 캐시 로직 오류와 레거시 시스템 호환 문제로 리뷰와 디버깅에 시간이 많이 소요된다. 저자는 코드 작성 비용이 저렴해도 전체 개발 비용은 여전히 높은 이유를 제시한다.",
+  "why": "AI 생성 코드는 캐시 로직 오류나 레거시 호환 문제를 숨기고 있어 리뷰와 디버깅 시간이 늘어난다. 코드 작성 단가가 떨어져도 전체 개발 비용은 그대로 유지된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "dev-tools",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "When Your Agent Refuses to Collaborate: Why Propositional Logic and Basic Hygiene Beat Raw Vibe Coding",
+  "url": "https://dev.to/rosspeili/when-your-agent-refuses-to-collaborate-why-propositional-logic-and-basic-hygiene-beat-raw-vibe-6f6",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 11,
+  "comments": 4,
+  "published_at": 1792607062.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/rosspeili/when-your-agent-refuses-to-collaborate-why-propositional-logic-and-basic-hygiene-beat-raw-vibe-6f6"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzckdq6vgpaf0viu29bk9.jpg",
+  "link_status": "ok",
+  "ko_title": "에이전트가 협업을 거부할 때: 명제 논리와 기본 위생이 원시 코딩을 이긴다",
+  "summary": "개발자들이 AI가 만든 코드를 디버깅하는 데 많은 시간을 소비하고 있다. 문제는 모델 자체가 아니라 명제 논리 기반의 명령 설계와 AI 시대에 맞춘 기본 소프트웨어 엔지니어링 위생이 부족한 것이다. 글에서는 이러한 문제를 해결하기 위한 구체적인 스택과 프롬프트 설계 방법을 제시한다.",
+  "why": "명제 논리 기반의 명령 설계와 에이전트 전용 저장소 가드레일 적용이 필수다. 이 방식이 없으면 AI가 생성한 코드를 디버깅하는 데 더 많은 시간이 소모된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+  "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "물리학자 크리스토퍼 스텁스, Anthropic 장기 이익 신탁에 합류",
+  "summary": "전 하버드 과학학장인 크리스토퍼 스텁스 교수가 Anthropic의 장기 이익 신탁에 합류했다. 그는 관측 우주론·정밀 측정 분야의 전문가이며, AI 활용 연구와 재현성 문제에 대한 의견을 제시해 왔다. 신탁은 AI의 장기적 인류 이익을 목표로 한다.",
+  "why": "AI 보조 연구에서 모델이 같은 질문에 다른 답을 줄 때 재현성을 유지하는 문제가 핵심 쟁점이다. 이 분야의 전문가가 거버넌스에 합류해 해당 리스크를 관리하는 방향이 정해진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "science"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Broad access through consistent standards",
+  "url": "https://openai.com/index/broad-access-through-consistent-standards",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792616400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/broad-access-through-consistent-standards"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "일관된 표준을 통한 광범위한 접근",
+  "summary": "OpenAI는 배포 파트너와 협력해 일관된 안전장치를 유지하고 책임 있는 접근을 지원한다. 또한 사용 정책에 대한 기대치를 명확히 한다.",
+  "why": "배포 파트너를 통한 접근 방식이 표준화되어 통합 환경의 정책 일관성이 확보된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "industry"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "HCLTech joins the Claude Partner Network as a Global Premier partner",
+  "url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792540800.0,
+  "origin_url": "https://claude.com/blog/hcltech-joins-claude-partner-network",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/hcltech-joins-claude-partner-network",
+   "https://claude.com/resources/articles/hcltech-joins-claude-partner-network"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": "https://claude.com/ko/resources/articles/hcltech-joins-claude-partner-network/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "HCLTech, Claude 파트너 네트워크 글로벌 프리미어 파트너 가입",
+  "summary": "HCLTech이 Anthropic과 협력해 Claude를 은행·병원·통신·제조 분야 솔루션에 통합한다. 전용 비즈니스 유닛·센터·HCLSoftware 제품에 Claude와 Claude Code를 삽입해 AI 서비스 플랫폼 AI Force와 연계한다. 파트너십은 안전 가드레일과 인간 검토를 강조한다.",
+  "why": "HCLSoftware 제품군에 Claude가 내장되면서 기존 보안·자동화 도구 사용 방식이 바뀐다. 클라이언트 시스템에 적용 전 샌드박스 테스트와 인간 검토 절차가 필수로 요구된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "ai-safety",
+   "industry"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
+  "title": "Google's Rust Style Guide",
+  "url": "https://google.github.io/styleguide/rustguide.html",
+  "source": "hackernews",
+  "upvotes": 135,
+  "comments": 92,
+  "published_at": 1792609917,
+  "discussion": "https://news.ycombinator.com/item?id=50186010",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://google.github.io/styleguide/rustguide.html"
+  ],
+  "cross_source_count": 1,
+  "score": 32,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Google's Rust 스타일 가이드",
+  "summary": "구글 내부에서 Rust를 사용할 때 API와 구현 설계까지 포함한 스타일 규칙을 제시한다. 구글의 주요 프로젝트들(google3, Android, ChromeOS, Fuchsia, Chrome)에서 일관된 코드를 유지하기 위한 목적이다. 기존 Rust 커뮤니티 스타일을 가능한 한 따르면서 구글 고유의 요구를 반영한다.",
+  "why": "구글 프로젝트에 기여하거나 해당 코드베이스를 다루는 경우 API 설계 시 공식 가이드와 충돌하는 규칙을 확인해야 한다. 기존 Rust 커뮤니티 스타일을 따르되 구글 고유의 요구사항이 우선 적용되는 부분을 구분해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-10-22T08:00:03.491442+09:00",
+  "batch_label": "10월 22일 08:00"
+ },
+ {
   "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
   "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
   "source": "rss",
