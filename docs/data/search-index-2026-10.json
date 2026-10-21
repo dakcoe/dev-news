@@ -1,5 +1,241 @@
 [
  {
+  "t": "다가오는 PHP 중요 보안 릴리스 (CVE-2026-109618 / -109619)",
+  "u": "https://news-web.php.net/php.announce/509",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "release"
+  ],
+  "d": "2026-10-21",
+  "o": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
+  "x": "두 개의 치명적인 취약점(CVSS v4.0 9.2)이 발견돼 PHP 보안 팀이 2026년 10월 21일 14:00 UTC에 패치를 배포한다. 취"
+ },
+ {
+  "t": "ALTK-Evolve: 학습된 메모리가 프런티어 모델 없이 고객 서비스 작업에서 타우제곱-bench 리더보드를 석권",
+  "u": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "hardware"
+  ],
+  "d": "2026-10-21",
+  "o": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+  "x": "학습된 메모리를 활용해 GPT-4.1 기반 기본 ReAct 에이전트가 타우제곱-bench 소매 분야에서 67.5% Pass 점수를 기록했다. 성"
+ },
+ {
+  "t": "tsrs: TypeScript를 Rust로 포팅",
+  "u": "https://blog.cloudflare.com/typescript-rust-port/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "research",
+   "web",
+   "devops-infra",
+   "hardware",
+   "language"
+  ],
+  "d": "2026-10-21",
+  "o": "Tsrs: A Port of TypeScript to Rust",
+  "x": "Cloudflare와 VoidZero가 Owner.com Max Schwenk과 협업해 TypeScript 컴파일러를 Rust로 옮긴 tsrs를"
+ },
+ {
+  "t": "디스틸레이션 공격에 대한 방어 강화",
+  "u": "https://www.anthropic.com/news/distillation-defenses",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "security",
+   "science"
+  ],
+  "d": "2026-10-21",
+  "o": "Strengthening our defenses against distillation attacks",
+  "x": "Anthropic은 최근 디스틸레이션 공격 효율을 90~99% 감소시키는 새로운 방법을 적용했다. 디스틸레이션은 모델을 무단 복제해 보안·생물학"
+ },
+ {
+  "t": "CSS의 미래",
+  "u": "https://www.joshwcomeau.com/css/interop-2027/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-21",
+  "o": "The Future of CSS",
+  "x": "Interop 프로젝트는 주요 브라우저 벤더가 협업해 웹 기술 지원을 향상시키는 노력이다. 최근 Interop에 추가된 CSS 서브그리드가 20"
+ },
+ {
+  "t": "10,000줄 파이썬 파일로 만든 Windows 보안 스위트, 암호 컨테이너 동작 방식과 깨면 루피50 제공",
+  "u": "https://dev.to/akhourianmolkumar/i-wrote-a-10000-line-windows-security-suite-in-one-python-file-heres-how-the-crypto-container-10c2",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "devops-infra",
+   "language"
+  ],
+  "d": "2026-10-21",
+  "o": "I wrote a 10,000-line Windows security suite in one Python file. Here's how the crypto container works, and ₹50 if you can break it",
+  "x": "ATLOCK v5는 파일·폴더·퀵락 아이템을 하나의 컨테이너(v3.1)로 관리한다. 각 청크는 AES-256-GCM으로 독립 인증되며, 서명 키"
+ },
+ {
+  "t": "dsh-context 플러그인",
+  "u": "https://github.com/bowenliang123/dsh-context",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "open-source"
+  ],
+  "d": "2026-10-21",
+  "o": "bowenliang123 / dsh-context",
+  "x": "dsh-context는 DeepSeek Harness용 플러그인으로, 컨텍스트 전반에 걸친 인사이트 페이지, 대시보드, 플릿 페이지, 사이드바 "
+ },
+ {
+  "t": "같은 dev.to 주제에 갇혔나요? 오픈 모델이 해결했습니다",
+  "u": "https://dev.to/thomasbnt/stuck-in-the-same-devto-topics-an-open-model-fixed-it-4mbc",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "d": "2026-10-21",
+  "o": "Stuck in the same dev.to topics? An open model fixed it.",
+  "x": "오픈소스 스크립트 devto-digest는 사용자의 dev.to 계정을 읽어 매주 이메일 다이제스트를 생성한다. 태그를 팔로우한 글과 사용자의 "
+ },
+ {
+  "t": "Railway에서 Hubfly Space로 앱 옮기기, 단계별 가이드",
+  "u": "https://dev.to/octave_nkurunziza_afb0512/how-to-move-your-app-from-railway-to-hubfly-space-step-by-step-3ih4",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data",
+   "science"
+  ],
+  "d": "2026-10-21",
+  "o": "How to move your app from Railway to Hubfly space, step by step",
+  "x": "이 가이드는 Railway의 웹 서비스와 Postgres 데이터베이스를 Hubfly Space로 이전하는 방법을 설명한다. 변수 내보내기, Co"
+ },
+ {
+  "t": "Aerial — 안드로이드 TV용 깔끔한 홈 화면",
+  "u": "https://github.com/pengchujin/aerial-tv",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-21",
+  "o": "pengchujin / aerial-tv",
+  "x": "Aerial은 Android TV용 런처로, 광고와 추천 콘텐츠 없이 사용자의 앱과 배경화면, Apple TV 항공 화면 보호기를 제공한다. X"
+ },
+ {
+  "t": "동남아시아 디지털 경제, 3,680억 달러 규모 도달",
+  "u": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-10-21",
+  "o": "Southeast Asia’s digital economy to hit $368 billion",
+  "x": "2026년까지 동남아시아 디지털 경제 규모가 연간 17% 성장해 3,680억 달러에 이를 것으로 전망된다. 보고서는 AI 활용이 전 분야에서 성"
+ },
+ {
+  "t": "OpenAI, Orchestra Bio 인수",
+  "u": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "release",
+   "industry"
+  ],
+  "d": "2026-10-21",
+  "o": "OpenAI acquires Orchestra Bio",
+  "x": "OpenAI가 Orchestra Bio를 인수해 AI 기반 운영을 생명과학 연구개발에 적용한다. 이를 통해 바이오제약 팀은 약물 개발 속도를 높"
+ },
+ {
+  "t": "기능",
+  "u": "https://www.anthropic.com/news/features",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [],
+  "d": "2026-10-21",
+  "o": "Features",
+  "x": "클로드를 활용해 전 세계 보건 기관이 백신이 확인되지 않은 드루갈리공화국(DRC) 내 희귀 에볼라 변이 확산에 신속히 대응하고 있다. 해당 상황"
+ },
+ {
+  "t": "내 CI가 255 커밋 내내 빨간색이었지만 아무도 보지 않음",
+  "u": "https://dev.to/debashish_ghosal/my-ci-was-red-for-255-commits-and-nobody-looked-518p",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "release",
+   "career-culture"
+  ],
+  "d": "2026-10-21",
+  "o": "My CI Was Red for 255 Commits and Nobody Looked",
+  "x": "agentwatch v0.2.1 릴리스에서 CI 파이프라인이 매 푸시마다 detector-corpus-v0.json 파일을 찾지 못해 실패했다."
+ },
+ {
+  "t": "모든 테스트가 통과했다. 그리고 배포했다.",
+  "u": "https://dev.to/rakno/every-test-was-green-then-i-deployed-it-33ea",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-10-21",
+  "o": "Every test was green. Then I deployed it.",
+  "x": "ParkEase가 Vercel에 무료로 배포되었으며, 프론트엔드와 백엔드가 각각 정적 호스팅과 무료 컨테이너로 운영된다. 배포 후 실제 환경에서"
+ },
+ {
+  "t": "Terminal X, GPT-6.1으로 고위 투자자 판단과 88.6% 일치",
+  "u": "https://openai.com/index/terminal-x",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "industry"
+  ],
+  "d": "2026-10-21",
+  "o": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+  "x": "Terminal X의 Eval Agent는 54가지 기준 루브릭으로 출력물을 평가한다. 이 에이전트는 GPT-6.1 Sol을 사용해 펀드의 사명"
+ },
+ {
+  "t": "Ofcom, 4chan 사건에서 패배 인정",
+  "u": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-21",
+  "o": "Ofcom concedes defeat in 4chan case",
+  "x": "Ofcom은 영국 의회의 디지털·문화·미디어·스포츠 위원회 청문회에서 외국 법원의 관할이 시작되는 지점부터는 온라인 안전 벌금을 회수할 수 없다"
+ },
+ {
   "t": "NVIDIA Cosmos3-H-Dreams: 생성 시뮬레이션으로 임상 수술 구현",
   "u": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
   "m": "2026-10",
