@@ -1,48 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-12T00:01:30+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "blocked": 5,
-    "unavailable": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35175",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35174",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35173",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35171",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35170",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://rachelbythebay.com/w/2026/10/08/idle/",
-     "source": "lobsters",
-     "reason": "unavailable"
-    }
-   ]
-  },
-  {
    "at": "2026-10-12T08:00:26+09:00",
    "total": 22,
    "counts": {
@@ -1214,6 +1172,27 @@
     },
     {
      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-22T00:00:56+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 11,
+    "github": 4,
+    "blocked": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/openai-models-google-cloud",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
      "source": "rss",
      "reason": "blocked"
     }
