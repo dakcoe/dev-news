@@ -1,48 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-13T08:00:27+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "empty": 1,
-    "blocked": 5,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://z.ai/blog/glm-legal",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35262",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35260",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35259",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35258",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35257",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-13T16:00:35+09:00",
    "total": 22,
    "counts": {
@@ -1143,6 +1101,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-10-23T08:00:37+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 17,
+    "github": 3
+   },
+   "failures": []
   }
  ]
 }

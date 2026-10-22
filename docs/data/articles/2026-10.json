@@ -1,5 +1,561 @@
 [
  {
+  "title": "Jakeschincariol / replica-skill",
+  "url": "https://github.com/Jakeschincariol/replica-skill",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 594,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Jakeschincariol/replica-skill"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 594,
+  "score": 73,
+  "image": "https://opengraph.githubassets.com/1/Jakeschincariol/replica-skill",
+  "link_status": null,
+  "ko_title": "Replica 스킬",
+  "summary": "Eleven Claude 스킬을 제공하는 오픈소스 프로젝트로, 앱을 역공학하고 스택·디자인·인증·결제 등을 자동으로 설계·구축한다. 클론 앱을 원본과 비교하고 브랜드·랜딩 페이지까지 생성한다. 설치는 Claude에 URL을 붙여넣거나 플러그인 형태로 가능하며, Python 3.8 이상이면 별도 패키지 설치가 필요 없다.",
+  "why": "앱의 기능과 플로우만 복제하며 원본의 코드나 브랜드 자산을 사용하지 않는다. 클론 앱 개발 시 정밀한 역공학부터 스택 설계까지 자동화할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+  "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792685491.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/olmoearth-v1-3"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/VEmSzlLjei8J3cUVNe7G6.png",
+  "link_status": "ok",
+  "ko_title": "OlmoEarth v1.3: 전 지구를 위한 최첨단 임베딩",
+  "summary": "OlmoEarth v1.3 모델을 공개하고, 전 세계 10 m 해상도에 대해 64·128 차원의 사전 계산 임베딩을 연간 단위로 제공한다. 새로운 웹 기반 “OlmoEarth Embeddings Explorer”를 통해 별도 로그인이나 고급 기술 없이도 임베딩을 탐색하고 지도에 적용할 수 있다. 기존에는 OlmoEarth Studio에서 개별 작업마다 모델을 미세조정하고 GPU를 사용해야 했지만, 이번 업데이트로 한 번 계산한 임베딩을 다양한 작업에 재활용할 수 있다.",
+  "why": "기존에는 작업마다 미세조정과 GPU가 필요했지만, 이제 사전 계산된 임베딩을 재사용해 로컬에서 소형 분류기만 학습하면 된다. 위성 이미지 다운로드와 저장이 불필요해져 지도 생성 파이프라인의 인프라 부담이 줄어든다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Donating Agent Skills to the Agentic AI Foundation",
+  "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic",
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+   "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+  ],
+  "cross_source_count": 2,
+  "score": 63,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "Agentic AI Foundation에 Agent Skills 기부",
+  "summary": "Anthropic이 AI 에이전트용 오픈 표준인 Agent Skills를 Linux Foundation 산하 Agentic AI Foundation에 기부한다. 현재 70여 개 에이전트 플랫폼이 이 표준을 사용하고 있으며, 100만 개 이상의 스킬이 공개·설치된 상태다. 기부 대상은 표준 자체, 로고, GitHub 조직, 도메인이며, 유지보수는 다수 기업 엔지니어가 담당한다.",
+  "why": "Cursor, GitHub Copilot, VS Code 등 기존에 쓰던 도구에서 스킬을 그대로 유지할 수 있다. 향후 버전 관리와 보안 가이드가 추가될 예정이므로 스킬 설치 전 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Building agents: When to fold subagents into your main agent loop",
+  "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792627200.0,
+  "origin_url": "https://claude.com/blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+   "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "에이전트 구축: 서브에이전트를 메인 에이전트 루프에 통합할 시점",
+  "summary": "Claude Platform에서 서브에이전트 대신 점진적으로 공개되는 컨텍스트와 도구를 사용하면 품질이 향상되고 비용·지연 시간이 감소한다. Applied AI 팀은 라우터·플래너·도메인 서브에이전트를 메인 루프에 통합하면 기업 배포에서 품질·비용·지연이 개선된 사례를 발견했다. 마이그레이션 키트는 패턴 식별·대안 평가·최적 접근 검증 워크플로를 제공한다.",
+  "why": "Claude Platform에서 라우터나 플래너 같은 서브에이전트를 메인 루프로 통합하면 품질과 비용, 지연 시간이 개선될 수 있다. 마이그레이션 키트로 기존 패턴을 식별하고 대안을 평가한 뒤 최적의 구조로 전환하는 것이 좋다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "A farewell to Arc browser",
+  "url": "https://arc.net/",
+  "source": "hackernews",
+  "upvotes": 210,
+  "comments": 190,
+  "published_at": 1792686467,
+  "discussion": "https://news.ycombinator.com/item?id=50197601",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arc.net/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://arc.net/farewell/og.png",
+  "link_status": "ok",
+  "ko_title": "Arc 브라우저와 작별 인사",
+  "summary": "Arc 팀이 새 브라우저 Dia로 전환한다는 발표와 함께 기존 Arc 계정 생성이 중단되고, iOS·Android AI 기능이 비활성화된다. 12월부터는 macOS·Windows에서 Arc 사용이 불가능해지며, 데이터는 30일 내 삭제된다. Dia는 기존 비밀번호·북마크·확장 프로그램·히스토리를 그대로 가져오며, 안정성·속도·보안 면에서 Arc를 능가한다.",
+  "why": "Arc를 쓰던 독자는 12월 22일까지 Dia로 이동을 완료해야 한다. macOS와 Windows에서 Arc가 완전히 사라지기 전이다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "web"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Run full iOS 16.5 firmware on Android Devices",
+  "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+  "source": "hackernews",
+  "upvotes": 284,
+  "comments": 110,
+  "published_at": 1792682782,
+  "discussion": "https://news.ycombinator.com/item?id=50196718",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/oosexgang/hackios-xnu-kernel"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/oosexgang/hackios-xnu-kernel",
+  "link_status": null,
+  "ko_title": "Android 기기에서 iOS 16.5 전체 펌웨어 실행",
+  "summary": "HackiOS 프로젝트는 Android 스마트폰과 QEMU 환경에서 iOS 16.5의 XNU 커널과 사용자 공간을 그대로 구동한다. POCO X5 Pro 5G에서는 fastboot boot로 UEFI를 실행해 RAM에 시스템을 올리고 재부팅 시 Android로 복귀한다. Linux 컴퓨터에서는 aarch64 QEMU로 동일한 환경을 제공한다.",
+  "why": "iOS 16.5의 XNU 커널과 사용자 공간을 Android 하드웨어에서 구동하는 연구 프로젝트다. POCO X5 Pro 5G에서는 fastboot boot로 RAM에 시스템을 올려 재부팅 시 Android로 복귀한다. Linux 컴퓨터에서는 aarch64 QEMU로 동일한 환경을 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Every AI model has the same \"controversial\" take on humans",
+  "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 181,
+  "published_at": 1792685280,
+  "discussion": "https://news.ycombinator.com/item?id=50197313",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://www.modelcompare.ai/api/og?post=ai-models-controversial-take-on-humans&v=31jhw0",
+  "link_status": "ok",
+  "ko_title": "모든 AI 모델이 인간에 대해 같은 “논란” 의견을 갖고 있다",
+  "summary": "12개 AI 모델에 인간에 대한 가장 논란이 되는 의견을 물었으며, 35개 답변 중 29개가 동일한 내용을 제시했다. 대부분 “인간은 진실보다 소속에 더 충성한다”는 식의 집단 순응성을 강조했다. 일부 모델은 다른 의견을 내었으며, Claude Opus 5.5는 인간의 선함을 강조했다.",
+  "why": "모든 AI 모델이 인간을 집단 순응성으로 규정하는 동일한 편향을 공유한다. 이 편향은 모델의 응답이 특정 사회적 고정관념에 갇혀 있음을 시사한다. AI의 객관성을 전제로 한 백엔드 로직 설계 시 이 한계를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "The full Claude Platform, available on Google Cloud",
+  "url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792627200.0,
+  "origin_url": "https://claude.com/blog/claude-models-on-google-cloud-anthropic-managed",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-models-on-google-cloud-anthropic-managed",
+   "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://claude.com/ko/resources/articles/claude-models-on-google-cloud-anthropic-managed/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "전체 Claude 플랫폼, Google Cloud에서 제공",
+  "summary": "Anthropic이 관리하는 Claude 모델이 Google Cloud에 일반 제공되어 IAM 인증·청구·커밋먼트 차감으로 전체 Claude Platform 기능을 이용할 수 있다. 미국 및 글로벌 엔드포인트를 지원하며, 새로운 기능과 베타가 Claude 본래 플랫폼과 동시 출시된다.",
+  "why": "Google Cloud IAM과 기존 커밋먼트로 Claude API를 바로 쓸 수 있어 별도 계정 관리가 사라진다. 새 기능과 베타가 Claude 본래 플랫폼과 같은 날 출시되어 에이전트 개발 시 최신 기능을 즉시 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+  "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792707874.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/microsoft/thinkingbox-training"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/64b8491203124195cd795cad/oS8I8qx7iBS8EcNIXR3q9.png",
+  "link_status": "ok",
+  "ko_title": "데이터베이스 채점 → RL 보상: ThinkingBox로 사후 학습 에이전트",
+  "summary": "ThinkingBox는 에이전트가 최종 데이터베이스 상태를 기대 결과와 비교해 평가하고, 이를 보상 신호로 활용한다. GitHub에 공개된 ThinkingBox-Training을 이용해 Qwen3.8-27B 모델의 성공률이 51.70%에서 60.78%로 상승했으며, 20개 시도 모두 정답을 맞춘 작업 수가 38건에서 107건으로 늘었다.",
+  "why": "에이전트 학습 시 최종 데이터베이스 상태를 검증하는 실행 가능한 신호를 보상 함수로 직접 활용할 수 있다. 이 방식은 에이전트가 작업 완료를 주장했지만 실제 데이터베이스 상태가 기대 결과와 어긋난 경우를 잡아낸다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "nikopueringer / CorridorKey2.0",
+  "url": "https://github.com/nikopueringer/CorridorKey2.0",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 583,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/nikopueringer/CorridorKey2.0"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 583,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/nikopueringer/CorridorKey2.0",
+  "link_status": null,
+  "ko_title": "nikopueringer / CorridorKey 2.0",
+  "summary": "CorridorKey 2.0 모델과 플러그인이 공개돼 거의 모든 미디어 소프트웨어에 적용 가능해졌다. NVIDIA RTX 30시리즈 이상 GPU와 CUDA-enabled PyTorch 환경이 필요하며, 모델 가중치는 Hugging Face에서 5 GB 정도 다운로드한다. 라이선스는 상업·개인 모두 허용한다.",
+  "why": "RTX 30시리즈 이상 GPU와 CUDA PyTorch 환경이 필수다. 상업적 용도로도 자유롭게 쓸 수 있어 기존 라이선스 제한이 사라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Congrats to the Sanity Challenge Winners!",
+  "url": "https://dev.to/devteam/congrats-to-the-sanity-challenge-winners-1140",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 26,
+  "comments": 13,
+  "published_at": 1792684421.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devteam/congrats-to-the-sanity-challenge-winners-1140"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fai84dn5sg47787tv3qsi.png",
+  "link_status": "ok",
+  "ko_title": "Sanity 챌린지 수상자 발표",
+  "summary": "Sanity와 공동 진행한 챌린지에서 콘텐츠 기반 에이전트를 만든 참가자들이 수상했다. 1차 경로에서는 실제 콘텐츠를 질의하는 에이전트를, 2차 경로에서는 독특한 코딩 시도를 평가했다. 수상작 중 하나는 시간대와 법률 정보를 결합해 질문에 답하고, 다른 하나는 나이저 델타의 지하수 저항성을 판단한다.",
+  "why": "컨텍스트 지식 베이스를 기반으로 한 에이전트 구축 시 단순 키워드 검색을 뛰어넘는 질의응답 설계가 핵심 평가 기준이다. 법률이나 지질학 데이터처럼 출처 간 충돌이 있는 경우, 에이전트가 판단을 내리기 전 인간이 서명하는 워크플로우를 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Getting ready to operate GNU Taler in Germany",
+  "url": "https://www.taler.net/en/news/2026-13.html",
+  "source": "hackernews",
+  "upvotes": 202,
+  "comments": 70,
+  "published_at": 1792685671,
+  "discussion": "https://news.ycombinator.com/item?id=50197404",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.taler.net/en/news/2026-13.html"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "독일에서 GNU Taler 운영 준비",
+  "summary": "Taler Operations AG가 독일 보훔에 설립돼 유로화 기반 Taler 결제 서비스를 운영한다. 기존 GLS 은행이 e-money 발행자 역할을 포기하면서 라이선스 신청을 새 회사가 담당한다. 이 회사는 독일 및 유로존 전역에 Taler를 제공하기 위해 BaFin 허가를 목표로 한다.",
+  "why": "독일 및 유로존 내 Taler 결제 서비스의 운영 주체가 GLS 은행에서 Taler Operations AG로 교체된다. BaFin의 전자화폐 발행 라이선스 취득 여부가 서비스 상용화의 핵심 변수다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Open call for guest investigators in the life sciences",
+  "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/633e51e2d75a5c14022fa48961b886553d41ce9d-1200x630.jpg",
+  "link_status": "ok",
+  "ko_title": "생명과학 분야 게스트 연구자 공개 모집",
+  "summary": "Anthropic이 생명과학 연구자들을 대상으로 Claude 모델을 활용한 8~12주 프로젝트 협업을 모집한다. 학계·비영리·정부 연구소의 PI와 팀이 신청 가능하며, 모델 사용 비용은 무료이다. 결과물은 공동 논문 및 오픈소스 데이터·코드로 공개한다.",
+  "why": "백엔드 개발자에게는 직접적 연관이 적지만, 오픈소스로 공개되는 데이터와 코드를 참고할 가치가 있다. 생명과학 도메인에서 Claude를 활용한 분석 파이프라인을 구축하는 사례를 확인해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Scaling stateful Gemini 4 Argon agent sessions on GKE: Connection draining, startup boost, and session persistence",
+  "url": "https://dev.to/googlecloud/scaling-stateful-gemini-4-argon-agent-sessions-on-gke-connection-draining-startup-boost-and-13ln",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 0,
+  "published_at": 1792685120.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/googlecloud/scaling-stateful-gemini-4-argon-agent-sessions-on-gke-connection-draining-startup-boost-and-13ln"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7xhrstgm9dxsbn3z63ps.png",
+  "link_status": "ok",
+  "ko_title": "GKE에서 상태 유지 Gemini 4 Argon 에이전트 세션 확장하기",
+  "summary": "기본 웹 서비스 설정으로 GKE에 장기 실행 에이전트를 배포하면 CPU 스로틀링, 로드밸런서 타임아웃에 의한 스트림 중단, 메모리 기반 상태 손실 등 세 가지 실패 모드가 발생한다. 글에서는 VPA CPU 스타트업 부스트, GCPBackendPolicy 기반 연결 드레인, 외부 상태 체크포인팅을 결합해 이러한 문제를 해결하는 방법을 제시한다.",
+  "why": "장기 실행 에이전트 배포 시 기본 설정의 CPU 스로틀링과 스트림 중단을 막아야 한다. VPA 부스트와 연결 드레인, 외부 상태 저장을 조합해 적용할 것.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Quad9 (DNS Resolver) to Exit France",
+  "url": "https://quad9.net/news/blog/au-revoir-france/",
+  "source": "hackernews",
+  "upvotes": 896,
+  "comments": 330,
+  "published_at": 1792679558,
+  "discussion": "https://news.ycombinator.com/item?id=50195959",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://quad9.net/news/blog/au-revoir-france/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://quad9.net/images/cover_c2f081e020.png",
+  "link_status": "ok",
+  "ko_title": "Quad9 (DNS 리졸버), 프랑스 서비스 종료",
+  "summary": "11월 24일부터 Quad9는 프랑스 사용자에게 무료 사이버보호 서비스를 제공하지 않는다. 프랑스 법원이 beIN 사건에서 Quad9에게 도메인 차단을 명령했으나, 재정 벌금이 일일 1,000유로로 감액되었다. Quad9는 원칙적으로 DNS 응답을 조작할 수 없어 서비스를 철회한다.",
+  "why": "프랑스 내 Quad9 DNS 사용자는 11월 24일부터 서비스를 받을 수 없다. 해당 지역 네트워크에서 이 리졸버를 설정한 경우 즉시 대안을 찾아 교체해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "I Didn’t Want AI to Build My App. I Wanted to Learn How to Build It Myself.",
+  "url": "https://dev.to/anzerayoob/i-didnt-want-ai-to-build-my-app-i-wanted-to-learn-how-to-build-it-myself-34aj",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 1,
+  "comments": 4,
+  "published_at": 1792688590.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/anzerayoob/i-didnt-want-ai-to-build-my-app-i-wanted-to-learn-how-to-build-it-myself-34aj"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0mef0ec66j3whkwochbu.jpg",
+  "link_status": "ok",
+  "ko_title": "AI가 내 앱을 만들게 하고 싶지 않았다. 내가 직접 만드는 법을 배우고 싶었다.",
+  "summary": "저자는 초등학교 시절 컴퓨터를 처음 접하고 스스로와 친구에게 기본 사용법을 가르치며 자기 주도 학습을 시작했다. 2G 인터넷과 제한된 교육 환경 속에서도 2009년 Wapka.mobi를 이용해 HTML 웹사이트를 만들며 코딩에 입문했다. 이 경험은 이후 개발자로 성장하는 계기가 되었다.",
+  "why": "이 기사는 학습자 개인의 성장 스토이로, 백엔드나 AI 개발 실무에 적용할 기술적 변화나 조치가 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
+  "title": "Enterprise AI Governance in 2026",
+  "url": "https://dev.to/kenwalger/building-an-enterprise-ai-governance-stack-2985",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 9,
+  "published_at": 1792684680.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kenwalger/building-an-enterprise-ai-governance-stack-2985"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8rs6p2m6oxr4182thxf6.png",
+  "link_status": "ok",
+  "ko_title": "2026년 기업 AI 거버넌스",
+  "summary": "기업 AI 거버넌스 스택은 단일 기능이 아니라 조직 목표부터 런타임 실행까지 이어지는 일련의 결정이다. 게이트웨이, 가상 키, RBAC, 접근 프로필, 사용자 수명주기 관리, MCP 정책 등 각각은 실제 문제를 해결하지만, 개별적으로는 완전한 거버넌스 스택이 아니다. 이 요소들을 올바른 순서와 연계로 구성해야 실질적인 거버넌스를 구현할 수 있다.",
+  "why": "게이트웨이나 가상 키 같은 인프라를 먼저 깔면 정책 없이 인프라만 남는다. 모델 접근 권한과 에이전트 실행 범위를 인프라 구축 전에 명시해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "language",
+   "industry"
+  ],
+  "batch": "2026-10-23T08:00:05.811797+09:00",
+  "batch_label": "10월 23일 08:00"
+ },
+ {
   "title": "Ensemble forecasting with IBM Granite time-series models",
   "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
   "source": "rss",
