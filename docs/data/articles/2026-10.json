@@ -1,5 +1,549 @@
 [
  {
+  "title": "Ensemble forecasting with IBM Granite time-series models",
+  "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792655491.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1"
+  ],
+  "cross_source_count": 1,
+  "score": 73,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6806091ee92bd22fd8ce9719/P6P8ZzHR8yL7GOOO4hQOg.png",
+  "link_status": "ok",
+  "ko_title": "IBM Granite 시계열 모델을 활용한 앙상블 예측",
+  "summary": "IBM Granite이 제공하는 사전 학습된 네 개의 시계열 모델을 결합한 앙상블 인터페이스가 공개됐다. 별도 재학습 없이 중위값·분위수 예측을 제공하며, Hugging Face에서 바로 설치·사용할 수 있다.",
+  "why": "시계열 예측 모델을 고르는 부담을 덜어준다. 중위값과 분위수 예측을 바로 받아볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+  "url": "https://huggingface.co/blog/hf-torchtpu",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792454400.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/hf-torchtpu"
+  ],
+  "cross_source_count": 1,
+  "score": 73,
+  "image": "https://huggingface.co/blog/assets/hf-torchtpu/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Hugging Face 사랑 TorchTPU: TPU를 네이티브로 지원",
+  "summary": "TorchTPU는 PyTorch에 TPU를 새로운 백엔드로 추가해 기존 torch_xla와 Optimum TPU 없이도 Hugging Face 모델을 바로 실행할 수 있게 한다. Transformers, Diffusers, Kernels가 TPU에서 네이티브로 동작하며, 한 줄 명령으로 설치가 가능하다.",
+  "why": "기존 torch_xla의 지연 평가와 그래프 재컴파일 문제를 피할 수 있다. Hugging Face 모델을 TPU에서 돌릴 때 Optimum TPU 의존성이 사라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Log Aggregation Pipeline Explained: Follow One Log Line and Run the Incident in Your Browser",
+  "url": "https://dev.to/devopsdaily/log-aggregation-pipeline-explained-follow-one-log-line-and-run-the-incident-in-your-browser-3h91",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1792680609.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devopsdaily/log-aggregation-pipeline-explained-follow-one-log-line-and-run-the-incident-in-your-browser-3h91"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdevops-daily.com%2Fimages%2Fsimulator-posts%2F8662405c-d58d-5784-83b7-6df4cc1cdf1d-cover.png",
+  "link_status": "ok",
+  "ko_title": "로그 집계 파이프라인 설명: 한 로그 라인을 따라 브라우저에서 사고 재현",
+  "summary": "로그 집계 파이프라인 시뮬레이터는 로그가 소스에서 검색 클러스터에 도달하기까지 여섯 단계(소스, 수집, 처리, 버퍼, 인덱스, 검색)를 시각화한다. 각 단계에서 배치 단위로 로그 수를 표시하고, 파서 선택이나 잡음 제거 스위치 등 설정을 바꾸면 새로 실행된다. 브라우저에서 무료로 동작하며 회원가입이 필요하지 않다.",
+  "why": "로그 검색 결과가 빈 경우 애플리케이션 오류인지 파이프라인에서 로그가 유실된 것인지 구분할 수 있다. 소스에서 검색 클러스터까지 여섯 단계의 처리 과정을 시각적으로 추적하며 사고 원인을 분석한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+  "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+  "source": "hackernews",
+  "upvotes": 161,
+  "comments": 41,
+  "published_at": 1792667557,
+  "discussion": "https://news.ycombinator.com/item?id=50193804",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://www.phoronix.net/image.php?id=2026&image=public_zdi",
+  "link_status": "ok",
+  "ko_title": "여러 Linux 커널 취약점이 실수로 공개 메일링 리스트에 게시됨",
+  "summary": "Zero Day Initiative가 새로 발견한 여러 Linux 커널 취약점 보고서를 비공개 보안 메일링 리스트 대신 공개 커널 메일링 리스트에 실수로 올렸다. 보고된 취약점은 아직 메인라인에 패치되지 않았으며, 일부는 테스트 중이거나 “-next” 브랜치에 대기 중이다. CVSS 점수는 최대 9.0이다.",
+  "why": "CVSS 9.0인 SMB Direct와 KSMBD 취약점은 메인라인 패치가 아직 없다. 해당 서브시스템을 다루는 백엔드 서비스라면 패치 적용 전까지 노출 위험이 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Amazon identifies Oct 17 PHP2Shell exploitation prior to public disclosure",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "source": "hackernews",
+  "upvotes": 138,
+  "comments": 30,
+  "published_at": 1792669836,
+  "discussion": "https://news.ycombinator.com/item?id=50194070",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2026/10/21/Lock-image-2.jpeg",
+  "link_status": "ok",
+  "ko_title": "Amazon, 공개 전 10월 17일 PHP2Shell 악용 탐지",
+  "summary": "Amazon Threat Intelligence는 CVE 공개 4일 전인 2026-10-17에 MadPot 텔레메트리에서 PHP2Shell 악용 시도를 포착했다. 익명화 네트워크를 통한 여러 IP에서 동일 취약점에 대한 시도가 있었으며, 공개 후 곧바로 실제 시스템에서도 악용이 확대되고 있다.",
+  "why": "PHP2Shell 취약점은 공개 전부터 악용이 시작됐으므로 패치 적용 시점을 앞당겨야 한다. 공개일 이후 실제 시스템에서 광범위한 공격이 확인됐기 때문에 즉시 업데이트를 진행해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Jailbreaking the Switch 2",
+  "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+  "source": "hackernews",
+  "upvotes": 367,
+  "comments": 138,
+  "published_at": 1792656112,
+  "discussion": "https://news.ycombinator.com/item?id=50192536",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Switch 2 탈옥",
+  "summary": "ns2jb 저장소에서 제공하는 소프트웨어 전용, 텐더드 탈옥 도구가 Switch 2에서 처음으로 공개됐다. 이 도구는 임의의 네이티브 코드를 일반 sysmodule이나 내장 fs sysmodule으로 실행하게 해 홈브류 실행, 게임 리버스 엔지니어링·모드, 저장 파일 백업, 주변기기 MMIO 접근을 가능하게 한다.",
+  "why": "Switch 2에서 임의 네이티브 코드 실행이 가능해졌다. 게임 리버스 엔지니어링과 저장 파일 백업이 이제 소프트웨어만으로 처리된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "I Built an Agent Skill That Tests Your App Like Four First-Time Users",
+  "url": "https://dev.to/bargan/i-built-an-agent-skill-that-tests-your-app-like-four-first-time-users-180d",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 11,
+  "comments": 7,
+  "published_at": 1792659597.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/bargan/i-built-an-agent-skill-that-tests-your-app-like-four-first-time-users-180d"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F21y23a88d4r93as8ds15.png",
+  "link_status": "ok",
+  "ko_title": "첫 사용자 감사 — 앱을 네 가지 초보자 관점으로 테스트하는 에이전트 스킬",
+  "summary": "First User Audit은 오픈소스 에이전트 스킬로, 네 가지 가상 초보자 행동(조급함, 회의감, 모바일, 파괴자)을 시뮬레이션해 앱의 첫 번째 유용한 결과에 도달할 수 있는지를 검사한다. 스킬은 성공 기준 정의, 온보딩 여정 탐색, 차단 요소 기록, 기술적 해결책 제안 및 검증 과정을 자동화한다. 설치는 npx 명령어로 간단히 할 수 있다.",
+  "why": "개발자가 앱 구조를 이미 알고 있어 놓치기 쉬운 초보자용 온보딩 마찰을 자동화 테스트로 잡아낸다. npx 명령어로 설치해 코딩 에이전트에 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "ikow / php2shell-poc",
+  "url": "https://github.com/ikow/php2shell-poc",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 524,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ikow/php2shell-poc"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 524,
+  "score": 64,
+  "image": "https://opengraph.githubassets.com/1/ikow/php2shell-poc",
+  "link_status": null,
+  "ko_title": "php2shell-poc",
+  "summary": "PHP 5.4부터 8.5.11까지 14년간 존재한 취약점을 이용한 사전 인증 원격 코드 실행(RCE) 툴킷이다. CVE-2026-109618·109619을 포함해 5개의 독립적인 RCE 체인을 제공한다. 전체 웹사이트의 78%에 영향을 미치며, 워드프레스·줌라·드루팔·라라벨·매젠토 등 주요 CMS도 포함한다.",
+  "why": "PHP 8.2.35, 8.3.36, 8.4.27, 8.5.12 버전으로 즉시 업데이트해야 한다. 사전 인증이 필요한 RCE 체인이 존재하므로 방화벽 설정만으로는 차단이 어렵다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "security",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "luongnv89 / claude-howto",
+  "url": "https://github.com/luongnv89/claude-howto",
+  "source": "github",
+  "upvotes": 316,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/luongnv89/claude-howto"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 316,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/luongnv89/claude-howto",
+  "link_status": null,
+  "ko_title": "Claude 사용법",
+  "summary": "Claude Code를 빠르게 배우고 에이전트·훅·스킬·MCP 서버까지 활용할 수 있도록 시각 튜토리얼·복사-붙여넣기 템플릿·학습 경로를 제공한다. 현재 버전은 2.1.302이며 다국어 README와 기능 카탈로그가 포함돼 있다.",
+  "why": "에이전트와 훅, MCP 서버를 조합하는 실전 템플릿을 즉시 적용할 수 있다. 공식 문서가 설명만 하는 기능을 시각 튜토리얼로 확인해 학습 시간을 줄인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Encryption, Explained Properly: AES vs ChaCha20 vs Argon2id (and How to Actually Combine Them)",
+  "url": "https://dev.to/akhourianmolkumar/encryption-explained-properly-aes-vs-chacha20-vs-argon2id-and-how-to-actually-combine-them-4223",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 24,
+  "comments": 90,
+  "published_at": 1792665827.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/encryption-explained-properly-aes-vs-chacha20-vs-argon2id-and-how-to-actually-combine-them-4223"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3rvkozulkc298rt7j8st.png",
+  "link_status": "ok",
+  "ko_title": "암호화 제대로 이해하기: AES vs ChaCha20 vs Argon2id (그리고 실제 결합 방법)",
+  "summary": "AES-GCM, ChaCha20-Poly1305, Argon2id, HKDF, X25519 등 여러 암호 원리를 파이썬 코드와 비교표로 정리하고, Akhouri Systems의 순수 파이썬 보안 스위트 ATLOCK v5 구현 예시를 제공한다. 각 알고리즘의 동작 원리, 선택 기준, 조합 방법을 실전 사례와 함께 설명한다.",
+  "why": "암호화 스택에서 실제 취약점은 알고리즘이 아닌 nonce 재사용이나 무인증 암호화다. 비밀번호에서 키를 만들 때 Argon2id를 쓰고 AEAD 방식을 적용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "language"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Seedance 2.5 Camera Control: Block Out AI Film Shots in Blender First",
+  "url": "https://dev.to/glglgl/seedance-25-camera-control-block-out-ai-film-shots-in-blender-first-2i7f",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 1,
+  "published_at": 1792674899.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/glglgl/seedance-25-camera-control-block-out-ai-film-shots-in-blender-first-2i7f"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fi.ytimg.com%2Fvi%2FjFpQfzZ8xzA%2Fmaxresdefault.jpg",
+  "link_status": "ok",
+  "ko_title": "Seedance 2.5 카메라 제어: 블렌더에서 AI 영상 샷을 먼저 블록아웃",
+  "summary": "블렌더에서 회색 블록아웃 씬을 만든 뒤 그 데이터를 Seedance 2.5에 전달해 AI 영상이 정확히 동일한 카메라 움직임과 구도를 따르게 하는 워크플로우를 소개한다. 3D-Agent가 블렌더 안에서 프롬프트 기반으로 세트와 스탠드인 배우, 렌즈, 카메라 트랙을 자동 생성한다. AI는 외관과 텍스처만 담당하고, 카메라와 구도는 사용자가 완전히 제어한다. 세 가지 예시 영상(갓파더 사무실, 사이버펑크 단편, 마법학교 포션 수업)과 구체적인 단계가 제공된다.",
+  "why": "블렌더의 회색 블록아웃 씬을 Seedance 2.5에 전달하면 AI가 카메라 움직임과 구도를 그대로 따른다. 프롬프트로 카메라 지시를 했을 때 발생하는 구도 변동과 프레임 불일치 문제를 해결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "gen-media",
+   "security"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Woman faces six years in prison over Cash App account she never opened",
+  "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 158,
+  "published_at": 1792674660,
+  "discussion": "https://news.ycombinator.com/item?id=50194833",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://www.techspot.com/images2/news/bigimage/2018/08/2018-08-14-image.png",
+  "link_status": "ok",
+  "ko_title": "현금 앱 계정 미개설자, 6년 징역 위험",
+  "summary": "펜실베이니아 주민이 자신의 이름으로 만든 현금 앱 계정이 사기 용도로 사용돼 아칸소에서 체포됐다. 회사가 계정 소유 증명을 요구해 정보를 제공하지 않아, 피고는 범죄 사실을 증명해야 하는 상황에 처했다. 현재 최대 6년 징역형이 제기된 상태다.",
+  "why": "신원 도용 피해 시 플랫폼이 계정 소유자임을 입증할 때까지 정보 제공을 거부할 수 있다. 본인 명의 계정의 사기 이용 여부를 사전에 확인하는 절차가 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
+  "url": "https://openai.com/index/cloudflare-cyber",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792540800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/cloudflare-cyber"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Cloudflare, OpenAI와 함께 취약점 발견을 방어에 연결",
+  "summary": "Cloudflare가 OpenAI Daybreak을 활용해 취약점을 조사하고 수정안을 제시한다. 개발자들은 Codex를 이용해 개발 속도와 코드 품질을 향상시킨다.",
+  "why": "Cloudflare가 OpenAI Daybreak로 취약점을 조사하고 수정안을 제시한다. 개발자는 Codex를 활용해 개발 속도와 코드 품질을 높인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "eMudhra to Exit Global SSL/TLS Certificate Business",
+  "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+  "source": "hackernews",
+  "upvotes": 218,
+  "comments": 120,
+  "published_at": 1792676019,
+  "discussion": "https://news.ycombinator.com/item?id=50195110",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://emudhra.com/images/press-release/thumbs/emudhra-to-exit-global-ssl-tls-certificate-business.jpg",
+  "link_status": "ok",
+  "ko_title": "eMudhra, 글로벌 SSL/TLS 인증서 사업 종료",
+  "summary": "eMudhra 이사회가 글로벌 SSL/TLS 인증서 사업을 자발적으로 철회하기로 결정했다. 최근 발생한 인증서 이슈를 14시간 내에 대응하고 데이터 유출은 없었다. SSL/TLS는 전체 매출의 약 1%에 불과했으며, 데이터 주권·컴플라이언스 요구 증가와 비용 상승으로 사업 가치가 감소했다. 회사는 핵심 엔터프라이즈 솔루션과 SSL/TLS 제외 신뢰 서비스에 집중한다.",
+  "why": "SSL/TLS 인증서 발급을 eMudhra에 의존하던 백엔드 인프라는 대체 인증 기관으로 전환해야 한다. 기존 G1 RSA 루트 인증서의 서비스 종료 시점이 공지되지 않아 직접적인 조치 시점을 잡기 어렵다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "peach-mitao / peach",
+  "url": "https://github.com/peach-mitao/peach",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1098,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/peach-mitao/peach"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1098,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/peach-mitao/peach",
+  "link_status": null,
+  "ko_title": "peach (피치)",
+  "summary": "개인용 영상 컬렉션 관리 도구로, 로컬 하드디스크와 115, PikPak, OneDrive 등 다양한 클라우드 스토리지를 하나의 인터페이스에서 볼 수 있다. 동일 번호의 다른 버전·분할 파일을 손쉽게 전환하며, 자막 로드 기능을 제공한다. 18세 이상 성인용 콘텐츠 관리에 특화되어 있다.",
+  "why": "백엔드 개발자의 업무와 무관한 개인용 영상 관리 도구다. 성인 콘텐츠 컬렉션 관리에 특화되어 있어 개발 환경에서는 활용 가치가 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "Why Your React Animations Feel Slow Even at 60 FPS",
+  "url": "https://dev.to/jyotipathak__/why-your-react-animations-feel-slow-even-at-60-fps-171m",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 9,
+  "comments": 0,
+  "published_at": 1792679195.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jyotipathak__/why-your-react-animations-feel-slow-even-at-60-fps-171m"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0wbszccxpp3zccm503uy.png",
+  "link_status": "ok",
+  "ko_title": "React 애니메이션이 60 FPS에도 느리게 느껴지는 이유",
+  "summary": "60 FPS는 프레임이 도착한 횟수만 알려줄 뿐, 프레임 간 간격이 일정한지 여부는 알 수 없다. 프레임 일관성, 입력 지연, 브라우저 렌더링 작업, JavaScript 실행 등이 애니메이션 품질에 영향을 미친다. 평균 FPS가 60이라도 간헐적인 지연 프레임이 있으면 끊김이 발생한다.",
+  "why": "평균 60 FPS를 확인해도 프레임 간격이 일정하지 않으면 끊김이 발생한다. 단순 프레임 수 측정만으로는 입력 지연이나 렌더링 병목을 찾지 못한다. 애니메이션 품질을 진단할 때 프레임 일관성을 함께 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
+  "title": "What FDE means at OpenAI",
+  "url": "https://openai.com/index/forward-deployed-engineering-means",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792648800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/forward-deployed-engineering-means"
+  ],
+  "cross_source_count": 1,
+  "score": 26,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI에서 FDE가 의미하는 것",
+  "summary": "OpenAI에서 사용되는 Forward Deployed Engineering(전방 배치 엔지니어링)의 정의와 역할을 설명한다.",
+  "why": "OpenAI의 전방 배치 엔지니어링은 고객 현장에 파견되어 문제를 해결하는 역할을 수행한다. 이는 백엔드 개발자가 고객사와 직접 소통하며 기술적 장벽을 낮추는 방식이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra"
+  ],
+  "batch": "2026-10-23T00:00:03.070136+09:00",
+  "batch_label": "10월 23일 00:00"
+ },
+ {
   "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
   "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
   "source": "hackernews",

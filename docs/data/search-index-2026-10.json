@@ -1,5 +1,237 @@
 [
  {
+  "t": "IBM Granite 시계열 모델을 활용한 앙상블 예측",
+  "u": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-10-23",
+  "o": "Ensemble forecasting with IBM Granite time-series models",
+  "x": "IBM Granite이 제공하는 사전 학습된 네 개의 시계열 모델을 결합한 앙상블 인터페이스가 공개됐다. 별도 재학습 없이 중위값·분위수 예측을"
+ },
+ {
+  "t": "Hugging Face 사랑 TorchTPU: TPU를 네이티브로 지원",
+  "u": "https://huggingface.co/blog/hf-torchtpu",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "d": "2026-10-23",
+  "o": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+  "x": "TorchTPU는 PyTorch에 TPU를 새로운 백엔드로 추가해 기존 torch_xla와 Optimum TPU 없이도 Hugging Face "
+ },
+ {
+  "t": "로그 집계 파이프라인 설명: 한 로그 라인을 따라 브라우저에서 사고 재현",
+  "u": "https://dev.to/devopsdaily/log-aggregation-pipeline-explained-follow-one-log-line-and-run-the-incident-in-your-browser-3h91",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-10-23",
+  "o": "Log Aggregation Pipeline Explained: Follow One Log Line and Run the Incident in Your Browser",
+  "x": "로그 집계 파이프라인 시뮬레이터는 로그가 소스에서 검색 클러스터에 도달하기까지 여섯 단계(소스, 수집, 처리, 버퍼, 인덱스, 검색)를 시각화한"
+ },
+ {
+  "t": "여러 Linux 커널 취약점이 실수로 공개 메일링 리스트에 게시됨",
+  "u": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-23",
+  "o": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+  "x": "Zero Day Initiative가 새로 발견한 여러 Linux 커널 취약점 보고서를 비공개 보안 메일링 리스트 대신 공개 커널 메일링 리스트"
+ },
+ {
+  "t": "Amazon, 공개 전 10월 17일 PHP2Shell 악용 탐지",
+  "u": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "hardware"
+  ],
+  "d": "2026-10-23",
+  "o": "Amazon identifies Oct 17 PHP2Shell exploitation prior to public disclosure",
+  "x": "Amazon Threat Intelligence는 CVE 공개 4일 전인 2026-10-17에 MadPot 텔레메트리에서 PHP2Shell 악용"
+ },
+ {
+  "t": "Switch 2 탈옥",
+  "u": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-safety"
+  ],
+  "d": "2026-10-23",
+  "o": "Jailbreaking the Switch 2",
+  "x": "ns2jb 저장소에서 제공하는 소프트웨어 전용, 텐더드 탈옥 도구가 Switch 2에서 처음으로 공개됐다. 이 도구는 임의의 네이티브 코드를 일"
+ },
+ {
+  "t": "첫 사용자 감사 — 앱을 네 가지 초보자 관점으로 테스트하는 에이전트 스킬",
+  "u": "https://dev.to/bargan/i-built-an-agent-skill-that-tests-your-app-like-four-first-time-users-180d",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "open-source",
+   "showcase"
+  ],
+  "d": "2026-10-23",
+  "o": "I Built an Agent Skill That Tests Your App Like Four First-Time Users",
+  "x": "First User Audit은 오픈소스 에이전트 스킬로, 네 가지 가상 초보자 행동(조급함, 회의감, 모바일, 파괴자)을 시뮬레이션해 앱의 첫"
+ },
+ {
+  "t": "php2shell-poc",
+  "u": "https://github.com/ikow/php2shell-poc",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "research",
+   "security",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-23",
+  "o": "ikow / php2shell-poc",
+  "x": "PHP 5.4부터 8.5.11까지 14년간 존재한 취약점을 이용한 사전 인증 원격 코드 실행(RCE) 툴킷이다. CVE-2026-109618·1"
+ },
+ {
+  "t": "Claude 사용법",
+  "u": "https://github.com/luongnv89/claude-howto",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-23",
+  "o": "luongnv89 / claude-howto",
+  "x": "Claude Code를 빠르게 배우고 에이전트·훅·스킬·MCP 서버까지 활용할 수 있도록 시각 튜토리얼·복사-붙여넣기 템플릿·학습 경로를 제공한"
+ },
+ {
+  "t": "암호화 제대로 이해하기: AES vs ChaCha20 vs Argon2id (그리고 실제 결합 방법)",
+  "u": "https://dev.to/akhourianmolkumar/encryption-explained-properly-aes-vs-chacha20-vs-argon2id-and-how-to-actually-combine-them-4223",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "language"
+  ],
+  "d": "2026-10-23",
+  "o": "Encryption, Explained Properly: AES vs ChaCha20 vs Argon2id (and How to Actually Combine Them)",
+  "x": "AES-GCM, ChaCha20-Poly1305, Argon2id, HKDF, X25519 등 여러 암호 원리를 파이썬 코드와 비교표로 정리하고"
+ },
+ {
+  "t": "Seedance 2.5 카메라 제어: 블렌더에서 AI 영상 샷을 먼저 블록아웃",
+  "u": "https://dev.to/glglgl/seedance-25-camera-control-block-out-ai-film-shots-in-blender-first-2i7f",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "gen-media",
+   "security"
+  ],
+  "d": "2026-10-23",
+  "o": "Seedance 2.5 Camera Control: Block Out AI Film Shots in Blender First",
+  "x": "블렌더에서 회색 블록아웃 씬을 만든 뒤 그 데이터를 Seedance 2.5에 전달해 AI 영상이 정확히 동일한 카메라 움직임과 구도를 따르게 하"
+ },
+ {
+  "t": "현금 앱 계정 미개설자, 6년 징역 위험",
+  "u": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-23",
+  "o": "Woman faces six years in prison over Cash App account she never opened",
+  "x": "펜실베이니아 주민이 자신의 이름으로 만든 현금 앱 계정이 사기 용도로 사용돼 아칸소에서 체포됐다. 회사가 계정 소유 증명을 요구해 정보를 제공하"
+ },
+ {
+  "t": "Cloudflare, OpenAI와 함께 취약점 발견을 방어에 연결",
+  "u": "https://openai.com/index/cloudflare-cyber",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-coding",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "d": "2026-10-23",
+  "o": "Cloudflare links vulnerability discovery to defense with OpenAI",
+  "x": "Cloudflare가 OpenAI Daybreak을 활용해 취약점을 조사하고 수정안을 제시한다. 개발자들은 Codex를 이용해 개발 속도와 코드"
+ },
+ {
+  "t": "eMudhra, 글로벌 SSL/TLS 인증서 사업 종료",
+  "u": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "industry"
+  ],
+  "d": "2026-10-23",
+  "o": "eMudhra to Exit Global SSL/TLS Certificate Business",
+  "x": "eMudhra 이사회가 글로벌 SSL/TLS 인증서 사업을 자발적으로 철회하기로 결정했다. 최근 발생한 인증서 이슈를 14시간 내에 대응하고 데"
+ },
+ {
+  "t": "peach (피치)",
+  "u": "https://github.com/peach-mitao/peach",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-10-23",
+  "o": "peach-mitao / peach",
+  "x": "개인용 영상 컬렉션 관리 도구로, 로컬 하드디스크와 115, PikPak, OneDrive 등 다양한 클라우드 스토리지를 하나의 인터페이스에서 "
+ },
+ {
+  "t": "React 애니메이션이 60 FPS에도 느리게 느껴지는 이유",
+  "u": "https://dev.to/jyotipathak__/why-your-react-animations-feel-slow-even-at-60-fps-171m",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-23",
+  "o": "Why Your React Animations Feel Slow Even at 60 FPS",
+  "x": "60 FPS는 프레임이 도착한 횟수만 알려줄 뿐, 프레임 간 간격이 일정한지 여부는 알 수 없다. 프레임 일관성, 입력 지연, 브라우저 렌더링 "
+ },
+ {
+  "t": "OpenAI에서 FDE가 의미하는 것",
+  "u": "https://openai.com/index/forward-deployed-engineering-means",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "devops-infra"
+  ],
+  "d": "2026-10-23",
+  "o": "What FDE means at OpenAI",
+  "x": "OpenAI에서 사용되는 Forward Deployed Engineering(전방 배치 엔지니어링)의 정의와 역할을 설명한다."
+ },
+ {
   "t": "손상된 LiteLLM 1.107.0이 자격 증명 탈취기와 백도어를 설치",
   "u": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
   "m": "2026-10",
