@@ -1,5 +1,560 @@
 [
  {
+  "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+  "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+  "source": "hackernews",
+  "upvotes": 480,
+  "comments": 163,
+  "published_at": 1792591226,
+  "discussion": "https://news.ycombinator.com/item?id=50181114",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://safedep.io/images/litellm-pypi-compromise-credential-stealer-backdoor-banner.jpg",
+  "link_status": "ok",
+  "ko_title": "손상된 LiteLLM 1.107.0이 자격 증명 탈취기와 백도어를 설치",
+  "summary": "LiteLLM 1.107.0 배포판에 자격 증명 탈취와 원격 코드 실행 백도어가 포함돼 있었다. 모든 플랫폼용 휠에 세 파일이 설치되며, Python 프로세스가 시작될 때 자동으로 실행된다. 해당 버전은 PyPI와 Docker Hub에서 2026-10-21에 삭제되었으며, 이전 및 rc 버전은 정상이다.",
+  "why": "프로젝트에서 1.107.0 버전을 쓰고 있다면 즉시 1.106.2나 rc 버전으로 내려가야 한다. 해당 버전의 휠을 설치한 호스트에서는 Python이 실행될 때마다 자격 증명 탈취와 원격 코드 실행이 발생한다. Docker Hub의 v1.107.0, latest, main-latest, main-stable 태그 이미지도 악성 코드를 포함했으므로 재빌드가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra",
+   "language",
+   "release"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+  "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792598683.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6ac67ea29579ea34f1f7e470/hEodPVvQZI24jETLbPooP.png",
+  "link_status": "ok",
+  "ko_title": "TorchNeuron 프로파일링 (1부): AWS Trainium에서 시스템 수준 프로파일링",
+  "summary": "이 글은 AWS Trainium 전용 AI 칩과 TorchNeuron 백엔드를 이용해 추론 성능을 체계적으로 분석하는 방법을 소개한다. torch.profiler 설정, key_averages() 테이블 해석, Neuron Explorer 활용 등을 단계별로 설명한다. PyTorch의 PrivateUse1 확장점을 통해 Neuron을 네이티브 백엔드로 등록하는 방식도 다룬다.",
+  "why": "Trainium에서 추론 성능 병목을 찾으려면 torch.profiler와 Neuron Explorer를 함께 써야 한다. 기존 CUDA 기반 프로파일링 습관과 달리 PrivateUse1 확장점 경로를 따라야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "I Migrated a Cloudflare Agents Workspace and Measured Everything: What Changes When the Storage Format Changes?",
+  "url": "https://dev.to/tanahiro2010/i-migrated-a-cloudflare-agents-workspace-and-measured-everything-what-changes-when-the-storage-28lg",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": 1792631247.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tanahiro2010/i-migrated-a-cloudflare-agents-workspace-and-measured-everything-what-changes-when-the-storage-28lg"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frjbe1o3f4de70bf7xups.png",
+  "link_status": "ok",
+  "ko_title": "Cloudflare Agents 워크스페이스 마이그레이션 및 저장 형식 변경 시 영향",
+  "summary": "Cloudflare Agents가 2026-10-20에 워크스페이스 구현을 @cloudflare/shell에서 @cloudflare/computer로 전환하면서 파일 저장 방식이 바뀌었다. 기존 구현은 경로당 한 행에 Base64-인코딩된 전체 파일을 저장했으며 6 MiB 제한과 1 MB 읽기/쓰기 시 13.5배 느린 성능을 보였다. 새 구현은 inode와 청크를 분리해 512 KiB 단위의 콘텐츠-주소 블롭으로 저장해 속도가 크게 개선되고 파일 크기 제한이 완화된다. 테이블 구조가 달라 자동 마이그레이션이 필요하며, 역전은 불가능하다.",
+  "why": "Cloudflare Agents 워크스페이스를 @cloudflare/computer로 전환 시 테이블 구조가 달라져 자동 마이그레이션이 필요하다. 마이그레이션을 건너뛰면 기존 파일이 보이지 않으며, 스키마 버전 관리로 인해 역방향 전환은 불가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Security Disclosure",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "source": "hackernews",
+  "upvotes": 416,
+  "comments": 237,
+  "published_at": 1792619883,
+  "discussion": "https://news.ycombinator.com/item?id=50188228",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.railway.com/p/security-disclosure-wednesday-october-21st"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://cms.railway.com/media/cf05de70-b435-4fe9-8d52-540e0b585874-blog-security-disclosure-wednesday-october-21st.png?w=1200&q=90",
+  "link_status": "ok",
+  "ko_title": "보안 공개",
+  "summary": "Railway가 고객 환경 변수 저장 시스템에서 비정상적인 활동을 감지했고, 제3자가 암호화된 환경 변수에 접근해 일부를 복호화한 것으로 보인다. 영향을 받은 사용자는 제한적이지만 모든 사용자는 환경 변수를 즉시 교체하고 로그를 검토하도록 권고받았다. 현재 모든 배포가 일시 중단된 상태이며, 복구 시점은 추후 공지될 예정이다.",
+  "why": "Railway에 저장한 API 키와 레지스트리 자격 증명은 즉시 교체해야 한다. 배포가 일시 중단되어 새 버전 롤아웃이 불가능하므로 서비스 업데이트 일정에 차질이 생긴다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Claude Security now scans continuously and tracks fixes",
+  "url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792540800.0,
+  "origin_url": "https://claude.com/blog/claude-security-now-scans-continuously-and-tracks-fixes",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-security-now-scans-continuously-and-tracks-fixes",
+   "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://claude.com/ko/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude Security 이제 지속적으로 스캔하고 수정 추적",
+  "summary": "Claude Security가 코드 변경에 맞춰 지속적으로 스캔하고, 발견된 취약점을 수정될 때까지 추적한다. 팀이 제공한 환경 정보를 학습해 중요도를 판단하고, API와 MCP를 통해 다양한 도구와 연동한다. 현재 Claude Enterprise 고객을 대상으로 퍼블릭 베타가 제공되며, 매월 2개월간 $25,000 무료 사용 크레딧을 제공한다.",
+  "why": "기존의 수동 스캔 방식과 달리 코드 변경에 맞춰 자동으로 취약점을 추적한다. Claude Enterprise 고객이라면 12월 31일까지 2개월간 매월 25,000달러 크레딧을 받을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "kingcharleslzy-ai / dsh-purge",
+  "url": "https://github.com/kingcharleslzy-ai/dsh-purge",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 806,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/kingcharleslzy-ai/dsh-purge"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 806,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/kingcharleslzy-ai/dsh-purge",
+  "link_status": null,
+  "ko_title": "dsh-purge — AI가 학습과 실험을 더 집중적으로 도와줍니다",
+  "summary": "Purge Community는 DeepSeek Harness용 자가 호스팅 플러그인으로, 상태 확인, 설정 일괄 적용, 기록 기반 롤백 등을 제공한다. 현재 버전 1.6.43은 프롬프트 잘림 오류와 흐름 취소 후 잔여 연결 문제를 수정했으며, 전송 실패와 취소를 별도 기록한다. Qwen Studio와 연동하면 로컬에서 이미지 생성이 가능해져 외부 서버 사용 없이 그림을 그릴 수 있다.",
+  "why": "DeepSeek Harness를 자가 호스팅으로 쓰는 경우, 이 플러그인으로 상태 확인과 설정 변경 이력을 한 곳에서 관리할 수 있다. 1.6.43 버전은 프롬프트 잘림 오류와 취소 후 연결 잔여 문제를 해결했다. Qwen Studio와 함께 쓰면 로컬 GPU에서 이미지 생성이 가능해져 외부 서버 의존을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "gen-media",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "The Hidden Bugs Behind Duplicate API Requests",
+  "url": "https://dev.to/hanzla/the-hidden-bugs-behind-duplicate-api-requests-1npb",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 40,
+  "comments": 0,
+  "published_at": 1792651038.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/hanzla/the-hidden-bugs-behind-duplicate-api-requests-1npb"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fn2vhit1djoe4zx7sbbnb.jpg",
+  "link_status": "ok",
+  "ko_title": "중복 API 요청 뒤에 숨은 버그",
+  "summary": "API 호출이 두 번 발생하는 현상이 실제 중복인지 판단하기 위한 체크리스트와 원인 6가지를 정리한다. CORS 프리플라이트, 개발 전용 동작, 다른 호출자 등 겉보기 중복을 구분하고, 가장 위험한 경우인 서버가 이미 작업을 완료했음에도 클라이언트가 재시도하는 상황을 중점적으로 다룬다. 해결 방법으로 서버에 요청 ID를 로깅하고, React StrictMode에서 발생하는 이중 요청을 방지하는 방법을 제시한다.",
+  "why": "서버가 작업을 이미 끝낸 뒤 클라이언트가 재시도하는 경우를 막아야 한다. 요청 ID를 서버에 로깅해 실제 중복 호출 여부를 먼저 확인하라.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "mitmproxy adds --emudhra option",
+  "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+  "source": "hackernews",
+  "upvotes": 400,
+  "comments": 104,
+  "published_at": 1792626697,
+  "discussion": "https://news.ycombinator.com/item?id=50189232",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/58e827e143b21d85e7009a31985d2abfb0b0d00f7fe91a9cc999f01a4deddbbf/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+  "link_status": "ok",
+  "ko_title": "mitmproxy에 --emudhra 옵션 추가",
+  "summary": "mitmproxy가 TLS 인증서를 손상된 eMudhra 중간 CA 키로 서명하는 --emudhra 옵션을 새로 도입했다. 이 옵션은 명령줄에서 bool 값으로 활성화할 수 있다. 또한 사전 컴파일 바이너리에서 eMudhra 인증서를 제거하는 certifi 의존성 업데이트가 포함된다.",
+  "why": "mitmproxy를 쓰는 백엔드 개발자는 eMudhra CA가 포함된 트래픽을 분석할 때 이 옵션을 활성화해야 한다. 사전 컴파일 바이너리에서 해당 인증서가 제거되었으므로 기존 환경 설정이 깨질 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Using thousands of AI agents to uncover new leads in biological data",
+  "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792558200.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+   "https://openai.com/index/scaling-ai-research-for-complex-biological-data/"
+  ],
+  "cross_source_count": 2,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "수천 개의 AI 에이전트를 활용해 생물학 데이터에서 새로운 연구 단서를 발견",
+  "summary": "OpenAI·PerturbAI·Scripps Research가 수백만 뇌세포 데이터를 대상으로 수천 개의 분산 AI 에이전트를 운영했다. 이 에이전트들은 데이터를 자동으로 탐색해 유망한 연구 단서를 자동 추출했다. 기존의 수동 분석에 비해 규모와 속도가 크게 향상되었다.",
+  "why": "생물학 데이터 분석 파이프라인에 분산 에이전트 구조를 적용할 때 참고할 사례다. 수동 분석 대비 처리 규모와 속도가 크게 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "science"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+  "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792566000.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+   "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/"
+  ],
+  "cross_source_count": 2,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Patch the Planet: 에이전트가 중요한 취약점을 발견하면서 전 세계 대응 조정",
+  "summary": "Patch the Planet은 보안 연구원·유지보수자·사고 대응자를 연결한다. 이 플랫폼을 통해 오픈소스 프로젝트의 심각한 취약점을 공동으로 해결한다.",
+  "why": "오픈소스 의존성의 치명적 취약점 대응 시 보안 연구자와 유지보수자 간 조율이 빨라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Your retry loop is your most expensive feature",
+  "url": "https://dev.to/tokenlat/your-retry-loop-is-your-most-expensive-feature-59dk",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1792649789.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tokenlat/your-retry-loop-is-your-most-expensive-feature-59dk"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqv9qir6wemhkqjhqq6zx.png",
+  "link_status": "ok",
+  "ko_title": "재시도 루프가 가장 비용이 많이 드는 기능",
+  "summary": "팀이 토큰 단위 비용을 추적하고 예산 경고를 설정했지만, 모델 호출에 3회 재시도를 추가해 예산에 포함시키지 않았다. 재시도 시 전체 컨텍스트를 다시 전송해 실패한 작업이 평균보다 4배 비용이 발생한다. 비용 대시보드는 성공 요청만 평균으로 보여 숨은 비용을 드러내지 않는다.",
+  "why": "재시도 시 전체 컨텍스트를 재전송하면 실패 작업의 비용이 4배로 늘어난다. 비용 대시보드는 성공 요청만 집계해 이 추가 지출을 숨긴다. 재시도 대신 컨텍스트를 유지한 채 다른 모델로 라우팅하는 방식이 대안이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Panache — RTS Belle Époque pour mobile",
+  "url": "https://simonwillison.net/2026/Oct/21/panache/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792599916.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/21/panache/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Panache — 모바일용 벨 에포크 실시간 전략 게임",
+  "summary": "Battle Drones를 Apache 2.0 라이선스로 공개한 뒤, 프랑스어 포크인 Panache가 1900년대 프랑스 스팀펑크 배경으로 리스킨하고 애니메이션 인트로를 추가했다. 새로운 스팀펑크 모델과 프랑스식 음악 트위스트가 적용됐으며, 게임플레이 자체는 크게 변하지 않았다.",
+  "why": "Apache 2.0 라이선스 덕분에 원본 코드를 자유롭게 포크하고 리스킨할 수 있다. 게임플레이 로직은 그대로 유지되어 기존 개발 경험을 그대로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "There isn't an easy exploit for this PHP vulnerability",
+  "url": "https://eliastaylor.com/noexploit/",
+  "source": "hackernews",
+  "upvotes": 445,
+  "comments": 220,
+  "published_at": 1792624407,
+  "discussion": "https://news.ycombinator.com/item?id=50188948",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://eliastaylor.com/noexploit/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "이 PHP 취약점에 쉬운 익스플로잇은 없습니다",
+  "summary": "현재 공개된 수천 개의 PoC가 실제 PHP 환경에서는 동작하지 않는다. 작성자는 직접 Docker 환경에서 테스트해볼 것을 권고한다. LLM이 자동으로 익스플로잇을 만들 수 있다는 기대는 현실과 다르다.",
+  "why": "공개된 수천 개의 PoC는 실제 PHP 환경에서 동작하지 않는다. LLM이 취약점 분석만으로 즉시 실행 가능한 익스플로잇을 만들어낸다는 기대는 현실과 다르다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "카카오 AI 돛 Summit 26 다시보기 공개 — AI 인프라부터 서비스 적용, 개발과 창업까지",
+  "url": "https://tech.kakao.com/posts/842",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792594800.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/842"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2F61f3be8a01a100001.png",
+  "link_status": "ok",
+  "ko_title": "카카오 AI 돛 Summit 26 다시보기 공개 — AI 인프라부터 서비스 적용, 개발과 창업까지",
+  "summary": "카카오가 9월 29일 부산에서 개최한 ‘카카오 AI 돛 Summit 26’ 주요 세션 VOD를 공개했다. 약 800명 규모의 행사 내용으로 AI 개발 방식, 서비스 적용 사례, 연구와 창업 연결 경험을 온라인에서 시청할 수 있다.",
+  "why": "백엔드 개발자가 AI를 실제 서비스에 적용하는 구체적인 과정을 확인할 수 있다. 현장에 참석하지 못했거나 일부 세션만 본 경우를 보완하는 자료로 활용한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "mmparko / dsh-purge",
+  "url": "https://github.com/mmparko/dsh-purge",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 834,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mmparko/dsh-purge"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 834,
+  "score": 38,
+  "image": "https://opengraph.githubassets.com/1/mmparko/dsh-purge",
+  "link_status": null,
+  "ko_title": "mmparko / dsh-purge — 레포지터리",
+  "summary": "현재 버전 1.1.71이며, 개발자는 현재 수입이 없어 유지보수가 중단된 상태다. 새로운 릴리스와 이슈·PR 처리가 이루어지지 않으며, 향후 dsh 버전 지원도 보장되지 않는다.",
+  "why": "이 도구는 현재 유지보수가 중단되어 새 릴리스나 이슈 처리가 이루어지지 않는다. 따라서 향후 dsh 버전과의 호환성 문제는 직접 해결해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+  "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+  "source": "hackernews",
+  "upvotes": 145,
+  "comments": 84,
+  "published_at": 1792636252,
+  "discussion": "https://news.ycombinator.com/item?id=50190455",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf"
+  ],
+  "cross_source_count": 1,
+  "score": 29,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "최근 제안된 o(n log n) 정수 곱셈 알고리즘",
+  "summary": "",
+  "why": "기존 정수 곱셈 알고리즘보다 계산 복잡도가 낮은 새로운 수학적 접근법이 제시되었다. 대규모 정수 연산이 필요한 백엔드 시스템의 이론적 성능 상한을 재정의할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
+  "title": "Don't Be a Proxy Between Me and Your AI",
+  "url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 2,
+  "published_at": 1792643469.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fobwbf432qy2unuy63rod.jpg",
+  "link_status": "ok",
+  "ko_title": "나와 당신의 AI 사이에 프록시가 되지 마세요",
+  "summary": "",
+  "why": "기술 질문에 대한 동료의 답변이 AI 생성 결과의 단순 전달로 끝나면, 독자는 그 사람의 실제 경험과 판단을 얻지 못한다. 이는 대화에 지연만 추가할 뿐 새로운 가치를 제공하지 못하는 구조를 만든다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-22T16:00:02.973737+09:00",
+  "batch_label": "10월 22일 16:00"
+ },
+ {
   "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
   "url": "https://huggingface.co/blog/nvidia/kumo-relational",
   "source": "rss",

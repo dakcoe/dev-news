@@ -1,5 +1,238 @@
 [
  {
+  "t": "손상된 LiteLLM 1.107.0이 자격 증명 탈취기와 백도어를 설치",
+  "u": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "devops-infra",
+   "language",
+   "release"
+  ],
+  "d": "2026-10-22",
+  "o": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+  "x": "LiteLLM 1.107.0 배포판에 자격 증명 탈취와 원격 코드 실행 백도어가 포함돼 있었다. 모든 플랫폼용 휠에 세 파일이 설치되며, Pyt"
+ },
+ {
+  "t": "TorchNeuron 프로파일링 (1부): AWS Trainium에서 시스템 수준 프로파일링",
+  "u": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-10-22",
+  "o": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+  "x": "이 글은 AWS Trainium 전용 AI 칩과 TorchNeuron 백엔드를 이용해 추론 성능을 체계적으로 분석하는 방법을 소개한다. torc"
+ },
+ {
+  "t": "Cloudflare Agents 워크스페이스 마이그레이션 및 저장 형식 변경 시 영향",
+  "u": "https://dev.to/tanahiro2010/i-migrated-a-cloudflare-agents-workspace-and-measured-everything-what-changes-when-the-storage-28lg",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "devops-infra"
+  ],
+  "d": "2026-10-22",
+  "o": "I Migrated a Cloudflare Agents Workspace and Measured Everything: What Changes When the Storage Format Changes?",
+  "x": "Cloudflare Agents가 2026-10-20에 워크스페이스 구현을 @cloudflare/shell에서 @cloudflare/comput"
+ },
+ {
+  "t": "보안 공개",
+  "u": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-10-22",
+  "o": "Security Disclosure",
+  "x": "Railway가 고객 환경 변수 저장 시스템에서 비정상적인 활동을 감지했고, 제3자가 암호화된 환경 변수에 접근해 일부를 복호화한 것으로 보인다"
+ },
+ {
+  "t": "Claude Security 이제 지속적으로 스캔하고 수정 추적",
+  "u": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "backend-data",
+   "industry"
+  ],
+  "d": "2026-10-22",
+  "o": "Claude Security now scans continuously and tracks fixes",
+  "x": "Claude Security가 코드 변경에 맞춰 지속적으로 스캔하고, 발견된 취약점을 수정될 때까지 추적한다. 팀이 제공한 환경 정보를 학습해 "
+ },
+ {
+  "t": "dsh-purge — AI가 학습과 실험을 더 집중적으로 도와줍니다",
+  "u": "https://github.com/kingcharleslzy-ai/dsh-purge",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "gen-media",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-22",
+  "o": "kingcharleslzy-ai / dsh-purge",
+  "x": "Purge Community는 DeepSeek Harness용 자가 호스팅 플러그인으로, 상태 확인, 설정 일괄 적용, 기록 기반 롤백 등을 제"
+ },
+ {
+  "t": "중복 API 요청 뒤에 숨은 버그",
+  "u": "https://dev.to/hanzla/the-hidden-bugs-behind-duplicate-api-requests-1npb",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-10-22",
+  "o": "The Hidden Bugs Behind Duplicate API Requests",
+  "x": "API 호출이 두 번 발생하는 현상이 실제 중복인지 판단하기 위한 체크리스트와 원인 6가지를 정리한다. CORS 프리플라이트, 개발 전용 동작,"
+ },
+ {
+  "t": "mitmproxy에 --emudhra 옵션 추가",
+  "u": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-22",
+  "o": "mitmproxy adds --emudhra option",
+  "x": "mitmproxy가 TLS 인증서를 손상된 eMudhra 중간 CA 키로 서명하는 --emudhra 옵션을 새로 도입했다. 이 옵션은 명령줄에서"
+ },
+ {
+  "t": "수천 개의 AI 에이전트를 활용해 생물학 데이터에서 새로운 연구 단서를 발견",
+  "u": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "research",
+   "science"
+  ],
+  "d": "2026-10-22",
+  "o": "Using thousands of AI agents to uncover new leads in biological data",
+  "x": "OpenAI·PerturbAI·Scripps Research가 수백만 뇌세포 데이터를 대상으로 수천 개의 분산 AI 에이전트를 운영했다. 이 에"
+ },
+ {
+  "t": "Patch the Planet: 에이전트가 중요한 취약점을 발견하면서 전 세계 대응 조정",
+  "u": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "research",
+   "security",
+   "open-source"
+  ],
+  "d": "2026-10-22",
+  "o": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+  "x": "Patch the Planet은 보안 연구원·유지보수자·사고 대응자를 연결한다. 이 플랫폼을 통해 오픈소스 프로젝트의 심각한 취약점을 공동으로 "
+ },
+ {
+  "t": "재시도 루프가 가장 비용이 많이 드는 기능",
+  "u": "https://dev.to/tokenlat/your-retry-loop-is-your-most-expensive-feature-59dk",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-22",
+  "o": "Your retry loop is your most expensive feature",
+  "x": "팀이 토큰 단위 비용을 추적하고 예산 경고를 설정했지만, 모델 호출에 3회 재시도를 추가해 예산에 포함시키지 않았다. 재시도 시 전체 컨텍스트를"
+ },
+ {
+  "t": "Panache — 모바일용 벨 에포크 실시간 전략 게임",
+  "u": "https://simonwillison.net/2026/Oct/21/panache/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-22",
+  "o": "Panache — RTS Belle Époque pour mobile",
+  "x": "Battle Drones를 Apache 2.0 라이선스로 공개한 뒤, 프랑스어 포크인 Panache가 1900년대 프랑스 스팀펑크 배경으로 리스"
+ },
+ {
+  "t": "이 PHP 취약점에 쉬운 익스플로잇은 없습니다",
+  "u": "https://eliastaylor.com/noexploit/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "d": "2026-10-22",
+  "o": "There isn't an easy exploit for this PHP vulnerability",
+  "x": "현재 공개된 수천 개의 PoC가 실제 PHP 환경에서는 동작하지 않는다. 작성자는 직접 Docker 환경에서 테스트해볼 것을 권고한다. LLM이"
+ },
+ {
+  "t": "카카오 AI 돛 Summit 26 다시보기 공개 — AI 인프라부터 서비스 적용, 개발과 창업까지",
+  "u": "https://tech.kakao.com/posts/842",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "devops-infra",
+   "release"
+  ],
+  "d": "2026-10-22",
+  "x": "카카오가 9월 29일 부산에서 개최한 ‘카카오 AI 돛 Summit 26’ 주요 세션 VOD를 공개했다. 약 800명 규모의 행사 내용으로 AI"
+ },
+ {
+  "t": "mmparko / dsh-purge — 레포지터리",
+  "u": "https://github.com/mmparko/dsh-purge",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-22",
+  "o": "mmparko / dsh-purge",
+  "x": "현재 버전 1.1.71이며, 개발자는 현재 수입이 없어 유지보수가 중단된 상태다. 새로운 릴리스와 이슈·PR 처리가 이루어지지 않으며, 향후 d"
+ },
+ {
+  "t": "최근 제안된 o(n log n) 정수 곱셈 알고리즘",
+  "u": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-22",
+  "o": "The recently proposed o(n log n) integer multiplication algorithm [pdf]"
+ },
+ {
+  "t": "나와 당신의 AI 사이에 프록시가 되지 마세요",
+  "u": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-10-22",
+  "o": "Don't Be a Proxy Between Me and Your AI"
+ },
+ {
   "t": "NVIDIA Kumo Relational, 관계형 데이터에서 감독 학습을 능가, 학습 필요 없음",
   "u": "https://huggingface.co/blog/nvidia/kumo-relational",
   "m": "2026-10",
