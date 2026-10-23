@@ -1,41 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-14T08:00:30+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "blocked": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35306",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35313",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35312",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35311",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35310",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-14T16:00:26+09:00",
    "total": 22,
    "counts": {
@@ -1062,6 +1027,27 @@
     },
     {
      "url": "https://openai.com/index/uber-chatgpt-work-rollout",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-24T08:00:28+09:00",
+   "total": 19,
+   "counts": {
+    "ok": 15,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
      "source": "rss",
      "reason": "blocked"
     }

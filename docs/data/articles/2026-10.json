@@ -1,5 +1,577 @@
 [
  {
+  "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+  "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792774800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/scaling-storage-one-billion-users-part-two"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "1억 명이 넘는 ChatGPT 사용자를 위한 온라인 스토리지 급속 확장 (Part II)",
+  "summary": "OpenAI는 Habitat 서비스를 다중 테넌시, 전 세계 캐싱, Azure Cosmos DB를 활용해 확장했다. 이를 통해 ChatGPT의 읽기 속도가 기존 대비 12배 빨라졌다.",
+  "why": "Azure Cosmos DB 기반 다중 테넌시 아키텍처를 참고할 수 있다. 대규모 사용자 트래픽 처리 시 읽기 지연을 줄이는 설계 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Claude Cowork and chat come together for Enterprise",
+  "url": "https://claude.com/resources/articles/unified-claude-enterprise",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792713600.0,
+  "origin_url": "https://claude.com/blog/unified-claude-enterprise",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/unified-claude-enterprise",
+   "https://claude.com/resources/articles/unified-claude-enterprise"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/unified-claude-enterprise/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude Cowork와 채팅이 Enterprise에 합쳐짐",
+  "summary": "Claude Enterprise 플랜에 통합된 Claude 경험이 일반 제공됩니다. 채팅과 Cowork 기능이 웹·데스크톱·모바일에서 하나로 합쳐져 대화 중에 코드 실행·파일 작업을 클라우드에서 수행하고 결과를 반환합니다. 관리자는 역할 기반 접근 제어와 새로운 Efficient 모드로 사용량을 관리할 수 있습니다.",
+  "why": "Claude Enterprise에서 채팅과 Cowork가 하나로 합쳐져 코드 실행과 파일 작업이 클라우드에서 수행됩니다. 노트북을 닫아도 작업이 계속 진행되며 웹, 데스크톱, 모바일에서 결과를 이어받을 수 있습니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "gamedev-skills / awesome-gamedev-agent-skills",
+  "url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 518,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/gamedev-skills/awesome-gamedev-agent-skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 518,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/gamedev-skills/awesome-gamedev-agent-skills",
+  "link_status": null,
+  "ko_title": "AI 코딩 에이전트를 위한 게임 개발 스킬 76개",
+  "summary": "이 GitHub 저장소는 AI 코딩 에이전트가 사용할 수 있는 76개의 게임 개발 스킬과 엔진별로 적절한 스킬을 자동으로 선택해 주는 라우터를 제공한다. Godot, Unity, Unreal 등 12개 엔진을 지원하며, 아트 디렉션 및 자산 생산 워크플로우도 포함한다. 모든 스킬은 공식 문서 기반으로 버전이 고정돼 검증 스크립트로 확인한다.",
+  "why": "AI 코딩 에이전트를 쓰는 게임 개발 작업에서 엔진별 스킬을 수동으로 골라주지 않아도 된다. 라우터가 엔진과 작업을 감지해 필요한 스킬만 로드하므로 설정 부담이 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Nutlope / hallmark",
+  "url": "https://github.com/Nutlope/hallmark",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 550,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Nutlope/hallmark"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 550,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/Nutlope/hallmark",
+  "link_status": null,
+  "ko_title": "Hallmark — AI 생성 디자인을 거부하는 디자인 스킬",
+  "summary": "Hallmark는 Claude Code, Codex, Cursor, OpenCode용 디자인 스킬로, 48가지 테마와 맞춤 페이지 생성을 지원한다. 페이지는 방문자의 목적에 맞게 자동 구성되며, AI 특유의 흔적을 브라우저에서 검사한다. v2에서는 테마 확대, 작업 기반 페이지 구성, URL·개발 서버·앱 직접 스크린샷 캡처, 755개의 공개 라이선스 사진 제공, 재디자인·감사 명령이 추가되었다.",
+  "why": "프롬프트만으로 AI 특유의 흔적을 제거한 페이지를 생성할 수 있다. URL이나 개발 서버를 지정하면 실제 스크린샷을 캡처해 디자인을 검증한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+  "url": "https://huggingface.co/blog/allenai/litpivot",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792772150.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/litpivot"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/7F9q8BZloWigwe7m5YGLG.png",
+  "link_status": "ok",
+  "ko_title": "LitPivot: 문헌 환경에서 동적 맥락화를 통한 연구 아이디어 개발",
+  "summary": "LitPivot은 연구자가 논문을 읽으며 아이디어 방향을 바꾸는 과정을 지원하는 시스템이다. 제안서 편집 부분에 맞춰 문헌을 조직하고, 선택된 연구의 발췌를 근거로 비판과 수정 제안을 제공한다. 17명의 연구자를 대상으로 한 실험에서, 텍스트 편집기와 AI 채팅 도구를 사용한 경우보다 문헌에 더 잘 근거된, 새롭고 유용한 아이디어를 도출한 것으로 평가되었다. 현재는 초기 연구 아이디어 구상에 초점을 맞추고 있다.",
+  "why": "LitPivot은 초기 연구 아이디어 구상 단계에서 문헌 기반 비판과 수정 제안을 제공한다. AI 채팅 도구와 텍스트 편집기 조합보다 문헌에 더 잘 근거된 아이디어를 도출할 수 있다. 장문 작성이나 후기 단계에는 적용 범위가 제한적이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Token Beggar 0.3.0: on 18 real bug fixes it cost 1.42x less, with a tie on tests",
+  "url": "https://dev.to/arthur031221/token-beggar-030-on-18-real-bug-fixes-it-cost-142x-less-with-a-tie-on-tests-5305",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 2,
+  "comments": 4,
+  "published_at": 1792780232.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/arthur031221/token-beggar-030-on-18-real-bug-fixes-it-cost-142x-less-with-a-tie-on-tests-5305"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FArthur031221%2FToken-Beggar%2Fmain%2Fassets%2Fbanner-cover.png",
+  "link_status": "ok",
+  "ko_title": "Token Beggar 0.3.0: 18개의 실제 버그 수정에서 비용 1.42배 감소, 테스트 결과는 동률",
+  "summary": "0.3.0 버전은 큰 모델을 사용하기 전에 작업 규모를 판단해 더 저렴한 모델이 처리 가능한 경우 이를 먼저 실행한다. 12개의 오픈소스 Python 프로젝트에서 18개의 버그를 대상으로 실험했으며, 평균 비용이 약 29% 감소했다. 해결된 이슈 비율은 기존 70%와 거의 동일한 69%로 차이가 없으며, 실행 시간도 비슷했다.",
+  "why": "Claude Code 사용 시 큰 모델로 모든 단계를 처리하던 방식에서 벗어나, 작업 규모에 따라 저렴한 모델을 먼저 투입하는 구조로 바뀐다. 12개 오픈소스 프로젝트의 18개 버그 수정 실험에서 평균 비용이 약 29% 줄었으나, 문제 해결 비율과 실행 시간은 기존과 동등했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "language",
+   "open-source",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Claude Duet Safety, Privacy, and Security",
+  "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792713600.0,
+  "origin_url": "https://claude.com/blog/claude-duet-safety-privacy-and-security",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-duet-safety-privacy-and-security",
+   "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://claude.com/ko/resources/articles/claude-duet-safety-privacy-and-security/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude Duet 안전·프라이버시·보안",
+  "summary": "Claude Duet은 클라우드 기반 컴퓨터를 활용해 사용자를 대신해 작업을 수행하는 에이전트이며, 현재 연구 미리보기 단계다. 연결된 앱의 데이터를 보호하기 위해 새로운 분류기를 도입하고, 비밀번호·쿠키·토큰 등 자격 증명을 절대 열람하지 않는다. 사용자는 에이전트가 수행하는 작업을 지속적으로 제어할 수 있다.",
+  "why": "클라우드 에이전트가 자격 증명을 분리 보관하므로 기존 수동 인증 방식과 보안 구조가 달라진다. 연구 미리보기 단계이므로 프로덕션 배포 전 동작 범위를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Breach Week Dropped 10 'Patch Now' Posts. A Local Gemma Boiled Them Down to 2 Lines, and Code Checked Every Number It Wrote.",
+  "url": "https://dev.to/t-rexbytes/breach-week-dropped-10-patch-now-posts-a-local-gemma-boiled-them-down-to-2-lines-and-code-53n6",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1792774019.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/t-rexbytes/breach-week-dropped-10-patch-now-posts-a-local-gemma-boiled-them-down-to-2-lines-and-code-53n6"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuafd7ophkso6400xtar3.png",
+  "link_status": "ok",
+  "ko_title": "Breach Week 10개 ‘Patch Now’ 게시물 삭제, 로컬 Gemma가 2줄로 요약",
+  "summary": "TwoToe라는 도구가 breach-week 리스트를 자동으로 검증하고, 실제와 허위 항목을 구분해 매일 두 줄과 체크리스트를 제공한다. 로컬 Gemma 모델과 검증기가 AI가 만든 버전, CVE, 숫자 등을 근거 없이 출력하지 않도록 필터링한다. 평가 라운드에서 4번째에는 80개 초안 중 거부된 것이 없으며, 9초 내에 결과를 도출한다. 이 도구는 Ollama에서 로컬로 실행되며 외부 API 없이 CISA KEV 피드만 사용한다.",
+  "why": "로컬 Gemma와 검증기가 결합해 AI가 근거 없는 CVE나 버전 정보를 출력하지 못하도록 막는다. 외부 API 없이 CISA KEV 피드만 사용해 사내 데이터가 외부로 나가지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Most Package Managers Won't Stop a Tampered Download by Default",
+  "url": "https://dev.to/dhruv1206/most-package-managers-wont-stop-a-tampered-download-by-default-1a67",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 2,
+  "published_at": 1792776157.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dhruv1206/most-package-managers-wont-stop-a-tampered-download-by-default-1a67"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F94szbadyk0tagalof4j9.png",
+  "link_status": "ok",
+  "ko_title": "대부분의 패키지 매니저는 기본적으로 변조된 다운로드를 차단하지 않음",
+  "summary": "Trail of Bits가 가짜 패키지 서버를 구축해 25개 인기 패키지 매니저를 테스트했다. Go와 vcpkg만 잠금 파일이 없어도 모든 패키지의 해시를 검증했으며, 나머지는 제공된 파일을 그대로 설치했다. 전체 매니저 중 절반 이하만 기본적으로 해시를 확인했으며, 일부는 해시 불일치 시에도 설치를 진행하고 잠금 파일을 업데이트한다.",
+  "why": "Go와 vcpkg를 제외한 대부분 매니저는 잠금 파일이 없으면 변조된 패키지를 그대로 설치한다. 잠금 파일이 있어도 해시를 확인하지 않거나, 불일치해도 설치를 진행하는 도구가 많다. 프로젝트에서 사용하는 매니저의 기본 검증 동작을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Introducing Kimi K3.1 Pro",
+  "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792784454.0,
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+   "https://www.kimi.ai/blog/kimi-k3-1-pro"
+  ],
+  "cross_source_count": 2,
+  "score": 52,
+  "image": "https://static.simonwillison.net/static/2026/kimi-k3.1-card.jpg",
+  "link_status": "ok",
+  "ko_title": "Kimi K3.1 Pro 출시",
+  "summary": "새 모델 Kimi K3.1 Pro가 Moonshot API에 등장했으며, 11월 4일까지 가중치 공개 예정이다. 고속 버전은 2-3배 빠르지만 가격이 두 배이며, 토큰당 비용은 입력 $2, 출력 $10으로 GPT-6.1과 동등하고 Claude Opus보다 절반이다. 벤치마크에서 Opus 5.5·GPT-6 Astra와 비슷하거나 앞서며, Artificial Analysis 점수 55로 최상위에 근접한다.",
+  "why": "11월 4일까지 가중치 공개 예정이므로 그 전까지는 API 호출로만 사용할 수 있다. 입력 토큰당 2달러, 출력 토큰당 10달러로 GPT-6.1 Sol과 같은 가격이다. Claude Opus 5.5보다 절반 수준이라 비용 민감한 백엔드 작업에 대안이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+  "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 85,
+  "published_at": 1792784055,
+  "discussion": "https://news.ycombinator.com/item?id=50214218",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK093_GOOGLE_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+  "link_status": "ok",
+  "ko_title": "이제 구글이 Gmail 및 Google 사진 데이터를 광고 타게팅에 사용할 수 있다고 밝힘",
+  "summary": "구글이 개인정보 보호정책을 수정해 개인화 AI 기능을 사용할 경우 Gmail·드라이브·Google 사진 데이터가 맞춤형 광고에 활용될 수 있게 되었다. 이는 사용자가 해당 서비스를 AI 모드 등에 연결했을 때 적용되며, 광고주는 구체적인 파일 내용이나 개인 식별 정보를 직접 접근하지 않는다.",
+  "why": "개인정보 보호정책이 10월 16일부터 변경되어 AI 모드 연결 시 Gmail과 사진 데이터가 광고 타게팅에 쓰인다. 기존에는 해당 데이터가 맞춤형 광고에 활용되지 않는다고 명시했으나 이제 예외 조항이 추가되었다. 광고주는 파일 내용이나 개인 식별 정보를 직접 접근하지 못하지만 관심사 기반 광고 노출은 늘어난다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Quick Study",
+  "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792791313.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://static.simonwillison.net/static/2026/heron-oil.webp",
+  "link_status": "ok",
+  "ko_title": "빠른 연구",
+  "summary": "Claude Opus 5.5 프롬프트를 이용해 사진을 열고 캔버스와 가상 붓으로 몇 초 안에 그림을 그리는 아티팩트를 만들었다. 구현에는 Sobel 엣지 검출을 사용했으며 Google Fonts 외에 외부 라이브러리를 전혀 사용하지 않았다. 이전에 Claude Fable로 P5.js를 활용해 수채화 일러스트를 시뮬레이션한 실험을 참고했다.",
+  "why": "Sobel 엣지 검출 기반 이미지 변환 로직을 외부 라이브러리 없이 구현할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Securing our frontier model training environment",
+  "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792749600.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/securing-our-frontier-model-training-environment",
+   "https://openai.com/index/securing-our-frontier-model-training-environment/"
+  ],
+  "cross_source_count": 2,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "최전선 모델 훈련 환경 보안",
+  "summary": "OpenAI가 최전선 모델 훈련·평가 환경의 격리를 강화했다. 오프라인 환경과 고성능 레드팀 테스트를 도입했다.",
+  "why": "오프라인 환경과 고성능 레드팀 테스트 도입으로 훈련 데이터 유출 위험이 줄어든다. 자체 모델 훈련 시 오프라인 격리 구성을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "How to Integrate Deep Research into Your AI Agent",
+  "url": "https://dev.to/valyuai/how-to-integrate-deep-research-into-your-ai-agent-2n82",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 7,
+  "comments": 2,
+  "published_at": 1792772429.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/valyuai/how-to-integrate-deep-research-into-your-ai-agent-2n82"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmivgd6tovehenuh8v69q.webp",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트에 심층 연구 통합하기",
+  "summary": "이 튜토리얼은 Vercel AI SDK와 TypeScript를 사용해 두 개의 백엔드 도구(연구 작업 시작, 상태·결과 조회)를 노출하고, Valyu DeepResearch를 통해 연구 요청을 제출·결과를 인용된 보고서 형태로 받아오는 방법을 보여준다. 예시로 지원 티켓 검색에 PostgreSQL과 Elasticsearch 중 어느 것을 선택할지 결정하는 실제 엔지니어링 의사결정을 다룬다. 연구 도구는 에이전트가 예산을 초과하거나 중복 조사 없이 지정된 연구만 수행하도록 제한한다.",
+  "why": "에이전트가 예산 초과나 중복 조사를 막고 지정된 연구만 수행하도록 제한할 수 있다. PostgreSQL과 Elasticsearch 선택처럼 문서 비교가 필요한 의사결정 시 인용된 보고서를 얻는다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "UUIDv7 doesn't have the properties you think it does",
+  "url": "https://alexsci.com/blog/uuidv7-is-weird/",
+  "source": "hackernews",
+  "upvotes": 94,
+  "comments": 80,
+  "published_at": 1792773585,
+  "discussion": "https://news.ycombinator.com/item?id=50211746",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://alexsci.com/blog/uuidv7-is-weird/"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "UUIDv7은 생각한 속성을 갖고 있지 않다",
+  "summary": "UUIDv7은 단순히 고유성을 보장할 뿐, 단조 증가, 정확한 생성 시각, 추측 불가성을 엄격히 제공하지 않는다. RFC 9562는 구현이 타임스탬프 값을 임의로 조정하도록 허용한다. 따라서 타임스탬프를 신뢰해 별도 컬럼 없이 생성 시점을 추적하는 것은 위험할 수 있다.",
+  "why": "UUIDv7의 타임스탬프는 실제 생성 시각과 크게 다를 수 있다. 따라서 별도 컬럼 없이 ID만으로 생성 시점을 추적하는 설계는 위험하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+  "url": "https://edjefferson.com/localwiki/",
+  "source": "hackernews",
+  "upvotes": 1171,
+  "comments": 223,
+  "published_at": 1792710078,
+  "discussion": "https://news.ycombinator.com/item?id=50202285",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://edjefferson.com/localwiki/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://edjefferson.com/localwiki/share.png",
+  "link_status": "ok",
+  "ko_title": "Local Wikipedia: 반시간 도보 거리 내의 위키피디아",
+  "summary": "Local Wikipedia는 위키피디아의 지오코딩된 페이지 중 사용자의 현재 위치에서 반시간 도보 거리(약 6마일) 이내에 있는 항목만을 보여준다. 근처에 25개 미만이면 가장 가까운 25개를, 500개를 초과하면 가장 가까운 500개만 표시한다. 위치 정보는 브라우저에만 저장되며 공유 링크에는 포함되지 않는다. 이 서비스는 위키피디아와 공식적인 제휴가 없다.",
+  "why": "위키데이터 기반 지오코딩 파이프라인을 직접 구축할 때 참고할 수 있는 필터링 로직이다. 반경 내 항목이 25개 미만이면 6마일 이내로 범위를 넓히는 방식이 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
+  "title": "Today, we hacked what we'd set out to hack: the iPhone",
+  "url": "https://blog.calif.io/p/iphone",
+  "source": "hackernews",
+  "upvotes": 678,
+  "comments": 450,
+  "published_at": 1792772510,
+  "discussion": "https://news.ycombinator.com/item?id=50211474",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.calif.io/p/iphone"
+  ],
+  "cross_source_count": 1,
+  "score": 32,
+  "image": "https://substackcdn.com/image/youtube/w_728,c_limit/_GJVKVNMczM",
+  "link_status": "ok",
+  "ko_title": "오늘 우리는 목표로 했던 해킹을 성공했다: iPhone",
+  "summary": "Hexacon 파리에서 일련의 데모를 공개했다. Signal 1-click 기능 시연이 포함됐다. iMessage 사용 현황과 iPhone 가능성을 언급했다. APT가 Apple Persistent Threat의 약자임을 밝혔다.",
+  "why": "iMessage가 기본 메신저로 자리 잡은 환경에서 제3자 앱 의존도를 낮추는 공격 벡터가 확인됐다. iPhone 기반 통신 보안 체계를 점검할 때 이 시나리오를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-10-24T08:00:03.055271+09:00",
+  "batch_label": "10월 24일 08:00"
+ },
+ {
   "title": "Renhuai123 / ziwei-doushu",
   "url": "https://github.com/Renhuai123/ziwei-doushu",
   "source": "github",
