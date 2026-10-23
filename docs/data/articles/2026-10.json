@@ -1,5 +1,460 @@
 [
  {
+  "title": "Renhuai123 / ziwei-doushu",
+  "url": "https://github.com/Renhuai123/ziwei-doushu",
+  "source": "github",
+  "upvotes": 544,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Renhuai123/ziwei-doushu"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 544,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/Renhuai123/ziwei-doushu",
+  "link_status": null,
+  "ko_title": "Renhuai123 / ziwei-doushu — 자미도수 오픈소스 배판 엔진",
+  "summary": "2026-10-15에 v4.0 해석 데이터셋이 공개돼 674,976개의 명판에 대해 13차원, 총 8,774,688개의 해석 구절을 제공한다. 데이터셋은 압축 해제 시 56.6 GB 규모이며 1950-2026년 실제 날짜를 포함한다. 온라인 데모 사이트에서 배판과 AI 해석을 바로 체험할 수 있다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Agents should never hold your API keys. NVIDIA just open-sourced the runtime that enforces it",
+  "url": "https://dev.to/slabb/agents-should-never-hold-your-api-keys-nvidia-just-open-sourced-the-runtime-that-enforces-it-3jm4",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 5,
+  "published_at": 1792753526.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/slabb/agents-should-never-hold-your-api-keys-nvidia-just-open-sourced-the-runtime-that-enforces-it-3jm4"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6p1gvrjxxl48z65if7if.png",
+  "link_status": "ok",
+  "ko_title": "에이전트가 API 키를 절대 보관하면 안 된다 — NVIDIA가 실행 환경을 오픈소스로 공개",
+  "summary": "NVIDIA가 GitHub에 OpenShell을 공개했다. 이 런타임은 에이전트 플릿을 커널 수준 샌드박스에서 실행해 실제 자격 증명을 노출하지 않는다. 정책 변경은 Z3 SMT 프로버로 검증 후 인간이 승인한다. 기본 샌드박스는 에이전트 없이 제공되며, OpenCode와 OpenRouter 모델을 이용해 무료로 체험할 수 있다.",
+  "why": "지금까지 에이전트 환경 변수에 API 키를 노출하던 방식은 더 이상 안전하지 않다. 커널 수준 샌드박스로 자격 증명 접근을 차단하는 구조로 전환해야 한다. 무료 체험 환경이 제공되므로 기존 에이전트 플릿의 보안 격리 여부를 즉시 점검할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "How to Use Jira with AI Agents for Free in 2026",
+  "url": "https://dev.to/therealmrmumba/how-to-use-jira-with-ai-agents-for-free-in-2026-52a5",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 16,
+  "comments": 1,
+  "published_at": 1792743484.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/therealmrmumba/how-to-use-jira-with-ai-agents-for-free-in-2026-52a5"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsvxztw7ebovh8h5gb8us.png",
+  "link_status": "ok",
+  "ko_title": "Jira와 AI 에이전트를 무료로 사용하는 방법 (2026)",
+  "summary": "Atlassian의 Rovo AI 기능을 사용하지 않고도 자체 코딩 에이전트를 Jira와 연동할 수 있는 방법을 소개한다. Sharkly를 이용해 Jira 이슈를 에이전트 실행 도구와 연결하고, 기존 구독이나 API 계정으로 Claude Code·Codex 같은 에이전트를 활용한다. 가이드에서는 설정 절차와 실제 워크플로, “무료”가 의미하는 범위를 설명한다.",
+  "why": "Jira 이슈를 직접 코딩 에이전트에 할당해 실행 결과를 추적하는 워크플로가 가능해진다. Atlassian의 Rovo 크레딧 없이 기존 Claude Code나 Codex 계정으로 연동할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Does Your Model Run on AWS Trainium? Look It Up",
+  "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792713600.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/torch-neuronx-model-support"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://huggingface.co/blog/assets/torch-neuronx-model-support/thumbnail.jpg",
+  "link_status": "ok",
+  "ko_title": "모델이 AWS Trainium에서 실행되나요? 확인해 보세요",
+  "summary": "TorchNeuron( torch-neuronx) 백엔드를 이용해 Hub의 다양한 Transformers 모델이 Trainium에서 그대로 실행 가능한지 확인할 수 있는 Hugging Face Space를 공개했다. 선택, 트렌딩, 다운로드 순위별로 모델을 검색하면 실행 결과, 사용 코어 수, 실행 시간·메모리 등 상세 정보를 제공한다. 현재 텍스트-생성·이미지-텍스트-투-텍스트 모델만 지원하며, 향후 diffusers·sentence-transformers 등으로 확대할 계획이다.",
+  "why": "Trainium2 인스턴스에서 Transformers 모델을 실행할 때 수정 없이 돌아가는지 이 Space에서 바로 검증할 수 있다. 현재는 텍스트 생성과 이미지-텍스트-투-텍스트 모델만 지원되므로 다른 작업은 아직 확인 대상이 아니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "hardware",
+   "science"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Phone Is About to Stop Being Yours: 70 Days Until Lockdown",
+  "url": "https://keepandroidopen.org/?",
+  "source": "hackernews",
+  "upvotes": 373,
+  "comments": 213,
+  "published_at": 1792761582,
+  "discussion": "https://news.ycombinator.com/item?id=50208558",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://keepandroidopen.org/?"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "휴대폰이 곧 당신의 것이 아니게 된다: 70일 후 잠금 시작",
+  "summary": "2027년부터 구글이 비동의 업데이트를 통해 구글에 등록·계약·요금·신분증 제출을 하지 않은 모든 안드로이드 앱을 전 세계 기기에서 차단한다. 이는 개인·오픈소스·취미 개발자까지 포함해 모든 앱에 적용된다. 등록을 하지 않으면 앱이 자동으로 차단돼 사용자가 설치·실행할 수 없게 된다.",
+  "why": "2027년부터 구글 등록을 마친 앱만 설치 가능해진다. 오픈소스나 사내 배포 앱도 예외 없이 차단된다. 신분증 제출과 서명 키 공개가 필수 조건이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Investor-owned utilities charge 23% more for electricity than public providers",
+  "url": "https://www.kadoa.com/energy-prices/insights/investor-owned-utilities",
+  "source": "hackernews",
+  "upvotes": 285,
+  "comments": 191,
+  "published_at": 1792762870,
+  "discussion": "https://news.ycombinator.com/item?id=50208837",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.kadoa.com/energy-prices/insights/investor-owned-utilities"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://kadoa-datasets.b-cdn.net/energy-prices/data/2026-10-23T14-44-17-2dd4c928/og-investor-owned-utilities.png",
+  "link_status": "ok",
+  "ko_title": "투자자 소유 전력회사가 공공 전력회사보다 전기 요금을 23% 더 높게 부과",
+  "summary": "2025년 미국 가구당 전기 요금은 투자자 소유 전력회사에서 kWh당 17.8센트, 공공 전력회사에서 14.5센트, 협동조합에서 14.1센트이다. 2020년 이후 투자자 소유 전력회사의 요금은 34% 상승했으며, 공공 전력회사는 19% 상승했다. 데이터는 각 주별 가격 변동과 2020-2025년 평균 가구당 요금 변화를 gzipped CSV 파일로 제공한다.",
+  "why": "미국 전력 요금 데이터는 백엔드 개발 업무와 직접적인 관련이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "basketikun / infinite-canvas",
+  "url": "https://github.com/basketikun/infinite-canvas",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 615,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/basketikun/infinite-canvas"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 615,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/basketikun/infinite-canvas",
+  "link_status": null,
+  "ko_title": "무한 캔버스 (infinite-canvas)",
+  "summary": "이 GitHub 저장소는 Vite와 React Router 기반의 무한 스크롤 캔버스 웹 애플리케이션을 제공한다. 빠른 시작 가이드와 기능 소개, Render 및 Docker 배포 방법을 문서화하고 있다. MIT 라이선스로 배포되며 최신 버전 태그가 표시된다.",
+  "why": "Vite와 React Router 기반이라 기존 스택에 바로 통합할 수 있다. Render나 Docker 배포 문서를 참고해 즉시 운영 환경에 올릴 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Swedish government offices to ban ChatGPT and Claude",
+  "url": "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
+  "source": "hackernews",
+  "upvotes": 227,
+  "comments": 86,
+  "published_at": 1792755594,
+  "discussion": "https://news.ycombinator.com/item?id=50207405",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://static-cdn.sr.se/images/83/4f267bc3-0129-4628-bd75-1e593f208dfc.jpg",
+  "link_status": "ok",
+  "ko_title": "스웨덴 정부 기관, ChatGPT와 Claude 사용 금지",
+  "summary": "스웨덴 정부청은 직원용 컴퓨터에서 ChatGPT와 Claude 접근을 차단하고, 마이크로소프트 Copilot 등 승인된 AI 도구만 사용하도록 정책을 시행한다. 동시에 Copilot의 보안 수준을 강화했으며, 세무청·국립기관관리청·채무추심청 등 다른 기관에서도 유사한 차단 조치를 도입하고 있다.",
+  "why": "공공기관에서 승인된 도구만 허용하는 정책이 확산되고 있다. 비승인 AI 서비스 사용 시 정보 보안 리스크가 내부 감사에서 확인되었다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "The End of an Era: Akhouri Systems Is Officially Retiring ACALCU and ANOTE (And Why a Solo Founder Had to Do It)",
+  "url": "https://dev.to/akhourianmolkumar/the-end-of-an-era-akhouri-systems-is-officially-retiring-acalcu-and-anote-and-why-a-solo-founder-2b1p",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 22,
+  "comments": 31,
+  "published_at": 1792738998.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/the-end-of-an-era-akhouri-systems-is-officially-retiring-acalcu-and-anote-and-why-a-solo-founder-2b1p"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9lvjt9yw9bz1pggwurl4.png",
+  "link_status": "ok",
+  "ko_title": "시대의 종말: Akhouri Systems, ACALCU와 ANOTE 공식 종료",
+  "summary": "Akhouri Systems가 단독 창업자에 의해 ACALCU와 ANOTE 두 제품의 업데이트와 유지보수를 중단하고 공식적으로 종료한다. 두 제품은 각각 맞춤형 과학 계산기와 프리미엄 텍스트 편집기로, 이제 새로운 프로젝트 ASNIPP가 2026년 10월 24일 출시될 예정이다.",
+  "why": "ACALCU와 ANOTE의 업데이트와 유지보수가 중단되므로 이 도구들을 의존하는 워크플로에서 대안을 찾아야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Building Digital Trust Into AI and Blockchain Architecture",
+  "url": "https://dev.to/aonica_/building-digital-trust-into-ai-and-blockchain-architecture-pop",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 29,
+  "comments": 1,
+  "published_at": 1792765831.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aonica_/building-digital-trust-into-ai-and-blockchain-architecture-pop"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Foepyaykaxeeykt5aocvm.png",
+  "link_status": "ok",
+  "ko_title": "AI와 블록체인 아키텍처에 디지털 신뢰 구축",
+  "summary": "AI가 인프라에 깊게 통합되면서 출력 검증·자동화 권한·운영 감시가 필요해졌다. 저자는 디지털 신뢰를 설계 문제로 보고, 분석 결과와 실행 권한을 분리하는 원칙과 블록체인을 검증 레이어로 활용하는 방안을 제시한다.",
+  "why": "AI 분석 결과와 실행 권한을 분리하는 구조가 핵심이다. 모델 출력의 불확실성을 차단해 자동화 사고를 줄인다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+  "url": "https://openai.com/index/uber-chatgpt-work-rollout",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792627200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/uber-chatgpt-work-rollout"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Uber, OpenAI와 함께 ChatGPT Work를 전 직원에게 제공",
+  "summary": "Uber는 3만 명 이상의 직원에게 ChatGPT Work를 확대 적용한다. 이 서비스는 팀이 조사, 데이터 분석, 프레젠테이션 제작 및 복잡한 워크플로를 수행하도록 돕는다. 내부 생산성 향상을 목표로 한 대규모 AI 도구 배포다.",
+  "why": "ChatGPT Work가 데이터 분석과 복잡한 워크플로 처리를 지원한다. 백엔드 개발자가 수동으로 처리하던 데이터 정제나 보고서 작성 단계를 이 도구로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "jbiaojerry / ebook-treasure-chest",
+  "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 587,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/jbiaojerry/ebook-treasure-chest"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 587,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/jbiaojerry/ebook-treasure-chest",
+  "link_status": null,
+  "ko_title": "ebook-treasure-chest — 전자책 다운로드 보물창고",
+  "summary": "GitHub에 공개된 전자책 다운로드 링크 모음 저장소다. 실시간 검색이 가능한 GitHub Pages 페이지를 제공해 책 제목·저자·분류로 빠르게 찾을 수 있다. epub·mobi·azw3 형식의 파일을 포함해 문학·역사·기술 등 다양한 분야를 다룬다.",
+  "why": "기술 분야 책이 포함되어 있어 백엔드와 AI 학습 자료를 빠르게 찾을 수 있다. epub, mobi, azw3 형식을 지원해 다양한 리더기에서 바로 열람할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Day 21 of Building Crowdwide — Finally, Time to Polish the UI! 🎉",
+  "url": "https://dev.to/puneetkumar2010/day-21-of-building-crowdwide-finally-time-to-polish-the-ui-1696",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 14,
+  "comments": 14,
+  "published_at": 1792756450.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-21-of-building-crowdwide-finally-time-to-polish-the-ui-1696"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa27vtues66e61e0oigon.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 21일 차 — UI 다듬을 시간",
+  "summary": "Crowdwide가 핵심 기능과 알고리즘을 마무리하고 UI를 개선했다. 배경 색상, 테마 적응성, 사이드바 레이아웃 등을 수정해 가독성과 디자인 일관성을 높였다. 현재 서비스는 안정적인 상태이며 추가 업데이트와 사용자 피드백을 반영할 예정이다.",
+  "why": "Crowdwide는 소규모 개발자 커뮤니티를 위한 소셜 플랫폼으로, 현재는 UI 다듬기 단계에 있다. 백엔드나 AI 개발과 직접적인 연관성이 없어 실무 적용 대상이 아니다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
+  "title": "Dutch government had hacked into Jared Kushner's phone",
+  "url": "https://twitter.com/jaredkushner/status/2113376217415958767",
+  "source": "hackernews",
+  "upvotes": 236,
+  "comments": 154,
+  "published_at": 1792752092,
+  "discussion": "https://news.ycombinator.com/item?id=50206914",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/jaredkushner/status/2113376217415958767"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "네덜란드 정부, 재러드 쿠시너의 전화 해킹",
+  "summary": "",
+  "why": "백엔드·AI 개발 업무와 직접적인 관련이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-10-24T00:00:01.674768+09:00",
+  "batch_label": "10월 24일 00:00"
+ },
+ {
   "title": "EthanArbuckle / fairplay-decrypt",
   "url": "https://github.com/EthanArbuckle/fairplay-decrypt",
   "source": "github",

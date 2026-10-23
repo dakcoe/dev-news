@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-14T00:00:31+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.bloomberg.com/news/features/2026-10-13/cftc-staff-told-to-retract-analysis-of-suspicious-oil-trades-on-iran",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35302",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35301",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35300",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35299",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35298",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-14T08:00:30+09:00",
    "total": 20,
    "counts": {
@@ -1081,6 +1040,28 @@
     },
     {
      "url": "https://openai.com/index/decisions-api",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-24T00:00:24+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 10,
+    "robots": 1,
+    "blocked": 1,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://twitter.com/jaredkushner/status/2113376217415958767",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://openai.com/index/uber-chatgpt-work-rollout",
      "source": "rss",
      "reason": "blocked"
     }
