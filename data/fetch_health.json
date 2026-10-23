@@ -1,58 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-13T16:00:35+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 12,
-    "blocked": 7,
-    "empty": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.patreon.com/vihart/posts/vi-harts-big-171939430",
-     "source": "lobsters",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://doi.org/10.1111/acel.70751",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35285",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35284",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35280",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35279",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35278",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://arxiv.org/pdf/cs/0701155",
-     "source": "lobsters",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-10-14T00:00:31+09:00",
    "total": 22,
    "counts": {
@@ -1110,6 +1058,33 @@
     "github": 3
    },
    "failures": []
+  },
+  {
+   "at": "2026-10-23T16:00:35+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 10,
+    "short": 1,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50193416",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/decisions-api",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
