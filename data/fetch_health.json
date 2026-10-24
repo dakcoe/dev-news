@@ -1,48 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-15T08:00:31+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "unavailable": 1,
-    "blocked": 5,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
-     "source": "lobsters",
-     "reason": "unavailable"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35370",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35369",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35368",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35367",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35366",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-15T16:00:53+09:00",
    "total": 22,
    "counts": {
@@ -1015,6 +973,22 @@
    "failures": [
     {
      "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+     "source": "hackernews",
+     "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-25T08:00:39+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 9,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://blog.roku.com/developer/gitlab-move",
      "source": "hackernews",
      "reason": "short"
     }

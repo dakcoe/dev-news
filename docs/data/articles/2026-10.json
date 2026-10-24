@@ -1,5 +1,395 @@
 [
  {
+  "title": "yeqv111 / mccarbon",
+  "url": "https://github.com/yeqv111/mccarbon",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 591,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/yeqv111/mccarbon"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 591,
+  "score": 73,
+  "image": "https://opengraph.githubassets.com/1/yeqv111/mccarbon",
+  "link_status": null,
+  "ko_title": "맥도날드 탄소장부",
+  "summary": "mccarbon은 맥도날드 공식 MCP API를 이용해 사용자의 연간 주문 데이터를 가져와 식품·포장·배달 3단계 탄소 모델로 개인 탄소 발자국을 계산한다. 결과는 외부 라이브러리 없이 단일 HTML 파일로 생성되며, 고기 종류 교체·포장 감소·배달 방식 변경 등으로 절감량을 시뮬레이션한다. Python 3.9 이상만 필요하고 표준 라이브러리만 사용한다.",
+  "why": "맥도날드 공식 MCP API를 통해 개인 주문 데이터를 탄소 발자국 계산에 활용하는 사례다. 단일 HTML 파일로 결과를 내보내는 방식은 외부 의존성 없이 공유가 쉽다. Python 표준 라이브러리만으로 동작하므로 별도 설치 과정 없이 바로 실행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "From Ancient Epigraphy to 3D Proteins: Building Plugins, Skills & MCP Sidecars in Google Antigravity",
+  "url": "https://dev.to/gde/from-ancient-epigraphy-to-3d-proteins-building-plugins-skills-mcp-sidecars-in-google-antigravity-4l1m",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 4,
+  "published_at": 1792868218.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/from-ancient-epigraphy-to-3d-proteins-building-plugins-skills-mcp-sidecars-in-google-antigravity-4l1m"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FRobinaMirbahar%2Fantigravity-science-plugin-cookbook%2Fmain%2Fassets%2Fdevto_cover_banner.jpg",
+  "link_status": "ok",
+  "ko_title": "고대 비문부터 3D 단백질까지: Google Antigravity에서 플러그인·스킬·MCP 사이드카 구축",
+  "summary": "Google Antigravity Science Plugin(v1.3.1)을 역공학해 오픈소스 쿠킹북과 브라우저 기반 3D 바이오분자·변이 WebGL 스튜디오를 제공한다. 플러그인은 AlphaGenome 변이 점수, AlphaFold 3D 구조 매핑, ChEMBL 소분자 스크리닝 등을 지원한다. 사용자는 TP53·Crambin·EGFR 등 구조를 탐색하고, 자체 pdb/cif 파일을 업로드하거나 라틴 비문 복원 데모를 실행할 수 있다. 전체 소스는 GitHub에 공개돼 있다.",
+  "why": "Antigravity의 플러그인 아키텍처는 단일 프롬프트에 API를 몰아넣을 때 발생하는 컨텍스트 부하 문제를 해결한다. 백엔드 개발자는 이 구조를 참고해 AI 에이전트의 도구 호출과 자격 증명 관리를 설계할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "backend-data",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "ludovic111 / horizon",
+  "url": "https://github.com/ludovic111/horizon",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 693,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ludovic111/horizon"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 693,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/ludovic111/horizon",
+  "link_status": null,
+  "ko_title": "Horizon — Rust로 다시 만든 마인크래프트 Java 26.3",
+  "summary": "Horizon은 마인크래프트 Java Edition 26.3을 Rust로 구현한 오픈소스 프로젝트다. 동일한 월드와 규칙, 지형을 재현하며 281개의 차등 테스트로 원본과 일치함을 검증한다. 자체 런처를 통해 사용자가 보유한 정품 파일을 이용해 실행한다.",
+  "why": "Rust 기반 네이티브 클라이언트로 기존 자바 런타임 의존 없이 실행된다. 동일한 월드 파일과 규칙을 지원하므로 기존 환경과 호환된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "The Goose Programming Language",
+  "url": "https://aardappel.github.io/goose/",
+  "source": "hackernews",
+  "upvotes": 153,
+  "comments": 123,
+  "published_at": 1792868815,
+  "discussion": "https://news.ycombinator.com/item?id=50224100",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://aardappel.github.io/goose/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Goose 프로그래밍 언어",
+  "summary": "메모리 안전 시스템 언어인 Goose는 힙 할당자, 가비지 컬렉터, 수명 주석이 없으며, 벤치마크에서 C++와 Rust보다 빠르고 메모리 사용량이 적다. 동적 값은 컴파일러가 관리하는 데이터 스택에 인라인으로 저장되고, 스코프 종료 시 자동으로 해제된다. 타입과 수명 규칙이 메모리 모델을 안전하게 만든다.",
+  "why": "힙 할당자와 가비지 컬렉터가 없어 수명 주석 없이 메모리 안전을 확보한다. C++와 Rust 대비 벤치마크에서 더 빠르고 메모리 사용량이 적다. 내장 데이터가 인라인으로 저장되어 포인터 추적을 위한 추가 비용이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "Bookmark It! STOP Shipping Broken Vibe Code: 10 Checks That Save Your App at 2 AM",
+  "url": "https://dev.to/flisk/bookmark-it-stop-shipping-broken-vibe-code-10-checks-that-save-your-app-at-2-am-2ei6",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1792882658.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/flisk/bookmark-it-stop-shipping-broken-vibe-code-10-checks-that-save-your-app-at-2-am-2ei6"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0zvd8olcr6mw326b7583.png",
+  "link_status": "ok",
+  "ko_title": "Bookmark It! STOP Shipping Broken Vibe Code: 10 Checks That Save Your App at 2 AM",
+  "summary": "Vibe 프레임워크로 만든 앱이 다른 환경에서 깨지는 문제를 방지하기 위한 10가지 체크리스트를 제시한다. 클론 후 빈 폴더에서 실행, CI 설치 명령 사용, 비밀키 환경 변수화, 모든 호출에 타임아웃 설정, 입력값 변형 테스트, 데이터베이스 선시작, 마이그레이션 단일 실행, 정확한 헬스 체크 등 구체적인 방안을 설명한다.",
+  "why": "에이전트가 작성한 코드는 정상 경로만 처리하므로 비정상 입력과 재시작 시 상태 유실 위험이 있다. 배포 전 클론 후 실행과 타임아웃 설정 등 10가지 항목을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "I turned my portfolio into a playground (plug a theme into a display to open it)",
+  "url": "https://dev.to/m_ahmad/i-turned-my-portfolio-into-a-playground-plug-a-theme-into-a-display-to-open-it-1p6",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 20,
+  "comments": 2,
+  "published_at": 1792859428.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/m_ahmad/i-turned-my-portfolio-into-a-playground-plug-a-theme-into-a-display-to-open-it-1p6"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FMA-Ahmad%2FmyPortfolio%2Fmain%2F.github%2Fscreenshots%2Ftheme-studio.png",
+  "link_status": "ok",
+  "ko_title": "포트폴리오를 놀이터로 바꾸다",
+  "summary": "개인 포트폴리오에 세 가지 테마(클래식, 터미널, 노트북)를 적용하고, 테마를 화면에 끌어다 연결해 전환할 수 있는 Theme Studio 놀이터를 추가했다. Next.js 16·React 19·Tailwind CSS·Framer Motion·Prisma·PostgreSQL·Cloudflare Workers 기반이며, 실시간 커서와 AI 연동 기능을 포함한다.",
+  "why": "드래그 앤 드롭 인터랙션 구현 시 Framer Motion과 커스텀 로직을 결합하는 참고 코드를 제공한다. MIT 라이선스라 포트폴리오나 데모 페이지에 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "SlothOps: A Local AI Caretaker for Your Codebase",
+  "url": "https://dev.to/extinctsion/slothops-a-local-ai-caretaker-for-your-codebase-4nh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1792863172.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/extinctsion/slothops-a-local-ai-caretaker-for-your-codebase-4nh"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8lbwec4l14oa5v05xew1.png",
+  "link_status": "ok",
+  "ko_title": "SlothOps: 코드베이스를 위한 로컬 AI 관리 도우미",
+  "summary": "SlothOps는 로컬에서 동작하는 개발자 도구로, TODO·FIXME 주석 탐색, Git 상태·커밋 기록 확인, 사용자 지정 테스트 실행 결과 요약 등을 자동으로 수행해 프로젝트 건강 보고서를 생성한다. Ollama 기반 로컬 언어 모델과 Python 스캐너, Next.js 대시보드로 구현되며, 초기 버전은 읽기 전용이며 결과와 제안만 제공한다.",
+  "why": "로컬에서 동작하므로 코드베이스를 외부로 전송하지 않고도 유지보수 현황을 점검할 수 있다. 초기 버전은 읽기 전용이라 코드 변경 없이 진단 결과만 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "Mundo puts a simulator inside the world model. Here’s what to inspect.",
+  "url": "https://dev.to/panditshivam/mundo-puts-a-simulator-inside-the-world-model-heres-what-to-inspect-3lbe",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1792859209.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/panditshivam/mundo-puts-a-simulator-inside-the-world-model-heres-what-to-inspect-3lbe"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fs3augylmuvy1c34dhsy2.png",
+  "link_status": "ok",
+  "ko_title": "Mundo가 세계 모델 안에 시뮬레이터를 넣다 — 무엇을 검사할까",
+  "summary": "Mundo는 장면을 명시적으로 표현하고 물리 시뮬레이션을 수행한 뒤 비디오 모델로 렌더링하는 프로젝트다. MuJoCo 3.17.0을 이용해 질량이 다른 두 큐브가 동일한 힘을 받으며 다른 궤적을 보이는 예시를 제공한다. 중간 표현을 통해 기하, 행동, 외관을 연결하고, 시뮬레이션 결과와 렌더링을 별도로 검증할 수 있다.",
+  "why": "시뮬레이션 상태와 렌더링 결과를 분리해 검증할 수 있다. 물리 법칙 위반 여부를 픽셀이 아닌 중간 표현으로 먼저 검사한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "Danish Government silently drops plan to dump MS Office",
+  "url": "https://www.computerworld.dk/art/297226/digitaliseringsministeriet-har-i-al-stilhed-droppet-stort-anlagt-forsoeg-med-open-source-alternativ-til-microsoft",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 127,
+  "published_at": 1792866708,
+  "discussion": "https://news.ycombinator.com/item?id=50223844",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.computerworld.dk/art/297226/digitaliseringsministeriet-har-i-al-stilhed-droppet-stort-anlagt-forsoeg-med-open-source-alternativ-til-microsoft"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://www.computerworld.dk/fil/223423?width=1200&height=630&focus=1",
+  "link_status": "ok",
+  "ko_title": "덴마크 정부, MS Office 대체 오픈소스 파일럿 프로젝트 조용히 중단",
+  "summary": "덴마크 디지털화부가 오픈소스 오피스 대안인 Collabora 파일럿을 중단했다. 프로젝트는 2025년 여름에 시작돼 약 40명의 직원이 테스트했으며, cBrain이 제공했다. 중단 이유는 기사에 명시되지 않았다.",
+  "why": "오픈소스 오피스 도입 시 벤더의 지속 지원과 정부 정책의 변동성을 점검해야 한다. 파일럿 단계에서 조용히 중단된 사례는 장기 운영 계획 수립 시 참고할 위험 신호다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "Show HN: Steal My Bitcoin",
+  "url": "https://stealmybitcoin.com/",
+  "source": "hackernews",
+  "upvotes": 289,
+  "comments": 141,
+  "published_at": 1792873831,
+  "discussion": "https://news.ycombinator.com/item?id=50224916",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://stealmybitcoin.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: 비트코인 훔치기",
+  "summary": "서버에 약 $500 상당의 비트코인 키가 숨겨져 있다. 해당 키는 print-flag 바이너리를 통해 PHP 사용자 계정에서 접근 가능하다. 사용된 PHP 버전은 PHP2SHELL 취약점이 발표되기 전 버전이다.",
+  "why": "PHP2SHELL 취약점 공개 전 버전에서 print-flag 바이너리를 통한 접근이 가능하다. 이 환경은 해당 취약점의 실제 동작 방식을 검증하는 데 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "No signs of AI payoff outside the tech sector",
+  "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+  "source": "hackernews",
+  "upvotes": 404,
+  "comments": 374,
+  "published_at": 1792871239,
+  "discussion": "https://news.ycombinator.com/item?id=50224463",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector"
+  ],
+  "cross_source_count": 1,
+  "score": 33,
+  "image": "https://www.apollo.com/content/dam/apolloaem/apollo-default-page-share-image/apollo-og-image.png",
+  "link_status": "ok",
+  "ko_title": "AI가 기술 부문 밖에서 수익을 내고 있다는 징후는 없다",
+  "summary": "기업 미국 전반에 걸쳐 AI 투자에도 불구하고 매출·이익이 증가하지 않았다. 주요 7대 기술 기업은 직원당 매출·마진이 상승하지만, S&P 493 기업은 정체 상태다. 토큰·에이전트 AI 사용이 제한적이라 전체 경제에 미치는 효과도 미미하다.",
+  "why": "토큰 지출이 성장 동력이 아닌 비용 항목으로 인식되며 예산이 줄어드는 추세다. 에이전트 AI 활용이 제한적이라 거시경제 효과는 미미하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
+  "title": "Roku developer repositories moved from GitHub to GitLab",
+  "url": "https://blog.roku.com/developer/gitlab-move",
+  "source": "hackernews",
+  "upvotes": 227,
+  "comments": 154,
+  "published_at": 1792857986,
+  "discussion": "https://news.ycombinator.com/item?id=50222622",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.roku.com/developer/gitlab-move"
+  ],
+  "cross_source_count": 1,
+  "score": 21,
+  "image": "https://www.roku.com/assets/roku-logo-purple.png",
+  "link_status": "ok",
+  "ko_title": "Roku 개발자 저장소가 GitHub에서 GitLab으로 이전",
+  "summary": "",
+  "why": "기존에 GitHub에서 Roku 저장소를 참조하던 스크립트나 워크플로우를 수정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-25T08:00:03.251856+09:00",
+  "batch_label": "10월 25일 08:00"
+ },
+ {
   "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
   "url": "https://github.com/Zagitta/gpu-unlock",
   "source": "hackernews",
