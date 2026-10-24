@@ -1,5 +1,451 @@
 [
  {
+  "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
+  "url": "https://github.com/Zagitta/gpu-unlock",
+  "source": "hackernews",
+  "upvotes": 20,
+  "comments": 11,
+  "published_at": 1792835907,
+  "discussion": "https://news.ycombinator.com/item?id=50219700",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/Zagitta/gpu-unlock"
+  ],
+  "cross_source_count": 2,
+  "score": 75,
+  "image": "https://opengraph.githubassets.com/1/Zagitta/gpu-unlock",
+  "link_status": null,
+  "ko_title": "GPU-unlock: Nvidia 3000 시리즈 카드의 FP/BF16 명령 발행률 향상",
+  "summary": "이 Linux 커널 모듈은 Nvidia 3000 시리즈 GPU에서 FP/BF16 명령 발행률을 전문 카드 수준으로 높인다. 기존 드라이버와 별도로 동작해 매번 패치를 할 필요가 없으며, GA102-GA106 GPU에서 FP/BF16 FMA의 발행 속도를 두 배로 증가시킨다. 설치는 소스 클론 후 make install 및 커널 부팅 옵션 추가만으로 가능하다.",
+  "why": "GA102부터 GA106 칩셋을 쓰는 3000 시리즈 카드를 쓰는 경우, FP16과 BF16 연산 속도가 두 배로 빨라진다. 기존처럼 드라이버 업데이트마다 패치를 다시 적용할 필요가 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Black October hit PHP, npm and PyPI. So I built a system that catches it in my app before I ship, with the fix ready",
+  "url": "https://dev.to/nirajkhetre/black-october-hit-php-npm-and-pypi-so-i-built-a-system-that-catches-it-in-my-app-before-i-ship-5gff",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": 1792833051.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nirajkhetre/black-october-hit-php-npm-and-pypi-so-i-built-a-system-that-catches-it-in-my-app-before-i-ship-5gff"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0j9kldxg0ww14ttkoft9.png",
+  "link_status": "ok",
+  "ko_title": "Black October이 PHP·npm·PyPI에 영향을 미쳤다 — 출시 전 앱에서 이를 감지하고 바로 수정하는 시스템 구축",
+  "summary": "이번 달 “Black October”이라 불리는 기간에 npm, PyPI, PHP에 악성코드가 포함된 배포가 연속적으로 발생했다. 특히 npm에 400개 이상의 패키지를 감염시킨 ChainDrop 웜이 파일을 남겨 재감염을 유발한다. 이를 방지하기 위해 저자는 프로젝트에 포함된 모든 패키지·스킬·서버·후크를 AST·REA 분석으로 검증하고, 결과를 한눈에 확인할 수 있는 로컬 도구 “slowship”을 만들었다.",
+  "why": "ChainDrop 웜이 .claude/settings.json과 .vscode/tasks.json 파일을 남기므로, 해당 프로젝트 폴더를 열 때마다 재감염이 발생할 수 있다. 로컬에서 코드를 실행하지 않고 AST와 REA로만 검증하는 slowship 도구를 활용해, 에이전트 스킬과 MCP 서버의 실제 동작을 사전에 점검할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Elon Musk Just Gave Europe a Reason to Replace American Technology",
+  "url": "https://steveblank.com/2026/10/24/europe-gets-a-wake-up-call/",
+  "source": "hackernews",
+  "upvotes": 258,
+  "comments": 254,
+  "published_at": 1792847368,
+  "discussion": "https://news.ycombinator.com/item?id=50220913",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://steveblank.com/2026/10/24/europe-gets-a-wake-up-call/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvczAud3AuY29tXC9pXC9ibGFuay5qcGciLCJ0eHQiOiJTdGV2ZSBCbGFuayIsInRlbXBsYXRlIjoiaGlnaHdheSIsImZvbnQiOiIiLCJibG9nX2lkIjo2NTk5NTg5fQ.-efmxdtN_YlMwMyz4RgR-akCDYfNNsBU6laamcldxGAMQ",
+  "link_status": "ok",
+  "ko_title": "Elon Musk가 유럽에 미국 기술 교체 이유를 제공",
+  "summary": "Elon Musk가 Starlink 군용 버전인 Starshield를 우크라이나에 대한 지원을 중단하면서 유럽 정책 입안자들의 우려가 현실화되었다. 미국 기업이 전쟁 중 핵심 군사 인프라를 일방적으로 제한한 사례가 유럽에 미국 기술 의존성 재검토를 촉발하고 있다. 유럽에서는 향후 다른 미국 기업들의 서비스 차단 가능성을 심각하게 고민하고 있다.",
+  "why": "유럽 정책 입안자들이 미국 기업의 일방적 서비스 차단 가능성을 현실적 위협으로 인식하기 시작했다. AI나 엔터프라이즈 소프트웨어 공급망에 대한 의존도가 높다면 이 사례가 리스크 관리 기준을 바꾼다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "pollen-robotics / microduck",
+  "url": "https://github.com/pollen-robotics/microduck",
+  "source": "github",
+  "upvotes": 421,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/pollen-robotics/microduck"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 421,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/pollen-robotics/microduck",
+  "link_status": null,
+  "ko_title": "Microduck — 작은 양족 로봇",
+  "summary": "이 저장소는 25 cm·800 g 크기의 양족 로봇 Microduck의 제어 소프트웨어와 강화학습 정책을 포함한다. Rockchip RK3566 기반으로 50 Hz 제어 루프와 15개 서보를 제어하며, ONNX 형식의 정책을 로드한다. 로봇 구매 및 정책 학습용 별도 저장소 링크가 제공된다.",
+  "why": "ONNX 형식 정책 로딩 구조를 참고해 소형 로봇에 강화학습 모델을 배포하는 방식을 파악할 수 있다. 50 Hz 제어 루프와 15개 서보 구동 아키텍처를 확인하면 유사한 하드웨어 구성 시 참고 자료가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "xevrion / hatchzip",
+  "url": "https://github.com/xevrion/hatchzip",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 306,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/xevrion/hatchzip"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 306,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/xevrion/hatchzip",
+  "link_status": null,
+  "ko_title": "hatchzip — 대용량 압축 파일을 공간 절약하며 추출",
+  "summary": "HatchZip은 압축 파일을 뒤에서부터 풀어가며 이미 추출된 부분을 압축 파일에서 잘라내어 디스크 사용량을 최소화한다. ZIP, 7z, tar, .tar.gz, RAR 등 다양한 포맷을 지원한다. 추출 전 전체 용량을 검증하고 중단·재시작이 가능하다.",
+  "why": "기존 압축 도구는 원본 파일과 추출 결과물이 동시에 디스크에 존재해야 해 용량 부담이 컸다. 이 도구는 추출이 진행될수록 원본 파일을 잘라내어 추가 공간 없이 대용량 파일을 풀 수 있다. 중단 후 재시작이 가능하므로 실패 시 처음부터 다시 풀 필요가 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "battledrones v14: Compass Rose, a four player map",
+  "url": "https://simonwillison.net/2026/Oct/24/battledrones/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792814397.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/24/battledrones/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://raw.githubusercontent.com/simonw/battledrones/v14/progress-shots/v14/compass-rose.jpg",
+  "link_status": "ok",
+  "ko_title": "battledrones v14: 컴퍼스 로즈, 4인용 맵",
+  "summary": "기존에 2인까지 지원하던 Battledrones에 4인 온라인 모드를 추가했다. 새 맵 “Compass Rose”는 4방향 대칭 구조이며, AI와 인간 플레이어를 혼합해 최대 4명까지 참여할 수 있다. 웹소켓 기반 멀티플레이 코드가 수정돼 공유 링크·QR 코드로 접속이 가능하고, 로봇 색상이 보라·초록으로 확장됐다.",
+  "why": "웹소켓 멀티플레이 코드가 4인까지 확장됐다. 공유 링크와 QR 코드로 접속하는 방식이 적용됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Humanizer has about 60,000 stars. On 12 public tasks my linter plugin scored 2.67 higher",
+  "url": "https://dev.to/efe_genc/humanizer-has-about-60000-stars-on-12-public-tasks-my-linter-plugin-scored-267-higher-2cdg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 9,
+  "published_at": 1792834374.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/efe_genc/humanizer-has-about-60000-stars-on-12-public-tasks-my-linter-plugin-scored-267-higher-2cdg"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FBubblegunn%2Fai-slop-linter%2Flaunch-assets%2Fbenchmark-round8%2Fcover-safe.png",
+  "link_status": "ok",
+  "ko_title": "Humanizer가 약 6만 스타를 보유. 12개 공개 과제에서 내 린터 플러그인이 2.67점 앞섰다",
+  "summary": "린터를 Claude Code 플러그인 형태로 구현해 12개 공개 과제에 적용했을 때 60점 만점 중 58.67점을 받아 다른 도구들 중 최고점인 Humanizer(이름 호출)보다 2.67점 높았다. 평가 기준은 파일 내용 보존 여부와 사실 정확성 검증이며, 블라인드 채점에서 99개 중 92개가 만장일치로 평가되었다.",
+  "why": "AI 글쓰기 린터를 Claude Code 플러그인으로 구현해 12개 공개 과제에서 58.67점을 기록했다. 이름 호출 방식의 Humanizer보다 2.67점 높게 나와 프롬프트 의존도를 낮출 수 있다. 평가 기준은 파일 내용 보존 여부와 사실 정확성 검증이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Sloth Reads: an open model reads my read-later pile overnight, then reads me the good ones",
+  "url": "https://dev.to/sbis04/sloth-reads-an-open-model-reads-my-read-later-pile-overnight-then-reads-me-the-good-ones-3o14",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 19,
+  "comments": 0,
+  "published_at": 1792828109.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sbis04/sloth-reads-an-open-model-reads-my-read-later-pile-overnight-then-reads-me-the-good-ones-3o14"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fugiaw2h77bjc9vj1atyj.png",
+  "link_status": "ok",
+  "ko_title": "Sloth Reads: 오픈 모델이 저장해둔 읽을거리들을 밤새 읽고, 좋은 글만 읽어준다",
+  "summary": "Sloth Reads는 DEV 북마크와 공유 링크를 매일 밤 자동으로 수집해 오픈 모델(Gemma 4)로 요약하고 중요도(읽을 가치, 스킴, 건너뛰기)를 판단한다. 새벽 6시에는 1분 분량의 브리프를 제공하고, 선택된 좋은 글은 ElevenLabs 음성으로 단어별 하이라이트와 함께 읽어준다. 서비스는 DigitalOcean Functions와 무료 웹 인터페이스로 별도 회원가입 없이 이용 가능하다.",
+  "why": "자동 요약·음성 읽기로 읽을거리 관리에 드는 시간을 크게 줄일 수 있다. 기존 북마크 정리와 수동 청취 과정을 대체해 개발자들의 지식 습득 흐름을 효율화한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "ASNIPP: Free Snipping Tool Alternative for Windows 11",
+  "url": "https://dev.to/akhourianmolkumar/asnipp-free-snipping-tool-alternative-for-windows-11-8im",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 19,
+  "comments": 30,
+  "published_at": 1792827592.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/asnipp-free-snipping-tool-alternative-for-windows-11-8im"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fz6w3a65uvims0tkmmmrm.png",
+  "link_status": "ok",
+  "ko_title": "ASNIPP: Windows 11용 무료 스니핑 툴 대안",
+  "summary": "ASNIPP v1.0.0이 공식 출시돼 Windows 전용 포터블 스크린샷·녹화·편집 도구를 제공한다. OCR 텍스트 추출, 시스템 오디오 녹음, 실시간 화면 그리기 등 여러 기능을 하나의 바에서 수행한다. 설치 파일 없이 ZIP 압축을 풀어 바로 실행할 수 있다.",
+  "why": "Windows 전용이므로 다른 OS에서는 사용할 수 없다. 서명되지 않은 앱이라 첫 실행 시 SmartScreen 경고가 뜰 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "makecindy / cindy",
+  "url": "https://github.com/makecindy/cindy",
+  "source": "github",
+  "upvotes": 199,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/makecindy/cindy"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 199,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/makecindy/cindy",
+  "link_status": null,
+  "ko_title": "makecindy / cindy",
+  "summary": "Cindy는 로컬에서 실행되는 오픈소스 AI 에이전트이며, Claude Code와 Codex를 초기 하네스로 지원한다. pnpm 기반 모노레포 형태의 데스크톱·모바일 클라이언트가 공개돼 자유롭게 모델을 추가할 수 있다. 현재 베타 단계이며 추가 하네스와 네이티브 지원이 진행 중이다.",
+  "why": "로컬에서 파일과 로그인된 앱을 직접 다루므로 클라우드 에이전트와 달리 데이터 주권을 확보할 수 있다. Claude Code와 Codex를 하나의 에이전트로 묶어 작업 중 하네스를 전환할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "aws / agent-toolkit-for-aws",
+  "url": "https://github.com/aws/agent-toolkit-for-aws",
+  "source": "github",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/aws/agent-toolkit-for-aws"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 11,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/aws/agent-toolkit-for-aws",
+  "link_status": null,
+  "ko_title": "AWS 에이전트 툴킷 — AI 코딩 에이전트를 위한 AWS 서비스 작업 지원",
+  "summary": "AI 코딩 에이전트가 AWS 서비스를 활용하도록 돕는 툴킷이 공개됐다. AWS CLI와 Claude Code 플러그인 형태로 제공돼 기존 에이전트와 바로 연동할 수 있다. 주요 플러그인은 서비스 선택·CDK·서버리스·컨테이너·스토리지·관측·청구·SDK·배포 등을 포괄한다.",
+  "why": "Claude Code를 쓰는 경우 공식 마켓플레이스에서 플러그인을 설치해 바로 쓸 수 있다. AWS CLI를 쓰는 경우 configure agent-toolkit 명령으로 터미널에서 연동한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Folkbench / folkbench",
+  "url": "https://github.com/Folkbench/folkbench",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 542,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Folkbench/folkbench"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 542,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/Folkbench/folkbench",
+  "link_status": null,
+  "ko_title": "Folkbench",
+  "summary": "Folkbench은 다양한 AI 중계 서비스의 가용성, 응답 시간, 가격을 지속적으로 테스트하고 공개하는 플랫폼이다. 이 저장소는 해당 서비스와 연동해 선택한 경로를 Claude Code, Codex 등 도구에 적용할 수 있는 데스크톱 클라이언트인 Folkbench Switch의 코드를 제공한다.",
+  "why": "Claude Code나 Codex를 쓰는 개발자는 Folkbench Switch로 경로를 설정해 응답 시간과 가격을 비교할 수 있다. 중계 서비스의 가용성 문제를 직접 확인하고 우회하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Day 22 of Building Crowdwide: I Thought UI Polish Would Be Easy, BUT I WAS WRONGGGGG 😭",
+  "url": "https://dev.to/puneetkumar2010/day-22-of-building-crowdwide-i-thought-ui-polish-would-be-easy-but-i-was-wronggggg-27jk",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 20,
+  "comments": 10,
+  "published_at": 1792841821.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-22-of-building-crowdwide-i-thought-ui-polish-would-be-easy-but-i-was-wronggggg-27jk"
+  ],
+  "cross_source_count": 1,
+  "score": 33,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fww6mdli8zclj6n910fqh.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 22일 차: UI 다듬기가 쉬울 거라 생각했지만, 생각과 달라",
+  "summary": "UI 다듬기 과정에서 마진·패딩·border-radius 문제를 발견하고 수정했다. 사이드바를 레이어와 분리해 열고 닫히게 하며 배경을 흐리게 처리했다. 옵티미스틱 UI 도입을 권유받아 구현했고, 일부 그라디언트 배경을 유지했다.",
+  "why": "옵티미스틱 UI는 서버 응답이 1~2초밖에 걸리지 않아도 사용자 체감 속도를 높이는 핵심 요소다. 단순 색상 변경이 아닌 마진·패딩·반경 등 세부 스타일 일관성을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
+  "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+  "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+  "source": "hackernews",
+  "upvotes": 361,
+  "comments": 110,
+  "published_at": 1792804514,
+  "discussion": "https://news.ycombinator.com/item?id=50217495",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://grapheneos.social/@GrapheneOS/117492375462459244"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "약 12개의 은행 앱이 GrapheneOS를 명시적으로 허용하기 시작",
+  "summary": "",
+  "why": "GrapheneOS를 쓰는 안드로이드 환경에서 은행 앱 접근이 가능해졌다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-25T00:00:01.676479+09:00",
+  "batch_label": "10월 25일 00:00"
+ },
+ {
   "title": "Alzheimer's breakthrough: 2 hrs of sleep restored without clearing brain plaques",
   "url": "https://www.sciencedaily.com/releases/2026/10/261018084421.htm",
   "source": "hackernews",
