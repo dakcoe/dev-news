@@ -1,5 +1,358 @@
 [
  {
+  "title": "Alzheimer's breakthrough: 2 hrs of sleep restored without clearing brain plaques",
+  "url": "https://www.sciencedaily.com/releases/2026/10/261018084421.htm",
+  "source": "hackernews",
+  "upvotes": 82,
+  "comments": 21,
+  "published_at": 1792806790,
+  "discussion": "https://news.ycombinator.com/item?id=50217683",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.sciencedaily.com/releases/2026/10/261018084421.htm"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://www.sciencedaily.com/images/1920/sleep-man-brain-spine-nervous-system.webp",
+  "link_status": "ok",
+  "ko_title": "알츠하이머 돌파: 뇌 플라크 제거 없이 2시간 수면 회복",
+  "summary": "과학자들은 알츠하이머에서 수면 감소의 원인으로 뇌 내 과활성 면역세포를 확인했다. 이 세포들을 일시적으로 제거하면 쥐의 하루 수면 시간이 2시간 이상 늘어났으며, 플라크는 제거되지 않았다. 연구는 면역세포가 염증을 일으켜 수면을 방해한다는 새로운 메커니즘을 제시한다.",
+  "why": "백엔드·AI 개발 업무와 직접적인 연관성이 없어 기술적 조치나 설정 변경 사항이 없습니다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "wesbos / 3d-model-anything",
+  "url": "https://github.com/wesbos/3d-model-anything",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 619,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/wesbos/3d-model-anything"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 619,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/wesbos/3d-model-anything",
+  "link_status": null,
+  "ko_title": "3D 모델 Anything",
+  "summary": "iPhone의 LiDAR를 이용해 방을 촬영하고, AI 코딩 에이전트를 통해 Three.js 편집 가능한 씬으로 변환한다. 저장소에는 iPhone 앱, Three.js 뷰어, 스캔-투-Three.js 에이전트 스킬, 사무실 데모가 포함돼 있다. 현재는 방·실내 중심 워크플로이며, 원클릭 완성 모델이 아니라 반복적인 재구성 과정을 제공한다.",
+  "why": "Three.js 씬을 AI 에이전트로 반복 재구성하는 워크플로다. LiDAR가 없는 기기는 스캔 없이 기존 데이터를 불러와 검토만 할 수 있다. 완성된 모델이 아니라 반복 과정이므로 즉시 프로덕션에 쓰기엔 한계가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Roboto Studio at Vercel Ship 2026: meeting GOATs and building moats",
+  "url": "https://dev.to/jonoroboto/vercel-ship-2026-agents-can-keep-their-files-between-runs-now-f31",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1792817175.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jonoroboto/vercel-ship-2026-agents-can-keep-their-files-between-runs-now-f31"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fqxvqs298ldvynvwd.public.blob.vercel-storage.com%2Fblog%2Fvercel-ship-2026-san-francisco%2Fvercel-ship-2026-san-francisco-og.png",
+  "link_status": "ok",
+  "ko_title": "Roboto Studio, Vercel Ship 2026에서 GOAT와 만나 방어벽 구축",
+  "summary": "Vercel Ship 2026에서 발표된 Drives는 Vercel Sandbox 에이전트가 파일을 실행 간에 유지하도록 하는 영구 저장소 기능이다. 기본 제공 크기는 Hobby 플랜 1 GiB, 일반 플랜 1 TiB이며, 읽기 전용 마운트와 포크 기능도 지원한다. 또한 MCP Events가 공개 베타로 제공돼 외부 도구 변화에 따라 에이전트를 자동으로 시작할 수 있다. AI Gateway에 예산 제한 기능이 추가되었다.",
+  "why": "Vercel Sandbox 에이전트는 이제 Drives를 마운트해 실행 종료 후에도 파일 상태를 유지할 수 있다. 포크된 드라이브는 병합 기능이 없어 병렬 실험 시 결과 통합에 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Your coding agent can read .env. Here's where the API keys should live instead.",
+  "url": "https://dev.to/i4cstudio/your-coding-agent-can-read-env-heres-where-the-api-keys-should-live-instead-58m5",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 0,
+  "comments": 6,
+  "published_at": 1792810850.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/i4cstudio/your-coding-agent-can-read-env-heres-where-the-api-keys-should-live-instead-58m5"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpi5nu21wz698i6gs00f5.png",
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트가 .env 파일을 읽는다 — API 키는 어디에 두어야 할까",
+  "summary": "개발자는 에이전트가 .env 파일을 읽어 비밀키가 프롬프트, 로그, 히스토리 등에 노출되는 문제를 지적한다. 이를 해결하기 위해 오픈소스 도구를 만들었으며, .env 파일이 안전하지 않은 이유와 OS 키체인 활용 방안을 설명한다.",
+  "why": "에이전트가 셸 접근 권한을 가지면 .env 파일의 비밀키가 프롬프트나 로그에 노출된다. OS 키체인으로 저장소를 옮기면 파일 읽기나 환경 변수 상속을 통한 유출을 막을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "I Built Mimu Because Even Taking Notes Is Too Much Work",
+  "url": "https://dev.to/sizzlebop/i-built-mimu-because-even-taking-notes-is-too-much-work-2dg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1792809332.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sizzlebop/i-built-mimu-because-even-taking-notes-is-too-much-work-2dg"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fql0dklbjcbmnp9a0l67v.png",
+  "link_status": "ok",
+  "ko_title": "메모하기조차 귀찮아 Mimu를 만들었습니다",
+  "summary": "Mimu는 음성 입력을 텍스트로 변환하고, 로컬 AI 모델이 제목·카테고리·태그를 자동으로 달아 정리된 메모로 저장합니다. Whisper가 브라우저에서 전사하고, Gemma 모델이 마크다운 형식으로 정리합니다. 질문 응답, 오늘 일정 요약, 알림 전송 기능도 포함됩니다.",
+  "why": "Whisper와 Gemma가 로컬에서 돌아가므로 음성 메모의 전사와 정리가 외부 API에 의존하지 않는다. 원문 전사가 보존되어 AI가 붙인 제목이나 태그가 틀렸을 때 원본을 바로 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Twelve years of distributed SQLite",
+  "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+  "source": "hackernews",
+  "upvotes": 136,
+  "comments": 16,
+  "published_at": 1792804618,
+  "discussion": "https://news.ycombinator.com/item?id=50217500",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "분산 SQLite 12년",
+  "summary": "2014년 rqlite가 SQLite에 Raft 로그를 결합해 첫 오픈소스 분산 SQLite 시스템으로 공개되었습니다. 이후 여러 프로젝트가 등장해 카테고리를 형성했으며, 현재는 벤처 투자와 인수까지 이루어진 상황입니다. rqlite는 초기부터 CP 모델을 고수해 리더를 통한 쓰기와 다수 동의를 요구합니다.",
+  "why": "rqlite는 CP 모델을 고수해 리더를 통한 쓰기와 다수 동의가 필수입니다. 네트워크 분할 시 소수파 노드는 쓰기를 거부하므로 가용성 우선 설계라면 이 한계를 고려해야 합니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "humanlayer / humanlayer",
+  "url": "https://github.com/humanlayer/humanlayer",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 261,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/humanlayer/humanlayer"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 261,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/humanlayer/humanlayer",
+  "link_status": null,
+  "ko_title": "휴먼레이어",
+  "summary": "HumanLayer는 Claude Code, Codex, OpenCode, Pi 등 여러 코딩 에이전트를 로컬 머신에서 실행하고, 데스크톱·웹·데몬을 통해 작업·세션·플랜·리뷰를 한 곳에서 관리할 수 있는 Turborepo 기반 모노레포이다. Bun과 Docker를 사용해 빌드하며, macOS 데스크톱 앱(Electron·Tauri), CLI, API, 인증 프록시, AWS Lambda 잡 등 다양한 구성 요소를 포함한다. 개발자는 `bun` 명령어와 `devstack` 스크립트로 전체 스택을 로컬에서 손쉽게 실행할 수 있다.",
+  "why": "다양한 코딩 에이전트를 로컬에서 실행하고 세션을 통합 관리할 수 있다. 기존에 개별적으로 돌리던 에이전트 작업 흐름을 단일 도구로 통합할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Why a score's printed beat and playback BPM need separate units",
+  "url": "https://dev.to/ptrgiang/why-a-scores-printed-beat-and-playback-bpm-need-separate-units-23jh",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 0,
+  "comments": 2,
+  "published_at": 1792807830.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ptrgiang/why-a-scores-printed-beat-and-playback-bpm-need-separate-units-23jh"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdriva4z8l8i5c2c56asx.png",
+  "link_status": "ok",
+  "ko_title": "점수에 표시된 박자와 재생 BPM은 별도 단위가 필요하다",
+  "summary": "점수에 표시된 박자 단위와 재생 타임라인의 단위가 다르면 같은 BPM으로 처리하면 재생 속도가 두 배가 된다. Pianory는 표시용 박자 단위를 유지하고, 내부에서는 사분음표 기준 속도로 변환한다. 변환 로직은 tempo.ts에 구현돼 있으며, MusicXML의 단순 메트로놈 마크만 지원한다.",
+  "why": "MusicXML의 박자 단위와 재생 속도가 다르면 변환 로직이 없으면 재생이 두 배가 된다. 단순 메트로놈 마크만 지원하므로 복잡한 음악 파일은 처리되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Why Do BaZi Calculators Give Different Results for the Same Birth Date?",
+  "url": "https://dev.to/lmxjw3/why-do-bazi-calculators-give-different-results-for-the-same-birth-date-bbf",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1792809060.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/lmxjw3/why-do-bazi-calculators-give-different-results-for-the-same-birth-date-bbf"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fre0mgtguxmkm1o0kmvnl.png",
+  "link_status": "ok",
+  "ko_title": "같은 생년월일에 왜 다른 BaZi 계산 결과가 나오는가",
+  "summary": "BaZi 차트는 출생 연·월·일·시를 전통 달력 규칙에 따라 변환하지만, 시간대·서머타임·역사적 UTC 오프셋·태양절 등 복잡한 요소 때문에 구현이 어려워진다. 두 웹사이트가 서로 다른 시간대 처리 방식이나 전통 규약을 적용하면 결과가 달라질 수 있다. 이 글은 이러한 차이점 네 가지를 예시와 함께 설명한다.",
+  "why": "시간대·서머타임·역사적 UTC 오프셋 처리가 부정확하면 BaZi 차트가 틀리게 산출된다. 날짜·시간 연산 로직을 재검토해 이러한 복합 요소를 정확히 반영하는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
+  "url": "https://news.ycombinator.com/item?id=50200997",
+  "source": "hackernews",
+  "upvotes": 609,
+  "comments": 678,
+  "published_at": 1792703035,
+  "discussion": "https://news.ycombinator.com/item?id=50200997",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50200997"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "모델이 이렇게 좋다면 왜 OpenAI는 100개의 회사를 직접 시작하지 않을까?",
+  "summary": "Hacker News에 올라온 질문으로, 최첨단 모델을 보유한 OpenAI와 Anthropic이 모델을 직접 활용한 제품 회사를 설립해 수익을 극대화할 수 있는지 논의한다. 현재 토큰 판매가 주된 수익 모델인데, 모델 가격이 하락하고 commodification이 진행되면서 응용 분야에서 더 큰 수익을 얻을 수 있지 않을까 하는 의문을 제기한다.",
+  "why": "토큰 가격 하락과 상품화 진행으로 응용 분야 수익성이 높아질 수 있다는 점이 시사된다. 백엔드 개발자가 AI 모델을 직접 제품으로 전환하는 전략을 수립할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
+  "title": "Evolving Threat: http2shell is an RCE in Node, Python, and more",
+  "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+  "source": "hackernews",
+  "upvotes": 146,
+  "comments": 79,
+  "published_at": 1792798217,
+  "discussion": "https://news.ycombinator.com/item?id=50216791",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "진화하는 위협: http2shell이 Node·Python 등에서 원격 코드 실행(RCE)",
+  "summary": "",
+  "why": "Node와 Python 백엔드 서버를 운영 중이라면 http2shell 취약점에 대한 패치 여부를 즉시 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-10-24T16:00:06.307359+09:00",
+  "batch_label": "10월 24일 16:00"
+ },
+ {
   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
   "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
   "source": "rss",

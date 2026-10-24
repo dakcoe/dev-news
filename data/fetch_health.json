@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-14T16:00:26+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35327",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35333",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35331",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35326",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35324",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-15T00:01:03+09:00",
    "total": 23,
    "counts": {
@@ -1050,6 +1009,34 @@
      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-24T16:00:30+09:00",
+   "total": 12,
+   "counts": {
+    "dead": 1,
+    "robots": 1,
+    "short": 1,
+    "ok": 7,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://music.apple.com/this-url-doesnt-exist",
+     "source": "hackernews",
+     "reason": "dead"
+    },
+    {
+     "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=50200997",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
