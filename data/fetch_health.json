@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-16T08:00:35+09:00",
-   "total": 21,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 1
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35437",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35436",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35435",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35434",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35433",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-16T16:00:31+09:00",
    "total": 22,
    "counts": {
@@ -931,6 +890,15 @@
      "reason": "robots"
     }
    ]
+  },
+  {
+   "at": "2026-10-26T08:00:24+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 10,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
