@@ -1,5 +1,422 @@
 [
  {
+  "title": "Your agent isn't running out of context because of one big file",
+  "url": "https://dev.to/techdevfun/your-agent-isnt-running-out-of-context-because-of-one-big-file-20bb",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 1,
+  "comments": 6,
+  "published_at": 1792930057.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/techdevfun/your-agent-isnt-running-out-of-context-because-of-one-big-file-20bb"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2z2ntlzdczbu7f856exm.png",
+  "link_status": "ok",
+  "ko_title": "에이전트가 컨텍스트를 소모하는 이유는 큰 파일이 아니라 누적된 로그",
+  "summary": "Context Diet는 에이전트가 전송하는 로그를 줄이기 위해 중복 제거·요약·추출 기능을 제공하는 MCP 서버와 CLI 도구 모음이다. 각 도구는 라인·바이트·예상 토큰 수를 세고, 중복 라인을 제거하며, 질의에 맞는 발췌와 토큰 예산 내 요약을 수행한다. 결과는 보존·삭제된 라인을 명시한 매니페스트와 함께 제공돼 신뢰성을 높인다. 실제 세션 로그에 400 토큰 예산으로 적용해 23 라인만 남기고 나머지를 기록했다.",
+  "why": "에이전트 세션에서 반복되는 로그 누적 문제를 해결할 수 있다. 요약 시 원문을 재작성하지 않고 보존된 라인을 명시하는 매니페스트를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "AgriciDaniel / claude-seo",
+  "url": "https://github.com/AgriciDaniel/claude-seo",
+  "source": "github",
+  "upvotes": 179,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/AgriciDaniel/claude-seo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 179,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/AgriciDaniel/claude-seo",
+  "link_status": null,
+  "ko_title": "Claude SEO",
+  "summary": "Claude Code용 무료 오픈소스 SEO 감사 플러그인이다. 기술 SEO, Core Web Vitals, E-E-A-T, Schema.org, AI 검색 등 26개의 세부 기능과 19개의 전문 에이전트를 제공한다. MIT 라이선스로 배포된다.",
+  "why": "Claude Code 환경에서 SEO 감사 작업을 자동화할 수 있다. 기존에 외부 도구로 처리하던 기술적 점검을 개발 워크플로 안에 통합한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Slow Post: planning five DEV posts took me 67 minutes, so now two open models do it while I sleep",
+  "url": "https://dev.to/abeera_lodhi/slow-post-planning-five-dev-posts-took-me-67-minutes-so-now-two-open-models-do-it-while-i-sleep-1fep",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": 1792914951.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/abeera_lodhi/slow-post-planning-five-dev-posts-took-me-67-minutes-so-now-two-open-models-do-it-while-i-sleep-1fep"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fslxa5ewg1n08zs9bu4y7.jpg",
+  "link_status": "ok",
+  "ko_title": "슬로우 포스트: 5개의 DEV 게시물 계획에 67분 걸렸지만, 이제 두 개의 오픈 모델이 내가 자는 동안 해준다",
+  "summary": "데이터 과학 학생이 로컬 앱 “Slow Post”를 만들어 짧은 브리프를 입력하면 Gemma 3 4B와 TabPFN-3.5 모델이 각각 초안 작성과 반응 가능성 점수를 매긴다. 강도가 낮은 초안은 재작성되고, 최종적으로 강한 아이디어만 사용자에게 전달한다.",
+  "why": "로컬에서 Gemma 3 4B와 TabPFN-3.5를 조합해 콘텐츠 기획 자동화 파이프라인을 구축할 수 있다. 언어 모델의 생성 결과와 데이터 기반 평가 모델을 분리하는 설계 원칙을 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Bubbles: a new kind of software, where one reply becomes a running stack",
+  "url": "https://dev.to/flisk/bubbles-a-new-kind-of-software-where-one-reply-becomes-a-running-stack-1b72",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1792935552.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/flisk/bubbles-a-new-kind-of-software-where-one-reply-becomes-a-running-stack-1b72"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdemo.flisk.sh%2Fog.png%3Fv%3D3",
+  "link_status": "ok",
+  "ko_title": "Bubbles: 하나의 답글로 실행 스택이 되는 새로운 형태의 소프트웨어",
+  "summary": "X에 @grok bubbles와 앱 설명을 답글로 달면 Grok이 링크를 반환한다. 링크를 열면 웹 프론트엔드·API·데이터베이스·워커로 구성된 로컬 스택이 CI를 통해 자동으로 구축되고 최대 두 시간 동안 실행된다. 이 스택은 사전 정의된 메뉴 기반으로만 구성되며, 모든 출력은 검증 과정을 거쳐 링크 형태로 제공된다.",
+  "why": "사전 정의된 메뉴에 없는 아키텍처는 기본값으로 구성된다. 모델이 생성하지 않아 같은 입력은 항상 동일한 스택을 반환한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
+  "url": "https://github.com/ihhub/fheroes2",
+  "source": "hackernews",
+  "upvotes": 94,
+  "comments": 29,
+  "published_at": 1792926552,
+  "discussion": "https://news.ycombinator.com/item?id=50230384",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/ihhub/fheroes2"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/ihhub/fheroes2",
+  "link_status": null,
+  "ko_title": "fheroes2: Heroes of Might and Magic II 게임 엔진 재구현",
+  "summary": "fheroes2는 Heroes of Might and Magic II 원작 엔진을 처음부터 다시 만든 오픈소스 멀티플랫폼 프로젝트다. 고해상도 그래픽, 향상된 AI, 다양한 버그 수정 및 UI 개선 등 여러 기능이 추가돼 기존 게임을 현대 환경에 맞게 재현한다. 프로젝트는 GitHub에서 배포되며 설치 가이드를 통해 쉽게 다운로드·설치할 수 있다.",
+  "why": "원작 리소스가 없으면 실행이 안 되므로 GOG나 유비소프트 스토어에서 구매하거나 데모를 내려받아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Meta Ignores Brazilian Court Order to End Bolsonaro Favoritism",
+  "url": "https://www.panamericandispatch.org/p/meta-ignores-brazilian-court-order",
+  "source": "hackernews",
+  "upvotes": 431,
+  "comments": 284,
+  "published_at": 1792918840,
+  "discussion": "https://news.ycombinator.com/item?id=50229587",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.panamericandispatch.org/p/meta-ignores-brazilian-court-order"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://substackcdn.com/image/fetch/$s_!CdTr!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d3b04ca-0141-4aca-81e2-f64fd77e8555_1157x626.jpeg",
+  "link_status": "ok",
+  "ko_title": "Meta, 브라질 법원 명령을 무시하고 볼소나로 편향 지속",
+  "summary": "Sleeping Giants Brasil과 CTRL+Z가 새로운 증거를 제시해 메타가 루라와 볼소나로 후보 캠페인에 차별적 알고리즘을 사용하고 있다고 주장한다. 인스타그램·WhatsApp 검색 결과와 AI 답변이 자유당 후보에게 유리하게 표시된 사례를 제시했다. 조직은 24시간 이내 시정과 메타 AI 순위 방식 공개, 기존 일일 벌금 집행을 법원에 요구했다.",
+  "why": "Meta AI가 검색 결과와 답변 생성 시 특정 후보를 유리하게 노출하는 알고리즘 편향이 확인됐다. AI 기반 검색 기능을 백엔드에 통합할 때 순위 산정 기준의 공정성을 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "JetBrains / thinkrail",
+  "url": "https://github.com/JetBrains/thinkrail",
+  "source": "github",
+  "upvotes": 52,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/JetBrains/thinkrail"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 52,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/JetBrains/thinkrail",
+  "link_status": null,
+  "ko_title": "JetBrains / thinkrail",
+  "summary": "ThinkRail은 프로젝트를 학습하고 스스로 기능을 확장하는 에이전트 기반 IDE이다. `pi` 코딩 에이전트를 중심으로 격리된 git worktree 워크스페이스를 제공하고, 현재 확장 기능 지원을 추가 중이다. 웹사이트와 블로그에서 자세히 확인할 수 있다.",
+  "why": "pi 코딩 에이전트를 격리된 git worktree에서 돌리므로 기존 체크아웃을 건드리지 않는다. 에이전트가 프로젝트를 학습해 기능을 스스로 확장하는 방식이므로 반복 작업을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Nikii-w / McLife-Desk",
+  "url": "https://github.com/Nikii-w/McLife-Desk",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 514,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Nikii-w/McLife-Desk"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 514,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/Nikii-w/McLife-Desk",
+  "link_status": null,
+  "ko_title": "맥맥 인생 작업대",
+  "summary": "McLife Desk는 맥도날드 주문 데이터를 실시간으로 연동해 월별 주문 횟수·금액·등급·소비 성향을 자동으로 정리한다. 사용자는 재미있는 소비 성격 테스트와 예산·열량 기반 ‘오늘 뭐 먹지’ 추천을 받을 수 있다. 설치 후 MCP 토큰만 연결하면 바로 활용 가능하다.",
+  "why": "맥도날드 MCP 토큰을 연결하면 월별 소비 데이터와 등급이 자동 집계된다. 예산과 열량 조건에 맞춘 메뉴 추천 기능을 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Your App Can Receive Email Too: Build an Email-to-Ticket Pipeline with TypeScript",
+  "url": "https://dev.to/boiliev/your-app-can-receive-email-too-build-an-email-to-ticket-pipeline-with-typescript-4ihh",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1792928980.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/boiliev/your-app-can-receive-email-too-build-an-email-to-ticket-pipeline-with-typescript-4ihh"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fyf6yt11p8y8422tahnc4.png",
+  "link_status": "ok",
+  "ko_title": "이메일도 받을 수 있다: TypeScript로 이메일-투-티켓 파이프라인 구축",
+  "summary": "Mailroom이라는 데모를 통해 SMTPfast가 수신한 이메일을 Fastify와 TypeScript로 파싱해 PostgreSQL 티켓으로 저장하고 브라우저에서 답변할 수 있는 흐름을 보여준다. Node.js, Docker Compose, 도메인 설정, SMTPfast 인바운드 플랜만 있으면 로컬에서 전체 대화를 테스트할 수 있다.",
+  "why": "이메일을 입력으로 받아 티켓을 생성하는 구조를 Node.js와 TypeScript로 구현할 수 있다. 서버 배포나 HTTPS 터널 없이 로컬에서 전체 대화 흐름을 즉시 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "DUNHKpcc / Claude-Guardian",
+  "url": "https://github.com/DUNHKpcc/Claude-Guardian",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 382,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/DUNHKpcc/Claude-Guardian"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 382,
+  "score": 50,
+  "image": "https://opengraph.githubassets.com/1/DUNHKpcc/Claude-Guardian",
+  "link_status": null,
+  "ko_title": "Claude-Guardian",
+  "summary": "Claude-Guardian은 에이전트가 실제 경험을 바탕으로 Claude 사용 환경을 준비하고 검증해 주는 도구다. macOS·Windows·Ubuntu·Arch 등 다양한 OS를 지원하고, 고정 IP·VM·VPS·방화벽·프록시 등 네트워크 설정을 단계별로 안내한다. 문서와 빠른 시작 가이드를 제공해 사용자가 직접 환경을 구성할 수 있다.",
+  "why": "Claude API 접근을 위해 고정 IP와 프록시 설정이 필요한 경우, 이 도구가 단계별 구성을 안내한다. 다만 원문은 중국어화되어 있어, 한국어 환경에서의 직접 적용 가능성은 문서 확인이 선행되어야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Day 23 of Building Crowdwide: I Fixed More Than I Planned 😭",
+  "url": "https://dev.to/puneetkumar2010/day-23-of-building-crowdwide-i-fixed-more-than-i-planned-1na6",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1792935376.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-23-of-building-crowdwide-i-fixed-more-than-i-planned-1na6"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuvmy6p9pbcaehgi4ux6f.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 23일 차: 계획보다 더 많이 고쳤다",
+  "summary": "UI에 4/8/16/24 간격 스케일을 적용해 디자인을 일관화했다. 게시 요청 실패 시 재시도 초안으로 롤백하고, 중복 제출을 방지해 게시물 중복 생성을 차단했다. 편집 응답이 뒤섞여도 최신 내용이 유지되도록 로직을 보강했으며, 접근성을 위해 불필요한 라벨 제거·스크린리더용 대체 텍스트 등을 추가했다.",
+  "why": "게시 요청 실패 시 재시도 초안으로 롤백하는 로직을 적용했다. 중복 제출 방지와 편집 응답 순서 처리를 보강해 데이터 무결성을 확보했다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "France asked ISPs to prepare temporary DNS blocks for major social platforms",
+  "url": "https://www.blast-info.fr/articles/2026/information-exclusive-blast-le-premier-ministre-a-prepare-la-coupure-des-reseaux-sociaux-pour-le-24-octobre-9D8cgrU5S5iiW14Sb9nMzQ",
+  "source": "hackernews",
+  "upvotes": 121,
+  "comments": 117,
+  "published_at": 1792922209,
+  "discussion": "https://news.ycombinator.com/item?id=50229861",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.blast-info.fr/articles/2026/information-exclusive-blast-le-premier-ministre-a-prepare-la-coupure-des-reseaux-sociaux-pour-le-24-octobre-9D8cgrU5S5iiW14Sb9nMzQ"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://static.blast-info.fr/stories/2026/open_graph-information-exclusive-blast-le-premier-ministre-a-prepare-la-coupure-des-reseaux-sociaux-pour-le-24-octobre-9D8cgrU5S5iiW14Sb9nMzQ.jpg",
+  "link_status": "ok",
+  "ko_title": "프랑스, 주요 소셜 플랫폼에 대한 임시 DNS 차단 준비 요청",
+  "summary": "프랑스 정부는 10월 24일 시위 전, 주요 통신사에 TikTok·Instagram·Snapchat·X에 대한 임시 DNS 차단을 준비하도록 지시했다. 회의 기록에 따르면 통신사들은 차단 실행에 대해 의구심을 표명했다. 이와 유사한 조치는 2024년 뉴칼레도니아에서도 사용된 바 있다.",
+  "why": "프랑스 정부의 DNS 차단 조치는 특정 플랫폼 접근을 제한하는 선례를 만든다. 통신사들이 실행 가능성에 의문을 제기한 점은 기술적 한계를 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
+  "title": "Samsung running a TensorFlow lite model on 960x540 image to track you",
+  "url": "https://twitter.com/mike64_t/status/2114150399406202896",
+  "source": "hackernews",
+  "upvotes": 178,
+  "comments": 116,
+  "published_at": 1792924921,
+  "discussion": "https://news.ycombinator.com/item?id=50230181",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/mike64_t/status/2114150399406202896"
+  ],
+  "cross_source_count": 1,
+  "score": 26,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "삼성, 960x540 이미지에 TensorFlow Lite 모델을 실행해 사용자를 추적",
+  "summary": "",
+  "why": "TensorFlow Lite 기반 경량 추론이 모바일 기기에 적용되는 사례다. 백엔드 서버 의존도를 낮추는 엣지 AI 설계 시 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-26T00:00:03.017589+09:00",
+  "batch_label": "10월 26일 00:00"
+ },
+ {
   "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
   "url": "https://github.com/slee-persis/GVS5H",
   "source": "hackernews",
