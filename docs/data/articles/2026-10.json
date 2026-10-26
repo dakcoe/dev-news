@@ -1,5 +1,395 @@
 [
  {
+  "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+  "url": "https://openai.com/index/greptile-code-review-codex-astra",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793052000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/greptile-code-review-codex-astra"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/41HmEnWTxiRSX2JLf1g8IJ/86b6e146a0620d83db05f4010e6b058e/greptile-connections-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Greptile, GPT-6 Astra로 코드 리뷰를 넘어 버그 탐지",
+  "summary": "Greptile은 전체 코드베이스 컨텍스트를 활용해 AI 에이전트가 코드 변경을 검토·테스트한다. GPT-6 Astra를 이용해 풀 리퀘스트에 대한 개발 서버를 실행하고, iPhone 뷰포트로 화면을 시뮬레이션해 UI 버그를 자동으로 찾아낸다. Daybreak을 통해 보안을 강화하고, Codex로 재작업을 줄인다.",
+  "why": "풀 리퀘스트 검증 시 개발 서버 실행과 모바일 뷰포트 시뮬레이션이 자동화된다. 코드 정독만으로는 발견하기 어려운 UI 결함을 시각적으로 탐지할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "dev-tools"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+  "url": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
+  "source": "hackernews",
+  "upvotes": 662,
+  "comments": 560,
+  "published_at": 1793028912,
+  "discussion": "https://news.ycombinator.com/item?id=50245524",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.kuow.org/technology/2026-10-26/microsoft-offers-voluntary-buyouts-to-a-quarter-of-its-workforce",
+   "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://images.seattletimes.com/wp-content/uploads/2026/10/10262026_Microsoft_tzr_081156.jpg?d=1200x630",
+  "link_status": "ok",
+  "ko_title": "Microsoft, 전체 직원의 약 1/4에 해당하는 60,000명에게 대규모 퇴직 제안",
+  "summary": "Microsoft는 미국·캐나다·인도·영국의 부사장 이하 직급 직원 60,000명에게 표준 퇴직 패키지를 제공한다. 선택 기간은 12월 초까지이며, 게임·Windows·Copilot·인사·재무 부서는 전면 참여하고 AI·법무·클라우드 부서는 일부 참여한다. 마케팅·상업·보안 부서는 참여하지 않는다.",
+  "why": "Copilot과 클라우드 팀이 일부 참여하므로 해당 서비스의 개발 로드맵이나 지원 정책이 바뀔 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "devops-infra"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+  "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+  "source": "hackernews",
+  "upvotes": 504,
+  "comments": 76,
+  "published_at": 1793027519,
+  "discussion": "https://news.ycombinator.com/item?id=50245138",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://substackcdn.com/image/fetch/$s_!1SoS!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F519db120-1320-411b-adec-a88865345f2c_4083x2916.jpeg",
+  "link_status": "ok",
+  "ko_title": "Sebastian Raschka의 추론 모델 직접 구현 비디오 코스",
+  "summary": "11시간 분량의 8개 비디오에서 PyTorch를 사용해 사전 학습된 LLM을 기반으로 추론 모델을 구현하고 평가·향상하는 방법을 다룬다. 강의는 추론 모델의 추론 스케일링, 강화학습, 증류 등을 직접 코딩하며 이해하도록 설계되었다. 기존 “Coding LLMs from the Ground Up” 코스의 후속 내용이며, 사전 수강 없이도 학습 가능하다.",
+  "why": "PyTorch로 추론 모델을 직접 구현하는 과정이 핵심이다. 강화학습과 증류 코드를 직접 작성하며 내부 동작을 파악할 수 있다. 사전 학습 LLM을 기반으로 평가와 향상 방법을 다루므로 실무 적용에 도움이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Expanding Claude for Nonprofits",
+  "url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792972800.0,
+  "origin_url": "https://claude.com/blog/expanding-claude-for-nonprofits",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/expanding-claude-for-nonprofits",
+   "https://claude.com/resources/articles/expanding-claude-for-nonprofits"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://claude.com/ko/resources/articles/expanding-claude-for-nonprofits/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "비영리 단체를 위한 Claude 확장",
+  "summary": "Anthropic이 비영리 단체 전용 Claude 플러그인을 출시했다. 플러그인은 펀드레이징·마케팅·채용 등 운영 업무를 지원하고, 기존 비영리 플랜을 팀·엔터프라이즈 모델과 동일하게 확대했다. 저소득 국가 검증 비영리 단체에 ~90% 할인된 가격($3/사용자·월)도 제공한다.",
+  "why": "Claude Code가 비영리 플랜에 추가 비용 없이 포함된다. 비영리 단체에서 백엔드 개발을 담당한다면 이 기능을 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry",
+   "career-culture"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Join the Hacktoberfest Open-Source AI Challenge: Ghost in the Machine! $2,850 in Prizes Across 21 Winners.",
+  "url": "https://dev.to/devteam/join-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-2850-in-prizes-across-21-3cho",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 26,
+  "comments": 3,
+  "published_at": 1793041230.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devteam/join-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-2850-in-prizes-across-21-3cho"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4b2bp0h36xv9ooc5bq0t.png",
+  "link_status": "ok",
+  "ko_title": "Hacktoberfest 오픈소스 AI 챌린지에 참여하세요 — 21명에게 총 2,850달러 상금",
+  "summary": "이번 주는 Hacktoberfest 2026의 마지막 DEV 챌린지 주제로, 오픈소스 AI와 오픈웨이트 모델을 활용한 새 프로젝트를 만들면 21개 파트너 카테고리와 전체 부문에서 상금을 받을 수 있다. 파트너별 기술을 사용하면 별도 카테고리에서 당첨 확률이 높으며, 일부 파트너는 크레딧과 프로모코드를 제공한다.",
+  "why": "파트너 기술로 프로젝트를 만들면 전체 부문보다 수상 확률이 높다. 10월 31일까지 참여해야 하며, 파트너 크레딧은 공식 사이트에서 직접 신청해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "The Minimum Friction of Truth: An Open Letter to Harun on Building a Biophysical Trust Kernel and Why His Thesis Changes Everything",
+  "url": "https://dev.to/jsb-securedme/the-minimum-friction-of-truth-an-open-letter-to-harun-on-building-a-biophysical-trust-kernel-and-3pn8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": 1793031121.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jsb-securedme/the-minimum-friction-of-truth-an-open-letter-to-harun-on-building-a-biophysical-trust-kernel-and-3pn8"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpl4o80rg3p22tuzu0750.jpg",
+  "link_status": "ok",
+  "ko_title": "최소 마찰의 진실: Harun에게 보내는 공개 서한 – 생물물리적 신뢰 커널 구축과 그의 논문이 모든 것을 바꾸는 이유",
+  "summary": "저자는 Harun의 bio-os 작업을 검토하고 AI가 코드와 DNA·양자 알고리즘을 작성할 때 발생할 수 있는 위험을 강조한다. 이를 바탕으로 48시간 안에 VeriPlith-OSS라는 생산 수준의 생물물리적 신뢰 커널을 구현해 Pull Request를 제출했다. 현재는 초기 단계이며 코드 정제와 경계 조건 보강이 필요하다.",
+  "why": "AI가 DNA나 양자 알고리즘을 생성할 때 환각이 치명적 결과를 낳는다. 기존 웹 코드와 달리 생물물리 영역에서는 신뢰 검증이 필수다. VeriPlith-OSS는 이 문제를 해결하기 위한 초기 구현이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "How to Divide Work Across Threads in JavaScript: CPU Cores, Workload, and Smart Scheduling",
+  "url": "https://dev.to/nishikantaray/how-to-divide-work-across-threads-in-javascript-cpu-cores-workload-and-smart-scheduling-45jb",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793034046.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nishikantaray/how-to-divide-work-across-threads-in-javascript-cpu-cores-workload-and-smart-scheduling-45jb"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fl6t4evxhna6zfxrf59n0.png",
+  "link_status": "ok",
+  "ko_title": "JavaScript에서 스레드로 작업 나누기: CPU 코어, 워크로드 및 스마트 스케줄링",
+  "summary": "이 가이드는 Node.js에서 worker_threads 모듈을 활용해 CPU 집약적인 작업을 여러 스레드에 분산하는 방법을 설명한다. 작업량과 머신의 CPU 코어 수에 따라 스레드 수와 작업 할당 방식을 결정하는 기준을 제시한다. 기존의 비동기 프로그래밍과 멀티스레딩의 차이를 명확히 구분하고, 효율적인 워커 시스템 설계 예시를 제공한다.",
+  "why": "CPU 집약 작업이 메인 스레드를 점유하면 요청 처리가 멈추므로 병렬화가 필요하다. worker_threads로 이 작업을 분리하면 이벤트 루프가 계속 돌아간다. 단, 스레드 수를 코어 수에 맞춰 조정해야 자원을 낭비하지 않는다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Working with academic communities to build scientific understanding",
+  "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793025000.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+   "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+  ],
+  "cross_source_count": 2,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "학계와 협력해 과학적 이해 구축",
+  "summary": "OpenAI가 Kakeya 추측, 지수 시간 가설, 양자 색역학에 대한 모델 결과를 공개했다. 연구자들이 이 결과를 검증하고 확장할 방법을 제시한다.",
+  "why": "AI 모델의 추상적 수리·물리 문제 풀이 결과를 검증하는 절차가 공개됐다. 백엔드 개발자에게는 직접적 영향이 없으나, AI 기반 자동화 도구의 신뢰성 평가 기준을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "science"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "CSS-Tricks has a new owner",
+  "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+  "source": "hackernews",
+  "upvotes": 345,
+  "comments": 79,
+  "published_at": 1793029883,
+  "discussion": "https://news.ycombinator.com/item?id=50245831",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://css-tricks.com/css-tricks-has-a-new-owner/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://css-tricks.com/wp-content/uploads/2019/12/css-tricks-logo-gradient-outline.png",
+  "link_status": "ok",
+  "ko_title": "CSS-Tricks, 새 소유주 등장",
+  "summary": "기존에 DigitalOcean이 2022년에 인수했던 CSS-Tricks가 2026년에 개인이 독립 소유자로 전환했다. 새 소유자는 광고 수익 모델을 재도입하고 커뮤니티 확대를 목표로 한다.",
+  "why": "백엔드 개발자에게 CSS-Tricks의 소유주 변경은 직접적인 코드나 도구 스택에 영향을 주지 않는다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "In Leaked Audio, Flock CEO Tells Cops Backlash to the Company Isn't Real",
+  "url": "https://www.404media.co/in-leaked-audio-flock-ceo-tells-cops-backlash-to-the-company-isnt-real/",
+  "source": "hackernews",
+  "upvotes": 234,
+  "comments": 143,
+  "published_at": 1793037240,
+  "discussion": "https://news.ycombinator.com/item?id=50248005",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.404media.co/in-leaked-audio-flock-ceo-tells-cops-backlash-to-the-company-isnt-real/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/10/FLOCKSCAN_01..jpg",
+  "link_status": "ok",
+  "ko_title": "유출된 녹음에서 Flock CEO, 회사에 대한 반발은 실재하지 않는다 주장",
+  "summary": "CEO는 경찰 회의에서 반대 시위가 가짜이며 러시아 봇이 만든 것이라고 주장했다. 그는 언론 인터뷰를 거부하고 사과하지 않겠다고 말했다. 소셜 미디어 언급이 7월 대비 95% 감소했으며, 우크라이나의 러시아 데이터센터 폭격이 영향을 줬다고 주장했다.",
+  "why": "Flock의 자동 번호판 판독 기술은 차량의 번호판과 색상, 제조사, 모델을 상시 스캔한다. 이 기술이 설치된 지역에서는 이동 경로가 실시간으로 기록된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Quoting Jason Koebler",
+  "url": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793041225.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/26/jason-koebler/"
+  ],
+  "cross_source_count": 1,
+  "score": 32,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "제이슨 코블러 인용",
+  "summary": "",
+  "why": "ChatGPT가 기술 지원 문의에 404 Media를 언급하는 사례가 늘고 있다. AI 기반 고객 응대 시스템의 응답 품질을 점검할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
+  "title": "Oldest GUI application that still runs on Windows 11",
+  "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+  "source": "hackernews",
+  "upvotes": 224,
+  "comments": 133,
+  "published_at": 1793037415,
+  "discussion": "https://news.ycombinator.com/item?id=50248055",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Windows 11에서도 실행되는 가장 오래된 GUI 애플리케이션",
+  "summary": "1993년 수정일을 가진 FREECELL.EXE가 Windows 11에서 별도 수정 없이 실행됨을 확인했다. 16비트 프로그램은 지원되지 않아 NT 3.x 시절의 Win32s를 찾아야 했으며, 1991-1992년 초반 버전은 파일 형식·호출 규약 차이로 동작하지 않았다.",
+  "why": "16비트 프로그램은 Windows 11에서 실행되지 않으므로 NT 3.x 시절 Win32s 기반 애플리케이션만 호환된다. 1991년 초안 PE 형식이나 1992년 중반 이전 cdecl 호출 규약 코드는 최신 Windows에서 충돌한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T08:00:02.871727+09:00",
+  "batch_label": "10월 27일 08:00"
+ },
+ {
   "title": "Fixing Tool-Call Accuracy in vLLM",
   "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
   "source": "hackernews",

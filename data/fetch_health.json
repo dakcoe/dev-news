@@ -1,52 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-17T08:00:36+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 7,
-    "ok": 13,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.tesla.com/roadster",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35487",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35483",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35497",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35496",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35495",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-17T16:00:41+09:00",
    "total": 22,
    "counts": {
@@ -851,6 +805,21 @@
     {
      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
      "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-27T08:00:27+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 14,
+    "blocked": 1
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
