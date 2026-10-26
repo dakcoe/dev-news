@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-16T16:00:31+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 15,
-    "blocked": 5,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35465",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35463",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35462",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35461",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35459",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-17T00:00:49+09:00",
    "total": 24,
    "counts": {
@@ -899,6 +863,28 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-10-26T16:00:25+09:00",
+   "total": 14,
+   "counts": {
+    "github": 3,
+    "robots": 1,
+    "ok": 9,
+    "short": 1
+   },
+   "failures": [
+    {
+     "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/843",
+     "source": "rss",
+     "reason": "short"
+    }
+   ]
   }
  ]
 }

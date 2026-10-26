@@ -1,5 +1,419 @@
 [
  {
+  "title": "You're Debouncing Scroll Wrong. requestAnimationFrame Fixes It.",
+  "url": "https://dev.to/parsajiravand/youre-debouncing-scroll-wrong-requestanimationframe-fixes-it-2pa5",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": 1792993166.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/youre-debouncing-scroll-wrong-requestanimationframe-fixes-it-2pa5"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Frequestanimationframe-scroll-throttling.png",
+  "link_status": "ok",
+  "ko_title": "스크롤 디바운스가 잘못되었습니다. requestAnimationFrame으로 해결",
+  "summary": "스티키 헤더가 스크롤 시 0.5초 정도 지연돼 그림자와 투명도가 늦게 표시됐다. 기존 debounce 구현은 스크롤 이벤트를 모두 무시하고 스크롤이 멈춘 뒤에만 업데이트했으며, 이는 실시간 UI에 부적합했다. throttle이나 requestAnimationFrame을 사용해 이벤트를 일정 간격으로 처리하면 즉각적인 반응을 얻을 수 있다. 코드 예시와 교체 방법이 제공된다.",
+  "why": "스크롤 기반 UI 업데이트에 디바운스를 쓰면 이벤트가 멈춘 뒤에만 반응한다. 실시간 피드백이 필요한 헤더 스타일 변경에는 스로틀링이나 requestAnimationFrame으로 교체해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "release"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "designfuchen / word-atlas",
+  "url": "https://github.com/designfuchen/word-atlas",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 507,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/designfuchen/word-atlas"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 507,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/designfuchen/word-atlas",
+  "link_status": null,
+  "ko_title": "Word Atlas – IELTS 핵심 어휘를 그림과 예문으로 학습하는 무료 오픈소스 웹앱",
+  "summary": "7,298개의 IELTS 핵심 어휘를 각각 원본 일러스트와 두 개의 예문, 영·미 발음, FSRS 기반 복습 스케줄러와 함께 제공한다. 웹에서 바로 이용 가능하며 회원가입·광고·추적 없이 무료로 사용할 수 있다. 모든 콘텐츠는 MIT 라이선스와 CC BY 4.0으로 오픈소스이며, 직접 수정·재배포가 가능하다.",
+  "why": "MIT 라이선스 덕분에 어휘 데이터를 직접 수정하거나 재배포할 수 있다. AI 기반 학습 도구를 만들 때 기존 어휘셋을 대체하는 재료를 얻을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "I Built a Claude Code Skill That Runs a Full-Stack Security Audit in One Command",
+  "url": "https://dev.to/toshipon/i-built-a-claude-code-skill-that-runs-a-full-stack-security-audit-in-one-command-i6p",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 0,
+  "comments": 5,
+  "published_at": 1792974593.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/toshipon/i-built-a-claude-code-skill-that-runs-a-full-stack-security-audit-in-one-command-i6p"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fd6i5af80debswpikp5st.png",
+  "link_status": "ok",
+  "ko_title": "Claude Code 스킬로 한 번에 전체 스택 보안 감사 실행",
+  "summary": "오픈소스 Claude Code 스킬을 설치하면 한 명령으로 웹·모바일·인프라·백엔드·LLM·AI 등 8단계 보안 감사를 수행한다. 각 단계는 OWASP Top 10, MASVS, CIS Benchmarks 등 기존 표준에 매핑돼 보고서 형식이 일관된다. 플러그인 마켓플레이스와 GitHub에서 제공된다.",
+  "why": "기존 보안 감사 시 매번 처음부터 체크리스트를 다시 작성하던 방식이 바뀐다. OWASP Top 10 등 표준에 매핑된 보고서 형식이 일관되게 생성된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+  "url": "https://minimaxir.com/2026/10/cheap-llms/",
+  "source": "hackernews",
+  "upvotes": 250,
+  "comments": 272,
+  "published_at": 1792962691,
+  "discussion": "https://news.ycombinator.com/item?id=50236102",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://minimaxir.com/2026/10/cheap-llms/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://minimaxir.com/2026/10/cheap-llms/vercel.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI와 Anthropic이 몇 달 안에 LLM 가격을 최대 80% 인하한 이유",
+  "summary": "OpenAI는 GPT-5.6 Luna 모델 가격을 80% 낮춰 $0.20/$1.20/$0.02로 변경했고, Sol 모델도 3개월간 약 20% 인하했습니다. Anthropic은 Claude Sonnet 5의 출시 가격 인하를 영구화했으며, 새로운 Fable 5.1 모델을 기존보다 캐시 읽기 비용을 75% 절감한 가격에 출시했습니다. 두 회사 모두 최근 몇 달간 모델 라인업과 가격을 대폭 조정했습니다.",
+  "why": "에이전트 코딩에서 캐시 읽기 비용이 전체 토큰 지출의 96~99%를 차지한다. Fable 5.1은 캐시 읽기 비용을 75% 낮춰 에이전트 워크플로 비용 구조를 바꾼다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "rddmwmddr / android-ad-cleaner",
+  "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 865,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/rddmwmddr/android-ad-cleaner"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 865,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/rddmwmddr/android-ad-cleaner",
+  "link_status": null,
+  "ko_title": "rddmwmddr / android-ad-cleaner — 안드로이드 광고 제거 도구",
+  "summary": "최신 0.2.3 버전은 읽기 화면 서비스 충돌을 해결하고, 한 번만 재시도하도록 개선했다. 또한 일체형 OnePlus Ace 2 Pro와 ColorOS 14에 대한 실측 및 제한적 지원을 추가했다. 데스크톱 클라이언트는 macOS(Apple 칩·Intel)와 Windows(설치형·포터블)에서 adb 연결을 통해 광고·추천·마케팅 푸시를 차단한다.",
+  "why": "adb 연결로 안드로이드 기기의 광고와 마케팅 푸시를 차단하는 도구다. 기존 버전 사용자는 자동 업데이트가 안 되므로 0.2.3 버전을 다시 내려받아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "Meet NEXI: A Windows Focus Companion Built with Python and AdaL",
+  "url": "https://dev.to/abdullah_haroon_092cf10d3/meet-nexi-a-windows-focus-companion-built-with-python-and-adal-252l",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 30,
+  "comments": 4,
+  "published_at": 1792980590.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/abdullah_haroon_092cf10d3/meet-nexi-a-windows-focus-companion-built-with-python-and-adal-252l"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fz2ignqdjcaz56jy71d19.png",
+  "link_status": "ok",
+  "ko_title": "Python과 AdaL로 만든 Windows용 집중 동반자 NEXI 소개",
+  "summary": "NEXI는 Python, PySide6, AdaL로 개발된 Windows 전용 생산성 앱으로, 활동 추적, 집중 세션, 의도 기반 작업, 시각 분석 등을 한 화면에 제공한다. 사용자는 현재 실행 중인 앱과 일일 활동 요약을 확인하고, 목표와 시간 예산을 설정해 집중 세션을 시작할 수 있다.",
+  "why": "NEXI는 Windows 환경에서 현재 실행 중인 앱과 일일 활동 요약을 한 화면에 보여준다. 개발자가 코딩 중 브라우저나 채팅으로 이탈하는 시간을 시각적으로 파악할 때 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "Slowth Money: a local AI agent for your financial goals",
+  "url": "https://dev.to/javz/slowth-money-a-local-ai-agent-for-your-financial-goals-2ki2",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 17,
+  "comments": 3,
+  "published_at": 1792971516.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/javz/slowth-money-a-local-ai-agent-for-your-financial-goals-2ki2"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzj04sr1ma3n0d7kd0hto.png",
+  "link_status": "ok",
+  "ko_title": "Slowth Money: 당신의 재무 목표를 위한 로컬 AI 에이전트",
+  "summary": "Slowth Money는 오픈소스 AI를 활용한 로컬-퍼스트 데스크톱 앱으로, 저축 및 재무 목표 계획을 자동화한다. 은행 제안 확인, 알림, 데이터 수집을 ‘게으르게’ 처리해 사용자의 주의를 최소화한다. 현재 캐나다 시장을 대상으로 MVP를 제공하며, 국가별 팩을 추가해 다른 시장에도 확장 가능하다. Electron 기반으로 동작해 클라우드 백엔드가 필요하지 않다.",
+  "why": "민감한 재무 데이터가 로컬 머신에 머물러 클라우드 전송을 피할 수 있다. 현재 캐나다 시장만 지원하므로 다른 국가에서는 바로 쓸 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "iPhone Duo Teardown",
+  "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+  "source": "hackernews",
+  "upvotes": 107,
+  "comments": 69,
+  "published_at": 1792977804,
+  "discussion": "https://news.ycombinator.com/item?id=50237896",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.ifixit.com/News/119895/iphone-duo-teardown"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://valkyrie.cdn.ifixit.com/media/2026/10/24232224/iPhone-Duo_94.jpg",
+  "link_status": "ok",
+  "ko_title": "iPhone Duo 분해 분석",
+  "summary": "iPhone Duo가 실제로 분해되었으며, 화면 균열과 접힘선에 대한 초기 사용자 불만이 보고됐다. Apple은 현재 교체용 기기를 제공하지만, 보증 외 화면 손상은 999달러가 든다. 내부 구조는 기존 아이폰의 수리 방식과 유사해 외부 화면 교체는 비교적 쉬우나, 내부 화면 수리는 여전히 어려운 편이다.",
+  "why": "접이식 스마트폰을 다루는 백엔드 개발자에게는 직접적 관련이 적다. 다만 하드웨어 수리 가능성을 평가하는 작업이 있다면, 내부 화면 수리가 여전히 어렵다는 점은 참고할 만하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+  "url": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+  "source": "hackernews",
+  "upvotes": 101,
+  "comments": 54,
+  "published_at": 1792976619,
+  "discussion": "https://news.ycombinator.com/item?id=50237712",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://cdn.bloffy.blog/korindiehacker/articles/469/1792976193085-aneuvk",
+  "link_status": "ok",
+  "ko_title": "Next.js 제거로 내 블로그가 모든 Lighthouse 항목에서 100점 달성",
+  "summary": "블로거가 Next.js를 포기하고 경량화된 자체 블로그를 구축해 Lighthouse 점수를 전 항목에서 만점(100점)으로 끌어올렸다. 기존 블로그 플랫폼들의 성능·복잡성 문제를 지적하고, 직접 마크업과 코드를 다루는 방식을 선호한다는 점을 강조한다. 구현 과정과 성능 측정은 pagespeed.web.dev를 사용했다.",
+  "why": "Next.js를 제거하고 직접 마크업을 다루는 방식으로 전환하면 Lighthouse 전 항목 만점이 가능하다. 기존 프레임워크의 성능과 복잡성 문제를 해결하려는 백엔드 개발자에게 경량화 전략의 실마리를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "Seam Cutter",
+  "url": "https://simonwillison.net/2026/Oct/25/seam-cutter/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792941019.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/25/seam-cutter/"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "시임 커터",
+  "summary": "이미지에 가로 또는 세로로 자르는 선을 만든 뒤, 양쪽을 서로 미끄러뜨려 중간 부분을 잘라낼 수 있는 특수한 크롭 도구이다. iPhone용 Tailor 앱으로 여러 스크린샷을 이어붙인 긴 이미지를 다룰 때, 중간에 불필요한 부분을 제거하고 싶을 때 유용하다. 현재 GitHub에 공개된 오픈소스 프로젝트이며, 웹 브라우저에서 바로 사용 가능하다.",
+  "why": "스크린샷을 이어 붙인 긴 이미지에서 중간 불필요 부분을 제거할 때 쓰면 된다. 웹 브라우저에서 바로 작동하므로 별도 설치나 설정이 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "문자를 보냈다는데 왜 안 오죠? 길 잃은 국제 MO 메시지 구출 작전",
+  "url": "https://tech.kakao.com/posts/843",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792594800.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/843"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2F62b81ab801a100001.png",
+  "link_status": "ok",
+  "ko_title": "문자를 보냈다는데 왜 안 오죠? 길 잃은 국제 MO 메시지 구출 작전",
+  "summary": "KIMS가 국제 MO 메시지 전송 과정에서 발생하던 손실 문제를 해결하고, 전환율을 90%대까지 끌어올린 기술적 접근을 소개한다.",
+  "why": "해외 발신 문자 추적은 여전히 불투명한 영역이라, 수신 실패 원인 분석 시 이 사례의 접근법을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "Steal My Bitcoin CTF PoC",
+  "url": "https://github.com/KillaBoi/StealMyBitcoin-PoC",
+  "source": "hackernews",
+  "upvotes": 72,
+  "comments": 14,
+  "published_at": 1792973717,
+  "discussion": "https://news.ycombinator.com/item?id=50237379",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/KillaBoi/StealMyBitcoin-PoC"
+  ],
+  "cross_source_count": 2,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/KillaBoi/StealMyBitcoin-PoC",
+  "link_status": null,
+  "ko_title": "Steal My Bitcoin CTF 증명 개념",
+  "summary": "",
+  "why": "PHP 8.4.26 환경에서 표준 라이브러리만으로 동작하는 단일 파일 PoC를 제공한다. Docker 기반 로컬 랩에서 오프셋을 검증하고 전체 요청 체인을 재현할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
+  "title": "IBM CEO says open weight models are now good and cheap on-prem",
+  "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+  "source": "hackernews",
+  "upvotes": 159,
+  "comments": 91,
+  "published_at": 1792979266,
+  "discussion": "https://news.ycombinator.com/item?id=50238088",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "IBM CEO, 오픈 가중치 모델이 이제 온프레미스에서 좋고 저렴해졌다고 말함",
+  "summary": "",
+  "why": "온프레미스 배포 시 오픈 가중치 모델의 비용과 성능 장벽이 낮아졌다. 데이터 주권을 유지하면서 자체 인프라에 AI를 구축하는 비용 산정 기준이 달라진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-26T16:00:05.589223+09:00",
+  "batch_label": "10월 26일 16:00"
+ },
+ {
   "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
   "url": "https://lynchlab.net/llm-skin-cancer",
   "source": "hackernews",
