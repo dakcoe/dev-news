@@ -1,53 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-17T00:00:49+09:00",
-   "total": 24,
-   "counts": {
-    "ok": 12,
-    "blocked": 6,
-    "short": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35473",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35477",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35476",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35475",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35474",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
-     "source": "lobsters",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-17T08:00:36+09:00",
    "total": 22,
    "counts": {
@@ -883,6 +836,22 @@
      "url": "https://tech.kakao.com/posts/843",
      "source": "rss",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-27T00:00:29+09:00",
+   "total": 17,
+   "counts": {
+    "blocked": 1,
+    "ok": 11,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }

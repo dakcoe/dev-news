@@ -1,5 +1,546 @@
 [
  {
+  "title": "Fixing Tool-Call Accuracy in vLLM",
+  "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+  "source": "hackernews",
+  "upvotes": 59,
+  "comments": 12,
+  "published_at": 1793019588,
+  "discussion": "https://news.ycombinator.com/item?id=50242870",
+  "merged_sources": [
+   "devto",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://dev.to/hordii_bohdan/architectural-deep-dive-fixing-tool-call-accuracy-in-vllm-1hhh",
+   "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm"
+  ],
+  "cross_source_count": 2,
+  "score": 71,
+  "image": "https://cdn.prod.website-files.com/64f9d9b4e737e7b37d4e39a4/6ace25a7011f2d0bca7a06ea_LLM-inference.png",
+  "link_status": "ok",
+  "ko_title": "vLLM에서 도구 호출 정확도 개선",
+  "summary": "vLLM 0.31에 제약 디코딩 기능이 추가돼 도구 호출 스키마 정확도를 100%로 만들 수 있다. 이전 0.28 버전에서는 Kimi K2.6 모델이 92% 정확도만 보였으며, 2/25 호출이 실패했다. 제약 디코딩은 서버 측 플래그로 활성화한다.",
+  "why": "vLLM 0.31로 업그레이드하고 서버 측 플래그를 켜야 한다. 이전 버전에서는 스키마 오류가 누적돼 에이전트 워크로드 품질이 떨어졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "alchaincyf / huashu-design",
+  "url": "https://github.com/alchaincyf/huashu-design",
+  "source": "github",
+  "upvotes": 177,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/alchaincyf/huashu-design"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 177,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/alchaincyf/huashu-design",
+  "link_status": null,
+  "ko_title": "Huashu 디자인",
+  "summary": "3.0 버전이 출시돼 프롬프트 한 줄로 제품 발표 애니메이션, 클릭 가능한 앱 프로토타입, PPT, 인쇄용 인포그래픽 등을 30분 이내에 생성한다. MIT 라이선스로 전면 오픈돼 개인·상업 모두 무료이며, Claude Code·Cursor·Codex·OpenClaw·Hermes 등 다양한 에이전트에 설치해 사용할 수 있다.",
+  "why": "Claude Code나 Cursor 같은 에이전트에서 프롬프트 한 줄로 디자인 산출물을 만들 수 있다. MIT 라이선스 변경으로 상업적 사용 시 별도 인허가 절차가 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "lyramakesmusic / neuron-explorer",
+  "url": "https://github.com/lyramakesmusic/neuron-explorer",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 204,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/lyramakesmusic/neuron-explorer"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 204,
+  "score": 68,
+  "image": "https://opengraph.githubassets.com/1/lyramakesmusic/neuron-explorer",
+  "link_status": null,
+  "ko_title": "neuron explorer",
+  "summary": "Qwen3.5-4B 모델의 모든 MLP 뉴런을 프롬프트로 조정해 3D 시각화하는 도구다. 로컬에서 MPS·CUDA·CPU 중 선택해 실행 가능하며, 탐색 결과를 지도·목록·뉴런·임베딩 등 여러 뷰로 제공한다. Claude CLI와 연동해 채팅 기반 인터페이스도 지원한다.",
+  "why": "Qwen3.5-4B 모델의 뉴런을 프롬프트로 조정해 3D로 시각화한다. 로컬에서 MPS, CUDA, CPU 중 선택해 실행할 수 있다. Claude CLI와 연동해 채팅 기반 인터페이스를 지원한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "NVIDIA / SkillSpector",
+  "url": "https://github.com/NVIDIA/SkillSpector",
+  "source": "github",
+  "upvotes": 203,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/NVIDIA/SkillSpector"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 203,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/NVIDIA/SkillSpector",
+  "link_status": null,
+  "ko_title": "NVIDIA / SkillSpector 보안 스캐너",
+  "summary": "SkillSpector는 AI 에이전트 스킬을 설치하기 전에 취약점·악성 패턴·보안 위험을 탐지하는 오픈소스 스캐너다. 연구 데이터셋 31,132개 스킬 중 26.1%에 취약점이, 5.2%에 악의적 의도가 발견된다는 결과를 바탕으로 위험성을 평가한다. NVIDIA Verified Skills 파이프라인의 일부로 제공되어, 검증된 스킬만 NVIDIA 스킬 카탈로그에 게시한다.",
+  "why": "AI 에이전트 스킬 설치 전 취약점과 악성 패턴을 사전에 차단할 수 있다. 26.1%의 스킬에 취약점이 존재하므로 무분별한 설치는 보안 위험을 초래한다. Claude Code나 Codex CLI 등 에이전트 도구를 사용하는 환경에서 필수 검증 절차로 활용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "MCP Token Cost: I Cut My MCP Server From 15 Tools to 4",
+  "url": "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 3,
+  "published_at": 1793019138.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4qgkbjxhfzhet61ya4m0.png",
+  "link_status": "ok",
+  "ko_title": "MCP 토큰 비용: 내 MCP 서버를 15개 도구에서 4개로 줄였다",
+  "summary": "GitHub 공식 MCP 서버는 질문 전 55,000 토큰을 사용해 예산의 1/4 이상을 소모한다. 저자는 AWS에서 동일한 서버를 두 번 구축해 도구 수를 15개에서 4개로 줄이고, 호출 횟수를 7회에서 2회로 감소시켰다. 두 버전의 코드가 GitHub 저장소에 공개돼 차이를 비교할 수 있다.",
+  "why": "MCP 서버의 도구 스키마가 컨텍스트 윈도우를 크게 점유하므로 도구 수를 줄여야 한다. 공개된 저장소의 두 버전 코드를 비교해 도구 설계 방식을 점검할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "amosblomqvist / learnharness",
+  "url": "https://github.com/amosblomqvist/learnharness",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 716,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/amosblomqvist/learnharness"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 716,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/amosblomqvist/learnharness",
+  "link_status": null,
+  "ko_title": "learnharness",
+  "summary": "LearnHarness는 AI 에이전트를 활용해 사용자의 현재 이해 수준을 측정하고 목표까지 단계별로 학습 계획을 수립한다. 답변과 사고 과정을 분석해 다음 학습 내용을 결정하고, 지속적인 지식 그래프로 세션 간 학습 상태를 유지한다. 학습 과정은 예측·설명·검증의 순환으로 진행된다.",
+  "why": "백엔드 개발자가 AI 에이전트 내부 구조를 익힐 때, 학습 상태가 세션 간 유지되는 지식 그래프 방식을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "How Fanatics and OpenAI streamline the fan experience",
+  "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792998000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/fanatics-streamline-fan-experience"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4HesvKzyeH10Tdn3X9RNpq/28039b261753134c4addc73a90aa3103/fanatics-seo-image.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Fanatics와 OpenAI가 팬 경험을 간소화",
+  "summary": "Fanatics가 OpenAI 기반 “Shop the Look” 기능을 출시해 경기 당일 복장을 AI가 추천한다. MLB 30,000개 제품을 대상으로 24시간 이내에 50개 제품 테스트를 완료했다. 추천은 재고와 팀 정보를 활용해 매일 업데이트된다.",
+  "why": "Fanatics가 Codex로 추천 도구 개발과 데이터 보강을 수행해 50개 제품 테스트를 하루 만에 완료했다. 이는 복잡한 커머스 로직을 AI 코딩 도구로 빠르게 프로토타이핑하는 실무 사례를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Black-Box Testing with AI Agents: Test the Rules, Not the Code",
+  "url": "https://dev.to/soaresdiogo/black-box-testing-with-ai-agents-test-the-rules-not-the-code-17j8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 9,
+  "published_at": 1793001538.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/soaresdiogo/black-box-testing-with-ai-agents-test-the-rules-not-the-code-17j8"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fopv6fceslp6ml4ku4cx9.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트로 블랙박스 테스트: 규칙을 검증하라",
+  "summary": "AI 에이전트에게 애플리케이션 코드를 전혀 제공하지 않고 비즈니스 규칙만 전달해 테스트를 생성하고 실행했다. 결과는 규칙을 위반한 모든 지점을 리스트업한 보고서였으며, 이는 구현 세부를 알지 못해 테스트가 코드에 맞춰 변형되지 않은 덕분이다. 글에서는 이런 블랙박스 테스트 파이프라인 구축 방법과 프롬프트·파일 구조·보고서 형식을 제시한다.",
+  "why": "코드를 읽는 에이전트는 구현을 그대로 검증하는 약한 테스트를 만든다. 규칙만 전달하면 구현에 맞춰 변형되지 않는 검증을 수행한다. 이 방식은 코드 기반 테스트가 오작동을 고정시키는 문제를 막는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "nightly-labs / openbot",
+  "url": "https://github.com/nightly-labs/openbot",
+  "source": "github",
+  "upvotes": 86,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/nightly-labs/openbot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 86,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/nightly-labs/openbot",
+  "link_status": null,
+  "ko_title": "nightly-labs / openbot — 로컬 AI 동료용 데스크톱 워크스페이스",
+  "summary": "OpenBot은 로컬에서 실행되는 데스크톱 애플리케이션으로, Codex, Claude, Grok, OpenCode, Gemini, Cursor, Cline 등 다양한 AI 에이전트를 하나의 워크스페이스에서 관리한다. 에이전트마다 별도 대화와 파일 전송, 브라우저 임베딩 등을 지원하며, FIFO 메시지 큐와 자동 컨텍스트 압축 기능을 제공한다. 현재 개발 프리뷰 단계이며, 에이전트는 `danger-full-access` 권한으로 동작해 파일·명령·네트워크 접근이 제한 없이 가능하다.",
+  "why": "에이전트가 파일 수정과 명령 실행을 확인 없이 수행하므로 신뢰할 수 없는 작업은 실행하면 안 된다. 개발 프리뷰 단계라 보안 설정을 반드시 검토한 뒤 사용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Your secrets don't need a git commit to leak into an AI tool",
+  "url": "https://dev.to/cyclopt_dimitrisk/your-secrets-dont-need-a-git-commit-to-leak-into-an-ai-tool-be2",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 4,
+  "published_at": 1793011677.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/your-secrets-dont-need-a-git-commit-to-leak-into-an-ai-tool-be2"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxt2i8uqhs43rkydwpuhy.png",
+  "link_status": "ok",
+  "ko_title": "비밀이 git 커밋 없이 AI 도구에 유출될 수 있다",
+  "summary": "비밀이 git에 커밋되지 않아도 AI 코딩 어시스턴트 사용 시 복사·붙여넣기, 환경 변수 출력, 로그 등으로 컨텍스트에 포함돼 유출될 수 있다. 기존 비밀 스캐너는 커밋만 감시하고 실시간 채팅 입력은 감시하지 않는다. 기사에서는 네 가지 구체적인 유출 사례를 제시한다.",
+  "why": "기존 비밀 스캐너는 커밋만 감시하므로 실시간 채팅 입력은 보호되지 않는다. 디버깅 시 테스트 출력이나 환경 변수를 붙여넣기 전에 자격 증명이 포함됐는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Switzerland. Block by block. At 1:1 scale",
+  "url": "https://blocks.manifold3d.ch/",
+  "source": "hackernews",
+  "upvotes": 335,
+  "comments": 153,
+  "published_at": 1793004369,
+  "discussion": "https://news.ycombinator.com/item?id=50240922",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blocks.manifold3d.ch/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "스위스. 블록 단위 1:1 스케일",
+  "summary": "스위스 전역을 1블록=1미터 비율로 재현한 Minecraft 모드가 출시됐다. UNESCO 세계유산인 융프라우-알레슈 지역을 포함해 에거, 뵌히, 융프라우 등 주요 지형을 오픈 데이터 기반으로 구현한다. 전체 지도는 1.1 GB ZIP 파일이며, 초기에는 무료 융프라우-알레슈 구역을 시험해볼 수 있다.",
+  "why": "Minecraft Java 1.12.2와 Cubic Chunks 환경에서만 동작한다. 1.1 GB 용량의 맵을 다루므로 하드웨어 사양을 먼저 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Does Encryption Really Matter? An Honest Answer for Windows Users",
+  "url": "https://dev.to/akhourianmolkumar/does-encryption-really-matter-an-honest-answer-for-windows-users-3h25",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 14,
+  "comments": 6,
+  "published_at": 1793010793.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/does-encryption-really-matter-an-honest-answer-for-windows-users-3h25"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fah6p223k14jtqev8kj03.gif",
+  "link_status": "ok",
+  "ko_title": "암호화가 정말 중요할까? Windows 사용자를 위한 솔직한 답변",
+  "summary": "암호화는 비밀을 숨기기 위한 것이 아니라, 노트북 도난이나 비밀번호 유출 등 최악의 상황을 재앙이 아닌 불편으로 만들기 위한 방어 수단이다. 현대 암호인 AES-256은 현재와 미래의 하드웨어로는 실질적인 무차별 대입이 불가능하도록 설계되었다. 실제 위협은 암호 자체가 아니라 비밀번호 유출, 키 관리 부실, 보호되지 않은 파일 등이다.",
+  "why": "클라이언트 파일이나 업무 문서가 유출되면 책임 소재가 불분명해진다. 암호화는 이런 최악의 상황을 재앙이 아닌 불편으로 낮추는 방어선이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+  "url": "https://www.anthropic.com/news/s1-sec",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/s1-sec"
+  ],
+  "cross_source_count": 2,
+  "score": 36,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic, SEC에 S-1 서류 제출…IPO 예정",
+  "summary": "Anthropic이 미국 증권거래위원회에 S-1 양식 등록을 제출해 클래스 A 보통주를 나스닥에 상장하려는 계획을 알렸다. 상장 기호는 “ANT”이며, 구체적인 주식 수와 가격 범위는 아직 미정이다. 현재는 예비 안내서만 제공되며, 등록이 효력 발생하기 전까지는 매매가 불가능하다.",
+  "why": "Anthropic이 나스닥 상장을 추진하며 기업공개 절차를 시작했다. 개발자로서는 이 회사의 서비스 안정성이나 장기적 운영 방향에 변화를 주시할 필요가 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Day 24 of Building Crowdwide — What Do You Do When Your Project Is Finally Done? 🤔",
+  "url": "https://dev.to/puneetkumar2010/day-24-of-building-crowdwide-what-do-you-do-when-your-project-is-finally-done-1e4l",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 13,
+  "comments": 14,
+  "published_at": 1793010557.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-24-of-building-crowdwide-what-do-you-do-when-your-project-is-finally-done-1e4l"
+  ],
+  "cross_source_count": 1,
+  "score": 21,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F618qwt302bxiinqgjr6k.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 24일 차 — 프로젝트가 끝났을 때는 무엇을 해야 할까?",
+  "summary": "개발자는 1개월 차에 v2 버전을 완성하고 공개 테스트와 사용자 피드백을 모두 반영했다. 현재 서비스는 무료이며 14명의 회원, 70개의 게시물, 4개의 커뮤니티가 존재한다. 프로젝트 완료 후 향후 업데이트 여부와 개인적인 진행 방향에 대해 고민하고 있다.",
+  "why": "프로젝트 완료 후 유지보수 중단과 재개 사이에서 의사결정이 필요한 시점이다. 사용자 피드백 반영이 끝난 상태라 추가 기능 개발보다 배포 전략에 집중해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Anthropic S-1",
+  "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+  "source": "hackernews",
+  "upvotes": 570,
+  "comments": 512,
+  "published_at": 1793019890,
+  "discussion": "https://news.ycombinator.com/item?id=50242939",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Anthropic S-1",
+  "summary": "",
+  "why": "Anthropic의 S-1 제출은 회사의 재무 구조와 사업 현황을 공개하는 절차다. 독자의 개발 환경이나 코드에 직접적인 변경 사항은 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "Websites Should Be Printable",
+  "url": "https://brennenputh.me/blog/printable-websites/",
+  "source": "hackernews",
+  "upvotes": 133,
+  "comments": 113,
+  "published_at": 1793010734,
+  "discussion": "https://news.ycombinator.com/item?id=50241664",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://brennenputh.me/blog/printable-websites/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "웹사이트는 인쇄 가능해야 한다",
+  "summary": "",
+  "why": "인쇄용 CSS 미디어 쿼리를 적용하지 않으면 백엔드 개발 문서나 API 스펙을 출력할 때 레이아웃이 깨진다. 화면 전용 스타일과 인쇄 전용 스타일을 분리하는 규칙을 기존 프론트엔드 코드에 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
+  "title": "OLED iPad Mini",
+  "url": "https://www.apple.com/shop/buy-ipad/ipad-mini",
+  "source": "hackernews",
+  "upvotes": 91,
+  "comments": 101,
+  "published_at": 1793022453,
+  "discussion": "https://news.ycombinator.com/item?id=50243646",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.apple.com/shop/buy-ipad/ipad-mini"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-unselect-gallery-1-202610?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1791933043916",
+  "link_status": "ok",
+  "ko_title": "OLED iPad Mini",
+  "summary": "",
+  "why": "OLED 패널 탑재로 기존 LCD 모델 대비 화면 품질이 달라진다. 10월 28일 예약 주문, 11월 6일 정식 출시 일정이다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T00:00:01.145839+09:00",
+  "batch_label": "10월 27일 00:00"
+ },
+ {
   "title": "You're Debouncing Scroll Wrong. requestAnimationFrame Fixes It.",
   "url": "https://dev.to/parsajiravand/youre-debouncing-scroll-wrong-requestanimationframe-fixes-it-2pa5",
   "source": "devto",

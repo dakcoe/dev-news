@@ -1,5 +1,229 @@
 [
  {
+  "t": "vLLM에서 도구 호출 정확도 개선",
+  "u": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "dev-tools"
+  ],
+  "d": "2026-10-27",
+  "o": "Fixing Tool-Call Accuracy in vLLM",
+  "x": "vLLM 0.31에 제약 디코딩 기능이 추가돼 도구 호출 스키마 정확도를 100%로 만들 수 있다. 이전 0.28 버전에서는 Kimi K2.6 "
+ },
+ {
+  "t": "Huashu 디자인",
+  "u": "https://github.com/alchaincyf/huashu-design",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "alchaincyf / huashu-design",
+  "x": "3.0 버전이 출시돼 프롬프트 한 줄로 제품 발표 애니메이션, 클릭 가능한 앱 프로토타입, PPT, 인쇄용 인포그래픽 등을 30분 이내에 생성한"
+ },
+ {
+  "t": "neuron explorer",
+  "u": "https://github.com/lyramakesmusic/neuron-explorer",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "lyramakesmusic / neuron-explorer",
+  "x": "Qwen3.5-4B 모델의 모든 MLP 뉴런을 프롬프트로 조정해 3D 시각화하는 도구다. 로컬에서 MPS·CUDA·CPU 중 선택해 실행 가능하"
+ },
+ {
+  "t": "NVIDIA / SkillSpector 보안 스캐너",
+  "u": "https://github.com/NVIDIA/SkillSpector",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "NVIDIA / SkillSpector",
+  "x": "SkillSpector는 AI 에이전트 스킬을 설치하기 전에 취약점·악성 패턴·보안 위험을 탐지하는 오픈소스 스캐너다. 연구 데이터셋 31,13"
+ },
+ {
+  "t": "MCP 토큰 비용: 내 MCP 서버를 15개 도구에서 4개로 줄였다",
+  "u": "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-10-27",
+  "o": "MCP Token Cost: I Cut My MCP Server From 15 Tools to 4",
+  "x": "GitHub 공식 MCP 서버는 질문 전 55,000 토큰을 사용해 예산의 1/4 이상을 소모한다. 저자는 AWS에서 동일한 서버를 두 번 구축"
+ },
+ {
+  "t": "learnharness",
+  "u": "https://github.com/amosblomqvist/learnharness",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "amosblomqvist / learnharness",
+  "x": "LearnHarness는 AI 에이전트를 활용해 사용자의 현재 이해 수준을 측정하고 목표까지 단계별로 학습 계획을 수립한다. 답변과 사고 과정을"
+ },
+ {
+  "t": "Fanatics와 OpenAI가 팬 경험을 간소화",
+  "u": "https://openai.com/index/fanatics-streamline-fan-experience",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-10-27",
+  "o": "How Fanatics and OpenAI streamline the fan experience",
+  "x": "Fanatics가 OpenAI 기반 “Shop the Look” 기능을 출시해 경기 당일 복장을 AI가 추천한다. MLB 30,000개 제품을 "
+ },
+ {
+  "t": "AI 에이전트로 블랙박스 테스트: 규칙을 검증하라",
+  "u": "https://dev.to/soaresdiogo/black-box-testing-with-ai-agents-test-the-rules-not-the-code-17j8",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "d": "2026-10-27",
+  "o": "Black-Box Testing with AI Agents: Test the Rules, Not the Code",
+  "x": "AI 에이전트에게 애플리케이션 코드를 전혀 제공하지 않고 비즈니스 규칙만 전달해 테스트를 생성하고 실행했다. 결과는 규칙을 위반한 모든 지점을 "
+ },
+ {
+  "t": "nightly-labs / openbot — 로컬 AI 동료용 데스크톱 워크스페이스",
+  "u": "https://github.com/nightly-labs/openbot",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "nightly-labs / openbot",
+  "x": "OpenBot은 로컬에서 실행되는 데스크톱 애플리케이션으로, Codex, Claude, Grok, OpenCode, Gemini, Cursor,"
+ },
+ {
+  "t": "비밀이 git 커밋 없이 AI 도구에 유출될 수 있다",
+  "u": "https://dev.to/cyclopt_dimitrisk/your-secrets-dont-need-a-git-commit-to-leak-into-an-ai-tool-be2",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools"
+  ],
+  "d": "2026-10-27",
+  "o": "Your secrets don't need a git commit to leak into an AI tool",
+  "x": "비밀이 git에 커밋되지 않아도 AI 코딩 어시스턴트 사용 시 복사·붙여넣기, 환경 변수 출력, 로그 등으로 컨텍스트에 포함돼 유출될 수 있다."
+ },
+ {
+  "t": "스위스. 블록 단위 1:1 스케일",
+  "u": "https://blocks.manifold3d.ch/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-27",
+  "o": "Switzerland. Block by block. At 1:1 scale",
+  "x": "스위스 전역을 1블록=1미터 비율로 재현한 Minecraft 모드가 출시됐다. UNESCO 세계유산인 융프라우-알레슈 지역을 포함해 에거, 뵌히"
+ },
+ {
+  "t": "암호화가 정말 중요할까? Windows 사용자를 위한 솔직한 답변",
+  "u": "https://dev.to/akhourianmolkumar/does-encryption-really-matter-an-honest-answer-for-windows-users-3h25",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "hardware"
+  ],
+  "d": "2026-10-27",
+  "o": "Does Encryption Really Matter? An Honest Answer for Windows Users",
+  "x": "암호화는 비밀을 숨기기 위한 것이 아니라, 노트북 도난이나 비밀번호 유출 등 최악의 상황을 재앙이 아닌 불편으로 만들기 위한 방어 수단이다. 현"
+ },
+ {
+  "t": "Anthropic, SEC에 S-1 서류 제출…IPO 예정",
+  "u": "https://www.anthropic.com/news/s1-sec",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "industry"
+  ],
+  "d": "2026-10-27",
+  "o": "Anthropic files S-1 with the SEC for proposed initial public offering",
+  "x": "Anthropic이 미국 증권거래위원회에 S-1 양식 등록을 제출해 클래스 A 보통주를 나스닥에 상장하려는 계획을 알렸다. 상장 기호는 “ANT"
+ },
+ {
+  "t": "Crowdwide 구축 24일 차 — 프로젝트가 끝났을 때는 무엇을 해야 할까?",
+  "u": "https://dev.to/puneetkumar2010/day-24-of-building-crowdwide-what-do-you-do-when-your-project-is-finally-done-1e4l",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [],
+  "d": "2026-10-27",
+  "o": "Day 24 of Building Crowdwide — What Do You Do When Your Project Is Finally Done? 🤔",
+  "x": "개발자는 1개월 차에 v2 버전을 완성하고 공개 테스트와 사용자 피드백을 모두 반영했다. 현재 서비스는 무료이며 14명의 회원, 70개의 게시물"
+ },
+ {
+  "t": "Anthropic S-1",
+  "u": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-10-27"
+ },
+ {
+  "t": "웹사이트는 인쇄 가능해야 한다",
+  "u": "https://brennenputh.me/blog/printable-websites/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-27",
+  "o": "Websites Should Be Printable"
+ },
+ {
+  "t": "OLED iPad Mini",
+  "u": "https://www.apple.com/shop/buy-ipad/ipad-mini",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-27"
+ },
+ {
   "t": "스크롤 디바운스가 잘못되었습니다. requestAnimationFrame으로 해결",
   "u": "https://dev.to/parsajiravand/youre-debouncing-scroll-wrong-requestanimationframe-fixes-it-2pa5",
   "m": "2026-10",
