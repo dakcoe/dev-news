@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-18T00:00:31+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 5,
-    "ok": 14,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35525",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35530",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35529",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35527",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35526",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-18T08:00:28+09:00",
    "total": 22,
    "counts": {
@@ -792,6 +756,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-10-28T00:00:27+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 13,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
