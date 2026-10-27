@@ -1,5 +1,237 @@
 [
  {
+  "t": "새 14인치 맥북 프로, M6 탑재",
+  "u": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "hardware"
+  ],
+  "d": "2026-10-28",
+  "o": "New 14‑inch MacBook Pro with M6",
+  "x": "Apple이 M6 칩을 장착한 14인치 맥북 프로를 발표했다. 12코어 CPU와 12코어 GPU가 탑재돼 기존 M5 대비 그래픽이 최대 30%,"
+ },
+ {
+  "t": "AI 고객 간 155개 응답 누출: GLM-5.3 KV 캐시 버그 — 그리고 여러분의 제공자를 위한 카나리 테스트",
+  "u": "https://dev.to/slabb/155-responses-leaked-between-ai-customers-the-glm-53-kv-cache-bug-and-the-canary-test-for-your-59n8",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "d": "2026-10-28",
+  "o": "155 responses leaked between AI customers: the GLM-5.3 KV cache bug — and the canary test for YOUR provider",
+  "x": "8월 말부터 9월 초 사이에 Cloudflare Workers AI에서 GLM-5.3 모델이 KV 캐시 크기 불일치로 인해 155개의 응답에 다"
+ },
+ {
+  "t": "LFM3으로 특화된 멀티모달 모델 구축",
+  "u": "https://huggingface.co/blog/LiquidAI/lfm3",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-10-28",
+  "o": "Build specialized multimodal models with LFM3",
+  "x": "LFM3은 2 B 파라미터 규모의 텍스트·시각·음성·옴니·결정 모델을 하나의 백본에 통합한 최신 Liquid Foundation Model이다."
+ },
+ {
+  "t": "“use server” 함수는 공개 HTTP 엔드포인트이며 미들웨어로 보호되지 않는다",
+  "u": "https://dev.to/johnnylemonny/your-use-server-functions-are-public-http-endpoints-and-middleware-wont-save-you-18ib",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-10-28",
+  "o": "Your \"use server\" Functions Are Public HTTP Endpoints (And Middleware Won't Save You)",
+  "x": "Next.js Server Actions는 코드에서 ‘use server’가 선언된 모든 함수가 공개 POST 엔드포인트로 컴파일된다. 이 엔드"
+ },
+ {
+  "t": "Genie 4",
+  "u": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-28",
+  "x": "새로운 세계 시뮬레이션 모델 Genie 4가 발표되었다. 멀티모달 지원으로 음향·음악·대화 등을 동시에 생성한다. Gemini 시리즈의 기능을 "
+ },
+ {
+  "t": "Ghostty 1.4 출시",
+  "u": "https://ghostty.org/docs/install/release-notes/1-4-0",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-28",
+  "o": "Ghostty 1.4",
+  "x": "Ghostty 1.4.0은 성능과 메모리 사용량이 크게 개선된 주요 업데이트이다. 최초로 Kitty 그래픽을 100% 구현해 애니메이션과 상대 "
+ },
+ {
+  "t": "Anthropic, 스탠포드 교수들의 불법 확보 도서를 사용해 Claude 학습",
+  "u": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-28",
+  "o": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+  "x": "연방 판사는 Anthropic이 10여 명 스탠포드 교수의 저작물을 불법 스크랩해 Claude 모델을 학습시킨 사실을 인정했다. 판결에 따라 향"
+ },
+ {
+  "t": "Claude for Financial Advisors",
+  "u": "https://claude.com/resources/articles/claude-for-financial-advisors",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-10-28",
+  "x": "Claude는 금융 자문가가 사용하는 수탁 기관, 포트폴리오 플랫폼, CRM, 재무 계획 도구와 연동되는 커넥터와 워크플로우 스킬을 제공한다. "
+ },
+ {
+  "t": "LLM이 연구 아이디어의 새로움을 판단할 수 있을까?",
+  "u": "https://huggingface.co/blog/allenai/novelty-bench",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data"
+  ],
+  "d": "2026-10-28",
+  "o": "Can we trust LLMs to judge whether a research idea is novel?",
+  "x": "연구 아이디어의 새로움을 평가하는 LLM 기반 판단기의 신뢰성을 조사한 “Old Ideas, Novel Problems” 연구를 발표했다. 논문"
+ },
+ {
+  "t": "OpenAI, Oracle와 파트너십 확대해 ChatGPT에 앱 제공",
+  "u": "https://openai.com/index/oracle-apps-in-chatgpt",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "industry"
+  ],
+  "d": "2026-10-28",
+  "o": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+  "x": "OpenAI와 Oracle가 Oracle 애플리케이션·데이터를 ChatGPT에 통합하고, OpenAI 모델을 활용한 새로운 Oracle AI W"
+ },
+ {
+  "t": "Dossier — 자체 서버에서 구직 관리",
+  "u": "https://github.com/AienTech/dossier",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "career-culture"
+  ],
+  "d": "2026-10-28",
+  "o": "AienTech / dossier",
+  "x": "Dossier는 개인 서버에 프로필을 저장하고, 채용 공고를 분석해 맞춤형 이력서와 커버레터를 자동 생성한다. AI 모델은 Ollama, LM "
+ },
+ {
+  "t": "GSA와의 파트너십 확대, Claude를 모든 정부 수준에 제공",
+  "u": "https://www.anthropic.com/news/expanding-partnership-gsa",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "industry"
+  ],
+  "d": "2026-10-28",
+  "o": "Expanding our partnership with GSA to bring Claude to all levels of government",
+  "x": "Anthropic은 GSA와 새로운 계약을 체결해 연방·주·지방·부족·영토 정부에 Claude Enterprise, Claude for Gove"
+ },
+ {
+  "t": "Retell, OpenAI 모델로 월 1억 통화 지원",
+  "u": "https://openai.com/index/retell-ai",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "industry"
+  ],
+  "d": "2026-10-28",
+  "o": "Retell uses OpenAI models to help power 100M monthly calls",
+  "x": "Retell은 OpenAI 모델을 활용해 월 1억 통화 이상을 처리하고 80% 이상 고객 해결률을 달성했다. 1조 토큰을 소비했으며 직원당 연간"
+ },
+ {
+  "t": "Google Cloud에서 Claude Code 비용 관리 및 ROI 입증",
+  "u": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+  "m": "2026-10",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "ai-safety",
+   "devops-infra"
+  ],
+  "d": "2026-10-28",
+  "o": "Manage costs and demonstrate ROI for Claude Code on Google Cloud",
+  "x": "Claude Code는 사용량 기반 과금 모델을 사용해 토큰 소비량과 모델 선택에 따라 비용이 결정된다. 조직은 가드레일 설정, 세부 사용 추적"
+ },
+ {
+  "t": "경찰이 AI로 ‘수상한’ 운전 행동을 감시해 정차시킨다",
+  "u": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-safety"
+  ],
+  "d": "2026-10-28",
+  "o": "Police are using AI to pull over drivers for 'suspicious' behavior",
+  "x": "미국 전역에서 자동 번호판 인식기와 AI 도구를 이용해 특정 범죄 혐의가 없어도 운전자를 정차시키는 사례가 늘고 있다. ACLU는 버지니아 여성"
+ },
+ {
+  "t": "컨퍼런스 배지에서 게임 보이 컬러",
+  "u": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "d": "2026-10-28",
+  "o": "Game Boy Color on My Conference Badge",
+  "x": "컨퍼런스 배지에 내장된 컬러 화면 컴퓨터에 NES와 게임 보이, 게임 보이 컬러 에뮬레이터가 탑재되었다. ROM을 확보하면 배지에서 <The L"
+ },
+ {
   "t": "SoMarkAI / OXR",
   "u": "https://github.com/SoMarkAI/OXR",
   "m": "2026-10",

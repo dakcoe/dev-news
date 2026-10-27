@@ -1,5 +1,537 @@
 [
  {
+  "title": "New 14‑inch MacBook Pro with M6",
+  "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+  "source": "hackernews",
+  "upvotes": 241,
+  "comments": 291,
+  "published_at": 1793117312,
+  "discussion": "https://news.ycombinator.com/item?id=50261352",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://www.apple.com/newsroom/images/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/tile/Apple-MacBook-Pro-14-in-with-M6-hero-261027-lp.jpg.og.jpg?202610271357",
+  "link_status": "ok",
+  "ko_title": "새 14인치 맥북 프로, M6 탑재",
+  "summary": "Apple이 M6 칩을 장착한 14인치 맥북 프로를 발표했다. 12코어 CPU와 12코어 GPU가 탑재돼 기존 M5 대비 그래픽이 최대 30%, AI 작업이 최대 25% 빨라졌다. Wi-Fi 7·Bluetooth 6 지원과 최대 24시간 배터리 수명을 제공한다.",
+  "why": "M6 칩은 GPU에 뉴럴 가속기를 추가해 로컬 LLM 실행 속도를 높였다. 기존 M5 환경에서 온디바이스 AI 워크로드를 돌리던 개발자는 성능 향상을 체감할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "155 responses leaked between AI customers: the GLM-5.3 KV cache bug — and the canary test for YOUR provider",
+  "url": "https://dev.to/slabb/155-responses-leaked-between-ai-customers-the-glm-53-kv-cache-bug-and-the-canary-test-for-your-59n8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 4,
+  "published_at": 1793113760.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/slabb/155-responses-leaked-between-ai-customers-the-glm-53-kv-cache-bug-and-the-canary-test-for-your-59n8"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffni04et32wbrfou5e08s.png",
+  "link_status": "ok",
+  "ko_title": "AI 고객 간 155개 응답 누출: GLM-5.3 KV 캐시 버그 — 그리고 여러분의 제공자를 위한 카나리 테스트",
+  "summary": "8월 말부터 9월 초 사이에 Cloudflare Workers AI에서 GLM-5.3 모델이 KV 캐시 크기 불일치로 인해 155개의 응답에 다른 고객의 프롬프트와 생성 일부를 포함했다. 681,280 토큰을 초과하는 프롬프트가 트리거했으며, Cloudflare는 상세 분석과 자체 제공자를 검사할 수 있는 카나리 스크립트를 공개했다.",
+  "why": "681,280 토큰을 초과하는 긴 프롬프트를 보내면 다른 고객의 데이터가 섞여 나올 수 있다. Cloudflare이 공개한 카나리 스크립트로 현재 쓰는 제공자의 교차 누출 여부를 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Build specialized multimodal models with LFM3",
+  "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793121412.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/LiquidAI/lfm3"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/wEKXxH6qGa7vmHjn5KA-W.png",
+  "link_status": "ok",
+  "ko_title": "LFM3으로 특화된 멀티모달 모델 구축",
+  "summary": "LFM3은 2 B 파라미터 규모의 텍스트·시각·음성·옴니·결정 모델을 하나의 백본에 통합한 최신 Liquid Foundation Model이다. 새로운 트라이-하이브리드 아키텍처와 학습 레시피로 LFM2 대비 파라미터당 성능이 향상되었으며, 1 GB 이하 크기의 텍스트 모델을 4-bit 정밀도로 제공한다. 모든 모델은 단일 GPU에서 파인튜닝 가능하고, 모바일·라즈베리파이·클라우드 등 다양한 디바이스에서 실행하도록 설계되었다.",
+  "why": "단일 GPU로 파인튜닝이 가능해 자체 데이터에 맞춘 특화 모델을 구축할 수 있다. 텍스트 모델은 4비트 정밀도로 약 1GB 용량에 256K 컨텍스트를 지원한다. 이로써 에이전트를 온디바이스에서 실행하는 환경 설계가 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Your \"use server\" Functions Are Public HTTP Endpoints (And Middleware Won't Save You)",
+  "url": "https://dev.to/johnnylemonny/your-use-server-functions-are-public-http-endpoints-and-middleware-wont-save-you-18ib",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 12,
+  "comments": 10,
+  "published_at": 1793115000.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/johnnylemonny/your-use-server-functions-are-public-http-endpoints-and-middleware-wont-save-you-18ib"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvye0iyezsotdkaedpsg7.png",
+  "link_status": "ok",
+  "ko_title": "“use server” 함수는 공개 HTTP 엔드포인트이며 미들웨어로 보호되지 않는다",
+  "summary": "Next.js Server Actions는 코드에서 ‘use server’가 선언된 모든 함수가 공개 POST 엔드포인트로 컴파일된다. 이 엔드포인트는 식별자만 알면 curl·Postman·스크립트 등으로 임의의 JSON을 보내 호출할 수 있어 UI와 인증 검증을 우회한다. 보호된 컴포넌트에서 호출하더라도 함수 자체에 인증 로직을 넣지 않으면 무단 변조 위험이 있다.",
+  "why": "Next.js Server Actions를 내부 함수처럼 취급하면 인증 우회 위험이 생깁니다. 'use server' 함수마다 인증 로직을 직접 구현해야 합니다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Genie 4",
+  "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+  "source": "hackernews",
+  "upvotes": 635,
+  "comments": 385,
+  "published_at": 1793117161,
+  "discussion": "https://news.ycombinator.com/item?id=50261319",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
+  "link_status": "ok",
+  "ko_title": "Genie 4",
+  "summary": "새로운 세계 시뮬레이션 모델 Genie 4가 발표되었다. 멀티모달 지원으로 음향·음악·대화 등을 동시에 생성한다. Gemini 시리즈의 기능을 기반으로 실시간으로 사건을 설정하면 세계의 반응·소리·인물 행동을 시뮬레이션한다. 현재 신뢰할 수 있는 테스트 사용자에게 연구 미리보기 형태로 제공 중이다.",
+  "why": "로봇이나 에이전트 학습 환경을 만들 때 활용 가치가 있다. 현재는 신뢰할 수 있는 테스트 대상자에게만 연구 미리보기로 제공된다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Ghostty 1.4",
+  "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+  "source": "hackernews",
+  "upvotes": 616,
+  "comments": 192,
+  "published_at": 1793119882,
+  "discussion": "https://news.ycombinator.com/item?id=50261998",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ghostty.org/docs/install/release-notes/1-4-0"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://ghostty.org/social-share-card.jpg",
+  "link_status": "ok",
+  "ko_title": "Ghostty 1.4 출시",
+  "summary": "Ghostty 1.4.0은 성능과 메모리 사용량이 크게 개선된 주요 업데이트이다. 최초로 Kitty 그래픽을 100% 구현해 애니메이션과 상대 위치 지정이 가능해졌다. SSH 연동이 향상되었으며 172명의 기여자와 2,889개의 커밋으로 수백 가지 개선 및 버그 수정이 포함됐다. 또한 여러 보안 취약점에 대한 패치가 제공된다.",
+  "why": "SSH 연동 개선과 Kitty 그래픽 완전 구현으로 터미널 기반 워크플로우가 확장된다. 보안 취약점 패치가 포함되므로 기존 버전을 쓰는 환경은 즉시 업데이트해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+  "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+  "source": "hackernews",
+  "upvotes": 399,
+  "comments": 225,
+  "published_at": 1793114906,
+  "discussion": "https://news.ycombinator.com/item?id=50260814",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://stanforddaily.com/wp-content/uploads/2026/10/Green-Library.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 스탠포드 교수들의 불법 확보 도서를 사용해 Claude 학습",
+  "summary": "연방 판사는 Anthropic이 10여 명 스탠포드 교수의 저작물을 불법 스크랩해 Claude 모델을 학습시킨 사실을 인정했다. 판결에 따라 향후 AI 학습을 위한 도서 불법 수집이 금지되지만, 기존에 확보한 도서는 공정 이용으로 인정받았다. 회사는 1억 5천만 달러 규모의 합의금을 저자와 출판사에 지급했으며, 일부 저자는 합의금이 충분치 않다고 주장한다.",
+  "why": "AI 학습 데이터 수집 시 저작권 경계가 명확해졌으므로, 기존에 쓰던 무단 스크래핑 방식은 더 이상 사용할 수 없다. 이미 확보한 데이터는 공정 이용으로 인정받았지만, 신규 데이터 수집은 불법이므로 현재 파이프라인을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Claude for Financial Advisors",
+  "url": "https://claude.com/resources/articles/claude-for-financial-advisors",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793059200.0,
+  "origin_url": "https://claude.com/blog/claude-for-financial-advisors",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-for-financial-advisors",
+   "https://claude.com/resources/articles/claude-for-financial-advisors"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/claude-for-financial-advisors/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude for Financial Advisors",
+  "summary": "Claude는 금융 자문가가 사용하는 수탁 기관, 포트폴리오 플랫폼, CRM, 재무 계획 도구와 연동되는 커넥터와 워크플로우 스킬을 제공한다. 이를 통해 리서치·준비·문서화 작업에 소요되는 시간을 절감하고, 고객 회의에 더 집중할 수 있다. 주요 연동 대상은 Addepar, BlackRock, Charles Schwab, Envestnet 등이다.",
+  "why": "백엔드 개발자가 금융 플랫폼 API를 직접 연동하던 방식과 달라진다. Claude가 Addepar, BlackRock 등 주요 수탁 기관 데이터를 중계하므로 별도 커넥터 개발 부담이 줄어든다. 기존 CRM이나 재무 계획 도구와의 통합 시 기존 코드베이스를 유지하면서 AI 기능을 추가할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Can we trust LLMs to judge whether a research idea is novel?",
+  "url": "https://huggingface.co/blog/allenai/novelty-bench",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793117562.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/novelty-bench"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/ZrKpGOLkSf0LmAf3bnJIX.png",
+  "link_status": "ok",
+  "ko_title": "LLM이 연구 아이디어의 새로움을 판단할 수 있을까?",
+  "summary": "연구 아이디어의 새로움을 평가하는 LLM 기반 판단기의 신뢰성을 조사한 “Old Ideas, Novel Problems” 연구를 발표했다. 논문과 함께 벤치마크, 데이터, 코드, 자동 파이프라인을 공개했다. 여섯 가지 LLM 판단기(GPT-5.1·5.2·5.4·Claude Sonnet 4.5·Claude Opus 4.5·4.6) 테스트 결과, 평가 설정의 사소한 차이가 동일 아이디어에 대해 크게 다른 판결을 내렸다.",
+  "why": "LLM 판단기를 연구 아이디어 평가에 쓰려면 평가 설정의 사소한 차이가 판결을 크게 바꾼다는 점을 고려해야 한다. 기존 논문이 아닌 AI 생성 아이디어를 검증하는 용도로는 신뢰성이 낮으므로, 자동화 파이프라인 도입 전 기준을 재검토해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+  "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793084400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/oracle-apps-in-chatgpt"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/2NtuSxL760WPfJi1wbdQwh/c651b8dac0f73296f731f9fbe7b827d9/openai-oracle-apps-chatgpt-blue-seo-image-1920x1080.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "OpenAI, Oracle와 파트너십 확대해 ChatGPT에 앱 제공",
+  "summary": "OpenAI와 Oracle가 Oracle 애플리케이션·데이터를 ChatGPT에 통합하고, OpenAI 모델을 활용한 새로운 Oracle AI Workspace를 발표했다. Oracle은 현재 13만 명 이상의 활성 ChatGPT 사용자와 9만5천 명 이상의 Codex 사용자를 보유하고 있다. 이번 협업은 기업이 AI를 통해 핵심 업무를 자동화하고, 애플리케이션 사용성을 높이며, 보안을 강화하도록 설계됐다.",
+  "why": "Oracle AI Workspace가 출시되면 기존 Oracle 앱과 데이터를 ChatGPT 안에서 직접 조회하고 업무를 처리할 수 있다. 기존엔 각 시스템에 접속해 데이터를 수동으로 취합했지만, 이제 권한 범위 내에서 통합된 환경에서 작업이 가능하다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "industry"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "AienTech / dossier",
+  "url": "https://github.com/AienTech/dossier",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 889,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/AienTech/dossier"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 889,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/AienTech/dossier",
+  "link_status": null,
+  "ko_title": "Dossier — 자체 서버에서 구직 관리",
+  "summary": "Dossier는 개인 서버에 프로필을 저장하고, 채용 공고를 분석해 맞춤형 이력서와 커버레터를 자동 생성한다. AI 모델은 Ollama, LM Studio 등 로컬 모델이나 OpenAI·Anthropic·Mistral 호환 API를 선택 가능하다. 생성된 문서는 PDF로 다운로드하고 지원 단계별로 추적한다.",
+  "why": "로컬 모델 연동 시 이력서 데이터가 외부로 전송되지 않는다. 개인 서버에 PostgreSQL을 직접 운영해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+  "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/expanding-partnership-gsa"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/4e3bfa972a8ec391977288fa36de3da1ecd78232-1920x1080.webp",
+  "link_status": "ok",
+  "ko_title": "GSA와의 파트너십 확대, Claude를 모든 정부 수준에 제공",
+  "summary": "Anthropic은 GSA와 새로운 계약을 체결해 연방·주·지방·부족·영토 정부에 Claude Enterprise, Claude for Government, Claude API를 40% 할인된 가격에 제공한다. 할인은 직접 구매와 클라우드 제공자를 통한 구매 모두 적용된다. 현재 약 500개 정부 조직이 Claude를 사용 중이며, 사용량이 크게 증가하고 있다.",
+  "why": "정부 기관이 Claude를 도입할 때 최소 지출 의무 없이 사용량만 결제하는 구조가 적용된다. 이는 예산 제약이 큰 공공 부문의 AI 도입 장벽을 낮추는 실질적 변화다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Retell uses OpenAI models to help power 100M monthly calls",
+  "url": "https://openai.com/index/retell-ai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793113200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/retell-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/5uWhs4tBhdZ4XPHsi9IaMG/06f4b61c4303de24a65075b3eaf500b2/retell-ai-customer-story-open-graph-acoustic-fabric.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Retell, OpenAI 모델로 월 1억 통화 지원",
+  "summary": "Retell은 OpenAI 모델을 활용해 월 1억 통화 이상을 처리하고 80% 이상 고객 해결률을 달성했다. 1조 토큰을 소비했으며 직원당 연간 매출이 160만 달러에 이른다. 4,000여 기업이 이용 중이며, GPT-6 Astra가 vCX 벤치마크에서 89.7% 점수로 1위를 차지했다.",
+  "why": "Retell의 vCX 벤치마크에서 GPT-6 Astra가 지시 준수 항목 1위인 89.7%를 기록했다. 음성 에이전트 모델 선정 시 데모가 아닌 실제 통화 품질을 기준으로 삼아야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Manage costs and demonstrate ROI for Claude Code on Google Cloud",
+  "url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793059200.0,
+  "origin_url": "https://claude.com/blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+   "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://claude.com/ko/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Google Cloud에서 Claude Code 비용 관리 및 ROI 입증",
+  "summary": "Claude Code는 사용량 기반 과금 모델을 사용해 토큰 소비량과 모델 선택에 따라 비용이 결정된다. 조직은 가드레일 설정, 세부 사용 추적, 비용 대비 가치를 입증하는 세 가지 레버로 비용을 제어하고 ROI를 측정할 수 있다. 구글 클라우드와 Claude 앱 게이트웨이를 통해 토큰 사용량과 모델별 비용을 실시간으로 확인한다.",
+  "why": "Claude Code는 에이전틱 작업 특성상 챗봇보다 토큰 소모가 커서 모델 선택이 비용에 직결된다. 구글 클라우드의 앱 게이트웨이를 통해 모델별 토큰 사용량을 실시간으로 추적해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "ai-safety",
+   "devops-infra"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
+  "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
+  "source": "hackernews",
+  "upvotes": 321,
+  "comments": 247,
+  "published_at": 1793119215,
+  "discussion": "https://news.ycombinator.com/item?id=50261819",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://gizmodo.com/app/uploads/2026/09/flock-camera-miami-2026-1200x675.jpg",
+  "link_status": "ok",
+  "ko_title": "경찰이 AI로 ‘수상한’ 운전 행동을 감시해 정차시킨다",
+  "summary": "미국 전역에서 자동 번호판 인식기와 AI 도구를 이용해 특정 범죄 혐의가 없어도 운전자를 정차시키는 사례가 늘고 있다. ACLU는 버지니아 여성의 사례를 들어 이러한 감시가 확대될 위험을 경고했다. 주요 업체인 Flock Safety와 Axon도 비판을 받고 있다.",
+  "why": "경찰이 특정 범죄 혐의 없이 AI로 운전 패턴을 분석해 정차시키는 사례가 늘고 있다. 미국 내 ALPR 기반 감시가 확대되며 시민의 이동 기록이 수집되는 방식이 달라진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
+  "title": "Game Boy Color on My Conference Badge",
+  "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793129658.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://static.simonwillison.net/static/2026/zelda-card.jpg",
+  "link_status": "ok",
+  "ko_title": "컨퍼런스 배지에서 게임 보이 컬러",
+  "summary": "컨퍼런스 배지에 내장된 컬러 화면 컴퓨터에 NES와 게임 보이, 게임 보이 컬러 에뮬레이터가 탑재되었다. ROM을 확보하면 배지에서 <The Legend of Zelda: Link's Awakening>을 실행할 수 있다. 배지는 몸체에 터치 버튼을 포함해 화면을 뒤집어 조작할 수 있다.",
+  "why": "GitHub Universe 배지에 NES와 게임 보이 계열 에뮬레이터가 구동된다는 점이 확인되었다. AI 도구를 활용해 소형 디바이스에 에뮬레이터를 이식하는 과정이 실증되었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-10-28T08:00:05.798441+09:00",
+  "batch_label": "10월 28일 08:00"
+ },
+ {
   "title": "SoMarkAI / OXR",
   "url": "https://github.com/SoMarkAI/OXR",
   "source": "github",
