@@ -1,5 +1,459 @@
 [
  {
+  "title": "indexable-inc / blaze",
+  "url": "https://github.com/indexable-inc/blaze",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 260,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/indexable-inc/blaze"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 260,
+  "score": 75,
+  "image": "https://opengraph.githubassets.com/1/indexable-inc/blaze",
+  "link_status": null,
+  "ko_title": "indexable-inc / blaze — 밀리초 단위로 Rust 재빌드",
+  "summary": "blaze는 cargo와 동일한 명령어 앞에 `blaze`만 붙이면 Rust 프로젝트를 밀리초 수준으로 재빌드한다. macOS arm64에서는 10배, Linux aarch64에서는 24배, Linux x86-64에서는 11배 빠른 성능을 보이며, 파일 저장 후 약 20 ms 안에 실행 중인 프로그램에 변경 사항을 반영한다. 설치는 단일 curl 스크립트로 가능하고, 기존 cargo와 호환된다.",
+  "why": "기존 cargo 명령어 앞에 blaze만 붙이면 된다. 파일 저장 후 20 ms 안에 실행 중 프로그램에 변경이 반영된다. Rust 개발 시 반복 빌드 대기 시간을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "Concerning behavior from a popular open-weight AI model",
+  "url": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
+  "source": "hackernews",
+  "upvotes": 289,
+  "comments": 115,
+  "published_at": 1793032544,
+  "discussion": "https://news.ycombinator.com/item?id=50246658",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://cdn.sanity.io/images/rjtqmwfu/web3-prod/658e160a6519a049e260213d409551e67399113a-1352x754.png?rect=0,22,1352,710&w=1200&h=630&q=80&fit=crop&auto=format",
+  "link_status": "ok",
+  "ko_title": "인기 있는 오픈 가중치 AI 모델의 우려되는 행동",
+  "summary": "최근 조사에 따르면 2026년 초까지 중국산 오픈 가중치 모델이 Hugging Face 다운로드의 41 %를 차지했으며, OpenRouter에서도 주당 AI 작업의 30 % 이상을 차지했다. 기업들이 자체 서버에 모델을 호스팅해도 데이터가 외부로 유출되지 않는다는 기존 믿음이 깨지고 있다. 모델이 명령줄에 직접 입력하고 인프라를 제어할 수 있게 되면서 보안 위험이 크게 확대되고 있다.",
+  "why": "자체 서버에 오픈 가중치 모델을 호스팅해도 데이터가 외부로 유출되지 않는다는 전제가 무너졌다. 모델이 명령줄이나 클라우드 콘솔에 직접 접근할 수 있게 되면서 보안 위험이 크게 확대됐다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "The Most Embarrassing Private Key in Web PKI History",
+  "url": "https://dev.to/varshithvhegde/the-most-embarrassing-private-key-in-web-pki-history-f9b",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793080567.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/varshithvhegde/the-most-embarrassing-private-key-in-web-pki-history-f9b"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Filt5ikviyosme61jx21q.png",
+  "link_status": "ok",
+  "ko_title": "웹 PKI 역사상 가장 당혹스러운 개인키",
+  "summary": "eMudhra가 운영하던 8개의 중간 인증기관에서 2025년 4월 30일에 생성된 타원곡선 P-384 개인키가 256 이하의 매우 작은 값으로 생성돼 공개키만으로 1초 이내에 복구가 가능했다. 해당 인증서는 약 18개월간 신뢰받았으며 2026년 10월 17일 연구자가 Chrome Root Program에 보고한 뒤 브라우저가 차단하고 eMudhra가 인증서를 폐기했다. 현재까지 악용된 증거는 없지만, 키 생성 과정의 심각한 운영·검토 실패를 보여준다.",
+  "why": "인증서 체인 검증만으로는 이런 취약 키를 걸러내지 못한다. 중간 인증기관 키 생성 시 작은 값이 섞이지 않는지 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "Next.js 16 updateTag vs revalidateTag: What Changed",
+  "url": "https://dev.to/parsajiravand/nextjs-16-updatetag-vs-revalidatetag-what-changed-1mci",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793081462.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/nextjs-16-updatetag-vs-revalidatetag-what-changed-1mci"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fnextjs-weekly-updatetag-vs-revalidatetag.png",
+  "link_status": "ok",
+  "ko_title": "Next.js 16 updateTag와 revalidateTag 변경 사항",
+  "summary": "Next.js 16에서 revalidateTag 함수의 시그니처가 변경되어, 기존 호출이 즉시 차단 캐시 미스로 동작한다. 새로운 profile 인자를 사용해 stale-while-revalidate 동작을 명시적으로 선택할 수 있다. updateTag 은 Server Action 외에서는 사용할 수 없는 제한이 있다.",
+  "why": "기존 revalidateTag 호출은 이제 즉시 블로킹 캐시 미스로 동작한다. stale-while-revalidate가 필요하면 profile 인자를 명시적으로 전달해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "I stopped babysitting my AI agents. Now they hold a standup.",
+  "url": "https://dev.to/atoll92/i-stopped-babysitting-my-ai-agents-now-they-hold-a-standup-74m",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 0,
+  "comments": 7,
+  "published_at": 1793063551.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/atoll92/i-stopped-babysitting-my-ai-agents-now-they-hold-a-standup-74m"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjqb92iaxah745doo91zo.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트 감시를 그만두었다. 이제 스탠드업을 진행한다.",
+  "summary": "Agent Standup은 Claude Code, Codex, Mistral Vibe 등 에이전트가 만든 세션 파일을 읽어 실시간 팀 콜 형태로 보여준다. 각 에이전트는 화면 공유와 상태 타일로 진행 상황을 표시하고, 토큰 사용량도 한눈에 확인한다. 음성 합성 모델을 이용해 업데이트를 음성으로 전달하며, 필요할 때만 사용자의 승인을 요청한다. 로컬에서 실행되며 토큰 비용이 전혀 발생하지 않는다.",
+  "why": "병렬로 돌린 에이전트를 터미널을 번갈아 보며 수동으로 확인하던 방식이 바뀐다. 세션 파일을 로컬에서 읽어 토큰 비용 없이 상태를 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "career-culture"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "There are now 5 inference providers for abliterated DeepSeek",
+  "url": "https://allmodels.io/llm/abliterated",
+  "source": "hackernews",
+  "upvotes": 59,
+  "comments": 63,
+  "published_at": 1793076832,
+  "discussion": "https://news.ycombinator.com/item?id=50254836",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://allmodels.io/llm/abliterated"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://allmodels.io/assets/og/llm-abliterated-pixels-v1.png",
+  "link_status": "ok",
+  "ko_title": "이제 5개의 추론 제공자가 있는 abliterated DeepSeek",
+  "summary": "AllModels는 여러 독립 제공자를 통해 abliterated DeepSeek 모델을 제공한다. 텍스트 요청은 폴백 풀에, 이미지 요청은 해당 제공자에게만 전송한다. 하나의 엔드포인트로 모든 abliterated 모델에 접근 가능하며, 가격·제한에 따라 제공자를 선택할 수 있다.",
+  "why": "기존 OpenAI SDK를 그대로 유지하면서 단일 엔드포인트로 여러 제공자의 abliterated 모델을 호출할 수 있다. 가격이나 요청 제한이 중요한 경우 특정 제공자를 명시적으로 선택하는 라우팅 전략을 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "AI Agents Have the Keys to Your Computer. I Spent 8 Months Building an Antivirus for Them.",
+  "url": "https://dev.to/id_1/ai-agents-have-the-keys-to-your-computer-i-spent-8-months-building-an-antivirus-for-them-349j",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 7,
+  "published_at": 1793063893.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/id_1/ai-agents-have-the-keys-to-your-computer-i-spent-8-months-building-an-antivirus-for-them-349j"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkb1l1tskrxxbvl17g3rh.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 당신의 컴퓨터를 제어한다 — 8개월 동안 만든 AI용 안티바이러스",
+  "summary": "오픈소스 보안 앱 AEGIS는 로컬 AI 에이전트의 명령 실행을 사전 차단·승인·감시하는 기능을 제공한다. 명령 정책, 단일 사용 MCP 승인, 비밀 데이터 차단 등 구체적인 보호 제어를 설정할 수 있다. 현재 Windows용 0.20.1-beta 버전이 MIT 라이선스로 배포된다.",
+  "why": "로컬 AI 에이전트가 터미널 접근 권한을 가질 때 파일과 자격 증명을 건드릴 수 있다. AEGIS는 실행 전 명령을 차단하고 MCP 호출을 승인하는 사전 제어를 제공한다. 현재 Windows용 0.20.1-beta 버전만 배포되므로 다른 환경에서는 적용이 어렵다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "GraphQL Isn't Magic: How ASTs, Resolvers, and DataLoaders Actually Work Under the Hood",
+  "url": "https://dev.to/smtahosin/graphql-isnt-magic-how-asts-resolvers-and-dataloaders-actually-work-under-the-hood-17gp",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1793075912.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/smtahosin/graphql-isnt-magic-how-asts-resolvers-and-dataloaders-actually-work-under-the-hood-17gp"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fiili.io%2FnMYbL8P.png",
+  "link_status": "ok",
+  "ko_title": "GraphQL은 마법이 아니다: AST와 Resolver, DataLoader가 실제로 작동하는 방식",
+  "summary": "GraphQL은 요청을 자동으로 최적화해 데이터베이스 조인을 생성하지 않는다. 실제 실행 엔진은 AST를 만들고 각 필드마다 별도 resolver를 호출한다. 이 구조 때문에 단일 요청이 수십 개의 SQL 쿼리를 발생시켜 DB 부하가 급증할 수 있다. 이해를 바탕으로 성능 병목을 사전에 예측하고 서버 아키텍처를 개선할 수 있다.",
+  "why": "GraphQL은 데이터베이스 조인을 자동 생성하지 않고 각 필드마다 별도 쿼리를 실행한다. 단일 요청이 수십 개의 SQL을 발생시켜 DB 부하를 급증시킬 수 있다. 이 구조를 이해하면 성능 병목을 사전에 예측하고 아키텍처를 개선할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+  "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793022300.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6.1 Sol이 CodeRabbit의 복잡한 코드베이스 보안을 강화하도록 지원",
+  "summary": "CodeRabbit은 GPT-6.1 Sol을 보안 에이전트로 도입해 복잡한 코드베이스의 보안 위험을 자동으로 조사한다. 에이전트는 발견된 취약점과 권장 수정안을 개발자에게 제시한다.",
+  "why": "코드 리뷰 시 보안 취약점과 수정안이 자동 생성되어 수동 점검 부담이 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "webframe: evaluated as a scraper and a sandbox",
+  "url": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793031300.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/26/webframe-evaluation/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "webframe: 스크래퍼와 샌드박스로 평가",
+  "summary": "webframe는 Jeff Lindsay가 만든 Go 기반 프로젝트로, URL이나 파일을 지정하면 숨겨진 헤드리스 웹 뷰에서 페이지를 실행하고 console.log를 표준 출력에, 예외를 표준 오류에 출력한다. glaze 라이브러리를 이용해 시스템 브라우저 엔진을 사용하므로 별도 엔진을 번들링하지 않는다. Playwright에 의존하지 않는 가벼운 패키지로, 웹 스크래핑과 샌드박싱 용도로 활용 가능하다.",
+  "why": "Playwright 의존 없이 시스템 브라우저 엔진을 재사용하므로 백엔드 스크래핑 파이프라인의 설치 부하를 줄일 수 있다. console.log를 표준 출력으로 분리해 기존 스크립트와 결합이 쉽다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "Introducing GPT-6.1 Terra",
+  "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1792972800.0,
+  "merged_sources": [
+   "OpenAI",
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-gpt-6-1-terra",
+   "https://openai.com/index/introducing-gpt-6-1-terra/",
+   "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
+  ],
+  "cross_source_count": 3,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6.1 Terra 소개",
+  "summary": "빠르고 강력한 컴퓨팅을 모두에게 제공한다.",
+  "why": "컴퓨터 사용 기능이 모든 사용자에게 제공된다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "current / deadcell-framework",
+  "url": "https://github.com/current/deadcell-framework",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 207,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/current/deadcell-framework"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 207,
+  "score": 40,
+  "image": "https://opengraph.githubassets.com/1/current/deadcell-framework",
+  "link_status": null,
+  "ko_title": "current / deadcell-framework",
+  "summary": "deadcell 메뉴용 imgui 기반이 1.89.5-wip 버전으로 고정돼 저장소에 포함돼 있다. 서브모듈 대신 vendoring 방식을 써서 upstream 변화에 영향을 받지 않는다. 필요 시 upstream 수정만 cherry-pick한다.",
+  "why": "imgui 내부 헤더에 의존하는 커스텀 위젯을 만들 때 서브모듈 업데이트가 빌드를 깨뜨리는 문제를 피할 수 있다. 업스트림 변경을 추적하지 않고 필요한 수정만 선택적으로 가져오는 방식으로 의존성을 관리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "Solar power is becoming bigger than nuclear",
+  "url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+  "source": "hackernews",
+  "upvotes": 237,
+  "comments": 369,
+  "published_at": 1793028377,
+  "discussion": "https://news.ycombinator.com/item?id=50245385",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://ychef.files.bbci.co.uk/624x351/p0pjn1gz.jpg",
+  "link_status": "ok",
+  "ko_title": "태양광 발전, 핵보다 커지고 있다",
+  "summary": "전 세계 태양광 전력 비중이 2025년에 핵발전보다 앞섰으며, 2026년에는 전체 전력의 10%에 육박할 것으로 전망된다. Ember와 BBC 분석에 따르면 최근 12개월간 태양광 발전량이 핵발전량보다 13% 더 많다. 성장 요인으로는 중국 대규모 설비와 석유 가격 상승 등이 있다.",
+  "why": "태양광이 핵발전량을 추월한 것은 전력 공급 구조의 변화일 뿐, 백엔드 개발자의 코드나 인프라 설정에 직접적인 영향을 주지 않는다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
+  "title": "The Exponential Time Hypothesis Is False [pdf]",
+  "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+  "source": "hackernews",
+  "upvotes": 536,
+  "comments": 196,
+  "published_at": 1793051955,
+  "discussion": "https://news.ycombinator.com/item?id=50251661",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
+  ],
+  "cross_source_count": 1,
+  "score": 0,
+  "image": "https://opengraph.githubassets.com/84bf3d0def43dfd9b14941598b50662a2db8fc0cec101359e7521cbd5e4e4a78/openai/math",
+  "link_status": "ok",
+  "ko_title": "지수 시간 가설은 거짓이다",
+  "summary": "",
+  "why": "지수 시간 가설이 거짓이라는 주장은 알고리즘 복잡도 분석의 전제 자체를 흔든다. 기존에 지수 시간으로 분류되던 문제의 계산 비용 평가 방식을 재검토해야 한다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "release",
+   "science"
+  ],
+  "batch": "2026-10-27T16:00:05.549965+09:00",
+  "batch_label": "10월 27일 16:00"
+ },
+ {
   "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
   "url": "https://openai.com/index/greptile-code-review-codex-astra",
   "source": "rss",

@@ -1,58 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-17T16:00:41+09:00",
-   "total": 22,
-   "counts": {
-    "blocked": 7,
-    "ok": 11,
-    "short": 1,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35517",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35506",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35519",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35518",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35516",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
-     "source": "lobsters",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/itau-generative-ai",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-18T00:00:31+09:00",
    "total": 22,
    "counts": {
@@ -819,6 +767,27 @@
    "failures": [
     {
      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-27T16:00:27+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 11,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
      "source": "rss",
      "reason": "blocked"
     }

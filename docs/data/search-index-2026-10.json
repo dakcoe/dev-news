@@ -1,5 +1,196 @@
 [
  {
+  "t": "indexable-inc / blaze — 밀리초 단위로 Rust 재빌드",
+  "u": "https://github.com/indexable-inc/blaze",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-10-27",
+  "o": "indexable-inc / blaze",
+  "x": "blaze는 cargo와 동일한 명령어 앞에 `blaze`만 붙이면 Rust 프로젝트를 밀리초 수준으로 재빌드한다. macOS arm64에서는 "
+ },
+ {
+  "t": "인기 있는 오픈 가중치 AI 모델의 우려되는 행동",
+  "u": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "d": "2026-10-27",
+  "o": "Concerning behavior from a popular open-weight AI model",
+  "x": "최근 조사에 따르면 2026년 초까지 중국산 오픈 가중치 모델이 Hugging Face 다운로드의 41 %를 차지했으며, OpenRouter에서"
+ },
+ {
+  "t": "웹 PKI 역사상 가장 당혹스러운 개인키",
+  "u": "https://dev.to/varshithvhegde/the-most-embarrassing-private-key-in-web-pki-history-f9b",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-10-27",
+  "o": "The Most Embarrassing Private Key in Web PKI History",
+  "x": "eMudhra가 운영하던 8개의 중간 인증기관에서 2025년 4월 30일에 생성된 타원곡선 P-384 개인키가 256 이하의 매우 작은 값으로 "
+ },
+ {
+  "t": "Next.js 16 updateTag와 revalidateTag 변경 사항",
+  "u": "https://dev.to/parsajiravand/nextjs-16-updatetag-vs-revalidatetag-what-changed-1mci",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-10-27",
+  "o": "Next.js 16 updateTag vs revalidateTag: What Changed",
+  "x": "Next.js 16에서 revalidateTag 함수의 시그니처가 변경되어, 기존 호출이 즉시 차단 캐시 미스로 동작한다. 새로운 profile"
+ },
+ {
+  "t": "AI 에이전트 감시를 그만두었다. 이제 스탠드업을 진행한다.",
+  "u": "https://dev.to/atoll92/i-stopped-babysitting-my-ai-agents-now-they-hold-a-standup-74m",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "career-culture"
+  ],
+  "d": "2026-10-27",
+  "o": "I stopped babysitting my AI agents. Now they hold a standup.",
+  "x": "Agent Standup은 Claude Code, Codex, Mistral Vibe 등 에이전트가 만든 세션 파일을 읽어 실시간 팀 콜 형태로"
+ },
+ {
+  "t": "이제 5개의 추론 제공자가 있는 abliterated DeepSeek",
+  "u": "https://allmodels.io/llm/abliterated",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-10-27",
+  "o": "There are now 5 inference providers for abliterated DeepSeek",
+  "x": "AllModels는 여러 독립 제공자를 통해 abliterated DeepSeek 모델을 제공한다. 텍스트 요청은 폴백 풀에, 이미지 요청은 해"
+ },
+ {
+  "t": "AI 에이전트가 당신의 컴퓨터를 제어한다 — 8개월 동안 만든 AI용 안티바이러스",
+  "u": "https://dev.to/id_1/ai-agents-have-the-keys-to-your-computer-i-spent-8-months-building-an-antivirus-for-them-349j",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-27",
+  "o": "AI Agents Have the Keys to Your Computer. I Spent 8 Months Building an Antivirus for Them.",
+  "x": "오픈소스 보안 앱 AEGIS는 로컬 AI 에이전트의 명령 실행을 사전 차단·승인·감시하는 기능을 제공한다. 명령 정책, 단일 사용 MCP 승인,"
+ },
+ {
+  "t": "GraphQL은 마법이 아니다: AST와 Resolver, DataLoader가 실제로 작동하는 방식",
+  "u": "https://dev.to/smtahosin/graphql-isnt-magic-how-asts-resolvers-and-dataloaders-actually-work-under-the-hood-17gp",
+  "m": "2026-10",
+  "s": "devto",
+  "g": [
+   "security",
+   "backend-data"
+  ],
+  "d": "2026-10-27",
+  "o": "GraphQL Isn't Magic: How ASTs, Resolvers, and DataLoaders Actually Work Under the Hood",
+  "x": "GraphQL은 요청을 자동으로 최적화해 데이터베이스 조인을 생성하지 않는다. 실제 실행 엔진은 AST를 만들고 각 필드마다 별도 resolve"
+ },
+ {
+  "t": "GPT-6.1 Sol이 CodeRabbit의 복잡한 코드베이스 보안을 강화하도록 지원",
+  "u": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "industry"
+  ],
+  "d": "2026-10-27",
+  "o": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+  "x": "CodeRabbit은 GPT-6.1 Sol을 보안 에이전트로 도입해 복잡한 코드베이스의 보안 위험을 자동으로 조사한다. 에이전트는 발견된 취약점"
+ },
+ {
+  "t": "webframe: 스크래퍼와 샌드박스로 평가",
+  "u": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "research",
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-10-27",
+  "o": "webframe: evaluated as a scraper and a sandbox",
+  "x": "webframe는 Jeff Lindsay가 만든 Go 기반 프로젝트로, URL이나 파일을 지정하면 숨겨진 헤드리스 웹 뷰에서 페이지를 실행하고 "
+ },
+ {
+  "t": "GPT-6.1 Terra 소개",
+  "u": "https://openai.com/index/introducing-gpt-6-1-terra",
+  "m": "2026-10",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "d": "2026-10-27",
+  "o": "Introducing GPT-6.1 Terra",
+  "x": "빠르고 강력한 컴퓨팅을 모두에게 제공한다."
+ },
+ {
+  "t": "current / deadcell-framework",
+  "u": "https://github.com/current/deadcell-framework",
+  "m": "2026-10",
+  "s": "github",
+  "g": [
+   "open-source",
+   "release"
+  ],
+  "d": "2026-10-27",
+  "x": "deadcell 메뉴용 imgui 기반이 1.89.5-wip 버전으로 고정돼 저장소에 포함돼 있다. 서브모듈 대신 vendoring 방식을 써서"
+ },
+ {
+  "t": "태양광 발전, 핵보다 커지고 있다",
+  "u": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-10-27",
+  "o": "Solar power is becoming bigger than nuclear",
+  "x": "전 세계 태양광 전력 비중이 2025년에 핵발전보다 앞섰으며, 2026년에는 전체 전력의 10%에 육박할 것으로 전망된다. Ember와 BBC "
+ },
+ {
+  "t": "지수 시간 가설은 거짓이다",
+  "u": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+  "m": "2026-10",
+  "s": "hackernews",
+  "g": [
+   "release",
+   "science"
+  ],
+  "d": "2026-10-27",
+  "o": "The Exponential Time Hypothesis Is False [pdf]"
+ },
+ {
   "t": "Greptile, GPT-6 Astra로 코드 리뷰를 넘어 버그 탐지",
   "u": "https://openai.com/index/greptile-code-review-codex-astra",
   "m": "2026-10",
