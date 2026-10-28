@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-19T00:00:32+09:00",
-   "total": 23,
-   "counts": {
-    "ok": 14,
-    "blocked": 5,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35576",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35575",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35574",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35573",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35572",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-19T08:00:34+09:00",
    "total": 22,
    "counts": {
@@ -717,6 +681,28 @@
      "url": "https://openai.com/index/check-point-daybreak",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-29T00:00:24+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 12,
+    "blocked": 1,
+    "robots": 1,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.reuters.com/business/media-telecom/amazon-signs-1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/",
+     "source": "hackernews",
+     "reason": "robots"
     }
    ]
   }

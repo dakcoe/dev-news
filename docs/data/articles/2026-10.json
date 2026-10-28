@@ -1,5 +1,557 @@
 [
  {
+  "title": "Are You a Python Developer or a Python Expert? 7 Tests I Failed Building 3 Desktop Apps",
+  "url": "https://dev.to/akhourianmolkumar/are-you-a-python-developer-or-a-python-expert-7-tests-i-failed-building-3-desktop-apps-2fp4",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 24,
+  "comments": 26,
+  "published_at": 1793182409.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/are-you-a-python-developer-or-a-python-expert-7-tests-i-failed-building-3-desktop-apps-2fp4"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fz79ftelq3gss34zn235x.png",
+  "link_status": "ok",
+  "ko_title": "파이썬 개발자와 전문가를 가르는 7가지 테스트 — 3개 데스크톱 앱 제작 경험",
+  "summary": "3개의 Windows 전용 파이썬 데스크톱 앱을 만들면서 발견한 보안, 화면 캡처, 물리 엔진, HiDPI, PyInstaller 실행 파일 문제 등 7가지 실전 테스트를 정리했다. 각 테스트는 실제 버그나 설계 선택을 기반으로 하며, import 순서가 보안에 미치는 영향 등 전문가 수준의 지식을 요구한다.",
+  "why": "Windows에서 파이썬 데스크톱 앱을 만들면 DLL 심기 공격을 막기 위해 import 순서가 보안 경계가 된다. 화면 캡처 시 자체 UI가 영상에 들어오는 문제를 Win32 API 호출로 해결해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "language",
+   "science"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+  "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793199497.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/3vFxCEUXz_xJVrTBr4hNr.jpeg",
+  "link_status": "ok",
+  "ko_title": "NVIDIA Nemotron 3.5 Transcribe와 Granary v2: 프롬프트와 적응이 가능한 지능형 다국어 전사",
+  "summary": "NVIDIA가 공개한 Nemotron 3.5 Transcribe는 40개 언어를 전사하고 31개 언어를 영어와 상호 번역하며 13개 언어에서 화자 구분을 제공한다. 한 번의 체크포인트로 전사·화자 라벨링·번역·오디오 Q&A 기능을 모두 지원하고, Hugging Face와 ModelScope에서 제공된다. Granary v2 데이터 파이프라인과 NeMo Speech 파인튜닝 도구를 통해 도메인 어휘와 억양에 맞게 모델을 쉽게 맞춤화할 수 있다. 해당 모델은 여러 공개 리더보드에서 최고 성능을 기록했으며, 단일 NVIDIA GPU에서 실행된다.",
+  "why": "단일 체크포인트로 전사, 화자 구분, 번역, 오디오 질의응답을 처리해 파이프라인을 단순화할 수 있다. NeMo Speech 도구로 도메인 어휘와 억양에 맞게 모델을 맞춤화할 수 있다. 단일 NVIDIA GPU에서 실행되어 배포 환경의 하드웨어 요구사항을 낮춘다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "The October inflection point for vibe game development",
+  "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793195715.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://static.simonwillison.net/static/2026/pumpkin-farmer.webp",
+  "link_status": "ok",
+  "ko_title": "10월, 바이브 게임 개발의 전환점",
+  "summary": "Claude Opus 5.5가 3D 모델링·음악 생성·게임 디자인 분야에서 의미 있는 개선을 보여 4개의 실제로 즐긴 게임을 바이브 코딩 방식으로 만들었다. 저자는 GPT-6 Astra가 아직 재미 요소에서 Opus 5.5에 미치지 못한다며, AI가 게임의 재미를 설계하는 단계에 도달했음을 강조한다.",
+  "why": "게임 디자인 영역에서 AI가 단순 구현을 넘어 재미 요소를 직접 설계하는 단계에 진입했다. Claude Opus 5.5를 활용해 코드를 보지 않고도 실제 즐길 수 있는 게임을 만들 수 있다. GPT-6 Astra는 아직 재미 설계 면에서 Opus 5.5에 미치지 못한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "interplains / Zero-Breach-Toolkit",
+  "url": "https://github.com/interplains/Zero-Breach-Toolkit",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 773,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/interplains/Zero-Breach-Toolkit"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 773,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/interplains/Zero-Breach-Toolkit",
+  "link_status": null,
+  "ko_title": "Zero Breach 툴킷",
+  "summary": "알려진 용병 스파이웨어(페가수스, 프레데터 등)의 흔적을 컴퓨터·Android·iPhone 백업에서 검사하는 무료 오픈소스 도구다. 읽기 전용이며 스캔 중 네트워크 요청을 하지 않아 증거를 변경하거나 외부에 전송하지 않는다. 각 보고서는 발견 내용·증거 강도·검사 제한을 명시한다.",
+  "why": "스캔 중 네트워크 요청을 차단해 외부 전송 위험을 원천 차단한다. 보고서에 증거 강도와 검사 한계를 명시해 음성 결과를 안전으로 오인하지 않게 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Ten days later, Git on macOS still trusts the compromised eMudhra certificates",
+  "url": "https://emudhra.we-have-a-problem.com/apple.html",
+  "source": "hackernews",
+  "upvotes": 485,
+  "comments": 185,
+  "published_at": 1793185420,
+  "discussion": "https://news.ycombinator.com/item?id=50271640",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://emudhra.we-have-a-problem.com/apple.html"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "10일이 지나도 macOS의 Git이 손상된 eMudhra 인증서를 여전히 신뢰",
+  "summary": "Apple이 macOS 개발 도구에 포함된 git, curl, python3가 손상된 eMudhra 인증서를 신뢰한다는 사실을 10일째에도 확인했다. 최신 macOS 27.2 업데이트는 문제를 해결하지 못했으며, 사용자가 직접 적용한 우회책도 되돌렸다. 여러 자원봉사 프로젝트가 이미 패치를 제공했지만, 기본 도구는 여전히 위험에 노출돼 있다.",
+  "why": "git ls-remote 명령으로 인증서 오류가 뜨는지 즉시 확인해야 한다. 오류가 없으면 현재 git이 공격자의 코드 주입과 토큰 탈취에 취약하다. macOS 27.2 업데이트는 문제를 해결하지 못했으므로 별도 패치가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Donchitos / Claude-Code-Game-Studios",
+  "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 417,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Donchitos/Claude-Code-Game-Studios"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 417,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/Donchitos/Claude-Code-Game-Studios",
+  "link_status": null,
+  "ko_title": "Claude Code 게임 스튜디오",
+  "summary": "단일 Claude Code 세션을 49명의 에이전트와 74개의 스킬을 갖춘 게임 개발 스튜디오 형태로 확장한다. 각 에이전트는 디렉터, 부서장, 전문가 등 역할을 나누어 비전 관리와 설계 검토, QA 과정을 제공한다. GitHub에 오픈소스로 공개돼 MIT 라이선스를 사용한다.",
+  "why": "게임 개발 시 단일 세션의 구조 부재로 인한 마법 숫자 하드코딩이나 설계 문서 생략을 방지한다. 디렉터와 부서장, 전문가로 나뉜 49개 에이전트가 비전 관리와 QA 과정을 자동 수행한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Building a coin-flip test for AI agents: 16 readings, 3 conditions, 80 Claude memos",
+  "url": "https://dev.to/kimolsen/building-a-coin-flip-test-for-ai-agents-16-readings-3-conditions-80-claude-memos-2f7a",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 8,
+  "published_at": 1793172947.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kimolsen/building-a-coin-flip-test-for-ai-agents-16-readings-3-conditions-80-claude-memos-2f7a"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ff0nbmp2ql0yjy06ncm0z.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트를 위한 동전 뒤집기 테스트 구축",
+  "summary": "이 글은 AI 에이전트가 제시하는 판단 근거를 검증하기 위한 테스트를 구현하는 과정을 소개한다. Anthropic 연구를 기반으로, Claude Code를 이용해 16개의 판독값과 3가지 조건을 설정하고 GitHub Actions 워크플로로 API 호출을 자동화한다. 테스트는 에이전트가 선택한 읽기값이 최종 결론에 미치는 영향을 측정한다.",
+  "why": "에이전트가 결론에 도달하기 전 선택한 분석 경로가 최종 판단을 좌우하는지 측정할 수 있다. 사람의 판단이 아닌 에이전트 자체의 편향과 근거 선택 방식을 검증하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "expo / skills",
+  "url": "https://github.com/expo/skills",
+  "source": "github",
+  "upvotes": 212,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/expo/skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 212,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/expo/skills",
+  "link_status": null,
+  "ko_title": "expo / 스킬",
+  "summary": "Expo 팀이 공식 AI 에이전트용 스킬을 공개했다. 이 스킬은 Expo API 사용 시점, 워크플로우 구조, Expo·EAS·React Native·iOS·Android 제약 조건 등을 안내한다. Claude Code·Codex에는 플러그인으로, Cursor·OpenCode·GitHub Copilot 등 다른 에이전트에는 skills CLI로 설치한다.",
+  "why": "Expo 앱 개발 시 AI 에이전트가 API 사용 시점과 플랫폼 제약을 정확히 적용하도록 돕는다. Claude Code나 Codex를 쓰면 플러그인, Cursor 등은 skills CLI로 설치해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "I started 10 MCP servers in Docker. One tool description changed between two runs of the same version",
+  "url": "https://dev.to/antoniogm82/i-started-10-mcp-servers-in-docker-one-tool-description-changed-between-two-runs-of-the-same-5eam",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 0,
+  "comments": 10,
+  "published_at": 1793177914.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/antoniogm82/i-started-10-mcp-servers-in-docker-one-tool-description-changed-between-two-runs-of-the-same-5eam"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2vgm0ra0j83w6xb6k5qx.png",
+  "link_status": "ok",
+  "ko_title": "Docker에서 10개의 MCP 서버를 시작했습니다. 동일 버전 두 실행 간 도구 설명이 하나 변경됨",
+  "summary": "동일 버전의 MCP 서버를 Docker에서 두 번 실행했을 때, 도구 설명 중 하나에 컨테이너 ID가 포함돼 해시값이 달라지는 현상이 발견되었습니다. 이는 서버가 실행 환경의 호스트명을 설명에 기록하기 때문이며, 보안 위험과는 무관합니다. 해시를 비교할 때는 같은 환경에서 수행하거나 호스트명·경로를 제거해야 합니다.",
+  "why": "MCP 서버의 도구 설명을 해시로 추적하는 경우, Docker 컨테이너 ID가 설명에 포함돼 동일 버전에서도 해시가 달라질 수 있다. 해시를 비교하기 전 호스트명이나 경로를 제거해야 무의미한 변경 감지를 피할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Legora is building the agentic operating system for legal work",
+  "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793179800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/legora-agentic-operating-system-for-legal-work"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/3u1CdSoTYE4igNYP08r65b/3aff62c6d68495f495218a2ccbbf48f3/legora-smoked-glass-seo-image-1920x1080.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Legora, 법률 업무용 에이전트 운영 체제 구축",
+  "summary": "Legora는 OpenAI 모델과 코딩 에이전트를 활용해 법률 팀의 업무 속도를 높이고 분석 범위를 확대한다. NDA 검토 시간 95% 감소, Fortune 100 고객의 계약 처리 속도 90% 향상, 변호사당 주당 9.5시간 회수 효과를 주장한다. 2023년 스톡홀름 설립 이후 AI 기반 워크플로우를 일상 업무에 적용하는 플랫폼을 제공한다.",
+  "why": "OpenAI 모델과 코딩 에이전트를 활용해 법률 문서 검토 속도를 높이는 플랫폼이다. 백엔드 개발자가 에이전트 기반 워크플로우를 설계할 때 참고할 사례다. 법률 도메인 외에는 직접적인 적용 대상이 아니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "ICE Is Running One of the Largest Anti-Left Surveillance Ops in US History",
+  "url": "https://www.wired.com/story/ice-is-running-one-of-the-largest-anti-left-surveillance-operations-in-us-history/",
+  "source": "hackernews",
+  "upvotes": 522,
+  "comments": 324,
+  "published_at": 1793191785,
+  "discussion": "https://news.ycombinator.com/item?id=50272749",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wired.com/story/ice-is-running-one-of-the-largest-anti-left-surveillance-operations-in-us-history/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media.wired.com/photos/6adf8486990ea20354efad62/191:100/w_1280,c_limit/Security_ICE%20Is%20Carrying%20Out%20%E2%80%98Cointelpro%202.0%E2%80%99_v2.jpg",
+  "link_status": "ok",
+  "ko_title": "ICE, 미국 역사상 최대 규모의 좌파 감시 작전 중 하나 진행",
+  "summary": "미네소타 주민 15명의 연방 공모 혐의 변호인단이 ICE가 좌파 사회운동을 대상으로 한 대규모 감시 작전을 증거로 확보했다. 해당 작전은 ‘Project Whipple Shield’와 ‘Operation Puppet Master’라는 명칭으로 진행됐으며, 1960·70년대의 반전·신좌파 탄압 이후 최대 규모라고 전문가가 평가한다. 증거에는 보고서, 오디오 전사, 이메일, Signal 채팅 가로채기, 사진, 데이터베이스 조회 등이 포함된다.",
+  "why": "백엔드나 AI 개발 업무와 직접적인 기술적 연관성이 없어 개발 환경이나 코드에 영향을 주지 않는다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "xiaolai / the-craft-of-selfteaching",
+  "url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+  "source": "github",
+  "upvotes": 143,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/xiaolai/the-craft-of-selfteaching"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 143,
+  "score": 44,
+  "image": "https://opengraph.githubassets.com/1/xiaolai/the-craft-of-selfteaching",
+  "link_status": null,
+  "ko_title": "자기주도 학습의 기술",
+  "summary": "이 저장소는 파이썬 기반 Jupyter 노트북으로 구성된 자기주도 학습 가이드북이다. 2019년 3월 23일에 마크다운 버전이 추가되었으며, 코딩을 입문으로 삼아 학습 방법을 단계별로 제시한다. Jupyterlab 설치 후 로컬에서 읽을 수 있도록 안내하고, 기여 방법도 제공한다.",
+  "why": "이 자료는 백엔드 개발자가 새로운 기술을 익힐 때 적용할 학습 프레임워크를 제공한다. 코딩을 입문 도구로 삼아 독서와 실습을 결합하는 구체적 단계를 제시한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Quoting Terk Terkowitz",
+  "url": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793182147.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/28/terk-terkowitz/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Terk Terkowitz 인용",
+  "summary": "현재 AI 도구가 업무에 도움이 되지 않는 경우는 실패가 아니라 발견이다. 해당 이유를 문서화하고 동료와 공유하며 관리자에게 알리는 것이 권장된다. 엔지니어가 AI가 아직 지원하지 못하는 부분을 설명하면 판단력을 보여주는 것이 된다.",
+  "why": "AI 도구가 업무에 도움이 안 되는 상황을 실패로 보지 말고 발견으로 취급해야 한다. 그 이유를 문서화해 동료와 공유하고 관리자에게 전달하는 것이 권장된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Every Developer Has a Shortcut They’re Too Embarrassed to Admit",
+  "url": "https://dev.to/harsh2644/every-developer-has-a-shortcut-theyre-too-embarrassed-to-admit-944",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 18,
+  "comments": 10,
+  "published_at": 1793185726.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/harsh2644/every-developer-has-a-shortcut-theyre-too-embarrassed-to-admit-944"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffsvixb7j1idrrg739v4g.png",
+  "link_status": "ok",
+  "ko_title": "모든 개발자가 부끄러워하는 바로가기",
+  "summary": "개발자들이 코드 리뷰에서 권하지 않을 습관들을 고백한다. TypeScript @ts-ignore 사용, console.log 남발, 스택오버플로우 코드 복사, CSS !important 남용 등 실제 현업에서 흔히 쓰이는 비공식적인 단축 방법을 사례별로 소개한다.",
+  "why": "@ts-ignore나 스택오버플로우 코드를 붙여넣는 습관은 타입 오류나 비공식 라이브러리 의존을 남긴다. 코드 리뷰를 피하는 임시 조치로 쓰면 유지보수 비용이 늘어난다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Day 25–26 of Building Crowdwide — Making the UI Minimal!",
+  "url": "https://dev.to/puneetkumar2010/day-25-26-of-building-crowdwide-making-the-ui-minimal-2n9k",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 20,
+  "comments": 12,
+  "published_at": 1793186106.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-25-26-of-building-crowdwide-making-the-ui-minimal-2n9k"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzrlr9267l97zxh5wdqnl.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 구축 25~26일차 — UI 최소화",
+  "summary": "기존 대시보드에 과도한 기능을 나열하던 UI를 정리해 상단 메뉴와 사이드 메뉴를 간소화했다. 커뮤니티 섹션을 별도 페이지로 이동하고, 포스트 작성 도구를 드롭다운 형태로 정리했다. 사용자 의견에 따라 Widewave 기능을 제거했다.",
+  "why": "기능 과잉으로 인한 인지 부하를 줄여 사용자 체류 시간을 늘리는 설계 원칙을 보여준다. 백엔드 개발자가 프론트엔드 인터페이스를 설계할 때 참고할 수 있는 사례다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Amazon to buy satellite firm Globalstar in $11.57B deal",
+  "url": "https://www.reuters.com/business/media-telecom/amazon-signs-1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/",
+  "source": "hackernews",
+  "upvotes": 120,
+  "comments": 56,
+  "published_at": 1793188463,
+  "discussion": "https://news.ycombinator.com/item?id=50272145",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reuters.com/business/media-telecom/amazon-signs-1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Amazon이 위성 기업 Globalstar를 115억 달러에 인수",
+  "summary": "",
+  "why": "AWS 서비스의 위성 통신 연계 가능성이 열렸다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry",
+   "science"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
+  "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+  "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+  "source": "hackernews",
+  "upvotes": 105,
+  "comments": 114,
+  "published_at": 1793194890,
+  "discussion": "https://news.ycombinator.com/item?id=50273396",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/"
+  ],
+  "cross_source_count": 1,
+  "score": 16,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "켄터키 남성, AI에 대한 종교적 면제를 받은 최초의 인본주의자",
+  "summary": "",
+  "why": "AI 관련 규제에서 인본주의 신앙도 종교적 면제 대상이 될 수 있음을 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-29T00:00:01.246472+09:00",
+  "batch_label": "10월 29일 00:00"
+ },
+ {
   "title": "anhao / ai-pose-gallery-zh",
   "url": "https://github.com/anhao/ai-pose-gallery-zh",
   "source": "github",
