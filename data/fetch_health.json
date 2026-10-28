@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-18T16:00:32+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 14,
-    "blocked": 6,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35565",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35564",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35563",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35562",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35561",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://webmasters.stackexchange.com/questions/88659/how-can-cloudflare-offer-a-free-cdn-with-unlimited-bandwidth/88685#88685",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-19T00:00:32+09:00",
    "total": 23,
    "counts": {
@@ -738,6 +697,28 @@
     "github": 1
    },
    "failures": []
+  },
+  {
+   "at": "2026-10-28T16:00:33+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 10,
+    "short": 1,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://tech.kakao.com/posts/844",
+     "source": "rss",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/check-point-daybreak",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
