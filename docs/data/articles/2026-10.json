@@ -1,5 +1,561 @@
 [
  {
+  "title": "Gemini 4 Carbon",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+  "source": "hackernews",
+  "upvotes": 728,
+  "comments": 593,
+  "published_at": 1793206883,
+  "discussion": "https://news.ycombinator.com/item?id=50276792",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_social_share.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 4 Carbon 모델",
+  "summary": "Gemini 4 Carbon은 최신 사이버보안 기능과 장기 작업 수행 능력을 갖춘 새로운 AI 모델이다. 최신 v5.0 AI Index에서 1위에 올랐으며, SEC-bench Pro, ExploitGym, CWE-bench 등 보안 벤치마크에서 높은 점수를 기록했다. 현재 미국 정부의 사전 테스트 프로그램에 참여 중이며, 제한된 사이버 방어팀에 먼저 제공될 예정이다.",
+  "why": "개발자용 공개는 아직이며, 현재는 제한된 사이버 방어팀에만 제공된다. 보안 벤치마크 점수가 높으므로, 취약점 탐지나 패치 생성 작업에 활용할 가치가 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "security"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "GitHub Octoverse 2026",
+  "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793205923.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GitHub 옥토버스 2026",
+  "summary": "2026년 GitHub의 병합된 풀 리퀘스트가 월 2억 2천만 건으로 1년 만에 3배 증가했으며, 커밋은 월 73억 8천만 건으로 3배 이상 늘었다. 신규 저장소 생성률도 월 3천만 3000건으로 두 배가 되었다. 보고서는 국가별 푸시량을 LLM으로 프로필 위치를 추출해 보정하고, NAICS 섹터와 인터페이스·리버스 엔지니어링 관련 저장소를 다중언어 임베딩 모델로 분류했다.",
+  "why": "월 2억 2천만 건의 병합된 풀 리퀘스트는 에이전틱 엔지니어링이 코드 병합 주기를 압축했음을 보여준다. 이로 인해 기존 수작업 리뷰 중심의 워크플로가 자동화 검증 중심으로 이동하고 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "release"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "milind-soni / OpenMausBot",
+  "url": "https://github.com/milind-soni/OpenMausBot",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 795,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/milind-soni/OpenMausBot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 795,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/milind-soni/OpenMausBot",
+  "link_status": null,
+  "ko_title": "OpenMausBot",
+  "summary": "OpenMausBot은 Grok Bot을 대체하는 오픈소스 챗 앱으로, 로컬에서 Claude·Codex 등 모델을 실행해 각각 독립적인 에이전트를 제공한다. Electron 기반으로 macOS·Windows·Ubuntu를 지원하며 TypeScript·React로 구현됐다. 다운로드와 최신 릴리스 정보는 GitHub에서 제공된다.",
+  "why": "로컬에서 Claude와 Codex를 독립 에이전트로 실행하는 구조다. 클라우드 의존 없이 자체 모델로 에이전트를 구성하려는 백엔드 개발자에게 대안이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Mercury 3: When AI Is Fast Enough to Stay in the Loop",
+  "url": "https://dev.to/maximsaplin/mercury-3-when-ai-is-fast-enough-to-stay-in-the-loop-3oe5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 2,
+  "published_at": 1793202310.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/maximsaplin/mercury-3-when-ai-is-fast-enough-to-stay-in-the-loop-3oe5"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fb2oqhg1yv3ku78tgboqa.png",
+  "link_status": "ok",
+  "ko_title": "Mercury 3: AI가 충분히 빨라서 루프에 머무를 수 있을 때",
+  "summary": "Mercury 3는 토큰당 초당 1,068개를 생성하며, 1백만 토큰 컨텍스트와 경쟁력 있는 속도를 제공한다. Inception의 확산 기반 접근 방식으로 토큰을 병렬 정제해 응답 속도를 높인다. 최신 가격은 입력 토큰 백만당 $0.20, 출력 토큰 백만당 $0.70이며 출시 할인 50%가 적용된다.",
+  "why": "SSH 접근 권한을 가진 에이전트가 40초 내로 하드웨어 결함을 진단하고 재부팅까지 수행했다. 이 속도라면 실시간 디버깅 세션에서 모델 응답을 기다리는 시간을 크게 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "I Compared 6 TypeScript Validation Libraries. Here's What Surprised Me 🤔",
+  "url": "https://dev.to/nyaomaru/i-compared-6-typescript-validation-libraries-heres-what-surprised-me-325g",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 32,
+  "comments": 3,
+  "published_at": 1793201873.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nyaomaru/i-compared-6-typescript-validation-libraries-heres-what-surprised-me-325g"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fui99ynynhqoyxtiuhkgm.gif",
+  "link_status": "ok",
+  "ko_title": "6가지 TypeScript 검증 라이브러리를 비교해 보았다",
+  "summary": "동일한 User 스키마와 검증 규칙을 6개 라이브러리로 구현하고, 브라우저 번들 크기와 런타임 성능을 벤치마크했다. 각 라이브러리가 제공하는 구조화된 오류, 변환, 파싱, 메타데이터, 프레임워크 통합 기능을 기준으로 차이를 분석했다.",
+  "why": "타입 가드와 스키마 기반 검증 라이브러리의 경계를 명확히 구분할 수 있다. 단순한 불리언 체크가 필요한 경우와 구조화된 오류 처리가 필요한 경우를 분리해 선택지 범위가 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "MacBook Pro with PROLED XDR Display and Touch",
+  "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
+  "source": "hackernews",
+  "upvotes": 455,
+  "comments": 782,
+  "published_at": 1793207437,
+  "discussion": "https://news.ycombinator.com/item?id=50276940",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.apple.com/macbook-pro/proled-xdr-display/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://www.apple.com/v/macbook-pro/proled-xdr-display/a/images/meta/mbp_proled_xdr__f7755bx607yq_og.png?202610271513",
+  "link_status": "ok",
+  "ko_title": "MacBook Pro PROLED XDR 디스플레이와 터치",
+  "summary": "새로운 MacBook Pro는 PROLED XDR 탠덤 OLED 디스플레이와 터치 기능을 도입했다. M5 Pro·M5 Max 칩에 강화된 GPU와 레이 트레이싱 엔진이 포함돼 3D 모델링·Blender·Unity 등에서 성능이 향상된다. 14인치·16인치 모델은 각각 3.0·4.0파운드이며, Thunderbolt 5·HDMI·MagSafe 3·SDXC 슬롯을 제공한다.",
+  "why": "M5 칩의 GPU와 3세대 레이 트레이싱 엔진이 Blender·Unity 작업 속도를 끌어올린다. 다이나믹 캐싱으로 온칩 메모리 활용도가 높아져 그래픽 집약 워크플로가 빨라진다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "IDC brings Quanta into Claude and adopts Claude across the company",
+  "url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793145600.0,
+  "origin_url": "https://claude.com/blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+   "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "IDC, Quanta를 Claude에 통합하고 전사적으로 Claude 도입",
+  "summary": "IDC는 자체 Quanta 플랫폼에 Anthropic의 Claude를 연결해 고객이 IDC의 검증된 시장 데이터와 예측을 AI로 질의할 수 있게 했다. 고객은 간단히 질문만 하면 Claude가 IDC 데이터 기반 분석 결과를 몇 분 안에 제공한다. IDC 내부에서도 모든 팀이 일상적으로 Claude를 활용하고 있다.",
+  "why": "IDC Quanta의 MCP 커넥터를 통해 Claude에서 시장 데이터 질의가 가능해졌다. 장기 보고서 정리를 수동으로 하던 방식이 몇 분 내 분석 결과 반환으로 바뀐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+  "url": "https://surgehq.ai/blog/dayjob-tax",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 105,
+  "published_at": 1793202390,
+  "discussion": "https://news.ycombinator.com/item?id=50275626",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://surgehq.ai/blog/dayjob-tax"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://cdn.prod.website-files.com/68dcd2ceb173c46fa029931c/6ae0beffc0ef7d2c805991ec_6ae0bef7bc59db92222e060b_dayjob-tax-cover-v3.png",
+  "link_status": "ok",
+  "ko_title": "DAYJOB: Tax — 50개의 전문 세무 과제에서 AI 에이전트 평가",
+  "summary": "DAYJOB 벤치마크에 세무 분야가 추가돼 50개의 과제와 8개 세무 영역을 제공한다. 에이전트는 고객 요청과 자료를 바탕으로 세무 신고서·작업지시서·조언 등을 생성한다. 이번 테스트는 세무 지식뿐 아니라 전문 판단·증거 분석·정보 부족 인식 등을 평가한다. 기존에 발표된 Healthcare·Finance 벤치마크에 이어 세무 분야가 확장된 것이 핵심이다.",
+  "why": "세무 에이전트 평가 시 단순 계산이 아닌 전문 판단과 정보 부족 인식이 핵심 지표가 된다. 고객이 묻지 않은 중요한 마감일이나 위험을 스스로 찾아내는 능력이 테스트된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Nasiko-Labs / nasiko",
+  "url": "https://github.com/Nasiko-Labs/nasiko",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 696,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Nasiko-Labs/nasiko"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 696,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/Nasiko-Labs/nasiko",
+  "link_status": null,
+  "ko_title": "Nasiko-Labs / nasiko — 에이전트·코딩·프레임워크용 OpenRuntime",
+  "summary": "Nasiko는 에이전트, 코딩 하네스, 프레임워크, 도구를 위한 오픈 런타임을 제공한다. 각 코딩 에이전트의 실행 현황과 하네스·모델별 비용을 확인할 수 있다. 개발자는 기존 하네스 워크플로를 유지하면서 원하는 모델로 라우팅할 수 있다. Rust로 구현됐으며 Apache-2.0 라이선스를 사용한다.",
+  "why": "기존 코딩 에이전트 워크플로를 유지하면서 모델 라우팅을 변경할 수 있다. 하네스와 모델별로 실행 비용이 어떻게 나뉘는지 직접 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+  "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793193300.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/openai-servicenow-partnership-expansion"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI와 ServiceNow, 기업 워크플로 전반에 파트너십 확대",
+  "summary": "OpenAI 모델과 에이전트를 ServiceNow 워크플로에 통합했다. 이를 통해 ChatGPT와 Codex에서 ServiceNow 기능을 직접 활용할 수 있다.",
+  "why": "ServiceNow 워크플로가 ChatGPT와 Codex에 직접 연결되어 기존 통합 방식이 바뀐다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "industry"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "How I finally understood the Dependency Inversion Principle",
+  "url": "https://dev.to/chrisvasqm/how-i-finally-understood-the-dependency-inversion-principle-4eef",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 0,
+  "comments": 3,
+  "published_at": 1793203152.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chrisvasqm/how-i-finally-understood-the-dependency-inversion-principle-4eef"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffrrmv6w2fg0per0jqyvj.png",
+  "link_status": "ok",
+  "ko_title": "Dependency Inversion Principle(의존성 역전 원칙) 이해하기",
+  "summary": "이 글은 의존성 역전 원칙(DIP)의 개념을 설명하고, 비즈니스 로직이 인프라 구현에 직접 의존하지 않도록 구조를 바꾸는 방법을 예시 코드로 보여준다. OrderService가 고수준 모듈이고, 데이터베이스와 결제 클라이언트는 저수준 모듈로 추상화에 의존하도록 리팩터링한다.",
+  "why": "OrderService가 Postgres나 Stripe 같은 구체적 구현을 직접 가져오지 않도록 구조를 바꿔야 한다. 이렇게 하면 결제 수단이나 데이터베이스를 교체할 때 비즈니스 로직 코드를 수정하지 않아도 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "AI for Science expands to foundations and research institutions",
+  "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/2c317246f4ac7eaf0667d90a76ac05a7a7b601fc-1200x630.jpg",
+  "link_status": "ok",
+  "ko_title": "AI for Science, 과학 재단·기관과 협업 확대",
+  "summary": "AI for Science 프로그램이 전 세계 20개 과학 재단·기관·연구 그룹과 파트너십을 맺었다. 이 파트너십을 통해 연구자들에게 Claude 무료 크레딧을 제공하고, HHMI Janelia와는 Model Hardware Standard를, Allen Institute와는 AI 에이전트를 활용한 데이터 분석을 지원한다. 프로그램은 개인 과학자 지원을 넘어 기관 차원의 협업으로 확대되고 있다.",
+  "why": "HHMI Janelia와 개발한 MHS는 AI 에이전트가 실험 장비를 안전하게 조작하는 공유 사양이다. 이 표준이 연구 실험 자동화 파이프라인 설계에 참고 자료가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "What I learned building wfreq",
+  "url": "https://dev.to/yashksaini/what-i-learned-building-wfreq-52f5",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1793200242.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yashksaini/what-i-learned-building-wfreq-52f5"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fn8zy0wuhjdvtm70eg8gx.png",
+  "link_status": "ok",
+  "ko_title": "wfreq 제작을 통해 배운 점",
+  "summary": "Rust로 만든 wfreq는 텍스트, 마크다운, PDF, DOCX 파일의 단어 빈도를 출력하는 CLI이다. 초기 구현에서는 `expect!` 로 파일을 읽어 panic이 발생했고, `Result`와 `?` 를 사용해도 오류 메시지가 디버그 형식으로 출력돼 사용자가 이해하기 어려웠다. 최종적으로 오류 처리를 `run()` 함수 내부에서 `?` 로 전파하고, `main`에서 한 번만 `Display` 형태로 출력하도록 구조를 바꾸어 사용자에게 명확한 오류를 제공한다.",
+  "why": "Rust CLI에서 main이 Result를 반환하면 오류가 Debug 형식으로 출력되어 thiserror의 사용자 메시지를 무시한다. run() 함수로 로직을 분리하고 main에서 Display로 출력하는 구조로 바꿔야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Smart reports, surveys, and pooled group budgets for Claude Enterprise",
+  "url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793145600.0,
+  "origin_url": "https://claude.com/blog/smart-reports-surveys-pooled-budgets",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/smart-reports-surveys-pooled-budgets",
+   "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://claude.com/ko/resources/articles/smart-reports-surveys-pooled-budgets/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "스마트 보고서·설문·그룹 예산 풀 – Claude Enterprise",
+  "summary": "Claude Enterprise에 스마트 보고서, 인앱 설문, 팀별 공유 예산 기능이 정식으로 제공된다. 보고서는 팀 작업 내용·비용·마찰점을 분석하고, 재현 가능한 워크플로우와 코드 규칙을 제안한다. 설문은 Claude 활용에 대한 피드백을 수집하며, 관리자는 보고서에서 직접 예산 한도를 조정할 수 있다. 팀 리더는 관리자 권한 없이도 자체 보고서를 실행해 결과를 바로 적용할 수 있다.",
+  "why": "보고서가 제안하는 재현 가능한 워크플로우와 코드 규칙을 저장소에 반영해야 한다. 관리자 권한이 없는 팀 리더도 자체 보고서를 실행해 결과를 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Why is this fingerprinting script creating bioweapons?",
+  "url": "https://nullpt.rs/fingerprinting-bioweapons",
+  "source": "hackernews",
+  "upvotes": 616,
+  "comments": 137,
+  "published_at": 1793207609,
+  "discussion": "https://news.ycombinator.com/item?id=50276998",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nullpt.rs/fingerprinting-bioweapons"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://nullpt.rs/opengraph-image.jpg",
+  "link_status": "ok",
+  "ko_title": "이 지문 스크립트가 바이오무기를 만드는 이유는?",
+  "summary": "저자는 브라우저 지문 스크립트를 역공학하기 위해 Playwright와 Tranco 상위 사이트 목록을 사용해 10,000개 사이트를 크롤링했다. 캔버스 toDataURL 호출과 navigator.webdriver 등 지문 관련 API를 후킹해 수집한 캔버스를 fingerprint.garden에 공개했다. 수집된 캔버스 중 일부는 FingerprintJS, Castle 등 기존 솔루션이며, 익숙하지 않은 복잡하고 예술적인 캔버스도 발견되었다.",
+  "why": "백엔드에서 브라우저 지문을 검증하거나 우회하는 로직을 짤 때, fingerprint.garden의 공개 데이터를 참고할 수 있다. 기존 라이브러리 외의 비표준 지문 스크립트 패턴을 파악해 방어 코드를 보완하는 데 활용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "The future of the firm",
+  "url": "https://openai.com/index/the-future-of-the-firm",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793181600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/the-future-of-the-firm"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/7lRSQJ7Rw4r60Qygy5SQ8t/6955cc97ff76059ae31cc1aa5642c27d/future-of-the-firm-inline-01.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "기업의 미래",
+  "summary": "AI가 조직 내에서 어떻게 배치될 수 있는지를 세 가지 시나리오(아래, 옆, 사이)로 제시한다. 각각 AI가 직원들의 아래, 옆, 혹은 중간에 위치하며 업무 보조부터 전체 조직 관리까지 역할이 확대된다. 이 에세이는 AI 시대에 기업 구조가 어떻게 재편될 수 있는지를 탐구한다.",
+  "why": "AI가 조직도에서 하위, 옆, 중간 세 위치에 배치되는 시나리오를 제시한다. 개발자가 AI를 단순 도구가 아닌 관리 대상의 팀원으로 취급하는 관점을 제공한다. 백엔드 시스템 설계 시 AI 에이전트 간 위계와 협업 구조를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
+  "title": "Archive.today links going forward",
+  "url": "https://www.reddit.com/r/Seattle/comments/1xhf6qp/archivetoday_links_going_forward/",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 105,
+  "published_at": 1793201518,
+  "discussion": "https://news.ycombinator.com/item?id=50275373",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reddit.com/r/Seattle/comments/1xhf6qp/archivetoday_links_going_forward/"
+  ],
+  "cross_source_count": 1,
+  "score": 15,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Archive.today 링크 앞으로",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-29T08:00:05.750691+09:00",
+  "batch_label": "10월 29일 08:00"
+ },
+ {
   "title": "Are You a Python Developer or a Python Expert? 7 Tests I Failed Building 3 Desktop Apps",
   "url": "https://dev.to/akhourianmolkumar/are-you-a-python-developer-or-a-python-expert-7-tests-i-failed-building-3-desktop-apps-2fp4",
   "source": "devto",
