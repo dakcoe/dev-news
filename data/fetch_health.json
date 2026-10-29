@@ -1,42 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-19T16:00:53+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 15,
-    "blocked": 5,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35628",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35627",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35626",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35625",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35624",
-     "source": "geeknews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-20T00:00:41+09:00",
    "total": 23,
    "counts": {
@@ -681,6 +645,27 @@
     },
     {
      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-29T16:00:30+09:00",
+   "total": 15,
+   "counts": {
+    "blocked": 2,
+    "ok": 11,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/legora",
      "source": "rss",
      "reason": "blocked"
     }
