@@ -1,5 +1,418 @@
 [
  {
+  "title": "Mistral Large 4 (Le Chonk) is now Open Weight",
+  "url": "https://mistral.ai/news/mistral-large-4-oss/",
+  "source": "hackernews",
+  "upvotes": 219,
+  "comments": 50,
+  "published_at": 1793283201,
+  "discussion": "https://news.ycombinator.com/item?id=50289418",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mistral.ai/news/mistral-large-4-oss/"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+  "link_status": "ok",
+  "ko_title": "Mistral Large 4 (Le Chonk), 오픈 가중치 공개",
+  "summary": "Mistral은 1조 파라미터 멀티모달 모델인 Mistral Large 4(Le Chonk)의 가중치를 공개했다. 이번 업데이트는 코딩, 사이버 방어, 추론 효율성을 크게 향상시켰으며, 비용·성능 균형을 위한 세 가지 추론 모드를 제공한다. 모델은 유럽 인프라에서 처음부터 학습되었으며, 자체 호스팅이 가능한 주권 AI 구축을 목표로 한다.",
+  "why": "1조 파라미터 모델의 가중치가 공개되어 자체 호스팅 환경에서 구동이 가능하다. 코딩과 사이버 방어 작업에 이 모델을 직접 배포해 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "The US added a record 20.2 GWh of battery storage in just 3 months",
+  "url": "https://electrek.co/2026/08/31/the-us-added-a-record-20-2-gwh-of-battery-storage-in-just-3-months/",
+  "source": "hackernews",
+  "upvotes": 182,
+  "comments": 115,
+  "published_at": 1793270689,
+  "discussion": "https://news.ycombinator.com/item?id=50287001",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://electrek.co/2026/08/31/the-us-added-a-record-20-2-gwh-of-battery-storage-in-just-3-months/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://electrek.co/wp-content/uploads/sites/3/2026/06/Green-River-Energy-Center-Utah.jpg?quality=82&strip=all&resize=1200,628",
+  "link_status": "ok",
+  "ko_title": "미국, 3개월 만에 사상 최대 20.2 GWh 배터리 저장량 추가",
+  "summary": "2026년 2분기에 미국 배터리 저장 시장이 사상 최대 규모인 20.2 GWh를 신규 설치해 반기 총량을 30.8 GWh로 늘렸다. 성장의 대부분은 대규모 전력망 배터리이며, 애리조나·텍사스·캘리포니아 등에서 큰 프로젝트가 진행됐다. 신규 저장량의 44%는 태양광과 연계돼 전력 비용을 낮추고 전력 안정성을 높인다.",
+  "why": "태양광과 연계된 저장 설비가 전력 비용을 낮추고 안정성을 높인다. 극한 더위 시 태양광 발전이 줄어드는 저녁 시간대 전력 수요를 메운다. 2026년 상반기 배터리 저장 공급량이 2025년 연간 공급량을 이미 넘어섰다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Ghost in the Shell: Can a Log File Hijack an AI?",
+  "url": "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 33,
+  "comments": 20,
+  "published_at": 1793257359.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ijzdipl8b0zzns8cduc.jpg",
+  "link_status": "ok",
+  "ko_title": "고스트 인 더 쉘: 로그 파일이 AI를 탈취할 수 있을까?",
+  "summary": "개발자는 ASP.NET Core API 로그 300개를 만든 뒤, 그 중에 프롬프트 인젝션을 삽입해 AI에게 분석을 요청하는 실험을 진행한다. 로그는 정상처럼 보이지만, 악의적인 프롬프트가 AI의 응답을 조작할 수 있는지 다양한 모델에 테스트한다. 실험 결과는 아직 공개되지 않았다.",
+  "why": "AI가 로그를 분석할 때 데이터 안에 숨겨진 프롬프트에 응답이 조작될 수 있다. 로그를 AI에 넘기기 전 입력 데이터를 신뢰할 수 있는 출처로 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "JimLiu / baoyu-design",
+  "url": "https://github.com/JimLiu/baoyu-design",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 267,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/JimLiu/baoyu-design"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 267,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/JimLiu/baoyu-design",
+  "link_status": null,
+  "ko_title": "바오위 디자인",
+  "summary": "baoyu-design 저장소는 Claude Design 엔진을 로컬 에이전트용 스킬로 제공한다. 이를 통해 웹사이트 없이도 UI 목업, 프로토타입, 슬라이드 등 다양한 디자인 산출물을 HTML 형태로 생성한다. 추가 스킬 네 개가 슬라이드, 캔버스, 디자인 시스템, 데이터 대시보드 등을 로컬에서 편집 가능하게 만든다.",
+  "why": "로컬 에이전트에서 디자인 산출물을 HTML로 생성하면 별도 웹사이트 구독이나 업로드 과정이 불필요하다. 생성된 파일이 저장소에 남아 있어 버전 관리와 팀 내 공유가 기존 워크플로우에 바로 적용된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Zero click, silent, remote Android DoS",
+  "url": "https://smsofdeath.com/",
+  "source": "hackernews",
+  "upvotes": 225,
+  "comments": 122,
+  "published_at": 1793257730,
+  "discussion": "https://news.ycombinator.com/item?id=50285452",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://smsofdeath.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Zero click, silent, remote Android DoS",
+  "summary": "악성 WAP Push SMS 하나가 Android의 com.android.phone 프로세스를 크래시시켜 통화와 긴급 전화까지 끊는다. 취약점은 WapPushOverSms.decodeWapPdu()에서 헤더 길이를 범위 검증 없이 int로 변환해 배열을 할당하는 과정에서 발생한다. 검증된 테스트에서 Pixel 9와 여러 삼성 Galaxy 모델에서 100% 재현된다.",
+  "why": "Android 기반 디바이스를 관리하거나 모니터링하는 환경이라면 긴급 전화까지 차단되는 이 취약점을 인지해야 한다. 사용자 조작 없이 SMS 수신만으로 발생하므로 기존 SMS 필터링 정책만으로는 방어할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "CopilotKit / OpenBot",
+  "url": "https://github.com/CopilotKit/OpenBot",
+  "source": "github",
+  "upvotes": 240,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/CopilotKit/OpenBot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 240,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/CopilotKit/OpenBot",
+  "link_status": null,
+  "ko_title": "OpenBot — 기업이 직접 소유할 수 있는 AI 어시스턴트",
+  "summary": "OpenBot은 자체 인프라에서 실행되는 AI 어시스턴트 템플릿으로, 각 에이전트가 별도 브라우저와 로그인, 파일을 갖는다. AG-UI를 통해 어떤 에이전트 스택도 연결 가능하며, 행동은 사전 승인 후 기록된다. GitHub에 오픈소스로 제공돼 직접 클론해 커스터마이징한다.",
+  "why": "AG-UI 규격만 지키면 기존 에이전트 스택을 그대로 붙일 수 있다. 각 에이전트가 독립된 브라우저와 로그인 세션을 가지므로 외부 API 의존 없이 내부 시스템 조작을 테스트할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Granite Switch 4.1.1 — Update models like you update software",
+  "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793281027.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/662836b742709fe826510597/az6afuuoAkyiMImufSePe.png",
+  "link_status": "ok",
+  "ko_title": "Granite Switch 4.1.1 — 모델을 소프트웨어처럼 업데이트",
+  "summary": "Granite Switch 4.1.1은 패치 릴리스로, 10개 언어를 지원하고 구두점·대문자를 자동으로 삽입하는 새로운 Granite Speech ASR 모델와 Jev Decision Index 테스트셋에서 성능이 향상된 Decision 어댑터를 포함한다. 기본 모델은 재학습되지 않았으며, 최신 어댑터만 교체해 배포할 수 있다.",
+  "why": "기존 파이프라인에 포맷팅 단계를 추가할 필요가 없다. ASR 출력에 구두점과 대문자가 이미 들어오기 때문이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Nicovic17 / vanish_webcam",
+  "url": "https://github.com/Nicovic17/vanish_webcam",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 240,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Nicovic17/vanish_webcam"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 240,
+  "score": 54,
+  "image": "https://opengraph.githubassets.com/1/Nicovic17/vanish_webcam",
+  "link_status": null,
+  "ko_title": "VanishCam — 웹캠 사라짐 효과",
+  "summary": "VanishCam은 로컬에서 영상 처리를 수행해 웹캠 화면을 다양한 효과로 사라지게 하는 Windows 전용 실행 파일이다. 설치형 파이썬이 필요 없으며, EXE 파일을 실행하면 가상 카메라와 프리뷰 창에서 효과만 보여준다. Normal Vanish, Naruto Vanish, Particles, Goku 네 가지 제스처 기반 모드가 제공된다.",
+  "why": "발행된 EXE 파일에는 Particles와 Goku 모드가 빠져 있다. 이 두 모드를 쓰려면 로컬 스크립트를 실행하거나 소스에서 EXE를 다시 빌드해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "An AI summary is not a fix. Stop letting it close your security findings.",
+  "url": "https://dev.to/cyclopt_dimitrisk/an-ai-summary-is-not-a-fix-stop-letting-it-close-your-security-findings-5dn5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 8,
+  "published_at": 1793259015.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/an-ai-summary-is-not-a-fix-stop-letting-it-close-your-security-findings-5dn5"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3q1mgtegarbwbbfi4vhr.png",
+  "link_status": "ok",
+  "ko_title": "AI 요약은 해결책이 아니다 — 보안 결과를 닫게 하지 말라",
+  "summary": "정적 분석 결과를 LLM 기반 어시스턴트가 요약해 리뷰를 편리하게 만들지만, 요약 과정에서 원본 경고의 상세 정보가 사라져 원인 파악이 어려워진다. 실제 파이프라인에서는 요약이 원본 증거를 대체해 잘못된 결론이 기록된다.",
+  "why": "LLM 요약이 원본 증거를 대체하면 데이터 흐름 추적이 사라져 원인 파악이 불가능해진다. 보안 결과를 닫을 때 원본 룰 ID와 파일 위치를 반드시 보존하는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+  "url": "https://huggingface.co/blog/announcing-project-protostar",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793232000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/announcing-project-protostar"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://huggingface.co/blog/assets/announcing-project-protostar/thumbnail.jpg",
+  "link_status": "ok",
+  "ko_title": "Project ProtoStar 발표: 공공 자금 지원 과학을 AI에 활용 가능하게 만들기",
+  "summary": "Project ProtoStar는 공공 자금으로 수행된 과학 연구의 데이터·모델·코드를 AI 활용이 가능한 형태로 공개·재사용하도록 지원한다. 첫 번째 오픈 챌린지는 카네기 멜론 대학이 주관하며 11월 2일에 시작한다. 참여 기관은 대학 연합, Astera Institute, Hugging Face, ORCA 등이며, 관심 기관은 이메일로 신청한다.",
+  "why": "Hugging Face가 인프라 파트너로 참여해 AI 활용 가능한 과학 데이터와 모델의 공개를 지원한다. 백엔드 개발자는 이 공개된 기계 가독성 형식의 자산을 AI 파이프라인에 직접 연결해 재사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "Day 27 of Building Crowdwide — The Solution Was So Simple, WHY DIDN'T I THINK OF IT EARLIER 😭",
+  "url": "https://dev.to/puneetkumar2010/day-27-of-building-crowdwide-the-solution-was-so-simple-why-didnt-i-think-of-it-earlier-3edi",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 13,
+  "comments": 16,
+  "published_at": 1793270285.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/day-27-of-building-crowdwide-the-solution-was-so-simple-why-didnt-i-think-of-it-earlier-3edi"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqulccmzlyyrmizu7zuuq.png",
+  "link_status": "ok",
+  "ko_title": "Crowdwide 27일 차 — 해결책이 너무 간단했어요",
+  "summary": "개발자는 새로운 목소리를 더 잘 발견하도록 하는 알고리즘을 적용한 소셜 미디어 플랫폼 Crowdwide의 핵심 기능을 완성했다. UI 복잡성을 줄이기 위해 Widewave 섹션을 삭제하고, 사이드 메뉴에 프로필 아이콘을 이동했으며, 차트를 막대형에서 선형으로 교체했다. 포스트 작성기에서 발생하던 레이아웃 오류와 옵션 표시 문제를 수정했다.",
+  "why": "새 목소리 발견 알고리즘은 기존 플랫폼과 차별화되는 핵심 기능이다. UI 단순화와 레이아웃 수정은 사용자 경험 개선에 초점을 맞췄다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "APIC v2 Development Has Begun: A New Desktop Image Editor Is Coming",
+  "url": "https://dev.to/akhourianmolkumar/apic-v2-development-has-begun-a-new-desktop-image-editor-is-coming-2hoh",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 18,
+  "comments": 9,
+  "published_at": 1793277660.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/apic-v2-development-has-begun-a-new-desktop-image-editor-is-coming-2hoh"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6d9ssh4d64ou4fcvjyr7.png",
+  "link_status": "ok",
+  "ko_title": "APIC v2 개발 시작 — 새로운 데스크톱 이미지 편집기 출시 예정",
+  "summary": "APIC v2 개발이 2026년 10월 29일 시작됐으며, 데스크톱 버전은 커뮤니티 다운로드 2,000건 달성 시 공개된다. 현재 총 다운로드는 1,400건으로 600건이 남았다. 개발자는 v1을 사용해 버그를 찾고 개선 아이디어를 제안하면 v2에 반영하겠다고 약속했다.",
+  "why": "APIC v2 출시 시점이 캘린더가 아닌 총 다운로드 2,000건 달성에 묶여 있다. 현재 1,400건으로 600건이 남아 있어 일정 예측이 어렵다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
+  "title": "No Human Will Ever Write Code Better Than LLMs? Better at What?",
+  "url": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 27,
+  "comments": 13,
+  "published_at": 1793266459.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fyef0r2qscs29hbs0j5ba.jpg",
+  "link_status": "ok",
+  "ko_title": "LLM이 인간보다 코드를 더 잘 쓸 수 있을까? 어느 부분이 더 나은가",
+  "summary": "트위터에 올라온 “LLM이 인간보다 코드를 더 잘 쓸 수 있다”는 주장에 대해 저자는 LLM이 설득력은 높지만 정확성은 보장하지 못한다는 점을 강조한다. senior 엔지니어링은 코드 작성뿐 아니라 언제 코드를 쓰지 않아야 하는지 판단하는 능력이 핵심이며, 이는 현재 LLM이 측정하거나 프롬프트로 끌어내기 어려운 영역이다. “better”라는 개념은 생산성(분당 라인 수), 정확성, 유지보수성 등 여러 차원에서 달라지며, 단순히 라인 수만으로는 코드 품질을 평가할 수 없다는 논의가 이어진다.",
+  "why": "LLM은 설득력 있는 코드를 생성하지만 정확성을 보장하지 않는다. 기존 시스템 제약과 비즈니스 맥락을 고려해 코드를 쓰지 않기로 판단하는 능력은 LLM이 대체하기 어렵다. 단순 라인 수 증가가 코드 품질 향상을 의미하지 않으므로 이 점을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-10-30T00:00:01.927370+09:00",
+  "batch_label": "10월 30일 00:00"
+ },
+ {
   "title": "Claude Code regularly sends each background agent’s transcript to its model",
   "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
   "source": "hackernews",
