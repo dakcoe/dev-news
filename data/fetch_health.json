@@ -1,47 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-20T08:00:35+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 13,
-    "blocked": 6,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://news.hada.io/topic?id=35657",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35656",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35650",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35664",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35663",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/low-resource-programming-languages",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-20T16:00:38+09:00",
    "total": 22,
    "counts": {
@@ -643,6 +602,32 @@
     "github": 3
    },
    "failures": []
+  },
+  {
+   "at": "2026-10-30T08:01:14+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 12,
+    "unavailable": 1,
+    "blocked": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.washingtonpost.com/climate-environment/2026/10/27/i-saw-future-driving-mexico-its-off-limits-americans/",
+     "source": "hackernews",
+     "reason": "unavailable"
+    },
+    {
+     "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }

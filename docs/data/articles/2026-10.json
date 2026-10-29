@@ -1,5 +1,451 @@
 [
  {
+  "title": "Google Search is now less than half of Alphabet’s revenue",
+  "url": "https://www.kadoa.com/companies/insights/google-search-below-half",
+  "source": "hackernews",
+  "upvotes": 379,
+  "comments": 324,
+  "published_at": 1793292137,
+  "discussion": "https://news.ycombinator.com/item?id=50291945",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.kadoa.com/companies/insights/google-search-below-half"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://www.kadoa.com/companies/og/insights/google-search-below-half.png",
+  "link_status": "ok",
+  "ko_title": "Google 검색 매출, 알파벳 전체 매출의 절반 이하",
+  "summary": "2026년 3분기 알파벳 매출 중 Google 검색이 49.7%로 처음으로 절반 미만을 기록했다. 검색 매출은 전년 대비 12% 증가했으며, Google Cloud 매출은 103% 급증해 전체 매출의 24.1%를 차지한다. 나머지 사업부(YouTube 광고·구독·디바이스·기타 베팅 등)는 전년 대비 40% 성장했다.",
+  "why": "클라우드 매출 비중이 24.1%로 확대되며 검색 의존도가 낮아졌다. 백엔드 개발자는 클라우드 인프라 수요 증가에 맞춰 서비스 확장 전략을 재점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Stop Using Default Node.js fetch() in Production Without These Two Fixes",
+  "url": "https://dev.to/johnnylemonny/stop-using-default-nodejs-fetch-in-production-without-these-two-fixes-4o5",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 16,
+  "comments": 6,
+  "published_at": 1793287800.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/johnnylemonny/stop-using-default-nodejs-fetch-in-production-without-these-two-fixes-4o5"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fttjo5jb11ik9npd86bc0.png",
+  "link_status": "ok",
+  "ko_title": "프로덕션에서 기본 Node.js fetch() 사용 중단, 두 가지 해결책 필요",
+  "summary": "Node.js에 기본 fetch()가 안정화되면서 많은 팀이 axios와 node-fetch를 대체했지만, 5분 기본 타임아웃과 응답 스트림 미소비 시 지연 가비지 컬렉션이라는 두 가지 기본 설정이 트래픽 급증 시 서비스 장애를 일으킨다. 기사에서는 이 문제를 해결하는 간단한 래퍼 코드를 제공한다.",
+  "why": "기본 fetch()의 5분 타임아웃과 미소비 스트림이 트래픽 급증 시 장애를 유발한다. 기존 axios나 node-fetch를 제거하고 기본 fetch()로 전환한 백엔드 코드를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "DoorDash to acquire Instacart",
+  "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+  "source": "hackernews",
+  "upvotes": 385,
+  "comments": 570,
+  "published_at": 1793277185,
+  "discussion": "https://news.ycombinator.com/item?id=50287919",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/trvmqu12jq2l/5qfYy7VGputct2yoKgzgj6/35e4e5767aaf32b6f868c2a89de7c89d/DoorDash_to_Acquire_Instacart_-_newsroom.png",
+  "link_status": "ok",
+  "ko_title": "DoorDash, Instacart 인수",
+  "summary": "DoorDash가 Instacart를 주당 65달러, 총 약 170억 달러에 인수한다. 인수 금액의 75% 이상은 현금이며, Instacart 주주들은 현금·DoorDash 주식·조합을 선택할 수 있다. 합병 후 두 회사는 배달 네트워크와 식료품 기술을 결합해 소규모 매장까지 고객에게 더 많은 선택과 저렴한 배송을 제공한다.",
+  "why": "DoorDash의 배달 네트워크와 Instacart의 식료품 기술이 결합되어 소규모 매장도 자체 웹사이트에서 주문을 받을 수 있게 된다. 기존 대형 온라인 유통업체만 갖추고 있던 광고 및 AI 도구를 지역 상점들이 활용할 수 있는 환경이 만들어진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Postgres NOTIFY Is a Doorbell, Not a Queue: Build a Worker That Survives kill -9",
+  "url": "https://dev.to/gabrielanhaia/postgres-notify-is-a-doorbell-not-a-queue-build-a-worker-that-survives-kill-9-4i41",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 3,
+  "comments": 3,
+  "published_at": 1793286070.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gabrielanhaia/postgres-notify-is-a-doorbell-not-a-queue-build-a-worker-that-survives-kill-9-4i41"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffcvr01r1oas4hq7lmrxp.png",
+  "link_status": "ok",
+  "ko_title": "Postgres NOTIFY는 문앞 초인종, 큐가 아니다 — 워커가 kill -9에도 살아남게 만들기",
+  "summary": "Postgres의 LISTEN/NOTIFY는 실시간으로 연결된 세션에만 알림을 보내며 재시작 중인 워커에게는 전달되지 않는다. 알림을 큐처럼 사용하면 배포 중 주문이 누락될 위험이 있다. 해결책은 작업을 테이블에 저장하고 NOTIFY는 워커를 깨우는 신호만 보내는 방식이다. 예시로 TypeScript와 node-postgres를 이용해 두 개의 워커를 실행하고 중간에 kill -9로 하나를 종료해 동작을 검증한다.",
+  "why": "배포 중 워커 재시작 구간에서 NOTIFY 알림이 사라져 주문 처리가 누락된다. 작업은 테이블에 저장하고 NOTIFY는 워커를 깨우는 신호로만 쓰도록 구조를 바꿔야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "career-culture"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+  "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+  "source": "hackernews",
+  "upvotes": 249,
+  "comments": 163,
+  "published_at": 1793295828,
+  "discussion": "https://news.ycombinator.com/item?id=50293047",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://nypost.com/wp-content/uploads/sites/2/2026/10/please-use-id-confirmed-146859021.jpg?quality=75&strip=all&w=1200",
+  "link_status": "ok",
+  "ko_title": "중국 스파이, 엔비디아 CEO와 ‘밀접 관계’",
+  "summary": "알리시스 황(황레)이라는 중국 시민이 싱가포르 기반 AI 클라우드 파트너 Megaspeed의 고위 임원으로 활동하면서 엔비디아 CEO 젠슨 황과 친밀한 관계를 유지한 것으로 드러났다. 미국 정보기관은 그녀가 베이징에 정보를 전달했다고 결론지었지만, 젠슨 황이 이를 알았다는 증거는 없었다. Megaspeed은 미국 수출 제한을 회피하고 엔비디아 칩을 중국에 밀수한 혐의로 조사 중이다.",
+  "why": "엔비디아 칩 수출 제한을 우회하는 경로가 확인된 만큼, 자사 인프라의 공급망 리스크를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "How we detect frontier model misalignment",
+  "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793264400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "프론티어 모델 불일치 탐지 방법",
+  "summary": "OpenAI는 프론티어 모델의 불일치와 무단 에이전트 행동을 감시하는 계층형 모니터링을 도입했다. 이를 통해 사고가 확대되기 전에 대응자가 개입할 수 있다.",
+  "why": "AI 에이전트를 백엔드에 도입할 때 무단 행동을 사전에 차단하는 계층형 모니터링 구조를 참고해야 한다. 사고가 확대되기 전에 개입할 수 있는 감시 체계를 갖추지 않으면 시스템 리스크가 커진다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-safety"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Building a multiplayer game world with autonomous Fable-class models",
+  "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793293226.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static.simonwillison.net/static/2026-10-29/IMG_9406.webp",
+  "link_status": "ok",
+  "ko_title": "멀티플레이어 게임 세계를 자율적인 Fable 클래스 모델로 구축",
+  "summary": "Jacob Sansbury는 AI 에이전트가 실시간으로 코드를 수정하고 배포하는 대규모 멀티플레이어 게임 환경인 Spawn을 소개한다. 플레이어는 인게임 에이전트 Savi에게 프롬프트를 보내 세계를 직접 만들 수 있다. 이 시스템은 오류와 버그를 스스로 감지·보고·수정하며, 배포 주기가 시간 단위로 이루어진다.",
+  "why": "에이전트가 실시간으로 코드를 수정해 시간 단위로 배포하는 구조다. 1시간 내 배포가 없으면 최상위 장애로 간주한다. 이러한 긴밀한 루프는 에이전트의 컨텍스트 한계를 고려한 설계다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "showcase"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "An updated Model Spec for more capable and beneficial AI",
+  "url": "https://openai.com/index/updated-model-spec",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793293200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/updated-model-spec"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/75veJvi069XNefheZKrGT3/524e301a9565289e83b5a666d47b3da5/model-spec-update-more-capable-beneficial-ai-seo.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "보다 능력 있고 유익한 AI를 위한 모델 사양 업데이트",
+  "summary": "OpenAI가 모델 사양을 업데이트해 인간 의도 충실, 해악 최소화, 정직·투명성, 인간 주체성, 배려라는 다섯 가지 가치 중심으로 재구성했다. 기존 원칙을 명확히 하고 상황·감시·주체성에 대한 안내를 추가했으며, 상세 스타일 가이드를 대부분 폐기했다.",
+  "why": "OpenAI 모델 사양이 다섯 가지 가치 중심으로 재구성되어 기존 스타일 가이드가 대부분 폐기됐다. AI를 백엔드나 에이전트 로직에 통합할 때 기대하는 행동 기준이 달라지므로 최신 사양을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "💀I'm the last mail carrier in the land of the dead. An open-weight model writes all the mail.",
+  "url": "https://dev.to/minhlong2605/im-the-last-mail-carrier-in-the-land-of-the-dead-an-open-weight-model-writes-all-the-mail-2cal",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1793295348.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/minhlong2605/im-the-last-mail-carrier-in-the-land-of-the-dead-an-open-weight-model-writes-all-the-mail-2cal"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fyeavoklfs7enlfexsfoh.png",
+  "link_status": "ok",
+  "ko_title": "나는 죽은 자들의 땅에서 마지막 우편 배달원이다. 오픈-웨이트 모델이 모든 편지를 작성한다.",
+  "summary": "ÁNIMAS는 멕시코 죽은 자의 땅인 미크틀란을 배경으로 한 3D 브라우저 게임이다. 골격 우편 배달원이 유령들의 편지를 전달하고, 유령이 그리워하는 물건을 찾아 주면 유령이 저승으로 건너간다. 모든 유령과 편지는 Gemma 4 오픈-웨이트 모델이 구조화된 JSON으로 생성한다. 게임은 24개의 사전 생성 유령을 포함해 즉시 플레이 가능하며, Gemma 서버와 연결해 실시간으로 새로운 유령을 생성할 수 있다.",
+  "why": "Gemma 4의 구조화된 JSON 출력으로 게임 내 캐릭터와 대사를 생성하는 방식이 확인된다. 오픈-웨이트 모델을 실시간 콘텐츠 생성 파이프라인에 적용하는 구현 예시로 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "API credits benefit for eligible ChatGPT subscriptions",
+  "url": "https://simonwillison.net/2026/Oct/29/api-credits/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793314109.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/29/api-credits/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "자격 있는 ChatGPT 구독에 대한 API 크레딧 혜택",
+  "summary": "OpenAI가 $100, $200, $500 구독 플랜 이용자에게 해당 금액만큼의 API 크레딧을 제공한다. 이는 Anthropic이 최근 발표한 동일한 혜택과 동일한 내용이다. 기존 구독만으로 API 사용 비용을 절감할 수 있다.",
+  "why": "기존 구독료로 API 비용을 충당할 수 있어 별도 결제 부담이 줄어든다. 이 크레딧은 만료일이 있으므로 장기 프로젝트에 의존하기보다 단기 데모나 프로토타이핑에 활용하는 것이 적합하다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Welcome to the Prompt Pad: AI Tips & Tricks with Rosendo Pili",
+  "url": "https://blog.mlh.com/welcome-to-the-prompt-pad-ai-tips-tricks-with-rosendo-pili-2hkl",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1793300875.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://blog.mlh.com/welcome-to-the-prompt-pad-ai-tips-tricks-with-rosendo-pili-2hkl"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F89unnpv2l9egvfexk82u.png",
+  "link_status": "ok",
+  "ko_title": "Prompt Pad에 오신 것을 환영합니다: Rosendo Pili와 함께하는 AI 팁과 요령",
+  "summary": "Prompt Pad는 @rosendo_pili가 진행하는 짧은 영상 시리즈로, 1분 이하 길이의 실용적인 AI 프롬프트 팁을 제공한다. 초보자부터 LLM 기능을 오래 다뤄온 개발자까지 모두 활용할 수 있다. 각 에피소드는 실제 도구를 사용해 한 가지 기술을 보여주며, DEV와 다양한 SNS 채널에 연동돼 질문을 받고 답변한다.",
+  "why": "각 에피소드가 실제 도구에서 한 가지 프롬프트 기술을 보여준다. LLM 기능을 다루는 개발자는 바로 적용 가능한 요령을 얻을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "I went to Mexico to test-drive the cars Americans can’t buy",
+  "url": "https://www.washingtonpost.com/climate-environment/2026/10/27/i-saw-future-driving-mexico-its-off-limits-americans/",
+  "source": "hackernews",
+  "upvotes": 272,
+  "comments": 315,
+  "published_at": 1793287822,
+  "discussion": "https://news.ycombinator.com/item?id=50290668",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.washingtonpost.com/climate-environment/2026/10/27/i-saw-future-driving-mexico-its-off-limits-americans/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "unknown",
+  "ko_title": "멕시코에서 미국에서 살 수 없는 차를 시승했다",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+  "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+  "source": "hackernews",
+  "upvotes": 339,
+  "comments": 184,
+  "published_at": 1793309939,
+  "discussion": "https://news.ycombinator.com/item?id=50296470",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Binance 해커 1029 – Binance에서 56억 달러 도난",
+  "summary": "",
+  "why": "백엔드 서버의 지갑 연동 로직과 트랜잭션 검증 코드를 즉시 점검해야 한다. 대규모 자산 유출 사고로 인한 시장 변동성이 API 응답과 결제 처리에 직격탄을 날릴 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
+  "title": "Yes, {} + [] = 0. No, JavaScript Isn’t Broken",
+  "url": "https://dev.to/sylwia-lask/yes-0-no-javascript-isnt-broken-14ob",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 20,
+  "comments": 6,
+  "published_at": 1793304533.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sylwia-lask/yes-0-no-javascript-isnt-broken-14ob"
+  ],
+  "cross_source_count": 1,
+  "score": 16,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Folm3zyjvpymz88fwvzrw.png",
+  "link_status": "ok",
+  "ko_title": "예, {} + [] = 0. 아니, JavaScript는 깨지지 않았다",
+  "summary": "",
+  "why": "문자열 변환 로직을 설계할 때 빈 객체와 배열의 조합이 0으로 평가될 수 있음을 인지해야 한다. 이러한 파싱 규칙은 기존 코드에서 예기치 못한 타입 변환 버그를 유발할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-30T08:00:06.039203+09:00",
+  "batch_label": "10월 30일 08:00"
+ },
+ {
   "title": "Mistral Large 4 (Le Chonk) is now Open Weight",
   "url": "https://mistral.ai/news/mistral-large-4-oss/",
   "source": "hackernews",
