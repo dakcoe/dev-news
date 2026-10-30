@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-21T08:00:26+09:00",
-   "total": 19,
-   "counts": {
-    "short": 2,
-    "ok": 14,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://tech.kakao.com/posts/840",
-     "source": "rss",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/ted-taylor-restaurant",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-21T16:00:32+09:00",
    "total": 19,
    "counts": {
@@ -560,6 +533,32 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-10-31T08:00:38+09:00",
+   "total": 16,
+   "counts": {
+    "ok": 10,
+    "blocked": 3,
+    "github": 3
+   },
+   "failures": [
+    {
+     "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
