@@ -1,53 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-20T16:00:38+09:00",
-   "total": 22,
-   "counts": {
-    "ok": 13,
-    "short": 1,
-    "blocked": 6,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=50151036",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35692",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35691",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35690",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35689",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://news.hada.io/topic?id=35688",
-     "source": "geeknews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/low-resource-programming-languages",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-21T00:00:51+09:00",
    "total": 24,
    "counts": {
@@ -624,6 +577,22 @@
     },
     {
      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-30T16:00:26+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 11,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/ropes-gray-ai-diligence",
      "source": "rss",
      "reason": "blocked"
     }

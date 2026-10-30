@@ -1,5 +1,446 @@
 [
  {
+  "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+  "url": "https://huggingface.co/blog/anydecisionmodel",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793232000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/anydecisionmodel"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://huggingface.co/blog/assets/anydecisionmodel/banner.png",
+  "link_status": "ok",
+  "ko_title": "Apple 플랫폼용 오픈 모델, AnySpeechRecognizer와 AnyDecisionModel 소개",
+  "summary": "AnySpeechRecognizer는 Apple의 새로운 SpeechAnalyzer API를 활용해 NVIDIA Parakeet·Alibaba Qwen3-ASR 등 로컬 Core ML 모델을 선택적으로 사용할 수 있으며 화자 구분 기능을 제공한다. AnyDecisionModel은 yes-no·다중선택·평점 질문에 대해 텍스트가 아닌 확률 기반 답변을 반환하고, MLX·Core AI·llama.cpp·Jev·Ollama 등 다양한 로컬 모델을 지원한다. 두 패키지는 Hugging Face Hub에서 모델을 다운로드해 기기에서 실행한다.",
+  "why": "macOS 26과 iOS 26의 SpeechAnalyzer API를 사용해 로컬에서 음성 인식 모델을 실행할 수 있다. 화자 구분 기능이 있어 고객 지원 같은 다자간 대화 처리 시 활용 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "Stop Using a JS Masonry Library. CSS Grid Lanes Does It Natively.",
+  "url": "https://dev.to/parsajiravand/stop-using-a-js-masonry-library-css-grid-lanes-does-it-natively-n42",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793338574.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/stop-using-a-js-masonry-library-css-grid-lanes-does-it-natively-n42"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fcss-grid-lanes-native-masonry-layout.png",
+  "link_status": "ok",
+  "ko_title": "JS 메이소니 라이브러리 사용 중단. CSS Grid Lanes가 기본 지원",
+  "summary": "기존 JS 메이소니 라이브러리는 리사이즈 시 레이아웃 점프, SSR 시 단일 컬럼 렌더링, 번들 크기 15–40KB 등의 문제를 가진다. CSS Grid Lanes는 순수 CSS만으로 같은 기능을 제공해 접근성 문제와 JS 의존성을 제거한다. 기존 CSS-only 컬럼 방식은 키보드·스크린리더 순서가 뒤섞여 사용성 문제가 있었으며, JS 방식은 성능·플래시 문제를 야기한다.",
+  "why": "기존 CSS 컬럼 방식은 키보드 포커스 순서가 뒤섞여 접근성 문제를 유발한다. JS 라이브러리는 리사이즈 시 레이아웃 점프와 번들 부하를 감수해야 한다. CSS Grid Lanes로 전환 시 이러한 의존성과 순서 오류를 제거할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "NestJS 12: @Optional() Not Inherited by a Redeclared Constructor",
+  "url": "https://dev.to/parsajiravand/nestjs-12-optional-not-inherited-by-a-redeclared-constructor-5hil",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1793338605.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/nestjs-12-optional-not-inherited-by-a-redeclared-constructor-5hil"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fnestjs-weekly-optional-not-inherited.png",
+  "link_status": "ok",
+  "ko_title": "NestJS 12: @Optional()이 재선언된 생성자에서 상속되지 않음",
+  "summary": "NestJS 11에서 12로 업그레이드하면 빌드는 성공하지만, 생성자를 재선언한 서브클래스에서 @Optional()이 상속되지 않아 의존성 해결 오류가 발생한다. 이 동작은 NestJS 12.1.0부터 적용된 공식 마이그레이션 가이드의 내용이며, 생성자를 선언하지 않은 서브클래스는 영향을 받지 않는다.",
+  "why": "NestJS 12로 올린 뒤 생성자를 재선언한 서브클래스에서 @Optional()이 사라진다. 빌드는 통과하지만 앱 기동 시 의존성 해결 오류가 난다. 생성자를 직접 선언하지 않은 서브클래스는 이 영향을 받지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "Undead Agent - My AI Agent Dies, Comes Back, and Tells Me What It Saw(Gemma + Ollama + Temporal)",
+  "url": "https://dev.to/khushighosh/undead-agent-my-ai-agent-dies-comes-back-and-tells-me-what-it-saw-33c9",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1793339349.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/khushighosh/undead-agent-my-ai-agent-dies-comes-back-and-tells-me-what-it-saw-33c9"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgcyhcjihrruy3fk8lo2z.png",
+  "link_status": "ok",
+  "ko_title": "언데드 에이전트 - 내 AI 에이전트가 죽었다가 다시 살아나서 본 것을 말한다 (Gemma + Ollama + Temporal)",
+  "summary": "Undead Agent는 로컬에서 동작하는 AI 에이전트로, 텍스트 파일 폴더를 읽어 Gemma 모델(Ollama)로 요약하고 보고서를 만든다. 각 단계는 Temporal 워크플로우로 실행돼 프로세스가 SIGKILL 등으로 중단돼도 진행 중이던 작업을 재시작 없이 이어받는다. 에이전트가 재생성될 때는 “유령” 목소리로 마지막 순간을 알려주며, “morgue” 대시보드에서 모든 부활 기록을 확인할 수 있다. 데모 페이지가 제공돼 실제 동작을 확인할 수 있다.",
+  "why": "Temporal 워크플로우를 적용하면 프로세스가 강제 종료돼도 완료된 단계는 반복 실행되지 않는다. 장시간 걸리는 AI 에이전트 파이프라인에서 재시작 비용과 지연을 줄이는 구조를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "herdrdev / herdr-app",
+  "url": "https://github.com/herdrdev/herdr-app",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 156,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/herdrdev/herdr-app"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 156,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/herdrdev/herdr-app",
+  "link_status": null,
+  "ko_title": "herdrdev / herdr-app — 데스크톱 터미널 및 코딩 에이전트 앱",
+  "summary": "Herdr는 터미널과 코딩 에이전트를 위한 데스크톱 애플리케이션으로, 작업을 공간으로 구분하고 에이전트 상태를 한눈에 확인할 수 있다. Linux와 macOS는 쉘 스크립트, Windows는 PowerShell 스크립트로 설치 가능하며, Linux는 Vulkan 드라이버와 데스크톱 세션이 필요하다. Apple Silicon용 dmg 파일이 제공되고, 설치 시 herdr-core가 자동으로 설치·업데이트된다.",
+  "why": "여러 터미널과 코딩 에이전트를 하나의 데스크톱 창에서 공간별로 관리할 수 있다. 에이전트 상태를 실시간으로 확인해 작업이 막힌 시점을 빠르게 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "What we know so far about Spain train crash",
+  "url": "https://www.bbc.com/news/articles/cm8xz7pkd0jjo",
+  "source": "hackernews",
+  "upvotes": 178,
+  "comments": 341,
+  "published_at": 1793264108,
+  "discussion": "https://news.ycombinator.com/item?id=50286197",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.com/news/articles/cm8xz7pkd0jjo"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://ichef.bbci.co.uk/news/1024/branded_news/fe69/live/788ac890-d37d-11f1-b441-2b33b063138f.jpg",
+  "link_status": "ok",
+  "ko_title": "스페인 열차 충돌 사고 현황",
+  "summary": "스페인 수도 남쪽 고속선에서 Renfe 열차가 정차 중인 Iryo 열차 뒤를 들이받아 최소 69명이 사망하고 다수가 부상했다. 사고는 08시 53분에 발생했으며, 컴퓨터 고장으로 열차가 멈추었다가 제한 속도 없이 재운행된 것이 원인으로 추정된다. 현재 해당 구간의 모든 열차 운행이 중단된 상태다.",
+  "why": "컴퓨터 고장 시 제어센터가 제한 속도 없이 재운행을 승인한 절차가 사고 원인으로 지목된다. 자동화 시스템의 장애 대응 로직과 수동 개입 시 안전 기준을 재점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "ccch1mneyyy / dsh-go",
+  "url": "https://github.com/ccch1mneyyy/dsh-go",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 627,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ccch1mneyyy/dsh-go"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 627,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/ccch1mneyyy/dsh-go",
+  "link_status": null,
+  "ko_title": "ccch1mneyyy / dsh-go",
+  "summary": "DeepSeek Harness의 Android 클라이언트가 공개되었습니다. 스마트폰에서 직접 실행하거나 PC에 있는 DSH를 원격 제어할 수 있습니다. Android 8 이상을 지원합니다.",
+  "why": "DSH를 스마트폰에서 직접 실행하거나 PC의 DSH를 원격 제어할 수 있다. Android 8 이상 기기에서만 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "Pico CSS is no longer maintained",
+  "url": "https://github.com/picocss/pico/discussions/754",
+  "source": "hackernews",
+  "upvotes": 100,
+  "comments": 31,
+  "published_at": 1793325524,
+  "discussion": "https://news.ycombinator.com/item?id=50298964",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/picocss/pico/discussions/754"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/3a6d74ffc646cd0aef45becc597592b9912ffb260ae8ee5d318d49d43eb92f14/picocss/pico/discussions/754",
+  "link_status": "ok",
+  "ko_title": "Pico CSS, 더 이상 유지되지 않음",
+  "summary": "이 저장소는 2026년 10월 4일에 아카이브되어 읽기 전용 상태가 되었다. AI가 필요한 CSS만 포함한 경량 HTML을 자동 생성하면서 최소 CSS 프레임워크의 필요성이 감소했다. 기존 Pico CSS를 현대화하려면 완전한 재작성과 새로운 컴파일러가 필요하지만, 이는 별도 프로젝트가 될 것이다. 이름과 로고는 MIT 라이선스에 포함되지 않으니 포크는 새로운 이름을 사용해야 한다.",
+  "why": "Pico CSS를 쓰는 프로젝트는 더 이상 보안 패치나 버그 수정을 받을 수 없다. 대체로 AI가 필요한 CSS만 추출해 내는 경량 HTML 생성 방식을 고려할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "How Ropes & Gray is developing AI for transactional diligence",
+  "url": "https://openai.com/index/ropes-gray-ai-diligence",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793257200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/ropes-gray-ai-diligence"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ropes & Gray, 거래 실사용 AI 개발",
+  "summary": "Ropes & Gray가 OpenAI와 협력해 거래 실사에 활용할 AI를 개발하고 있다. 변호사들이 그룹화된 문서와 요약·보고서를 검토한 뒤 고객에게 조언한다.",
+  "why": "법무 영역의 AI 도입 사례로, 백엔드 개발자가 직접 다루는 기술 스택과는 무관하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "If IPv4 were land",
+  "url": "https://iptrust.co/blog/if-ipv4-were-land",
+  "source": "hackernews",
+  "upvotes": 265,
+  "comments": 369,
+  "published_at": 1793276340,
+  "discussion": "https://news.ycombinator.com/item?id=50287775",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://iptrust.co/blog/if-ipv4-were-land"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "IPv4가 땅이라면",
+  "summary": "세계 육지 면적을 기준으로 각 국가의 IPv4 주소 비율에 맞게 국가 크기를 재조정한 시각화이다. 2026년 10월 IP Trust 지리 위치 데이터와 1:110 m Natural Earth 지도 형상을 사용했으며, 남극은 제외하고 약 70개의 소규모 영토는 제외했다. 100 000개 이상의 IPv4 주소와 20 000 km제곱 이상의 면적을 가진 국가만 표에 포함된다.",
+  "why": "IPv4 주소 배분 현황을 육지 면적과 비교한 시각화 자료다. 특정 지역의 주소 고갈 위험을 직관적으로 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "Juniper-Pi Network Configuration",
+  "url": "https://dev.to/annavi11arrea1/juniper-pi-network-configuration-552d",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 1,
+  "comments": 0,
+  "published_at": 1793336299.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/annavi11arrea1/juniper-pi-network-configuration-552d"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2For828c34hlnwpgz4ophp.png",
+  "link_status": "ok",
+  "ko_title": "Juniper-Pi 네트워크 구성",
+  "summary": "라즈베리 파이를 이용해 소비자 라우터 뒤에 Juniper 스위치를 배치하고 이중 NAT를 처리하면서 작은 방화벽 역할도 수행했다. 서버가 접근 불가 시 표시되는 유지보수 페이지를 설정했고, 6개의 소셜 미디어 앱을 활용한 관리 계획을 수립했다. 또한 온라인 웹 개발 강의를 마무리했다.",
+  "why": "이 구성은 소비자 라우터 뒤에서 이중 NAT 문제를 라즈베리 파이를 활용해 해결하는 방법이다. 서버 접근 불가 시 유지보수 페이지를 띄우는 설정도 함께 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "JavaScript: The Language That Gaslights Its Developers",
+  "url": "https://dev.to/jlmartel/javascript-the-language-that-gaslights-its-developers-1m08",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793343600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jlmartel/javascript-the-language-that-gaslights-its-developers-1m08"
+  ],
+  "cross_source_count": 1,
+  "score": 36,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fo33vr4gcp9o3as5ir0hb.png",
+  "link_status": "ok",
+  "ko_title": "JavaScript: 개발자를 혼란스럽게 하는 언어",
+  "summary": "JavaScript는 타입 강제 변환과 느슨한 동등성 비교 등으로 의도와 다른 결과를 보인다. 빈 배열은 불리언 컨텍스트에서는 참이지만, `== false`와 비교하면 true가 된다. 또한 `typeof null`이 \"object\"로 표시돼 오래된 혼동을 일으킨다.",
+  "why": "느슨한 동등성 비교는 타입 강제 변환 규칙을 적용해 의도와 다른 결과를 만든다. 값 비교 시에는 항상 엄격한 동등성 연산자를 사용해 이 문제를 피해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "H.264 Is Magic (2016)",
+  "url": "https://sidbala.com/h-264-is-magic/",
+  "source": "hackernews",
+  "upvotes": 387,
+  "comments": 143,
+  "published_at": 1793289183,
+  "discussion": "https://news.ycombinator.com/item?id=50291054",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://sidbala.com/h-264-is-magic/"
+  ],
+  "cross_source_count": 1,
+  "score": 21,
+  "image": "https://storage.ghost.io/c/55/d9/55d91d94-f430-41c7-b2da-d3e4e9822c0b/content/images/size/w1200/2016/11/Artboard.jpg",
+  "link_status": "ok",
+  "ko_title": "H.264는 마법이다",
+  "summary": "H.264는 인터넷 동영상, 블루레이, 스마트폰, 보안 카메라, 드론 등 모든 분야에서 사용되는 비디오 압축 표준이다. 30년 이상의 연구를 통해 전체 동영상 전송에 필요한 대역폭을 크게 줄이는 것이 목표였다. 예시로 Apple 홈페이지를 PNG와 H.264 영상으로 저장했을 때, 300프레임 영상이 175KB로 PNG 단일 프레임 1015KB보다 1500배 효율적이었다.",
+  "why": "백엔드에서 영상 스트리밍이나 녹화 기능을 구현할 때 대역폭과 저장 용량을 계산하는 기준이 된다. H.264의 압축 원리를 이해하면 서비스의 전송 비용과 저장소 부하를 예측하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
+  "title": "LLM Voice",
+  "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+  "source": "hackernews",
+  "upvotes": 428,
+  "comments": 219,
+  "published_at": 1793285875,
+  "discussion": "https://news.ycombinator.com/item?id=50290177",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://martinfowler.com/bliki/LLM-Voice.html"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://martinfowler.com/logo-sq.png",
+  "link_status": "ok",
+  "ko_title": "LLM 보이스",
+  "summary": "",
+  "why": "LLM이 초안을 쓰고 사람이 다듬는 방식은 특유의 어색함을 완전히 제거하기 어렵다. 문장 구조나 개요만 LLM에 맡기고 본문은 직접 작성하는 것이 안전하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-10-30T16:00:04.079484+09:00",
+  "batch_label": "10월 30일 16:00"
+ },
+ {
   "title": "Google Search is now less than half of Alphabet’s revenue",
   "url": "https://www.kadoa.com/companies/insights/google-search-below-half",
   "source": "hackernews",
