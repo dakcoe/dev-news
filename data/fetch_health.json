@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-21T16:00:32+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 15,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/terminal-x",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-22T00:00:56+09:00",
    "total": 17,
    "counts": {
@@ -555,6 +534,39 @@
     },
     {
      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-31T16:00:27+09:00",
+   "total": 14,
+   "counts": {
+    "robots": 1,
+    "ok": 7,
+    "short": 1,
+    "github": 3,
+    "blocked": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=50312756",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/fair-use-benefits-everyone",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/credit-saison",
      "source": "rss",
      "reason": "blocked"
     }
