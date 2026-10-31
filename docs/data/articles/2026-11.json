@@ -1,0 +1,325 @@
+[
+ {
+  "title": "We Took over ChatGPT Accounts",
+  "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+  "source": "hackernews",
+  "upvotes": 134,
+  "comments": 58,
+  "published_at": 1793442611,
+  "discussion": "https://news.ycombinator.com/item?id=50314699",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.parameter.ai/labs/we-found-a-gap-at-openai"
+  ],
+  "cross_source_count": 1,
+  "score": 80,
+  "image": "https://www.parameter.ai/opengraph-image.png",
+  "link_status": "ok",
+  "ko_title": "ChatGPT 계정을 탈취했습니다",
+  "summary": "연구팀은 ChatGPT 공유 기능을 이용해 악성 JavaScript을 삽입, 사용자가 링크만 클릭하면 인증된 세션에서 계정 API를 호출할 수 있게 했다. 이를 통해 공격자는 대화 목록을 열람하고 비공개 대화 내용을 외부 서버로 전송할 수 있었다. OpenAI는 2026년 10월 26일에 해당 취약점을 패치하고 보고서를 P1 등급으로 분류했다.",
+  "why": "공유 링크 클릭만으로 인증된 세션에서 API 호출이 가능해졌으므로, 공유 링크를 열기 전 출처를 반드시 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "TypeScript 7.1 beta's native compiler checks a 353,000-line project in 2.8 seconds instead of 12.4",
+  "url": "https://dev.to/alexgeorgiev17/typescript-71-betas-native-compiler-checks-a-353000-line-project-in-28-seconds-instead-of-124-3h91",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 9,
+  "comments": 0,
+  "published_at": 1793444400.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/typescript-71-betas-native-compiler-checks-a-353000-line-project-in-28-seconds-instead-of-124-3h91"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Foc90bzsh2c27112gn0hq.png",
+  "link_status": "ok",
+  "ko_title": "TypeScript 7.1 베타, 네스트JS 프로젝트 353 천줄을 2.8 초에 컴파일",
+  "summary": "TypeScript 7.1 베타는 Go로 구현된 네이티브 컴파일러를 사용해 NestJS 코드베이스(353 천줄, 2 934 파일)를 2.8 초에 컴파일한다. 이는 이전 버전인 6.0.3 대비 4.5배, 7.0.2 대비 1.8배 빠른 속도다. 메모리 사용량은 7.0.2보다 감소해 1 GB 수준을 유지한다.",
+  "why": "TypeScript 7.1 베타로 전환 시 CI 파이프라인의 컴파일 대기 시간이 크게 줄어든다. 7.0.2에서 메모리 사용량이 증가했던 문제가 7.1 베타에서 1GB 수준으로 개선되었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "web",
+   "backend-data",
+   "hardware",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "valentderah / totk-pc-recomp",
+  "url": "https://github.com/valentderah/totk-pc-recomp",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1135,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/valentderah/totk-pc-recomp"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1135,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/valentderah/totk-pc-recomp",
+  "link_status": null,
+  "ko_title": "totk-pc-recomp — The Legend of Zelda: Tears of the Kingdom을 Windows용으로 정적 재컴파일",
+  "summary": "이 오픈소스 프로젝트는 Switch용 왼쪽꺾쇠괄호젤다의 전설: 티어즈 오브 더 킹덤오른쪽꺾쇠괄호을 Windows x86-64 네이티브 실행 파일로 변환한다. 게임 파일은 포함되지 않으며, 사용자는 직접 콘솔에서 덤프한 정품 파일이 필요하다. 현재는 초기 개발 단계로 Windows에서 플레이 가능하지만 시각적 버그와 충돌이 발생할 수 있다.",
+  "why": "이것은 에뮬레이션이 아닌 정적 재컴파일 방식이라 기존 에뮬레이터의 오버헤드 문제가 없다. 단, 초기 개발 단계라 시각적 버그와 충돌이 발생할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "Prospero: A new coding harness for a more civilized age",
+  "url": "https://nullprogram.com/blog/2026/10/31/",
+  "source": "hackernews",
+  "upvotes": 68,
+  "comments": 38,
+  "published_at": 1793447699,
+  "discussion": "https://news.ycombinator.com/item?id=50315226",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nullprogram.com/blog/2026/10/31/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Prospero: 보다 문명화된 시대를 위한 새로운 코딩 하니스",
+  "summary": "Prospero는 C++와 Dear ImGui 기반의 코딩 하니스로, 기존 제품에 비해 메모리 사용량을 두 자릿수 감소시켰다. 모델 제공자는 내장되지 않아 llama.cpp, 온프레미스 모델, OpenRouter, Anthropic API, OpenAI API 등을 직접 연결한다. 에이전트와 서브에이전트가 도구를 호출하고, SSH나 WSL을 통해 다른 호스트에 무인 복제본을 배포할 수 있다.",
+  "why": "로컬 LLM 기반 코딩 하니스를 쓸 때 웹 스택의 막대한 메모리 소모를 피할 수 있다. 모델 제공자를 직접 연결해야 하므로 Claude 구독은 사용할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "vercel-labs / agent-desktop",
+  "url": "https://github.com/vercel-labs/agent-desktop",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 848,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/vercel-labs/agent-desktop"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 848,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/vercel-labs/agent-desktop",
+  "link_status": null,
+  "ko_title": "에이전트-데스크톱",
+  "summary": "Vercel Labs가 공개한 agent-desktop은 macOS, Windows, Linux용 CLI와 C 라이브러리다. OS 접근성 트리를 이용해 데스크톱 앱 요소를 JSON 형태로 스냅샷하고, 해당 요소에 대한 레퍼런스로 AI 에이전트가 조작할 수 있다. 픽셀 매칭 없이 요소를 직접 제어하며, 호스트는 15분 유휴 시 자동 종료된다.",
+  "why": "기존 픽셀 매칭 방식과 달리 OS 접근성 트리를 활용해 데스크톱 요소를 직접 제어한다. macOS 환경에서는 임시 디렉터리 권한을 0700으로 설정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "Molly(Signal fork) has not been updated since 3 months and is vulnerable",
+  "url": "https://piefed.world/post/1503394",
+  "source": "hackernews",
+  "upvotes": 125,
+  "comments": 77,
+  "published_at": 1793442221,
+  "discussion": "https://news.ycombinator.com/item?id=50314666",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://piefed.world/post/1503394"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://piefed.world/static/images/piefed_logo_full_t_300x300.svg",
+  "link_status": "ok",
+  "ko_title": "Molly(Signal 포크) 3개월째 업데이트되지 않아 취약",
+  "summary": "Molly의 최신 릴리스는 7월 31일(v8.19.2-4)이며, 메인라인 Signal에서 이미 수정된 취약점을 그대로 포함하고 있다. 10월에 공개된 최신 익스플로잇도 Signal 8.27에서 해결됐지만 Molly는 여전히 취약하다. 현재는 메인라인 Signal을 사용하고 Molly는 업데이트가 재개될 때까지 삭제하는 것이 권장된다.",
+  "why": "Molly를 쓰는 경우 메인라인 Signal로 전환하고 Molly를 삭제해야 한다. 10월에 공개된 익스플로잇은 Signal 8.27에서 해결됐지만 Molly는 여전히 취약하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "I made $0 from my side project for 8 months. Then one furious email at 2am changed everything.",
+  "url": "https://dev.to/infoinlet1/i-made-0-from-my-side-project-for-8-months-then-one-furious-email-at-2am-changed-everything-316l",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1793434423.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/i-made-0-from-my-side-project-for-8-months-then-one-furious-email-at-2am-changed-everything-316l"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjvshu7l7ac7xkhh99d29.png",
+  "link_status": "ok",
+  "ko_title": "사이드 프로젝트 8개월간 수익 0달러, 새벽 2시 분노 이메일이 모든 것을 바꾸다",
+  "summary": "저자는 8개월 동안 30여 개의 기능을 지속적으로 배포했지만 매출은 0달러였다. 새벽 2시 받은 한 통의 분노 섞인 이메일이 고객의 실제 결제 의사를 확인시켜 매출이 발생하기 시작했다. 이 경험을 통해 단순히 기능을 많이 출시하는 것이 아니라 고객 피드백을 직접 반영하는 것이 중요함을 강조한다.",
+  "why": "AI로 기능 개발 속도가 빨라졌지만, 고객 결제 의사를 확인하는 피드백 루프가 없으면 매출은 0달러에 머문다. 기능 배포에 집중하던 방식에서 벗어나 실제 사용자 반응을 직접 확인하는 과정으로 개발 우선순위를 바꿔야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "Aoandon: Hearn's ghost stories in Japanese, retold at five JLPT levels",
+  "url": "https://dev.to/adk_bbx/aoandon-hearns-ghost-stories-in-japanese-retold-at-five-jlpt-levels-5017",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 0,
+  "published_at": 1793437402.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/adk_bbx/aoandon-hearns-ghost-stories-in-japanese-retold-at-five-jlpt-levels-5017"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjk0yh5olejh8rfsqes94.png",
+  "link_status": "ok",
+  "ko_title": "Aoandon: 일본어 레벨별 헤른 유령 이야기",
+  "summary": "오픈소스 프로젝트 Aoandon은 일본어 학습자를 위해 하프다이언의 유령 이야기를 JLPT N5부터 N1까지 다섯 단계로 재구성한다. Aozora Bunko에서 제공되는 원문을 기반으로 5개의 이야기를 53개의 장면으로 나누어 총 265번 재구성한다. 사용자는 원하는 레벨과 이야기를 선택해 와시 종이에 장면을 읽고 질문에 답한다.",
+  "why": "오픈소스 프로젝트로 Gemma 4를 활용해 일본어 원문을 JLPT 레벨별로 재구성하는 파이프라인을 직접 구현해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "Switch Lowering in GCC",
+  "url": "https://xoranth.net/gcc-switch/",
+  "source": "hackernews",
+  "upvotes": 119,
+  "comments": 22,
+  "published_at": 1793433746,
+  "discussion": "https://news.ycombinator.com/item?id=50314085",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://xoranth.net/gcc-switch/"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GCC에서 스위치 문 낮추기",
+  "summary": "이 글은 GCC가 스위치 문을 점프 테이블이나 상수 오프셋을 이용해 최적화하는 방식을 분석한다. 실험을 통해 GCC가 약 8개의 케이스 라벨당 하나의 점프 테이블 엔트리를 기준으로 전환한다는 것을 확인한다.",
+  "why": "스위치 문이 점프 테이블로 변환되는 임계값이 케이스당 약 8개 엔트리임을 확인했다. 이 기준을 벗어나는 희소 케이스 구조에서는 점프 테이블 대신 다른 분기 방식이 쓰인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ },
+ {
+  "title": "Serbia just elected the world's brainiest parliament",
+  "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+  "source": "hackernews",
+  "upvotes": 508,
+  "comments": 306,
+  "published_at": 1793442090,
+  "discussion": "https://news.ycombinator.com/item?id=50314654",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "세르비아, 세계에서 가장 똑똑한 의회 선출",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-01T00:00:01.274884+09:00",
+  "batch_label": "11월 1일 00:00"
+ }
+]
