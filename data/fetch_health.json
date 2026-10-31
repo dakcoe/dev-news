@@ -1,32 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-22T08:00:31+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "blocked": 3,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://apnews.com/article/oregon-waterfall-for-sale-lawmakers-996de63462d49ec3ad9bee1629fb9488",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/att-legal",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/broad-access-through-consistent-standards",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-22T16:00:29+09:00",
    "total": 18,
    "counts": {
@@ -562,6 +536,22 @@
    "failures": [
     {
      "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-01T08:00:32+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 9,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
      "source": "hackernews",
      "reason": "blocked"
     }

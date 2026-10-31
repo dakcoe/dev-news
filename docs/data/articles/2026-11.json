@@ -1,5 +1,385 @@
 [
  {
+  "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+  "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+  "source": "hackernews",
+  "upvotes": 225,
+  "comments": 108,
+  "published_at": 1793474190,
+  "discussion": "https://news.ycombinator.com/item?id=50319143",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf"
+  ],
+  "cross_source_count": 1,
+  "score": 76,
+  "image": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf/opengraph-image",
+  "link_status": "ok",
+  "ko_title": "TCP 사용 후 해제 취약점: CVE-2026-98432 / CVSS 9.8",
+  "summary": "리눅스 4.4 이후 커널에 존재하던 IPv4 TCP 핸드쉐이크의 use-after-free 버그가 2026년 10월 11·15일에 여러 안정 커널에 패치되었다. Ubuntu와 Red Hat 등 주요 배포판은 아직 패치를 적용하지 않아 취약 상태이며, Anthropic 연구원이 제시한 PoC는 인증 없이 루트 권한을 획득한다.",
+  "why": "Go 프로그램은 기본적으로 멀티패스 TCP 리스너를 열기 때문에 해당 취약점에 노출된다. 컨테이너는 호스트 커널을 공유하므로 이미지 재빌드만으로 문제를 해결할 수 없다. Ubuntu와 Red Hat은 아직 패치를 배포하지 않아 즉시 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It 💀🔮",
+  "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 22,
+  "comments": 6,
+  "published_at": 1793469447.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fezbb0xf5v8087ny2qes2.jpg",
+  "link_status": "ok",
+  "ko_title": "모든 코드베이스에 '// DO NOT TOUCH' 파일이 있다. AI 네크로맨서를 만들어 작성자를 소환했다",
+  "summary": "GitSéance는 해크토버페스트 오픈소스 AI 챌린지 4주차 작품으로, 레거시 코드 파일을 분석해 위험도를 예측하고 대체 의존성을 찾는다. 네 개의 특화된 에이전트가 Git 히스토리, TabPFN 모델, Google Gemma, SerpApi를 활용한다. 현재 GitHub에 오픈소스로 공개돼 직접 사용 가능하다.",
+  "why": "레거시 코드의 위험도와 대체 의존성을 자동 분석해 주입 공포를 줄여준다. 원작자가 떠난 뒤에도 코드 유지보수 판단의 근거를 확보할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "ESA's satellite is dead. Its ghost: 2,123 signals. TabPFN beat the published SOTA; 83¢ of Tinker stopped an LLM speaking for it",
+  "url": "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 17,
+  "comments": 5,
+  "published_at": 1793485095.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fozz9mgm22d3tb3z39mur.png",
+  "link_status": "ok",
+  "ko_title": "ESA 위성 사망, 2,123 신호 남겨",
+  "summary": "TabPFN 모델이 OPS-SAT 데이터셋에서 기존 최고 모델을 학습 없이 능가했다. Qwen3-8B는 83센트 비용으로 Tinker에 파인튜닝돼 문서에 근거한 답변만 제공한다. 두 모델을 이용해 사라진 위성 신호 원인을 탐색했지만, 원인 자체는 기록에 없었다.",
+  "why": "TabPFN은 학습 루프 없이 기존 최고 성능을 뛰어넘는 이상 탐지 결과를 내므로, 백엔드 로그 분석에 학습 비용이 큰 장벽으로 작용하던 부분을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "anomalyco / hex",
+  "url": "https://github.com/anomalyco/hex",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 686,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/anomalyco/hex"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 686,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/anomalyco/hex",
+  "link_status": null,
+  "ko_title": "Hex — 로컬에서 동작하는 음성 받아쓰기 앱",
+  "summary": "Hex는 Apple 실리콘 Mac용 로컬 음성 받아쓰기 앱으로, 클라우드 없이 기기 내에서 음성 모델을 다운로드해 텍스트로 변환한다. Windows와 Linux 베타 버전도 제공되며, 사용자는 단축키와 언어, 모델을 선택해 맞춤형으로 사용할 수 있다.",
+  "why": "클라우드 전송 없이 기기 내 모델로 변환하므로 음성 데이터가 외부로 나가지 않는다. 백엔드 개발 환경에서 코드 작성 시 음성 입력을 활용하면 키보드 의존도를 낮출 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "patch-gg / pixelfx",
+  "url": "https://github.com/patch-gg/pixelfx",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 902,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/patch-gg/pixelfx"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 902,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/patch-gg/pixelfx",
+  "link_status": null,
+  "ko_title": "픽셀FX",
+  "summary": "이 GitHub 저장소는 244개의 픽셀 아트 효과와 애니메이션을 제공한다. 효과는 실시간 재생·색상 변환·미러링이 가능하고, 브라우저 게임에 바로 삽입하거나 스프라이트 시트로 내보낼 수 있다. Claude Code 스킬을 통해 새로운 효과를 AI가 자동으로 생성한다.",
+  "why": "브라우저 게임 개발 시 픽셀 아트 효과를 직접 코딩할 필요 없이 스프라이트 시트로 내보내 바로 적용할 수 있다. Claude Code 스킬을 활용해 기존 244개 효과 외에 새로운 픽셀 아트 효과를 자동으로 생성할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "HackerTube: YouTube built from videos recommended by HN",
+  "url": "https://karpathy.bearblog.dev/hacker-tube/",
+  "source": "hackernews",
+  "upvotes": 426,
+  "comments": 162,
+  "published_at": 1793476613,
+  "discussion": "https://news.ycombinator.com/item?id=50319510",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://karpathy.bearblog.dev/hacker-tube/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://bearblog.dev/static/og-image.png",
+  "link_status": "ok",
+  "ko_title": "HackerTube: 해커뉴스에서 추천된 동영상으로 만든 유튜브",
+  "summary": "해커뉴스 댓글에서 추천된 6,454개의 유튜브 동영상을 수집해 자체 UI와 키보드 단축키를 제공하는 비공식 유튜브 클론 사이트가 공개됐다. 40 K개의 댓글을 필터링·스팸 제거해 150개 주제별로 정리했으며, 썸네일은 50 % 크기로 표시한다. 데이터 내보내기 기능으로 사용자가 직접 호스팅 버전을 만들 수 있다.",
+  "why": "데이터 내보내기 기능으로 수집된 6,454개 동영상을 직접 호스팅할 수 있다. 자체 유튜브 클론을 구축하거나 특정 주제별 영상 목록을 확보하려는 경우 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "Trick or Type Guard? Surviving `unknown` with is-kit 🎃",
+  "url": "https://dev.to/nyaomaru/trick-or-type-guard-surviving-unknown-with-is-kit-4oc2",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 36,
+  "comments": 2,
+  "published_at": 1793459812.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nyaomaru/trick-or-type-guard-surviving-unknown-with-is-kit-4oc2"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fedxqob3qk61zkrn9sudb.gif",
+  "link_status": "ok",
+  "ko_title": "Trick or Type Guard? Surviving `unknown` with is-kit 호박",
+  "summary": "is-kit 라이브러리의 `isString` 함수를 이용해 TypeScript의 `unknown` 타입을 안전하게 검사하는 방법을 소개한다. JSON 파싱으로 얻은 `unknown` 값에 대해 타입 가드 없이 직접 속성에 접근하면 오류가 발생하지만, `isString` 같은 타입 가드로 확인하면 안전하게 값을 사용할 수 있다. 복잡한 객체 구조에서도 타입 가드를 적용해 속성을 안전하게 다루는 예시를 보여준다.",
+  "why": "JSON 파싱 결과처럼 unknown 타입인 값을 다룰 때 is-kit의 타입 가드를 쓰면 안전하다. typeof로 단일 검사는 충분하지만, 복잡한 객체 구조에서는 이 라이브러리가 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "I Retested My MoE Offloading Benchmarks. Some of My Conclusions Changed.",
+  "url": "https://dev.to/sizzlebop/i-retested-my-moe-offloading-benchmarks-some-of-my-conclusions-changed-6f4",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 2,
+  "published_at": 1793475186.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sizzlebop/i-retested-my-moe-offloading-benchmarks-some-of-my-conclusions-changed-6f4"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdspu8kwuws0c3qo3vl9t.png",
+  "link_status": "ok",
+  "ko_title": "MoE 오프로드 벤치마크 재검증 – 일부 결론 변경",
+  "summary": "원래 16GB GPU 환경에서 MoE 오프로드 실험을 진행한 뒤, 양자화 방식을 일관시키고 벤치마크를 재실행했다. 선택적 전문가 오프로드와 전통적인 레이어 분할을 다섯 모델에 적용해 결과가 크게 달라졌다. 특히 LFM2.5 모델은 선택적 오프로드 시 성능이 급격히 저하돼 원인 분석이 필요했다.",
+  "why": "양자화 방식이 달라졌던 초기 벤치마크 결론은 신뢰할 수 없다. 16GB GPU 환경에서 MoE 오프로드 전략을 정할 때 이 재검증 결과를 기준으로 삼아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware",
+   "science"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "Ghost Diary: My Local AI Started Writing Between the Lines",
+  "url": "https://dev.to/style96/ghost-diary-my-local-ai-started-writing-between-the-lines-9nk",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 1,
+  "comments": 4,
+  "published_at": 1793462004.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/style96/ghost-diary-my-local-ai-started-writing-between-the-lines-9nk"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fq1ne2dybjor7wxmbwgee.png",
+  "link_status": "ok",
+  "ko_title": "Ghost Diary: 로컬 AI가 줄 사이에 글을 쓰다",
+  "summary": "로컬 Gemma 모델을 활용해 일기 내용에 AI가 자동으로 문장을 삽입하는 웹 데모가 공개됐다. 사용자는 일기를 작성하고 “Pass the night”를 선택하면 모델이 기존 텍스트와 과거 기록을 참고해 새로운 문장을 생성한다. 생성된 문장은 원본과 비교·복원할 수 있으며, 전체 애플리케이션은 로컬에서만 실행된다.",
+  "why": "로컬 Gemma 모델이 과거 일기 기록을 컨텍스트로 활용해 문맥에 맞는 문장을 생성하는 방식을 확인할 수 있다. 웹 데모는 라이브 추론 기능이 없어 실제 로컬 환경에서 실행하려면 별도 설정이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+  "url": "https://ryanmadden.net/gpt-56-beats-factorio/",
+  "source": "hackernews",
+  "upvotes": 141,
+  "comments": 152,
+  "published_at": 1793472634,
+  "discussion": "https://news.ycombinator.com/item?id=50318871",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ryanmadden.net/gpt-56-beats-factorio/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://ryanmadden.net/img/factorio_rocket_launch_social.jpg",
+  "link_status": "ok",
+  "ko_title": "GPT-5.6 Sol, 평화 모드 Factorio 완주",
+  "summary": "GPT-5.6 Sol이 Python 기반 게임 매니저를 이용해 13.5시간 게임 시간 동안 평화 모드 Factorio를 자동으로 진행했다. 모델은 생산 통계와 과학 연구 마일스톤을 기록했으며, 초기 단계에서는 뛰어난 성과를 보였지만 후반에는 확장 문제와 생산 연결 실패가 나타났다. 이전 GPT-5.5 버전 대비 운송 벨트 사용 문제가 개선되었다.",
+  "why": "AI 에이전트가 복잡한 시뮬레이션 게임을 완주하는 데서 드러난 후반부 확장성 한계를 참고할 수 있다. 자동화 시스템 설계 시 초기 단계의 성공이 후반부의 병목 현상을 가릴 수 있음을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "language"
+  ],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "Digital minimalism",
+  "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+  "source": "hackernews",
+  "upvotes": 292,
+  "comments": 220,
+  "published_at": 1793427396,
+  "discussion": "https://news.ycombinator.com/item?id=50313661",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "http://vitalik.ca/images/icon.png",
+  "link_status": "ok",
+  "ko_title": "디지털 미니멀리즘",
+  "summary": "",
+  "why": "디지털 미니멀리즘은 기술 사용이 무의미한 습관이 아닌 의식적인 선택이어야 한다는 원칙이다. 백엔드 개발 환경에서 알림과 피드 소비를 줄이면 집중력이 높아진다. 이 글은 특정 도구 설정 변경이나 버전 업데이트를 다루지 않는다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
+  "title": "Casio Watches of the 1980s",
+  "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
+  "source": "hackernews",
+  "upvotes": 200,
+  "comments": 101,
+  "published_at": 1793462448,
+  "discussion": "https://news.ycombinator.com/item?id=50317363",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.casio.com/us/watches/50th/Heritage/1980s/"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "1980년대 카시오 시계",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-01T08:00:05.305701+09:00",
+  "batch_label": "11월 1일 08:00"
+ },
+ {
   "title": "We Took over ChatGPT Accounts",
   "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
   "source": "hackernews",
