@@ -1,5 +1,352 @@
 [
  {
+  "title": "AI crawlers vs search crawlers: the 7-night census",
+  "url": "https://dev.to/mrsaynothing/ai-crawlers-vs-search-crawlers-the-7-night-census-36g5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": 1793568493.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mrsaynothing/ai-crawlers-vs-search-crawlers-the-7-night-census-36g5"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmrsaynothing.dev%2Fapi%2Fspace%2Fmedia%2Fpost%2F9a495210-c73a-4539-87f3-82b3ef9ad398",
+  "link_status": "ok",
+  "ko_title": "AI 크롤러와 검색 크롤러: 7일간의 조사",
+  "summary": "7일 동안 작은 사이트에 8,654건의 크롤러 방문이 기록됐으며, 그 중 65%는 이름이 없었다. AI 기반 크롤러인 PerplexityBot이 검색 엔진 크롤러보다 많이 방문했으며, SEO 도구 크롤러가 검색 엔진 자체 크롤러를 앞섰다. 로그를 이용해 직접 크롤러 현황을 측정하는 방법도 제공한다.",
+  "why": "AI 크롤러가 검색 엔진 크롤러보다 방문 빈도가 높아졌으므로, 기존 검색 최적화 전략만으로는 부족하다. 로그를 분석해 익명 트래픽 비율을 확인하고, robots.txt 설정을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+  "url": "https://hackerbooks.org",
+  "source": "hackernews",
+  "upvotes": 738,
+  "comments": 160,
+  "published_at": 1793548708,
+  "discussion": "https://news.ycombinator.com/item?id=50326821",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hackerbooks.org"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: HackerBooks – HackerTube처럼 HN에 언급된 책을 모아 보여줍니다",
+  "summary": "HackerBooks는 2007년부터 현재까지 Hacker News 댓글에서 두 명 이상이 언급한 약 16,500권의 책을 수집한 웹 서비스다. 각 책은 해당 언급 댓글로 연결되며, 데이터는 사이트 소개 페이지에서 다운로드할 수 있다. 전체 구현과 데이터 파이프라인은 Claude가 담당했으며, 제작자는 도메인 구매와 전반적인 방향을 맡았다.",
+  "why": "데이터는 사이트 소개 페이지에서 내려받을 수 있다. 단순 언급 횟수만 세어 칭찬과 비판을 구분하지 못한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "I built a free Whisper transcription site that runs in the browser: 5 things that broke",
+  "url": "https://dev.to/quietscribe/i-built-a-free-whisper-transcription-site-that-runs-in-the-browser-5-things-that-broke-59o6",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1793553167.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/quietscribe/i-built-a-free-whisper-transcription-site-that-runs-in-the-browser-5-things-that-broke-59o6"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgo1otheprzipc351ruqb.png",
+  "link_status": "ok",
+  "ko_title": "브라우저에서 실행되는 무료 Whisper 전사 사이트 구축: 깨진 5가지 문제",
+  "summary": "개발자는 Cloudflare Pages에 정적 사이트로 Whisper를 브라우저에서 직접 실행하는 Quietscribe를 만들었다. 다국어 모델에서 언어 자동 감지가 영어로 고정되고, iPhone Safari에서 페이지가 리로드되는 등 다섯 가지 문제를 겪었다. 각 문제에 대한 해결 방법으로 언어 토큰 선택 로직 추가와 WASM 스레드 제한을 적용했다.",
+  "why": "브라우저 내 Whisper 실행 시 다국어 모델의 언어 자동 감지가 영어로 고정되는 문제를 확인해야 한다. 해결을 위해 초기 음성 구간의 언어 토큰 점수 계산 로직을 직접 구현해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "DeanChensj / jiangshan-map",
+  "url": "https://github.com/DeanChensj/jiangshan-map",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 663,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/DeanChensj/jiangshan-map"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 663,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/DeanChensj/jiangshan-map",
+  "link_status": null,
+  "ko_title": "중국 역사의 인터랙티브 지도 — 전쟁 국가 시대부터 현재까지",
+  "summary": "403 BCE 전쟁 국가 시기부터 현대까지 2,400년 넘는 중국 역사를 18개 시대에 걸쳐 하나의 인터랙티브 지도에 시각화한 웹 애플리케이션이다. 영문 UI와 실시간 데모를 제공하며, 고대 도시 위치와 주요 역사적 사건 경로를 탐색할 수 있다.",
+  "why": "중국어화 옵션이 제공되므로 중국어 자료를 다루는 개발자는 해당 화면을 직접 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
+  "url": "https://dev.to/zachbenson/how-do-ai-agents-authenticate-the-problem-nobody-has-solved-yet-3cbe",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 4,
+  "published_at": 1793566956.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zachbenson/how-do-ai-agents-authenticate-the-problem-nobody-has-solved-yet-3cbe"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fp3x233ly0ct0riwwbbvl.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트 인증은 어떻게 할까? (아직 해결되지 않은 문제)",
+  "summary": "Arken은 HTTP API와 MCP 서버용 오픈소스 인증 구현을 제공한다. 각 에이전트는 키 쌍을 가지고 did:key 식별자를 사용해 인증한다. 서버는 Express 미들웨어 한 줄로 검증한다.",
+  "why": "MCP 서버나 에이전트 호출 API를 만들 때 정적 API 키 대신 did:key 기반 서명 인증으로 전환할 수 있다. 기존처럼 키를 환경변수에 넣거나 팀 전체에 공유하던 방식과 달리, 각 에이전트마다 고유 키 쌍을 사용해 권한을 분리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "One new site got 7,000+ impressions in a week; another got zero. What I'm learning about Google indexing (from an aerospace engineer)",
+  "url": "https://dev.to/christopher_yurg_1e5aa92f/one-new-site-got-7000-impressions-in-a-week-another-got-zero-what-im-learning-about-google-178k",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 1,
+  "comments": 2,
+  "published_at": 1793568139.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/christopher_yurg_1e5aa92f/one-new-site-got-7000-impressions-in-a-week-another-got-zero-what-im-learning-about-google-178k"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcoblw4tx5gzu4rm67h02.png",
+  "link_status": "ok",
+  "ko_title": "새로운 사이트가 일주일에 7,000회 이상 노출, 다른 사이트는 전혀 안 됨 — 구글 인덱싱에 대한 학습",
+  "summary": "구글 검색 콘솔을 활용해 직접 만든 다섯 개 사이트 중 두 개의 인덱싱 결과를 비교했다. 기존 실험 사이트(A)는 첫 주에 7,000회 이상의 노출과 26회의 클릭을 기록했으며 평균 순위가 46위에서 15.5위로 상승했다. 새로 만든 사이트(B)는 출시 2일 만에 노출과 클릭이 전혀 없었다. 두 사이트의 구조 차이와 인덱싱 결과 차이를 분석하고 있다.",
+  "why": "구글 인덱싱 속도는 사이트 구조와 콘텐츠 유형에 따라 크게 달라질 수 있다. 수천 개의 페이지를 가진 기존 사이트와 달리, 신규 사이트는 초기 노출이 지연될 수 있다. 검색 콘솔 데이터를 통해 자신의 사이트가 어떤 패턴에 해당하는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "Mathematics has changed. Let's act like it",
+  "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+  "source": "hackernews",
+  "upvotes": 175,
+  "comments": 190,
+  "published_at": 1793557722,
+  "discussion": "https://news.ycombinator.com/item?id=50328251",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://secure.gravatar.com/blavatar/bd4bda4207561b6998f10dec44b570f04ff4072b20f89162d525b186dfca3e49?s=200&ts=1793573934",
+  "link_status": "ok",
+  "ko_title": "수학이 변했다. 우리도 그렇게 행동하자",
+  "summary": "OpenAI가 10월 6일에 공개한 700여 편의 연구 논문이 수학 분야에 큰 변화를 가져왔다고 주장한다. 그러나 해당 논문들은 작성이 부실하고 인용·귀속 문제를 위반하며 일부는 잘못된 내용도 포함한다. 필자는 AI 기업보다 학계가 논문 출판·연구자 채용·학생 교육을 통해 대응해야 한다고 강조한다.",
+  "why": "수학 연구의 중심이 되는 오픈 문제들이 AI에 의해 대거 해결 주장이 나오면서 기존 연구 방향의 유효성이 흔들린다. 학계의 논문 출판과 연구자 채용 관행이 AI 산출물의 품질 문제를 통제하는 실질적 수단이 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "career-culture"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "It wasn't AI that flipped Proton's charge",
+  "url": "https://blog.raed.dev/posts/proton-loser-thinking/",
+  "source": "hackernews",
+  "upvotes": 130,
+  "comments": 78,
+  "published_at": 1793559235,
+  "discussion": "https://news.ycombinator.com/item?id=50328488",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.raed.dev/posts/proton-loser-thinking/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://blog.raed.dev/It%20wasn't%20AI%20that%20flipped%20Proton's%20charge.png",
+  "link_status": "ok",
+  "ko_title": "AI가 Proton의 방침을 바꾼 것이 아니다",
+  "summary": "404 Media가 Proton 경영진이 사내 AI 활용을 강요한다는 조사 결과를 보도했다. CEO가 보안 우려를 제기한 엔지니어를 비난하고 AI 사용 여부가 직책 유지에 영향을 줄 수 있다고 말했다. 이는 AI 자체보다 리더십의 태도와 보안 문화에 대한 문제다.",
+  "why": "보안 검증 절차를 무시하고 AI 도입을 강요하는 문화는 프라이버시 서비스의 신뢰를 훼손한다. Proton을 메일 대체 수단으로 추천하던 기존 관행에 의문을 제기해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "Quoting Kyle Kingsbury",
+  "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793551744.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Kyle Kingsbury 인용",
+  "summary": "LLM이 문서와 소프트웨어에 대한 신뢰를 약화시킨다. 기존에 성숙성을 판단하던 신호들이 위조되기 쉬워져 엔지니어가 새로운 프로젝트를 의심하게 될 가능성이 있다. 유지보수자는 올바른 소프트웨어와 정확한 문서를 보장하기 위해 어떤 조치를 취하고, 그 품질을 사용자에게 어떻게 증명할 수 있는지 고민한다.",
+  "why": "LLM 생성물로 성숙도 신호가 위조되므로 기존 검증 방식의 신뢰도가 떨어진다. 새 프로젝트를 도입할 때 문서와 소프트웨어의 정확성을 직접 입증할 기준을 재점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source",
+   "career-culture"
+  ],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "Patrick Stewart taught us what good men do with power",
+  "url": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
+  "source": "hackernews",
+  "upvotes": 318,
+  "comments": 225,
+  "published_at": 1793554096,
+  "discussion": "https://news.ycombinator.com/item?id=50327650",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://platform.vox.com/wp-content/uploads/sites/2/2026/10/gettyimages-459889618.jpg?quality=90&strip=all&crop=0%2C15.142462754721%2C100%2C69.715074490557&w=1200",
+  "link_status": "ok",
+  "ko_title": "Patrick Stewart가 우리에게 권력을 가진 좋은 사람이 해야 할 일을 가르쳐 주다",
+  "summary": "",
+  "why": "이 기사는 Patrick Stewart의 별세와 Star Trek의 정치·철학적 의미를 다루는 문화 평론이다. 백엔드나 AI 개발 업무에 적용할 기술적 변화나 조치 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
+  "title": "🔧 You Build It, You Fix It",
+  "url": "https://dev.to/zenika/you-build-it-you-fix-it-3046",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793568565.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zenika/you-build-it-you-fix-it-3046"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fbcouetil%2Farticles%2Fmain%2Fimages%2Fpractices%2Fdirty-liquid-1.jpg",
+  "link_status": "ok",
+  "ko_title": "You Build It, You Fix It — 개발팀이 직접 버그를 고치는 문화",
+  "summary": "",
+  "why": "버그 수정을 전담하는 팀은 최근 코드 맥락을 몰라 원인을 파악하기 어렵다. 개발자가 직접 버그를 고치면 품질과 속도, 팀 몰입도가 함께 올라간다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-02T08:00:05.952697+09:00",
+  "batch_label": "11월 2일 08:00"
+ },
+ {
   "title": "beenuar / AiSOC",
   "url": "https://github.com/beenuar/AiSOC",
   "source": "github",
