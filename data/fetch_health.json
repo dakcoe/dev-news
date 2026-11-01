@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-23T00:00:38+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 12,
-    "blocked": 2,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/forward-deployed-engineering-means",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/cloudflare-cyber",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-23T08:00:37+09:00",
    "total": 20,
    "counts": {
@@ -535,6 +514,38 @@
    "failures": [
     {
      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+     "source": "hackernews",
+     "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-02T00:00:27+09:00",
+   "total": 16,
+   "counts": {
+    "blocked": 2,
+    "github": 5,
+    "ok": 7,
+    "robots": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.economist.com/asia/2026/10/29/a-tiny-pacific-country-rolls-out-universal-basic-income",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://xn--69f31l4t57c0mag4b613h.xn--7uh4898msjaso/🆆🆃🅵/",
      "source": "hackernews",
      "reason": "robots"
     }
