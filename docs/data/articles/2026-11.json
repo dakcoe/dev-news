@@ -1,5 +1,394 @@
 [
  {
+  "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
+  "url": "https://arxiv.org/abs/2409.02292",
+  "source": "hackernews",
+  "upvotes": 58,
+  "comments": 27,
+  "published_at": 1793497589,
+  "discussion": "https://news.ycombinator.com/item?id=50322022",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2409.02292"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "RAMBO: 메모리에서 라디오 신호를 만들어 공기 단절 컴퓨터의 비밀 유출",
+  "summary": "연구진은 메모리 버스에서 라디오 신호를 발생시켜 공기 단절 시스템에서 데이터를 탈취하는 방법을 제시했다. 소프트웨어만으로 1 kbps 속도로 파일, 이미지, 키 입력, 바이오메트릭 데이터, 암호키 등을 전송할 수 있다. SDR 수신기와 간단한 안테나로 원거리에서 신호를 복원한다. 논문은 구현 방식과 실험 결과, 그리고 방어 대책을 논의한다.",
+  "why": "공기 단절 시스템의 물리적 격리만으로는 메모리 버스에서 발생하는 라디오 신호를 막을 수 없다. 소프트웨어로만 1kbps 속도로 암호키와 바이오메트릭 데이터를 외부로 전송할 수 있다. SDR 수신기와 일반 안테나로 원거리에서 신호를 복원할 수 있으므로 기존 방어 대책의 한계를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
+  "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 1,
+  "published_at": 1793499772.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk0muq7rnwgqvoopal8dx.jpg",
+  "link_status": "ok",
+  "ko_title": "내 로컬 AI가 162개의 파이썬 패키지를 만들었다. 처음부터 다시 실행했더니 161개가 돌아왔다.",
+  "summary": "세 개의 로컬 모델이 1,199개의 파이썬 스크립트를 생성하고, 제안된 pip 설치 중 15%가 존재하지 않는 가짜 패키지임을 발견했다. TabPFN 모델을 이용해 패키지 이름만으로 가짜 여부를 예측하고, Claude Code 훅과 GitHub Action으로 설치를 차단하는 가드가 구현되었다. 가드가 가짜 설치를 2.2초에 차단하고 실제 설치는 1.7초에 통과시킨다. 동일 실험을 재실행해도 161개의 가짜 이름이 재현되었다.",
+  "why": "로컬 모델이 생성한 코드의 pip 설치 지시 중 15%가 존재하지 않는 가짜 패키지다. Claude Code 훅이나 GitHub Action으로 설치 전 검사를 거치면 가짜 설치를 차단할 수 있다. 오프라인 환경에서도 패키지 이름만으로 가짜 여부를 판별하는 기능이 제공된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "language",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "haydenschmitty / floorplan",
+  "url": "https://github.com/haydenschmitty/floorplan",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 176,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/haydenschmitty/floorplan"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 176,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/haydenschmitty/floorplan",
+  "link_status": null,
+  "ko_title": "플로어플랜",
+  "summary": "Claude 또는 Codex가 코드베이스를 분석해 파일·요청·연결을 영어 이름으로 표시하는 인터랙티브 맵을 생성한다. Node 18 이상에서 동작하며 의존성이 전혀 없고 현재 버전은 0.6.0이다. 라이브 데모와 영상이 제공돼 바로 체험할 수 있다.",
+  "why": "Claude나 Codex 플러그인으로 코드베이스 구조를 영어 이름의 인터랙티브 맵으로 시각화한다. 복잡한 백엔드 시스템의 파일과 요청 간 연결을 한눈에 파악할 때 활용 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "deeplethe / sandstorm",
+  "url": "https://github.com/deeplethe/sandstorm",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 154,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/deeplethe/sandstorm"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 154,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/deeplethe/sandstorm",
+  "link_status": null,
+  "ko_title": "Sandstorm — 하나의 머신에 수천 개 샌드박스",
+  "summary": "Sandstorm은 유휴 샌드박스를 일시 정지하고 디스크에 스냅샷을 저장해 요청 시 빠르게 복원함으로써 하나의 머신에 수천 개의 샌드박스를 동시에 보유할 수 있게 한다. gVisor 컨테이너와 Firecracker 마이크로VM 두 가지 백엔드를 지원하며, 각 샌드박스는 독립 네트워크 네임스페이스를 갖는다. 마스터는 웹 콘솔을 제공해 샌드박스 관리와 플릿 스케줄링을 가능하게 한다.",
+  "why": "gVisor 컨테이너와 Firecracker 마이크로VM을 하나의 플릿에서 함께 운영할 수 있다. 각 샌드박스는 독립 네트워크 네임스페이스를 갖는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
+  "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/",
+  "source": "hackernews",
+  "upvotes": 80,
+  "comments": 29,
+  "published_at": 1793499593,
+  "discussion": "https://news.ycombinator.com/item?id=50322173",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://jetstream.security/wp-content/uploads/2026/07/ChatGPT-Image-Jul-1-2026-02_56_34-PM.png",
+  "link_status": "ok",
+  "ko_title": "브라질 법원, 법정 서류에 프롬프트 인젝션 시도한 변호사 제재",
+  "summary": "브라질 파라우아페바스 3법원은 AI 검토 시스템에 숨은 명령을 삽입한 변호사 두 명에게 청구액의 10%에 해당하는 벌금을 부과했다. 해당 명령은 흰색 글씨로 숨겨져 AI가 서류를 피상적으로 처리하도록 유도했다. 이는 법원 AI 조작에 대한 최초 판결로 기록된다.",
+  "why": "AI 기반 문서 검토 시스템에 프롬프트 인젝션을 시도할 경우 법적 제재 대상이 될 수 있다. AI를 활용해 서류나 코드를 자동 처리하는 워크플로우를 구축할 때 입력 데이터의 무결성을 검증하는 절차가 필수적이다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "datasette-llm 0.1a9",
+  "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793484601.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Oct/31/datasette-llm/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-llm 0.1a9",
+  "summary": "datasette-llm 플러그인이 기본 LLM 모델을 자동으로 인식하도록 개선되었습니다. 이제 Datasette Agent를 사용할 때 별도로 모델을 지정할 필요가 없으며, `uvx --with datasette-agent datasette content.db --internal internal.db` 명령만으로 실행할 수 있습니다. 이전에는 `-s plugins.datasette-agent.default_model gpt-6-astra` 옵션을 추가해야 했습니다.",
+  "why": "Datasette Agent를 실행할 때 모델 설정 옵션을 생략할 수 있다. 기존에 `-s plugins.datasette-agent.default_model`을 직접 지정하던 방식이 더 이상 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "Are You a Web Developer or a Browser Expert? 7 Tests I Failed Building a Photo Editor That Never Uploads Your Photos",
+  "url": "https://dev.to/akhourianmolkumar/are-you-a-web-developer-or-a-browser-expert-7-tests-i-failed-building-a-photo-editor-that-never-2j97",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 16,
+  "comments": 5,
+  "published_at": 1793510293.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/are-you-a-web-developer-or-a-browser-expert-7-tests-i-failed-building-a-photo-editor-that-never-2j97"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqmx33rcjcruq9o8nwljs.png",
+  "link_status": "ok",
+  "ko_title": "웹 개발자이신가요, 브라우저 전문가이신가요? 사진을 절대 업로드하지 않는 포토 에디터 제작에서 실패한 7가지 테스트",
+  "summary": "APIC Web은 ONNX Runtime Web을 이용해 브라우저 내에서 AI 모델을 실행하고, 모든 기능을 하나의 HTML 파일에 담아 GitHub Pages에 호스팅한다. 정적 호스트에서는 SharedArrayBuffer가 필요해 COOP/COEP 헤더가 없으면 멀티스레드 WASM이 동작하지 않아 모바일에서 AI 단계가 멈춘다. 이를 해결하려면 스레드 수를 1로 고정하고 fallback 설정을 비활성화한다. 또한 큰 모델 파일 다운로드와 실패를 구분하는 로직이 필요하다.",
+  "why": "정적 호스팅 환경에서 멀티스레드 WASM은 COOP/COEP 헤더 부재로 동작하지 않는다. 모바일에서 AI 처리가 멈추는 현상을 막으려면 스레드 수를 1로 고정해야 한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "Here Lies My Toaster",
+  "url": "https://dev.to/nazar-boyko/here-lies-my-toaster-1nmm",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1793501751.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nazar-boyko/here-lies-my-toaster-1nmm"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5zczj0oyjqr094e6rbsy.jpg",
+  "link_status": "ok",
+  "ko_title": "여기 누워있는 내 토스터",
+  "summary": "이 프로젝트는 로컬에서 실행되는 웹 앱으로, 사진을 찍은 가전·소품 등에 대해 Ollama의 Gemma 4 모델이 신문식 부고를 생성한다. 생성된 부고는 이름·사망 원인·서비스 기록·유언 등으로 구성되며 PNG 파일로 다운로드할 수 있다. Go와 Node 기반이며, Ollama와 모델을 직접 내려받아 실행한다.",
+  "why": "로컬에서 Ollama와 Gemma 4를 직접 실행하는 구조라 데이터가 외부로 나가지 않는다. Go 코드로 모델이 지어낸 세부 묘사를 검증하는 방식이 참고할 만하다. 실행에는 Go 1.26과 Node 20 이상이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "From a Simple \"Mark as Seen\" to Feedgrab & Ghostify: Story of My Life!",
+  "url": "https://dev.to/fm/from-a-simple-mark-as-seen-to-feedgrab-ghostify-story-of-my-life-33dl",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1793515058.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/fm/from-a-simple-mark-as-seen-to-feedgrab-ghostify-story-of-my-life-33dl"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FSweaDev%2Fghostify%2Fmain%2Fsubmission%2Fcover.png",
+  "link_status": "ok",
+  "ko_title": "간단한 “읽음 표시”에서 Feedgrab·Ghostify까지: 내 인생 이야기",
+  "summary": "개발자는 DEV 피드에 반복되는 게시물을 해결하기 위해 “읽음 표시” 브라우저 확장을 만들었다가 두 개의 새로운 프로젝트 Feedgrab와 Ghostify를 진행 중이다. 현재 Ghostify는 v1.0.0이 해커톤 기간 내에 출시됐으며, 이후 업데이트가 진행 중이다.",
+  "why": "DEV 피드에서 반복 노출되는 게시물을 제거하는 브라우저 확장이다. 현재 개발 중이라 오류가 발생할 수 있으니 릴리스 페이지를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "Anthropic blocks users for anything touching training larger models",
+  "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+  "source": "hackernews",
+  "upvotes": 305,
+  "comments": 176,
+  "published_at": 1793475559,
+  "discussion": "https://news.ycombinator.com/item?id=50319358",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/jiahaoshao1/status/2116475922190922088"
+  ],
+  "cross_source_count": 1,
+  "score": 36,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Anthropic, 대형 모델 학습 관련 모든 행위에 대해 사용자 차단",
+  "summary": "",
+  "why": "대형 모델 학습 관련 작업 시 Anthropic 서비스 이용이 차단된다. 해당 영역의 개발 계획에 영향을 줄 수 있으므로 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+  "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+  "source": "hackernews",
+  "upvotes": 317,
+  "comments": 90,
+  "published_at": 1793486466,
+  "discussion": "https://news.ycombinator.com/item?id=50320963",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://th-thumbnailer.cdn-si-edu.com/_-X8sWyx82CD0eX5ZxIF7dcS2X8=/fit-in/1600x0/filters:focal(1181x787:1182x788)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/37/95/3795362b-64a6-4d5f-b7df-67aa18192521/l2190910.jpg",
+  "link_status": "ok",
+  "ko_title": "이탈리아 농부, 다락방에서 발견한 알 수 없는 씨앗을 심다",
+  "summary": "1990년대 초 파르마 농부가 다락방에서 찾은 오래된 씨앗을 비료에 뿌려 심었더니 여러 종류의 밀이 자라났으며, 그 중 하나는 높이 6피트에 7개의 이삭을 맺고 무지개 색상의 알갱이를 생산했다. 기존 농업 서적에 기록되지 않은 이 고대 곡물은 현대 농업 문제 해결 가능성을 시사한다.",
+  "why": "백엔드·AI 개발자의 업무와 무관한 농업 관련 기사입니다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
+  "title": "All That Glisters Is Softmax: Shiny-Object Interns, Airplane-Magazine Execs, and Why AI Labs Can Only Bake In Half the Scars",
+  "url": "https://dev.to/gde/all-that-glisters-is-softmax-shiny-object-interns-airplane-magazine-execs-and-why-ai-labs-can-18af",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": 1793493677.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/all-that-glisters-is-softmax-shiny-object-interns-airplane-magazine-execs-and-why-ai-labs-can-18af"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqlk0251k4s6ucmxlzfnw.jpg",
+  "link_status": "ok",
+  "ko_title": "반짝이는 것은 모두 소프트맥스: 인턴, 항공 잡지 임원, 그리고 AI 랩이 절반만 상처를 남길 수 있는 이유",
+  "summary": "이 글은 인간 심리를 활용해 소프트맥스 어텐션 매트릭스의 함정을 설명하고, 실제 생산 현장에서 발생하는 오류와 그 해결 방식을 사례와 통계로 제시한다. 저자는 인간의 의도와 기계의 자동화 사이의 관계를 비유적으로 풀어내며, 현재 AI 코딩 워크플로우의 한계를 지적한다.",
+  "why": "소프트맥스 어텐션 매트릭스의 함정을 인간 심리 비유로 풀어내며 AI 코딩 워크플로우의 한계를 지적한다. 생성형 AI가 자동화하는 과정에서 발생하는 오류 패턴을 이해하는 데 도움이 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-11-01T16:00:02.439272+09:00",
+  "batch_label": "11월 1일 16:00"
+ },
+ {
   "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
   "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
   "source": "hackernews",

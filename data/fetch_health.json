@@ -1,39 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-22T16:00:29+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 12,
-    "empty": 1,
-    "blocked": 2,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://tech.kakao.com/posts/842",
-     "source": "rss",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-23T00:00:38+09:00",
    "total": 17,
    "counts": {
@@ -554,6 +521,22 @@
      "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
      "source": "hackernews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-01T16:00:30+09:00",
+   "total": 13,
+   "counts": {
+    "robots": 1,
+    "ok": 10,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+     "source": "hackernews",
+     "reason": "robots"
     }
    ]
   }
