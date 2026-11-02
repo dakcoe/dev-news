@@ -1,5 +1,424 @@
 [
  {
+  "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+  "url": "https://github.com/ivankovic/omnidiff",
+  "source": "hackernews",
+  "upvotes": 208,
+  "comments": 50,
+  "published_at": 1793538150,
+  "discussion": "https://news.ycombinator.com/item?id=50325253",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/ivankovic/omnidiff"
+  ],
+  "cross_source_count": 2,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/ivankovic/omnidiff",
+  "link_status": null,
+  "ko_title": "Show HN: OmniDiff – 오픈소스, 초고속, 내용 인식 Git difftool, Rust 구현",
+  "summary": "OmniDiff는 Rust로 만든 오픈소스 Git difftool로, 100 ms 이하의 속도로 99.95%의 코드 변경을 정확히 구분한다. 내용별 알고리즘을 적용해 이미지·PDF·폰트 등 다양한 파일 형식에서도 높은 정확도를 보인다. 브라우저에서 실시간 데모와 실제 코드 변경 사례를 확인할 수 있다.",
+  "why": "기존 Unix diff가 통째로 지우고 추가한 줄로 표시하던 코드 변경을, OmniDiff는 실제로 바뀐 부분만 강조해 보여준다. 이로써 백엔드 코드 리뷰 시 불필요한 노이즈를 줄이고 실제 로직 변경에 집중할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "research",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "language",
+   "open-source",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "OccupySaaS",
+  "url": "https://occupysaas.com/",
+  "source": "hackernews",
+  "upvotes": 183,
+  "comments": 124,
+  "published_at": 1793578647,
+  "discussion": "https://news.ycombinator.com/item?id=50331402",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://occupysaas.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://occupysaas.com/assets/img/og.jpg",
+  "link_status": "ok",
+  "ko_title": "OccupySaaS",
+  "summary": "레이오프된 엔지니어들이 AI와 공개 문서를 활용해 클라우드 서비스의 독점적인 API와 가격 정책을 대체할 오픈소스 프로젝트를 시작했다. 프로젝트는 공개 API, OAuth 2.0·OIDC·REST 등 표준을 기반으로 클린룸 방식으로 재구축되며, 벤더 SDK와 호환성을 검증한다. 현재 GitHub에 여러 저장소가 공개돼 기여자를 모집하고 있다.",
+  "why": "클린룸 방식으로 재구축된 오픈소스 대안으로 벤더 SDK 호환성을 검증할 수 있다. 기존 클라이언트 코드를 수정 없이 유지하면서 클라우드 서비스 종속성을 낮추는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "Build a BPE Tokenizer in 80 Lines of TypeScript and Watch JSON Eat Your Tokens",
+  "url": "https://dev.to/gabrielanhaia/build-a-bpe-tokenizer-in-80-lines-of-typescript-and-watch-json-eat-your-tokens-leg",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 3,
+  "comments": 3,
+  "published_at": 1793592077.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gabrielanhaia/build-a-bpe-tokenizer-in-80-lines-of-typescript-and-watch-json-eat-your-tokens-leg"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fr3sljqjqswwg5s4uv3ni.jpg",
+  "link_status": "ok",
+  "ko_title": "80줄 TypeScript로 BPE 토크나이저 만들고 JSON이 토큰을 잡아먹는 모습 보기",
+  "summary": "80줄짜리 TypeScript 코드로 BPE 기반 토크나이저를 직접 구현하고, 동일 JSON 데이터를 포맷팅 전후로 토큰 수를 비교했다. 미니파이된 JSON은 들여쓰기와 줄바꿈을 없애 토큰 수를 약 36% 줄였다. 토크나이저는 정규식으로 텍스트를 청크화하고 UTF-8 바이트로 변환한 뒤, 학습된 병합 규칙으로 토큰을 생성한다.",
+  "why": "JSON을 미니파하면 들여쓰기 비용이 사라져 토큰 수가 약 36% 줄어든다. LLM 호출 비용이 토큰 단위로 청구되므로, 프롬프트에 JSON을 넣을 때 포맷팅을 최소화하는 것이 직접적인 절감 효과가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "How to make link to SaaS Launch Video system",
+  "url": "https://dev.to/mashraf_aiman/how-to-make-link-to-saas-launch-video-system-5a8k",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 53,
+  "comments": 1,
+  "published_at": 1793585783.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mashraf_aiman/how-to-make-link-to-saas-launch-video-system-5a8k"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmp7hwxt2jounbdnrbtn6.png",
+  "link_status": "ok",
+  "ko_title": "SaaS 런치 비디오 만들기 방법",
+  "summary": "/brag는 오픈소스 에이전트 스킬로 프로젝트 코드를 분석해 짧은 런치 비디오를 자동으로 기획하고 Hyperframes에 전달한다. 출력물은 렌더링된 영상, 포스터 이미지, 공유용 캡션 및 기획·구성 파일이다. 워크플로는 코드 검사, 스토리 플랜, 구성 브리프 작성, 검증·전달의 네 단계로 이루어진다.",
+  "why": "프로젝트 코드를 분석해 런치 영상 기획부터 렌더링까지 자동화한다. 수동 편집 대신 에이전트 스킬로 영상 제작 시간을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "storytold / craft-anything",
+  "url": "https://github.com/storytold/craft-anything",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 699,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/storytold/craft-anything"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 699,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/storytold/craft-anything",
+  "link_status": null,
+  "ko_title": "무엇이든 만들기",
+  "summary": "이 프로젝트는 순수 Rust로 구현된 오픈소스 엔진으로, 웹사이트·앱·게임을 분석하고 AI가 동일한 기능을 가진 새로운 버전을 자동으로 생성한다. 대상 프로그램을 지정하고 원하는 기능을 설명하면, 코드 생성 에이전트가 프로젝트를 만들고 원본과 비교·수정한다. 현재는 초기 알파 단계이며 macOS·Windows·Linux·FreeBSD·Web을 지원한다.",
+  "why": "초기 알파 단계라 프로덕션 환경에 바로 쓰기엔 불안정하다. 기존 앱이나 게임 구조를 분석해 유사한 코드를 자동 생성하는 워크플로우를 시험해 볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "modelflare-ai / AnyModelBot",
+  "url": "https://github.com/modelflare-ai/AnyModelBot",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 372,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/modelflare-ai/AnyModelBot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 372,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/modelflare-ai/AnyModelBot",
+  "link_status": null,
+  "ko_title": "AnyModelBot",
+  "summary": "AnyModelBot은 Windows·macOS·Linux에서 동작하는 로컬 우선 AI 로봇이다. 하나의 로봇에 모델·작업공간·기억이 연결돼 채팅 및 파일·명령 조작이 가능하며, WeChat·Feishu·Telegram·Slack·Discord 등에서도 사용할 수 있다. 모델은 Modelflare에서 제공되며 토큰당 과금되고, 자체 구독은 없다.",
+  "why": "로컬 우선 구조라 대화·기억·파일·API 키가 내 기기에 남는다. 모델 호출만 Modelflare로 가서 토큰당 과금된다. 자체 구독이 없어 기존 구독 비용 구조와 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "If in doubt, delete the uv.lock file",
+  "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793575462.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "의심스러우면 uv.lock 파일을 삭제하라",
+  "summary": "Python 3.15 환경에서 uv.lock 파일이 Python 3.15에 아직 지원되지 않는 의존성 버전을 고정해 오류가 발생한다. 해당 파일을 삭제하고 다시 실행하면 문제를 해결할 수 있다.",
+  "why": "Python 3.15 환경에서 uv run 실행 시 watchfiles 같은 의존성이 PyO3 지원 범위를 넘어 빌드 실패할 수 있다. 이때 uv.lock 파일을 삭제하고 다시 실행하면 해결된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "Zero Downtime Deploy for Docker Apps, With Rollback",
+  "url": "https://dev.to/thegdsks/zero-downtime-deploy-for-docker-apps-with-rollback-1909",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 4,
+  "comments": 2,
+  "published_at": 1793578308.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/thegdsks/zero-downtime-deploy-for-docker-apps-with-rollback-1909"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Flevelrail.com%2Fog%2Fblog%2Fzero-downtime-deploy-docker-rollback-cover.png",
+  "link_status": "ok",
+  "ko_title": "Docker 앱 무중단 배포와 롤백",
+  "summary": "이 가이드는 Levelrail이라는 자체 호스팅 배포 플랫폼에서 Docker 애플리케이션을 무중단으로 배포하고, 문제가 발생했을 때 한 명령으로 롤백하는 방법을 설명한다. 배포는 새로운 컨테이너가 준비 상태 프로브를 연속으로 통과하고 일정 시간 안정적으로 실행된 뒤 트래픽을 받으며, 실패 시 기존 컨테이너가 계속 서비스된다. 배포 상태를 실시간으로 확인하려면 `levelrail-cli` 명령을 사용한다.",
+  "why": "레디니스 프로브가 외부 서비스를 호출하면 배포와 무관한 실패가 발생할 수 있다. 프로브 경로를 가볍게 유지하고, 실패 시 기존 컨테이너가 계속 서비스되는 구조를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "I Let AI Type the Code and Lost the Map",
+  "url": "https://dev.to/programmerraja/i-let-ai-type-the-code-and-lost-the-map-1jie",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1793581797.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/programmerraja/i-let-ai-type-the-code-and-lost-the-map-1jie"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fw9tuohyhy2wwjju845mi.png",
+  "link_status": "ok",
+  "ko_title": "AI가 코드를 작성하게 두고 지도(코드 흐름)를 잃다",
+  "summary": "저자는 3년간 직접 코딩하며 기능 흐름을 머릿속에 유지했지만, 최근 1년 반 동안 AI가 대부분 코드를 작성하면서 코드 흐름을 기억하지 못하게 되었다. 손으로 코딩할 때는 기능을 완성하면서 흐름을 파악했지만, AI가 만든 코드는 디버깅 시 흐름을 추적하기 어려워진다. 작은 핸들러 예시와 디버깅 과정을 통해 문제 해결 방식을 설명한다.",
+  "why": "AI가 작성한 코드는 직접 타이핑하지 않아 머릿속 흐름도가 형성되지 않는다. 디버깅 시 전체를 훑어야 해 기존처럼 특정 함수만 열어 바로 고치기 어렵다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "U.S. workers took home their smallest share of capital since at least 1947",
+  "url": "https://fortune.com/article/why-did-us-workers-just-take-home-smallest-share-of-capital-since-1947-lowest-ever-recorded/",
+  "source": "hackernews",
+  "upvotes": 274,
+  "comments": 148,
+  "published_at": 1793575231,
+  "discussion": "https://news.ycombinator.com/item?id=50330939",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://fortune.com/article/why-did-us-workers-just-take-home-smallest-share-of-capital-since-1947-lowest-ever-recorded/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://fortune.com/img-assets/wp-content/uploads/2026/01/GettyImages-1322099863-e1768339483475.jpg?resize=1200,600",
+  "link_status": "ok",
+  "ko_title": "미국 노동자, 1947년 이후 최저 자본 비율 수령",
+  "summary": "미국 노동통계국 자료에 따르면 2026년 2분기 노동자 소득 비중이 52.8%로 1947년 이후 최저치를 기록했다. 같은 기간 기업 이익은 사상 최고인 2.1조 달러에 육박했으며, 고용 증가율도 둔화되고 있다.",
+  "why": "미국 경제의 자본 집중 심화는 AI 인프라 투자와 같은 기술 산업의 수익 구조를 재편한다. 개발자로서는 이 거시적 흐름이 클라우드 비용과 기술 스택의 수익성 모델에 직접적인 영향을 미친다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+  "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+  "source": "hackernews",
+  "upvotes": 453,
+  "comments": 157,
+  "published_at": 1793543683,
+  "discussion": "https://news.ycombinator.com/item?id=50326099",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Lenovo의 '암호화된' 지문 USB는 케이스 안의 암호화되지 않은 SD 카드에 불과하다",
+  "summary": "",
+  "why": "Lenovo의 지문 USB가 실제로는 암호화되지 않은 SD 카드라는 점이 확인됐다. 이 장치를 신뢰하고 민감한 데이터를 저장하면 보안 위협에 노출된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "My first open-source service reached its first 20 stars on GitHub 💎",
+  "url": "https://dev.to/anthonymax/my-first-open-source-service-reached-its-first-20-stars-on-github-52nm",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 15,
+  "comments": 1,
+  "published_at": 1793596779.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/anthonymax/my-first-open-source-service-reached-its-first-20-stars-on-github-52nm"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4gz6q9bu26eolb0obaqd.png",
+  "link_status": "ok",
+  "ko_title": "내 첫 오픈소스 서비스가 GitHub에서 처음으로 20 스타를 받았습니다",
+  "summary": "해당 프로젝트가 GitHub에서 20개의 스타를 획득했으며, 7월부터 개발해 왔다. 개발자는 시간 부족에도 불구하고 오픈소스 활동을 공개적으로 공유하고 싶어한다. 프로젝트 페이지와 이슈 참여를 통해 추가 기여를 권유하고 있다.",
+  "why": "EmbedCatalog는 GitHub에서 20스타를 기록한 오픈소스 서비스다. 이슈를 통해 기능 제안을 하거나 코드를 직접 기여할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
+  "title": "Ask HN: Which TV do you recommend for privacy?",
+  "url": "https://news.ycombinator.com/item?id=50328896",
+  "source": "hackernews",
+  "upvotes": 277,
+  "comments": 434,
+  "published_at": 1793561727,
+  "discussion": "https://news.ycombinator.com/item?id=50328896",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50328896"
+  ],
+  "cross_source_count": 1,
+  "score": 0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "프라이버시를 위해 추천할 TV는?",
+  "summary": "",
+  "why": "스마트 TV의 내장 앱이 아닌 외부 스트리밍 기기를 디스플레이 전용으로 쓰는 구성을 검토할 때 참고할 수 있다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-02T16:00:06.693034+09:00",
+  "batch_label": "11월 2일 16:00"
+ },
+ {
   "title": "AI crawlers vs search crawlers: the 7-night census",
   "url": "https://dev.to/mrsaynothing/ai-crawlers-vs-search-crawlers-the-7-night-census-36g5",
   "source": "devto",
