@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-24T00:00:24+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 10,
-    "robots": 1,
-    "blocked": 1,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://twitter.com/jaredkushner/status/2113376217415958767",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://openai.com/index/uber-chatgpt-work-rollout",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-24T08:00:28+09:00",
    "total": 19,
    "counts": {
@@ -558,6 +536,15 @@
      "reason": "robots"
     }
    ]
+  },
+  {
+   "at": "2026-11-03T00:00:27+09:00",
+   "total": 13,
+   "counts": {
+    "ok": 11,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }

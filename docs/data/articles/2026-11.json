@@ -1,5 +1,358 @@
 [
  {
+  "title": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
+  "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+  "source": "hackernews",
+  "upvotes": 118,
+  "comments": 60,
+  "published_at": 1793604448,
+  "discussion": "https://news.ycombinator.com/item?id=50334038",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://i0.wp.com/labs.cloudsecurityalliance.org/wp-content/uploads/2025/12/cropped-logo.png?fit=512%2C512&ssl=1",
+  "link_status": "ok",
+  "ko_title": "중국 최초 최전선 AI 수출 통제: MOFCOM 발표 48호",
+  "summary": "2026년 10월 16일, 중국 상무부와 과학기술부가 48호 발표를 통해 40개 기술을 수출 금지·제한 목록에 추가하고, 그 중 23개를 인공지능 분야로 지정했다. 이번 초안은 최전선 모델 가중치, 에이전트 아키텍처, AI 기반 공격 사이버 능력 등을 포함하며, 특정 FLOPs, 파라미터 수, 혹은 글로벌 순위 기준을 충족하는 경우 제한한다. 또한 사전 수출 등록 요구가 즉시 적용돼 현재 진행 중인 수출에도 적용된다.",
+  "why": "사전 수출 등록 의무는 이미 발효되어 진행 중인 수출 건에도 즉시 적용된다. 최전선 모델 가중치나 에이전트 아키텍처를 다루는 프로젝트라면 해당 기술이 제한 대상에 해당하는지 지금 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Locus Earth: Building an Open-Source 3D Globe That Runs Directly in Your Browser 🌍",
+  "url": "https://dev.to/zhunemo/locus-earth-building-an-open-source-3d-globe-that-runs-directly-in-your-browser-2d70",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1793625876.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zhunemo/locus-earth-building-an-open-source-3d-globe-that-runs-directly-in-your-browser-2d70"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqw4lr97coek5m4ng1or4.png",
+  "link_status": "ok",
+  "ko_title": "Locus Earth: 브라우저에서 바로 실행되는 오픈소스 3D 지구",
+  "summary": "Locus Earth는 CesiumJS 기반의 오픈소스 웹 애플리케이션으로, 별도 설치 없이 브라우저에서 3D 지구와 지형, 위성 이미지, 3D 건물을 탐색할 수 있다. 다중 이미지 제공자와 지도 스타일, 위치 검색, 거리·면적 측정, 마커·경로·폴리곤 등 다양한 기능을 제공한다. PWA 지원과 오프라인 이미지 캐시로 데스크톱·모바일 모두에서 사용 가능하다.",
+  "why": "CesiumJS 기반이라 기존 3D 지오스페이스 프로젝트에서 바로 재사용할 수 있다. 오프라인 캐시와 PWA 지원으로 네트워크가 불안정한 환경에서도 동작한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Show HN: I've updated my Linux System Call website and API",
+  "url": "https://syscall.sh/",
+  "source": "hackernews",
+  "upvotes": 113,
+  "comments": 37,
+  "published_at": 1793611756,
+  "discussion": "https://news.ycombinator.com/item?id=50334704",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://syscall.sh/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://syscall.sh/og.png",
+  "link_status": "ok",
+  "ko_title": "Show HN: 내 Linux 시스템 콜 웹사이트와 API를 업데이트했습니다",
+  "summary": "이 프로젝트는 각 아키텍처별 Linux 시스템 콜 테이블을 JSON 형태로 제공하고, API를 통해 특정 커널 버전의 시스템 콜 정보를 조회할 수 있게 했다. 데이터는 커널 소스와 SYSCALL_DEFINE 매크로를 직접 파싱해 생성되며, 호출 규약과 인수 위치까지 포함한다. 웹사이트와 API는 최신 커널 릴리스 간 차이점과 삭제된 시스템 콜도 표시한다.",
+  "why": "커널 소스를 직접 파싱해 실제 디스패치되는 번호와 호출 규약을 제공하므로 추측을 줄일 수 있다. 최신 릴리스 간 차이점과 삭제된 항목을 조회해 시스템 콜 호환성 문제를 빠르게 진단할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Codex Was Torching Your SSD and Nobody Noticed for Months",
+  "url": "https://dev.to/varshithvhegde/codex-was-torching-your-ssd-and-nobody-noticed-for-months-4c5h",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1793609825.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/varshithvhegde/codex-was-torching-your-ssd-and-nobody-noticed-for-months-4c5h"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuwumzuicrzyp2slqdp54.png",
+  "link_status": "ok",
+  "ko_title": "Codex가 당신의 SSD를 태우고 있었고 몇 달째 눈에 띄지 않았다",
+  "summary": "Codex CLI가 TRACE 레벨 로그를 과도하게 남겨 SQLite 데이터베이스와 WAL 파일이 지속적으로 SSD에 쓰기를 발생시켰다. 한 개발자는 21일 동안 약 37 TB를 기록했으며, 0.142.0 버전에서 쓰기량이 85 % 감소했다. 오래된 버전을 사용 중이라면 업데이트 후 실제 쓰기량을 확인하라.",
+  "why": "Codex CLI를 오래 실행한 환경이라면 SSD 수명이 급격히 줄어든 상태일 수 있다. 0.142.0 버전으로 업데이트한 뒤 실제 쓰기량을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "JiaFeiMiao-K-Cat / DiscImageStudio",
+  "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 755,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 755,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/JiaFeiMiao-K-Cat/DiscImageStudio",
+  "link_status": null,
+  "ko_title": "DiscImageStudio — 전용 이미지 생성·광디스크 굽기 도구",
+  "summary": "DiscImageStudio는 이미지 파일을 CD, DVD, 단일층 블루레이 물리 제약에 맞는 데이터로 변환해 굽는 Windows 전용 GUI와 Linux·macOS 실험용 CLI를 제공한다. .NET 10 기반으로 C#으로 개발됐으며, ISO·RAW·WAV+CUE 등 다양한 포맷으로 내보낼 수 있다. 즉시 굽기 기능은 테스트용 매체에만 사용하도록 안내한다.",
+  "why": "Linux와 macOS용 CLI는 실험 단계라 안정성이 보장되지 않는다. 즉시 굽기 기능은 데이터 손실 위험이 있어 폐기 가능한 테스트 매체에만 사용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "The Anatomy of a Fair Launchpad: How We Killed the 14-Day Queue and Timezone Lottery for Indie Developers",
+  "url": "https://dev.to/astrodiscover/the-anatomy-of-a-fair-launchpad-how-we-killed-the-14-day-queue-and-timezone-lottery-for-indie-i4e",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": 1793626099.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/astrodiscover/the-anatomy-of-a-fair-launchpad-how-we-killed-the-14-day-queue-and-timezone-lottery-for-indie-i4e"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4g0zzi2amkvws7d5tfjg.png",
+  "link_status": "ok",
+  "ko_title": "공정한 런치패드의 구조: 14일 대기열과 시간대 추첨을 없앤 방법",
+  "summary": "Astro Discover라는 오픈 디스커버리 엔진·런치패드가 출시돼 인디 개발자의 24시간 출시 창을 보장한다. 제출 시 목표 출시일을 지정하고, 리뷰가 지연돼도 프로젝트는 일정에 맞춰 자동으로 “Pending Review” 배지를 달고 오늘의 출시 목록에 표시된다. 방문자는 설명·샌드박스 미리보기·기술 스택을 확인할 수 있다.",
+  "why": "기존 디렉토리의 14일 대기열과 시간대 편차 문제를 해결해 출시 일정을 확보할 수 있다. 리뷰 지연 시에도 'Pending Review' 배지로 즉시 노출되어 방문자가 샌드박스를 테스트할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Supermarket freezers across Europe hit by second suspected cyber-attack",
+  "url": "https://www.theguardian.com/world/2026/nov/02/supermarket-freezers-across-europe-hit-by-second-suspected-cyber-attack",
+  "source": "hackernews",
+  "upvotes": 123,
+  "comments": 129,
+  "published_at": 1793620213,
+  "discussion": "https://news.ycombinator.com/item?id=50335615",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theguardian.com/world/2026/nov/02/supermarket-freezers-across-europe-hit-by-second-suspected-cyber-attack"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://i.guim.co.uk/img/media/4b71e9b955055d1a0eb5f597da100556359fa09b/1184_0_6400_5120/master/6400.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=a69f8f68954a7702d519049973a8be9f",
+  "link_status": "ok",
+  "ko_title": "유럽 슈퍼마켓 냉동고, 두 번째 의심 사이버 공격에 직면",
+  "summary": "스웨덴, 벨기에, 룩셈부르크의 여러 슈퍼마켓 체인에서 냉동·냉장고 온도가 급격히 상승해 사이버 공격이 의심된다. 해당 체인들은 온도 상승을 확인하고 기술자를 파견해 설비를 차단했으며, 프랑스에서 발생한 대규모 냉동고 해킹 사건과 유사한 양상이다.",
+  "why": "프랑스 사례에서 확인된 원격 설정 조작 방식이 반복되고 있다. 인터넷에 연결된 냉각 설비는 물리적 자산 보호의 사각지대다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "The U.S. Census Bureau and “Super Intelligence”",
+  "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793626286.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://static.simonwillison.net/static/2026-11-01/5821A414-FAF6-4E61-B037-952C1FD80D39.png",
+  "link_status": "ok",
+  "ko_title": "미국 인구조사국과 “초지능”",
+  "summary": "최신 BTOS 설문 결과에 따르면 대기업(250명 이상) 중 AI 활용을 ‘어떤 비즈니스 기능이든’이라고 물었을 때 2026년 10월 기준 40%가 사용한다고 답했다. 이는 2025년 9월에 ‘상품·서비스 생산’만 물었을 때 12%였던 것과 큰 차이를 보인다. 설문 문항 변경과 함께 미국 인구조사국이 행정명령 14434(초지능 관련) 위반 논란에 휘말렸다.",
+  "why": "설문 문항이 '상품·서비스 생산'에서 '어떤 비즈니스 기능이든'으로 바뀌어 수치 비교가 무의미해졌다. 이전 데이터와 최신 수치를 직접 비교해 AI 도입률을 판단하는 행위는 중단해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Verlintas / NOIR",
+  "url": "https://github.com/Verlintas/NOIR",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 755,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Verlintas/NOIR"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 755,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/Verlintas/NOIR",
+  "link_status": null,
+  "ko_title": "Verlintas / NOIR",
+  "summary": "NOIR은 컴퓨터에서 실행되는 Android 기기 감사 도구로, adb를 이용해 연결된 기기의 앱 목록, 권한, APK 내 네트워크 엔드포인트를 추출한다. 추출된 정보를 기반으로 앱을 분류·위험 점수화하고, 자동 또는 수동으로 실행 가능한 보안 조치를 제안한다. 필요 시 jadx를 사용해 개별 APK를 역컴파일하고 위험 호출을 검색한다. 도구는 네트워크 연결 없이 로컬에서 동작하며, 계정이나 루트 권한이 필요하지 않다.",
+  "why": "adb로 기기를 연결해 로컬에서 앱의 네트워크 엔드포인트와 권한을 추출할 수 있다. 앱이 어떤 데이터를 어디로 보내는지 파악해 위험도를 점수화한다. 루트 권한이나 계정 없이도 기기의 데이터 유출 경로를 감사할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "Your AI code reviewer isn't a second opinion. It may be the first opinion again.",
+  "url": "https://dev.to/cyclopt_dimitrisk/your-ai-code-reviewer-isnt-a-second-opinion-it-may-be-the-first-opinion-again-nbm",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 2,
+  "published_at": 1793605704.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/your-ai-code-reviewer-isnt-a-second-opinion-it-may-be-the-first-opinion-again-nbm"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgxnhvwtbobicttbu1j30.png",
+  "link_status": "ok",
+  "ko_title": "AI 코드 리뷰어는 두 번째 의견이 아니라 첫 번째 의견일 수도 있다.",
+  "summary": "AI가 코드를 생성하고 검토해도 동일한 가정에 기반해 보안 결함을 놓칠 수 있다. 리뷰어와 생성 모델이 같은 컨텍스트를 공유하면 권한 검증 오류가 반복된다. 또한 변경된 diff만으로는 보안 로직을 파악하기 어려워 실제 위험을 놓칠 수 있다.",
+  "why": "생성 모델과 리뷰어가 같은 컨텍스트를 공유하면 권한 검증 오류가 반복된다. 따라서 AI 리뷰를 독립적인 보안 검증으로 간주하지 말고 요구사항 단계에서 접근 권한을 명시해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "career-culture"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
+  "title": "BioWare co-founder: game execs \"have never made a game\" and don't get it",
+  "url": "https://www.pcgamer.com/gaming-industry/none-of-these-people-have-ever-made-a-game-bioware-co-founder-greg-zeschuk-says-of-game-industry-executives-they-just-dont-know-how-it-works/",
+  "source": "hackernews",
+  "upvotes": 92,
+  "comments": 89,
+  "published_at": 1793608350,
+  "discussion": "https://news.ycombinator.com/item?id=50334372",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.pcgamer.com/gaming-industry/none-of-these-people-have-ever-made-a-game-bioware-co-founder-greg-zeschuk-says-of-game-industry-executives-they-just-dont-know-how-it-works/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://cdn.mos.cms.futurecdn.net/SzmN5gBZ4AzPwnUJwehJHj-1920-80.jpg",
+  "link_status": "ok",
+  "ko_title": "BioWare 공동창업자: 게임 경영진은 “한 번도 게임을 만든 적이 없으며” 이해하지 못한다",
+  "summary": "BioWare가 EA에 의해 폐쇄된 후 공동창업자 그렉 제슈크가 인터뷰에서 폐쇄 소식을 듣고 감정적 순간을 겪었다고 밝혔다. 그는 현재 가장 우려하는 것이 해고된 직원들의 구직 어려움이며, EA 인수에 대한 후회는 없다고 전했다.",
+  "why": "게임 개발 현장의 경험과 경영진의 의사결정 간 괴리를 보여준다. 백엔드나 AI 프로젝트에서도 기술적 판단과 경영진의 방향이 엇갈릴 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-11-03T00:00:01.667700+09:00",
+  "batch_label": "11월 3일 00:00"
+ },
+ {
   "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
   "url": "https://github.com/ivankovic/omnidiff",
   "source": "hackernews",
