@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-24T08:00:28+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 15,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-24T16:00:30+09:00",
    "total": 12,
    "counts": {
@@ -545,6 +524,34 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-03T08:00:46+09:00",
+   "total": 16,
+   "counts": {
+    "ok": 11,
+    "short": 1,
+    "robots": 1,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50340088",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://openai.com/index/grid-protectors-program",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }

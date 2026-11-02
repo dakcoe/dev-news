@@ -1,5 +1,229 @@
 [
  {
+  "t": "뭐야 Ubuntu?",
+  "u": "https://chalmovsky.com/posts/wtf-ubuntu",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "security",
+   "industry"
+  ],
+  "d": "2026-11-03",
+  "o": "WTF Ubuntu?",
+  "x": "CVE-2026-98432는 2016년부터 존재해 온 Linux 커널 TCP 코드의 치명적인 취약점으로, 원격으로 루트 권한을 획득할 수 있다."
+ },
+ {
+  "t": "긴 실행 에이전트를 메시지 스레드로 빠르게",
+  "u": "https://claude.com/resources/articles/message-threads",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data"
+  ],
+  "d": "2026-11-03",
+  "o": "Make long-running agents faster with message threads",
+  "x": "메시지 API에 메시지 스레드가 공개 베타로 추가돼 에이전트가 매 턴 전체 대화 기록을 재전송하지 않고 새 메시지만 전송한다. 토큰 수는 동일하"
+ },
+ {
+  "t": "표준 bf16 반올림이 RL 정책 업데이트의 99%를 버립니다",
+  "u": "https://dev.to/reidmarlow/standard-bf16-rounding-discards-99-of-your-rl-policy-updates-2pf5",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "release"
+  ],
+  "d": "2026-11-03",
+  "o": "Standard bf16 Rounding Discards 99% of Your RL Policy Updates",
+  "x": "강화학습 후학습에서 fp32 마스터 가중치를 bf16으로 변환할 때, 표준 반올림이 대부분의 파라미터 업데이트를 0으로 만들고 있다. Stanf"
+ },
+ {
+  "t": "Anthropic 내부 AI 사용량, 소매가 기준 직원 급여 초과",
+  "u": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "d": "2026-11-03",
+  "o": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+  "x": "Anthropic은 IPO 서류에서 내부에서 Claude AI를 사용한 가치를 직원 급여(주식 보상 제외)보다 높게 평가했다고 밝혔다. 1월 대"
+ },
+ {
+  "t": "2026년 10월에 발표한 최신 AI 소식",
+  "u": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "release",
+   "science"
+  ],
+  "d": "2026-11-03",
+  "o": "The latest AI news we announced in October 2026",
+  "x": "구글은 10월에 최신 AI 모델인 Gemini 4 Argon을 전 세계에 공개하고, 두 주 뒤에 보안·장기 엔지니어링에 강력한 Gemini 4 "
+ },
+ {
+  "t": "Astra, 가중치를 읽고 써서 Qwen을 개선",
+  "u": "https://rikiyat.github.io/blog/weight-space-programming/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "d": "2026-11-03",
+  "o": "Astra can read and write weights to improve Qwen",
+  "x": "frontier LLM인 Astra가 신경망 가중치를 직접 읽고 수정해 Qwen3.5-0.8B의 수학 성능을 크게 향상시켰다. 0.016%의 가"
+ },
+ {
+  "t": "thtbee / nectarlink",
+  "u": "https://github.com/thtbee/nectarlink",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "security",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-03",
+  "x": "Android 폰과 Windows 10/11을 연결해 알림, 메시지, 통화, 클립보드, 파일, 사진, 화면 미러링 등을 한 앱으로 제공한다. 로"
+ },
+ {
+  "t": "API 오류는 추측 게임이 되어서는 안 된다",
+  "u": "https://dev.to/ihssmaheel/your-api-errors-shouldnt-be-a-guessing-game-5col",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-11-03",
+  "o": "Your API Errors Shouldn't Be a Guessing Game",
+  "x": "API마다 오류 형식이 달라 프론트엔드에서 별도 처리 로직이 필요했다. RFC 9457이 정의한 Problem Details 표준을 사용하면 오"
+ },
+ {
+  "t": "LifeVal",
+  "u": "https://openai.com/index/lifeval",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "research",
+   "release"
+  ],
+  "d": "2026-11-03",
+  "x": "OpenAI는 일상 생활 과제에 대한 모델 성능을 측정하기 위해 새로운 평가 체계를 구축했다. 미국 시간 사용 조사와 다국적 시간 사용 연구를 "
+ },
+ {
+  "t": "프롬프트 패드: 더 나은 AI 답변을 위한 페르소나 설정",
+  "u": "https://blog.mlh.com/prompt-pad-frame-your-persona-for-better-ai-answers-eg3",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "d": "2026-11-03",
+  "o": "Prompt Pad: Frame Your Persona for Better AI Answers",
+  "x": "시스템 프롬프트에 모델의 역할을 지정하면 답변 품질이 즉시 향상된다. 질문 앞에 “당신은 시니어 백엔드 엔지니어다”와 같은 한 줄 페르소나를 추"
+ },
+ {
+  "t": "Show HN: Subvocal – 소리를 내지 않고 컴퓨터와 대화",
+  "u": "https://news.ycombinator.com/item?id=50340088",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "industry",
+   "showcase"
+  ],
+  "d": "2026-11-03",
+  "o": "Show HN: Subvocal – Talk to your computer without making noise",
+  "x": "Subvocal은 입을 움직이거나 입을 닫은 상태에서도 RF 신호로 입 안을 감지해 텍스트로 변환하는 스마트 안경을 개발했다. 초기 EMG 기반"
+ },
+ {
+  "t": "Grid Protectors 프로그램 소개",
+  "u": "https://openai.com/index/grid-protectors-program",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "devops-infra",
+   "release"
+  ],
+  "d": "2026-11-03",
+  "o": "Introducing the Grid Protectors Program",
+  "x": "OpenAI가 유틸리티와 협력해 미래 컴퓨트 캠퍼스의 전력망 안정성을 지원하는 프로그램을 시작했다. 이 프로그램은 전력망 신뢰성을 높이고 소비자"
+ },
+ {
+  "t": "TwinMCP에서 AI 에이전트에 손을 주되 키는 넘기지 않기: 안전성에 대한 우리의 생각",
+  "u": "https://dev.to/twinmcp/giving-ai-agents-hands-without-handing-over-the-keys-how-we-think-about-safety-at-twinmcp-o02",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-safety",
+   "security",
+   "backend-data"
+  ],
+  "d": "2026-11-03",
+  "o": "Giving AI agents hands without handing over the keys: how we think about safety at TwinMCP",
+  "x": "TwinMCP는 MCP 서버를 호스팅하면서 최소 권한 원칙을 프록시 레벨에서 적용하고, 도구 접근을 허용 목록과 거부 목록으로 관리한다. 각 서"
+ },
+ {
+  "t": "MCP 서버가 ~/.ssh를 읽을 수 있다 – 감옥에 가두는 방법",
+  "u": "https://dev.to/alvamacus/your-mcp-server-can-read-ssh-here-is-how-i-put-it-in-a-jail-1n1m",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data"
+  ],
+  "d": "2026-11-03",
+  "o": "Your MCP server can read ~/.ssh. Here is how I put it in a jail",
+  "x": "이 글은 Claude Desktop·Cursor·Claude Code 설정에 포함된 파일시스템 서버 명령이 사용자의 홈 디렉터리와 SSH 키 등"
+ },
+ {
+  "t": "Horizon",
+  "u": "https://github.com/Thysrael/Horizon",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "open-source"
+  ],
+  "d": "2026-11-03",
+  "o": "Thysrael / Horizon"
+ },
+ {
+  "t": "남자 이름이 여자 이름이 되고, 그 반대도 되는 경우",
+  "u": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-03",
+  "o": "US boy names that became girl names and vice versa"
+ },
+ {
   "t": "중국 최초 최전선 AI 수출 통제: MOFCOM 발표 48호",
   "u": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
   "m": "2026-11",
