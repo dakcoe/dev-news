@@ -1,34 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-24T16:00:30+09:00",
-   "total": 12,
-   "counts": {
-    "dead": 1,
-    "robots": 1,
-    "short": 1,
-    "ok": 7,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://music.apple.com/this-url-doesnt-exist",
-     "source": "hackernews",
-     "reason": "dead"
-    },
-    {
-     "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://news.ycombinator.com/item?id=50200997",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-25T00:00:31+09:00",
    "total": 16,
    "counts": {
@@ -548,6 +520,38 @@
     },
     {
      "url": "https://openai.com/index/grid-protectors-program",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-03T16:00:30+09:00",
+   "total": 17,
+   "counts": {
+    "blocked": 3,
+    "ok": 11,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/scaling-git-at-openai/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/845",
+     "source": "rss",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
      "source": "rss",
      "reason": "blocked"
     }

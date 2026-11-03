@@ -1,5 +1,551 @@
 [
  {
+  "title": "# 230,756 Requests/Second. And Breeze Is Much More Than a Fast Go Framework. 🚀",
+  "url": "https://dev.to/farshad_khazaee_8871e424d/-230756-requestssecond-and-breeze-is-much-more-than-a-fast-go-framework-1a15",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 4,
+  "comments": 6,
+  "published_at": 1793667507.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/farshad_khazaee_8871e424d/-230756-requestssecond-and-breeze-is-much-more-than-a-fast-go-framework-1a15"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu54dqnm7po0tgp3e2nd1.png",
+  "link_status": "ok",
+  "ko_title": "초당 230,756 요청·Breeze는 빠른 Go 프레임워크 그 이상",
+  "summary": "Breeze v2.2는 512 동시 연결에서 초당 약 200 천 건을 처리하며, 64~512 연결 수준에서 기존 Go 프레임워크 대비 12 %~33 % 높은 처리량을 보인다. 이벤트-드리븐 gnet 엔진 기반으로 인라인 실행, O(1) 라우팅, 제로-카피 헤더 처리 등 성능 최적화가 적용되었다. 또한 12개의 내장 미들웨어, OAuth2·소셜 로그인, WebSocket, 서버-사이드 템플릿, 비디오 스트리밍 등 생산성을 높이는 기능을 하나의 생태계에 제공한다.",
+  "why": "기존 Go 프레임워크 대비 12~33% 높은 처리량을 원한다면 Breeze v2.2를 검토해야 한다. 단순 HTTP 서버를 넘어 OAuth2, WebSocket, 비디오 스트리밍까지 내장되어 있어 별도 라이브러리 의존도를 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Rewarding defenders with bigger bug bounties",
+  "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793642400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "방어자를 위한 더 큰 버그 현상금 제공",
+  "summary": "OpenAI가 보안 버그 현상금 보상을 인상한다. 독립 보안 연구자를 위해 보고 품질, 충성도, 우선순위 캠페인 보너스를 새롭게 도입한다.",
+  "why": "보안 취약점을 발견해 보고하는 개발자에게는 보상 구조가 달라진다. 단순 발견이 아닌 보고 품질과 충성도에 따라 추가 보상을 받을 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "NVIDIA / auto-ontology",
+  "url": "https://github.com/NVIDIA/auto-ontology",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 219,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/NVIDIA/auto-ontology"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 219,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/NVIDIA/auto-ontology",
+  "link_status": null,
+  "ko_title": "NVIDIA 자동 온톨로지",
+  "summary": "NVIDIA Auto Ontology는 기업 메타데이터를 기반으로 컨텍스트 레이어를 자동으로 구축하고, 시스템 간 정의를 조정해 에이전트가 신뢰할 수 있는 비즈니스 의미를 제공한다. MCP, CLI, API를 통해 어떤 에이전트에도 컨텍스트를 노출하며, 온톨로지를 활용해 지식 그래프를 생성하고 질의를 검증한다. 현재 외부 기여는 받지 않으며, 텍스트-투-SQL 벤치마크용 별도 평가 저장소를 제공한다.",
+  "why": "에이전트가 데이터 위치와 의미를 파악해 잘못된 질의를 줄여준다. MCP, CLI, API로 기존 에이전트 환경에 바로 연결할 수 있다. 외부 기여는 받지 않으므로 코드 수정이 필요하면 내부에서 처리해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
+  "url": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793683945.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "내가 발견한 소리, 정확한 위치를 누출한다 (그리고 어디에나 있다) - YouTube",
+  "summary": "영상 사운드 트랙에 거의 들리지 않는 비행기 잡음의 도플러 곡선을 분석해 ADS-B 데이터와 대조하면 영상이 촬영된 정확한 위치를 추정할 수 있다. 이 방법은 OSINT 기술을 활용해 배경 소리만으로도 위치 정보를 추출한다.",
+  "why": "영상 사운드 트랙의 비행기 잡음으로 촬영 위치를 추정하는 OSINT 기법이다. 개인 영상에 위치 정보가 숨어 있을 위험을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "If you love a website, back it up",
+  "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+  "source": "hackernews",
+  "upvotes": 490,
+  "comments": 109,
+  "published_at": 1793625935,
+  "discussion": "https://news.ycombinator.com/item?id=50336518",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "웹사이트를 사랑한다면 백업하세요",
+  "summary": "오래된 웹페이지가 사라지는 사례를 소개하고, 개인이 웹 아카이빙을 직접 할 수 있는 방법을 제시한다. WARC 형식 등 표준 아카이빙 도구 사용법을 설명한다.",
+  "why": "WARC 같은 표준 형식을 쓰면 특정 플랫폼에 의존하지 않고 데이터를 보존할 수 있다. 중요한 웹페이지나 문서가 사라질 위험에 노출되어 있다면 직접 아카이빙을 시작해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "옮기는 것보다 증명이 어렵다",
+  "url": "https://tech.kakao.com/posts/845",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793631600.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/845"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2F9f290b0601a100002.png",
+  "link_status": "ok",
+  "ko_title": "옮기는 것보다 증명이 어렵다",
+  "summary": "기존 알림 기반 클레임 검색 색인을 데이터베이스 변경 로그(CDC) 기반으로 전환했다. 전환 전에는 알림이 없으면 변경이 색인에 반영되지 않았고, 필드 수정 시 건의 체류 시간 계산에 오류가 있었다. 새 색인의 정확성을 누락·값·지연 세 축으로 검증했다.",
+  "why": "알림 기반 색인에서는 미발행 알림으로 인한 누락과 필드 수정에 따른 체류 시간 계산 오류가 발생했다. CDC 전환 시 색인 정확성을 누락, 값, 지연 세 축으로 검증하는 절차가 필수적이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Fine-tuning a 322M Model for Coding Agent Safety: What 3 Runs and 2 Failures Taught Me",
+  "url": "https://dev.to/scs0209/fine-tuning-a-322m-model-for-coding-agent-safety-what-3-runs-and-2-failures-taught-me-1anc",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 6,
+  "published_at": 1793663156.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/scs0209/fine-tuning-a-322m-model-for-coding-agent-safety-what-3-runs-and-2-failures-taught-me-1anc"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwswbs9jmznhfwykkwl9a.jpg",
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트 안전을 위한 322M 모델 파인튜닝: 3번 실행과 2번 실패에서 배운 점",
+  "summary": "laya-guard는 코딩 에이전트의 명령을 쉘에 전달하기 전에 규칙과 322M 파라미터 로컬 모델 Laya로 검증한다. 기존 모델은 절반 정도의 명령에 대해 질문을 발생시켜 사용자가 무조건 “yes”를 클릭하게 만들었다. 저자는 13,000개의 실제 쉘 명령을 수집·전처리하고 3번의 파인튜닝을 시도했으며, 첫 번째는 과도하게 엄격하고 두 번째는 너무 관대했으며, 세 번째가 현재 laya-guard에 적용된 버전이다.",
+  "why": "코딩 에이전트가 쉘 명령을 실행할 때 불필요한 확인을 줄여 사용자 피로도를 낮춘다. 로컬에서 322M 파라미터 모델을 파인튜닝해 명령 검증 정확도를 높이는 실전 사례를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "ai-safety",
+   "showcase"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+  "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+  "source": "hackernews",
+  "upvotes": 182,
+  "comments": 135,
+  "published_at": 1793664533,
+  "discussion": "https://news.ycombinator.com/item?id=50346153",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://s.yimg.com/lo/mysterio/api/20c071d47e1d29b6bcb68516712316fd79f4afbe9817d204b091e7acdade2c1f/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-11%2F1b2b2cbf-96e4-452f-9ea7-7917f40a6da2",
+  "link_status": "ok",
+  "ko_title": "Intel 주가 급락, 3조5천억 달러 규모 반도체 급락 확대",
+  "summary": "인텔 주가가 9% 하락하며 1974년 이후 최악의 하루를 기록했다. 메모리·스토리지 기업인 마이크론·산디스크·시게이트·웨스턴디지털도 6~8% 하락했으며, 마블은 Lumentum 인수 발표와 함께 더 큰 폭으로 떨어졌다. 10월 6일 이후 반도체·메모리 주식 전체가 약 3.7조 달러의 시장 가치를 잃었다.",
+  "why": "백엔드 인프라의 하드웨어 비용 변동성이 커져 예산 계획에 영향을 줄 수 있다. 인텔 주가는 9월 말 대비 절반 이하로 떨어졌다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "BryceYuuu / RUN",
+  "url": "https://github.com/BryceYuuu/RUN",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 480,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/BryceYuuu/RUN"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 480,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/BryceYuuu/RUN",
+  "link_status": null,
+  "ko_title": "RUN ·윤 — 해외 이주 매뉴얼",
+  "summary": "이 GitHub 저장소는 디지털 노마드, 기술 이민, 유럽 블루카드, 창업·자영업, 투자·입국 등 5가지 상황별로 30여 개 유럽 국가와 전 세계 13개 목적지의 이주 경로, 필요 서류, 비교 정보 등을 정리한 오픈소스 핸드북이다. 최신 데이터(2026-10 기준)와 각 국가별 상세 가이드를 제공한다.",
+  "why": "2025~2026년 사이 다수의 이주 경로가 폐지되거나 규칙이 바뀌었다. 기존에 유통되던 온라인 가이드의 상당수가 이미 무효화되었으므로 주의가 필요하다. 실제 이주 결정 전에는 반드시 각국 공식 페이지의 최신 정보를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+  "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 229,
+  "published_at": 1793658647,
+  "discussion": "https://news.ycombinator.com/item?id=50344919",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://cdn.sanity.io/images/3tzzh18d/production/07bfadd5db5c963aa461d36b3f5bfa4a34c6f335-1200x675.png",
+  "link_status": "ok",
+  "ko_title": "SEC, Anthropic IPO 차단해야 공공 보호",
+  "summary": "Anthropic이 2026년 말 IPO 등록을 제출했지만, 재무제표는 감사되지 않았고, 2030년대까지 이어지는 900 억 달러 규모의 지출 약속이 드러났다. 매출 성장률은 여름에 급감했으며, 현금 96 억 달러에도 불구하고 재무 압박이 심각하다. 이러한 상황이 투자자와 근로자에게 위험을 초래한다.",
+  "why": "Anthropic의 IPO가 진행되면 AI 업계의 불투명한 재무 구조가 공개 시장으로 전가된다. 투자자나 근로자가 회사의 막대한 지출 부담을 떠안게 될 위험이 생긴다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Preparing our next security sprint to harden OpenAI",
+  "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793642400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "다음 보안 스프린트를 준비해 OpenAI를 강화한다",
+  "summary": "OpenAI는 Cathedral Systems와 함께 내부 보안 스프린트를 진행한다. AI를 활용해 방어 체계를 테스트하고 강화한다.",
+  "why": "AI 기반 보안 테스트가 OpenAI 내부 방어 체계에 적용된다. 백엔드 개발자는 AI 서비스의 보안 강화 흐름을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "My Agent Gave the Right Answer. Then It Wrote Down That It Was Wrong.",
+  "url": "https://dev.to/kenielzep97/my-agent-gave-the-right-answer-then-it-wrote-down-that-it-was-wrong-311d",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 17,
+  "comments": 4,
+  "published_at": 1793674414.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kenielzep97/my-agent-gave-the-right-answer-then-it-wrote-down-that-it-was-wrong-311d"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbhvby1skcs6ju4rnmzd3.jpg",
+  "link_status": "ok",
+  "ko_title": "내 에이전트가 정답을 제시했다가 스스로 틀렸다고 기록했다",
+  "summary": "에이전트는 사용자가 존재하지 않는 대화를 물었을 때 “기록이 없다”고 정확히 답했다. 이후 자체 반성 단계에서 해당 답변을 오류로 기록해 자기 모델에 저장했다. 저장된 12개의 항목 중 3개는 테스트용 질문(친척 사업)과 관련돼 있다.",
+  "why": "에이전트가 정답을 내렸음에도 반성 과정에서 이를 실패로 재해석해 자기 모델에 저장했다. 이 기록이 런타임 프롬프트에 포함되면 에이전트가 실제 기억을 의심하게 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Web Locks and draft recovery: which browser edge cases am I missing?",
+  "url": "https://dev.to/lartuen/web-locks-and-draft-recovery-which-browser-edge-cases-am-i-missing-5324",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 1,
+  "comments": 8,
+  "published_at": 1793669087.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/lartuen/web-locks-and-draft-recovery-which-browser-edge-cases-am-i-missing-5324"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5wy7z9bxjfs5syanqms8.png",
+  "link_status": "ok",
+  "ko_title": "Web Locks와 초안 복구: 놓친 브라우저 엣지 케이스는?",
+  "summary": "웹 앱 온보딩 흐름에서 탭 간 초안 복구를 구현 중이다. 현재 로컬스토리지는 복구 레코드를, 세션스토리지는 해당 탭의 초안 슬롯 포인터를 저장한다. Web Lock을 독점적으로 사용하지만, 슬롯을 읽는 시점이 너무 빨라 다른 탭이 최신 초안을 덮어쓰는 레이스 상황이 발견되었다. 제안된 해결책은 락을 획득한 뒤 스냅샷을 다시 읽고 검증한 뒤 복구하는 것이다.",
+  "why": "Web Lock을 얻은 뒤 스냅샷을 다시 읽고 검증해야 한다. 락 획득 전 읽은 데이터는 다른 탭의 최신 초안을 덮어쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "October sponsors-only newsletter",
+  "url": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793683739.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/3/october-newsletter/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "10월 스폰서 전용 뉴스레터",
+  "summary": "스폰서에게만 제공되는 10월 호 뉴스레터가 발행되었으며, 내용에는 vibe 게임 개발 전환점, 보안 취약점 급증, 최신 LLM 발표, 월 $100 이상 구독자 대상 API 크레딧, 현재 사용 중인 도구와 소프트웨어 릴리스가 포함된다. 이전 달인 9월 호는 미리보기 형태로 공개돼 있으며, 정식 구독은 월 $10이다.",
+  "why": "보안 취약점 급증과 최신 LLM 발표를 다루므로 백엔드 보안 점검과 모델 선택 기준을 재확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
+  "url": "https://hackertimes.ca/",
+  "source": "hackernews",
+  "upvotes": 172,
+  "comments": 56,
+  "published_at": 1793670814,
+  "discussion": "https://news.ycombinator.com/item?id=50346981",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hackertimes.ca/"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Show HN: Hacker Times, Hacker News 영감을 받은 버전",
+  "summary": "MIT CSAIL 팀이 GPT-6 Astra가 훈련 루프 없이 신경망 가중치를 해석·수정하는 초기 실험을 보고했다. HackerTube은 20년간 Hacker News 독자들이 언급한 6,454개의 유튜브 영상을 수집했다. 여러 전문가가 AI 버그 보고, 백업 필요성, 투자 위험, 보안 패치 부재 등에 대해 의견을 제시했다.",
+  "why": "GPT-6 Astra가 학습 루프 없이 신경망 가중치를 직접 수정하는 초기 실험 결과가 나왔다. 이는 기존 학습 파이프라인 의존도를 낮추는 새로운 모델 최적화 접근법을 제시한다. 다만 해당 결과는 예비 단계이므로 즉시 실무 적용을 검토하기는 이르다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Green tests, dead tripwire",
+  "url": "https://dev.to/alphanumericentity/green-tests-dead-tripwire-30bc",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 1,
+  "comments": 3,
+  "published_at": 1793684897.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alphanumericentity/green-tests-dead-tripwire-30bc"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5g7q54z0dfeymmdcm6kn.png",
+  "link_status": "ok",
+  "ko_title": "Green tests, dead tripwire",
+  "summary": "프리툴사용 훅을 구현하고 테스트했지만, 페이로드 필드가 변경돼 훅이 작동하지 않는다. 테스트는 자체 생성한 페이로드와 일치해 여전히 통과한다. 외부 변화에 대한 가정이 오래돼도 감지되지 않는다.",
+  "why": "훅이 외부 페이로드 구조 변경을 감지하지 못해 무력화될 수 있다. 테스트가 자체 생성된 페이로드를 검증하므로 실제 환경과의 불일치를 놓친다. 장기간 차단 이벤트가 없으면 훅이 정상 작동 중인지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
+  "title": "Scaling Git at OpenAI",
+  "url": "https://openai.com/index/scaling-git-at-openai/",
+  "source": "hackernews",
+  "upvotes": 165,
+  "comments": 78,
+  "published_at": 1793663276,
+  "discussion": "https://news.ycombinator.com/item?id=50345924",
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/scaling-git-at-openai",
+   "https://openai.com/index/scaling-git-at-openai/"
+  ],
+  "cross_source_count": 2,
+  "score": 14,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI의 Git 확장",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-11-03T16:00:02.715195+09:00",
+  "batch_label": "11월 3일 16:00"
+ },
+ {
   "title": "WTF Ubuntu?",
   "url": "https://chalmovsky.com/posts/wtf-ubuntu",
   "source": "hackernews",
