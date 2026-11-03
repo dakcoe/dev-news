@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-25T00:00:31+09:00",
-   "total": 16,
-   "counts": {
-    "ok": 9,
-    "github": 6,
-    "short": 1
-   },
-   "failures": [
-    {
-     "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-25T08:00:39+09:00",
    "total": 12,
    "counts": {
@@ -552,6 +536,33 @@
     },
     {
      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-04T00:00:32+09:00",
+   "total": 19,
+   "counts": {
+    "robots": 1,
+    "ok": 11,
+    "blocked": 2,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://twitter.com/guilleflorvs/status/2117379073785696395",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://openai.com/index/heimstaden",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/dan-driscoll-joins-openai",
      "source": "rss",
      "reason": "blocked"
     }

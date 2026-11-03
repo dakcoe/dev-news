@@ -1,5 +1,591 @@
 [
  {
+  "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+  "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+  "source": "hackernews",
+  "upvotes": 182,
+  "comments": 95,
+  "published_at": 1793692581,
+  "discussion": "https://news.ycombinator.com/item?id=50349276",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://nicholas.carlini.com/writing/2026/chess/ppro-screen.png",
+  "link_status": "ok",
+  "ko_title": "현대 체스 엔진이 펜티엄으로 1996년 카스파로프를 이길 수 있었을까?",
+  "summary": "IBM의 Deep Blue가 1996년 카스파로프에게 승리했지만, 저자는 200 MHz Pentium Pro와 64 MB RAM에 포팅한 Stockfish가 3300 Elo 수준을 보여 Deep Blue 없이도 충분히 이길 수 있었다는 실험 결과를 제시한다. 해당 엔진은 인터넷에 연결돼 직접 대전도 가능하다. 기존 Deep Blue는 수백만 달러와 전용 VLSI 코프로세서를 사용했으며, 현재는 일반 하드웨어와 오픈소스 엔진으로 대체 가능함을 강조한다.",
+  "why": "오픈소스 체스 엔진이 전용 하드웨어 없이 일반 PC에서 최상위 인간 기수를 압도함을 확인했다. 고비용 전용 하드웨어 의존에서 오픈소스 소프트웨어 중심의 성능 달성으로 패러다임이 이동했다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "floci-io / floci",
+  "url": "https://github.com/floci-io/floci",
+  "source": "github",
+  "upvotes": 219,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/floci-io/floci"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 219,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/floci-io/floci",
+  "link_status": null,
+  "ko_title": "floci-io / floci — 로컬 AWS 에뮬레이터",
+  "summary": "Floci는 무료 오픈소스 로컬 AWS 에뮬레이터로, 클라우드 계정이나 인증 토큰 없이 Docker Compose만으로 AWS 형태의 서비스들을 로컬에서 실행할 수 있다. 최신 릴리스와 Docker 이미지가 제공되며, 다양한 SDK와 Testcontainers와 통합된다.",
+  "why": "로컬 개발 환경에서 AWS 계정 인증을 생략하고 Docker Compose만으로 서비스 통합 테스트를 돌릴 수 있다. 기존 LocalStack 사용자는 마이그레이션 문서를 참고해 전환 여부를 판단해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "devops-infra",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Usagi-org / ai-goofish-monitor",
+  "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+  "source": "github",
+  "upvotes": 204,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Usagi-org/ai-goofish-monitor"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 204,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/Usagi-org/ai-goofish-monitor",
+  "link_status": null,
+  "ko_title": "ai-goofish-monitor — Playwright와 AI 기반 실시간 모니터링 시스템",
+  "summary": "이 오픈소스는 Playwright와 AI를 활용해 중고거래 플랫폼의 상품을 실시간으로 다중 작업 감시한다. 웹 UI에서 작업·계정·AI 프롬프트를 관리하고, 다양한 알림 채널과 Cron 스케줄링을 지원한다. Docker 이미지에 Chromium이 포함돼 별도 브라우저 설치 없이 배포가 가능하다.",
+  "why": "중고거래 플랫폼 감시 스크립트를 직접 작성하던 방식에서 벗어나, 이 도구를 활용해 AI 프롬프트만으로 상품 분석 기준을 설정할 수 있다. Docker 이미지 배포 시 Chromium이 이미 포함돼 있어 별도 브라우저 설치 과정이 생략된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "RikiyaT / lm_understand-logs",
+  "url": "https://github.com/RikiyaT/lm_understand-logs",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 197,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/RikiyaT/lm_understand-logs"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 197,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/RikiyaT/lm_understand-logs",
+  "link_status": null,
+  "ko_title": "RikiyaT / lm_understand-logs — LLM이 신경망 가중치를 이해하고 작성",
+  "summary": "이 GitHub 저장소는 블로그 글 “Sparks of Weight Space Programming: LLMs can understand and write neural network weights”에 실린 모든 실험 로그를 공개한다. 각 실험 폴더에는 모델에 보낸 입력, 모델이 반환한 출력·추론 요약, 실행한 코드와 결과, 평가 지표, 읽고 쓴 네트워크 파일이 포함된다. 실험별 README가 어떤 실험 행과 파일에 대응하는지 설명한다. 현재 블로그에 보고된 실험만 포함돼 있다.",
+  "why": "신경망 가중치를 직접 읽고 수정하는 실험의 원본 로그와 코드를 제공한다. 블로그 글의 수치와 결론을 재현하거나 검증할 때 기준 자료로 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "spotify / portal-ai-plugins",
+  "url": "https://github.com/spotify/portal-ai-plugins",
+  "source": "github",
+  "upvotes": 94,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/spotify/portal-ai-plugins"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 94,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/spotify/portal-ai-plugins",
+  "link_status": null,
+  "ko_title": "spotify / portal-ai-plugins — Spotify Portal AI 플러그인",
+  "summary": "Spotify Portal을 Claude Code, Codex, Cursor, pi 등 AI 코딩 에이전트에 연결하는 플러그인이다. 인증 설정, 소프트웨어 카탈로그 검색, 서비스 브리핑 생성, 진단 실행, Portal 액션 호출 등을 지원한다. 현재 Claude Code 전용인 shunt 플러그인을 통해 I/O-무거운 작업을 저비용 모델로 위임할 수 있다.",
+  "why": "Claude Code를 쓰면 shunt 플러그인으로 대량 파일 읽기 같은 작업을 저비용 모델로 넘길 수 있다. 이로써 에이전트 사용 시 토큰 비용 부담을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "mromidev / claude-animated-shorts",
+  "url": "https://github.com/mromidev/claude-animated-shorts",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 367,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mromidev/claude-animated-shorts"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 367,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/mromidev/claude-animated-shorts",
+  "link_status": null,
+  "ko_title": "claude-animated-shorts — Claude를 이용한 55~70초 세로 애니메이션 숏 제작",
+  "summary": "이 GitHub 저장소는 three.js와 Remotion을 활용해 로컬 PC에서 55~70초 길이의 2D 캐릭터가 3D 세계를 배경으로 움직이는 세로형 애니메이션 숏을 만들 수 있는 전체 파이프라인을 제공한다. 템플릿, 사운드 합성, 품질 검증 스크립트 등 30여 개 파일이 포함돼 있어 바로 사용이 가능하다. AI 영상 생성기를 사용하지 않으며, Node, Python 3, ffmpeg 환경만 있으면 설치가 쉽다.",
+  "why": "three.js와 Remotion으로 로컬에서 렌더링하므로 AI 영상 생성기 비용이 들지 않는다. Node, Python 3, ffmpeg 환경만 갖춰야 하며 2K 해상도 출력까지 지원한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "gen-media",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "uBlock Origin filter to block autoplay videos in TechCrunch",
+  "url": "https://cornfieldlabs.github.io/posts/ublock-stop-techcrunch-autoplay-video/post.html",
+  "source": "hackernews",
+  "upvotes": 119,
+  "comments": 35,
+  "published_at": 1793691407,
+  "discussion": "https://news.ycombinator.com/item?id=50349155",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://cornfieldlabs.github.io/posts/ublock-stop-techcrunch-autoplay-video/post.html"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "uBlock Origin 필터로 TechCrunch 자동재생 비디오 차단",
+  "summary": "TechCrunch 기사 중간에 자동재생되는 JW Player 비디오와 Connatix 플로팅 광고 플레이어를 차단하는 uBlock Origin 필터 규칙을 제공한다. Firefox용 전체 MV2 버전 uBlock Origin에 적용하면 비디오 로드와 배경 재생을 방지하고, 남는 빈 공간을 숨긴다. 새 비디오 공급업체가 등장하면 기존 CSS 차단 규칙은 유지되지만 스크립트 차단 규칙을 업데이트해야 한다.",
+  "why": "Firefox에서 uBlock Origin MV2 전체 버전을 쓴다면 대시보드의 내 필터에 규칙을 붙여넣어야 한다. TechCrunch가 비디오 공급업체를 바꾸면 스크립트 차단 규칙을 새로 만들어야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "OpenRouter Alternatives: 5 AI API Gateways Worth Considering in 2026",
+  "url": "https://dev.to/bearerclub/openrouter-alternatives-5-ai-api-gateways-worth-considering-in-2026-2l56",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 2,
+  "published_at": 1793713251.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/bearerclub/openrouter-alternatives-5-ai-api-gateways-worth-considering-in-2026-2l56"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3ip5xzugm0y4tga28efy.png",
+  "link_status": "ok",
+  "ko_title": "OpenRouter 대안 5가지 — 2026년에 고려할 만한 AI API 게이트웨이",
+  "summary": "OpenRouter는 다중 모델 요청을 단일 API로 라우팅하지만, 자체 호스팅 제어, 예측 가능한 가격, 생산 단계 관측 기능이 필요한 경우 대안이 필요하다. 기사에서는 Bearer Club, LiteLLM, Portkey, AI/ML API, Requesty 다섯 서비스를 모델 접근성, 가격 구조, 데이터 처리, 운영 부담 측면에서 비교한다. 각 대안은 특정 요구에 맞춰 비용 절감, 자체 관리, 관측 기능 등을 제공한다.",
+  "why": "프롬프트 처리 위치를 직접 통제해야 하거나, 토큰당 마크업이 아닌 예측 가능한 비용 구조가 필요할 때 대안 검토가 필요하다. 자체 호스팅이 가능한 LiteLLM은 라우팅과 데이터 처리에 대한 완전한 제어권을 제공하지만, 운영 부담을 감수해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "llm 0.37",
+  "url": "https://simonwillison.net/2026/Nov/2/llm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793663370.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/2/llm/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "llm 0.37 릴리즈",
+  "summary": "이번 릴리즈에서는 gpt-6.1-sol·gpt-6.1-terra 모델 추가와 OpenAI 호환 엔드포인트를 손쉽게 설정하는 새 명령이 도입되었습니다. 기본 모델이 비용이 절반인 gpt-6-luna로 바뀌었으며, 임베딩이 다양한 바이너리 콘텐츠 타입을 지원하도록 개선되었습니다.",
+  "why": "기본 모델이 gpt-6-luna로 바뀌어 비용이 절반으로 줄었습니다. 임베딩이 오디오·이미지·비디오 등 다양한 바이너리 콘텐츠 타입을 지원합니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Anthropic IPO filing: $1.7B quarterly payroll, about $107K per employee monthly",
+  "url": "https://www.techspot.com/news/114428-anthropic-ipo-filing-reveals-17-billion-quarterly-personnel.html",
+  "source": "hackernews",
+  "upvotes": 63,
+  "comments": 72,
+  "published_at": 1793704567,
+  "discussion": "https://news.ycombinator.com/item?id=50350560",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techspot.com/news/114428-anthropic-ipo-filing-reveals-17-billion-quarterly-personnel.html"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://www.techspot.com/images2/news/bigimage/2026/11/2026-11-03-image-7.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic IPO 제출: 직원당 월 평균 107천 달러 급여",
+  "summary": "Anthropic이 2026년 3분기 인건비가 17억 달러 이상이며, 직원 5,300명당 월 평균 107,300달러를 지출한 것으로 공개됐다. 인건비 중 11억 달러는 주식 기반 보상이며, 이는 현금이 아닌 주식 가치로 기록된다. 2026년 1~9월 인건비는 매출의 약 15%에 해당한다.",
+  "why": "Claude를 백엔드 서비스에 통합하는 비용 구조를 재점검해야 한다. 인건비가 매출의 15%까지 낮아졌지만, IPO 시점에 발생하는 막대한 주식 보상 비용이 서비스 가격에 반영될 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Writing code for a computer that is mostly asleep",
+  "url": "https://dev.to/remdore/writing-code-for-a-computer-that-is-mostly-asleep-27ok",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1793693022.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remdore/writing-code-for-a-computer-that-is-mostly-asleep-27ok"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fv2wv8y87eeyt71yvehel.png",
+  "link_status": "ok",
+  "ko_title": "대부분 잠든 컴퓨터를 위한 코드 작성",
+  "summary": "기존 서버 소프트웨어는 머신이 계속 깨어 있다고 가정하지만, 에이전트는 대부분 대기 상태가 정상이다. DigitalOcean Managed Agents는 세션당 작은 VM을 제공하고, CPU 사용 시간만 과금해 대기 비용을 거의 없게 만든다. 평균 25% 사용률의 2 vCPU는 전체 머신 대비 절반 이하 비용으로 운영된다.",
+  "why": "에이전트 워크플로에서 대기 시간을 과금하지 않는 구조를 적용하면 운영 비용이 줄어든다. 기존처럼 상시 구동을 전제로 한 코드 대신, 빈번한 정지·기동 사이클을 허용하는 설계를 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "I Let AI Build a Feature Without Giving It the Full Context",
+  "url": "https://dev.to/harsh2644/i-let-ai-build-a-feature-without-giving-it-the-full-context-6h",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 16,
+  "comments": 4,
+  "published_at": 1793712967.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/harsh2644/i-let-ai-build-a-feature-without-giving-it-the-full-context-6h"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvjfvxjyuym3m70wcniah.png",
+  "link_status": "ok",
+  "ko_title": "AI에게 전체 컨텍스트 없이 기능을 만들게 했더니",
+  "summary": "AI에게 CSV 내보내기 엔드포인트 코드를 요청했지만 시스템 맥락을 제공하지 않아 다중 테넌트 환경에서 모든 사용자 데이터를 노출하고, 대량 데이터 처리 시 메모리 초과 오류가 발생했다.",
+  "why": "다중 테넌트 환경에서 권한 범위를 명시하지 않으면 타사 데이터가 유출된다. 대량 데이터 처리 시 메모리 초과가 발생하므로 스트리밍 방식이 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Your Website Has a Design System. Does Your Marketing Team Have a Content System?",
+  "url": "https://dev.to/yassersoliman/your-website-has-a-design-system-does-your-marketing-team-have-a-content-system-27d1",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 17,
+  "comments": 2,
+  "published_at": 1793699490.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yassersoliman/your-website-has-a-design-system-does-your-marketing-team-have-a-content-system-27d1"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F61qa0rxy3va232m0wqgr.png",
+  "link_status": "ok",
+  "ko_title": "웹사이트에 디자인 시스템이 있다면, 마케팅 팀에 콘텐츠 시스템은 있나요?",
+  "summary": "마케팅 콘텐츠 시스템은 팀이 웹사이트 콘텐츠를 만들고, 조직하고, 업데이트하고, 게시하는 방식을 일관되게 관리하도록 돕는다. 디자인 시스템이 시각 요소를 정의하지만, 페이지 소유자, 메시지 일관성, 다중 편집자 협업 등은 다루지 않는다. 기업이 성장하면서 마케팅 캠페인과 제품 기능이 늘어나면 콘텐츠 관리가 산재된 문서와 대화에 머물러 일관성이 깨질 수 있다. 콘텐츠 시스템을 도입하면 이러한 병목을 줄이고 메시지를 빠르게 업데이트할 수 있다.",
+  "why": "백엔드 개발자는 디자인 시스템의 시각적 일관성만으로는 페이지 소유권과 메시지 업데이트 프로세스를 관리할 수 없다. 콘텐츠 시스템이 없으면 산재된 문서와 대화에 의존해 일관성이 깨질 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+  "url": "https://openai.com/index/dan-driscoll-joins-openai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793577600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/dan-driscoll-joins-openai"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI, Dan Driscoll을 국가 안보 현대화 담당 수석 고문으로 임명",
+  "summary": "OpenAI가 Dan Driscoll을 국가 안보 현대화, 사이버 회복력, 미국 동맹국과의 협력을 위한 책임 있는 AI 자문 역할에 임명했다.",
+  "why": "백엔드 개발자의 일상 업무나 기술 스택에는 직접적인 변화가 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Heimstaden is changing residential real estate management with AI",
+  "url": "https://openai.com/index/heimstaden",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793692800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/heimstaden"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Heimstaden, AI로 주거 부동산 관리를 혁신",
+  "summary": "Heimstaden이 OpenAI의 ChatGPT Enterprise와 Codex를 도입해 유럽 전역의 부동산 관리 방식을 바꾸고 비용을 절감하며 직원들을 지원한다.",
+  "why": "백엔드 개발자는 Codex를 활용해 부동산 관리 시스템의 자동화 스크립트를 작성할 수 있다. 이는 반복적인 유지보수 작업을 줄여준다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "industry"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "My homepage took 8 seconds to load. I threw a CDN, a cache, and lazy-loading at it. It was still slow.",
+  "url": "https://dev.to/infoinlet1/my-homepage-took-8-seconds-to-load-i-threw-a-cdn-a-cache-and-lazy-loading-at-it-it-was-still-1abh",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 12,
+  "comments": 1,
+  "published_at": 1793697399.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/my-homepage-took-8-seconds-to-load-i-threw-a-cdn-a-cache-and-lazy-loading-at-it-it-was-still-1abh"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5sicgp1a5ms830zsr8lu.png",
+  "link_status": "ok",
+  "ko_title": "내 홈페이지 로드 시간이 8초였다. CDN·캐시·지연 로딩을 적용했지만 여전히 느렸다.",
+  "summary": "저자는 CDN, 캐시, 이미지 지연 로딩, 코드 스플리팅, 스켈레톤 화면 등 일반적인 성능 최적화를 적용했지만 페이지 로드 속도가 크게 개선되지 않았다. 결국 원인 분석에 집중한 결과 문제를 해결할 수 있었다. 최적화 목록이 모두 “작업을 더 빠르게” 하는 방법이었고, “작업을 줄이는” 접근이 부족했다는 점을 강조한다.",
+  "why": "CDN이나 캐시 같은 최적화만으로는 불필요한 처리 자체를 줄이지 못한다. 속도 개선이 미미할 때는 작업량 자체를 줄이는 방향으로 원인을 분석해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Transformers Model Integration Contracts",
+  "url": "https://huggingface.co/blog/transformers-mic",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793664000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/transformers-mic"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://huggingface.co/blog/assets/transformers-mic/mic-logo.png",
+  "link_status": "ok",
+  "ko_title": "Transformers 모델 통합 계약",
+  "summary": "7월 30일 Transformers가 T5에 PyTorch의 스케일드 닷-프로덕트 어텐션을 적용하면서 UMT5 디코더가 미래 토큰을 볼 수 있는 버그가 발생했다. 버그는 두 달간 메인에 머물렀으며, 작은 CPU용 UMT5 모델이 이를 모두 탐지했다. 이를 계기로 실제 체크포인트를 축소한 작은 모델 피처를 만들어 빠른 CPU 통합 테스트를 수행한다.",
+  "why": "UMT5 디코더가 미래 토큰을 참조하는 버그가 두 달간 메인에 머문 사례가 있다. 이 버그는 단순 포워드 패스 테스트로는 탐지되지 않았다. 작은 모델 픽스처를 활용한 CPU 통합 테스트가 이 문제를 사전에 차단할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
+  "title": "Revolut moves to self-hosted GLM",
+  "url": "https://twitter.com/guilleflorvs/status/2117379073785696395",
+  "source": "hackernews",
+  "upvotes": 165,
+  "comments": 132,
+  "published_at": 1793699639,
+  "discussion": "https://news.ycombinator.com/item?id=50350004",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/guilleflorvs/status/2117379073785696395"
+  ],
+  "cross_source_count": 1,
+  "score": 15,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Revolut, 자체 호스팅 GLM으로 전환",
+  "summary": "",
+  "why": "Revolut이 자체 호스팅 GLM으로 전환했다는 사실만으로 독자의 코드나 설정에 직접적인 변경 사항이 발생하지 않는다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-04T00:00:05.851421+09:00",
+  "batch_label": "11월 4일 00:00"
+ },
+ {
   "title": "# 230,756 Requests/Second. And Breeze Is Much More Than a Fast Go Framework. 🚀",
   "url": "https://dev.to/farshad_khazaee_8871e424d/-230756-requestssecond-and-breeze-is-much-more-than-a-fast-go-framework-1a15",
   "source": "devto",
