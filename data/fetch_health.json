@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-25T08:00:39+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://blog.roku.com/developer/gitlab-move",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-25T16:00:29+09:00",
    "total": 12,
    "counts": {
@@ -563,6 +547,27 @@
     },
     {
      "url": "https://openai.com/index/dan-driscoll-joins-openai",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-04T08:00:29+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
      "source": "rss",
      "reason": "blocked"
     }

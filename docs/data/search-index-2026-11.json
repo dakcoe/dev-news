@@ -1,5 +1,241 @@
 [
  {
+  "t": "Qwen 3.8 27B가 내 노트북에서 모델 가중치를 해석할 수 있다",
+  "u": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "security",
+   "science"
+  ],
+  "d": "2026-11-04",
+  "o": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+  "x": "최근 발표된 논문은 최첨단 LLM이 모델 가중치를 직접 읽고 수정할 수 있음을 보여준다. 해당 논문에서는 GPT-6 Astra가 가중치만 보고 "
+ },
+ {
+  "t": "Stringman, $800 오픈소스 룸 스케일 그리퍼 로봇",
+  "u": "https://neufangled.com/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "language",
+   "open-source",
+   "industry"
+  ],
+  "d": "2026-11-04",
+  "o": "Stringman, an $800 open-source room scale gripper robot",
+  "x": "Stringman은 천장 모서리에 고정한 케이블을 이용해 방 전체를 커버하는 그리퍼 로봇이다. 4개의 모터와 1 N·m 직류 구동 액추에이터를 "
+ },
+ {
+  "t": "Pika H3 Flex",
+  "u": "https://github.com/Pika-Labs/Pika-H3-Flex",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "backend-data",
+   "open-source"
+  ],
+  "d": "2026-11-04",
+  "o": "Pika-Labs / Pika-H3-Flex",
+  "x": "Pika H3 Flex는 사전 학습된 H3 기반 텍스트-투-비디오 모델로, 6단계 샘플링과 오디오 동기화 기능을 제공한다. 네이티브 480p·7"
+ },
+ {
+  "t": "Palette: 디자인 언어에 맞는 슬라이드 데크를 만드는 작은 모델 교육",
+  "u": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "backend-data"
+  ],
+  "d": "2026-11-04",
+  "o": "Palette: teaching a small model to build decks in your design language",
+  "x": "작은 오픈 가중치 모델을 IBM Design Language 기반 합성 데이터로 미세조정해 20B 규모 모델이 슬라이드 레이아웃 코드를 생성한다"
+ },
+ {
+  "t": "ChangelogBot으로 변경 로그의 “WHY” 문제 해결하기",
+  "u": "https://dev.to/johnnylemonny/stop-generating-changelogs-from-git-commits-how-i-fixed-the-why-problem-in-changelogbot-11n9",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools"
+  ],
+  "d": "2026-11-04",
+  "o": "Stop Generating Changelogs from Git Commits: How I Fixed the 'WHY' Problem in ChangelogBot",
+  "x": "ChangelogBot은 Git 커밋이나 PR 제목만으로 만든 전통적인 자동 변경 로그의 한계를 보완한다. AI를 활용해 PR 설명·이슈·토론 "
+ },
+ {
+  "t": "실시간 24시간 런치 엔진을 React와 Firestore로 구축한 방법",
+  "u": "https://dev.to/astrodiscover/beyond-upvote-rings-how-we-engineered-a-real-time-24-hour-launch-engine-with-react-and-firestore-3g08",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web",
+   "backend-data",
+   "release",
+   "showcase"
+  ],
+  "d": "2026-11-04",
+  "o": "Beyond Upvote Rings: How We Engineered a Real-Time 24-Hour Launch Engine with React and Firestore",
+  "x": "Astro Discover 팀은 전 세계 출시 시각 차이를 없애기 위해 인도 표준시 12시 01분을 기준으로 모든 앱을 동시 공개하는 엔진을 만"
+ },
+ {
+  "t": "Postman이 AI 플러그인을 자동 설치하고 모든 API 데이터를 공유하려 시도",
+  "u": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-04",
+  "o": "Postman silently auto-installs AI plugins and attempts to share all API data",
+  "x": "Postman 12.33.4가 macOS에서 자동으로 Claude Code와 Codex 플러그인을 설치하고, 사용자 전역 설정을 변경해 API "
+ },
+ {
+  "t": "자동화 테스트가 통과되었습니다. 올바른 것을 테스트했는지 증명할 수 있나요?",
+  "u": "https://dev.to/sleepyfalcon247/your-automated-tests-passed-can-you-prove-they-tested-the-right-thing-fpp",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-11-04",
+  "o": "Your Automated Tests Passed. Can You Prove They Tested the Right Thing?",
+  "x": "테스트가 통과돼도 실제 중요한 기능이 깨질 수 있다는 점을 지적한다. 외부 의존성(예: 분석 서비스) 장애가 테스트 결과에 큰 영향을 미쳐 CI"
+ },
+ {
+  "t": "StateBench: 긴 문서에서 상태 변화를 추적하는 언어 모델 테스트",
+  "u": "https://huggingface.co/blog/allenai/statebench",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "d": "2026-11-04",
+  "o": "StateBench: Testing how language models track state changes over long documents",
+  "x": "StateBench는 긴 문서에서 엔터티 상태 변화를 추적하는 능력을 평가하는 벤치마크이다. 상태 추적은 변수 재할당이 있는 코드 읽기부터 등장"
+ },
+ {
+  "t": "물리적 세계를 위한 엔지니어링 가속화",
+  "u": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "d": "2026-11-04",
+  "o": "Accelerating engineering for the physical world",
+  "x": "ChatGPT와 Codex가 CAD, PCB 설계, 시뮬레이션 등 물리적 분야의 엔지니어링 워크플로우를 빠르게 진행하도록 돕는다."
+ },
+ {
+  "t": "WhatsApp 그룹 API: 그룹 생성·초대·방송 (무료)",
+  "u": "https://dev.to/omdaa/whatsapp-groups-api-create-groups-invites-broadcasts-free-2jmo",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "open-source"
+  ],
+  "d": "2026-11-04",
+  "o": "WhatsApp Groups API: Create Groups, Invites & Broadcasts (Free)",
+  "x": "새 오픈소스 Omdaa API를 통해 WhatsApp에서 그룹을 만들고 참가자를 관리하며 초대 링크를 가져올 수 있다. npm 패키지 @omda"
+ },
+ {
+  "t": "Cisco, OpenAI와 함께 머신 속도로 방어",
+  "u": "https://openai.com/index/cisco-cyber",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-04",
+  "o": "How Cisco defends at machine speed with OpenAI",
+  "x": "Cisco가 네트워크 텔레메트리를 OpenAI 모델과 결합해 실시간 위협 탐지를 강화한다. 공격자가 AI로 자동화된 공격을 빠르게 전개하는 상황"
+ },
+ {
+  "t": "OpenSelena / omniget — 무료 오픈소스 다운로드 및 미디어 툴박스",
+  "u": "https://github.com/OpenSelena/omniget",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-04",
+  "o": "OpenSelena / omniget",
+  "x": "OmniGet은 Windows, macOS, Linux에서 동작하는 무료 오픈소스 다운로드 관리자이다. Udemy, YouTube, Instag"
+ },
+ {
+  "t": "Kalshi와 공동창업자들, 유타 도박법 위반 혐의로 중범죄 기소",
+  "u": "https://arstechnica.com/tech-policy/2026/10/trump-admin-sues-utah-to-save-kalshi-from-the-states-total-ban-on-gambling/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-04",
+  "o": "Kalshi and its co-founders face felony charges for violating Utah gambling laws",
+  "x": "유타 주 검찰이 Kalshi와 공동창업자 Tarek Mansour, Luana Lopes Lara에게 스포츠 베팅 제공으로 13건의 중범죄와 1"
+ },
+ {
+  "t": "Hacktoberfest 2026 마무리",
+  "u": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [],
+  "d": "2026-11-04",
+  "o": "That's a Wrap on Hacktoberfest 2026! 🎃👻",
+  "x": "Hacktoberfest 2026이 10월 31일에 종료되었으며 115,385명이 참여했다. 70개국 이상에서 500개 이상의 오프라인 행사와 "
+ },
+ {
+  "t": "AI를 거부하는 학교의 검색 기능을 중단한다",
+  "u": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-11-04",
+  "o": "Google will turn off search for schools that reject AI"
+ },
+ {
+  "t": "‘Astra가 가중치를 읽고 쓰며 Qwen을 개선한다’는 주장 오해",
+  "u": "https://honnibal.dev/blog/astra-read-write-misleading",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "language"
+  ],
+  "d": "2026-11-04",
+  "o": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+  "x": "이 글은 Astra가 가중치만으로 Qwen 모델을 개선한다는 주장에 대해 실제 실험은 파이썬 코드를 실행해 가중치를 수정한다는 점을 지적한다. "
+ },
+ {
   "t": "현대 체스 엔진이 펜티엄으로 1996년 카스파로프를 이길 수 있었을까?",
   "u": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
   "m": "2026-11",
