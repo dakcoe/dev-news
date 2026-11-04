@@ -1,5 +1,380 @@
 [
  {
+  "title": "KKKKhazix / agent-autoloop",
+  "url": "https://github.com/KKKKhazix/agent-autoloop",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 494,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/KKKKhazix/agent-autoloop"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 494,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/KKKKhazix/agent-autoloop",
+  "link_status": null,
+  "ko_title": "agent-autoloop — 자동화 백그라운드 에이전트",
+  "summary": "Agent Autoloop은 Node 기반의 경량 자동화 중간 플랫폼으로, 명령줄 에이전트를 백그라운드에서 스케줄링하고 진행 상황을 알림으로 전달한다. 플러그인 구조로 이벤트 소스, 에이전트, 알림 채널을 자유롭게 교체할 수 있다. macOS·Linux에서 한 줄 명령으로 설치·실행 가능하며, 별도 클라우드 서버나 포트 개방이 필요 없다.",
+  "why": "기존에는 터미널을 열어놓고 에이전트 실행을 직접 감시해야 했지만, 이제 백그라운드에서 스케줄링이 가능하다. 결정 사항이 생겼을 때만 알림을 받아 처리하므로, 대기 중에는 프로세스와 토큰 소모가 발생하지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "Indirect Prompt Injection: How to Protect Your AI Agent with Spotlighting and Prompt Shields",
+  "url": "https://dev.to/carlosjcastrog/indirect-prompt-injection-how-to-protect-your-ai-agent-with-spotlighting-and-prompt-shields-2cd1",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 1,
+  "comments": 5,
+  "published_at": 1793747386.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/carlosjcastrog/indirect-prompt-injection-how-to-protect-your-ai-agent-with-spotlighting-and-prompt-shields-2cd1"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzn423wk46j8rk7zmn7fq.png",
+  "link_status": "ok",
+  "ko_title": "간접 프롬프트 인젝션: 스포트라이트와 프롬프트 방패로 AI 에이전트 보호",
+  "summary": "이 글은 모델이 외부 콘텐츠를 읽을 때 발생할 수 있는 간접 프롬프트 인젝션 공격을 설명한다. OWASP 2025 LLM 애플리케이션 Top 10에 1위로 등재된 이 위협에 대해 Microsoft가 제시한 3계층 방어 방식을 소개한다. 또한 Hacktoberfest 2026 프로젝트 예시를 통해 실제 적용 사례를 보여준다.",
+  "why": "외부 콘텐츠 처리 시 인젝션 차단보다 공격 성공 시 보안 영향 제한에 초점을 맞춰야 한다. 모든 공격 탐지가 아닌, 시스템 설계로 피해 범위를 통제하는 방식이 핵심이다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "Are You a Python Developer or a Python Expert? 8 Tests I Failed Hijacking Win+Shift+S in One 7,600-Line File",
+  "url": "https://dev.to/akhourianmolkumar/are-you-a-python-developer-or-a-python-expert-8-tests-i-failed-hijacking-winshifts-in-one-30dg",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 12,
+  "comments": 9,
+  "published_at": 1793769296.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/are-you-a-python-developer-or-a-python-expert-8-tests-i-failed-hijacking-winshifts-in-one-30dg"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F513ad3x9o1jur8q0rxo0.png",
+  "link_status": "ok",
+  "ko_title": "파이썬 개발자와 전문가를 가르는 8가지 테스트 — 7,600줄 파일에서 Win+Shift+S 가로채기 실패 사례",
+  "summary": "이 글은 7,600줄 파이썬 단일 파일로 만든 화면 캡처·녹화·오버레이 도구 ASNIPP의 실제 버그와 설계 결정을 8가지 테스트 형태로 제시한다. 테스트는 핫키 예약 충돌, 오디오 장치 문제, 화면 캡처 속도 등 전문가 수준에서 마주치는 상황을 다룬다. 각 테스트는 코드 조각과 동작 설명을 포함한다.",
+  "why": "ASNIPP은 외부 의존성이 없고 로컬에서만 동작하므로 유사한 도구를 만들 때 보안·성능·핫키 처리 방법을 직접 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "Safari introduces Adaptive Dark Mode in 27.3",
+  "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+  "source": "hackernews",
+  "upvotes": 390,
+  "comments": 211,
+  "published_at": 1793741945,
+  "discussion": "https://news.ycombinator.com/item?id=50358562",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://webkit.org/wp-content/uploads/Demo-of-Adaptive-Dark-Mode_light.png",
+  "link_status": "ok",
+  "ko_title": "Safari, 27.3 베타에서 어댑티브 다크 모드 도입",
+  "summary": "Safari 27.3 베타에 어댑티브 다크 모드가 추가돼 사용자가 밝은 웹사이트를 자동으로 어두운 테마로 변환한다. 기존에 다크 모드를 지원하는 사이트는 영향을 받지 않으며, 색상 분석을 통해 밝은 페이지만 변환한다. 이 기능은 색상 행렬과 WCAG 대비 비율을 활용해 가시성을 유지한다.",
+  "why": "기존에 다크 모드를 명시적으로 선언한 사이트는 변환 대상에서 제외된다. 나머지 사이트는 색상 분석 후 밝은 페이지만 어두운 테마로 바꾼다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "The Two Workflows That Wrote to the Same Row and Both Said Success: Race Conditions in n8n",
+  "url": "https://dev.to/haopengai/the-two-workflows-that-wrote-to-the-same-row-and-both-said-success-race-conditions-in-n8n-4o1f",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 1,
+  "comments": 6,
+  "published_at": 1793756208.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/haopengai/the-two-workflows-that-wrote-to-the-same-row-and-both-said-success-race-conditions-in-n8n-4o1f"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fx2veih7gxavhsw8nkhzb.png",
+  "link_status": "ok",
+  "ko_title": "동일 행에 동시에 쓰고 성공이라고 표시한 두 워크플로우: n8n의 레이스 컨디션",
+  "summary": "두 워크플로우가 같은 고객 레코드를 동시에 업데이트하면서 각각 성공했다고 보고했지만, 실제로는 한쪽의 변경만 적용되었다. 전체 레코드를 덮어쓰는 방식이 충돌을 일으키며, 버전 검사를 포함한 부분 업데이트가 필요하다. 해결책은 업데이트 시 버전 일치를 확인하고, 충돌 시 재시도하도록 워크플로우를 수정하는 것이다.",
+  "why": "n8n 워크플로우에서 전체 레코드 덮어쓰기를 쓰면 동시 충돌 시 데이터가 조용히 사라진다. 업데이트 구문에 버전 일치 조건을 포함해 충돌 시 실패하도록 바꿔야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "govijr / terminal-mac",
+  "url": "https://github.com/govijr/terminal-mac",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 368,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/govijr/terminal-mac"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 368,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/govijr/terminal-mac",
+  "link_status": null,
+  "ko_title": "terminal-mac — 터미널에서 제어하는 macOS 가상 데스크톱",
+  "summary": "terminal-mac은 Apple 실리콘용 초기 릴리스 후보로, Apple Virtualization을 이용해 실제 macOS 게스트를 실행한다. 게스트 내부에 화면을 캡처하고 입력을 전달하는 헬퍼가 포함돼 있어 터미널(Kitty·iTerm2)에서 그래픽으로 화면을 스트리밍한다. 별도 VM이므로 호스트 앱이나 세션을 공유하지 않으며, 사전 빌드된 바이너리는 Xcode 없이 설치 가능하다.",
+  "why": "컴퓨터 사용 에이전트가 터미널에서 macOS 게스트를 제어하므로 물리적 마우스 포인터나 클립보드는 건드리지 않는다. 호스트의 실행 중 앱과 로그인 세션은 게스트에 상속되지 않아 격리된 환경에서 작업할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "C++26 Disapproved",
+  "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+  "source": "hackernews",
+  "upvotes": 222,
+  "comments": 119,
+  "published_at": 1793752402,
+  "discussion": "https://news.ycombinator.com/item?id=50360164",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://andreasfertig.com/img/2026-11-03-cpp26-failed-li.png",
+  "link_status": "ok",
+  "ko_title": "C++26 승인 거부",
+  "summary": "ISO 국가기관들의 투표에서 C++26 초안이 2/3 다수 결격으로 승인되지 않았다. 이는 C++ 역사상 최초의 DIS(초안) 부결 사례이며, 이전에 부결된 사례는 2006년 C++/CLI 초안뿐이다. 부결 이유는 일부 국가기관이 해당 기능을 아직 출시 준비가 안 됐다고 판단했기 때문이다.",
+  "why": "C++26 표준이 승인되지 않아 해당 기능의 릴리스 일정이 불확실해졌다. C++26 기반 기능을 개발 중이라면 표준 확정 전까지 구현 변경이 필요할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+  "url": "https://news.ycombinator.com/item?id=50352757",
+  "source": "hackernews",
+  "upvotes": 467,
+  "comments": 143,
+  "published_at": 1793717621,
+  "discussion": "https://news.ycombinator.com/item?id=50352757",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50352757"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI, Codex 채팅에서 모델 학습을 조용히 다시 활성화하는 것으로 보인다",
+  "summary": "사용자들이 Codex에서 데이터 공유 설정이 자동으로 다시 켜진 것을 발견했다. 설정은 https://chatgpt.com/settings/data-controls 에서 확인할 수 있다. “Improve the model for everyone” 옵션을 끄려면 https://privacy.openai.com/policies?modal=take-control 를 이용한다. 동일 현상이 이전에도 보고된 바 있다.",
+  "why": "IP 유출을 막기 위해 데이터 공유를 꺼둔 개발자는 Codex 설정이 자동으로 켜진 것을 확인해야 한다. chatgpt.com/settings/data-controls에서 \"Improve the model for everyone\" 옵션 상태를 점검하라.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "security"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "CWE-bench v2: More coverage, quality, and transparency",
+  "url": "https://huggingface.co/blog/cwe-bench",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793664000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/cwe-bench"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://huggingface.co/blog/assets/cwe-bench/thumbnail.jpg",
+  "link_status": "ok",
+  "ko_title": "CWE-bench v2: 더 많은 범위, 품질 및 투명성",
+  "summary": "CWE-bench v2는 100개의 공개 과제와 91개의 CWE를 포함해 보안 취약점 탐지·수정 모델을 평가한다. 과제는 실제 오픈소스 저장소와 짧은 지시문을 제공하고, 자동 채점으로 결과를 재현 가능하게 만든다. LLM 심사 패널이 검증 기준을 강화했으며, 보류된 별도 테스트 세트도 제공한다.",
+  "why": "보안 취약점 수정 모델을 평가할 때 실제 저장소 환경에서 재현 가능한 점수를 얻을 수 있다. 기존 패턴 인식만으로는 통과가 어려워 다중 취약점 표면 이해가 필수적이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "How to read PostgreSQL EXPLAIN output",
+  "url": "https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1793761101.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcgdc9s5i25hzdhevibnd.png",
+  "link_status": "ok",
+  "ko_title": "PostgreSQL EXPLAIN 출력 읽는 방법",
+  "summary": "EXPLAIN은 실행 계획을 트리 형태로 보여 주며, 각 노드에 비용·예상 행 수·행 너비를 추정값으로 표시한다. EXPLAIN ANALYZE를 사용하면 실제 실행 시간·행 수·반복 횟수가 추가된다. 계획을 분석할 때는 잎 노드부터 루트까지 따라가고, 행 수 불일치가 발생하면 조기 종료·루프 여부를 먼저 확인한다.",
+  "why": "비용과 행 수는 측정값이 아닌 추정치이므로 실제 실행 시간과 다를 수 있다. EXPLAIN ANALYZE는 문장을 실행해 자원을 소모하므로 확인 전에는 일반 EXPLAIN을 쓰라.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "Nano Banana 2.1: fourteen references, four that matter",
+  "url": "https://dev.to/chet103cc/nano-banana-21-fourteen-references-four-that-matter-247b",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 59,
+  "comments": 4,
+  "published_at": 1793768061.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chet103cc/nano-banana-21-fourteen-references-four-that-matter-247b"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy8pesz4yobnt2xtlcpf6.jpg",
+  "link_status": "ok",
+  "ko_title": "Nano Banana 2.1: 열네 개의 레퍼런스, 중요한 네 개",
+  "summary": "이 글은 이미지 레퍼런스 예산을 어떻게 효율적으로 사용할지 설명한다. 14개의 레퍼런스 슬롯을 4 + 10으로 나누어 인물 4개와 객체 10개로 제한하는 것이 최적이라고 제안한다. 각 레퍼런스는 역할별로 구분되며, 중복된 이미지는 노이즈가 된다.",
+  "why": "레퍼런스 슬롯은 상한선이지 목표가 아니므로, 유용한 세트 이후의 이미지는 노이즈가 됩니다. 인물 4개와 객체 10개로 예산을 나누어 각 이미지에 단일 역할을 부여해야 합니다. 무드 보드는 이미지 대신 텍스트로 서술하는 것이 더 효율적입니다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
+  "title": "Mac at any scale",
+  "url": "https://namespace.so/blog/mac-at-any-scale",
+  "source": "hackernews",
+  "upvotes": 363,
+  "comments": 203,
+  "published_at": 1793717622,
+  "discussion": "https://news.ycombinator.com/item?id=50352758",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://namespace.so/blog/mac-at-any-scale"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://namespace.so/blog-images/mac-at-any-scale/banner.png",
+  "link_status": "ok",
+  "ko_title": "Mac at any scale",
+  "summary": "",
+  "why": "iOS 앱 빌드와 시뮬레이터 실행은 Mac이 필수다. MacBook을 데이터센터 랙에 배치해 대규모 CI 환경을 구축하는 사례다. Mac Mini 공급망 차질로 최신 칩을 빠르게 확보하려는 대안이다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-04T16:00:05.260743+09:00",
+  "batch_label": "11월 4일 16:00"
+ },
+ {
   "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
   "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
   "source": "rss",

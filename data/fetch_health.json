@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-25T16:00:29+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "github": 3
-   },
-   "failures": []
-  },
-  {
    "at": "2026-10-26T00:00:29+09:00",
    "total": 14,
    "counts": {
@@ -568,6 +559,33 @@
     },
     {
      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-04T16:00:28+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 9,
+    "short": 2,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50352757",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://mrdoob.github.io/codevember-2026/01/",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
      "source": "rss",
      "reason": "blocked"
     }
