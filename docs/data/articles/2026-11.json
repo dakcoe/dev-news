@@ -1,5 +1,492 @@
 [
  {
+  "title": "Your AI's code is \"almost right\". Here are 7 ways it fools you, and the 30-second check for each",
+  "url": "https://dev.to/wst2002rk/your-ais-code-is-almost-right-here-are-7-ways-it-fools-you-and-the-30-second-check-for-each-4i93",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 36,
+  "comments": 3,
+  "published_at": 1793778883.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wst2002rk/your-ais-code-is-almost-right-here-are-7-ways-it-fools-you-and-the-30-second-check-for-each-4i93"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkjsamnw2log34hsxut71.jpg",
+  "link_status": "ok",
+  "ko_title": "AI가 만든 코드는 “거의 맞다”. 7가지 함정과 30초 점검법",
+  "summary": "AI 코딩 도구가 제시한 수정이 실제로는 테스트를 실행하지 않거나 테스트 자체를 변경해 통과시키는 경우가 많다. 또한 존재하지 않는 함수·패키지를 사용하거나, 정상적인 입력만 통과시키는 코드가 생산된다. 각 함정을 확인할 수 있는 30초 정도의 간단한 검증 명령을 제시한다.",
+  "why": "AI가 수정했다고 보고한 코드는 실제로 테스트를 실행하지 않았거나 테스트 자체를 바꿔 통과시킨 경우가 많다. 수락 전에 테스트 파일의 변경 이력을 확인하고 실행된 테스트 수를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "Kitty 0.50",
+  "url": "https://sw.kovidgoyal.net/kitty/changelog/#",
+  "source": "hackernews",
+  "upvotes": 263,
+  "comments": 160,
+  "published_at": 1793782630,
+  "discussion": "https://news.ycombinator.com/item?id=50362980",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://sw.kovidgoyal.net/kitty/changelog/#"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://sw.kovidgoyal.net/kitty/_images/social_previews/summary_changelog_3a0c7623.png",
+  "link_status": "ok",
+  "ko_title": "Kitty 0.50",
+  "summary": "이번 0.50 버전에서는 도킹 창 기능이 추가돼 편집기 옆에 상태 표시줄이나 파일 트리를 배치할 수 있다. 로그아웃·재시작 시 세션을 저장·복원하도록 옵션이 제공된다. 커스텀 셰이더를 공식 지원해 그래픽 효과를 다양하게 적용할 수 있다. 텍스트 처리량이 15-35% 향상돼 전반적인 성능이 개선됐다.",
+  "why": "도킹 창은 편집기 옆에 상태 표시줄이나 파일 트리를 고정할 때 쓰인다. 로그아웃 후 세션 복원은 restore_session_after_logout 옵션을 켜야 작동한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "Flare vs Sunburst: five prompts, rendered twice, one clear rule",
+  "url": "https://dev.to/chet103cc/flare-vs-sunburst-five-prompts-rendered-twice-one-clear-rule-1aae",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 50,
+  "comments": 0,
+  "published_at": 1793803502.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chet103cc/flare-vs-sunburst-five-prompts-rendered-twice-one-clear-rule-1aae"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbyjbynlmdhd6bi0nog0n.jpg",
+  "link_status": "ok",
+  "ko_title": "Flare vs Sunburst: 다섯 프롬프트, 두 번 렌더링, 한 가지 명확한 규칙",
+  "summary": "GPT Image 2.5는 Flare와 Sunburst 두 변형을 동일 이미지당 가격에 제공한다. 테스트에서는 동일 설정으로 다섯 프롬프트를 양쪽 모두 렌더링했으며, Flare는 처리 시간이 절반 수준으로 빠르지만 품질이 상황에 따라 다르게 나타난다. 빛을 강조한 이미지에는 Flare가, 레이아웃이나 인터페이스와 같은 배열을 강조한 이미지에는 Sunburst가 더 적합한 결과를 보였다.",
+  "why": "이미지 생성 시 빛 표현이 핵심이면 Flare, 레이아웃이나 인터페이스 배열이 핵심이면 Sunburst를 선택해야 한다. 나머지 경우 품질 차이가 없으므로 동일한 가격 기준에서 처리 속도가 빠른 Flare를 쓰는 것이 유리하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "FareedKhan-dev / kimi-k3-in-c",
+  "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+  "source": "github",
+  "upvotes": 351,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/FareedKhan-dev/kimi-k3-in-c"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 351,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/FareedKhan-dev/kimi-k3-in-c",
+  "link_status": null,
+  "ko_title": "kimi-k3-in-c — 2.78조 파라미터 모델, CPU와 8 GB RAM만으로 실행",
+  "summary": "C99로 구현된 Kimi K3 추론 엔진은 BLAS나 프레임워크 없이도 2.78조 파라미터 모델을 실행한다. 1.1.0 버전은 Linux·macOS·Windows를 지원하고, 8 GB RAM 환경에서 토큰당 약 26.5초가 소요된다. 메모리를 늘리면 속도가 개선된다.",
+  "why": "GPU나 프레임워크 없이 CPU만으로 2.78조 파라미터 모델을 돌릴 수 있다. 8 GB RAM 기준 토큰당 26.5초로, 실시간 응답이 필요한 서비스에는 부적합하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "4K for five credits: the cheapest upgrade in my image stack",
+  "url": "https://dev.to/chet103cc/4k-for-five-credits-the-cheapest-upgrade-in-my-image-stack-40eg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 39,
+  "comments": 0,
+  "published_at": 1793803598.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chet103cc/4k-for-five-credits-the-cheapest-upgrade-in-my-image-stack-40eg"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcd3etfcgwekz6s4z9sdv.jpg",
+  "link_status": "ok",
+  "ko_title": "5크레딧에 4K: 이미지 스택에서 가장 저렴한 업그레이드",
+  "summary": "4K 해상도는 5크레딧이며 1K는 3크레딧, 2K는 4크레딧이다. 저렴한 1K 단계에서 여러 시안을 만들고, 최종 4K 단계에서 선택된 프레임만 고해상도로 렌더링하면 전체 비용이 낮아진다. Callirra API 예시와 Google 이미지 출력 비용 비교가 포함된다.",
+  "why": "1K 시안 30개와 4K 최종본 10개 조합이 1K 100개 렌더링 후 업스케일링보다 저렴하다. 1K는 구도 확인용이며, 4K는 크롭 시 프레임 손실을 줄여주는 역할만 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "scenario-labs / skills",
+  "url": "https://github.com/scenario-labs/skills",
+  "source": "github",
+  "upvotes": 224,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/scenario-labs/skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 224,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/scenario-labs/skills",
+  "link_status": null,
+  "ko_title": "Scenario 에이전트 스킬",
+  "summary": "이 GitHub 저장소는 Claude Code, Cursor, Codex, Copilot 등 70여 개 이상의 AI 코딩 에이전트가 Scenario MCP 서버를 통해 이미지·영상 등 프로덕션 수준의 콘텐츠를 생성하도록 교육하는 Agent Skills를 제공한다.",
+  "why": "Claude Code나 Cursor 같은 에이전트를 쓰는 개발자는 이 스킬을 설치해 이미지나 영상 생성을 에이전트에 위임할 수 있다. 프롬프트 작성 대신 MCP 서버를 통한 콘텐츠 생성 워크플로를 에이전트에게 학습시키는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "HunYiSage / dsh-purge",
+  "url": "https://github.com/HunYiSage/dsh-purge",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 749,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/HunYiSage/dsh-purge"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 749,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/HunYiSage/dsh-purge",
+  "link_status": null,
+  "ko_title": "DeepSeek Harness 사이버보안 레드팀 도구 (dsh-purge)",
+  "summary": "dsh-purge는 DeepSeek Harness용 레드팀 툴로 버전 1.1.90이 출시되었다. 모든 모델에 대한 jailbreak를 지원하며, 기본 프롬프트는 소마장으로 설정돼 있다. Node.js 이상 18 환경에서 JavaScript로 동작하고 Apache-2.0 라이선스를 사용한다.",
+  "why": "DeepSeek Harness 환경에서 모델별 프롬프트를 교체해 제이브레이크를 테스트할 때 이 도구를 쓸 수 있다. 기본 프롬프트가 특정 이름으로 고정돼 있어, 실제 서비스 시나리오에 맞게 직접 수정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "security",
+   "web",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
+  "url": "https://news.ycombinator.com/item?id=50363461",
+  "source": "hackernews",
+  "upvotes": 297,
+  "comments": 82,
+  "published_at": 1793787027,
+  "discussion": "https://news.ycombinator.com/item?id=50363461",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50363461"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Gemini가 채팅 기록을 학습에 사용, 구독자도 포함 (개인 계정)",
+  "summary": "개인 Google AI 구독자는 Gemini에서 저장한 모든 채팅 기록이 학습에 사용되며, 옵트아웃 방법은 채팅 기록을 끄거나 임시 세션을 사용하는 것뿐이다. 인간 리뷰어가 일부 대화를 검토하고, 검토된 대화는 삭제해도 최대 3년간 보관된다. “Keep Activity” 설정을 끄면 학습을 차단할 수 있지만, 72시간 이후 대화가 사라진다.",
+  "why": "Gemini 채팅 기록은 학습 데이터로 쓰이며, 유료 구독만으로는 차단되지 않는다. 비밀 정보를 입력하면 인간 리뷰어가 볼 수 있고, 삭제해도 최대 3년간 보관된다. 학습을 막으려면 'Keep Activity'를 끄야 하며, 이때 72시간 뒤 채팅이 사라진다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "UncensoredLabs / uncensored-ai-api",
+  "url": "https://github.com/UncensoredLabs/uncensored-ai-api",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 434,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/UncensoredLabs/uncensored-ai-api"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 434,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/UncensoredLabs/uncensored-ai-api",
+  "link_status": null,
+  "ko_title": "UncensoredLabs / 검열되지 않은 AI API",
+  "summary": "UncensoredLabs가 DeepSeek와 GLM 텍스트 모델을 검열 없이 제공하는 OpenAI 호환 API를 공개했다. 계정 생성 시 $0.10의 체험 크레딧을 제공하고, 최소 $3부터 선불 충전이 가능하다. 공식 저장소에는 가이드, 설정 예시, API 샘플이 포함되어 있다.",
+  "why": "기존 OpenAI 호환 클라이언트 코드에서 base URL만 바꾸면 바로 적용할 수 있다. DeepSeek와 GLM 모델의 검열이 제거된 버전이 제공되는 것이 핵심 변화다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+  "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+  "source": "hackernews",
+  "upvotes": 306,
+  "comments": 158,
+  "published_at": 1793781989,
+  "discussion": "https://news.ycombinator.com/item?id=50362905",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://i.mscdn.ai/o/iZl0kkZU2R9KXyy7/a/3V2ICO3oSq2QZPii/_published/generated-images/0d8c9668-cbfe-4ecf-bb31-1a7fff7102be.png?fm=auto&w=1200&h=630&fit=crop",
+  "link_status": "ok",
+  "ko_title": "Nvidia RTX Spark 암호화 펌웨어, Linux에서 추론 속도 35%로 감소",
+  "summary": "Linux는 Nvidia RTX Spark 노트북에서 GPU 가속과 4K 120 Hz 출력 등을 지원하지만, 전원 연결 시 GPU 클럭이 780 MHz로 제한돼 토큰 처리 속도가 14 tps 수준으로 크게 떨어진다. 이는 Windows 전용 전원 관리 펌웨어가 암호화돼 Linux에서 읽을 수 없기 때문이다. 또한 GPU에 기본 할당된 96 GB 통합 메모리를 조정할 수 없어 메모리 사용에도 제약이 있다. 현재는 Windows 드라이버를 이용하는 WSL이 실용적인 대안이다.",
+  "why": "RTX Spark 노트북에서 Linux를 쓰면 GPU 클럭이 780 MHz로 고정돼 추론 속도가 크게 떨어진다. 현재는 WSL을 쓰는 것이 실용적인 대안이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "After 5 years, Wasp 1.0 is coming: a 6-month plan for our full-stack JS framework",
+  "url": "https://dev.to/wasp/after-5-years-wasp-10-is-coming-a-6-month-plan-for-our-full-stack-js-framework-4hlf",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 82,
+  "comments": 11,
+  "published_at": 1793788932.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wasp/after-5-years-wasp-10-is-coming-a-6-month-plan-for-our-full-stack-js-framework-4hlf"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fwasp.sh%2Fimg%2Fblog%2F2026-10-20-wasp-1-0-is-coming%2Fwasp-1-0-is-coming-banner.webp",
+  "link_status": "ok",
+  "ko_title": "5년 만에 Wasp 1.0 출시 예정: 풀스택 JS 프레임워크 6개월 로드맵",
+  "summary": "Wasp 팀이 5년간 베타 단계에 머물렀던 풀스택 JavaScript 프레임워크의 정식 1.0 버전을 6개월 안에 출시한다는 계획을 발표했다. 현재 React·Node·Prisma 기반이며 자체 선언형 언어와 컴파일러를 사용한다. 베타 기간 동안 100여 차례 릴리즈와 5백만 달러 투자, 다수 기업이 사용한 실적을 보유했다.",
+  "why": "Wasp 1.0은 6개월 내 출시될 예정이며, 현재 베타 버전은 React·Node·Prisma 기반으로 동작한다. 자체 선언형 언어와 컴파일러를 사용하므로 기존 JS 프레임워크와 다른 개발 경험을 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "AI is forcing us to pay off 40 years of technical debt",
+  "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+  "source": "hackernews",
+  "upvotes": 360,
+  "comments": 253,
+  "published_at": 1793793137,
+  "discussion": "https://news.ycombinator.com/item?id=50364336",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://spectrum.ieee.org/media-library/image.jpg?id=68544156&width=1200&height=600&coordinates=0%2C312%2C0%2C313",
+  "link_status": "ok",
+  "ko_title": "AI가 40년간의 기술 부채를 갚게 만든다",
+  "summary": "최근 PHP2Shell 취약점이 발견돼 NASA·위키피디아·백악관 등 수많은 사이트가 위험에 처했지만, 패치가 신속히 배포돼 큰 사고는 피했다. 연구자들은 이 사건이 AI 시대에 레거시 소프트웨어의 취약점이 폭로될 위험을 보여준다고 경고한다. PHP의 오래된 메모리 오류가 이번 취약점의 근원이며, 기존에 무시돼 온 버그들이 AI에 의해 재조명되고 있다.",
+  "why": "PHP2Shell은 단순 크래시였던 메모리 오류가 AI 분석으로 악용 가능 취약점으로 재분류된 사례다. 기존에 무시하던 버그들이 AI에 의해 위험 요소로 드러나므로 레거시 코드 점검 기준을 재설정해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "hardware",
+   "science"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "The-PR-Agent / pr-agent",
+  "url": "https://github.com/The-PR-Agent/pr-agent",
+  "source": "github",
+  "upvotes": 279,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/The-PR-Agent/pr-agent"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 279,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/The-PR-Agent/pr-agent",
+  "link_status": null,
+  "ko_title": "The-PR-Agent / pr-agent",
+  "summary": "PR-Agent은 오픈소스 AI 기반 코드 리뷰 에이전트이며, Qodo의 상용 AI 리뷰와는 별도이다. GitHub, GitLab, Bitbucket, Azure DevOps와 연동해 자동 리뷰를 제공한다. 커뮤니티와 스폰서가 지속적으로 개발을 지원한다.",
+  "why": "Qodo 상용 AI 리뷰와 별개의 오픈소스 프로젝트다. GitHub, GitLab, Bitbucket, Azure DevOps에 연동해 자동 리뷰를 수행한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "We're Building AI to Replace Ourselves. What's the Plan?",
+  "url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 65,
+  "comments": 34,
+  "published_at": 1793779585.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmsqofwuj23waq6n4qaof.png",
+  "link_status": "ok",
+  "ko_title": "우리는 스스로를 대체할 AI를 만들고 있다. 계획은?",
+  "summary": "저자는 현재 데이터 보안이 중요한 직장에서 AI 코딩 에이전트를 사용하고 있다고 밝힌다. AI가 간단한 기능을 스스로 구현하고 디버깅까지 돕는 수준에 이르렀으며, 이는 앞으로 애플리케이션이 거의 자동으로 생성되는 시대를 예고한다. 향후 AI 에이전트가 자체 하위 에이전트를 생성하고 복잡한 작업을 수행하게 되면 개발자의 역할이 크게 변할 것으로 전망한다.",
+  "why": "레거시 코드 디버깅까지 AI가 처리하므로 기존 수동 수정 방식의 비중이 줄어든다. 하위 에이전트 생성 기능이 상용화되면 단일 프롬프트로 복잡한 작업을 위임하는 구조로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
+  "title": "Geoffrey Hinton: it might turn out we were better off without AI",
+  "url": "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai",
+  "source": "hackernews",
+  "upvotes": 217,
+  "comments": 172,
+  "published_at": 1793787814,
+  "discussion": "https://news.ycombinator.com/item?id=50363554",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://i.guim.co.uk/img/media/2874e862dc2a0fc34d651f70e5ecffd542d947a6/543_22_2658_2128/master/2658.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=ae0638cdbc3daea6b3a154d41c73dad9",
+  "link_status": "ok",
+  "ko_title": "Geoffrey Hinton: AI 없이 사는 것이 더 나았을 수도 있다",
+  "summary": "AI의 창시자 중 한 명인 힌턴이 AI가 대규모 금융·전력 시스템 정전 등 위험을 초래할 수 있다고 경고했다. 그는 AI가 “놀라운 미래”를 만들 가능성도 있지만, 위험 관리에 실패하면 사회적 격차와 실업이 급증할 것이라고 말했다. 힌턴은 주요 AI 기업들의 위험 무시 태도를 비판하며, 특히 OpenAI의 샘 알트만을 신뢰하지 않는다고 밝혔다.",
+  "why": "AI 모델 배포가 가속화되는 상황에서 시스템 정전 같은 대형 사고 위험이 현실화될 수 있다. 금융·전력 인프라를 다루는 백엔드 개발자는 AI 의존도가 높아지는 서비스의 장애 시나리오를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-05T00:00:01.383574+09:00",
+  "batch_label": "11월 5일 00:00"
+ },
+ {
   "title": "KKKKhazix / agent-autoloop",
   "url": "https://github.com/KKKKhazix/agent-autoloop",
   "source": "github",

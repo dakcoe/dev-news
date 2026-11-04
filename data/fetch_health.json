@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-26T00:00:29+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 8,
-    "robots": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://twitter.com/mike64_t/status/2114150399406202896",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-10-26T08:00:24+09:00",
    "total": 12,
    "counts": {
@@ -588,6 +572,22 @@
      "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T00:00:29+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 9,
+    "short": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50363461",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
