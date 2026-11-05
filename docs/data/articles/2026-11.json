@@ -1,5 +1,517 @@
 [
  {
+  "title": "Baidu released ERNIE 5.5 Flash Base",
+  "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+  "source": "hackernews",
+  "upvotes": 118,
+  "comments": 68,
+  "published_at": 1793870952,
+  "discussion": "https://news.ycombinator.com/item?id=50377078",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Baidu, ERNIE 5.5 Flash Base 공개",
+  "summary": "Baidu가 280억 파라미터 규모의 희소 MoE 언어 모델 ERNIE-5.5-Flash-Base를 공개했다. 토큰당 140억 파라미터가 활성화되며, 사전 학습은 33.5조 토큰, 컨텍스트 길이는 최대 128K, 파인튜닝·추론 시 1M 토큰을 지원한다. 효율성을 중시해 설계·학습 시스템을 함께 최적화했으며, 도메인 적응·명령 튜닝·강화학습 연구의 출발점으로 제공한다.",
+  "why": "도메인 적응이나 강화학습 연구의 출발점으로 쓸 수 있다. 사전 학습만 완료된 상태이므로 중간 학습이나 후학습은 직접 수행해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "lz4 / lz4",
+  "url": "https://github.com/lz4/lz4",
+  "source": "github",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/lz4/lz4"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 16,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/lz4/lz4",
+  "link_status": null,
+  "ko_title": "lz4 / lz4",
+  "summary": "LZ4는 손실 없는 압축 알고리즘으로 코어당 500 MB/s 이상의 압축 속도와 다중 코어에서 수 GB/s 수준의 복호화 속도를 제공한다. 압축 속도는 “acceleration” 인자를 통해 동적으로 조정 가능하며, 높은 압축률을 원하는 경우 LZ4_HC 모드를 사용할 수 있다. 또한 사전 압축 기능을 지원해 작은 파일 압축 성능을 크게 향상시킬 수 있다. 라이브러리는 BSD 2-Clause 라이선스로, 명령줄 유틸리티는 GPL-2.0-or-later 라이선스로 배포된다.",
+  "why": "라이브러리는 BSD 2-Clause, 명령줄 유틸리티는 GPL-2.0-or-later 라이선스다. 프로덕션 코드에 유틸리티를 직접 포함시킬 시 라이선스 충돌을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+  "url": "https://huggingface.co/blog/phonon-tts",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793836800.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/phonon-tts"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://huggingface.co/blog/assets/phonon-closer-look/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Phonon TTS 자세히 살펴보기 — 고품질 온디바이스 음성, 벤치마크 최고",
+  "summary": "Phonon은 서버 없이 로컬에서 동작하는 텍스트-투-스피치 모델이다. 31 M 파라미터 버전은 Apache 2.0 라이선스로 상업용에도 무료이며, 다른 모델은 비영리 프로젝트에 무료다. 모델 크기는 65 MB와 75 MB 두 가지이며, 다섯 개 언어와 커스텀 보이스 클로닝을 지원한다.",
+  "why": "Apache 2.0 라이선스인 31M 버전은 상업용 제품에 무료로 적용할 수 있다. 서버와 네트워크 없이 로컬에서 동작하므로 텍스트 데이터가 외부로 전송되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "vercel-labs / agent-browser",
+  "url": "https://github.com/vercel-labs/agent-browser",
+  "source": "github",
+  "upvotes": 181,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/vercel-labs/agent-browser"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 181,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/vercel-labs/agent-browser",
+  "link_status": null,
+  "ko_title": "vercel-labs / agent-browser — AI 에이전트를 위한 브라우저 자동화 도구",
+  "summary": "agent-browser는 Rust로 만든 CLI이며 AI 에이전트가 한 번에 하나의 명령으로 브라우저를 제어할 수 있게 한다. `snapshot` 명령은 페이지를 텍스트와 요소 레퍼런스로 반환하고, 에이전트는 레퍼런스를 사용해 요소를 조작하고 결과를 다시 확인한다. npm, Homebrew, Linux 전용 옵션 등 다양한 설치 방법을 제공하며, `npx`를 이용해 설치 없이도 바로 실행할 수 있다.",
+  "why": "기존 스크래핑 방식과 달리 접근성 트리 기반의 텍스트 스냅샷을 반환한다. AI 에이전트가 요소를 참조해 조작하고 결과를 즉시 검증하는 루프를 구현할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "zortos293 / Lichii",
+  "url": "https://github.com/zortos293/Lichii",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 501,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/zortos293/Lichii"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 501,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/zortos293/Lichii",
+  "link_status": null,
+  "ko_title": "Lichii",
+  "summary": "Lichii는 C++로 만든 실험용 오픈소스 Nintendo Switch·Switch 2 에뮬레이터이다. 기존 Eglantine·Eden·yuzu·Sudachi 코드를 기반으로 포크했으며, Windows용 빌드가 릴리즈 페이지에 제공된다. 기존 Eden/Eglantine 데이터 디렉터리와 설정 키를 그대로 유지해 저장 파일을 그대로 사용할 수 있다.",
+  "why": "기존 Eden·Eglantine 환경이라면 저장 파일과 설정을 그대로 유지해 즉시 실행할 수 있다. 다만 실험 단계라 렌더링 오류나 크래시가 발생할 수 있어 저장 데이터를 백업해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Discord is ditching Electron and its new app uses less RAM",
+  "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app",
+  "source": "hackernews",
+  "upvotes": 108,
+  "comments": 68,
+  "published_at": 1793883928,
+  "discussion": "https://news.ycombinator.com/item?id=50378625",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/acastro_STK062_01.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+  "link_status": "ok",
+  "ko_title": "Discord, Electron 포기… 새 앱은 RAM 사용량 감소",
+  "summary": "Discord가 데스크톱 클라이언트를 Electron 대신 Rust로 전면 이전한다. 새 Windows 클라이언트는 약 290 MB 메모리를 사용해 기존 1 GB 이상 사용하던 버전을 크게 줄였다. 전환 시점은 아직 미정이지만 곧 사용자 테스트를 진행할 예정이다.",
+  "why": "Electron 기반 클라이언트에서 Rust로 전환되면서 메모리 사용량이 크게 줄었다. Discord를 백엔드 연동이나 자동화 스크립트에 쓰는 경우, 리소스 소모가 낮아진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Don't Write Markdown Files for Your Coding Agent. Write Scripts.",
+  "url": "https://dev.to/dannwaneri/dont-write-markdown-files-for-your-coding-agent-write-scripts-j00",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 3,
+  "published_at": 1793878181.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dannwaneri/dont-write-markdown-files-for-your-coding-agent-write-scripts-j00"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F701t0c2zifz0n0n7667t.jpg",
+  "link_status": "ok",
+  "ko_title": "코딩 에이전트를 위해 마크다운 파일을 쓰지 말고 스크립트를 작성하라",
+  "summary": "현재 코딩 에이전트는 탐색적이고 모호한 프롬프트에 기반해 패치를 만들고 테스트를 반복한다. 이런 방식은 프로토타이핑에 적합하지만, 동일한 작업을 일관되게 수행해야 할 때는 불안정하다. 마크다운 문서는 에이전트에게 지시를 전달하는 데 한계가 있어 해석 오류를 초래한다. 대신 결정론적인 스크립트를 사용하면 에이전트가 명확한 성공·실패 결과를 얻으며 판단이 필요 없는 작업을 수행할 수 있다.",
+  "why": "반복 작업에 에이전트를 쓸 때 마크다운 지시문 대신 스크립트를 호출하도록 구성해야 한다. 에이전트가 문서 해석에서 벗어나 스크립트 실행 결과로만 판단하도록 하면 실패 원인을 명확히 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Your build attestation is a chain of custody, not a safety certificate",
+  "url": "https://dev.to/cyclopt_dimitrisk/your-build-attestation-is-a-chain-of-custody-not-a-safety-certificate-41mm",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 8,
+  "comments": 2,
+  "published_at": 1793864287.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/your-build-attestation-is-a-chain-of-custody-not-a-safety-certificate-41mm"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fv3ohii1r3s5u75d77w9x.png",
+  "link_status": "ok",
+  "ko_title": "빌드 증명은 안전 인증서가 아니라 연쇄 보관 기록이다",
+  "summary": "빌드와 배포 과정의 모든 단계가 서명되고 기록되는 프로비넌스는 사고 발생 시 원인 파악에 도움이 된다. 그러나 이러한 기록은 코드가 올바르게 동작한다는 보장을 제공하지 않는다. 기사에서는 서명 검증이 누락된 경우와 테스트가 충분히 커버되지 않은 경우 두 가지 실패 시나리오를 예시한다.",
+  "why": "서명된 빌드 기록은 배포된 아티팩트가 변조되지 않았음을 보장할 뿐, 코드 로직 자체의 오류를 잡아주지 않는다. 서명 검증 로직의 누락이나 테스트 케이스의 부족은 프로비넌스 기록이 완벽하더라도 그대로 프로덕션으로 올라갈 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research",
+   "release"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Popularity Depends on How You Define It: How 700 RSS Bot Posts Took Over DEV's Community Hub 🤖💥",
+  "url": "https://dev.to/dj29/popularity-depends-on-how-you-define-it-how-700-rss-bot-posts-took-over-devs-community-hub-414p",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 33,
+  "comments": 17,
+  "published_at": 1793883336.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dj29/popularity-depends-on-how-you-define-it-how-700-rss-bot-posts-took-over-devs-community-hub-414p"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnixds1pgz41lb4ux5y8p.png",
+  "link_status": "ok",
+  "ko_title": "인기도는 정의에 따라 달라진다: 700개의 RSS 봇 게시물이 DEV 커뮤니티 허브를 장악한 이유",
+  "summary": "DEV 커뮤니티 허브의 인기 회원 순위가 RSS 피드 자동 게시 봇 때문에 왜곡되었다. 기존 쿼리에서 피드 게시물을 제외하지 않아 게시물 수가 많은 봇이 상위에 올랐으며, 이를 수정하면서 PostgreSQL 쿼리 플래너 비용 분석까지 진행했다.",
+  "why": "PostgreSQL 쿼리에서 특정 필터를 누락하면 데이터가 왜곡된다는 사례다. 랭킹 로직을 만들 때 집계 기준을 명시적으로 제한해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "career-culture"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Setting a new standard for responsible AI infrastructure",
+  "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793844000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/3tfG1ium2HchPnPJartCV6/bd2d0a4c101b0a41440cc45adefa35cd/setting-a-new-standard-for-responsible-ai-infrastructure-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "책임 있는 AI 인프라를 위한 새로운 표준 설정",
+  "summary": "OpenAI가 미국 내 AI 컴퓨팅 캠퍼스 운영 시 지역 사회와의 협약과 정책 청사진을 공개했다. 이 문서는 지역 주민에게 캠퍼스 개발에 대한 발언권을 부여하고, 비용 부담을 최소화하며, 경제적 이익을 공유하도록 설계되었다. 이전에 발표한 에너지 비용 자부와 현지 투자 약속을 확장한 내용이다.",
+  "why": "AI 인프라 확충이 지역 사회 비용 부담과 직결되므로, 관련 정책 변화를 추적해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "career-culture"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "WebMCP Attack Lab: Can an E-Shop Hijack Your AI Agent?",
+  "url": "https://dev.to/gramli/webmcp-attack-lab-can-an-e-shop-hijack-your-ai-agent-4oe5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 31,
+  "comments": 15,
+  "published_at": 1793863756.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gramli/webmcp-attack-lab-can-an-e-shop-hijack-your-ai-agent-4oe5"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fv7lgr9ne1q8nrb0kchad.jpg",
+  "link_status": "ok",
+  "ko_title": "WebMCP 공격 실험실: 전자상거래 사이트가 AI 에이전트를 탈취할 수 있을까",
+  "summary": "저자는 Angular 22에서 실험적으로 지원되는 WebMCP를 활용해 전자상거래 시뮬레이션을 만든 뒤, AI 에이전트가 쇼핑을 수행하도록 했다. 동시에 악의적인 툴 설명을 삽입해 에이전트가 예산을 초과하도록 유도하는 공격 시나리오를 구현했다. 이 실험은 브라우저 기반 AI 에이전트와 웹 표준의 보안 위험을 탐구한다.",
+  "why": "Angular 22의 실험적 WebMCP 지원으로 브라우저 내 AI 에이전트와 웹 표준의 보안 위험이 구체화됐다. 에이전트를 전자상거래에 활용하려면 툴 설명에 숨겨진 악의적 지시로부터 예산 이탈을 막는 검증이 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "A Maintainer's Advice on Contributing to Open Source in 2026",
+  "url": "https://dev.to/wasp/a-maintainers-advice-on-contributing-to-open-source-in-2026-4ea1",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 24,
+  "comments": 2,
+  "published_at": 1793870495.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wasp/a-maintainers-advice-on-contributing-to-open-source-in-2026-4ea1"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fwasp.sh%2Fimg%2Fblog%2F2026-08-13-advice-for-contributing-in-2026%2Fbanner.webp",
+  "link_status": "ok",
+  "ko_title": "2026년 오픈소스 기여에 대한 유지관리자의 조언",
+  "summary": "오픈소스 유지관리자는 열정과 이해를 가진 기여자를 이상적인 협업 파트너로 본다. 실제 사례로 Wasp 프로젝트에 깊이 있는 제안을 한 기여자와 Windows 지원을 도운 기여자를 소개한다. 그러나 동기 부족으로 인한 저품질 PR이 다수 존재한다는 현실도 언급한다.",
+  "why": "프로젝트를 실제로 쓰며 문제를 이해한 뒤 기여하면 협업의 질이 달라진다. 단순히 병합을 위한 PR은 유지관리자의 시간을 소모하므로 피해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Sshole",
+  "url": "https://sshhole.com",
+  "source": "hackernews",
+  "upvotes": 755,
+  "comments": 216,
+  "published_at": 1793881142,
+  "discussion": "https://news.ycombinator.com/item?id=50378228",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://sshhole.com"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Sshole — Unix 비밀번호 처리 역사",
+  "summary": "1980년 Bill Joy가 daemon 계정에 를 넣어 비밀번호 없이 로그인 불가하게 만든 이래, Unix는 /etc/passwd에서 /etc/shadow로 비밀번호 해시 위치를 옮겼다. 1990년대 crypt() 함수가 실패 시 NULL을 반환하지만 많은 프로그램이 이를 체크하지 않아 크래시가 발생했다. 2012년 musl libc는 NULL 대신 매치 불가능한 단일 문자 “?”(실제로는 “”)를 반환하도록 바꾸어 크래시를 방지한다.",
+  "why": "musl libc 환경에서 crypt() 실패 시 NULL 대신 물음표를 반환한다. NULL 체크를 누락한 기존 코드가 크래시 없이 실패로 처리된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "Awesome repositories are no longer awesome",
+  "url": "https://erikgahner.github.io/posts/2026/awesome-repositories-are-no-longer-awesome/",
+  "source": "hackernews",
+  "upvotes": 146,
+  "comments": 76,
+  "published_at": 1793877411,
+  "discussion": "https://news.ycombinator.com/item?id=50377821",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://erikgahner.github.io/posts/2026/awesome-repositories-are-no-longer-awesome/"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Awesome 레포지토리는 더 이상 Awesome하지 않다",
+  "summary": "기존에 유용했던 ‘awesome’ 접두사 레포지토리들이 AI 도입으로 오래된 자료와 무관한 PR이 늘어나 신뢰성이 떨어졌다. 최신 AI 모델을 활용하면 최신 정보와 도구를 빠르게 얻을 수 있다.",
+  "why": "기존에 의존하던 큐레이션 목록 대신 최신 AI 모델에 직접 질의하는 방식으로 전환해야 한다. 1년 이상 방치된 레포지토리는 2016년 데이터까지 포함하므로 신뢰할 수 없다. AI가 생성한 범용 도구 PR이 대량 유입되어 목록의 품질이 급격히 하락했다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "OpenSSH 10.6p2 has been released with a workaround for a critical vulnerability",
+  "url": "https://hachyderm.io/@damienmiller/117563026759098135",
+  "source": "hackernews",
+  "upvotes": 134,
+  "comments": 51,
+  "published_at": 1793871977,
+  "discussion": "https://news.ycombinator.com/item?id=50377221",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hachyderm.io/@damienmiller/117563026759098135"
+  ],
+  "cross_source_count": 1,
+  "score": 24,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenSSH 10.6p2, 중요한 취약점에 대한 우회 방법과 함께 출시",
+  "summary": "",
+  "why": "OpenSSH 10.6p2로 업데이트해야 한다. 중요한 취약점에 대한 우회 방법이 포함되었기 때문이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
+  "title": "N1nEmAn / sapper-v2",
+  "url": "https://github.com/N1nEmAn/sapper-v2",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 230,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/N1nEmAn/sapper-v2"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 230,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/N1nEmAn/sapper-v2",
+  "link_status": null,
+  "ko_title": "N1nEmAn / sapper-v2 — Autonomous Pentest Legion",
+  "summary": "",
+  "why": "모델과 에이전트를 자유롭게 교체할 수 있는 멀티 에이전트 오케스트레이션 구조를 제공한다. 장기 실행 시나리오에서 에이전트 간 스케줄링과 공동 메모리 관리 방식을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-06T00:00:01.593403+09:00",
+  "batch_label": "11월 6일 00:00"
+ },
+ {
   "title": "We Gave a Local LLM Live Web Access. Here’s How",
   "url": "https://dev.to/zenrows/we-gave-a-local-llm-live-web-access-heres-how-1a88",
   "source": "devto",
