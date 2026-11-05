@@ -1,5 +1,466 @@
 [
  {
+  "title": "We Gave a Local LLM Live Web Access. Here’s How",
+  "url": "https://dev.to/zenrows/we-gave-a-local-llm-live-web-access-heres-how-1a88",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793861267.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zenrows/we-gave-a-local-llm-live-web-access-heres-how-1a88"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6i0ow61ai3u40hqn83jb.png",
+  "link_status": "ok",
+  "ko_title": "로컬 LLM에 실시간 웹 접근 권한을 부여했습니다",
+  "summary": "Ollama의 qwen3 모델을 Zenrows MCP와 연결해 웹 검색과 페이지 추출을 수행하는 방법을 소개한다. 코드 없이 ollmcp 브리지와 짧은 Python 에이전트를 이용해 구현하며, 필요한 환경은 Ollama, 도구 지원 모델, Node.js, Python 3.11 이상이다. Zenrows는 요청을 프록시 회전, JavaScript 렌더링 등으로 처리해 모델에 구조화된 JSON을 제공한다.",
+  "why": "로컬 LLM이 웹 검색 도구를 직접 호출하는 구조를 만들 수 있다. 반봇 챌린지나 자바스크립트 렌더링이 필요한 페이지도 구조화된 JSON으로 받아낼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "Images 2.6",
+  "url": "https://openai.com/index/introducing-images-2-6/",
+  "source": "hackernews",
+  "upvotes": 227,
+  "comments": 147,
+  "published_at": 1793835344,
+  "discussion": "https://news.ycombinator.com/item?id=50372945",
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-images-2-6",
+   "https://openai.com/index/introducing-images-2-6/"
+  ],
+  "cross_source_count": 2,
+  "score": 70,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6EYvL2y5CLXFr8E1pqoVUK/064e0d73b10087e20967b69ef0a06678/images-2-6-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Images 2.6",
+  "summary": "Images 2.6은 이미지 생성 속도를 50% 높이고 GIF 애니메이션을 지원한다. API에서는 저품질용 Flare와 고품질용 Sunburst 두 모델을 제공한다. 새 모델은 레이아웃 품질을 개선하고 편집 간 일관성을 강화한다.",
+  "why": "API에서 저품질 Flare와 고품질 Sunburst를 선택할 수 있다. 편집 시 캐릭터와 브랜드 디테일 일관성이 강화된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media",
+   "backend-data"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "A thousand fewer paths to root",
+  "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+  "source": "hackernews",
+  "upvotes": 267,
+  "comments": 163,
+  "published_at": 1793835194,
+  "discussion": "https://news.ycombinator.com/item?id=50372929",
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/a-thousand-fewer-paths-to-root",
+   "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+  ],
+  "cross_source_count": 2,
+  "score": 65,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/400PQ4WTCOvXwwvk1OMOHv/03970ddeafd22fdbc9832669deacc59c/a-thousand-fewer-paths-to-root-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "루트 권한 획득 경로를 천 개 줄였다",
+  "summary": "자동화된 취약점 탐지·악용·패치 파이프라인이 Linux 로컬 권한 상승 취약점 948건을 검증하고 패치를 생성했다. 2,308개의 후보를 분석해 1,724건을 재현했으며, API 비용은 120만 달러였다. 파이프라인은 정적·동적 분석과 패치 생성까지 포함한다.",
+  "why": "Linux 커널 로컬 권한 상승 취약점 948건에 대한 패치가 생성되어 배포 전 검증이 필요하다. 기존 수동 분석과 달리 자동화 파이프라인이 패치 후보를 대량으로 제공한다. 커널 업데이트 시 해당 패치가 적용되었는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "A new Go API for JSON",
+  "url": "https://go.dev/blog/jsonv2",
+  "source": "hackernews",
+  "upvotes": 278,
+  "comments": 128,
+  "published_at": 1793814731,
+  "discussion": "https://news.ycombinator.com/item?id=50369106",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://go.dev/blog/jsonv2"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://go.dev/doc/gopher/gopher5logo.jpg",
+  "link_status": "ok",
+  "ko_title": "새로운 Go JSON API",
+  "summary": "Go 1.27에 encoding/json/v2와 encoding/json/jsontext 패키지가 정식으로 포함돼 기존 encoding/json의 문제점을 개선한다. 주요 개선점은 UTF-8 유효성 검사 강화와 중복 키 처리 등이다.",
+  "why": "Go 1.27에서 기존 패키지의 UTF-8 오류와 중복 키 문제를 해결한 새 API가 정식 제공된다. 백엔드 서비스의 데이터 무결성을 위해 기존 코드를 새 패키지로 마이그레이션해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "River Enqueues Jobs in Your Postgres Transaction. Keep It Out of Your Go Domain",
+  "url": "https://dev.to/gabrielanhaia/river-enqueues-jobs-in-your-postgres-transaction-keep-it-out-of-your-go-domain-411n",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793858471.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gabrielanhaia/river-enqueues-jobs-in-your-postgres-transaction-keep-it-out-of-your-go-domain-411n"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk0zpbr5l3084iz3nhta3.jpg",
+  "link_status": "ok",
+  "ko_title": "River가 Postgres 트랜잭션 안에서 작업을 큐에 넣는다 — Go 도메인에서 제외하기",
+  "summary": "River는 작업을 Postgres 트랜잭션과 동일하게 커밋하거나 롤백하도록 보장한다. 기존 방식은 pgx와 River를 비즈니스 로직에 섞어야 했지만, 예시 코드에서는 두 라이브러리를 도메인 로직 밖에 두었다. InsertTx 메서드가 핵심이며, 작업이 커밋 전에는 실행되지 않는다.",
+  "why": "Postgres 트랜잭션과 작업 큐의 커밋 시점을 일치시켜 데이터 정합성을 확보할 수 있다. pgx와 River를 도메인 로직 밖으로 분리하는 패턴을 적용해 의존성을 정리해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "career-culture"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "How to Build Your Team's First Shared Agent",
+  "url": "https://dev.to/therealmrmumba/how-to-build-your-teams-first-shared-agent-3b4p",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 22,
+  "comments": 1,
+  "published_at": 1793858906.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/therealmrmumba/how-to-build-your-teams-first-shared-agent-3b4p"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcwrnmc3hso2hxtrkr62v.png",
+  "link_status": "ok",
+  "ko_title": "팀의 첫 공유 에이전트 만들기",
+  "summary": "팀 내 AI 활용이 개인별로 흩어져 있어 일관성이 부족하고 담당자가 부재 시 업무가 중단된다. 공유 에이전트를 도입하면 동일한 지침·데이터·규칙을 모든 구성원이 사용할 수 있다. 가이드에서는 반복적인 작업을 선정하고, 기대 결과를 정의하며, 안전하게 설정하고 배포하는 절차를 제시한다.",
+  "why": "개인별 프롬프트를 공유 에이전트로 통합하면 담당자 부재 시에도 업무가 중단되지 않는다. 반복 작업 하나를 선정해 지침과 데이터를 표준화하는 것이 첫 단계다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "s1dashu / quiet-md",
+  "url": "https://github.com/s1dashu/quiet-md",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 310,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/s1dashu/quiet-md"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 310,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/s1dashu/quiet-md",
+  "link_status": null,
+  "ko_title": "quiet-md — 빠른 로컬 메모 앱",
+  "summary": "Rust와 GPUI로 만든 로컬 메모 앱으로, 메모가 Feishu(Lark) DocxXML 형식으로 컴퓨터에 저장된다. macOS와 Windows용 바이너리를 제공하며 현재 베타 단계이다.",
+  "why": "메모가 Feishu DocxXML 형식으로 로컬에 저장되므로 기존 마크다운 파이프라인과 호환되지 않는다. 베타 단계라 기능 변경이 잦아 프로덕션 환경 도입은 신중해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+  "url": "https://openai.com/index/devrev-enterprise-self-service",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793750400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/devrev-enterprise-self-service"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/wbLuf3JmoXr8PLJs6ENpY/a84a25ea67b1c35ae01cfad0ee60e1c7/og.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "DevRev, GPT-6.1 Sol로 자율 셀프서비스 제공",
+  "summary": "DevRev가 GPT-6.1 Sol을 활용해 기업 서비스용 AI 에이전트인 Computer와 Operator를 출시했다. 이 에이전트는 실시간 데이터에 기반해 추론하고, 행동을 되돌릴 수 있으며, 답변 출처를 표시한다. OpenAI 모델과 자체 컨텍스트 연결·권한 제어 기능을 결합해 비용·지연 시간을 최적화한다.",
+  "why": "DevRev의 에이전트는 실시간 데이터 추론과 행동을 되돌릴 수 있는 기능을 제공한다. 답변 출처를 명시하고 권한을 제어해 기업 서비스 환경에서 신뢰성을 높인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "datasette-agent 0.5a0",
+  "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793747625.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/3/datasette-agent/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.simonwillison.net/static/2026/datasette-agent-panel.webp",
+  "link_status": "ok",
+  "ko_title": "datasette-agent 0.5a0",
+  "summary": "새 패널 기능으로 에이전트 채팅을 Datasette 테이블·쿼리 페이지 옆에 배치할 수 있다. datasette-apps와 결합하면 데이터베이스 기반 앱을 즉시 생성하고 채팅으로 바로 수정할 수 있다. GitHub 계정으로 agent.datasette.io에 로그인하면 체험 가능하다.",
+  "why": "데이터베이스 기반 앱을 프롬프트로 생성한 뒤, 옆에 붙은 채팅으로 즉시 수정할 수 있다. datasette-apps를 함께 쓰면 기존 워크플로에서 앱 수정 단계를 대화형으로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "worldonlyu / Google_AI_Pro_2Year_ZeroCost_Auto",
+  "url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 598,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 598,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+  "link_status": null,
+  "ko_title": "Google AI Pro 2년 무료 자동 콘솔",
+  "summary": "이 GitHub 저장소는 Windows 환경에서 Python으로 실행되는 배치 스크립트를 제공한다. 미국 지역 프록시와 외국 카드 정보를 입력하면 Google AI Pro 5 TB 플랜을 0 달러로 2년 동안 자동으로 신청·연장한다. 계정·카드 정보를 일괄 입력하고 한 번의 클릭으로 전 과정을 자동화한다.",
+  "why": "이 도구는 미국 프록시와 외국 카드가 없으면 실행할 수 없다. Google AI Pro 5TB 플랜을 2년간 무료로 유지하는 자동화 절차다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "Stop Hacking Base64 With btoa(). toBase64() Fixes It Natively.",
+  "url": "https://dev.to/parsajiravand/stop-hacking-base64-with-btoa-tobase64-fixes-it-natively-2kkm",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793859025.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/stop-hacking-base64-with-btoa-tobase64-fixes-it-natively-2kkm"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fuint8array-tobase64.png",
+  "link_status": "ok",
+  "ko_title": "btoa()로 Base64 해킹 중단, toBase64()가 기본적으로 해결",
+  "summary": "기존 btoa() 방식은 큰 파일을 Base64로 변환할 때 인수 개수 제한으로 스택 오버플로를 일으켰다. 최신 브라우저의 toBase64() 메서드는 이러한 문제를 내부적으로 처리해 안정적인 변환을 제공한다. 기존 코드를 toBase64()로 교체하면 대용량 PDF나 문자열도 오류 없이 인코딩할 수 있다.",
+  "why": "기존 btoa()는 대용량 데이터에서 스택 오버플로가 발생한다. toBase64()로 교체하면 이 문제를 해결할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "llm 0.37.1",
+  "url": "https://simonwillison.net/2026/Nov/3/llm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793742102.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/3/llm/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "llm 0.37.1 버전",
+  "summary": "LLM 0.37.1은 버그 수정 릴리스이다. Steven Huang, Tao An, Arjan Mossel, XQ가 기여했다.",
+  "why": "버그 수정으로 기존 LLM 사용 시 오류가 감소한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "Ask HN: What's your current AI agentic setup?",
+  "url": "https://news.ycombinator.com/item?id=50366117",
+  "source": "hackernews",
+  "upvotes": 261,
+  "comments": 255,
+  "published_at": 1793803042,
+  "discussion": "https://news.ycombinator.com/item?id=50366117",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50366117"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "현재 AI 에이전트 설정은 어떻게 사용하고 있나요?",
+  "summary": "",
+  "why": "에이전트 오케스트레이션 도구와 로컬 모델 호스팅 등 다양한 워크플로우 사례를 비교할 수 있다. 현재 자사 스택과 다른 구성을 채택한 개발자들의 전환 이유를 파악하는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "career-culture"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
+  "title": "Crows, Moths, and Makefiles: How 300 Megabytes of Crow DNA Explains Why a 20-Kilobyte Scar File Outsmarts a Terabyte LLM",
+  "url": "https://dev.to/gde/crows-moths-and-makefiles-how-300-megabytes-of-crow-dna-explains-why-a-20-kilobyte-scar-file-36a",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 2,
+  "published_at": 1793836964.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/crows-moths-and-makefiles-how-300-megabytes-of-crow-dna-explains-why-a-20-kilobyte-scar-file-36a"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fp24lnbmzkhrdluxod8g5.jpg",
+  "link_status": "ok",
+  "ko_title": "까마귀, 나방, 그리고 메이크파일: 300메가바이트의 까마귀 DNA가 20킬로바이트 스카 파일이 테라바이트 LLM을 능가하는 이유",
+  "summary": "",
+  "why": "LLM이 반복적인 프로덕션 버그를 해결하지 못하는 원인을 구조적 한계로 분석한다. 백엔드 시스템의 문제 해결 접근법을 재검토하는 데 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-05T16:00:05.163161+09:00",
+  "batch_label": "11월 5일 16:00"
+ },
+ {
   "title": "AMD expects to outsell Intel in Q4 for the first time in history",
   "url": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
   "source": "hackernews",

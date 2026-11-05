@@ -1,5 +1,201 @@
 [
  {
+  "t": "로컬 LLM에 실시간 웹 접근 권한을 부여했습니다",
+  "u": "https://dev.to/zenrows/we-gave-a-local-llm-live-web-access-heres-how-1a88",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "language"
+  ],
+  "d": "2026-11-05",
+  "o": "We Gave a Local LLM Live Web Access. Here’s How",
+  "x": "Ollama의 qwen3 모델을 Zenrows MCP와 연결해 웹 검색과 페이지 추출을 수행하는 방법을 소개한다. 코드 없이 ollmcp 브리지"
+ },
+ {
+  "t": "Images 2.6",
+  "u": "https://openai.com/index/introducing-images-2-6/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "gen-media",
+   "backend-data"
+  ],
+  "d": "2026-11-05",
+  "x": "Images 2.6은 이미지 생성 속도를 50% 높이고 GIF 애니메이션을 지원한다. API에서는 저품질용 Flare와 고품질용 Sunburst"
+ },
+ {
+  "t": "루트 권한 획득 경로를 천 개 줄였다",
+  "u": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "backend-data"
+  ],
+  "d": "2026-11-05",
+  "o": "A thousand fewer paths to root",
+  "x": "자동화된 취약점 탐지·악용·패치 파이프라인이 Linux 로컬 권한 상승 취약점 948건을 검증하고 패치를 생성했다. 2,308개의 후보를 분석해"
+ },
+ {
+  "t": "새로운 Go JSON API",
+  "u": "https://go.dev/blog/jsonv2",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "backend-data"
+  ],
+  "d": "2026-11-05",
+  "o": "A new Go API for JSON",
+  "x": "Go 1.27에 encoding/json/v2와 encoding/json/jsontext 패키지가 정식으로 포함돼 기존 encoding/json"
+ },
+ {
+  "t": "River가 Postgres 트랜잭션 안에서 작업을 큐에 넣는다 — Go 도메인에서 제외하기",
+  "u": "https://dev.to/gabrielanhaia/river-enqueues-jobs-in-your-postgres-transaction-keep-it-out-of-your-go-domain-411n",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "career-culture"
+  ],
+  "d": "2026-11-05",
+  "o": "River Enqueues Jobs in Your Postgres Transaction. Keep It Out of Your Go Domain",
+  "x": "River는 작업을 Postgres 트랜잭션과 동일하게 커밋하거나 롤백하도록 보장한다. 기존 방식은 pgx와 River를 비즈니스 로직에 섞어야"
+ },
+ {
+  "t": "팀의 첫 공유 에이전트 만들기",
+  "u": "https://dev.to/therealmrmumba/how-to-build-your-teams-first-shared-agent-3b4p",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-11-05",
+  "o": "How to Build Your Team's First Shared Agent",
+  "x": "팀 내 AI 활용이 개인별로 흩어져 있어 일관성이 부족하고 담당자가 부재 시 업무가 중단된다. 공유 에이전트를 도입하면 동일한 지침·데이터·규칙"
+ },
+ {
+  "t": "quiet-md — 빠른 로컬 메모 앱",
+  "u": "https://github.com/s1dashu/quiet-md",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-05",
+  "o": "s1dashu / quiet-md",
+  "x": "Rust와 GPUI로 만든 로컬 메모 앱으로, 메모가 Feishu(Lark) DocxXML 형식으로 컴퓨터에 저장된다. macOS와 Window"
+ },
+ {
+  "t": "DevRev, GPT-6.1 Sol로 자율 셀프서비스 제공",
+  "u": "https://openai.com/index/devrev-enterprise-self-service",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "d": "2026-11-05",
+  "o": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+  "x": "DevRev가 GPT-6.1 Sol을 활용해 기업 서비스용 AI 에이전트인 Computer와 Operator를 출시했다. 이 에이전트는 실시간 "
+ },
+ {
+  "t": "datasette-agent 0.5a0",
+  "u": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-05",
+  "x": "새 패널 기능으로 에이전트 채팅을 Datasette 테이블·쿼리 페이지 옆에 배치할 수 있다. datasette-apps와 결합하면 데이터베이스"
+ },
+ {
+  "t": "Google AI Pro 2년 무료 자동 콘솔",
+  "u": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-05",
+  "o": "worldonlyu / Google_AI_Pro_2Year_ZeroCost_Auto",
+  "x": "이 GitHub 저장소는 Windows 환경에서 Python으로 실행되는 배치 스크립트를 제공한다. 미국 지역 프록시와 외국 카드 정보를 입력하"
+ },
+ {
+  "t": "btoa()로 Base64 해킹 중단, toBase64()가 기본적으로 해결",
+  "u": "https://dev.to/parsajiravand/stop-hacking-base64-with-btoa-tobase64-fixes-it-natively-2kkm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "security",
+   "web"
+  ],
+  "d": "2026-11-05",
+  "o": "Stop Hacking Base64 With btoa(). toBase64() Fixes It Natively.",
+  "x": "기존 btoa() 방식은 큰 파일을 Base64로 변환할 때 인수 개수 제한으로 스택 오버플로를 일으켰다. 최신 브라우저의 toBase64() "
+ },
+ {
+  "t": "llm 0.37.1 버전",
+  "u": "https://simonwillison.net/2026/Nov/3/llm/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-05",
+  "o": "llm 0.37.1",
+  "x": "LLM 0.37.1은 버그 수정 릴리스이다. Steven Huang, Tao An, Arjan Mossel, XQ가 기여했다."
+ },
+ {
+  "t": "현재 AI 에이전트 설정은 어떻게 사용하고 있나요?",
+  "u": "https://news.ycombinator.com/item?id=50366117",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "career-culture"
+  ],
+  "d": "2026-11-05",
+  "o": "Ask HN: What's your current AI agentic setup?"
+ },
+ {
+  "t": "까마귀, 나방, 그리고 메이크파일: 300메가바이트의 까마귀 DNA가 20킬로바이트 스카 파일이 테라바이트 LLM을 능가하는 이유",
+  "u": "https://dev.to/gde/crows-moths-and-makefiles-how-300-megabytes-of-crow-dna-explains-why-a-20-kilobyte-scar-file-36a",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "d": "2026-11-05",
+  "o": "Crows, Moths, and Makefiles: How 300 Megabytes of Crow DNA Explains Why a 20-Kilobyte Scar File Outsmarts a Terabyte LLM"
+ },
+ {
   "t": "AMD, 사상 처음으로 4분기 인텔 매출 추월 기대",
   "u": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
   "m": "2026-11",

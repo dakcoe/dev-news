@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-26T16:00:25+09:00",
-   "total": 14,
-   "counts": {
-    "github": 3,
-    "robots": 1,
-    "ok": 9,
-    "short": 1
-   },
-   "failures": [
-    {
-     "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://tech.kakao.com/posts/843",
-     "source": "rss",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-10-27T00:00:29+09:00",
    "total": 17,
    "counts": {
@@ -595,6 +573,28 @@
      "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
      "source": "hackernews",
      "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T16:00:35+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 11,
+    "empty": 1,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.spacex.com/starfall",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=50366117",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
