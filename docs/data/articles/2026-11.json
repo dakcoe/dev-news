@@ -1,5 +1,524 @@
 [
  {
+  "title": "One Markdown File Can Hijack Your AI Coding Agent: The Hidden Cost of Blindly Trusting AGENTS.md",
+  "url": "https://dev.to/johnnylemonny/one-markdown-file-can-hijack-your-ai-coding-agent-the-hidden-cost-of-blindly-trusting-agentsmd-167n",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 8,
+  "published_at": 1793892600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/johnnylemonny/one-markdown-file-can-hijack-your-ai-coding-agent-the-hidden-cost-of-blindly-trusting-agentsmd-167n"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgp9mzlfxjcl32v27828r.jpg",
+  "link_status": "ok",
+  "ko_title": "하나의 마크다운 파일이 AI 코딩 에이전트를 탈취할 수 있다: AGENTS.md를 무조건 신뢰할 때의 숨은 비용",
+  "summary": "연구진이 로컬에서 실행되는 AI 코딩 에이전트가 프로젝트 디렉터리의 AGENTS.md·CLAUDE.md 파일을 읽어 명령을 수행하도록 설계돼 있어, 악의적인 내용이 포함된 파일 하나만으로 API 트래픽을 가로채고 토큰을 유출하며 쉘 명령을 실행할 수 있음을 입증했다. 테스트에서는 Codex 90%, Claude Code 50%의 성공률을 보였다. 일반 개발자가 다운로드 폴더 등 신뢰되지 않은 위치에서 에이전트를 실행하거나 PR을 빠르게 검토하는 습관이 공격을 쉽게 만든다.",
+  "why": "AGENTS.md와 CLAUDE.md 파일이 악성 명령을 포함할 경우 에이전트가 이를 실행한다. 신뢰할 수 없는 폴더에서 에이전트를 실행하거나 PR을 대충 검토하는 습관이 위험하다. 로컬 환경에서 에이전트를 돌리기 전 해당 파일의 출처를 반드시 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+  "url": "https://openai.com/index/introducing-gpt-6-cyber",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793869200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-gpt-6-cyber"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT-6 Cyber: 정렬된 사이버보안 에이전트의 최전선을 확장",
+  "summary": "OpenAI가 사이버보안용 GPT-6 Cyber 모델을 공개했다. 이 모델은 exploitable 취약점을 찾아내고 해결책을 제시하도록 훈련되었다. 또한 허가된 범위 내에서만 작동하도록 설계되었다.",
+  "why": "취약점 탐지 및 패치 제안 워크플로에 이 모델을 적용할 수 있다. 허가된 범위 내에서만 작동하도록 설계되어 있어 무단 접근 위험을 줄인다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+  "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793907316.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/677c471f8b4c4e271e57eaa5/rtmGVvFdD6JqkjBc26vsp.png",
+  "link_status": "ok",
+  "ko_title": "새로운 NVIDIA Cosmos 3 오픈 모델로 인터랙티브 세계 시뮬레이션",
+  "summary": "NVIDIA가 Cosmos 3 모델군에 16 B 파라미터를 가진 네 개의 오픈 가중치 체크포인트를 공개했다. 각각은 날씨·조명·시간 변화를 포함한 다중 뷰 주행 데이터 생성, 카메라·LiDAR 동기 스트리밍, 텍스트 프롬프트 기반 포토리얼리스틱 비디오 변환, 로봇·카메라 동작 기반 비디오 예측 기능을 제공한다. OpenMDW1.1 라이선스로 상업·비상업 모두 사용 가능하다.",
+  "why": "로봇과 자율주행 시뮬레이션 파이프라인에 카메라와 LiDAR 동시 스트리밍을 적용할 수 있다. 텍스트 프롬프트와 시뮬레이터 제어 입력만으로 포토리얼리스틱 비디오를 생성하는 워크플로우를 구성할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Nasdaq plummets 4% into correction territory",
+  "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html",
+  "source": "hackernews",
+  "upvotes": 177,
+  "comments": 142,
+  "published_at": 1793898675,
+  "discussion": "https://news.ycombinator.com/item?id=50381623",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://image.cnbcfm.com/api/v1/image/108364037-1793907899126-108364037-17895893572026-09-16t200807z_1402825571_rc2iknai4t1v_rtrmadp_0_usa-fed-stocks.jpeg?v=1793907928&w=1920&h=1080",
+  "link_status": "ok",
+  "ko_title": "나스닥 4% 급락, 조정 구역 진입",
+  "summary": "나스닥 종합지수가 5.52% 하락해 24,315.00으로 마감하며 기록 대비 10% 이상 떨어져 조정 구역에 들어갔다. 데이터센터 구축 둔화 우려와 AI·칩 관련 주식 매도세가 주요 원인이다. 주요 지수 모두 4% 이상 하락했으며, 반도체 ETF와 일부 클라우드 기업도 큰 폭으로 떨어졌다.",
+  "why": "데이터센터 구축 둔화 우려가 AI 인프라 투자 사이클에 직접적 리스크를 준다. 칩과 클라우드 관련 스택의 의존도가 높다면 변동성 확대에 대비할 필요가 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "More visibility and control over Claude Enterprise for security teams",
+  "url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793836800.0,
+  "origin_url": "https://claude.com/blog/claude-enterprise-security-updates",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-enterprise-security-updates",
+   "https://claude.com/resources/articles/claude-enterprise-security-updates"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/claude-enterprise-security-updates/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude Enterprise 보안팀을 위한 가시성 및 제어 강화",
+  "summary": "Claude Enterprise에 보안 센터, 추론 훅, 중앙 관리, 접근 제어 기능이 추가되었다. 보안 센터는 조직 설정을 Anthropic 권장 구성과 비교해 보여준다. 추론 훅은 프롬프트와 도구 호출을 데이터 보안 도구에 전달한다. 중앙 관리 콘솔로 전사 설정을 관리하고, Admin API로 회원 로그아웃 및 IP 허용 목록을 직접 제어한다.",
+  "why": "Claude Enterprise를 쓰는 조직이라면 보안 센터와 추론 훅으로 기존 데이터 보안 도구를 연동할 수 있다. 개인 계정 차단과 IP 허용 목록 직접 관리로 관리형 컴퓨터의 접근 통제를 강화해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+  "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793898000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini Omni 1.2 Flash: 빠르고 비용 효율적인 장시간 클립",
+  "summary": "Gemini Omni 1.2 Flash가 720p 비디오당 초당 $0.07로 가격을 30% 인하하고, 최대 15초 길이의 영상을 원본으로 생성·편집할 수 있다. 360p·720p 초안 작성 후 부분 편집으로 비용을 절감하고, 필요 시 1080p·4K로 업스케일한다. 이미지·짧은 동영상·오디오 힌트를 결합해 캐릭터·제품·스타일 일관성을 유지한다.",
+  "why": "기존 10초 제한이 사라져 15초 분량의 영상 생성이 가능해졌다. 720p 기준 초당 7센트로 비용이 30% 낮아졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "AI 에이전트를 위한 멀티모달 의사결정 모델 ‘Kanana-2-v-decide’ 오픈소스 공개",
+  "url": "https://tech.kakao.com/posts/846",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793890800.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/846"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Fa992c6d001a100001.jpeg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트를 위한 멀티모달 의사결정 모델 ‘Kanana-2-v-decide’ 오픈소스 공개",
+  "summary": "Kanana-2-v-decide 모델이 오픈소스로 공개돼 AI 에이전트가 요청 처리 중 판단을 내릴 때 멀티모달 정보를 활용할 수 있다. 모델은 고객 문의 분류, 상품 사진 확인, 도구 선택 등 다양한 작업에 적용된다.",
+  "why": "에이전트 파이프라인에서 텍스트 외 이미지 정보를 판단 근거로 넣을 수 있는 모델이 생겼다. 도구 선택이나 문의 분류 단계에서 멀티모달 입력을 처리하는 로직을 이 모델로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Prompt Pad: What Are Open-Weight Models?",
+  "url": "https://blog.mlh.com/prompt-pad-what-are-open-weight-models-1ghh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1793912419.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://blog.mlh.com/prompt-pad-what-are-open-weight-models-1ghh"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdhpbb4fkjfpnq7nocn60.png",
+  "link_status": "ok",
+  "ko_title": "Prompt Pad: 오픈 가중치 모델이란?",
+  "summary": "오픈 가중치 모델은 학습된 모델 자체를 제공해 다운로드·로컬 실행·프로젝트 맞춤 파인튜닝이 가능하다. 오픈소스는 코드와 학습 데이터·과정까지 전체 레시피를 공개한다. 이번 영상에서는 구글 Gemma를 예시로 차이를 설명한다.",
+  "why": "오픈 가중치 모델은 학습된 모델만 제공하므로 로컬 실행과 파인튜닝은 가능하지만 학습 데이터 공개는 없다. 오픈소스 모델은 코드와 학습 과정까지 공개되므로 두 용어를 혼용하지 않아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Motorola Signature 27 with GrapheneOS support",
+  "url": "https://motorolanews.com/motorola-signature-27-2/",
+  "source": "hackernews",
+  "upvotes": 357,
+  "comments": 268,
+  "published_at": 1793894494,
+  "discussion": "https://news.ycombinator.com/item?id=50380810",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://motorolanews.com/motorola-signature-27-2/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media.motorolanews.fiestic.com/2026/11/04151018/29260918_MOTOROLA_SIGNATURE_1047-768x1151.png",
+  "link_status": "ok",
+  "ko_title": "Motorola Signature 27, GrapheneOS 지원",
+  "summary": "Motorola가 새로운 플래그십 스마트폰 Motorola Signature 27을 발표했다. 최고 수준의 카메라 시스템(50MP 메인, 200MP 퍼스코프 100배 줌)과 DXOMARK 골드 라벨을 획득했다. Snapdragon 8 Elite Extreme Gen 6 모바일 플랫폼과 Bang & Olufsen 오디오를 탑재했으며, GrapheneOS 지원이 추가됐다.",
+  "why": "GrapheneOS 지원으로 기존 Android 보안 프로필보다 강화된 운영체제 환경을 선택할 수 있다. 개인정보 보호를 최우선으로 두는 백엔드 개발 환경에서 단말기 보안 수준을 높일 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Introducing Personal Finance in Claude",
+  "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793836800.0,
+  "origin_url": "https://claude.com/blog/introducing-personal-finance-in-claude",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/introducing-personal-finance-in-claude",
+   "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://claude.com/ko/resources/articles/introducing-personal-finance-in-claude/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude에 개인 금융 기능 도입",
+  "summary": "Claude에 은행·카드 계좌를 읽기 전용으로 연결해 질문하면 잔액·거래·지출을 자연어로 요약해준다. 현재 미국 프로·맥스·울트라 플랜에서 베타로 제공된다.",
+  "why": "미국 프로·맥스·울트라 플랜 사용자만 베타로 쓸 수 있다. 계좌는 읽기 전용으로만 연결되며 자금 이동이나 투자 기능은 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Kagi Search for Everyone",
+  "url": "https://kagi.com/changelog",
+  "source": "hackernews",
+  "upvotes": 318,
+  "comments": 165,
+  "published_at": 1793909014,
+  "discussion": "https://news.ycombinator.com/item?id=50383740",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://kagi.com/changelog"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "모두를 위한 Kagi 검색",
+  "summary": "Kagi가 계정 없이도 처음 50회(회원가입 시 추가 100회) 검색을 허용해 누구나 서비스를 체험할 수 있게 했다. Android 앱도 홈 화면 재설계·음성 검색 개선·위젯·퀵 설정 타일 추가 등으로 전면 개편했다. 구글의 교육용 AI 제한 정책에 대한 비판과 대안으로 Kagi를 제시한다.",
+  "why": "Kagi가 계정 없이 50회 검색을 허용해 신규 사용자 검증 장벽을 낮췄다. Android 앱의 음성 검색과 위젯 기능 개편으로 모바일 환경에서의 접근성이 달라졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Minireel / HGhub",
+  "url": "https://github.com/Minireel/HGhub",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 163,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Minireel/HGhub"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 163,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/Minireel/HGhub",
+  "link_status": null,
+  "ko_title": "HGhub — 황과 단극 제3자 클라이언트 Rust·Tauri 2 기반",
+  "summary": "이 프로젝트는 Rust와 Tauri 2로 만든 황과 단극 영상 서비스의 비공식 클라이언트이며, Windows·macOS·Android를 지원한다. 비상업적 사용만 허용하고, 공식 릴리즈 외의 배포 파일은 악성 변조 가능성이 있어 사용을 금한다. 기술 스택은 Tauri 2, React 19·TypeScript·Vite·Tailwind, hls.js, reqwest·rustls이다.",
+  "why": "Tauri 2와 React 19 조합으로 만든 데스크톱 및 모바일 클라이언트 구조를 참고할 수 있다. Rust 백엔드에서 HLS 스트리밍과 미디어 캐싱을 처리하는 방식이 구현 예시로 제시된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Congrats to the Kaggle Benchmarking Challenge Winners!",
+  "url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 43,
+  "comments": 7,
+  "published_at": 1793913131.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fig8gi4bw1h7vk0z76krk.png",
+  "link_status": "ok",
+  "ko_title": "Kaggle 벤치마킹 챌린지 수상자 발표",
+  "summary": "Kaggle과 협업해 모델 성능을 직접 평가하는 벤치마크를 만들었다. 참가자들은 실시간 시스템 탐지, 스페인 전자청구서 해시 재현, 신뢰되지 않은 문서의 권위 있는 메모 식별 등 다양한 과제를 수행했다. 각 과제는 기존에 어려운 것으로 알려진 문제를 기반으로 설계되었다. 수상 모델들은 시간대 변환 질문과 메모리 사용량 관련 질문에서 오류를 보였다.",
+  "why": "새 모델이 배포될 때마다 기존 리더보드가 아닌 직접 만든 벤치마크를 실행해야 한다. 시간대 변환이나 언어별 메모리 사용량 같은 세부 영역에서 모델이 오류를 낼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Window Sweaters",
+  "url": "https://github.com/saragordic/window-sweaters",
+  "source": "hackernews",
+  "upvotes": 204,
+  "comments": 72,
+  "published_at": 1793897414,
+  "discussion": "https://news.ycombinator.com/item?id=50381383",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/saragordic/window-sweaters"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://opengraph.githubassets.com/1/saragordic/window-sweaters",
+  "link_status": null,
+  "ko_title": "윈도우 스웨터",
+  "summary": "macOS용 작은 앱으로 창에 뜨개질 테두리를 입혀 데스크톱을 더 아늑하게 만든다. Homebrew(cask) 또는 최신 ZIP 파일을 통해 설치할 수 있으며, 메뉴 바에서 스타일·패턴·두께·스티치 크기를 조정하고 앱별 적용 여부를 선택한다. 앱은 아직 Apple notarization을 받지 않아 보안 설정에서 “Open Anyway”가 필요할 수 있다.",
+  "why": "앱이 Apple 인증을 받지 않아 보안 설정에서 직접 허용해야 한다. 특정 앱에만 적용하거나 전체 적용을 끄는 설정이 제공된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Quoting Paul Ford",
+  "url": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793900043.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/5/paul-ford/"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Paul Ford 인용",
+  "summary": "웹 브라우저는 애플리케이션을 위한 매우 강력한 소프트웨어이며, 그 힘을 활용하는 비용이 매일 감소하고 있다. 이 추세는 개발자가 브라우저 기반 솔루션을 더 쉽게 채택하도록 만든다.",
+  "why": "브라우저 기반 솔루션의 도입 비용이 낮아지는 추세다. 기존 네이티브 앱 개발과 비교해 브라우저 환경의 활용 가치가 재평가된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "career-culture"
+  ],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
+  "title": "Goodbye from Salon",
+  "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+  "source": "hackernews",
+  "upvotes": 295,
+  "comments": 103,
+  "published_at": 1793909009,
+  "discussion": "https://news.ycombinator.com/item?id=50383739",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.salon.com/2026/11/05/goodbye-from-salon/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.salon.com/app/uploads/2026/11/Salon-Logos-Background-2.jpg",
+  "link_status": "ok",
+  "ko_title": "Salon이 서비스 종료",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-06T08:00:05.831174+09:00",
+  "batch_label": "11월 6일 08:00"
+ },
+ {
   "title": "Baidu released ERNIE 5.5 Flash Base",
   "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
   "source": "hackernews",

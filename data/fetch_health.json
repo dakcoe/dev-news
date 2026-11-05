@@ -1,21 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-27T08:00:27+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 14,
-    "blocked": 1
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-27T16:00:27+09:00",
    "total": 15,
    "counts": {
@@ -595,6 +580,28 @@
      "url": "https://hachyderm.io/@damienmiller/117563026759098135",
      "source": "hackernews",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-06T08:00:30+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 14,
+    "github": 2,
+    "short": 1,
+    "blocked": 1
+   },
+   "failures": [
+    {
+     "url": "https://tech.kakao.com/posts/846",
+     "source": "rss",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/introducing-gpt-6-cyber",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
