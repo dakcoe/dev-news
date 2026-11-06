@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-28T08:00:28+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 18,
-    "github": 1
-   },
-   "failures": []
-  },
-  {
    "at": "2026-10-28T16:00:33+09:00",
    "total": 14,
    "counts": {
@@ -620,6 +611,22 @@
     {
      "url": "https://openai.com/ads/customers/flipsnack",
      "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-07T08:00:34+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 12,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+     "source": "hackernews",
      "reason": "blocked"
     }
    ]

@@ -1,5 +1,427 @@
 [
  {
+  "title": "Stop Swapping Models: Optimizing the Agent Environment Cuts 70% More Cost",
+  "url": "https://dev.to/reidmarlow/stop-swapping-models-optimizing-the-agent-environment-cuts-70-more-cost-36cf",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 3,
+  "comments": 4,
+  "published_at": 1793986120.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/reidmarlow/stop-swapping-models-optimizing-the-agent-environment-cuts-70-more-cost-36cf"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fq7z07tny2klt5nd5cs4u.png",
+  "link_status": "ok",
+  "ko_title": "모델 교체 중단: 에이전트 환경 최적화로 비용 70% 절감",
+  "summary": "연구진은 에이전트가 작업을 수행하는 정적인 환경을 최적화하면 모델 교체나 프롬프트 엔지니어링보다 토큰 비용을 크게 줄인다고 밝혔다. 실험은 UC Berkeley와 UT Austin 팀이 수행했으며, 작업 성공률은 유지되었다. 기존에는 에이전트에게 원시 파일·API·데이터베이스에 자유롭게 접근하도록 하여 컨텍스트 소모가 많았다.",
+  "why": "에이전트 워크플로에서 모델 교체나 프롬프트 수정보다 작업 환경을 최적화하는 편이 토큰 비용 절감에 더 효과적이다. 원시 파일이나 API 스키마에 직접 접근하던 방식은 컨텍스트 소모가 크므로, 정적인 환경을 정리하는 방향을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Containing the Autonomous Mind: Sub-Second Zero-Trust Execution with GKE Agent Sandbox",
+  "url": "https://dev.to/gde/containing-the-autonomous-mind-sub-second-zero-trust-execution-with-gke-agent-sandbox-5e6b",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 18,
+  "comments": 1,
+  "published_at": 1793982858.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/containing-the-autonomous-mind-sub-second-zero-trust-execution-with-gke-agent-sandbox-5e6b"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqk83614v6vodxh1desyb.png",
+  "link_status": "ok",
+  "ko_title": "자율 에이전트를 위한 서브초 제로트러스트 실행 – GKE 에이전트 샌드박스",
+  "summary": "에이전트가 코드를 작성해 실행할 때 기존 쿠버네티스 파드가 겪는 격리와 속도 문제를 해결한다. gVisor와 Kata Containers 기반 커널 격리와 GKE 파드 스냅샷을 결합해 서브초 수준의 부팅 지연과 메모리 오버헤드를 최소화한다. 일반 가용(GA) 단계에 도달한 오픈소스 프로젝트로, 쿠버네티스 환경에서 에이전트 워크로드를 안전하게 프로덕션화한다.",
+  "why": "에이전트가 코드를 실행할 때 기존 쿠버네티스 파드의 커널 공유 위험을 제거한다. 서브초 부팅으로 에이전트의 빠른 도구 호출 지연 문제를 해결한다. GA 단계의 오픈소스 프로젝트로 프로덕션 배포가 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+  "url": "https://openai.com/index/partnering-with-hacktron",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793952000.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/partnering-with-hacktron",
+   "https://openai.com/index/partnering-with-hacktron/"
+  ],
+  "cross_source_count": 2,
+  "score": 62,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6567aD1rFerr0QBajJ0uig/50339d375097da8d96ce12e925130276/partnering-with-hacktron-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "OpenAI, Hacktron과 협업해 시스템 취약점 찾는다",
+  "summary": "OpenAI가 Hacktron과 파트너십을 맺고 고우선순위 영역을 공동 테스트한다. 양측은 서드파티 서비스와의 연동 부분에 집중해 취약점을 탐색한다. Hacktron은 AI 에이전트를 활용해 코드 리뷰·침투 테스트·레드팀 작업을 수행한다. 이번 협업은 보안 버그 현상금도 확대한다.",
+  "why": "서드파티 서비스 연동 취약점을 AI 에이전트로 탐지하는 방식이 확산되고 있다. 자체 시스템의 외부 연동 지점을 점검할 때 이 접근법을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "[Part 3] Your first steps in Computer Vision on AWS: deploying models for an ASL recognition app",
+  "url": "https://dev.to/aws-builders/part-3-your-first-steps-in-computer-vision-on-aws-deploying-models-for-an-asl-recognition-app-14hf",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": 1793980497.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws-builders/part-3-your-first-steps-in-computer-vision-on-aws-deploying-models-for-an-asl-recognition-app-14hf"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffn5vzz23zqsnpnydxiar.png",
+  "link_status": "ok",
+  "ko_title": "[Part 3] AWS에서 컴퓨터 비전 시작하기: ASL 인식 앱용 모델 배포",
+  "summary": "이번 글은 ASL 손글씨 인식 모델을 서버리스 방식으로 배포하는 전체 과정을 다룬다. S3와 CloudFront로 정적 웹을 호스팅하고, API Gateway와 Lambda가 사진을 전처리해 SageMaker 서버리스 추론 엔드포인트에 전달한다. 인프라는 CloudFormation으로 자동 생성되며, 컨테이너 이미지는 ECR에 빌드·푸시한다.",
+  "why": "서버리스 엔드포인트는 트래픽이 없는 기간에 컴퓨트 자원을 0으로 축소한다. 이로써 인스턴스 타입 선정이나 스케일링 정책 관리가 불필요해진다. 단, 최대 메모리 용량은 6GB로 제한되어 있다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Measuring how AI agents handle everyday wet-lab science",
+  "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793923200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/3lNbSQIg31Dg9aBrUjuQMI/131fea8d534499ca30f7a9f880269d74/biobasicsbench-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 일상 실험실 과학을 처리하는 방식 측정",
+  "summary": "BioBasicsBench라는 새로운 벤치마크가 100개의 일상 실험실 작업을 통해 AI 에이전트가 원시 실험 데이터를 해석하는 능력을 평가한다. 이 벤치마크는 겔 이미지, 콜로니 플레이트, 현미경 사진 등 다양한 원시 데이터를 포함한다. ‘xhigh’ 설정에서 GPT-6 Astra가 평균 66.7% 점수를 얻어 이전 모델보다 높은 성능을 보였다.",
+  "why": "기존 벤치마크는 논문용 정제된 데이터에 치우쳐 있어 실험실의 모호한 원시 데이터 해석력을 측정하지 못했다. BioBasicsBench는 실패한 실험과 애매한 이미지를 포함한 일상적 상황을 반영해 에이전트의 오류 탐지 능력을 평가한다. GPT-6 Astra가 66.7%의 점수를 기록했으나 이미지 해석과 대조군 검증 부분에서는 여전히 개선 여지가 남아 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+  "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+  "source": "hackernews",
+  "upvotes": 232,
+  "comments": 50,
+  "published_at": 1793994531,
+  "discussion": "https://news.ycombinator.com/item?id=50397429",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hightouch.com/blog/llm-judges-identity-resolution"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://cdn.sanity.io/images/pwmfmi47/production/9a5d7191d614c824c822ec90672adaf424699d3d-2400x1256.png?w=1200",
+  "link_status": "ok",
+  "ko_title": "Jev가 Opus에 도움을 요청하면 Opus 정확도가 4배 낮은 비용으로 향상",
+  "summary": "Jev와 Luna 모델을 혼합해 Jev + Opus 하이브리드 모델을 사용하면 기존 대비 4배 이상 낮은 비용으로 최첨단 정확도를 달성했다. Luna는 기본 성능이 더 좋지만 어려운 경우에는 차이가 사라진다. 결정 모델은 비용이 90배 저렴하고 속도가 10배 빠르지만 어려운 벤치마크에서는 Opus보다 약 6% 낮은 정확도를 보인다.",
+  "why": "Jev의 신뢰도 보정이 좋아 하이브리드 모델에서 효율이 높다. 어려운 케이스에서는 Opus가 여전히 더 정확하다. 비용 민감한 배치 작업에서 하이브리드 구성을 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Tesla to wind down Cybertruck production",
+  "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+  "source": "hackernews",
+  "upvotes": 754,
+  "comments": 1575,
+  "published_at": 1793967231,
+  "discussion": "https://news.ycombinator.com/item?id=50391456",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-02/250213-Cybertruck-aa-1045-dd55f3.jpg",
+  "link_status": "ok",
+  "ko_title": "테슬라, 사이버트럭 생산 중단",
+  "summary": "테슬라는 2027년 중반 텍사스 공장에서 사이버트럭 생산을 종료하고, 새로 출시한 사이버캡 생산을 늘릴 계획이다. 사이버트럭은 2023년 말부터 판매를 시작했지만, 2024년 미국 판매량이 전년 대비 48% 감소한 20,237대에 머물렀다. 생산 중단 여부가 다른 공장으로 이전될지는 아직 확정되지 않았다.",
+  "why": "테슬라가 2027년 중반까지 사이버트럭 생산을 줄이고 사이버캡 생산을 늘린다는 점이다. 로보택시 관련 개발을 하는 경우 사이버캡이 핵심 모델이 될 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+  "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+  "source": "hackernews",
+  "upvotes": 180,
+  "comments": 414,
+  "published_at": 1793984076,
+  "discussion": "https://news.ycombinator.com/item?id=50394906",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Anthropic IPO 구매자, 기업가치 1조 1천억 달러 이하로 평가",
+  "summary": "Anthropic의 IPO 투자자들이 기업가치를 1조 1천억 달러 수준으로 낮게 평가하고 있다. 이는 이전 예상보다 크게 낮은 수치이며, 투자자들의 기대치 변화를 보여준다.",
+  "why": "Anthropic의 기업가치 평가가 낮아진 것은 AI 모델 라이선스 비용이나 서비스 가격 정책의 직접적 변화를 의미하지 않는다. 현재 백엔드나 AI 개발 환경에 즉각적인 조치나 설정 변경 사항이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Prompt Pad: Show Your AI How to Respond with Few-Shot Examples",
+  "url": "https://blog.mlh.com/prompt-pad-show-your-ai-how-to-respond-with-few-shot-examples-2869",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 0,
+  "published_at": 1793980800.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://blog.mlh.com/prompt-pad-show-your-ai-how-to-respond-with-few-shot-examples-2869"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftn3p67u8ofy4cefxftvd.png",
+  "link_status": "ok",
+  "ko_title": "Prompt Pad: 몇 개의 예시로 AI에게 답변 방식 알려주기",
+  "summary": "몇 개의 입력·출력 예시를 프롬프트에 포함하면 모델이 원하는 형식·톤·스타일을 학습한다. 기존에 출력 설명만 제공했을 때보다 일관된 답변을 얻을 수 있다. 사용자는 원하는 작업에 2~3개의 좋은 답변 예시를 추가해 효과를 확인한다.",
+  "why": "출력 형식이나 톤을 텍스트로 설명하는 방식보다 예시를 보여주는 편이 일관성이 높다. 반복적으로 원하는 결과를 놓치는 프롬프트에 2~3개의 모범 답변을 추가해 보자.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "We know 15k websites are infected. how do we tell them?",
+  "url": "https://scotthelme.co.uk/we-know-15-579-websites-are-infected-how-do-we-tell-them/",
+  "source": "hackernews",
+  "upvotes": 131,
+  "comments": 110,
+  "published_at": 1793988815,
+  "discussion": "https://news.ycombinator.com/item?id=50396064",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://scotthelme.co.uk/we-know-15-579-websites-are-infected-how-do-we-tell-them/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://storage.ghost.io/c/ee/88/ee889f88-37ef-43e5-9180-f9b88ee6261d/content/images/size/w1200/2026/11/Responsible-Disclosure-at-Scale.png",
+  "link_status": "ok",
+  "ko_title": "15천 개 사이트가 감염됐습니다 — 어떻게 알릴까",
+  "summary": "Report URI는 현재 악성 JavaScript가 삽입된 15,579개 웹사이트를 확인했으며, 이들 사이트는 매월 1억 3500만 회 이상의 방문을 받고 있다. 감염 유형에는 카드 스키머, 클릭피싱, 기기 악성코드 로드, 악성 리다이렉트 등이 포함된다. 감염 경로는 워드프레스 취약점 등 직접 침해와 서드파티 스크립트 공급망 침해로 나뉜다. 현재 감염 사실을 해당 사이트 운영자에게 알리는 방법을 찾지 못해 도움을 요청하고 있다.",
+  "why": "워드프레스 취약점과 서드파티 스크립트 공급망이 주요 감염 경로다. 백엔드 개발자는 자사 사이트가 이러한 벡터에 노출되지 않았는지 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "mmdoctor / google-pro-helper",
+  "url": "https://github.com/mmdoctor/google-pro-helper",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 540,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mmdoctor/google-pro-helper"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 540,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/mmdoctor/google-pro-helper",
+  "link_status": null,
+  "ko_title": "mmdoctor / google-pro-helper",
+  "summary": "이 GitHub 저장소는 브라우저 확장판과 배치판 두 가지 독립 버전을 제공한다. 브라우저 확장판은 Chrome에서 Google AI Pro를 무료로 12개월 또는 24개월 활성화하도록 돕고, 배치판은 로컬 콘솔에서 다수 계정의 작업을 관리한다. 설치와 사용 방법이 README에 단계별 이미지와 함께 안내된다.",
+  "why": "이 도구는 브라우저 확장으로 Google AI Pro를 무료로 활성화하는 용도다. 백엔드 개발이 아닌 개인 계정 관리 영역이라 업무 코드에는 직접 적용할 부분이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "An Update on the Hacktoberfest Open-Source AI Challenge: Ghost in the Machine Winners",
+  "url": "https://dev.to/devteam/an-update-on-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-winners-44bp",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 19,
+  "comments": 1,
+  "published_at": 1794004111.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devteam/an-update-on-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-winners-44bp"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frhtnbaz5elh8xcpmie86.png",
+  "link_status": "ok",
+  "ko_title": "Hacktoberfest 오픈소스 AI 챌린지: Ghost in the Machine 수상자 업데이트",
+  "summary": "21명의 전체 수상자와 20개의 파트너 부문을 선정 중이며, 최종 결정을 위해 검토 시간이 추가로 필요하다. 최종 수상자 발표는 다음 주 말까지 진행될 예정이다. 동시에 진행 중인 Presage SmartSpectra SDK 챌린지도 확인할 수 있다.",
+  "why": "수상자 발표는 다음 주 말까지 지연된다. 동시에 진행 중인 Presage SmartSpectra SDK 챌린지도 참여할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
+  "title": "Deus Ex",
+  "url": "https://www.filfre.net/2026/11/deus-ex/",
+  "source": "hackernews",
+  "upvotes": 310,
+  "comments": 156,
+  "published_at": 1793979876,
+  "discussion": "https://news.ycombinator.com/item?id=50393758",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.filfre.net/2026/11/deus-ex/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Deus Ex",
+  "summary": "2000년 출시 당시 Deus Ex는 긍정적인 평가를 받았지만, 초기 리뷰에서는 성능 문제와 적 AI 부족 등 결함이 지적되었다. 이후 수십 년 동안 게임은 깊이 있는 스토리와 세계관으로 재평가되어 “가장 중요한 비디오게임”이라는 평가까지 받는다. 현재 2026년 유튜브에는 이 게임이 미래를 예측했다는 의견이 넘쳐난다.",
+  "why": "백엔드와 AI 개발 업무에는 직접적인 기술적 변화나 조치 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-07T08:00:06.106679+09:00",
+  "batch_label": "11월 7일 08:00"
+ },
+ {
   "title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
   "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
   "source": "rss",
