@@ -1,5 +1,447 @@
 [
  {
+  "title": "Inkling 2 Small",
+  "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+  "source": "hackernews",
+  "upvotes": 164,
+  "comments": 55,
+  "published_at": 1793923224,
+  "discussion": "https://news.ycombinator.com/item?id=50386338",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://thinkingmachines.ai/news/inkling-2-small/"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://thinkingmachines.ai/news/inkling-2-small/images/cover-social.png",
+  "link_status": "ok",
+  "ko_title": "Inkling 2 Small",
+  "summary": "Inkling 2 Small은 594 B 전체 파라미터 중 17 B가 활성화된 Mixture-of-Experts 모델로 이미지 입력과 가변 노력 지원이 추가되었습니다. 성능은 AI Index에서 31점으로 이전 모델을 크게 앞서며, 이미지 기반 웹·게임·3D 디자인 제작과 장기 자동 코딩 작업에 강합니다. 현재 Tinker Playground에서 체험 가능하고, 곧 Apache 2.0 라이선스로 전체 가중치를 공개할 예정입니다.",
+  "why": "이미지 입력과 가변 노력 지원이 추가되어 시각 피드백을 반영한 반복적 코딩 작업이 가능해졌습니다. 다음 주 Apache 2.0 라이선스로 전체 가중치가 공개되어 로컬 배포나 파인튜닝 환경에 바로 적용할 수 있습니다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "anomalyco / rune",
+  "url": "https://github.com/anomalyco/rune",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 341,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/anomalyco/rune"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 341,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/anomalyco/rune",
+  "link_status": null,
+  "ko_title": "루네",
+  "summary": "GPU 기반으로 렌더링되는 Rust UI 프레임워크이며 macOS·Windows·Linux·Web을 지원한다. 모든 앱을 headless 모드로 실행해 PNG로 렌더링하고 요소 트리를 추출할 수 있다. 예제와 문서를 통해 에이전트가 자동으로 UI를 검증하도록 설계되었다.",
+  "why": "Rust로 UI를 개발할 때 GPU 렌더링을 직접 다루며 크로스 플랫폼 환경을 구축할 수 있다. 에이전트가 PNG 렌더링과 요소 트리를 통해 UI를 자동 검증하므로 수동 테스트 부담이 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Moving off WordPress with an import script you can re-run until launch day",
+  "url": "https://dev.to/kanawoot_korsang_5be7c94a/moving-off-wordpress-with-an-import-script-you-can-re-run-until-launch-day-2pmi",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 2,
+  "comments": 2,
+  "published_at": 1793937139.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kanawoot_korsang_5be7c94a/moving-off-wordpress-with-an-import-script-you-can-re-run-until-launch-day-2pmi"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1wlvy7oxv17aam2753uo.png",
+  "link_status": "ok",
+  "ko_title": "WordPress에서 Easy CMS로 이동하기 위한 재실행 가능한 가져오기 스크립트",
+  "summary": "기존 WordPress 내보내기 방식은 한 번의 스냅샷으로 오래되어 문제가 발생한다. 이 글은 REST API를 이용해 실시간 데이터를 읽고, 새 CMS에 반복 실행 가능한 스크립트를 제공한다. 스크립트는 각 항목에 wpId를 저장해 매핑을 유지한다. 전체 스크립트는 GitHub 레시피에 공개돼 있다.",
+  "why": "기존 XML 내보내기는 발행 중 데이터가 달라져 최종 일자에 수동 복사가 필요했다. 이 스크립트는 REST API로 실시간 데이터를 읽어 반복 실행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+  "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+  "source": "hackernews",
+  "upvotes": 258,
+  "comments": 114,
+  "published_at": 1793920197,
+  "discussion": "https://news.ycombinator.com/item?id=50385870",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://s.yimg.com/lo/mysterio/api/c7b9e208fd6dff01b9115dea6cf00d560e269c36a6987f309be6e79d843e306b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fmoneywise_327%2F892777675c4b84ce45a666a8bfe1fb93.jpg",
+  "link_status": "ok",
+  "ko_title": "쿠반: 페이스북, AI 딥페이크 사기 광고를 알면서도 진행 — 16조 원 사기 수익 보고",
+  "summary": "마크 쿠반이 페이스북(메타)에서 자신의 얼굴·음성으로 만든 딥페이크 사기 광고가 계속 게재된다고 고발했다. 내부 문서에 따르면 메타는 2024년 매출의 약 10%에 해당하는 16조 원 규모의 사기·금지 제품 광고 수익을 예상한다. 하루에 약 150억 건의 고위험 광고가 사용자에게 노출되고 있다.",
+  "why": "AI 딥페이크 기술이 사기 광고에 악용되는 사례가 확인됐다. 사용자 검증 로직을 설계할 때 생성형 AI 콘텐츠 탐지를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "RepoDNA v1.5.0 Is Here: Local History Controls, Reviewed Exports, and Clearer CI Impact",
+  "url": "https://dev.to/sanskarin/repodna-v150-is-here-local-history-controls-reviewed-exports-and-clearer-ci-impact-1ohf",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793940485.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sanskarin/repodna-v150-is-here-local-history-controls-reviewed-exports-and-clearer-ci-impact-1ohf"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1zgj90h7l2biwlukgafa.png",
+  "link_status": "ok",
+  "ko_title": "RepoDNA v1.5.0 출시 — 로컬 히스토리 제어, 검토된 내보내기, CI 영향 명확화",
+  "summary": "이번 릴리스는 저장된 분석 히스토리를 개별 또는 전체 삭제할 수 있게 하고, CSV·JSON·Markdown 내보내기 전 로컬 미리보기를 제공한다. CI 베이스라인 비교에 모듈 소유권·파일 경로·의존성 정보를 추가해 변경 영향을 파악하기 쉽도록 했다. 또한 반복 발견과 중복 경로 처리의 결정성을 높여 비교 결과의 일관성을 개선했다.",
+  "why": "내보내기 전 미리보기는 비밀 정보를 자동으로 제거하지 않으므로 공유 전 수동 확인이 필수다. CI 비교 시 모듈 소유권과 의존성 정보가 추가되어 변경의 구조적 영향을 추적하기 쉬워졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "larashero3-dotcom / lieflat-less-ai-tone",
+  "url": "https://github.com/larashero3-dotcom/lieflat-less-ai-tone",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 517,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/larashero3-dotcom/lieflat-less-ai-tone"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 517,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/larashero3-dotcom/lieflat-less-ai-tone",
+  "link_status": null,
+  "ko_title": "larashero3-dotcom / lieflat-less-ai-tone — AI 맛 제거 스킬",
+  "summary": "두 차례 실험(총 1,169편, 약 520만 한자, 100여 지표, 50만 번 모델 의미 판단)을 통해 AI가 만든 텍스트의 “AI 맛”을 정량화하고 최소한의 교정으로 개선하는 오픈소스 스킬을 공개했다. 5개 대형 모델과 인간 글을 비교해 AI 특유의 구두점 남용·비유·구조적 반복 등을 지표화했으며, 검출·교정·재검증 과정을 자동화한다.",
+  "why": "AI가 작성한 문서의 구두점 남용이나 구조적 반복을 정량 지표로 잡아 최소 교정만 적용하는 도구다. 단순 금지 단어 목록으로는 잡지 못하는 AI 특유의 문체 문제를 해결할 수 있다. 모델이 원문의 자연스러운 표현을 과도하게 개조하는 오작동을 방지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Australian universities are creating AI-native graduates",
+  "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793898000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/australian-universities-ai-native-graduates"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "호주 대학, AI 네이티브 졸업생 양성",
+  "summary": "호주 대학들이 ChatGPT 접근성을 확대하고 교육 과정에 AI를 도입한다. 이는 학생들을 AI 활용 업무 환경에 대비시키기 위한 조치이다.",
+  "why": "AI 네이티브 졸업생이 늘면 협업 대상의 AI 활용 수준이 달라진다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "MCP Went Stateless This Year. Your 'Supports MCP' Checkbox Is Now a Lie.",
+  "url": "https://dev.to/debashish_ghosal/mcp-went-stateless-this-year-your-supports-mcp-checkbox-is-now-a-lie-411n",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1793948400.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/debashish_ghosal/mcp-went-stateless-this-year-your-supports-mcp-checkbox-is-now-a-lie-411n"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2cyht2l0uf06l3gw0lqe.png",
+  "link_status": "ok",
+  "ko_title": "MCP가 올해 무상태화되었습니다. “Supports MCP” 체크박스는 이제 거짓입니다.",
+  "summary": "2026-07-28 사양 개정으로 MCP 프로토콜이 세션 기반에서 완전 무상태 방식으로 바뀌었다. 모든 요청에 필요한 정보를 포함해 핸드쉐이크와 세션 ID가 사라지고 라운드-로빈 로드밸런싱이 가능해졌다. 기존 SDK와 서버가 혼재해 마이그레이션이 급히 필요하지만, 지원 여부가 모호해졌다.",
+  "why": "기존 세션 기반 인프라를 그대로 두면 새 사양과 호환되지 않는다. 로드밸런서 설정을 라운드-로빈으로 바꾸고 세션 스토어를 제거해야 한다. 클라이언트와 서버의 SDK 버전이 일치하는지 지금 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Every keyboard is a mechanical keyboard with Klicky",
+  "url": "https://dev.to/muneer320/i-wanted-keyboard-sounds-on-linux-then-i-fell-down-the-audio-stack-3b1d",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 38,
+  "comments": 1,
+  "published_at": 1793936477.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/muneer320/i-wanted-keyboard-sounds-on-linux-then-i-fell-down-the-audio-stack-3b1d"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8k4h2wo31lack9yu9q4f.png",
+  "link_status": "ok",
+  "ko_title": "모든 키보드는 Klicky가 있는 기계식 키보드",
+  "summary": "Rust 기반 유틸리티 Klicky는 타이핑에 기계식 키보드 소리를 입혀준다. 10개의 사운드 팩, 볼륨 조절, 데스크톱 통합 기능을 제공한다. 원래 macOS용 프로젝트를 Linux와 Windows에 이식해 패키징까지 완료했다.",
+  "why": "Rust 기반 유틸리티를 직접 다루는 개발자에게는 오디오 버퍼링과 데코딩 최적화 구조를 참고할 수 있다. 키 입력과 사운드 재생 사이의 지연을 줄이기 위해 사전 준비 방식을 적용한 점이 핵심이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Claude Code sends your email address to websites",
+  "url": "https://github.com/anthropics/claude-code/issues/107757",
+  "source": "hackernews",
+  "upvotes": 891,
+  "comments": 296,
+  "published_at": 1793917035,
+  "discussion": "https://news.ycombinator.com/item?id=50385272",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/anthropics/claude-code/issues/107757"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/0c48835c89d5d74c4e9aa66e789bdfa1563c57c42fd4edc2ea6ba2c6fe4fa926/anthropics/claude-code/issues/107757",
+  "link_status": "ok",
+  "ko_title": "Claude Code가 이메일 주소를 웹사이트에 전송",
+  "summary": "Claude Code가 웹 검색 시 User-Agent 헤더에 사용자의 이메일 주소를 포함해 임의의 제3자에게 전송한다는 버그가 보고되었습니다. 이로 인해 사용자는 스팸 메일을 대량으로 받게 되었으며, 해당 기능은 옵션으로 켜고 끄는 형태가 아니라 완전히 제거되어야 한다는 요구가 제기되었습니다. 피해자는 Anthropic의 프라이버시 보호에 신뢰를 잃고 OpenRouter 기반 Pi로 이전하고 있습니다.",
+  "why": "Claude Code를 웹 검색에 쓰고 있다면 User-Agent 헤더에서 이메일이 새어 나가는지 지금 확인해야 한다. 이 주소가 제3자에게 노출되면 스팸 메일 공격의 표적이 되므로, 해당 버전을 쓰는 환경에서는 즉시 사용을 중단하거나 대안을 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "Cult.fit builds operational muscle with Codex",
+  "url": "https://openai.com/index/cultfit-builds-with-codex",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1793908800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/cultfit-builds-with-codex"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Cult.fit, Codex로 운영 역량 강화",
+  "summary": "Cult.fit이 Codex를 활용해 다양한 부서 팀이 자체 도구를 만들고 작업 속도를 높이며 업무 방식을 바꾸고 있다. 이를 통해 내부 프로세스 자동화와 개발 효율성을 증대시키려는 시도가 진행 중이다.",
+  "why": "Codex로 비개발 부서도 자체 도구를 만들어 프로세스를 자동화할 수 있다. 이는 백엔드 개발자의 반복적 요청을 줄이고 AI 기반 도구 개발 범위를 넓힌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "An AI Testing Presentation Became the Final Push for Organizational Change at My Company",
+  "url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 58,
+  "comments": 38,
+  "published_at": 1793928452.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fixx20m4903kd4gqasfhz.png",
+  "link_status": "ok",
+  "ko_title": "AI 테스트 발표가 우리 회사 조직 변화의 최종 촉진제가 되다",
+  "summary": "발표자는 AI 기반 자동화 테스트 시스템을 시연했지만, 논의가 테스트 효율성에서 제품·개발·QA 팀 간 협업과 요구사항 정합성 문제로 확대되었다. AI가 전체 엔지니어링 조직의 업무 방식 재고를 촉구하는 계기가 되었다.",
+  "why": "요구사항 정합성 문제를 해결하려면 제품·개발·QA 팀 간 협업 구조를 재설계해야 한다. AI가 테스트 효율성뿐 아니라 조직 전체의 업무 방식을 바꾸는 변수로 작용한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "MS Paint Remote Code Execution Vulnerability",
+  "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+  "source": "hackernews",
+  "upvotes": 459,
+  "comments": 174,
+  "published_at": 1793911422,
+  "discussion": "https://news.ycombinator.com/item?id=50384233",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cve.org/CVERecord?id=CVE-2026-83844"
+  ],
+  "cross_source_count": 1,
+  "score": 28,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "MS Paint 원격 코드 실행 취약점",
+  "summary": "",
+  "why": "MS Paint의 원격 코드 실행 취약점이 공개됐다. 백엔드 서버에 MS Paint가 설치되어 있다면 즉시 패치 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
+  "title": "I wish tech companies knew more about me",
+  "url": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
+  "source": "hackernews",
+  "upvotes": 376,
+  "comments": 320,
+  "published_at": 1793886052,
+  "discussion": "https://news.ycombinator.com/item?id=50378942",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "기술 기업이 나에 대해 더 알았으면 좋겠다",
+  "summary": "",
+  "why": "개인화 알고리즘이 단순한 행동 패턴조차 인식하지 못해 광고와 추천의 정확도가 떨어진다. 개발자가 직접 사용자 경험 데이터를 수집할 때 이 같은 시스템 한계를 참고해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-06T16:00:02.894343+09:00",
+  "batch_label": "11월 6일 16:00"
+ },
+ {
   "title": "One Markdown File Can Hijack Your AI Coding Agent: The Hidden Cost of Blindly Trusting AGENTS.md",
   "url": "https://dev.to/johnnylemonny/one-markdown-file-can-hijack-your-ai-coding-agent-the-hidden-cost-of-blindly-trusting-agentsmd-167n",
   "source": "devto",
