@@ -1,5 +1,393 @@
 [
  {
+  "title": "Freeing AI from the Terminal: How We Built SwitchWarRoom to Turn Coding Agents into SRE Teammates in Slack",
+  "url": "https://dev.to/vidisha_gupta_/freeing-ai-from-the-terminal-how-we-built-switchwarroom-to-turn-coding-agents-into-sre-teammates-2aom",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1794073453.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/vidisha_gupta_/freeing-ai-from-the-terminal-how-we-built-switchwarroom-to-turn-coding-agents-into-sre-teammates-2aom"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5eiwxpjqv4qay8khghni.png",
+  "link_status": "ok",
+  "ko_title": "터미널에서 AI 해방: SwitchWarRoom로 코딩 에이전트를 Slack SRE 팀원으로 전환",
+  "summary": "SwitchWarRoom는 Slack·Discord·Switch 콘솔에 사고 대응용 다중 에이전트 스웜을 자동으로 생성한다. 기존 터미널 전용 AI 코딩 도우미가 가시성·안전성·컨텍스트 손실 문제를 해결하기 위해 팀 채널에 실시간으로 협업한다. GitHub 저장소와 Vercel 배포 링크가 제공된다.",
+  "why": "터미널에서 단독으로 돌리던 AI 에이전트가 Slack 채널 내 다중 에이전트 스웜으로 전환된다. 이로써 사고 대응 시 팀 전체가 에이전트 실행 과정을 실시간으로 공유하게 된다. 세션 종료 시 컨텍스트가 사라지던 기존 방식과 달리 협업 채널에 기록이 남는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+  "url": "https://github.com/hedgerow-dev/coldframe",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 36,
+  "published_at": 1794072450,
+  "discussion": "https://news.ycombinator.com/item?id=50406292",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/hedgerow-dev/coldframe"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/hedgerow-dev/coldframe",
+  "link_status": null,
+  "ko_title": "Show HN: Coldframe, 슈퍼마켓 냉장고 컨트롤러를 가장한 허니팟",
+  "summary": "Coldframe은 Python 단일 파일로 구현된 허니팟으로, Danfoss와 Dixell 냉장고 제어기를 가장한다. 공격자가 연결 시도 시도한 비밀번호와 사용한 공개 익스플로잇을 기록하고 실제 장비를 제어하지 않는다. 각 페르소나는 실제 장비와 동일한 HTTP 헤더, TLS 설정, 인증 흐름을 모방한다.",
+  "why": "IoT 장비 보안을 다루는 백엔드 개발자에게는 실제 공격 트래픽 패턴을 분석할 수 있는 실전 사례를 제공한다. 허니팟이 기록하는 인증 시도와 익스플로잇 사용 내역은 취약점 탐지 로직을 설계할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "security",
+   "backend-data",
+   "language",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "Rate Limits Are a Queueing Problem: Capacity Math for Agent Fleets",
+  "url": "https://dev.to/debashish_ghosal/rate-limits-are-a-queueing-problem-capacity-math-for-agent-fleets-1977",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 6,
+  "comments": 2,
+  "published_at": 1794086082.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/debashish_ghosal/rate-limits-are-a-queueing-problem-capacity-math-for-agent-fleets-1977"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzckllj8jznhk8r5fvfky.png",
+  "link_status": "ok",
+  "ko_title": "Rate Limits Are a Queueing Problem: Capacity Math for Agent Fleets",
+  "summary": "팀이 스탠드업 후 짧은 시간에 여러 에이전트를 호출하면서 발생한 요청 폭주가 레이트 제한 초과로 이어진다. 저자는 도착률과 서비스률을 비교해 큐가 무한히 늘어나는 원인을 설명하고, 인간 일정에 따른 스파이크가 평탄한 서비스 한계와 충돌한다는 점을 강조한다.",
+  "why": "에이전트 호출이 스탠드업 등 인간 일정에 맞춰 몰리므로, 서비스 한계를 초과하는 큐가 무한히 늘어난다. 요청 폭주가 발생하면 단순한 운이 아니라 도착률과 서비스률의 수학적 불균형이 원인이다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "industry",
+   "science"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "bangtutorial / bang-motion",
+  "url": "https://github.com/bangtutorial/bang-motion",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 420,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/bangtutorial/bang-motion"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 420,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/bangtutorial/bang-motion",
+  "link_status": null,
+  "ko_title": "Bang Motion 모션 디자이너",
+  "summary": "AI 코딩 에이전트를 모션 디자이너로 전환하는 에이전트 스킬이다. 단일 `index.html` 파일로 연속적인 영상처럼 동작하며, 슬라이드가 아닌 실제 카메라 움직임과 지속적인 객체를 지원한다. 브랜드 스타일 브리프와 개념 메뉴를 통해 다양한 디자인을 생성한다. 현재 버전은 1.19.0이며 Claude Code·Codex·Gemini CLI·Cursor와 호환된다.",
+  "why": "AI 에이전트로 영상 제작 시 슬라이드 형태가 아닌 연속 카메라 움직임과 객체 지속성을 확보할 수 있다. 브랜드 스타일 브리프와 개념 메뉴를 지정해 디자인을 생성하므로 결과물의 일관성을 유지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "Ubuntu Core Desktop Is Coming in 27.04 - And It Kills sudo apt (But Maybe That Is the Point?)",
+  "url": "https://dev.to/taqui/ubuntu-core-desktop-is-coming-in-2704-and-it-kills-sudo-apt-but-maybe-that-is-the-point-3dp1",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 17,
+  "comments": 0,
+  "published_at": 1794064694.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/taqui/ubuntu-core-desktop-is-coming-in-2704-and-it-kills-sudo-apt-but-maybe-that-is-the-point-3dp1"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Feu769mdbtq0xlo2cdc7i.jpg",
+  "link_status": "ok",
+  "ko_title": "Ubuntu Core Desktop이 27.04에 출시 – sudo apt 사용 불가",
+  "summary": "Ubuntu Core Desktop은 스냅 기반으로 전면 잠금된 불변 시스템을 제공한다. 기존 apt 기반 설치 방식이 사라지고, 업데이트는 전체 스냅 교체 방식으로 진행된다. 새로운 팀이 스냅을 작은 단위로 분리해 빠른 일일 빌드를 제공한다. 27.04 릴리즈를 목표로 6개월 내에 출시될 예정이다.",
+  "why": "백엔드 개발 환경에서 apt를 통한 패키지 설치 관행이 스냅 교체 방식으로 바뀐다. 27.04 릴리스 전까지 기존 apt 기반 워크플로우의 대체 수단을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+  "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+  "source": "hackernews",
+  "upvotes": 279,
+  "comments": 191,
+  "published_at": 1794071196,
+  "discussion": "https://news.ycombinator.com/item?id=50406111",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://i.guim.co.uk/img/media/28e97d03d0abcd9f1e2eb53b873f17079a1a7f82/998_270_3911_3129/master/3911.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=ae2dd9194072b73ebb69c7269d955ba3",
+  "link_status": "ok",
+  "ko_title": "Apple의 회색 목록: iPhone이 자동완성하지 않는 단어와 구문",
+  "summary": "독립 연구원 Derik Kauffman이 iOS 내부에서 10만 개가 넘는 자동완성 제한 단어 목록을 발견했다. 정치·인권·성·마약 관련 구절과 “iMessage isn’t working” 같은 문구가 포함돼 있다. 사용자는 해당 구절을 직접 입력해야 하며, 스와이프 입력 시 오타가 발생한다.",
+  "why": "iOS 자동완성 제한 목록에 포함된 단어를 스와이프 입력하면 오타가 발생한다. 해당 구절을 쓰려면 직접 타이핑해야 하므로 입력 속도가 느려진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "What I run on my $10 USD OpenStick homelab",
+  "url": "https://blog.bosscher.ch/posts/openstick/",
+  "source": "hackernews",
+  "upvotes": 249,
+  "comments": 57,
+  "published_at": 1794075132,
+  "discussion": "https://news.ycombinator.com/item?id=50406670",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.bosscher.ch/posts/openstick/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://blog.bosscher.ch/posts/openstick/index.png",
+  "link_status": "ok",
+  "ko_title": "$10짜리 OpenStick으로 내가 직접 운영하는 홈랩",
+  "summary": "OpenStick은 512 MB RAM, 4 코어 ARM Cortex-A53, 4 GB eMMC, Wi-Fi·4G·GPS 등을 갖춘 저가형 싱글보드 컴퓨터다. Debian 기반으로 부팅해 systemd와 Podman을 활용해 컨테이너를 실행할 수 있다. 글쓴이는 이 장치에 CastSponsorSkip과 AdGuard Home 포크를 설치해 광고·스폰서십 차단 및 DNS 수준 차단 서비스를 운영한다.",
+  "why": "Podman 기반 컨테이너 환경이 구축되어 있어 저사양 단말에서도 서비스 배포를 연습할 수 있다. DNS 차단만으로는 모든 악성 요청을 막지 못하므로 방화벽과 병행해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "The end of Microsoft Research's AI Frontiers group",
+  "url": "https://hunch.net/?p=13764006",
+  "source": "hackernews",
+  "upvotes": 294,
+  "comments": 165,
+  "published_at": 1794074537,
+  "discussion": "https://news.ycombinator.com/item?id=50406563",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://hunch.net/?p=13764006"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Microsoft Research AI Frontiers 그룹 종료",
+  "summary": "Microsoft Research는 AI Frontiers라는 소규모 조직(~50명)을 만들었지만, 2023년 ChatGPT 출시 이후 연구 효율성을 높이기 위해 구조를 재정비했다. 조직은 Autogen 오케스트레이션 프레임워크와 Fara 컴퓨터 사용 에이전트 등 에이전트 기술을 개발했으며, Next Latent 목표, Dion3, Full Bandwidth Transformer와 같은 새로운 기능도 탐구했다. 최근 이 조직을 해체하고 기존 MSR에 통합하려는 계획을 발표했다.",
+  "why": "Autogen과 Fara를 직접 다루는 경우 MSR 통합으로 인한 코드베이스나 API 변화 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "showcase"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "reacher-z / Awesome-REA",
+  "url": "https://github.com/reacher-z/Awesome-REA",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 493,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/reacher-z/Awesome-REA"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 493,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/reacher-z/Awesome-REA",
+  "link_status": null,
+  "ko_title": "reacher-z / Awesome-REA — 역공학 도구·사례·논문 모음",
+  "summary": "웹사이트, 게임, 앱, 네이티브 바이너리, 펌웨어, 통신 프로토콜 등 여섯 분야의 역공학 도구, 사례, 논문을 1,253개 리소스와 431개 사례, 235개 논문으로 정리한 GitHub 저장소이다. 최신 커밋을 통해 지속적으로 업데이트되며 MIT 라이선스로 제공된다.",
+  "why": "웹사이트·게임·앱·네이티브 바이너리·펌웨어·통신 프로토콜 중 특정 역공학 과제가 있을 때 도구와 사례를 바로 검색할 수 있다. 각 분야별 도구 목록과 실제 적용 사례를 한 곳에서 비교해 작업 방향을 잡는 데 쓴다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "The Correct Timestamp Was in My Agent's Prompt. It Still Said We Were Talking.",
+  "url": "https://dev.to/kenielzep97/the-correct-timestamp-was-in-my-agents-prompt-it-still-said-we-were-talking-eh7",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 21,
+  "comments": 1,
+  "published_at": 1794067507.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kenielzep97/the-correct-timestamp-was-in-my-agents-prompt-it-still-said-we-were-talking-eh7"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fewr54iync9jryurqcqec.jpg",
+  "link_status": "ok",
+  "ko_title": "올바른 타임스탬프가 내 에이전트 프롬프트에 있었지만, 여전히 대화 중이라고 말했다",
+  "summary": "에이전트가 자체 감사에서 두 개의 서로 다른 시계 정보를 사용해 시간 불일치를 보였다. 하나는 실제 마지막 메시지 시점, 다른 하나는 일기 헤더의 오래된 타임스탬프였다. 이 차이로 인해 감사가 몇 주 차이의 ‘스테일’ 상태를 보고했다.",
+  "why": "에이전트 시스템에서 대화 기록과 일기 헤더 등 시계 소스가 다르면 시간 불일치가 생긴다. 감사 로직이 오래된 타임스탬프를 참조하면 실제 상태와 다른 경보를 보낼 수 있다. 자동화 에이전트의 시간 인식 로직에서 데이터 출처를 단일화해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "I Never Thought I'd Be a Programmer. Yet Here I Am.",
+  "url": "https://dev.to/sizzlebop/i-never-thought-id-be-a-programmer-yet-here-i-am-21in",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1794084118.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sizzlebop/i-never-thought-id-be-a-programmer-yet-here-i-am-21in"
+  ],
+  "cross_source_count": 1,
+  "score": 34,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxh1hhb2ldpcdvcpiisk1.png",
+  "link_status": "ok",
+  "ko_title": "나는 프로그래머가 될 줄 몰랐지만, 지금은 프로그래머다",
+  "summary": "개인적인 성장 이야기를 통해, 전혀 예상치 못했던 시점에 코딩, 소프트웨어 개발, AI 모델 실험, IT 전공 대학 진학까지 이뤄낸 과정을 공유한다. 저자는 어릴 적 컴퓨터와 친숙했지만, 동물에 관심이 많아 전혀 다른 길을 걸었으며, 17세에 중퇴 후 GED를 취득하고 새로운 분야에 도전했다. 현재는 개발자로서의 삶을 살아가며 비슷한 고민을 하는 이들에게 영감을 주고자 한다.",
+  "why": "개발 전환을 고민하는 사람들에게 늦은 시작도 가능하다는 실질적 사례를 제공한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
+  "title": "They don't make 'em like that any more: Borland Turbo Pascal 7",
+  "url": "https://kevinboone.me/tpwin.html",
+  "source": "hackernews",
+  "upvotes": 179,
+  "comments": 97,
+  "published_at": 1794067587,
+  "discussion": "https://news.ycombinator.com/item?id=50405678",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://kevinboone.me/tpwin.html"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "그때 그 시절의 Borland Turbo Pascal 7",
+  "summary": "TP 7은 Turbo Pascal 라인 중 마지막 버전으로, Windows 1.5와 동등한 기능을 제공했다. 책 라이선스 방식으로 한 복사본을 여러 사용자가 순차적으로 사용할 수 있었으며, 복사 보호가 없었다. 1990년대 Windows 3.1 환경에서 의료 영상 소프트웨어 개발에 활용된 사례가 있다.",
+  "why": "TP 7는 책 라이선스 방식이라 한 복본을 여러 명이 순차적으로 쓸 수 있었다. 복사 보호가 없어 당시 개발 환경의 제약이 적었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-08T08:00:07.090880+09:00",
+  "batch_label": "11월 8일 08:00"
+ },
+ {
   "title": "An agent told me it deployed. I asked the server, and the containers were a day old",
   "url": "https://dev.to/chet103cc/an-agent-told-me-it-deployed-i-asked-the-server-and-the-containers-were-a-day-old-2b6i",
   "source": "devto",
