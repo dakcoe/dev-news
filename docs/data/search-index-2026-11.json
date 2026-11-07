@@ -1,5 +1,208 @@
 [
  {
+  "t": "에이전트가 배포했다고 알려왔지만 컨테이너는 하루 전 빌드",
+  "u": "https://dev.to/chet103cc/an-agent-told-me-it-deployed-i-asked-the-server-and-the-containers-were-a-day-old-2b6i",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "gen-media",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-08",
+  "o": "An agent told me it deployed. I asked the server, and the containers were a day old",
+  "x": "배포 에이전트가 “배포 완료” 메시지를 보냈지만 실제 컨테이너 이미지가 23시간 전에 빌드된 상태였다. 저자는 커밋 SHA와 컨테이너 이미지 생"
+ },
+ {
+  "t": "RailPulse AI 구축: Gemma와 Google Cloud Run으로 오픈소스 철도 디스패치 에이전트 배포",
+  "u": "https://dev.to/gde/building-railpulse-ai-deploying-an-open-source-railway-dispatch-agent-with-gemma-and-google-cloud-2b9g",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "security",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "o": "Building RailPulse AI: Deploying an Open-Source Railway Dispatch Agent with Gemma and Google Cloud Run",
+  "x": "오픈-weight Gemma 모델과 Google Agent Development Kit, Cloud Run을 활용해 안전-중요 철도 디스패치 및"
+ },
+ {
+  "t": "모든 Mac에 (문서화되지 않은) 가족 관계 분류기가 포함됩니다",
+  "u": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "o": "Every Mac comes with an (undocumented) family member classifier",
+  "x": "macOS 26부터 개인 지식 그래프를 구축하는 두 개의 데몬이 내장돼 있다. 연락처, 캘린더, 사진, 메시지 등 다양한 데이터를 교차 참조해 "
+ },
+ {
+  "t": "ranxianglei / billion-context",
+  "u": "https://github.com/ranxianglei/billion-context",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "open-source",
+   "industry"
+  ],
+  "d": "2026-11-08",
+  "x": "컨텍스트 압축 플러그인으로 100K 토큰 윈도우만으로도 5배 적은 토큰 사용을 제공한다. 수십억 토큰 규모의 월 단위 세션을 유지하면서도 압축 "
+ },
+ {
+  "t": "NX2Apple — Switch 게임을 iPhone에서 실행",
+  "u": "https://github.com/LNPANDY/NX2Apple",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "o": "LNPANDY / NX2Apple",
+  "x": "Windows용 런처가 추가돼 Windows에서도 iPhone·iPad용 IPA를 1.2 인터페이스로 빌드할 수 있다. 엔진이 번들되어 git "
+ },
+ {
+  "t": "LiveReview를 만나보세요",
+  "u": "https://dev.to/lovestaco/you-tried-git-lrc-meet-livereview-7od",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "d": "2026-11-08",
+  "o": "You tried git-lrc. Meet LiveReview 👀",
+  "x": "LiveReview는 PR에 위험 점수를 매겨 위험도가 낮은 30-50%를 자동 승인하고, 나머지는 중요도 순으로 검토자를 지정한다. 기존 AI"
+ },
+ {
+  "t": "Asahi Linux 진행 상황 – Linux 7.3",
+  "u": "https://asahilinux.org/2026/11/progress-report-7-3/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-08",
+  "o": "Asahi Linux Progress Linux 7.3",
+  "x": "Asahi Linux가 Linux 7.3에 맞춰 주요 드라이버인 macaudio와 AVD를 업스트림에 제출 준비를 마쳤다. 두 드라이버와 관련 "
+ },
+ {
+  "t": "meta / Astryx 디자인 시스템",
+  "u": "https://github.com/meta/astryx",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "o": "meta / astryx",
+  "x": "Astryx는 메타에서 8년간 개발된 오픈소스 디자인 시스템으로 현재 베타 단계이며 React 19+와 StyleX 기반이다. 150개 이상의 "
+ },
+ {
+  "t": "Containerd 2.4, klauspost gzip 디코더 전환으로 실제 이미지 레이어 18% 가속",
+  "u": "https://dev.to/alexgeorgiev17/containerd-24s-switch-to-klausposts-gzip-decoder-speeds-up-real-image-layers-by-18-2jne",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "research",
+   "devops-infra",
+   "hardware",
+   "language",
+   "release"
+  ],
+  "d": "2026-11-08",
+  "o": "Containerd 2.4's switch to klauspost's gzip decoder speeds up real image layers by 18%",
+  "x": "Containerd 2.4.0에서 gzip 레이어 압축 해제에 표준 라이브러리 대신 klauspost/compress/gzip를 사용하도록 변경"
+ },
+ {
+  "t": "LocalThings — Home Assistant에서 삼성 가전 제어",
+  "u": "https://github.com/mbillow/localthings",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "o": "mbillow / localthings",
+  "x": "LocalThings는 Home Assistant와 삼성 세탁기·건조기·냉장고·에어컨·오븐 등 SmartThings와 연동되는 가전을 로컬 네트"
+ },
+ {
+  "t": "dsx-ai-factory / nvke",
+  "u": "https://github.com/dsx-ai-factory/nvke",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "backend-data",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-08",
+  "x": "NVIDIA Kubernetes Engine(NVKE)은 자체 NVIDIA GPU 인프라에서 관리형 Kubernetes 서비스를 제공한다. 관리"
+ },
+ {
+  "t": "“프라이빗” 검색 엔진이 Bing 위에서 동작할 수도 있다. 이 엔진은 자체 인덱스를 구축한다",
+  "u": "https://dev.to/startupcafe/your-private-search-engine-might-run-on-bing-this-one-builds-its-own-index-4all",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "research",
+   "backend-data",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-08",
+  "o": "Your “Private” Search Engine Might Run on Bing. This One Builds Its Own Index",
+  "x": "LYNX는 Anoneurx가 만든 오픈소스 검색 엔진으로, 공개 웹을 크롤링해 자체 인덱스를 만들고 프로파일링 없이 결과를 제공한다. 현재 v0"
+ },
+ {
+  "t": "Free 소프트웨어로 법률 사무소 운영하기",
+  "u": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-08",
+  "o": "Running a law firm on Free software",
+  "x": "2026년 업데이트에서는 여전히 Debian GNOME을 사용하고 ThinkPad X1 Yoga Gen 6에서 작업하지만, Thunder-bol"
+ },
+ {
+  "t": "RAM 업로드",
+  "u": "https://uploadyourram.org",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-08",
+  "o": "Upload Your RAM",
+  "x": "새롭게 발표된 RAM 업로드 기술을 통해 사용하지 않는 컴퓨터의 RAM을 업로드해 기부할 수 있다. 기존에는 구매한 RAM을 되돌릴 수 없어 사"
+ },
+ {
+  "t": "Need for Speed Underground 2 온라인 브라우저 버전",
+  "u": "https://nfsu2.xyz/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "web"
+  ],
+  "d": "2026-11-08",
+  "o": "Need for Speed Underground 2 online in the browser"
+ },
+ {
   "t": "Pure Go로 구현한 HDF5, CGO 없이: 5KB 파일이 40GB 할당, 라운드트립 테스트 오류",
   "u": "https://dev.to/scigolib/hdf5-in-pure-go-no-cgo-a-5-kb-file-that-allocated-40-gb-and-round-trip-tests-that-lied-1jao",
   "m": "2026-11",

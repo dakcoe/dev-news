@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-29T00:00:24+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 12,
-    "blocked": 1,
-    "robots": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.reuters.com/business/media-telecom/amazon-signs-1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-10-29T08:00:28+09:00",
    "total": 18,
    "counts": {
@@ -624,6 +602,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-11-08T00:00:27+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 10,
+    "github": 5
+   },
+   "failures": []
   }
  ]
 }

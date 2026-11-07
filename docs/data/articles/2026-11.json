@@ -1,5 +1,482 @@
 [
  {
+  "title": "An agent told me it deployed. I asked the server, and the containers were a day old",
+  "url": "https://dev.to/chet103cc/an-agent-told-me-it-deployed-i-asked-the-server-and-the-containers-were-a-day-old-2b6i",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 58,
+  "comments": 5,
+  "published_at": 1794061129.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chet103cc/an-agent-told-me-it-deployed-i-asked-the-server-and-the-containers-were-a-day-old-2b6i"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5nnkxefwj4x15zhan0d7.jpg",
+  "link_status": "ok",
+  "ko_title": "에이전트가 배포했다고 알려왔지만 컨테이너는 하루 전 빌드",
+  "summary": "배포 에이전트가 “배포 완료” 메시지를 보냈지만 실제 컨테이너 이미지가 23시간 전에 빌드된 상태였다. 저자는 커밋 SHA와 컨테이너 이미지 생성 시간을 비교하는 검증 스크립트를 제시한다. 이 스크립트는 배포가 실제로 적용됐는지 확인하는 데 사용된다.",
+  "why": "에이전트의 배포 완료 보고만 믿으면 구버전 컨테이너가 트래픽을 처리하는 사고가 난다. 커밋 SHA와 이미지 생성 시간을 직접 대조하는 스크립트를 실행해 실제 적용 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "gen-media",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Building RailPulse AI: Deploying an Open-Source Railway Dispatch Agent with Gemma and Google Cloud Run",
+  "url": "https://dev.to/gde/building-railpulse-ai-deploying-an-open-source-railway-dispatch-agent-with-gemma-and-google-cloud-2b9g",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 17,
+  "comments": 7,
+  "published_at": 1794036933.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/building-railpulse-ai-deploying-an-open-source-railway-dispatch-agent-with-gemma-and-google-cloud-2b9g"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FRobinaMirbahar%2Frailpulse-gemma-cloudrun%2Fmain%2Fassets%2Frailpulse_banner_v2.jpg",
+  "link_status": "ok",
+  "ko_title": "RailPulse AI 구축: Gemma와 Google Cloud Run으로 오픈소스 철도 디스패치 에이전트 배포",
+  "summary": "오픈-weight Gemma 모델과 Google Agent Development Kit, Cloud Run을 활용해 안전-중요 철도 디스패치 및 실시간 추적 에이전트를 구축하고 서버리스로 배포하는 방법을 공개했다. 기능 호출과 결정적 안전 인터록을 적용해 물리적 운영에 AI를 적용할 때 발생할 수 있는 위험을 최소화한다. 전체 아키텍처와 구현 단계가 GitHub Blueprint에 정리돼 있다.",
+  "why": "기능 호출과 결정적 안전 인터록을 결합해 물리적 운영에 AI를 적용할 때의 위험을 줄이는 구조를 보여준다. 이 패턴은 단순 챗봇이 아닌 안전-중요 시스템에 AI를 도입할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Every Mac comes with an (undocumented) family member classifier",
+  "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+  "source": "hackernews",
+  "upvotes": 302,
+  "comments": 149,
+  "published_at": 1794044763,
+  "discussion": "https://news.ycombinator.com/item?id=50403097",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://8rank.ai/og-apple-intelligence-personal-knowledge-graph.png",
+  "link_status": "ok",
+  "ko_title": "모든 Mac에 (문서화되지 않은) 가족 관계 분류기가 포함됩니다",
+  "summary": "macOS 26부터 개인 지식 그래프를 구축하는 두 개의 데몬이 내장돼 있다. 연락처, 캘린더, 사진, 메시지 등 다양한 데이터를 교차 참조해 사용자와 주변 사람들의 관계와 행동을 그래프로 저장한다. 이 그래프는 로컬에 저장되며 LLM이 조회할 수 있다고 알려졌다. 분석 결과를 바탕으로 iKnow라는 대시보드를 오픈소스로 제공한다.",
+  "why": "macOS 26에서 개인 지식 그래프를 구축하는 데몬이 내장되어 있다. 연락처와 사진 등 로컬 데이터를 교차 참조해 관계 그래프를 만든다. 이 그래프는 LLM이 조회할 수 있는 저장소로 동작한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "ranxianglei / billion-context",
+  "url": "https://github.com/ranxianglei/billion-context",
+  "source": "github",
+  "upvotes": 185,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/ranxianglei/billion-context"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 185,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/ranxianglei/billion-context",
+  "link_status": null,
+  "ko_title": "ranxianglei / billion-context",
+  "summary": "컨텍스트 압축 플러그인으로 100K 토큰 윈도우만으로도 5배 적은 토큰 사용을 제공한다. 수십억 토큰 규모의 월 단위 세션을 유지하면서도 압축 품질이 높다. npm을 통해 전역 설치가 가능하며, 여러 LLM 서비스와 연동된다.",
+  "why": "100K 토큰 윈도우 환경에서 5배 적은 토큰 사용이 가능해진다. 수십억 토큰 규모의 월 단위 세션을 유지할 때 압축 품질이 높게 나타난다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "LNPANDY / NX2Apple",
+  "url": "https://github.com/LNPANDY/NX2Apple",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 380,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/LNPANDY/NX2Apple"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 380,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/LNPANDY/NX2Apple",
+  "link_status": null,
+  "ko_title": "NX2Apple — Switch 게임을 iPhone에서 실행",
+  "summary": "Windows용 런처가 추가돼 Windows에서도 iPhone·iPad용 IPA를 1.2 인터페이스로 빌드할 수 있다. 엔진이 번들되어 git 없이도 동작하고, 멀티코어 NSO 재작성 및 자동 업데이트 기능을 제공한다. Mac·Windows 런처 모두에서 Switch 2 게임 폴더나 .nup 파일을 선택해 prod.keys 없이 실행한다.",
+  "why": "NX2Apple은 에뮬레이터가 아니라 Switch 게임을 iPhone용 IPA로 변환하는 도구다. Windows용 런처가 추가돼 기존 Mac 환경이 아니어도 동일한 빌드 과정을 수행할 수 있다. 엔진이 번들링되어 있어 git 클론 없이도 즉시 실행 환경을 구성할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "You tried git-lrc. Meet LiveReview 👀",
+  "url": "https://dev.to/lovestaco/you-tried-git-lrc-meet-livereview-7od",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 38,
+  "comments": 3,
+  "published_at": 1794048672.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/lovestaco/you-tried-git-lrc-meet-livereview-7od"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fjournal-wa6509js.s3.ap-south-1.amazonaws.com%2Fa9f97414682fab3bc3da3724817dda45f819ca88dec1a1241c419ff1e1569fee.jpg",
+  "link_status": "ok",
+  "ko_title": "LiveReview를 만나보세요",
+  "summary": "LiveReview는 PR에 위험 점수를 매겨 위험도가 낮은 30-50%를 자동 승인하고, 나머지는 중요도 순으로 검토자를 지정한다. 기존 AI 리뷰 도구와 달리 인간 검토 필요 여부와 검토 순서를 제시한다. 제품은 Product Hunt에 공개됐으며, GitHub Copilot 등과 비교 평가했다.",
+  "why": "기존 AI 리뷰 도구가 코드 문제나 스타일만 지적하던 것과 달리, 인간 검토의 필요 여부와 우선순위를 직접 판단한다. 위험도가 낮은 30~50%의 PR을 자동 승인해 시니어 개발자의 병목 현상을 줄인다. 나머지 PR은 중요도 순으로 정렬되어 가장 위험한 변경 사항부터 먼저 검토되도록 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Asahi Linux Progress Linux 7.3",
+  "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+  "source": "hackernews",
+  "upvotes": 221,
+  "comments": 187,
+  "published_at": 1794028818,
+  "discussion": "https://news.ycombinator.com/item?id=50401867",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://asahilinux.org/2026/11/progress-report-7-3/"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://asahilinux.org/img/AsahiLinux_logomark_256px.png",
+  "link_status": "ok",
+  "ko_title": "Asahi Linux 진행 상황 – Linux 7.3",
+  "summary": "Asahi Linux가 Linux 7.3에 맞춰 주요 드라이버인 macaudio와 AVD를 업스트림에 제출 준비를 마쳤다. 두 드라이버와 관련 디바이스 트리 변경은 각각 약 3100줄과 13000줄의 코드 규모다. M4 Pro, Max, M5 모델용 초기 디바이스 트리도 추가되었으며, TI USB-PD·SPMI와 Thunderbolt 지원을 업스트림-우선 방식으로 개발했다.",
+  "why": "macOS 환경에서 Linux를 구동하려는 경우, 이번 업스트림 제출로 오디오와 디스플레이 관련 드라이버의 안정성이 확보된다. M4 Pro·Max 및 M5 모델의 초기 부팅 지원이 추가되어 해당 하드웨어에서의 테스트 범위가 넓어진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "meta / astryx",
+  "url": "https://github.com/meta/astryx",
+  "source": "github",
+  "upvotes": 198,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/meta/astryx"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 198,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/meta/astryx",
+  "link_status": null,
+  "ko_title": "meta / Astryx 디자인 시스템",
+  "summary": "Astryx는 메타에서 8년간 개발된 오픈소스 디자인 시스템으로 현재 베타 단계이며 React 19+와 StyleX 기반이다. 150개 이상의 접근성 컴포넌트와 테마, 다크모드, 템플릿, CLI를 제공한다. 사전 구축된 CSS와 타입드 React 컴포넌트를 바로 가져와 사용할 수 있어 별도의 빌드 플러그인이나 스타일링 라이브러리가 필요하지 않다.",
+  "why": "React 19+ 프로젝트에서 별도 스타일링 라이브러리나 빌드 플러그인 없이 타입드 컴포넌트를 바로 가져다 쓸 수 있다. 베타 단계이므로 프로덕션 도입 전 API 안정성을 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Containerd 2.4's switch to klauspost's gzip decoder speeds up real image layers by 18%",
+  "url": "https://dev.to/alexgeorgiev17/containerd-24s-switch-to-klausposts-gzip-decoder-speeds-up-real-image-layers-by-18-2jne",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1794049200.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/containerd-24s-switch-to-klausposts-gzip-decoder-speeds-up-real-image-layers-by-18-2jne"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fc4pleieq7siranzjqh7a.png",
+  "link_status": "ok",
+  "ko_title": "Containerd 2.4, klauspost gzip 디코더 전환으로 실제 이미지 레이어 18% 가속",
+  "summary": "Containerd 2.4.0에서 gzip 레이어 압축 해제에 표준 라이브러리 대신 klauspost/compress/gzip를 사용하도록 변경했다. 실제 python:3.12 이미지 레이어를 x86_64 환경에서 테스트한 결과 압축 해제 속도가 약 18% 빨라졌다. 압축은 기존 표준 라이브러리를 그대로 사용한다.",
+  "why": "Docker Engine이 containerd v2.4.2를 번들링하므로 별도 설정 없이 이 가속 효과를 적용받는다. gzip 레이어 압축 해제 속도만 개선되며 압축 과정은 기존 표준 라이브러리를 그대로 사용한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "devops-infra",
+   "hardware",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "mbillow / localthings",
+  "url": "https://github.com/mbillow/localthings",
+  "source": "github",
+  "upvotes": 184,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/mbillow/localthings"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 184,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/mbillow/localthings",
+  "link_status": null,
+  "ko_title": "LocalThings — Home Assistant에서 삼성 가전 제어",
+  "summary": "LocalThings는 Home Assistant와 삼성 세탁기·건조기·냉장고·에어컨·오븐 등 SmartThings와 연동되는 가전을 로컬 네트워크만으로 제어한다. 푸시 지원 기기는 실시간 업데이트를 제공하고, 나머지는 30초마다 상태를 확인한다. 설정 시 IP 주소만 입력하면 자동으로 기기 유형과 모델을 인식한다.",
+  "why": "Home Assistant에서 삼성 가전을 클라우드 없이 로컬로 제어할 수 있다. 삼성 서버 연결이 끊겨도 가전 제어가 유지되는 점이 기존 방식과 다르다. 가전 자체의 삼성 서버 연결은 변하지 않으므로 이 한계를 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "dsx-ai-factory / nvke",
+  "url": "https://github.com/dsx-ai-factory/nvke",
+  "source": "github",
+  "upvotes": 125,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/dsx-ai-factory/nvke"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 125,
+  "score": 49,
+  "image": "https://opengraph.githubassets.com/1/dsx-ai-factory/nvke",
+  "link_status": null,
+  "ko_title": "dsx-ai-factory / nvke",
+  "summary": "NVIDIA Kubernetes Engine(NVKE)은 자체 NVIDIA GPU 인프라에서 관리형 Kubernetes 서비스를 제공한다. 관리 플레인을 설치해 고객에게 개별 클러스터와 API 접근을 제공하며, 현재 프리뷰 단계라 생산 환경 사용은 권장되지 않는다. 로컬 빠른 시작 가이드를 통해 GPU 없이도 개발용 관리 플레인과 워크로드 클러스터를 시뮬레이션할 수 있다.",
+  "why": "프리뷰 단계라 API와 설정이 변경될 수 있어 생산 환경 배포는 피해야 한다. GPU 하드웨어 없이 로컬에서 관리 플레인과 워크로드 클러스터를 시뮬레이션해 평가할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Your “Private” Search Engine Might Run on Bing. This One Builds Its Own Index",
+  "url": "https://dev.to/startupcafe/your-private-search-engine-might-run-on-bing-this-one-builds-its-own-index-4all",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 57,
+  "comments": 0,
+  "published_at": 1794056823.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/startupcafe/your-private-search-engine-might-run-on-bing-this-one-builds-its-own-index-4all"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fanoneurx.com%2Fog-images%2Fopensource%2Fprojects%2Fog-image-lynx.jpg",
+  "link_status": "ok",
+  "ko_title": "“프라이빗” 검색 엔진이 Bing 위에서 동작할 수도 있다. 이 엔진은 자체 인덱스를 구축한다",
+  "summary": "LYNX는 Anoneurx가 만든 오픈소스 검색 엔진으로, 공개 웹을 크롤링해 자체 인덱스를 만들고 프로파일링 없이 결과를 제공한다. 현재 v0.1.0 버전이 공개됐으며, 크롤러·파서·인덱서·쿼리 처리·BM25F 랭커·Postgres 저장소·공개 API 등을 포함한다. 프로젝트와 코드, 벤치마크는 모두 공개돼 있어 기여와 검증이 가능하다.",
+  "why": "자체 인덱스를 구축해 Bing 같은 외부 API에 의존하지 않는다. 프로파일링 없이 결과를 제공하지만 익명성이 보장되지 않는다. 로그가 생성되므로 완전한 무기록을 요구하는 환경에서는 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "backend-data",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Running a law firm on Free software",
+  "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
+  "source": "hackernews",
+  "upvotes": 65,
+  "comments": 24,
+  "published_at": 1794044346,
+  "discussion": "https://news.ycombinator.com/item?id=50403066",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/"
+  ],
+  "cross_source_count": 1,
+  "score": 23,
+  "image": "https://decoded.legal/blog/content/images/decoded.legal_logo.png",
+  "link_status": "ok",
+  "ko_title": "Free 소프트웨어로 법률 사무소 운영하기",
+  "summary": "2026년 업데이트에서는 여전히 Debian GNOME을 사용하고 ThinkPad X1 Yoga Gen 6에서 작업하지만, Thunder-bolt/USB-C 포트가 불안정해 노트북 교체가 필요할 수 있다. 이메일은 Thunderbird와 mutt, 문서 작성은 LibreOffice Writer와 pandoc·typst, 프레젠테이션은 reveal.js를 활용한다.",
+  "why": "Thunderbird의 반복 캘린더 초대 처리 오류는 ikhal로 우회할 수 있다. 클라이언트가 .tex 파일의 차이를 요구할 때 pandoc·typst 파이프라인만으로는 부족하다. 이런 경우 LaTeX 전환을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Upload Your RAM",
+  "url": "https://uploadyourram.org",
+  "source": "hackernews",
+  "upvotes": 209,
+  "comments": 178,
+  "published_at": 1794046526,
+  "discussion": "https://news.ycombinator.com/item?id=50403214",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://uploadyourram.org"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "RAM 업로드",
+  "summary": "새롭게 발표된 RAM 업로드 기술을 통해 사용하지 않는 컴퓨터의 RAM을 업로드해 기부할 수 있다. 기존에는 구매한 RAM을 되돌릴 수 없어 사용하지 않는 용량에 대한 죄책감이 있었다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
+  "title": "Need for Speed Underground 2 online in the browser",
+  "url": "https://nfsu2.xyz/",
+  "source": "hackernews",
+  "upvotes": 308,
+  "comments": 91,
+  "published_at": 1794044196,
+  "discussion": "https://news.ycombinator.com/item?id=50403052",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nfsu2.xyz/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Need for Speed Underground 2 온라인 브라우저 버전",
+  "summary": "",
+  "why": "기사는 브라우저에서 구동되는 Need for Speed Underground 2의 조작키와 클라우드 저장 설정을 안내한다. 기존 PC 버전과 달리 브라우저 환경에서 클라우드 동기화 기능을 사용할 수 있다. 다만 변경 사항은 다음 플레이 시점에 적용되므로 즉시 반영되지 않는다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-08T00:00:01.271502+09:00",
+  "batch_label": "11월 8일 00:00"
+ },
+ {
   "title": "HDF5 in Pure Go, No CGO: a 5 KB File That Allocated 40 GB, and Round-Trip Tests That Lied",
   "url": "https://dev.to/scigolib/hdf5-in-pure-go-no-cgo-a-5-kb-file-that-allocated-40-gb-and-round-trip-tests-that-lied-1jao",
   "source": "devto",
