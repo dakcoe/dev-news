@@ -1,5 +1,311 @@
 [
  {
+  "title": "HDF5 in Pure Go, No CGO: a 5 KB File That Allocated 40 GB, and Round-Trip Tests That Lied",
+  "url": "https://dev.to/scigolib/hdf5-in-pure-go-no-cgo-a-5-kb-file-that-allocated-40-gb-and-round-trip-tests-that-lied-1jao",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 1,
+  "comments": 2,
+  "published_at": 1794016890.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/scigolib/hdf5-in-pure-go-no-cgo-a-5-kb-file-that-allocated-40-gb-and-round-trip-tests-that-lied-1jao"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Femlcgnilmagw3sqt5noy.png",
+  "link_status": "ok",
+  "ko_title": "Pure Go로 구현한 HDF5, CGO 없이: 5KB 파일이 40GB 할당, 라운드트립 테스트 오류",
+  "summary": "Go에서 MATLAB .mat 파일을 읽기 위한 순수 Go HDF5 라이브러리를 공개했다. 기존 cgo 바인딩과 미완성 순수 Go 시도들을 대체하며, 읽기·쓰기 모두 지원한다. 현재 34개의 릴리즈가 있으며, HDF5 C 라이브러리 테스트 파일 383개 중 379개를 성공적으로 읽는다.",
+  "why": "CGO 없이 Go에서 HDF5 파일을 직접 읽거나 쓸 수 있게 됐다. MATLAB v7.3 형식이나 과학 데이터 파이프라인을 Go로 이식할 때 C 라이브러리 의존성을 제거할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "AI is dramatically accelerating AI research",
+  "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+  "source": "hackernews",
+  "upvotes": 271,
+  "comments": 210,
+  "published_at": 1793996843,
+  "discussion": "https://news.ycombinator.com/item?id=50397994",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://substackcdn.com/image/fetch/$s_!u_X_!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd74ff70-df26-4e1a-be31-4fc3543bada8_2048x1072.png",
+  "link_status": "ok",
+  "ko_title": "AI가 AI 연구를 급격히 가속화하고 있다",
+  "summary": "Anthropic이 자체 책임 확장 정책에 따라 AI가 연구 개발을 자동화함으로써 능력 향상 속도가 두 배가 되었다고 보고했다. METR의 비공개 보고서는 2025-2026년 사이에 이러한 가속이 이미 발생했음을 제시한다. 보고서에 따르면 가속의 주요 원인은 AI 자동화이며, 기타 증거는 대부분 비공개이다.",
+  "why": "AI가 AI 연구 개발을 자동화하면서 능력 향상 속도가 두 배로 빨라졌다. 이는 모델 성능 개선 주기가 기존보다 짧아져 최신 버전 배포 주기를 재조정해야 함을 의미한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "Audit 1,000 websites for speed, SEO, AI-crawler access and domain expiry (with plain Python, no scraping)",
+  "url": "https://dev.to/michael1980/audit-1000-websites-for-speed-seo-ai-crawler-access-and-domain-expiry-with-plain-python-no-4k99",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 2,
+  "published_at": 1794026196.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/michael1980/audit-1000-websites-for-speed-seo-ai-crawler-access-and-domain-expiry-with-plain-python-no-4k99"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxgek2li84vtijt1xd41a.png",
+  "link_status": "ok",
+  "ko_title": "1,000개 웹사이트를 속도·SEO·AI 크롤러 접근·도메인 만료 검사 (간단한 파이썬으로, 스크래핑 없이)",
+  "summary": "파이썬 몇 줄 코드로 WHOIS 대신 RDAP를 이용해 도메인 만료일을 JSON 형태로 조회할 수 있다. DNS-over-HTTPS를 활용해 SPF·DMARC 레코드를 확인해 이메일 스푸핑 위험을 판단한다. Core Web Vitals 실패 페이지와 GPTBot·ClaudeBot 차단 여부도 공식 API와 DNS 정보를 통해 스크래핑 없이 검증한다. 구현 시 레지스트리별 레이트 제한과 일부 국가 TLD의 RDAP 부재에 주의해야 한다.",
+  "why": "RDAP은 WHOIS와 달리 JSON을 반환하므로 파싱이 쉬워진다. 일부 국가 TLD는 RDAP을 지원하지 않아 DNS로 등록 여부를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "Sodium-ion batteries approach cost parity with LFP",
+  "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+  "source": "hackernews",
+  "upvotes": 171,
+  "comments": 79,
+  "published_at": 1794006046,
+  "discussion": "https://news.ycombinator.com/item?id=50399657",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://www.pv-magazine.com/wp-content/uploads/2025/03/Singeng-Sodium-ion-project-in-Hubei.jpg",
+  "link_status": "ok",
+  "ko_title": "나트륨 이온 배터리, LFP와 비용 동등점 접근",
+  "summary": "나트륨 이온 배터리가 상업 생산 단계에 진입해 리튬 이온 대체재로 부상하고 있다. 70 GWh 규모의 공급 계약이 이미 체결됐으며, 2026년 말까지 셀 수준에서 LFP와 비용이 동등해질 것으로 예상된다. 중국이 상용화를 주도하고 BYD와 CATL이 각각 30 GWh와 1 GWh 규모 생산을 목표로 한다.",
+  "why": "나트륨 이온 배터리는 초기 비용이 LFP보다 높지만 20년 사용 시 총 소유 비용이 21% 낮다. 셀 수준 비용 동등은 2026년 말이지만 시스템 수준은 2030년 이후라 당장 교체는 어렵다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "Libghostty 1.0",
+  "url": "https://mitchellh.com/writing/libghostty-1-0",
+  "source": "hackernews",
+  "upvotes": 484,
+  "comments": 78,
+  "published_at": 1794007852,
+  "discussion": "https://news.ycombinator.com/item?id=50399933",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mitchellh.com/writing/libghostty-1-0"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Libghostty 1.0",
+  "summary": "libghostty-vt 1.0이 출시되어 C ABI가 안정화되었습니다. 이제 JetBrains IDE의 터미널, Neovim의 libvterm 대체, KDE Konsole 실험 등 수백 개 제품에서 사용됩니다. 수백만 사용자에게 고성능 터미널 에뮬레이션을 제공하며, 배포판이 별도 패키지로 제공될 수 있습니다.",
+  "why": "JetBrains IDE와 Neovim의 터미널이 libghostty-vt 기반으로 전환되었습니다. C ABI가 안정화되어 배포판이 의존성을 별도 패키지로 관리할 수 있습니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "🎃 The Real Nightmare Isn't a Bug. It's a Bug Nobody Notices. 🎃",
+  "url": "https://dev.to/sinarezaei/the-real-nightmare-isnt-a-bug-its-a-bug-nobody-notices-565n",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 2,
+  "comments": 2,
+  "published_at": 1794027113.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sinarezaei/the-real-nightmare-isnt-a-bug-its-a-bug-nobody-notices-565n"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdn3dpzwfxztbdnzjjpbr.png",
+  "link_status": "ok",
+  "ko_title": "실제 악몽은 버그가 아니라 아무도 눈치채지 못하는 버그",
+  "summary": "테스트와 CI가 모두 정상이라도 응답 손실로 인해 결제 요청이 중복될 수 있다. 재시도 로직이 동일한 결제 요청을 다시 보내면 사용자가 두 번 결제되는 문제가 발생한다. 이를 방지하려면 결제 API에 아이디empotency 키를 전달해 중복 요청을 식별하도록 해야 한다. 아이디empotency 지원 여부는 결제 제공업체에 따라 다르다.",
+  "why": "재시도 로직이 응답 손실 시 중복 결제를 유발할 수 있다. 결제 API 호출 시 아이디empotency 키를 전달해 중복 요청을 차단해야 한다. 결제 제공업체에 따라 아이디empotency 지원 여부가 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "NotRexed / Hookshot",
+  "url": "https://github.com/NotRexed/Hookshot",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 312,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/NotRexed/Hookshot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 312,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/NotRexed/Hookshot",
+  "link_status": null,
+  "ko_title": "Hookshot — Windows에서 실행되는 젤다 Ocarina of Time (Nintendo Switch 2)",
+  "summary": "이 프로젝트는 Switch 2용 젤다 Ocarina of Time을 에뮬레이터 없이 Windows용 C 프로그램으로 정적 재컴파일한다. 게임 파일을 직접 보유한 사용자는 Vulkan 기반 그래픽과 재구현된 시스템 소프트웨어로 실행 파일을 빌드할 수 있다. 현재는 제한된 환경에서만 테스트됐으며, 일부 기능은 정상 작동하지만 성능과 일부 그래픽 결함이 남아 있다.",
+  "why": "에뮬레이터 없이 Windows에서 실행되는 방식은 기존 가상화 환경과 다른 접근이다. 현재 단일 PC에서만 테스트되어 안정성이 보장되지 않는다. 성능 저하와 그래픽 결함이 남아 있어 실사용에는 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "Windows won't let you own Win+Shift+S. So I hooked the keyboard in Python.",
+  "url": "https://dev.to/akhourianmolkumar/windows-wont-let-you-own-winshifts-so-i-hooked-the-keyboard-in-python-248c",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 22,
+  "comments": 10,
+  "published_at": 1794027072.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/windows-wont-let-you-own-winshifts-so-i-hooked-the-keyboard-in-python-248c"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Feiamx8g9gjxsqv6pdyxp.png",
+  "link_status": "ok",
+  "ko_title": "Windows에서 Win+Shift+S를 가로챌 수 없다. 그래서 파이썬으로 키보드를 후킹했다.",
+  "summary": "Win+Shift+S 조합은 Windows 쉘이 예약해 RegisterHotKey가 동작하지 않는다. 저자는 저수준 키보드 훅(WH_KEYBOARD_LL)을 사용해 키 입력을 가로채고, 키를 억제한 뒤 가상키 0xE8을 주입해 시작 메뉴가 뜨는 것을 방지한다. 훅 콜백을 가비지 컬렉션에서 보호하고, 키다운·키업을 모두 처리해야 안정적으로 동작한다.",
+  "why": "RegisterHotKey은 Win+Shift+S를 등록할 수 없으므로 WH_KEYBOARD_LL 훅을 구현해야 한다. 콜백 참조를 유지하지 않으면 가비지 컬렉션으로 앱이 크래시한다. 키다운만 차단하면 시작 메뉴가 열리므로 가상키 0xE8을 주입해 Win 조합을 위장해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "JenkinWoo / sheeridVerify",
+  "url": "https://github.com/JenkinWoo/sheeridVerify",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 484,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/JenkinWoo/sheeridVerify"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 484,
+  "score": 52,
+  "image": "https://opengraph.githubassets.com/1/JenkinWoo/sheeridVerify",
+  "link_status": null,
+  "ko_title": "JenkinWoo / sheeridVerify — Node.js 기반 검증 프로세스 학습 프로젝트",
+  "summary": "sheeridVerify는 Node.js 이상 22.15 환경에서 동작하는 오픈소스 프로젝트로, 로컬 웹 작업대와 작업 큐, 브라우저 폼 인터랙션, HTTP 상태 조회 기능을 제공한다. 교육·연구 목적의 검증 흐름을 실습할 수 있도록 작업 생성·관리·재시도와 파일 업로드 기능을 포함한다. 사용 전에는 반드시 인증된 플랫폼에 대한 권한을 확보하고, 프로젝트는 SheerID와 공식적인 연관이 없음을 명시한다.",
+  "why": "Node.js 22.15 이상 환경이 필요하므로 기존 런타임 버전이 낮으면 업데이트가 필수다. 실제 플랫폼 사용 시 사전 권한 확보가 필수이며, 이 프로젝트는 SheerID와 무관하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
+  "title": "I toured Unitree's factory. I'm more bullish on the West",
+  "url": "https://josef.cn/blog/unitree",
+  "source": "hackernews",
+  "upvotes": 98,
+  "comments": 61,
+  "published_at": 1794013516,
+  "discussion": "https://news.ycombinator.com/item?id=50400597",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://josef.cn/blog/unitree"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://josef.cn/blog/unitree/social.png",
+  "link_status": "ok",
+  "ko_title": "Unitree 공장을 견학했다 – 서구에 더 낙관적이다",
+  "summary": "저자는 항저우에 있는 Unitree 공장을 직접 방문해 대부분의 모터 생산 라인이 인간이 조작하는 구식 와인딩 기계로 이루어져 있음을 확인했다. 자동화 라인은 소수에 불과하지만, 현재 로봇 제조 비용 중 인건비 비중은 8% 수준이며, 향후 새로운 모터 라인으로 인건비를 절반 이상 절감해 로봇당 비용을 2% 이하로 낮출 계획이다. Unitree는 2025년에 약 2만6천 대의 로봇 개를 생산했으며, 이는 전년 세계 출하량을 초과한다.",
+  "why": "Unitree의 로봇 제조에서 인건비 비중이 8%에 불과해 자동화 설비 확충으로 얻는 비용 절감 효과가 제한적이다. 서구권 제조 자동화 기술의 경쟁 우위가 유지될 가능성이 높으므로, 로봇 하드웨어 공급망 분석 시 이 점을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-07T16:00:03.016983+09:00",
+  "batch_label": "11월 7일 16:00"
+ },
+ {
   "title": "Stop Swapping Models: Optimizing the Agent Environment Cuts 70% More Cost",
   "url": "https://dev.to/reidmarlow/stop-swapping-models-optimizing-the-agent-environment-cuts-70-more-cost-36cf",
   "source": "devto",

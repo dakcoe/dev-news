@@ -1,5 +1,128 @@
 [
  {
+  "t": "Pure Go로 구현한 HDF5, CGO 없이: 5KB 파일이 40GB 할당, 라운드트립 테스트 오류",
+  "u": "https://dev.to/scigolib/hdf5-in-pure-go-no-cgo-a-5-kb-file-that-allocated-40-gb-and-round-trip-tests-that-lied-1jao",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "release"
+  ],
+  "d": "2026-11-07",
+  "o": "HDF5 in Pure Go, No CGO: a 5 KB File That Allocated 40 GB, and Round-Trip Tests That Lied",
+  "x": "Go에서 MATLAB .mat 파일을 읽기 위한 순수 Go HDF5 라이브러리를 공개했다. 기존 cgo 바인딩과 미완성 순수 Go 시도들을 대체"
+ },
+ {
+  "t": "AI가 AI 연구를 급격히 가속화하고 있다",
+  "u": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "research"
+  ],
+  "d": "2026-11-07",
+  "o": "AI is dramatically accelerating AI research",
+  "x": "Anthropic이 자체 책임 확장 정책에 따라 AI가 연구 개발을 자동화함으로써 능력 향상 속도가 두 배가 되었다고 보고했다. METR의 비공"
+ },
+ {
+  "t": "1,000개 웹사이트를 속도·SEO·AI 크롤러 접근·도메인 만료 검사 (간단한 파이썬으로, 스크래핑 없이)",
+  "u": "https://dev.to/michael1980/audit-1000-websites-for-speed-seo-ai-crawler-access-and-domain-expiry-with-plain-python-no-4k99",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "d": "2026-11-07",
+  "o": "Audit 1,000 websites for speed, SEO, AI-crawler access and domain expiry (with plain Python, no scraping)",
+  "x": "파이썬 몇 줄 코드로 WHOIS 대신 RDAP를 이용해 도메인 만료일을 JSON 형태로 조회할 수 있다. DNS-over-HTTPS를 활용해 S"
+ },
+ {
+  "t": "나트륨 이온 배터리, LFP와 비용 동등점 접근",
+  "u": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-07",
+  "o": "Sodium-ion batteries approach cost parity with LFP",
+  "x": "나트륨 이온 배터리가 상업 생산 단계에 진입해 리튬 이온 대체재로 부상하고 있다. 70 GWh 규모의 공급 계약이 이미 체결됐으며, 2026년 "
+ },
+ {
+  "t": "Libghostty 1.0",
+  "u": "https://mitchellh.com/writing/libghostty-1-0",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "dev-tools"
+  ],
+  "d": "2026-11-07",
+  "x": "libghostty-vt 1.0이 출시되어 C ABI가 안정화되었습니다. 이제 JetBrains IDE의 터미널, Neovim의 libvterm"
+ },
+ {
+  "t": "실제 악몽은 버그가 아니라 아무도 눈치채지 못하는 버그",
+  "u": "https://dev.to/sinarezaei/the-real-nightmare-isnt-a-bug-its-a-bug-nobody-notices-565n",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-07",
+  "o": "🎃 The Real Nightmare Isn't a Bug. It's a Bug Nobody Notices. 🎃",
+  "x": "테스트와 CI가 모두 정상이라도 응답 손실로 인해 결제 요청이 중복될 수 있다. 재시도 로직이 동일한 결제 요청을 다시 보내면 사용자가 두 번 "
+ },
+ {
+  "t": "Hookshot — Windows에서 실행되는 젤다 Ocarina of Time (Nintendo Switch 2)",
+  "u": "https://github.com/NotRexed/Hookshot",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-11-07",
+  "o": "NotRexed / Hookshot",
+  "x": "이 프로젝트는 Switch 2용 젤다 Ocarina of Time을 에뮬레이터 없이 Windows용 C 프로그램으로 정적 재컴파일한다. 게임 파"
+ },
+ {
+  "t": "Windows에서 Win+Shift+S를 가로챌 수 없다. 그래서 파이썬으로 키보드를 후킹했다.",
+  "u": "https://dev.to/akhourianmolkumar/windows-wont-let-you-own-winshifts-so-i-hooked-the-keyboard-in-python-248c",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "language"
+  ],
+  "d": "2026-11-07",
+  "o": "Windows won't let you own Win+Shift+S. So I hooked the keyboard in Python.",
+  "x": "Win+Shift+S 조합은 Windows 쉘이 예약해 RegisterHotKey가 동작하지 않는다. 저자는 저수준 키보드 훅(WH_KEYBOA"
+ },
+ {
+  "t": "JenkinWoo / sheeridVerify — Node.js 기반 검증 프로세스 학습 프로젝트",
+  "u": "https://github.com/JenkinWoo/sheeridVerify",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-07",
+  "o": "JenkinWoo / sheeridVerify",
+  "x": "sheeridVerify는 Node.js 이상 22.15 환경에서 동작하는 오픈소스 프로젝트로, 로컬 웹 작업대와 작업 큐, 브라우저 폼 인터랙"
+ },
+ {
+  "t": "Unitree 공장을 견학했다 – 서구에 더 낙관적이다",
+  "u": "https://josef.cn/blog/unitree",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-07",
+  "o": "I toured Unitree's factory. I'm more bullish on the West",
+  "x": "저자는 항저우에 있는 Unitree 공장을 직접 방문해 대부분의 모터 생산 라인이 인간이 조작하는 구식 와인딩 기계로 이루어져 있음을 확인했다."
+ },
+ {
   "t": "모델 교체 중단: 에이전트 환경 최적화로 비용 70% 절감",
   "u": "https://dev.to/reidmarlow/stop-swapping-models-optimizing-the-agent-environment-cuts-70-more-cost-36cf",
   "m": "2026-11",
