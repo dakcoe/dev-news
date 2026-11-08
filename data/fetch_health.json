@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-29T16:00:30+09:00",
-   "total": 15,
-   "counts": {
-    "blocked": 2,
-    "ok": 11,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/legora",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-30T00:00:26+09:00",
    "total": 16,
    "counts": {
@@ -595,6 +574,15 @@
    "total": 12,
    "counts": {
     "ok": 9,
+    "github": 3
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-11-08T16:01:14+09:00",
+   "total": 13,
+   "counts": {
+    "ok": 10,
     "github": 3
    },
    "failures": []

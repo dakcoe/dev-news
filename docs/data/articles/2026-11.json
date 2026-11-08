@@ -1,5 +1,424 @@
 [
  {
+  "title": "I fact-checked a blockchain's docs. 4 claims fail, 54 can't be checked, and one won't sit still.",
+  "url": "https://dev.to/zkasuran/i-fact-checked-a-blockchains-docs-4-claims-fail-54-cant-be-checked-and-one-wont-sit-still-2j68",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 0,
+  "comments": 2,
+  "published_at": 1794108351.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zkasuran/i-fact-checked-a-blockchains-docs-4-claims-fail-54-cant-be-checked-and-one-wont-sit-still-2j68"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fzkasuran%2Fflop-lab%2Fmain%2Fdocs%2Fassets%2Flaunch-cover.png",
+  "link_status": "ok",
+  "ko_title": "블록체인 문서 검증 결과, 4개 주장 실패, 54개 확인 불가, 1개는 변동 지속",
+  "summary": "FLOP 개발 네트워크의 문서 239개 주장 중 175~176개는 통과, 4개는 반복 검증에서도 실패, 54~55개는 검증 불가로 판정됐다. 검증 명령은 Node 22와 pnpm 환경에서 실행 가능하며, 0 FLOP 비용으로 읽기 전용 요청을 80회까지 제한한다. FLOP는 AI 에이전트가 GPU 마이너에게 추론 비용을 지불하는 실험용 체인이며, flop-lab은 이를 검증하는 오픈 도구 모음이다.",
+  "why": "flop-lab은 CI 파이프라인에 통합해 문서 무결성을 자동 검증할 수 있다. 실행 코드가 1이면 실패가 확정된 것이므로 배포 전 차단 기준으로 삼을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "hardware"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "ZapFast: A fast, native WhatsApp client in Rust and egui",
+  "url": "https://github.com/crmne/zapfast",
+  "source": "hackernews",
+  "upvotes": 51,
+  "comments": 27,
+  "published_at": 1794103347,
+  "discussion": "https://news.ycombinator.com/item?id=50409855",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/crmne/zapfast"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/crmne/zapfast",
+  "link_status": null,
+  "ko_title": "ZapFast: Rust와 egui 기반 빠른 네이티브 WhatsApp 클라이언트",
+  "summary": "ZapFast는 Linux·macOS·Windows용 경량 WhatsApp 클라이언트로, Rust와 egui·fastframe으로 구현돼 브라우저 엔진 없이 동작한다. 전화와 연결은 whatsapp-rust를 사용하며, 테스트에서 1초 이내 실행·idle RAM 약 200 MB를 사용한다(WhatsApp Web 대비 1.13 GB). 다국어 UI를 제공한다.",
+  "why": "브라우저 엔진이 없어 WhatsApp Web 대비 메모리 사용량이 크게 줄었다. Rust와 egui로 네이티브 데스크톱 앱을 만들 때 참고할 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "GitHub New pull request overview page in public preview",
+  "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+  "source": "hackernews",
+  "upvotes": 112,
+  "comments": 81,
+  "published_at": 1794092980,
+  "discussion": "https://news.ycombinator.com/item?id=50408931",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-new-releases.jpg",
+  "link_status": "ok",
+  "ko_title": "GitHub 새 풀 리퀘스트 개요 페이지 공개 미리보기",
+  "summary": "GitHub은 풀 리퀘스트 페이지에 개요 섹션을 추가해 머지 상태와 다음 행동을 상단에 요약한다. 머지 박스를 절반 이하 크기로 재설계하고, 체크, 댓글, 승인 정보를 컴팩트하게 보여준다. 필터링·정렬 기능으로 미해결 대화와 최신 댓글을 쉽게 찾을 수 있다.",
+  "why": "긴 풀 리퀘스트에서 스크롤을 줄이고 병목 요소를 빠르게 파악할 수 있다. 미해결 대화나 최신 댓글을 필터링해 리뷰 진행 속도를 높인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "The AI Understood My Payment Request. My Rust Code Refused It.",
+  "url": "https://dev.to/lymah/the-ai-understood-my-payment-request-my-rust-code-refused-it-59c5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1794097268.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/lymah/the-ai-understood-my-payment-request-my-rust-code-refused-it-59c5"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frio53u8xt24qelywtmcx.png",
+  "link_status": "ok",
+  "ko_title": "AI가 내 결제 요청을 이해했지만 내 Rust 코드가 거부했다",
+  "summary": "SpendGuard는 Solana Devnet용 결제 에이전트로, 자연어 명령을 LLM이 결제 제안으로 변환하고 Rust 코드가 정책에 따라 허용 여부를 판단한다. 사용자는 제안된 거래를 확인하면 서명 및 전송이 이루어진다. 정책 위반 요청은 LLM이 이해하더라도 차단된다.",
+  "why": "LLM이 지시를 이해하는 것과 실제 실행을 승인하는 것을 분리하는 구조다. AI 기반 결제 에이전트를 만들 때 정책 검증 계층을 설계하는 데 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "qybaihe / bla",
+  "url": "https://github.com/qybaihe/bla",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 237,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/qybaihe/bla"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 237,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/qybaihe/bla",
+  "link_status": null,
+  "ko_title": "qybaihe / bla — 블라인드 LLM 에이전트",
+  "summary": "BLA는 AI 역공학 에이전트가 코드를 분석할 때 리소스 예산을 초과하게 만들고, 미끼를 따라가게 하며 토큰을 소모하도록 설계된 npm 패키지다. 개발자는 빌드에 BLA를 적용해 사용자에게 동일한 런타임 동작을 제공하면서도 역공학 비용을 크게 높일 수 있다. 현재 npm에 배포되어 있으며 다양한 언어 로컬라이제이션 문서를 제공한다.",
+  "why": "빌드 파이프라인에 BLA를 적용하면 AI 역공학 에이전트의 분석 비용을 높일 수 있다. 사용자에게 제공되는 런타임 동작은 그대로 유지된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "A Builder in CDMX: Flu Edition",
+  "url": "https://dev.to/earlgreyhot1701d/a-builder-in-cdmx-flu-edition-167",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 3,
+  "comments": 3,
+  "published_at": 1794102307.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/a-builder-in-cdmx-flu-edition-167"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffhxt2o5ti8j747yswmdq.png",
+  "link_status": "ok",
+  "ko_title": "CDMX에서 만든 디지털 벨 – 독감 버전",
+  "summary": "저자는 멕시코 여행 중 독감에 걸린 아내를 위해 GitHub Pages에 호스팅된 디지털 호출 페이지를 만들었다. 키보드가 불편한 Chromebook만 사용했으며, Claude AI가 코드를 직접 GitHub에 푸시했다. 페이지는 “Té, por favor” 버튼을 눌러 미리 작성된 텍스트를 전송한다.",
+  "why": "Claude가 IDE나 터미널 없이 채팅으로 GitHub에 코드를 직접 푸시하는 방식이 확인됐다. 개발 환경이 제한적인 상황에서 즉시 배포 가능한 프로토타입을 만들 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "Every Windows 11 app should kill Electron, and Discord just showed why",
+  "url": "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/",
+  "source": "hackernews",
+  "upvotes": 289,
+  "comments": 254,
+  "published_at": 1794049875,
+  "discussion": "https://news.ycombinator.com/item?id=50403507",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://www.windowslatest.com/wp-content/uploads/2026/11/Discords-current-Electron-client-and-its-new-Rust-client-launching-side-by-side-on-two-Lenovo-ThinkPads-running-Windows-11.jpg",
+  "link_status": "ok",
+  "ko_title": "모든 Windows 11 앱은 Electron을 없애야 한다, Discord가 이유를 보여줬다",
+  "summary": "Discord가 Rust로 새 클라이언트를 만든 뒤, 기존 Electron 앱보다 1.5초 정도 빠르게 친구 목록을 로드하고 RAM 사용량을 290 MB 수준으로 유지한다. 두 앱 모두 콜드 스타트이며, 새 클라이언트는 부팅 시간과 반응 속도가 크게 개선됐다.",
+  "why": "Electron 기반 클라이언트를 유지 중인 백엔드 팀은 Rust 전환 시 부팅 지연과 메모리 점유율 개선 효과를 기대할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+  "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+  "source": "hackernews",
+  "upvotes": 320,
+  "comments": 221,
+  "published_at": 1794084332,
+  "discussion": "https://news.ycombinator.com/item?id=50407882",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Claude Code의 \"Don't Ask Again\"이 1,122개의 공개 GitHub 파일에서 비밀번호를 노출",
+  "summary": "Claude Code의 “Don’t Ask Again” 기능이 공개된 1,122개의 GitHub 파일에서 비밀번호를 평문으로 포함하고 있는 것이 발견되었습니다. 해당 파일들은 모두 공개 저장소이며, AI 코딩 도구가 자동으로 코드를 생성하면서 비밀 정보를 삽입한 사례입니다. 이 사건은 AI 기반 코드 생성 시 보안 검증이 필요함을 보여줍니다.",
+  "why": "Claude Code를 쓰는 개발자는 공개 저장소에 커밋한 파일에서 평문 비밀번호가 노출됐는지 확인해야 한다. AI가 코드를 자동 생성할 때 비밀 정보를 삽입할 수 있으므로 보안 검증 절차를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "security"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "Real faces on Seedance: standard vs ultra-wide, in practice",
+  "url": "https://dev.to/chet103cc/real-faces-on-seedance-standard-vs-ultra-wide-in-practice-21bd",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 87,
+  "comments": 6,
+  "published_at": 1794119124.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chet103cc/real-faces-on-seedance-standard-vs-ultra-wide-in-practice-21bd"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcq3iest6jbop54evirzi.jpg",
+  "link_status": "ok",
+  "ko_title": "Seedance 실시간 얼굴 적용: 표준 vs 초광각, 실제 사용법",
+  "summary": "표준 경로는 대부분의 실시간 얼굴 사진을 문제 없이 처리한다. 초광각 경로는 표준 검토가 거부할 경우에만 사용되며, 같은 해상도에서 비용이 1.5배에서 2.1배 높다. 실사용에서는 표준 경로를 먼저 시도하고, 거부 시 초광각으로 전환한다. 실시간 얼굴 작업을 통과시키려면 한 사람당 깨끗한 정면 사진 한 장, 구체적인 작업 지시, 변하지 않을 요소와 변할 요소를 명확히 구분하는 것이 필요하다.",
+  "why": "표준 경로가 거부할 때만 초광각으로 전환해야 하며, 이 경우 비용이 1.5배에서 2.1배까지 오릅니다. 공식 정책 문구가 엄격해 보이지만, 실제 표준 경로는 대부분의 일반 얼굴 작업을 통과시킵니다. 공개 인물은 초광각 경로에서도 사용이 금지되므로, 타인의 사진 업로드 시 동의 여부는 사용자가 직접 확인해야 합니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "gen-media"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "Your AI Agent Passed Preflight. Which Receipt Proves the Change Landed?",
+  "url": "https://dev.to/suirindo/your-ai-agent-passed-preflight-which-receipt-proves-the-change-landed-3fl8",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 0,
+  "comments": 4,
+  "published_at": 1794108892.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/suirindo/your-ai-agent-passed-preflight-which-receipt-proves-the-change-landed-3fl8"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fj8dhcpp5erxydpj0mfpo.png",
+  "link_status": "ok",
+  "ko_title": "당신의 AI 에이전트가 사전 검증을 통과했습니다. 어떤 영수증이 변경이 적용됐음을 증명하나요?",
+  "summary": "엔지니어에게 AI 에이전트가 ERP 레코드를 업데이트할 때 신뢰할 수 있는 최소 증거 체인을 묻는다. 저자는 역할·범위·검토를 오프라인에서 검증하는 ARC 오픈소스 프로젝트를 운영한다. 네 가지 후보 증거(작업 다이제스트, 인증된 실행자·툴 버전, 논리적 작업 ID·재시도 ID, 최신 결과 읽기)를 제시하고 비용을 논한다. 실제 사례와 함께 데이터베이스 로그·멱등키·이벤트 소싱·워크플로 엔진 등 대안을 논의한다.",
+  "why": "AI 에이전트가 ERP 같은 시스템에 변경을 가할 때, 단순 멱등키만으로는 도구 정의 변경이나 동시성 문제를 막지 못한다. 타임아웃 후 재시도 시 변경 주체를 식별할 수 없어 신뢰할 수 있는 최소 증거 체인을 직접 설계해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "Goodbye Claude, Hello Pi",
+  "url": "https://caleb.software/posts/claude-to-pi.html",
+  "source": "hackernews",
+  "upvotes": 138,
+  "comments": 81,
+  "published_at": 1794107508,
+  "discussion": "https://news.ycombinator.com/item?id=50410107",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://caleb.software/posts/claude-to-pi.html"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Goodbye Claude, Hello Pi",
+  "summary": "필자는 Claude Code 사용을 중단하고 개발 환경을 Pi로 전환한다. Anthropic이 Claude Code에 AGENTS.md 지원을 추가했지만, 사용자는 여전히 포맷 변환과 IDE 연결 제한 등 불편을 겪는다. Pi로 옮기면서 이러한 문제들을 피하고자 한다.",
+  "why": "Pi로 전환 시 AGENTS.md 포맷 변환과 IDE 연결 제한 문제를 피할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+  "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794095866.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/7/link-rel-next/"
+  ],
+  "cross_source_count": 1,
+  "score": 32,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette #3046: HTML 페이지에 대해 Firefox에 link: rel=next HTTP 헤더를 제공하지 않음",
+  "summary": "Datasette가 HTML 테이블 페이지에 rel=\"next\" 링크 헤더를 포함해 Firefox가 다음 페이지 데이터를 미리 가져오게 한다. 이는 실제 클릭이 거의 없으며 불필요한 데이터 전송과 서버 렌더링을 초래한다. 해당 동작은 24년째 열려 있는 Firefox 버그와 연관된다.",
+  "why": "Datasette를 백엔드 API로 쓰는 경우, Firefox 클라이언트가 다음 페이지를 미리 가져와 불필요한 서버 렌더링을 유발한다. 이 헤더를 차단하는 패치는 Firefox의 24년 된 버그로 인한 자원을 낭비하는 문제를 해결한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
+  "title": "sarpstar / cinecode",
+  "url": "https://github.com/sarpstar/cinecode",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 254,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/sarpstar/cinecode"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 254,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/sarpstar/cinecode",
+  "link_status": null,
+  "ko_title": "sarpstar / cinecode",
+  "summary": "",
+  "why": "three.js와 ffmpeg를 조합해 코드로 영상을 생성하는 방식이다. AI 에이전트가 시나리오 작성부터 렌더링까지 전 과정을 처리한다. 완성된 MP4 파일을 직접 받아볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-08T16:00:19.604466+09:00",
+  "batch_label": "11월 8일 16:00"
+ },
+ {
   "title": "Freeing AI from the Terminal: How We Built SwitchWarRoom to Turn Coding Agents into SRE Teammates in Slack",
   "url": "https://dev.to/vidisha_gupta_/freeing-ai-from-the-terminal-how-we-built-switchwarroom-to-turn-coding-agents-into-sre-teammates-2aom",
   "source": "devto",
