@@ -1,5 +1,196 @@
 [
  {
+  "t": "Llama-modchip: 284B DeepSeek, 64GB RAM에서 GPU 없이",
+  "u": "https://github.com/synchopate/llama-modchip",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "hardware",
+   "release"
+  ],
+  "d": "2026-11-09",
+  "o": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+  "x": "새 버전 v2.4.0이 64GB RAM만으로 284B DeepSeek-V4-Flash와 30B MoE 모델을 CPU만으로 실행 가능함을 발표한다"
+ },
+ {
+  "t": "더 이상 프롬프트를 쓰지 말고 이 10가지 트렌딩 ‘스킬’ 설치하기",
+  "u": "https://dev.to/taqui/dont-write-more-prompts-install-these-10-trending-skills-instead-3lpc",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "devops-infra"
+  ],
+  "d": "2026-11-09",
+  "o": "Don't Write More Prompts. Install These 10 Trending 'Skills' Instead",
+  "x": "GitHub 트렌딩에서 에이전트가 한 작업을 반복적으로 잘 수행하도록 하는 SKILL.md 파일 형태의 10개 저장소를 소개한다. 각 스킬은 프"
+ },
+ {
+  "t": "Redis 8.12-rc1, 로어링 비트맵 타입으로 희소 비트맵을 24MB에서 239KB로 축소",
+  "u": "https://dev.to/alexgeorgiev17/redis-812-rc1s-roaring-bitmap-type-shrinks-a-sparse-bitmap-from-24mb-to-239kb-5bll",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-11-09",
+  "o": "Redis 8.12-rc1's roaring bitmap type shrinks a sparse bitmap from 24MB to 239KB",
+  "x": "Redis 8.12-rc1에 로어링 비트맵이 핵심에 통합돼 옵션으로 사용 가능해졌다. 희소 비트맵을 기존 방식 대비 메모리를 24 MB에서 23"
+ },
+ {
+  "t": "구글 딥마인드 / MuJoCo",
+  "u": "https://github.com/google-deepmind/mujoco",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "backend-data",
+   "language",
+   "open-source",
+   "release",
+   "science"
+  ],
+  "d": "2026-11-09",
+  "o": "google-deepmind / mujoco",
+  "x": "MuJoCo는 로봇공학·생체역학·그래픽·머신러닝 등에서 빠르고 정확한 관절 구조 시뮬레이션을 지원하는 범용 물리 엔진이다. C API와 Pyth"
+ },
+ {
+  "t": "DIYgod / pinky",
+  "u": "https://github.com/DIYgod/pinky",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "x": "Pinky는 macOS, Windows, Linux에서 AI 에이전트가 iPhone·Android 기기를 원격으로 제어하도록 지원한다. 모든 주"
+ },
+ {
+  "t": "NX2navi — Zelda Ocarina of Time을 Windows용 x86-64 정적 재컴파일",
+  "u": "https://github.com/tangerineturtle1/NX2navi",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "tangerineturtle1 / NX2navi",
+  "x": "Nintendo Switch 2용 Ocarina of Time을 Windows에서 Vulkan으로 실행하는 정적 재컴파일 버전이다. 게임 파일은"
+ },
+ {
+  "t": "13살이 만든 온디바이스 사진 편집기 APIC: Canva·Adobe Express·Photopea·remove.bg와 비교",
+  "u": "https://dev.to/akhourianmolkumar/im-13-and-built-a-private-on-device-photo-editor-apic-vs-canva-adobe-express-photopea--5h89",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools",
+   "web",
+   "language",
+   "showcase"
+  ],
+  "d": "2026-11-09",
+  "o": "I'm 13 and Built a Private, On-Device Photo Editor: APIC vs Canva, Adobe Express, Photopea & remove.bg",
+  "x": "APIC는 브라우저에서만 동작하는 무료 사진 편집·배경 제거·이미지 변환·압축 도구로, 이미지와 AI가 사용자 디바이스에서 처리된다. GitHu"
+ },
+ {
+  "t": "MaxxBench – “멋진 DeepSWE 점수. 하지만 사실일까?”",
+  "u": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "research"
+  ],
+  "d": "2026-11-09",
+  "o": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+  "x": "MaxxBench는 DeepSWE 벤치마크의 과제 요구사항을 변형해 코딩 에이전트의 적응과 일반화 능력을 평가한다. 변형된 89개 과제에서 모델"
+ },
+ {
+  "t": "anthropics / claude-quickstarts — Claude API 빠른 시작 프로젝트",
+  "u": "https://github.com/anthropics/claude-quickstarts",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "anthropics / claude-quickstarts",
+  "x": "Claude API를 활용한 여러 프로젝트 템플릿을 제공한다. 고객 지원 에이전트, 금융 데이터 분석, 컴퓨터 사용 데모 등 네 가지 빠른 시작"
+ },
+ {
+  "t": "에이전트 메모리, OpenTelemetry 순간 필요",
+  "u": "https://www.lorekit.io/blog/open-agent-memory-format",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "Agent memory needs its OpenTelemetry moment",
+  "x": "현재 다양한 에이전트 도구가 서로 다른 메모리 형식을 사용해 호환이 안 된다. 관측 분야가 OpenTelemetry로 통합된 사례를 들어, 메모"
+ },
+ {
+  "t": "MiutChat: 계정·전화번호·영구 신원 없이 개인 대화",
+  "u": "https://dev.to/jd452/miutchat-private-conversations-without-accounts-phone-numbers-or-permanent-identity-4mia",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "security",
+   "web",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "MiutChat: Private Conversations Without Accounts, Phone Numbers, or Permanent Identity",
+  "x": "MiutChat은 브라우저 기반 오픈소스 메신저로, 방을 만들고 비밀 코드를 공유하면 별도 회원가입 없이 실시간 대화를 할 수 있다. 방 안의 "
+ },
+ {
+  "t": "우리는 빠른 코드를 일부러 느리게 만들었지만 가격을 정하지 않았다",
+  "u": "https://dev.to/ashutosh_mishra/we-made-our-fast-code-slower-on-purpose-and-never-priced-it-5ebc",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "showcase"
+  ],
+  "d": "2026-11-09",
+  "o": "We Made Our Fast Code Slower on Purpose, and Never Priced It",
+  "x": "팀은 해커톤에서 성능보다 코드 가독성을 우선시해 의도적으로 속도를 낮췄다. 해시 검증을 실제 바이트 비교로 바꾸고 버퍼를 모든 입력에 맞게 조정"
+ },
+ {
+  "t": "피터 원칙 이후에 일어나는 일",
+  "u": "https://aworkinglibrary.com/writing/petered",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-09",
+  "o": "Petered (what happens after the Peter Principle)",
+  "x": "피터 원칙에 따르면 사람은 무능력 수준에 도달할 때까지 승진한다. 저자는 이 상황이 안정적이지 않으며, 승진이 멈춘 사람은 직업을 잃을 위험에 "
+ },
+ {
   "t": "블록체인 문서 검증 결과, 4개 주장 실패, 54개 확인 불가, 1개는 변동 지속",
   "u": "https://dev.to/zkasuran/i-fact-checked-a-blockchains-docs-4-claims-fail-54-cant-be-checked-and-one-wont-sit-still-2j68",
   "m": "2026-11",
