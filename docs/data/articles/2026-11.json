@@ -1,5 +1,365 @@
 [
  {
+  "title": "Building a free AI UI builder on Cloudflare: what small models taught me",
+  "url": "https://dev.to/timofeus_248d45d3902a91a3/building-a-free-ai-ui-builder-on-cloudflare-what-small-models-taught-me-1p8c",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 2,
+  "comments": 9,
+  "published_at": 1794152682.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/timofeus_248d45d3902a91a3/building-a-free-ai-ui-builder-on-cloudflare-what-small-models-taught-me-1p8c"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fopenconstructor.pw%2Fog.png",
+  "link_status": "ok",
+  "ko_title": "Cloudflare에서 무료 AI UI 빌더 만들기: 작은 모델이 가르쳐 준 것",
+  "summary": "오픈소스 브라우저 편집기 openconstructor를 공개했으며, Cloudflare Worker와 Supabase, 무료 오픈 모델(GPT-OSS 120B, Llama 3.3 70B)로 동작한다. 디자인은 미리 만든 섹션으로 나누고 모델은 JSON 형태의 콘텐츠만 생성해 6초 내에 일관된 결과를 만든다. 게시된 페이지는 Content-Security-Policy에 의해 JavaScript를 전혀 사용하지 않으며 최신 CSS만으로 인터랙티브함을 구현한다.",
+  "why": "디자인 로직을 코드로 고정하고 모델은 JSON 콘텐츠 생성만 맡기면 일관된 결과를 얻는다. 발행된 페이지는 스크립트 없이 최신 CSS만으로 인터랙션을 구현한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "The model said yes. The chain said no. An on-chain lock for AI agents with wallets",
+  "url": "https://dev.to/muhammadmurtuzahussain/the-model-said-yes-the-chain-said-no-an-on-chain-lock-for-ai-agents-with-wallets-2igp",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1794156414.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/muhammadmurtuzahussain/the-model-said-yes-the-chain-said-no-an-on-chain-lock-for-ai-agents-with-wallets-2igp"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FMuhammadMurtuzaHussain%2Fdeadbolt%2Fmain%2Fdocs%2Fscreenshots%2F04-bolted-blocked.jpg",
+  "link_status": "ok",
+  "ko_title": "모델은 “예”라고 답했지만 체인은 “아니오”라고 답했다 – AI 에이전트를 위한 온체인 잠금 장치",
+  "summary": "Deadbolt는 Solana 프로그램을 이용해 AI 에이전트의 지출 권한을 제한하는 온체인 정책을 구현한 프로젝트다. 동일한 프롬프트 공격에도 정책에 의해 금액 전송이 차단돼 실제 자금이 보호된다. 프로젝트는 MLH Solana 해커톤 출품작이며, 데모와 코드가 공개돼 있다.",
+  "why": "AI 에이전트에 온체인 정책을 적용하면 프롬프트 공격에도 자금이 보호된다. 모델의 판단을 신뢰하던 방식과 달리 체인 레벨에서 지출을 차단한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+  "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+  "source": "hackernews",
+  "upvotes": 168,
+  "comments": 140,
+  "published_at": 1794165632,
+  "discussion": "https://news.ycombinator.com/item?id=50416158",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://mailroute.net/og-default.png",
+  "link_status": "ok",
+  "ko_title": "Outlook.com, DMARC 없는 도메인 메일 거부",
+  "summary": "Microsoft의 Outlook.com·Hotmail·Live·MSN 서비스가 DMARC 레코드가 없는 도메인에서 온 메일을 일부 거부한다. 이는 대량 발송자뿐 아니라 소규모 발송자도 영향을 받는다. 반송 메일은 “550 5.7.1 Message rejected: Message lacks SPF/DKIM/DMARC Auth Records” 형태이며, 해결 방법은 v=DMARC1; p=none 레코드 하나를 DNS에 추가하는 것이다.",
+  "why": "고객이나 협력사에게 메일을 보내는 도메인에 DMARC 레코드가 없으면 일부 메일이 반송된다. DNS에 v=DMARC1; p=none TXT 레코드 하나를 추가해야 이 문제를 해결할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "anefzaoui / misterdownloadmanager",
+  "url": "https://github.com/anefzaoui/misterdownloadmanager",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 920,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/anefzaoui/misterdownloadmanager"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 920,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/anefzaoui/misterdownloadmanager",
+  "link_status": null,
+  "ko_title": "Mister 다운로드 매니저",
+  "summary": "Mister 다운로드 매니저는 IDM보다 빠른 다운로드 속도를 제공하는 무료 다운로드 관리 프로그램이다. Windows, macOS, Linux용 바이너리를 제공하며, Firefox와 Chrome(Edge, Brave, Opera 포함)용 브라우저 확장도 지원한다.",
+  "why": "IDM 대신 무료 대안을 찾는다면 이 도구가 그 역할을 한다. Windows, macOS, Linux 전 플랫폼과 주요 브라우저에서 동일하게 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+  "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+  "source": "hackernews",
+  "upvotes": 299,
+  "comments": 234,
+  "published_at": 1794169603,
+  "discussion": "https://news.ycombinator.com/item?id=50416801",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://iprsoftwaremedia.com/219/files/202512/692f56983d6332f89cbbc58b_nvidia-logo-horiz-wht-16x9/nvidia-logo-horiz-wht-16x9_44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b-prv.png?v=44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b",
+  "link_status": "ok",
+  "ko_title": "Nvidia 이사회, Jensen Huang 조사 착수",
+  "summary": "Nvidia 이사회는 창업자 겸 CEO인 Jensen Huang이 외국 정보기관의 표적이 되었다는 보도에 따라 독립적인 조사를 시작한다. 독립 이사와 외부 법률 고문이 조사 위원회를 구성해 모든 관련 정보를 검토한다. 이사회는 현재까지 국가 안보나 기업 비밀이 유출됐다는 증거는 없으며, Huang은 조사에 전적으로 협조한다.",
+  "why": "Nvidia의 보안 체계가 흔들릴 경우 GPU 공급망과 AI 인프라 안정성에 직접적 리스크가 발생한다. 현재까지 기업 비밀 유출 증거는 없으므로 기존 개발 환경과 배포 전략은 유지해도 된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "quem fica de fora do seu site? — boas práticas de acessibilidade na web",
+  "url": "https://dev.to/buzinei_bibi/quem-fica-de-fora-do-seu-site-boas-praticas-de-acessibilidade-na-web-17mk",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 22,
+  "comments": 0,
+  "published_at": 1794167683.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/buzinei_bibi/quem-fica-de-fora-do-seu-site-boas-praticas-de-acessibilidade-na-web-17mk"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnh0d0lnsqphhooecaju2.png",
+  "link_status": "ok",
+  "ko_title": "누구가 당신 사이트에서 제외되는가? — 웹 접근성 모범 사례",
+  "summary": "포트폴리오 프로젝트에서 접근성 메뉴를 구현한 경험을 바탕으로, 접근성 부재 시 배제되는 인구 규모와 실제 사례를 제시한다. 접근성 오버레이가 코드 수준에서 문제를 해결하지 못하고 잘못된 ARIA 속성을 삽입할 위험을 설명한다. W3C 권고에 따라 기존 HTML 요소를 직접 사용하는 것이 최선임을 강조한다.",
+  "why": "접근성 오버레이는 ARIA 속성을 잘못 삽입해 스크린리더 오류를 유발하므로 피해야 한다. W3C 권고에 따라 기존 HTML 요소를 직접 사용해 마크업을 작성하는 것이 정답이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "How I Fight AI Brain Fry",
+  "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+  "source": "hackernews",
+  "upvotes": 115,
+  "comments": 101,
+  "published_at": 1794166662,
+  "discussion": "https://news.ycombinator.com/item?id=50416363",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://sergeykuhne.com/blog/fighting-ai-brain-fry"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AI 뇌 피로와 싸우는 방법",
+  "summary": "개발자는 Claude Code·Codex를 터미널에서 사용할 때 여러 작업이 겹쳐 뇌가 과부하되는 문제를 겪는다. 이를 해결하기 위해 저자는 작업 티켓을 마크다운 파일로 관리하고, Git 저장소에 우선순위 큐를 구현한다. 에이전트가 티켓을 순차적으로 처리하고, 인간이 판단해야 할 항목은 하나의 인박스로 모아진다.",
+  "why": "터미널에서 AI 에이전트를 다룰 때 발생하는 컨텍스트 과부하를 줄이는 구조를 제공한다. 작업 상태를 Git 저장소의 마크다운 파일로 관리해 세션이 끊겨도 진행 상황을 유지할 수 있다. 인간이 판단해야 할 항목만 인박스로 모아 집중력을 분산시키는 상황을 방지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "parse_number() as a SQLite extension: C vs Rust",
+  "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794176760.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "parse_number()를 SQLite 확장으로 구현: C와 Rust 비교",
+  "summary": "Rust로 만든 SQLite 확장은 321 KB(Rusqlite)·298 KB(sqlite-loadable-rs) 크기에 14 KB C 확장보다 빠른 성능을 보였다. 두 구현의 성능 차이는 Rust의 strtod 대체 함수가 C보다 두 배 빠른 데서 비롯된다. 작성자는 C 구현을 최적화해 Rust 속도를 맞추려 시도했다.",
+  "why": "Rust 기반 SQLite 확장은 파일 크기가 크지만 숫자 파싱 성능이 C보다 빠르다. C 구현을 최적화하면 Rust와 비슷한 속도를 낼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data",
+   "language",
+   "industry"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+  "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+  "source": "hackernews",
+  "upvotes": 513,
+  "comments": 312,
+  "published_at": 1794161767,
+  "discussion": "https://news.ycombinator.com/item?id=50415628",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://www.thestateofai.com/media/uploads/33f913ce812c4074d207c01b6df1858a692e6bc3229dadbfcd4f56b61722a538.png",
+  "link_status": "ok",
+  "ko_title": "골드만삭스, 은행가·트레이더에게서 Claude Code 차단",
+  "summary": "골드만삭스는 엔지니어에게만 Anthropic Claude Code와 Microsoft GitHub 사용을 허용하고 트레이더와 은행가의 접근을 차단했다. 내부 가이드라인은 10월에 업데이트돼 생산성·위험 우려를 반영한다. 스트랫 팀은 여전히 사용 가능하지만, 대부분 직원은 도구 사용이 제한된다.",
+  "why": "트레이더나 비엔지니어 직군에서 AI 코딩 도구로 프로토타입을 만들어 엔지니어에게 넘기던 방식이 막혔다. 클라이언트 정보와 같은 환경에서 코드 실행 도구를 쓰던 관행이 사라졌다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "My first month of hackathons: 4 local AI projects, 4 lessons",
+  "url": "https://dev.to/devcarlat800/my-first-month-of-hackathons-4-local-ai-projects-4-lessons-2528",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 4,
+  "published_at": 1794159614.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devcarlat800/my-first-month-of-hackathons-4-local-ai-projects-4-lessons-2528"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqqo70f7f00q06e8o8ipj.png",
+  "link_status": "ok",
+  "ko_title": "해커톤 첫 달: 4개의 로컬 AI 프로젝트와 4가지 교훈",
+  "summary": "저자는 Hacktoberfest와 DEV 챌린지를 통해 로컬에서 Ollama와 Gemma 모델을 사용한 4개의 AI 프로젝트를 만들었다. 각 프로젝트는 의미 기반 검색, 고객 지원 자동화 등 실용적인 기능을 제공했으며, 구현 과정에서 점수 임계값 설정 오류와 정책 적용 실수 등을 겪었다.",
+  "why": "로컬 LLM 기반 검색 구현 시 점수 임계값 설정이 필수다. 임계값이 없으면 관련 없는 결과도 무조건 반환된다. 임계값을 높이면 오히려 관련 항목이 누락될 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
+  "title": "Frizti / Fritchii",
+  "url": "https://github.com/Frizti/Fritchii",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 681,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Frizti/Fritchii"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 681,
+  "score": 41,
+  "image": "https://opengraph.githubassets.com/1/Frizti/Fritchii",
+  "link_status": null,
+  "ko_title": "프리츠티 / 프리치이",
+  "summary": "GitHub에 매우 실험적인 Nintendo Switch 2 에뮬레이터가 공개되었습니다. 현재 초기 단계이며 사용에 제한이 있습니다.",
+  "why": "Switch 2 게임 실행 환경이 아직 초기 단계라 제한이 크다. 현재는 실험적 수준이므로 실무 적용을 기대하기 어렵다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-09T08:00:06.164246+09:00",
+  "batch_label": "11월 9일 08:00"
+ },
+ {
   "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
   "url": "https://github.com/synchopate/llama-modchip",
   "source": "hackernews",

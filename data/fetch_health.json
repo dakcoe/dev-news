@@ -1,32 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-30T08:01:14+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 12,
-    "unavailable": 1,
-    "blocked": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.washingtonpost.com/climate-environment/2026/10/27/i-saw-future-driving-mexico-its-off-limits-americans/",
-     "source": "hackernews",
-     "reason": "unavailable"
-    },
-    {
-     "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-30T16:00:26+09:00",
    "total": 14,
    "counts": {
@@ -584,6 +558,15 @@
    "counts": {
     "ok": 9,
     "github": 5
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-11-09T08:00:30+09:00",
+   "total": 13,
+   "counts": {
+    "ok": 11,
+    "github": 2
    },
    "failures": []
   }
