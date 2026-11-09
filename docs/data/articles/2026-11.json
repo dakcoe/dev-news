@@ -1,5 +1,565 @@
 [
  {
+  "title": "Claude Fable 5.2 and Mythos 5.2",
+  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+  "source": "hackernews",
+  "upvotes": 811,
+  "comments": 478,
+  "published_at": 1794250589,
+  "discussion": "https://news.ycombinator.com/item?id=50429906",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude Fable 5.2 및 Mythos 5.2",
+  "summary": "Claude Fable 5.2와 Mythos 5.2는 코딩·추론·시각 분야에서 성능이 향상되었으며, 엔지니어링 마이그레이션, 전자 장치 설계, 블랙홀 물리 문제 해결, 로봇 평가, 페르마 마지막 정리 증명 등에 활용됐다. 두 모델은 이전 버전보다 30% 빠른 출력과 낮은 비용을 제공하고, 선택적 빠른 모드도 지원한다. 보안·생물학 보호 기능이 강화돼 사이버·생명과학 분야 접근이 확대되었다.",
+  "why": "기존 5.1 버전 대비 출력 속도가 30% 빨라지고 비용이 낮아졌다. 선택적 빠른 모드를 쓰면 토큰 생성 속도가 최대 2.5배 빨라진다. 사이버 보안과 생명과학 분야 접근이 확대된 Mythos 버전은 별도 검증 프로그램 신청이 필요하다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "science"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "I ran 125 prompt-injection attacks on my AI agent. None got through, and that wasn't the interesting part",
+  "url": "https://dev.to/riadgaffar/i-ran-125-prompt-injection-attacks-on-my-ai-agent-none-got-through-and-that-wasnt-the-4ib6",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 1,
+  "comments": 13,
+  "published_at": 1794253094.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/riadgaffar/i-ran-125-prompt-injection-attacks-on-my-ai-agent-none-got-through-and-that-wasnt-the-4ib6"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa2g8on93a5e711lphdvz.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트 125가지 프롬프트 주입 공격을 시도했지만 모두 차단됨",
+  "summary": "오픈소스 에이전트 엔진 GAWE는 모델이 제안하고 결정은 결정론적 코드가 수행하도록 설계했다. 저자는 25개의 프롬프트 주입 시나리오를 포함한 125가지 공격을 테스트했으며, 스키마 제한, 플래너와 독립된 정책 엔진, 해시 체인 감사 로그 덕분에 모든 공격이 차단되었다.",
+  "why": "에이전트가 이메일 발송 등 실제 작업을 수행할 때 프롬프트 주입은 보안 사고로 이어진다. 모델이 제안만 하고 결정론적 코드가 판단하는 구조를 적용해 공격을 차단할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+  "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+  "source": "hackernews",
+  "upvotes": 435,
+  "comments": 238,
+  "published_at": 1794240045,
+  "discussion": "https://news.ycombinator.com/item?id=50427362",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://www.payments.ca/sites/default/files/2026-11/CanadaLightsUp.png",
+  "link_status": "ok",
+  "ko_title": "캐나다 실시간 결제 레일(RTR) 출시",
+  "summary": "캐나다 전역의 금융기관·신용조합·결제 서비스 제공자가 24시간 실시간으로 결제 정산을 할 수 있는 국가 결제 인프라가 도입됐다. 기존 은행·결제 채널을 통해 즉시 현금 흐름 가시성과 데이터 풍부 메시지를 제공한다. 이는 캐나다 경제의 디지털 혁신 기반을 마련한다.",
+  "why": "캐나다 내 결제 연동 시 기존 배치 방식 대신 24시간 실시간 정산 API를 설계해야 한다. 즉시 현금 흐름 가시성과 데이터 풍부 메시지가 기존 채널을 통해 제공된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "ChatGPT Enterprise now available in AWS Marketplace",
+  "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794250800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/chatgpt-enterprise-aws-marketplace"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/5DGBSgbf6fNNvNwn1uSuuS/b1cb4070d26ff221cd7f08bbc171b268/chatgpt-enterprise-now-available-in-aws-marketplace-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "ChatGPT Enterprise, AWS 마켓플레이스에서 제공",
+  "summary": "ChatGPT Enterprise가 AWS 마켓플레이스를 통해 구매·관리 가능해졌다. 기존 AWS 결제·청구 체계와 연동돼 조직이 손쉽게 서비스를 도입할 수 있다. 동일한 모델·기능을 제공하며, AWS Marketplace에서 헬스케어·금융용 버전도 이용 가능하다.",
+  "why": "AWS Bedrock의 OpenAI 모델로 앱을 개발하고, 팀 업무에는 ChatGPT Enterprise를 쓰는 분리가 가능해졌다. 기존 AWS 계약 범주 내에서 지출을 처리할 수 있어 별도 결제 체계 구축이 불필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku",
+  "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794225600.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/which-claude-model-should-you-build-with/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://claude.dev/blog/which-claude-model-should-you-build-with/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude 모델 선택 가이드: Fable, Opus, Sonnet, Haiku 중 어떤 모델을 써야 할까",
+  "summary": "현재 Claude는 Haiku 5.5, Sonnet 5.5, Opus 5.5, Fable 5.2 네 가지 모델을 제공한다. 기본 작업은 비용이 절반이면서 성능이 좋은 Opus 5.5의 중간 effort 레벨을 사용하도록 권장한다. 모델을 바꾸기 전에 effort 레벨을 조정해 비용과 성능을 미세 조정할 수 있다. 더 높은 effort는 지연을 늘리지만 모델이 더 오래 생각하고 도구를 활용하도록 돕는다.",
+  "why": "모델 교체 전에 effort 레벨을 먼저 조정해 비용과 성능을 미세 조정하라. effort를 높여도 모델이 원래 갖지 못한 지식이나 기술은 생기지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
+  "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 61,
+  "comments": 10,
+  "published_at": 1794240745.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flcwp10ptnojbvt20v0y7.jpg",
+  "link_status": "ok",
+  "ko_title": "우리 루핑 팩토리, DEV 페이지 로드 시간 75% 단축",
+  "summary": "DEV에서 평균 웹 요청 처리 시간이 70ms에서 16ms로 감소했다. 데이터베이스, 뷰 렌더링, Redis 처리 시간도 각각 크게 줄었다. 30일간 475개의 풀 리퀘스트를 병합해 성능 개선을 이뤘다.",
+  "why": "OpenHands와 ACP 기반 자율 루프를 구축해 반복적 유지보수를 분리했다. 개발자가 CI 모니터링이나 디프 승인 같은 중간 관리 작업에서 벗어날 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "shinyobjectz / raea",
+  "url": "https://github.com/shinyobjectz/raea",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 819,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/shinyobjectz/raea"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 819,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/shinyobjectz/raea",
+  "link_status": null,
+  "ko_title": "shinyobjectz / raea — 렌더링 엔진",
+  "summary": "raea는 React와 TypeScript로 작성된 코드를 AI가 직접 생성해 GPU에서 영상·모션 그래픽·3D·게임을 렌더링할 수 있게 하는 엔진이다. macOS(Apple Silicon), Linux, Windows용 바이너리를 제공하며 설치 스크립트 하나로 간편히 설치·업데이트한다. 엔진은 무료이며 별도 계정이 필요 없고, Claude Code와 같은 에이전트가 자동으로 사용하도록 스킬을 추가한다.",
+  "why": "AI 에이전트가 React와 TypeScript로 렌더링 코드를 직접 생성해 GPU에서 실행하는 방식이다. 기존에 AI가 생성한 코드를 수동으로 변환하거나 별도 렌더링 파이프라인을 구성하던 절차를 생략할 수 있다. 프로젝트는 카나리 단계라 매일 변경되며 문서가 부족하므로 안정성이 필요한 환경에서는 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "USPS now offers official ZIP Code boundary polygons",
+  "url": "https://postalpro.usps.com/zcb",
+  "source": "hackernews",
+  "upvotes": 323,
+  "comments": 165,
+  "published_at": 1794254339,
+  "discussion": "https://news.ycombinator.com/item?id=50431058",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://postalpro.usps.com/zcb"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "USPS, 공식 ZIP 코드 경계 폴리곤 제공",
+  "summary": "USPS가 공식 ZIP 코드 경계 폴리곤 데이터를 공개했다. 개발자는 이를 다운로드해 주소 기반 서비스나 지리적 매칭 등에 활용할 수 있다.",
+  "why": "주소 기반 서비스나 지리적 매칭을 만들 때 제3자 데이터 대신 공식 경계 데이터를 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "JPMorganChase expands Claude Code to more employees across the firm",
+  "url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794182400.0,
+  "origin_url": "https://claude.com/blog/jpmorganchase-expands-claude-code",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/jpmorganchase-expands-claude-code",
+   "https://claude.com/resources/articles/jpmorganchase-expands-claude-code"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://claude.com/ko/resources/articles/jpmorganchase-expands-claude-code/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "JPMorganChase, Claude Code를 전사 직원에게 확대",
+  "summary": "JPMorganChase가 엔지니어 외에도 상업·투자은행, 인프라·보안팀 등 전사적으로 Claude Code를 도입한다. 팀들은 프루 리퀘스트 검토, 자동 복구 에이전트 등을 구축해 생산성을 높이고 있다. 자산·자산관리 부문에서는 55ip의 ActiveTax 기술을 Claude와 연동해 세금 인식 포트폴리오 전환 분석을 제공한다.",
+  "why": "클라우드 코드가 엔지니어링 워크플로에 편입되며 요구사항을 백로그로 직접 변환하는 방식이 달라진다. 프루 리퀘스트 검토나 자동 복구 같은 에이전트 구축 사례를 참고해 자신의 팀에 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+  "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794236757.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/604ad59e2fad27aca4515dab/-hyd03JaQoRhMbmlw9-uJ.jpeg",
+  "link_status": "ok",
+  "ko_title": "Nemotron-Personas-Finance-Japan: 일본 인구통계와 금융 상황을 포착한 합성 데이터셋",
+  "summary": "Nemotron-Personas-Finance-Japan은 일본 공식 통계와 가계 금융·금융 교육 데이터를 결합한 백만 건 규모의 합성 퍼소나 데이터셋이다. Elith와 NVIDIA가 NeMo SDG-PGM과 NeMo Data Designer를 이용해 생성했으며, 주요 금융기관의 피드백을 반영했다. CC BY 4.0 라이선스로 상업적 이용이 가능해 일본 내 AI 금융 개발에 실제 데이터를 사용하지 않고도 테스트할 수 있다.",
+  "why": "일본 금융 AI를 개발할 때 실명 고객 데이터의 프라이버시 리스크를 피하고 싶다. 이 데이터셋은 공식 통계 기반이라 실제 분포를 반영하면서도 상업적 이용이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Top 7 Best Agent Gateways",
+  "url": "https://dev.to/varshithvhegde/top-7-best-agent-gateways-lhi",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 17,
+  "comments": 2,
+  "published_at": 1794247701.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/varshithvhegde/top-7-best-agent-gateways-lhi"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fiburxf57u4z2ovss242z.png",
+  "link_status": "ok",
+  "ko_title": "Top 7 Best Agent Gateways",
+  "summary": "에이전트가 모델 호출, 내부 시스템 검색, 티켓 생성, 데이터베이스 기록, 다른 에이전트에 작업 전달 등을 수행할 수 있다. 이를 관리하기 위해 에이전트 게이트웨이가 에이전트와 모델 제공자, MCP 도구, 내부 API 등을 연결하고 인증·허가·라우팅·비용 제한·로그를 중앙에서 담당한다. 기존에는 각 에이전트가 자체 키와 로깅을 사용해 복잡해졌지만, 게이트웨이는 하나의 정책으로 모든 트래픽을 제어한다.",
+  "why": "에이전트별 개별 키와 로깅을 중앙 정책으로 통합해 운영 복잡도를 줄인다. 모델 호출, 도구 사용, 에이전트 간 통신을 하나의 게이트웨이로 통제할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Why am I building one more UI component lib in AI age?",
+  "url": "https://dev.to/kumakint/why-am-i-building-one-more-ui-component-lib-in-ai-age-5eai",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 15,
+  "comments": 4,
+  "published_at": 1794264169.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kumakint/why-am-i-building-one-more-ui-component-lib-in-ai-age-5eai"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0mtw7l1grytald4icmey.png",
+  "link_status": "ok",
+  "ko_title": "AI 시대에 또 다른 UI 컴포넌트 라이브러리를 만드는 이유",
+  "summary": "기존에 개발한 데이터 그리드 RevoGrid에서 추출한 UI 컴포넌트 라이브러리를 공개했다. 차트·AI 챗·파일 뷰어·날짜 선택기·드롭다운·폼·타임라인 등 다양한 요소를 포함하고 React·Vue·Angular·Svelte·TypeScript에서 사용할 수 있다.",
+  "why": "분석 대시보드나 리포팅 도구 개발 시 차트와 AI 챗 등 복잡한 UI 요소를 직접 구현할 필요가 줄어든다. React, Vue, Angular, Svelte, TypeScript 환경에서 기존 RevoGrid 기반 컴포넌트를 바로 재사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+  "url": "https://openai.com/index/control-room",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794229200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/control-room"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/7CRGR1hiay1UfPVqjUSdAk/da9d8e1e61347fdae6d40e0a72962731/introducing-control-room-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Control Room: 연구 인프라 전반의 모델 워크로드를 추적·중단하는 중앙 시스템",
+  "summary": "Control Room은 연구 인프라에서 실행되는 모든 모델 추론 작업을 실시간으로 모니터링하고, 안전·보안 문제가 감지되면 35초 이내에 작업을 중단한다. 작업, 추론 엔진, 중앙 서비스가 연동돼 모델 출력이 중단될 수 있도록 설계되었으며, 다른 시스템이 실패해도 자체적으로 동작한다. 현재 연구 인프라 전역에 배포돼 외부 모델 서빙 스택에서도 활용되고 있다.",
+  "why": "모델 출력 중단을 자동화해 안전 위험을 신속히 차단할 수 있다. 기존에는 개별 서비스마다 수동으로 차단해야 했지만, 중앙화된 제어로 운영 부담이 감소한다. 시스템 장애 시에도 자체적으로 차단 기능을 유지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "Safely scaling multi-agent teams with Claude Fable 5.2",
+  "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794225600.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Fable 5.2로 다중 에이전트 팀 안전하게 확장하기",
+  "summary": "1,000명의 에이전트가 Claude Fable 5.2 초기 버전을 사용해 Fermat의 마지막 정리를 증명했다. 기존에는 Prove2Me와 연구자 지도가 필요했지만, 이번 실험에서는 사전 지시와 제한된 데이터만으로 28.7시간에 완료했다. 각 에이전트는 샌드박스에서 동작했으며, 명령과 파일 편집은 분류기와 오프라인 모니터가 검증했다.",
+  "why": "다중 에이전트 팀 운영 시 샌드박스 격리와 명령 검증 계층이 필수 안전장치임을 보여준다. 외부 플랫폼 의존 없이 사전 지시만으로 장기 작업을 완수할 수 있는 경계가 확인됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-safety",
+   "backend-data"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "When will this stop? The Raspberry Pi 5 16GB SBC now sells for $385",
+  "url": "https://www.cnx-software.com/2026/11/03/when-will-this-stop-the-raspberry-pi-5-16gb-sbc-now-sells-for-385/",
+  "source": "hackernews",
+  "upvotes": 263,
+  "comments": 226,
+  "published_at": 1794246175,
+  "discussion": "https://news.ycombinator.com/item?id=50428801",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cnx-software.com/2026/11/03/when-will-this-stop-the-raspberry-pi-5-16gb-sbc-now-sells-for-385/"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://www.cnx-software.com/wp-content/uploads/2026/11/Raspberry-Pi-5-16GB-385-dollars.jpg",
+  "link_status": "ok",
+  "ko_title": "언제 멈출까? 라즈베리 파이 5 16GB SBC 가격이 385달러로 인상",
+  "summary": "라즈베리 파이는 16GB 모델 가격을 385달러(전년 대비 80달러 인상)로 올렸다. 같은 라인업의 CM5 모듈도 40달러 인상돼 375달러부터 시작한다. 메모리 부족으로 전 세계 SBC와 SoM 가격이 상승하고 있으며, 메모리 공급 부족은 2028~2030년까지 지속될 전망이다.",
+  "why": "라즈베리 파이 5 16GB 모델의 현재 가격은 385달러다. 메모리 공급 부족은 2028년부터 2030년까지 이어질 전망이다. 하드웨어 구매 계획에 이 기간을 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "I saw your HN comment",
+  "url": "https://joshstrange.com/2026/11/09/i-saw-your-hn-comment/",
+  "source": "hackernews",
+  "upvotes": 398,
+  "comments": 285,
+  "published_at": 1794236463,
+  "discussion": "https://news.ycombinator.com/item?id=50426582",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://joshstrange.com/2026/11/09/i-saw-your-hn-comment/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://joshstrange.com/2026/11/09/i-saw-your-hn-comment/hero_hu_358929660eb06ed6.jpg",
+  "link_status": "ok",
+  "ko_title": "당신의 HN 댓글을 보았습니다",
+  "summary": "저자는 최근 2년간 Hacker News 댓글에 대한 이메일이 신호보다 잡음이 많아졌다고 지적한다. 대형 언어 모델이 실제 댓글을 기반으로 설득력 있는 맞춤형 이메일을 자동 생성해 사기성 영업 메일이 늘었다. 이런 이메일은 질문 형식으로 시작해 답변을 유도한 뒤 제품을 홍보한다. 저자는 이러한 “성장 해킹” 방식의 이메일을 거부한다.",
+  "why": "LLM 기반 맞춤형 영업 메일이 질문으로 답변을 유도하는 구조를 취하고 있다. 이메일 응답 정책을 재검토해야 하며, 답변을 쓰면 제품 홍보로 이어질 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
+  "title": "h4ckf0r0day / obscura",
+  "url": "https://github.com/h4ckf0r0day/obscura",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 824,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/h4ckf0r0day/obscura"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 824,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/h4ckf0r0day/obscura",
+  "link_status": null,
+  "ko_title": "h4ckf0r0day / obscura",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-10T08:00:06.116033+09:00",
+  "batch_label": "11월 10일 08:00"
+ },
+ {
   "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
   "url": "https://arxiv.org/abs/2610.14162",
   "source": "hackernews",

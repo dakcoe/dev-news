@@ -1,32 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-31T08:00:38+09:00",
-   "total": 16,
-   "counts": {
-    "ok": 10,
-    "blocked": 3,
-    "github": 3
-   },
-   "failures": [
-    {
-     "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-31T16:00:27+09:00",
    "total": 14,
    "counts": {
@@ -582,6 +556,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-11-10T08:00:32+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 16,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
