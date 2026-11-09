@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-30T16:00:26+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 11,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/ropes-gray-ai-diligence",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-10-31T00:00:31+09:00",
    "total": 12,
    "counts": {
@@ -569,6 +553,22 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-09T16:00:38+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 12,
+    "empty": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+     "source": "hackernews",
+     "reason": "empty"
+    }
+   ]
   }
  ]
 }

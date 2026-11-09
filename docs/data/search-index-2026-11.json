@@ -1,5 +1,198 @@
 [
  {
+  "t": "자신의 스위치 게임을 iPhone·iPad·Mac에서 네이티브로 실행",
+  "u": "https://github.com/jhaizhou-ops/S2Arm",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "jhaizhou-ops / S2Arm",
+  "x": "S2Arm은 스위치 게임 코드를 빌드 시 ARM64로 변환해 iOS·iPadOS·macOS에서 직접 실행한다. 그래픽은 Metal으로 전달돼 속"
+ },
+ {
+  "t": "jamesondh / chimera-vocal-synth — 물리 모델링 기반 웹 보이스 신디사이저",
+  "u": "https://github.com/jamesondh/chimera-vocal-synth",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-09",
+  "o": "jamesondh / chimera-vocal-synth",
+  "x": "이 프로젝트는 브라우저에서 물리 모델링을 이용해 음성을 합성하는 엔진을 제공한다. Rust로 구현된 코어를 WebAssembly로 컴파일해 Au"
+ },
+ {
+  "t": "웹은 충분히 충분하다",
+  "u": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "showcase"
+  ],
+  "d": "2026-11-09",
+  "o": "The Web Is More Than Enough, by Paul Ford",
+  "x": "Claude Opus 5.5 Medium 모델이 Three.js로 만든 Nudibranch 테마 파베르제 에그를 Vanilla JS + WebG"
+ },
+ {
+  "t": "AI SDK 7.0.163 패치 릴리즈에 두 개의 스트림 파트 추가로 전체 스위치 컴파일 오류 발생",
+  "u": "https://dev.to/sushilmagare10/ai-sdk-70163-added-two-stream-parts-in-a-patch-release-my-exhaustive-switch-stopped-compiling-1m14",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools",
+   "language",
+   "release"
+  ],
+  "d": "2026-11-09",
+  "o": "AI SDK 7.0.163 Added Two Stream Parts in a Patch Release. My Exhaustive Switch Stopped Compiling",
+  "x": "7.0.162에서 정상 컴파일되던 exhaustive switch가 7.0.163부터 새로 추가된 `TextStreamPingPart`와 `Te"
+ },
+ {
+  "t": "unshare -n이 남긴 것: AI 정찰 에이전트를 위한 경계 구축",
+  "u": "https://dev.to/gnomeman4201/what-unshare-n-leaves-behind-building-a-boundary-for-an-ai-recon-agent-75b",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-09",
+  "o": "What unshare -n leaves behind: building a boundary for an AI recon agent",
+  "x": "AI 에이전트가 GitHub Actions 환경에서 격리 테스트 13개를 모두 통과했지만, Unix 소켓 하나를 통해 외부 프로그램과 통신할 수"
+ },
+ {
+  "t": "PR 설명을 <details><summary>로 숨기기",
+  "u": "https://simonwillison.net/2026/Nov/9/details-summary/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "d": "2026-11-09",
+  "o": "Hide your slop PR descriptions behind <details><summary>",
+  "x": "PR 설명을 HTML <details><summary> 태그로 감싸면 요약만 보이고 클릭 시 전체 내용을 펼칠 수 있다. GitHub 마크다운에"
+ },
+ {
+  "t": "테스트 디버깅을 위해 큰 모델로 옮겼다가 다시 작은 모델로 돌아갔다",
+  "u": "https://dev.to/debashish_ghosal/we-moved-to-a-bigger-model-to-debug-the-test-then-we-went-back-to-the-smaller-one-1d3",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "release"
+  ],
+  "d": "2026-11-09",
+  "o": "We Moved to a Bigger Model to Debug the Test. Then We Went Back to the Smaller One.",
+  "x": "agentpolicy v0.1.0이 PyPI에 공개돼 로컬 우선 Cedar 기반 정책 결정점을 제공한다. 릴리스에는 에이전트 행동을 허용·거부·"
+ },
+ {
+  "t": "PHP는 매 요청마다 종료된다 — Zend 엔진이 코드를 실제로 실행하는 방식",
+  "u": "https://dev.to/smtahosin/php-dies-after-every-request-how-the-zend-engine-actually-runs-your-code-2843",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "hardware"
+  ],
+  "d": "2026-11-09",
+  "o": "PHP Dies After Every Request. How the Zend Engine Actually Runs Your Code.",
+  "x": "PHP는 요청마다 완전히 격리된 환경에서 실행돼 메모리를 모두 회수하고 초기 상태로 복구한다. 최근 Zend 엔진은 16바이트 zval 구조와 "
+ },
+ {
+  "t": "악성 봇 공격으로 웹마스터 도구를 엣지 컴퓨팅으로 재구축",
+  "u": "https://dev.to/laing_lii_8c1214ffb0b60ec/how-a-malicious-bot-attack-forced-me-to-rebuild-my-webmaster-tools-on-edge-computing-2n55",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools",
+   "hardware"
+  ],
+  "d": "2026-11-09",
+  "o": "How a Malicious Bot Attack Forced Me to Rebuild My Webmaster Tools on Edge Computing",
+  "x": "악성 봇이 동일 IP에서 0초 체류 요청을 대량으로 보내 서버 메모리 한계에 도달했다. 개발자는 PHP 기반 사이트에 경량 IP 차단 JSON "
+ },
+ {
+  "t": "RIP, Harvest",
+  "u": "https://aphyr.com/posts/427-rip-harvest",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "d": "2026-11-09",
+  "x": "Harvest는 시간 추적·청구 서비스였으나 2025년 Bending Spoons에 인수된 뒤 가격을 월 $13.32에서 $133.98로 인상하"
+ },
+ {
+  "t": "AI 버블이 존재한다는 주장에 회의적",
+  "u": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "devops-infra"
+  ],
+  "d": "2026-11-09",
+  "o": "I'm not convinced the AI bubble exists",
+  "x": "AI 산업의 과대평가 논란을 다루며, 기업들이 5조 달러 규모의 투자를 했지만 대부분은 데이터센터 구축을 위한 일회성 비용이라고 주장한다. 현재"
+ },
+ {
+  "t": "Nvidia CEO Jensen Huang의 직원 대상 사과 편지",
+  "u": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-09",
+  "o": "Nvidia CEO Jensen Huang's letter to staff about affair"
+ },
+ {
+  "t": "전 세계 대부분에서 X 브랜드 차량 원격 잠금 해제",
+  "u": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-09",
+  "o": "Unlocking any car from X brand in most of the world"
+ },
+ {
+  "t": "언어의 창시자와 소유자가 강하게 의견 차이를 보일 때",
+  "u": "https://isocpp.org/files/papers/P4454R0.pdf",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-09",
+  "o": "When a language's creator and its owners strongly disagree [pdf]"
+ },
+ {
+  "t": "TASTE, 토스의 추천 파운데이션 플랫폼",
+  "u": "https://toss.tech/article/taste",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [],
+  "d": "2026-11-09",
+  "x": "토스는 다양한 서비스에서 사용되는 사용자 데이터를 하나의 모델인 TASTE로 학습해 여러 추천 과제에 활용하고자 한다. 멀티태스크 학습과 MMo"
+ },
+ {
   "t": "Cloudflare에서 무료 AI UI 빌더 만들기: 작은 모델이 가르쳐 준 것",
   "u": "https://dev.to/timofeus_248d45d3902a91a3/building-a-free-ai-ui-builder-on-cloudflare-what-small-models-taught-me-1p8c",
   "m": "2026-11",

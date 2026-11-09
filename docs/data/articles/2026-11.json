@@ -1,5 +1,480 @@
 [
  {
+  "title": "jhaizhou-ops / S2Arm",
+  "url": "https://github.com/jhaizhou-ops/S2Arm",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 634,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/jhaizhou-ops/S2Arm"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 634,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/jhaizhou-ops/S2Arm",
+  "link_status": null,
+  "ko_title": "자신의 스위치 게임을 iPhone·iPad·Mac에서 네이티브로 실행",
+  "summary": "S2Arm은 스위치 게임 코드를 빌드 시 ARM64로 변환해 iOS·iPadOS·macOS에서 직접 실행한다. 그래픽은 Metal으로 전달돼 속도·발열·배터리 효율이 높다. 모든 게임을 하나의 앱에 모아 개발자 계정의 앱 슬롯을 절약한다. Mac·Windows용 그래픽 런처가 제공되며 Android·HarmonyOS 지원이 예정돼 있다.",
+  "why": "기존 에뮬레이터 방식과 달리 CPU 에뮬레이션이 없어 발열과 배터리 소모가 줄어든다. 개발자 계정의 앱 슬롯을 하나만 사용해 게임 추가 시 별도 설치나 서명 비용이 들지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "jamesondh / chimera-vocal-synth",
+  "url": "https://github.com/jamesondh/chimera-vocal-synth",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 632,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/jamesondh/chimera-vocal-synth"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 632,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/jamesondh/chimera-vocal-synth",
+  "link_status": null,
+  "ko_title": "jamesondh / chimera-vocal-synth — 물리 모델링 기반 웹 보이스 신디사이저",
+  "summary": "이 프로젝트는 브라우저에서 물리 모델링을 이용해 음성을 합성하는 엔진을 제공한다. Rust로 구현된 코어를 WebAssembly로 컴파일해 AudioWorklet에서 동작하며, 실시간으로 혀·입·턱을 조작하거나 텍스트·IPA를 입력해 말하고, 피아노 롤 기반으로 노래와 비트박스를 만들 수 있다. CLI와 오프라인 렌더링 기능도 포함돼 로컬에서 음성·노래·드럼을 파일로 출력할 수 있다.",
+  "why": "물리 모델링 엔진이 샘플 합성이 아닌 기류와 성대 진동을 시뮬레이션해 소리를 만든다. 브라우저에서 실시간으로 혀와 입 모양을 조작해 소리를 만들 수 있다. CLI를 이용해 로컬에서 음성 파일을 직접 렌더링할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "The Web Is More Than Enough, by Paul Ford",
+  "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794198753.0,
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ftrain.com/aboard-the-web-is-more-than-enough",
+   "https://simonwillison.net/2026/Nov/9/hn-50421091/"
+  ],
+  "cross_source_count": 2,
+  "score": 61,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "웹은 충분히 충분하다",
+  "summary": "Claude Opus 5.5 Medium 모델이 Three.js로 만든 Nudibranch 테마 파베르제 에그를 Vanilla JS + WebGL 코드로 변환했다. 변환된 코드는 원본보다 파일 크기가 약간 커졌지만, Three.js 없이도 3D 모델링이 가능함을 보여준다. 변환 과정과 차이점은 Claude 대화 기록에서 확인할 수 있다.",
+  "why": "Three.js 의존 없이 WebGL로 3D 렌더링이 가능해졌다. 라이브러리 없이 코드를 직접 제어해야 하는 환경에서 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "AI SDK 7.0.163 Added Two Stream Parts in a Patch Release. My Exhaustive Switch Stopped Compiling",
+  "url": "https://dev.to/sushilmagare10/ai-sdk-70163-added-two-stream-parts-in-a-patch-release-my-exhaustive-switch-stopped-compiling-1m14",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794192290.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sushilmagare10/ai-sdk-70163-added-two-stream-parts-in-a-patch-release-my-exhaustive-switch-stopped-compiling-1m14"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fl34xw5cb92bk24x3juit.png",
+  "link_status": "ok",
+  "ko_title": "AI SDK 7.0.163 패치 릴리즈에 두 개의 스트림 파트 추가로 전체 스위치 컴파일 오류 발생",
+  "summary": "7.0.162에서 정상 컴파일되던 exhaustive switch가 7.0.163부터 새로 추가된 `TextStreamPingPart`와 `TextStreamSteeringMessagePart` 때문에 타입 검사에서 오류를 일으킨다. 런타임에는 영향이 없으며, 해결 방법은 새 파트를 처리하도록 switch에 추가하는 것이다.",
+  "why": "ai SDK를 7.0.163 이상으로 올리면 기존 exhaustive switch가 컴파일 오류를 낸다. 새로 추가된 두 스트림 파트를 switch에 명시적으로 처리해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "What unshare -n leaves behind: building a boundary for an AI recon agent",
+  "url": "https://dev.to/gnomeman4201/what-unshare-n-leaves-behind-building-a-boundary-for-an-ai-recon-agent-75b",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 3,
+  "comments": 2,
+  "published_at": 1794185144.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gnomeman4201/what-unshare-n-leaves-behind-building-a-boundary-for-an-ai-recon-agent-75b"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F153beda57aqb92ee5667.png",
+  "link_status": "ok",
+  "ko_title": "unshare -n이 남긴 것: AI 정찰 에이전트를 위한 경계 구축",
+  "summary": "AI 에이전트가 GitHub Actions 환경에서 격리 테스트 13개를 모두 통과했지만, Unix 소켓 하나를 통해 외부 프로그램과 통신할 수 있었다. 저자는 네트워크 접근이 차단된 AI 정찰 파이프라인을 구축하고 있으며, 브로커와 서명된 권한 기록을 통해 요청을 중계한다. 이번 글에서는 에이전트가 탈출 경로를 찾은 과정을 기록하고, 해당 경로를 차단하고 재검증한 방법을 설명한다.",
+  "why": "unshare -n만으로는 Unix 소켓을 통한 외부 통신을 막지 못한다. AI 에이전트를 격리 환경에서 돌릴 때 이 경로를 반드시 차단해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "Hide your slop PR descriptions behind <details><summary>",
+  "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794198305.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/9/details-summary/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.simonwillison.net/static/2026/details-summary-card.webp",
+  "link_status": "ok",
+  "ko_title": "PR 설명을 <details><summary>로 숨기기",
+  "summary": "PR 설명을 HTML <details><summary> 태그로 감싸면 요약만 보이고 클릭 시 전체 내용을 펼칠 수 있다. GitHub 마크다운에서도 동작한다.",
+  "why": "Claude Code나 Codex가 작성한 PR 설명이 길어지는 문제를 해결할 수 있다. GitHub 마크다운에 <details><summary> 태그를 직접 넣으면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "We Moved to a Bigger Model to Debug the Test. Then We Went Back to the Smaller One.",
+  "url": "https://dev.to/debashish_ghosal/we-moved-to-a-bigger-model-to-debug-the-test-then-we-went-back-to-the-smaller-one-1d3",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1794207600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/debashish_ghosal/we-moved-to-a-bigger-model-to-debug-the-test-then-we-went-back-to-the-smaller-one-1d3"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgyiiwt7luhq4xk2bcpgc.png",
+  "link_status": "ok",
+  "ko_title": "테스트 디버깅을 위해 큰 모델로 옮겼다가 다시 작은 모델로 돌아갔다",
+  "summary": "agentpolicy v0.1.0이 PyPI에 공개돼 로컬 우선 Cedar 기반 정책 결정점을 제공한다. 릴리스에는 에이전트 행동을 허용·거부·질문·속도 제한·편집하는 규칙 팩이 포함된다. 개발자는 큰 모델로 전환해 디버깅한 결과, 모델 자체가 아니라 테스트 하네스에 버그가 있음을 확인하고 원래 작은 모델로 복귀했다.",
+  "why": "로컬 에이전트 정책 결정을 위해 agentpolicy v0.1.0을 PyPI에서 설치할 수 있다. 이 라이브러리는 에이전트 행동을 허용, 거부, 질문, 속도 제한, 편집으로 제어한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "PHP Dies After Every Request. How the Zend Engine Actually Runs Your Code.",
+  "url": "https://dev.to/smtahosin/php-dies-after-every-request-how-the-zend-engine-actually-runs-your-code-2843",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794203812.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/smtahosin/php-dies-after-every-request-how-the-zend-engine-actually-runs-your-code-2843"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fiili.io%2FnMfkIcB.png",
+  "link_status": "ok",
+  "ko_title": "PHP는 매 요청마다 종료된다 — Zend 엔진이 코드를 실제로 실행하는 방식",
+  "summary": "PHP는 요청마다 완전히 격리된 환경에서 실행돼 메모리를 모두 회수하고 초기 상태로 복구한다. 최근 Zend 엔진은 16바이트 zval 구조와 OPcache, Copy-on-Write, PHP 8 트레이싱 JIT 등으로 성능을 크게 개선했다. 이러한 설계가 PHP가 웹의 75 % 이상을 차지하게 만든 핵심 이유다.",
+  "why": "PHP는 요청마다 격리된 환경에서 실행되어 메모리 누수나 전역 상태 오염을 원천 차단한다. 장기 실행 런타임과 달리 서버 재시작 없이도 안정성을 유지할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "How a Malicious Bot Attack Forced Me to Rebuild My Webmaster Tools on Edge Computing",
+  "url": "https://dev.to/laing_lii_8c1214ffb0b60ec/how-a-malicious-bot-attack-forced-me-to-rebuild-my-webmaster-tools-on-edge-computing-2n55",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794202941.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/laing_lii_8c1214ffb0b60ec/how-a-malicious-bot-attack-forced-me-to-rebuild-my-webmaster-tools-on-edge-computing-2n55"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftodicnshhjwoe1m8dpan.png",
+  "link_status": "ok",
+  "ko_title": "악성 봇 공격으로 웹마스터 도구를 엣지 컴퓨팅으로 재구축",
+  "summary": "악성 봇이 동일 IP에서 0초 체류 요청을 대량으로 보내 서버 메모리 한계에 도달했다. 개발자는 PHP 기반 사이트에 경량 IP 차단 JSON 파일을 적용해 즉시 차단하고, 워크로드를 엣지로 이전해 방어 시스템을 구축했다.",
+  "why": "PHP 기반 사이트에서 데이터베이스 조회나 페이지 렌더링 전에 로컬 JSON 파일을 검사해 IP를 차단하는 방식이다. 프레임워크나 외부 방화벽 없이 경량 방어 체계를 구축할 때 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "hardware"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "RIP, Harvest",
+  "url": "https://aphyr.com/posts/427-rip-harvest",
+  "source": "hackernews",
+  "upvotes": 285,
+  "comments": 88,
+  "published_at": 1794189501,
+  "discussion": "https://news.ycombinator.com/item?id=50420035",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://aphyr.com/posts/427-rip-harvest"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "RIP, Harvest",
+  "summary": "Harvest는 시간 추적·청구 서비스였으나 2025년 Bending Spoons에 인수된 뒤 가격을 월 $13.32에서 $133.98로 인상하고, 기존 플랜에 2% 추가 수수료를 부과했다. 고객 지원은 이메일 대신 대규모 언어 모델로 전환돼 답변이 어려워졌다.",
+  "why": "시간 추적과 청구 업무를 Harvest에 의존하고 있다면 가격 구조 변경으로 인한 비용 급증을 확인해야 한다. 고객 지원이 대규모 언어 모델로 전환되어 기존 이메일 대응 방식과 달라졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "I'm not convinced the AI bubble exists",
+  "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+  "source": "hackernews",
+  "upvotes": 171,
+  "comments": 228,
+  "published_at": 1794181476,
+  "discussion": "https://news.ycombinator.com/item?id=50418975",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "AI 버블이 존재한다는 주장에 회의적",
+  "summary": "AI 산업의 과대평가 논란을 다루며, 기업들이 5조 달러 규모의 투자를 했지만 대부분은 데이터센터 구축을 위한 일회성 비용이라고 주장한다. 현재 지출이 지속되지 않을 경우 AI 비용이 급감할 가능성을 제시한다.",
+  "why": "데이터센터 구축은 일회성 비용이므로, 건설이 끝나면 AI 운영 비용이 급감할 수 있다. 이는 향후 인프라 투자 계획이나 서비스 가격 변동성을 고려할 때 참고할 만한 시나리오다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+  "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+  "source": "hackernews",
+  "upvotes": 529,
+  "comments": 563,
+  "published_at": 1794176409,
+  "discussion": "https://news.ycombinator.com/item?id=50418016",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nvidianews.nvidia.com/news/a-message-to-our-company"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://iprsoftwaremedia.com/219/files/202512/692f56983d6332f89cbbc58b_nvidia-logo-horiz-wht-16x9/nvidia-logo-horiz-wht-16x9_44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b-prv.png?v=44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b",
+  "link_status": "ok",
+  "ko_title": "Nvidia CEO Jensen Huang의 직원 대상 사과 편지",
+  "summary": "",
+  "why": "Nvidia 이사회가 국가 안보 우려에 대한 독립 조사를 시작했다. 개발자로서는 해당 사안이 제품 공급이나 기술 지원에 영향을 주는지 확인해야 한다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "Unlocking any car from X brand in most of the world",
+  "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+  "source": "hackernews",
+  "upvotes": 221,
+  "comments": 79,
+  "published_at": 1794183050,
+  "discussion": "https://news.ycombinator.com/item?id=50419215",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "전 세계 대부분에서 X 브랜드 차량 원격 잠금 해제",
+  "summary": "",
+  "why": "연결형 차량 플랫폼의 인터넷 접근 서비스에서 원격 잠금 해제 기능이 악용될 수 있음을 확인했다. 백엔드 인프라를 다루는 개발자는 해당 도메인의 API 엔드포인트 보안 설정을 점검해야 한다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "When a language's creator and its owners strongly disagree [pdf]",
+  "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+  "source": "hackernews",
+  "upvotes": 106,
+  "comments": 101,
+  "published_at": 1794180481,
+  "discussion": "https://news.ycombinator.com/item?id=50418818",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://isocpp.org/files/papers/P4454R0.pdf"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "언어의 창시자와 소유자가 강하게 의견 차이를 보일 때",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
+  "title": "TASTE, 토스의 추천 파운데이션 플랫폼",
+  "url": "https://toss.tech/article/taste",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794207240.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/taste"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "TASTE, 토스의 추천 파운데이션 플랫폼",
+  "summary": "토스는 다양한 서비스에서 사용되는 사용자 데이터를 하나의 모델인 TASTE로 학습해 여러 추천 과제에 활용하고자 한다. 멀티태스크 학습과 MMoE 구조를 시험했으며, 데이터 규모를 확대하자 성능이 향상되는 것을 확인했다. 현재는 내부 모델링 접근법을 공유하는 내용이다.",
+  "why": "토스의 추천 파운데이션 모델 TASTE는 멀티태스크 학습과 MMoE 구조를 통해 사용자 표현을 추출합니다. 이 표현을 다른 서비스의 추천 모델에 전달해 예측 성능을 높이는 방식입니다. 데이터 규모를 확대할수록 성능이 향상되는 것을 확인했습니다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-09T16:00:02.912385+09:00",
+  "batch_label": "11월 9일 16:00"
+ },
+ {
   "title": "Building a free AI UI builder on Cloudflare: what small models taught me",
   "url": "https://dev.to/timofeus_248d45d3902a91a3/building-a-free-ai-ui-builder-on-cloudflare-what-small-models-taught-me-1p8c",
   "source": "devto",
