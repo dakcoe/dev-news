@@ -1,5 +1,209 @@
 [
  {
+  "t": "다음-컨셉 모델링: 빠르고 병렬적인 거친-세밀 텍스트 생성",
+  "u": "https://arxiv.org/abs/2610.14162",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-10",
+  "o": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+  "x": "NCM은 다중스케일 VQ-VAE와 트랜스포머를 결합한 두 단계 거친-세밀 생성 프레임워크다. 동일 파라미터 규모에서 LM1B에서 기존 확산 언어"
+ },
+ {
+  "t": "Prompt injection은 프롬프트 문제가 아니라 권한 문제다",
+  "u": "https://dev.to/cyclopt_dimitrisk/prompt-injection-isnt-a-prompt-problem-its-an-authorization-problem-59j6",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security"
+  ],
+  "d": "2026-11-10",
+  "o": "Prompt injection isn't a prompt problem. It's an authorization problem.",
+  "x": "AI 코딩 에이전트가 실제 배포 환경에서 티켓 외에 다양한 문서와 로그를 읽으며 명령을 오인할 수 있다. 시스템 프롬프트만 검토하는 기존 보안 "
+ },
+ {
+  "t": "전문가들은 파트너가 있다. 함께 유지하기 위한 HOPE",
+  "u": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-10",
+  "o": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+  "x": "기존 MoE 모델은 토큰당 사용되지 않는 전문가들이 메모리를 차지해 비효율적이다. 새 논문은 전문가 간 상호작용을 고려한 2차 방식인 HOPE를"
+ },
+ {
+  "t": "KetchUp – Rust와 WebGPU로 만든 오픈소스 SketchUp 대안",
+  "u": "https://ketchup3d.github.io/app/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-10",
+  "o": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+  "x": "KetchUp은 목공 및 가구 설계용 무료 오픈소스 3D 모델링 앱이다. Windows·macOS·Linux와 데스크톱 브라우저에서 동작하며, "
+ },
+ {
+  "t": "Idempotency로 내결함성 API 설계",
+  "u": "https://dev.to/chocoscoding/designing-fault-tolerant-api-through-idempotency-1gnn",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data"
+  ],
+  "d": "2026-11-10",
+  "o": "Designing Fault-Tolerant API Through Idempotency",
+  "x": "클릭 시 좋아요 토글 엔드포인트가 재시도 시 상태를 반전시키는 문제를 설명한다. MongoDB와 Neon PostgreSQL을 예시로 두 데이터"
+ },
+ {
+  "t": "HA-MCP — AI로 Home Assistant 관리",
+  "u": "https://github.com/homeassistant-ai/ha-mcp",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-10",
+  "o": "homeassistant-ai / ha-mcp",
+  "x": "v7.3.0 버전에서 `ha_config_set_yaml` 기능이 베타 단계로 이동했다. 이 변경은 기존 설정 자동화 스크립트가 작동 중단될 수"
+ },
+ {
+  "t": "janestreet / agent_skills — AI 에이전트용 스킬 모음",
+  "u": "https://github.com/janestreet/agent_skills",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "d": "2026-11-10",
+  "o": "janestreet / agent_skills",
+  "x": "이 GitHub 저장소는 AI 에이전트와 챗봇을 위한 스킬 디렉터리를 제공한다. 각 스킬은 `SKILL.md` 파일에 사용법이 정의되어 있다. "
+ },
+ {
+  "t": "garrytan / gbrain",
+  "u": "https://github.com/garrytan/gbrain",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-10",
+  "x": "GBrain은 에이전트에 사용자가 직접 관리하는 메모리를 제공하는 MIT 라이선스 오픈소스 도구다. 명시적 사실과 출처를 저장하고 수정·철회를 "
+ },
+ {
+  "t": "MCP 서버용 에이전트별 토큰: 운영자 의견과 설계",
+  "u": "https://dev.to/zachbenson/per-agent-tokens-for-mcp-servers-what-operators-told-me-and-the-design-that-came-out-of-it-40ml",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-11-10",
+  "o": "Per-agent tokens for MCP servers: what operators told me, and the design that came out of it",
+  "x": "운영자들이 요구한 바에 따라 에이전트마다 별도 토큰을 발급해 읽기 제한을 완화하고 빠른 폐기를 가능하게 하는 설계가 제시되었다. 기존 방식은 전"
+ },
+ {
+  "t": "GestaltX",
+  "u": "https://github.com/huamidev/GestaltX",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-10",
+  "o": "huamidev / GestaltX",
+  "x": "iOS 27.x용 SwiftUI 기반 MobileGestalt 편집기이다. iPhone·iPad에서 디스플레이, 디바이스, iPad, 인텔리전스"
+ },
+ {
+  "t": "Opsville, 무료 픽셀 아트 마을에서 DevOps 사고를 해결하세요",
+  "u": "https://dev.to/devopsdaily/we-built-opsville-a-free-pixel-art-town-where-you-fix-devops-incidents-5892",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-10",
+  "o": "We Built Opsville, a Free Pixel-Art Town Where You Fix DevOps Incidents",
+  "x": "Opsville은 브라우저 기반 픽셀 아트 게임으로, Linux, Docker, Git, CI/CD, Kubernetes, 모니터링, 보안, 데"
+ },
+ {
+  "t": "모두가 개발자를 대체할 AI를 만들고 있다. 그 이후를 위한 계획은 아무도 만들지 않는다.",
+  "u": "https://dev.to/thebitforge/everyone-is-building-ai-to-replace-developers-nobody-is-building-the-plan-for-what-comes-after-4a5o",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-coding",
+   "release"
+  ],
+  "d": "2026-11-10",
+  "o": "Everyone Is Building AI to Replace Developers. Nobody Is Building the Plan for What Comes After.",
+  "x": "AI가 개발 업무의 일부를 차지한다는 측정치가 9%에서 25% 사이로 다양하게 제시된다. 기존 논의는 개인에게만 초점을 맞추고 전체적인 인력 재"
+ },
+ {
+  "t": "Fold Epic Paper Airplanes",
+  "u": "https://www.foldableflight.com",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "research"
+  ],
+  "d": "2026-11-10"
+ },
+ {
+  "t": "인간은 다시는 위키피디아와 같은 프로젝트를 만들 수 없을 것이다",
+  "u": "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-10",
+  "o": "Humans will never again create a project like Wikipedia"
+ },
+ {
+  "t": "Opus 5.5가 약화됐나요? 11월 3일에 사고 패턴이 바뀌었습니다",
+  "u": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-10",
+  "o": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3"
+ },
+ {
   "t": "자신의 스위치 게임을 iPhone·iPad·Mac에서 네이티브로 실행",
   "u": "https://github.com/jhaizhou-ops/S2Arm",
   "m": "2026-11",

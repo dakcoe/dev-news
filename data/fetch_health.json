@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-31T00:00:31+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 10,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-10-31T08:00:38+09:00",
    "total": 16,
    "counts": {
@@ -567,6 +558,28 @@
      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
      "source": "hackernews",
      "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-10T00:00:39+09:00",
+   "total": 16,
+   "counts": {
+    "robots": 1,
+    "blocked": 1,
+    "ok": 10,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }

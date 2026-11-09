@@ -1,5 +1,487 @@
 [
  {
+  "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+  "url": "https://arxiv.org/abs/2610.14162",
+  "source": "hackernews",
+  "upvotes": 143,
+  "comments": 30,
+  "published_at": 1794208837,
+  "discussion": "https://news.ycombinator.com/item?id=50422168",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arxiv.org/abs/2610.14162"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+  "link_status": "ok",
+  "ko_title": "다음-컨셉 모델링: 빠르고 병렬적인 거친-세밀 텍스트 생성",
+  "summary": "NCM은 다중스케일 VQ-VAE와 트랜스포머를 결합한 두 단계 거친-세밀 생성 프레임워크다. 동일 파라미터 규모에서 LM1B에서 기존 확산 언어 모델보다 21배 빠르게 퍼플렉시티를 개선했다. OpenWebText와 XSum에서도 각각 10배·31배 빠른 속도로 경쟁 성능을 보였다.",
+  "why": "기존 확산 언어 모델은 샘플링 단계가 줄면 품질이 급격히 떨어진다. NCM은 병렬 생성으로 속도를 높이며 이 품질 저하 문제를 해결한다. 추론 비용이 주요 부담인 백엔드 서비스에 적용할 가치가 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Prompt injection isn't a prompt problem. It's an authorization problem.",
+  "url": "https://dev.to/cyclopt_dimitrisk/prompt-injection-isnt-a-prompt-problem-its-an-authorization-problem-59j6",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 11,
+  "published_at": 1794210177.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/prompt-injection-isnt-a-prompt-problem-its-an-authorization-problem-59j6"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqy270mj7z8i2gif97a0t.png",
+  "link_status": "ok",
+  "ko_title": "Prompt injection은 프롬프트 문제가 아니라 권한 문제다",
+  "summary": "AI 코딩 에이전트가 실제 배포 환경에서 티켓 외에 다양한 문서와 로그를 읽으며 명령을 오인할 수 있다. 시스템 프롬프트만 검토하는 기존 보안 리뷰는 잘못된 파일을 보는 것이며, 모델이 읽은 텍스트와 실행할 텍스트를 구분하지 못한다. 예시로 README에 숨겨진 명령이나 테스트 출력에 포함된 설정 변경 제안이 모델을 오도한다.",
+  "why": "AI 코딩 에이전트를 배포 환경에 쓸 때 시스템 프롬프트만 점검하면 안 된다. 에이전트가 읽는 문서나 로그에 숨겨진 명령이 실제 실행으로 이어질 수 있다. 모델이 읽을 텍스트와 따를 텍스트를 구분하지 못하므로 권한 통제 설계가 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+  "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794227669.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/amazon/higher-order-pruning-experts"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6ab2f79bd8000a811c648a32/xZT8tg4be3bgZIx2EQS_m.png",
+  "link_status": "ok",
+  "ko_title": "전문가들은 파트너가 있다. 함께 유지하기 위한 HOPE",
+  "summary": "기존 MoE 모델은 토큰당 사용되지 않는 전문가들이 메모리를 차지해 비효율적이다. 새 논문은 전문가 간 상호작용을 고려한 2차 방식인 HOPE를 제안한다. HOPE는 전문가 쌍의 영향을 평가해 보다 효율적인 프루닝을 가능하게 한다. 실험에서 기존 1차 방법보다 높은 프루닝 비율에서도 성능 저하가 적었다.",
+  "why": "MoE 모델의 전문가를 자를 때 개별 중요도만 보면 성능이 급격히 떨어진다. 전문가 쌍의 상호작용을 고려한 HOPE 방식은 높은 비율로 잘라도 성능 저하를 줄여준다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+  "url": "https://ketchup3d.github.io/app/",
+  "source": "hackernews",
+  "upvotes": 623,
+  "comments": 186,
+  "published_at": 1794177335,
+  "discussion": "https://news.ycombinator.com/item?id=50418176",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ketchup3d.github.io/app/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://ketchup3d.github.io/app/assets/screenshots/ketchup.jpg?v=0.6.5-r2",
+  "link_status": "ok",
+  "ko_title": "KetchUp – Rust와 WebGPU로 만든 오픈소스 SketchUp 대안",
+  "summary": "KetchUp은 목공 및 가구 설계용 무료 오픈소스 3D 모델링 앱이다. Windows·macOS·Linux와 데스크톱 브라우저에서 동작하며, Rust와 WebGPU를 기반으로 한다. SketchUp 파일을 가져오고 OBJ 형식으로 내보낼 수 있어 기존 워크플로와 연계한다.",
+  "why": "Rust와 WebGPU 기반이라 기존 SketchUp 파일 가져오기와 OBJ 내보내기가 지원된다. 독립된 오픈소스 도구로 목공 설계 워크플로에 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Designing Fault-Tolerant API Through Idempotency",
+  "url": "https://dev.to/chocoscoding/designing-fault-tolerant-api-through-idempotency-1gnn",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 13,
+  "comments": 1,
+  "published_at": 1794208305.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/chocoscoding/designing-fault-tolerant-api-through-idempotency-1gnn"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7dq5g8j7rkvyafxk5rg9.jpg",
+  "link_status": "ok",
+  "ko_title": "Idempotency로 내결함성 API 설계",
+  "summary": "클릭 시 좋아요 토글 엔드포인트가 재시도 시 상태를 반전시키는 문제를 설명한다. MongoDB와 Neon PostgreSQL을 예시로 두 데이터베이스에서 안전하게 재시도하도록 트랜잭션 활용 방법을 제시한다.",
+  "why": "좋아요 토글처럼 상태를 반전시키는 엔드포인트는 재시도 시 의도와 다른 결과가 나올 수 있다. 클라이언트 재시도 로직이 있는 백엔드 API라면 트랜잭션만으로는 이 문제를 해결하지 못한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "homeassistant-ai / ha-mcp",
+  "url": "https://github.com/homeassistant-ai/ha-mcp",
+  "source": "github",
+  "upvotes": 31,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/homeassistant-ai/ha-mcp"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 31,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/homeassistant-ai/ha-mcp",
+  "link_status": null,
+  "ko_title": "HA-MCP — AI로 Home Assistant 관리",
+  "summary": "v7.3.0 버전에서 `ha_config_set_yaml` 기능이 베타 단계로 이동했다. 이 변경은 기존 설정 자동화 스크립트가 작동 중단될 수 있음을 의미한다. 프로젝트는 Claude·ChatGPT 등 다양한 AI 어시스턴트를 활용해 Home Assistant를 구성·자동화한다.",
+  "why": "v7.3.0에서 ha_config_set_yaml이 베타로 이동했다. 기존 설정 자동화 스크립트가 중단될 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "janestreet / agent_skills",
+  "url": "https://github.com/janestreet/agent_skills",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 594,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/janestreet/agent_skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 594,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/janestreet/agent_skills",
+  "link_status": null,
+  "ko_title": "janestreet / agent_skills — AI 에이전트용 스킬 모음",
+  "summary": "이 GitHub 저장소는 AI 에이전트와 챗봇을 위한 스킬 디렉터리를 제공한다. 각 스킬은 `SKILL.md` 파일에 사용법이 정의되어 있다. 현재 포함된 스킬은 Socratic-Tutor로, 선택한 주제를 소크라테스식 질문으로 단계별 학습한다. 스킬 디렉터리를 에이전트의 스킬 폴더에 복사하거나 `SKILL.md` 내용을 프롬프트에 붙여 사용할 수 있다.",
+  "why": "SKILL.md 형식을 지원하는 에이전트에 스킬 폴더를 복사해 바로 쓸 수 있다. 프롬프트에 내용을 붙여넣는 방식도 가능해 별도 도구 설치 없이 적용된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "garrytan / gbrain",
+  "url": "https://github.com/garrytan/gbrain",
+  "source": "github",
+  "upvotes": 215,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/garrytan/gbrain"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 215,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/garrytan/gbrain",
+  "link_status": null,
+  "ko_title": "garrytan / gbrain",
+  "summary": "GBrain은 에이전트에 사용자가 직접 관리하는 메모리를 제공하는 MIT 라이선스 오픈소스 도구다. 명시적 사실과 출처를 저장하고 수정·철회를 지원하며, 키워드 검색에서 의미 검색·합성·배경 강화까지 단계적으로 확장할 수 있다. 자체 호스팅이 가능하고, gbrain.io를 통한 유료 호스팅 옵션도 제공한다.",
+  "why": "에이전트 메모리를 직접 관리할 수 있어 사실 수정과 철회가 가능하다. 키워드 검색부터 의미 검색까지 단계적으로 확장하는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Per-agent tokens for MCP servers: what operators told me, and the design that came out of it",
+  "url": "https://dev.to/zachbenson/per-agent-tokens-for-mcp-servers-what-operators-told-me-and-the-design-that-came-out-of-it-40ml",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1794234528.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zachbenson/per-agent-tokens-for-mcp-servers-what-operators-told-me-and-the-design-that-came-out-of-it-40ml"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fj1gg9wqdjgx9azhif17r.png",
+  "link_status": "ok",
+  "ko_title": "MCP 서버용 에이전트별 토큰: 운영자 의견과 설계",
+  "summary": "운영자들이 요구한 바에 따라 에이전트마다 별도 토큰을 발급해 읽기 제한을 완화하고 빠른 폐기를 가능하게 하는 설계가 제시되었다. 기존 방식은 전체 계정을 로그아웃하거나 키를 회전해야 했지만, 새로운 토큰 방식은 비용이 드는 작업은 별도 계정으로, 읽기 작업은 에이전트별 토큰으로 처리한다.",
+  "why": "MCP 서버 운영 시 문제 에이전트 차단이 전체 계정 로그아웃이나 공용 키 회전으로 이어지던 방식이 바뀐다. 읽기 작업은 에이전트별 토큰으로 처리해 폐기가 빨라지고, 비용이 드는 작업은 별도 계정으로 분리된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "huamidev / GestaltX",
+  "url": "https://github.com/huamidev/GestaltX",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 666,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/huamidev/GestaltX"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 666,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/huamidev/GestaltX",
+  "link_status": null,
+  "ko_title": "GestaltX",
+  "summary": "iOS 27.x용 SwiftUI 기반 MobileGestalt 편집기이다. iPhone·iPad에서 디스플레이, 디바이스, iPad, 인텔리전스, 고급 기능 등을 프리셋과 도구로 제공한다. 필드 편집, 자동 백업, 로그·리스프링 등 다양한 관리 기능을 포함한다.",
+  "why": "iOS 27.x 환경에서 Apple Intelligence 활성화 시도를 위해 지역 코드만 변경하면 된다. 판매 지역 설정을 건드릴 필요가 없어 불필요한 변경 범위를 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "We Built Opsville, a Free Pixel-Art Town Where You Fix DevOps Incidents",
+  "url": "https://dev.to/devopsdaily/we-built-opsville-a-free-pixel-art-town-where-you-fix-devops-incidents-5892",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 19,
+  "comments": 0,
+  "published_at": 1794220956.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devopsdaily/we-built-opsville-a-free-pixel-art-town-where-you-fix-devops-incidents-5892"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdevops-daily.com%2Fimages%2Fsimulator-posts%2Fd6e5df37-0737-49ae-aa10-a43abdc7fd7d-cover.png",
+  "link_status": "ok",
+  "ko_title": "Opsville, 무료 픽셀 아트 마을에서 DevOps 사고를 해결하세요",
+  "summary": "Opsville은 브라우저 기반 픽셀 아트 게임으로, Linux, Docker, Git, CI/CD, Kubernetes, 모니터링, 보안, 데이터베이스 등 8개의 DevOps 영역을 퀘스트 형태로 제공한다. 각 구역마다 시뮬레이터가 열리고 세 문제를 풀어야 하며, 모든 구역을 완료하면 마을이 런치된다. 진행 상황은 브라우저에 저장돼 탭을 닫아도 복구 가능하다.",
+  "why": "Docker, Kubernetes, CI/CD 등 8개 영역의 실전 시나리오를 브라우저에서 바로 연습할 수 있다. 각 구역의 보스전은 실제 장애 대응처럼 시스템 상태를 복구하는 과정으로 구성돼 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Everyone Is Building AI to Replace Developers. Nobody Is Building the Plan for What Comes After.",
+  "url": "https://dev.to/thebitforge/everyone-is-building-ai-to-replace-developers-nobody-is-building-the-plan-for-what-comes-after-4a5o",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 54,
+  "comments": 2,
+  "published_at": 1794232663.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/thebitforge/everyone-is-building-ai-to-replace-developers-nobody-is-building-the-plan-for-what-comes-after-4a5o"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgznnx050gbzm02crp9o9.jpg",
+  "link_status": "ok",
+  "ko_title": "모두가 개발자를 대체할 AI를 만들고 있다. 그 이후를 위한 계획은 아무도 만들지 않는다.",
+  "summary": "AI가 개발 업무의 일부를 차지한다는 측정치가 9%에서 25% 사이로 다양하게 제시된다. 기존 논의는 개인에게만 초점을 맞추고 전체적인 인력 재배치 계획이 부재함을 지적한다. 해당 글은 DEV 커뮤니티에서 큰 반응을 얻으며, 구체적인 대안이 제시되지 않은 점을 비판한다.",
+  "why": "AI가 개발 업무의 9~25%를 차지한다는 측정치가 제시된다. 개별 개발자의 역량 강화만 강조하는 기존 논의와 달리 조직 차원의 인력 재배치 계획 부재가 지적된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "release"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Fold Epic Paper Airplanes",
+  "url": "https://www.foldableflight.com",
+  "source": "hackernews",
+  "upvotes": 271,
+  "comments": 54,
+  "published_at": 1794226762,
+  "discussion": "https://news.ycombinator.com/item?id=50424581",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.foldableflight.com"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://static.wixstatic.com/media/0641fb_4ff6a49def494e379b4f3b585c4ac4a8%7Emv2_d_2482_1412_s_2.jpg/v1/fit/w_2500,h_1330,al_c/0641fb_4ff6a49def494e379b4f3b585c4ac4a8%7Emv2_d_2482_1412_s_2.jpg",
+  "link_status": "ok",
+  "ko_title": "Fold Epic Paper Airplanes",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "research"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Humans will never again create a project like Wikipedia",
+  "url": "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia",
+  "source": "hackernews",
+  "upvotes": 260,
+  "comments": 181,
+  "published_at": 1794227420,
+  "discussion": "https://news.ycombinator.com/item?id=50424704",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "인간은 다시는 위키피디아와 같은 프로젝트를 만들 수 없을 것이다",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
+  "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
+  "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+  "source": "hackernews",
+  "upvotes": 345,
+  "comments": 241,
+  "published_at": 1794207865,
+  "discussion": "https://news.ycombinator.com/item?id=50422069",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/shanemelaugh/status/2119192075505893695"
+  ],
+  "cross_source_count": 1,
+  "score": 16,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Opus 5.5가 약화됐나요? 11월 3일에 사고 패턴이 바뀌었습니다",
+  "summary": "",
+  "why": "11월 3일 이후 사고 패턴이 바뀌었으므로 기존 프롬프트의 출력 품질을 재확인해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-10T00:00:02.820871+09:00",
+  "batch_label": "11월 10일 00:00"
+ },
+ {
   "title": "jhaizhou-ops / S2Arm",
   "url": "https://github.com/jhaizhou-ops/S2Arm",
   "source": "github",
