@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-01T08:00:32+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-01T16:00:30+09:00",
    "total": 13,
    "counts": {
@@ -549,6 +533,27 @@
    "failures": [
     {
      "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-11T08:00:31+09:00",
+   "total": 19,
+   "counts": {
+    "ok": 15,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/introducing-businesses-chatgpt",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/ai-effect-on-freelance-work",
      "source": "rss",
      "reason": "blocked"
     }
