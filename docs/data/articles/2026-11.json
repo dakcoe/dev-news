@@ -1,5 +1,625 @@
 [
  {
+  "title": "AlphaProof Code",
+  "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+  "source": "hackernews",
+  "upvotes": 266,
+  "comments": 101,
+  "published_at": 1794312672,
+  "discussion": "https://news.ycombinator.com/item?id=50439193",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://deepmind.google/blog/introducing-alphaproof-code/"
+  ],
+  "cross_source_count": 1,
+  "score": 77,
+  "image": "https://lh3.googleusercontent.com/hn6AiI6lYFo6chi1mL6uJ9nOW9UXfsAKnSyOApiie2urHNU2tmSPUmGn0hNfWyYLRcsWCGjCIrBZSCt1ihZmvW-LDJPfyolsr5w-yvzlknZVzmaH=w1200-h630-n-nu-rw",
+  "link_status": "ok",
+  "ko_title": "AlphaProof Code — 복잡한 소프트웨어를 깊이 검증하는 혁신",
+  "summary": "Google DeepMind 연구진이 AlphaProof Code라는 에이전트 기반 프레임워크로 Signal 암호 프로토콜 코드를 수학적으로 검증했다. 인간 전문가와 AI 에이전트가 협업해 보안 목표를 형식화하고, Gemini Carbon 기반 에이전트가 Lean 언어로 600만 줄 이상의 증명을 생성했다. 검증 과정에서 인간이 재검토해야 할 코드는 전체의 1%에 불과했다.",
+  "why": "보안 프로토콜 검증 시 인간 재검토 범위가 전체 코드의 1%로 줄어든다. 기존 수작업 중심 방식과 비교해 검증 비용과 시간이 크게 절감된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+  "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794295701.0,
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://research.meta.ai/blog/muse-ember",
+   "https://simonwillison.net/2026/Nov/10/muse-ember/"
+  ],
+  "cross_source_count": 2,
+  "score": 66,
+  "image": "https://static.simonwillison.net/static/2026/muse-ember.webp",
+  "link_status": "ok",
+  "ko_title": "우리 가장 작고 효율적인 모델: Muse Ember",
+  "summary": "Meta AI가 복잡한 추론과 도구 호출, 코딩 서브태스크, 라우팅, 추출, 장문 문서 파싱 등에 최적화된 Muse Ember 모델을 출시했다. 입력 토큰 100만까지 지원하며, 짧은 프롬프트에 대한 가격은 GPT-6 Luna와 Claude Haiku 5.5와 동일하게 입력당 $0.10, 출력당 $0.50이다. 긴 프롬프트에서는 가격이 상승하는 임계값이 존재한다.",
+  "why": "에이전트 루프의 도구 호출이나 코딩 서브태스크에 Muse Ember를 적용하면 비용 효율이 달라진다. 긴 프롬프트 처리 시 가격 상승 임계값이 존재하므로 배치 크기를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Ableton Live 13",
+  "url": "https://www.ableton.com/en/live/",
+  "source": "hackernews",
+  "upvotes": 95,
+  "comments": 101,
+  "published_at": 1794315484,
+  "discussion": "https://news.ycombinator.com/item?id=50439695",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.ableton.com/en/live/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://beta-ableton.imgix.net/media/fe1omm2e/live-13-1200x630-4.jpg",
+  "link_status": "ok",
+  "ko_title": "Ableton Live 13",
+  "summary": "Ableton Live 13은 내장 스텝 시퀀서, ARA 2 지원, 캡처 자동화 등 새로운 오디오·MIDI 워크플로와 사운드 디자인 도구, 믹싱 효과를 추가한다. 믹서에 디바이스 슬롯과 전송 슬라이더 등 UI 개선이 포함되고, Suite 버전에는 Melodyne essential·Looplet·Clipper·Transient Shaper·Softube 클래식 다이내믹스·EQ 팩이 제공된다. Push 3는 커스텀 레이아웃·새 스텝 시퀀서·퍼포먼스 믹서·디바이스 모드 업그레이드를 지원한다.",
+  "why": "ARA 2 지원으로 기존 오디오 편집 플러그인을 Live 내에서 직접 사용할 수 있게 된다. Push 2 사용자는 커스텀 레이아웃과 퍼포먼스 믹서 기능을 활용할 수 없다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Once Upon Agentic AI (Part 1): Create your own agent and forge its tools with Strands Agents",
+  "url": "https://dev.to/aws/once-upon-agentic-ai-part-1-create-your-own-agent-and-forge-its-tools-with-strands-agents-22mo",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 12,
+  "comments": 0,
+  "published_at": 1794300356.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws/once-upon-agentic-ai-part-1-create-your-own-agent-and-forge-its-tools-with-strands-agents-22mo"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fragdkj0cwkzj3srl1bk7.png",
+  "link_status": "ok",
+  "ko_title": "에이전트 AI 만들기 (Part 1): Strands Agents로 에이전트와 도구 만들기",
+  "summary": "이 튜토리얼은 Python·uv·터미널·AWS 자격증명으로 Strands Agents SDK를 사용해 첫 AI 에이전트를 만들고, 외부 API와 연동해 도구를 장착하고, 직접 만든 도구로 주사위 굴리기 등을 구현하는 과정을 제공한다. 샘플 코드는 aws-samples/sample-once-upon-agentic-ai 저장소에 있으며, 주요 브랜치에 TODO 표시가 있다.",
+  "why": "AWS 자격증명이 없으면 에이전트 실행이 막힌다. 샘플 저장소의 TODO 마커를 채워야 에이전트가 동작한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "expo / exact",
+  "url": "https://github.com/expo/exact",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 973,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/expo/exact"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 973,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/expo/exact",
+  "link_status": null,
+  "ko_title": "expo / exact",
+  "summary": "Exact은 하나의 코드베이스로 웹, macOS, iOS, Linux에서 네이티브 앱을 실행할 수 있는 프레임워크이다. AI 코딩 에이전트(예: Claude Code)를 이용해 전체 빌드·테스트·배포 과정을 자동화할 수 있다. macOS·iOS 최초 빌드에 약 13분씩 소요되지만 이후 빌드는 1~2분 수준이다.",
+  "why": "웹과 네이티브 플랫폼을 하나의 코드베이스로 묶어 AI 에이전트 자동화 파이프라인에 바로 연결할 수 있다. macOS와 iOS 최초 빌드가 13분씩 걸리므로 초기 환경 구축 시간을 계획에 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+  "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
+  "source": "hackernews",
+  "upvotes": 479,
+  "comments": 174,
+  "published_at": 1794290468,
+  "discussion": "https://news.ycombinator.com/item?id=50436640",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://strandsagents.com/blog/og/amazon-saves-millions-replacing-sonnet-with-strands-decider.png",
+  "link_status": "ok",
+  "ko_title": "Amazon, Sonnet 4.6을 교체해 수백만 달러 절감",
+  "summary": "Amazon과 AWS는 내부 티켓 라벨링에 사용하던 Claude Sonnet 4.6을 한 달 전에 출시한 Strands Decider로 교체해 비용을 98 % 절감했다. 새 모델은 E4B Gemma 4 기반으로 동일하거나 더 나은 정확도를 보였으며 SageMaker ml.g5.xlarge 인스턴스에서 640 ms 응답 시간을 기록했다.",
+  "why": "분류 작업에 LLM 대신 결정 모델을 쓰면 비용이 98 % 줄어든다. 텍스트 생성이 필요 없는 라벨링 작업은 이 구조로 전환할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+  "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794319200.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Adobe_snippet_hero.max-1440x810.png",
+  "link_status": "ok",
+  "ko_title": "Adobe의 창작·생산성 도구를 일상적인 Google 앱에 가깝게 가져옵니다.",
+  "summary": "Adobe는 Google과의 파트너십을 확대해 Google Drive·Gmail에서 Adobe Acrobat을 직접 열 수 있게 한다. Gemini와 Gemini Enterprise에 Adobe의 창작 도구와 PDF 편집 기능을 연결하고, Google Search AI 모드에서도 활용한다. 기업용으로는 Gemini Enterprise에 Adobe CX Enterprise Coworker 에이전트를 제공해 그래픽·PDF·마케팅 작업을 앱 전환 없이 지원한다. DeepMind와 협업해 Photoshop용 이미지 모델을 개발해 실시간 편집을 목표로 한다.",
+  "why": "Gemini Enterprise에 Adobe 에이전트가 들어오면 앱 전환 없이 그래픽과 PDF 작업을 처리할 수 있다. 백엔드 개발자가 문서 처리 파이프라인을 만들 때 외부 앱 호출 로직을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "industry"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Google Cloud launches Gemini for healthcare.",
+  "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794315600.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/social_share_NWQpgus.max-1440x810.png",
+  "link_status": "ok",
+  "ko_title": "Google Cloud, 의료용 Gemini 출시",
+  "summary": "Google Cloud가 의료 데이터 통합을 목표로 한 AI 솔루션 Gemini for healthcare를 미리보기 단계로 공개했다. 전자 건강 기록·청구·임상 가이드라인·메디케어 데이터 등을 연결해 다단계 워크플로를 자동화한다. 초기 파트너는 HCA Healthcare·Highmark Health·Northwell Health다.",
+  "why": "의료 데이터 통합 워크플로 자동화 기능이 미리보기 단계로만 제공된다. HCA Healthcare 등 초기 파트너 외에는 아직 접근할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "devops-infra",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Dev log # 29 The Review Marathon: Hardening libp2p across C# and Python",
+  "url": "https://dev.to/yashksaini/dev-log-the-review-marathon-hardening-libp2p-across-c-and-python-2f7i",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794305961.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yashksaini/dev-log-the-review-marathon-hardening-libp2p-across-c-and-python-2f7i"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmsfshjk2dkpoj3h80u0f.png",
+  "link_status": "ok",
+  "ko_title": "리뷰 마라톤: C#·Python용 libp2p 강화",
+  "summary": "이번 주에 dotnet-libp2p 프로젝트에서 22개의 PR을 검토하며 메모리 제한, 입력 검증, 프로토콜 안정성을 강화했다. InMemoryProviderStore의 키 수 제한, 멀티스트림 라인 읽기 제한, varint 오버플로우 차단 등 메모리 사용량을 제어하는 수정이 포함됐다. Kademlia와 PubSub에서도 피어 검증 및 구독 기반 전송 제한이 적용됐으며, TCP 수신 경로 버그 수정으로 고처리량 노드의 메모리 압력이 크게 감소한다.",
+  "why": "C# 기반 libp2p 노드를 운영 중이라면 메모리 제한과 입력 검증이 강화된 버전을 적용해야 한다. 고처리량 환경에서 TCP 수신 경로 버그 수정으로 메모리 압력이 크게 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "tokio-rs / topcoat",
+  "url": "https://github.com/tokio-rs/topcoat",
+  "source": "github",
+  "upvotes": 192,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/tokio-rs/topcoat"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 192,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/tokio-rs/topcoat",
+  "link_status": null,
+  "ko_title": "Rust 전체 스택 프레임워크 Topcoat",
+  "summary": "Topcoat은 모듈식이며 배터리 포함형 Rust 프레임워크로, 전체 스택 애플리케이션을 간단하고 생산적으로 만들 수 있게 설계되었다. 현재 초기 단계이며 실험적인 상태라 향후 큰 변경이 있을 수 있다. Crates.io와 Docs.rs에 공개돼 있어 바로 사용해볼 수 있다.",
+  "why": "초기 실험 단계라 향후 깨지는 변경이 생길 수 있다. Rust로 풀스택을 다루는 경우에만 참고할 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "PotterRemember37 / minecraft-hacked-client",
+  "url": "https://github.com/PotterRemember37/minecraft-hacked-client",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 911,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/PotterRemember37/minecraft-hacked-client"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 911,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/PotterRemember37/minecraft-hacked-client",
+  "link_status": null,
+  "ko_title": "Capri — 사이버펑크 AI 에이전트",
+  "summary": "Capri는 Windows 전용 데스크톱 애플리케이션으로 Claude Code, Codex, Antigravity 등 다양한 AI 어시스턴트를 하나의 인터페이스에 통합한다. Discord 통화에 자동으로 참여해 음성 채팅을 수행하고, 게임 실행 등 명령을 수행할 수 있다. GitHub에서 최신 릴리스와 다운로드 링크가 제공된다.",
+  "why": "Windows 환경에서 Claude Code나 Codex를 쓰는 개발자는 별도 터미널 전환 없이 하나의 창에서 AI 어시스턴트를 관리할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Helping caregivers use AI in everyday life",
+  "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794312000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/5hU7ON7hfir24W1E1vtQLV/8eb49679510e09c2d19d0ad918229de4/helping-caregivers-use-ai-in-everyday-life-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "AI로 일상 생활을 돕는 돌봄 제공자",
+  "summary": "OpenAI Academy가 11월 10일에 미국 5개 도시에서 돌봄 제공자를 위한 무료 ChatGPT 워크숍을 개최한다. 참가자는 일정 관리, 체크리스트 작성, 교육 자료 단순화, 지역 자원 찾기 등 일상 업무에 AI를 활용하는 방법을 배운다. 워크숍은 AI 사용 시 개인정보 보호와 전문가 상담 필요성을 강조한다.",
+  "why": "돌봄 제공자를 위한 오프라인 워크숍이므로 백엔드 개발 업무와 직접적인 연관성이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Fossil CO2 emissions decrease by 0.4% in 2026",
+  "url": "https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/fossil-co2-emissions-decrease-in-2026/",
+  "source": "hackernews",
+  "upvotes": 106,
+  "comments": 129,
+  "published_at": 1794301181,
+  "discussion": "https://news.ycombinator.com/item?id=50437752",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/fossil-co2-emissions-decrease-in-2026/"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://news.exeter.ac.uk/wp-content/uploads/2026/11/solar-pic.jpg",
+  "link_status": "ok",
+  "ko_title": "화석 CO2 배출량 2026년 0.4% 감소",
+  "summary": "2026년 전 세계 화석 연료 배출량이 0.4% 감소할 것으로 전망된다. 감소는 태양·풍력 확대와 이란 분쟁에 따른 에너지 충격이 원인이다. 석유 배출은 1.9% 감소하지만, 전체 CO2 배출량은 43.3억 톤으로 전년보다 늘어난다.",
+  "why": "백엔드 개발자의 코드나 인프라 설정에 직접 영향을 주는 내용은 아니다. 기후 데이터나 탄소 배출량 모니터링 시스템을 구축할 때 참고할 수 있는 최신 수치다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Closing the AI guidance gap in education",
+  "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794301200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/closing-ai-guidance-gap-education"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "교육에서 AI 안내 격차 해소",
+  "summary": "ThinkYoung이 AI 안내 격차 해소를 위한 새로운 연구 결과를 발표했다. OpenAI가 EMEA 지역 교육 파트너십을 통해 교사 지원, AI 리터러시 향상, 자율 학습 촉진 방안을 제시한다.",
+  "why": "백엔드와 AI 개발 업무에는 직접적인 도구 변경이나 기술적 조치 사항이 없다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "One app, three native UIs: what I learned building the same app in SwiftUI, WinUI 3 and GTK 4",
+  "url": "https://dev.to/vaache/one-app-three-native-uis-what-i-learned-building-the-same-app-in-swiftui-winui-3-and-gtk-4-la7",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 8,
+  "comments": 2,
+  "published_at": 1794305126.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/vaache/one-app-three-native-uis-what-i-learned-building-the-same-app-in-swiftui-winui-3-and-gtk-4-la7"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fojv74pj1i0rgbe29nle2.jpg",
+  "link_status": "ok",
+  "ko_title": "하나의 앱, 세 가지 네이티브 UI: SwiftUI·WinUI 3·GTK 4로 같은 앱을 만든 경험",
+  "summary": "개발자는 GitHub PR 검토를 빠르게 할 수 있는 PullYard라는 앱을 macOS, Windows, Linux 각각 SwiftUI, WinUI 3, Rust·GTK 4로 별도 구현했다. 각 버전은 코드가 전혀 공유되지 않으며, 초기 런칭은 하루 걸렸지만 보안·메모리 누수 등 추가 작업이 필요했다. 글에서는 Electron·Tauri·Flutter 등 크로스플랫폼 프레임워크 대신 네이티브 구현을 선택한 이유와 주의점을 설명한다.",
+  "why": "대용량 코드 차이 비교 화면의 스크롤 성능은 플랫폼별 네이티브 렌더링에 좌우된다. 크로스플랫폼 프레임워크를 쓰면 이 부분을 직접 제어할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "we-promise / sure",
+  "url": "https://github.com/we-promise/sure",
+  "source": "github",
+  "upvotes": 184,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/we-promise/sure"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 184,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/we-promise/sure",
+  "link_status": null,
+  "ko_title": "Sure: 모두를 위한 개인 재무 앱",
+  "summary": "이 저장소는 이제 중단된 Maybe Finance 프로젝트를 커뮤니티가 포크한 개인 재무 관리 애플리케이션이다. 대시보드에서 현금 흐름·순자산·지출·출금 정보를 두 열로 확인하고, AI 어시스턴트를 통해 저축 관련 질문에 답변받을 수 있다. README가 다국어로 제공돼 한국어를 포함한 여러 언어로 문서를 볼 수 있다.",
+  "why": "Maybe Finance가 중단된 상황에서 이 포크를 통해 개인 재무 관리 기능을 계속 유지할 수 있다. AI 어시스턴트를 활용해 저축 관련 질문에 대한 답변을 받을 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "I Used gp-grid to Build a React Food Festival App with Advanced Data Grid Features",
+  "url": "https://dev.to/hadil/i-used-gp-grid-to-build-a-react-food-festival-app-with-advanced-data-grid-features-3l22",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 85,
+  "comments": 10,
+  "published_at": 1794301450.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/hadil/i-used-gp-grid-to-build-a-react-food-festival-app-with-advanced-data-grid-features-3l22"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fn4q9jewu74jn3w6oo3yn.png",
+  "link_status": "ok",
+  "ko_title": "gp-grid로 고급 데이터 그리드 기능을 갖춘 React 푸드 페스티벌 앱 만들기",
+  "summary": "그는 가상의 국제 스트리트 푸드 페스티벌 사이트인 STREET BITES를 네 페이지로 구축하고, 세 페이지에서 gp-grid를 활용해 정렬·필터링·맞춤 셀 렌더러·인라인 편집·행 그룹화·피벗·가상 스크롤·실시간 업데이트 등을 구현했다. 설치와 초기 설정이 간단했으며, 라이브러리가 React·TypeScript 프로젝트에 자연스럽게 녹아들었다.",
+  "why": "React와 TypeScript 프로젝트에서 정렬, 피벗, 가상 스크롤 등 고급 그리드 기능이 필요한 경우 gp-grid를 대안으로 검토할 수 있다. 유료 기능이 없는 Apache 2.0 라이선스라 비용 부담 없이 도입이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Anthropic launches roadshow for proposed initial public offering",
+  "url": "https://www.anthropic.com/news/roadshow-launch",
+  "source": "anthropic",
+  "feed": "Anthropic",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Anthropic",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/news/roadshow-launch"
+  ],
+  "cross_source_count": 2,
+  "score": 46,
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic, 제안된 기업공개 로드쇼 시작",
+  "summary": "Anthropic이 8억 2,500만 주 규모의 Class A 보통주 IPO 로드쇼를 시작했다. 주당 예상 가격은 70~78달러이며, Nasdaq에 “ANT” 심볼로 상장 신청 중이다. 기존 주주가 2,364만 주를, 회사가 8억 1,351만 주를 판매하고, 인수기관에 추가 1억 2,375만 주 옵션을 부여한다.",
+  "why": "Anthropic의 기업공개는 개발자에게 직접적인 코드 변경이나 도구 업데이트를 요구하지 않는다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
+  "title": "Don't buy AR glasses",
+  "url": "https://blog.yaros.ae/dont-buy-ar-glasses/",
+  "source": "hackernews",
+  "upvotes": 95,
+  "comments": 102,
+  "published_at": 1794316225,
+  "discussion": "https://news.ycombinator.com/item?id=50439805",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.yaros.ae/dont-buy-ar-glasses/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://yaros.ae/data/images/social/blog/preview.png",
+  "link_status": "ok",
+  "ko_title": "AR 안경을 사지 말라",
+  "summary": "",
+  "why": "AR 안경은 하루 종일 착용하는 기기라 스마트폰과 달리 사용 예절의 제약이 없다. 기존 웹의 광고와 다크 패턴이 AR 환경으로 그대로 이식될 가능성이 높다. 현재의 깔끔한 사용자 경험은 시간이 지나면 훼손될 수밖에 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T00:00:03.520802+09:00",
+  "batch_label": "11월 11일 00:00"
+ },
+ {
   "title": "wycocoyu / Resume-Agent",
   "url": "https://github.com/wycocoyu/Resume-Agent",
   "source": "github",

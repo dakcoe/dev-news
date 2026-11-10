@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-01T00:00:30+09:00",
-   "total": 12,
-   "counts": {
-    "blocked": 1,
-    "ok": 9,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-01T08:00:32+09:00",
    "total": 12,
    "counts": {
@@ -549,6 +533,22 @@
     },
     {
      "url": "https://openai.com/index/kuken",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-11T00:00:34+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 15,
+    "blocked": 1,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/closing-ai-guidance-gap-education",
      "source": "rss",
      "reason": "blocked"
     }
