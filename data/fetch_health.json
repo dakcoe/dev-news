@@ -1,39 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-10-31T16:00:27+09:00",
-   "total": 14,
-   "counts": {
-    "robots": 1,
-    "ok": 7,
-    "short": 1,
-    "github": 3,
-    "blocked": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://news.ycombinator.com/item?id=50312756",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/fair-use-benefits-everyone",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/credit-saison",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-01T00:00:30+09:00",
    "total": 12,
    "counts": {
@@ -565,6 +532,27 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-10T16:00:33+09:00",
+   "total": 16,
+   "counts": {
+    "ok": 11,
+    "github": 3,
+    "blocked": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/coderabbit-codex-daybreak",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/kuken",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
