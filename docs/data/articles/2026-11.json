@@ -1,5 +1,554 @@
 [
  {
+  "title": "How Curative is building a national provider network with agents on Claude",
+  "url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794268800.0,
+  "origin_url": "https://claude.com/blog/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+   "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://claude.com/ko/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Curative가 Claude 기반 에이전트로 전국 공급자 네트워크 구축",
+  "summary": "Curative는 Claude 위에 계층형 에이전트 시스템을 도입해 2025년 대비 계약 체결 속도를 50배 가속화했다. 주요 에이전트인 Gwen이 초기 연락부터 서명까지 전 과정을 담당하고, 하위 에이전트들이 요율 검토·메시지 확인·질문 응답·비표준 가격 이슈를 인간에게 전달한다. 이를 통해 주당 2,000건 이상의 공급자 계약을 체결하고 있다.",
+  "why": "Claude 기반 계층형 에이전트 구조를 설계할 때 참고할 사례다. 주요 에이전트가 전 과정을 처리하고 하위 에이전트가 예외를 인간에게 넘기는 방식이다. 반복적 협상 업무에 에이전트를 적용할 때 역할 분담을 어떻게 했는지 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "HybridRobotics / supermimic",
+  "url": "https://github.com/HybridRobotics/supermimic",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 583,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/HybridRobotics/supermimic"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 583,
+  "score": 64,
+  "image": "https://opengraph.githubassets.com/1/HybridRobotics/supermimic",
+  "link_status": null,
+  "ko_title": "HybridRobotics / supermimic (슈퍼미믹)",
+  "summary": "SuperMimic은 SuperTrack 기반 구현으로, 세계 모델과 정책을 학습해 모션 데이터를 모방한다. mjlab 연구 코드 위에 구축됐으며, uv 패키지 매니저로 설치·실행한다. 일반 좌표와 최대 좌표 두 가지 태스크 ID를 제공해 학습과 재생이 가능하다.",
+  "why": "mjlab 연구 코드 위에 구축되어 있어 해당 환경 설정이 선행 조건이다. 일반 좌표와 최대 좌표 두 가지 태스크 ID 중 목적에 맞는 것을 선택해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+  "url": "https://github.com/GoogleChrome/modern-web-guidance",
+  "source": "hackernews",
+  "upvotes": 336,
+  "comments": 101,
+  "published_at": 1794333675,
+  "discussion": "https://news.ycombinator.com/item?id=50443812",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/GoogleChrome/modern-web-guidance"
+  ],
+  "cross_source_count": 2,
+  "score": 64,
+  "image": "https://opengraph.githubassets.com/1/GoogleChrome/modern-web-guidance",
+  "link_status": null,
+  "ko_title": "Show HN: 코딩 에이전트를 2019년 JavaScript에서 현대 웹 프리미티브로 전환",
+  "summary": "Modern Web Guidance는 Chrome·Edge·Firefox·MDN 팀이 만든 CLI 기반 도구로, 웹 플랫폼 최신 기능과 호환성 데이터를 코딩 에이전트에 직접 제공한다. 인터랙티브 설치와 검색·가이드 조회·레거시 코드 스캔 명령을 통해 기존 레거시 패턴을 현대화할 수 있다.",
+  "why": "코딩 에이전트가 레거시 패턴을 현대 웹 프리미티브로 전환하도록 유도한다. 기존 코드를 스캔해 현대화 대상 패턴을 자동으로 찾아준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "hardware",
+   "open-source",
+   "release",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+  "url": "https://huggingface.co/blog/qvac/botpsy",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794373276.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/qvac/botpsy"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6468b319b2321e47d3267049/Emr86qw6NAueYLdIEiTTD.png",
+  "link_status": "ok",
+  "ko_title": "BotPsy: 온-디바이스 개인 비서, 10억 파라미터 미만 에이전트 언어 모델",
+  "summary": "Tether AI Research가 Qwen3.5-0.8B 기반의 0.8 B 파라미터 모델 BotPsy를 공개했다. 함수 호출과 에이전트 워크플로에 최적화돼 온-디바이스에서 웹 검색, 일정 관리, 파일 처리 등 다양한 작업을 수행한다. 동일 규모 모델 중 최고 수준의 도구 사용 성능을 보이며, 프라이버시와 비용 효율성을 강조한다.",
+  "why": "0.8B 규모에서 도구 호출 성능이 뛰어나 온디바이스 에이전트 구현 시 클라우드 API 의존도를 낮출 수 있다. 다만 저·중도 난이도 작업에 적합하며 고위험 업무에는 부적합하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "A Small Laptop Is a Full Build Kit: Bootstrapping with a Chromebook, Claude, and GitHub",
+  "url": "https://dev.to/earlgreyhot1701d/a-small-laptop-is-a-full-build-kit-bootstrapping-with-a-chromebook-claude-and-github-4j16",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 3,
+  "published_at": 1794364917.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/a-small-laptop-is-a-full-build-kit-bootstrapping-with-a-chromebook-claude-and-github-4j16"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6mt8ftcy9rk2fblpxpxv.png",
+  "link_status": "ok",
+  "ko_title": "작은 노트북은 전체 빌드 키트 — Chromebook, Claude, GitHub 활용",
+  "summary": "저자는 4 GB Chromebook에서 앱을 개발하고 배포·복구까지 전 과정을 기록했다. 제한된 하드웨어에서 워크플로우 핵심을 파악하고, 동일한 절차를 다른 노트북에도 적용해 5차례 빌드와 스트레스 테스트를 수행했다. CPU 사용량은 5 %~15 % 수준으로 안정적이었다.",
+  "why": "로컬 에디터나 터미널 없이 브라우저 기반 AI 에이전트로 빌드와 배포를 끝낼 수 있다. 하드웨어가 제한된 환경에서 워크플로우의 필수 요소를 분리해 재사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "hardware"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Lee-xeo / Claude-Cage",
+  "url": "https://github.com/Lee-xeo/Claude-Cage",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 339,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Lee-xeo/Claude-Cage"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 339,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/Lee-xeo/Claude-Cage",
+  "link_status": null,
+  "ko_title": "Claude Cage — Claude와 대화하기 위한 데스크톱 프로그램",
+  "summary": "Claude Cage는 Mac, Windows, Linux에서 작동하는 데스크톱 앱으로, 네트워크와 지문을 격리하고 프록시를 자동 설정한다. 사용자는 가상 머신 내에서 Claude와 협업하고, 서버 연결 및 모바일 연동도 가능하다. 프로젝트는 GitHub에서 오픈소스로 제공되며, 다국어 문서와 자동 CI 배포가 포함된다.",
+  "why": "Claude가 계정 차단이나 환경 감지를 우회하기 위해 가상 머신을 직접 세팅하던 방식이 사라진다. 프록시와 지문 동기화를 앱이 자동 처리하므로, 백엔드 개발 환경에서 Claude를 안정적으로 호출할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "ChatGPT Plus for veterans and servicemembers",
+  "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794384000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/chatgpt-plus-for-veterans"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "재향군인 및 현역·전역 군인을 위한 ChatGPT Plus",
+  "summary": "2만 명이 넘는 재향군인과 전역을 앞둔 군인들이 ChatGPT Plus를 1년 무료로 이용하고 있다. 이들은 서비스를 활용해 민간 직업 전환을 준비하고 있다.",
+  "why": "군인 출신 개발자가 민간 이직 준비 중이라면 ChatGPT Plus 1년 무료 혜택을 받을 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Your agent isn't hallucinating — your rules never defined \"I don't know\"",
+  "url": "https://dev.to/tokenlat/your-agent-isnt-hallucinating-your-rules-never-defined-i-dont-know-4od4",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 15,
+  "published_at": 1794362036.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tokenlat/your-agent-isnt-hallucinating-your-rules-never-defined-i-dont-know-4od4"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhm2haqis68ks8bi55alh.jpg",
+  "link_status": "ok",
+  "ko_title": "에이전트가 환각하는 것이 아니라 규칙에 “모른다”가 정의되지 않음",
+  "summary": "내부 비용 처리 에이전트가 정책 문서를 파싱하지 못해 빈 컨텍스트에서 답변을 생성하고 승인 절차를 진행한다. 시스템 프롬프트에 “모른다”를 말하라는 규칙이 있어도 상태와 전환 로직이 없어 실제 판단이 이루어지지 않는다. 이를 해결하려면 오케스트레이터에 insufficient_context 상태와 전환, 그리고 constraint_evaluated 이벤트를 기록하도록 설계해야 한다.",
+  "why": "오케스트레이터에 insufficient_context 상태와 constraint_evaluated 이벤트 기록을 추가해야 한다. 프롬프트 문구만으로는 빈 컨텍스트에서의 허위 답변과 승인 진행을 막을 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Scion is back and is going to sell a kei truck in America",
+  "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+  "source": "hackernews",
+  "upvotes": 436,
+  "comments": 293,
+  "published_at": 1794340246,
+  "discussion": "https://news.ycombinator.com/item?id=50445401",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://images-stag.jazelc.com/uploads/theautopian-m2en/20261110110448/ScionByToyota_Family_TS3.jpg",
+  "link_status": "ok",
+  "ko_title": "Scion이 돌아와 미국에서 경차 트럭을 판매한다",
+  "summary": "토요타가 Scion 브랜드를 부활시켜 “Scion by Toyota”라는 자유 실험실 형태로 출시한다. 첫 제품은 기존 다이하쓰 히젯을 재브랜딩한 KEI-01 경차 트럭이며, 인디애나 공장에서 생산해 미국에 판매한다. 660cc 엔진과 CVT를 탑재해 시속 25마일 이하로 제한된 저속 차량 기준을 충족한다.",
+  "why": "백엔드 개발 업무와 무관한 자동차 산업 뉴스입니다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "실행은 격리하고, 세션은 이어간다: 망분리 환경의 Agent Platform 설계기",
+  "url": "https://toss.tech/article/agent-platform-foundation",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794294120.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/agent-platform-foundation"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://static.toss.im/disposables/contents/agent_platform.png",
+  "link_status": "ok",
+  "ko_title": "실행은 격리하고, 세션은 이어간다: 망분리 환경의 Agent Platform 설계기",
+  "summary": "AI Platform 팀은 망분리된 내부망에서 에이전트가 코드를 안전하게 실행하도록 샌드박스를 도입하고, 작업 파일과 대화 상태를 보관해 세션을 이어갈 수 있게 설계했다. 사용자별 Kubernetes Pod를 재사용하면서도 에이전트마다 파일·시스템 접근을 제한한다. OpenSandbox와 bubblewrap을 활용해 실행 환경을 격리하고, 하네스가 모델·도구 호출을 조율한다.",
+  "why": "내부망에서 에이전트를 돌릴 때 모델 생성 코드의 부작용을 막으려면 샌드박스가 필수다. OpenSandbox와 bubblewrap 조합으로 사용자별 Pod 재사용과 에이전트별 접근 제한을 동시에 잡을 수 있다. 이 구조를 참고해 망분리 환경의 에이전트 실행 격리 정책을 설계할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "devops-infra"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Ask More of Your UI",
+  "url": "https://dev.to/dailycontext/ask-more-of-your-ui-2nf7",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 25,
+  "comments": 2,
+  "published_at": 1794361155.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dailycontext/ask-more-of-your-ui-2nf7"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsbhz5b16c123bk8q1zp6.jpg",
+  "link_status": "ok",
+  "ko_title": "UI에 더 많은 것을 요구하세요",
+  "summary": "개발자는 Forem에서 자동화 루프를 도입해 351개의 PR을 처리하고 평균 Rails 요청 시간을 70ms에서 16ms로 단축했다. 하지만 다수의 자동화 루프와 여러 모델 구독이 동시에 동작하면 기존 채팅 기반 UI로는 상태와 운영 정보를 파악하기 어렵다. 저자는 UI가 관찰성을 제공하도록 개선될 필요성을 강조한다.",
+  "why": "자동화 루프가 다수 병렬로 돌면 채팅 로그로는 상태 파악이 안 된다. 운영 정보를 보기 위해 별도 관찰성 UI를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Tracking Anthropic-discovered vulnerabilities",
+  "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+  "source": "hackernews",
+  "upvotes": 382,
+  "comments": 177,
+  "published_at": 1794349076,
+  "discussion": "https://news.ycombinator.com/item?id=50447074",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.vulncheck.com/blog/anthropic-glasswing-november-update"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://www.vulncheck.com/_og/s/o_6eba28d38c5a4083.png",
+  "link_status": "ok",
+  "ko_title": "Anthropic가 발견한 취약점 추적",
+  "summary": "VulnCheck이 7개월간 Project Glasswing을 추적해 Anthropic 관련 CVE 442건을 기록했으며, 전체 CVE의 0.5%에 해당한다. 공개된 7,349건 중 217건만 수정됐고, 12,000건 이상의 신규 발견이 추가됐지만 수정은 15건에 불과하다. 중복 및 철회된 보고가 다수 존재해 실제 해결률이 낮다.",
+  "why": "AI 기반 취약점 스캐너의 검증 부담이 유지자에게 넘어가며, 실제 보안 조치까지의 간극이 넓어지고 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "AI Agents Need a Runtime, Not Another Framework",
+  "url": "https://dev.to/jonlunsford/ai-agents-need-a-runtime-not-another-framework-569d",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794354229.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jonlunsford/ai-agents-need-a-runtime-not-another-framework-569d"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4i0azw5vtunr4kvg075u.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트는 또 다른 프레임워크가 아니라 런타임이 필요하다",
+  "summary": "AI 에이전트를 실제 서비스에 배포할 때 발생하는 장애 복구, 정책 위반, 악성 입력 처리 등 운영상의 문제를 다루어야 한다는 점을 강조한다. LLM 자체는 툴 호출을 잘하지만, 지속적인 실행과 예측 가능한 동작을 보장하려면 전통적인 분산 시스템 엔지니어링이 필요하다. 현재 많은 프레임워크가 존재하지만, 런타임 수준의 안정성 확보가 핵심 과제로 남아 있다.",
+  "why": "에이전트 배포 시 장애 복구와 정책 위반 같은 운영 문제를 기존 분산 시스템 방식으로 처리해야 한다. LLM의 추론 능력만으로는 실행 단계의 안정성을 보장할 수 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "Gilbert + Tobin rethinks the business of law with AI",
+  "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/gilbert-tobin-sam-nickless"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/34qb6se5e4WPds4qMTRVll/e5de73acb5100416606cc7cd390693bd/EF_Ep21_16.9.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Gilbert + Tobin, AI로 법률 비즈니스 재구상",
+  "summary": "호주 대형 로펌 Gilbert + Tobin이 사내 AI 활용을 확대해 ChatGPT Enterprise·Work·Codex를 도입했다. 실험 단계에서 시작해 다단계 에이전트 워크플로우로 전환했으며, 직원들은 인간 중심 업무에 집중하도록 지원받는다. 보안 규정 하에 고객 데이터는 입력하지 않도록 제한한다.",
+  "why": "법률 업계의 AI 도입 사례로, 다단계 에이전트 워크플로우 전환 시 인간이 검토와 승인에 집중하는 구조를 보여준다. 고객 데이터 입력 금지라는 보안 규정은 민감한 정보를 다루는 백엔드 시스템 설계 시 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "industry"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "AI usage generates a fragile codebase",
+  "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+  "source": "hackernews",
+  "upvotes": 483,
+  "comments": 464,
+  "published_at": 1794306358,
+  "discussion": "https://news.ycombinator.com/item?id=50438318",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.evanxmerz.com/images/ai-codebases-are-a-house-of-cards.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 사용이 취약한 코드베이스를 만든다",
+  "summary": "",
+  "why": "AI가 생성한 코드는 컨텍스트 윈도우 밖의 장기적 기술 부채를 무시해 취약한 구조를 만든다. 대규모 SaaS 서비스의 가용성과 확장성을 유지하려면 이 한계를 인지하고 코드를 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "What constant surveillance is doing to children and parents",
+  "url": "https://www.theatlantic.com/magazine/2026/12/location-tracking-apps-parental-surveillance/689031/",
+  "source": "hackernews",
+  "upvotes": 238,
+  "comments": 263,
+  "published_at": 1794307638,
+  "discussion": "https://news.ycombinator.com/item?id=50438480",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theatlantic.com/magazine/2026/12/location-tracking-apps-parental-surveillance/689031/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "지속적인 감시가 아이와 부모에게 미치는 영향",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
+  "title": "How to Turn a Slack Thread into a Tracked Task (and Get a PR Back)",
+  "url": "https://dev.to/therealmrmumba/how-to-turn-a-slack-thread-into-a-tracked-task-and-get-a-pr-back-1oho",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1794379682.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/therealmrmumba/how-to-turn-a-slack-thread-into-a-tracked-task-and-get-a-pr-back-1oho"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbcdh78nklxes319x3der.png",
+  "link_status": "ok",
+  "ko_title": "Slack 스레드를 추적 작업으로 전환하고 PR 받기",
+  "summary": "",
+  "why": "Slack 스레드 내의 버그 리포트와 재현 단계를 코딩 에이전트가 바로 처리할 수 있는 작업으로 변환한다. 수동으로 티켓을 만들고 스크린샷을 다시 올리는 과정을 생략해 에이전트 전달 시간을 단축한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-11T16:00:06.436278+09:00",
+  "batch_label": "11월 11일 16:00"
+ },
+ {
   "title": "RunanywhereAI / trnrt",
   "url": "https://github.com/RunanywhereAI/trnrt",
   "source": "github",
