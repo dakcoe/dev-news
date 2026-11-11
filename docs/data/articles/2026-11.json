@@ -1,5 +1,464 @@
 [
  {
+  "title": "AWS emulator",
+  "url": "https://github.com/aws/aws-emulator",
+  "source": "hackernews",
+  "upvotes": 541,
+  "comments": 186,
+  "published_at": 1794421298,
+  "discussion": "https://news.ycombinator.com/item?id=50456631",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/aws/aws-emulator"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/aws/aws-emulator",
+  "link_status": null,
+  "ko_title": "AWS 에뮬레이터",
+  "summary": "로컬에서 AWS API를 에뮬레이션하는 프로그램으로, AWS 계정 없이도 개발·CI 환경에서 코드 테스트가 가능하다. 환경 변수 설정만으로 AWS CLI·SDK를 에뮬레이터 엔드포인트에 연결해 사용한다. 보안 테스트나 프로덕션에는 사용할 수 없으며, Linux는 패키지 설치, Windows·macOS는 Docker 컨테이너 실행 방식으로 제공한다.",
+  "why": "CI 파이프라인에서 AWS 계정 없이 로컬에서 통합 테스트를 돌릴 수 있다. 보안 검증이나 프로덕션 배포에는 사용할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+  "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794420000.0,
+  "merged_sources": [
+   "Google AI Blog",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+  ],
+  "cross_source_count": 2,
+  "score": 67,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini Decisions API: 빠른, 보정된 멀티모달 의사결정",
+  "summary": "새로운 Gemini Decision 1 모델 기반 Decisions API가 출시돼 텍스트·이미지·오디오·비디오·PDF 입력을 한 번에 처리하고 최대 1,000 질문에 대해 150-250 ms 지연으로 확률·신뢰도 점수를 반환한다. 출력 토큰은 과금되지 않아 기존 Gemini 3.5 Flash-Lite 대비 약 5배 저렴하다. 벤치마크에서 가장 낮은 보정 오차와 최고 성능을 기록했다.",
+  "why": "도구 선택이나 모델 라우팅 같은 제한된 선택지 판단에 텍스트 생성 대신 확률 점수를 직접 반환받는다. 출력 토큰 과금이 없어 기존 Gemini 3.5 Flash-Lite 대비 비용이 크게 줄어든다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+  "url": "https://openai.com/index/jiostar-vijay-seshadri",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794355200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/jiostar-vijay-seshadri"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6yXeyZ5Lph5wYnDiSxL1Rf/fe6264331b54720f59b3c7e90a05b2b8/EF_Ep20_16.9.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "JioStar 수석 설계자가 5억 사용자 규모에서 AI 탐색에 대해 이야기",
+  "summary": "JioStar는 OpenAI API를 활용해 JioHotstar에 대화형 영상·크리켓 통계 검색 어시스턴트를 구축했다. 15개 언어를 8주 안에 지원했으며, 대규모 동시 시청자에게 빠르고 안정적인 AI 서비스를 제공한다. 기존 추천 시스템과 달리 음성·시각 인터페이스로 사용자의 감정·상황을 반영한 맞춤 검색이 가능하다.",
+  "why": "기존 추천 시스템은 사용자의 감정이나 상황을 반영하기 어렵다. 음성 인터페이스를 통해 맥락을 설명하면 맞춤 검색이 가능하다. 대규모 동시 접속 환경에서 AI 검색을 도입할 때 참고할 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research",
+   "backend-data"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "Use your eval as a CI gate with Agents CLI",
+  "url": "https://dev.to/googlecloud/use-your-eval-as-a-ci-gate-with-agents-cli-1ha1",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1794420910.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/googlecloud/use-your-eval-as-a-ci-gate-with-agents-cli-1ha1"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Feliasecchig.github.io%2F_astro%2Fpipeline.J1Pi-k71_1aTFBO.webp",
+  "link_status": "ok",
+  "ko_title": "Agents CLI로 평가를 CI 게이트로 사용하기",
+  "summary": "Agents CLI v1.13.0에 평가 실행 결과를 PASS/FAIL 라인과 함께 출력하는 기능이 추가돼 CI 파이프라인에서 자동으로 빌드 실패를 유발할 수 있다. 평가 임계값은 설정 파일이나 명령줄 옵션으로 지정 가능하며, 임계값 미달이나 오류 발생 시 비정상 종료 코드가 반환된다. 이를 통해 풀 리퀘스트 단계에서 에이전트 변경이 자동으로 차단된다.",
+  "why": "에이전트 지시어 한 줄 수정이 테스트는 통과시키면서 응답 품질을 떨어뜨리는 문제를 막는다. v1.13.0부터 임계값 미달 시 비정상 종료 코드가 반환돼 CI에서 자동으로 빌드를 실패 처리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "groschen81-web / secure-desktop-installer",
+  "url": "https://github.com/groschen81-web/secure-desktop-installer",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 533,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/groschen81-web/secure-desktop-installer"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 533,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/groschen81-web/secure-desktop-installer",
+  "link_status": null,
+  "ko_title": "UnlockTool: Windows 10·11용 보안 설치 프로그램 및 향상된 데스크톱 유틸리티",
+  "summary": "unlocktool은 Windows 10·11 x64 환경에서 외부 서비스 없이 오프라인으로 동작하는 독립형 설치 프로그램이다. PowerShell 5.1+만 있으면 관리자 권한 없이도 배포가 가능하며, 사전 활성화된 구성과 강화된 무결성 검사를 제공한다. 기술팀이 로컬에서 일관된 설치를 관리하려는 경우에 적합하다.",
+  "why": "외부 서비스 의존 없이 로컬에서 일관된 배포를 수행할 수 있다. 관리자 권한이 필요 없어 제한된 인프라 환경에서도 적용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "Meet type-tune! 🦀 Give Your TypeScript Types a Better Home! 😸",
+  "url": "https://dev.to/necoz/meet-type-tune-give-your-typescript-types-a-better-home-1p6l",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 34,
+  "comments": 3,
+  "published_at": 1794417562.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/meet-type-tune-give-your-typescript-types-a-better-home-1p6l"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnmpfwlsvrtynp0s1lm59.gif",
+  "link_status": "ok",
+  "ko_title": "type-tune! — TypeScript 타입을 더 좋은 위치로 이동하기",
+  "summary": "type-tune은 Rust로 만든 CLI 도구로, 프로젝트 내 공유된 TypeScript 타입 별칭과 인터페이스를 자동으로 찾아 이동 계획을 생성한다. 이동 전후의 import와 re-export를 업데이트하고 TypeScript로 검증한다. npm에 type-tune 패키지로 배포되며 GitHub Releases에서 버전을 확인할 수 있다.",
+  "why": "공유 타입을 수동으로 옮기며 import를 추적하던 방식이 plan.md 검토 후 자동 재작성으로 바뀐다. 타입 이동 시 호환성 re-export가 원위치에 유지되므로 기존 참조는 깨지지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "How emulators might catch what you might miss",
+  "url": "https://dev.to/aws/how-emulators-might-catch-what-you-might-miss-34hd",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": 1794420468.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws/how-emulators-might-catch-what-you-might-miss-34hd"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbkwhdqdx4pd8rsisx5t1.png",
+  "link_status": "ok",
+  "ko_title": "에뮬레이터가 놓친 부분을 잡아줄 수 있다",
+  "summary": "AWS 서비스에 대한 테스트에서 모의 응답만으로는 실제 동작을 놓칠 수 있다는 사례가 소개된다. 메시지 재전송 시 영수증 핸들이 바뀌어 중복 청구가 발생한 버그를 통해, 클라우드 실제 환경에서 테스트하거나 로컬 에뮬레이터를 사용하는 필요성이 강조된다. 이번에 발표된 AWS Emulator는 로컬에서 클라우드 API를 에뮬레이션해 비용과 동시성 문제를 완화한다.",
+  "why": "SQS 재전송 시 영수증 핸들이 바뀐다는 동작을 모의 응답만으로는 검증하기 어렵다. 로컬에서 AWS Emulator를 돌리면 실제 API 규약을 따르는 테스트가 가능해진다. 이로써 클라우드 인프라 비용과 동시성 문제를 피하고 중복 청구 같은 버그를 잡을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "devops-infra",
+   "career-culture"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "Retirement Savings Are Fueling the AI Bubble",
+  "url": "https://lpeproject.org/blog/your-retirement-savings-are-fueling-the-ai-bubble/",
+  "source": "hackernews",
+  "upvotes": 123,
+  "comments": 135,
+  "published_at": 1794424003,
+  "discussion": "https://news.ycombinator.com/item?id=50457164",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://lpeproject.org/blog/your-retirement-savings-are-fueling-the-ai-bubble/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://lpeproject.org/wp-content/uploads/2020/08/cropped-Screen-Shot-2020-08-13-at-6.04.41-PM.png",
+  "link_status": "ok",
+  "ko_title": "퇴직 저축이 AI 버블을 부추긴다",
+  "summary": "최근 대형 기술 기업들의 AI 투자와 차입 확대가 주가 급락을 초래했다. 이와 동시에 공공·민간 연금 자산이 사모펀드 등 불투명한 기관에 투자돼 AI 데이터센터 건설 자금으로 사용되고 있다. 보고서는 사모펀드가 데이터센터와 전력 설비 자금 조달에 관여하고 있음을 밝혀냈다.",
+  "why": "AI 인프라 투자가 사모펀드 경유로 확대되며 시장 변동성 리스크가 커졌다. 백엔드 인프라의 전력·데이터센터 비용 구조가 불투명해져 장기 유지비 예측이 어려워진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794412800.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/labs_tabletop_blog_image_2784x1566.max-1440x810.jpg",
+  "link_status": "ok",
+  "ko_title": "Try Tabletop: 그룹이 함께 계획하고, 플레이하고, 더 많은 일을 할 수 있는 맞춤형 협업 공간",
+  "summary": "Google Labs가 실시간 협업을 위한 새로운 서비스 Tabletop을 공개했다. 링크·파일·아이디어를 추가하고 템플릿을 선택하면 여행 일정, 식사 투표, 비용 분담, 토너먼트 브래킷 등을 자동 생성한다. 생성된 공간은 초대 링크로 그룹 채팅에 공유해 동시에 사용할 수 있다. 현재 미국(18세 이상)에서 대기자 명단을 통해 순차적으로 제공한다.",
+  "why": "미국 18세 이상만 대기자 명단으로 순차 오픈되므로 지금 바로 쓸 수 없다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "How To Review Pull Requests with Kiro CLI and GitHub Actions",
+  "url": "https://dev.to/erikch/how-to-review-pull-requests-with-kiro-cli-and-github-actions-1b9b",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 10,
+  "comments": 2,
+  "published_at": 1794428806.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/erikch/how-to-review-pull-requests-with-kiro-cli-and-github-actions-1b9b"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnrwyuy74ezp32ehk1o31.png",
+  "link_status": "ok",
+  "ko_title": "Kiro CLI와 GitHub Actions로 풀 리퀘스트 검토하기",
+  "summary": "Kiro CLI의 헤드리스 모드를 API 키와 --no-interactive 옵션과 함께 사용하면 PR diff를 읽고 자동으로 리뷰를 작성해 댓글로 게시한다. GitHub Actions 워크플로에 단일 잡을 설정하고, .kiro/agents/pr-reviewer.md 파일에 리뷰 에이전트 정의만 하면 된다.",
+  "why": "PR 리뷰 에이전트 정의 파일을 저장소에 추가하고 워크플로를 구성하면 된다. 리뷰 에이전트는 읽기 전용 권한만 가지며 파일 수정이나 셸 실행은 차단된다. 디프에 포함된 지시문은 신뢰할 수 없는 데이터로 취급해 따르지 않도록 설계되어 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+  "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+  "source": "hackernews",
+  "upvotes": 188,
+  "comments": 192,
+  "published_at": 1794432275,
+  "discussion": "https://news.ycombinator.com/item?id=50458900",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/11/11/abfecdbe-5571-42df-95f8-6c22131067aa/thumbnail/1200x630/526b47f241e8e11c31cb47bc82f1f68c/gettyimages-2296986024-1.jpg",
+  "link_status": "ok",
+  "ko_title": "United Airlines, 여행자 대신 AI 에이전트 항공권 예약 금지",
+  "summary": "United Airlines는 보안 위험과 연방 규정 위반 가능성을 이유로 AI 에이전트가 항공권을 예약하거나 체크인하는 행위를 금지한다. 정책은 디지털 플랫폼과 여행사·집계 서비스를 통해 적용되며, 고객 정보와 마일리지를 보호하려는 목적이다.",
+  "why": "AI 에이전트가 항공권 예약 시 결제 정보와 마일리지에 접근하는 구조를 막는다. 여행사나 집계 서비스 경로의 자동화 예약도 함께 차단된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "hembramneeraj3-create / aida-64-extreme",
+  "url": "https://github.com/hembramneeraj3-create/aida-64-extreme",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 532,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/hembramneeraj3-create/aida-64-extreme"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 532,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/hembramneeraj3-create/aida-64-extreme",
+  "link_status": null,
+  "ko_title": "AIDA 64 Extreme 2026: Windows 11용 완전 데스크톱 설치 프로그램",
+  "summary": "AIDA 64 Extreme 2026은 Windows 10·11 환경에서 PowerShell을 이용해 별도 라이선스 없이 바로 실행 가능한 단일 설치 파일을 제공한다. 설치 시 관리자 권한이 필요 없으며, 네트워크 연결만 있으면 오프라인·격리된 시스템에도 동일하게 배포할 수 있다. 전체 진단·모니터링·벤치마크 기능이 사전 활성화된 상태로 포함된다.",
+  "why": "라이선스 없이 사전 활성화된 단일 설치 파일이라 별도 라이선스 관리 절차가 생략된다. 관리자 권한이 불필요하고 네트워크만 있으면 격리된 시스템에도 배포할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+  "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+  "source": "hackernews",
+  "upvotes": 365,
+  "comments": 179,
+  "published_at": 1794415124,
+  "discussion": "https://news.ycombinator.com/item?id=50455394",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://michael.bacarella.com/assets/mbacface.jpg",
+  "link_status": "ok",
+  "ko_title": "잘못된 화재 경보가 Jane Street의 유일한 NYC 데이터센터를 거의 침수시켰다",
+  "summary": "잘못된 화재 경보가 작동해 데이터센터에 물이 급격히 유입될 위기가 발생했다. 시스템 팀이 직접 전원 케이블을 뽑아 물이 들어오는 것을 차단했고, 물리적 차단 장치의 중요성이 재조명됐다. 이 사건은 데이터센터 운영 시 자동화와 수동 안전 장치의 균형 필요성을 보여준다.",
+  "why": "단일 데이터센터 운영 시 자동화에만 의존하면 물리적 차단이 불가능해진다. 비상 상황에서 수동 전원 차단 장치가 없으면 서비스 중단이 불가피하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
+  "title": "8 a.m. Thoughts: Word Press, Security, and Legacy 💭🤔",
+  "url": "https://dev.to/annavi11arrea1/8-am-thoughts-word-press-security-and-legacy-mn5",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 14,
+  "comments": 1,
+  "published_at": 1794412073.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/annavi11arrea1/8-am-thoughts-word-press-security-and-legacy-mn5"
+  ],
+  "cross_source_count": 1,
+  "score": 25,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fla10g56meonvuea9xrvs.png",
+  "link_status": "ok",
+  "ko_title": "8 a.m. 생각: 워드프레스, 보안, 그리고 레거시",
+  "summary": "글쓴이는 워드프레스가 보안 취약점과 업데이트 관리의 어려움 때문에 개발 경력에 큰 도움이 되지 않을 것이라고 판단한다. 워드프레스가 초보 개발자에게 일자리를 많이 제공하지만, 복잡한 커스터마이징과 보안 위험이 부담이라고 지적한다. 개인적인 전자상거래 사이트에 워드프레스를 사용하지 않을 것이라고 결론짓는다.",
+  "why": "워드프레스를 운영할 경우 패치와 업데이트를 놓치면 취약점에 노출된다. 복잡한 커스터마이징은 업데이트 시 충돌과 성능 저하를 유발한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-11-12T08:00:04.816774+09:00",
+  "batch_label": "11월 12일 08:00"
+ },
+ {
   "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
   "url": "https://huggingface.co/blog/token-pooling",
   "source": "rss",

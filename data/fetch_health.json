@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-02T08:00:29+09:00",
-   "total": 12,
-   "counts": {
-    "short": 1,
-    "ok": 9,
-    "blocked": 1,
-    "github": 1
-   },
-   "failures": [
-    {
-     "url": "https://hackerbooks.org",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://nurse.org/news/uber-for-nursing-gig-apps-report/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-02T16:00:35+09:00",
    "total": 13,
    "counts": {
@@ -552,6 +530,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-11-12T08:00:38+09:00",
+   "total": 17,
+   "counts": {
+    "github": 3,
+    "ok": 14
+   },
+   "failures": []
   }
  ]
 }
