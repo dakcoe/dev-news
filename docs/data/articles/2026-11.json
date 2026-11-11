@@ -1,5 +1,555 @@
 [
  {
+  "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+  "url": "https://huggingface.co/blog/token-pooling",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794355200.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/token-pooling"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://huggingface.co/blog/assets/train-sentence-transformers/st-hf-thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "다중 벡터 임베딩 모델을 위한 토큰 풀링 인식 학습",
+  "summary": "토큰 풀링 인식 학습은 다중 벡터 검색 모델의 토큰 벡터를 병합하면서 중요한 정보를 보존하도록 인코더를 훈련한다. Sentence Transformers 예제로 4배 압축 시 기존 모델 대비 nDCG@10을 94.6%→97.8%로 향상시킨 결과를 제시한다. 기존 연구(Learn to Pool, LightOn)와 달리 압축-품질 트레이드오프를 직접 실험한다.",
+  "why": "다중 벡터 검색 모델을 사용할 때 토큰 풀링으로 저장 공간을 줄이려면 이 학습법이 필요합니다. 기존 방식보다 압축 시 품질 저하를 줄여 동일한 저장 예산에서 더 나은 검색 결과를 얻을 수 있습니다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Announcing .NET 11",
+  "url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/",
+  "source": "hackernews",
+  "upvotes": 224,
+  "comments": 277,
+  "published_at": 1794326487,
+  "discussion": "https://news.ycombinator.com/item?id=50442225",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2026/11/announcing-dotnet-11-scaled.webp",
+  "link_status": "ok",
+  "ko_title": ".NET 11 발표",
+  "summary": ".NET 11이 출시되어 C# 15, ASP.NET Core, .NET MAUI, Windows 개발 등에 성능 개선과 새로운 기능을 제공한다. 표준 지원(STS) 버전으로 2년 지원되며, .NET 10은 LTS 옵션으로 유지된다. .NET Conf 2026에서 제품 팀과 커뮤니티가 새 버전을 소개한다.",
+  "why": ".NET 11은 표준 지원 버전이라 2년 후면 유지보수가 끝난다. .NET 10은 장기 지원 옵션으로 남아 있어 장기 운영 환경에서는 이 버전을 고수할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+  "url": "https://pietromiotti.com/latest/maya-site/?maya",
+  "source": "hackernews",
+  "upvotes": 418,
+  "comments": 153,
+  "published_at": 1794398722,
+  "discussion": "https://news.ycombinator.com/item?id=50452455",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://pietromiotti.com/latest/maya-site/?maya"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://pietromiotti.com/latest/maya-site/forest-vs-lidar.jpg",
+  "link_status": "ok",
+  "ko_title": "Google SWE가 48개의 AI 에이전트로 NASA 라이다 데이터를 분석해 72시간 만에 미확인 마야 피라미드 발견",
+  "summary": "AI 에이전트 48개가 NASA 라이다 데이터를 이미지로 변환해 마야 정글 1,200 km제곱를 분석, 피라미드와 구조물 후보를 찾아냈다. 분석 결과는 멕시코 정부에 공식 보고되었으며, 기존 위성 사진으로는 식별이 어려운 지역을 빠르게 탐색한 사례다. 사용된 에이전트는 Gemini, ChatGPT, Claude, Grok 등이며 별도 모델 학습 없이 라이다 데이터만으로 작업했다.",
+  "why": "라이다 데이터는 위성 사진과 달리 수관 아래 지형을 직접 스캔해 밀림 속 구조물을 식별할 수 있다. 별도 모델 학습 없이 기존 LLM 에이전트로 지형 이미지를 분석하는 파이프라인을 구축할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "science"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Decision Models in Hugging Face",
+  "url": "https://huggingface.co/blog/decision",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794268800.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/decision"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://huggingface.co/blog/assets/decision/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Hugging Face의 Decision Models",
+  "summary": "Hugging Face가 텍스트 생성 대신 선택형 질문에 확률 분포를 반환하는 “decision” 파이프라인을 공개했다. 고객 지원 티켓을 예시로, 부서 선택과 긴급도 판단을 JSON 형태로 반환한다. 모델은 autotrust/GEV-26B-Decide이며, 선택지별 신뢰도와 확률을 제공한다.",
+  "why": "기존 LLM으로 JSON을 생성하던 방식과 달리 확률 분포를 직접 반환한다. 선택지별 신뢰도를 수치로 확인해 판단의 불확실성을 정량화할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "shadcn / improve",
+  "url": "https://github.com/shadcn/improve",
+  "source": "github",
+  "upvotes": 418,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/shadcn/improve"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 418,
+  "score": 64,
+  "image": "https://opengraph.githubassets.com/1/shadcn/improve",
+  "link_status": null,
+  "ko_title": "shadcn / 개선",
+  "summary": "shadcn가 제공하는 improve 스킬은 코드베이스를 자동으로 감사하고, 다른 에이전트가 실행할 수 있는 구현 계획을 마크다운 파일로 생성한다. 비싼 모델은 설계와 우선순위 지정에만 사용하고, 실제 구현·테스트·배포는 저렴한 모델에게 맡긴다. npx 명령으로 설치 가능하며, Agent Skills 형식을 지원하는 모든 에이전트와 호환된다.",
+  "why": "설계와 우선순위 지정은 고가 모델로, 구현과 테스트는 저가 모델로 분리해 비용을 줄일 수 있다. 생성된 마크다운 계획 파일은 Agent Skills 형식을 지원하는 모든 에이전트에서 실행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "How a Privacy-First Online Image Editor Works Without Uploading Your Photos (WebAssembly + On-Device AI)",
+  "url": "https://dev.to/akhouri-systems/how-a-privacy-first-online-image-editor-works-without-uploading-your-photos-webassembly--ae8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 8,
+  "published_at": 1794381089.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhouri-systems/how-a-privacy-first-online-image-editor-works-without-uploading-your-photos-webassembly--ae8"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8g5nxb4fi5crd1sn4d1i.png",
+  "link_status": "ok",
+  "ko_title": "업로드 없이 사진을 편집하는 프라이버시 우선 온라인 이미지 편집기 작동 방식 (WebAssembly·온디바이스 AI)",
+  "summary": "Akhouri Systems가 만든 무료 브라우저 기반 편집기 APIC는 WebAssembly와 Canvas API, 클라이언트에서 실행되는 AI 모델을 이용해 사진을 서버에 업로드하지 않고 처리한다. 이미지가 브라우저 탭을 떠나지 않아 민감한 사진을 로컬에 보관할 수 있고, 업로드 대기열이 없으며 대용량 파일과 오프라인 사용도 가능하다. 이 설계는 클라이언트가 더 많은 연산을 수행해야 하는 비용을 동반한다.",
+  "why": "클라이언트 연산이 늘면 사용자 하드웨어 성능이 처리 속도를 좌우한다. 서버 의존도가 사라져 오프라인에서도 편집이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "mahmoudtawfik1998 / secure-pdf-document-processor",
+  "url": "https://github.com/mahmoudtawfik1998/secure-pdf-document-processor",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 364,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mahmoudtawfik1998/secure-pdf-document-processor"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 364,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/mahmoudtawfik1998/secure-pdf-document-processor",
+  "link_status": null,
+  "ko_title": "Adobe Acrobat Pro: 보안 PDF 문서 프로세서 2026 Windows 데스크톱 클라이언트",
+  "summary": "Adobe Acrobat Pro는 Windows 10·11 64비트 환경용 독립 실행형 데스크톱 애플리케이션으로, 오프라인 설치가 가능하고 PowerShell을 통해 빠르게 설치할 수 있다. 로컬에서 PDF 파싱·렌더링·변환을 수행해 문서가 외부로 유출되지 않으며, 하드웨어 기반 라이선스 검증과 격리된 런타임 샌드박스를 제공한다. 관리자 권한 없이도 실행 가능하고, 네트워크 연결만 있으면 설치가 된다.",
+  "why": "오프라인 환경에서 PDF를 로컬로 처리해 문서 유출을 막을 수 있다. 관리자 권한 없이 PowerShell로 설치하므로 기존 배포 절차가 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Apple has new Mac app coming to make running local AI models easy",
+  "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+  "source": "hackernews",
+  "upvotes": 398,
+  "comments": 399,
+  "published_at": 1794345903,
+  "discussion": "https://news.ycombinator.com/item?id=50446520",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/10/Mac-mini.jpg?quality=82&strip=all&resize=1200,628",
+  "link_status": "ok",
+  "ko_title": "Apple, 로컬 AI 모델 실행을 쉽게 해줄 새로운 Mac 앱 ‘Harbor’ 공개",
+  "summary": "Apple이 ‘Harbor’라는 앱을 프라이빗 프리뷰 중이며, Apple 실리콘 Mac에서 오픈웨이트 모델을 로컬로 실행한다. Thunderbolt 5를 통해 여러 대의 Mac을 클러스터링해 메모리를 합쳐 대형 모델과 높은 동시성을 지원한다. 설정이 자동으로 이루어져 명령줄이나 인프라 지식이 필요 없다.",
+  "why": "기존 로컬 추론 환경 구축에 필요한 명령줄 설정과 인프라 지식을 Harbor가 자동화한다. Thunderbolt 5로 Mac을 연결해 통합 메모리를 합치면 단일 기기의 용량을 초과하는 대형 모델을 돌릴 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Using voltage glitching to unleash the A100 in my mining card",
+  "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+  "source": "hackernews",
+  "upvotes": 97,
+  "comments": 42,
+  "published_at": 1794394120,
+  "discussion": "https://news.ycombinator.com/item?id=50451903",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "전압 글리칭으로 마이닝 카드의 A100 발휘",
+  "summary": "전압 결함 주입 취약점을 이용해 GA100 다이의 퓨즈를 임의로 파괴하고, CMP 170HX 8GB 카드를 사실상 A100-80G 수준으로 전환했다. 풀어낸 카드가 모든 SM을 활성화해 일반 A100보다 약 1.2배 빠른 성능을 보이며, NVLink·PCIe Gen4·NVJPG·NVDEC·MIG 등 제한 기능도 해제 가능하다. 해당 취약점은 기존 연구를 바탕으로 공개했으며, NVIDIA 보안팀에 사전 보고했다.",
+  "why": "전압 결함 주입으로 GA100 다이의 퓨즈를 임의로 파괴할 수 있는 취약점이 공개됐다. 이로써 CMP 170HX 8GB 카드를 A100-80G급으로 전환하고 NVLink 등 제한 기능을 해제할 수 있다. 해당 취약점은 NVIDIA 보안팀에 사전 보고된 상태다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "openai / codex-security",
+  "url": "https://github.com/openai/codex-security",
+  "source": "github",
+  "upvotes": 20,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/openai/codex-security"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 20,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/openai/codex-security",
+  "link_status": null,
+  "ko_title": "openai / codex-security",
+  "summary": "Codex Security는 코드 취약점을 찾고 조사하며 수정할 수 있는 도구다. CLI와 TypeScript SDK를 통해 터미널이나 자동화 파이프라인에서 사용할 수 있다. 주요 기능으로는 레포지토리·경로·Git 변경점 스캔, 패치 생성·검증, SECURITY.md 초안 작성, 결과 저장·중복 제거·심각도 평가, Linear·Jira·GitHub 연동, CI·컨테이너 자동 스캔 등이 있다.",
+  "why": "CI 파이프라인이나 컨테이너 환경에서 코드 스캔을 자동화할 수 있다. 발견된 취약점에 대한 패치를 생성하고 수정 사항을 검증하는 워크플로우를 제공한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "security",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+  "url": "https://openai.com/index/cogent-security",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794268800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/cogent-security"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Cogent와 OpenAI, 기업용 사이버 방어 공장 구축",
+  "summary": "Cogent가 OpenAI 모델을 기업 환경에 결합해 에이전트를 통해 취약점을 자동으로 복구한다. 이 솔루션은 기업 보안 운영을 자동화하고 대응 속도를 높인다.",
+  "why": "보안 운영 자동화 파이프라인을 설계할 때 에이전트 기반 취약점 복구 방식을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "An AI Reviewer Said PASS. Could the Implementer Have Written the Receipt?",
+  "url": "https://dev.to/suirindo/an-ai-reviewer-said-pass-could-the-implementer-have-written-the-receipt-2fm3",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 3,
+  "comments": 10,
+  "published_at": 1794390407.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/suirindo/an-ai-reviewer-said-pass-could-the-implementer-have-written-the-receipt-2fm3"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsri55kx7s5p45xi5hhhs.png",
+  "link_status": "ok",
+  "ko_title": "AI 리뷰어가 PASS를 말했습니다. 구현자가 영수증을 작성했을 수도 있나요?",
+  "summary": "이 글은 AI 에이전트가 동일한 풀 리퀘스트를 승인하면서도 서로 다른 이름을 붙일 수 있는 상황에서, 실제 리뷰 증거를 만든 주체가 누구인지 검증하는 합성 Node.js 테스트를 소개한다. 테스트는 실제 AI 모델이나 레포지토리를 사용하지 않고, 증거의 독립성을 확인하기 위한 네 가지 시나리오를 포함한다. 핵심은 선언된 생산자 이름이 인증된 신원과 일치하는지를 검증하는 로직이다.",
+  "why": "AI 에이전트 리뷰에서 생산자 이름만 대조하면 구현자가 스스로 증거를 만들 수 있다. 실제 권한은 인증된 역할과 후보 식별자, 이벤트 다이제스트가 일치할 때만 성립한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "language"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+  "url": "https://openai.com/index/singapore-airlines-travel-work",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794297600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/singapore-airlines-travel-work"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "싱가포르항공, OpenAI 기술로 여행·업무 향상",
+  "summary": "싱가포르항공은 OpenAI 모델과 API를 도입해 고객 지원, 여행 탐색, 직원 생산성을 개선했다. 이를 통해 Kris 챗봇의 고객 만족도(CSAT)가 두 배로 상승했다.",
+  "why": "OpenAI API를 활용해 챗봇 고객 만족도를 두 배로 끌어올린 사례다. 백엔드 개발자는 고객 지원 자동화 시나리오에서 API 연동 방식과 성과 지표 설정을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "We Keep Hearing About AI Productivity. The QA Group Chat Told a Different Story.",
+  "url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 64,
+  "comments": 30,
+  "published_at": 1794386115.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjm7bc53mhi6cxl48ue89.png",
+  "link_status": "ok",
+  "ko_title": "AI 생산성 이야기는 계속 들리지만, QA 그룹 채팅은 다른 이야기를 전했다.",
+  "summary": "익명 설문에서 QA 커뮤니티 500명 중 16명이 현재 무직이라는 결과가 나와 주목받았다. 글쓴이는 AI 기반 테스트 자동화가 기존의 수작업 핸드오프를 드러내며, 자동화된 프로세스가 문제를 숨기기 어렵게 만든 사례를 공유한다. 제조업 자동화 경험과 비교해 동일한 문제점을 강조한다.",
+  "why": "AI 테스트 자동화는 수작업으로 메워지던 공백을 드러내므로, 기존 프로세스의 취약점이 노출될 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "AI can write code, but the magic of a first project is unmatched! 🗽",
+  "url": "https://dev.to/necoz/ai-can-write-code-but-the-magic-of-a-first-project-is-unmatched-30c4",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 47,
+  "comments": 17,
+  "published_at": 1794399509.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/ai-can-write-code-but-the-magic-of-a-first-project-is-unmatched-30c4"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ft7xlpeokmbyx2wht6pdy.jpg",
+  "link_status": "ok",
+  "ko_title": "AI가 코드를 작성할 수 있지만 첫 프로젝트의 마법은 비교할 수 없다",
+  "summary": "개발자는 인도 주를 소개하는 웹 페이지를 직접 HTML, CSS, JavaScript로 구현했다. AI를 일부 조사에 활용했지만 코딩은 스스로 작성했으며, 초보자가 직접 오류를 해결하며 배우는 과정을 강조한다. 프로젝트에는 36개 주와 UT를 선택할 수 있는 드롭다운이 포함돼 있다.",
+  "why": "AI가 코드를 대신 써주지만, 초보 단계에서 직접 오류를 해결하며 기초를 다지는 학습 효과는 대체할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "wzdnzd / aggregator",
+  "url": "https://github.com/wzdnzd/aggregator",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 456,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/wzdnzd/aggregator"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 456,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/wzdnzd/aggregator",
+  "link_status": null,
+  "ko_title": "aggregator — 무료 프록시 풀 구축 도구",
+  "summary": "",
+  "why": "무료 프록시 풀을 구축해 백엔드 테스트나 스크레이핑 시 IP 차단 우회 환경을 직접 만들 수 있다. Clash나 V2Ray 등 기존 클라이언트 형식으로 변환되므로 별도 설정 변경 없이 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
+  "title": "Val Town is winding down",
+  "url": "https://blog.val.town/winding-down",
+  "source": "hackernews",
+  "upvotes": 407,
+  "comments": 99,
+  "published_at": 1794331874,
+  "discussion": "https://news.ycombinator.com/item?id=50443427",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.val.town/winding-down"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://valdottown--01a1c636170f75bd955ad39917dccd9e.web.val.run/images/winding-down-bird-24619313141.jpg",
+  "link_status": "ok",
+  "ko_title": "Val Town 서비스 종료",
+  "summary": "Val Town이 클라우드 컴퓨팅 경쟁에서 밀려 서비스를 종료한다. 청구를 오늘 중단하고 기존 구독은 무료로 유지하며 연간 플랜 선불자는 부분 환불을 제공한다. Cloudflare, Vercel, Netlify, Render 등으로 마이그레이션할 수 있는 가이드를 제공한다.",
+  "why": "Val Town에서 호스팅 중인 프로젝트는 Cloudflare, Vercel, Netlify, Render 중 하나로 이전해야 한다. 이전 가이드가 제공되므로 해당 문서에 따라 마이그레이션 작업을 진행하면 된다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T00:00:06.321885+09:00",
+  "batch_label": "11월 12일 00:00"
+ },
+ {
   "title": "How Curative is building a national provider network with agents on Claude",
   "url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
   "source": "anthropic",

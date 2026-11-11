@@ -1,38 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-02T00:00:27+09:00",
-   "total": 16,
-   "counts": {
-    "blocked": 2,
-    "github": 5,
-    "ok": 7,
-    "robots": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.economist.com/asia/2026/10/29/a-tiny-pacific-country-rolls-out-universal-basic-income",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://xn--69f31l4t57c0mag4b613h.xn--7uh4898msjaso/🆆🆃🅵/",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-02T08:00:29+09:00",
    "total": 12,
    "counts": {
@@ -560,6 +528,27 @@
     {
      "url": "https://www.theatlantic.com/magazine/2026/12/location-tracking-apps-parental-surveillance/689031/",
      "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-12T00:00:35+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 13,
+    "blocked": 2,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/singapore-airlines-travel-work",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/cogent-security",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
