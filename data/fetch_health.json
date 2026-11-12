@@ -1,34 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-03T08:00:46+09:00",
-   "total": 16,
-   "counts": {
-    "ok": 11,
-    "short": 1,
-    "robots": 1,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=50340088",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://openai.com/index/grid-protectors-program",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-03T16:00:30+09:00",
    "total": 17,
    "counts": {
@@ -548,6 +520,33 @@
     },
     {
      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-13T08:00:34+09:00",
+   "total": 17,
+   "counts": {
+    "blocked": 2,
+    "short": 1,
+    "ok": 12,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://status.cloud.microsoft/",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/amplitude",
      "source": "rss",
      "reason": "blocked"
     }

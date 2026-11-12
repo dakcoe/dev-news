@@ -1,5 +1,530 @@
 [
  {
+  "title": "shanselman / gputaskman",
+  "url": "https://github.com/shanselman/gputaskman",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 666,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/shanselman/gputaskman"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 666,
+  "score": 71,
+  "image": "https://opengraph.githubassets.com/1/shanselman/gputaskman",
+  "link_status": null,
+  "ko_title": "shanselman / gputaskman — GPU 내부 상태를 터미널 UI로 보여주는 도구",
+  "summary": "gputaskman은 Windows, Linux/WSL, macOS에서 동작하는 터미널 기반 UI로, 프로세스별 GPU 메모리와 엔진 활동을 모델 파일·LLM 버퍼와 연결해 상세히 표시한다. 기존 Task Manager가 전체 사용량만 보여주는 것과 달리, 어떤 모델 가중치·KV 캐시·브라우저 등이 메모리를 차지하는지 파악할 수 있다. PyPI와 pipx를 통해 별도 클론 없이 설치 가능하며, Python 3.11 이상 환경을 요구한다.",
+  "why": "로컬에서 LLM 추론이나 학습을 돌릴 때 GPU 메모리 점유 원인을 프로세스 단위로 추적할 수 있다. 단, 모델 식별은 추정치에 불과하므로 VRAM 덤프나 텍스처 열거는 불가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "web",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Gemini 4 Hydrogen",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+  "source": "hackernews",
+  "upvotes": 411,
+  "comments": 274,
+  "published_at": 1794506508,
+  "discussion": "https://news.ycombinator.com/item?id=50471431",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
+  "link_status": "ok",
+  "ko_title": "Gemini 4 Hydrogen",
+  "summary": "Gemini 4 Hydrogen 모델이 발표돼 일상적인 코딩과 에이전트 워크플로에 빠른 실행과 효율성을 제공한다. Carbon·Argon과 달리 빠른 처리와 저렴한 토큰 비용($1.50/입력·$7.50/출력)으로 1백만 토큰 컨텍스트를 지원한다. Orchestrator 기능을 통해 세션 내에서 Carbon·Hydrogen을 자동 전환해 비용을 24% 절감하고 속도를 19% 높인다.",
+  "why": "Orchestrator를 쓰면 세션 안에서 Carbon과 Hydrogen을 자동 전환해 비용을 24% 줄인다. 동시에 작업 완료 속도는 19% 빨라진다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Long Live Rails",
+  "url": "https://dev.to/ben/long-live-rails-3p21",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 82,
+  "comments": 11,
+  "published_at": 1794497450.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ben/long-live-rails-3p21"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqb9kfsla99mu47xwg4z0.jpg",
+  "link_status": "ok",
+  "ko_title": "Long Live Rails",
+  "summary": "DHH는 Rails World 2026에서 Ruby on Rails 대신 Rust를 도입해 30배~100배 성능 향상과 작은 바이너리, 서브밀리초 시작 시간을 강조했다. 그는 Forem 모놀리식에서 CPU 집약적 Ruby 코드를 Rust 확장(gems/forem_native)으로 교체해 페이지 로드 시간을 75% 단축했다. 이 과정은 magnus와 rb-sys를 이용해 Ruby와 Rust를 손쉽게 연결한다.",
+  "why": "Ruby 온탑에서 CPU 집약 코드를 Rust로 교체할 때 별도 마이크로서비스 분리가 필요 없다. magnus와 rb-sys로 Ruby와 Rust를 직접 연결해 프로세스 내에서 실행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "vercel-labs / ui",
+  "url": "https://github.com/vercel-labs/ui",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 602,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/vercel-labs/ui"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 602,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/vercel-labs/ui",
+  "link_status": null,
+  "ko_title": "vercel-labs / ui — 차세대 UI SDK",
+  "summary": "UI SDK는 키보드 탐색, 포커스, 선택, 팝업, 드래그·드롭 등 UI 동작을 제공하는 라이브러리다. React, Vue, Svelte, Solid, Web Components용 어댑터가 포함돼 있어 프레임워크에 맞게 설치할 수 있다. 현재 베타 버전이며 `npm install @ui-sdk/core @ui-sdk/react` 등으로 설치하고, `npx skills add vercel-labs/ui --skill ui-sdk` 로 에이전트에 스킬을 부여한다.",
+  "why": "에이전트에게 스킬을 부여하면 복잡한 UI 동작을 직접 코딩할 필요가 없어진다. 현재 베타 단계라 프로덕션 배포 전 안정성 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Operate Claude Managed Agents inside your security perimeter",
+  "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/self-hosted-claude-managed-agents",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/self-hosted-claude-managed-agents",
+   "https://claude.com/resources/articles/self-hosted-claude-managed-agents"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://claude.com/ko/resources/articles/self-hosted-claude-managed-agents/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "보안 경계 내에서 Claude 관리형 에이전트 운영",
+  "summary": "Anthropic이 자체 호스팅 가능한 Claude 관리형 에이전트를 베타로 공개했다. 개발자는 에이전트와 인증 정보, 세션 기록을 자체 클라우드나 온프레미스 환경에 배치하고, Claude 요청을 원하는 엔드포인트로 보낼 수 있다. 이 서비스는 기존 호스팅형과 달리 전체 인프라를 고객이 직접 운영한다.",
+  "why": "기존 호스팅형과 달리 에이전트 하네스와 자격 증명, 세션 기록까지 자체 인프라에서 직접 운영해야 한다. 모델 요청은 Anthropic뿐 아니라 Amazon Bedrock이나 자체 게이트웨이 등 원하는 엔드포인트로 보낼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+  "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794510455.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6484ca4d5ff9a3d2ee52a83b/6KFZDHIJkxpICiErHLqAw.gif",
+  "link_status": "ok",
+  "ko_title": "LLMON: LLM-네이티브 마크업 언어, Granite 4.1 3B·8B에 적용",
+  "summary": "LLMON은 모델이 구조와 의미를 명시적으로 이해하도록 설계된 마크업 언어다. Granite 4.1 기반 3B와 8B 모델 두 개를 LLMON 텍스트를 주고받도록 사전 학습한 프리뷰 버전을 공개했다. GitHub 저장소에는 LLMON 도구와 워크플로 예제가 포함돼 있다.",
+  "why": "기존 JSON 기반 프롬프트 구조와 달리 LLMON은 지시와 데이터를 명시적으로 분리한다. 이로써 사용자 데이터에 숨겨진 간접적 프롬프트 인젝션 공격 성공률이 크게 낮아진다. 소규모 모델에서 구조 부재로 인한 예기치 못한 실패를 줄이는 데 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Can you merge at agent speed?",
+  "url": "https://blog.mlh.com/can-you-merge-at-agent-speed-4m67",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 27,
+  "comments": 1,
+  "published_at": 1794505259.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://blog.mlh.com/can-you-merge-at-agent-speed-4m67"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fx4ae4os9kmw5lsmraiv1.png",
+  "link_status": "ok",
+  "ko_title": "에이전트 속도로 병합할 수 있나요?",
+  "summary": "Major League Hacking과 Entire가 해커톤과 DEV 챌린지를 1년간 공동 진행한다. 이번 협업으로 에이전트와 인간이 협업할 수 있는 최초의 Git 포지가 해커들에게 제공된다. 해커들은 AI 에이전트가 만든 변경을 실시간으로 병합하고, 빌드 과정을 캡처·공유·학습할 수 있다.",
+  "why": "에이전트가 생성한 코드를 실시간으로 병합하는 워크플로우를 적용할 수 있다. 기존 Git 포지가 인간 리뷰 속도에 맞춰져 있어 에이전트 협업 시 병목이 발생한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "dev-tools"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Introducing Claude for Manufacturing",
+  "url": "https://claude.com/resources/articles/claude-for-manufacturing",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/claude-for-manufacturing",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-for-manufacturing",
+   "https://claude.com/resources/articles/claude-for-manufacturing"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/claude-for-manufacturing/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "제조업을 위한 Claude 소개",
+  "summary": "새로운 플러그인 Claude for Manufacturing은 17개의 스킬과 Autodesk Fusion, Infor, Microsoft 365, Oracle NetSuite 연결자를 제공한다. 견적서·품질 보고서·공급업체 요청서를 기존 시스템에서 자동으로 초안 작성한다. 설문에 따르면 제조업체의 79%가 데이터를 수동 입력하므로, 이 플러그인은 작업 흐름을 자동화해 담당자가 검토만 하면 된다.",
+  "why": "백엔드 개발자가 Autodesk Fusion이나 Oracle NetSuite 같은 제조 시스템과 연동하는 AI 자동화 파이프라인을 구축할 때 참고할 만한 구조다. 17개의 스킬이 단일 작업부터 다단계 프로세스까지 처리하며, 최종 승인 전 단계까지 자동화하는 방식을 보여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "release"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Your MCP Servers Are Silently Draining Your Context Window: The Hidden Cost of Tool-Heavy AI Agents",
+  "url": "https://dev.to/necoz/your-mcp-servers-are-silently-draining-your-context-window-the-hidden-cost-of-tool-heavy-ai-agents-fkl",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 32,
+  "comments": 7,
+  "published_at": 1794501000.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/your-mcp-servers-are-silently-draining-your-context-window-the-hidden-cost-of-tool-heavy-ai-agents-fkl"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fa20dm7o9oqkdd8zvyns3.jpg",
+  "link_status": "ok",
+  "ko_title": "당신의 MCP 서버가 컨텍스트 창을 몰래 소모한다 — 도구가 많은 AI 에이전트의 숨은 비용",
+  "summary": "도구 호출을 위해 모든 MCP 서버의 JSON 스키마 정의가 매 API 요청에 포함돼 토큰 사용량이 급증한다. GitHub·Jira·Postgres·Sentry·Slack·Docker·파일시스템 등 7개의 MCP 서버를 연결하면 30~60개의 도구 정의가 전송돼 컨텍스트 창이 크게 줄어든다. 이로 인해 추론 정확도가 떨어지고 첫 토큰 응답 시간이 늦어지며 토큰 비용이 늘어난다.",
+  "why": "MCP 서버를 여러 개 연결하면 매 요청마다 전체 도구의 JSON 스키마가 전송된다. 이는 컨텍스트 창을 점유해 추론 정확도를 떨어뜨리고 응답 속도를 늦춘다. 도구를 다수 사용하는 에이전트 구성 시 토큰 비용과 성능 저하를 감수해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+  "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794506400.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/HydrogenUI_socialshare.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Google 검색, Gemini 4 Hydrogen으로 대규모 업그레이드",
+  "summary": "Google 검색에 Gemini 4 Hydrogen 모델이 전 세계 사용자에게 제공된다. 의도 파악이 강화돼 복잡한 질문이나 오타가 있는 요청도 정확히 이해한다. 시각적 응답이 확대돼 이미지·표·구조화된 정보가 빠르게 표시된다.",
+  "why": "복합 조건이 섞인 검색 쿼리를 보내면 각 하위 질문을 개별적으로 처리해 결과를 반환한다. 기존에 한 번에 처리되던 요청과 달리 세부 항목별 응답이 분리되어 백엔드 로직 검증 시 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+  "url": "https://openai.com/index/amplitude",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794513600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/amplitude"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Amplitude가 OpenAI로 1~2일 안에 제품 개선을 출시하는 방법",
+  "summary": "Amplitude는 OpenAI 모델을 기반으로 한 제품 에이전트 Wave를 도입했다. Wave는 어떤 기능을 개발할지 제안하고, 코딩 에이전트를 통해 구현을 지원한다. 또한 배포된 변경 사항의 영향을 자동으로 측정한다.",
+  "why": "제품 개선 주기가 1~2일로 단축되어 배포 속도가 빨라진다. 배포된 변경 사항의 영향을 자동으로 측정하는 기능이 포함된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Rust 1.100",
+  "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+  "source": "hackernews",
+  "upvotes": 270,
+  "comments": 129,
+  "published_at": 1794508745,
+  "discussion": "https://news.ycombinator.com/item?id=50472038",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+  "link_status": "ok",
+  "ko_title": "Rust 1.100",
+  "summary": "Rust 1.100.0이 정식 릴리스되었습니다. 이번 버전에서 10년 간 논의된 ‘never type’(!)이 안정화되어 어디서든 사용할 수 있게 되었습니다. 업데이트는 rustup을 통해 간단히 진행할 수 있습니다.",
+  "why": "10년간 논의된 never type(!)이 안정화되어 이제 어디서든 명시적으로 사용할 수 있게 됐다. 이전에는 함수 반환형에서만 쓰던 !를 이제 매개변수나 타입 주석 등 모든 위치에서 선언할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "I built a Theme Studio where you plug a theme into a display and watch it stream in ⚡",
+  "url": "https://dev.to/m_ahmad/i-built-a-theme-studio-where-you-plug-a-theme-into-a-display-and-watch-it-stream-in-3m9c",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 9,
+  "comments": 0,
+  "published_at": 1794513885.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/m_ahmad/i-built-a-theme-studio-where-you-plug-a-theme-into-a-display-and-watch-it-stream-in-3m9c"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmahmad.me%2Fog%2Ftheme-studio.png%3Fv%3D2",
+  "link_status": "ok",
+  "ko_title": "테마 스튜디오를 만들었습니다 — 테마를 디스플레이에 연결해 스트리밍을 볼 수 있음",
+  "summary": "포트폴리오에 있는 다섯 가지 테마를 카드 형태로 선택하면 화면 아래로 슬라이드하고, 실시간 페이지가 표시됩니다. 테마 전환 시 전선이 스프링처럼 움직이며 빛과 진행 바가 시각화됩니다. 모든 효과는 캔버스에 매 프레임마다 그려집니다.",
+  "why": "캔버스에서 매 프레임 재렌더링하는 방식이라 테마 전환 시 프레임 드랍이 발생할 수 있다. 스프링 물리 효과와 벡터 곡선 렌더링을 직접 구현할 때 참고 자료로 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Nintendo Takes Down Emulators and Firmware in Massive GitHub DMCA Sweep",
+  "url": "https://www.ign.com/articles/nintendo-takes-down-switch-emulators-and-mod-chip-firmware-in-massive-github-dmca-sweep",
+  "source": "hackernews",
+  "upvotes": 251,
+  "comments": 186,
+  "published_at": 1794500953,
+  "discussion": "https://news.ycombinator.com/item?id=50469994",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.ign.com/articles/nintendo-takes-down-switch-emulators-and-mod-chip-firmware-in-massive-github-dmca-sweep"
+  ],
+  "cross_source_count": 1,
+  "score": 36,
+  "image": "https://assets-prd.ignimgs.com/2024/02/05/nintendo-blogroll-logos-1707165316914.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "link_status": "ok",
+  "ko_title": "Nintendo, 대규모 GitHub DMCA 조치로 에뮬레이터와 펌웨어 삭제",
+  "summary": "Nintendo가 GitHub에 Yuzu와 Citron Neo 에뮬레이터, 그리고 모드칩 펌웨어를 대상으로 4건의 DMCA 삭제 요청을 제출했다. 해당 펌웨어는 144개의 저장소에서 삭제되었으며, 일부는 여전히 다른 위치에 존재한다. 이번 조치는 최근 에뮬레이터가 Zelda 리메이크를 PC에서 실행한 뒤 이루어졌다.",
+  "why": "모드칩 펌웨어 저장소가 GitHub에서 삭제되어 해당 하드웨어 기반 우회 수단의 접근성이 줄었다. 다만 같은 펌웨어가 사이트 다른 위치에 남아 있어 완전한 차단이 아님을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "AI is getting better. Here is my plan to stay ahead.",
+  "url": "https://dev.to/javz/ai-is-getting-better-here-is-my-plan-to-stay-ahead-2822",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 21,
+  "comments": 7,
+  "published_at": 1794497700.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/javz/ai-is-getting-better-here-is-my-plan-to-stay-ahead-2822"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6csfx8i2kft82mrqhcj6.png",
+  "link_status": "ok",
+  "ko_title": "AI가 점점 좋아지고 있다. 앞서 나가기 위한 나의 계획",
+  "summary": "소프트웨어 엔지니어가 AI 발전에 대비해 자신만의 행동 계획을 공개한다. 계획은 기본 역량 강화와 새로운 도구 활용을 포함한 여러 단계로 시각화되어 있다. 글에서는 저자의 전공 전환 이야기와 6년간의 개발 경험을 배경으로 제시한다.",
+  "why": "AI가 개발자의 기본 역량을 대체할 수 없다는 전제 아래, 도구 활용과 기초 체력 강화를 병행해야 한다. 단순 코드 작성 능력만으로는 경쟁력을 유지하기 어렵다. 새로운 기술 도입과 함께 소프트웨어 설계 원리 학습을 병행해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
+  "title": "Service degradation on Microsoft 365",
+  "url": "https://status.cloud.microsoft/",
+  "source": "hackernews",
+  "upvotes": 367,
+  "comments": 353,
+  "published_at": 1794507648,
+  "discussion": "https://news.ycombinator.com/item?id=50471731",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://status.cloud.microsoft/"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Microsoft 365 서비스 성능 저하",
+  "summary": "",
+  "why": "Microsoft 365 서비스 성능 저하로 업무 도구가 불안정해질 수 있다. 백엔드 연동이나 AI 파이프라인에 M365 API를 쓰는 경우 장애를 감지해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-13T08:00:06.356754+09:00",
+  "batch_label": "11월 13일 08:00"
+ },
+ {
   "title": "ClickHouse 26.10's string filter during scan cuts a selective LIKE query's memory 25-fold",
   "url": "https://dev.to/alexgeorgiev17/clickhouse-2610s-string-filter-during-scan-cuts-a-selective-like-querys-memory-25-fold-228j",
   "source": "devto",
