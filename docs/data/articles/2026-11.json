@@ -1,5 +1,622 @@
 [
  {
+  "title": "ClickHouse 26.10's string filter during scan cuts a selective LIKE query's memory 25-fold",
+  "url": "https://dev.to/alexgeorgiev17/clickhouse-2610s-string-filter-during-scan-cuts-a-selective-like-querys-memory-25-fold-228j",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1794481200.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/clickhouse-2610s-string-filter-during-scan-cuts-a-selective-like-querys-memory-25-fold-228j"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fs3ahzz2vk98ftnj00a35.png",
+  "link_status": "ok",
+  "ko_title": "ClickHouse 26.10의 스캔 중 문자열 필터가 선택적 LIKE 쿼리 메모리를 25배 감소",
+  "summary": "ClickHouse 26.10에 기본값으로 적용된 apply_string_filters_during_scan 설정이 LIKE 조건을 스캔 단계에서 적용해 메모리 사용량을 37.6 MB에서 1.48 MB로 25배 줄였다. 설정은 문자열 컬럼의 PREWHERE 조건을 검사해 일치하지 않는 행을 빈 문자열로 읽어들이며, 선택도가 낮을 경우 런타임에 자동으로 비활성화된다. 테스트는 1천만 행, 평균 1.3 KB 크기의 텍스트 데이터를 가진 MergeTree 테이블에서 수행되었다.",
+  "why": "ClickHouse 26.10 이상에서 LIKE 쿼리의 메모리 사용량이 크게 줄어든다. 선택도가 낮은 조건은 런타임에 자동으로 비활성화되므로 성능 저하를 걱정할 필요는 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "A VS Code extension to turn ANY free chatbot website into an AI agent (kind of)",
+  "url": "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1jfb",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 28,
+  "comments": 28,
+  "published_at": 1794492015.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1jfb"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fajrw5ue6qipaycfbsrh0.png",
+  "link_status": "ok",
+  "ko_title": "VS Code 확장으로 모든 무료 챗봇 웹사이트를 AI 에이전트로 전환",
+  "summary": "ReptClip 확장은 VS Code와 무료 웹 챗봇을 연동해 파일 컨텍스트를 복사하고, 챗봇이 생성한 코드 차이를 적용하도록 돕는다. 사용자는 파일 경로 지정, 컨텍스트 복사, 챗봇 프롬프트 입력, 차이 적용 순으로 작업한다. 추가 기능으로 구문 강조, 자동완성, 퍼지(diff) 매칭, 전체 적용 방지, 최근 10개 차이에 대한 undo/redo, 중복 차이 재적용 경고, .gitignore 및 바이너리 파일 제외가 있다.",
+  "why": "무료 챗봇을 개발 환경에 직접 연결해 코드 수정 자동화를 가능하게 하므로, 별도 유료 AI IDE 없이도 AI 기반 코딩 보조를 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Nvidia CEO Jensen Huang resigns after reports of second affair deepened scandal",
+  "url": "https://www.bbc.co.uk/news/live/c6zjry11v8w1t",
+  "source": "hackernews",
+  "upvotes": 101,
+  "comments": 42,
+  "published_at": 1794491798,
+  "discussion": "https://news.ycombinator.com/item?id=50467139",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.bbc.co.uk/news/live/c6zjry11v8w1t"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/dcb2/live/fb3cd920-de8d-11f1-93e1-3b657b665bcf.jpg",
+  "link_status": "ok",
+  "ko_title": "Nvidia CEO Jensen Huang 사임, 두 번째 스캔들로 논란 심화",
+  "summary": "Nvidia CEO가 사임하면서 AI와 반도체 시장에 파장이 일었다. 한국 코스피와 TSMC 주가가 하락했으며, 중국 GPU 업체와 AMD 주가가 상승했다.",
+  "why": "Nvidia CEO 사임으로 AI 반도체 공급망의 불확실성이 커졌다. AMD와 중국 GPU 업체 주가 상승은 경쟁 구도 변화를 시사한다. TSMC와 코스피 하락은 관련 생태계 전반의 리스크를 반영한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "ashhart / TensorFold",
+  "url": "https://github.com/ashhart/TensorFold",
+  "source": "github",
+  "upvotes": 58,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/ashhart/TensorFold"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 58,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/ashhart/TensorFold",
+  "link_status": null,
+  "ko_title": "ashhart / TensorFold",
+  "summary": "TensorFold는 Zig 바이너리로 Apple Silicon과 NVIDIA GPU에서 언어 모델을 서빙한다. 체크포인트를 읽고 요청을 토크나이즈한 뒤 Metal 또는 CUDA 커널을 직접 실행한다. Python이나 MLX 설치 없이 동작한다. 에이전트 기반 기여를 위해 ATC(Agent Traffic Control)와 연동된 워크플로를 제공한다.",
+  "why": "Python이나 MLX 없이 Zig 바이너리로 Metal과 CUDA 커널을 직접 실행한다. 서빙 스택에서 Python 런타임 의존성을 제거할 수 있는 점이 기존 방식과 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "\"Don't reveal it\" is not an access control. RAG permissions belong in retrieval.",
+  "url": "https://dev.to/cyclopt_dimitrisk/dont-reveal-it-is-not-an-access-control-rag-permissions-belong-in-retrieval-3475",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 6,
+  "published_at": 1794479192.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cyclopt_dimitrisk/dont-reveal-it-is-not-an-access-control-rag-permissions-belong-in-retrieval-3475"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhg62bfrfw0r160urdqcr.png",
+  "link_status": "ok",
+  "ko_title": "“Don't reveal it”은 접근 제어가 아니다. RAG 권한은 검색 단계에 있어야 한다",
+  "summary": "RAG 시스템에서 문서 접근 권한을 프롬프트 수준이 아닌 검색 단계에서 적용해야 한다는 내용이다. 검색 결과를 필터링하는 기존 방식은 권한 오류 시 전체 문서를 반환하거나 결과가 부족해질 위험이 있다. 권한을 쿼리 필터에 포함시켜 벡터 스토어가 처음부터 제한된 문서만 반환하도록 하는 것이 권장된다.",
+  "why": "프롬프트로 접근 제어를 하면 민감한 문서가 이미 컨텍스트에 들어간 상태가 된다. 권한 필터를 벡터 검색 쿼리에 포함시켜야 제한된 문서만 반환된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "QwenLM / qwen-code",
+  "url": "https://github.com/QwenLM/qwen-code",
+  "source": "github",
+  "upvotes": 151,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/QwenLM/qwen-code"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 151,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/QwenLM/qwen-code",
+  "link_status": null,
+  "ko_title": "QwenLM / qwen-code — 오픈소스 AI 코딩 에이전트",
+  "summary": "Qwen Code는 터미널·편집기·데스크톱·브라우저·채팅에서 사용할 수 있는 오픈소스 AI 코딩 에이전트이다. npm 패키지(@qwen-code/qwen-code)로 제공되며 Node.js 22 이상이 필요하다. 다양한 언어와 VS Code·JetBrains 등 여러 IDE와의 연동을 지원한다.",
+  "why": "Node.js 22 이상이 필요하므로 기존 환경과 호환성을 먼저 확인해야 한다. 터미널과 IDE를 아우르는 단일 에이전트로, 백엔드 개발 워크플로우를 통합할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "apex-compute / ANR",
+  "url": "https://github.com/apex-compute/ANR",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 468,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/apex-compute/ANR"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 468,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/apex-compute/ANR",
+  "link_status": null,
+  "ko_title": "Apex 신경 렌더링 (ANR)",
+  "summary": "ANR은 프레임 생성(FG) 베타 버전을 제공하며, OptiScaler 사용 여부에 따라 두 패키지를 다운로드할 수 있다. 현재 베타 단계이지만 곧 슈퍼 해상도(SR)와 레이 재구성(RR) 기능도 공개될 예정이다. Windows, Linux, Steam Deck 등 다양한 OS와 RTX, GTX, Radeon, Intel Arc GPU를 지원한다.",
+  "why": "OptiScaler 사용 여부에 따라 설치 패키지를 나눠야 한다. Linux와 Steam Deck에서는 Proton 환경 설정이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "tidain / YunX-Desktop",
+  "url": "https://github.com/tidain/YunX-Desktop",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 421,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/tidain/YunX-Desktop"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 421,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/tidain/YunX-Desktop",
+  "link_status": null,
+  "ko_title": "YunX 데스크톱",
+  "summary": "YunX의 공식 Windows 데스크톱 앱으로, 클라우드 저장소·동영상 사이트·P2P 링크를 붙여넣기만 하면 고속 다운로드와 미리보기가 가능하다. 포터블 버전과 설치 버전을 제공하며, 로그인 정보는 로컬에 암호화 저장·백업한다. AGPL-3.0 라이선스로 무료 오픈소스이며, 유료 사기 버전과 구분된다.",
+  "why": "윈도우 환경에서 클라우드 저장소나 P2P 링크를 다룰 때 별도 브라우저 확장 없이 데스크톱 앱으로 처리할 수 있다. 로그인 정보는 로컬에 암호화되어 저장되며, 포터블 버전으로 배포 환경에 맞춰 유연하게 설치할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Anthropic IPO",
+  "url": "https://ipo.anthropic.com/us/",
+  "source": "hackernews",
+  "upvotes": 281,
+  "comments": 312,
+  "published_at": 1794484001,
+  "discussion": "https://news.ycombinator.com/item?id=50465829",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ipo.anthropic.com/us/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://ipo.anthropic.com/assets/share-image-eAr8nJRP.jpg",
+  "link_status": "ok",
+  "ko_title": "Anthropic 상장",
+  "summary": "Anthropic이 나스닥에 “ANT” 티커로 상장한다. IPO 로드쇼는 11월 10일 시작해 11월 19일 거래가 시작될 예정이다. 발표된 2026년 3분기 실적은 매출 170억 달러와 15% 조정 영업이익을 포함한다.",
+  "why": "클라우드 API 비용 구조와 공급 안정성이 상장 후 달라질 수 있다. 11월 19일 거래 시작 전까지 기존 계약 조건을 재확인할 시점이다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Enterprise SSO for B2B SaaS: How to Prepare Before Your First Big Customer Asks",
+  "url": "https://dev.to/hadil/enterprise-sso-for-b2b-saas-how-to-prepare-before-your-first-big-customer-asks-50p6",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 28,
+  "comments": 2,
+  "published_at": 1794475014.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/hadil/enterprise-sso-for-b2b-saas-how-to-prepare-before-your-first-big-customer-asks-50p6"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwhh1rudvficvzrc37724.png",
+  "link_status": "ok",
+  "ko_title": "B2B SaaS 기업용 SSO: 첫 대형 고객 요청에 대비하는 방법",
+  "summary": "대형 고객이 기존 아이덴티티 제공자를 통해 로그인하려면 SAML 2.0·OIDC를 지원해야 한다. Keycloak 등으로 인증 흐름을 구현하고, 테넌트별 아이덴티티 제공자 설정을 설계한다. 사용자 매핑·계정·역할 관리까지 포함한 온보딩 프로세스를 미리 테스트한다.",
+  "why": "기존 이메일 인증만으로는 대형 고객 확보가 막힐 수 있다. 테넌트별 아이덴티티 제공자 설정과 사용자 매핑을 미리 설계해야 한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+  "url": "https://huggingface.co/blog/3d-lora-finetuning",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/3d-lora-finetuning"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://huggingface.co/blog/assets/3d-lora-finetuning/thumbnail.gif",
+  "link_status": "ok",
+  "ko_title": "3D 생성 모델 파인튜닝 가이드",
+  "summary": "TRELLIS.2 모델을 로컬 및 Hugging Face Jobs에서 파인튜닝할 수 있는 스크립트와 컨테이너를 제공한다. 데이터셋을 Hugging Face Hub에 업로드하면 최소 인수만으로 파인튜닝이 가능하며, 스크립트 동작 방식을 상세히 설명한다.",
+  "why": "TRELLIS.2 파인튜닝 스크립트와 컨테이너를 제공해 로컬이나 Hugging Face Jobs에서 직접 실행할 수 있다. 데이터셋을 Hugging Face Hub에 올리면 최소 인수로 파인튜닝을 시작할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Why Writing Correct Software Is Hard",
+  "url": "https://pron.github.io/posts/correctness-and-complexity",
+  "source": "hackernews",
+  "upvotes": 196,
+  "comments": 82,
+  "published_at": 1794479306,
+  "discussion": "https://news.ycombinator.com/item?id=50465352",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://pron.github.io/posts/correctness-and-complexity"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://www.gravatar.com/avatar/c69557151e2f8331f6b1865469b694dd?s=200",
+  "link_status": "ok",
+  "ko_title": "정확한 소프트웨어 작성이 어려운 이유",
+  "summary": "발표 내용의 확장 버전으로, 프로그램과 정확성 사이의 근본적인 갈등을 설명한다. 계산 가능성 이론과 복잡도 이론의 결과들을 모아 소프트웨어 정확성을 달성하는 데 드는 비용이 자연법칙에 의해 제한된다는 점을 강조한다.",
+  "why": "정확성 검증 비용은 계산의 자연법칙에 의해 제한되므로 도구만으로 해결되지 않는다. 완전한 이해가 정확성에 필수적이므로 프로그램 작성의 근본적 한계를 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "NVIDIA Announces CEO Transition",
+  "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+  "source": "hackernews",
+  "upvotes": 741,
+  "comments": 547,
+  "published_at": 1794491549,
+  "discussion": "https://news.ycombinator.com/item?id=50467087",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://nvidianews.nvidia.com/media/sites/219/images/social-image.jpg",
+  "link_status": "ok",
+  "ko_title": "NVIDIA, CEO 전환 발표",
+  "summary": "NVIDIA 이사회는 Jensen Huang이 사임하고 CFO 겸 EVP인 Colette Kress가 임시 CEO로 선임됐다고 발표했다. 동시에 Harvey C. Jones가 최초의 이사회 의장으로 임명되었다. Kress는 영구 CEO 후보를 찾는 동안 기존 역할을 겸임한다.",
+  "why": "NVIDIA의 제품 로드맵과 고객 약속은 그대로 유지된다. 따라서 GPU 기반 AI 인프라 개발 계획에 변동이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Holiday Extras is rethinking what it can build with Codex",
+  "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794475800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/holidays-extras-codex"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Holiday Extras, Codex로 구축할 수 있는 것을 재고하다",
+  "summary": "Holiday Extras는 Codex를 활용해 고객의 전문 지식을 앱에 반영한다. 이를 통해 앱 품질이 향상되고 예약 전환율이 높아진다. 또한 Codex 기반 기능으로 새로운 성장 기회를 모색한다.",
+  "why": "고객의 전문 지식을 앱에 반영해 예약 전환율을 높이는 방식이다. 백엔드 개발자는 사용자 입력을 앱 로직에 통합하는 설계에 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Anthropic's IPO roadshow video",
+  "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794409919.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Anthropic IPO 로드쇼 영상",
+  "summary": "Anthropic이 IPO 로드쇼를 시작하며 공개된 영상에서 공동창업자 Tom Brown이 AWS Trainium, Google TPU, NVIDIA GPU, AMD GPU 등 네 가지 주요 칩을 모두 활용해 Claude 모델을 학습·서비스하는 방식을 설명한다. 특히 AMD GPU를 3일 만에 자동으로 적용한 사례와, 물리적 컴퓨팅 자원에 곱해지는 ‘컴퓨트 멀티플라이어’를 발견해 효율을 크게 높인 전략을 강조한다.",
+  "why": "클라우드 인프라를 다룰 때 단일 칩 의존도를 낮추는 전략을 검토해야 한다. 신규 칩 플랫폼 도입에 수개월이 걸리던 과거와 달리, 자동화 도구를 활용하면 며칠 만에 적용이 가능하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "MCP Is Dead Simple. And That's Exactly the Problem",
+  "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 54,
+  "comments": 30,
+  "published_at": 1794471276.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4ajaeuift6x1wfndpe9s.png",
+  "link_status": "ok",
+  "ko_title": "MCP는 매우 단순합니다. 그리고 바로 그 점이 문제입니다",
+  "summary": "MCP는 Model Context Protocol의 약자로, AI 애플리케이션이 외부 도구와 서비스를 일관된 방식으로 연결하도록 정의한 프로토콜이다. 구현 자체는 수백 줄의 코드로 몇 분 안에 실행할 수 있지만, 실제 사용 시 복잡한 문제들이 많이 발생한다. 글에서는 기존 AI 에이전트 구현과 비교해 MCP의 구조와 한계를 설명한다.",
+  "why": "MCP 구현 자체는 수백 줄의 코드로 몇 분 안에 끝난다. 하지만 실제 사용 단계에서 복잡한 문제가 많이 발생한다. 기존 AI 에이전트 구현과 비교해 구조적 한계를 먼저 파악해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "pookjw / HermesEnabler",
+  "url": "https://github.com/pookjw/HermesEnabler",
+  "source": "github",
+  "upvotes": 390,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/pookjw/HermesEnabler"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 390,
+  "score": 46,
+  "image": "https://opengraph.githubassets.com/1/pookjw/HermesEnabler",
+  "link_status": null,
+  "ko_title": "HermesEnabler2",
+  "summary": "HermesEnabler2는 watchOS 27.0-27.3 베타 전용으로 iPhone의 Watch 앱을 통해 설치하거나 Xcode로 직접 빌드해 Apple Watch에 설치할 수 있다. 사이드로드 시 자동 번들 ID 사용을 비활성화하고 고정 번들 식별자를 유지해야 하며, 앱 삭제 전에는 MobileGestalt 백업을 복원해야 한다.",
+  "why": "watchOS 27.0부터 27.3 베타 1까지만 지원되므로 해당 버전 외에는 사용할 수 없다. 사이드로딩 시 자동 번들 ID를 끄고 고정 식별자를 유지해야 데이터가 보존된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "Supporting research on AI and children’s safety",
+  "url": "https://openai.com/index/children-first-declaration",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/children-first-declaration"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4Sf0H3Wms7pT8ElWHCBqtC/dc443a9424134ea7518258ed6bdd9ffa/supporting-research-on-ai-and-childrens-safety-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "AI와 아동 안전 연구 지원",
+  "summary": "OpenAI가 전 세계적인 아동 AI 안전 연구를 위해 200만 달러를 기부한다. 파리 평화 포럼에서 아동 안전을 위한 AI 참여 헌장에 서명하고, 아동 권리 보호 연합의 과학 연구 네트워크를 지원한다. 기부금은 아동에게 AI 위험과 기회를 측정할 도구 개발에 사용된다.",
+  "why": "아동 대상 AI 제품 개발 시 연령별 안전 기준이 기본값으로 요구될 수 있다. EU Kids Act 입법 과정이 진행 중이므로 관련 규제 동향을 추적해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
+  "title": "J. Crew brings its signature approach to styling to life with Claude",
+  "url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/j-crew-style-advisor-with-claude",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/j-crew-style-advisor-with-claude",
+   "https://claude.com/resources/articles/j-crew-style-advisor-with-claude"
+  ],
+  "cross_source_count": 1,
+  "score": 24,
+  "image": "https://claude.com/ko/resources/articles/j-crew-style-advisor-with-claude/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "J. Crew, Claude로 스타일링 접근 방식 구현",
+  "summary": "J.Crew가 AI 스타일리스트인 Claude 기반의 Style Advisor를 출시했다. 사용자는 상황에 맞는 전체 코디를 요청하면 Claude 모델들이 J.Crew 사진을 활용해 완성된 룩을 제안한다. 여성·남성 라인 모두 미국에서 이용 가능하며, 여러 Claude 모델(Fable, Opus, Sonnet, Haiku)을 조합해 응답 속도와 품질을 최적화했다.",
+  "why": "여러 Claude 모델을 작업 난이도에 맞춰 조합하는 아키텍처를 참고할 수 있다. 복잡한 추론과 빠른 응답 처리를 분리해 성능과 속도를 동시에 잡는 방식이다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-13T00:00:01.612722+09:00",
+  "batch_label": "11월 13일 00:00"
+ },
+ {
   "title": "Critical RCE Vulnerability in Apache HTTP Server",
   "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
   "source": "hackernews",

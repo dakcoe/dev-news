@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-03T00:00:27+09:00",
-   "total": 13,
-   "counts": {
-    "ok": 11,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-11-03T08:00:46+09:00",
    "total": 16,
    "counts": {
@@ -536,6 +527,28 @@
     {
      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
      "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-13T00:00:33+09:00",
+   "total": 20,
+   "counts": {
+    "ok": 13,
+    "robots": 1,
+    "blocked": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.reuters.com/live/nvidia-live-board-meets-fate-ceo-jensen-huang-after-affair-reports-2026-11-12/",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
