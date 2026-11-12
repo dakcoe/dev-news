@@ -1,5 +1,187 @@
 [
  {
+  "t": "Apache HTTP Server의 치명적 원격 코드 실행 취약점",
+  "u": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-11-12",
+  "o": "Critical RCE Vulnerability in Apache HTTP Server",
+  "x": "Apache HTTP Server HTTP/2 모듈(mod_http2)의 동기화 결함(CVE-2026-119618)으로 원격 무인 공격자가 힙 "
+ },
+ {
+  "t": "n8n-io / nod",
+  "u": "https://github.com/n8n-io/nod",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "d": "2026-11-12",
+  "x": "Nod는 실제 웹사이트에서 청구서 추적, 통화 준비, 체험판 취소 등을 자동으로 수행하는 오픈소스 개인 에이전트다. 사용자가 선택한 모델로 로컬"
+ },
+ {
+  "t": "inferssd — SSD로 대형 MoE 모델 실행",
+  "u": "https://github.com/wici-ai/inferssd",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-12",
+  "o": "wici-ai / inferssd",
+  "x": "inferSSD는 llama.cpp 기반 오픈소스 도구로, 표준 GGUF 파일을 SSD에서 직접 스트리밍하여 RAM·VRAM보다 큰 혼합 전문가"
+ },
+ {
+  "t": "Yogurt – 무료, 개인용, 오픈소스 Granola 대안",
+  "u": "https://github.com/FrigadeHQ/yogurt",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "showcase"
+  ],
+  "d": "2026-11-12",
+  "o": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+  "x": "Yogurt는 회의 음성을 로컬에서 기록하고 실시간 전사와 요약을 제공하는 오픈소스 앱이다. 99개 언어를 지원하고 macOS에서는 화자 인식을"
+ },
+ {
+  "t": "x86-64 PC용 범용 Apple Silicon 레이어",
+  "u": "https://github.com/tylertms/Stela",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "hardware",
+   "language",
+   "release"
+  ],
+  "d": "2026-11-12",
+  "o": "A general purpose Apple Silicon layer for x86-64 PCs",
+  "x": "Stela는 x86-64 PC에서 macOS와 대부분의 앱을 실행할 수 있게 하는 UEFI 부트 프로그램이다. ARM64 코드를 x86-64로 "
+ },
+ {
+  "t": "llm 0.37.2",
+  "u": "https://simonwillison.net/2026/Nov/11/llm/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-12",
+  "x": "이번 릴리스는 Daniel de Araujo가 보고한 두 개의 보안 취약점을 해결한다. 새 명령 `llm openai endpoint add` "
+ },
+ {
+  "t": "tools.simonwillison.net을 태그별로 탐색",
+  "u": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-12",
+  "o": "Browse tools.simonwillison.net by tag",
+  "x": "저자는 244개 이상의 vibe-coded 도구 컬렉션을 JavaScript API, 라이브러리, 웹 API 호스트별로 분석해 태그 클라우드 형"
+ },
+ {
+  "t": "스마트 소프트웨어에 대한 주장",
+  "u": "https://dev.to/swyx/the-case-for-smart-software-329f",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-11-12",
+  "o": "The Case for Smart Software",
+  "x": "TypeSafe AI의 Diogo Almeida가 시스템 원 모델을 애플리케이션 코드에 직접 삽입해 기존 LLM 에이전트 방식보다 효율적인 자동"
+ },
+ {
+  "t": "실행 중인 Pod는 승인된 워크로드가 아니다",
+  "u": "https://dev.to/zenmesh/a-running-pod-is-not-an-admitted-workload-3fen",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "security",
+   "devops-infra"
+  ],
+  "d": "2026-11-12",
+  "o": "A Running Pod Is Not an Admitted Workload",
+  "x": "실행 중이지만 애플리케이션에 안전하게 참여하지 못하는 Pod 사례를 들어, 쿠버네티스의 상태와 애플리케이션 수준의 입학·권한·수렴 여부가 다를 "
+ },
+ {
+  "t": "AI 코드가 “거의 맞다”는 또 다른 방식 하나를 더 요청했더니 일곱 가지 답변을 받았다",
+  "u": "https://dev.to/wst2002rk/i-asked-for-one-more-way-ai-code-is-almost-right-you-gave-me-seven-3ien",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-coding"
+  ],
+  "d": "2026-11-12",
+  "o": "I asked for one more way AI code is \"almost right\". You gave me seven.",
+  "x": "원 글에서 AI 코드가 거의 맞는 7가지 사례를 제시하고, 독자에게 8번째 사례를 요청했다. 독자들의 답변 중 새로 제시된 다섯 가지와 기존 체"
+ },
+ {
+  "t": "Buckle Up: 미국 우주선 엔터프라이즈가 곧 이륙할까?",
+  "u": "https://dev.to/remojansen/buckle-up-is-the-uss-enterprise-about-to-take-off-34n0",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "industry",
+   "science"
+  ],
+  "d": "2026-11-12",
+  "o": "Buckle Up: Is the U.S.S. Enterprise About to Take Off?",
+  "x": "AI Futures Project가 2027년에 인공지능 폭발이 일어날 것이라는 타임라인 업데이트를 발표했다. 이는 인간 연구자를 능가하는 AI"
+ },
+ {
+  "t": "Nvidia, 젠슨 황 퇴출 준비",
+  "u": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "hardware"
+  ],
+  "d": "2026-11-12",
+  "o": "Nvidia is preparing to oust Jensen Huang"
+ },
+ {
+  "t": "Jensen Huang, 자신에게 보고하는 임원과 관계가 있었던 것으로 알려짐",
+  "u": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-12",
+  "o": "Jensen Huang said to have had relationship with executive who reports to him"
+ },
+ {
   "t": "AWS 에뮬레이터",
   "u": "https://github.com/aws/aws-emulator",
   "m": "2026-11",

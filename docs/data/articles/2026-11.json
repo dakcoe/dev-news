@@ -1,5 +1,431 @@
 [
  {
+  "title": "Critical RCE Vulnerability in Apache HTTP Server",
+  "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+  "source": "hackernews",
+  "upvotes": 120,
+  "comments": 52,
+  "published_at": 1794449471,
+  "discussion": "https://news.ycombinator.com/item?id=50462177",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://www.datocms-assets.com/75231/1794425853-threat-update-kics-alert_custom.jpeg?fm=webp",
+  "link_status": "ok",
+  "ko_title": "Apache HTTP Server의 치명적 원격 코드 실행 취약점",
+  "summary": "Apache HTTP Server HTTP/2 모듈(mod_http2)의 동기화 결함(CVE-2026-119618)으로 원격 무인 공격자가 힙 메모리를 손상시켜 임의 코드 실행이 가능하다. Wiz 데이터에 따르면 클라우드 환경의 64%가 이 취약점에 노출돼 있다. 현재 익스플로잇은 없으며, 즉시 패치를 적용해야 한다.",
+  "why": "클라우드 환경의 64%가 이 취약점에 노출되어 있어 즉시 패치를 적용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "n8n-io / nod",
+  "url": "https://github.com/n8n-io/nod",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 110,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/n8n-io/nod"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 110,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/n8n-io/nod",
+  "link_status": null,
+  "ko_title": "n8n-io / nod",
+  "summary": "Nod는 실제 웹사이트에서 청구서 추적, 통화 준비, 체험판 취소 등을 자동으로 수행하는 오픈소스 개인 에이전트다. 사용자가 선택한 모델로 로컬 머신에서 실행되며, 동작 전에 항상 확인을 요청한다. macOS와 Windows용 바이너리를 제공하고, 무료로 사용할 수 있다.",
+  "why": "로컬에서 실행되며 동작 전 확인을 거치므로, 웹 자동화 에이전트 도입 시 데이터 유출 우려를 줄일 수 있다. macOS 14 이상 또는 Windows 11 환경에서만 사용할 수 있어, 해당 OS 미사용 시 적용이 불가하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "wici-ai / inferssd",
+  "url": "https://github.com/wici-ai/inferssd",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 225,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/wici-ai/inferssd"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 225,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/wici-ai/inferssd",
+  "link_status": null,
+  "ko_title": "inferssd — SSD로 대형 MoE 모델 실행",
+  "summary": "inferSSD는 llama.cpp 기반 오픈소스 도구로, 표준 GGUF 파일을 SSD에서 직접 스트리밍하여 RAM·VRAM보다 큰 혼합 전문가(MoE) 모델을 실행한다. DeepSeek-V4.1-Flash-1017, Muse-Spark-Open, Qwen3.6-35B-A3B, Qwen3.8 Flash Next 등 여러 대형 모델을 지원하며 macOS(Metal), Linux(CUDA), Windows(진행 중)에서 동작한다.",
+  "why": "RAM이나 VRAM 용량보다 큰 MoE 모델을 SSD에서 직접 실행할 수 있다. 기존에는 메모리 부족으로 돌리지 못했던 대형 모델을 로컬에서 처리하는 길이 열렸다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+  "url": "https://github.com/FrigadeHQ/yogurt",
+  "source": "hackernews",
+  "upvotes": 222,
+  "comments": 92,
+  "published_at": 1794411186,
+  "discussion": "https://news.ycombinator.com/item?id=50454625",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/FrigadeHQ/yogurt"
+  ],
+  "cross_source_count": 2,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/FrigadeHQ/yogurt",
+  "link_status": null,
+  "ko_title": "Yogurt – 무료, 개인용, 오픈소스 Granola 대안",
+  "summary": "Yogurt는 회의 음성을 로컬에서 기록하고 실시간 전사와 요약을 제공하는 오픈소스 앱이다. 99개 언어를 지원하고 macOS에서는 화자 인식을 제공한다. macOS, Windows, Linux용 바이너리를 별도 다운로드해 바로 사용할 수 있다.",
+  "why": "회의 음성과 전사본이 로컬에 머물러 외부 전송을 막을 수 있다. macOS 14.4 이상에서 화자 인식을 쓸 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security",
+   "backend-data",
+   "devops-infra",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+  "url": "https://github.com/tylertms/Stela",
+  "source": "hackernews",
+  "upvotes": 93,
+  "comments": 36,
+  "published_at": 1794438158,
+  "discussion": "https://news.ycombinator.com/item?id=50460154",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/tylertms/Stela"
+  ],
+  "cross_source_count": 2,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/tylertms/Stela",
+  "link_status": null,
+  "ko_title": "x86-64 PC용 범용 Apple Silicon 레이어",
+  "summary": "Stela는 x86-64 PC에서 macOS와 대부분의 앱을 실행할 수 있게 하는 UEFI 부트 프로그램이다. ARM64 코드를 x86-64로 변환하는 컴파일러와 NVIDIA GPU용 Metal 드라이버를 포함한다. 현재 v0.1.0이며 Mac mini (M2) 모델을 에뮬레이션한다.",
+  "why": "v0.1.0 단계라 부팅 성공 확률이 낮고 성능이 느리다. x86-64 PC에서 macOS 개발 환경을 직접 구축하려는 경우에만 유의할 가치가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "llm 0.37.2",
+  "url": "https://simonwillison.net/2026/Nov/11/llm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794417592.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/11/llm/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "llm 0.37.2",
+  "summary": "이번 릴리스는 Daniel de Araujo가 보고한 두 개의 보안 취약점을 해결한다. 새 명령 `llm openai endpoint add` 로 extra-openai-models.yaml을 관리해 OpenAI 호환 API 사용을 안전하게 만든다. 키가 저장되지 않았거나 `-o chat_completions 1` 옵션을 사용할 때 API 키가 외부 제공자에게 노출될 위험을 차단한다.",
+  "why": "외부 OpenAI 호환 API를 쓰는 경우 0.37.2로 업데이트해야 한다. 이전 버전에서는 API 키가 저장되지 않았거나 특정 옵션 사용 시 키가 유출될 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "Browse tools.simonwillison.net by tag",
+  "url": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794422570.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/11/tools-tags/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://static.simonwillison.net/static/2026/tools-tag-cloud.webp",
+  "link_status": "ok",
+  "ko_title": "tools.simonwillison.net을 태그별로 탐색",
+  "summary": "저자는 244개 이상의 vibe-coded 도구 컬렉션을 JavaScript API, 라이브러리, 웹 API 호스트별로 분석해 태그 클라우드 형태로 제공한다. 이를 위해 tree-sitter를 사용해 코드에서 해당 정보를 추출했다. 홈페이지에 최근 글 목록도 함께 표시된다.",
+  "why": "tree-sitter로 코드 내 API와 라이브러리 사용처를 추출하는 방식은 백엔드 의존성 분석에 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "The Case for Smart Software",
+  "url": "https://dev.to/swyx/the-case-for-smart-software-329f",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 1,
+  "published_at": 1794445257.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/swyx/the-case-for-smart-software-329f"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftlzmkzz51drmiptal7sd.png",
+  "link_status": "ok",
+  "ko_title": "스마트 소프트웨어에 대한 주장",
+  "summary": "TypeSafe AI의 Diogo Almeida가 시스템 원 모델을 애플리케이션 코드에 직접 삽입해 기존 LLM 에이전트 방식보다 효율적인 자동화를 제안한다. 그는 기존 인스트럭트 튜닝 LLM이 인간을 작업 흐름에 남겨두는 문제를 지적하고, Jev가 비용·속도·보정 측면에서 개선점을 제공한다.",
+  "why": "기존 LLM 에이전트 방식은 인간을 작업 흐름에 계속 묶어둔다. Jev는 애플리케이션 코드 내부에 직접 호출을 삽입해 이 구조를 바꾼다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "A Running Pod Is Not an Admitted Workload",
+  "url": "https://dev.to/zenmesh/a-running-pod-is-not-an-admitted-workload-3fen",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 3,
+  "comments": 5,
+  "published_at": 1794442791.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zenmesh/a-running-pod-is-not-an-admitted-workload-3fen"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7f1zt9lttj3rulbuzfez.png",
+  "link_status": "ok",
+  "ko_title": "실행 중인 Pod는 승인된 워크로드가 아니다",
+  "summary": "실행 중이지만 애플리케이션에 안전하게 참여하지 못하는 Pod 사례를 들어, 쿠버네티스의 상태와 애플리케이션 수준의 입학·권한·수렴 여부가 다를 수 있음을 설명한다. Liveness, readiness, admission, authority, convergence 다섯 질문을 제시하고, 프로브가 측정하는 내용과 한계도 논한다.",
+  "why": "쿠버네티스의 Running 상태는 프로세스가 살아있다는 뜻일 뿐, 애플리케이션에 안전하게 참여했음을 보장하지 않는다. 프로브가 통과해도 권한이나 상태 수렴이 안 된 Pod가 트래픽을 받을 수 있어, 서비스 라우팅 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "I asked for one more way AI code is \"almost right\". You gave me seven.",
+  "url": "https://dev.to/wst2002rk/i-asked-for-one-more-way-ai-code-is-almost-right-you-gave-me-seven-3ien",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 15,
+  "comments": 0,
+  "published_at": 1794464960.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wst2002rk/i-asked-for-one-more-way-ai-code-is-almost-right-you-gave-me-seven-3ien"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuujigpnfsb60kmbjjor5.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 코드가 “거의 맞다”는 또 다른 방식 하나를 더 요청했더니 일곱 가지 답변을 받았다",
+  "summary": "원 글에서 AI 코드가 거의 맞는 7가지 사례를 제시하고, 독자에게 8번째 사례를 요청했다. 독자들의 답변 중 새로 제시된 다섯 가지와 기존 체크를 강화하는 두 가지가 선정되었다. 특히 “형태는 맞지만 값이 틀린” 사례와 한 줄 수정이 여러 파일에 영향을 미치는 사례가 강조된다.",
+  "why": "형태는 맞지만 값이 틀린 오류는 예외가 발생하지 않아 기존 검증 로직으로 잡기 어렵다. 한 줄 수정 요청 시 예상치 못한 파일 변경이 섞여 들어와 코드 리뷰 범위가 넓어진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "Buckle Up: Is the U.S.S. Enterprise About to Take Off?",
+  "url": "https://dev.to/remojansen/buckle-up-is-the-uss-enterprise-about-to-take-off-34n0",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 1,
+  "published_at": 1794449691.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remojansen/buckle-up-is-the-uss-enterprise-about-to-take-off-34n0"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgt41wk7xunns6gn37p59.png",
+  "link_status": "ok",
+  "ko_title": "Buckle Up: 미국 우주선 엔터프라이즈가 곧 이륙할까?",
+  "summary": "AI Futures Project가 2027년에 인공지능 폭발이 일어날 것이라는 타임라인 업데이트를 발표했다. 이는 인간 연구자를 능가하는 AI 연구 시스템이 등장하고, 그 시스템이 더 강력한 AI를 만들 가능성을 시사한다. 글쓴이는 이 전망이 과학 소설과 기술 특이점 개념을 떠올리게 한다고 언급한다.",
+  "why": "AI 연구 자동화 시점이 2027년으로 앞당겨졌다는 전망이 나왔다. 자율 AI 연구 시스템이 등장하면 모델 개발 속도가 급격히 빨라질 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry",
+   "science"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "Nvidia is preparing to oust Jensen Huang",
+  "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+  "source": "hackernews",
+  "upvotes": 855,
+  "comments": 1197,
+  "published_at": 1794436266,
+  "discussion": "https://news.ycombinator.com/item?id=50459703",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad"
+  ],
+  "cross_source_count": 1,
+  "score": 14,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Nvidia, 젠슨 황 퇴출 준비",
+  "summary": "",
+  "why": "기사 본문이 없어 구체적인 영향이나 조치 사항을 확인할 수 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
+  "title": "Jensen Huang said to have had relationship with executive who reports to him",
+  "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+  "source": "hackernews",
+  "upvotes": 339,
+  "comments": 415,
+  "published_at": 1794434638,
+  "discussion": "https://news.ycombinator.com/item?id=50459321",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Jensen Huang, 자신에게 보고하는 임원과 관계가 있었던 것으로 알려짐",
+  "summary": "",
+  "why": "백엔드·AI 개발 업무와 무관한 경영진 사생활 이슈로 기술적 조치나 설정 변경 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-12T16:00:03.841247+09:00",
+  "batch_label": "11월 12일 16:00"
+ },
+ {
   "title": "AWS emulator",
   "url": "https://github.com/aws/aws-emulator",
   "source": "hackernews",
