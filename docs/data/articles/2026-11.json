@@ -1,5 +1,497 @@
 [
  {
+  "title": "I'm making LLMs work on small and old devices",
+  "url": "https://github.com/hyperionaidev/smolmaxxing/",
+  "source": "hackernews",
+  "upvotes": 332,
+  "comments": 120,
+  "published_at": 1794496990,
+  "discussion": "https://news.ycombinator.com/item?id=50468888",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/hyperionaidev/smolmaxxing",
+   "https://github.com/hyperionaidev/smolmaxxing/"
+  ],
+  "cross_source_count": 2,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/hyperionaidev/smolmaxxing",
+  "link_status": null,
+  "ko_title": "작은·오래된 기기에서 LLM 작동시키기",
+  "summary": "smolmaxxing은 TV 박스, 구형 태블릿, 싱글보드 컴퓨터, 라우터 등 1 GB 수준의 RAM을 가진 저사양 하드웨어에서 8 B·16 B Mixture-of-Experts 모델을 실행하도록 커스텀 커널과 가중치 스트리밍을 적용한다. 현재 Xiaomi TV Box S와 2013년형 iPad Air에서 각각 2 B-4 B 모델을 5 ~ 24 tok/s 속도로 구동한 결과를 공개했다. 모든 측정은 해당 디바이스에서 직접 수행했으며, 모델 선택과 실행 방법을 문서화했다.",
+  "why": "기존에 GPU나 고사양 서버가 필요했던 MoE 모델을 1GB RAM 기기에서 돌릴 수 있게 됐다. 커스텀 커널과 플래시 스트리밍 기법을 적용해 메모리 부족 문제를 우회한다. 저사양 하드웨어에서 LLM 추론을 시도할 때 참고할 실행 방법과 속도 데이터가 제공된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+  "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+  "source": "hackernews",
+  "upvotes": 191,
+  "comments": 51,
+  "published_at": 1794524777,
+  "discussion": "https://news.ycombinator.com/item?id=50475713",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://cdn.hashnode.com/uploads/covers/6aea03219fa4aa99923b5acf/de5ebdea-3436-4b9a-b3f2-e9910f3a0abc.png",
+  "link_status": "ok",
+  "ko_title": "Edge0-145B: 내 컴퓨터에서 최첨단 AI 기능",
+  "summary": "Edge0-145B와 Edge0-120B를 오픈소스로 공개하고, 통합 추론 프레임워크와 배포 도구를 제공한다. 145 억 파라미터 모델을 개인 노트북에서 28 GB 메모리와 80 토큰/초 속도로 실행할 수 있다. 모델 가중치와 프레임워크를 받아 직접 평가·미세조정·제품에 통합할 수 있다.",
+  "why": "145B 파라미터 모델을 28GB 메모리로 구동해 클라우드 의존도를 낮출 수 있다. 모델 가중치와 프레임워크를 받아 직접 평가 및 미세조정이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Introducing Claude Meetings",
+  "url": "https://claude.com/resources/articles/claude-meetings",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/claude-meetings",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-meetings",
+   "https://claude.com/resources/articles/claude-meetings"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://claude.com/ko/resources/articles/claude-meetings/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude 미팅 소개",
+  "summary": "Claude가 영상 통화에 참여해 대화를 실시간으로 파악하고 회의 중에 문서·화이트보드·노트를 자동으로 작성한다. 팀은 음성이나 채팅으로 Claude에게 질문하고, 허가하면 연결된 도구를 활용해 데이터를 조회·추가할 수 있다. 현재 베타 버전이 팀·엔터프라이즈 플랜에 순차 출시 중이며, 향후 다른 화상 회의 플랫폼도 지원한다.",
+  "why": "회의 중 문서 작성과 기록 업무를 Claude가 대신 수행하므로 개발자가 회의에 집중할 수 있다. 연결된 도구를 활용해 데이터를 조회하려면 사용자의 허가가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Local AI models need to be a browser feature",
+  "url": "https://dev.to/kenzic/local-ai-models-need-to-be-a-browser-feature-399l",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1794532679.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kenzic/local-ai-models-need-to-be-a-browser-feature-399l"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqeaivhy0kmxilbyyw8e4.webp",
+  "link_status": "ok",
+  "ko_title": "로컬 AI 모델은 브라우저 기능이어야 한다",
+  "summary": "웹에서 LLM을 직접 실행하려면 성능 문제가 발생하고 클라우드 사용 시 비용이 발생한다. 저자는 사용자 허가를 받아 장치 내 모델에 접근하는 Browser.AI 프로토타입을 만들었으며, 이를 기반으로 Web Models API를 제안한다. 이 API는 navigator.models를 통해 모델을 요청·관리하고, 사용자는 사이트별로 접근 권한을 부여·철회할 수 있다.",
+  "why": "브라우저가 모델을 직접 관리하므로 개별 앱에서 성능 문제를 해결할 필요가 없다. 사이트별 권한 설정으로 사용자 승인 절차만 구현하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "showcase"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+  "url": "https://github.com/simpsoka/zigzag",
+  "source": "hackernews",
+  "upvotes": 463,
+  "comments": 171,
+  "published_at": 1794502962,
+  "discussion": "https://news.ycombinator.com/item?id=50470488",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/simpsoka/zigzag"
+  ],
+  "cross_source_count": 2,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/simpsoka/zigzag",
+  "link_status": null,
+  "ko_title": "내 $300 자수 기계에 구독이 필요해 직접 만든 앱",
+  "summary": "ZigZag는 Rust로 만든 시각적 자수 편집기로, SVG를 스티치로 변환하고 다양한 포맷(PES, DST, EXP, JEF, VP3)으로 내보낼 수 있다. AI 에이전트와 협업을 위한 MCP 지원과 Brother Skitch(PP1)와의 블루투스 전송 기능을 제공한다. macOS와 Windows용 바이너리를 별도 설치 없이 다운로드할 수 있다.",
+  "why": "MCP 지원으로 AI 에이전트가 자수 디자인 생성과 편집에 직접 개입할 수 있다. 이는 기존 수작업 편집 파이프라인에 에이전트 기반 자동화 단계를 추가하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "language",
+   "industry",
+   "showcase"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Composio vs Nango vs Scalekit: What Changes When Your Agent Goes to Production",
+  "url": "https://dev.to/therealmrmumba/composio-vs-nango-vs-scalekit-what-changes-when-your-agent-goes-to-production-4fl2",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794544704.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/therealmrmumba/composio-vs-nango-vs-scalekit-what-changes-when-your-agent-goes-to-production-4fl2"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3ga0yb91lyb3bsfyq1g8.png",
+  "link_status": "ok",
+  "ko_title": "Composio vs Nango vs Scalekit: 에이전트가 프로덕션에 갈 때 변하는 점",
+  "summary": "Brightwater Logistics 팀이 Xero, Amplitude, Apollo를 연동한 에이전트를 주말에 구축해 데모를 성공시켰지만, 보안팀의 심층 질문에 직면했다. 질문은 토큰 저장 위치, 권한 초과 행동 방지, RSA 키와 도메인 위임 지원, 행동 추적, VPC 내 실행 등이다. 기사에서는 이러한 보안·운영 요구를 기준으로 Composio, Nango, Scalekit 세 플랫폼을 비교한다. 각각의 강점은 카탈로그 규모, 자체 호스팅 가능성, 프로덕션 단계 지원이다.",
+  "why": "에이전트 프로덕션 전환 시 토큰 격리와 권한 초과 방지 등 보안 요구가 핵심 검증 항목이 된다. 자체 호스팅이 필요한 경우 Nango의 엔터프라이즈 버전을, 광범위한 도구 연동이 우선이면 Composio를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Using Claude Opus 5.5 as your daily driver for knowledge work",
+  "url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+   "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://claude.com/ko/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude Opus 5.5를 지식 작업 일상 모델로 사용",
+  "summary": "Opus 5.5가 Pro·Max·Ultra·Team 플랜의 기본 모델로 지정됐다. Anthropic은 이를 연구·분석·보고서·스프레드시트·프레젠테이션 작성 등 일상적인 지식 작업에 지속적으로 사용할 것을 권장한다. 기존에 Sonnet을 일상에 쓰고 Opus를 무거운 분석에만 사용하던 경우, 더 강력한 Opus 5.5가 작업을 적게 수행해 비용을 상쇄할 수 있어 전환을 고려하라는 내용이다.",
+  "why": "기존에 Sonnet을 일상 작업에 쓰고 Opus를 무거운 분석에만 쓰던 방식이 바뀐다. Opus 5.5가 더 적은 작업으로 과제를 끝내 토큰 단가 상승분을 상쇄할 수 있다. Pro·Max·Ultra·Team 플랜에서 기본 모델이 Opus 5.5로 지정됐다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Gondola doubles revenue as its team builds more with Codex",
+  "url": "https://openai.com/business/customer-stories/gondola",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794484800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/gondola"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Gondola, Codex로 팀 생산성 향상해 매출 두 배",
+  "summary": "Gondola는 창작자에게 신용과 고용 기회를 제공한다. Codex 도입으로 주요 엔지니어의 생산성이 50% 증가했으며, ChatGPT가 일상 업무를 간소화한다. 이 결과 매출이 두 배로 늘었다.",
+  "why": "Codex가 핵심 개발자의 산출량을 50% 끌어올린 사례다. AI 코딩 도구가 개인 생산성뿐 아니라 팀 매출까지 직접 연결할 수 있음을 보여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "industry"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Reverse Engineering GPT-6 Cyber",
+  "url": "https://dev.to/om_shree_0709/reverse-engineering-gpt-6-cyber-54gj",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1794526134.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/om_shree_0709/reverse-engineering-gpt-6-cyber-54gj"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgdcxco71sfbsw7t82bwc.jpg",
+  "link_status": "ok",
+  "ko_title": "GPT-6 Cyber 역공학",
+  "summary": "OpenAI가 GPT-6 Cyber 모델을 공개했으며, 시스템 카드와 발표 자료 등을 기반으로 동작 원리를 추정했다. 사이버 모델은 공격 능력과 안전 제한 사이의 모순을 해결해야 하며, 과거 내부 샌드박스 탈출 사례와 여러 정렬 실패 사례가 보고되었다.",
+  "why": "사이버 모델의 샌드박스 탈출과 정렬 실패 사례가 보고되어 신뢰성에 의문이 제기된다. 해당 모델의 공격 능력을 활용하되 안전 제한이 제대로 작동하는지 직접 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "heartleo / zlib",
+  "url": "https://github.com/heartleo/zlib",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 156,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/heartleo/zlib"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 156,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/heartleo/zlib",
+  "link_status": null,
+  "ko_title": "heartleo / zlib",
+  "summary": "Z-Library를 명령줄에서 사용할 수 있는 CLI 도구이며, AI 에이전트와 연동해 책을 검색·열람·다운로드할 수 있다. Go 언어로 구현돼 CI·버전·다운로드 통계가 제공된다. 주요 기능은 연도·언어·포맷 필터링 검색, 즐겨찾기·추천·인기 도서 조회, 다운로드 기록 관리이다.",
+  "why": "AI 에이전트 파이프라인에 책 검색과 다운로드 단계를 넣을 때 웹 스크래핑 대신 이 도구를 호출하면 된다. 연도·언어·포맷 필터링으로 원하는 자료를 정확히 골라낼 수 있어 에이전트 프롬프트 설계가 단순해진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Silent Failure #5: The Suite Was Green Because It Asserted the Bug",
+  "url": "https://dev.to/dafili/silent-failure-5-the-suite-was-green-because-it-asserted-the-bug-1i9k",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 1,
+  "comments": 5,
+  "published_at": 1794536114.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dafili/silent-failure-5-the-suite-was-green-because-it-asserted-the-bug-1i9k"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2F13rjpisvf9.ucarecd.net%2F62905043-24ee-4a70-880a-3011de033a64%2Fsilent-failure-5-cover.png",
+  "link_status": "ok",
+  "ko_title": "Silent Failure #5: 도구 호출이 버그를 감추어 테스트가 통과",
+  "summary": "OpenAI 호환 게이트웨이에서 도구 호출 요청이 래퍼를 잃어버려 타입 정보가 사라졌다. 상위 서비스는 200 응답과 정상 메시지만 반환했으며, 테스트 스위트는 래퍼가 없어도 통과했다. 두 테스트는 래퍼 없이도 name과 parameters만 확인했기 때문에 버그를 놓쳤다.",
+  "why": "도구 호출 응답의 래퍼 구조를 검증하지 않으면 버그가 감추어져 테스트가 통과한다. 상위 서비스에서 도구 목록을 읽는 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+  "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+  "source": "hackernews",
+  "upvotes": 215,
+  "comments": 237,
+  "published_at": 1794513093,
+  "discussion": "https://news.ycombinator.com/item?id=50473190",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "전 Nvidia CEO 황, 두 번째 직원과 관계 있었다",
+  "summary": "전 Nvidia CEO인 Jensen Huang이 두 번째 직원과 사적인 관계를 가졌다는 내용이 내부 소식통을 통해 알려졌다.",
+  "why": "기업 최고경영진의 사생활이 공개되면 투자자와 파트너의 신뢰에 영향을 줄 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Four Applications and One Ask. Guess Which One Scared Me.",
+  "url": "https://dev.to/earlgreyhot1701d/four-applications-and-one-ask-guess-which-one-scared-me-2ia3",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 16,
+  "comments": 7,
+  "published_at": 1794525208.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/four-applications-and-one-ask-guess-which-one-scared-me-2ia3"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6v1imq7yz3dr9u8h3b5a.png",
+  "link_status": "ok",
+  "ko_title": "네 개의 지원과 하나의 요청. 어느 것이 나를 겁먹게 했을까",
+  "summary": "하루에 AI 펠로십·프로그램 3개와 주정부 관심 양식 1개, 총 네 개에 지원했다. 전Cycle에 대기자 명단에 올랐던 프로그램에 다시 지원했으며, 공개 프로젝트 Themis Lex 덕분에 Annie Liao에게 레퍼런스를 요청해 성공했다.",
+  "why": "공개 프로젝트로 만든 레퍼런스가 AI 펠로십 지원의 실질적 장벽을 낮췄다. 직장 내 지인 대신 공개적으로 구축한 산출물을 근거로 외부 추천을 받는 방식이 유효하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "zxsos / HGhubX",
+  "url": "https://github.com/zxsos/HGhubX",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 492,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/zxsos/HGhubX"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 492,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/zxsos/HGhubX",
+  "link_status": null,
+  "ko_title": "HGhubX — Rust와 Tauri 2 기반 제3자 클라이언트",
+  "summary": "",
+  "why": "Tauri 2와 Rust로 작성된 멀티플랫폼 데스크톱 앱 구조를 참고할 수 있다. 라이선스가 PolyForm Noncommercial 1.0.0이라 상업적 배포는 금지된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
+  "title": "Nvidia employees petition to bring back Jensen Huang",
+  "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+  "source": "hackernews",
+  "upvotes": 404,
+  "comments": 306,
+  "published_at": 1794536184,
+  "discussion": "https://news.ycombinator.com/item?id=50477231",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media.wired.com/photos/6af6533dc5d481da1362b330/191:100/w_1280,c_limit/Petition-Bring-Back-Jensen-Business-2299493060.jpg",
+  "link_status": "ok",
+  "ko_title": "Nvidia 직원들, 젠슨 황 복귀 청원",
+  "summary": "",
+  "why": "Nvidia의 리더십 공백이 GPU 공급이나 소프트웨어 지원에 영향을 줄지 확인해야 한다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-13T16:00:06.405685+09:00",
+  "batch_label": "11월 13일 16:00"
+ },
+ {
   "title": "shanselman / gputaskman",
   "url": "https://github.com/shanselman/gputaskman",
   "source": "github",
