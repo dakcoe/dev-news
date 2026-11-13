@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-04T00:00:32+09:00",
-   "total": 19,
-   "counts": {
-    "robots": 1,
-    "ok": 11,
-    "blocked": 2,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://twitter.com/guilleflorvs/status/2117379073785696395",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://openai.com/index/heimstaden",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/dan-driscoll-joins-openai",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-04T08:00:29+09:00",
    "total": 17,
    "counts": {
@@ -544,6 +517,28 @@
      "url": "https://openai.com/business/customer-stories/gondola",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-14T00:00:31+09:00",
+   "total": 16,
+   "counts": {
+    "ok": 10,
+    "blocked": 1,
+    "robots": 1,
+    "github": 4
+   },
+   "failures": [
+    {
+     "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://twitter.com/MSFT365Status/status/2121079061774491735",
+     "source": "hackernews",
+     "reason": "robots"
     }
    ]
   }

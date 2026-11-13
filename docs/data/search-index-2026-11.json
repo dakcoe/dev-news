@@ -1,5 +1,213 @@
 [
  {
+  "t": "Git 2.56의 history drop 명령이 리베이스보다 40~77배 빠르게 커밋을 재생",
+  "u": "https://dev.to/alexgeorgiev17/git-256s-history-drop-command-replays-commits-40-to-77-times-faster-than-rebase-45jm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "research",
+   "dev-tools"
+  ],
+  "d": "2026-11-14",
+  "o": "Git 2.56's history drop command replays commits 40 to 77 times faster than rebase",
+  "x": "Git 2.56에 실험적으로 추가된 git history drop 명령은 베어 저장소에서 중간 커밋을 제거하고 이후 커밋을 재생하는 작업을 워크"
+ },
+ {
+  "t": "스타트업을 위한 Claude Tag 가이드",
+  "u": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "The Claude Tag guide for startups",
+  "x": "스타트업이 Slack 채널에 Claude Tag(beta)를 연결해 작업을 자동화하고 속도를 높이는 방법을 8개 고성장 기업 사례를 통해 정리한"
+ },
+ {
+  "t": "하나의 도난당한 토큰이 앱을 배포하지 못하게 하라: GitHub Actions의 2인 릴리즈 게이트",
+  "u": "https://dev.to/wamzii/one-stolen-token-should-not-ship-your-app-a-two-person-release-gate-in-github-actions-330c",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "release",
+   "showcase"
+  ],
+  "d": "2026-11-14",
+  "o": "One Stolen Token Should Not Ship Your App: A Two-Person Release Gate in GitHub Actions",
+  "x": "하나의 관리자 토큰이 탈취돼 조직 전체에 워크플로우를 삽입한 사건을 계기로, 저자는 모바일 레포에서 코드 병합과 앱 배포를 분리하고, 두 명이 "
+ },
+ {
+  "t": "Likely7 / Veyra-NRVideo",
+  "u": "https://github.com/Likely7/Veyra-NRVideo",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "backend-data",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-14",
+  "x": "Veyra는 Windows용 실시간 GPU 비디오 향상 도구로 초고해상도, 노이즈 제거, HDR, 프레임 생성, 캡처 및 콘솔 스트리밍을 하나의"
+ },
+ {
+  "t": "4개의 SQL 문과 segfault: PostgreSQL 22년 된 타입 혼동, CVE-2026-6460",
+  "u": "https://dev.to/slabb/4-sql-statements-and-a-segfault-inside-postgresqls-22-year-old-type-confusion-cve-2026-6460-1ggm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "security",
+   "backend-data",
+   "showcase"
+  ],
+  "d": "2026-11-14",
+  "o": "4 SQL statements and a segfault: inside PostgreSQL's 22-year-old type confusion, CVE-2026-6460",
+  "x": "이 취약점은 2004년 ALTER TABLE … ALTER COLUMN … TYPE 명령으로 도입된 타입 혼동으로, 4개의 SQL 문을 무권한 "
+ },
+ {
+  "t": "llama.cpp v1.0.0 : 로컬 AI 생태계를 위한 강력한 기반",
+  "u": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "language",
+   "release",
+   "science"
+  ],
+  "d": "2026-11-14",
+  "o": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+  "x": "llama.cpp가 멀티모달 LLM을 다양한 하드웨어에서 실행할 수 있도록 최적화된 양자화와 C/C++ 구현을 제공한다. 이번 1.0.0 릴리즈"
+ },
+ {
+  "t": "OpenFilm",
+  "u": "https://github.com/openfilm/openfilm",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "d": "2026-11-14",
+  "o": "openfilm / openfilm",
+  "x": "OpenFilm은 코딩 에이전트가 영상을 만들고, 브라우저 기반 로컬 편집기인 Studio에서 직접 편집할 수 있게 해 주는 오픈소스 AI 비디"
+ },
+ {
+  "t": "remove.bg 서비스 종료 — 무료 업로드 없는 대안 소개",
+  "u": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-11-14",
+  "o": "remove.bg Is Shutting Down — Here's a Free, No-Upload Alternative",
+  "x": "remove.bg가 2026년 12월 1일에 독립 사이트를 종료하고 Canva 프로 기능으로 옮겨갑니다. 기존 무료 제한이 있었던 서비스 대신,"
+ },
+ {
+  "t": "Claude 트레이딩 스킬",
+  "u": "https://github.com/tradermonty/claude-trading-skills",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source",
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "tradermonty / claude-trading-skills",
+  "x": "Claude 트레이딩 스킬은 AI 기반 Claude Skills를 활용해 시간에 제약이 있는 개인 투자자를 위한 거래 워크플로우 툴킷이다. 장기"
+ },
+ {
+  "t": "claude.ai·Claude Code·platform.claude.com에서 오류 증가",
+  "u": "https://status.claude.com/incidents/nn11wk485zfn",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "d": "2026-11-14",
+  "o": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+  "x": "claude.ai, Claude Code, platform.claude.com의 장애 상황을 이메일·문자(SMS)로 구독해 실시간 알림을 받을 "
+ },
+ {
+  "t": "Claude 서비스 중단",
+  "u": "https://status.claude.com/history",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-14",
+  "o": "Claude Is Down"
+ },
+ {
+  "t": "Eli Lilly CEO, Dario Amodei의 의료 주장에 반박",
+  "u": "https://garymarcus.substack.com/p/breaking-eli-lilly-ceo-becomes-latest",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "Eli Lilly CEO pushes back on Dario Amodei's ludicrous medical claims",
+  "x": "Dario Amodei가 IPO와 함께 제시한 암·정신질환 치료 일정이 비현실적이라는 비판이 이어지고 있다. 전문가와 Eli Lilly CEO가"
+ },
+ {
+  "t": "Microsoft Outlook/365, 12시간 지나도 여전히 중단",
+  "u": "https://twitter.com/MSFT365Status/status/2121079061774491735",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-14",
+  "o": "Microsoft Outlook/365 still down after 12 hours"
+ },
+ {
+  "t": "plannotator",
+  "u": "https://github.com/backnotprop/plannotator",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "d": "2026-11-14",
+  "o": "backnotprop / plannotator"
+ },
+ {
+  "t": "종말: 2026년 11월 13일 금요일 (1960)",
+  "u": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-14",
+  "o": "Doomsday: Friday, 13 November, A.D. 2026 (1960)"
+ },
+ {
   "t": "작은·오래된 기기에서 LLM 작동시키기",
   "u": "https://github.com/hyperionaidev/smolmaxxing/",
   "m": "2026-11",

@@ -1,5 +1,492 @@
 [
  {
+  "title": "Git 2.56's history drop command replays commits 40 to 77 times faster than rebase",
+  "url": "https://dev.to/alexgeorgiev17/git-256s-history-drop-command-replays-commits-40-to-77-times-faster-than-rebase-45jm",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 13,
+  "comments": 0,
+  "published_at": 1794567600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/git-256s-history-drop-command-replays-commits-40-to-77-times-faster-than-rebase-45jm"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdo1bmwnshgfsjxs32twg.png",
+  "link_status": "ok",
+  "ko_title": "Git 2.56의 history drop 명령이 리베이스보다 40~77배 빠르게 커밋을 재생",
+  "summary": "Git 2.56에 실험적으로 추가된 git history drop 명령은 베어 저장소에서 중간 커밋을 제거하고 이후 커밋을 재생하는 작업을 워크트리를 만들지 않고 수행한다. 벤치마크에서 400개의 후속 커밋이 있는 경우 기존 워크트리-리베이스 방식은 26.5초가 걸린 반면, history drop은 0.36초만 소요했다. 명령은 현재 drop, fixup, reword, split 네 가지 서브커맨드를 제공한다.",
+  "why": "중간 커밋 제거 작업에 워크트리 생성과 리베이스를 쓰던 방식이 바뀐다. 해당 명령은 실험 단계라 동작이 변경될 수 있어 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "dev-tools"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "The Claude Tag guide for startups",
+  "url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794441600.0,
+  "origin_url": "https://claude.com/blog/claude-tag-guide-for-startups",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/claude-tag-guide-for-startups",
+   "https://claude.com/resources/articles/claude-tag-guide-for-startups"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://claude.com/ko/resources/articles/claude-tag-guide-for-startups/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "스타트업을 위한 Claude Tag 가이드",
+  "summary": "스타트업이 Slack 채널에 Claude Tag(beta)를 연결해 작업을 자동화하고 속도를 높이는 방법을 8개 고성장 기업 사례를 통해 정리한 가이드다. 주요 사용 사례와 초기 적용에 적합한 채널 목록을 제공한다. 각 기업이 Claude Tag를 통해 며칠 걸리던 작업을 몇 시간으로 단축한 구체적인 결과를 공유한다.",
+  "why": "Slack 채널에 Claude Tag를 연결해 온콜 대응과 배포 감시 같은 반복 업무를 자동화할 수 있다. 수일 걸리던 작업이 수 시간으로 줄어드는 효과를 얻어 팀 생산성을 높일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "industry"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "One Stolen Token Should Not Ship Your App: A Two-Person Release Gate in GitHub Actions",
+  "url": "https://dev.to/wamzii/one-stolen-token-should-not-ship-your-app-a-two-person-release-gate-in-github-actions-330c",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 2,
+  "comments": 5,
+  "published_at": 1794569087.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wamzii/one-stolen-token-should-not-ship-your-app-a-two-person-release-gate-in-github-actions-330c"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fijv3xwt1wbkaju6ju0qn.jpg",
+  "link_status": "ok",
+  "ko_title": "하나의 도난당한 토큰이 앱을 배포하지 못하게 하라: GitHub Actions의 2인 릴리즈 게이트",
+  "summary": "하나의 관리자 토큰이 탈취돼 조직 전체에 워크플로우를 삽입한 사건을 계기로, 저자는 모바일 레포에서 코드 병합과 앱 배포를 분리하고, 두 명이 각각 요청·승인해야만 배포가 이루어지는 GitHub Actions 기반 릴리즈 게이트를 구현했다. 이 게이트는 요청을 JSON 파일로 기록하고 전용 브랜치에 PR을 자동 생성한 뒤, 승인 조건을 만족하는 경우에만 스토어 인증 정보를 사용해 배포한다. 구현된 템플릿은 현재 GitHub에 공개돼 있다.",
+  "why": "모바일 앱 배포 시 코드 병합과 스토어 업로드가 자동 연동되는 구조라면, 이 패턴을 적용해 배포 권한을 분리해야 한다. 단일 토큰 탈취 시 앱 배포가 불가능하도록 두 사람의 명시적 승인을 요구하는 게이트를 구축할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Likely7 / Veyra-NRVideo",
+  "url": "https://github.com/Likely7/Veyra-NRVideo",
+  "source": "github",
+  "upvotes": 245,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Likely7/Veyra-NRVideo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 245,
+  "score": 67,
+  "image": "https://opengraph.githubassets.com/1/Likely7/Veyra-NRVideo",
+  "link_status": null,
+  "ko_title": "Likely7 / Veyra-NRVideo",
+  "summary": "Veyra는 Windows용 실시간 GPU 비디오 향상 도구로 초고해상도, 노이즈 제거, HDR, 프레임 생성, 캡처 및 콘솔 스트리밍을 하나의 파이프라인으로 제공한다. 포터블 패키지와 전체 릴리스 자산의 누적 다운로드가 각각 79 천·103 천 건을 넘어 인기를 입증한다.",
+  "why": "Veyra는 Windows에서 GPU로 실시간 비디오 보강을 수행하는 도구다. 백엔드 개발자가 로컬 영상 처리나 스트리밍 파이프라인을 구축할 때 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "hardware",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "4 SQL statements and a segfault: inside PostgreSQL's 22-year-old type confusion, CVE-2026-6460",
+  "url": "https://dev.to/slabb/4-sql-statements-and-a-segfault-inside-postgresqls-22-year-old-type-confusion-cve-2026-6460-1ggm",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1794555323.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/slabb/4-sql-statements-and-a-segfault-inside-postgresqls-22-year-old-type-confusion-cve-2026-6460-1ggm"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F43u0rqx1xfz468mlxpwk.png",
+  "link_status": "ok",
+  "ko_title": "4개의 SQL 문과 segfault: PostgreSQL 22년 된 타입 혼동, CVE-2026-6460",
+  "summary": "이 취약점은 2004년 ALTER TABLE … ALTER COLUMN … TYPE 명령으로 도입된 타입 혼동으로, 4개의 SQL 문을 무권한 로그인 역할로 실행하면 세그멘테이션 오류가 발생한다. PostgreSQL 17.11에서 재현 가능했으며, 17.12 버전에서 패치되었다. 해당 연구는 총 52개의 CVE 중 6개를 포함한다.",
+  "why": "PostgreSQL 17.12로 업데이트해야 한다. 17.11 이하 버전에서는 무권한 계정으로 서버가 종료될 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+  "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794578722.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/63148d3b996c52bf0142cdbe/2PgU1GxpJX_LVORaP2RRy.png",
+  "link_status": "ok",
+  "ko_title": "llama.cpp v1.0.0 : 로컬 AI 생태계를 위한 강력한 기반",
+  "summary": "llama.cpp가 멀티모달 LLM을 다양한 하드웨어에서 실행할 수 있도록 최적화된 양자화와 C/C++ 구현을 제공한다. 이번 1.0.0 릴리즈에서는 API·ABI 호환성을 명시적으로 구분하는 주요 버전 업데이트 정책을 도입했다. 향후 배포와 패키징 지원을 확대할 계획이다.",
+  "why": "llama.cpp v1.0.0부터 API와 ABI 변경은 메이저 버전 증가로 명확히 구분된다. 하류 프로젝트에서 이 라이브러리를 의존성으로 사용할 때 버전 호환성을 관리하는 기준이 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware",
+   "language",
+   "release",
+   "science"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "openfilm / openfilm",
+  "url": "https://github.com/openfilm/openfilm",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 334,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/openfilm/openfilm"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 334,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/openfilm/openfilm",
+  "link_status": null,
+  "ko_title": "OpenFilm",
+  "summary": "OpenFilm은 코딩 에이전트가 영상을 만들고, 브라우저 기반 로컬 편집기인 Studio에서 직접 편집할 수 있게 해 주는 오픈소스 AI 비디오 에이전트다. 하나의 HTML 파일과 하나의 함수만으로 웹 기술(three.js, WebGL, canvas 등)을 활용해 애니메이션, 이미지, 사운드 등을 트랙에 결합한다. Node 22.2+와 ffmpeg가 필요하며, npx 명령으로 간편히 설치한다.",
+  "why": "기존 Remotion 같은 프레임워크 없이 단일 함수로 씀. 코딩 에이전트가 HTML로 영상을 생성해 로컬 편집기에서 바로 다듬을 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "remove.bg Is Shutting Down — Here's a Free, No-Upload Alternative",
+  "url": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 32,
+  "comments": 29,
+  "published_at": 1794567950.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffppaetfto55zr1p16o7g.png",
+  "link_status": "ok",
+  "ko_title": "remove.bg 서비스 종료 — 무료 업로드 없는 대안 소개",
+  "summary": "remove.bg가 2026년 12월 1일에 독립 사이트를 종료하고 Canva 프로 기능으로 옮겨갑니다. 기존 무료 제한이 있었던 서비스 대신, 개발자가 만든 APIC Web이라는 브라우저 기반 배경 제거 도구가 전체 해상도 투명 PNG를 무료로 제공하며 사진을 절대 서버에 업로드하지 않습니다.",
+  "why": "remove.bg 종료로 기존 워크플로우의 배경 제거 단계를 대체할 도구가 필요하다. APIC Web은 브라우저에서 로컬로 실행되어 이미지 서버 업로드 없이 전체 해상도 투명 PNG를 생성한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "tradermonty / claude-trading-skills",
+  "url": "https://github.com/tradermonty/claude-trading-skills",
+  "source": "github",
+  "upvotes": 60,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/tradermonty/claude-trading-skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 60,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/tradermonty/claude-trading-skills",
+  "link_status": null,
+  "ko_title": "Claude 트레이딩 스킬",
+  "summary": "Claude 트레이딩 스킬은 AI 기반 Claude Skills를 활용해 시간에 제약이 있는 개인 투자자를 위한 거래 워크플로우 툴킷이다. 장기 투자, ETF, 배당주를 기본으로 하면서 시장 상황이 좋을 때 스윙 트레이딩을 보조 전략으로 사용하도록 설계되었다. 구매·판매 결정을 AI에 맡기는 것이 아니라 시장 검토, 위험 관리, 거래 계획, 저널링, 지속적 개선을 구조화한다. 오픈소스로 제공돼 워크플로우와 체크리스트를 공유하고 개선할 수 있다.",
+  "why": "Claude Skills 기반이라 기존 백엔드 스택과 별개로 워크플로우를 구성할 수 있다. 매수·매도 판단을 AI에 위임하지 않고 프로세스를 구조화하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+  "url": "https://status.claude.com/incidents/nn11wk485zfn",
+  "source": "hackernews",
+  "upvotes": 359,
+  "comments": 312,
+  "published_at": 1794565093,
+  "discussion": "https://news.ycombinator.com/item?id=50481187",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://status.claude.com/incidents/nn11wk485zfn"
+  ],
+  "cross_source_count": 1,
+  "score": 41,
+  "image": "https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png",
+  "link_status": "ok",
+  "ko_title": "claude.ai·Claude Code·platform.claude.com에서 오류 증가",
+  "summary": "claude.ai, Claude Code, platform.claude.com의 장애 상황을 이메일·문자(SMS)로 구독해 실시간 알림을 받을 수 있다. 이메일만 원하면 ‘Subscribe’를 클릭하면 된다.",
+  "why": "Claude Code를 백엔드 워크플로에 쓰고 있다면 장애 시 SMS 알림을 받을 수 있다. 이메일만 원하면 'Subscribe'를 클릭하면 된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Claude Is Down",
+  "url": "https://status.claude.com/history",
+  "source": "hackernews",
+  "upvotes": 172,
+  "comments": 148,
+  "published_at": 1794565209,
+  "discussion": "https://news.ycombinator.com/item?id=50481220",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://status.claude.com/history"
+  ],
+  "cross_source_count": 1,
+  "score": 26,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Claude 서비스 중단",
+  "summary": "",
+  "why": "Claude 서비스 중단으로 API 호출이 실패할 수 있다. 백엔드 시스템에서 재시도 로직이나 장애 대응 절차를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Eli Lilly CEO pushes back on Dario Amodei's ludicrous medical claims",
+  "url": "https://garymarcus.substack.com/p/breaking-eli-lilly-ceo-becomes-latest",
+  "source": "hackernews",
+  "upvotes": 178,
+  "comments": 189,
+  "published_at": 1794577887,
+  "discussion": "https://news.ycombinator.com/item?id=50483480",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://garymarcus.substack.com/p/breaking-eli-lilly-ceo-becomes-latest"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": "https://substackcdn.com/image/fetch/$s_!Diua!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2120233136420270080.jpg",
+  "link_status": "ok",
+  "ko_title": "Eli Lilly CEO, Dario Amodei의 의료 주장에 반박",
+  "summary": "Dario Amodei가 IPO와 함께 제시한 암·정신질환 치료 일정이 비현실적이라는 비판이 이어지고 있다. 전문가와 Eli Lilly CEO가 해당 주장을 부정하며, 임상시험 가속화가 불가능하다고 지적한다. 언론이 이를 충분히 다루지 않아 대중에게 위험이 전달될 우려가 있다.",
+  "why": "AI 기반 의료 치료 일정이 비현실적이라는 전문가 반박이 이어지고 있다. 투자 판단 시 기술적 과장 가능성을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Microsoft Outlook/365 still down after 12 hours",
+  "url": "https://twitter.com/MSFT365Status/status/2121079061774491735",
+  "source": "hackernews",
+  "upvotes": 413,
+  "comments": 287,
+  "published_at": 1794546503,
+  "discussion": "https://news.ycombinator.com/item?id=50478609",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/MSFT365Status/status/2121079061774491735"
+  ],
+  "cross_source_count": 1,
+  "score": 22,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Microsoft Outlook/365, 12시간 지나도 여전히 중단",
+  "summary": "",
+  "why": "Outlook과 365 서비스가 12시간째 중단 상태다. 백엔드 연동 작업이나 API 호출이 불가하므로 관련 배포를 보류해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "backnotprop / plannotator",
+  "url": "https://github.com/backnotprop/plannotator",
+  "source": "github",
+  "upvotes": 100,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/backnotprop/plannotator"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 100,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/backnotprop/plannotator",
+  "link_status": null,
+  "ko_title": "plannotator",
+  "summary": "",
+  "why": "에이전트 작업 결과물을 검토하고 피드백을 전달하는 흐름을 단일 도구로 통합한다. Amp, Claude Code, Codex 등 다양한 에이전트와 연동되어 코드 리뷰와 문서 주석을 처리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
+  "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+  "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+  "source": "hackernews",
+  "upvotes": 245,
+  "comments": 149,
+  "published_at": 1794571824,
+  "discussion": "https://news.ycombinator.com/item?id=50482379",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.science.org/doi/10.1126/science.132.3436.1291"
+  ],
+  "cross_source_count": 1,
+  "score": 0,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "종말: 2026년 11월 13일 금요일 (1960)",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-14T00:00:02.618617+09:00",
+  "batch_label": "11월 14일 00:00"
+ },
+ {
   "title": "I'm making LLMs work on small and old devices",
   "url": "https://github.com/hyperionaidev/smolmaxxing/",
   "source": "hackernews",
