@@ -1,5 +1,487 @@
 [
  {
+  "title": "Can't Beat Free: Gemma 4 31B on AMD Token Lab, with a Local Chat Page and an ADK Agent",
+  "url": "https://dev.to/gde/cant-beat-free-gemma-4-31b-on-amd-token-lab-with-a-local-chat-page-and-an-adk-agent-c5b",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 15,
+  "comments": 3,
+  "published_at": 1794588546.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/cant-beat-free-gemma-4-31b-on-amd-token-lab-with-a-local-chat-page-and-an-adk-agent-c5b"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fgemma4-dev%2Fmain%2Fdocs%2Ftokenlab-free%2Fdevto-cover.aff96a99.jpg",
+  "link_status": "ok",
+  "ko_title": "무료를 이길 수 없다: AMD Token Lab에서 Gemma 4 31B 사용, 로컬 채팅 페이지와 ADK 에이전트",
+  "summary": "이 글은 AMD Token Lab의 무료 API를 이용해 AMD GPU에서 Gemma 4 31B 모델을 호출하고, 로컬 채팅 페이지·터미널 클라이언트·작은 ADK 에이전트를 구축하는 과정을 단계별로 안내한다. Token Lab은 신용카드 없이 30일 무료 이용과 포인트 예산을 제공하며, 현재 10개의 무료 모델을 지원한다. 사용 예시에서는 23개의 요청이 10포인트 중 0.000335포인트만 소모되었다.",
+  "why": "Token Lab API는 OpenAI 호환 인터페이스를 제공하므로 기존 SDK나 LangChain 코드를 수정 없이 바로 적용할 수 있다. 30일 무료 기간 동안 신용카드 없이 10포인트 예산을 제공해 초기 프로토타입 검증 비용을 절감할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+  "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+  "source": "hackernews",
+  "upvotes": 285,
+  "comments": 83,
+  "published_at": 1794591010,
+  "discussion": "https://news.ycombinator.com/item?id=50486748",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://i.guim.co.uk/img/media/6eeccf216579fe2181ae737d30f31abd7590125c/210_58_1759_1407/master/1759.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=334efc63d7472a97d72be0ffd23af8bb",
+  "link_status": "ok",
+  "ko_title": "AI가 Gödel의 노트북을 해독, 수백 개 정리된 정리 정리",
+  "summary": "핀란드 논리학자 Jan von Plato가 AI 모델 Claude를 활용해 Gödel이 1940년대 초에 쓴 1,009페이지 분량의 노트북을 며칠 만에 요약했다. AI는 Gödel이 아직 알려지지 않은 수백 개의 정리를 증명했음을 밝혀냈다. 이 정리들은 1970·80년대에야 알려진 결과와 14개의 미탐구 논리 주제를 포함한다.",
+  "why": "수학·논리 연구에서 AI가 방대한 비정형 문서의 핵심을 빠르게 추출하는 사례다. 기존에는 한 주에 한 페이지씩 진행하던 해독이 며칠 만에 전체 요약으로 단축됐다. 대규모 텍스트 분석 작업에 AI를 적용할 때 기대할 수 있는 처리 속도를 가늠할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Introducing ChatGPT Wallet",
+  "url": "https://openai.com/index/introducing-chatgpt-wallet",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794582000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-chatgpt-wallet"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/2xTvIZkcQhKk3VNFioQ4CR/4efb84a6adbddb41311f6b18158fad8b/introducing-chatgpt-wallet-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "ChatGPT 월렛 소개",
+  "summary": "ChatGPT 월렛은 에이전트가 사용자의 카드 정보를 직접 알지 못하게 하면서 결제 시마다 보안 검증을 요구하는 새로운 결제 방식이다. 미국 내 ChatGPT Pro 구독자에게 우선 제공되며, American Express·Mastercard·Visa와 협업해 기존 카드 혜택과 분쟁 보호를 유지한다. 웹사이트는 에이전트 결제를 허용하도록 결제·리스크 시스템을 업데이트해야 한다.",
+  "why": "에이전트 결제 시 카드 정보가 노출되지 않고 매 결제마다 생체 인증을 요구한다. 기존 카드 혜택과 분쟁 보호가 유지되어 별도 대응이 필요 없다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "One Month After the Hackathon: Why My 4-Service App Stopped Working (and What @mansio Caught in the Verifiers)",
+  "url": "https://dev.to/earlgreyhot1701d/one-month-after-the-hackathon-why-my-4-service-app-stopped-working-and-what-mansio-caught-in-the-3i8h",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 21,
+  "comments": 8,
+  "published_at": 1794592105.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/one-month-after-the-hackathon-why-my-4-service-app-stopped-working-and-what-mansio-caught-in-the-3i8h"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fo095420vidmninm8id0y.png",
+  "link_status": "ok",
+  "ko_title": "해커톤 한 달 뒤 4-서비스 앱이 멈춘 이유와 검증기에서 @mansio가 발견한 문제",
+  "summary": "한 달 전 배포한 README Clew 2가 모든 스캔에서 실패했다. 원인은 30일짜리 GitHub 토큰 만료, Vercel에 제한된 Claude Haiku 키 회전, 그리고 README에 포함된 “ava” 문자열을 놓친 서브스트링 버그였다. 이 세 문제는 각각 PR #2와 설정 수정으로 해결되었다.",
+  "why": "외부 API 토큰과 키의 만료 주기를 무시하면 배포 후 한 달 만에 서비스가 멈출 수 있다. 문자열 매칭 시 부분 문자열 오인을 방지하는 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "devops-infra"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "edgerunners-2 / capri-ai-desktop",
+  "url": "https://github.com/edgerunners-2/capri-ai-desktop",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 767,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/edgerunners-2/capri-ai-desktop"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 767,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/edgerunners-2/capri-ai-desktop",
+  "link_status": null,
+  "ko_title": "edgerunners-2 / capri-ai-desktop — 사이버펑크 AI 에이전트",
+  "summary": "Capri는 Claude Code, Codex, Antigravity 등 다양한 AI 어시스턴트를 하나의 데스크톱 애플리케이션에 통합한 사이버펑크 스타일의 AI 에이전트이다. 텍스트와 음성 입력을 지원하며 80개 언어로 응답하고, 사용자가 선택한 음성 모델로 음성 출력이 가능하다. 현재 Windows 전용으로 배포되고 있다.",
+  "why": "Windows 환경에서만 사용할 수 있어 다른 운영체제 사용자는 접근이 제한된다. 여러 AI 어시스턴트를 단일 데스크톱 앱에서 전환하는 방식이 기존 개별 도구 사용과 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "open-source"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+  "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794592839.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6abfe9e7d7cf09a9b38ef308/HFZWtQ2i9VN_agjeUw2HB.gif",
+  "link_status": "ok",
+  "ko_title": "SimReady 에셋으로 로봇 픽앤플레이스 시뮬레이션 만들기",
+  "summary": "이 가이드는 UR17G 팔과 Robotiq 2F-140 그리퍼, 음료 캔을 이용해 Isaac Sim에서 픽앤플레이스 작업을 설정하고 실행하는 방법을 보여준다. SimReady 에셋은 충돌, 질량, 조인트 등 시뮬레이션에 필요한 속성을 미리 정의한 OpenUSD 형식이며, Hugging Face의 SimReady Central에서 재사용 가능하다. 에셋에는 모델과 시뮬레이션 설정이 포함돼 있어 사용자는 장면 구성과 작업 코드를 추가하기만 하면 된다.",
+  "why": "SimReady 에셋은 충돌과 질량 등 시뮬레이션 속성이 미리 정의된 OpenUSD 파일이다. Hugging Face의 SimReady Central에서 재사용할 수 있어 장면 구성과 작업 코드만 추가하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "We tested 37,000 MCP servers. Here's how many actually work",
+  "url": "https://dev.to/nestdaddy/we-tested-37000-mcp-servers-heres-how-many-actually-work-1pne",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 3,
+  "comments": 3,
+  "published_at": 1794585557.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/nestdaddy/we-tested-37000-mcp-servers-heres-how-many-actually-work-1pne"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fnestdaddy.com%2Fstatic%2Fog%2Fblog%2Fwe-tested-37000-mcp-servers.png",
+  "link_status": "ok",
+  "ko_title": "37,000개의 MCP 서버를 테스트했습니다. 실제로 작동하는 서버는 얼마나 될까",
+  "summary": "MCP 레지스트리의 62,000개 이상 서버를 매일 자동으로 연결해 상태를 확인한 결과, 원격 서버의 89.6%가 응답했으며 약 1/3은 인증 키 없이 정보를 제공하지 않는다. 응답하지 않은 서버는 주로 잘못된 경로나 404/405 오류 때문이었다. 인증이 필요한 서버는 도구 목록을 공개하지 않아 디렉터리와 에이전트가 활용하기 어렵다.",
+  "why": "MCP 서버를 직접 구축할 때는 초기화 단계에서 인증을 요구하지 말고 도구 목록만 공개하는 방식이 유리하다. 이렇게 해야 에이전트가 실제 호출 전에 서버의 기능을 파악하고 선택할 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+  "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+  "source": "hackernews",
+  "upvotes": 242,
+  "comments": 130,
+  "published_at": 1794595244,
+  "discussion": "https://news.ycombinator.com/item?id=50487864",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://www.freightwaves.com/wp-content/uploads/2026/11/09/NVIDIA-Endeavor-1200x628-1.jpg",
+  "link_status": "ok",
+  "ko_title": "NVIDIA 하드웨어 1천140만 달러 규모 물류 분실",
+  "summary": "캘리포니아 오클랜드에서 텍사스 포트워스로 운송 중인 NVIDIA 하드웨어 6개 팔레트가 약 1천140만 달러 가치로 사라졌다. 오클랜드 경찰은 2026년 9월 13일 제보를 받고 대규모 절도 사건을 수사 중이다. 동일 지역에서 1천200만 달러 규모의 다른 화물 절도 사건도 진행 중이지만 연관성은 확인되지 않았다.",
+  "why": "데이터센터 구축에 필요한 GPU 물량 확보가 지연될 수 있다. 대규모 AI 인프라 투자가 진행 중인 기업은 공급망 리스크를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Scope WebMCP Tools to the Open React Workflow",
+  "url": "https://dev.to/gde/scope-webmcp-tools-to-the-open-react-workflow-262o",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 18,
+  "comments": 2,
+  "published_at": 1794590120.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/scope-webmcp-tools-to-the-open-react-workflow-262o"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8ukmm68nr5ws1x9u0s8c.jpg",
+  "link_status": "ok",
+  "ko_title": "Scope WebMCP 도구를 Open React 워크플로에 적용",
+  "summary": "이벤트 목록에서는 웹MCP 도구가 발견되지 않았지만, 이벤트 초안에서는 네 개, 여행 초안에서는 다섯 개가 표시된다. 페이지 스코프 도구는 현재 컨텍스트를 명확히 하며, 도구 등록은 초안 ID와 상태가 확보된 후에 이루어진다. Chrome 153부터는 신호 기반 abort가 도구를 제거하지만 실행 중인 작업은 취소하지 않는다.",
+  "why": "Chrome 153에서 등록 신호를 중단해도 실행 중인 작업은 취소되지 않는다. 라우트 정리와 실행 안전성을 별개로 처리해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "XYBench: Helping with the problem behind the question",
+  "url": "https://huggingface.co/blog/allenai/xybench",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794589355.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/allenai/xybench"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/aOWdQgZ8ioJcx9Eii4iob.png",
+  "link_status": "ok",
+  "ko_title": "XYBench: 질문 뒤에 있는 문제 해결 돕기",
+  "summary": "XYBench는 8천 개 이상의 실제 질문을 모아 AI 어시스턴트가 사용자의 잘못된 전제에 기반한 요청을 인식하고 올바른 목표로 유도하는 능력을 평가한다. 이 벤치마크는 EMNLP 2026에서 최우수 자료 논문상을 받았다. 평가된 모델들은 인간 답변과 달리 잘못된 접근을 바로잡는 비율이 낮았다.",
+  "why": "AI 어시스턴트가 잘못된 전제에 기반한 요청을 바로잡지 못하고 원본 접근법에 집착하는 경향이 확인됐다. 사용자 의도와 실제 문제의 불일치를 감지하는 로직을 직접 구현하거나 검증할 때 이 벤치마크를 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
+  "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 59,
+  "comments": 27,
+  "published_at": 1794585386.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok"
+  ],
+  "cross_source_count": 1,
+  "score": 34,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fg9n66rugp217ye18xdzh.png",
+  "link_status": "ok",
+  "ko_title": "Hacktoberfest 오픈소스 AI 챌린지 4주차: Ghost in the Machine 수상자 발표",
+  "summary": "4주차 챌린지에서 ‘Ghost in the Machine’ 주제로 제출된 작품 중 베스트 렌더, TabPFN, Tinker, Arduino 등 다양한 카테고리 수상자를 발표했다. 전체 우승자에게는 $250와 DEV++ 멤버십, 파트너 카테고리 수상자에게는 각각 $100~$200와 전용 배지가 제공된다. 모든 유효 제출자는 완료 배지를 받는다. 다음 챌린지인 Presage SmartSpectra SDK가 진행 중이다.",
+  "why": "다음 챌린지인 Presage SmartSpectra SDK가 이미 진행 중이다. 참여를 원하면 지금 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Building always-on agents",
+  "url": "https://claude.com/resources/articles/building-always-on-agents",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794528000.0,
+  "origin_url": "https://claude.com/blog/building-always-on-agents",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/building-always-on-agents",
+   "https://claude.com/resources/articles/building-always-on-agents"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://claude.com/ko/resources/articles/building-always-on-agents/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "항상 켜져 있는 에이전트 구축",
+  "summary": "",
+  "why": "장기 코딩 벤치마크에서 Opus 5.5가 Opus 5보다 과제당 비용이 78% 낮다. 장기 작업 비중이 높은 백엔드 파이프라인에서는 모델 전환 시 비용 절감 효과가 크다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "Why is Google cutting off Search from AI-free schools? Here are some theories",
+  "url": "https://text.npr.org/nx-s1-6029408",
+  "source": "hackernews",
+  "upvotes": 156,
+  "comments": 160,
+  "published_at": 1794583750,
+  "discussion": "https://news.ycombinator.com/item?id=50484960",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://text.npr.org/nx-s1-6029408"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "왜 구글이 AI가 없는 학교에서 검색을 차단하고 있나요? 몇 가지 이론",
+  "summary": "",
+  "why": "기사가 제목만 있고 본문이 없어 구체적인 기술적 변화나 조치 사항이 확인되지 않는다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "LibreOffice actually works 365 days a year",
+  "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
+  "source": "hackernews",
+  "upvotes": 774,
+  "comments": 245,
+  "published_at": 1794589798,
+  "discussion": "https://news.ycombinator.com/item?id=50486482",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/LibreOffice/status/2121205272479998268"
+  ],
+  "cross_source_count": 1,
+  "score": 15,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "LibreOffice 실제로 연중 365일 작동한다",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
+  "title": "FAA Issues National Ground Stop",
+  "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&advn=111",
+  "source": "hackernews",
+  "upvotes": 864,
+  "comments": 501,
+  "published_at": 1794603953,
+  "discussion": "https://news.ycombinator.com/item?id=50489641",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&advn=111"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "FAA, 전국 지상 정지 발표",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-14T08:00:06.200313+09:00",
+  "batch_label": "11월 14일 08:00"
+ },
+ {
   "title": "Git 2.56's history drop command replays commits 40 to 77 times faster than rebase",
   "url": "https://dev.to/alexgeorgiev17/git-256s-history-drop-command-replays-commits-40-to-77-times-faster-than-rebase-45jm",
   "source": "devto",
