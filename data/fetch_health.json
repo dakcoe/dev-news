@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-05T00:00:29+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 9,
-    "short": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=50363461",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-11-05T08:00:33+09:00",
    "total": 18,
    "counts": {
@@ -528,6 +512,22 @@
      "url": "https://openai.com/business/customer-stories/shield",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-15T00:00:26+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 9,
+    "robots": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
+     "source": "hackernews",
+     "reason": "robots"
     }
    ]
   }
