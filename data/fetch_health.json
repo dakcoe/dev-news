@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-04T16:00:28+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 9,
-    "short": 2,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://news.ycombinator.com/item?id=50352757",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://mrdoob.github.io/codevember-2026/01/",
-     "source": "hackernews",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-05T00:00:29+09:00",
    "total": 15,
    "counts": {
@@ -539,6 +512,22 @@
      "url": "https://text.npr.org/nx-s1-6029408",
      "source": "hackernews",
      "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-14T16:00:43+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 12,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/business/customer-stories/shield",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }

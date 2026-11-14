@@ -1,5 +1,199 @@
 [
  {
+  "t": "deepseek-ai / chat-demo — DeepSeek API 기반 정적 채팅 데모",
+  "u": "https://github.com/deepseek-ai/chat-demo",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-14",
+  "o": "deepseek-ai / chat-demo",
+  "x": "DeepSeek API를 이용한 정적 채팅 데모가 공개되었습니다. 브라우저가 직접 API에 연결하므로 별도의 백엔드가 필요 없으며, 온라인으로 "
+ },
+ {
+  "t": "셀을 차지하지 않는 터미널 테두리",
+  "u": "https://www.joshka.net/cell-borders/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "dev-tools"
+  ],
+  "d": "2026-11-14",
+  "o": "Terminal borders that don't cost a cell",
+  "x": "셀 가장자리에 얇은 선을 그리는 새로운 터미널 프로토콜을 개발해 Ghostty와 Rio에 패치 형태로 적용했다. Ratatui 데모 앱을 통해 "
+ },
+ {
+  "t": "게시하는 TypeScript 라이브러리 보호: 타입 정의 제공, 구현 숨기기",
+  "u": "https://dev.to/veilvm/protecting-a-typescript-library-you-publish-ship-typings-hide-the-implementation-1mhi",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools",
+   "web",
+   "language"
+  ],
+  "d": "2026-11-14",
+  "o": "Protecting a TypeScript library you publish: ship typings, hide the implementation",
+  "x": "TypeScript 라이브러리를 배포할 때 .d.ts 파일을 공개하고 런타임 JavaScript는 최소한으로 노출하도록 패키지 구성을 제시한다."
+ },
+ {
+  "t": "agentscrub: 로컬 우선 Rust CLI로 AI 에이전트 전사에서 비밀과 개인정보를 삭제",
+  "u": "https://dev.to/jarvisosorio/agentscrub-a-local-first-rust-cli-that-redacts-secrets-and-pii-from-ai-agent-transcripts-4b5f",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-14",
+  "o": "agentscrub: a local-first Rust CLI that redacts secrets and PII from AI agent transcripts",
+  "x": "agentscrub은 로컬에서 동작하는 Rust 기반 CLI 도구로 AI 에이전트 세션 전사 파일에서 API 키, 클라우드 자격 증명, 이메일 "
+ },
+ {
+  "t": "Nvidia 이사, Jensen Huang 사태 직전 10억 달러 규모 주식 매각",
+  "u": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+  "x": "Nvidia 이사회 이사인 Mark Stevens가 2026년 3분기에 약 4.2백만 주를 매각해 총 9억4600만 달러를 현금화했다. 매각은 "
+ },
+ {
+  "t": "datasette-cluster-map 0.19 — 위도·경도 컬럼이 있는 데이터를 지도에 표시하는 Datasette 플러그인",
+  "u": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-14",
+  "o": "datasette-cluster-map 0.19",
+  "x": "이번 0.19 릴리스는 Datasette 1.0a42와 호환되며, 새로운 datasette-leaflet에 의존해 OpenStreetMap 타일"
+ },
+ {
+  "t": "Gemini Decisions API 벤치마크",
+  "u": "https://dev.to/gde/benchmarking-the-gemini-decisions-api-l31",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "backend-data",
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "Benchmarking the Gemini Decisions API",
+  "x": "이 글은 고객지원 티켓 분류 예시를 통해 Gemini Decisions API 사용 방법을 단계별로 안내한다. 동일한 질문을 Gemini 3.8"
+ },
+ {
+  "t": "하나의 엔진, 일곱 개 오픈소스 프로젝트: PageSift 1.4와 yolow 패밀리",
+  "u": "https://dev.to/yolow92/one-engine-seven-open-source-projects-pagesift-14-and-the-yolow-family-o19",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "research",
+   "open-source"
+  ],
+  "d": "2026-11-14",
+  "o": "One Engine, Seven Open-Source Projects: PageSift 1.4 and the yolow Family",
+  "x": "PageSift 1.4에서는 엔진을 구성하던 기능들을 독립적인 7개의 오픈소스 저장소로 분리하고, Apache-2.0 라이선스로 전환했다. 새로"
+ },
+ {
+  "t": "Windows에서 안드로이드 앱 실행기 — 안드로이드 앱을 Windows 네이티브 소프트웨어처럼 설치·사용",
+  "u": "https://github.com/RoutineMiku/apkstart",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-11-14",
+  "o": "RoutineMiku / apkstart",
+  "x": "ApkStart는 Windows 10/11에서 .apk 파일을 더블클릭하면 자동으로 설치하고 바탕화면 아이콘을 생성해 바로 실행할 수 있게 해준"
+ },
+ {
+  "t": "REDACTED는 삭제된 것이 아니다",
+  "u": "https://dev.to/alphanumericentity/redacted-doesnt-mean-deleted-3bk6",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools"
+  ],
+  "d": "2026-11-14",
+  "o": "[REDACTED] doesn't mean deleted",
+  "x": "PDF 파일은 편집 시 전체를 다시 쓰지 않고 변경 부분만 파일 끝에 추가한다. 이때 이전 내용이 파일 앞부분에 남아 있어, 파일을 앞부분만 잘"
+ },
+ {
+  "t": "엔비디아, AI 스타트업에 투자해 GPU 부족 상황을 만든 혐의",
+  "u": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-14",
+  "o": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
+  "x": "WSJ 보도에 따르면 엔비디아가 AI 스타트업에 자금을 지원해 자사 GPU와 메모리를 구매하도록 유도해 공급 과잉을 해소하려 했다고 한다. 회의"
+ },
+ {
+  "t": "datasette-leaflet 0.3",
+  "u": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-14",
+  "x": "datasette-leaflet 플러그인이 OpenStreetMap 타일 요청에 Referrer-Policy를 strict-origin-when"
+ },
+ {
+  "t": "전국 FAA 운항 중단 속 Amtrak 예약 시스템 큰 문제 발생",
+  "u": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-14",
+  "o": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+  "x": "Amtrak 예약 시스템이 전국 FAA 운항 중단과 동시에 네트워크 장애를 겪었으며, 급증한 수요가 원인으로 지목됐다. 시스템은 오후 9시경 정"
+ },
+ {
+  "t": "Shield, OpenAI로 레거시 포털 작업을 기술자에게 전달 지원",
+  "u": "https://openai.com/business/customer-stories/shield",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent"
+  ],
+  "d": "2026-11-14",
+  "o": "Shield helps technicians hand off legacy portal work with OpenAI",
+  "x": "Shield는 OpenAI 기반의 Forge 에이전트를 활용해 레거시 포털을 자동으로 탐색한다. 이를 통해 IT 기술자는 시스템 탐색에 드는 시"
+ },
+ {
   "t": "무료를 이길 수 없다: AMD Token Lab에서 Gemma 4 31B 사용, 로컬 채팅 페이지와 ADK 에이전트",
   "u": "https://dev.to/gde/cant-beat-free-gemma-4-31b-on-amd-token-lab-with-a-local-chat-page-and-an-adk-agent-c5b",
   "m": "2026-11",

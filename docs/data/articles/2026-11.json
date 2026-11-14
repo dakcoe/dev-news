@@ -1,5 +1,457 @@
 [
  {
+  "title": "deepseek-ai / chat-demo",
+  "url": "https://github.com/deepseek-ai/chat-demo",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 464,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/deepseek-ai/chat-demo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 464,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/deepseek-ai/chat-demo",
+  "link_status": null,
+  "ko_title": "deepseek-ai / chat-demo — DeepSeek API 기반 정적 채팅 데모",
+  "summary": "DeepSeek API를 이용한 정적 채팅 데모가 공개되었습니다. 브라우저가 직접 API에 연결하므로 별도의 백엔드가 필요 없으며, 온라인으로 체험하거나 저장소를 내려받아 로컬에서 `index.html`만으로 실행할 수 있습니다. Node.js와 pnpm을 이용해 개발 서버를 띄우거나 정적 파일을 빌드해 배포할 수 있으며, 다중 대화, 스트리밍 응답, 음성 입력 등 다양한 기능을 제공합니다.",
+  "why": "브라우저가 API에 직접 연결되므로 별도 백엔드 서버를 구축할 필요가 없다. 로컬에서 index.html 하나만 열면 바로 테스트할 수 있어 프롬프트 검증에 유용하다. file:// 환경에서 실행하려면 브라우저 저장소 지원과 API 측 CORS 허용이 전제 조건이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Terminal borders that don't cost a cell",
+  "url": "https://www.joshka.net/cell-borders/",
+  "source": "hackernews",
+  "upvotes": 188,
+  "comments": 84,
+  "published_at": 1794611200,
+  "discussion": "https://news.ycombinator.com/item?id=50491423",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.joshka.net/cell-borders/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://www.joshka.net/cell-borders/og.png",
+  "link_status": "ok",
+  "ko_title": "셀을 차지하지 않는 터미널 테두리",
+  "summary": "셀 가장자리에 얇은 선을 그리는 새로운 터미널 프로토콜을 개발해 Ghostty와 Rio에 패치 형태로 적용했다. Ratatui 데모 앱을 통해 테두리가 행·열을 차지하지 않음이 확인되었다. 기존 유니코드 박스 그리기 문자보다 공간 효율적인 UI 구성이 가능하다.",
+  "why": "Ratatui 기반 TUI 개발 시 테두리가 행과 열을 차지하지 않아 패널 내부 표시 영역이 넓어진다. 기존 유니코드 박스 그리기 문자를 쓰던 방식과 달리 공간 효율이 달라진다. Ghostty와 Rio 터미널에서만 지원되므로 다른 터미널에서는 기존 방식으로 폴백된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Protecting a TypeScript library you publish: ship typings, hide the implementation",
+  "url": "https://dev.to/veilvm/protecting-a-typescript-library-you-publish-ship-typings-hide-the-implementation-1mhi",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1794619286.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/veilvm/protecting-a-typescript-library-you-publish-ship-typings-hide-the-implementation-1mhi"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqyt8wgvazp4myaox1obm.png",
+  "link_status": "ok",
+  "ko_title": "게시하는 TypeScript 라이브러리 보호: 타입 정의 제공, 구현 숨기기",
+  "summary": "TypeScript 라이브러리를 배포할 때 .d.ts 파일을 공개하고 런타임 JavaScript는 최소한으로 노출하도록 패키지 구성을 제시한다. package.json에 types, main/module, exports, files 항목을 명시해 소스 코드와 맵 파일이 실수로 포함되지 않게 한다. npm pack --dry-run 등으로 최종 아카이브를 확인하는 절차도 소개한다.",
+  "why": "files 항목을 명시하지 않으면 src/ 폴더나 소스 맵 파일이 실수로 배포될 수 있다. npm pack --dry-run으로 최종 아카이브를 확인해 구현 코드가 노출되지 않는지 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "agentscrub: a local-first Rust CLI that redacts secrets and PII from AI agent transcripts",
+  "url": "https://dev.to/jarvisosorio/agentscrub-a-local-first-rust-cli-that-redacts-secrets-and-pii-from-ai-agent-transcripts-4b5f",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1794618510.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jarvisosorio/agentscrub-a-local-first-rust-cli-that-redacts-secrets-and-pii-from-ai-agent-transcripts-4b5f"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftcn7rm6ib8s28wh20z48.png",
+  "link_status": "ok",
+  "ko_title": "agentscrub: 로컬 우선 Rust CLI로 AI 에이전트 전사에서 비밀과 개인정보를 삭제",
+  "summary": "agentscrub은 로컬에서 동작하는 Rust 기반 CLI 도구로 AI 에이전트 세션 전사 파일에서 API 키, 클라우드 자격 증명, 이메일 주소 등 비밀과 개인정보를 탐지하고 마스킹한다. 현재 v0.1.0에서는 discover, scan, report, scrub, verify, retention, config 명령을 제공하며, 쓰기 작업은 배타적 잠금과 원자적 교체로 안전하게 처리한다. 설치는 소스 클론 후 cargo install 로 진행한다.",
+  "why": "에이전트 전사 파일에 평문으로 남은 자격 증명은 이 도구로 로컬에서 마스킹할 수 있다. 스캔 결과로 발견된 키는 반드시 제공자 측에서 직접 교체해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
+  "source": "hackernews",
+  "upvotes": 178,
+  "comments": 34,
+  "published_at": 1794622896,
+  "discussion": "https://news.ycombinator.com/item?id=50492993",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://s.yimg.com/lo/mysterio/api/ea33872456927e6c60fd6ae873cc248800ea9558f19ac095dc5ea2367757e23b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fmoneywise_327%2F03f97ac29476948d659ef4eba662dfa9.jpg",
+  "link_status": "ok",
+  "ko_title": "Nvidia 이사, Jensen Huang 사태 직전 10억 달러 규모 주식 매각",
+  "summary": "Nvidia 이사회 이사인 Mark Stevens가 2026년 3분기에 약 4.2백만 주를 매각해 총 9억4600만 달러를 현금화했다. 매각은 8월 말부터 9월 중순까지 세 차례에 걸쳐 이루어졌으며, 사전 거래 계획(Prearranged Trading Plan)이 적용되지 않은 것으로 확인됐다.",
+  "why": "Nvidia 주식을 보유한 독자는 사전 거래 계획이 없던 대규모 매각이 주가에 미칠 영향을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "datasette-cluster-map 0.19",
+  "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794610965.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-cluster-map 0.19 — 위도·경도 컬럼이 있는 데이터를 지도에 표시하는 Datasette 플러그인",
+  "summary": "이번 0.19 릴리스는 Datasette 1.0a42와 호환되며, 새로운 datasette-leaflet에 의존해 OpenStreetMap 타일을 referrer 헤더와 함께 요청한다. 플러그인을 이용해 캘리포니아 PG&E 전력 시설을 지도에 시각화한 예시가 제공된다.",
+  "why": "Datasette 1.0a42를 쓰는 환경이라면 이 플러그인 업데이트가 필수다. OpenStreetMap 타일 요청에 referrer 헤더가 자동으로 포함되도록 바뀌었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Benchmarking the Gemini Decisions API",
+  "url": "https://dev.to/gde/benchmarking-the-gemini-decisions-api-l31",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 3,
+  "published_at": 1794613504.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/benchmarking-the-gemini-decisions-api-l31"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fdecisions-api%2Fmain%2Fdocs%2Farticle%2Fdevto-cover.df71ccfa.jpg",
+  "link_status": "ok",
+  "ko_title": "Gemini Decisions API 벤치마크",
+  "summary": "이 글은 고객지원 티켓 분류 예시를 통해 Gemini Decisions API 사용 방법을 단계별로 안내한다. 동일한 질문을 Gemini 3.8 Flash, Gemini 4 Hydrogen, Gemini 3.5 Flash-Lite, Gemma 4 E2B와 비교해 정확도·속도·비용을 측정한다. API는 최대 1,000개의 고정 답변 질문에 대해 입력 토큰당 $0.10만 청구한다.",
+  "why": "고정된 답변 집합으로 분류하는 백엔드 로직에 적용할 수 있다. 출력 생성 비용이 없어 입력 토큰 단가만 부담한다. 생성형 모델 대비 속도와 비용 비교 데이터가 제공된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "One Engine, Seven Open-Source Projects: PageSift 1.4 and the yolow Family",
+  "url": "https://dev.to/yolow92/one-engine-seven-open-source-projects-pagesift-14-and-the-yolow-family-o19",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1794620274.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yolow92/one-engine-seven-open-source-projects-pagesift-14-and-the-yolow-family-o19"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftdtbqn0mq9m9v21iubgw.png",
+  "link_status": "ok",
+  "ko_title": "하나의 엔진, 일곱 개 오픈소스 프로젝트: PageSift 1.4와 yolow 패밀리",
+  "summary": "PageSift 1.4에서는 엔진을 구성하던 기능들을 독립적인 7개의 오픈소스 저장소로 분리하고, Apache-2.0 라이선스로 전환했다. 새로 추가된 pagesift-graph 크레이트는 각 페이지와 문서의 추출 과정을 그래프 형태로 기록해 버전 이력과 근거를 보존한다. 기존 페이지 스크래핑이 텍스트만 반환하던 것을 넘어, 데이터 품질 충돌을 감지하고 증거를 제공한다.",
+  "why": "PageSift 1.4는 기존 텍스트 반환 방식과 달리 데이터 품질 충돌을 감지하고 근거를 제공한다. 추출된 필드에 원문 바이트 오프셋이 기록되어 특정 주장의 출처를 정확히 추적할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "open-source"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "RoutineMiku / apkstart",
+  "url": "https://github.com/RoutineMiku/apkstart",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 946,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/RoutineMiku/apkstart"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 946,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/RoutineMiku/apkstart",
+  "link_status": null,
+  "ko_title": "Windows에서 안드로이드 앱 실행기 — 안드로이드 앱을 Windows 네이티브 소프트웨어처럼 설치·사용",
+  "summary": "ApkStart는 Windows 10/11에서 .apk 파일을 더블클릭하면 자동으로 설치하고 바탕화면 아이콘을 생성해 바로 실행할 수 있게 해준다. 각 앱마다 독립적인 창으로 표시되며, 시작 메뉴와 작업 표시줄에서도 검색·실행이 가능하다. APK 내부 파일은 `%USERPROFILE%\\ApkStartShared`와 Android `/sdcard/ApkStartShared` 사이에 실시간으로 양방향 동기화된다. 프로그램 자체는 ZIP·PNG·ICO·AXML 파서를 직접 구현해 제3자 의존성을 전혀 갖지 않는다.",
+  "why": "Windows에서 안드로이드 앱을 별도 에뮬레이터 설정 없이 더블클릭만으로 실행할 수 있다. APK 내부 파일이 로컬 디렉터리와 실시간 양방향 동기화되어 데이터 접근이 편해진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "[REDACTED] doesn't mean deleted",
+  "url": "https://dev.to/alphanumericentity/redacted-doesnt-mean-deleted-3bk6",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 0,
+  "comments": 3,
+  "published_at": 1794625802.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alphanumericentity/redacted-doesnt-mean-deleted-3bk6"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpa9ef4jvqhaavxw195c6.png",
+  "link_status": "ok",
+  "ko_title": "REDACTED는 삭제된 것이 아니다",
+  "summary": "PDF 파일은 편집 시 전체를 다시 쓰지 않고 변경 부분만 파일 끝에 추가한다. 이때 이전 내용이 파일 앞부분에 남아 있어, 파일을 앞부분만 잘라내면 원본 데이터를 복구할 수 있다. 기존 검색 도구와 디버거는 현재 내용만 보여줘 복구된 정보를 찾지 못한다.",
+  "why": "PDF 편집 시 원본 데이터가 파일 앞부분에 남아 있어 단순 검색이나 디버거로는 복구 여부를 확인하지 못한다. 개인정보를 숨긴 PDF를 배포할 때는 파일 앞부분을 잘라내는 방식으로 실제 삭제를 검증해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
+  "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+  "source": "hackernews",
+  "upvotes": 352,
+  "comments": 181,
+  "published_at": 1794624779,
+  "discussion": "https://news.ycombinator.com/item?id=50493251",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://www.techpowerup.com/img/ooCln2q3jkKNGHen.jpg",
+  "link_status": "ok",
+  "ko_title": "엔비디아, AI 스타트업에 투자해 GPU 부족 상황을 만든 혐의",
+  "summary": "WSJ 보도에 따르면 엔비디아가 AI 스타트업에 자금을 지원해 자사 GPU와 메모리를 구매하도록 유도해 공급 과잉을 해소하려 했다고 한다. 회의에서 CFO 코렛 크레스는 순환 금융 계약 축소를 요구했으며, 엔비디아는 TSMC에서 대량 공급받은 GPU의 즉각적인 구매자를 확보하려는 전략을 취했다. 해당 스타트업들은 GPU 구매 여력이 부족해 재정적 위험이 존재한다.",
+  "why": "엔비디아의 투자 구조가 GPU 공급 부족의 원인이었다면, 현재 확보한 하드웨어의 장기적 가치와 대체재 도입 시점이 달라진다. 순환 금융 계약 축소 움직임은 향후 GPU 구매 비용과 공급 안정성에 직접적인 영향을 미친다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "datasette-leaflet 0.3",
+  "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794609054.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/13/datasette-leaflet/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-leaflet 0.3",
+  "summary": "datasette-leaflet 플러그인이 OpenStreetMap 타일 요청에 Referrer-Policy를 strict-origin-when-cross-origin으로 설정하도록 업데이트되었습니다. 기존에 사용하던 no-referrer 헤더 때문에 OSM 정책을 위반하던 문제가 해결되었습니다.",
+  "why": "OSM 타일 요청에 Referrer-Policy가 strict-origin-when-cross-origin으로 바뀌었다. 기존 no-referrer 헤더로 인한 정책 위반 문제가 해결되어 별도 조치가 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+  "url": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
+  "source": "hackernews",
+  "upvotes": 156,
+  "comments": 47,
+  "published_at": 1794617549,
+  "discussion": "https://news.ycombinator.com/item?id=50492315",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://images.foxtv.com/static.fox5dc.com/www.fox5dc.com/content/uploads/2026/11/1200/630/gettyimages-2296656867.jpg?ve=1&tl=1",
+  "link_status": "ok",
+  "ko_title": "전국 FAA 운항 중단 속 Amtrak 예약 시스템 큰 문제 발생",
+  "summary": "Amtrak 예약 시스템이 전국 FAA 운항 중단과 동시에 네트워크 장애를 겪었으며, 급증한 수요가 원인으로 지목됐다. 시스템은 오후 9시경 정상으로 복구됐지만 결제·예약·수정 과정에서 일부 이용자는 여전히 문제를 겪을 수 있다.",
+  "why": "Amtrak 예약 시스템 장애가 FAA 운항 중단과 겹치며 수요 폭주로 발생했다. 결제나 예약 수정 시 여전히 오류가 나올 수 있으니 즉시 재시도하지 말고 대기해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
+  "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+  "url": "https://openai.com/business/customer-stories/shield",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794556800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/shield"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Shield, OpenAI로 레거시 포털 작업을 기술자에게 전달 지원",
+  "summary": "Shield는 OpenAI 기반의 Forge 에이전트를 활용해 레거시 포털을 자동으로 탐색한다. 이를 통해 IT 기술자는 시스템 탐색에 드는 시간을 절감하고, 판단이 필요한 문제 해결에 집중할 수 있다.",
+  "why": "레거시 포털 작업 시 시스템 탐색 시간을 줄여 판단이 필요한 문제 해결에 집중할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-14T16:00:03.550337+09:00",
+  "batch_label": "11월 14일 16:00"
+ },
+ {
   "title": "Can't Beat Free: Gemma 4 31B on AMD Token Lab, with a Local Chat Page and an ADK Agent",
   "url": "https://dev.to/gde/cant-beat-free-gemma-4-31b-on-amd-token-lab-with-a-local-chat-page-and-an-adk-agent-c5b",
   "source": "devto",
