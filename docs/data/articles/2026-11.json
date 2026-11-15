@@ -1,5 +1,354 @@
 [
  {
+  "title": "Building a Faster Playwright MCP Server: Compact DOM Deltas, 1-Turn Form Filling, and Submit Guards",
+  "url": "https://dev.to/tthanh2k6/building-a-faster-playwright-mcp-server-compact-dom-deltas-1-turn-form-filling-and-submit-guards-2o2p",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 3,
+  "comments": 4,
+  "published_at": 1794716237.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tthanh2k6/building-a-faster-playwright-mcp-server-compact-dom-deltas-1-turn-form-filling-and-submit-guards-2o2p"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9z3gfmexqbx8fo4obj0d.png",
+  "link_status": "ok",
+  "ko_title": "더 빠른 Playwright MCP 서버 구축: 컴팩트 DOM 델타, 1턴 폼 채우기, 제출 가드",
+  "summary": "turbo-browser-mcp 0.4.0이 기존 Playwright 기반 MCP 서버의 네 가지 병목을 해결하기 위해 10개의 통합 도구를 제공한다. 주요 개선점은 접근성 스냅샷을 제한하고 변경된 부분만 반환하며, React 입력과 파일 업로드를 한 턴으로 처리한다. 또한 파일 업로드를 Base64 대신 스트림 방식으로 전송하고, 잘못된 제출 클릭을 방지한다. 제한 사항과 향후 과제는 코드 주석에 명시돼 있다.",
+  "why": "Playwright 기반 MCP 서버를 쓰는 경우, turbo-browser-mcp 0.4.0으로 전환하면 토큰 소모와 턴 수를 줄일 수 있다. React 폼 입력과 파일 업로드를 한 턴에 처리하므로 기존 단계별 자동화 스크립트보다 실행 속도가 빨라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "web",
+   "backend-data",
+   "release",
+   "career-culture"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "datasette-llm 0.1a11",
+  "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794700768.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/14/datasette-llm/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://static.simonwillison.net/static/2026/lmstudio-datasette-agent.webp",
+  "link_status": "ok",
+  "ko_title": "datasette-llm 0.1a11",
+  "summary": "이번 릴리스에서는 OpenAI 호환 엔드포인트 지원이 추가돼 로컬 모델(LM Studio, Ollama, llama.cpp 등)을 Datasette와 연동할 수 있다. uvx와 datasette-agent를 이용해 로컬 모델을 Datasette 플러그인에 연결하는 예시가 제공된다.",
+  "why": "기존에 클라우드 API만 쓰던 Datasette 설정을 로컬 모델로 바로 바꿀 수 있다. LM Studio나 Ollama 같은 로컬 런타임이 이미 돌아가면 추가 비용 없이 에이전트를 돌릴 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "Eynnzerr / TelemetryCleaner",
+  "url": "https://github.com/Eynnzerr/TelemetryCleaner",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 306,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Eynnzerr/TelemetryCleaner"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 306,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/Eynnzerr/TelemetryCleaner",
+  "link_status": null,
+  "ko_title": "TelemetryCleaner",
+  "summary": "TelemetryCleaner는 Android 10 이상 기기에서 Shizuku를 이용해 국행 펌웨어에 사전 설치된 통신사 관리 컴포넌트를 탐지하고, 권한 확인·언인스톨·복구를 수행한다. 루트 없이도 시스템 앱 삭제를 시도하며, 자동 청소 기능도 제공한다.",
+  "why": "Shizuku를 통해 루트 없이 통신사 관리 앱을 삭제할 수 있어, 백그라운드 데이터 수집을 차단하는 데 활용할 수 있다. 다만 비보 계열 일부 통신사 앱은 현재 삭제 지원이 되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "ZiChuanLan / freebie-radar",
+  "url": "https://github.com/ZiChuanLan/freebie-radar",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 205,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ZiChuanLan/freebie-radar"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 205,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/ZiChuanLan/freebie-radar",
+  "link_status": null,
+  "ko_title": "ZiChuanLan / freebie-radar (리소스 레이더)",
+  "summary": "전 세계 무료 혜택, 블랙프라이데이 특가, 카풀 거래, 오픈소스 프로젝트 및 뉴스 정보를 다중 관심사별로 자동 수집·분류·정밀 푸시하는 자체 호스팅 웹앱이다. Node.js·Docker·SQLite·React 기반이며 AI 의미 분석 엔진으로 콘텐츠를 5가지 형태와 21개 분야로 나눈다. Telegram 등으로 맞춤형 라우팅 푸시가 가능하다.",
+  "why": "Node.js와 Docker 기반이라 기존 스택에 바로 붙여 쓸 수 있다. AI로 21개 분야를 자동 분류해 Telegram으로 정밀 푸시한다. 무료 혜택과 오픈소스 프로젝트를 원할 때 꺼내 쓸 물건이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
+  "url": "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches",
+  "source": "hackernews",
+  "upvotes": 184,
+  "comments": 49,
+  "published_at": 1794708054,
+  "discussion": "https://news.ycombinator.com/item?id=50503255",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://www.eff.org/files/banner_library/siren_v._san_jose.png",
+  "link_status": "ok",
+  "ko_title": "ALPR 검색에 영장 요구를 요청하고 있다",
+  "summary": "ACLU와 EFF가 미국 제6순회항소법원에 ALPR 데이터 검색에 영장을 요구하는 의견서를 제출했다. 사건은 클리블랜드 인근 강도 사건에서 용의자의 차량을 ALPR 데이터베이스로 추적해 체포한 내용이다. 법원은 기존 판결에서 번호판은 공개 정보라 영장이 필요 없다고 했지만, 단체들은 이를 대규모 감시라며 영장 필요성을 주장한다.",
+  "why": "ALPR 데이터 검색에 영장이 필요하다는 판결이 나오면, 미국 내 위치 추적 관련 서비스의 데이터 접근 정책이 바뀔 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "datasette-vega 0.7",
+  "url": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794676149.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/14/datasette-vega/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://static.simonwillison.net/static/2026/datasette-vega.webp",
+  "link_status": "ok",
+  "ko_title": "datasette-vega 0.7",
+  "summary": "2018년 이후 처음으로 datasette-vega 플러그인이 0.7 버전으로 업데이트되었습니다. 최신 Datasette 알파와 Datasette Lite와 호환되도록 수정했으며, UI 개선도 포함되었습니다. 이제 Datasette Lite에서도 Vega-Lite 차트를 렌더링할 수 있습니다.",
+  "why": "Datasette Lite에서 이제 Vega-Lite 차트를 렌더링할 수 있다. 기존 Datasette 알파 버전과의 호환성 문제도 해결되었다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "Jira said Done. It wasn't, and the bug showed up later. So I made Jira check first.",
+  "url": "https://dev.to/wst2002rk/jira-said-done-it-wasnt-and-the-bug-showed-up-later-so-i-made-jira-check-first-9ed",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 17,
+  "comments": 1,
+  "published_at": 1794719140.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/wst2002rk/jira-said-done-it-wasnt-and-the-bug-showed-up-later-so-i-made-jira-check-first-9ed"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5a8qp3o6xpxoi9g8e8oq.jpg",
+  "link_status": "ok",
+  "ko_title": "Jira가 Done이라고 했지만, 아니었고, 버그가 나중에 나타났다. 그래서 나는 Jira가 먼저 확인하도록 만들었다.",
+  "summary": "개발자가 테스트를 완화하거나 건너뛰어 CI를 통과시킨 사례가 늘어나고 있다. 이를 방지하기 위해 Proof of Done이라는 무료 오픈소스 Jira 앱을 만들었다. 이 앱은 작업이 Done으로 이동하기 전에 연결된 PR이 모두 머지됐는지, CI가 통과했는지, 테스트가 변경됐는지, 테스트가 건너뛰어지거나 삭제·완화되지 않았는지를 검사한다. 조건을 만족하지 않으면 Done 전환을 차단하고 구체적인 파일·라인·변경 내용을 보여준다.",
+  "why": "테스트를 완화하거나 건너뛰어 CI를 통과시키는 행위를 Done 전환 시점에 차단한다. 기존 CI는 검사 강도 저하를 실패로 잡지 못했지만 이제 Done 상태의 무결성을 검증한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "I built a free calculator site from scratch: 3 weeks of honest Search Console data",
+  "url": "https://dev.to/muddasirriaz099/i-built-a-free-calculator-site-from-scratch-3-weeks-of-honest-search-console-data-56j6",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 0,
+  "comments": 5,
+  "published_at": 1794718371.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/muddasirriaz099/i-built-a-free-calculator-site-from-scratch-3-weeks-of-honest-search-console-data-56j6"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9i377mx4scm708i7k1xr.png",
+  "link_status": "ok",
+  "ko_title": "무료 계산기 사이트를 직접 만들었다: 3주간의 솔직한 Search Console 데이터",
+  "summary": "3주 전 SEO 실험으로 미국 근무·급여 계산기 10개를 정적 GitHub Pages에 배포하고 검색 콘솔로 공개 추적했다. 총 930회 노출, 클릭 4회(전부 본인)였으며, 하루 최고 173회 노출을 기록했지만 이후 급감했다. 일부 페이지는 색인되지 않았고, 사이트맵도 검색 콘솔에 받아들여지지 않았다.",
+  "why": "정적 사이트 배포 후 색인 지연과 사이트맵 미수신이 발생했다. GitHub Pages 기반 SEO 실험 시 색인 상태 확인이 필수다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "showcase"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "Italy fines Meta $887M over Android users' data access",
+  "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
+  "source": "hackernews",
+  "upvotes": 362,
+  "comments": 253,
+  "published_at": 1794664086,
+  "discussion": "https://news.ycombinator.com/item?id=50497009",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/"
+  ],
+  "cross_source_count": 1,
+  "score": 28,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "이탈리아, 안드로이드 사용자 데이터 접근으로 메타에 8억 8700만 달러 벌금",
+  "summary": "",
+  "why": "EU 내 안드로이드 데이터 접근 정책이 규제 리스크로 분류된다. 백엔드에서 사용자 데이터 수집 범위를 재점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "industry"
+  ],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "KDE: The documentary [video]",
+  "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+  "source": "hackernews",
+  "upvotes": 437,
+  "comments": 94,
+  "published_at": 1794663808,
+  "discussion": "https://news.ycombinator.com/item?id=50496976",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": "https://tube.kockatoo.org/lazy-static/thumbnails/02935b80-28d9-4fd7-bc33-9d0cb76f2e80.webp",
+  "link_status": "ok",
+  "ko_title": "KDE: 다큐멘터리 [video]",
+  "summary": "",
+  "why": "",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
+  "title": "The Single Router in Southern Arkansas That Ground Air Travel to a Halt",
+  "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
+  "source": "hackernews",
+  "upvotes": 52,
+  "comments": 33,
+  "published_at": 1794711954,
+  "discussion": "https://news.ycombinator.com/item?id=50503588",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c"
+  ],
+  "cross_source_count": 1,
+  "score": 0,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "남부 아칸소의 단일 라우터가 항공 운항을 중단시켰다",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-15T16:00:03.270309+09:00",
+  "batch_label": "11월 15일 16:00"
+ },
+ {
   "title": "arjun988 / blender-skills",
   "url": "https://github.com/arjun988/blender-skills",
   "source": "github",
