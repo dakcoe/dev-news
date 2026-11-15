@@ -1,5 +1,397 @@
 [
  {
+  "title": "NVIDIA / SkillEvaluator",
+  "url": "https://github.com/NVIDIA/SkillEvaluator",
+  "source": "github",
+  "upvotes": 133,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/NVIDIA/SkillEvaluator"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 133,
+  "score": 71,
+  "image": "https://opengraph.githubassets.com/1/NVIDIA/SkillEvaluator",
+  "link_status": null,
+  "ko_title": "NVIDIA SkillEvaluator – AI 에이전트 스킬 평가 도구",
+  "summary": "NVIDIA가 공개한 SkillEvaluator는 AI 에이전트의 스킬을 검증하고 작업 성과에 미치는 영향을 측정한다. Python 3.12-3.14를 지원하며 pip로 설치 가능하고, CLI, CI 연동, 에이전트 직접 연결 등 세 가지 방식으로 사용할 수 있다. Agent Skills 사양에 정의된 스킬 폴더를 입력으로 받아 Tier 1 품질 검사를 수행한다.",
+  "why": "에이전트 스킬 폴더를 CI 파이프라인에 연결해 품질 검사를 자동화할 수 있다. 스킬 유무에 따른 작업 성과 차이를 비교 측정하는 기능이 포함됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "ersinkoc / phonebox",
+  "url": "https://github.com/ersinkoc/phonebox",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 368,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ersinkoc/phonebox"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 368,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/ersinkoc/phonebox",
+  "link_status": null,
+  "ko_title": "PhoneBox — 구형 안드로이드 폰을 PC 데스크 패널로",
+  "summary": "PhoneBox는 안드로이드 폰을 USB 또는 Wi-Fi(티얼스케일)로 연결해 Windows, Linux, macOS에서 사용할 수 있는 데스크 패널로 변환한다. PC에서 시각 편집기로 115개의 위젯과 30개의 템플릿을 조합해 페이지를 만들고, CPU·GPU·RAM·네트워크 등 시스템 정보를 한눈에 볼 수 있다. AI 코딩 세션의 토큰 사용량과 남은 할당량을 표시하며, 해당 이벤트가 발생하면 폰이 진동한다. MIT 라이선스로 공개된 오픈소스 프로젝트이다.",
+  "why": "AI 코딩 세션의 토큰 소진 시 폰이 진동해 알림을 준다. 화면에서 눈을 뗄 때 할당량 소진 여부를 즉시 파악할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "devops-infra",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "elementalsouls / Claude-BugHunter",
+  "url": "https://github.com/elementalsouls/Claude-BugHunter",
+  "source": "github",
+  "upvotes": 124,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/elementalsouls/Claude-BugHunter"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 124,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/elementalsouls/Claude-BugHunter",
+  "link_status": null,
+  "ko_title": "elementalsouls / Claude-BugHunter",
+  "summary": "claude-bughunter는 Claude Code용 스킬 번들로, 한 번 설치하면 Claude가 버그 사냥·레드팀 운영자 역할을 수행한다. 83개의 스킬, 15개의 슬래시 명령, 681개의 보고서 패턴을 제공하며, 24개 핵심 취약점 클래스와 기업용 공격 매트릭스를 포함한다. Burp MCP 연동과 DVWA·OWASP Juice Shop·Hacker101 등 교육 플랫폼에서도 검증된 도구이다.",
+  "why": "Claude Code에 설치하면 단순 채팅 도구가 아닌 시니어 버그 헌터처럼 동작한다. 681개의 공개 보고서 패턴을 기반으로 취약점을 탐지한다. Burp MCP 연동으로 기존 보안 워크플로우에 바로 통합할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "ggml-org / ggml",
+  "url": "https://github.com/ggml-org/ggml",
+  "source": "github",
+  "upvotes": 154,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/ggml-org/ggml"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 154,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/ggml-org/ggml",
+  "link_status": null,
+  "ko_title": "ggml — 머신러닝용 텐서 라이브러리",
+  "summary": "ggml은 C/C++ 기반의 의존성 없는 텐서 라이브러리로, 다양한 CPU 아키텍처와 WebAssembly를 지원한다. SIMD 최적화 커널과 2~8비트 정수 양자화, MXFP4·NVFP4 마이크로스케일링 포맷을 제공한다. 빌드와 사용이 간단하며, GPU·NPU·브라우저 백엔드도 활용 가능하다.",
+  "why": "의존성이 없어 기존 C/C++ 백엔드에 바로 통합할 수 있다. 런타임 메모리 할당이 없어 예측 가능한 성능이 필요한 환경에 적합하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "# Where a UI regression test starts matters",
+  "url": "https://dev.to/joduchan/-where-a-ui-regression-test-starts-matters-19f7",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1794744149.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/joduchan/-where-a-ui-regression-test-starts-matters-19f7"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhxsmsu2bfppv80f3yqex.png",
+  "link_status": "ok",
+  "ko_title": "UI 회귀 테스트 시작 위치가 중요합니다",
+  "summary": "tapflow가 v0.29.0부터 흐름 실행 전 디바이스 상태를 초기화한다. iOS와 Android에서 초기화 범위가 다르고, iOS는 키체인·권한·클립보드·위치까지 지운다. Android는 앱 데이터와 gRPC 에뮬레이터의 클립보드만 초기화한다. 필요 시 --no-reset 옵션으로 초기화를 건너뛸 수 있다.",
+  "why": "iOS 시뮬레이터에서 타플로우를 실행하면 키체인과 권한이 지워진다. 다른 사람이 쓰는 시뮬레이터라면 로그인 상태가 사라질 수 있다. 상태를 유지해야 하면 --no-reset 옵션을 사용해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "google-labs-code / stitch-skills",
+  "url": "https://github.com/google-labs-code/stitch-skills",
+  "source": "github",
+  "upvotes": 109,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/google-labs-code/stitch-skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 109,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/google-labs-code/stitch-skills",
+  "link_status": null,
+  "ko_title": "google-labs-code / stitch-skills (스티치 스킬)",
+  "summary": "Google Stitch용 에이전트 스킬과 플러그인 모음이다. Codex, Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode 등 다양한 코딩 에이전트와 호환된다. CLI 혹은 UI를 통해 선택적으로 플러그인을 설치할 수 있다.",
+  "why": "Codex, Claude Code, Cursor 등 기존에 쓰는 코딩 에이전트에서 추가 설치 없이 스티치 기능을 바로 쓸 수 있다. 디자인과 빌드, 유틸리티 플러그인을 선택적으로 적용해 에이전트 워크플로우를 확장할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "How to Build an AI Membership and Class Booking Agent for a Gym",
+  "url": "https://dev.to/bcncodeschool/how-to-build-an-ai-membership-and-class-booking-agent-for-a-gym-4mnb",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1794736268.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/bcncodeschool/how-to-build-an-ai-membership-and-class-booking-agent-for-a-gym-4mnb"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzvz7plxudhq2uwbwxr7b.png",
+  "link_status": "ok",
+  "ko_title": "헬스장을 위한 AI 회원·수업 예약 에이전트 구축 방법",
+  "summary": "AI를 대화형 레이어로 두어 기존 회원·스케줄 시스템과 연동하는 예약 에이전트를 설계한다. 요청을 이해하고 신원·회원·정책을 검증한 뒤 실시간 수업 잔여량을 확인하고, 중복 방지를 위해 멱등성을 적용한다. 모든 상태 변경은 확인을 거쳐 시스템에 반영하고, 오류나 의료·운동 관련 질문은 직원에게 전달한다.",
+  "why": "예약 확정 직전 실시간 잔여량을 재확인하는 절차가 필수다. 모델이 아닌 스케줄링 시스템이 회원 상태와 예약 상태를 소유하도록 설계해야 한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "Lutnick Pushed to Weaken Chip Rules That Overlap with His Family Business",
+  "url": "https://www.nytimes.com/2026/11/15/us/politics/lutnick-pushed-to-weaken-chip-rules-that-overlap-with-his-family-business.html",
+  "source": "hackernews",
+  "upvotes": 101,
+  "comments": 26,
+  "published_at": 1794742851,
+  "discussion": "https://news.ycombinator.com/item?id=50506180",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/11/15/us/politics/lutnick-pushed-to-weaken-chip-rules-that-overlap-with-his-family-business.html"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://static01.nyt.com/images/2026/11/14/multimedia/14dc-lutnick-commerce-01-bqtl/14dc-lutnick-commerce-01-bqtl-facebookJumbo.jpg",
+  "link_status": "ok",
+  "ko_title": "루트닉, 가족 사업과 겹치는 칩 규제 완화 추진",
+  "summary": "미국 상무부 장관인 루트닉이 동남아시아 데이터센터에 적용될 신규 칩 규제 완화를 주장하고 있다. 말레이시아에 건설 중인 A201 데이터센터는 Nvidia 최신 AI 서버를 사용해 중국 기업에 컴퓨팅 파워를 제공한다. 현재 규제는 중국에 직접 첨단 칩 판매를 금지하지만, 데이터센터를 통한 우회 판매를 제한하려는 논의가 진행 중이다. 루트닉은 이러한 제한을 완화해 Nvidia의 아시아 판매를 유지하려는 입장을 보이고 있다.",
+  "why": "AI 인프라 규제 방향이 Nvidia 아시아 판매에 직접 영향을 미친다. 데이터센터 경유 우회 판매 제한 논의가 진행 중이다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "My Duration Formatter Broke in French. Intl.DurationFormat Doesn't.",
+  "url": "https://dev.to/parsajiravand/my-duration-formatter-broke-in-french-intldurationformat-doesnt-56gl",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1794744497.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/parsajiravand/my-duration-formatter-broke-in-french-intldurationformat-doesnt-56gl"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fbestpractic.org%2Fmedia%2Fcovers%2Fintl-durationformat-native-duration-formatting.png",
+  "link_status": "ok",
+  "ko_title": "내 지속 시간 포맷터가 프랑스어에서 깨졌다. Intl.DurationFormat는 아니다.",
+  "summary": "기존에 영문 전용으로 구현된 duration 포맷 함수가 프랑스어 로케일을 추가했을 때 올바른 복수형과 연결어를 사용하지 못한다. 영어 이외의 언어는 복수 규칙이 다중이며, 단순 ternary 연산으로는 처리할 수 없다. 이 문제를 해결하기 위해 다수의 npm 패키지가 로케일 데이터 파일을 제공한다.",
+  "why": "프랑스어 등 복수 규칙이 복잡한 로케일을 지원하려면 영문 전용 삼항 연산자 로직은 즉시 교체해야 한다. Intl.DurationFormat을 사용하면 브라우저가 복수형과 연결어를 자동 처리하므로 별도 로케일 데이터 파일을 관리할 필요가 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "The MacBook Pro's OLED PWM Problem: When a 'Better' Display Becomes Worse to Use",
+  "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
+  "source": "hackernews",
+  "upvotes": 88,
+  "comments": 49,
+  "published_at": 1794748522,
+  "discussion": "https://news.ycombinator.com/item?id=50506719",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://macanorak.com/content/images/2026/11/PROLED-Display-XDR-1.png",
+  "link_status": "ok",
+  "ko_title": "MacBook Pro OLED PWM 문제: ‘더 나은’ 디스플레이가 사용을 방해한다",
+  "summary": "새로운 PROLED XDR 디스플레이는 무한 대비와 깊은 검정을 제공하지만 PWM으로 인한 눈 피로를 겪는 사용자가 보고되고 있다. MacRumors와 Reddit 등에서 두통·현기증·눈 피로 등을 호소하는 사례가 등장했으며 일부는 제품을 반품했다. 현재는 개인 경험에 국한된 보고이며 전반적인 문제 여부는 확인되지 않았다.",
+  "why": "PWM 민감도가 있는 개발자는 장시간 코딩 시 두통이나 현기증을 유발할 수 있다. 현재까지 개인 경험에 국한된 보고이며 전체 사용자 대상 문제는 확인되지 않았다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "Day 83: Two Files and Four Parts",
+  "url": "https://dev.to/ndcodes/day-83-two-files-and-four-parts-40hc",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 12,
+  "comments": 0,
+  "published_at": 1794750421.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ndcodes/day-83-two-files-and-four-parts-40hc"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flu2uf8at6q2n6n45lblx.jpg",
+  "link_status": "ok",
+  "ko_title": "Day 83: 두 파일과 네 파트",
+  "summary": "Ansible 인벤토리와 플레이북을 별도로 작성하고, 명령줄에서 연결해 stapp03에 적용한다. 인벤토스 파일에 비밀번호를 평문으로 저장하지 말고 Vault 사용을 권고한다. 또한 로드밸런서 구성 요소 중 세 개는 규칙이 모두 지정될 때까지 비활성 상태이다.",
+  "why": "Ansible 인벤토리에 비밀번호를 평문으로 넣지 말고 Vault를 사용해야 한다. 인벤토리와 플레이북은 서로를 참조하지 않으며, 명령줄에서 연결한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
+  "title": "Book list for streetfighting computer scientists",
+  "url": "https://nick-black.com/dankwiki/index.php?title=Book_list_for_streetfighting_computer_scientists",
+  "source": "hackernews",
+  "upvotes": 72,
+  "comments": 27,
+  "published_at": 1794726530,
+  "discussion": "https://news.ycombinator.com/item?id=50504718",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nick-black.com/dankwiki/index.php?title=Book_list_for_streetfighting_computer_scientists"
+  ],
+  "cross_source_count": 1,
+  "score": 29,
+  "image": "https://nick-black.com/dankwiki/resources/assets/orca.jpg",
+  "link_status": "ok",
+  "ko_title": "스트리트파이팅 컴퓨터 과학자를 위한 도서 목록",
+  "summary": "이 글은 시스템 프로그래밍·운영체제·네트워킹·알고리즘 분야에서 실무에 바로 적용할 수 있는 고전 및 최신 서적들을 선정해 소개한다. C·C++·Rust 등 언어별 핵심 서적과 UNIX·Linux·FreeBSD 등 OS 관련 서적을 포함한다. 책마다 권장 판과 이유가 간단히 언급된다.",
+  "why": "C·C++·Rust와 UNIX·Linux·FreeBSD 실무 서적을 한데 모았으니, 특정 기술 스택의 내부 구조를 파고들 때 참고할 책을 바로 골라 읽을 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-16T00:00:03.101878+09:00",
+  "batch_label": "11월 16일 00:00"
+ },
+ {
   "title": "Building a Faster Playwright MCP Server: Compact DOM Deltas, 1-Turn Form Filling, and Submit Guards",
   "url": "https://dev.to/tthanh2k6/building-a-faster-playwright-mcp-server-compact-dom-deltas-1-turn-form-filling-and-submit-guards-2o2p",
   "source": "devto",

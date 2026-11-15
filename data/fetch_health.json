@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-06T00:00:38+09:00",
-   "total": 16,
-   "counts": {
-    "ok": 11,
-    "short": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://hachyderm.io/@damienmiller/117563026759098135",
-     "source": "hackernews",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-11-06T08:00:30+09:00",
    "total": 18,
    "counts": {
@@ -533,6 +517,28 @@
      "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
      "source": "hackernews",
      "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-16T00:00:33+09:00",
+   "total": 15,
+   "counts": {
+    "blocked": 1,
+    "ok": 8,
+    "dead": 1,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://space.stackexchange.com/questions/37775",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://litnews.ai/articles/garciaguirre-samsung-[REDACTED]",
+     "source": "hackernews",
+     "reason": "dead"
     }
    ]
   }
