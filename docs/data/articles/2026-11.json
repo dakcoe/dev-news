@@ -1,5 +1,423 @@
 [
  {
+  "title": "Noniv / abyssal-garden",
+  "url": "https://github.com/Noniv/abyssal-garden",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 479,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/Noniv/abyssal-garden"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 479,
+  "score": 69,
+  "image": "https://opengraph.githubassets.com/1/Noniv/abyssal-garden",
+  "link_status": null,
+  "ko_title": "Noniv / abyssal-garden",
+  "summary": "96 KB HTML 파일 하나만으로 웹 브라우저에서 WebGPU를 이용해 수중 세계를 실시간으로 생성한다. 이미지·3D 모델·음원 파일 없이 켈프 숲, 햇빛, 난파선, 만타가오리 등 다양한 요소를 코드로 구현한다. Chrome·Edge에서 오프라인으로 실행 가능하며, 키보드·마우스로 자유롭게 탐험한다.",
+  "why": "WebGPU 기반 실시간 3D 렌더링을 단일 HTML 파일로 구현한 예시다. 외부 에셋 없이 코드로만 시각 효과를 만드는 기법을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "MCP, A2A, UCP, AP2... Confused? A Simple Map of AI Agent Protocols (November 2026)",
+  "url": "https://dev.to/gde/mcp-a2a-ucp-ap2-confused-a-simple-map-of-ai-agent-protocols-november-2026-3ph",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 4,
+  "comments": 0,
+  "published_at": 1794773375.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/mcp-a2a-ucp-ap2-confused-a-simple-map-of-ai-agent-protocols-november-2026-3ph"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2588rtb8vlj9s7dliua3.jpg",
+  "link_status": "ok",
+  "ko_title": "MCP·A2A·UCP·AP2… 혼란스러운가? AI 에이전트 프로토콜 간단 지도",
+  "summary": "이 글은 AI 에이전트 통신에 사용되는 다섯 계층 프로토콜(MCP, A2A, UCP, AP2, 기타)의 최신 사양과 계층 구조를 정리한다. 2026-07-28에 발표된 MCP 사양이 상태 기반에서 무상태 요청-응답 방식으로 바뀌어 로드밸런서 환경에서 활용이 쉬워졌다. 각 계층이 어떤 역할을 하는지와 실제 엔드-투-엔드 예시를 제공한다.",
+  "why": "MCP 사양이 무상태 방식으로 바뀌어 로드밸런서 뒤에서 서버를 돌리는 환경의 부하 분산이 쉬워졌다. 기존 세션 기반 구조를 쓰던 백엔드 구성이라면 이번 변경 사항을 반영해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "hitkeeen / blender-ai-mcp-addon",
+  "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 548,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/hitkeeen/blender-ai-mcp-addon"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 548,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/hitkeeen/blender-ai-mcp-addon",
+  "link_status": null,
+  "ko_title": "블렌더 AI MCP 애드온",
+  "summary": "1.0.0 버전이 출시된 이 애드온은 Blender 4.2 이상에서 AI 비주얼 채팅 워크스페이스와 모델 컨텍스트 프로토콜 서버를 제공한다. 2. 장면 검사, 객체 생성, 재질 편집, 자산 검색 등 다단계 작업을 대화형으로 수행할 수 있다. 3. 클라우드 제공자, 로컬 Ollama 모델, 맞춤 엔드포인트 등 다양한 AI 모델을 연결해 사용할 수 있다.",
+  "why": "Blender 4.2 이상 환경에서 MCP 서버를 내장해 AI와 씬 조작을 연결할 수 있다. 클라우드, 로컬 Ollama, 맞춤 엔드포인트 중 원하는 모델로 전환해 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "Why Architecture is the True Security Boundary",
+  "url": "https://dev.to/aws-builders/why-architecture-is-the-true-security-boundary-38fi",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 7,
+  "comments": 2,
+  "published_at": 1794759016.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws-builders/why-architecture-is-the-true-security-boundary-38fi"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fs22n6twngt25zp25btf6.png",
+  "link_status": "ok",
+  "ko_title": "아키텍처가 진정한 보안 경계다",
+  "summary": "기존 보안 경계 개념인 물리적 경계, 네트워크 경계, Active Directory 등을 검토하고, 클라우드와 원격 근무 환경에서 이들이 왜 한계에 부딪히는지 설명한다. 클라우드 기반 인프라와 마이크로서비스 아키텍처가 보안 설계의 중심이 되어야 함을 주장한다.",
+  "why": "클라우드와 마이크로서비스 환경에서는 네트워크 위치나 IP 주소만으로 신뢰를 판단할 수 없다. 기존의 평탄한 내부 네트워크 구조에서는 초기 침입 후 횡적 이동이 쉽게 발생한다. 보안 설계를 아키텍처 중심으로 재검토해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "The Vibe Coding Kernel-pocalypse Is Here, and It Is a Good Thing",
+  "url": "https://dev.to/xbill/the-vibe-coding-kernel-pocalypse-is-here-and-it-is-a-good-thing-3d83",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 4,
+  "published_at": 1794757493.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/xbill/the-vibe-coding-kernel-pocalypse-is-here-and-it-is-a-good-thing-3d83"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fkernel_vibe_coding%2Fmain%2Farticles%2Fkernel-agent-loop%2Fdevto-cover.313239af.jpg",
+  "link_status": "ok",
+  "ko_title": "Vibe 코딩 커널-포칼립스가 도래했으며 좋은 일이다",
+  "summary": "이 글은 Linux 커널 개발을 자동화하는 코딩 에이전트를 위한 단계별 가이드를 제공한다. AGENTS.md와 여러 runbook, 빌드·설치 스크립트, 부팅 로그를 활용해 에이전트가 커널을 수정·빌드·부팅·검증까지 수행한다. 이를 통해 한 사람이 수행하던 작업을 에이전트가 대신하게 되어 기존 커널 개발자의 부담을 크게 줄인다.",
+  "why": "커널 개발 에이전트 워크플로우를 구축해 빌드와 검증 단계를 자동화할 수 있다. 기존에 수작업으로 처리하던 반복적 검증 부담이 줄어들어 개발 효율이 개선된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "hardware"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "'Birdbrain' Is a Misnomer. Crows Make Decisions Faster Than We Can",
+  "url": "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html",
+  "source": "hackernews",
+  "upvotes": 122,
+  "comments": 89,
+  "published_at": 1794765211,
+  "discussion": "https://news.ycombinator.com/item?id=50509023",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://static01.nyt.com/images/2026/11/05/multimedia/00SCI-TB-CROWS-01-tlwk/00SCI-TB-CROWS-01-tlwk-facebookJumbo.jpg",
+  "link_status": "ok",
+  "ko_title": "‘Birdbrain’은 오해다. 까마귀가 우리보다 빠르게 결정한다",
+  "summary": "새 연구에서 까마귀가 시각 신호를 인간과 영장류보다 두 배 빠르게 처리한다는 것이 처음으로 정량화되었다. 이는 조류의 의사결정 신경 속도를 측정한 최초 사례다.",
+  "why": "까마귀의 빠른 의사결정 능력은 조류 지능에 대한 기존 편견을 뒤집을 근거가 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "A step toward defining the Standard Model on a lattice",
+  "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794780001.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/step-toward-defining-the-standard-model"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "격자에서 표준 모델 정의를 향한 한 걸음",
+  "summary": "표준 모델을 격자에 비섭동적으로 정의하려는 후보 방안이 제시되었다. 이 아이디어를 구체적인 증명으로 발전시키는 데 GPT-6 Astra가 활용되었다.",
+  "why": "표준 모델의 격자 비섭동적 정의는 이론물리학의 난제다. 개발자가 직접 코드를 작성하거나 설정을 변경할 대상이 아니다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
+  "url": "https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html",
+  "source": "hackernews",
+  "upvotes": 281,
+  "comments": 146,
+  "published_at": 1794767770,
+  "discussion": "https://news.ycombinator.com/item?id=50509411",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://www1.wdr.de/nrw/koeln/phantasialand-134~_v-gseagaleriexl.jpg",
+  "link_status": "ok",
+  "ko_title": "Microsoft 365 장애가 15명 호텔 손님에게 염소 가스 중독을 일으킴",
+  "summary": "Microsoft 365 서비스 장애가 독일의 Phantasialand 호텔에 영향을 주어 자동 풀 염소 투입 시스템이 과다 작동, 15명의 손님이 호흡기 자극을 겪었다. 해당 풀은 물을 교체하고 재개했으며, 일부 손님은 병원에 이송되었다.",
+  "why": "클라우드 의존형 자동화 시스템의 장애가 물리적 설비로 전이될 수 있음을 보여준다. 핵심 인프라 장애 시 알림 채널의 단일화 위험을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "Recover a WebMCP Update After Its Response Disappears",
+  "url": "https://dev.to/gde/recover-a-webmcp-update-after-its-response-disappears-2hp",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 4,
+  "comments": 4,
+  "published_at": 1794755100.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/recover-a-webmcp-update-after-its-response-disappears-2hp"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Faz2z3292x0i1gwckyonq.jpg",
+  "link_status": "ok",
+  "ko_title": "WebMCP 업데이트 응답 사라진 후 복구",
+  "summary": "WebMCP 업데이트 시 서버는 커밋했지만 브라우저는 응답을 놓쳐 상태가 불확실해졌다. 테스트는 응답을 숨긴 후 원본 명령을 조회해 현재 리비전을 확인하는 방법을 검증한다. 사용된 환경은 HeadlessChrome, Puppeteer, PostgreSQL 호환 DB이다.",
+  "why": "WebMCP 업데이트에서 응답이 사라지면 서버는 커밋했지만 클라이언트는 상태를 알 수 없게 된다. 이때 다시 쓰기 요청을 보내면 실패와 혼동될 수 있으므로 원본 명령을 조회해 리비전을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "How I Made a Markov Chain Model from Scratch in C++ During a Global Online Teen Hackathon",
+  "url": "https://dev.to/necoz/how-i-made-a-markov-chain-model-from-scratch-in-c-during-a-global-online-teen-hackathon-3gd7",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 1,
+  "published_at": 1794772264.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/how-i-made-a-markov-chain-model-from-scratch-in-c-during-a-global-online-teen-hackathon-3gd7"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5elgjxui0dq9ukar94dn.png",
+  "link_status": "ok",
+  "ko_title": "글로벌 온라인 청소년 해커톤에서 C++로 마코프 체인 모델을 직접 만든 방법",
+  "summary": "개발자는 13일간 34시간에 걸쳐 C++20 STL만을 사용해 인터랙티브 TUI를 갖춘 N-gram 마코프 체인 모델 Corpustein을 구현했다. 이 모델은 가변 차수와 롤링 윈도우를 지원하며, 이전 토큰 집합을 추적해 반복을 방지한다. 기존 LLM과 달리 정확한 단어 시퀀스 매칭에 기반한다.",
+  "why": "마코프 체인은 LLM과 달리 추상적 규칙 학습 없이 정확한 단어 시퀀스 매칭에만 의존한다. 따라서 새로운 질문에 대한 합리적 답변 생성은 불가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "All AI-generated code should be Open Source",
+  "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+  "source": "hackernews",
+  "upvotes": 1019,
+  "comments": 565,
+  "published_at": 1794754018,
+  "discussion": "https://news.ycombinator.com/item?id=50507303",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://jakub.jankiewicz.org/blog/ai-code-open-source/"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://jakub.jankiewicz.org/img/en/ai-code-open-source.png",
+  "link_status": "ok",
+  "ko_title": "AI가 만든 모든 코드는 오픈소스여야 한다",
+  "summary": "글은 AI가 학습한 데이터가 대부분 오픈소스이며, 이를 무단으로 폐쇄형 코드에 활용하는 것은 라이선스 세탁이라고 주장한다. 미국 판례와 위키미디어 정책을 근거로 AI 생성물은 저작권을 가질 수 없으며, 따라서 CC0 등으로 공개해야 한다고 제안한다. 저작권 보호가 국가마다 다르지만, 공정성을 위해 전 세계적으로 오픈소스 공개를 권고한다.",
+  "why": "AI 생성 코드를 폐쇄형으로 배포하면 오픈소스 라이선스 위반 소지가 있다. 영미권 판례상 순수 AI 생성물은 저작권 대상이 아니므로 CC0 공개가 안전하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "Emacs Is My Browser",
+  "url": "https://joshblais.com/blog/emacs-as-my-browser/",
+  "source": "hackernews",
+  "upvotes": 163,
+  "comments": 83,
+  "published_at": 1794756081,
+  "discussion": "https://news.ycombinator.com/item?id=50507553",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://joshblais.com/blog/emacs-as-my-browser/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://joshblais.com/og-images/emacs-as-my-browser.png",
+  "link_status": "ok",
+  "ko_title": "Emacs가 내 브라우저다",
+  "summary": "Emacs에 기본 탑재된 EWW를 이용해 웹 브라우징을 실험한 사용자가, 기존 크롬·파이어폭스보다 집중력을 유지하고 방해 요소를 줄이는 데 효과적이라고 평가했다. 그는 일상 사용의 85-90%를 EWW로 처리하고, 남은 5-10%는 별도 브라우저로 보완한다. 또한 모바일 환경에서도 Termux와 Emacs를 활용해 자바스크립트 프론트엔드 사용을 최소화한다.",
+  "why": "EWW는 자바스크립트 의존도가 높은 사이트에서 동작이 제한된다. 이런 경우 기존 브라우저를 병행해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
+  "title": "Our new blog for science",
+  "url": "https://openai.com/index/our-new-blog-for-science",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794780000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/our-new-blog-for-science"
+  ],
+  "cross_source_count": 1,
+  "score": 36,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/ZyKta7ePADbiaWqX3EARs/81a2a593e66096fb001987910330e24e/our-new-blog-for-science-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "새로운 과학 블로그",
+  "summary": "OpenAI가 과학자와 학계 연구자를 위한 블로그를 개설한다. 블로그에서는 OpenAI와 협력자, 그리고 외부 과학 커뮤니티의 최신 연구 결과와 AI 활용 방법, 실험 설계·데이터 분석 등 실용적인 가이드를 제공한다. 또한 AI를 이용한 연구 사례와 그 영향에 대한 관점을 공유한다.",
+  "why": "모델이 실험 설계와 데이터 분석에 어떻게 쓰이는지 실용적 가이드를 제공하므로, 기존 워크플로에 바로 적용할 수 있다. 방법론이 어디서 한계를 드러내는지 함께 다루므로, 결과 검증 시 참고할 기준이 된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-11-16T08:00:03.269643+09:00",
+  "batch_label": "11월 16일 08:00"
+ },
+ {
   "title": "NVIDIA / SkillEvaluator",
   "url": "https://github.com/NVIDIA/SkillEvaluator",
   "source": "github",

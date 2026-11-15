@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-06T08:00:30+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 14,
-    "github": 2,
-    "short": 1,
-    "blocked": 1
-   },
-   "failures": [
-    {
-     "url": "https://tech.kakao.com/posts/846",
-     "source": "rss",
-     "reason": "short"
-    },
-    {
-     "url": "https://openai.com/index/introducing-gpt-6-cyber",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-06T16:00:35+09:00",
    "total": 14,
    "counts": {
@@ -539,6 +517,27 @@
      "url": "https://litnews.ai/articles/garciaguirre-samsung-[REDACTED]",
      "source": "hackernews",
      "reason": "dead"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-16T08:00:26+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 10,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://arkanumdata.com/research/house-trades",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
