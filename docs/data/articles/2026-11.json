@@ -1,5 +1,487 @@
 [
  {
+  "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+  "url": "https://huggingface.co/blog/openrouter",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794787200.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/openrouter"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://huggingface.co/blog/assets/openrouter/thumbnail.jpg",
+  "link_status": "ok",
+  "ko_title": "Hugging Face와 OpenRouter가 협업해 오픈-웨이트 모델 실행을 간편하게",
+  "summary": "Hugging Face Hub에 있는 모든 오픈-웨이트 모델을 OpenRouter가 80개 이상의 제공자를 실시간으로 평가해 최적 제공자를 선택해 서비스한다. 기존 커스텀 라우터를 OpenRouter로 교체했으며, 코드 변경 없이 동일 API와 Hugging Face 토큰만으로 호출 가능하다. OpenRouter에서 오픈-웨이트 모델 비중이 2025년 10월 26.8%에서 2026년 9월 말 71.7%로 급증했다.",
+  "why": "기존 커스텀 라우터를 OpenRouter로 교체해도 코드 변경 없이 동일 API로 호출된다. Hugging Face 토큰 하나로 저장소, 컴퓨트, 추론 엔드포인트를 모두 사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "How to compress a JPG to an exact KB size in the browser (and why 50 KB is two numbers)",
+  "url": "https://dev.to/muhayminbinmehmood/how-to-compress-a-jpg-to-an-exact-kb-size-in-the-browser-and-why-50-kb-is-two-numbers-2k8m",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1794863044.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/muhayminbinmehmood/how-to-compress-a-jpg-to-an-exact-kb-size-in-the-browser-and-why-50-kb-is-two-numbers-2k8m"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2ha80pyfpn5k1r65nuz7.png",
+  "link_status": "ok",
+  "ko_title": "브라우저에서 JPG를 정확한 KB 크기로 압축하는 방법 (그리고 50 KB가 두 숫자인 이유)",
+  "summary": "파일 크기 제한은 1 KB를 1,000바이트와 1,024바이트 두 기준으로 해석해야 한다. 저자는 최대 품질 95%에서 시작해 이진 탐색으로 품질을 조정하고, 필요 시 이미지 해상도를 단계적으로 축소한다. 캔버스에 흰색 배경을 채워 투명 PNG가 검은 배경으로 변하는 문제를 방지한다.",
+  "why": "KB 제한이 1,000바이트와 1,024바이트로 나뉘므로 최대값은 1,000, 최소값은 1,024로 환산해야 한다. 투명 PNG를 JPG로 변환할 때 흰색 배경을 채우지 않으면 검은색으로 변한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "career-culture"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+  "url": "https://openai.com/index/strengthening-online-child-safety",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794848400.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/strengthening-online-child-safety",
+   "https://openai.com/index/strengthening-online-child-safety/"
+  ],
+  "cross_source_count": 2,
+  "score": 65,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/48yJpyhKNBj3OvZAAEeLWN/5a888045c242da8cc8f8dc539f5f92fe/strengthening-online-child-safety-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "온라인 아동 성학대 방지를 위한 새로운 도구와 지원",
+  "summary": "새로운 이미지 분류기가 AI 생성 포함 CSAM을 탐지한다. 점수 기반으로 검토 우선순위를 제공한다. NCMEC와 협업해 실사용을 위한 훈련·평가가 이루어졌다.",
+  "why": "AI 생성 이미지까지 탐지하는 분류기가 제공된다. 검토 우선순위를 정할 때 점수를 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "dev-tools",
+   "industry"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Nvidia was in trouble before the Jensen Huang mess",
+  "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
+  "source": "hackernews",
+  "upvotes": 236,
+  "comments": 221,
+  "published_at": 1794842649,
+  "discussion": "https://news.ycombinator.com/item?id=50518567",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media.wired.com/photos/6af5e8bf5864e5f624e083f1/191:100/w_1280,c_limit/111226-Nvidia%20In%20Trouble.jpg",
+  "link_status": "ok",
+  "ko_title": "엔비디아, 젠슨 황 사태 전에도 위기",
+  "summary": "엔비디아는 AI 가속기 시장 80% 점유율을 유지하고 있지만, AMD와 주요 클라우드 기업들이 자체 AI 칩을 개발하며 경쟁이 심화되고 있다. 신규 스타트업과 AMD의 Taalas 인수 등 다양한 대체 칩이 등장했으며, 이들 칩을 사용하려면 코드 재작성이 필요하다.",
+  "why": "기존 엔비디아 코드를 그대로 쓰던 방식과 달라진다. 대체 칩을 도입하려면 상당량의 코드 재작성이 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Broadening access to AI for scientists",
+  "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794848400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/expanding-chatgpt-for-academic-researchers"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/793p1h1iUmksoWkDep5NRR/580e87d687cea7ef8e8288bef51c7bd4/academic-researchers-seo-card.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "과학자를 위한 AI 접근성 확대",
+  "summary": "OpenAI가 ChatGPT for Academic Researchers 프로그램을 확대해 전 세계 최대 20만 명의 연구자에게 ChatGPT Plus를 무료로 제공한다. 이번 라운드에서는 선착순 5만 명에게 2명의 협업자까지 포함한 무료 이용권을 부여한다. 참가자는 최신 모델을 사용하고, 프로그램 데이터는 모델 학습에 활용되지 않는다.",
+  "why": "11월 23일 신청 개시와 선착순 5만 명 배정 구조를 확인해야 한다. 프로그램 데이터를 모델 학습에 쓰지 않는다는 점은 연구 데이터 보안 우려를 해소한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "How the Claude Code team thinks about verification",
+  "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794830400.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Code 팀이 검증에 대해 생각하는 방식",
+  "summary": "Claude Code 팀은 코드의 90%를 Claude가 작성·검토한다는 규모에서, 에이전트가 증거 기반 검증을 수행하도록 하는 검증 루프를 도입했다. 내부 테스트에서 별도 채점자가 루브릭에 따라 Claude의 출력을 평가하면 작업 성공도가 최대 10점 상승했으며, 에이전트가 자체적으로 테스트·벤치마크·스펙을 생성해 반복 실행할 수 있다. 검증 결과를 활용해 CLAUDE.md 규칙을 수정하면 반복 오류를 방지할 수 있다.",
+  "why": "에이전트가 스스로 테스트와 벤치마크를 생성해 반복 실행하므로 수동 검수 부담이 줄어든다. CLAUDE.md 규칙을 검증 결과로 갱신하면 반복 오류를 막을 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "🌐 I Built an Interactive Digital Museum to Explore the Entire History of the Internet",
+  "url": "https://dev.to/dmsmenula/i-built-an-interactive-digital-museum-to-explore-the-entire-history-of-the-internet-39lp",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 6,
+  "published_at": 1794844130.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dmsmenula/i-built-an-interactive-digital-museum-to-explore-the-entire-history-of-the-internet-39lp"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsbd8aju628m1jhtaznlk.jpg",
+  "link_status": "ok",
+  "ko_title": "인터랙티브 디지털 박물관으로 인터넷 전체 역사 탐험",
+  "summary": "개발자가 WebMuseum이라는 인터랙티브 웹 앱을 공개했다. 최신 프론트엔드 스택으로 구현돼 인터넷의 초기 ARPANET부터 현재까지의 변천사를 시각적으로 체험한다. 라이브 데모와 GitHub 저장소가 제공돼 누구든 직접 사용하고 기여할 수 있다.",
+  "why": "최신 프론트엔드 스택으로 구현된 예제 코드를 GitHub에서 직접 살펴볼 수 있다. 인터랙티브 웹 앱의 구조와 시각화 방식을 참고해 유사한 프로젝트를 만들 때 활용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Your 100% Lighthouse A11y Score Is a Lie: The Visual Architecture Guide to the Browser Accessibility Tree",
+  "url": "https://dev.to/smtahosin/your-100-lighthouse-a11y-score-is-a-lie-the-visual-architecture-guide-to-the-browser-50l7",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1794860419.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/smtahosin/your-100-lighthouse-a11y-score-is-a-lie-the-visual-architecture-guide-to-the-browser-50l7"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fi.imgur.com%2FoLZVOCF.png",
+  "link_status": "ok",
+  "ko_title": "100% 라이트하우스 접근성 점수는 거짓이다 — 브라우저 접근성 트리 시각 가이드",
+  "summary": "라이트하우스 자동 점검은 정적 규칙만 확인해 실제 화면 리더 사용자의 경험을 반영하지 못한다. 자동 스캔은 전체 장애 중 30~40%만 포착하며, 키보드 탭 순서, 모달 포커스 트랩, ARIA 속성 오류 등은 검출하지 못한다. WebAIM 조사에 따르면 ARIA 사용 페이지는 오류가 41% 더 많이 발생한다.",
+  "why": "자동 점검은 정적 규칙만 확인해 키보드 순서나 모달 포커스 같은 동적 문제를 놓친다. 라이트하우스 100점을 받아도 화면 리더 사용자는 실제 조작에 실패할 수 있다. ARIA 속성을 잘못 쓰면 오히려 접근성 오류가 41% 더 늘어난다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "web"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Frame – 31.5\" color ePaper display",
+  "url": "https://trmnl.com/blog/introducing-frame",
+  "source": "hackernews",
+  "upvotes": 245,
+  "comments": 164,
+  "published_at": 1794846202,
+  "discussion": "https://news.ycombinator.com/item?id=50519354",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://trmnl.com/blog/introducing-frame"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://trmnl-public.s3.us-east-2.amazonaws.com/zzswly4kqlbg9cqf982toa8anyeg",
+  "link_status": "ok",
+  "ko_title": "Frame – 31.5인치 컬러 ePaper 디스플레이",
+  "summary": "31.5인치 풀 컬러 ePaper 디스플레이가 목재 프레임에 손수 제작돼 사전 주문을 받는다. 첫 번째 배치는 약 470대이며 2026년 말까지 일부를 배송하고 대부분은 2027년 초에 출고한다. 기존 흑백 ePaper 제품에 색상을 추가해 예술 전시용으로 활용한다.",
+  "why": "백엔드 개발 업무와 무관한 하드웨어 제품 소식이다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Strands to Strands over A2A on Bedrock AgentCore, With IAM as the Only Credential",
+  "url": "https://dev.to/aws-builders/strands-to-strands-over-a2a-on-bedrock-agentcore-with-iam-as-the-only-credential-19hp",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794859932.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws-builders/strands-to-strands-over-a2a-on-bedrock-agentcore-with-iam-as-the-only-credential-19hp"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fstrands-agentcore-a2a-iam%2Fmain%2Fdocs%2Fdevto-cover.85c749f0.jpg",
+  "link_status": "ok",
+  "ko_title": "Strands 간 A2A 연결 on Bedrock AgentCore, IAM만 인증 수단",
+  "summary": "이 가이드는 Amazon Bedrock AgentCore Runtime에서 Strands 에이전트 두 개를 A2A 프로토콜로 연결하는 방법을 단계별로 설명한다. 인증은 AWS IAM만 사용하며, 호출자는 SigV4 서명을 통해 요청한다. 필요한 환경은 AWS 계정, AWS CLI v2, Python·Node, AgentCore CLI 및 관련 Python 패키지이다. 저장소에는 구현 코드와 설정 예제가 포함돼 있다.",
+  "why": "IAM만 인증 수단으로 쓰는 패턴이므로 API 키나 OAuth 클라이언트 설정을 생략할 수 있다. AWS 계정과 Nova Micro 접근 권한이 있는 환경에서만 이 구성을 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "dev-tools",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "datasette-agent 0.6a0",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794714587.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/15/datasette-agent/"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-agent 0.6a0",
+  "summary": "Datasette Agent 플러그인에 누적된 소규모 수정이 포함되었습니다. 이제 Datasette 홈페이지에 에이전트 프롬프트가 추가되어 테이블과 쿼리를 해시 멘션 형태로 직접 지정할 수 있습니다.",
+  "why": "Datasette를 쓰는 경우 에이전트 프롬프트가 홈페이지에 붙고 테이블·쿼리를 해시 멘션으로 지정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "High or Low Thinking? Gemini 4 and Gemma 4 on Hard Math, Cost First",
+  "url": "https://dev.to/gde/high-or-low-thinking-gemini-4-and-gemma-4-on-hard-math-cost-first-3091",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 19,
+  "comments": 3,
+  "published_at": 1794851817.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/high-or-low-thinking-gemini-4-and-gemma-4-on-hard-math-cost-first-3091"
+  ],
+  "cross_source_count": 1,
+  "score": 53,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fgemma4-dev%2Fmain%2Fdocs%2Fgemini-high-vs-low%2Fdevto-cover.8e6eb323.jpg",
+  "link_status": "ok",
+  "ko_title": "Gemini 4와 Gemma 4, 어려운 수학에서 고·저 사고 수준 비교",
+  "summary": "Gemini API를 이용해 7개 모델이 동일한 15개 수학 문제를 최소와 최대 사고 설정으로 두 번씩 풀었다. 최고 사고 설정은 비용이 약 4배였지만 정답 수는 변하지 않았다. 작은 모델은 최고 설정에서 1~2문제 정도 추가 정답을 얻었지만 통계적 우연일 가능성이 있다.",
+  "why": "Gemini 4 모델은 최고 사고 설정이 최저 대비 약 4배의 비용을 들이고도 정답 수가 동일하므로 최저 설정으로 시작하면 된다. 작은 모델은 최고 설정에서 1~2문제 추가 정답을 얻지만 통계적 우연일 가능성이 있어 자체 문제로 검증이 필요하다. Carbon과 Argon은 2026년 12월 1일 가격 인상이 예정되어 있어 비용 격차가 더 벌어질 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "science"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Many of Amazon’s Black Friday and Cyber Monday “deals” offered no savings",
+  "url": "http://groundworkcollaborative.org/news/amazons-decoy-deals-groundwork-investigation-reveals-nearly-1-in-3-black-friday-and-cyber-monday-deals-advertised-by-amazon-offered-no-savings-to-shoppers-nearly-1-in-10-w/",
+  "source": "hackernews",
+  "upvotes": 782,
+  "comments": 474,
+  "published_at": 1794836347,
+  "discussion": "https://news.ycombinator.com/item?id=50517488",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "http://groundworkcollaborative.org/news/amazons-decoy-deals-groundwork-investigation-reveals-nearly-1-in-3-black-friday-and-cyber-monday-deals-advertised-by-amazon-offered-no-savings-to-shoppers-nearly-1-in-10-w/"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "http://groundworkcollaborative.org/wp-content/uploads/2026/11/GWC_CL_Cover_110526-1-791x1024.png",
+  "link_status": "ok",
+  "ko_title": "아마존 블랙프라이데이·사이버먼데이 “딜” 중 3분의 1은 절감 효과 없음",
+  "summary": "Groundwork Collaborative가 조사한 결과, 2024·2025년 아마존 블랙프라이데이·사이버먼데이 행사에서 350개 이상 제품을 분석한 결과 3분의 1에 해당하는 딜은 가격이 동일하거나 더 비쌌다. 특히 10% 정도는 행사 전보다 높은 가격에 판매되었다. 조사팀은 이 현상이 소비자에게 실질적인 할인을 제공하지 못한다고 지적했다.",
+  "why": "아마존 행사 기간에 표시된 할인가를 그대로 신뢰하면 오히려 비싸게 구매할 수 있다. 행사 전 가격과 비교하지 않으면 실질적 할인 여부를 판단하기 어렵다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Software is breaking down at a systemic level",
+  "url": "https://www.breck-mckye.com/blog/2026/11/software-is-breaking-down-at-a-systemic-level/",
+  "source": "hackernews",
+  "upvotes": 311,
+  "comments": 192,
+  "published_at": 1794853037,
+  "discussion": "https://news.ycombinator.com/item?id=50520866",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.breck-mckye.com/blog/2026/11/software-is-breaking-down-at-a-systemic-level/"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "소프트웨어가 시스템 수준에서 붕괴하고 있다",
+  "summary": "최근 마이크로소프트 전 세계 서비스 장애와 FAA 전면 정지, PHP2Shell 취약점, eMudhra SSL 인증서 유출 등 연속적인 사고가 발생했다. AI가 복잡한 취약점을 빠르게 찾아내는 데 활용되면서 문제의 원인과 증상이 동시에 나타나고 있다. 이러한 사건들은 서로 다른 직접 원인에도 불구하고 유사한 시스템적 결함을 드러낸다.",
+  "why": "AI가 복잡한 취약점을 수 시간 만에 찾아내는 시대가 열리며 공격 속도가 크게 빨라졌다. 백엔드 서비스의 네트워크 구성과 인증서 관리 등 기존 방어 체계가 이 속도를 따라가지 못해 연쇄 장애 위험이 커졌다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security"
+  ],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
+  "title": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
+  "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
+  "source": "hackernews",
+  "upvotes": 662,
+  "comments": 523,
+  "published_at": 1794853890,
+  "discussion": "https://news.ycombinator.com/item?id=50521045",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "JPMorgan Chase의 기술 문제로 미국 은행 온라인 뱅킹 지연",
+  "summary": "",
+  "why": "백엔드 인프라 장애가 고객사 서비스 가용성에 직접 영향을 미친 사례다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-17T08:00:05.278951+09:00",
+  "batch_label": "11월 17일 08:00"
+ },
+ {
   "title": "duwqijlk / muse-protocol",
   "url": "https://github.com/duwqijlk/muse-protocol",
   "source": "github",
