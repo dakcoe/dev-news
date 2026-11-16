@@ -1,5 +1,196 @@
 [
  {
+  "t": "Tor Project, 지속적인 DDoS 공격 중 신속 대응 DoS 방어 수정 발표",
+  "u": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "release"
+  ],
+  "d": "2026-11-16",
+  "o": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+  "x": "Tor 프로젝트가 0.4.9.17 버전을 공개했다. 이번 릴리스에는 IPv6 처리와 관련된 릴레이 DoS 방어를 강화하는 보안 수정이 포함된다."
+ },
+ {
+  "t": "CSS 컴파일러가 프로덕션 전에 접근성 버그를 잡을 수 있다면?",
+  "u": "https://dev.to/jenny_akhi_aade503c2764f6/what-if-your-css-compiler-could-catch-accessibility-bugs-before-production-1b3n",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-16",
+  "o": "\"What If Your CSS Compiler Could Catch Accessibility Bugs Before Production?\"",
+  "x": "traceless-style은 빌드 시점에 원자 CSS를 생성하고, 런타임 스타일링을 제거한다. 컴파일 단계에서 접근성 검증과 스타일 진단을 자"
+ },
+ {
+  "t": "OrcaRouter 라이트",
+  "u": "https://github.com/Continuum-AI-Corp/OrcaRouter-Lite",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-11-16",
+  "o": "Continuum-AI-Corp / OrcaRouter-Lite",
+  "x": "OrcaRouter Lite는 자체 호스팅이 가능한 LLM 라우터로, OpenAI와 호환되며 BYOK(키 직접 제공) 방식을 지원한다. 단일 워"
+ },
+ {
+  "t": "datasette-maplibre 0.1a0",
+  "u": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "d": "2026-11-16",
+  "x": "MapLibre GL과 OpenFreeMap을 결합한 새로운 Datasette 지리공간 플러그인이 공개되었습니다. SVG 미리보기를 보여주고 화"
+ },
+ {
+  "t": "datasette 1.0a43",
+  "u": "https://simonwillison.net/2026/Nov/15/datasette/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-16",
+  "x": "이번 릴리스에서는 출력 렌더러용 스트리밍 지원이 추가돼 TSV·CSV 내보내기가 스트리밍 방식으로 동작한다. private stored quer"
+ },
+ {
+  "t": "AI 에이전트가 도구 호출을 재시도했습니다. 첫 번째 호출은 이미 성공했습니다.",
+  "u": "https://dev.to/rudratosh/your-ai-agent-retried-the-tool-call-the-first-one-had-already-succeeded-3pke",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "d": "2026-11-16",
+  "o": "Your AI Agent Retried the Tool Call. The First One Had Already Succeeded.",
+  "x": "결제 도구 호출이 성공했지만 응답이 전달되지 않아 에이전트가 재시도하면서 중복 결제가 발생한 사례를 설명한다. 응답 누락으로 인해 시스템이 실패"
+ },
+ {
+  "t": "AI Avatar v28 (보안 지원, 복셀 아바타)",
+  "u": "https://dev.to/webdeveloperhyper/ai-avatar-v28-security-support-voxel-avatar-2i5i",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "security",
+   "devops-infra"
+  ],
+  "d": "2026-11-16",
+  "o": "AI Avatar v28 (Security Support, Voxel Avatar)🛡️",
+  "x": "AI Avatar에 보안 지원 기능이 추가돼 npm audit 기반 라이브러리 취약점 검사와 Betterleaks 기반 데이터 유출 검사를 제공"
+ },
+ {
+  "t": "당신의 웹캠이 건강 체크업이 된다",
+  "u": "https://dev.to/abhisekroy169/your-webcam-is-your-health-check-up-4ea8",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "hardware",
+   "showcase"
+  ],
+  "d": "2026-11-16",
+  "o": "Your Webcam Is Your Health Check-Up",
+  "x": "웹캠만으로 심박수와 호흡수를 실시간으로 측정하고, LLM이 작성한 간단한 건강 팁을 제공하는 웹 앱이 공개됐다. 측정 과정에서 카메라 위치·조명"
+ },
+ {
+  "t": "uBlock Origin의 웹사이트 기반 요소 선택기에서 발생한 범용 XSS",
+  "u": "https://iter.ca/post/ubo-uxss/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "web"
+  ],
+  "d": "2026-11-16",
+  "o": "Universal XSS in uBlock Origin from website-driven element picker",
+  "x": "uBlock Origin(MV2 Firefox 버전)에서 요소 선택기를 이용해 악성 사이트가 임의의 신뢰 필터를 추가할 수 있는 범용 XSS 취"
+ },
+ {
+  "t": "Nvidia는 앞으로 어떻게 될까?",
+  "u": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-16",
+  "o": "What's Next for Nvidia?",
+  "x": "Nvidia 이사회가 공동 창업자이자 CEO인 Jensen Huang이 33년 만에 사임했다고 발표했다. Huang은 과거 CUDA 도입, 딥러"
+ },
+ {
+  "t": "Coles, 사이버 보안 사고 발생",
+  "u": "https://www.colesgroup.com.au/updates/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-11-16",
+  "o": "Coles hit by a cybersecurity incident",
+  "x": "호주 대형 유통업체 Coles가 사이버 보안 사고를 조사 중이며, 현재까지 고객·직원·공급업체 데이터가 유출됐다는 증거는 발견되지 않았다. Co"
+ },
+ {
+  "t": "독립 개발자 시대는 끝났는가? 순수 PHP로 사이트를 만든 나의 여정",
+  "u": "https://dev.to/laing_lii_8c1214ffb0b60ec/title-is-the-era-of-independent-developers-over-my-journey-of-building-a-site-with-pure-php-cko",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [],
+  "d": "2026-11-16",
+  "o": "Title: Is the era of independent developers over? My journey of building a site with pure PHP.",
+  "x": "저자는 프레임워크 없이 순수 PHP로 디렉터리와 20여 개의 온라인 도구를 직접 구현하고 사이트를 출시했다. 출시 후 스팸 봇 공격을 받아 자체"
+ },
+ {
+  "t": "BaaRai / ARTEX",
+  "u": "https://github.com/BaaRai/ARTEX",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "open-source"
+  ],
+  "d": "2026-11-16"
+ },
+ {
+  "t": "Qwen4-최대",
+  "u": "https://qwen.ai/blog?id=qwen4-max",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-16",
+  "o": "Qwen4-Max"
+ },
+ {
   "t": "Noniv / abyssal-garden",
   "u": "https://github.com/Noniv/abyssal-garden",
   "m": "2026-11",

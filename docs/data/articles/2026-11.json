@@ -1,5 +1,457 @@
 [
  {
+  "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+  "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+  "source": "hackernews",
+  "upvotes": 118,
+  "comments": 28,
+  "published_at": 1794788514,
+  "discussion": "https://news.ycombinator.com/item?id=50512441",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://forum.torproject.org/t/security-release-0-4-9-17/22454"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://forum.torproject.org/uploads/default/original/2X/d/d3424bed34f4ec18b2e99178c2801ba6dfb655d6.png",
+  "link_status": "ok",
+  "ko_title": "Tor Project, 지속적인 DDoS 공격 중 신속 대응 DoS 방어 수정 발표",
+  "summary": "Tor 프로젝트가 0.4.9.17 버전을 공개했다. 이번 릴리스에는 IPv6 처리와 관련된 릴레이 DoS 방어를 강화하는 보안 수정이 포함된다. 지속적인 DDoS 공격으로 대부분의 릴레이 운영자가 영향을 받아 신속히 배포된 업데이트이다. 릴레이 운영자는 가능한 한 빨리 업그레이드해야 한다.",
+  "why": "Tor 릴레이를 운영 중이라면 0.4.9.17 버전으로 즉시 업그레이드해야 한다. 업그레이드 후 별도의 추가 조치는 필요 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "\"What If Your CSS Compiler Could Catch Accessibility Bugs Before Production?\"",
+  "url": "https://dev.to/jenny_akhi_aade503c2764f6/what-if-your-css-compiler-could-catch-accessibility-bugs-before-production-1b3n",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794796757.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/jenny_akhi_aade503c2764f6/what-if-your-css-compiler-could-catch-accessibility-bugs-before-production-1b3n"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9vxapi98mnmvpvkeeiem.png",
+  "link_status": "ok",
+  "ko_title": "CSS 컴파일러가 프로덕션 전에 접근성 버그를 잡을 수 있다면?",
+  "summary": "traceless-style은 빌드 시점에 원자 CSS를 생성하고, 런타임 스타일링을 제거한다. 컴파일 단계에서 접근성 검증과 스타일 진단을 자동으로 수행한다. 기존 CSS-in-JS 방식과 달리 클래스 이름을 미리 변환해 브라우저 작업을 최소화한다. MIT 라이선스로 오픈소스이며, 예시 코드와 함께 사용 방법을 소개한다.",
+  "why": "빌드 시점에 접근성 검증을 수행해 프로덕션 배포 전 스타일 버그를 차단한다. 런타임 스타일링을 제거해 브라우저에서 처리해야 할 작업을 줄인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Continuum-AI-Corp / OrcaRouter-Lite",
+  "url": "https://github.com/Continuum-AI-Corp/OrcaRouter-Lite",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 192,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Continuum-AI-Corp/OrcaRouter-Lite"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 192,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/Continuum-AI-Corp/OrcaRouter-Lite",
+  "link_status": null,
+  "ko_title": "OrcaRouter 라이트",
+  "summary": "OrcaRouter Lite는 자체 호스팅이 가능한 LLM 라우터로, OpenAI와 호환되며 BYOK(키 직접 제공) 방식을 지원한다. 단일 워크스페이스에서 스트리밍 응답과 자동 모델 선택(`model=\"auto\"`) 기능을 제공한다. 모델 제공자 장애 시 코드 변경 없이 자동으로 대체 모델로 전환한다.",
+  "why": "기존 OpenAI 호환 코드를 그대로 유지하면서 단일 엔드포인트로 100개 이상 모델을 호출할 수 있다. 제공자 장애 시 코드 수정 없이 대체 모델로 자동 전환되어 서비스 중단 리스크를 줄인다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "datasette-maplibre 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794787116.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/15/datasette-maplibre/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://static.simonwillison.net/static/cors-allow/2026/datasette-maplibre.webp",
+  "link_status": "ok",
+  "ko_title": "datasette-maplibre 0.1a0",
+  "summary": "MapLibre GL과 OpenFreeMap을 결합한 새로운 Datasette 지리공간 플러그인이 공개되었습니다. SVG 미리보기를 보여주고 화면에 나타날 때 WebGL으로 전환하는 기능을 포함합니다. 최신 Datasette Lite에서 Pyodide와 WebAssembly를 이용해 브라우저에서 바로 시연할 수 있는 데모도 제공됩니다.",
+  "why": "Datasette에서 지리공간 데이터를 다룰 때 기존 플러그인 대신 이 도구를 쓰면 된다. GeoJSON 형상과 좌표 포인트를 하나의 맵에서 동시에 확인하는 데 유용하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "datasette 1.0a43",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794784827.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/15/datasette/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette 1.0a43",
+  "summary": "이번 릴리스에서는 출력 렌더러용 스트리밍 지원이 추가돼 TSV·CSV 내보내기가 스트리밍 방식으로 동작한다. private stored query 노출 위험을 해결하는 보안 수정이 포함됐으며, <datasette-copy-button> 웹 컴포넌트와 JSON pretty-print 기능이 새롭게 제공된다. 또한 CSS 멀티-페이지 전환 효과가 적용돼 탐색이 SPA처럼 부드러워졌다.",
+  "why": "TSV·CSV 내보내기가 스트리밍 방식으로 바뀌어 대용량 데이터 처리 시 메모리 부담이 줄었다. 개인 저장 쿼리의 제목과 SQL이 노출될 수 있는 보안 취약점이 수정됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Your AI Agent Retried the Tool Call. The First One Had Already Succeeded.",
+  "url": "https://dev.to/rudratosh/your-ai-agent-retried-the-tool-call-the-first-one-had-already-succeeded-3pke",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794808056.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/rudratosh/your-ai-agent-retried-the-tool-call-the-first-one-had-already-succeeded-3pke"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Frudratoshs.github.io%2Fassets%2Fai-agent-retry-idempotency%2Fcover.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 도구 호출을 재시도했습니다. 첫 번째 호출은 이미 성공했습니다.",
+  "summary": "결제 도구 호출이 성공했지만 응답이 전달되지 않아 에이전트가 재시도하면서 중복 결제가 발생한 사례를 설명한다. 응답 누락으로 인해 시스템이 실패와 성공을 구분하지 못하는 위험한 실패 모드와, HTTP 클라이언트·프레임워크·큐·워커·모델 등 여러 컴포넌트가 동시에 재시도할 수 있음을 지적한다. 이러한 상황을 방지하기 위한 실행 시스템 설계 방안을 제시한다.",
+  "why": "도구 호출이 성공했는데 응답만 사라지면 중복 결제 같은 부작용이 생길 수 있다. HTTP 클라이언트, 큐, 워커, 모델이 동시에 재시도하면 중복이 더 커진다. 실행 시스템 설계 시 이 실패 모드를 반드시 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "AI Avatar v28 (Security Support, Voxel Avatar)🛡️",
+  "url": "https://dev.to/webdeveloperhyper/ai-avatar-v28-security-support-voxel-avatar-2i5i",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 9,
+  "comments": 1,
+  "published_at": 1794803679.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/webdeveloperhyper/ai-avatar-v28-security-support-voxel-avatar-2i5i"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1p4kxontmb681a8hynvf.png",
+  "link_status": "ok",
+  "ko_title": "AI Avatar v28 (보안 지원, 복셀 아바타)",
+  "summary": "AI Avatar에 보안 지원 기능이 추가돼 npm audit 기반 라이브러리 취약점 검사와 Betterleaks 기반 데이터 유출 검사를 제공한다. 취약점 발견 시 바이러스 같은 애니메이션으로 시각화한다. 또한 복셀 아바타 업데이트와 AWS 정리 작업이 포함된다.",
+  "why": "VS Code 사이드바에서 npm audit과 Betterleaks 검사를 바로 실행할 수 있다. 라이브러리 취약점이나 노출된 키가 발견되면 시각적 피드백을 받는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Your Webcam Is Your Health Check-Up",
+  "url": "https://dev.to/abhisekroy169/your-webcam-is-your-health-check-up-4ea8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 6,
+  "comments": 1,
+  "published_at": 1794804379.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/abhisekroy169/your-webcam-is-your-health-check-up-4ea8"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fycnowar1qhpdzi7kxo58.png",
+  "link_status": "ok",
+  "ko_title": "당신의 웹캠이 건강 체크업이 된다",
+  "summary": "웹캠만으로 심박수와 호흡수를 실시간으로 측정하고, LLM이 작성한 간단한 건강 팁을 제공하는 웹 앱이 공개됐다. 측정 과정에서 카메라 위치·조명·동작 등에 대한 실시간 피드백을 제공한다. 결과는 메모리 상에서만 처리되고 저장되지 않으며, Keycloak 로그인으로 개인 정보를 보호한다.",
+  "why": "웹캠 기반 생체 신호 측정 시 LLM이 수치만 받아 건강 팁을 생성하는 구조를 참고할 수 있다. 영상은 메모리에서 처리되고 저장되지 않는 방식이므로 개인정보 보호 설계에 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Universal XSS in uBlock Origin from website-driven element picker",
+  "url": "https://iter.ca/post/ubo-uxss/",
+  "source": "hackernews",
+  "upvotes": 260,
+  "comments": 67,
+  "published_at": 1794794688,
+  "discussion": "https://news.ycombinator.com/item?id=50513160",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://iter.ca/post/ubo-uxss/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://iter.ca//ubo-epicker.png",
+  "link_status": "ok",
+  "ko_title": "uBlock Origin의 웹사이트 기반 요소 선택기에서 발생한 범용 XSS",
+  "summary": "uBlock Origin(MV2 Firefox 버전)에서 요소 선택기를 이용해 악성 사이트가 임의의 신뢰 필터를 추가할 수 있는 범용 XSS 취약점이 발견됐다. 이 필터는 페이지에 JavaScript를 주입해 모든 사이트에서 임의 코드를 실행할 수 있다. 해당 취약점은 현재 수정되었으며 GitHub advisory에 상세 내용이 있다.",
+  "why": "uBlock Origin을 사용하는 Firefox 사용자는 즉시 확장 기능을 업데이트해야 한다. 미리 업데이트하지 않으면 악성 사이트가 신뢰 필터를 주입해 모든 사이트에서 임의의 JavaScript를 실행할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "What's Next for Nvidia?",
+  "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+  "source": "hackernews",
+  "upvotes": 192,
+  "comments": 252,
+  "published_at": 1794786955,
+  "discussion": "https://news.ycombinator.com/item?id=50512235",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://steveblank.com/2026/11/15/whats-next-for-nvidia/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://steveblank.com/wp-content/uploads/2026/11/nvidia-reinventions-1024x677.jpg",
+  "link_status": "ok",
+  "ko_title": "Nvidia는 앞으로 어떻게 될까?",
+  "summary": "Nvidia 이사회가 공동 창업자이자 CEO인 Jensen Huang이 33년 만에 사임했다고 발표했다. Huang은 과거 CUDA 도입, 딥러닝 전환, Mellanox 인수 등으로 회사를 세 차례 혁신해 왔다. 그의 퇴임으로 향후 경영진이 어떤 전략을 선택할지가 주목된다.",
+  "why": "CUDA와 Mellanox 인수를 이끈 황의 퇴임으로 향후 경영 전략이 불확실해졌다. AI 인프라와 GPU 플랫폼의 방향성이 바뀔 수 있어 관련 기술 스택 점검이 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Coles hit by a cybersecurity incident",
+  "url": "https://www.colesgroup.com.au/updates/",
+  "source": "hackernews",
+  "upvotes": 90,
+  "comments": 65,
+  "published_at": 1794791675,
+  "discussion": "https://news.ycombinator.com/item?id=50512824",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.colesgroup.com.au/updates/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Coles, 사이버 보안 사고 발생",
+  "summary": "호주 대형 유통업체 Coles가 사이버 보안 사고를 조사 중이며, 현재까지 고객·직원·공급업체 데이터가 유출됐다는 증거는 발견되지 않았다. Coles는 호주 사이버 보안 센터와 글로벌 보안 전문가와 협력해 시스템을 보호하고 있다. 영업은 정상적으로 진행 중이며, 온라인·오프라인 쇼핑에 영향이 없다.",
+  "why": "Coles의 사고와 무관한 개발 환경에는 직접적 변경 사항이 없다. 다만 유사한 유통·플랫폼 서비스의 공급망 보안 점검 시 참고할 사례로 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Title: Is the era of independent developers over? My journey of building a site with pure PHP.",
+  "url": "https://dev.to/laing_lii_8c1214ffb0b60ec/title-is-the-era-of-independent-developers-over-my-journey-of-building-a-site-with-pure-php-cko",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1794811810.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/laing_lii_8c1214ffb0b60ec/title-is-the-era-of-independent-developers-over-my-journey-of-building-a-site-with-pure-php-cko"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ldg6b0w62v9z6no8m92.png",
+  "link_status": "ok",
+  "ko_title": "독립 개발자 시대는 끝났는가? 순수 PHP로 사이트를 만든 나의 여정",
+  "summary": "저자는 프레임워크 없이 순수 PHP로 디렉터리와 20여 개의 온라인 도구를 직접 구현하고 사이트를 출시했다. 출시 후 스팸 봇 공격을 받아 자체 안티스팸 로직을 적용했으며, 최종적으로 스팸 차단을 위해 Google OAuth 로그인을 도입했다. 이 과정에서 순수 개발 방식의 어려움과 독립 개발자로서의 지속 가능성을 고민한다.",
+  "why": "사용자 제출 기능을 제공하는 백엔드 서비스라면 스팸 봇 공격에 대비해야 한다. 레이트 리미팅과 허니팟만으로는 차단이 부족할 수 있다. 스팸이 지속되면 Google OAuth 로그인 도입을 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "BaaRai / ARTEX",
+  "url": "https://github.com/BaaRai/ARTEX",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 840,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/BaaRai/ARTEX"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 840,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/BaaRai/ARTEX",
+  "link_status": null,
+  "ko_title": "BaaRai / ARTEX",
+  "summary": "",
+  "why": "자체 호스팅 환경에서 LLM 기반 침투 테스트를 수행할 때 유용하다. 각 탐지 결과에 실제 HTTP 요청과 응답 증거를 연결해 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
+  "title": "Qwen4-Max",
+  "url": "https://qwen.ai/blog?id=qwen4-max",
+  "source": "hackernews",
+  "upvotes": 362,
+  "comments": 121,
+  "published_at": 1794795284,
+  "discussion": "https://news.ycombinator.com/item?id=50513215",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://qwen.ai/blog?id=qwen4-max"
+  ],
+  "cross_source_count": 1,
+  "score": 17,
+  "image": "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png",
+  "link_status": "ok",
+  "ko_title": "Qwen4-최대",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-16T16:00:07.314922+09:00",
+  "batch_label": "11월 16일 16:00"
+ },
+ {
   "title": "Noniv / abyssal-garden",
   "url": "https://github.com/Noniv/abyssal-garden",
   "source": "github",

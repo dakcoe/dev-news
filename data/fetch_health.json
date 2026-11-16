@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-06T16:00:35+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 10,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/australian-universities-ai-native-graduates",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/cultfit-builds-with-codex",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-07T00:00:38+09:00",
    "total": 16,
    "counts": {
@@ -538,6 +517,22 @@
      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-16T16:00:34+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 11,
+    "empty": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://qwen.ai/blog?id=qwen4-max",
+     "source": "hackernews",
+     "reason": "empty"
     }
    ]
   }
