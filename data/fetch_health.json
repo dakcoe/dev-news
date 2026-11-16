@@ -1,34 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-07T00:00:38+09:00",
-   "total": 16,
-   "counts": {
-    "robots": 1,
-    "ok": 11,
-    "empty": 1,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://www.msn.com/en-us/technology/tech-companies/tesla-to-wind-down-cybertruck-production-after-years-of-poor-sales-in-few-markets/ar-AA2gSZGv",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://openai.com/ads/customers/flipsnack",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-07T08:00:34+09:00",
    "total": 15,
    "counts": {
@@ -531,6 +503,22 @@
    "failures": [
     {
      "url": "https://qwen.ai/blog?id=qwen4-max",
+     "source": "hackernews",
+     "reason": "empty"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-17T00:00:33+09:00",
+   "total": 20,
+   "counts": {
+    "empty": 1,
+    "ok": 14,
+    "github": 5
+   },
+   "failures": [
+    {
+     "url": "https://www.monirbounadi.com/Bounadi_JMP.pdf",
      "source": "hackernews",
      "reason": "empty"
     }
