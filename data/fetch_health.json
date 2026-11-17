@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-08T00:00:27+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 10,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-11-08T08:00:33+09:00",
    "total": 12,
    "counts": {
@@ -525,6 +516,28 @@
      "url": "https://openai.com/index/science-at-the-frontier",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-18T00:00:29+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "blocked": 1,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/introducing-openai-for-chile",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/849",
+     "source": "rss",
+     "reason": "short"
     }
    ]
   }

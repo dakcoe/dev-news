@@ -1,5 +1,483 @@
 [
  {
+  "title": "판단에만 집중하세요: 토스 타겟팅 모델 개발 자동화",
+  "url": "https://toss.tech/article/targeting-model-automation",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794899640.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/targeting-model-automation"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "판단에만 집중하세요: 토스 타겟팅 모델 개발 자동화",
+  "summary": "토스는 고객 타겟팅 모델 개발 프레임워크 TASTE에 auto_k 기능을 추가해 피쳐 수를 자동으로 최적화한다. 동일 모델 설정에서 피쳐를 늘려가며 성능을 측정하고, 개선이 멈추는 지점에서 피쳐 수를 결정한다. 이를 통해 피쳐를 84% 줄여도 성능 손실이 없으며, 전환율이 1.7배 상승했다.",
+  "why": "기존에 중요도 상위 비율로 피쳐를 고르던 방식과 달리, 성능 개선이 멈추는 지점을 기준으로 피쳐 수를 자동 결정합니다. 피쳐를 대폭 줄여도 성능 손실이 없으므로 학습 시간과 메모리 부담을 낮출 수 있습니다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "EL4CTEO / blender-skills",
+  "url": "https://github.com/EL4CTEO/blender-skills",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 439,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/EL4CTEO/blender-skills"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 439,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/EL4CTEO/blender-skills",
+  "link_status": null,
+  "ko_title": "EL4CTEO / 블렌더 스킬",
+  "summary": "이 GitHub 저장소는 Blender 5.2 LTS 이상에서 동작하는 28개의 에이전트 스킬을 제공한다. Claude Code, Codex, OpenCode, Gemini CLI, GitHub Copilot, Cursor 등 다양한 AI 코딩 에이전트와 연동된다. 설치는 플러그인 추가 또는 레포지토리 클론 후 스크립트 실행으로 간단히 할 수 있다.",
+  "why": "Blender 5.2 LTS 이상 환경에서 AI 에이전트로 3D 파이프라인을 자동화할 수 있다. 5.3.0으로 업데이트하면 KTX2 웹 내보내기 기능이 추가된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Git 2.56's git add --resolved only checks conflict markers while git still calls a file unmerged",
+  "url": "https://dev.to/alexgeorgiev17/git-256s-git-add-resolved-only-checks-conflict-markers-while-git-still-calls-a-file-unmerged-jgm",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794913200.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/git-256s-git-add-resolved-only-checks-conflict-markers-while-git-still-calls-a-file-unmerged-jgm"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fh7kqyp6kr1abxt89agq3.png",
+  "link_status": "ok",
+  "ko_title": "Git 2.56의 git add --resolved는 충돌 표시만 확인하고 파일을 아직 병합되지 않은 상태로 남긴다",
+  "summary": "Git 2.56에 새로 추가된 `git add --resolved` 옵션은 병합 충돌이 해결된 파일만 스테이징한다. 기존 `git add .`와 달리 충돌 표시가 남은 파일은 제외하고, 다른 파일은 영향을 주지 않는다. Ubuntu 24.04에서는 소스 빌드가 필요했으며, 테스트 결과 옵션이 의도대로 동작함을 확인했다.",
+  "why": "Git 2.56의 git add --resolved는 충돌 표시만 검사한다. 파일의 병합 상태가 여전히 미해결로 남아 있으면 스테이징이 거부된다. 충돌 표시를 지웠더라도 이 상태를 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Jiff 1.0: A datetime library for Rust",
+  "url": "https://burntsushi.net/jiff/",
+  "source": "hackernews",
+  "upvotes": 413,
+  "comments": 88,
+  "published_at": 1794848019,
+  "discussion": "https://news.ycombinator.com/item?id=50519744",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://burntsushi.net/jiff/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Jiff 1.0: Rust용 날짜·시간 라이브러리",
+  "summary": "Jiff 1.0이 정식 출시되었으며, Rust 생태계의 다수 프로젝트에서 이미 사용 중이다. API에 시간대 처리를 핵심으로 두어 일광 절약 시간 문제를 자동으로 해결한다. 주요 변경 사항은 CHANGELOG에서 확인할 수 있다.",
+  "why": "Rust 프로젝트에서 시간대 처리를 수동으로 구현하던 방식과 달라진다. 일광 절약 시간 문제를 라이브러리가 자동으로 해결하므로 관련 버그를 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Strengthening NATO and allied cyber defenses with AI",
+  "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794873600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4AvTdfi4XgE0hchiQH8UhY/6c9c5278cafc000de19c0892beecbf8c/strengthening-nato-and-allied-cyber-defences-with-ai-seo.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "AI로 NATO와 동맹 사이버 방어 강화",
+  "summary": "OpenAI가 NATO와 협력해 사이버 방어에 고급 AI 모델을 제공한다. Daybreak 도구를 통해 소프트웨어 검토·위협 조사·취약점 검증·수정 테스트를 지원한다. NATO는 월 3000억 토큰 규모로 모델을 활용했으며, 2026년 Crossed Swords 훈련에 AI 에이전트 구축·평가 과정을 포함했다. 유럽 주요 사이버 기관과 우크라이나 디지털 전환부도 이 도구를 사용한다.",
+  "why": "Daybreak는 소프트웨어 검토와 취약점 검증 등 보안 업무를 자동화하는 도구다. AI 에이전트와 함께 작업하되 인간 감독을 유지하는 운영 방식이 표준으로 자리 잡고 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "security"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "nexu-io / openmotion",
+  "url": "https://github.com/nexu-io/openmotion",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 428,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/nexu-io/openmotion"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 428,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/nexu-io/openmotion",
+  "link_status": null,
+  "ko_title": "nexu-io / openmotion — 오픈소스 Claude Motion 및 CapCut 대안",
+  "summary": "OpenMotion은 Claude Motion과 CapCut을 대체하는 오픈소스 영상 편집·모션 툴이다. Node.js 22.18 이상에서 동작하며 Apache 2.0 라이선스를 사용한다. GitHub 스타 9.5 k(2026-11-09)와 OpenDesign 커뮤니티 지원을 받고 있다.",
+  "why": "Node.js 22.18 이상 환경에서만 동작하므로 기존 런타임 버전 확인이 필요하다. CapCut이나 Claude Motion을 쓰던 워크플로우를 오픈소스 도구로 대체할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "OpenCode Browse",
+  "url": "https://opencode.ai/product/browse",
+  "source": "hackernews",
+  "upvotes": 311,
+  "comments": 193,
+  "published_at": 1794864037,
+  "discussion": "https://news.ycombinator.com/item?id=50523459",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://opencode.ai/product/browse"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://opencode.ai/og/product-browse-1528ffd6f6.png",
+  "link_status": "ok",
+  "ko_title": "OpenCode Browse",
+  "summary": "MCP 서버와 Chromium 확장 프로그램을 결합해 에이전트가 사용자의 실제 브라우저 탭, 로그인 정보, 확장 기능을 그대로 활용한다. 에이전트는 백그라운드에서 탭을 열어 페이지를 읽고 클릭·입력·스크린샷·녹화를 수행하고, 로그인·2FA·결제 등 사용자가 직접 해야 할 단계만 사용자에게 넘긴다. Chrome, Edge, Brave 등 주요 브라우저를 지원하며, CLI 설치 옵션도 제공한다.",
+  "why": "에이전트가 기존 브라우저 세션을 재사용하므로 별도 API 키나 인증 설정이 불필요하다. 로그인이나 2FA 등 민감한 단계는 사용자가 직접 처리해야 하므로 완전 자동화에는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Once Upon Agentic AI (Part 2): Develop your own MCP server and cast its tools from Strands Agents",
+  "url": "https://dev.to/aws/once-upon-agentic-ai-part-2-develop-your-own-mcp-server-and-cast-its-tools-from-strands-agents-9ob",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 24,
+  "comments": 6,
+  "published_at": 1794904535.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws/once-upon-agentic-ai-part-2-develop-your-own-mcp-server-and-cast-its-tools-from-strands-agents-9ob"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxi3uazx8659dkwvykj6s.jpeg",
+  "link_status": "ok",
+  "ko_title": "에이전트형 AI 파트 2: 자체 MCP 서버 개발 및 Strands 에이전트 도구 활용",
+  "summary": "이번 글은 AWS 샘플 저장소에서 MCP(Model Context Protocol) 서버를 구축하고, Strands Agents Harness SDK를 이용해 도구를 호출하는 방법을 소개한다. 파이썬, uv, 터미널, AWS 자격증명 필요하며, 코드와 TODO 마커가 포함된 레포가 제공된다. MCP는 에이전트가 외부 프로그램의 기능을 사용할 수 있게 하는 오픈 표준이다.",
+  "why": "MCP를 쓰면 에이전트 도구를 별도 프로세스로 분리해 재사용할 수 있다. Strands 에이전트에서 외부 도구를 호출할 때 이 표준을 적용하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Grazing sheep in fields with solar arrays",
+  "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
+  "source": "hackernews",
+  "upvotes": 305,
+  "comments": 304,
+  "published_at": 1794850066,
+  "discussion": "https://news.ycombinator.com/item?id=50520182",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_lg/public/2026-10/2026_1407_aer_009-n.jpg?itok=01dhmnjw",
+  "link_status": "ok",
+  "ko_title": "태양광 필드에서 양 방목",
+  "summary": "두 연구는 적정 양 수(헥타당 2마리)로 방목하면 벌과 무당벌레 등 유익 곤충이 38% 증가한다는 것을 보여준다. 또 다른 연구는 농가가 태양광 방목을 수익성 있게 운영하도록 돕는 의사결정 지원 도구를 소개한다.",
+  "why": "태양광 발전소 운영 시 양 방목이 벌과 무당벌레 등 유익 곤충을 38% 늘린다는 연구 결과가 나왔다. 농가가 태양광 방목을 수익성 있게 운영하도록 돕는 의사결정 지원 도구도 함께 소개됐다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "New Evidence Shows School Phone Bans Are Gradually Improving Test Scores",
+  "url": "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html",
+  "source": "hackernews",
+  "upvotes": 453,
+  "comments": 225,
+  "published_at": 1794915951,
+  "discussion": "https://news.ycombinator.com/item?id=50530163",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static01.nyt.com/images/2026/11/17/multimedia/17up-phone-pouch1-jlkf/17up-phone-pouch1-jlkf-facebookJumbo.jpg",
+  "link_status": "ok",
+  "ko_title": "학교 휴대폰 금지, 시험 점수 서서히 향상",
+  "summary": "엄격한 휴대폰 금지 정책을 시행한 4,600개 학교의 3.3백만 학생을 대상으로 한 전국 규모 연구에서, 금지 전후 시험 점수가 평균 1~2주 분량의 학업 효과만큼 상승한 것으로 나타났다. 연구는 2021~2026년 MAP 시험 데이터를 활용했으며, 금지 정책이 이전의 점수 하락 추세를 부분적으로 회복시킨다.",
+  "why": "기존 연구와 달리 금지 정책이 실제 학업 성과에 긍정적 영향을 미친다는 근거가 제시되었다. 교육 현장에서 휴대폰 사용 제한을 검토 중인 경우, 정책 도입을 고려할 근거가 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "career-culture"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "지표 뒤에 숨은 맥락을 한눈에: New20 Timeline Hub 만들기",
+  "url": "https://toss.tech/article/new20-timeline-hub",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794908340.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/new20-timeline-hub"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "지표 뒤에 숨은 맥락을 한눈에: New20 Timeline Hub 만들기",
+  "summary": "New20 프로모션의 다양한 기록을 하나의 시간축으로 통합한 내부 도구를 소개한다. 배포, 정책, 실험 등 여러 채널의 정보를 자동 수집·정리해 분석가가 특정 시점의 제품 상태를 빠르게 파악할 수 있다. 기존에는 회의록·PR·문서가 흩어져 있어 연결 비용이 높았던 문제를 해결한다.",
+  "why": "흩어진 회의록과 PR을 시간축으로 묶어 특정 시점의 제품 상태를 빠르게 복원할 수 있다. 지표 변동의 원인을 추적할 때 여러 채널을 수동으로 연결하는 비용을 줄여준다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "if(kakao)26 현장 스케치",
+  "url": "https://tech.kakao.com/posts/849",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794841200.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/849"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Fe799beca01a100001.jpg",
+  "link_status": "ok",
+  "ko_title": "if(kakao)26 현장 스케치",
+  "summary": "10월 13·14일 카카오 AI 캠퍼스에서 “모든 연결에 지능을” 주제로 if(kakao)26 행사가 열렸다. 현장과 온라인 참가자에게 카카오가 만든 AI 기술·서비스와 개발·운영 경험을 공유했다. 이번 행사에서는 기술 세션과 네트워킹에 중점을 두어 현재 성과와 해결 중인 과제를 솔직히 이야기했다.",
+  "why": "카카오의 AI 개발과 운영 과정에서 겪은 실질적 과제를 공유하는 자리다. 백엔드와 AI를 다루는 개발자가 유사한 문제를 해결하는 데 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Could I Still Do This From Scratch?",
+  "url": "https://dev.to/dannwaneri/could-i-still-do-this-from-scratch-427h",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 27,
+  "comments": 5,
+  "published_at": 1794914775.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/dannwaneri/could-i-still-do-this-from-scratch-427h"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6sw7q891msu9qonbawld.webp",
+  "link_status": "ok",
+  "ko_title": "아직도 처음부터 할 수 있을까?",
+  "summary": "개발자들이 AI 도구로 작업 속도가 빨라지는 동시에 문제 해결 능력이 약화된다는 우려를 공유한다. Microsoft와 MIT 연구는 AI 신뢰도가 높을수록 비판적 사고가 감소하고, 오히려 생산성이 떨어질 수 있음을 보여준다.",
+  "why": "AI 도구 의존도가 높아질수록 비판적 사고와 문제 해결 능력이 저하된다는 연구 결과가 나왔다. 경험 많은 개발자도 AI 사용 시 실제보다 생산성이 높다고 오인할 수 있다. 코드 작성보다 검토 중심으로 업무가 바뀌면 장기적 기술 역량이 약화된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "career-culture"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "Introducing OpenAI for Chile",
+  "url": "https://openai.com/index/introducing-openai-for-chile",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794873600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/introducing-openai-for-chile"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI for Chile 소개",
+  "summary": "OpenAI가 칠레 정부와 협력해 책임 있는 AI 도입을 지원한다. 공공 부문의 AI 역량을 강화하고, 현지 스타트업이 AI 애플리케이션을 개발하도록 돕는다.",
+  "why": "칠레 현지 공공 부문 및 스타트업 대상 지원이므로, 국내 백엔드 개발자의 작업 환경에는 직접적인 변경 사항이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
+  "title": "My Empire of Dirt",
+  "url": "https://geohot.github.io//blog/jekyll/update/2026/11/17/my-empire-of-dirt.html",
+  "source": "hackernews",
+  "upvotes": 93,
+  "comments": 104,
+  "published_at": 1794915560,
+  "discussion": "https://news.ycombinator.com/item?id=50530114",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://geohot.github.io//blog/jekyll/update/2026/11/17/my-empire-of-dirt.html"
+  ],
+  "cross_source_count": 1,
+  "score": 19,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "내 먼지 제국",
+  "summary": "글은 Anthropic의 AI 중심 이념이 인간과 조직을 배제하고 내부 에이전트만으로 미래를 설계한다는 주장이다. 저자는 이러한 흐름이 제3차 세계대전으로 이어질 위험을 경고한다. 또한 미국 정부와 AI 연구자조차 필요 없다고 비판한다.",
+  "why": "이 글은 기술적 구현이나 도구 업데이트가 아니라 특정 AI 기업에 대한 정치적·이념적 비판이다. 백엔드나 AI 개발 업무에 직접 적용할 변경 사항이나 주의할 점이 없다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-18T00:00:01.998167+09:00",
+  "batch_label": "11월 18일 00:00"
+ },
+ {
   "title": "Optimizely compromised, served malware on Zoom, GitLab",
   "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
   "source": "hackernews",
