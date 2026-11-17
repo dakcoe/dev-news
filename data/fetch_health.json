@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-07T16:00:36+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "blocked": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-08T00:00:27+09:00",
    "total": 15,
    "counts": {
@@ -519,6 +503,27 @@
     {
      "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
      "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-17T16:00:25+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 13,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+     "source": "rss",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://openai.com/index/science-at-the-frontier",
+     "source": "rss",
      "reason": "blocked"
     }
    ]
