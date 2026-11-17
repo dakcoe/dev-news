@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-08T08:00:33+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "github": 3
-   },
-   "failures": []
-  },
-  {
    "at": "2026-11-08T16:01:14+09:00",
    "total": 13,
    "counts": {
@@ -538,6 +529,22 @@
      "url": "https://tech.kakao.com/posts/849",
      "source": "rss",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-18T08:00:28+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 15,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }

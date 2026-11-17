@@ -1,5 +1,245 @@
 [
  {
+  "t": "코딩 에이전트를 위한 외부 샌드박스",
+  "u": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "backend-data",
+   "devops-infra",
+   "language"
+  ],
+  "d": "2026-11-18",
+  "o": "External sandboxes for coding agents",
+  "x": "외부 샌드박스 패턴을 소개하고, 에이전트가 실행하는 코드를 전용 샌드박스에서 격리한다. 이를 구현한 세 가지 서버(Node.js-v86, Pyt"
+ },
+ {
+  "t": "GPT-6.2 Astra 및 Sol 소개",
+  "u": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-18",
+  "o": "Introducing GPT-6.2 Astra and Sol",
+  "x": "GPT-6.2 Astra는 복잡한 전문 작업에서 더 높은 품질과 낮은 비용을 제공하고, GPT-6.2 Sol은 일상적인 작업에서 효율성을 높인다"
+ },
+ {
+  "t": "MAI Code 2와 Code 2 Flash",
+  "u": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-coding",
+   "dev-tools"
+  ],
+  "d": "2026-11-18",
+  "o": "MAI Code 2 and Code 2 Flash",
+  "x": "MAI Code 2와 Code 2 Flash는 기업용 코딩 작업에 최적화된 새로운 모델이다. Code 2는 코드 배포, 디버깅, 다파일 구현 등"
+ },
+ {
+  "t": "서비스 워커와 Pyodide로 브라우저에서 전체 서버-사이드 Datasette Python 앱 실행",
+  "u": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "web",
+   "backend-data",
+   "language",
+   "release"
+  ],
+  "d": "2026-11-18",
+  "o": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+  "x": "Datasette Lite가 서비스 워커와 Pyodide를 이용해 완전한 재작성 버전으로 제공된다. lite.datasette.io URL을 통"
+ },
+ {
+  "t": "Respan Gateway 사용 후기: Rust로 만든 오픈소스 LLM 게이트웨이",
+  "u": "https://dev.to/therealmrmumba/i-tried-respan-gateway-an-open-source-llm-gateway-written-in-rust-n7n",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "dev-tools",
+   "devops-infra",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-18",
+  "o": "I Tried Respan Gateway: An Open-Source LLM Gateway Written in Rust",
+  "x": "Respan Gateway는 Rust로 구현된 단일 바이너리 LLM 게이트웨이로, 16개 이상의 제공자를 플러그인 형태로 지원한다. Window"
+ },
+ {
+  "t": "ChatGPT for Sales 소개",
+  "u": "https://openai.com/index/introducing-chatgpt-for-sales",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "release",
+   "industry"
+  ],
+  "d": "2026-11-18",
+  "o": "Introducing ChatGPT for Sales",
+  "x": "OpenAI가 영업 팀을 위한 ChatGPT 기능을 출시했다. 새로운 Sales 플러그인과 30여 개의 파트너 플러그인을 통해 계정 선정, 통화"
+ },
+ {
+  "t": "Claude 플랫폼의 연결 청구",
+  "u": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data"
+  ],
+  "d": "2026-11-18",
+  "o": "Linked billing on the Claude Platform",
+  "x": "베타 기능으로 도입된 연결 청구를 통해 서드파티 플랫폼은 고객에게 API 키를 공유하지 않고 Claude API 사용료를 직접 결제하도록 할 수"
+ },
+ {
+  "t": "밀밭 – 다중 플랫폼 블로거를 위한 오픈소스 작업대",
+  "u": "https://github.com/CzzzzzzJ/mdldm-maitian",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "open-source"
+  ],
+  "d": "2026-11-18",
+  "o": "CzzzzzzJ / mdldm-maitian",
+  "x": "다중 플랫폼에 동시 게시를 지원하는 macOS 전용 워크플로우 도구다. Node 22.5+ 환경에서 실행되며, 각 플랫폼의 문안·표지·게시 형식"
+ },
+ {
+  "t": "Gemini를 당신을 위해 활용하기",
+  "u": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "d": "2026-11-18",
+  "o": "Put Gemini to work for you",
+  "x": "Gemini 4 Hydrogen 모델을 기반으로 한 새로운 개인 비서 기능이 미국, 일본, 한국, 캐나다, 호주, 인도에 무료로 제공된다. 이메"
+ },
+ {
+  "t": "Sellbird — 오픈소스 아웃리치 플랫폼, Claude 또는 ChatGPT 플랜에서 실행",
+  "u": "https://github.com/ethanplusai/sellbird",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "d": "2026-11-18",
+  "o": "ethanplusai / sellbird",
+  "x": "Sellbird는 기업을 찾아 담당자를 식별하고 이메일을 자동으로 작성·전송하며 회신을 관리하는 오픈소스 아웃리치 도구다. 사용자는 자신의 머신"
+ },
+ {
+  "t": "AI 에이전트가 한 달에 1700만 개의 풀 리퀘스트를 연다. 나는 거짓인 것을 거부하는 게이트를 만들었다.",
+  "u": "https://dev.to/aws-builders/ai-agents-open-17-million-pull-requests-a-month-i-built-a-gate-that-rejects-the-ones-that-lie-46n7",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "language",
+   "open-source",
+   "showcase"
+  ],
+  "d": "2026-11-18",
+  "o": "AI agents open 17 million pull requests a month. I built a gate that rejects the ones that lie.",
+  "x": "AI 에이전트가 버그를 수정하고 풀 리퀘스트를 열면, 실제 커밋을 검증해 테스트가 회귀되지 않았는지 확인한다. 검증 게이트는 Amazon Nov"
+ },
+ {
+  "t": "Java4Shell: Base64 처리 시 OpenJDK에서 원격 코드 실행 취약점",
+  "u": "https://calif.io/java4shell/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "hardware",
+   "language"
+  ],
+  "d": "2026-11-18",
+  "o": "Java4Shell: RCE in OpenJDK when processing Base64",
+  "x": "OpenJDK Base64 디코더에 메모리 손상 취약점이 발견돼 원격 공격자가 힙 메모리를 덮어쓰고 정보를 유출하거나 원격 코드 실행을 할 수 "
+ },
+ {
+  "t": "고도로 기밀인 미국 국가 안보 통신망 장애",
+  "u": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "open-source"
+  ],
+  "d": "2026-11-18",
+  "o": "Highly classified US national security communications network goes down",
+  "x": "NSA 내부 통신에 사용되는 NSANet이 다운돼 직원들의 도착이 단계적으로 조정되고 있다. NSA는 정기 유지보수 중 일시적 성능 저하라고 밝"
+ },
+ {
+  "t": "생각 켜기·끄기? Gemma 4 E2B를 8 GB RTX 3050에서 실행",
+  "u": "https://dev.to/gde/thinking-on-or-off-gemma-4-e2b-on-an-8-gb-rtx-3050-30e0",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-18",
+  "o": "Thinking On or Off? Gemma 4 E2B on an 8 GB RTX 3050",
+  "x": "이 글은 llama.cpp를 이용해 Gemma 4 E2B 모델을 8 GB RTX 3050에서 실행하고, ‘thinking’ 옵션을 켰을 때와 끈"
+ },
+ {
+  "t": "JavaScript로 인터랙티브 웹페이지 만들기",
+  "u": "https://dev.to/tyleruploads/how-to-build-interactive-webpages-with-javascript-16f2",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-11-18",
+  "o": "How to Build Interactive Webpages with JavaScript",
+  "x": "이 글은 HTML에 JavaScript를 연결하는 두 가지 방법을 설명한다. 외부 파일을 script 태그의 src 속성으로 불러오고, defe"
+ },
+ {
+  "t": "Nvidia, 매출 1040억 달러 기록… 싱가포르 판매량 공개 중단",
+  "u": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "hardware",
+   "industry"
+  ],
+  "d": "2026-11-18",
+  "o": "Nvidia stopped disclosing Singapore sales as revenues hit $104B"
+ },
+ {
+  "t": "Apple 서비스 중단",
+  "u": "https://developer.apple.com/system-status/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-18",
+  "o": "Apple Services Down"
+ },
+ {
   "t": "판단에만 집중하세요: 토스 타겟팅 모델 개발 자동화",
   "u": "https://toss.tech/article/targeting-model-automation",
   "m": "2026-11",
