@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-09T00:00:28+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 9,
-    "github": 5
-   },
-   "failures": []
-  },
-  {
    "at": "2026-11-09T08:00:30+09:00",
    "total": 13,
    "counts": {
@@ -558,6 +549,28 @@
      "url": "https://tech.kakao.com/posts/848",
      "source": "rss",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-19T00:00:50+09:00",
+   "total": 16,
+   "counts": {
+    "short": 1,
+    "ok": 11,
+    "github": 3,
+    "blocked": 1
+   },
+   "failures": [
+    {
+     "url": "https://social.anoxinon.de/@codebergstatus/117636437840688845",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+     "source": "rss",
+     "reason": "blocked"
     }
    ]
   }
