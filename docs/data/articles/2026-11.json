@@ -1,5 +1,456 @@
 [
  {
+  "title": "Google's AI answers reducing search traffic by 40%",
+  "url": "https://revscope.co/blog/search-seo-geo-2026/",
+  "source": "hackernews",
+  "upvotes": 292,
+  "comments": 217,
+  "published_at": 1794961078,
+  "discussion": "https://news.ycombinator.com/item?id=50540178",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://revscope.co/blog/search-seo-geo-2026/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Google AI 답변, 검색 트래픽 40% 감소",
+  "summary": "무작위 실험에서 AI 개요를 숨긴 사용자와 비교해 AI 개요가 표시된 경우 외부 웹사이트 클릭이 약 40% 감소한 것으로 나타났다. AI 개요 표시 비중은 2년 전 6%에서 현재 60% 이상으로 급증했다. 현재까지 AI 답변에 대한 보상 방안인 GEO는 효과적인 방법을 제시하지 못하고 있다.",
+  "why": "AI 개요가 표시되면 기존 랭킹 대비 외부 사이트 방문이 40% 줄어든다. 현재 GEO는 이 손실을 상쇄할 효과적인 방법을 제시하지 못하고 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Java4Shell (CVE-2026-114938): The Bug That Leaked Before Its Patch",
+  "url": "https://dev.to/thegdsks/java4shell-one-stray-sign-vs-your-java-server-4j3j",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1794970252.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/thegdsks/java4shell-one-stray-sign-vs-your-java-server-4j3j"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fn9owm1ikussqwqyitx4m.png",
+  "link_status": "ok",
+  "ko_title": "Java4Shell (CVE-2026-114938): 패치 전에 유출된 버그",
+  "summary": "java.util.Base64 클래스의 JIT 최적화 루틴에 AVX-512 기반 디코딩 과정에서 발생하는 버퍼 오버플로우가 원격에서 JVM을 크래시시킬 수 있다. 이 취약점은 Keycloak, Jira, Confluence, Artifactory, Jenkins, PingFederate 등에 영향을 미치며, 패치는 네 줄의 코드 수정으로 해결된다. 일부 보안 업체는 오버플로우가 메모리 손상을 넘어 악용될 수 있다고 주장하지만, 현재 공개된 증거는 원격 크래시 수준에 머물러 있다.",
+  "why": "JVM 기반 백엔드 서비스라면 패치 적용 전까지 원격 크래시 위험이 상존한다. 보안 업체 간 RCE 가능성에 대한 논쟁은 있으나, 현재 공개된 증거는 원격 크래시 수준에 머물러 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Astra for Law leads in legal intelligence",
+  "url": "https://openai.com/index/astra-law-6-2",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794873600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/astra-law-6-2"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/3MwSwa1GcJHdJGeOy7u0LZ/7ecfaba7da6555bc46c1e85f50c13bdb/astra-law-legal-intelligence-social-smooth.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Astra for Law, 법률 인텔리전스 선두",
+  "summary": "업데이트된 Astra for Law 모델이 Harvey LAB-AA 벤치마크에서 40% 높은 전체 점수를 기록했고, Vals AI Legal Research Bench에서도 46%에서 53.8%로 정확도가 상승했다. 모든 ChatGPT Enterprise 고객이 Trusted Access Program을 통해 API 포함 접근 요청이 가능해졌다. 기존에 소수 법무법인에만 제공됐던 서비스를 확대했다.",
+  "why": "ChatGPT Enterprise 고객이라면 Trusted Access Program을 통해 API 접근을 요청할 수 있다. 법률 검색 인덱스가 3분의 1 이상 확장되어 기존보다 폭넓은 자료를 참조할 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "backend-data",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Swagger UI is from 2011. It’s Time to Upgrade to Scalar.",
+  "url": "https://dev.to/ihssmaheel/still-using-swagger-ui-you-should-try-scalar-no1",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 15,
+  "comments": 0,
+  "published_at": 1794984246.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ihssmaheel/still-using-swagger-ui-you-should-try-scalar-no1"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F02bsxglber7fn9axnw27.png",
+  "link_status": "ok",
+  "ko_title": "Swagger UI는 2011년부터 사용돼 왔습니다. 이제 Scalar로 업그레이드할 때입니다.",
+  "summary": "기존 Swagger UI를 사용 중인 TypeScript·NestJS·Fastify 기반 백엔드에 오픈소스 도구 Scalar를 적용하면 다크 모드·테마 커스터마이징·내장 API 클라이언트·다양한 언어 코드 스니펫·인증 지원 등 현대적인 UI를 제공한다. 기존 OpenAPI 스펙을 그대로 사용해 백엔드 코드를 수정할 필요가 없으며 Fastify·NestJS·Express·Next.js 등 여러 프레임워크에 몇 줄의 설정만으로 통합할 수 있다. Swagger UI도 여전히 유지보수 중이며 기능 차이는 주로 개발자 경험에 있다.",
+  "why": "기존 OpenAPI 슎을 그대로 쓰므로 백엔드 코드 수정 없이 다크 모드와 내장 API 클라이언트를 쓸 수 있다. Postman으로 전환하지 않고 문서 화면에서 바로 엔드포인트를 테스트할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "gylive / google-ultra",
+  "url": "https://github.com/gylive/google-ultra",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 634,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/gylive/google-ultra"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 634,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/gylive/google-ultra",
+  "link_status": null,
+  "ko_title": "구글 울트라",
+  "summary": "이 스크립트는 Google One AI Ultra 12개월 무료 체험을 자동으로 신청한다. 웹 버전은 브라우저만으로 동작하고, 스크립트 버전은 루트 권한 Android 기기와 Frida를 이용해 실제 클라이언트에서 오퍼를 가져온다. 성공 시 5배 속도·20TB 저장 용량을 0원에 사용할 수 있다. 사용 방법과 필요 환경이 상세히 안내된다.",
+  "why": "무료 체험 신청은 Play 결제 라이브러리 반환값에서만 확인되는 오퍼를 직접 호출하는 방식이다. 루트 권한이 없는 환경에서는 브라우저 기반 웹 버전으로만 신청이 가능하다. 30TB 등급은 결제 시 2차 검증으로 대부분 무료 체험 대상에서 제외된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Quad9's withdrawal from France: A canary in the coal mine",
+  "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+  "source": "hackernews",
+  "upvotes": 467,
+  "comments": 145,
+  "published_at": 1794953614,
+  "discussion": "https://news.ycombinator.com/item?id=50538994",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.cloudflare.com/quad9-withdrawal-from-france/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7NJA0M7FAQEQZBW0K0W5KKS.png",
+  "link_status": "ok",
+  "ko_title": "Quad9, 프랑스에서 무료 DNS 서비스 철수",
+  "summary": "스위스 비영리 재단 Quad9이 프랑스 법원의 차단 명령과 일일 과태료 부과 판결에 따라 무료 공개 DNS 리졸버 서비스를 철수한다. 프랑스 내 정부·교육·병원·공공기관 등 다양한 사용자가 영향을 받으며, 대체 DNS 설정을 하지 않을 경우 인터넷 연결이 중단될 위험이 있다. 이전에도 Cisco가 유사한 이유로 OpenDNS를 철수한 사례가 있다.",
+  "why": "프랑스 내 서비스 철수로 기존 DNS 설정이 그대로면 인터넷 연결이 끊긴다. 대체 리졸버로 설정을 바꾸지 않으면 연결이 중단된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "mdiri-ai / SoduWork",
+  "url": "https://github.com/mdiri-ai/SoduWork",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 941,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mdiri-ai/SoduWork"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 941,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/mdiri-ai/SoduWork",
+  "link_status": null,
+  "ko_title": "SoduWork — 팀과 에이전트를 위한 AI-네이티브 엔진",
+  "summary": "SoduWork는 다중 하니스와 다중 에이전트를 지원하는 자체 호스팅 AI 작업 플랫폼이다. Pi, OpenCode, DeepSeek 등 여러 모델을 조합해 작업을 수행하고 검토한다. GitHub에서 클론 후 start.sh 혹은 start.cmd 로 데스크톱 모드 실행이 가능하다.",
+  "why": "다중 에이전트 워크플로우를 자체 호스팅 환경에서 구축할 수 있다. 작업 수행과 검토를 서로 다른 모델로 분리해 품질을 검증하는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "같은 GPU로 더 많은 AI 요청을 처리할 수 있을까? ― KV 캐시 오프로딩 × EPP 라우팅: 계산 결과를 오래 남기고, 다음 요청이 그 결과를 찾아가게 하기",
+  "url": "https://tech.kakao.com/posts/848",
+  "source": "rss",
+  "feed": "카카오 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794927600.0,
+  "merged_sources": [
+   "카카오 기술블로그"
+  ],
+  "merged_urls": [
+   "https://tech.kakao.com/posts/848"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Fec50ff3b01a100001.png",
+  "link_status": "ok",
+  "ko_title": "같은 GPU로 더 많은 AI 요청을 처리할 수 있을까? ― KV 캐시 오프로딩 × EPP 라우팅: 계산 결과를 오래 남기고, 다음 요청이 그 결과를 찾아가게 하기",
+  "summary": "KV 캐시를 GPU 외부에 저장하고, EPP 라우팅으로 동일 문서에 대한 후속 요청을 캐시가 있는 서버로 보내 처리 시간을 121.7분에서 47.2분으로 크게 단축했다. GPU와 모델은 그대로 유지했으며, 두 가지 변경만으로 효율을 높였다.",
+  "why": "기존에 쓰던 방식과 달리 계산 결과를 GPU 밖에도 보관하고 후속 요청을 해당 서버로 보낸다. 모델과 하드웨어를 바꾸지 않고도 처리 시간을 크게 줄일 수 있는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "From GPT-3 to Agents: How AI Rewired Software in Six Years (2020-2026)",
+  "url": "https://dev.to/akhourianmolkumar/from-gpt-3-to-agents-how-ai-rewired-software-in-six-years-2020-2026-5al1",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 23,
+  "comments": 2,
+  "published_at": 1794979603.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhourianmolkumar/from-gpt-3-to-agents-how-ai-rewired-software-in-six-years-2020-2026-5al1"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhixwhnq9vw0trfbq5r23.png",
+  "link_status": "ok",
+  "ko_title": "GPT-3에서 에이전트까지: 6년간 AI가 소프트웨어를 재구성한 방식",
+  "summary": "2020년을 AI 시대의 시작점으로 잡고 2026년까지 개발자들의 AI 도구 사용률이 급증했다. 2025년 설문에서 31%가 에이전트를 사용했으며, 2026년 4월 조사에서는 59%로 거의 두 배가 되었다. 또한 미국 채용 공고 중 AI 기술 언급 비중이 2.5%에 이르며 연간 55% 상승했다.",
+  "why": "에이전트 사용률이 59%까지 올라가며 코드를 대신 작성하는 도구가 표준이 되었다. 채용 공고의 AI 기술 언급 비중이 55% 증가했으므로 직무 요구사항이 바뀌고 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "career-culture"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "My Feather Fractal Was Just Two Blobs: Fixing 2 Rational Dynamics Bugs in WebGL & NumPy",
+  "url": "https://dev.to/quantumtechcoder/my-feather-fractal-was-just-two-blobs-fixing-2-rational-dynamics-bugs-in-webgl-numpy-57b8",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 10,
+  "comments": 0,
+  "published_at": 1794984137.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/quantumtechcoder/my-feather-fractal-was-just-two-blobs-fixing-2-rational-dynamics-bugs-in-webgl-numpy-57b8"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2FQuantumTechCoder%2FFantasticFractals%2Fwebsite%2Fpublic%2Fscreenshots%2Ffeather_fractal.png",
+  "link_status": "ok",
+  "ko_title": "My Feather Fractal Was Just Two Blobs: Fixing 2 Rational Dynamics Bugs in WebGL & NumPy",
+  "summary": "FantasticFractals 라이브러리의 Feather Fractal과 Nova Fractal에서 복소수 연산 오류가 발견돼 화면에 잘못된 형태가 나타났다. 저자는 WebGL GLSL 코드와 Python NumPy 구현을 수정해 올바른 프랙탈 형태를 복원했다. 수정된 코드는 GitHub와 PyPI에 공개돼 바로 사용 가능하다.",
+  "why": "FantasticFractals 라이브러리를 쓰는 경우 PyPI 최신 버전으로 업데이트해야 한다. 기존 버전의 WebGL과 NumPy 구현은 프랙탈 형태가 잘못 렌더링된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
+  "url": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794916800.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/chaos-loop-claude-docs-launch/"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png",
+  "link_status": "ok",
+  "ko_title": "클로드 Docs 출시를 강화하기 위한 “카오스 루프” 활용: 수십억 요청 중 60건 서버 오류",
+  "summary": "클로드 Docs는 2026년 9월 16일에 공개됐으며, 출시 첫 주에 4.6 백만 개 이상의 문서를 생성하고 20억 건의 요청 중 60건만 오류가 발생했다. 약 50개의 메모리 최적화 팟으로 운영됐으며, 출시 전 2주 동안 클로드가 주도한 “카오스 루프” 테스트를 통해 대규모 트래픽 상황을 시뮬레이션하고 핵심 컴포넌트를 고의로 파손해 문제를 사전에 해결했다.",
+  "why": "AI 에이전트가 스테이징 환경에서 핵심 컴포넌트를 고의로 파손하며 대규모 트래픽을 시뮬레이션하는 방식이다. 출시 전 2주 동안 이 루프를 돌리면 실제 트래픽 없이도 서비스 안정성을 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "ID.me terms required for IRS sign-in",
+  "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+  "source": "hackernews",
+  "upvotes": 295,
+  "comments": 126,
+  "published_at": 1794963105,
+  "discussion": "https://news.ycombinator.com/item?id=50540437",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://consumerrights.wiki/images/logo/new_fixed_logo.png",
+  "link_status": "ok",
+  "ko_title": "IRS 로그인에 ID.me 약관 필요",
+  "summary": "ID.me를 이용해 IRS 온라인 서비스에 로그인할 경우, 사용자는 ID.me의 이용약관에 동의해야 하며, 이 약관은 분쟁을 소액재판이 아닌 중립 중재인에게 넘긴다. 또한 ID.me는 개인정보를 마케팅에 활용할 수 있고, 기업 인수·합병 시 정보 이전이 가능하다. 로그인 대안으로는 정부 운영 Login.gov와 로그인 없이 이용 가능한 Direct Pay가 있다.",
+  "why": "IRS 온라인 서비스 접근 시 ID.me 외에 정부 운영 Login.gov를 선택할 수 있다. ID.me 이용 시 개인정보 마케팅 활용 및 기업 합병 시 정보 이전 조항에 동의해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Archive Team is archiving the Apple Support Community (closes November 20, 2026)",
+  "url": "https://wiki.archiveteam.org/index.php/Apple_Discussions",
+  "source": "hackernews",
+  "upvotes": 161,
+  "comments": 52,
+  "published_at": 1794958378,
+  "discussion": "https://news.ycombinator.com/item?id=50539747",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://wiki.archiveteam.org/index.php/Apple_Discussions"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Archive Team, Apple 지원 커뮤니티 아카이브 진행 (2026년 11월 20일 종료)",
+  "summary": "Apple 지원 커뮤니티가 2026년 11월 20일에 영구 종료된다. 서비스는 오늘부터 신규 게시를 받지 않으며 읽기 전용 모드로 전환된다. 사용자는 공식 Apple 지원 사이트에서 계속 지원을 받을 수 있다.",
+  "why": "Apple의 공식 포럼이 사라지므로 기존에 의존하던 커뮤니티 기반 문제 해결 경로를 공식 지원 사이트로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "career-culture"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
+  "title": "Part 6: The Walkthrough That Only Worked on My Machine",
+  "url": "https://dev.to/ndcodes/part-6-the-walkthrough-that-only-worked-on-my-machine-15e8",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1794984195.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ndcodes/part-6-the-walkthrough-that-only-worked-on-my-machine-15e8"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3f1ropjeo5nj9o1j3vxo.png",
+  "link_status": "ok",
+  "ko_title": "6부: 내 머신에서만 동작한 안내서",
+  "summary": "이 글은 HL7 v2-to-FHIR R4 상호운용 서비스 저장소(ND-codes/nhs-interop-platform)의 파트 6을 다루며, 저장소의 quickstart 절차가 Windows 전용 Git Bash 환경에 의존해 다른 OS에서는 실패한다는 문제를 제시한다. 문제 원인과 해결 방법으로, cygpath 사용을 조건부로 처리하고 Docker 볼륨 경로를 OS에 맞게 조정하는 스크립트를 제시한다.",
+  "why": "Docker 볼륨 마운트 스크립트에서 cygpath를 조건부로 처리해야 한다. Windows 전용 Git Bash 환경이 아닌 시스템에서는 기존 명령이 실패한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-11-18T16:00:06.553924+09:00",
+  "batch_label": "11월 18일 16:00"
+ },
+ {
   "title": "External sandboxes for coding agents",
   "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
   "source": "rss",
