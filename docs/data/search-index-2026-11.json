@@ -1,5 +1,236 @@
 [
  {
+  "t": "파인튜닝 작업이 FLOPs 예상보다 오래 걸리는 이유",
+  "u": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "career-culture"
+  ],
+  "d": "2026-11-19",
+  "o": "Why your fine-tuning job takes longer than the FLOPs say",
+  "x": "연구팀은 272개의 실제 파인튜닝 작업 데이터를 분석해 FLOP 기반 예상이 실제 소요 시간과 낮은 상관관계(R제곱=0.31)를 보인다고 밝혔습"
+ },
+ {
+  "t": "Nginx 무인증 원격 코드 실행 취약점",
+  "u": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security",
+   "release"
+  ],
+  "d": "2026-11-19",
+  "o": "Unauthenticated remote code execution in Nginx",
+  "x": "두 개의 심각한 원격 코드 실행 취약점(CVE-2026-123633, CVE-2026-123007)이 Nginx에서 발견되었다. 두 취약점 모두"
+ },
+ {
+  "t": "독일은행 내부 파일 유출 – 1500만 건 파일이 은행 비밀과 스캔들을 드러냄",
+  "u": "https://www.inside-db.com/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-19",
+  "o": "Inside Deutsche Bank",
+  "x": "1500만 개 이상의 파일이 유출돼 반부패·제재 감시·내부 감사 등 핵심 업무의 문제점을 공개한다. 은행이 러시아 자금 흐름, 전쟁 무기 자금 "
+ },
+ {
+  "t": "왜 나는 type-tune을 TypeScript에서 Rust로 다시 작성했는가",
+  "u": "https://dev.to/necoz/why-i-rewrote-type-tune-from-typescript-to-rust-1egg",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools",
+   "web",
+   "language",
+   "release"
+  ],
+  "d": "2026-11-19",
+  "o": "Why I Rewrote type-tune from TypeScript to Rust 🦀",
+  "x": "type-tune은 공유된 TypeScript 타입 별칭과 인터페이스를 찾아 자동으로 이동하고 import를 업데이트해 주는 Rust 기반 CL"
+ },
+ {
+  "t": "Gemini 4 Neon",
+  "u": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "industry"
+  ],
+  "d": "2026-11-19",
+  "x": "Gemini 4 Neon 모델이 1백만 토큰 컨텍스트와 빠른 엔드-투-엔드 작업 수행 능력을 갖추어 복합 소프트웨어 엔지니어링·지식·과학 워크플"
+ },
+ {
+  "t": "AI 에이전트, KPMG 회계사보다 감사 절차에서 더 나은 질문 제시",
+  "u": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-agent"
+  ],
+  "d": "2026-11-19",
+  "o": "AI agents ask better questions than KPMG accountants in audit trial",
+  "x": "KPMG 영국이 100여 개 AI 에이전트를 활용해 FTSE 250 기업의 재무제표를 검토한 결과, 인간 감사팀보다 깊이 있는 분석과 새로운 질"
+ },
+ {
+  "t": "DaisyRose-27B: 사후 학습 효율성 최전선 돌파",
+  "u": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-19",
+  "o": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+  "x": "RadixArk가 Qwen3.8-27B 기반으로 강화학습과 Miles를 활용해 DaisyRose-27B 모델을 공개했다. 1M 토큰 길이의 장기"
+ },
+ {
+  "t": "Gemini 앱이 저용량 안드로이드 기기에서 사용 가능해졌습니다",
+  "u": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "gen-media",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "d": "2026-11-19",
+  "o": "The Gemini app is now available on lower-memory Android devices.",
+  "x": "Gemini 앱이 Android Go 에디션 등 메모리 용량이 낮은 안드로이드 기기에서도 동작하도록 재구축되었습니다. 음성 대화, 45개 언어 "
+ },
+ {
+  "t": "앱 스토어 컴플라이언스 플레이북",
+  "u": "https://github.com/mjmirza/app-store-compliance",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "ai-safety",
+   "security",
+   "open-source",
+   "industry"
+  ],
+  "d": "2026-11-19",
+  "o": "mjmirza / app-store-compliance",
+  "x": "iOS와 Android 앱이 앱 스토어와 구글 플레이에서 거부되는 문제를 예방하기 위한 기업용 레퍼런스와 자동화 가드가 제공된다. 웹사이트 형태"
+ },
+ {
+  "t": "OpenAI 모델로 칩 설계 진전",
+  "u": "https://openai.com/index/advancing-chip-design-with-our-models",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "d": "2026-11-19",
+  "o": "Advancing chip design with OpenAI models",
+  "x": "OpenAI는 자체 모델을 활용해 첫 번째 맞춤형 추론 칩인 Jalapeño의 설계 효율을 크게 개선했다. GPT-4o를 사용해 벡터·매트릭스 "
+ },
+ {
+  "t": "6가지 웹 스크래핑 API 테스트 결과",
+  "u": "https://dev.to/startupcafe/i-tested-6-best-web-scraping-apis-so-you-dont-waste-your-time-27de",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-11-19",
+  "o": "I Tested 6 Best Web Scraping APIs So You Don't Waste Your Time",
+  "x": "저자는 URL 입력만으로 데이터를 반환하는 서비스부터 AI 기반 추출까지 여섯 가지 웹 스크래핑 API를 직접 사용해 장단점을 비교했다. 각 A"
+ },
+ {
+  "t": "다니엘 스텐버그 인용",
+  "u": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "security",
+   "language",
+   "career-culture"
+  ],
+  "d": "2026-11-19",
+  "o": "Quoting Daniel Stenberg",
+  "x": "지난 3주간 curl 프로젝트에 300개 이상의 커밋을 병합하고 200여 건의 버그를 수정했다. 동시에 185,000줄의 C 코드를 340,00"
+ },
+ {
+  "t": "프론트엔드 개발자는 괜찮을까… 맞나요?",
+  "u": "https://dev.to/erikch/frontend-developers-are-going-to-be-fine-right-2m5p",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "web"
+  ],
+  "d": "2026-11-19",
+  "o": "Frontend Developers Are Going to Be Fine... Right?",
+  "x": "AI가 코드를 대부분 작성하는 현 상황에서 프론트엔드·풀스택 개발자가 차별화하려면 아키텍처 설계, 디버깅, 검증, 프롬프트 엔지니어링, 프롬프트"
+ },
+ {
+  "t": "CodeNewbie 팟캐스트 시즌 28 재개",
+  "u": "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-11-19",
+  "o": "The CodeNewbie Podcast is Back for Season 28!",
+  "x": "시즌 28은 AI를 활용한 앱 구축과 운영 위험을 다룬다. 각 에피소드마다 실제 사례와 전문가 인터뷰를 통해 AI 도구 사용 시 발생할 수 있는"
+ },
+ {
+  "t": "HolyArrs",
+  "u": "https://github.com/HolyArrs/HolyArrs",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "devops-infra",
+   "open-source"
+  ],
+  "d": "2026-11-19",
+  "o": "HolyArrs / HolyArrs",
+  "x": "자체 호스팅 앱으로 쇼, 영화, 음악 및 다운로드를 관리한다. 여러 언어 지원 페이지와 로드맵, 최신 소식 링크가 제공된다."
+ },
+ {
+  "t": "AWS 스토리지 선택 방법",
+  "u": "https://dev.to/aws/how-to-pick-aws-storage-without-reading-every-doc-hfm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "d": "2026-11-19",
+  "o": "How to pick AWS storage (without reading every doc)",
+  "x": "AWS에서 데이터를 저장할 때 어떤 스토리지를 골라야 할지 모를 경우, 앱이 데이터를 접근하는 방식, 데이터 형태, 신규·기존 앱 여부, 여러 "
+ },
+ {
   "t": "openvinotoolkit / openvino — 딥러닝 모델 최적화·배포 툴킷",
   "u": "https://github.com/openvinotoolkit/openvino",
   "m": "2026-11",

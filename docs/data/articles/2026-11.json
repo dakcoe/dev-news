@@ -1,5 +1,534 @@
 [
  {
+  "title": "Why your fine-tuning job takes longer than the FLOPs say",
+  "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795028023.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6a725daa5ca641a21ab61956/J6DIf4Len_31Tj-CQlQXY.png",
+  "link_status": "ok",
+  "ko_title": "파인튜닝 작업이 FLOPs 예상보다 오래 걸리는 이유",
+  "summary": "연구팀은 272개의 실제 파인튜닝 작업 데이터를 분석해 FLOP 기반 예상이 실제 소요 시간과 낮은 상관관계(R제곱=0.31)를 보인다고 밝혔습니다. 대신 파라미터, 평가 주기, 체크포인트 정책 등 사전 정보만으로 학습된 CatBoost 회귀 모델은 R제곱=0.98, 평균 오차 1.71시간을 달성했습니다. 이 모델은 비선형 상호작용을 학습해 보다 정확한 소요 시간 예측이 가능합니다.",
+  "why": "FLOPs 기반 계산은 실제 파인튜닝 소요 시간과 낮은 상관관계를 보인다. 공유 GPU 클러스터에서 작업 순서를 정할 때 이 오차가 대기 시간을 늘린다. 파라미터와 체크포인트 정책 등 사전 정보를 이용해 예측 정확도를 높일 수 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "career-culture"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Unauthenticated remote code execution in Nginx",
+  "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+  "source": "hackernews",
+  "upvotes": 977,
+  "comments": 452,
+  "published_at": 1795015195,
+  "discussion": "https://news.ycombinator.com/item?id=50547374",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
+  ],
+  "cross_source_count": 1,
+  "score": 73,
+  "image": "https://www.datocms-assets.com/75231/1794936719-img_7875.png?fm=webp",
+  "link_status": "ok",
+  "ko_title": "Nginx 무인증 원격 코드 실행 취약점",
+  "summary": "두 개의 심각한 원격 코드 실행 취약점(CVE-2026-123633, CVE-2026-123007)이 Nginx에서 발견되었다. 두 취약점 모두 HTTP/2가 활성화된 서버에서만 악용 가능하며, 2015년부터 존재한 버전까지 영향을 미친다. 패치가 2026-11-18에 공개될 예정이며, 영향을 받는 배포판은 최신 릴리스로 업데이트해야 한다.",
+  "why": "HTTP/2를 켜둔 Nginx 서버라면 2026-11-18 패치 적용 전까지 무인증 원격 코드 실행에 노출된다. 애플리케이션 코드 자체는 안전해도 Nginx 취약점으로 인해 서버 탈취와 데이터 유출이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Inside Deutsche Bank",
+  "url": "https://www.inside-db.com/",
+  "source": "hackernews",
+  "upvotes": 489,
+  "comments": 179,
+  "published_at": 1795016313,
+  "discussion": "https://news.ycombinator.com/item?id=50547620",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.inside-db.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://www.inside-db.com/content/images/size/w1200/2026/09/_DSF9639.jpg",
+  "link_status": "ok",
+  "ko_title": "독일은행 내부 파일 유출 – 1500만 건 파일이 은행 비밀과 스캔들을 드러냄",
+  "summary": "1500만 개 이상의 파일이 유출돼 반부패·제재 감시·내부 감사 등 핵심 업무의 문제점을 공개한다. 은행이 러시아 자금 흐름, 전쟁 무기 자금 조달, 그리고 라틴아메리카 대형 투자은행과의 연루 사실을 드러낸다. 구체적인 금액과 거래 내역이 문서에 포함돼 있다.",
+  "why": "독자 업무와 직접적인 관련이 없어 확인이나 조치 대상이 없다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Why I Rewrote type-tune from TypeScript to Rust 🦀",
+  "url": "https://dev.to/necoz/why-i-rewrote-type-tune-from-typescript-to-rust-1egg",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 48,
+  "comments": 6,
+  "published_at": 1795022872.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/why-i-rewrote-type-tune-from-typescript-to-rust-1egg"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0pd3h3yek7wxcgkqpkov.gif",
+  "link_status": "ok",
+  "ko_title": "왜 나는 type-tune을 TypeScript에서 Rust로 다시 작성했는가",
+  "summary": "type-tune은 공유된 TypeScript 타입 별칭과 인터페이스를 찾아 자동으로 이동하고 import를 업데이트해 주는 Rust 기반 CLI 도구이다. 기존 TypeScript 구현은 2만 라인 규모였으며, Rust로 재작성해 성능과 안정성을 개선했다. npm에 배포되고 GitHub Releases에서 버전을 관리한다.",
+  "why": "TypeScript 프로젝트에서 공유 타입을 옮길 때 import와 barrel export를 수동으로 수정하던 방식이 바뀐다. 이 도구는 이동 계획을 검토한 뒤 타입 전용 import만 선택적으로 갱신해 주므로 기존 코드와의 호환성을 유지할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "language",
+   "release"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Gemini 4 Neon",
+  "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+  "source": "hackernews",
+  "upvotes": 273,
+  "comments": 262,
+  "published_at": 1795037647,
+  "discussion": "https://news.ycombinator.com/item?id=50552424",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 4 Neon",
+  "summary": "Gemini 4 Neon 모델이 1백만 토큰 컨텍스트와 빠른 엔드-투-엔드 작업 수행 능력을 갖추어 복합 소프트웨어 엔지니어링·지식·과학 워크플로에 적용된다. 인공지능 지수와 Vals Index 등에서 상위 순위를 차지했으며, 사용자 중간 수정에 대한 적응력도 높다. 가격은 입력 토큰당 $3, 출력 토큰당 $15이며, Google AI Studio와 Gemini API 등에서 제공된다.",
+  "why": "1백만 토큰 컨텍스트로 기존에 분할 처리하던 대규모 코드를 한 번에 분석할 수 있다. 중간 수정에 대한 적응력이 높아 반복적인 프롬프트 조정을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "industry"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "AI agents ask better questions than KPMG accountants in audit trial",
+  "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+  "source": "hackernews",
+  "upvotes": 291,
+  "comments": 134,
+  "published_at": 1795016974,
+  "discussion": "https://news.ycombinator.com/item?id=50547777",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://europeanbusinessmagazine.com/wp-content/uploads/2026/06/ai5555-1024x678.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트, KPMG 회계사보다 감사 절차에서 더 나은 질문 제시",
+  "summary": "KPMG 영국이 100여 개 AI 에이전트를 활용해 FTSE 250 기업의 재무제표를 검토한 결과, 인간 감사팀보다 깊이 있는 분석과 새로운 질문을 제시했다. 이번 실험은 AI가 회계·감사 업무 전반에 자율적으로 투입될 수 있음을 보여준다. 현재 AI가 지원 도구를 넘어 전체 감사 워크플로우에 적용되는 초기 단계이다.",
+  "why": "감사 워크플로우 전체에 자율 에이전트를 배치하는 초기 단계로, 기존 지원 도구와 역할이 달라진다. 백엔드 개발자는 에이전트 오케스트레이션과 데이터 파이프라인 설계 시 이 자율성 수준을 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+  "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795031696.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6aeabf9f2efd990530425e58/faP4Su889q_DIgN3wmU9M.png",
+  "link_status": "ok",
+  "ko_title": "DaisyRose-27B: 사후 학습 효율성 최전선 돌파",
+  "summary": "RadixArk가 Qwen3.8-27B 기반으로 강화학습과 Miles를 활용해 DaisyRose-27B 모델을 공개했다. 1M 토큰 길이의 장기 에이전트 작업 1,200개를 18일간 144대 H200 GPU로 학습했으며, Terminal-Bench 4.1에서 pass@1 점수가 5.6%에서 12.0%로 상승했다. 기존 Qwen3.8-27B보다 모든 벤치마크에서 성능이 개선되었고, Apache 2.0 라이선스로 제공된다.",
+  "why": "Apache 2.0 라이선스라 Qwen3.8-27B 기반 에이전트 파인튜닝의 출발점으로 바로 쓸 수 있다. SGLang과 DSpark 추측 디코딩 조합으로 서빙하는 것이 권장된다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "The Gemini app is now available on lower-memory Android devices.",
+  "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795021200.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_Android_social_share.max-1440x810.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 앱이 저용량 안드로이드 기기에서 사용 가능해졌습니다",
+  "summary": "Gemini 앱이 Android Go 에디션 등 메모리 용량이 낮은 안드로이드 기기에서도 동작하도록 재구축되었습니다. 음성 대화, 45개 언어 지원 Gemini Live, 카메라 기반 번역, Nano Banana 이미지 생성 기능을 그대로 제공하며 Google Play에서 다운로드하거나 파트너 기기에 사전 탑재됩니다.",
+  "why": "백엔드 개발자가 저사양 안드로이드 환경에서 Gemini API를 호출하는 클라이언트 앱을 만들 때 참고할 수 있다. 기존 고사양 기기 전제였던 애플리케이션 구조를 저메모리 하드웨어에 맞게 재설계해야 하는 사례가 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "gen-media",
+   "hardware",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "mjmirza / app-store-compliance",
+  "url": "https://github.com/mjmirza/app-store-compliance",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 533,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/mjmirza/app-store-compliance"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 533,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/mjmirza/app-store-compliance",
+  "link_status": null,
+  "ko_title": "앱 스토어 컴플라이언스 플레이북",
+  "summary": "iOS와 Android 앱이 앱 스토어와 구글 플레이에서 거부되는 문제를 예방하기 위한 기업용 레퍼런스와 자동화 가드가 제공된다. 웹사이트 형태로 제공되며, 오픈소스 라이선스로 누구나 활용·기여할 수 있다.",
+  "why": "앱 스토어 심사 거부를 사전에 차단하는 자동화 가드와 레퍼런스를 제공한다. 앱 배포 파이프라인에 이 가드를 연결해 반복되는 거부를 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "ai-safety",
+   "security",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Advancing chip design with OpenAI models",
+  "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794960000.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/advancing-chip-design-with-our-models",
+   "https://openai.com/index/advancing-chip-design-with-our-models/"
+  ],
+  "cross_source_count": 2,
+  "score": 59,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/658zg0FHAg7zuL73DTFCfC/fff21fd18c260ce64a10a14ee8d4e851/advancing-chip-design-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "OpenAI 모델로 칩 설계 진전",
+  "summary": "OpenAI는 자체 모델을 활용해 첫 번째 맞춤형 추론 칩인 Jalapeño의 설계 효율을 크게 개선했다. GPT-4o를 사용해 벡터·매트릭스 유닛의 논리와 파이프라인을 최적화해 셀 면적을 13% 정도 줄이고 지연 시간을 단축했다. 또한 Synopsys와 협력해 EDA 툴에 모델을 통합하고, AMD 등 타사 하드웨어에도 동일한 접근법을 적용하고 있다.",
+  "why": "GPT-4o가 칩 설계에서 셀 면적과 지연 시간을 줄이는 구체적 최적화 방안을 제시했다. Synopsys EDA 툴에 모델이 통합되어 기존 설계 검증 워크플로에 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "I Tested 6 Best Web Scraping APIs So You Don't Waste Your Time",
+  "url": "https://dev.to/startupcafe/i-tested-6-best-web-scraping-apis-so-you-dont-waste-your-time-27de",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 15,
+  "comments": 2,
+  "published_at": 1795026380.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/startupcafe/i-tested-6-best-web-scraping-apis-so-you-dont-waste-your-time-27de"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fx5uczxtmofb0f54dib1k.jpg",
+  "link_status": "ok",
+  "ko_title": "6가지 웹 스크래핑 API 테스트 결과",
+  "summary": "저자는 URL 입력만으로 데이터를 반환하는 서비스부터 AI 기반 추출까지 여섯 가지 웹 스크래핑 API를 직접 사용해 장단점을 비교했다. 각 API는 반환 형식(HTML, JSON, Markdown)과 규모에 따른 가격 모델이 다르며, 선택 시 초기 비용 대비 확장성을 고려해야 한다.",
+  "why": "각 서비스의 가격과 크레딧 조건이 자주 바뀌므로 도입 전 최신 문서를 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Quoting Daniel Stenberg",
+  "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795017507.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/18/daniel-stenberg/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "다니엘 스텐버그 인용",
+  "summary": "지난 3주간 curl 프로젝트에 300개 이상의 커밋을 병합하고 200여 건의 버그를 수정했다. 동시에 185,000줄의 C 코드를 340,000줄의 Rust 코드로 변환하는 작업이 진행 중이다. 추가로 몇 건의 보안 취약점도 해결했다.",
+  "why": "curl의 Rust 전환은 기존 C 코드의 버그 수정이나 보안 취약점 해결을 대체하지 못한다. AI 에이전트로 생성된 Rust 클론이 원본 프로젝트의 유지보수 속도를 따라잡을 수 있을지 불확실하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "security",
+   "language",
+   "career-culture"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "Frontend Developers Are Going to Be Fine... Right?",
+  "url": "https://dev.to/erikch/frontend-developers-are-going-to-be-fine-right-2m5p",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 1,
+  "published_at": 1795031189.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/erikch/frontend-developers-are-going-to-be-fine-right-2m5p"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fstorage.ghost.io%2Fc%2Ff0%2Fef%2Ff0ef7042-4f18-43a4-8fc3-034133d9598b%2Fcontent%2Fimages%2F2026%2F11%2Fcover-4.png",
+  "link_status": "ok",
+  "ko_title": "프론트엔드 개발자는 괜찮을까… 맞나요?",
+  "summary": "AI가 코드를 대부분 작성하는 현 상황에서 프론트엔드·풀스택 개발자가 차별화하려면 아키텍처 설계, 디버깅, 검증, 프롬프트 엔지니어링, 프롬프트 관리 다섯 가지 역량을 강화해야 한다. 각 역량별 실천 방법과 도구 사용 팁을 제시한다.",
+  "why": "AI가 생성한 코드는 컴파일은 되지만 엣지 케이스에서 깨지는 경우가 많다. 디버깅 시간이 늘어난다는 통계가 있으므로 에러를 그대로 붙여넣기만 하지 말고 콘솔과 네트워크 탭을 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "web"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "The CodeNewbie Podcast is Back for Season 28!",
+  "url": "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 53,
+  "comments": 2,
+  "published_at": 1795026756.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxnvlq05rqztkqdg64see.png",
+  "link_status": "ok",
+  "ko_title": "CodeNewbie 팟캐스트 시즌 28 재개",
+  "summary": "시즌 28은 AI를 활용한 앱 구축과 운영 위험을 다룬다. 각 에피소드마다 실제 사례와 전문가 인터뷰를 통해 AI 도구 사용 시 발생할 수 있는 문제와 해결 방법을 제시한다. AI 초보부터 경험자까지 모두 적용 가능한 내용이다.",
+  "why": "AI 에이전트가 코드에서 독립적으로 행동을 수행하므로 프로덕션 데이터베이스 삭제나 이중 과금 같은 사고가 날 수 있다. AI 도구가 내부 동작을 항상 알려주지 않으므로 백엔드 개발자는 하위 계층에서 발생하는 문제를 직접 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "HolyArrs / HolyArrs",
+  "url": "https://github.com/HolyArrs/HolyArrs",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 502,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/HolyArrs/HolyArrs"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 502,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/HolyArrs/HolyArrs",
+  "link_status": null,
+  "ko_title": "HolyArrs",
+  "summary": "자체 호스팅 앱으로 쇼, 영화, 음악 및 다운로드를 관리한다. 여러 언어 지원 페이지와 로드맵, 최신 소식 링크가 제공된다.",
+  "why": "자체 호스팅 환경에서 쇼·영화·음악·다운로드 관리를 통합하려는 경우 참고할 도구다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
+  "title": "How to pick AWS storage (without reading every doc)",
+  "url": "https://dev.to/aws/how-to-pick-aws-storage-without-reading-every-doc-hfm",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 16,
+  "comments": 0,
+  "published_at": 1795037530.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws/how-to-pick-aws-storage-without-reading-every-doc-hfm"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5l3945o20rzl7t9cx7zs.png",
+  "link_status": "ok",
+  "ko_title": "AWS 스토리지 선택 방법",
+  "summary": "AWS에서 데이터를 저장할 때 어떤 스토리지를 골라야 할지 모를 경우, 앱이 데이터를 접근하는 방식, 데이터 형태, 신규·기존 앱 여부, 여러 앱이 같은 데이터를 공유하는지, AI·에이전트 사용 여부 등 다섯 가지 질문에 답하면 적합한 스토리지를 결정할 수 있다. 객체·파일·블록 스토리지로 구분하고, 각각 S3, EFS·FSx·S3 Files, EBS에 대응한다. 기존 앱 이전 시에는 DataSync나 Data Transfer Terminal을 활용한다.",
+  "why": "기존 앱의 데이터 접근 방식과 형태를 먼저 확인하면 스토리지 후보를 빠르게 좁힐 수 있다. S3에 저장된 데이터를 경로로 접근해야 하는 경우 S3 Files를 선택해 복사 작업을 생략할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-11-19T08:00:06.029138+09:00",
+  "batch_label": "11월 19일 08:00"
+ },
+ {
   "title": "openvinotoolkit / openvino",
   "url": "https://github.com/openvinotoolkit/openvino",
   "source": "github",
