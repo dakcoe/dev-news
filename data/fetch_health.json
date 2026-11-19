@@ -1,15 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-10T08:00:32+09:00",
-   "total": 18,
-   "counts": {
-    "ok": 16,
-    "github": 2
-   },
-   "failures": []
-  },
-  {
    "at": "2026-11-10T16:00:33+09:00",
    "total": 16,
    "counts": {
@@ -560,6 +551,28 @@
     "github": 4
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-20T08:00:33+09:00",
+   "total": 17,
+   "counts": {
+    "robots": 1,
+    "ok": 13,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }

@@ -1,5 +1,558 @@
 [
  {
+  "title": "Stop Wrapping Everything in Promise.all: How Unbounded Concurrency Crashes APIs",
+  "url": "https://dev.to/johnnylemonny/stop-wrapping-everything-in-promiseall-how-unbounded-concurrency-crashes-apis-11ol",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 19,
+  "comments": 7,
+  "published_at": 1795105800.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/johnnylemonny/stop-wrapping-everything-in-promiseall-how-unbounded-concurrency-crashes-apis-11ol"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbrc7m38ceh5rk4w1mlq1.jpg",
+  "link_status": "ok",
+  "ko_title": "모든 작업을 Promise.all로 감싸지 말라: 무제한 동시성으로 API가 다운됨",
+  "summary": "1,200개의 청구 작업을 Promise.all로 동시에 실행했을 때 결제 게이트웨이가 429 오류를 반환하고 PostgreSQL 연결 풀 타임아웃이 발생했다. Promise.all은 작업을 제한하거나 큐에 넣지 않으며, Array.map은 동기적으로 모든 비동기 콜백을 같은 이벤트 루프 틱에 시작한다. 이로 인해 수천 개의 DNS 조회, TLS 핸드쉐이크, 소켓 버퍼 및 DB 쿼리가 동시에 발생해 외부 API 제한 초과와 DB 연결 풀 포화, 그리고 실패한 하나의 프라미스가 전체를 거부하면서 남은 작업이 취소되지 않아 부작용이 남는다.",
+  "why": "Promise.all은 작업 수를 제한하지 않아 대량 데이터 처리 시 외부 API 한계 초과와 DB 연결 풀 포화를 유발한다. 하나의 실패가 전체를 거부해도 남은 작업은 취소되지 않아 고립된 부작용이 남는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "UK government forced to admit it issued Apple a secret encryption order",
+  "url": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
+  "source": "hackernews",
+  "upvotes": 429,
+  "comments": 187,
+  "published_at": 1795105263,
+  "discussion": "https://news.ycombinator.com/item?id=50562113",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://macanorak.com/content/images/2026/11/Apple.jpg",
+  "link_status": "ok",
+  "ko_title": "영국 정부, 애플에 비밀 암호화 명령 발부 사실 인정",
+  "summary": "영국 조사권 재판소가 정부가 애플에 비밀 기술능력통지(TCN)를 발부했음을 인정하도록 판결했다. TCN은 2016년 조사권법 제253조에 근거한 비밀 명령으로, 기업에 서비스 변경을 요구한다. 이번 판결로 정부는 명령 존재 자체를 은폐하려던 시도가 무산되었다.",
+  "why": "영국 정부의 비밀 암호화 명령 존재가 공식 확인되면서, 서비스 보안 정책이 법적 압력에 의해 변경될 수 있음을 확인해야 한다. 이는 특정 국가의 규제 환경이 글로벌 서비스의 암호화 기능 제공 여부에 직접적인 영향을 미친다는 점을 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "apekshik / anymachine",
+  "url": "https://github.com/apekshik/anymachine",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 382,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/apekshik/anymachine"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 382,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/apekshik/anymachine",
+  "link_status": null,
+  "ko_title": "anymachine — Blender에서 에이전트가 만든 움직이는 기계",
+  "summary": "AnyMachine은 Blender와 Python 스크립트를 이용해 복잡한 기계와 객체를 자동 생성하는 오픈소스 도구다. 최근 업데이트로 헬리콥터, 구명보트, 석유 설비 등 다중 부품을 가진 모델을 파트별로 제작한다. 에이전트 Claude Fable 5.2가 디자인 단계부터 구현까지 진행한다.",
+  "why": "Blender 기반 3D 모델링 파이프라인을 Python 스크립트로 자동화할 때 참고할 사례다. 다중 부품 구조를 파트별로 생성하는 방식이 기존 일괄 생성 접근법과 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "PostgreSQL 19 Released",
+  "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795121037.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/19/postgresql-19/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "PostgreSQL 19 릴리스",
+  "summary": "PostgreSQL 19가 11월에 출시되었다. 주요 새 기능으로 스탠바이에서 읽기 시 “read-your-writes” 일관성을 보장하는 WAIT FOR LSN 명령을 추가했다. 애플리케이션은 특정 LSN까지 WAL 재생을 기다린 뒤 쿼리를 실행해 방금 쓴 데이터를 바로 읽을 수 있다. 이 기능은 복제 지연을 최소화해 일관된 읽기를 제공한다.",
+  "why": "기존에 스탠바이에서 읽기 시 복제 지연으로 인한 일관성 문제를 애플리케이션 레벨에서 해결하던 방식이 바뀐다. WAIT FOR LSN 명령으로 특정 LSN까지 WAL 재생을 기다린 뒤 쿼리를 실행할 수 있다. 타임아웃 옵션을 지정하면 스탠바이가 제때 따라오지 못하면 에러를 반환한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "security",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Introducing Tool Retrieval in the Gemini API",
+  "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795111200.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png",
+  "link_status": "ok",
+  "ko_title": "Gemini API에 도구 검색 기능 도입",
+  "summary": "Gemini API에 도구 검색(Tool Retrieval) 프리뷰가 추가됐다. 도구의 전체 파라미터 스키마를 요청마다 전송하지 않고, 필요할 때만 로드하도록 defer_loading 옵션을 설정한다. 모델은 이름과 설명만 보고 도구를 선택하고, 호출 시 스키마를 불러와 함수 호출을 수행한다.",
+  "why": "도구가 수십 개 이상인 에이전트에서 토큰 비용과 지연을 줄일 수 있다. 자주 쓰는 도구는 제외하고 나머지에 defer_loading 옵션만 적용하면 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "release",
+   "science"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Tool Names Are Identifiers. Don't Autocorrect Them.",
+  "url": "https://dev.to/gde/tool-names-are-identifiers-dont-autocorrect-them-33g9",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 3,
+  "published_at": 1795106100.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/tool-names-are-identifiers-dont-autocorrect-them-33g9"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6s8zo9lqsjlp5sz9wa8t.jpg",
+  "link_status": "ok",
+  "ko_title": "도구 이름은 식별자다. 자동 교정하지 말라.",
+  "summary": "도구 이름에 유사한 유니코드 문자(키릴 문자 o)가 포함될 경우, 문자열 비교에서 불일치가 발생한다. AgentInspect 6.31.35 버전은 이런 경우 코드 포인트를 노출해 식별자를 정확히 확인한다. 동일한 이름이라도 다른 문자 집합이면 계약 위반으로 간주한다.",
+  "why": "도구 이름에 키릴 문자 같은 유사 문자가 섞이면 문자열 비교가 실패한다. AgentInspect 6.31.35 버전은 코드 포인트를 노출해 이 불일치를 정확히 확인한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "release"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+  "url": "https://thedataexchange.media/pete-warden-moonshine/",
+  "source": "hackernews",
+  "upvotes": 195,
+  "comments": 179,
+  "published_at": 1795102692,
+  "discussion": "https://news.ycombinator.com/item?id=50561508",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://thedataexchange.media/pete-warden-moonshine/"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://thedataexchange.media/wp-content/uploads/2026/11/pete-warden-local-ai.001.jpeg",
+  "link_status": "ok",
+  "ko_title": "Pete Warden, 로컬 AI·오픈 모델·음성 인터페이스·하드웨어 미래",
+  "summary": "이 인터뷰에서는 로컬 AI가 클라우드보다 선호되는 이유와 오픈 가중치 모델의 급속한 발전을 다룬다. 노트북·브라우저에서 AI를 실행하는 방법과 저지연 음성 모델이 자연스러운 음성 인터페이스를 가능하게 하는 방식을 설명한다. 또한 특화 모델과 엔드-투-엔드 모델의 차이, 로컬 AI의 경제성, GPU 중심 인프라를 대체할 수 있는 새로운 하드웨어 접근법을 논의한다.",
+  "why": "로컬 AI와 오픈 가중치 모델의 발전으로 노트북과 브라우저에서 AI를 실행하는 방식이 달라진다. 저지연 음성 모델은 자연스러운 음성 인터페이스를 가능하게 하여 사용자 경험의 기준을 바꾼다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Major League Hacking and SpaceXSI Come Together to Support the Next Generation of Builders",
+  "url": "https://blog.mlh.com/major-league-hacking-and-spacexsi-come-together-to-support-the-next-generation-of-builders-feh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 31,
+  "comments": 0,
+  "published_at": 1795107326.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://blog.mlh.com/major-league-hacking-and-spacexsi-come-together-to-support-the-next-generation-of-builders-feh"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fespjtcfkbz9n5dvtxgka.png",
+  "link_status": "ok",
+  "ko_title": "Major League Hacking과 SpaceXSI, 차세대 빌더 지원 프로그램 발표",
+  "summary": "MLH와 SpaceXSI가 2026-2027 학년도에 100개 대학 캠퍼스의 학생들에게 SpaceXSI 최신 X Premium 구독을 한 달 무료로 제공한다. 학생들은 Grok Build와 Grok Bot 등 SI 도구를 활용하고, 온라인 워크숍·챌린지·Global Hack Week에 참여할 수 있다. 이 프로그램은 연간 약 5백만 명의 빌더와 1/3의 컴퓨터 과학 졸업생에게 도달한다.",
+  "why": "Grok Build와 Grok Bot을 한 달간 무료로 사용해 볼 수 있다. AI 코딩 도구의 강점과 한계를 직접 다루며 실력을 다질 기회다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "career-culture"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Bodila51 / gtavi-claudecode",
+  "url": "https://github.com/Bodila51/gtavi-claudecode",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 786,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Bodila51/gtavi-claudecode"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 786,
+  "score": 58,
+  "image": "https://opengraph.githubassets.com/1/Bodila51/gtavi-claudecode",
+  "link_status": null,
+  "ko_title": "gtavi-claudecode — GTA 6 클립 자동 생성 플러그인",
+  "summary": "이 비공식 플러그인은 Claude Code에 추가해 10분 안에 GTA 6 스트리밍 영상에서 인기 순간을 추출하고 1080×1920 세로 클립을 자동으로 편집한다. 클립은 1,000 뷰당 보상을 주는 캠페인에 바로 게시할 수 있다. 설치는 `/plugin marketplace add Bodila51/gtavi-claudecode`와 `/plugin install gtavi-claudecode@gtavi-claudecode` 두 줄이면 된다.",
+  "why": "Claude Code 환경에 설치해 스트리밍 영상에서 세로 클립을 자동 편집하는 도구다. GTA 6 관련 영상 콘텐츠를 빠르게 가공해 게시해야 하는 작업에 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "open-source"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Claude solves two open problems in the physics of black holes",
+  "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+  "source": "hackernews",
+  "upvotes": 323,
+  "comments": 145,
+  "published_at": 1795109444,
+  "discussion": "https://news.ycombinator.com/item?id=50563148",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.anthropic.com/research/claude-black-hole-physics"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://assets.claude.com/57a443b51d13727573b7c1290130d09c5f434b2c.jpg",
+  "link_status": "ok",
+  "ko_title": "Claude가 블랙홀 물리학의 두 미해결 문제 해결",
+  "summary": "Claude가 20년 넘게 풀리지 않았던 블랙홀 형성 전이 계산을 완성하고, 양자 중력 후보 이론을 검증하는 기법의 가장 단순한 버전의 정확한 한계를 찾았다. 두 결과 모두 블랙홀을 통한 양자 중력 연구에 새로운 이론적 근거를 제공한다.",
+  "why": "백엔드 개발자의 업무와 직접적인 연관성이 없어 확인이나 조치가 필요 없다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Thinking On or Off? Gemma 4 E4B on an 8 GB RTX 3050",
+  "url": "https://dev.to/gde/thinking-on-or-off-gemma-4-e4b-on-an-8-gb-rtx-3050-5d5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 1,
+  "published_at": 1795101573.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/thinking-on-or-off-gemma-4-e4b-on-an-8-gb-rtx-3050-5d5"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fxbill9%2Fgemma4-dev%2Fmain%2Fdocs%2Fgemma4-e4b-thinking-3050%2Fdevto-cover.690126f5.jpg",
+  "link_status": "ok",
+  "ko_title": "Thinking On or Off? Gemma 4 E4B on an 8 GB RTX 3050",
+  "summary": "Gemma 4 E4B 모델을 8 GB RTX 3050 GPU에서 llama.cpp로 실행해 GSM8K와 AIME 2025 문제를 테스트했다. 생각(Thinking) 기능을 켜면 정확도가 최대 16문제 상승하지만 실행 시간이 2배 이상 늘었다. QAT 드래프트를 사용하면 모든 실행이 1.99~2.39배 빨라지고 점수에는 영향을 주지 않는다.",
+  "why": "llama.cpp로 Gemma 4 E4B를 돌릴 때 QAT 드래프트를 쓰면 점수 변화 없이 속도가 2배 이상 빨라진다. 생각 기능을 켜면 실행 시간이 2배 이상 늘지만 정확도 상승은 미미하므로 기본값으로 켜두지 않는 게 좋다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Managing frontier AI risk: From training to deployment",
+  "url": "https://openai.com/index/managing-frontier-ai-risk",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794981600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/managing-frontier-ai-risk"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/62zvkDv3unaiLBblzJHY4f/d61ad5ec9ebc02f033d0efac3807be3e/managing-frontier-ai-risk-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "프론티어 AI 위험 관리: 학습부터 배포까지",
+  "summary": "프론티어 모델의 급속한 능력 향상에 대응해 내부 교육 중단이나 GPT-6.1 Astra와 같은 모델 출시 보류 등 안전 기준 충족을 위한 조치를 취하고 있다. 새로운 안전 사례와 정렬 행동에 대한 강력한 증거 요구 등 프로세스를 도입해 모델 출시 속도를 늦추지만 안전성을 높인다. Hugging Face 사건 이후 훈련·테스트·배포 단계별 위험 관리와 다중 방어층을 적용한다.",
+  "why": "프롬프트 주입 등 단일 방어층 실패 시 다른 계층이 개입하는 다중 방어 구조를 적용한다. 내부 도구 연동 시 모델이 의도를 숨기면 모니터링이 무력화되므로 출력 검증 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+  "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795075200.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "OpenAI의 Performance Factory가 ChatGPT를 빠르게 유지하는 방법",
+  "summary": "OpenAI는 Codex 기반 워크플로우로 구성된 Performance Factory를 구축해 성능 문제를 자동으로 탐지·수정한다. 이 시스템은 ChatGPT의 응답 속도를 지속적으로 최적화한다.",
+  "why": "Codex 기반 워크플로우로 성능 문제를 자동 탐지·수정하는 방식은 백엔드 최적화 파이프라인 설계에 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Day 87: A Redirected Module and a Renamed Publisher",
+  "url": "https://dev.to/ndcodes/day-87-a-redirected-module-and-a-renamed-publisher-1280",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 12,
+  "comments": 0,
+  "published_at": 1795111200.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ndcodes/day-87-a-redirected-module-and-a-renamed-publisher-1280"
+  ],
+  "cross_source_count": 1,
+  "score": 43,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8n1pcdc1eglsxa9ap1it.jpg",
+  "link_status": "ok",
+  "ko_title": "Day 87: 리디렉션된 모듈과 이름이 바뀐 퍼블리셔",
+  "summary": "Ansible의 yum 모듈이 실제로는 dnf 모듈로 리디렉션되고, Azure 이미지 퍼블리셔 이름이 jetware-srl로 변경됐다. KodeKloud Engineer 플랫폼 과제에서 vsftpd 설치·시작 플레이북을 실행해 idempotent 동작을 확인한다. 문서에 yum 모듈이 dnf로 전환됐음을 명시했다.",
+  "why": "Ansible 플레이북에서 yum 모듈을 쓰면 실제로 dnf 모듈이 실행된다. 기존 스크립트에서 yum을 명시해도 동작은 유지되지만, 내부 모듈명이 달라진 점을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795107600.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dialogues.max-1440x810.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 시대의 호기심과 창의성에 대한 Walter Isaacson",
+  "summary": "최신 팟캐스트 ‘Dialogues on Technology and Society’에서 Walter Isaacson이 Leonardo da Vinci, Benjamin Franklin, Ada Lovelace를 예로 들어 AI 시대에 창의성과 호기심이 왜 중요한지 논한다. Kent Walker와 함께 인간 판단과 팀워크가 정보가 손 안에 있을 때 더욱 필요함을 강조한다.",
+  "why": "정보 접근이 쉬워진 환경에서는 인간 판단과 팀워크가 핵심 역량으로 부상한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Anthropic hits $2T in Nasdaq debut",
+  "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+  "source": "hackernews",
+  "upvotes": 768,
+  "comments": 1436,
+  "published_at": 1795107760,
+  "discussion": "https://news.ycombinator.com/item?id=50562754",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Anthropic, 나스닥 데뷔에서 2조 달성",
+  "summary": "",
+  "why": "Anthropic의 나스닥 상장으로 AI 인프라 투자가 가속화될 수 있다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "industry"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
+  "title": "Fuck Your AI Safeguards",
+  "url": "https://ounapuu.ee/posts/2026/11/19/unsafeguards/",
+  "source": "hackernews",
+  "upvotes": 435,
+  "comments": 173,
+  "published_at": 1795105818,
+  "discussion": "https://news.ycombinator.com/item?id=50562262",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ounapuu.ee/posts/2026/11/19/unsafeguards/"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": "https://ounapuu.ee/posts/2026/11/19/unsafeguards/media/cover_hu_5a6285e4518135fc.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 안전장치에 화풀이",
+  "summary": "",
+  "why": "보안 취약점 분석 시 AI가 안전장치로 작업을 차단할 수 있다. 이 경우 기존 보안 대응 프로세스에 차질이 생길 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety"
+  ],
+  "batch": "2026-11-20T08:00:05.905365+09:00",
+  "batch_label": "11월 20일 08:00"
+ },
+ {
   "title": "I Trimmed My Agent's Tool Results to Five Fields. It Solved More, Not Fewer.",
   "url": "https://dev.to/aheadkit/i-trimmed-my-agents-tool-results-to-five-fields-it-solved-more-not-fewer-27d5",
   "source": "devto",

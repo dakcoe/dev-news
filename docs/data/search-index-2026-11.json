@@ -1,5 +1,242 @@
 [
  {
+  "t": "모든 작업을 Promise.all로 감싸지 말라: 무제한 동시성으로 API가 다운됨",
+  "u": "https://dev.to/johnnylemonny/stop-wrapping-everything-in-promiseall-how-unbounded-concurrency-crashes-apis-11ol",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data"
+  ],
+  "d": "2026-11-20",
+  "o": "Stop Wrapping Everything in Promise.all: How Unbounded Concurrency Crashes APIs",
+  "x": "1,200개의 청구 작업을 Promise.all로 동시에 실행했을 때 결제 게이트웨이가 429 오류를 반환하고 PostgreSQL 연결 풀 타임"
+ },
+ {
+  "t": "영국 정부, 애플에 비밀 암호화 명령 발부 사실 인정",
+  "u": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-11-20",
+  "o": "UK government forced to admit it issued Apple a secret encryption order",
+  "x": "영국 조사권 재판소가 정부가 애플에 비밀 기술능력통지(TCN)를 발부했음을 인정하도록 판결했다. TCN은 2016년 조사권법 제253조에 근거한"
+ },
+ {
+  "t": "anymachine — Blender에서 에이전트가 만든 움직이는 기계",
+  "u": "https://github.com/apekshik/anymachine",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-20",
+  "o": "apekshik / anymachine",
+  "x": "AnyMachine은 Blender와 Python 스크립트를 이용해 복잡한 기계와 객체를 자동 생성하는 오픈소스 도구다. 최근 업데이트로 헬리콥"
+ },
+ {
+  "t": "PostgreSQL 19 릴리스",
+  "u": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "security",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-20",
+  "o": "PostgreSQL 19 Released",
+  "x": "PostgreSQL 19가 11월에 출시되었다. 주요 새 기능으로 스탠바이에서 읽기 시 “read-your-writes” 일관성을 보장하는 WA"
+ },
+ {
+  "t": "Gemini API에 도구 검색 기능 도입",
+  "u": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "release",
+   "science"
+  ],
+  "d": "2026-11-20",
+  "o": "Introducing Tool Retrieval in the Gemini API",
+  "x": "Gemini API에 도구 검색(Tool Retrieval) 프리뷰가 추가됐다. 도구의 전체 파라미터 스키마를 요청마다 전송하지 않고, 필요할 "
+ },
+ {
+  "t": "도구 이름은 식별자다. 자동 교정하지 말라.",
+  "u": "https://dev.to/gde/tool-names-are-identifiers-dont-autocorrect-them-33g9",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "release"
+  ],
+  "d": "2026-11-20",
+  "o": "Tool Names Are Identifiers. Don't Autocorrect Them.",
+  "x": "도구 이름에 유사한 유니코드 문자(키릴 문자 o)가 포함될 경우, 문자열 비교에서 불일치가 발생한다. AgentInspect 6.31.35 버전"
+ },
+ {
+  "t": "Pete Warden, 로컬 AI·오픈 모델·음성 인터페이스·하드웨어 미래",
+  "u": "https://thedataexchange.media/pete-warden-moonshine/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "web",
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-11-20",
+  "o": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+  "x": "이 인터뷰에서는 로컬 AI가 클라우드보다 선호되는 이유와 오픈 가중치 모델의 급속한 발전을 다룬다. 노트북·브라우저에서 AI를 실행하는 방법과 "
+ },
+ {
+  "t": "Major League Hacking과 SpaceXSI, 차세대 빌더 지원 프로그램 발표",
+  "u": "https://blog.mlh.com/major-league-hacking-and-spacexsi-come-together-to-support-the-next-generation-of-builders-feh",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "career-culture"
+  ],
+  "d": "2026-11-20",
+  "o": "Major League Hacking and SpaceXSI Come Together to Support the Next Generation of Builders",
+  "x": "MLH와 SpaceXSI가 2026-2027 학년도에 100개 대학 캠퍼스의 학생들에게 SpaceXSI 최신 X Premium 구독을 한 달 무"
+ },
+ {
+  "t": "gtavi-claudecode — GTA 6 클립 자동 생성 플러그인",
+  "u": "https://github.com/Bodila51/gtavi-claudecode",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "open-source"
+  ],
+  "d": "2026-11-20",
+  "o": "Bodila51 / gtavi-claudecode",
+  "x": "이 비공식 플러그인은 Claude Code에 추가해 10분 안에 GTA 6 스트리밍 영상에서 인기 순간을 추출하고 1080×1920 세로 클립을"
+ },
+ {
+  "t": "Claude가 블랙홀 물리학의 두 미해결 문제 해결",
+  "u": "https://www.anthropic.com/research/claude-black-hole-physics",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "d": "2026-11-20",
+  "o": "Claude solves two open problems in the physics of black holes",
+  "x": "Claude가 20년 넘게 풀리지 않았던 블랙홀 형성 전이 계산을 완성하고, 양자 중력 후보 이론을 검증하는 기법의 가장 단순한 버전의 정확한 "
+ },
+ {
+  "t": "Thinking On or Off? Gemma 4 E4B on an 8 GB RTX 3050",
+  "u": "https://dev.to/gde/thinking-on-or-off-gemma-4-e4b-on-an-8-gb-rtx-3050-5d5",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "d": "2026-11-20",
+  "x": "Gemma 4 E4B 모델을 8 GB RTX 3050 GPU에서 llama.cpp로 실행해 GSM8K와 AIME 2025 문제를 테스트했다. 생"
+ },
+ {
+  "t": "프론티어 AI 위험 관리: 학습부터 배포까지",
+  "u": "https://openai.com/index/managing-frontier-ai-risk",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "devops-infra"
+  ],
+  "d": "2026-11-20",
+  "o": "Managing frontier AI risk: From training to deployment",
+  "x": "프론티어 모델의 급속한 능력 향상에 대응해 내부 교육 중단이나 GPT-6.1 Astra와 같은 모델 출시 보류 등 안전 기준 충족을 위한 조치를"
+ },
+ {
+  "t": "OpenAI의 Performance Factory가 ChatGPT를 빠르게 유지하는 방법",
+  "u": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "dev-tools",
+   "showcase"
+  ],
+  "d": "2026-11-20",
+  "o": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+  "x": "OpenAI는 Codex 기반 워크플로우로 구성된 Performance Factory를 구축해 성능 문제를 자동으로 탐지·수정한다. 이 시스템은"
+ },
+ {
+  "t": "Day 87: 리디렉션된 모듈과 이름이 바뀐 퍼블리셔",
+  "u": "https://dev.to/ndcodes/day-87-a-redirected-module-and-a-renamed-publisher-1280",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [],
+  "d": "2026-11-20",
+  "o": "Day 87: A Redirected Module and a Renamed Publisher",
+  "x": "Ansible의 yum 모듈이 실제로는 dnf 모듈로 리디렉션되고, Azure 이미지 퍼블리셔 이름이 jetware-srl로 변경됐다. Kode"
+ },
+ {
+  "t": "AI 시대의 호기심과 창의성에 대한 Walter Isaacson",
+  "u": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-11-20",
+  "o": "Walter Isaacson on curiosity and creativity in the AI age.",
+  "x": "최신 팟캐스트 ‘Dialogues on Technology and Society’에서 Walter Isaacson이 Leonardo da Vin"
+ },
+ {
+  "t": "Anthropic, 나스닥 데뷔에서 2조 달성",
+  "u": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "industry"
+  ],
+  "d": "2026-11-20",
+  "o": "Anthropic hits $2T in Nasdaq debut"
+ },
+ {
+  "t": "AI 안전장치에 화풀이",
+  "u": "https://ounapuu.ee/posts/2026/11/19/unsafeguards/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "ai-safety"
+  ],
+  "d": "2026-11-20",
+  "o": "Fuck Your AI Safeguards"
+ },
+ {
   "t": "에이전트 도구 결과를 다섯 필드로 줄였더니 해결된 작업이 늘었다",
   "u": "https://dev.to/aheadkit/i-trimmed-my-agents-tool-results-to-five-fields-it-solved-more-not-fewer-27d5",
   "m": "2026-11",
