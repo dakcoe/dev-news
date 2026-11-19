@@ -1,5 +1,552 @@
 [
  {
+  "title": "I Trimmed My Agent's Tool Results to Five Fields. It Solved More, Not Fewer.",
+  "url": "https://dev.to/aheadkit/i-trimmed-my-agents-tool-results-to-five-fields-it-solved-more-not-fewer-27d5",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 3,
+  "comments": 8,
+  "published_at": 1795082400.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aheadkit/i-trimmed-my-agents-tool-results-to-five-fields-it-solved-more-not-fewer-27d5"
+  ],
+  "cross_source_count": 1,
+  "score": 72,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhj7ek0a3l5352i3m03fj.png",
+  "link_status": "ok",
+  "ko_title": "에이전트 도구 결과를 다섯 필드로 줄였더니 해결된 작업이 늘었다",
+  "summary": "트라이아지 헬퍼가 반환하는 GitHub 이슈 정보를 다섯 필드(번호, 제목, 라벨, 댓글 수, 본문 앞 300자)로 제한했을 때, 전체 텍스트를 반환한 경우보다 더 많은 작업을 정확히 해결했다. 24개의 테스트 작업 중 전체 텍스트는 9개, 제한 텍스트는 17개를 성공적으로 처리했다. 토큰 사용량도 전체 텍스트 대비 크게 감소했다.",
+  "why": "에이전트 도구 결과를 핵심 필드만 남기고 줄이면 컨텍스트 윈도우가 줄어든다. 결국 더 많은 작업을 정확히 처리할 수 있어 토큰 비용과 성공률을 동시에 개선한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "What's New in PHP 8.6",
+  "url": "https://www.php.net/releases/8.6/en.php",
+  "source": "hackernews",
+  "upvotes": 168,
+  "comments": 86,
+  "published_at": 1795080435,
+  "discussion": "https://news.ycombinator.com/item?id=50557870",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.php.net/releases/8.6/en.php"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://www.php.net/images/php8/php_8_6_released.png",
+  "link_status": "ok",
+  "ko_title": "PHP 8.6의 새로운 기능",
+  "summary": "PHP 8.6은 부분 함수 적용, Duration 클래스, Polling API, clamp() 함수, SortDirection 열거형 등 여러 새로운 기능을 도입한다. 이 업데이트는 함수 인자를 미리 제공해 클로저를 반환하는 부분 적용과 나노초 정밀도의 시간 측정이 가능한 Duration 클래스를 포함한다. 또한 epoll·kqueue 기반의 확장 가능한 I/O 멀티플렉싱을 지원한다.",
+  "why": "Duration 클래스로 타임아웃이나 벤치마크 시간을 나노초 정밀도로 표현할 수 있다. Polling API가 epoll과 kqueue를 지원해 ReactPHP 같은 이벤트 루프 라이브러리의 확장성이 높아진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "Can a plain table hijack an AI agent?",
+  "url": "https://dev.to/edbrdi/can-a-plain-table-hijack-an-ai-agent-2pde",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 4,
+  "comments": 12,
+  "published_at": 1795080049.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/edbrdi/can-a-plain-table-hijack-an-ai-agent-2pde"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm2kkbuaxsa4tzcezoty0.png",
+  "link_status": "ok",
+  "ko_title": "평범한 표가 AI 에이전트를 탈취할 수 있을까?",
+  "summary": "연구자는 도구 결과에 숨긴 명령을 무시하거나 차단하는 강화된 모델들을 테스트했다. 그러나 별다른 지시가 없는 평범한 표만으로도 모델 세 개가 이전에 본 적 없는 도메인을 추천하도록 만들었다. 이는 간단한 데이터만으로도 프롬프트 인젝션이 가능함을 보여준다.",
+  "why": "도구 호출 결과에 지시 문장이 없어도 평범한 표 데이터만으로 모델이 조작될 수 있다. 외부 데이터를 읽는 에이전트를 만들면 지시 없는 표 형식도 공격 벡터로 봐야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "showcase"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+  "url": "https://huggingface.co/blog/moe-expert-streaming",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794960000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/moe-expert-streaming"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://huggingface.co/blog/assets/moe-expert-streaming/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "180B 파라미터와 32GB RAM: 트랜스포머로 MoE 추론 한계에 도전",
+  "summary": "스트리밍 방식으로 SSD에서 MoE 전문가를 로드하면 토큰 생성 시 Strata 대비 6% 이하의 성능 차이로 실행할 수 있다. 저자는 RTX 4090 두 대와 32GB 통합 메모리 MacBook M5를 활용해 Qwen 3.8-27B 모델을 로컬에서 운영하고, Strata 엔진을 통해 전문가 가중치를 VRAM이 아닌 RAM·디스크에 오프로드한다. 기존 llama.cpp, vLLM, Transformers와 비교해 메모리 요구량을 크게 낮추면서도 실용적인 속도를 제공한다.",
+  "why": "Strata 엔진은 MoE 전문가 가중치를 VRAM 대신 RAM이나 디스크에 배치해 메모리 부담을 줄인다. 기존 llama.cpp나 vLLM과 달리 전문가를 SSD에서 스트리밍하며 로드한다. 토큰 생성 속도는 Strata 대비 6% 이내 차이로 실용적 수준을 유지한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "Tracer-Cloud / opensre",
+  "url": "https://github.com/Tracer-Cloud/opensre",
+  "source": "github",
+  "upvotes": 25,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/Tracer-Cloud/opensre"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 25,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/Tracer-Cloud/opensre",
+  "link_status": null,
+  "ko_title": "OpenSRE: CI/CD 신뢰성을 위한 오픈소스 에이전트",
+  "summary": "OpenSRE는 CI/CD 파이프라인에서 실패한 실행을 분석해 원인을 추적하고, 수정안을 자동으로 생성해 검토하도록 하는 CLI 기반 에이전트이다. 자체 호스팅이 가능하며, 사용자가 직접 모델을 연결해 활용할 수 있다. 현재 퍼블릭 알파 단계이며, GitHub Actions CI 상태와 Apache 2.0 라이선스를 제공한다.",
+  "why": "CI 실패 원인을 추적하고 수정안을 자동 생성하는 기능이 있어 파이프라인 장애 대응 시간을 줄일 수 있다. 퍼블릭 알파 단계이므로 프로덕션 환경 도입 전 안정성 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "Distributed, high-performance blob storage on SQLite",
+  "url": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/",
+  "source": "hackernews",
+  "upvotes": 148,
+  "comments": 31,
+  "published_at": 1795077585,
+  "discussion": "https://news.ycombinator.com/item?id=50557537",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://zerodha.tech/blog/high-performance-distributed-blob-storage/"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://zerodha.tech//static/images/blobasaur-og.png",
+  "link_status": "ok",
+  "ko_title": "SQLite 기반 분산 고성능 블롭 스토리지",
+  "summary": "Blobasaur는 SQLite 위에 구축한 샤딩·분산형 경량 블롭 저장 서버다. 수천 건·초당 읽·쓰기와 십밀리초 수준 지연을 커머디티 하드웨어에서 달성한다. 기존에 사용하던 SSDB가 유지보수 중단·단일 노드 한계에 부딪혀 대체가 필요했으며, Blobasaur가 그 해결책으로 도입됐다.",
+  "why": "SSDB의 유지보수 중단과 단일 노드 한계로 인한 운영 리스크를 피할 대안이 제시됐다. C++ 스택이 아닌 팀이라면 포크 유지가 불가능했던 기존 환경과 달리 SQLite 기반이라 접근성이 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "toyxyz / toyxyz_RGBMocap",
+  "url": "https://github.com/toyxyz/toyxyz_RGBMocap",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 288,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/toyxyz/toyxyz_RGBMocap"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 288,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/toyxyz/toyxyz_RGBMocap",
+  "link_status": null,
+  "ko_title": "toyxyz / toyxyz_RGBMocap — 비디오를 편집 가능한 인간 애니메이션으로 변환하는 Windows 앱",
+  "summary": "비디오를 로컬 AI 처리로 인간 애니메이션으로 변환하는 Windows 전용 앱을 제공한다. 언리얼 엔진 5.7용 Live Link 샘플 프로젝트와 연동이 가능하다. 플러그인이나 C++ 빌드 없이 수신기를 사용할 수 있다.",
+  "why": "언리얼 엔진 5.7.4에서 수신기 사용 시 플러그인이나 C++ 빌드가 필요 없다. 라이브 링크 애니메이션 블루프린트와 IK 리타겟터를 바로 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "How to Add Login, SSO, and MFA to a Next.js SaaS with Managed Keycloak",
+  "url": "https://dev.to/hadil/how-to-add-login-sso-and-mfa-to-a-nextjs-saas-with-managed-keycloak-56dj",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 27,
+  "comments": 2,
+  "published_at": 1795096185.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/hadil/how-to-add-login-sso-and-mfa-to-a-nextjs-saas-with-managed-keycloak-56dj"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftybzc5i2zf2iicl3ylco.png",
+  "link_status": "ok",
+  "ko_title": "Next.js SaaS에 로그인·SSO·MFA를 Managed Keycloak으로 추가하기",
+  "summary": "이 가이드는 Next.js App Router와 Auth.js를 사용해 Managed Keycloak 인스턴스와 OpenID Connect로 연동하는 방법을 설명한다. 인증 흐름을 Keycloak이 담당하고, 개발자는 로그인, 기업 SSO, MFA 기능을 직접 구현하지 않아도 된다. 구현 예제와 설정 단계가 포함되어 있다.",
+  "why": "Next.js SaaS에서 인증 인프라 운영 부담을 덜어준다. 로그인, SSO, MFA 기능을 직접 구현하지 않아도 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web",
+   "industry"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "Inside the Codex sandbox",
+  "url": "https://openai.com/index/inside-the-codex-sandbox",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794988800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/inside-the-codex-sandbox"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/1PnylD7lJwgUw7jYNP8wLh/7fa5553001136f3982e8d4db44146de3/inside-the-codex-sandbox-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Codex 샌드박스 내부",
+  "summary": "Codex가 명령을 실행할 때 파일시스템·네트워크 접근을 제한하는 샌드박스를 제공한다. 사용자는 권한 프로필을 통해 특정 디렉터리와 네트워크 접근을 허용·차단할 수 있다. macOS·Linux·Windows에서 적용되는 구현 방식과 기본 프로필 예시가 소개된다.",
+  "why": "Codex가 명령 실행 시 파일시스템과 네트워크 접근을 제한하는 샌드박스를 제공한다. 권한 프로필을 설정해 특정 디렉터리와 네트워크 접근을 허용하거나 차단할 수 있다. macOS, Linux, Windows에서 모두 적용되는 구현 방식이 공개됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "SSD prices will start going down the second half of next year",
+  "url": "https://www.drivevault.io/blog/when-will-hard-drive-prices-come-down.html",
+  "source": "hackernews",
+  "upvotes": 193,
+  "comments": 159,
+  "published_at": 1795079134,
+  "discussion": "https://news.ycombinator.com/item?id=50557716",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.drivevault.io/blog/when-will-hard-drive-prices-come-down.html"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://images.unsplash.com/photo-1779896412126-ed004b6eb80c?auto=format&fit=crop&w=1600&q=80",
+  "link_status": "ok",
+  "ko_title": "SSD 가격, 내년 하반기부터 하락 시작",
+  "summary": "분석가와 주요 HDD 제조업체 투자자 발표에 따르면 2027년 하반기부터 SSD 가격이 완화될 전망이다. HDD는 2028년까지도 공급이 제한돼 가격 하락이 늦어질 것으로 보인다. NAND 공급이 2027년 중반부터 수요를 따라잡으며 가격 완화가 점진적으로 진행될 것이다.",
+  "why": "내년 하반기부터 SSD 가격 하락이 시작되므로 지금 대량 구매를 미루는 것이 유리하다. HDD는 2028년까지 공급이 제한되어 가격 안정이 늦어지므로 저장소 구성 시 이 차이를 고려해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "How the European Commission rolled out Matrix to more than 40k staff",
+  "url": "https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/",
+  "source": "hackernews",
+  "upvotes": 368,
+  "comments": 170,
+  "published_at": 1795085909,
+  "discussion": "https://news.ycombinator.com/item?id=50558533",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://element.io/blog/content/images/size/w1200/2026/11/euc-conf__blog.png",
+  "link_status": "ok",
+  "ko_title": "유럽연합 집행위원회, 4만 명 직원에게 매트릭스 도입",
+  "summary": "유럽연합 집행위원회는 2025년 12월 파일럿을 시작해 2026년 9월 자체 운영 매트릭스 기반 커뮤니케이션 도구를 전 직원에게 배포했다. Element의 ESS Pro를 채택해 자체 클라우드 호스팅으로 운영하며, 데이터 소유권·탄력성·상호운용성을 핵심으로 삼았다.",
+  "why": "자체 클라우드에서 매트릭스 프로토콜을 운영하면 데이터 소유권을 확보할 수 있다. 서버 위치가 아닌 데이터 통제와 상호운용성을 기준으로 통신 도구를 선택하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "XiaoYouChR / Ghost-Downloader-3",
+  "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+  "source": "github",
+  "upvotes": 432,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "github"
+  ],
+  "merged_urls": [
+   "https://github.com/XiaoYouChR/Ghost-Downloader-3"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 432,
+  "score": 52,
+  "image": "https://opengraph.githubassets.com/1/XiaoYouChR/Ghost-Downloader-3",
+  "link_status": null,
+  "ko_title": "Ghost-Downloader-3",
+  "summary": "Ghost-Downloader-3는 GitHub에 공개된 오픈소스 다운로드 도구이다. 90 M 이상의 전 세계 거주 IP를 제공하는 Swiftproxy와 연동해 지역 제한 콘텐츠를 다운로드할 수 있다. 문서와 사용 영상이 제공되며, QQ·Discord 커뮤니티에서 지원을 받을 수 있다.",
+  "why": "지역 제한이 걸린 리소스를 백엔드 파이프라인에서 가져와야 할 때, Swiftproxy 연동으로 우회할 수 있다. HTTP(S)와 SOCKS5 프로토콜을 지원하므로 기존 네트워크 설정에 맞춰 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "KytyPS5 / KytyPS5",
+  "url": "https://github.com/KytyPS5/KytyPS5",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 285,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/KytyPS5/KytyPS5"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 285,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/KytyPS5/KytyPS5",
+  "link_status": null,
+  "ko_title": "KytyPS5",
+  "summary": "KytyPS5는 Windows와 Linux용 C++ 기반 무료 오픈소스 PlayStation 5 번역 레이어이며 macOS 지원도 실험 중이다. 현재 게임 호환성 확대와 부팅 안정성 개선에 집중하고 있다. 프로젝트는 활발히 개발 중이며 빌드마다 동작이 크게 달라질 수 있다.",
+  "why": "빌드마다 동작이 크게 달라지므로 최신 빌드를 설치해도 이전과 다른 문제를 겪을 수 있다. 게임 호환성과 부팅 안정성 개선에 집중하고 있어 특정 타이틀 실행 전 최신 빌드 확인이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+  "url": "https://openai.com/business/customer-stories/sumitomo-life",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794988800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/sumitomo-life"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4hobAtsV8r9aiWOWQkUYu6/aec1eae52f5c7241756a43c764ef43f5/sumitomo-life-seo-white-canvas-final.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Sumitomo Life 리더들이 팀에 ChatGPT Enterprise 도입을 돕다",
+  "summary": "Sumitomo Life은 2025년에 100~150명의 임직원을 대상으로 ChatGPT Business 파일럿을 진행한 뒤 2026년 6월에 ChatGPT Enterprise로 전환했다. 현재 직원 80% 이상이 주간 단위로 사용하고 있으며, 월 101회 이상 이용한 직원들의 평균 추정 ROI는 524%다. 기업은 OpenAI와 협력해 보안 기준을 검증했으며, 향후 수천 명에게 확대 rollout을 계획하고 있다.",
+  "why": "금융권 보안 기준을 충족하는 워크스페이스 접근과 기능 권한 관리 방식을 참고할 수 있다. OpenAI가 비즈니스 데이터를 모델 학습에서 기본적으로 제외하는 정책을 확인했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "Automate Changelog Videos with GitHub Actions and AI",
+  "url": "https://dev.to/sheen_417f0f3a7f4/automate-changelog-videos-with-github-actions-and-ai-114m",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 12,
+  "comments": 2,
+  "published_at": 1795086223.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sheen_417f0f3a7f4/automate-changelog-videos-with-github-actions-and-ai-114m"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F70003cdhvlgtwm615kqm.png",
+  "link_status": "ok",
+  "ko_title": "GitHub Actions와 AI로 변경 로그 비디오 자동화",
+  "summary": "GitHub 릴리즈가 트리거가 되어 코딩 에이전트가 릴리즈 노트를 편집하고 비디오 프로젝트를 수정한 뒤 coa render 명령으로 MP4를 생성한다. 안전하게 무인 실행되도록 verdict.json을 검증하는 게이트가 포함돼 있다. 예시 워크플로는 deploykit CLI 3.8 버전을 기반으로 하며, 에이전트 편집과 최종 검토 단계만 사람이 개입한다.",
+  "why": "게이트는 참조만 검증하므로 의미 오류를 막지 못한다. 최종 MP4는 배포 전 사람이 반드시 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "The AI Superintelligence Debate Has Serious Flaws",
+  "url": "https://spectrum.ieee.org/ai-superintelligence-debate",
+  "source": "hackernews",
+  "upvotes": 85,
+  "comments": 126,
+  "published_at": 1795090630,
+  "discussion": "https://news.ycombinator.com/item?id=50559140",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://spectrum.ieee.org/ai-superintelligence-debate"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://spectrum.ieee.org/media-library/image.png?id=68699683&width=1200&height=600&coordinates=0%2C205%2C0%2C205",
+  "link_status": "ok",
+  "ko_title": "AI 초지능 논쟁에 심각한 결함이 있다",
+  "summary": "Anthropic 연구원이 사임하면서 AI 초지능이 인간 멸종을 초래할 수 있다는 경고가 제기되었다. 해당 기업과 OpenAI가 자가 개선 초지능을 향해 경쟁하고 있다는 주장이 제시되었다. 논쟁은 초지능을 마케팅 수단이나 규제 촉구에 이용한다는 의견과, 초지능이 인류를 위협할 가능성을 두고 다양한 시나리오를 논의하는 입장으로 나뉜다.",
+  "why": "자가 개선 초지능 경쟁이 현실화되면 기존 AI 시스템의 안전성 검증 기준이 달라진다. 현재 개발 중인 모델의 통제 메커니즘을 재점검해야 하는 시점이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
+  "title": "A DigitalOcean volume next to the Droplet's own disk",
+  "url": "https://dev.to/remdore/a-digitalocean-volume-next-to-the-droplets-own-disk-51nb",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 13,
+  "comments": 1,
+  "published_at": 1795073518.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remdore/a-digitalocean-volume-next-to-the-droplets-own-disk-51nb"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fblsmenzvuh1y7gzacfnl.png",
+  "link_status": "ok",
+  "ko_title": "DigitalOcean 볼륨, Droplet 자체 디스크와 나란히",
+  "summary": "DigitalOcean의 블록 스토리지 볼륨은 공유-CPU Droplet에서 7,500 IOPS·300 MB/s 기본, 10,000 IOPS·450 MB/s 최대 60 초 버스트를 제공한다. 테스트 결과, 버스트 성능은 문서와 일치했으며, Droplet 자체 SSD는 4,102 MB/s 순읽기·1,206 MB/s 순쓰기·39,703 IOPS 랜덤 쓰기로 훨씬 높은 성능을 보였다. 볼륨을 PostgreSQL이 쓰는 중에 분리해 이동하면 성능 저하와 잠재적 데이터 손실 위험이 확인되었다.",
+  "why": "PostgreSQL 데이터 디렉터리를 볼륨에 두면 최대 450 MB/s로 제한된다. Droplet 자체 디스크는 순읽기 4,102 MB/s를 내므로 격차가 크다. 쓰기 중 볼륨을 분리하면 데이터 손실 위험이 있으니 주의해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "hardware"
+  ],
+  "batch": "2026-11-20T00:00:05.715365+09:00",
+  "batch_label": "11월 20일 00:00"
+ },
+ {
   "title": "Multiple vulnerabilities in Regexp and String case conversion",
   "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
   "source": "hackernews",

@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-10T00:00:39+09:00",
-   "total": 16,
-   "counts": {
-    "robots": 1,
-    "blocked": 1,
-    "ok": 10,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-10T08:00:32+09:00",
    "total": 18,
    "counts": {
@@ -573,6 +551,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-11-20T00:00:36+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 14,
+    "github": 4
+   },
+   "failures": []
   }
  ]
 }
