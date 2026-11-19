@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-09T16:00:38+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 12,
-    "empty": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://isocpp.org/files/papers/P4454R0.pdf",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-11-10T00:00:39+09:00",
    "total": 16,
    "counts": {
@@ -573,6 +557,22 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-19T16:00:36+09:00",
+   "total": 18,
+   "counts": {
+    "ok": 15,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://openai.com/index/the-silent-consensus",
+     "source": "rss",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
