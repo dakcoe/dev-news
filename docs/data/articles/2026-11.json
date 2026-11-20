@@ -1,5 +1,486 @@
 [
  {
+  "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+  "url": "https://huggingface.co/blog/rumble-2-flash",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1794960000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/rumble-2-flash"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://huggingface.co/blog/assets/rumble-2-flash/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Rumble-2-Flash: 40개 이상 언어 지원 0.5B 파라미터 오픈 음성 모델",
+  "summary": "Rumble-2-Flash가 Apache 2.0 라이선스로 공개됐다. 0.5 B 파라미터 규모이지만 40개 이상 언어를 자동 감지하며, 허깅페이스 Transformers와 vLLM에서 별도 코드 없이 바로 사용할 수 있다. 실시간 전화 통화 데이터에서도 30 B 규모의 NVIDIA Nemotron 3.5 Transcribe와 동등한 정확도를 보인다.",
+  "why": "기존 스택에 커스텀 코드 없이 바로 통합할 수 있다. 실시간 전화 데이터에서 30B 모델과 동등한 정확도를 낸다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "My tests were green. They caught 0 of 10 real bugs.",
+  "url": "https://dev.to/softalpha_0/my-tests-were-green-they-caught-0-of-10-real-bugs-g9h",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 2,
+  "comments": 6,
+  "published_at": 1795142449.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/softalpha_0/my-tests-were-green-they-caught-0-of-10-real-bugs-g9h"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpfrhlpu8f2m3ehm34wg6.png",
+  "link_status": "ok",
+  "ko_title": "내 테스트는 모두 통과했지만 실제 버그 10개 중 0개만 잡았다",
+  "summary": "Saboteur는 엔드-투-엔드 브라우저 테스트에 변이 테스트를 적용하고, AI가 놓친 버그에 대해 새로운 테스트를 자동 생성한다. 실제 웹 샵에 10가지 버그를 삽입해 실행했을 때 기존 테스트는 모두 통과했으며, 각 누락된 버그마다 Claude가 테스트를 작성한다. 프로젝트는 GitHub에 공개돼 직접 사용해 볼 수 있다.",
+  "why": "기존 E2E 테스트가 전수 통과해도 실제 결함을 놓칠 수 있음을 확인하는 도구다. 누락된 버그에 대해 Claude가 새 테스트를 생성하고, 정답 앱에서는 통과하고 버그가 있는 앱에서는 실패해야만 채택된다. 변이 테스트를 브라우저 E2E 영역에 적용해 테스트 스위트의 사각지대를 측정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+  "url": "https://github.com/openssl/openssl/pull/33652",
+  "source": "hackernews",
+  "upvotes": 150,
+  "comments": 79,
+  "published_at": 1795140069,
+  "discussion": "https://news.ycombinator.com/item?id=50569226",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/openssl/openssl/pull/33652"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/d916370b558eb3cac8dc01b88d8ab926b071f58101c5310fdc4b4b5b880d0aa7/openssl/openssl/pull/33652",
+  "link_status": "ok",
+  "ko_title": "OpenSSL: EVP_EncodeBlock() 버퍼 오버플로우 취약점 (CVE-2026-121481, CVSS 9.8)",
+  "summary": "OpenSSL에서 `EVP_EncodeBlock()` 함수가 잘못된 입력에 대해 `-1`을 반환하도록 수정되어 버퍼 오버플로우가 방지된다. 동일한 검증이 `EVP_DecodeBlock()`에도 적용되었으며, `http_client.c`의 `base64encode()` 함수에서 길이 검사가 수정되었다. 문서가 업데이트되고 새로운 테스트가 추가되었다.",
+  "why": "CVSS 9.8의 버퍼 오버플로우 취약점이므로 OpenSSL 4.0과 4.1 사용자는 패치 적용이 필수다. EVP_EncodeBlock()과 EVP_DecodeBlock()을 직접 호출하는 백엔드 코드는 즉시 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "sourmitocand1987 / VividFrame-GPU",
+  "url": "https://github.com/sourmitocand1987/VividFrame-GPU",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 370,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/sourmitocand1987/VividFrame-GPU"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 370,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/sourmitocand1987/VividFrame-GPU",
+  "link_status": null,
+  "ko_title": "실시간 GPU 영상 향상 VividFrame",
+  "summary": "VividFrame GPU는 Windows용 영상 재생·캡처 프로그램으로, DirectX 12 기반 실시간 GPU 파이프라인을 통해 AI 초고해상도, 노이즈 감소, HDR, 프레임 생성 및 색상 보정 등을 적용한다. 로컬 파일, 캡처 카드, 화면 캡처, 콘솔·PC 스트리밍 등 모든 입력에 동일한 체인을 사용한다. 별도의 오프라인 렌더링 없이 재생 중에 바로 향상된 영상을 제공한다.",
+  "why": "DirectX 12 기반 실시간 파이프라인으로 별도 오프라인 렌더링 없이 향상된 영상을 제공한다. 기존의 느린 오프라인 업스케일러나 개별 후처리 도구 대신 단일 체인으로 처리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "imxieyi / Kernarium",
+  "url": "https://github.com/imxieyi/Kernarium",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 798,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/imxieyi/Kernarium"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 798,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/imxieyi/Kernarium",
+  "link_status": null,
+  "ko_title": "Kernarium",
+  "summary": "실제 Linux 커널을 iOS에서 네이티브로 실행하는 User-mode Linux 기반 에뮬레이터를 제공한다. Android 에뮬레이터 앱인 Andarium는 앱스토어에서 차단됐지만 소스는 공개돼 사이드로드가 가능하고, 일반 Linux 배포판도 실행할 수 있는 초기 단계 프로젝트이다. Docker 컨테이너, Linux 데스크톱, Wine/Proton, 전체 Android 시스템까지 현대 iOS 기기에서 적당한 속도로 구동한다.",
+  "why": "iOS에서 Linux 커널을 네이티브로 실행해 Docker 컨테이너와 Wine 구동이 가능해졌다. 앱스토어 배포가 차단되어 사이드로드 설치만 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra",
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "NYC: Escape the IVR at Twilio Assemble (Dec 8, Brooklyn)",
+  "url": "https://dev.to/twilio/nyc-escape-the-ivr-at-twilio-assemble-dec-8-brooklyn-2dmb",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1795129238.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/twilio/nyc-escape-the-ivr-at-twilio-assemble-dec-8-brooklyn-2dmb"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4cqlqu8nbw9g3x5j4v9l.png",
+  "link_status": "ok",
+  "ko_title": "NYC: Twilio Assemble에서 IVR 탈출하기 (12월 8일, 브루클린)",
+  "summary": "Twilio Assemble가 뉴욕 브루클린에서 12월 8일에 무료 오프라인 행사를 개최한다. AI 에이전트를 웹 채팅이 아닌 전화·문자·이메일 등 실제 사용 채널에 연결하는 인프라와 최신 AI 도구를 소개한다. 참가자는 Twilio의 Conversational Intelligence와 Claude Code 기능을 직접 체험하고, 네트워킹을 할 수 있다.",
+  "why": "AI 에이전트를 웹 채팅이 아닌 전화와 문자 등 실제 사용 채널에 연결하는 인프라를 직접 확인할 수 있다. Conversational Intelligence와 Claude Code 기능을 현장에서 체험하고 팀에 질문할 기회다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "devops-infra",
+   "hardware"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "RAG vs GraphRAG vs Knowledge Graphs: Choosing the Right Enterprise Knowledge Architecture",
+  "url": "https://dev.to/quokkalabs/rag-vs-graphrag-vs-knowledge-graphs-choosing-the-right-enterprise-knowledge-architecture-fi7",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 6,
+  "comments": 0,
+  "published_at": 1795155736.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/quokkalabs/rag-vs-graphrag-vs-knowledge-graphs-choosing-the-right-enterprise-knowledge-architecture-fi7"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3jxhfdu2udcbbrwzmowz.png",
+  "link_status": "ok",
+  "ko_title": "RAG vs GraphRAG vs 지식 그래프: 기업 지식 아키텍처 선택",
+  "summary": "Microsoft가 GraphRAG Zero로 서브초 단위 검색을 구현했지만, 독립 벤치마크에서는 그래프 기반 시스템이 일반 RAG보다 성능이 떨어질 수 있다. RAG는 텍스트 증거를, GraphRAG는 관계와 그래프 요약을 활용해 정보를 연결한다. 지식 그래프는 엔터프라이즈 데이터를 엔터티와 관계 형태로 저장해 텍스트 생성 없이 직접 질의한다. 선택은 애플리케이션이 답해야 할 질문 유형에 따라 달라진다.",
+  "why": "GraphRAG Zero의 서브초 단위 검색에도 독립 벤치마크에서 일반 RAG에 밀릴 수 있다. 단일 문서 조회에는 하이브리드 RAG가 더 정확할 수 있으니 주의해야 한다. 답변이 여러 문서 연결이나 패턴 요약이 필요할 때만 GraphRAG 도입을 검토하라.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Token fraud is here and it’s BAD (YouTube)",
+  "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795142997.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "토큰 사기가 등장했고 위험합니다 (YouTube)",
+  "summary": "ChatPRD의 무료 체험을 악용해 토큰을 무단으로 재판매하거나 상업적 용도로 사용하는 사례가 급증하고 있다. 악용자는 로블록스·포트나이트 맵 제작 등 다양한 목적에 AI 토큰을 활용하고 있다. 이에 따라 서비스 제공자는 무료 체험을 전면 종료하기로 했다.",
+  "why": "무료 체험을 악용한 토큰 재판매와 상업적 이용이 급증하고 있다. 이로 인해 ChatPRD는 무료 체험을 전면 종료했다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "What team-wide AI adoption actually takes",
+  "url": "https://dev.to/peter/what-team-wide-ai-adoption-actually-takes-1gbh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 29,
+  "comments": 3,
+  "published_at": 1795134985.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/peter/what-team-wide-ai-adoption-actually-takes-1gbh"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu7kwsgmm696mwcbkbl0k.png",
+  "link_status": "ok",
+  "ko_title": "팀 전체 AI 도입에 실제로 필요한 것",
+  "summary": "개인이 AI를 활용해 생산성을 높이는 것은 비교적 쉬우나, 팀 전체가 매일 사용하도록 만들려면 사고방식과 기존 업무 흐름에 맞는 도구가 필요하다. 저자는 AI를 반복 작업에 맡기고 판단은 사람에게 남기는 방식을 제안한다. 공개 채널에서 AI 활용 과정을 공유하면 팀원들이 서로 학습하고 재사용할 수 있다.",
+  "why": "반복 작업은 AI에 맡기고 판단은 사람이 하는 구조로 업무 흐름을 재설계해야 한다. AI 활용 과정을 공개 채널에서 공유하면 팀원들이 프롬프트와 결과를 재사용할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Deploying Daybreak Red",
+  "url": "https://openai.com/business/learn/deploying-daybreak-red",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795046400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/learn/deploying-daybreak-red"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Daybreak Red 배포",
+  "summary": "Daybreak Red를 활용한 감독 보안 조사용 레퍼런스 아키텍처를 소개한다. 안전 제어, 설정 방법, 모니터링 절차를 상세히 설명한다.",
+  "why": "보안 조사를 자동화할 때 안전 제어와 모니터링 절차를 어떻게 구성해야 하는지 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Everything you need to survive and rebuild society",
+  "url": "https://lastbook.org/",
+  "source": "hackernews",
+  "upvotes": 389,
+  "comments": 199,
+  "published_at": 1795099638,
+  "discussion": "https://news.ycombinator.com/item?id=50560822",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://lastbook.org/"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://lastbook.org/og-survive-rebuild-v2.png",
+  "link_status": "ok",
+  "ko_title": "생존과 사회 재건에 필요한 모든 것",
+  "summary": "로컬에서 오프라인으로 사용할 수 있는 생존 가이드 앱이다. macOS, Windows, Linux용으로 제공되며, 전체 용량은 선택에 따라 7.7 GB에서 388 GB까지다. 물 정화, 식량 보존, 전기·발전 기본 지식 등 다양한 주제를 다룬다. 선택적 로컬 AI 모델을 통해 라이브러리 내 정보를 질문하고 출처를 확인할 수 있다.",
+  "why": "로컬 AI 모델이 라이브러리 내 정보를 질의하고 출처를 연결해 주므로, 오프라인 환경에서도 문헌 검증이 가능하다. 다만 임상 검토를 거치지 않은 자료이므로, 응급 상황에서는 전문 의료 대응을 대체할 수 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "See PR scans in action",
+  "url": "https://openai.com/business/learn/pr-scans-demo",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795046400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/learn/pr-scans-demo"
+  ],
+  "cross_source_count": 1,
+  "score": 42,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6pUIP8aRHn6eGeRGBWd0B0/c447f22952fcb14b3c43104989c1e739/pr-scans-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "PR 스캔 작동 모습 보기",
+  "summary": "PR 스캔 기능을 시연하는 제품 데모 영상이다. 발표자가 풀 리퀘스트 흐름에서 스캔 결과를 검토하는 과정을 보여준다.",
+  "why": "풀 리퀘스트 단계에서 스캔 결과를 어떻게 검토하는지 확인 가능하다. 기존 코드 리뷰 흐름에 보안 검사를 어떻게 끼워 넣을지 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+  "url": "https://git-aarvin.github.io/mei/",
+  "source": "hackernews",
+  "upvotes": 333,
+  "comments": 204,
+  "published_at": 1795131335,
+  "discussion": "https://news.ycombinator.com/item?id=50568130",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://git-aarvin.github.io/mei/"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://git-aarvin.github.io/mei/scatter/cost.png",
+  "link_status": "ok",
+  "ko_title": "Gemini 4 Neon이 모델 엔지니어링 지수에서 새로운 1위",
+  "summary": "Gemini 4 Neon이 모델 엔지니어링 지수(MEI)에서 1위에 올랐다. MEI는 10개의 코딩 벤치마크를 기반으로 모델의 실무 성능을 종합 점수로 산출한다. 점수는 벤치마크 난이도와 누락 결과를 보정해 평균 50점이 되도록 조정한다. 비용과 토큰 사용량도 동일하게 보정돼 전형적인 모델 대비 상대값으로 표시된다.",
+  "why": "Gemini 4 Neon이 MEI 1위를 차지하며 실무 코딩 성능의 기준점이 바뀌었다. 비용과 토큰 사용량이 상대값으로 보정되어 모델 간 효율 비교가 명확해졌다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+  "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+  "source": "hackernews",
+  "upvotes": 166,
+  "comments": 42,
+  "published_at": 1795131131,
+  "discussion": "https://news.ycombinator.com/item?id=50568082",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Visa·Mastercard·JPMorgan 고객 데이터가 해커에 의해 유출",
+  "summary": "",
+  "why": "고객 데이터 유출로 인한 보안 위협이 현실화되었으므로 결제 연동 서비스의 인증 로직 점검이 필요하다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
+  "title": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
+  "url": "https://grapheneos.social/@GrapheneOS/117645038299496084",
+  "source": "hackernews",
+  "upvotes": 187,
+  "comments": 30,
+  "published_at": 1795152062,
+  "discussion": "https://news.ycombinator.com/item?id=50570479",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://grapheneos.social/@GrapheneOS/117645038299496084"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Google, OEM을 설득해 GrapheneOS와 부트로더 잠금 해제를 반대",
+  "summary": "",
+  "why": "부트로더 잠금 해제 경로가 OEM 정책으로 막히면 GrapheneOS 설치 환경이 제한된다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-20T16:00:04.802369+09:00",
+  "batch_label": "11월 20일 16:00"
+ },
+ {
   "title": "Stop Wrapping Everything in Promise.all: How Unbounded Concurrency Crashes APIs",
   "url": "https://dev.to/johnnylemonny/stop-wrapping-everything-in-promiseall-how-unbounded-concurrency-crashes-apis-11ol",
   "source": "devto",

@@ -1,5 +1,208 @@
 [
  {
+  "t": "Rumble-2-Flash: 40개 이상 언어 지원 0.5B 파라미터 오픈 음성 모델",
+  "u": "https://huggingface.co/blog/rumble-2-flash",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-20",
+  "o": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+  "x": "Rumble-2-Flash가 Apache 2.0 라이선스로 공개됐다. 0.5 B 파라미터 규모이지만 40개 이상 언어를 자동 감지하며, 허깅페이"
+ },
+ {
+  "t": "내 테스트는 모두 통과했지만 실제 버그 10개 중 0개만 잡았다",
+  "u": "https://dev.to/softalpha_0/my-tests-were-green-they-caught-0-of-10-real-bugs-g9h",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "web"
+  ],
+  "d": "2026-11-20",
+  "o": "My tests were green. They caught 0 of 10 real bugs.",
+  "x": "Saboteur는 엔드-투-엔드 브라우저 테스트에 변이 테스트를 적용하고, AI가 놓친 버그에 대해 새로운 테스트를 자동 생성한다. 실제 웹 샵"
+ },
+ {
+  "t": "OpenSSL: EVP_EncodeBlock() 버퍼 오버플로우 취약점 (CVE-2026-121481, CVSS 9.8)",
+  "u": "https://github.com/openssl/openssl/pull/33652",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-11-20",
+  "o": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+  "x": "OpenSSL에서 `EVP_EncodeBlock()` 함수가 잘못된 입력에 대해 `-1`을 반환하도록 수정되어 버퍼 오버플로우가 방지된다. 동일"
+ },
+ {
+  "t": "실시간 GPU 영상 향상 VividFrame",
+  "u": "https://github.com/sourmitocand1987/VividFrame-GPU",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-20",
+  "o": "sourmitocand1987 / VividFrame-GPU",
+  "x": "VividFrame GPU는 Windows용 영상 재생·캡처 프로그램으로, DirectX 12 기반 실시간 GPU 파이프라인을 통해 AI 초고해"
+ },
+ {
+  "t": "Kernarium",
+  "u": "https://github.com/imxieyi/Kernarium",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "devops-infra",
+   "open-source",
+   "industry"
+  ],
+  "d": "2026-11-20",
+  "o": "imxieyi / Kernarium",
+  "x": "실제 Linux 커널을 iOS에서 네이티브로 실행하는 User-mode Linux 기반 에뮬레이터를 제공한다. Android 에뮬레이터 앱인 A"
+ },
+ {
+  "t": "NYC: Twilio Assemble에서 IVR 탈출하기 (12월 8일, 브루클린)",
+  "u": "https://dev.to/twilio/nyc-escape-the-ivr-at-twilio-assemble-dec-8-brooklyn-2dmb",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "devops-infra",
+   "hardware"
+  ],
+  "d": "2026-11-20",
+  "o": "NYC: Escape the IVR at Twilio Assemble (Dec 8, Brooklyn)",
+  "x": "Twilio Assemble가 뉴욕 브루클린에서 12월 8일에 무료 오프라인 행사를 개최한다. AI 에이전트를 웹 채팅이 아닌 전화·문자·이메일"
+ },
+ {
+  "t": "RAG vs GraphRAG vs 지식 그래프: 기업 지식 아키텍처 선택",
+  "u": "https://dev.to/quokkalabs/rag-vs-graphrag-vs-knowledge-graphs-choosing-the-right-enterprise-knowledge-architecture-fi7",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "research",
+   "industry"
+  ],
+  "d": "2026-11-20",
+  "o": "RAG vs GraphRAG vs Knowledge Graphs: Choosing the Right Enterprise Knowledge Architecture",
+  "x": "Microsoft가 GraphRAG Zero로 서브초 단위 검색을 구현했지만, 독립 벤치마크에서는 그래프 기반 시스템이 일반 RAG보다 성능이 "
+ },
+ {
+  "t": "토큰 사기가 등장했고 위험합니다 (YouTube)",
+  "u": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-20",
+  "o": "Token fraud is here and it’s BAD (YouTube)",
+  "x": "ChatPRD의 무료 체험을 악용해 토큰을 무단으로 재판매하거나 상업적 용도로 사용하는 사례가 급증하고 있다. 악용자는 로블록스·포트나이트 맵 "
+ },
+ {
+  "t": "팀 전체 AI 도입에 실제로 필요한 것",
+  "u": "https://dev.to/peter/what-team-wide-ai-adoption-actually-takes-1gbh",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "d": "2026-11-20",
+  "o": "What team-wide AI adoption actually takes",
+  "x": "개인이 AI를 활용해 생산성을 높이는 것은 비교적 쉬우나, 팀 전체가 매일 사용하도록 만들려면 사고방식과 기존 업무 흐름에 맞는 도구가 필요하다"
+ },
+ {
+  "t": "Daybreak Red 배포",
+  "u": "https://openai.com/business/learn/deploying-daybreak-red",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-safety",
+   "security",
+   "devops-infra",
+   "industry"
+  ],
+  "d": "2026-11-20",
+  "o": "Deploying Daybreak Red",
+  "x": "Daybreak Red를 활용한 감독 보안 조사용 레퍼런스 아키텍처를 소개한다. 안전 제어, 설정 방법, 모니터링 절차를 상세히 설명한다."
+ },
+ {
+  "t": "생존과 사회 재건에 필요한 모든 것",
+  "u": "https://lastbook.org/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai"
+  ],
+  "d": "2026-11-20",
+  "o": "Everything you need to survive and rebuild society",
+  "x": "로컬에서 오프라인으로 사용할 수 있는 생존 가이드 앱이다. macOS, Windows, Linux용으로 제공되며, 전체 용량은 선택에 따라 7."
+ },
+ {
+  "t": "PR 스캔 작동 모습 보기",
+  "u": "https://openai.com/business/learn/pr-scans-demo",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "dev-tools"
+  ],
+  "d": "2026-11-20",
+  "o": "See PR scans in action",
+  "x": "PR 스캔 기능을 시연하는 제품 데모 영상이다. 발표자가 풀 리퀘스트 흐름에서 스캔 결과를 검토하는 과정을 보여준다."
+ },
+ {
+  "t": "Gemini 4 Neon이 모델 엔지니어링 지수에서 새로운 1위",
+  "u": "https://git-aarvin.github.io/mei/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "d": "2026-11-20",
+  "o": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+  "x": "Gemini 4 Neon이 모델 엔지니어링 지수(MEI)에서 1위에 올랐다. MEI는 10개의 코딩 벤치마크를 기반으로 모델의 실무 성능을 종합"
+ },
+ {
+  "t": "Visa·Mastercard·JPMorgan 고객 데이터가 해커에 의해 유출",
+  "u": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-11-20",
+  "o": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers"
+ },
+ {
+  "t": "Google, OEM을 설득해 GrapheneOS와 부트로더 잠금 해제를 반대",
+  "u": "https://grapheneos.social/@GrapheneOS/117645038299496084",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-20",
+  "o": "Google is pushing OEMs against GrapheneOS and bootloader unlocking"
+ },
+ {
   "t": "모든 작업을 Promise.all로 감싸지 말라: 무제한 동시성으로 API가 다운됨",
   "u": "https://dev.to/johnnylemonny/stop-wrapping-everything-in-promiseall-how-unbounded-concurrency-crashes-apis-11ol",
   "m": "2026-11",
