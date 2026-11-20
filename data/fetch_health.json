@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-11T00:00:34+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 15,
-    "blocked": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/closing-ai-guidance-gap-education",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-11T08:00:31+09:00",
    "total": 19,
    "counts": {
@@ -578,6 +562,22 @@
      "url": "https://openai.com/business/learn/deploying-daybreak-red",
      "source": "rss",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-21T00:00:36+09:00",
+   "total": 17,
+   "counts": {
+    "ok": 14,
+    "empty": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://alpo.ge/remark.pdf",
+     "source": "hackernews",
+     "reason": "empty"
     }
    ]
   }

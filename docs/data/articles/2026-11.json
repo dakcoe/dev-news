@@ -1,5 +1,481 @@
 [
  {
+  "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+  "url": "https://architectlabs.com/blog/frostbite",
+  "source": "hackernews",
+  "upvotes": 353,
+  "comments": 228,
+  "published_at": 1795168901,
+  "discussion": "https://news.ycombinator.com/item?id=50572503",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://architectlabs.com/blog/frostbite"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://main--gleeful-begonia-6bb5f3.netlify.app/_next/static/media/frostbite-cover.3n9ytugnquhlr.jpg",
+  "link_status": "ok",
+  "ko_title": "Frostbite: AI가 발견·설계·검증한 새로운 CPU 아키텍처",
+  "summary": "Frostbite는 AI가 처음부터 설계하고 검증한 범용 CPU로, 새로운 명령어 집합과 인터랙션 넷 기반 마이크로아키텍처를 사용한다. 25개의 워크로드 테스트에서 기존 듀얼 이슈 인-오더 CPU 대비 4.59배의 성능-당-전력 효율을 달성했다. 설계 과정은 컴파일러·ISA·마이크로아키텍처·RTL·검증·GDS까지 AI가 자동으로 반복했다.",
+  "why": "인터랙션 넷 기반의 새로운 ISA와 마이크로아키텍처가 등장했다. 기존 인-오더 코어 대비 전력당 성능이 4.59배 높아졌다. AI가 컴파일러부터 GDS까지 전체 설계 과정을 자동화했다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "language"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+  "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795132800.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/harness-adapters-at-scale"
+  ],
+  "cross_source_count": 1,
+  "score": 69,
+  "image": "https://huggingface.co/blog/assets/harness-adapters-at-scale/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "하네스 어댑터 소개: 선호 모델을 하네스에 맞춰 성능·비용 개선",
+  "summary": "하네스와 모델을 결합해 RL로 맞춤 LoRA 어댑터를 학습하면 기존 모델 대비 정확도와 토큰 사용량이 크게 개선된다. Qwen3.8-27B에 대해 pi, Hermes Agent, OpenCode 하네스 각각에 어댑터를 적용해 성능·효율 모두 향상된 결과를 보였다. 세 어댑터를 하나로 합친 슈퍼 어댑터도 제공한다.",
+  "why": "하네스별 LoRA 어댑터를 적용하면 같은 모델에서 토큰 사용량이 줄고 정확도가 오른다. 자신의 작업 환경에 맞는 어댑터를 학습하거나 제공된 레시피를 재현해 비용을 낮출 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "release"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Why OpenAI, Anthropic and SpaceX's Cursor Are All Building Their Own GitHub",
+  "url": "https://dev.to/amananandrai/why-openai-anthropic-and-spacexs-cursor-are-all-building-their-own-github-33lg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 9,
+  "comments": 0,
+  "published_at": 1795167006.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/amananandrai/why-openai-anthropic-and-spacexs-cursor-are-all-building-their-own-github-33lg"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fglbbqsuon29s6281x2vf.png",
+  "link_status": "ok",
+  "ko_title": "OpenAI·Anthropic·SpaceX Cursor, 모두 자체 GitHub 구축",
+  "summary": "OpenAI는 Pando라는 Git 백엔드를 만들고 Pierre Computer를 인수해 Codex에 직접 Git 호스팅을 통합한다. Anthropic은 자체 시스템 Scion으로 전체 모노레포의 Git을 대체했으며, SpaceX 소유 Cursor는 편집기에 내장된 Origin을 출시했다. AI 에이전트가 생성하는 코드 양이 급증하면서 기존 GitHub가 빈번한 장애를 겪어 대형 AI 기업들이 자체 인프라를 구축하게 되었다.",
+  "why": "AI 에이전트가 생성하는 코드량이 기존 Git 호스팅의 처리 한계를 초과했다. Anthropic은 하루 병합 건수가 2,500건에서 30,000건 이상으로 급증했다. GitHub는 2025년 5월부터 2026년 4월까지 257건의 장애를 기록했다. 대형 AI 기업은 플랫폼 장애로 개발이 멈추는 것을 막기 위해 자체 인프라를 구축했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "iamajmeena / neonclipping",
+  "url": "https://github.com/iamajmeena/neonclipping",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 424,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/iamajmeena/neonclipping"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 424,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/iamajmeena/neonclipping",
+  "link_status": null,
+  "ko_title": "NeonClipping (네온클리핑)",
+  "summary": "NeonClipping은 YouTube·Twitch·Kick 영상이나 로컬 MP4 파일을 9:16 세로 비율의 캡션이 포함된 클립으로 변환한다. 모든 처리는 사용자의 머신에서 이루어져 계정이나 구독이 필요 없으며, 기본적으로 오디오만 다운로드해 YouTube 자막을 활용하고, 필요 시 로컬 Whisper 모델을 사용한다. 선택된 순간은 로컬 LLM으로 제목과 훅을 자동 생성한다.",
+  "why": "로컬 LLM이 클립 제목과 훅을 자동 생성해 편집 단계의 수작업을 줄인다. YouTube 자막을 무료로 활용하므로 별도 음성 인식 모델 설치 부담이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "open-source"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Agentic engineering a smart home energy system with Antigravity and Gemini 4",
+  "url": "https://dev.to/googleai/agentic-engineering-a-smart-home-energy-system-with-antigravity-and-gemini-4-53md",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 13,
+  "comments": 0,
+  "published_at": 1795178736.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/googleai/agentic-engineering-a-smart-home-energy-system-with-antigravity-and-gemini-4-53md"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F913y9g66ma1ggz6p92f9.png",
+  "link_status": "ok",
+  "ko_title": "Antigravity와 Gemini 4로 스마트 홈 에너지 시스템 엔지니어링",
+  "summary": "저자는 옥상 태양광, 가정용 배터리, 전기차 두 대, 시간대별 전기 요금을 자동으로 조정하는 시스템을 구축하고 GitHub에 오픈소스로 공개했다. Google Antigravity 안에서 Gemini 4 Hydrogen과 Gemini 4 Carbon을 각각 사양 작성과 다파일 코딩·테스트에 활용했다. 하드웨어 API를 인터페이스로 추상화하고 비밀 스캔·PR 체크·dry-run 플래그로 안전성을 확보했다.",
+  "why": "하드웨어 API를 인터페이스로 추상화하면 기기 변경 시 수정 범위를 최소화할 수 있다. 비밀 스캔과 dry-run 플래그를 적용해 에이전트 실행 중 실수로 인한 위험을 차단해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+  "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
+  "source": "hackernews",
+  "upvotes": 304,
+  "comments": 176,
+  "published_at": 1795165989,
+  "discussion": "https://news.ycombinator.com/item?id=50572116",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://ecohustler.com/article/one-corporation-to-pollute-them-all/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://ecohustler.com/img/asset/bWFpbi9vbmUtY29ycG9yYXRpb24tdG8tcG9sbHV0ZS10aGVtLWFsbC5wbmc/one-corporation-to-pollute-them-all.png?p=og&s=6d596b09b5a7b3028cc8993239fa3d38",
+  "link_status": "ok",
+  "ko_title": "Carnival Cruises, 유럽 자동차보다 10배 많은 황산화물 배출",
+  "summary": "새 보고서에 따르면 세계 최대 크루즈 기업인 Carnival이 유럽 해안에서 배출한 황산화물(SOx)이 2017년 유럽 전체 자동차 배출량의 거의 10배에 달한다. 동일 보고서는 Royal Caribbean도 자동차보다 4배 높은 배출량을 기록했다고 밝혔다. 주요 영향을 받는 국가는 스페인, 이탈리아, 그리스 등이며, 바르셀로나·팔마·베니스 등 항구 도시가 가장 큰 피해를 입는다.",
+  "why": "백엔드 개발 환경과 무관한 환경 규제 이슈다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Your Error Survived the Wrapper. Did Its Code Survive the Trace?",
+  "url": "https://dev.to/gde/your-error-survived-the-wrapper-did-its-code-survive-the-trace-17gg",
+  "source": "devto",
+  "tag": "typescript",
+  "upvotes": 20,
+  "comments": 2,
+  "published_at": 1795161600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/your-error-survived-the-wrapper-did-its-code-survive-the-trace-17gg"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzyfbncr2yf3yx5znyex3.jpg",
+  "link_status": "ok",
+  "ko_title": "오류가 래퍼를 통과했지만, 코드가 추적에 남았나요?",
+  "summary": "AgentInspect는 오류 객체를 래퍼로 감싸면 코드 필드가 직렬화 파일에 보존되지 않는 문제를 발견했다. 기존 재시도 정책은 오류 객체와 코드가 그대로 유지되지만, 수동 래퍼와 인스턴스 기반 라이터 경로에서는 코드가 누락된다. 이 제한은 6.31.35 버전에서 확인되었다.",
+  "why": "에러 래퍼를 거치면 코드 필드가 추적 파일에서 사라질 수 있다. 재시도 로직은 정상 작동해도 디버깅에 필요한 오류 코드가 누락된다. 6.31.35 버전에서 수동 래퍼와 인스턴스 기반 라이터 경로가 해당된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "bothaggsigym1988 / frameglide",
+  "url": "https://github.com/bothaggsigym1988/frameglide",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 454,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/bothaggsigym1988/frameglide"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 454,
+  "score": 51,
+  "image": "https://opengraph.githubassets.com/1/bothaggsigym1988/frameglide",
+  "link_status": null,
+  "ko_title": "bothaggsigym1988 / frameglide — 콘솔 스트림을 PC에서 60–120 fps로 보간",
+  "summary": "이 오픈소스 도구는 콘솔에서 30 fps로 전송되는 영상을 PC에서 60 ~ 120 fps로 프레임 보간·생성한다. NVIDIA DLSS, RIFE, Vulkan 등 다양한 하드웨어 가속과 업스케일링 기술을 활용한다. 원격 플레이 환경에서 부드러운 화면을 제공한다.",
+  "why": "콘솔 원격 플레이 시 30fps로 끊기는 화면을 PC에서 60~120fps로 부드럽게 볼 수 있다. NVIDIA DLSS나 RIFE 등 하드웨어 가속 옵션을 직접 선택해 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "디자인 시스템 만들던 디자이너가 3D 그래픽을 그린다면",
+  "url": "https://toss.tech/article/bankbook_graphic",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795163640.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/bankbook_graphic"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://static.toss.im/disposables/static/bankbook-techblog-thumb.png",
+  "link_status": "ok",
+  "ko_title": "디자인 시스템 만들던 디자이너가 3D 그래픽을 그린다면",
+  "summary": "디자이너가 디자인 시스템 업무에서 벗어나 AI와 협업해 3D 그래픽을 구현한 과정을 소개한다. 기존 UI 중심 작업에서 메타포 아이데이션과 3D 시각화 시도를 통해 새로운 비주얼을 만들었다. 구현 방법으로 Three.js와 셰이더 기반 접근을 비교한다.",
+  "why": "Three.js와 셰이더 기반 접근을 비교해 3D 그래픽 구현 방법을 제시한다. 디자인 토큰과 컴포넌트 설계에 익숙한 백엔드 개발자에게도 적용 가능한 시각화 기법이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Don't Trust the Agent. Trust the Factory.",
+  "url": "https://dev.to/remojansen/dont-trust-the-agent-trust-the-factory-fmc",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": 1795170511.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remojansen/dont-trust-the-agent-trust-the-factory-fmc"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frqjepozsl2frbhoxcox8.png",
+  "link_status": "ok",
+  "ko_title": "에이전트를 믿지 말고 공장을 믿어라",
+  "summary": "에이전트가 실수를 저지르는 것을 전제로, 실수를 잡고 영향을 제한하며 학습하는 전달 시스템을 구축해야 한다는 주장이다. 기존에는 에이전트가 모든 과정을 자동화할 것이라 기대했지만, 실제로는 검증·배포·피드백을 포함한 신뢰 시스템이 필요하다. 이 시스템은 단순 CI 파이프라인을 넘어 변화마다 위험에 맞는 증거를 요구한다.",
+  "why": "에이전트 생성 코드를 전수 수동 검토하던 방식은 병목이 되므로 폐기해야 한다. 변경 위험도에 맞는 검증 증거를 요구하는 전달 시스템을 구축해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Explore the Codex Security Plugin",
+  "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795046400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/learn/codex-security-plugin-demo"
+  ],
+  "cross_source_count": 1,
+  "score": 44,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/5v8vfxgtSsA7NgJTT3kzqU/5c217881e8568e2b342dc59a8e69d7e1/codex-security-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Codex 보안 플러그인 살펴보기",
+  "summary": "Codex 보안 플러그인의 데모 영상이 제공된다. 워크플로우 시작부터 결과 검토까지 과정을 확인할 수 있다.",
+  "why": "데모 영상으로 워크플로우 전 과정을 미리 확인해 볼 수 있다. 실제 도입 전 보안 플러그인의 동작 방식을 점검하는 데 활용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "security",
+   "dev-tools"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "\"I can tell you wrote this yourself\"",
+  "url": "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself/",
+  "source": "hackernews",
+  "upvotes": 305,
+  "comments": 296,
+  "published_at": 1795158801,
+  "discussion": "https://news.ycombinator.com/item?id=50571189",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself/"
+  ],
+  "cross_source_count": 1,
+  "score": 40,
+  "image": "https://bearblog.dev/static/og-image.png",
+  "link_status": "ok",
+  "ko_title": "직접 쓴 거라고 바로 알 수 있어",
+  "summary": "대학 공학 프로젝트 보고서를 직접 작성했지만, 지도교수가 AI가 쓴 것으로 착각했다는 이야기를 전한다. 학생은 AI 사용이 과제 수행에 필수화된 현 상황을 비판하며, AI가 주도하는 엔지니어링 교육의 문제점을 제기한다.",
+  "why": "AI가 생성한 보고서와 직접 작성한 보고서의 구분이 흐려지는 현실을 보여준다. 프롬프트 작성 능력이 실제 기술 이해를 대체하는 교육 환경의 변화를 경계해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "If you can't explain something in simple terms, you don't understand it (2017)",
+  "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+  "source": "hackernews",
+  "upvotes": 271,
+  "comments": 162,
+  "published_at": 1795167799,
+  "discussion": "https://news.ycombinator.com/item?id=50572355",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": "http://kottke.org/plus/misc/images/feynman-blackboard.jpg",
+  "link_status": "ok",
+  "ko_title": "간단히 설명할 수 없다면 이해하지 못한 것이다",
+  "summary": "이 글은 리처드 파인만이 복잡한 물리 개념을 초등 수준으로 설명하려다 실패한 일화를 소개한다. 또한 애플 엔지니어들이 복잡한 기술을 간단히 설명하는 것이 이해도의 증명이라는 문화적 요구를 강조한다. 파인만과 애플 사례를 통해 ‘단순 설명’이 깊은 이해와 직결된다는 점을 보여준다.",
+  "why": "단순 설명이 불가능하다는 것은 해당 기술에 대한 이해도가 부족한 신호다. 복잡한 백엔드 로직이나 AI 모델을 동료에게 설명할 때 막히면 그 지점이 학습이 필요한 구간이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Get started with Daybreak Blue",
+  "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795046400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/learn/daybreak-blue-onboarding-demo"
+  ],
+  "cross_source_count": 1,
+  "score": 29,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/3oycdkFjJTGZs3kPmqJXJx/e793dee688314652562a63782e000e77/daybreak-blue-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Daybreak Blue 시작하기",
+  "summary": "Daybreak Blue의 온보딩 과정을 보여주는 데모 영상이 제공됩니다. 설정 화면과 초기 사용 방법을 자세히 살펴볼 수 있습니다.",
+  "why": "",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
+  "title": "Anthropic employee claims general proof of the Riemann Hypothesis [pdf]",
+  "url": "https://alpo.ge/remark.pdf",
+  "source": "hackernews",
+  "upvotes": 208,
+  "comments": 59,
+  "published_at": 1795184181,
+  "discussion": "https://news.ycombinator.com/item?id=50574968",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://alpo.ge/remark.pdf"
+  ],
+  "cross_source_count": 1,
+  "score": 10,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Anthropic 직원이 리만 가설 일반 증명을 주장",
+  "summary": "",
+  "why": "리만 가설 증명은 백엔드나 AI 개발 업무와 직접적인 연관이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-21T00:00:05.873332+09:00",
+  "batch_label": "11월 21일 00:00"
+ },
+ {
   "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
   "url": "https://huggingface.co/blog/rumble-2-flash",
   "source": "rss",
