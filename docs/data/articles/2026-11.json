@@ -1,5 +1,487 @@
 [
  {
+  "title": "Inkling 2 Mini",
+  "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+  "source": "hackernews",
+  "upvotes": 462,
+  "comments": 69,
+  "published_at": 1795205539,
+  "discussion": "https://news.ycombinator.com/item?id=50581260",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://thinkingmachines.ai/news/inkling-2-mini/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
+  "link_status": "ok",
+  "ko_title": "Inkling 2 Mini 모델",
+  "summary": "Inkling 2 Mini는 토큰당 중간 레이어를 세 번 반복하는 루프형 트랜스포머 구조를 갖춘 26.4 B 파라미터 모델이다. 활성 파라미터는 3.4 B이며, 20 GB 메모리로 노트북에서도 실행 가능하다. 100 B 이하 오픈웨이트 모델 중 벤치마크 DeepSWE v1.1(48.2 %)·Vals Index v2.2(46.5 %)에서 최고 성능을 기록한다. 변수-루프 변형 모델도 함께 공개돼 루프 깊이에 따른 성능·모니터링 변화를 실험할 수 있다.",
+  "why": "에이전틱 코딩 작업에서 추론 품질이 핵심이므로 이 구조가 유리하다. 루프가 늘수록 사슬 사고가 짧아져 모니터링이 쉬워진다. 변수 루프 변형 모델로 루프 깊이에 따른 성능 변화를 직접 실험할 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "hardware"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Combatting adversarial distillation",
+  "url": "https://openai.com/index/combatting-adversarial-distillation",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795168800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/combatting-adversarial-distillation"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "적대적 증류 방어",
+  "summary": "OpenAI는 적대적 증류 위험을 완화하기 위해 탐지·차단 체계를 공개했다. 모델 출력으로부터 보호된 추론 과정을 추출하려는 시도를 방어하고, API 수준 보호와 분류기를 결합한 새로운 방어 전략을 도입했다. GPT-6.2 Astra와 GPT-6.2 Sol에 적용된 방어는 자동 레드팀 테스트에서 공격 성공률을 크게 낮췄다.",
+  "why": "GPT-6.2 Astra와 Sol에서 보호된 추론 과정 추출을 차단하는 방어 체계가 적용됐다. 이 모델들을 사용해 추론 과정을 학습 데이터로 재사용하려는 시도는 이제 실패할 가능성이 높다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-safety",
+   "backend-data"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Your IR Runbook Is a PDF Nobody Reads at 3 AM. I Turned Mine Into a State Machine.",
+  "url": "https://dev.to/le_beltagy/your-ir-runbook-is-a-pdf-nobody-reads-at-3-am-i-turned-mine-into-a-state-machine-32o8",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 7,
+  "comments": 4,
+  "published_at": 1795214461.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/le_beltagy/your-ir-runbook-is-a-pdf-nobody-reads-at-3-am-i-turned-mine-into-a-state-machine-32o8"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Ffiles.catbox.moe%2F9pbbc1.png",
+  "link_status": "ok",
+  "ko_title": "당신의 IR 런북은 3시 새벽에 아무도 읽지 않는 PDF다. 나는 이를 상태 머신으로 바꾸었다.",
+  "summary": "AWS Step Functions, Python, Terraform, 교차 계정 KMS, 인간 승인 게이트를 활용해 포렌식 대응 파이프라인을 구축한 사례다. 기존 런북의 절차를 상태 머신으로 구현해 순서 오류와 증거 손실을 방지한다. Lambda 제한으로 스냅샷 복사가 함수 호출이 아님을 확인했다.",
+  "why": "기존 문서형 런북은 순서 오류를 막지 못하지만 상태 머신은 이전 단계의 증거가 없으면 진행을 차단한다. Lambda 타임아웃으로 스냅샷 복사가 함수 호출이 아님을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "language"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Geo-Targeted Web Scraping with Proxies: Country & City-Level Guide",
+  "url": "https://dev.to/necoz/geo-targeted-web-scraping-with-proxies-country-city-level-guide-3446",
+  "source": "devto",
+  "tag": "python",
+  "upvotes": 18,
+  "comments": 2,
+  "published_at": 1795195311.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/geo-targeted-web-scraping-with-proxies-country-city-level-guide-3446"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdzdr0ftwz3o31ts7cx7v.jpg",
+  "link_status": "ok",
+  "ko_title": "프록시를 이용한 지역별 웹 스크래핑 가이드",
+  "summary": "이 글은 IP 기반 위치 추정 방식을 설명하고, 국가·도시 수준 프록시를 활용해 지역별 페이지를 수집하는 Python 예시(requests, httpx, Playwright)를 제공한다. 가격·재고·검색 결과·언어 경로·광고·법적 제한 등이 지역에 따라 달라지는 사례를 제시한다.",
+  "why": "미국 클라우드 서버에서 스크래핑 시 독일·인도 등 타 지역 사용자가 보는 가격·재고·검색 결과를 놓친다. 국가·도시 단위 프록시를 적용해 해당 지역 IP로 요청을 보내야 실제 사용자 관점의 데이터를 수집할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+  "url": "https://openai.com/business/customer-stories/hebbia",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795132800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/hebbia"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/70gWqYyqb096it9EoD7OqI/5df8cad1c7fdf2a4e942c3183a10f405/hebbia-smoked-depth-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Hebbia, GPT-6 Astra로 금융 연구 효율 향상",
+  "summary": "Hebbia는 자체 검색·분석 플랫폼인 Matrix에 OpenAI의 GPT-6 Astra를 적용해 금융 연구에서 두 가지 핵심 작업, 즉 질문에 필요한 출처 찾기와 은행가의 브리프에 맞는 프레젠테이션 생성 능력을 테스트했다. 테스트 결과 GPT-6 Astra는 기존 모델 대비 출처 정확도에서 13.6 %p, 프레젠테이션 요구 충족도에서 14.4 %p 높은 점수를 기록했다. 이를 통해 2,000여 개 파일을 포함한 데이터룸을 자동으로 분석·인용하고, 결과를 PowerPoint 템플릿 형태의 딜리전스 요약으로 출력할 수 있다.",
+  "why": "금융 M&A 딜리전스 업무에서 GPT-6 Astra가 기존 모델보다 출처 정확도와 프레젠테이션 요구 충족도가 높다. 2,000여 개 파일 규모의 데이터룸을 분석해 PowerPoint 템플릿 형태의 요약서를 자동 생성하는 워크플로우를 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "release"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "XinaTian / MROffice",
+  "url": "https://github.com/XinaTian/MROffice",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 272,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/XinaTian/MROffice"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 272,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/XinaTian/MROffice",
+  "link_status": null,
+  "ko_title": "XinaTian / MROffice — 오픈소스 브라우저 기반 오피스 편집기",
+  "summary": "MR Office는 문서·스프레드시트·프레젠테이션·PDF·필기·코드 편집 기능을 브라우저에서 제공하는 오픈소스 프로젝트다. 라이선스는 AGPL-3.0이며, 실시간 데모를 별도 설치 없이 체험할 수 있다. 최신 릴리즈는 GitHub Releases에서 다운로드 가능하다.",
+  "why": "AGPL-3.0 라이선스이므로 서비스 내장 시 소스 공개 의무가 발생한다. 클라우드 문서 도구 도입을 검토할 때 자체 호스팅 대안으로 평가할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "web",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Tufalabs / tufazip",
+  "url": "https://github.com/Tufalabs/tufazip",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 310,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Tufalabs/tufazip"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 310,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/Tufalabs/tufazip",
+  "link_status": null,
+  "ko_title": "tufazip 압축 해제 도구",
+  "summary": "deterministic decoder인 tufazip v2가 enwik9-v2.bin(100 MB) 파일을 복원한다. 실행에는 Linux x86-64, 두 대의 NVIDIA B200 GPU, GCC, CUDA 13.0, cuDNN 9.20, Python 3.12.3, uv가 필요하다. 압축-해제 시간은 각각 약 631 k초와 646 k초이며, 전체 압축 크기는 105 388 353 바이트다.",
+  "why": "B200 GPU 두 대와 CUDA 13.0 환경이 없으면 실행할 수 없다. 해제에 약 64만 6천 초가 걸려 일상적 데이터 복원 용도로는 부적합하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI",
+  "url": "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/",
+  "source": "hackernews",
+  "upvotes": 229,
+  "comments": 166,
+  "published_at": 1795193967,
+  "discussion": "https://news.ycombinator.com/item?id=50577901",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://www.motherjones.com/wp-content/uploads/2026/11/google-chromebook-la-school-covid.jpg?w=1200&h=630&crop=1",
+  "link_status": "ok",
+  "ko_title": "구글 직원, AI 사용 거부 학교에 대한 처벌 금지 촉구",
+  "summary": "구글이 내년부터 Gemini AI 도구를 끈 학교의 검색 엔진 접근을 차단하려는 정책을 발표했다. 이에 구글 직원 100여 명이 정책 철회를 요구하는 청원을 제출했다. 뉴욕, 로스앤젤레스, 시카고 등 주요 학군이 대체 검색 엔진을 검토하고 있다.",
+  "why": "학교가 Gemini AI를 비활성화하면 검색 엔진 접근이 차단되는 정책이 적용된다. 이로 인해 기존에 의존하던 검색 서비스의 가용성이 교육 환경 설정에 따라 달라진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Where Agents Fail: Part 1",
+  "url": "https://dev.to/googleai/where-agents-fail-part-1-54hg",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 2,
+  "published_at": 1795193428.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/googleai/where-agents-fail-part-1-54hg"
+  ],
+  "cross_source_count": 1,
+  "score": 50,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fwww.patrickjohnkelly.com%2Fimages%2Fwhere-agents-fail%2Fbanner-where-agents-fail-part-1.png",
+  "link_status": "ok",
+  "ko_title": "에이전트가 실패하는 경우: 파트 1",
+  "summary": "저자는 실제 에이전트 세션 160개를 분석해 231개의 오류 사례를 도출하고, 공개 데이터셋에서도 동일 패턴을 확인했다. 초기 조사에서 세 가지 주요 오류 패턴(수정 미완료 선언, 과도한 작업 수행, 피드백 과잉 적용)이 드러났다. 향후 글에서는 각 패턴을 깊이 파고 해결 방안을 제시한다.",
+  "why": "테스트가 통과해도 실제 앱은 깨져 있을 수 있으므로 수정 완료 선언을 그대로 믿지 마라. 좁은 범위 피드백을 주면 에이전트가 전 프로젝트에 규칙을 적용할 수 있어 주의가 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Why there are still no non-WebKit browsers on iOS",
+  "url": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
+  "source": "hackernews",
+  "upvotes": 315,
+  "comments": 187,
+  "published_at": 1795187011,
+  "discussion": "https://news.ycombinator.com/item?id=50575644",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://blog.mozilla.org/wp-content/blogs.dir/278/files/2026/11/Mozilla_Illustrations_Pixelgram_Arrows_Orange-1082x721.png",
+  "link_status": "ok",
+  "ko_title": "iOS에 아직 비-WebKit 브라우저가 없는 이유",
+  "summary": "EU 디지털 시장법(DMA)과 일본의 규제로 Apple이 iOS에서 대체 엔진을 허용했지만, Mozilla 등은 여전히 조건이 실현 불가능해 Gecko 기반 브라우저를 출시하지 못하고 있다. Apple이 제시한 조건은 실제 적용이 어려워 현재까지 성공적인 비-WebKit 브라우저가 나오지 않았다.",
+  "why": "iOS에서 Gecko 엔진 기반 브라우저가 여전히 출시되지 않아 기존 WebKit 의존 환경이 유지된다. Mozilla이 제시한 조건 충족 시도가 실패했으므로 대체 엔진 도입은 지연된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "web"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Cozy Bytes 🍺 | Rust::Who Owns the Cat? 🐈🦀",
+  "url": "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 49,
+  "comments": 2,
+  "published_at": 1795191697.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F36ic1wwew7q0m53uv65e.gif",
+  "link_status": "ok",
+  "ko_title": "Rust에서 고양이 소유권은?",
+  "summary": "Rust의 소유권 규칙과 이동, 불변·가변 빌림을 간단한 예제로 설명한다. 코드 스니펫을 통해 값이 이동될 때와 빌림이 가능한 상황을 보여준다. 초보자를 위한 짧은 튜토리얼 형식이다.",
+  "why": "Rust를 처음 접하거나 빌러 체커 오류 원리를 재확인할 때 코드 스니펫으로 개념을 잡을 수 있다. 이동과 빌림의 차이를 컴파일 타임에 강제하는 규칙을 이해하면 런타임 메모리 오류를 사전에 막을 수 있다.",
+  "relevance": "게재",
+  "kind": "튜토리얼",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Quoting Levent Alpöge",
+  "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795192248.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/20/levent-alpoge/"
+  ],
+  "cross_source_count": 1,
+  "score": 35,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Levent Alpöge 인용",
+  "summary": "Claude와 협업해 리만 가설을 증명했다고 주장한다. 같은 방법으로 일반화된 리만 가설까지 해결했으며, 추가 연구로 확장된 리만 가설도 기대한다. 논증을 가정 없이 형식화했으며, 과정에서 과학적 의미가 크게 확장되었다고 느낀다.",
+  "why": "리만 가설 증명 주장이 사실이라면 수학 기반 암호 검증 로직의 전제가 흔들린다. 현재 배포 중인 암호화 스택의 안전성 재평가가 필요해진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Tell us your story, and we might read it on the CodeNewbie Podcast 🎙️",
+  "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 27,
+  "comments": 4,
+  "published_at": 1795192129.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fha5ti01f54tg2zar52fk.png",
+  "link_status": "ok",
+  "ko_title": "당신의 이야기를 들려주세요, CodeNewbie 팟캐스트에 실릴 수도 있습니다",
+  "summary": "CodeNewbie 팟캐스트가 청취자 이야기를 받아 에피소드 소재로 활용한다. AI 개발 과정에서 겪은 실수·보안·비용·채용 등 다양한 상황을 공유하도록 권장한다. 최소 500자 이상 자세히 작성하면 한 편의 에피소드가 될 수 있다.",
+  "why": "AI 에이전트 배포 실패나 API 키 유출 같은 실제 사고 사례를 공유하면 전문가 토론 소재가 된다. 자신의 경험을 500자 이상 상세히 기록해 에피소드 제작에 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "career-culture"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "Hurried Announcement: Alessandro Masullo GRH",
+  "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
+  "source": "hackernews",
+  "upvotes": 1244,
+  "comments": 576,
+  "published_at": 1795199594,
+  "discussion": "https://news.ycombinator.com/item?id=50579568",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "긴급 발표: Alessandro Masullo, GRH 증명",
+  "summary": "Alessandro Masullo가 제안한 일반화 리만 가설(GRH) 증명 초안이 공개되었습니다. Brian Conrad이 수개월간 검토하고 피드백을 제공했으며, 현재 인간만의 작업으로 AI는 사용되지 않았습니다. 초안을 빠르게 검토하고 작은 틈새를 메우길 요청하고 있습니다.",
+  "why": "수학 증명 초안 공개와 관련되어 개발 환경이나 백엔드, AI 시스템에 직접적인 변경 사항은 없습니다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "release"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
+  "title": "I'll never buy Framework hardware again",
+  "url": "https://poolp.org/posts/2026-11-20/ill-never-buy-framework-hardware-again/",
+  "source": "hackernews",
+  "upvotes": 747,
+  "comments": 520,
+  "published_at": 1795190790,
+  "discussion": "https://news.ycombinator.com/item?id=50576855",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://poolp.org/posts/2026-11-20/ill-never-buy-framework-hardware-again/"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://poolp.org/posts/2026-11-20/ill-never-buy-framework-hardware-again/featured.png",
+  "link_status": "ok",
+  "ko_title": "다시는 Framework 하드웨어를 사지 않겠다",
+  "summary": "",
+  "why": "Framework 하드웨어와 무관한 백엔드·AI 개발자에게는 적용할 기술적 변화가 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-21T08:00:06.300688+09:00",
+  "batch_label": "11월 21일 08:00"
+ },
+ {
   "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
   "url": "https://architectlabs.com/blog/frostbite",
   "source": "hackernews",
