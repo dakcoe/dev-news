@@ -1,5 +1,414 @@
 [
  {
+  "title": "Inkling-2-Mini in 5.4 GB Memory",
+  "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
+  "source": "hackernews",
+  "upvotes": 299,
+  "comments": 75,
+  "published_at": 1795284139,
+  "discussion": "https://news.ycombinator.com/item?id=50591853",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/ShinMegamiBoson/lookatmyquant"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/ShinMegamiBoson/lookatmyquant",
+  "link_status": null,
+  "ko_title": "Inkling-2-Mini 5.4 GB 메모리",
+  "summary": "LookAtMyQuant는 모델 각 파라미터의 압축 손실을 측정해 최소 손실로 크기 제한에 맞추는 양자화 컴파일러다. 최신 버전인 LookAtMyQuant 2는 Qwen3.5-4B 모델을 1.23 GB(2.3 bits/weight)로 압축해 540문제 중 330문제 정답을 맞추며, 4,000단계 증류와 피셔 정보 기반 비트 할당을 사용한다. 동일 레시피로 Qwen3.8-27B를 53.7 GB에서 7.2 GB(2.1 bits/weight)로 줄여 원본과 동등한 수학 문제 해결률을 유지한다. 코드와 결과는 MIT 라이선스로 공개돼 있다.",
+  "why": "Qwen3.8-27B를 7.2GB로 줄여도 원본과 동일한 수학 문제 해결률을 유지한다. 기존 양자화 방식보다 성능 저하가 적어 저사양 환경에서 대형 모델을 돌릴 때 대안이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "language",
+   "open-source",
+   "science"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "PostgreSQL Extensions in Go",
+  "url": "https://jespino.github.io/gopgext/",
+  "source": "hackernews",
+  "upvotes": 105,
+  "comments": 14,
+  "published_at": 1795280884,
+  "discussion": "https://news.ycombinator.com/item?id=50591260",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://jespino.github.io/gopgext/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://jespino.github.io/gopgext/img/social.png",
+  "link_status": "ok",
+  "ko_title": "Go로 PostgreSQL 확장 만들기",
+  "summary": "gopgext는 TinyGo를 이용해 순수 Go 코드만으로 PostgreSQL 확장을 빌드한다. 함수에 //gopgext:function 주석을 달면 SQL 함수가 자동 생성되며, C 글루, 설치 스크립트, control 파일을 자동으로 만든다. 문자열·숫자·배열·JSON·UUID 등 다양한 Go 타입이 SQL 타입에 매핑되고, 트리거·집계·인덱스·FDW 등도 구현 가능하다. 기존 PostgreSQL contrib 모듈 포팅이 upstream 테스트를 통과해 안정성을 입증했다.",
+  "why": "기존 C 기반 확장 개발 대신 Go로 작성해 빌드와 배포 절차를 단순화할 수 있다. 트리거나 인덱스 접근 방식 등 복잡한 로직도 Go로 구현 가능해진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "I built a 3D open-world mythology game in the browser with just Three.js",
+  "url": "https://dev.to/yashdatir/i-built-a-3d-open-world-mythology-game-in-the-browser-with-just-threejs-3mic",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 2,
+  "comments": 0,
+  "published_at": 1795280232.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/yashdatir/i-built-a-3d-open-world-mythology-game-in-the-browser-with-just-threejs-3mic"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6mwehp838cbx6wv4ghbt.jpg",
+  "link_status": "ok",
+  "ko_title": "Three.js만으로 브라우저에서 3D 오픈월드 신화 게임을 만들다",
+  "summary": "개발자는 Three.js와 Web Audio API만 사용해 인도 신화를 배경으로 한 무료 오픈소스 3D 액션 탐험 게임을 만들었다. 모든 모델은 코드 내 기하학으로 생성하고, 사운드 역시 실시간 합성해 외부 파일을 전혀 포함하지 않는다. 빌드 단계 없이 ES 모듈만으로 정적 파일로 배포할 수 있어 어떤 정적 호스팅에도 바로 올릴 수 있다.",
+  "why": "빌드 도구 없이 ES 모듈과 import map만으로 배포되는 구조를 확인해볼 수 있다. 정적 호스팅 환경에서 복잡한 빌드 파이프라인 없이 3D 웹앱을 구성하는 데 참고할 만한 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "backend-data",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Dead Keys: I Brought Back the Typing Games. Kiro Did the Heavy Lifting.",
+  "url": "https://dev.to/earlgreyhot1701d/dead-keys-i-brought-back-the-typing-games-kiro-did-the-heavy-lifting-5gc2",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1795285418.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/dead-keys-i-brought-back-the-typing-games-kiro-did-the-heavy-lifting-5gc2"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcbsnz7j5h5wxcobyj9vm.png",
+  "link_status": "ok",
+  "ko_title": "Dead Keys: 타이핑 게임을 되살렸다",
+  "summary": "Dead Keys는 1980년대 아케이드 타이핑 게임을 현대 웹 기반 키보드 트레이너로 재구성한 프로젝트다. 사용자가 놓친 키를 실시간으로 집계해 히트맵으로 표시하고, 놓친 키를 중심으로 다음 연습을 자동 생성한다. 옵션으로 Amazon Nova Micro 모델을 활용해 맞춤 연습 문장을 생성할 수 있다.",
+  "why": "Amazon Nova Micro를 통한 연습 문장 생성은 기본적으로 꺼져 있어 별도 설정 없이도 게임을 즐길 수 있다. AI 기능이 활성화되어도 코드에서 모든 문장을 사전 검증하므로 잘못된 입력이 게임에 반영되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "llm-gemini 0.38.1",
+  "url": "https://simonwillison.net/2026/Nov/20/llm-gemini/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795143717.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/20/llm-gemini/"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://static.simonwillison.net/static/2026/gemini-4-xhigh-pelicans.webp",
+  "link_status": "ok",
+  "ko_title": "llm-gemini 0.38.1",
+  "summary": "이번 점(dot) 릴리스에서 llm-gemini 플러그인이 Gemini 4 Hydrogen·Neon 모델의 추가 xhigh 추론 레벨을 지원하도록 수정되었습니다. xhigh 설정을 사용하면 Hydrogen 모델이 토큰 사용량이 5배 이상 늘고 비용도 6배 가량 상승하지만 출력 품질이 크게 향상됩니다.",
+  "why": "llm-gemini 0.38.1 이상으로 업데이트해야 xhigh 추론 레벨을 사용할 수 있다. Hydrogen 모델에서 xhigh를 쓰면 토큰 사용량이 5배, 비용이 6배 늘어난다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "release"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Beyond Aurora: Sub-20ms Real-Time Payment Fraud & Vector Search with Google Cloud AlloyDB, SCaNN, and Gemini",
+  "url": "https://dev.to/gde/beyond-aurora-sub-20ms-real-time-payment-fraud-vector-search-with-google-cloud-alloydb-scann-ani",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 2,
+  "published_at": 1795277754.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/beyond-aurora-sub-20ms-real-time-payment-fraud-vector-search-with-google-cloud-alloydb-scann-ani"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpadfaentfm28632ec3zy.png",
+  "link_status": "ok",
+  "ko_title": "Aurora를 넘어: 구글 클라우드 AlloyDB·SCaNN·Gemini로 20ms 이하 실시간 결제 사기 탐지 및 벡터 검색",
+  "summary": "구글 클라우드 Vertex AI에서 Gemini 4 Hydrogen을 사용해 결제 사기 탐지를 테스트했을 때 3.5초가 소요됐으며, 20 ms 이내에 결제 승인과 동시에 15-20 ms 안에 데이터베이스 잠금, 최근 24시간 거래 평균 계산, 500 000건 사기 카탈로그와 실시간 매칭을 수행해야 한다는 요구사항을 제시한다. 이를 위해 AlloyDB와 SCaNN을 결합한 아키텍처가 소개된다. 구체적인 구현 세부와 성능 수치는 본문에 포함되지 않는다.",
+  "why": "기존 LLM 호출 방식으로는 20ms 이내 결제 승인 요구사항을 충족할 수 없다. AlloyDB와 SCaNN 조합으로 실시간 벡터 검색과 트랜잭션 처리를 병행하는 구조를 검토해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "My --config-test accepted a listen address that could never bind",
+  "url": "https://dev.to/marcusbeauregard/my-config-test-accepted-a-listen-address-that-could-never-bind-51o6",
+  "source": "devto",
+  "tag": "go",
+  "upvotes": 1,
+  "comments": 1,
+  "published_at": 1795277292.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/marcusbeauregard/my-config-test-accepted-a-listen-address-that-could-never-bind-51o6"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9lzsqbk4t5738284j3x3.png",
+  "link_status": "ok",
+  "ko_title": "My --config-test가 바인드될 수 없는 listen 주소를 허용",
+  "summary": "Go 프록시 transponder의 --config-test 플래그가 설정 파일을 검증하고 종료했지만, 실제로 net.Listen이 바인드할 수 없는 주소를 허용했다. 기존 검증 로직은 net.SplitHostPort만 사용해 포트 문자열을 분리했으며, 이는 유효성 검증이 아니다. 포트는 0-65535 범위의 숫자이거나 net.LookupPort를 통해 확인된 서비스 이름이어야 한다는 점을 반영해 검증 함수를 수정했다.",
+  "why": "net.SplitHostPort는 문자열을 나누는 역할만 하므로 포트 유효성 검사로 쓰면 안 된다. 설정 검증 로직이 실제 바인드 실패를 놓치면 배포 후 서버가 즉시 종료된다. 포트는 0~65535 숫자 또는 net.LookupPort로 확인된 서비스 이름이어야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Upload2Shell (CVE-2026-125396)",
+  "url": "https://pwn.ai/upload2shell",
+  "source": "hackernews",
+  "upvotes": 59,
+  "comments": 16,
+  "published_at": 1795285769,
+  "discussion": "https://news.ycombinator.com/item?id=50592097",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://pwn.ai/upload2shell"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://pwn.ai/upload2shell-share.png?v=2",
+  "link_status": "ok",
+  "ko_title": "Upload2Shell (CVE-2026-125396)",
+  "summary": "Ghostscript 10.05.1에 존재하던 Type 1 폰트 로더의 use-after-free 취약점이 -dSAFER 샌드박스를 우회해 공격자가 임의 명령을 실행할 수 있다. 이 결함을 이용해 IPP 프린트 작업을 무인 인증으로 수행하면 호스트에서 lp 사용자 권한으로 명령이 실행된다. Artifex가 해당 취약점을 수정했으며 Debian 13에 보안 업데이트가 배포되었다.",
+  "why": "서버에 Ghostscript 10.05.1이 설치되어 있다면 Debian 13 보안 업데이트를 즉시 적용해야 한다. IPP 프린트 큐나 문서 변환 파이프라인을 노출한 환경은 무인 인증 공격에 취약하므로 네트워크 접근을 제한해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "release"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Monuments of India, Part 3: Sixteen Statues Sculpted from Photographs, a Rebuilt Mysore Palace and More",
+  "url": "https://dev.to/amananandrai/monuments-of-india-part-3-sixteen-statues-sculpted-from-photographs-a-rebuilt-mysore-palace-and-3bm",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 7,
+  "comments": 0,
+  "published_at": 1795283306.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/amananandrai/monuments-of-india-part-3-sixteen-statues-sculpted-from-photographs-a-rebuilt-mysore-palace-and-3bm"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flo577hvj9052pxwtfx3t.jpg",
+  "link_status": "ok",
+  "ko_title": "인도 기념물 파트 3: 사진으로 새로 만든 16개 동상, 재구성된 마이소르 궁전 등",
+  "summary": "이 글은 인도 기념물 프로젝트에서 사진을 기반으로 16개의 독립 동상을 재조각하고, 사자·코끼리·나디 등 동물·인물 모델을 개선한 내용이다. 또한 30여 개의 새로운 공유 부품과 40여 개 기념물에 세부 표면을 추가했으며, 마이소르 궁전을 사진으로 재구성했다. 작업은 기존의 저해상도 메쉬 방식에서 정밀 영역을 지정해 고품질 메쉬를 생성하는 방식으로 전환했다.",
+  "why": "SDF 기반 조각 파이프라인이 정밀 영역 지정 방식으로 바뀌었다. 고해상도 메쉬 생성 시 삼각형 예산 관리 전략을 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "havenicec / google-qr-sms-helper",
+  "url": "https://github.com/havenicec/google-qr-sms-helper",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 657,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/havenicec/google-qr-sms-helper"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 657,
+  "score": 54,
+  "image": "https://opengraph.githubassets.com/1/havenicec/google-qr-sms-helper",
+  "link_status": null,
+  "ko_title": "Google QR SMS Helper — 데스크톱 브라우저에서 QR 인증을 SMS 인증으로 전환",
+  "summary": "이 Chrome/Edge/Brave 확장은 Google 데스크톱 로그인 시 강제되는 크로스-디바이스 QR 인증을 기존 6자리 SMS·음성 인증으로 되돌린다. 최신 버전 1.1.0은 Manifest V3 기반이며, 릴리즈 압축 파일 다운로드 혹은 Git 클론으로 설치할 수 있다. 사용 전 Google Cloud Console의 Cloud Shell에서 한 번 SMS 인증을 완료해야 한다.",
+  "why": "데스크톱에서 Google 계정으로 로그인할 때 QR 인증 대신 SMS 인증을 쓰려면 이 확장을 설치해야 한다. Google Cloud Console의 Cloud Shell에서 먼저 SMS 인증을 한 번 완료해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "devops-infra",
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "R0Y00 / Xbox2Windows",
+  "url": "https://github.com/R0Y00/Xbox2Windows",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 564,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/R0Y00/Xbox2Windows"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 564,
+  "score": 52,
+  "image": "https://opengraph.githubassets.com/1/R0Y00/Xbox2Windows",
+  "link_status": null,
+  "ko_title": "Xbox2Windows (Xbox Series X|S 소프트웨어 정적 재컴파일)",
+  "summary": "프로젝트는 Xbox Series X|S용 소프트웨어를 x64 Windows 실행 파일과 DLL로 정적 재컴파일하는 실험을 진행한다. 현재 CPU 코드 실행과 전체 게임 시작·프레임 레이트는 검증되지 않았지만, FidelityFX 업스케일러와 일부 셰이더 변환이 성공적으로 동작한다. 추가 작업으로 그래픽스 파이프라인 전반과 런타임 호환성을 테스트하고 있다.",
+  "why": "Xbox Series X|S 소프트웨어를 x64 Windows용으로 정적 재컴파일하는 실험 단계다. CPU 코드 실행과 전체 게임 구동은 아직 검증되지 않았다. 그래픽스 파이프라인 호환성 테스트가 진행 중이므로, Xbox 타이틀의 Windows 이식 가능성에 대한 초기 신호로 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "backend-data",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Lean verification of the Riemann Hypothesis",
+  "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+  "source": "hackernews",
+  "upvotes": 727,
+  "comments": 578,
+  "published_at": 1795271805,
+  "discussion": "https://news.ycombinator.com/item?id=50589618",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+   "https://math.mit.edu/~drew/grh/"
+  ],
+  "cross_source_count": 1,
+  "score": 46,
+  "image": "https://leanprover-community.github.io/blog/meta-twitter.png",
+  "link_status": "ok",
+  "ko_title": "Lean을 이용한 리만 가설 검증",
+  "summary": "2026년 11월 20일, Levent Alpöge가 Lean 라이브러리 형태로 1,700만 줄의 코드를 포함한 리만 가설 증명을 공개했다. 해당 증명은 Mathlib만을 직접 의존하며, 커뮤니티가 컴파일 및 여러 독립 검증 도구를 통해 정확성을 확인했다.",
+  "why": "Mathlib 의존성만 갖는 1,700만 줄 규모의 코드가 컴파일 및 독립 검증 도구를 통과했다. 수학 정리의 기계 검증 워크플로에서 단일 라이브러리 의존 구조의 실용성을 확인할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
+  "title": "Show HN: Zero C# – C# without a runtime or GC",
+  "url": "https://onurgumus.github.io/zero-csharp/index.html",
+  "source": "hackernews",
+  "upvotes": 114,
+  "comments": 89,
+  "published_at": 1795275549,
+  "discussion": "https://news.ycombinator.com/item?id=50590279",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://onurgumus.github.io/zero-csharp/index.html"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": "https://onurgumus.github.io/zero-csharp/img/social.png?v=2",
+  "link_status": "ok",
+  "ko_title": "Zero C# – 런타임·GC 없는 C#",
+  "summary": "",
+  "why": ".NET 런타임 의존 없이 C# 문법과 제네릭을 그대로 유지한다. 예외 처리 대신 유니온으로 에러를 반환하고, 리플렉션과 async를 쓰지 못한다. 메모리는 아레나 기반으로 일괄 해제하며, GC를 전제로 한 기존 코드는 재작성이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-11-22T08:00:02.545630+09:00",
+  "batch_label": "11월 22일 08:00"
+ },
+ {
   "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
   "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
   "source": "hackernews",
