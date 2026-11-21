@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-12T00:00:35+09:00",
-   "total": 20,
-   "counts": {
-    "ok": 13,
-    "blocked": 2,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/singapore-airlines-travel-work",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/cogent-security",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-12T08:00:38+09:00",
    "total": 17,
    "counts": {
@@ -561,6 +540,27 @@
      "url": "https://news.ycombinator.com/item?id=50583761",
      "source": "hackernews",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-22T00:00:30+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 8,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://www.bloomberg.com/news/articles/2026-11-18/jellycats-squishmallows-and-lego-sets-for-adults-drive-holiday-traffic",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }

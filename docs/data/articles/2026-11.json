@@ -1,5 +1,260 @@
 [
  {
+  "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+  "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+  "source": "hackernews",
+  "upvotes": 490,
+  "comments": 210,
+  "published_at": 1795195296,
+  "discussion": "https://news.ycombinator.com/item?id=50578358",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://secure.gravatar.com/blavatar/bd4bda4207561b6998f10dec44b570f04ff4072b20f89162d525b186dfca3e49?s=200&ts=1795272947",
+  "link_status": "ok",
+  "ko_title": "강제되지 않은 Navier-Stokes 특이점과 일반화 리만 가설",
+  "summary": "Levent Alpöge와 Tristan Buckmaster가 AI를 활용해 3차원 무강제 비압축 Navier-Stokes 방정식의 유한 시간 폭발을 증명하고, 이를 Lean으로 형식화했다. 동일한 팀이 Euler 방정식에 대한 증명도 AI 도움으로 작성했으며, Alpöge는 내부 AI 모델을 이용해 일반화 리만 가설에 대한 Lean 전용 증명을 생성했다. 각 증명은 인간이 읽을 수 있는 형태이지만, Navier-Stokes와 일반화 리만 가설 증명은 아직 전문적인 논문 형태는 아니다.",
+  "why": "AI가 생성한 수학적 증명은 Lean으로 형식화되어 검증이 가능하다. Lean 기반 형식화 환경이 수학 증명 검증에 활용되는 사례가 늘고 있다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "hatsunemiku-ai / google-one-tools",
+  "url": "https://github.com/hatsunemiku-ai/google-one-tools",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 398,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/hatsunemiku-ai/google-one-tools"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 398,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/hatsunemiku-ai/google-one-tools",
+  "link_status": null,
+  "ko_title": "Google One 도구 모음",
+  "summary": "이 저장소는 MuMu 안드로이드 에뮬레이터와 Frida를 이용해 Google One 구독 정보를 스캔하고, 원하는 SKU의 결제 화면을 호출할 수 있는 파이썬 스크립트 모음이다. 프리다 버전 16.x와 루트된 에뮬레이터만 있으면 별도 의존성 없이 바로 실행할 수 있다. 주요 스크립트는 전체 SKU 오퍼를 무위험으로 조회하고, 선택 SKU의 결제 UI를 띄우는 기능을 제공한다.",
+  "why": "프라이다 17.x를 쓰면 자바 브리지가 깨져서 기능이 멈춘다. 16.x로 고정해야 하고, 루트된 에뮬레이터 환경이 필수다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "A VS Code extension to turn ANY free chatbot website into an AI agent (kind of)",
+  "url": "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1n21",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 36,
+  "comments": 8,
+  "published_at": 1795261780.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1n21"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fd1di2l8z24jfwbgdwm6b.png",
+  "link_status": "ok",
+  "ko_title": "ANY 무료 챗봇 웹사이트를 AI 에이전트로 전환하는 VS Code 확장 (일종의)",
+  "summary": "ReptClip은 무료 오픈소스 VS Code 확장으로, 프로젝트 파일을 마크다운 형태로 클립보드에 복사하고 챗봇에 붙여넣어 코드를 수정하도록 요청한다. 챗봇이 반환한 Search/Replace diff를 확장판에서 바로 적용해 파일을 자동으로 업데이트한다. 별도의 API 키나 구독 없이 모든 무료 챗봇과 연동한다. 현재 v2.0 버전이 공개되었다.",
+  "why": "무료 챗봇으로 코드 수정을 할 때 수동으로 파일을 복사하고 붙여넣던 과정을 자동화한다. API 키나 구독 없이 기존에 쓰던 무료 챗봇을 그대로 활용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "Day 89: A Dead Service and a Private Container That Serves",
+  "url": "https://dev.to/ndcodes/day-89-a-marker-in-the-file-and-a-grant-somewhere-else-1deo",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 17,
+  "comments": 0,
+  "published_at": 1795251600.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ndcodes/day-89-a-marker-in-the-file-and-a-grant-somewhere-else-1deo"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhg6t49ihysuwwv3tlewr.jpg",
+  "link_status": "ok",
+  "ko_title": "Day 89: 죽은 서비스와 비공개 컨테이너가 제공하는 내용",
+  "summary": "Ansible 플레이북으로 세 대의 서버에 logrotate 패키지를 설치하고, 서비스 상태가 “inactive (dead)”인 것이 정상임을 확인했다. logrotate는 데몬이 아니라 systemd 타이머에 의해 주기적으로 실행되는 배치 작업이므로 서비스가 비활성 상태여도 문제없다.",
+  "why": "로그 로테이션은 데몬이 아니라 타이머 기반 배치 작업이다. 서버 점검 시 서비스가 비활성 상태여도 정상 동작이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "Cablezumready / metatrader-5-bot",
+  "url": "https://github.com/Cablezumready/metatrader-5-bot",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 421,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Cablezumready/metatrader-5-bot"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 421,
+  "score": 47,
+  "image": "https://opengraph.githubassets.com/1/Cablezumready/metatrader-5-bot",
+  "link_status": null,
+  "ko_title": "Cablezumready / 메타트레이더 5 봇",
+  "summary": "Metatrader 5 플랫폼용 자동 거래 봇을 Windows 10·11에서 실행하도록 제공한다. GUI 없이 동작하며 사용자 정의 전략을 적용할 수 있다. 실시간 시장 변화에 즉시 대응해 거래를 자동으로 실행한다.",
+  "why": "백엔드 개발자가 Metatrader 5 전략을 자동화 코드로 구현할 때 GUI 의존성을 제거할 수 있다. Windows 10·11 x64 환경에서 관리자 권한 설치와 인터넷 연결이 필수 조건이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "I scanned 220,000 MCP tool descriptions for prompt injection. The scare is overblown — but 1 in 4 servers touches your credentials.",
+  "url": "https://dev.to/serverdex/i-scanned-220000-mcp-tool-descriptions-for-prompt-injection-the-scare-is-overblown-but-1-in-4-6pk",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 4,
+  "comments": 13,
+  "published_at": 1795253031.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/serverdex/i-scanned-220000-mcp-tool-descriptions-for-prompt-injection-the-scare-is-overblown-but-1-in-4-6pk"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6vkttstg1b44xxqeem06.png",
+  "link_status": "ok",
+  "ko_title": "22만 개 MCP 도구 설명을 스캔한 결과, 위협은 과장됐지만 4분의 1 서버가 자격 증명에 접근",
+  "summary": "2026년 11월 21일에 12,987개의 MCP 서버(총 220,226개 도구) 설명을 조사해 도구 설명에 삽입된 명령어나 숨은 문자 등을 찾았다. 무시 명령, 숨은 문자, 민감 파일 접근 시도는 거의 없었으며, 발견된 몇 건은 보안 스캐너나 비밀 저장소 등 정상적인 도구였다. 따라서 현재 실시간 MCP 환경에서 도구 중독 위험은 사실상 존재하지 않는다.",
+  "why": "MCP 도구 설명에 숨겨진 명령어 주입은 현재 사실상 존재하지 않으므로, 해당 공격 벡터에 대한 방어 로직을 우선순위에서 낮출 수 있다. 대신 4분의 1에 달하는 서버가 자격 증명에 접근하는 점을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "My Monitor Was Cutting My Download Speed by 75%",
+  "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+  "source": "hackernews",
+  "upvotes": 133,
+  "comments": 51,
+  "published_at": 1795257392,
+  "discussion": "https://news.ycombinator.com/item?id=50587875",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://blog.tymscar.com/posts/studiodisplayethernet/"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://blog.tymscar.com/studio-display-ethernet/og-card.png",
+  "link_status": "ok",
+  "ko_title": "내 모니터가 다운로드 속도를 75% 감소시켰다",
+  "summary": "사용자는 2.5 Gbps 대칭 인터넷을 사용 중이었으나, Studio Display XDR에 연결된 UGREEN USB-C-to-2.5G 이더넷 어댑터를 통해 속도 테스트를 하면 다운로드 속도가 600 Mbps로 감소했다. 어댑터를 모니터가 아닌 맥에 직접 연결하면 속도가 정상으로 회복된다. 이는 어댑터가 모니터를 경유할 때 패킷을 손실하고 있음을 의미한다.",
+  "why": "USB-C 허브나 모니터의 디스플레이포트 어댑터를 경유해 이더넷을 연결하면 패킷 손실이 발생할 수 있다. 고대역폭 유선 네트워크를 쓰는 환경이라면 어댑터를 모니터가 아닌 호스트에 직접 꽂아야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
+  "title": "First Post at The Startup Cafe: Building Project Lumina and Where to Release It",
+  "url": "https://dev.to/startupcafe/first-post-at-the-startup-cafe-building-project-lumina-and-where-to-release-it-2n58",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 20,
+  "comments": 4,
+  "published_at": 1795254499.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/startupcafe/first-post-at-the-startup-cafe-building-project-lumina-and-where-to-release-it-2n58"
+  ],
+  "cross_source_count": 1,
+  "score": 45,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2o43lhlsnu8gbkfva3hl.png",
+  "link_status": "ok",
+  "ko_title": "스타트업 카페 첫 게시물: 프로젝트 루미나 구축 및 출시 위치",
+  "summary": "AGI Systems Directorate의 설립자 겸 CEO가 프로젝트 루미나라는 새로운 하이브리드 AGI 연구 프로젝트를 진행 중이며, 첫 커뮤니티 게시물에서 이 프로젝트를 어느 플랫폼에 먼저 공개할지 의견을 구하고 있다.",
+  "why": "프로젝트 루미나는 생물학적 뇌 복제 메커니즘을 결합한 하이브리드 방식의 AGI 연구다. 백엔드 개발자가 직접 다루는 기술 스택이나 배포 환경의 변경 사항은 아니다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-22T00:00:05.399837+09:00",
+  "batch_label": "11월 22일 00:00"
+ },
+ {
   "title": "Your Sticky Header Is Hiding Anchor Links. `scroll-margin-top` Fixes It.",
   "url": "https://dev.to/parsajiravand/your-sticky-header-is-hiding-anchor-links-scroll-margin-top-fixes-it-4d40",
   "source": "devto",
