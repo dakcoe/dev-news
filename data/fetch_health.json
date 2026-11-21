@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-11T16:00:39+09:00",
-   "total": 19,
-   "counts": {
-    "ok": 14,
-    "github": 3,
-    "blocked": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://www.theatlantic.com/magazine/2026/12/location-tracking-apps-parental-surveillance/689031/",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-12T00:00:35+09:00",
    "total": 20,
    "counts": {
@@ -568,6 +547,22 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-21T16:00:30+09:00",
+   "total": 13,
+   "counts": {
+    "ok": 10,
+    "short": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50583761",
+     "source": "hackernews",
+     "reason": "short"
+    }
+   ]
   }
  ]
 }
