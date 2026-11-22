@@ -1,5 +1,392 @@
 [
  {
+  "title": "I turned my GitHub contribution graph into a Bloomberg-style trading terminal",
+  "url": "https://dev.to/necoz/i-turned-my-github-contribution-graph-into-a-bloomberg-style-trading-terminal-31eh",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 35,
+  "comments": 5,
+  "published_at": 1795352482.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/i-turned-my-github-contribution-graph-into-a-bloomberg-style-trading-terminal-31eh"
+  ],
+  "cross_source_count": 1,
+  "score": 71,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fc5w2n6ra57sogqhujyra.png",
+  "link_status": "ok",
+  "ko_title": "GitHub 기여 그래프를 블룸버그 스타일 트레이딩 터미널로 바꾸기",
+  "summary": "gh-trading-terminal은 GitHub Action으로, 실제 기여 캘린더를 TradingView·블룸버그 형태의 SVG 차트로 변환한다. Node 18.3+ 환경에서 동작하며 의존성이 없고 MIT 라이선스를 사용한다. 설정은 워크플로우 파일 추가·액션 실행·README에 SVG 삽입의 3단계만으로 완료된다.",
+  "why": "프로필 리포지토리에 워크플로우를 추가하고 실행하면 기여 기록이 SVG 차트로 자동 생성된다. 기본 토큰이 거부되면 read:user 권한이 있는 GH_PAT 시크릿을 설정해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "web",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+  "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+  "source": "hackernews",
+  "upvotes": 327,
+  "comments": 437,
+  "published_at": 1795337854,
+  "discussion": "https://news.ycombinator.com/item?id=50597612",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
+  ],
+  "cross_source_count": 1,
+  "score": 66,
+  "image": "https://i0.wp.com/betterdatacenterproject.com/wp-content/uploads/2026/11/anthropic-total-co2.png?fit=1200%2C1065&ssl=1",
+  "link_status": "ok",
+  "ko_title": "Anthropic 전력의 87%는 가스로, 11%는 석탄으로 2028년에 공급될 예정",
+  "summary": "데이터센터가 자체 전력 생산(BYOP)을 확대하면서 177 GW 규모의 가스 설비가 계획되고 있다. 현재 제안된 BYOP 중 재생에너지 비중은 2032년까지 20% 미만으로 예상된다. AI 수요 증가로 그리드에 추가로 200 GW 규모의 화석 발전소가 건설 중이며, Anthropic은 2028년까지 미국 내 전력의 87%를 가스, 11%를 석탄으로 사용할 것으로 추정된다. Anthropic은 1.7 GW 가스 발전기에 34억 달러를 투자했지만, 미국에서는 재생에너지 계약이 없다.",
+  "why": "Anthropic의 2028년 전력 공급은 가스와 석탄에 집중될 전망이다. 이는 AI 인프라 확충이 재생에너지보다 화석연료 의존도를 높이는 구조임을 보여준다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "devops-infra"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Give Your AI Agent a Wallet It Can't Overspend (Telegraph + MCP)",
+  "url": "https://dev.to/aghazie_david_4dc30f4c9a8/give-your-ai-agent-a-wallet-it-cant-overspend-telegraph-mcp-kd6",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 1,
+  "comments": 14,
+  "published_at": 1795335175.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aghazie_david_4dc30f4c9a8/give-your-ai-agent-a-wallet-it-cant-overspend-telegraph-mcp-kd6"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpvamg9rnz1gw5yg84i5x.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 과도하게 쓰지 못하도록 지갑을 제공하기",
+  "summary": "Telegraph 네트워크에서 실시간 정보를 구매할 때 AI 에이전트가 과다 지출을 방지하도록, 최대 호출당·일일 한도와 구매 이유 기록을 설정할 수 있는 오픈소스 MCP 서버인 Telegraph Purse를 소개한다. 서버는 가격 견적을 확인하고, 한도를 초과하면 결제를 차단하며, 모든 거래를 로컬 원장에 기록한다. 테스트넷 USDC를 사용해 구현 예시를 제공한다.",
+  "why": "AI 에이전트가 실시간 정보를 구매할 때 최대 한도 초과 시 결제를 차단한다. 모든 거래와 차단 이력을 로컬 원장에 기록해 지출 추적이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow",
+  "url": "https://github.com/EL4CTEO/fast-anything",
+  "source": "hackernews",
+  "upvotes": 95,
+  "comments": 68,
+  "published_at": 1795320609,
+  "discussion": "https://news.ycombinator.com/item?id=50596155",
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/EL4CTEO/fast-anything"
+  ],
+  "cross_source_count": 2,
+  "score": 63,
+  "image": "https://opengraph.githubassets.com/1/EL4CTEO/fast-anything",
+  "link_status": null,
+  "ko_title": "Fast-Anything: 느린 5%만 Rust로 다시 작성",
+  "summary": "fast-anything는 실행 속도가 느린 함수들을 자동으로 찾아 코딩 에이전트를 통해 해당 부분만 Rust로 포팅한다. 포팅된 코드는 실제 호출 기록으로 결과 일치를 검증하고, 한 번의 명령으로 기존 코드와 교체하며 언제든 되돌릴 수 있다. npm 또는 cargo를 통해 전역 설치 후 `fa` 명령으로 사용한다.",
+  "why": "기존 언어로 작성한 코드 전체를 Rust로 옮기는 대신, 실행이 느린 함수만 선택적으로 전환할 수 있다. 실제 호출 기록을 기준으로 결과 일치를 검증하므로, 성능 개선 시 로직 오류 위험을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "language"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "How Changing SQLite's JOIN Order Turned 173 Seconds into 1 Second",
+  "url": "https://dev.to/tanahiro2010/how-changing-sqlites-join-order-turned-173-seconds-into-1-second-46en",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 5,
+  "comments": 2,
+  "published_at": 1795332436.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tanahiro2010/how-changing-sqlites-join-order-turned-173-seconds-into-1-second-46en"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqp6epopmtmfgm3jszqab.png",
+  "link_status": "ok",
+  "ko_title": "SQLite JOIN 순서 변경으로 173초가 1초로",
+  "summary": "ghusage라는 CLI·TUI 도구에서 SQLite 캐시를 이용해 보고서를 생성하던 중, 기존 JOIN을 CROSS JOIN으로 바꾸어 루프 순서를 바꾸니 실행 시간이 173초에서 1초 수준으로 크게 단축되었다. 성능 차이는 SQLite가 테이블 통계가 없어 외부·내부 루프 테이블을 잘못 선택한 것이 원인이다. 해당 도구는 npm install -g ghusage 로 설치할 수 있다.",
+  "why": "SQLite는 테이블 통계가 없어 JOIN 순서를 잘못 정할 수 있다. EXPLAIN QUERY PLAN의 SEARCH는 인덱스 사용만 보여줄 뿐 실제 성능을 보장하지 않는다. JOIN 구문에서 루프 순서를 직접 제어하는 CROSS JOIN으로 재작성해 보자.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "backend-data"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Advice for the next 100 Rust GUIs",
+  "url": "https://linebender.org/blog/next-100-guis/",
+  "source": "hackernews",
+  "upvotes": 215,
+  "comments": 100,
+  "published_at": 1795295873,
+  "discussion": "https://news.ycombinator.com/item?id=50593737",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://linebender.org/blog/next-100-guis/"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "다음 100개의 Rust GUI를 위한 조언",
+  "summary": "4.5년 전 발표된 “다음 12개의 Rust GUI를 위한 조언” 이후 20여 개의 Rust GUI 툴킷이 등장했으며, AI의 관심 급증으로 Rust GUI 개발이 다시 주목받고 있다. 현재 GUI 앱의 성능 문제와 Electron 의존도가 높아지는 상황에서 Rust 기반 UI가 실용적인 대안으로 부상한다. Zed 편집기의 GPUI 프레임워크가 실제 제품에 적용돼 가시성과 신뢰성을 높였지만, 일반 애플리케이션에 필요한 고급 렌더링 기능은 부족하다.",
+  "why": "GPUI는 텍스트 편집기에 최적화되어 일반 앱에 필요한 그라디언트나 블렌딩 기능이 부족하다. Electron 대안으로 Rust GUI를 검토할 때 이 렌더링 한계를 먼저 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "language"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Blackberry releases secure browser for Windows",
+  "url": "https://www.blackberry.com/en/secure-communications/insights/blog/introducing-blackberry-access-secure-browser-windows",
+  "source": "hackernews",
+  "upvotes": 9,
+  "comments": 7,
+  "published_at": 1795355172,
+  "discussion": "https://news.ycombinator.com/item?id=50599667",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.blackberry.com/en/secure-communications/insights/blog/introducing-blackberry-access-secure-browser-windows"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://assets.blackberry.com/f/286245462458556/1024x768/ffcbfa83f9/blackerry-access.webp",
+  "link_status": "ok",
+  "ko_title": "BlackBerry, Windows용 보안 브라우저 출시",
+  "summary": "BlackBerry Access Secure Browser for Windows가 Chromium 기반으로 공개돼 기업 데이터 보호 기능을 제공한다. 기존 BlackBerry Access 데스크톱 클라이언트를 대체하며 iOS·Android 버전과 동일한 보안 정책을 적용한다. BYOD 환경에서 관리되지 않은 Windows PC를 안전하게 업무용으로 활용할 수 있다.",
+  "why": "BYOD 환경에서 관리되지 않은 Windows PC를 업무용으로 쓸 때 기존 데스크톱 클라이언트 대신 이 브라우저를 설치해야 한다. iOS·Android와 동일한 보안 정책이 적용되어 개인 기기의 데이터 유출을 차단한다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "web",
+   "release"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Prisons get OK to jam contraband phones",
+  "url": "https://arstechnica.com/tech-policy/2026/11/prisons-get-ok-to-jam-contraband-phones-ctia-says-nearby-phones-will-be-jammed-too/",
+  "source": "hackernews",
+  "upvotes": 29,
+  "comments": 48,
+  "published_at": 1795352452,
+  "discussion": "https://news.ycombinator.com/item?id=50599313",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://arstechnica.com/tech-policy/2026/11/prisons-get-ok-to-jam-contraband-phones-ctia-says-nearby-phones-will-be-jammed-too/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/prison-barbed-wire-1152x648-1767732268.jpg",
+  "link_status": "ok",
+  "ko_title": "교도소, 불법 휴대폰 차단용 전파 방해 허가",
+  "summary": "연방통신위원회(FCC)가 주·지방 교도소에 불법 휴대폰 차단용 전파 방해 기술 사용을 승인했다. CTIA가 진행한 파일럿 테스트에서는 제한된 마이크로 방해 장치가 911 호출을 차단하고, 2.5마일 거리까지 무선 인프라에 간섭을 일으켰다. 동시에 야외 재활 구역에서는 차단 대상 기기의 통화 성공률이 1/2~2/3 수준으로 낮았다.",
+  "why": "전파 방해 기술이 911 호출을 차단하고 2.5마일 밖 무선 인프라에 간섭을 일으킨다. 야외 구역에서는 차단 대상 기기의 통화 성공률이 1/2~2/3 수준에 그쳤다. 교도소 인근에서 통신 품질 저하를 겪는다면 이 기술의 부수적 영향임을 인지해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "WhiteTowerAI / ohmygame",
+  "url": "https://github.com/WhiteTowerAI/ohmygame",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 293,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/WhiteTowerAI/ohmygame"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 293,
+  "score": 55,
+  "image": "https://opengraph.githubassets.com/1/WhiteTowerAI/ohmygame",
+  "link_status": null,
+  "ko_title": "WhiteTowerAI / 오마이게임",
+  "summary": "오픈소스 스튜디오가 AI를 이용해 게임을 설계·아트·코드·플레이·배포까지 자동화한다. 하나의 캔버스에서 디자인 문서, 이미지, 영상, 3D, 오디오와 코드를 동시에 편집한다. 현재 베타 단계이며, 사용 중 버그를 보고할 수 있다.",
+  "why": "베타 단계라 버그가 있을 수 있으니 안정성보다 프로토타입 검증 용도로만 써야 한다. 디자인 문서와 코드를 별도 앱 없이 하나의 캔버스에서 동시에 편집하는 방식이 기존 워크플로우와 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "open-source"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "Day 90: A Mask in the Way and a Policy Pointing at Nothing",
+  "url": "https://dev.to/ndcodes/day-90-a-mask-in-the-way-and-a-policy-pointing-at-nothing-390o",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 23,
+  "comments": 9,
+  "published_at": 1795338000.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ndcodes/day-90-a-mask-in-the-way-and-a-policy-pointing-at-nothing-390o"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7fe8n9khrpkrg1kcpco1.jpg",
+  "link_status": "ok",
+  "ko_title": "Day 90: 마스크와 아무것도 가리키지 않는 정책",
+  "summary": "이번 글은 Linux ACL 마스크와 Azure 접근 정책의 잘못된 설정 사례를 다룬다. Ansible을 이용해 세 서버에 서로 다른 ACL을 적용하고 Azure Key Vault에서 암호화·복호화를 검증한다. 작업은 KodeKloud Engineer 플랫폼에서 제공한다.",
+  "why": "ACL 마스크와 Azure 접근 정책의 잘못된 설정은 권한이 존재하는 것처럼 보이지만 실제로는 아무것도 허용하지 않는다. ls -l 출력과 ARM의 무응답은 실제 권한 상태를 오해하게 만드는 위험 요소다. Ansible의 acl 모듈은 ansible.posix 컬렉션이므로 ansible-core만으로는 동작하지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "I built a local memory for my PC in Rust, then tried to steal my own secrets from it",
+  "url": "https://dev.to/0xstoic_bit/i-built-a-local-memory-for-my-pc-in-rust-then-tried-to-steal-my-own-secrets-from-it-2h5k",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 1,
+  "comments": 5,
+  "published_at": 1795347823.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/0xstoic_bit/i-built-a-local-memory-for-my-pc-in-rust-then-tried-to-steal-my-own-secrets-from-it-2h5k"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2F0xStoic-bit%2FSynapse_Mind%2Fmain%2Fassets%2Fhafiza-paneli-koyu.png",
+  "link_status": "ok",
+  "ko_title": "로컬 메모리 도구 Synapse Mind를 Rust로 만들고 비밀을 직접 탈취해 보기",
+  "summary": "이 글은 Windows용 로컬-first 메모리 앱 Synapse Mind의 구현과 비밀 보호 기능을 설명한다. UI Automation과 클립보드 이벤트를 통해 텍스트를 캡처하고, BM25와 벡터 유사도를 결합한 검색을 제공한다. 비밀이 포함된 파일은 마스킹하고, 메모리 덤프 테스트로 프라이버시 주장을 검증한다.",
+  "why": "로컬에서 동작하는 메모리 도구를 만들거나 보안 검증을 할 때 참고할 수 있다. Rust 타입 시스템으로 원본 데이터의 디버그와 직렬화를 컴파일 단계에서 막는 방식이 핵심이다. 메모리 덤프를 직접 분석해 비밀 정보가 유출되지 않는지 검증하는 테스트 절차도 제시된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "dev-tools",
+   "hardware",
+   "language",
+   "showcase"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
+  "title": "diggerhq / opencomputer",
+  "url": "https://github.com/diggerhq/opencomputer",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 312,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/diggerhq/opencomputer"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 312,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/diggerhq/opencomputer",
+  "link_status": null,
+  "ko_title": "diggerhq / opencomputer — 오픈소스 Devin 대안, Slack 등에서 팀과 함께 쓰는 코딩 에이전트",
+  "summary": "오픈소스 코딩 에이전트인 OpenComputer이 공개돼 Slack, 자체 서버, 클라우드 등 다양한 환경에서 팀 협업을 지원한다. 클라우드 서비스와 셀프-호스팅 가이드, 벤치마크 결과가 제공된다. 현재 GitHub에서 릴리즈와 라이선스 정보를 확인할 수 있다.",
+  "why": "Slack에서 코딩 에이전트와 협업하는 방식이 가능해졌다. 클라우드 서비스나 셀프-호스팅 중 하나를 선택해 도입할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "research",
+   "devops-infra",
+   "open-source"
+  ],
+  "batch": "2026-11-23T00:00:01.908968+09:00",
+  "batch_label": "11월 23일 00:00"
+ },
+ {
   "title": "Muru",
   "url": "https://simonwillison.net/2026/Nov/21/muru/",
   "source": "rss",
