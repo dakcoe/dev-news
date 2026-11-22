@@ -1,5 +1,168 @@
 [
  {
+  "t": "Muru",
+  "u": "https://simonwillison.net/2026/Nov/21/muru/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "web",
+   "backend-data",
+   "language"
+  ],
+  "d": "2026-11-22",
+  "x": "Graham Dumpleton이 AI 지원 Rust 서버인 Muru를 공개했다. Muru는 개발 및 프로덕션 환경에서 ASGI와 WSGI 파이썬"
+ },
+ {
+  "t": "Limn 엔진 내부 살펴보기: 단일 HTML 파일로 360 레벨 레이캐스트 FPS 구현",
+  "u": "https://dev.to/kehinde_owolabi_e2e54567a/inside-limn-engine-how-a-360-level-raycast-fps-runs-in-a-single-html-file-2ofl",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "web"
+  ],
+  "d": "2026-11-22",
+  "o": "Inside Limn Engine: How a 360-Level Raycast FPS Runs in a Single HTML File",
+  "x": "Limn Engine은 HTML5 Canvas 래퍼로, 렌더 루프·입력·카메라 등을 제공한다. 숨김 오프스크린 캔버스로 정적 요소를 한 번만 그"
+ },
+ {
+  "t": "추론 제공자 데이터 처리 사고",
+  "u": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "d": "2026-11-22",
+  "o": "Data Processing Incidents on Inference Providers",
+  "x": "OpenRouter는 최근 보안 연구자들의 조사 결과를 바탕으로 3개의 추론 제공자를 서비스에서 제외하고, 125개의 엔드포인트를 영구 데이터 "
+ },
+ {
+  "t": "내 RAG를 더 안전하게 만들었지만 부하가 걸리면 성능이 떨어졌다",
+  "u": "https://dev.to/ayush_singh_9b0d83152be5b/i-made-my-rag-safer-it-got-worse-under-load-3olm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "showcase"
+  ],
+  "d": "2026-11-22",
+  "o": "I Made My RAG Safer. It Got Worse Under Load",
+  "x": "검증된 문장만 사용자에게 전달하도록 RAG 시스템을 재구성했다. 부하가 심한 상황에서 처리량이 67.4%에서 62.8%로 감소했다. 30개의 요"
+ },
+ {
+  "t": "bookwjitchieni1986 / blender-ai-mcp-addon",
+  "u": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source",
+   "release"
+  ],
+  "d": "2026-11-22",
+  "x": "Blender 4.2 이상에서 사용할 수 있는 AI 어시스턴트 애드온이 1.0.0 버전으로 공개되었습니다. 이 애드온은 장면 검사, 객체 생성,"
+ },
+ {
+  "t": "FastAPI vs Node.js vs Bun: 하나의 PostgreSQL 설정이 최대 31% 차이를 만들었다 (런타임 변경 없음)",
+  "u": "https://dev.to/rudratosh/fastapi-vs-nodejs-vs-bun-one-postgresql-setting-was-worth-up-to-31-no-runtime-changed-4b1h",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "research",
+   "backend-data",
+   "language",
+   "showcase"
+  ],
+  "d": "2026-11-22",
+  "o": "FastAPI vs Node.js vs Bun: One PostgreSQL Setting Was Worth Up to 31% (No Runtime Changed)",
+  "x": "여러 2026년 공개 벤치마크를 분석한 결과, Node.js가 PostgreSQL과 통신하는 방식을 바꾸면 런타임이나 프레임워크를 바꾸지 않아도"
+ },
+ {
+  "t": "Prompt injection은 권한 부여 버그",
+  "u": "https://dev.to/shubham399/prompt-injection-is-an-authorization-bug-26oe",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "security"
+  ],
+  "d": "2026-11-22",
+  "o": "Prompt injection is an authorization bug",
+  "x": "프롬프트 인젝션을 단순히 모델이 악의적 텍스트를 믿는 문제로 보는 대신 권한 부여 문제로 재구성한다. 공격자는 일반 비즈니스 언어를 사용해 도구"
+ },
+ {
+  "t": "Leonida",
+  "u": "https://github.com/ItsNotRexed/Leonida",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-22",
+  "o": "ItsNotRexed / Leonida",
+  "x": "Leonida는 Xbox Series용 Grand Theft Auto VI를 Windows에서 네이티브로 실행하도록 정적 재컴파일하는 오픈소스 "
+ },
+ {
+  "t": "토요타·닛산·혼다, 부품 표준화로 비용 절감",
+  "u": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-22",
+  "o": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+  "x": "일본 3대 자동차 업체가 내년부터 강판, 플라스틱·레진, 전선 하니스 색상 코드를 통일해 부품 생산 비용을 낮춘다. 표준화는 국내 공급업체와 논"
+ },
+ {
+  "t": "팀이 매 분기마다 더 빠르게 배포하지만 코드 이해도는 줄어든다. 이를 측정하는 사람은 없다.",
+  "u": "https://dev.to/debashish_ghosal/your-team-ships-faster-every-quarter-and-understands-its-own-code-less-nobodys-measuring-that-2j5i",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent"
+  ],
+  "d": "2026-11-22",
+  "o": "Your Team Ships Faster Every Quarter and Understands Its Own Code Less. Nobody's Measuring That.",
+  "x": "AI 기반 에이전트가 개발 작업을 대체하면서 배포 속도는 증가하지만, 엔지니어들의 코드 이해도가 점차 감소하고 있다. 이는 리뷰 과정에서 이해하"
+ },
+ {
+  "t": "의식 있는 AI의 신화",
+  "u": "https://www.noemamag.com/the-mythology-of-conscious-ai/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "career-culture"
+  ],
+  "d": "2026-11-22",
+  "o": "The Mythology of Conscious AI",
+  "x": "인간을 모방한 인공지능에 대한 문화적 이야기를 정리하고, 현재 AI가 의식을 가질 가능성을 논한다. 2025년 베르그루엔 상 수상 에세이와 과거"
+ },
+ {
+  "t": "샌드위치 시뮬레이터",
+  "u": "https://stulle.app/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-22",
+  "o": "Sandwich Simulator",
+  "x": "이 웹 기반 시뮬레이터는 마우스 클릭과 드래그로 빵에 재료를 올리고, 회전시키며, 사진을 저장할 수 있다. 재료를 잡아 끌어올리거나 놓을 때 움"
+ },
+ {
   "t": "Inkling-2-Mini 5.4 GB 메모리",
   "u": "https://github.com/ShinMegamiBoson/lookatmyquant",
   "m": "2026-11",

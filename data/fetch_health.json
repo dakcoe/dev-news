@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-12T16:00:33+09:00",
-   "total": 14,
-   "counts": {
-    "robots": 1,
-    "github": 4,
-    "blocked": 1,
-    "ok": 8
-   },
-   "failures": [
-    {
-     "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
-     "source": "hackernews",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-13T00:00:33+09:00",
    "total": 20,
    "counts": {
@@ -561,6 +539,15 @@
    "counts": {
     "ok": 10,
     "github": 3
+   },
+   "failures": []
+  },
+  {
+   "at": "2026-11-22T16:00:31+09:00",
+   "total": 13,
+   "counts": {
+    "ok": 11,
+    "github": 2
    },
    "failures": []
   }
