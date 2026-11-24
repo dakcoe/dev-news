@@ -1,5 +1,560 @@
 [
  {
+  "title": "AFK-surf / xnulinux",
+  "url": "https://github.com/AFK-surf/xnulinux",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1376,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/AFK-surf/xnulinux"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1376,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/AFK-surf/xnulinux",
+  "link_status": null,
+  "ko_title": "macOS 사용자 공간을 Linux에서 실행",
+  "summary": "xnulinux는 Apple이 공개한 macOS 커널 소스인 XNU를 빌드해 arm64 Linux 커널에 로드 가능한 모듈로 삽입한다. 이를 통해 하이퍼바이저 없이 macOS 프로세스와 Linux 프로세스가 동일 CPU에서 네이티브로 동시에 동작한다. Ubuntu 기본 커널에 `insmod xnu.ko`만으로 macOS 27 시스템 디스크를 부팅해 데스크톱 환경을 사용할 수 있다.",
+  "why": "하이퍼바이저 없이 macOS와 Linux 프로세스가 같은 CPU에서 네이티브로 동작한다. 기존 가상화 방식과 달리 CPU와 MMU를 직접 제어해 성능 손실이 줄어든다. GPU 브리지 없이 CPU 렌더링으로 데스크톱을 구동하는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+  "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795478400.0,
+  "origin_url": "https://claude.com/blog/skills-over-mcp-tasks-and-more",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/skills-over-mcp-tasks-and-more",
+   "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://claude.com/ko/resources/articles/skills-over-mcp-tasks-and-more/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "MCP 서버가 이제 Claude와 함께 스킬을 제공하고 작업을 실행할 수 있음",
+  "summary": "Claude에서 Skills over MCP가 퍼블릭 베타로 제공돼 서버가 도구와 함께 스킬을 배포할 수 있다. Tasks와 Elicitation이 정식 출시됐으며 파일 업로드 기능이 곧 제공된다. 스킬은 필요 시 로드돼 컨텍스트 사용량을 최소화하고, 서버와 동기화돼 별도 설치 없이 도구와 가이드를 함께 제공한다.",
+  "why": "MCP 서버에 스킬을 함께 배포하면 별도 설치 없이 도구와 가이드를 동기화할 수 있다. 필요할 때만 스킬이 로드돼 컨텍스트 사용량을 줄이는 구조다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+  "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795525200.0,
+  "merged_sources": [
+   "OpenAI",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+   "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+  ],
+  "cross_source_count": 2,
+  "score": 65,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/Eg5mCwwaA3KqnznOVCh0n/8e6deaef25fd508d9853ff86a95187c1/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "GPT-6 모델, 고유한 단백질 설계 능력 보여줌",
+  "summary": "GPT-6 모델이 전문 생물학 모델 없이도 추론과 코딩만으로 새로운 단백질 구조와 서열을 설계한다. 내부 연구 모델이 다수의 단백질 설계 과제에서 전문 모델을 능가하거나 동등한 성능을 보였다. GPT-6.2 설계 기반 단백질은 실험실에서 다섯 목표에 걸쳐 결합 증거를 나타냈으며, 재설계된 항체도 결합력을 유지했다.",
+  "why": "백엔드 개발자가 생물학 도메인 로직을 구현할 때 전문 모델 호출 없이 추론과 코딩만으로 단백질 구조를 설계할 수 있다. 이는 기존 파이프라인에서 외부 생물학 모델 의존도를 낮추고 통합 비용을 줄이는 변화를 가져온다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "git bisect doesn't work on lockfiles — so I built whichdep",
+  "url": "https://dev.to/kameh0use/git-bisect-doesnt-work-on-lockfiles-so-i-built-whichdep-4d37",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 9,
+  "comments": 9,
+  "published_at": 1795533870.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/kameh0use/git-bisect-doesnt-work-on-lockfiles-so-i-built-whichdep-4d37"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fslyhi5i2ey4widy926wn.png",
+  "link_status": "ok",
+  "ko_title": "git bisect가 lockfile에서 작동하지 않아 — whichdep을 만들었습니다",
+  "summary": "whichdep(v0.1.0, Apache-2.0)은 Cargo, uv, pip, npm, pnpm의 lockfile 변화를 자동으로 분석해 문제 패키지를 찾아준다. Rust로 구현돼 외부 런타임 없이 Linux·macOS·Windows용 바이너리를 제공한다. 실패한 lockfile을 체크아웃하고 정상 커밋을 --good 옵션에 지정하면 격리된 복제본에서 테스트를 반복한다.",
+  "why": "lockfile 변경으로 인한 테스트 실패 시 수동으로 패키지를 하나씩 고정하던 과정을 자동화한다. git bisect가 코드 변경이 아닌 의존성 문제로 작동하지 않는 상황에서 문제 패키지를 격리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Turn artifacts into Mac and Windows apps",
+  "url": "https://claude.com/resources/articles/install-as-app",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795478400.0,
+  "origin_url": "https://claude.com/blog/install-as-app",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/install-as-app",
+   "https://claude.com/resources/articles/install-as-app"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://claude.com/ko/resources/articles/install-as-app/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Claude 아티팩트를 Mac 및 Windows 앱으로 전환",
+  "summary": "오늘부터 Claude의 아티팩트를 Mac·Windows 전용 데스크톱 앱으로 설치할 수 있다. 베타 기능인 “앱으로 설치”는 별도 아이콘과 창을 제공하며, 권한을 선택해 컴퓨터와 상호작용한다. 앱은 Claude와 연결자를 활용하고, 아티팩트가 수정되면 자동 업데이트된다.",
+  "why": "앱이 Claude에 보내는 요청은 기존 플랜의 사용량 한도에 포함된다. 권한 설정에 따라 앱이 컴퓨터와 상호작용하는 범위가 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Hut-hzf / ung220z-tool",
+  "url": "https://github.com/Hut-hzf/ung220z-tool",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1263,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Hut-hzf/ung220z-tool"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1263,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/Hut-hzf/ung220z-tool",
+  "link_status": null,
+  "ko_title": "UNG220Z 광모뎀 자격증명 자동 추출 도구",
+  "summary": "이 오픈소스 도구는 UNG220Z 및 다수의 광모뎀(중흥·불화·화웨이·구연)에서 현재 유효한 웹·텔넷·PPPoE·Wi-Fi·루트 비밀번호를 자동으로 추출한다. Telnet 채널을 이용해 장비 설정 파일을 복호화하고, 추출된 자격증명을 콘솔에 출력하거나 로그 파일에 저장한다. Python 3 기반이며, 명령행 옵션으로 IP·계정·비밀번호 등을 지정할 수 있다. 현재 UNG220Z만 실기 검증되었으며, 다른 모델은 호환성만 명시돼 있다.",
+  "why": "광모뎀 관리 비밀번호가 주기적으로 바뀌어 접근이 막히는 상황에서 현재 유효한 자격증명을 즉시 확보할 수 있다. 다만 UNG220Z 모델 외에는 실제 기기 검증이 끝나지 않아 다른 장비에서는 동작이 보장되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Why Your AI Release Notes Hallucinate: The \"Why vs What\" Problem in Git History",
+  "url": "https://dev.to/necoz/why-your-ai-release-notes-hallucinate-the-why-vs-what-problem-in-git-history-5ch0",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 28,
+  "comments": 6,
+  "published_at": 1795537800.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/why-your-ai-release-notes-hallucinate-the-why-vs-what-problem-in-git-history-5ch0"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffpv8z3hlxeu12fq22xbh.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 릴리즈 노트가 환각하는 이유: Git 히스토리의 “왜 vs 무엇” 문제",
+  "summary": "자동화된 릴리즈 파이프라인이 git diff를 그대로 LLM에 전달하면, 실제는 메모리 누수 패치인 커밋이 성능 개선으로 허위 서술될 수 있다. diff만으로는 변경 의도(“왜”)를 파악할 수 없어 모델이 가장 가능성 높은 이야기를 만들어낸다. 특히 AI 코드 에이전트가 만든 PR 설명에는 ‘근거 없는 설득형’, ‘구현 중심형’, ‘근거 있는 의도형’ 세 유형이 반복된다.",
+  "why": "자동화 파이프라인에 diff만 넣으면 의도가 없는 변경이 허위 기능으로 서술될 수 있다. 브레이킹 체인지의 마이그레이션 경로가 누락되는 위험이 있다. AI 에이전트가 작성한 PR 설명은 근거 없는 설득형일 수 있어 검증이 필요하다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "GPT 6.2 Astra Solves a Historical Mystery",
+  "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795539239.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "GPT 6.2 Astra가 역사적 미스터리를 해결",
+  "summary": "GPT-6.2 Astra가 최소한의 프롬프트만으로 1808년 연대가 없는 스케치북의 창작자를 식별했다. 공개된 1차·2차 자료와 논문 아카이브의 희귀 소스를 활용해 22분 만에 가설을 검증했으며, 해당 소스 자체도 캐나다와 모피 무역 연구에 중요한 새 자료가 되었다.",
+  "why": "GPT-6.2 Astra가 희귀 아카이브 자료를 찾아내 가설을 검증하는 능력이 확인됐다. 백엔드 개발자에게는 대량의 비정형 문서를 다루는 자동화 파이프라인 설계 시 참고할 사례다. 단, 역사 연구처럼 맥락 해석이 필수인 영역에서는 인간의 개입이 여전히 필요하다는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Active intrusion campaign against Check Point security management servers",
+  "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+  "source": "hackernews",
+  "upvotes": 241,
+  "comments": 99,
+  "published_at": 1795537937,
+  "discussion": "https://news.ycombinator.com/item?id=50630594",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://cdn.prod.website-files.com/667dd40ebb8095e89f27565d/6b00b96c7176ac8c286ffb00_GreyNoise-Blog-Check-Point-1600x900.png",
+  "link_status": "ok",
+  "ko_title": "Check Point 보안 관리 서버에 대한 적극적 침입 캠페인",
+  "summary": "GreyNoise가 2026년 10월 17일부터 11월 2일 사이에 22개 조직을 대상으로 한 침입 캠페인을 발견했다. 공격자는 99개의 일회용 IP를 이용해 Check Point 보안 관리 서버에 접근했으며, 대상은 지역·산업 분야에 제한이 없었다. 현재 이 캠페인을 GreyNoise Threat 13(GT13)으로 추적하고 있다.",
+  "why": "Check Point 보안 관리 서버를 운영하는 조직이라면 GT13 캠페인 대상에 포함될 수 있다. 지역이나 산업 분야를 가리지 않는 무차별 공격이므로 즉시 보안 패치 상태를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+  "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795538053.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/6847ab8c06094fa4afb6ee38/M70tUMNd7N4KO5QGI37YZ.png",
+  "link_status": "ok",
+  "ko_title": "Microduck 장애물 회피: Isaac Lab과 Newton을 활용한 Sim2Real 워크플로우",
+  "summary": "이 튜토리얼은 기존 Microduck 보행 정책을 고정한 채, ToF 센서를 이용해 별도의 회피 컨트롤러를 학습하는 방법을 제시한다. Isaac Lab의 GPU 병렬 시뮬레이션과 Newton의 물리·깊이 센서 모델을 활용해 다양한 장애물 코스를 생성하고, 학습·평가·내보내기·실제 로봇 적용까지 전 과정을 다룬다.",
+  "why": "보행 정책은 고정된 채 ToF 센서 기반 회피 컨트롤러만 학습하는 구조다. 게임패드 입력 속도를 장애물 회피용으로 조정해 기존 보행 정책으로 전달한다. Isaac Lab과 Newton으로 시뮬레이션부터 실물 로봇 배포까지 전 과정을 처리한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "hardware"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "A practical guide to shipping with Claude Code",
+  "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+  "source": "anthropic",
+  "feed": "Claude 개발자 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795521600.0,
+  "merged_sources": [
+   "Claude 개발자 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.dev/blog/the-work-after-you-open-a-pr/"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png",
+  "link_status": "ok",
+  "ko_title": "Claude Code로 배포하기 실전 가이드",
+  "summary": "PR을 열면 /ship 명령으로 Claude Code 에이전트가 후속 작업을 자동화한다. 코드 리뷰, PR 관리, 승인 에이전트 중 두 개는 베타이며, 관리 권한 없이도 개인 레포에서 바로 사용 가능하다. 관리자 개입은 팀 전체 자동화 시에만 필요하다.",
+  "why": "코드 리뷰 에이전트는 정식 출시되어 바로 사용할 수 있다. PR 스테어드와 승인 에이전트는 베타 단계이므로 안정성을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Searching for distant planets with Astra",
+  "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795518000.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/searching-for-distant-planets-with-astra"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/318YLaAKlMKQFzOdMutjeX/8b6e4e516fd1a7894c97318838f43a0f/searching-for-distant-planets-with-astra-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Astra로 먼 행성 찾기",
+  "summary": "두 아마추어 천문학자가 Codex와 Astra를 활용해 공개 망원경 데이터에서 약 1900만 별을 분석하고 잠재적 외계행성을 발견했다. 이 결과는 전문가에게 검증을 요청했으며, Astra는 기존 데이터에서 새로운 신호를 탐색하는 도구로 활용됐다.",
+  "why": "Astra로 기존 공개 데이터에서 놓친 외계행성 신호를 직접 탐색할 수 있다. 백엔드 개발자는 대용량 데이터 분석 파이프라인 설계 시 참고할 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-coding",
+   "science"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "How Gemini is changing the game for Golden State's organization and fans.",
+  "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+  "source": "rss",
+  "feed": "Google AI Blog",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795536000.0,
+  "merged_sources": [
+   "Google AI Blog"
+  ],
+  "merged_urls": [
+   "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Gemini_1.max-1440x810.jpg",
+  "link_status": "ok",
+  "ko_title": "Gemini가 골든스테이트 조직과 팬들에게 가져오는 변화",
+  "summary": "구글은 골든스테이트 워리어스와 챈스 센터, 2026년 WNBA 챔피언 발키리스를 대상으로 Gemini를 공식 AI 어시스턴트 파트너 및 생성 AI·엔터프라이즈 LLM 파트너로 확대한다. 팬들은 경기장 비디오보드와 디지털 채널을 통해 인터랙티브한 경험을 얻고, 팀은 맞춤형 AI 에이전트를 활용해 비즈니스와 농구 운영을 효율화한다.",
+  "why": "구글이 스포츠 구단 운영에 생성형 AI를 적용하는 사례를 보여준다. 백엔드 개발자는 맞춤형 AI 에이전트 구축 방식에 참고할 수 있다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "9 Best Agent Gateways",
+  "url": "https://dev.to/anthonymax/9-best-agent-gateways-1f21",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 27,
+  "comments": 2,
+  "published_at": 1795536954.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/anthonymax/9-best-agent-gateways-1f21"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsudumczuk2ow9i6i7rwx.png",
+  "link_status": "ok",
+  "ko_title": "9가지 에이전트 게이트웨이",
+  "summary": "이 글은 모델 제공자와 도구에 연결하는 에이전트 게이트웨이 9개를 비교한다. 각 게이트웨이는 자체 호스팅 여부, 라우팅, 재시도, 예산, 접근 제어, 캐시 등 기능이 다르다. 선택 시 지원하는 모델·도구·프로토콜과 배포 방식, 운영 제어 범위를 검토해야 한다.",
+  "why": "자체 호스팅과 클라우드 관리형 게이트웨이의 기능 범위가 다르다. 모델 라우팅, 재시도, 예산 제어, 접근 권한 중 필요한 기능이 무엇인지 먼저 정해야 한다. 지원하는 프로토콜과 배포 방식이 프로젝트 요구사항과 맞지 않으면 도입을 재고해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+  "url": "https://news.ycombinator.com/item?id=50630809",
+  "source": "hackernews",
+  "upvotes": 206,
+  "comments": 161,
+  "published_at": 1795538744,
+  "discussion": "https://news.ycombinator.com/item?id=50630809",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.ycombinator.com/item?id=50630809"
+  ],
+  "cross_source_count": 1,
+  "score": 31,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ask HN: Anthropic가 내 회사를 증류 혐의로 고소했습니다. 어떻게 증명하지?",
+  "summary": "해당 기업은 Anthropic API를 사용해 자체 모델을 훈련하지 않고, AI 설정 변경 시 자동 회귀 벤치마크만 수행한다고 주장한다. 현재 24시간 안에 증거를 제시해야 하는 상황이며, 사용자 개인정보를 침해하지 않으면서 증류 사실이 없음을 입증하는 방법을 찾고 있다.",
+  "why": "Anthropic API를 활용한 자동 회귀 벤치마크만 수행해도 증류로 오인될 수 있다. 24시간 내 증거 제출이 요구되므로 사용자 개인정보 보호와 증명 절차의 충돌을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Microsoft declares 'Code Red' after historic outage, internal memos show",
+  "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/",
+  "source": "hackernews",
+  "upvotes": 200,
+  "comments": 174,
+  "published_at": 1795540061,
+  "discussion": "https://news.ycombinator.com/item?id=50631157",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/"
+  ],
+  "cross_source_count": 1,
+  "score": 24,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Microsoft, 사상 최대 정전 이후 ‘Code Red’ 선언, 내부 메모 공개",
+  "summary": "",
+  "why": "사상 최대 규모 장애가 발생했으므로 서비스 안정성에 대한 내부 대응이 최우선으로 전환됐다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "devops-infra"
+  ],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
+  "title": "Jetty Pro",
+  "url": "http://hypercritical.co/2026/11/23/jetty-pro",
+  "source": "hackernews",
+  "upvotes": 239,
+  "comments": 104,
+  "published_at": 1795537382,
+  "discussion": "https://news.ycombinator.com/item?id=50630462",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "http://hypercritical.co/2026/11/23/jetty-pro"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://hypercritical.co/jetty-pro/images/jetty-pro-palettes.png",
+  "link_status": "ok",
+  "ko_title": "Jetty Pro",
+  "summary": "",
+  "why": "백엔드나 AI 개발과 무관한 macOS 데스크톱 유틸리티 개발 일기다. 독자의 업무 환경이나 기술 스택에 영향을 주는 변화가 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-25T08:00:06.949554+09:00",
+  "batch_label": "11월 25일 08:00"
+ },
+ {
   "title": "Turning on Postgres logical replication without a restart",
   "url": "https://dev.to/alexgeorgiev17/turning-on-postgres-logical-replication-without-a-restart-4b35",
   "source": "devto",

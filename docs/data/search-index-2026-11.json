@@ -1,5 +1,238 @@
 [
  {
+  "t": "macOS 사용자 공간을 Linux에서 실행",
+  "u": "https://github.com/AFK-surf/xnulinux",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-25",
+  "o": "AFK-surf / xnulinux",
+  "x": "xnulinux는 Apple이 공개한 macOS 커널 소스인 XNU를 빌드해 arm64 Linux 커널에 로드 가능한 모듈로 삽입한다. 이를 통"
+ },
+ {
+  "t": "MCP 서버가 이제 Claude와 함께 스킬을 제공하고 작업을 실행할 수 있음",
+  "u": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-11-25",
+  "o": "MCP servers can now ship skills, run tasks, and more with Claude",
+  "x": "Claude에서 Skills over MCP가 퍼블릭 베타로 제공돼 서버가 도구와 함께 스킬을 배포할 수 있다. Tasks와 Elicitatio"
+ },
+ {
+  "t": "GPT-6 모델, 고유한 단백질 설계 능력 보여줌",
+  "u": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "science"
+  ],
+  "d": "2026-11-25",
+  "o": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+  "x": "GPT-6 모델이 전문 생물학 모델 없이도 추론과 코딩만으로 새로운 단백질 구조와 서열을 설계한다. 내부 연구 모델이 다수의 단백질 설계 과제에"
+ },
+ {
+  "t": "git bisect가 lockfile에서 작동하지 않아 — whichdep을 만들었습니다",
+  "u": "https://dev.to/kameh0use/git-bisect-doesnt-work-on-lockfiles-so-i-built-whichdep-4d37",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "dev-tools",
+   "language",
+   "release",
+   "showcase"
+  ],
+  "d": "2026-11-25",
+  "o": "git bisect doesn't work on lockfiles — so I built whichdep",
+  "x": "whichdep(v0.1.0, Apache-2.0)은 Cargo, uv, pip, npm, pnpm의 lockfile 변화를 자동으로 분석해 문"
+ },
+ {
+  "t": "Claude 아티팩트를 Mac 및 Windows 앱으로 전환",
+  "u": "https://claude.com/resources/articles/install-as-app",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm"
+  ],
+  "d": "2026-11-25",
+  "o": "Turn artifacts into Mac and Windows apps",
+  "x": "오늘부터 Claude의 아티팩트를 Mac·Windows 전용 데스크톱 앱으로 설치할 수 있다. 베타 기능인 “앱으로 설치”는 별도 아이콘과 창을"
+ },
+ {
+  "t": "UNG220Z 광모뎀 자격증명 자동 추출 도구",
+  "u": "https://github.com/Hut-hzf/ung220z-tool",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "security",
+   "dev-tools",
+   "language",
+   "open-source"
+  ],
+  "d": "2026-11-25",
+  "o": "Hut-hzf / ung220z-tool",
+  "x": "이 오픈소스 도구는 UNG220Z 및 다수의 광모뎀(중흥·불화·화웨이·구연)에서 현재 유효한 웹·텔넷·PPPoE·Wi-Fi·루트 비밀번호를 자동"
+ },
+ {
+  "t": "AI 릴리즈 노트가 환각하는 이유: Git 히스토리의 “왜 vs 무엇” 문제",
+  "u": "https://dev.to/necoz/why-your-ai-release-notes-hallucinate-the-why-vs-what-problem-in-git-history-5ch0",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "backend-data",
+   "hardware",
+   "release"
+  ],
+  "d": "2026-11-25",
+  "o": "Why Your AI Release Notes Hallucinate: The \"Why vs What\" Problem in Git History",
+  "x": "자동화된 릴리즈 파이프라인이 git diff를 그대로 LLM에 전달하면, 실제는 메모리 누수 패치인 커밋이 성능 개선으로 허위 서술될 수 있다."
+ },
+ {
+  "t": "GPT 6.2 Astra가 역사적 미스터리를 해결",
+  "u": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "research"
+  ],
+  "d": "2026-11-25",
+  "o": "GPT 6.2 Astra Solves a Historical Mystery",
+  "x": "GPT-6.2 Astra가 최소한의 프롬프트만으로 1808년 연대가 없는 스케치북의 창작자를 식별했다. 공개된 1차·2차 자료와 논문 아카이브의"
+ },
+ {
+  "t": "Check Point 보안 관리 서버에 대한 적극적 침입 캠페인",
+  "u": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "security"
+  ],
+  "d": "2026-11-25",
+  "o": "Active intrusion campaign against Check Point security management servers",
+  "x": "GreyNoise가 2026년 10월 17일부터 11월 2일 사이에 22개 조직을 대상으로 한 침입 캠페인을 발견했다. 공격자는 99개의 일회용"
+ },
+ {
+  "t": "Microduck 장애물 회피: Isaac Lab과 Newton을 활용한 Sim2Real 워크플로우",
+  "u": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "dev-tools",
+   "hardware"
+  ],
+  "d": "2026-11-25",
+  "o": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+  "x": "이 튜토리얼은 기존 Microduck 보행 정책을 고정한 채, ToF 센서를 이용해 별도의 회피 컨트롤러를 학습하는 방법을 제시한다. Isaac"
+ },
+ {
+  "t": "Claude Code로 배포하기 실전 가이드",
+  "u": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+  "m": "2026-11",
+  "s": "anthropic",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "d": "2026-11-25",
+  "o": "A practical guide to shipping with Claude Code",
+  "x": "PR을 열면 /ship 명령으로 Claude Code 에이전트가 후속 작업을 자동화한다. 코드 리뷰, PR 관리, 승인 에이전트 중 두 개는 베"
+ },
+ {
+  "t": "Astra로 먼 행성 찾기",
+  "u": "https://openai.com/index/searching-for-distant-planets-with-astra",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-coding",
+   "science"
+  ],
+  "d": "2026-11-25",
+  "o": "Searching for distant planets with Astra",
+  "x": "두 아마추어 천문학자가 Codex와 Astra를 활용해 공개 망원경 데이터에서 약 1900만 별을 분석하고 잠재적 외계행성을 발견했다. 이 결과"
+ },
+ {
+  "t": "Gemini가 골든스테이트 조직과 팬들에게 가져오는 변화",
+  "u": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "industry"
+  ],
+  "d": "2026-11-25",
+  "o": "How Gemini is changing the game for Golden State's organization and fans.",
+  "x": "구글은 골든스테이트 워리어스와 챈스 센터, 2026년 WNBA 챔피언 발키리스를 대상으로 Gemini를 공식 AI 어시스턴트 파트너 및 생성 A"
+ },
+ {
+  "t": "9가지 에이전트 게이트웨이",
+  "u": "https://dev.to/anthonymax/9-best-agent-gateways-1f21",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent"
+  ],
+  "d": "2026-11-25",
+  "o": "9 Best Agent Gateways",
+  "x": "이 글은 모델 제공자와 도구에 연결하는 에이전트 게이트웨이 9개를 비교한다. 각 게이트웨이는 자체 호스팅 여부, 라우팅, 재시도, 예산, 접근 "
+ },
+ {
+  "t": "Ask HN: Anthropic가 내 회사를 증류 혐의로 고소했습니다. 어떻게 증명하지?",
+  "u": "https://news.ycombinator.com/item?id=50630809",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "research",
+   "security",
+   "backend-data"
+  ],
+  "d": "2026-11-25",
+  "o": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+  "x": "해당 기업은 Anthropic API를 사용해 자체 모델을 훈련하지 않고, AI 설정 변경 시 자동 회귀 벤치마크만 수행한다고 주장한다. 현재 "
+ },
+ {
+  "t": "Microsoft, 사상 최대 정전 이후 ‘Code Red’ 선언, 내부 메모 공개",
+  "u": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "devops-infra"
+  ],
+  "d": "2026-11-25",
+  "o": "Microsoft declares 'Code Red' after historic outage, internal memos show"
+ },
+ {
+  "t": "Jetty Pro",
+  "u": "http://hypercritical.co/2026/11/23/jetty-pro",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-25"
+ },
+ {
   "t": "Postgres 논리 복제, 재시작 없이 켜기",
   "u": "https://dev.to/alexgeorgiev17/turning-on-postgres-logical-replication-without-a-restart-4b35",
   "m": "2026-11",

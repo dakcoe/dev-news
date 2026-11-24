@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-14T08:00:37+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 12,
-    "robots": 2,
-    "github": 1
-   },
-   "failures": [
-    {
-     "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://text.npr.org/nx-s1-6029408",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-14T16:00:43+09:00",
    "total": 15,
    "counts": {
@@ -513,6 +492,34 @@
      "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
      "source": "hackernews",
      "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-25T08:00:32+09:00",
+   "total": 20,
+   "counts": {
+    "robots": 1,
+    "dead": 1,
+    "short": 1,
+    "ok": 15,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://github.com/ItsNotRexed/Leonida/issues",
+     "source": "hackernews",
+     "reason": "dead"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=50630809",
+     "source": "hackernews",
+     "reason": "short"
     }
    ]
   }
