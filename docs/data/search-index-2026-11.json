@@ -1,5 +1,164 @@
 [
  {
+  "t": "Postgres 논리 복제, 재시작 없이 켜기",
+  "u": "https://dev.to/alexgeorgiev17/turning-on-postgres-logical-replication-without-a-restart-4b35",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "devops-infra",
+   "release"
+  ],
+  "d": "2026-11-25",
+  "o": "Turning on Postgres logical replication without a restart",
+  "x": "PostgreSQL 19부터 wal_level이 replica로 설정돼 있어도 논리 복제 슬롯을 생성하면 서버를 재시작하지 않고도 논리 복제가 "
+ },
+ {
+  "t": "노트북이 첫 번째 환경: PostgreSQL 기반 AlloyDB 실행",
+  "u": "https://dev.to/gde/your-laptop-is-the-first-environment-building-on-postgresql-running-on-alloydb-4b9a",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "d": "2026-11-25",
+  "o": "Your Laptop Is the First Environment: Building on PostgreSQL, Running on AlloyDB",
+  "x": "이 글은 개발자가 로컬 노트북에서 PostgreSQL 18을 Docker로 실행하고, 동일한 스키마와 연결 문자열 패턴을 사용해 AlloyDB "
+ },
+ {
+  "t": "datasette-charts 0.1a0",
+  "u": "https://simonwillison.net/2026/Nov/23/datasette-charts/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "d": "2026-11-25",
+  "x": "새 플러그인은 Datasette의 테이블이나 임의의 SQL 쿼리에 대해 전체 행을 고려한 차트를 생성한다. 기존 플러그인과 달리 전체 결과 집합"
+ },
+ {
+  "t": "XCL – Xbox Series X|S → Windows 호환 레이어",
+  "u": "https://github.com/ivall/xcl",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-25",
+  "o": "ivall / xcl",
+  "x": "XCL은 Xbox Series X|S 게임을 Windows PC에서 실행할 수 있게 하는 호환 레이어다. CPU 에뮬레이션 없이 게임의 x64 "
+ },
+ {
+  "t": "목적마다, 상품마다 늘던 모델을 하나로: 금융 도메인에 멀티태스크 학습 적용하기",
+  "u": "https://toss.tech/article/multi-task-learning-in-finance",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [],
+  "d": "2026-11-25",
+  "x": "토스는 마케팅과 상품 예측에 사용하던 수백 개의 트리 모델을 하나의 멀티태스크 학습 모델로 통합했다. 통합 모델은 새로운 과제는 출력층 추가만으"
+ },
+ {
+  "t": "Quad9, 프랑스에서 DNS 서비스 중단",
+  "u": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "backend-data"
+  ],
+  "d": "2026-11-25",
+  "o": "Quad9 pulled their DNS service from France",
+  "x": "Quad9는 2026년 11월 24일 09:00 CET에 프랑스 사용자 대상 DNS 서비스를 전면 중단한다. 프랑스 법원이 beIn의 도메인 차"
+ },
+ {
+  "t": "datasette-agent 0.7a1",
+  "u": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "release",
+   "showcase"
+  ],
+  "d": "2026-11-25",
+  "x": "채팅 세션에서 iframe 사이드 패널을 열 수 있게 되었으며, 해당 패널이 페이지를 이동할 수 있다. 이번 버전은 프래그먼트 해시를 이용한 탐"
+ },
+ {
+  "t": "Marvisak / VIctory",
+  "u": "https://github.com/Marvisak/VIctory",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "hardware",
+   "open-source"
+  ],
+  "d": "2026-11-25",
+  "x": "VIctory는 사용자가 제공한 GTA VI (Xbox Series X|S) 파일을 Windows에서 네이티브로 실행하도록 하는 오픈소스 프로젝"
+ },
+ {
+  "t": "목적에 따라 잊어버리는 메모리 구축: 90일 후 오래됨, 365일 후 사라짐, 영구 고정",
+  "u": "https://dev.to/krish_verma_77e28d3fd63ca/how-i-built-memory-that-forgets-on-purpose-90-days-to-stale-365-to-gone-and-a-pin-that-never-12gk",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "hardware",
+   "showcase"
+  ],
+  "d": "2026-11-25",
+  "o": "How I built memory that forgets on purpose: 90 days to stale, 365 to gone, and a pin that never expires",
+  "x": "Ankita AI는 사용자 정보를 기억하는 데스크톱 AI 비서이다. 개발자는 기억이 영원히 남는 문제를 해결하기 위해 90일과 365일 두 가지"
+ },
+ {
+  "t": "LLM 에이전트는 여러분이 아닌 모회사를 위해 일한다",
+  "u": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "showcase"
+  ],
+  "d": "2026-11-25",
+  "o": "LLM agents work for their parent companies, not for you",
+  "x": "작성자는 인스타그램 릴에서 음악을 발견하고 Bandcamp에서 구매하려는 자동화 스킬을 Claude Code로 만들었다가 Bandcamp 검색 "
+ },
+ {
+  "t": "2035가 일찍 왔다",
+  "u": "https://fzakaria.com/2026/11/23/2035-came-early",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "web",
+   "language"
+  ],
+  "d": "2026-11-25",
+  "o": "2035 Came Early",
+  "x": "trynix.dev가 브라우저에서 GUI 프로그램을 실행한다. 30만 개 이상의 Nix 패키지를 웹에서 직접 구동할 수 있다. QEMU 기반 에"
+ },
+ {
+  "t": "에이전트는 규칙을 어기지 않는다. 규칙은 적용되지 않았다",
+  "u": "https://dev.to/tokenlat/your-agent-isnt-breaking-the-rules-your-rules-were-never-enforced-2ngo",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "d": "2026-11-25",
+  "o": "Your agent isn't breaking the rules. Your rules were never enforced."
+ },
+ {
   "t": "GLM-5.4: 루프 트랜스포머를 활용한 일반화 코딩",
   "u": "https://simonwillison.net/2026/Nov/23/glm-54/",
   "m": "2026-11",

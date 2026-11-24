@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-14T00:00:31+09:00",
-   "total": 16,
-   "counts": {
-    "ok": 10,
-    "blocked": 1,
-    "robots": 1,
-    "github": 4
-   },
-   "failures": [
-    {
-     "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://twitter.com/MSFT365Status/status/2121079061774491735",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-14T08:00:37+09:00",
    "total": 15,
    "counts": {
@@ -517,6 +495,22 @@
     },
     {
      "url": "https://www.science.org/doi/10.1126/scisignal.aef1375",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-25T00:00:32+09:00",
+   "total": 15,
+   "counts": {
+    "github": 2,
+    "ok": 12,
+    "blocked": 1
+   },
+   "failures": [
+    {
+     "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
      "source": "hackernews",
      "reason": "blocked"
     }

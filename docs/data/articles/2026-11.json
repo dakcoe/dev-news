@@ -1,5 +1,390 @@
 [
  {
+  "title": "Turning on Postgres logical replication without a restart",
+  "url": "https://dev.to/alexgeorgiev17/turning-on-postgres-logical-replication-without-a-restart-4b35",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1795518000.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/alexgeorgiev17/turning-on-postgres-logical-replication-without-a-restart-4b35"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbcza9wwu7lthgsxhwppv.png",
+  "link_status": "ok",
+  "ko_title": "Postgres 논리 복제, 재시작 없이 켜기",
+  "summary": "PostgreSQL 19부터 wal_level이 replica로 설정돼 있어도 논리 복제 슬롯을 생성하면 서버를 재시작하지 않고도 논리 복제가 활성화된다. 새로운 effective_wal_level 파라미터가 logical 값을 반환해 실제 복제 모드가 필요할 때만 전환한다. 기존 18버전에서는 동일 설정으로 오류가 발생했다. 이 동작은 GA 이미지에서 확인되었다.",
+  "why": "PostgreSQL 19로 업그레이드하면 트래픽이 있는 서버에서 논리 복제를 켤 때 재시작이 사라진다. 기존 18버전에서는 wal_level 설정 변경 후 재시작이 필수였으나, 이제 슬롯 생성만으로 즉시 활성화된다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra",
+   "release"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "Your Laptop Is the First Environment: Building on PostgreSQL, Running on AlloyDB",
+  "url": "https://dev.to/gde/your-laptop-is-the-first-environment-building-on-postgresql-running-on-alloydb-4b9a",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 8,
+  "comments": 0,
+  "published_at": 1795526912.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gde/your-laptop-is-the-first-environment-building-on-postgresql-running-on-alloydb-4b9a"
+  ],
+  "cross_source_count": 1,
+  "score": 67,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmtkka8qddkrnh9rgoc96.jpg",
+  "link_status": "ok",
+  "ko_title": "노트북이 첫 번째 환경: PostgreSQL 기반 AlloyDB 실행",
+  "summary": "이 글은 개발자가 로컬 노트북에서 PostgreSQL 18을 Docker로 실행하고, 동일한 스키마와 연결 문자열 패턴을 사용해 AlloyDB Express와 전체 AlloyDB로 순차 이동하는 워크플로우를 제시한다. 환경 변수 하나만 바꾸면 단계별로 전환할 수 있도록 설계했으며, 버전 불일치가 버그를 일으킬 수 있음을 강조한다.",
+  "why": "로컬 PostgreSQL 18과 AlloyDB Express의 버전 불일치가 은밀한 버그를 유발하므로 버전 정합성이 핵심이다. 환경 변수 하나만 바꾸는 구조를 유지해야 단계 전환 시 코드 수정 없이 운영할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "datasette-charts 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/23/datasette-charts/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795394240.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/23/datasette-charts/"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://static.simonwillison.net/static/2026/datasette-charts-0.1a0.webp",
+  "link_status": "ok",
+  "ko_title": "datasette-charts 0.1a0",
+  "summary": "새 플러그인은 Datasette의 테이블이나 임의의 SQL 쿼리에 대해 전체 행을 고려한 차트를 생성한다. 기존 플러그인과 달리 전체 결과 집합을 GROUP BY와 윈도우 함수로 집계해 최대 5,000행까지 시각화한다. 샘플링을 이용해 대규모 테이블에서도 차트 제안을 제공한다. 현재 알파 버전이며 Datasette Lite에서 체험 가능하다.",
+  "why": "기존 datasette-vega가 현재 페이지 100행만 차트에 반영했다면, 이번 플러그인은 전체 결과 집합을 집계해 최대 5,000행까지 시각화한다. 대규모 테이블에서는 샘플링으로 차트를 제안하므로 전체 데이터를 직접 계산하지 않아도 된다. 현재 알파 버전이므로 프로덕션 환경 도입 전 동작 안정성을 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "ivall / xcl",
+  "url": "https://github.com/ivall/xcl",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 5678,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/ivall/xcl"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 5678,
+  "score": 62,
+  "image": "https://opengraph.githubassets.com/1/ivall/xcl",
+  "link_status": null,
+  "ko_title": "XCL – Xbox Series X|S → Windows 호환 레이어",
+  "summary": "XCL은 Xbox Series X|S 게임을 Windows PC에서 실행할 수 있게 하는 호환 레이어다. CPU 에뮬레이션 없이 게임의 x64 코드를 네이티브로 실행하고, 콘솔 전용 시스템 라이브러리를 자체 구현한다. 현재 Minecraft Preview, Unicorn Overlord, Fortnite, XDefiant 등 몇몇 게임이 완전 플레이 가능하며, 새로운 리테일 게임도 초기 구동이 가능하다.",
+  "why": "CPU 에뮬레이션 없이 x64 코드를 네이티브로 실행하므로 기존 호환 레이어 대비 성능 손실이 적다. 콘솔 전용 시스템 라이브러리를 자체 구현해야 하므로 해당 게임이 정상 구동되는지 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "목적마다, 상품마다 늘던 모델을 하나로: 금융 도메인에 멀티태스크 학습 적용하기",
+  "url": "https://toss.tech/article/multi-task-learning-in-finance",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795402920.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/multi-task-learning-in-finance"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png",
+  "link_status": "ok",
+  "ko_title": "목적마다, 상품마다 늘던 모델을 하나로: 금융 도메인에 멀티태스크 학습 적용하기",
+  "summary": "토스는 마케팅과 상품 예측에 사용하던 수백 개의 트리 모델을 하나의 멀티태스크 학습 모델로 통합했다. 통합 모델은 새로운 과제는 출력층 추가만으로, 새로운 상품은 입력 정보만으로 확장 가능하도록 설계되었다. 이를 통해 운영 비용·재학습 부담·실험 비용을 크게 줄이고, 데이터가 적은 과제에도 공유 표현을 활용할 수 있게 되었다.",
+  "why": "신규 예측 과제는 출력층 추가만으로, 신규 상품은 입력 정보만으로 기존 모델에 바로 반영할 수 있다. 모델 수만큼 불어나던 재학습과 실험 비용이 줄어 반복적인 운영 부담에서 벗어날 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "Quad9 pulled their DNS service from France",
+  "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/",
+  "source": "hackernews",
+  "upvotes": 90,
+  "comments": 28,
+  "published_at": 1795509194,
+  "discussion": "https://news.ycombinator.com/item?id=50625384",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://quad9.net/news/blog/quad9-service-deactivation-in-france/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://quad9.net/images/cover_c2f081e020.png",
+  "link_status": "ok",
+  "ko_title": "Quad9, 프랑스에서 DNS 서비스 중단",
+  "summary": "Quad9는 2026년 11월 24일 09:00 CET에 프랑스 사용자 대상 DNS 서비스를 전면 중단한다. 프랑스 법원이 beIn의 도메인 차단 요구를 인정하고, 미준수 시 벌금이 부과될 위험 때문에 이 결정을 내렸다.",
+  "why": "프랑스 네트워크에서 Quad9 DNS를 쓰는 경우 2026년 11월 24일 09:00 CET부터 모든 쿼리가 거부된다. 해당 시간까지 대체 DNS 서버로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "datasette-agent 0.7a1",
+  "url": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795491957.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/24/datasette-agent/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-agent 0.7a1",
+  "summary": "채팅 세션에서 iframe 사이드 패널을 열 수 있게 되었으며, 해당 패널이 페이지를 이동할 수 있다. 이번 버전은 프래그먼트 해시를 이용한 탐색을 개선해 상태 변화를 반영하는 다른 Datasette 플러그인과의 연동을 깊게 한다. 이 개선은 datasette-charts 0.2a0 릴리즈와 관련된 버그를 수정하기 위해 제작되었다.",
+  "why": "Datasette 플러그인을 백엔드 서비스로 구성할 때 iframe 패널 내 페이지 이동이 지원된다. 프래그먼트 해시 기반 탐색이 개선되어 상태 변화가 있는 플러그인과의 연동이 깊어진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "release",
+   "showcase"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "Marvisak / VIctory",
+  "url": "https://github.com/Marvisak/VIctory",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 3756,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Marvisak/VIctory"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 3756,
+  "score": 48,
+  "image": "https://opengraph.githubassets.com/1/Marvisak/VIctory",
+  "link_status": null,
+  "ko_title": "Marvisak / VIctory",
+  "summary": "VIctory는 사용자가 제공한 GTA VI (Xbox Series X|S) 파일을 Windows에서 네이티브로 실행하도록 하는 오픈소스 프로젝트다. 현재 부팅과 메뉴, 인트로 영상까지는 정상 동작하지만, 월드 로딩 후 첫 미션 인트로에서 렌더링이 실패한다. 테스트는 Windows 11·AMD RX 6700 XT 한 대에서 진행됐으며, 실제 GPU 사용 시 드라이버가 리셋될 수 있다.",
+  "why": "GTA VI의 x86-64 코드를 그대로 실행하는 방식이라 기존 에뮬레이터와 다르다. 실제 GPU에서 월드 로딩 시 드라이버 리셋이 발생할 수 있다. 진단용 소프트웨어 렌더링 옵션을 써야 추가 확인이 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "How I built memory that forgets on purpose: 90 days to stale, 365 to gone, and a pin that never expires",
+  "url": "https://dev.to/krish_verma_77e28d3fd63ca/how-i-built-memory-that-forgets-on-purpose-90-days-to-stale-365-to-gone-and-a-pin-that-never-12gk",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 0,
+  "comments": 8,
+  "published_at": 1795516126.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/krish_verma_77e28d3fd63ca/how-i-built-memory-that-forgets-on-purpose-90-days-to-stale-365-to-gone-and-a-pin-that-never-12gk"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fadlkmlqzle7fojksfmpm.png",
+  "link_status": "ok",
+  "ko_title": "목적에 따라 잊어버리는 메모리 구축: 90일 후 오래됨, 365일 후 사라짐, 영구 고정",
+  "summary": "Ankita AI는 사용자 정보를 기억하는 데스크톱 AI 비서이다. 개발자는 기억이 영원히 남는 문제를 해결하기 위해 90일과 365일 두 가지 만료 기간을 설정하고, 삭제는 하지 않도록 설계했다. 설정값은 환경 변수로 조정 가능하며, 오래된 정보는 기본 검색에서 제외되지만 명시적으로 요청하면 복구할 수 있다. 코드 위치와 동작 방식이 본문에 제시된다.",
+  "why": "AI 비서의 기억 관리에 만료 기간을 도입해 오래된 정보가 최신 사실과 같은 권위로 처리되는 문제를 막을 수 있다. 삭제 대신 검색 결과에서 제외하는 방식이라 명시적 요청 시 복구가 가능하며, 환경 변수로 기간을 조정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "LLM agents work for their parent companies, not for you",
+  "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+  "source": "hackernews",
+  "upvotes": 352,
+  "comments": 129,
+  "published_at": 1795524015,
+  "discussion": "https://news.ycombinator.com/item?id=50627340",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://michaelharley.net/assets/images/open-graph-image.png",
+  "link_status": "ok",
+  "ko_title": "LLM 에이전트는 여러분이 아닌 모회사를 위해 일한다",
+  "summary": "작성자는 인스타그램 릴에서 음악을 발견하고 Bandcamp에서 구매하려는 자동화 스킬을 Claude Code로 만들었다가 Bandcamp 검색 API에 새로운 챌린지가 추가돼 동작이 중단되었다는 내용이다.",
+  "why": "외부 API 정책 변경으로 자동화 스크립트가 중단될 수 있다. LLM 에이전트를 업무에 도입할 때 제3자 서비스 의존도를 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data",
+   "showcase"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "2035 Came Early",
+  "url": "https://fzakaria.com/2026/11/23/2035-came-early",
+  "source": "hackernews",
+  "upvotes": 509,
+  "comments": 196,
+  "published_at": 1795501833,
+  "discussion": "https://news.ycombinator.com/item?id=50624497",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://fzakaria.com/2026/11/23/2035-came-early"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "2035가 일찍 왔다",
+  "summary": "trynix.dev가 브라우저에서 GUI 프로그램을 실행한다. 30만 개 이상의 Nix 패키지를 웹에서 직접 구동할 수 있다. QEMU 기반 에뮬레이션 속도가 느려 실용성은 낮다. unkernel.dev는 Linux를 WebAssembly로 컴파일해 커널은 wasm 속도로, 사용자 프로그램만 에뮬레이션한다.",
+  "why": "QEMU 기반 에뮬레이션은 속도가 느려 실용성이 낮다. unkernel은 커널을 WebAssembly로 컴파일해 사용자 프로그램만 에뮬레이션한다. 이로써 브라우저에서 Nix 패키지를 실행하는 방식의 성능 한계가 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
+  "title": "Your agent isn't breaking the rules. Your rules were never enforced.",
+  "url": "https://dev.to/tokenlat/your-agent-isnt-breaking-the-rules-your-rules-were-never-enforced-2ngo",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 7,
+  "comments": 3,
+  "published_at": 1795504334.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/tokenlat/your-agent-isnt-breaking-the-rules-your-rules-were-never-enforced-2ngo"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fawigmqj65sjl63zfacr2.jpg",
+  "link_status": "ok",
+  "ko_title": "에이전트는 규칙을 어기지 않는다. 규칙은 적용되지 않았다",
+  "summary": "",
+  "why": "프롬프트 문장은 모델의 선호를 표현할 뿐 실제 실행을 강제하지 않는다. 권한 검증과 상태 기록은 코드의 결정적 분기로 구현해야 한다. 에이전트 시스템의 보안과 감사 추적 신뢰도가 달라진다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-25T00:00:01.765778+09:00",
+  "batch_label": "11월 25일 00:00"
+ },
+ {
   "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
   "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
   "source": "rss",
