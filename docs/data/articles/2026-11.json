@@ -1,5 +1,566 @@
 [
  {
+  "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+  "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795477249.0,
+  "merged_sources": [
+   "Simon Willison",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/23/glm-54/",
+   "https://z.ai/blog/glm-5.4"
+  ],
+  "cross_source_count": 2,
+  "score": 68,
+  "image": "https://static.simonwillison.net/static/2026/glm-family-4.webp",
+  "link_status": "ok",
+  "ko_title": "GLM-5.4: 루프 트랜스포머를 활용한 일반화 코딩",
+  "summary": "GLM-5.4가 Z.ai에서 공개됐으며, 가중치를 공유하는 레이어 그룹을 여러 번 반복 실행하는 루프 트랜스포머 구조를 도입했다. 이는 파라미터 수는 그대로면서 네트워크 깊이를 늘려 코딩 작업에서 추론 품질을 향상시킨다. 모델은 현재 오픈 가중치가 없으며, 코딩 플랜 구독을 통해 API로 접근할 수 있다.",
+  "why": "오픈 가중치가 없어 Z.ai 코딩 플랜 구독이 필수다. 기존 API 키로는 접근이 불가하므로 별도 가입 절차를 거쳐야 한다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+  "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795392000.0,
+  "origin_url": "https://claude.com/blog/zero-data-retention-with-enterprise-frontier-safeguards",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/zero-data-retention-with-enterprise-frontier-safeguards",
+   "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards"
+  ],
+  "cross_source_count": 1,
+  "score": 62,
+  "image": "https://claude.com/ko/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "Enterprise Frontier Safeguards 베타 출시 – 제로 데이터 보존",
+  "summary": "Anthropic이 기업용 보안 기능인 Enterprise Frontier Safeguards(EFS)를 베타 버전으로 공개했다. EFS는 고도화된 오용 탐지를 제공하면서도 기업 데이터는 Anthropic이나 클라우드 제공자가 보관하지 않는다. 현재 포춘 100 기업 중 1/4과 의료·금융·법률 등 규제가 엄격한 분야의 기업들이 프라이빗 베타에 참여하고 있다.",
+  "why": "Anthropic의 오용 탐지 기능을 쓰면서도 기업 데이터가 외부에 남지 않는 구조가 생겼다. 데이터 주권을 유지해야 하는 환경에서 프런티어 모델 도입의 규제 장벽이 낮아진다.",
+  "relevance": "게재",
+  "kind": "제품",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-safety",
+   "devops-infra",
+   "industry"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+  "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+  "source": "hackernews",
+  "upvotes": 373,
+  "comments": 182,
+  "published_at": 1795473149,
+  "discussion": "https://news.ycombinator.com/item?id=50620349",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://stalw.art/blog/microsoft-exchange-replacement/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://stalw.art/og/blog/microsoft-exchange-replacement.png",
+  "link_status": "ok",
+  "ko_title": "Stalwart, 이제 Microsoft Exchange와 바로 교체 가능",
+  "summary": "Stalwart 1.2.0이 출시돼 MAPI over HTTP, EWS, Exchange ActiveSync, Autodiscover 등 Exchange 클라이언트 프로토콜을 지원한다. Outlook·Apple Mail·모바일 메일 앱이 기존처럼 연결해 메일·캘린더·연락처 등을 한 계정에서 사용할 수 있다. 이 기능은 AGPL 라이선스의 오픈소스 Community edition에 포함된다.",
+  "why": "Outlook과 모바일 메일 앱이 기존 Exchange 서버처럼 Stalwart에 바로 연결된다. Exchange 2016과 2019는 2025년 10월 14일부로 지원이 종료됐다. 자체 구축 환경에서 Exchange 클라이언트 호환성을 유지하면서 오픈소스로 전환할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "datasette-charts 0.2a0",
+  "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795494269.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/24/datasette-charts/"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-charts 0.2a0",
+  "summary": "새 차트 플러그인이 Datasette Agent와 통합돼 채팅으로 차트를 요청하면 자동으로 생성한다. 플러그인 데모와 GitHub 로그인으로 직접 체험할 수 있다.",
+  "why": "Datasette Agent에서 채팅으로 차트를 요청하면 자동으로 생성된다. 데이터 탐색 시 별도 차트 도구를 띄울 필요 없이 에이전트 대화만으로 시각화를 만들 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "I made a product video without opening a video editor: Chrome DevTools Protocol, a local AI voice and ffmpeg",
+  "url": "https://dev.to/moonjikwang/i-made-a-product-video-without-opening-a-video-editor-chrome-devtools-protocol-a-local-ai-voice-19ng",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 10,
+  "published_at": 1795482145.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/moonjikwang/i-made-a-product-video-without-opening-a-video-editor-chrome-devtools-protocol-a-local-ai-voice-19ng"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9t64eeabzw2bf2aaoe8h.png",
+  "link_status": "ok",
+  "ko_title": "비디오 편집기 없이 만든 제품 영상: Chrome DevTools Protocol, 로컬 AI 음성 및 ffmpeg",
+  "summary": "개발자는 오픈소스 리버스 프록시 Corvus의 제품 영상을 영상 편집 없이 자동 생성했다. Docker Compose와 가짜 백엔드, Python 트래픽 생성기로 데모 인스턴스를 구축하고, Chrome DevTools Protocol을 이용해 헤드리스 Chrome을 제어해 화면을 녹화했다. 로컬 AI 음성 합성 및 ffmpeg로 영상과 음성을 결합해 Windows 노트북 하나에서 비용 없이 완성했다.",
+  "why": "Node 22 내장 fetch와 WebSocket만으로 헤드리스 Chrome을 제어할 수 있다. 영상 편집기나 별도 녹화 도구 없이 스크립트로 데모 영상을 자동 생성할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "backend-data",
+   "devops-infra",
+   "language",
+   "open-source",
+   "showcase"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+  "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+  "source": "hackernews",
+  "upvotes": 210,
+  "comments": 61,
+  "published_at": 1795487222,
+  "discussion": "https://news.ycombinator.com/item?id=50622774",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription"
+  ],
+  "cross_source_count": 1,
+  "score": 58,
+  "image": "https://www.governor.ny.gov/sites/default/files/styles/cover_image_660x400_/public/thumbnails/image/cars.cr_.jpg?h=b5f6a62e&itok=FV7N-hBe",
+  "link_status": "ok",
+  "ko_title": "뉴욕, 자동차 구독·구매후 비용 금지",
+  "summary": "뉴욕 주가 자동차 제조·딜러가 내장 기능에 대해 구독료나 구매후 추가 비용을 부과하는 것을 금지하는 법안을 통과시켰다. 해당 법은 히터 시트·고급 내비게이션·핸즈프리 운전·엔터테인먼트 등 사전 설치된 하드웨어를 이용한 기능에 대한 지속 비용이 없을 경우 비용 청구를 금지한다. 기존에 불법적인 정액 요금을 부과받던 소비자들에게 환불 및 비용 절감 효과가 기대된다.",
+  "why": "차량 내장 하드웨어를 쓰는 기능에 대한 구독료 모델이 뉴욕에서 법적으로 막혔다. 이 지역의 차량 관련 서비스나 커넥티드 카 API를 다룰 때, 해당 기능에 대한 반복 결제 로직을 구현하거나 유지할 필요가 없어진다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "industry"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "4lwayz / portwatch-vi",
+  "url": "https://github.com/4lwayz/portwatch-vi",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 714,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/4lwayz/portwatch-vi"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 714,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/4lwayz/portwatch-vi",
+  "link_status": null,
+  "ko_title": "portwatch-vi — GTA VI PC 이식 진행 상황을 추적하는 정적 사이트",
+  "summary": "이 GitHub 저장소는 GTA VI 누출된 Xbox Series 빌드를 PC로 재컴파일·에뮬레이션·포팅하려는 커뮤니티 시도를 실시간으로 추적한다. 3시간마다 스카우트가 데이터를 갱신하고, 진행 바·카운트다운·리더보드 등으로 시각화한다. GitHub Pages와 Actions를 이용해 자동 배포 및 인덱싱이 가능하다.",
+  "why": "GitHub Actions와 Pages를 활용해 정적 사이트를 자동 배포하는 구조를 참고할 수 있다. 스카우트 워크플로가 주기적으로 데이터를 갱신하고 IndexNow로 검색 인덱싱을 처리한다. 자체 프로젝트에서 유사한 자동화 파이프라인을 구성할 때 설정을 적용할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "The enterprise guide to securing coding agents",
+  "url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+  "source": "anthropic",
+  "feed": "Claude 블로그",
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795392000.0,
+  "origin_url": "https://claude.com/blog/enterprise-guide-to-securing-coding-agents",
+  "merged_sources": [
+   "Claude 블로그"
+  ],
+  "merged_urls": [
+   "https://claude.com/blog/enterprise-guide-to-securing-coding-agents",
+   "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://claude.com/ko/resources/articles/enterprise-guide-to-securing-coding-agents/opengraph-image/og",
+  "link_status": "ok",
+  "ko_title": "엔터프라이즈를 위한 코딩 에이전트 보안 가이드",
+  "summary": "클로드 코드를 전사적으로 도입한 기업들이 겪는 보안 위험을 정리하고, 프롬프트 주입·권한 남용 등 네 가지 주요 위험과 이를 완화하기 위한 권한 검증·제한된 환경 등 방어 계층을 제시한다. 가이드에서는 AI 공급자를 SaaS 체크리스트와 동일하게 평가하도록 여섯 가지 질문을 제시한다.",
+  "why": "클로드 코드를 전사적으로 도입할 때 SaaS 체크리스트와 동일한 기준으로 공급자를 평가해야 한다. 프롬프트 주입과 권한 남용을 막기 위해 권한 검증과 제한된 환경을 계층적으로 구성해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Richpanel helps companies automate 50% of support in 30 days",
+  "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795420800.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/richpanel-ai-customer-support"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4aVhQ1EicxWg7i6lIkBrLQ/cdabc180f7e5f780dbb43c302e7163d8/richpanel-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Richpanel, 기업의 지원 업무를 30일 안에 50% 자동화",
+  "summary": "Richpanel은 GPT-6 Astra·Sol과 GPT-6 Luna를 활용해 AI 지원 에이전트와 AI 매니저(Boss AI)를 제공한다. Boss AI는 도구와 절차를 자동으로 설정해 엔지니어 없이도 에이전트를 배포할 수 있게 한다. 이를 통해 기업은 기존 인력 대비 빠르게 지원 업무의 절반을 자동화한다.",
+  "why": "Boss AI가 도구 연결과 절차 정의를 자동화해 엔지니어 개입 없이 에이전트를 배포할 수 있다. 지원 자동화 도입 시 전담 엔지니어 확보가 어려운 환경에서 즉시 적용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Verify on the Surface, Not the Success Message",
+  "url": "https://dev.to/eliashivemind/verify-on-the-surface-not-the-success-message-1b37",
+  "source": "devto",
+  "tag": "devops",
+  "upvotes": 0,
+  "comments": 3,
+  "published_at": 1795484379.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/eliashivemind/verify-on-the-surface-not-the-success-message-1b37"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4nbmpx27yxk4qmpi0ih6.png",
+  "link_status": "ok",
+  "ko_title": "Surface에서 검증하고 성공 메시지는 무시하기",
+  "summary": "Obsidian 플러그인 1.6.0 버전이 릴리스될 때 자동 검증은 모두 정상으로 표시됐지만, 실제 파일을 확인했을 때 README가 이전 내용으로 되돌아가는 문제가 발견됐다. 이를 방지하기 위해 세 단계의 검증 레이어를 도입했으며, 각 레이어는 서로 다른 오류를 잡아낸다.",
+  "why": "자동화 테스트가 성공을 보여줘도 실제 파일 상태는 달라질 수 있다. 패치를 적용할 때 충돌을 무시하거나 강제 처리하면 문서 내용이 조용히 사라진다. 출력 결과물을 직접 읽어 검증하는 습관이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "release"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "How to build and maintain an agentic evaluation",
+  "url": "https://huggingface.co/blog/agentic-evals",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795392000.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/agentic-evals"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": "https://huggingface.co/blog/assets/agentic-evals/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "에이전시 평가를 구축하고 유지하는 방법",
+  "summary": "Hugging Face 허브에 약 3,500개의 평가 리더보드와 17,000개의 평가 데이터셋이 집계돼 최근 16배 성장했으며, 에이전시 추상화를 지원한다. 가이드에서는 평가의 세 단계 변천사와 에이전시 평가를 수행하는 8단계 절차, 벤치마크 오류 탐지 및 수정 방법을 제시한다.",
+  "why": "에이전시 추상화 지원으로 에이전트 작업 기록을 검토 가능한 형태로 저장할 수 있다. 벤치마크 오류 탐지 및 수정 절차가 명시되어 있어 평가 신뢰도를 검증하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Generate shell completions from the binary, with no new dependency",
+  "url": "https://dev.to/prascli/generate-shell-completions-from-the-binary-with-no-new-dependency-5457",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1795490223.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/prascli/generate-shell-completions-from-the-binary-with-no-new-dependency-5457"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fblog.qansa.web.id%2Fcomics%2Fshell-completions-from-the-binary-cover.png%3Fx%3D1795490229",
+  "link_status": "ok",
+  "ko_title": "바이너리만으로 쉘 자동완성 생성, 새 의존성 없이",
+  "summary": "broom에 --completions 옵션을 추가해 bash·zsh·fish용 자동완성 스크립트를 출력한다. 의존성을 추가하지 않고 Rust 단일 바이너리로 구현했다. 출력된 스크립트를 사용자는 셸 자동완성 디렉터리에 리다이렉트해 설치한다.",
+  "why": "broom을 쓰는 경우 --completions 옵션으로 셸 자동완성 스크립트를 생성할 수 있다. bash, zsh, fish 세 셸만 지원한다. 스크립트를 셸 자동완성 디렉터리에 리다이렉트해 설치해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Perplexity and Intelligence",
+  "url": "https://openai.com/index/perplexity-and-intelligence",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795305600.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/index/perplexity-and-intelligence"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/6rIIhCRSKrhIfe385Onmcz/aca2d190553c62fd5d49efb5d5ce1eb6/perplexity-and-intelligence-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Perplexity와 Intelligence",
+  "summary": "OpenAI는 대규모 데이터 압축기(예측기) 훈련의 진행 상황을 퍼플렉시티(교차 엔트로피 손실) 측정값으로 공개했다. 이는 모델 개발자 간 비교와 산업 전반의 안전 기준 마련을 위한 투명성을 높이기 위한 첫 단계이다. 퍼플렉시티를 핵심 지표로 삼아 AI 발전 속도를 추적하고 공유 과학적 기반을 구축하려는 의도가 강조된다.",
+  "why": "퍼플렉시티를 표준 지표로 삼아 모델 간 비교와 안전 기준을 공유하려는 시도다. AI 개발 속도를 추적하는 공통 과학적 기반이 생기는 셈이다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "hardware"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Crowdwide Day 33: I Tried Building Crowdwide AI... And It Went Wrong 😭",
+  "url": "https://dev.to/puneetkumar2010/crowdwide-day-33-i-tried-building-crowdwide-ai-and-it-went-wrong-5d6i",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 16,
+  "comments": 6,
+  "published_at": 1795491779.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/puneetkumar2010/crowdwide-day-33-i-tried-building-crowdwide-ai-and-it-went-wrong-5d6i"
+  ],
+  "cross_source_count": 1,
+  "score": 37,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fd2nqd0gt9mhcbr0p5y1z.webp",
+  "link_status": "ok",
+  "ko_title": "Crowdwide Day 33: Crowdwide AI를 만들었지만 실패했다",
+  "summary": "개발자는 소셜 미디어 플랫폼 Crowdwide에 AI 기능을 통합하려 시도했다. 로컬에서는 PyTorch와 무료 언어 모델을 사용해 동작했지만, 배포 시 메모리 오류가 발생했다. 캐시 방식으로 모델을 로드했지만 결과가 많이 환각했다. 더 큰 모델을 로컬에서 테스트해 성공했지만 배포는 아직 어려움이 있다.",
+  "why": "로컬에서 검증된 AI 기능이 배포 환경에서 메모리 오류로 막히는 사례다. 무료 플랜에서 PyTorch 기반 모델을 돌릴 때 같은 문제를 피하려면 배포 전 메모리 한계를 먼저 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "showcase"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "Apple removed my open-source app from EU App Stores after 9 years",
+  "url": "https://github.com/glushchenko/fsnotes/discussions/2056",
+  "source": "hackernews",
+  "upvotes": 557,
+  "comments": 126,
+  "published_at": 1795459690,
+  "discussion": "https://news.ycombinator.com/item?id=50616933",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/glushchenko/fsnotes/discussions/2056"
+  ],
+  "cross_source_count": 1,
+  "score": 33,
+  "image": "https://opengraph.githubassets.com/6ffea309f85ed97869c3b78c189a48d8d64ff8c2f775724d1730980d0bf84ad9/glushchenko/fsnotes/discussions/2056",
+  "link_status": "ok",
+  "ko_title": "Apple, 9년 된 오픈소스 앱을 EU 앱스토어에서 삭제",
+  "summary": "독립 개발자가 9년간 유지해 온 메모 앱 FSNotes가 EU 디지털 서비스법 관련 서류를 제출했음에도 불구하고 Apple에 의해 유럽 앱스토어 전역에서 삭제되었습니다. 개발자는 두 차례 지원 요청을 했지만 답변을 받지 못했으며, 매출 정산도 지연되고 있습니다. 현재 앱은 순위와 검색 가시성을 잃고 회복이 어려운 상황입니다.",
+  "why": "EU 앱스토어에서 앱이 삭제되면 순위와 검색 가시성이 즉시 사라진다. 복원 이후에도 그 손실을 회복할 수단이 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "industry"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "zed-industries / gpui",
+  "url": "https://github.com/zed-industries/gpui",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 480,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift",
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/zed-industries/gpui"
+  ],
+  "cross_source_count": 2,
+  "delta_stars": 480,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/1/zed-industries/gpui",
+  "link_status": null,
+  "ko_title": "zed-industries / gpui",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
+  "title": "VP ≠ VNP over Every Field",
+  "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
+  "source": "hackernews",
+  "upvotes": 310,
+  "comments": 281,
+  "published_at": 1795471750,
+  "discussion": "https://news.ycombinator.com/item?id=50620102",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/anthropics/formal-math/tree/main/vp-vnp"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "VP는 모든 필드에서 VNP와 다르다",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "science"
+  ],
+  "batch": "2026-11-24T16:00:06.722012+09:00",
+  "batch_label": "11월 24일 16:00"
+ },
+ {
   "title": "pierridotite / mobile-agent-testers",
   "url": "https://github.com/pierridotite/mobile-agent-testers",
   "source": "github",
