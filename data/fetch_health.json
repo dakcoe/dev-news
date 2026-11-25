@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-15T08:00:28+09:00",
-   "total": 12,
-   "counts": {
-    "ok": 9,
-    "robots": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://x.com/i/broadcasts/2brajgZlOKRMka",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-15T16:00:29+09:00",
    "total": 14,
    "counts": {
@@ -524,6 +508,22 @@
     },
     {
      "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+     "source": "hackernews",
+     "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-26T08:00:29+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 11,
+    "robots": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/",
      "source": "hackernews",
      "reason": "robots"
     }
