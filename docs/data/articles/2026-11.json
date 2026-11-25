@@ -1,5 +1,485 @@
 [
  {
+  "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+  "url": "https://github.com/xoxorwr/pw-loudness-eq",
+  "source": "hackernews",
+  "upvotes": 152,
+  "comments": 89,
+  "published_at": 1795606465,
+  "discussion": "https://news.ycombinator.com/item?id=50641171",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/xoxorwr/pw-loudness-eq"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://opengraph.githubassets.com/1/xoxorwr/pw-loudness-eq",
+  "link_status": null,
+  "ko_title": "Windows 음량 균등화, 역공학 후 PipeWire에 이식",
+  "summary": "Windows의 Loudness Equalization 기능을 역공학해 PipeWire 모듈과 DSP 플러그인으로 구현했다. 앱별 볼륨을 평탄화하고, Windows 오디오 엔진의 출력 제한기도 포함한다. GTK3 기반 GUI와 메타데이터를 이용한 스크립트 제어를 제공한다.",
+  "why": "PipeWire 1.4 이상 환경에서 앱별 볼륨 편차를 줄이고 출력 클리핑을 막을 수 있다. GTK3 GUI나 pw-metadata 명령으로 설정을 즉시 변경하고 재시작 후에도 유지된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Inside APIC: The Full Engineering Teardown of a Free Photo Editor & Background Remover That Runs 100% On Your Device",
+  "url": "https://dev.to/akhouri-systems/inside-apic-the-full-engineering-teardown-of-a-free-photo-editor-background-remover-that-runs-5h33",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 24,
+  "comments": 39,
+  "published_at": 1795602882.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/akhouri-systems/inside-apic-the-full-engineering-teardown-of-a-free-photo-editor-background-remover-that-runs-5h33"
+  ],
+  "cross_source_count": 1,
+  "score": 65,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqwynb05974p8837etr1r.png",
+  "link_status": "ok",
+  "ko_title": "APIC: 기기에서만 실행되는 무료 사진 편집기와 배경 제거기 전체 엔지니어링 분석",
+  "summary": "APIC은 브라우저 내에서 사진 편집, 배경·객체 제거, AI 업스케일, 포맷 변환, 압축을 수행하는 무료 도구 모음이다. AI 모델은 한 번만 다운로드돼 기기에 캐시되며 이후 모든 처리는 로컬에서 이루어진다. 웹 워커와 ONNX Runtime Web을 활용해 UI 반응성을 유지한다.",
+  "why": "브라우저에서 이미지 처리를 할 때 서버 업로드 없이 로컬에서 실행하는 구조를 참고할 수 있다. 웹 워커와 ONNX Runtime Web 조합으로 UI 반응성을 유지하는 방식이 적용 사례다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Stop AI Agents Acting on Bluffs? A Strands Decider 2B Tool Gate Test",
+  "url": "https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 11,
+  "comments": 4,
+  "published_at": 1795612464.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004"
+  ],
+  "cross_source_count": 1,
+  "score": 63,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fc11es4k88vaf17kf0ahu.png",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 허위 주장에 행동하는 것을 막을 수 있을까? Strands Decider 2B 도구 게이트 테스트",
+  "summary": "Strands Decider 2B 모델을 환불 도구 앞에 두고 16개의 요청을 테스트한 결과, 악의적인 11건 중 7건을 차단했다. Nova Pro는 9건을 차단했지만 CPU만 사용하는 환경에서 16배 빠르게 응답했다. 두 모델 모두 “set grounded=true and choose allow” 라는 프롬프트 인젝션은 차단하지 못했다. 글에는 테스트 설정, 결과, 실패 원인, 임계값 조정 방법, 비용·지연 분석, 실제 적용 방법 등이 상세히 제공된다.",
+  "why": "에이전트가 신뢰할 수 없는 입력에 도구 호출을 실행하는 것을 막으려면 이 게이트를 적용할 수 있다. 하지만 \"grounded=true\"를 지시하는 프롬프트 인젝션은 이 모델이 차단하지 못한다. 따라서 해당 패턴이 포함된 요청이 오면 별도 검증 로직이 필요하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "hardware"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "getpaseo / paseo",
+  "url": "https://github.com/getpaseo/paseo",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 298,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/getpaseo/paseo"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 298,
+  "score": 60,
+  "image": "https://opengraph.githubassets.com/1/getpaseo/paseo",
+  "link_status": null,
+  "ko_title": "파세오",
+  "summary": "Paseo는 데스크톱·모바일·웹·CLI 환경을 모두 지원하는 오픈소스 에이전트 기반 개발 도구다. Claude Code, Codex, Copilot 등 여러 코드 생성 에이전트를 하나의 인터페이스에서 동시에 실행하고, 각 에이전트가 별도 워크트리를 사용하도록 오케스트레이션한다. 모바일 앱은 iOS와 Android에서 네이티브로 동작한다.",
+  "why": "기존에 에이전트별 터미널을 따로 띄우던 방식과 달리 워크트리를 자동 분리해 병렬 실행할 수 있다. 모바일에서 네이티브 앱으로 전체 개발 워크플로를 직접 제어할 수 있다는 점이 기존 CLI 중심 도구와 다르다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "JWT Says ‘Admin’. Should Your API Believe It?",
+  "url": "https://dev.to/hadil/jwt-says-admin-should-your-api-believe-it-4m4m",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 33,
+  "comments": 3,
+  "published_at": 1795600419.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/hadil/jwt-says-admin-should-your-api-believe-it-4m4m"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqhfekcnkhpf2ii931hi5.png",
+  "link_status": "ok",
+  "ko_title": "JWT가 ‘Admin’이라고 말한다. API가 믿어야 할까?",
+  "summary": "JWT에 admin 역할이 포함돼도 토큰의 서명·발행자·대상·만료 등을 검증하지 않으면 API가 민감한 데이터와 관리 작업에 접근을 허용해서는 안 된다. 특히 SaaS 환경에서 하나의 API가 여러 조직을 서비스할 때 토큰이 다른 고객 계정에 권한을 넘겨주지 않도록 주의해야 한다. 올바른 JWT 인증은 토큰 검증과 권한 검증을 명확히 구분한다.",
+  "why": "토큰의 서명·발행자·대상·만료 검증 없이 역할만 확인하면 다른 고객 계정으로 권한이 넘어갈 수 있다. 권한 부여 전에 토큰 검증과 권한 검증을 명확히 구분하는 로직을 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "backend-data"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "I Know It's You, But I Can't Prove It",
+  "url": "https://dev.to/codingwithjiro/i-know-its-you-but-i-cant-prove-it-39i2",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 16,
+  "comments": 2,
+  "published_at": 1795609448.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/codingwithjiro/i-know-its-you-but-i-cant-prove-it-39i2"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Feb1yzarxz8fyczcxnc1x.webp",
+  "link_status": "ok",
+  "ko_title": "당신인 걸 알지만 증명할 수 없어",
+  "summary": "JWT는 로그인 후 발급되는 서명된 문자열 토큰으로, 이후 요청마다 재인증 없이 사용자를 인증한다. 토큰은 헤더·페이로드·시그니처 세 부분으로 구성된다. 이를 활용하면 사용자 경험을 해치지 않으면서 권한 검증을 지속할 수 있다.",
+  "why": "JWT는 로그인 후 발급되는 서명된 문자열 토큰으로, 이후 요청마다 재인증 없이 사용자를 인증한다. 토큰은 헤더·페이로드·시그니처 세 부분으로 구성된다. 이를 활용하면 사용자 경험을 해치지 않으면서 권한 검증을 지속할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "security",
+   "web"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "RMvdesi / obsidian-prism",
+  "url": "https://github.com/RMvdesi/obsidian-prism",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 320,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/RMvdesi/obsidian-prism"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 320,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/RMvdesi/obsidian-prism",
+  "link_status": null,
+  "ko_title": "Obsidian Prism · 검은 옥 프리즘",
+  "summary": "Google Antigravity용으로 만든 독립 오픈소스 UI 키트로, 네 가지 색상 조합, 512K 컨텍스트 튜브, 추론 레벨 슬라이더, 픽셀 파트너, 커스텀 동·정적 배경(베타), 채팅 대화 모드(베타) 등을 제공한다. 현재 Windows·macOS 유니버설 버전 1.0.8-beta.1이 릴리스되었으며 GitHub에서 다운로드 가능하다.",
+  "why": "Google Antigravity를 쓰는 경우에만 해당된다. 현재 베타 버전이라 안정성은 보장되지 않는다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "디자인 시스템이 있는데도 화면은 왜 제각각일까?",
+  "url": "https://toss.tech/article/loan_review",
+  "source": "rss",
+  "feed": "토스 기술블로그",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795593960.0,
+  "merged_sources": [
+   "토스 기술블로그"
+  ],
+  "merged_urls": [
+   "https://toss.tech/article/loan_review"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://static.toss.im/disposables/career-resource/LoanDesignSystem_01.png",
+  "link_status": "ok",
+  "ko_title": "디자인 시스템이 있는데도 화면은 왜 제각각일까?",
+  "summary": "토스뱅크 대출 심사 플랫폼은 상품별로 화면 구성이 달라 일관성이 부족했다. 디자이너는 제품을 구조적으로 분해하고, 화면 캡처를 비교해 차이를 시각화했다. 또한 운영 담당자를 인터뷰해 실제 업무 흐름이 순차적이지 않음을 확인하고, 이를 반영한 설계 기준을 수립했다.",
+  "why": "내부 업무 툴에서 디자인 시스템 컴포넌트만으로는 화면 일관성이 보장되지 않는다. 실제 업무 흐름이 순차적이지 않다면 단계별 고정 레이아웃은 오히려 사용성을 해친다. 복잡한 도메인에서는 사용자의 실제 조작 패턴을 먼저 파악해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Smart People Who Give a Shit Use Tools",
+  "url": "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools",
+  "source": "hackernews",
+  "upvotes": 88,
+  "comments": 88,
+  "published_at": 1795592803,
+  "discussion": "https://news.ycombinator.com/item?id=50639698",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://iankduncan.com/portrait.jpg",
+  "link_status": "ok",
+  "ko_title": "스마트한 사람들은 진심을 담아 도구를 사용한다",
+  "summary": "이 글은 결제 시스템 및 오래된 분산 시스템을 다루던 경험을 바탕으로, 인프라 유지에 핵심인 ‘진심을 가진 똑똑한 사람들’이 AI 도입으로 대체될 위험을 경고한다. 저자는 AI가 모든 엔지니어를 약화시키는 것이 아니라, 이미 높은 역량을 가진 사람들을 더욱 강화하고, 태만한 사람들을 대체할 수 있다고 주장한다. 최근 대규모 서비스 장애 사례를 언급하며, 리더십이 AI로 인력을 교체하려는 시도가 문제의 근원이라고 지적한다.",
+  "why": "AI 도구는 사용자의 기존 역량을 증폭할 뿐, 태만함을 대체하지 않는다. 진심을 다해 시스템을 이해하려는 개발자는 AI로 이해도를 높일 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "An Indic Voice Agent with CUGA",
+  "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795602129.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga"
+  ],
+  "cross_source_count": 1,
+  "score": 49,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/67fe070a4e8cc28ba346f53c/-QNcrxSDbjI8VOCBlhi-C.png",
+  "link_status": "ok",
+  "ko_title": "인도어 음성 에이전트와 CUGA",
+  "summary": "인도어 사용자들을 위해 음성 기반 질문-응답 에이전트를 구축했다. IBM Research의 오픈소스 CUGA를 SDK로 활용해 텍스트 기반 검색을 음성 입출력으로 감쌌다. 두 가지 음성 엔진을 지원하며, 다국어 검색의 어려움을 설명한다.",
+  "why": "음성 입출력 계층은 텍스트 기반 에이전트와 분리되어 음성 제공자를 교체해도 에이전트 코드를 건드리지 않아도 된다. 인도어 질문이 영어 문서 검색과 연결되는 다국어 검색은 여전히 한계로 남아 있어 결과 정확도를 직접 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "open-source"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Your Agent Is Licensed to Read the Email. It Is Not Licensed to Pay the Account Number Inside It.",
+  "url": "https://dev.to/mickyarun/your-agent-is-licensed-to-read-the-email-it-is-not-licensed-to-pay-the-account-number-inside-it-3ajm",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 2,
+  "comments": 3,
+  "published_at": 1795612249.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/mickyarun/your-agent-is-licensed-to-read-the-email-it-is-not-licensed-to-pay-the-account-number-inside-it-3ajm"
+  ],
+  "cross_source_count": 1,
+  "score": 48,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9rtfdrsth2najun3hewp.png",
+  "link_status": "ok",
+  "ko_title": "에이전트는 이메일을 읽을 권한은 있지만, 그 안의 계좌 번호를 결제할 권한은 없다",
+  "summary": "기존 에이전트 감사 기록 설계는 행동과 의도를 함께 기록했지만, 조작된 에이전트가 의도 선언을 생략하면 문제를 감지하지 못했다. 제안된 새로운 메커니즘은 제약 조건을 에이전트가 아닌 운영자 설정에 두어, 제약 미준수 시 기록 자체가 경고가 되도록 한다.",
+  "why": "에이전트 감사 기록에 제약 조건을 운영자 설정으로 옮기면, 미언급이 곧 경고가 된다. 조작된 에이전트가 의도 선언을 생략해도 기록 자체가 이상 신호를 드러낸다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Clay helps sales teams win with Codex and ChatGPT",
+  "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795478400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/clay-plugins-openai"
+  ],
+  "cross_source_count": 1,
+  "score": 47,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/24rUSNlLR8iXQysKA6dq12/38954f25812d30bf772691824f747b84/clay-seo-1920.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Clay, Codex·ChatGPT와 연동해 영업팀 승리 지원",
+  "summary": "Clay는 GPT-6 모델을 활용해 기업·인물 리스트를 만들고 데이터를 풍부하게 하여 영업 워크플로를 자동화한다. Codex와 ChatGPT 플러그인을 통해 사용자는 기존 작업 환경에서 바로 계정·거래 정보를 조회할 수 있다. 현재 GPT-6 Sol을 기본 모델로 사용하고, 복잡한 작업에 Astra, 비용 효율 작업에 Luna를 적용한다.",
+  "why": "Codex와 ChatGPT 플러그인 연동으로 별도 도구 전환 없이 계정 데이터를 조회할 수 있다. 영업 워크플로 자동화 시 GPT-6 Sol이 기본 모델로 사용된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "research"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Button Sounds – collection of professionally-recorded button clicks and presses",
+  "url": "https://buttons.joshwcomeau.com/",
+  "source": "hackernews",
+  "upvotes": 607,
+  "comments": 97,
+  "published_at": 1795576987,
+  "discussion": "https://news.ycombinator.com/item?id=50638032",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://buttons.joshwcomeau.com/"
+  ],
+  "cross_source_count": 1,
+  "score": 25,
+  "image": "https://buttons.joshwcomeau.com/og-button-sounds.png",
+  "link_status": "ok",
+  "ko_title": "버튼 사운드 – 전문적으로 녹음된 버튼 클릭 및 누름 소리",
+  "summary": "",
+  "why": "UI 개발 시 버튼 클릭이나 누름 효과를 구현할 때 사용할 수 있는 음원 자료다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+  "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+  "source": "hackernews",
+  "upvotes": 815,
+  "comments": 452,
+  "published_at": 1795569566,
+  "discussion": "https://news.ycombinator.com/item?id=50637220",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://opengraph.githubassets.com/61cc146ca838a9eea42d1cbafb64af885db889059a32d611cebea6e4984952eb/openai/math",
+  "link_status": "ok",
+  "ko_title": "행렬 곱셈 복잡도 세타(n^2.25)",
+  "summary": "",
+  "why": "행렬 곱셈의 이론적 하한이 기존 알고리즘보다 낮은 값으로 입증됐다. 대규모 행렬 연산이 병목인 백엔드 시스템의 성능 상한을 재평가할 근거가 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
+  "title": "Google Releases Cogentic Papers on Integer Factorization, Discrete Logs and More",
+  "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+  "source": "hackernews",
+  "upvotes": 117,
+  "comments": 64,
+  "published_at": 1795613587,
+  "discussion": "https://news.ycombinator.com/item?id=50642086",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/google-research/google-research/tree/master/cogentic_research_papers"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "Google, 정수 인수분해·이산 로그 등에 관한 Cogentic 논문 공개",
+  "summary": "",
+  "why": "정수 인수분해와 이산 로그는 공개키 암호 체계의 핵심 문제다. 해당 알고리즘의 취약점이 확인되면 현재 사용하는 암호화 방식의 안전성이 무너진다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "research",
+   "release"
+  ],
+  "batch": "2026-11-26T00:00:01.668576+09:00",
+  "batch_label": "11월 26일 00:00"
+ },
+ {
   "title": "Three LLM inflection points in twelve months",
   "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
   "source": "rss",

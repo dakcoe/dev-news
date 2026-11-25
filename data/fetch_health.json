@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-15T00:00:26+09:00",
-   "total": 15,
-   "counts": {
-    "ok": 9,
-    "robots": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-15T08:00:28+09:00",
    "total": 12,
    "counts": {
@@ -518,6 +502,28 @@
    "failures": [
     {
      "url": "https://twitter.com/raul_bs3/status/2125213756238291075",
+     "source": "hackernews",
+     "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-26T00:00:34+09:00",
+   "total": 15,
+   "counts": {
+    "ok": 10,
+    "github": 3,
+    "empty": 1,
+    "robots": 1
+   },
+   "failures": [
+    {
+     "url": "https://buttons.joshwcomeau.com/",
+     "source": "hackernews",
+     "reason": "empty"
+    },
+    {
+     "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
      "source": "hackernews",
      "reason": "robots"
     }

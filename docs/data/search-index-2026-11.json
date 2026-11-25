@@ -1,5 +1,206 @@
 [
  {
+  "t": "Windows 음량 균등화, 역공학 후 PipeWire에 이식",
+  "u": "https://github.com/xoxorwr/pw-loudness-eq",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-26",
+  "o": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+  "x": "Windows의 Loudness Equalization 기능을 역공학해 PipeWire 모듈과 DSP 플러그인으로 구현했다. 앱별 볼륨을 평탄화"
+ },
+ {
+  "t": "APIC: 기기에서만 실행되는 무료 사진 편집기와 배경 제거기 전체 엔지니어링 분석",
+  "u": "https://dev.to/akhouri-systems/inside-apic-the-full-engineering-teardown-of-a-free-photo-editor-background-remover-that-runs-5h33",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "dev-tools",
+   "web",
+   "language"
+  ],
+  "d": "2026-11-26",
+  "o": "Inside APIC: The Full Engineering Teardown of a Free Photo Editor & Background Remover That Runs 100% On Your Device",
+  "x": "APIC은 브라우저 내에서 사진 편집, 배경·객체 제거, AI 업스케일, 포맷 변환, 압축을 수행하는 무료 도구 모음이다. AI 모델은 한 번만"
+ },
+ {
+  "t": "AI 에이전트가 허위 주장에 행동하는 것을 막을 수 있을까? Strands Decider 2B 도구 게이트 테스트",
+  "u": "https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "dev-tools",
+   "hardware"
+  ],
+  "d": "2026-11-26",
+  "o": "Stop AI Agents Acting on Bluffs? A Strands Decider 2B Tool Gate Test",
+  "x": "Strands Decider 2B 모델을 환불 도구 앞에 두고 16개의 요청을 테스트한 결과, 악의적인 11건 중 7건을 차단했다. Nova P"
+ },
+ {
+  "t": "파세오",
+  "u": "https://github.com/getpaseo/paseo",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-11-26",
+  "o": "getpaseo / paseo",
+  "x": "Paseo는 데스크톱·모바일·웹·CLI 환경을 모두 지원하는 오픈소스 에이전트 기반 개발 도구다. Claude Code, Codex, Copil"
+ },
+ {
+  "t": "JWT가 ‘Admin’이라고 말한다. API가 믿어야 할까?",
+  "u": "https://dev.to/hadil/jwt-says-admin-should-your-api-believe-it-4m4m",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "web",
+   "backend-data"
+  ],
+  "d": "2026-11-26",
+  "o": "JWT Says ‘Admin’. Should Your API Believe It?",
+  "x": "JWT에 admin 역할이 포함돼도 토큰의 서명·발행자·대상·만료 등을 검증하지 않으면 API가 민감한 데이터와 관리 작업에 접근을 허용해서는 "
+ },
+ {
+  "t": "당신인 걸 알지만 증명할 수 없어",
+  "u": "https://dev.to/codingwithjiro/i-know-its-you-but-i-cant-prove-it-39i2",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "llm",
+   "security",
+   "web"
+  ],
+  "d": "2026-11-26",
+  "o": "I Know It's You, But I Can't Prove It",
+  "x": "JWT는 로그인 후 발급되는 서명된 문자열 토큰으로, 이후 요청마다 재인증 없이 사용자를 인증한다. 토큰은 헤더·페이로드·시그니처 세 부분으로 "
+ },
+ {
+  "t": "Obsidian Prism · 검은 옥 프리즘",
+  "u": "https://github.com/RMvdesi/obsidian-prism",
+  "m": "2026-11",
+  "s": "github",
+  "g": [
+   "open-source",
+   "release",
+   "industry"
+  ],
+  "d": "2026-11-26",
+  "o": "RMvdesi / obsidian-prism",
+  "x": "Google Antigravity용으로 만든 독립 오픈소스 UI 키트로, 네 가지 색상 조합, 512K 컨텍스트 튜브, 추론 레벨 슬라이더, 픽"
+ },
+ {
+  "t": "디자인 시스템이 있는데도 화면은 왜 제각각일까?",
+  "u": "https://toss.tech/article/loan_review",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [],
+  "d": "2026-11-26",
+  "x": "토스뱅크 대출 심사 플랫폼은 상품별로 화면 구성이 달라 일관성이 부족했다. 디자이너는 제품을 구조적으로 분해하고, 화면 캡처를 비교해 차이를 시"
+ },
+ {
+  "t": "스마트한 사람들은 진심을 담아 도구를 사용한다",
+  "u": "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "ai",
+   "dev-tools",
+   "devops-infra"
+  ],
+  "d": "2026-11-26",
+  "o": "Smart People Who Give a Shit Use Tools",
+  "x": "이 글은 결제 시스템 및 오래된 분산 시스템을 다루던 경험을 바탕으로, 인프라 유지에 핵심인 ‘진심을 가진 똑똑한 사람들’이 AI 도입으로 대체"
+ },
+ {
+  "t": "인도어 음성 에이전트와 CUGA",
+  "u": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "ai-agent",
+   "research",
+   "dev-tools",
+   "open-source"
+  ],
+  "d": "2026-11-26",
+  "o": "An Indic Voice Agent with CUGA",
+  "x": "인도어 사용자들을 위해 음성 기반 질문-응답 에이전트를 구축했다. IBM Research의 오픈소스 CUGA를 SDK로 활용해 텍스트 기반 검색"
+ },
+ {
+  "t": "에이전트는 이메일을 읽을 권한은 있지만, 그 안의 계좌 번호를 결제할 권한은 없다",
+  "u": "https://dev.to/mickyarun/your-agent-is-licensed-to-read-the-email-it-is-not-licensed-to-pay-the-account-number-inside-it-3ajm",
+  "m": "2026-11",
+  "s": "devto",
+  "g": [
+   "ai",
+   "ai-agent",
+   "open-source"
+  ],
+  "d": "2026-11-26",
+  "o": "Your Agent Is Licensed to Read the Email. It Is Not Licensed to Pay the Account Number Inside It.",
+  "x": "기존 에이전트 감사 기록 설계는 행동과 의도를 함께 기록했지만, 조작된 에이전트가 의도 선언을 생략하면 문제를 감지하지 못했다. 제안된 새로운 "
+ },
+ {
+  "t": "Clay, Codex·ChatGPT와 연동해 영업팀 승리 지원",
+  "u": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "m": "2026-11",
+  "s": "rss",
+  "g": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "research"
+  ],
+  "d": "2026-11-26",
+  "o": "Clay helps sales teams win with Codex and ChatGPT",
+  "x": "Clay는 GPT-6 모델을 활용해 기업·인물 리스트를 만들고 데이터를 풍부하게 하여 영업 워크플로를 자동화한다. Codex와 ChatGPT 플"
+ },
+ {
+  "t": "버튼 사운드 – 전문적으로 녹음된 버튼 클릭 및 누름 소리",
+  "u": "https://buttons.joshwcomeau.com/",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-26",
+  "o": "Button Sounds – collection of professionally-recorded button clicks and presses"
+ },
+ {
+  "t": "행렬 곱셈 복잡도 세타(n^2.25)",
+  "u": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [],
+  "d": "2026-11-26",
+  "o": "Matrix Multiplication is Θ(n^2.25) [pdf]"
+ },
+ {
+  "t": "Google, 정수 인수분해·이산 로그 등에 관한 Cogentic 논문 공개",
+  "u": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+  "m": "2026-11",
+  "s": "hackernews",
+  "g": [
+   "research",
+   "release"
+  ],
+  "d": "2026-11-26",
+  "o": "Google Releases Cogentic Papers on Integer Factorization, Discrete Logs and More"
+ },
+ {
   "t": "12개월 동안의 LLM 전환점 3가지",
   "u": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
   "m": "2026-11",
