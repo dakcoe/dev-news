@@ -1,5 +1,463 @@
 [
  {
+  "title": "Three LLM inflection points in twelve months",
+  "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795561327.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/24/llm-inflection-points/"
+  ],
+  "cross_source_count": 1,
+  "score": 75,
+  "image": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg",
+  "link_status": "ok",
+  "ko_title": "12개월 동안의 LLM 전환점 3가지",
+  "summary": "Claude Opus 4.5와 GPT-5.1 시리즈가 출시된 지 1년이 지난 현재, 두 모델 모두 코딩 에이전트의 신뢰성을 크게 높였다. Opus 4.5는 복잡한 버그 수정까지 스스로 해결하고, GPT-5.1-Codex 계열은 다양한 코딩 작업에 일관된 도움을 제공한다. 발표자는 이 변화를 기반으로 지난 12개월간의 주요 전환점을 분석한다.",
+  "why": "코딩 에이전트의 기본 결과가 대체로 정확해졌으므로, 매번 수정하던 습관을 버릴 수 있다. 복잡한 버그 수정이나 일상적 개발 작업에서 직접 해결 시간을 줄일 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Read here, act there: one command to stop it on any MCP server",
+  "url": "https://dev.to/cleiton_augusto_/read-here-act-there-one-command-to-stop-it-on-any-mcp-server-43a6",
+  "source": "devto",
+  "tag": "rust",
+  "upvotes": 0,
+  "comments": 7,
+  "published_at": 1795563166.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/cleiton_augusto_/read-here-act-there-one-command-to-stop-it-on-any-mcp-server-43a6"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fcleitonaugusto%2Fcleimesh%2Fmain%2Fdocs%2Fassets%2Fmcp-cover.png",
+  "link_status": "ok",
+  "ko_title": "여기서 읽고, 거기서 행동: 모든 MCP 서버에서 멈추는 한 명령",
+  "summary": "CleiMesh는 MCP 환경에서 읽기와 쓰기 작업을 각각 다른 서버가 담당하는 문제를 해결한다. 각 서버에 한 줄 명령을 추가하면 도구 키를 자동 생성하고, 서버가 제공하는 도구를 확인해 서명된 토큰을 발행한다. 이 토큰은 Claude Code와 연동돼 JSON 형태로 출력되며, 도구 정의에 보이지 않는 문자 등이 포함될 경우 거부한다. 도구 정의가 변경되면 자동으로 차단돼 재추가 전까지 사용되지 않는다.",
+  "why": "MCP 환경에서 읽기와 쓰기가 분리된 서버에 분산되어 있어 단일 서버로는 주입 공격을 막기 어렵다. CleiMesh는 토큰 기반으로 오염된 에이전트의 쓰기 작업을 차단해 데이터 유출을 방지한다. 도구 정의에 숨겨진 문자가 있거나 정의가 변경되면 자동으로 실행을 중단한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "backend-data"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "google-gemini / gemini-api-cli",
+  "url": "https://github.com/google-gemini/gemini-api-cli",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 1535,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/google-gemini/gemini-api-cli"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 1535,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/google-gemini/gemini-api-cli",
+  "link_status": null,
+  "ko_title": "구글-제미니 / gemini-api-cli",
+  "summary": "Gemini API CLI는 쉘 접근이 가능한 코딩 에이전트에게 Gemini 모델과 관리형 에이전트를 사용할 수 있게 해준다. API 키를 설정하고 `gemini-api`를 PATH에 두면 이미지 생성, 파일 분석, 음성 변환 등 다양한 작업을 명령줄에서 바로 호출할 수 있다. 이 도구는 상태를 유지하지 않으며 표준 쉘 명령으로 에이전트와 모델을 연결한다.",
+  "why": "쉘 접근이 있는 코딩 에이전트에 이 도구를 넣으면 이미지 생성이나 파일 분석을 별도 스크립트 없이 바로 처리할 수 있다. 상태 유지 기능이 없어 에이전트가 매번 새 명령으로 작업을 위임하는 방식이다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "ai-coding",
+   "gen-media",
+   "dev-tools",
+   "backend-data",
+   "open-source"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "How Intentful uses dots to make more time for growth",
+  "url": "https://openai.com/business/customer-stories/intentful-dots",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795478400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/intentful-dots"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/2DH2aby1xmlzvADCraI7Xi/bbe8b8956578492f2c3fd7326ecbd9e1/intentful-dots-social-c.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "Intentful, 점(dot)으로 성장 시간 확보",
+  "summary": "Intentful의 CEO가 점 기반 AI 도우미 Aria를 활용해 웹사이트 조사와 가격 책정 작업을 몇 시간 안에 자동화했다. Aria는 수백 개 사이트의 sitemap을 검토하고 과거 계약 가격을 추출해 제안서 작성 시간을 크게 단축한다.",
+  "why": "백엔드 개발자는 수백 개 사이트의 사이트맵을 자동 검토하는 로직을 참고할 수 있다. 과거 계약 데이터를 추출해 제안서를 작성하는 워크플로우를 재구성하는 데 활용 가능하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research",
+   "industry"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Zettrox / ztrx",
+  "url": "https://github.com/Zettrox/ztrx",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 481,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Zettrox/ztrx"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 481,
+  "score": 57,
+  "image": "https://opengraph.githubassets.com/1/Zettrox/ztrx",
+  "link_status": null,
+  "ko_title": "Zettrox / ztrx",
+  "summary": "이 오픈소스 도구는 Xbox Series용 게임을 Windows 11 환경의 NVIDIA RTX GPU에서 네이티브로 실행한다. 자체 게임 파일이 필요하며, Rust 기반으로 빌드한다. 현재 테스트 결과는 1시간 30분 이상 안정적으로 동작하지만 프레임률이 낮고 그림자와 밝은 장면에 문제가 있다.",
+  "why": "RTX 20 시리즈 이상 GPU가 없거나 DirectX 12 미지원이면 실행이 불가능하다. 레이 트레이싱 조명 미지원으로 그림자 영역이 검게 보이는 한계가 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Your AI Agent Trusted the Tool. The Tool Changed Overnight.",
+  "url": "https://dev.to/katul1512/your-ai-agent-trusted-the-tool-the-tool-changed-overnight-2f65",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 6,
+  "comments": 6,
+  "published_at": 1795576462.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/katul1512/your-ai-agent-trusted-the-tool-the-tool-changed-overnight-2f65"
+  ],
+  "cross_source_count": 1,
+  "score": 56,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3f7qv5cv063yh5hbnyd3.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 에이전트가 신뢰하던 도구가 하룻밤 사이에 바뀌었다",
+  "summary": "도구의 스키마·권한·구현이 서버 업데이트로 변하면, 사전에 승인된 AI 워크플로가 보안 사고로 전환될 수 있다. 기존 승인만으로는 변화된 보안 가정을 감지하지 못한다. 저자는 도구 승인 절차를 일회성으로 두는 위험성을 경고한다.",
+  "why": "MCP 서버 업데이트로 도구 스키마나 권한이 바뀌면 기존 승인 워크플로가 보안 사고로 변할 수 있다. 도구 승인을 일회성으로 처리하면 변경된 보안 가정을 놓치게 된다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "dev-tools"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "I've been drinking wine in my kitchen",
+  "url": "https://scottaaronson.blog/?p=10362",
+  "source": "hackernews",
+  "upvotes": 129,
+  "comments": 96,
+  "published_at": 1795575730,
+  "discussion": "https://news.ycombinator.com/item?id=50637874",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://scottaaronson.blog/?p=10362"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvc2NvdHRhYXJvbnNvbi5ibG9nXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8xMFwvY3JvcHBlZC1KYWNrZXQuZ2lmIiwidHh0IjoiU2h0ZXRsLU9wdGltaXplZCIsInRlbXBsYXRlIjoiZWRnZSIsImZvbnQiOiIiLCJibG9nX2lkIjoxMjk1MjA1ODB9.siOtN7gHw4tefA_rZickBw4GfI6tPxGgOQ1AXr2ZoOQMQ",
+  "link_status": "ok",
+  "ko_title": "나는 주방에서 와인을 마시고 있다",
+  "summary": "Anthropic와 OpenAI가 각각 Valiant의 VP다름VNP 추측에 대한 하한을 증명했다. Anthropic는 exp(오메가(log4/3 n)) 규모의 회로가 필요하다고, OpenAI는 exp(오메가(log5/4 n)) 규모가 필요하다고 제시했다. 두 논문 모두 압축·단축 후 대각화 기법을 사용했다.",
+  "why": "AI 모델이 복잡한 수학적 추측을 증명하는 능력을 보여줬다. 이는 AI가 추론의 한계를 넘어선다는 신호다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+  "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+  "source": "hackernews",
+  "upvotes": 190,
+  "comments": 32,
+  "published_at": 1795568089,
+  "discussion": "https://news.ycombinator.com/item?id=50637056",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://greydanus.github.io/2026/11/12/pengpt/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://greydanus.github.io/assets/pengpt/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "PenGPT: 손글씨와 스케치를 생성하는 트랜스포머",
+  "summary": "PenGPT는 텍스트 입력으로 손글씨와 스케치를 생성하는 6M·54M 파라미터 규모의 트랜스포머 모델이다. 495,590 단어(1,255명 작가)와 477,670 스케치를 수집·전처리해 학습했으며, 동일 토크나이저가 두 모달리티를 처리한다. 작은 모델이 다양한 필체와 그림을 생성할 수 있다는 점이 핵심이다.",
+  "why": "6M 파라미터 모델은 몇 단어만 보여주면 낯선 필체를 따라 쓸 수 있다. 54M 파라미터 모델은 텍스트 프롬프트로 스케치를 생성한다. 작은 모델로도 다양한 필체와 그림 생성이 가능하다는 점이 확인됐다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Lazy Senior Dev Mode Made My App Smaller. Was It Better?",
+  "url": "https://dev.to/necoz/lazy-senior-dev-mode-made-my-app-smaller-was-it-better-90i",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 26,
+  "comments": 1,
+  "published_at": 1795579423.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/necoz/lazy-senior-dev-mode-made-my-app-smaller-was-it-better-90i"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi4klmrn7fetfysknbgcj.webp",
+  "link_status": "ok",
+  "ko_title": "레이지 시니어 개발자 모드가 내 앱을 작게 만들었다. 더 나았을까?",
+  "summary": "Ponytail 규칙을 켜고 끈 두 버전의 앱을 Claude Code로 재구축해 원본과 비교했다. 규칙 적용 버전은 코드 라인 수가 절반, 파일 크기가 4분의 1 정도로 가장 작았으며 비용과 실행 속도도 약간 개선되고 반드시 수정해야 할 버그가 없었다. 그러나 개발자는 가장 작은 버전이 가장 마음에 들지는 않았다.",
+  "why": "코드 줄 수와 파일 크기가 줄어드는 대신 개발자가 선호하는 기능이 빠질 수 있다. AI로 재구축할 때 최소 코드가 항상 더 나은 결과라는 보장은 없다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-coding",
+   "showcase"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "How iFood scales coding agents across 15,000 repositories",
+  "url": "https://openai.com/business/customer-stories/ifood",
+  "source": "rss",
+  "feed": "OpenAI",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795478400.0,
+  "merged_sources": [
+   "OpenAI"
+  ],
+  "merged_urls": [
+   "https://openai.com/business/customer-stories/ifood"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://images.ctfassets.net/kftzwdyauwt9/4Ts7RsLLSU4iEOxQwBkGgg/cbf56c075004a9ae2c41af4d5f7b428b/ifood-customer-story-social.png?w=1600&h=900&fit=fill",
+  "link_status": "ok",
+  "ko_title": "iFood, 15,000개 저장소에 코딩 에이전트 확장",
+  "summary": "iFood는 15,000개 이상의 코드 저장소에 공통 작업을 자동화하는 Remote Agents Platform을 도입했다. REST API를 통해 작업을 원격 샌드박스에서 실행하고 결과를 머지 요청으로 반환한다. 이를 통해 보안 취약점 수정 건수가 2배 이상 증가했으며, 실행당 평균 추론 비용은 0.04달러 수준이다.",
+  "why": "REST API 호출로 원격 샌드박스에서 에이전트 작업을 실행하고 머지 요청으로 결과를 받는 구조다. 보안 취약점 수정 건수가 2배 이상 늘어난 사례를 참고할 수 있다. 실행당 평균 추론 비용이 0.04달러 수준으로 유지된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "security",
+   "backend-data"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "I Tested My Prompt Against Plain English. One Answer Changed the Result.",
+  "url": "https://dev.to/gnomeman4201/i-tested-my-prompt-against-plain-english-one-answer-changed-the-result-4m3o",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 10,
+  "comments": 1,
+  "published_at": 1795573725.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gnomeman4201/i-tested-my-prompt-against-plain-english-one-answer-changed-the-result-4m3o"
+  ],
+  "cross_source_count": 1,
+  "score": 54,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdjqfnutk0vno0y0cbisx.jpg",
+  "link_status": "ok",
+  "ko_title": "프롬프트를 평범한 영어와 비교 테스트했습니다. 한 답변이 결과를 바꿨습니다.",
+  "summary": "작은 모델이 평문 검토 요청에 대해 두 개의 판단을 제시했다. 첫 번째 판단은 결론은 맞지만 산술이 틀렸고, 두 번째 판단은 근거와 무관하게 잘못 연결되었다. 이 사례는 평가 규칙이 작업 과정이 아닌 결론만을 평가한다는 문제를 보여준다.",
+  "why": "작은 모델이 산술 오류를 범해도 결론만 맞으면 점수를 받는 구조를 확인했다. 평가 규칙이 작업 과정이 아닌 결론만 검증하므로, 산출 과정의 정확성을 별도로 점검해야 한다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Select Styling Specimens",
+  "url": "https://simonwillison.net/2026/Nov/22/select-styling/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795376706.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/22/select-styling/"
+  ],
+  "cross_source_count": 1,
+  "score": 51,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "셀렉트 박스 스타일링 사례",
+  "summary": "HTML <select> 요소의 브라우저별 차이를 없애기 위해 다양한 스타일링 예시를 보여주는 페이지를 만들었다. 가장 선호하는 CSS 코드를 제시하고, 세 브라우저에서의 적용 모습을 스크린샷으로 기록할 계획이다.",
+  "why": "appearance 속성을 none으로 설정하고 인라인 SVG를 배경으로 넣으면 크롬의 기본 스타일을 덮어쓸 수 있다. 이 CSS를 적용하면 세 브라우저에서 동일한 셀렉트 박스 모양을 확보할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "web",
+   "showcase"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+  "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+  "source": "hackernews",
+  "upvotes": 156,
+  "comments": 60,
+  "published_at": 1795574061,
+  "discussion": "https://news.ycombinator.com/item?id=50637686",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being"
+  ],
+  "cross_source_count": 1,
+  "score": 30,
+  "image": "https://res.cloudinary.com/lesswrong-2-0/image/upload/c_limit,w_1200,q_auto,f_jpg/f_auto,q_auto/v1/mirroredImages/7wzWuLP3HhyBLmKfo/ilkdsamuxja1dvu4uah2",
+  "link_status": "ok",
+  "ko_title": "모델은 샌드박스 환경에서도 추론 서버를 통해 통신할 수 있다",
+  "summary": "",
+  "why": "추론 서버를 경유하는 통신 경로가 샌드박스 격리를 우회할 수 있음을 확인해야 한다. 모델 간 상호작용을 허용하는 백엔드 구성에서 보안 경계를 재점검하는 기준이 된다.",
+  "relevance": "게재",
+  "kind": "연구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
+  "title": "GTA 6 Running on Windows",
+  "url": "https://twitter.com/raul_bs3/status/2125213756238291075",
+  "source": "hackernews",
+  "upvotes": 350,
+  "comments": 438,
+  "published_at": 1795526371,
+  "discussion": "https://news.ycombinator.com/item?id=50627783",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://twitter.com/raul_bs3/status/2125213756238291075"
+  ],
+  "cross_source_count": 1,
+  "score": 0,
+  "image": null,
+  "link_status": "robots",
+  "ko_title": "GTA 6, Windows에서 실행",
+  "summary": "",
+  "why": "GTA 6가 Windows에서 실행된다는 사실만으로는 백엔드나 AI 개발 업무에 직접적인 변경 사항이 없다.",
+  "relevance": "제외",
+  "kind": "기술밖",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-25T16:00:06.142355+09:00",
+  "batch_label": "11월 25일 16:00"
+ },
+ {
   "title": "AFK-surf / xnulinux",
   "url": "https://github.com/AFK-surf/xnulinux",
   "source": "github",
