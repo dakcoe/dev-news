@@ -1,5 +1,520 @@
 [
  {
+  "title": "alesha-pro / llm.asm",
+  "url": "https://github.com/alesha-pro/llm.asm",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 508,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/alesha-pro/llm.asm"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 508,
+  "score": 64,
+  "image": "https://opengraph.githubassets.com/1/alesha-pro/llm.asm",
+  "link_status": null,
+  "ko_title": "alesha-pro / llm.asm",
+  "summary": "이 저장소는 순수 x86-64 NASM 어셈블리만으로 구현된 세 개의 LLM 프로젝트를 제공한다. C·C++·Rust·libc·런타임 의존성이 전혀 없으며, NASM으로 어셈블하고 ld로 링크한다. 각 프로젝트는 토큰 디코딩 속도·부팅 시간·학습 성능 등에서 기존 CPU 기반 LLM 구현보다 빠른 결과를 보여준다.",
+  "why": "라이브러리 의존성이 없어 빌드 환경이 단순해진다. 기존 CPU 기반 구현보다 빠른 디코딩 속도를 확인했다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "hardware",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+  "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+  "source": "hackernews",
+  "upvotes": 87,
+  "comments": 98,
+  "published_at": 1795686263,
+  "discussion": "https://news.ycombinator.com/item?id=50653477",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://techstackups.com/articles/google-workspace-ai-agents-mcp/"
+  ],
+  "cross_source_count": 1,
+  "score": 64,
+  "image": "https://techstackups.com/img/articles/google-workspace-agent-api/cover.jpg",
+  "link_status": "ok",
+  "ko_title": "Google, AI 에이전트에 MCP 서버 사용 강제… Gmail 에이전트는 이메일 전송 불가",
+  "summary": "Google은 2027년 2월 1일부터 AI 에이전트가 Gmail, Drive, Calendar 등 Workspace에 접근할 때 자체 MCP 서버를 사용하도록 API 약관을 변경했다. Gmail용 도구는 메일 검색·스레드 읽기·초안 생성·라벨 지정은 가능하지만, 메시지 전송·답장·전달·초안 수정은 허용되지 않는다. 해당 규정 위반 시 Google은 접근 제한이나 계정 정지를 할 수 있다.",
+  "why": "Gmail 기반 이메일 어시스턴트를 만들었다면 메시지 전송 기능이 막혀서 대안을 찾아야 한다. 2027년 2월 1일 전까지 AI 에이전트 구조를 MCP 서버로 전환해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+  "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795693037.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+  ],
+  "cross_source_count": 1,
+  "score": 61,
+  "image": "https://cdn-uploads.huggingface.co/production/uploads/67289c93ff90038d9a6e5675/tbIvyMSISXCm64WYP3atl.png",
+  "link_status": "ok",
+  "ko_title": "AMD Ryzen·Radeon용 llama.cpp 벤치마크 대시보드 소개",
+  "summary": "Hugging Face에 공개된 대시보드에서 AMD Ryzen 및 Radeon 하드웨어에서 llama.cpp 빌드·모델·양자화별 프롬프트 처리와 텍스트 생성 성능을 추적할 수 있다. 현재 Radeon 8060S와 Radeon AI Pro R9700S를 지원하며, PP512와 TG128 두 테스트를 통해 토큰당 초당 처리량을 시각화한다. 빌드 히스토리와 컨텍스트 스케일링 탭을 통해 시간 경과에 따른 성능 변화를 비교·분석한다.",
+  "why": "AMD Ryzen·Radeon에서 로컬 추론 성능을 추적할 수 있는 공개 대시보드가 생겼다. 모델·빌드·양자화 조합별 성능 차이를 비교해 최적 구성을 고르는 데 쓰인다. 컨텍스트가 길어질 때 생성 속도가 어떻게 변하는지 확인해 워크로드에 맞는 하드웨어를 선택할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "research",
+   "hardware",
+   "release",
+   "science"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
+  "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
+  "source": "hackernews",
+  "upvotes": 183,
+  "comments": 72,
+  "published_at": 1795693849,
+  "discussion": "https://news.ycombinator.com/item?id=50654289",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://nextcloud.com/c/uploads/2026/11/Euro-Office-comes-to-your-desktop-with-the-Nextcloud-Office-app.png",
+  "link_status": "ok",
+  "ko_title": "Euro-Office가 Nextcloud Office Desktop 앱으로 데스크톱에 등장",
+  "summary": "Euro-Office의 첫 정식 버전이 출시되었으며, Nextcloud Hub 26 Summer와 함께 Windows, macOS, Linux용 Nextcloud Office Desktop 앱이 제공된다. 이 앱은 오프라인 작업, 로컬 폰트 사용, 디지털 서명 등 기능을 지원하고, Microsoft Office 및 오픈 포맷과 높은 호환성을 갖는다. 설치 방법과 팀 협업 기능에 대한 안내가 포함된다.",
+  "why": "Nextcloud Hub를 쓰는 팀이라면 브라우저 편집 대신 데스크톱 앱으로 전환해 오프라인 작업과 로컬 폰트 사용이 가능해진다. 디지털 서명 기능이 추가되어 문서 승인 절차에 변화를 줄 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+  "url": "https://huggingface.co/blog/training-swarms",
+  "source": "rss",
+  "feed": "Hugging Face",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795651200.0,
+  "merged_sources": [
+   "Hugging Face"
+  ],
+  "merged_urls": [
+   "https://huggingface.co/blog/training-swarms"
+  ],
+  "cross_source_count": 1,
+  "score": 60,
+  "image": "https://huggingface.co/blog/assets/training-swarms/thumbnail.png",
+  "link_status": "ok",
+  "ko_title": "Swarms, Flocks, Gangs: 다중 에이전트 시스템 구축·학습·평가 방법",
+  "summary": "다중 에이전트 시스템을 구축하고 에이전트 간 소통을 학습시키는 방법을 단계별 블로그 시리즈로 소개한다. 첫 번째 글에서는 4개의 에이전트와 공유 언어 모델을 이용해 검증 가능한 과제를 수행하는 예제를 제공한다. 실습은 Hugging Face Jobs에서 두 개의 H200 GPU로 약 5시간, 비용은 약 50달러가 소요된다.",
+  "why": "에이전트 간 소통은 학습 없이는 성능 향상이 되지 않으므로 단순 통합만으론 부족하다. 4개 에이전트와 공유 언어 모델로 검증 가능한 과제를 수행하는 실습 코드를 직접 돌려볼 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "hardware",
+   "career-culture"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Intel One Mono font",
+  "url": "https://github.com/intel/intel-one-mono",
+  "source": "hackernews",
+  "upvotes": 241,
+  "comments": 150,
+  "published_at": 1795687861,
+  "discussion": "https://news.ycombinator.com/item?id=50653667",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://github.com/intel/intel-one-mono"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://opengraph.githubassets.com/1/intel/intel-one-mono",
+  "link_status": null,
+  "ko_title": "Intel One Mono 폰트",
+  "summary": "Intel이 개발자용 가독성을 높인 모노스페이스 폰트 Intel One Mono를 공개했다. 라틴 문자 200개 언어를 지원하며 Light·Regular·Medium·Bold 네 가지 굵기와 이탤릭을 제공한다. GitHub 릴리즈에서 .otf·.ttf·.woff·.woff2 형식으로 다운로드 가능하고 VSCode·Sublime Text·IntelliJ 등 주요 코드 편집기에서 바로 설정할 수 있다.",
+  "why": "장시간 코딩 시 눈의 피로와 시력 저하를 줄여 코드 오류를 막는 데 도움이 된다. 시력이 약한 개발자의 피드백을 반영해 가독성을 높였으므로 기존 폰트 대비 읽기 편하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Unify.ai alternatives: 5 multi-model AI API platforms",
+  "url": "https://dev.to/bearerclub/unifyai-alternatives-5-multi-model-ai-api-platforms-e0k",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 20,
+  "comments": 2,
+  "published_at": 1795700472.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/bearerclub/unifyai-alternatives-5-multi-model-ai-api-platforms-e0k"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu13v29e7dzru8q2vqoir.png",
+  "link_status": "ok",
+  "ko_title": "Unify.ai 대안: 5개의 멀티모델 AI API 플랫폼",
+  "summary": "Unify.ai는 단일 엔드포인트로 여러 AI 제공자를 라우팅하지만 모델 선택, 가격 투명성, 데이터 정책에서 제한이 있다. 2026년에 멀티모델 AI API 플랫폼이 늘어나면서 Bearer Club, OpenRouter, Together AI, Groq Cloud, Requesty 등 5개 대안을 비교한다. 각 서비스는 가격, 속도, 모델 다양성, 데이터 제어 중 어떤 요소를 최적화하느냐에 따라 장점이 다르다.",
+  "why": "현재 Unify.ai를 쓰면 모델 선택과 가격 투명성에서 제한을 겪을 수 있다. 대안 플랫폼은 비용, 속도, 모델 다양성 중 무엇을 우선시하느냐에 따라 선택 기준이 달라진다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "backend-data",
+   "devops-infra"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Remotion vs. CoAnimator When Your Product Demo Needs an Update",
+  "url": "https://dev.to/ruixiao/remotion-vs-coanimator-when-your-product-demo-needs-an-update-3ikb",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 18,
+  "comments": 3,
+  "published_at": 1795694608.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/ruixiao/remotion-vs-coanimator-when-your-product-demo-needs-an-update-3ikb"
+  ],
+  "cross_source_count": 1,
+  "score": 57,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7s8cok1zce2ahyvir640.png",
+  "link_status": "ok",
+  "ko_title": "Remotion vs. CoAnimator – 제품 데모 업데이트 시 선택",
+  "summary": "Remotion은 React 컴포넌트와 props를 이용해 파라미터화된 비디오를 만들고, 코드 변경 없이 재사용이 가능하다. CoAnimator는 데스크톱 편집기와 시각적 타임라인을 제공해 장면을 직접 수정하고 결과를 바로 확인할 수 있다. 두 도구 모두 코딩 에이전트와 연동해 영상 수정·검토·재수출을 지원한다.",
+  "why": "코딩 에이전트 연동 시 Remotion은 코드 수정이 필요 없고, CoAnimator는 데스크톱 편집기에서 시각적 검수가 가능하다. 프로덕션 데모의 UI 변경에 맞춰 영상 수정과 재수출을 담당할 워크플로우를 선택해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "ai-coding",
+   "web",
+   "release"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "datasette-charts 0.3a0",
+  "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795630610.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/25/datasette-charts/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://static.simonwillison.net/static/2026/chart-annotate.gif",
+  "link_status": "ok",
+  "ko_title": "datasette-charts 0.3a0",
+  "summary": "차트에 선, 음영 영역, 라벨 등을 추가하는 주석 기능이 새롭게 제공된다. Datasette Lite UI에서 주석을 직접 조정할 수 있다. Datasette Agent를 설치하면 프롬프트 기반으로 주석이 포함된 차트를 자동 생성한다.",
+  "why": "Datasette Lite UI에서 주석을 직접 조정할 수 있어 수동 편집이 가능해졌다. Datasette Agent를 설치하면 프롬프트만으로 주석 포함 차트를 자동 생성한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "avatarmanz / VIctory-7900XTX",
+  "url": "https://github.com/avatarmanz/VIctory-7900XTX",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 420,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/avatarmanz/VIctory-7900XTX"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 420,
+  "score": 53,
+  "image": "https://opengraph.githubassets.com/1/avatarmanz/VIctory-7900XTX",
+  "link_status": null,
+  "ko_title": "RX 7900 XTX용 VIctory",
+  "summary": "VIctory를 포크해 Xbox Series 게임을 Windows에서 파일만으로 네이티브 실행한다. 렌더러 패치를 통해 에뮬레이션이 아닌 포팅 방식으로 30 fps 이상을 목표로 하며, 현재 RX 7900 XTX와 64 GB RAM 환경에서 20~22 fps를 달성했다. 쉐이더는 사전 번역되어 저장되며, 레이 트레이싱은 기본 비활성화이다.",
+  "why": "렌더러 패칭 방식이라 기존 에뮬레이션 레이어와 동작 원리가 다르다. 64GB RAM이 권장되며 32GB 이하 환경에서는 실행이 불안정할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "hardware",
+   "open-source"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Slow Ubuntu security response times",
+  "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+  "source": "hackernews",
+  "upvotes": 353,
+  "comments": 195,
+  "published_at": 1795639080,
+  "discussion": "https://news.ycombinator.com/item?id=50647181",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://www.openwall.com/lists/oss-security/2026/11/25/9"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "Ubuntu 보안 대응 지연",
+  "summary": "Ubuntu가 최근 발표된 심각한 커널 취약점들(CVE-2026-99288, CVE-2026-99312, CVE-2026-98432)에 대해 패치를 아직 제공하지 않아 다른 배포판보다 늦고, 장기 지원 커널 대신 오래된 커널에 백포팅하는 전략이 비효율적이라는 비판이 제기됨. 최근 악용 가능성 보고도 함께 언급됨.",
+  "why": "Ubuntu가 원격 메모리 손상 취약점에 대한 패치를 지연하고 있다. 이로 인해 다른 배포판보다 보안 업데이트가 늦게 적용된다. 오래된 커널에 패치를 백포팅하는 방식이 비효율적이라는 지적이 있다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "I Built AI Test Automation. Today, I Went Back to Manual Testing.",
+  "url": "https://dev.to/thethirdcup/i-built-ai-test-automation-today-i-went-back-to-manual-testing-mlh",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 74,
+  "comments": 54,
+  "published_at": 1795680965.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/thethirdcup/i-built-ai-test-automation-today-i-went-back-to-manual-testing-mlh"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkec3yfhirrh3b4h4baqj.png",
+  "link_status": "ok",
+  "ko_title": "AI 테스트 자동화를 만들었지만 오늘은 수동 테스트로 돌아갔다",
+  "summary": "저자는 AI 기반 테스트 자동화 프레임워크를 도입해 여러 프로젝트를 자동으로 테스트해 왔다. 최근 직접 프로젝트를 열어 수동으로 버그를 찾으며 AI가 만든 상세 보고서와 비교했다. 수동 보고서는 간단했지만 실제 문제를 발견했다.",
+  "why": "AI 자동화 보고서가 상세하지만 수동 테스트가 실제 문제를 더 잘 포착할 수 있음을 보여준다. 단순한 재현 단계와 결과 설명만으로도 버그를 정확히 기록할 수 있다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "datasette-charts 0.2a1",
+  "url": "https://simonwillison.net/2026/Nov/24/datasette-charts-2/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795500439.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/24/datasette-charts-2/"
+  ],
+  "cross_source_count": 1,
+  "score": 38,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-charts 0.2a1",
+  "summary": "이번 0.2a1 릴리스에서는 UI가 소폭 개선되었습니다. 차트 섹션을 접어도 차트 자체는 보이며, 차트 링크를 열면 해당 방문에 한해 제안이 접힌 상태로 표시됩니다. 테이블 페이지에서 패널 위치가 조정되고, 차트 아래의 “Data” 테이블이 복사 버튼으로 교체되었습니다. 메뉴에서 “Chart this data” 항목이 제거되고, 차트 툴팁의 줄 간격이 넓어졌습니다.",
+  "why": "차트 아래 데이터 테이블이 TSV와 CSV 복사 버튼으로 바뀌었다. 차트 데이터를 외부 도구로 옮길 때 수동 복사를 대신할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "A Hacker Attacked Wealtii for Nearly 7 Hours and Stole $0: The Crypto Security Features We Added",
+  "url": "https://dev.to/zayd_ahmed/a-hacker-attacked-wealtii-for-nearly-7-hours-and-stole-0-the-crypto-security-features-we-added-582e",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 35,
+  "comments": 0,
+  "published_at": 1795691358.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/zayd_ahmed/a-hacker-attacked-wealtii-for-nearly-7-hours-and-stole-0-the-crypto-security-features-we-added-582e"
+  ],
+  "cross_source_count": 1,
+  "score": 31,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnpvhg5wxjljs5syoidw9.png",
+  "link_status": "ok",
+  "ko_title": "해커가 Wealtii를 7시간 동안 공격하고 $0를 탈취함: 추가한 암호화 보안 기능",
+  "summary": "2026년 11월 18일, Wealtii 플랫폼에 해커가 7시간 동안 8,255건의 요청을 보내고 67개의 빈 계정을 만든 뒤 125건의 출금 시도를 했지만 금전적 손실은 없었다. 일주일 뒤 172개의 보안 수정이 포함된 업데이트를 배포했으며, 이번 글에서는 공격 전후의 보안 변화만을 공개한다.",
+  "why": "백엔드 보안 설계 시 자동화 도구의 단순 차단이 아닌, 차단 회피 패턴을 고려한 대응이 필요함을 보여준다. 공격자가 차단 후 다른 경로를 통해 재접속하는 사례가 있으므로, 단일 IP 차단만으로는 부족하다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "industry"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Nostalgia and the AI Productivity Paradox",
+  "url": "https://dev.to/gramli/nostalgia-and-the-ai-productivity-paradox-4f33",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 56,
+  "comments": 26,
+  "published_at": 1795680189.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/gramli/nostalgia-and-the-ai-productivity-paradox-4f33"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkhjra6otsf5yefyzhgnj.jpg",
+  "link_status": "ok",
+  "ko_title": "AI 생산성 역설과 향수",
+  "summary": "",
+  "why": "AI 코딩 에이전트가 직접 코드를 작성하면서 개발자의 수동 구현 비중이 줄어든다. 코딩 자체의 만족도가 낮아지는 구조적 변화에 대비해야 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "dev-tools"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
+  "title": "Jev is probably Qwen3.5-35B-A3B",
+  "url": "https://modaic.dev/blog/latency-doesnt-lie",
+  "source": "hackernews",
+  "upvotes": 326,
+  "comments": 90,
+  "published_at": 1795647424,
+  "discussion": "https://news.ycombinator.com/item?id=50648823",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://modaic.dev/blog/latency-doesnt-lie"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://www.modaic.dev/blog/latency-doesnt-lie/latency_doesnt_lie_og.png",
+  "link_status": "ok",
+  "ko_title": "Jev는 Qwen3.5-35B-A3B일 가능성이 높다",
+  "summary": "",
+  "why": "",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm"
+  ],
+  "batch": "2026-11-27T00:00:01.651780+09:00",
+  "batch_label": "11월 27일 00:00"
+ },
+ {
   "title": "antigravity-cn-community / Antigravity-Chinese-Localization",
   "url": "https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization",
   "source": "github",

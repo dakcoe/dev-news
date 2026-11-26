@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-16T00:00:33+09:00",
-   "total": 15,
-   "counts": {
-    "blocked": 1,
-    "ok": 8,
-    "dead": 1,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://space.stackexchange.com/questions/37775",
-     "source": "hackernews",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://litnews.ai/articles/garciaguirre-samsung-[REDACTED]",
-     "source": "hackernews",
-     "reason": "dead"
-    }
-   ]
-  },
-  {
    "at": "2026-11-16T08:00:26+09:00",
    "total": 14,
    "counts": {
@@ -521,6 +499,27 @@
      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
      "source": "hackernews",
      "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-27T00:00:37+09:00",
+   "total": 17,
+   "counts": {
+    "github": 3,
+    "ok": 12,
+    "short": 2
+   },
+   "failures": [
+    {
+     "url": "https://modaic.dev/blog/latency-doesnt-lie",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://tech.kakao.com/posts/850",
+     "source": "rss",
+     "reason": "short"
     }
    ]
   }
