@@ -1,33 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-15T16:00:29+09:00",
-   "total": 14,
-   "counts": {
-    "empty": 1,
-    "ok": 9,
-    "robots": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://www.spacex.com/launches/starship-flight-15",
-     "source": "hackernews",
-     "reason": "empty"
-    },
-    {
-     "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
-     "source": "hackernews",
-     "reason": "robots"
-    },
-    {
-     "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
-     "source": "hackernews",
-     "reason": "robots"
-    }
-   ]
-  },
-  {
    "at": "2026-11-16T00:00:33+09:00",
    "total": 15,
    "counts": {
@@ -524,6 +497,28 @@
    "failures": [
     {
      "url": "https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/",
+     "source": "hackernews",
+     "reason": "robots"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-26T16:00:33+09:00",
+   "total": 15,
+   "counts": {
+    "short": 1,
+    "robots": 1,
+    "ok": 11,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://news.ycombinator.com/item?id=50649864",
+     "source": "hackernews",
+     "reason": "short"
+    },
+    {
+     "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
      "source": "hackernews",
      "reason": "robots"
     }
