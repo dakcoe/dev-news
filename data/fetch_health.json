@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-17T00:00:33+09:00",
-   "total": 20,
-   "counts": {
-    "empty": 1,
-    "ok": 14,
-    "github": 5
-   },
-   "failures": [
-    {
-     "url": "https://www.monirbounadi.com/Bounadi_JMP.pdf",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-11-17T08:00:27+09:00",
    "total": 15,
    "counts": {
@@ -510,6 +494,28 @@
     "github": 2
    },
    "failures": []
+  },
+  {
+   "at": "2026-11-28T00:00:29+09:00",
+   "total": 13,
+   "counts": {
+    "robots": 1,
+    "ok": 9,
+    "blocked": 1,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+     "source": "hackernews",
+     "reason": "robots"
+    },
+    {
+     "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ssqu.70219",
+     "source": "hackernews",
+     "reason": "blocked"
+    }
+   ]
   }
  ]
 }
