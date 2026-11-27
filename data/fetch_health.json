@@ -1,22 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-16T16:00:34+09:00",
-   "total": 14,
-   "counts": {
-    "ok": 11,
-    "empty": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://qwen.ai/blog?id=qwen4-max",
-     "source": "hackernews",
-     "reason": "empty"
-    }
-   ]
-  },
-  {
    "at": "2026-11-17T00:00:33+09:00",
    "total": 20,
    "counts": {
@@ -517,6 +501,15 @@
      "reason": "empty"
     }
    ]
+  },
+  {
+   "at": "2026-11-27T16:00:38+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 10,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
