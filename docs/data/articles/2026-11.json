@@ -1,5 +1,415 @@
 [
  {
+  "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+  "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+  "source": "hackernews",
+  "upvotes": 296,
+  "comments": 120,
+  "published_at": 1795820789,
+  "discussion": "https://news.ycombinator.com/item?id=50672565",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://research.google/blog/supercharging-transformer-residual-connections/"
+  ],
+  "cross_source_count": 1,
+  "score": 70,
+  "image": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg",
+  "link_status": "ok",
+  "ko_title": "Google의 DeepCrossAttention, 모델 품질을 최대 3배 빠르게 달성",
+  "summary": "DeepCrossAttention(DCA)는 학습 가능한 가중치와 깊이별 교차-어텐션을 이용해 이전 레이어 출력을 동적으로 결합한다. 기존 잔차 연결이 모든 표현을 동일하게 취급해 정보가 희석되는 문제를 해결한다. ICML 2025 논문에 발표된 이 구조는 파라미터 증가가 거의 없으면서도 동일 품질을 최대 3배 빠르게 달성한다.",
+  "why": "잔차 연결의 정보 희석 문제를 해결해 학습 효율을 높인다. 파라미터 증가가 거의 없어 기존 트랜스포머 구조의 대안으로 검토할 수 있다.",
+  "relevance": "게재",
+  "kind": "모델",
+  "llm_done": true,
+  "tags": [
+   "research"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "I built a zero-dependency canvas tool for banners, logos and badges",
+  "url": "https://dev.to/sitetoolsbox/i-built-a-zero-dependency-canvas-tool-for-banners-logos-and-badges-20e",
+  "source": "devto",
+  "tag": "javascript",
+  "upvotes": 5,
+  "comments": 1,
+  "published_at": 1795848409.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/sitetoolsbox/i-built-a-zero-dependency-canvas-tool-for-banners-logos-and-badges-20e"
+  ],
+  "cross_source_count": 1,
+  "score": 68,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fv477sz18vamdjei5kawd.png",
+  "link_status": "ok",
+  "ko_title": "배너·로고·뱃지를 위한 무의존 캔버스 도구 제작",
+  "summary": "이 도구는 라이브러리 없이 순수 HTML <canvas>만으로 로고·파비콘·소셜 배너 등 다양한 사전 정의된 크기의 이미지를 즉시 생성한다. 프리셋 목록에 YouTube, Twitter/X, GitHub 등 주요 플랫폼 사이즈가 포함돼 있어 별도 설정 없이 바로 사용 가능하다. 사용자 지정 크기도 지원한다.",
+  "why": "사이드 프로젝트에서 로고나 배너를 만들 때 html2canvas 같은 라이브러리를 끌고 올 필요가 없다. 순수 캔버스 API로만 구현했기 때문에 의존성이 없고 렌더링 속도도 빠르다. 플랫폼별 고정 크기를 프리셋으로 제공해 해상도 불일치 문제를 피할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools",
+   "showcase"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "Reukix / Reloc",
+  "url": "https://github.com/Reukix/Reloc",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 831,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/Reukix/Reloc"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 831,
+  "score": 61,
+  "image": "https://opengraph.githubassets.com/1/Reukix/Reloc",
+  "link_status": null,
+  "ko_title": "Reukix / Reloc",
+  "summary": "iPhone·iPad에서 가상 외부 장치를 만들어 GPS 위치를 주입하는 앱이다. CoreAccessories와 iAP2를 이용해 실제 GPS와 동일한 신호를 생성하며, 물리적 장치나 컴퓨터 없이도 셀룰러 환경에서 동작한다. 지도 기반 정지 위치 지정, 경로 시뮬레이션, 다중 지도 레이어, 백그라운드 지속 실행 등 다양한 기능을 제공한다. 오픈소스로 Swift·Objective-C 스택이며 iOS 16.0 이상을 지원한다.",
+  "why": "iOS 16 이상 기기에서 컴퓨터나 물리적 장치 없이 GPS 주입이 가능해졌다. 백엔드 로직이나 AI 모델의 위치 기반 기능 테스트 시 별도 하드웨어 없이 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+  "url": "https://unkernel.dev",
+  "source": "hackernews",
+  "upvotes": 152,
+  "comments": 11,
+  "published_at": 1795835960,
+  "discussion": "https://news.ycombinator.com/item?id=50674218",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://unkernel.dev"
+  ],
+  "cross_source_count": 1,
+  "score": 59,
+  "image": "https://unkernel.dev/og.png",
+  "link_status": "ok",
+  "ko_title": "Unkernel: 실제 Linux 커널, WebAssembly로 컴파일",
+  "summary": "이 페이지는 JavaScript가 필요하며, WebAssembly로 컴파일된 실제 Linux 커널을 부팅한다. 사용하려면 사이트에서 JavaScript를 활성화하고 페이지를 새로 고쳐야 한다.",
+  "why": "브라우저에서 실제 Linux 커널을 구동할 수 있어, WebAssembly 환경의 커널 동작을 직접 검증할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "web",
+   "language"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "Two Sisters Tinctures, Now in Motion: An AI Ad Made with Migoo",
+  "url": "https://dev.to/earlgreyhot1701d/two-sisters-tinctures-now-in-motion-an-ai-ad-made-with-migoo-3lo7",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 14,
+  "comments": 1,
+  "published_at": 1795825395.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/earlgreyhot1701d/two-sisters-tinctures-now-in-motion-an-ai-ad-made-with-migoo-3lo7"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fb7zs5z63bfh74pwpzueh.jpg",
+  "link_status": "ok",
+  "ko_title": "Two Sisters Tinctures, 이제 움직인다: Migoo로 만든 AI 광고",
+  "summary": "개발자는 B.E.L.L.E × Migoo AI 마케팅 영상 챌린지에 참가해 두 자매 티크처스 앱을 홍보하는 영상을 제작했다. Migoo의 채팅 기반 인터페이스로 스크립트를 작성하고 영상 모델을 선택해 총 754 credits를 사용해 초안과 최종 6개 씬을 만들었다. 완성된 영상은 실제 앱 화면을 보여주며, 결과는 월요일에 발표된다.",
+  "why": "Migoo는 채팅으로 스크립트를 작성하고 영상 모델을 선택해 광고를 만드는 도구다. 초안과 최종 씬을 만들 때 모델에 따라 크레딧 소모량이 크게 달라진다. 실제 앱 화면을 영상에 넣으려면 해당 화면 이미지를 미리 제공해야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "showcase"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "CoreShroud Update: Deeper Protection, Faster Pipeline, Cleaner UI",
+  "url": "https://dev.to/charlezin_ffx/-coreshroud-update-deeper-protection-faster-pipeline-cleaner-ui-3jpk",
+  "source": "devto",
+  "tag": "security",
+  "upvotes": 5,
+  "comments": 0,
+  "published_at": 1795843046.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/charlezin_ffx/-coreshroud-update-deeper-protection-faster-pipeline-cleaner-ui-3jpk"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1xka73hliokvtimwotqd.png",
+  "link_status": "ok",
+  "ko_title": "CoreShroud 업데이트: 더 깊은 보호, 빠른 파이프라인, 깔끔한 UI",
+  "summary": "보호 파이프라인이 단계별 결과 보고로 바뀌어 적용된 보호 레이어와 처리 시간, 결과 APK 크기 변화를 확인할 수 있다. 보호 프리셋이 추가돼 동일 빌드 시 레이어 선택을 반복할 필요가 없으며, 히스토리 항목에 적용 레이어와 설명이 표시된다. 세션 관리 UI가 개선돼 기기·위치·활동 정보를 보여주고 개별 혹은 전체 세션을 종료할 수 있다.",
+  "why": "보호 레이어별 APK 크기 증가량을 수치로 확인해 프리셋을 조정할 수 있다. 기존에는 보호 적용 후 패키지 크기 변화를 추측해야 했으나, 이제 정확한 비용 데이터가 제공된다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "datasette-mcp 0.4",
+  "url": "https://simonwillison.net/2026/Nov/27/datasette-mcp/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795739177.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/27/datasette-mcp/"
+  ],
+  "cross_source_count": 1,
+  "score": 55,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-mcp 0.4",
+  "summary": "Datasette 1.0a44와 호환되도록 수정되었습니다.",
+  "why": "Datasette 1.0a44를 쓰는 환경이라면 datasette-mcp를 0.4로 올려야 한다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
+  "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
+  "source": "hackernews",
+  "upvotes": 152,
+  "comments": 115,
+  "published_at": 1795829576,
+  "discussion": "https://news.ycombinator.com/item?id=50673521",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": "https://substackcdn.com/image/fetch/$s_!opth!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fdrmahfouz.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-356292795%26version%3D9",
+  "link_status": "ok",
+  "ko_title": "AI 어시스턴트가 임대료 연기를 허락했다는 메일에 따라 퇴거당한 여성",
+  "summary": "노스캐롤라이나 여성은 아파트 관리 사무소의 AI 어시스턴트가 보낸 것으로 보이는 메일에서 11월 30일까지 연체 임대료 3,934.17달러를 납부해도 된다고 승인받았다가 11월 19일 퇴거 통보를 받았다. 해당 아파트는 AI 어시스턴트 사용을 인정했지만 공식 확인은 하지 않았다. 이번 사건은 자동화된 시스템이 제공한 재정 약속에 대한 기업 책임 여부를 제기한다.",
+  "why": "임대료 납기 연기를 승인한 것으로 보이는 AI 메일에 의존했다가 퇴거당한 사례다. 자동화 시스템이 보낸 재정적 약속에 법적 효력이 있는지 확인해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "ai"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "datasette-charts 0.4a0",
+  "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+  "source": "rss",
+  "feed": "Simon Willison",
+  "page": true,
+  "upvotes": 0,
+  "comments": 0,
+  "published_at": 1795823837.0,
+  "merged_sources": [
+   "Simon Willison"
+  ],
+  "merged_urls": [
+   "https://simonwillison.net/2026/Nov/27/datasette-charts/"
+  ],
+  "cross_source_count": 1,
+  "score": 52,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "datasette-charts 0.4a0",
+  "summary": "새 버전은 다른 플러그인이 새로운 차트 유형을 정의할 수 있는 플러그인 훅을 개선하고, 설계상의 마찰점을 해소했다. 플러그인 전용 웹사이트(charts.datasette.io)를 개설해 튜토리얼과 핵심 차트·주석 갤러리를 제공한다.",
+  "why": "datasette-charts 플러그인 개발 시 기존 설계의 마찰점이 해소되어 차트 유형 추가가 쉬워졌다. charts.datasette.io의 튜토리얼과 인터랙티브 데모를 참고해 개발 환경을 점검할 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "llm",
+   "backend-data",
+   "release"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "openBitFun / OpenBitFun",
+  "url": "https://github.com/openBitFun/OpenBitFun",
+  "source": "github",
+  "feed": "Trendshift",
+  "upvotes": 355,
+  "comments": 0,
+  "published_at": null,
+  "merged_sources": [
+   "Trendshift"
+  ],
+  "merged_urls": [
+   "https://github.com/openBitFun/OpenBitFun"
+  ],
+  "cross_source_count": 1,
+  "delta_stars": 355,
+  "score": 45,
+  "image": "https://opengraph.githubassets.com/1/openBitFun/OpenBitFun",
+  "link_status": null,
+  "ko_title": "OpenBitFun",
+  "summary": "OpenBitFun은 고도로 커스터마이징 가능한 오픈소스 에이전트 워크스페이스이다. 네 가지 에이전트 하네스 모드와 크로스 디바이스 원격 제어를 지원한다. 미니 앱부터 소스 코드까지 다양한 수준에서 확장이 가능하다.",
+  "why": "에이전트 워크스페이스를 직접 커스터마이징해야 하는 환경에서 소스 코드 수준까지 개입할 수 있다. 크로스 디바이스 원격 제어가 지원되어 데스크톱과 모바일 간 작업 흐름을 이어갈 수 있다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent",
+   "language",
+   "open-source"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "In Defense of the Software Factory",
+  "url": "https://dev.to/remojansen/in-defense-of-the-software-factory-48gf",
+  "source": "devto",
+  "tag": "ai",
+  "upvotes": 2,
+  "comments": 3,
+  "published_at": 1795827187.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/remojansen/in-defense-of-the-software-factory-48gf"
+  ],
+  "cross_source_count": 1,
+  "score": 39,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fj0eahl1atugu099ltstw.png",
+  "link_status": "ok",
+  "ko_title": "소프트웨어 팩토리 옹호",
+  "summary": "소프트웨어 개발에 AI 에이전트를 적용하는 비유를 팩토리 대신 설계 엔지니어링으로 보는 의견에 반론을 제시한다. 저자는 기존 팩토리 개념을 유연한 제조 시스템으로 확장해, 다양한 제품을 같은 설비에서 생산하듯 AI 기반 소프트웨어 개발을 바라볼 것을 주장한다.",
+  "why": "AI 에이전트 개발을 유연한 제조 시스템으로 보면, 동일한 인프라에서 다양한 요구사항을 처리하는 구조를 설계할 수 있다. 이는 반복적 생산이 아닌 적응형 프로세스 구축에 초점을 맞추게 한다.",
+  "relevance": "게재",
+  "kind": "의견",
+  "llm_done": true,
+  "tags": [
+   "ai",
+   "ai-agent"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "10 Terminal Commands I Wish I Knew 5 Years Ago",
+  "url": "https://dev.to/infoinlet1/10-terminal-commands-i-wish-i-knew-5-years-ago-4bg3",
+  "source": "devto",
+  "tag": "webdev",
+  "upvotes": 11,
+  "comments": 0,
+  "published_at": 1795846041.0,
+  "merged_sources": [
+   "devto"
+  ],
+  "merged_urls": [
+   "https://dev.to/infoinlet1/10-terminal-commands-i-wish-i-knew-5-years-ago-4bg3"
+  ],
+  "cross_source_count": 1,
+  "score": 20,
+  "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fs2l03e70w98vtwzfav1e.png",
+  "link_status": "ok",
+  "ko_title": "5년 전 알았으면 좋았을 터미널 명령 10가지",
+  "summary": "",
+  "why": "긴 명령어 수정이나 과거 명령 재실행에 매번 시간을 쓰는 일이 줄어든다. 특히 복잡한 커스텀 스크립트나 API 호출을 반복하는 백엔드 작업에서 체감 효율이 높다.",
+  "relevance": "게재",
+  "kind": "도구",
+  "llm_done": true,
+  "tags": [
+   "dev-tools"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
+  "title": "US Air Force's cloud computing platform hacked",
+  "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
+  "source": "hackernews",
+  "upvotes": 343,
+  "comments": 209,
+  "published_at": 1795784051,
+  "discussion": "https://news.ycombinator.com/item?id=50666375",
+  "merged_sources": [
+   "hackernews"
+  ],
+  "merged_urls": [
+   "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163"
+  ],
+  "cross_source_count": 1,
+  "score": 18,
+  "image": null,
+  "link_status": "ok",
+  "ko_title": "미국 공군 클라우드 컴퓨팅 플랫폼 해킹",
+  "summary": "",
+  "why": "클라우드 인프라의 보안 취약점이 실제 공격으로 이어질 수 있음을 보여준다. 백엔드 서비스의 접근 제어와 네트워크 분리를 재점검해야 한다.",
+  "relevance": "게재",
+  "kind": "사건",
+  "llm_done": true,
+  "tags": [
+   "security",
+   "devops-infra"
+  ],
+  "batch": "2026-11-28T16:00:04.835506+09:00",
+  "batch_label": "11월 28일 16:00"
+ },
+ {
   "title": "DeadInternetStudios / 100x-engineer-skill",
   "url": "https://github.com/DeadInternetStudios/100x-engineer-skill",
   "source": "github",

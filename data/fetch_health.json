@@ -1,27 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-17T16:00:25+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 13,
-    "blocked": 2,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://openai.com/index/science-at-the-frontier",
-     "source": "rss",
-     "reason": "blocked"
-    }
-   ]
-  },
-  {
    "at": "2026-11-18T00:00:29+09:00",
    "total": 17,
    "counts": {
@@ -521,6 +500,27 @@
      "url": "https://bouncemarket.minhanhday.com/",
      "source": "hackernews",
      "reason": "short"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-28T16:00:30+09:00",
+   "total": 14,
+   "counts": {
+    "ok": 10,
+    "blocked": 2,
+    "github": 2
+   },
+   "failures": [
+    {
+     "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
+     "source": "hackernews",
+     "reason": "blocked"
+    },
+    {
+     "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
+     "source": "hackernews",
+     "reason": "blocked"
     }
    ]
   }
