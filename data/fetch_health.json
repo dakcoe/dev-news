@@ -1,28 +1,6 @@
 {
  "runs": [
   {
-   "at": "2026-11-18T00:00:29+09:00",
-   "total": 17,
-   "counts": {
-    "ok": 13,
-    "blocked": 1,
-    "short": 1,
-    "github": 2
-   },
-   "failures": [
-    {
-     "url": "https://openai.com/index/introducing-openai-for-chile",
-     "source": "rss",
-     "reason": "blocked"
-    },
-    {
-     "url": "https://tech.kakao.com/posts/849",
-     "source": "rss",
-     "reason": "short"
-    }
-   ]
-  },
-  {
    "at": "2026-11-18T08:00:28+09:00",
    "total": 18,
    "counts": {
@@ -523,6 +501,15 @@
      "reason": "blocked"
     }
    ]
+  },
+  {
+   "at": "2026-11-29T00:00:30+09:00",
+   "total": 12,
+   "counts": {
+    "ok": 10,
+    "github": 2
+   },
+   "failures": []
   }
  ]
 }
